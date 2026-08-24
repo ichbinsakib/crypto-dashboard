@@ -1,0 +1,52 @@
+{
+  "alerts": [
+    {
+      "id": "btc-resistance-break",
+      "coin": "BTC",
+      "condition": "above",
+      "price": 78424.62,
+      "label": "BTC breaks 30-day resistance",
+      "enabled": true
+    },
+    {
+      "id": "btc-support-break",
+      "coin": "BTC",
+      "condition": "below",
+      "price": 62802.63,
+      "label": "BTC breaks 30-day support",
+      "enabled": true
+    },
+    {
+      "id": "eth-resistance-break",
+      "coin": "ETH",
+      "condition": "above",
+      "price": 2518.78,
+      "label": "ETH breaks 30-day resistance",
+      "enabled": true
+    },
+    {
+      "id": "eth-support-break",
+      "coin": "ETH",
+      "condition": "below",
+      "price": 1844.61,
+      "label": "ETH breaks 30-day support",
+      "enabled": true
+    },
+    {
+      "id": "btc-above-85000-1787558751",
+      "coin": "BTC",
+      "condition": "above",
+      "price": 85000.0,
+      "label": "BTC above $85,000",
+      "enabled": true
+    },
+    {
+      "id": "eth-above-3000-1787562883",
+      "coin": "ETH",
+      "condition": "above",
+      "price": 3000.0,
+      "label": "ETH above $3,000",
+      "enabled": true
+    }
+  ]
+}

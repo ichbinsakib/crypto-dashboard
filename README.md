@@ -1,0 +1,43 @@
+# Teka Live Dashboard
+
+A BTC/ETH market dashboard that regenerates itself automatically and publishes to GitHub Pages — free-tier data only, no paid APIs, no server to maintain.
+
+**Live URL:** set after the repo is created and Pages is enabled (see below).
+
+## What it shows
+
+- Price, 24h/7d/30d change, 30-day support/resistance
+- Funding rate, open interest trend, futures mark/index premium (Binance public API)
+- Fear & Greed Index (Alternative.me), used as a retail-sentiment proxy
+- A heuristic cycle-stage model (Accumulation / Markup / Distribution / Markdown) and a 1-10 "heat score", both derived from the numbers above — not a third-party analytics product
+- Price alerts you define in `data/alerts_config.json`
+
+Rows that need paid on-chain data (MVRV Z-Score, NUPL, exchange flows, ETF flows) are explicitly marked **Unavailable** rather than faked.
+
+## How it runs
+
+`.github/workflows/deploy.yml` runs `dashboard.py` on a schedule (best-effort every ~5 minutes — GitHub Actions doesn't support finer-grained cron), publishes `site/index.html` to GitHub Pages, and commits the updated `data/` folder back to the repo so state and alert history persist between runs.
+
+## Editing alerts
+
+Edit `data/alerts_config.json` directly (GitHub's web editor works fine) — each entry:
+
+```json
+{"id": "unique-id", "coin": "BTC", "condition": "above", "price": 85000, "label": "BTC above $85,000", "enabled": true}
+```
+
+Push the change (or edit via GitHub's UI, which commits for you) and it takes effect on the next scheduled run, or trigger **Actions → Update Teka Dashboard → Run workflow** for an immediate refresh.
+
+If you have this repo cloned locally, `python add_alert.py` opens a small desktop GUI for the same thing.
+
+## Running locally
+
+```
+python dashboard.py
+```
+
+Writes to `site/index.html`, reading/writing state and alerts in `data/`.
+
+## Education only
+
+Not financial advice. The cycle model and heat score are Teka's own heuristics, not guaranteed signals.
