@@ -3,7 +3,7 @@
   "_fng_classification": "Greed",
   "_alerts_state": {
     "btc-resistance-break": {
-      "triggered": true,
+      "triggered": false,
       "last_triggered_at": "2026-08-25 20:38:22"
     },
     "btc-support-break": {
@@ -55,7 +55,7 @@
         ],
         [
           "Stretch from long-term average",
-          "+13.0% above its long-term average - a bit stretched",
+          "+12.5% above its long-term average - a bit stretched",
           -1
         ],
         [
@@ -68,12 +68,12 @@
       "id": "binancecoin",
       "symbol": "BNB",
       "name": "BNB",
-      "price": 695.96,
-      "pct_24h": -1.03858,
+      "price": 692.54,
+      "pct_24h": -1.48628,
       "pct_7d": 15.7,
       "support_30d": 565.6186945632496,
       "resistance_30d": 704.0935851533615,
-      "as_of": "2026-08-25 20:38:22",
+      "as_of": "2026-08-25 20:59:32",
       "stale": false
     },
     "ripple": {
@@ -199,7 +199,7 @@
         ],
         [
           "Stretch from long-term average",
-          "+5.0% vs its long-term average - not stretched either way",
+          "+4.9% vs its long-term average - not stretched either way",
           0
         ],
         [
@@ -212,12 +212,12 @@
       "id": "tron",
       "symbol": "TRX",
       "name": "TRON",
-      "price": 0.338172,
-      "pct_24h": -1.57061,
+      "price": 0.33774,
+      "pct_24h": -1.6917,
       "pct_7d": 1.6,
       "support_30d": 0.32452018457184145,
       "resistance_30d": 0.3447899585776834,
-      "as_of": "2026-08-25 20:38:22",
+      "as_of": "2026-08-25 20:59:32",
       "stale": false
     },
     "figure-heloc": {
@@ -260,12 +260,12 @@
       "id": "figure-heloc",
       "symbol": "FIGR_HELOC",
       "name": "Figure Heloc",
-      "price": 1.033,
-      "pct_24h": -1.42126,
+      "price": 1.039,
+      "pct_24h": -0.41177,
       "pct_7d": -0.5,
       "support_30d": 1.0008548889936117,
       "resistance_30d": 1.0443247364269224,
-      "as_of": "2026-08-25 20:38:22",
+      "as_of": "2026-08-25 20:59:32",
       "stale": false
     },
     "hyperliquid": {
@@ -295,7 +295,7 @@
         ],
         [
           "Stretch from long-term average",
-          "+61.8% above its long-term average - very stretched",
+          "+58.6% above its long-term average - very stretched",
           -2
         ],
         [
@@ -308,60 +308,12 @@
       "id": "hyperliquid",
       "symbol": "HYPE",
       "name": "Hyperliquid",
-      "price": 80.67,
-      "pct_24h": 3.57554,
+      "price": 79.07,
+      "pct_24h": 1.24165,
       "pct_7d": 39.0,
       "support_30d": 52.199165596630266,
       "resistance_30d": 82.12213360662557,
-      "as_of": "2026-08-25 20:38:22",
-      "stale": false
-    },
-    "rain": {
-      "label": "\ud83d\udd34 DISTRIBUTION ZONE",
-      "status": "bearish",
-      "score": -8,
-      "rows": [
-        [
-          "Price vs. recent range",
-          "Near its 30-day high (~$0) - less room to run",
-          -1
-        ],
-        [
-          "Crowd mood (Fear & Greed)",
-          "74/100 - crowd is greedy",
-          -1
-        ],
-        [
-          "Market phase (best guess)",
-          "Very extended after a big run - phase where smart money sells",
-          -2
-        ],
-        [
-          "Recent trend",
-          "Shooting straight up - classic blow-off top risk, don't chase",
-          -2
-        ],
-        [
-          "Stretch from long-term average",
-          "+75.8% above its long-term average - very stretched",
-          -2
-        ],
-        [
-          "Leverage traders' bias",
-          "No leverage data",
-          0
-        ]
-      ],
-      "plain": "Looks stretched and euphoric - historically the zone where smart money sells, not buys.",
-      "id": "rain",
-      "symbol": "RAIN",
-      "name": "Rain",
-      "price": 0.01930185,
-      "pct_24h": 29.77478,
-      "pct_7d": 48.4,
-      "support_30d": 0.01228523605280373,
-      "resistance_30d": 0.01929194658072725,
-      "as_of": "2026-08-25 20:38:22",
+      "as_of": "2026-08-25 20:59:32",
       "stale": false
     },
     "dogecoin": {
@@ -391,7 +343,7 @@
         ],
         [
           "Stretch from long-term average",
-          "-2.1% vs its long-term average - not stretched either way",
+          "-3.7% vs its long-term average - not stretched either way",
           0
         ],
         [
@@ -404,12 +356,60 @@
       "id": "dogecoin",
       "symbol": "DOGE",
       "name": "Dogecoin",
-      "price": 0.087437,
-      "pct_24h": -2.09723,
+      "price": 0.086033,
+      "pct_24h": -3.77007,
       "pct_7d": 25.1,
       "support_30d": 0.06912171465773863,
       "resistance_30d": 0.09337437185106227,
-      "as_of": "2026-08-25 20:38:22",
+      "as_of": "2026-08-25 20:59:32",
+      "stale": false
+    },
+    "rain": {
+      "label": "\ud83d\udd34 DISTRIBUTION ZONE",
+      "status": "bearish",
+      "score": -8,
+      "rows": [
+        [
+          "Price vs. recent range",
+          "Near its 30-day high (~$0) - less room to run",
+          -1
+        ],
+        [
+          "Crowd mood (Fear & Greed)",
+          "74/100 - crowd is greedy",
+          -1
+        ],
+        [
+          "Market phase (best guess)",
+          "Very extended after a big run - phase where smart money sells",
+          -2
+        ],
+        [
+          "Recent trend",
+          "Shooting straight up - classic blow-off top risk, don't chase",
+          -2
+        ],
+        [
+          "Stretch from long-term average",
+          "+68.2% above its long-term average - very stretched",
+          -2
+        ],
+        [
+          "Leverage traders' bias",
+          "No leverage data",
+          0
+        ]
+      ],
+      "plain": "Looks stretched and euphoric - historically the zone where smart money sells, not buys.",
+      "id": "rain",
+      "symbol": "RAIN",
+      "name": "Rain",
+      "price": 0.01846003,
+      "pct_24h": 24.12891,
+      "pct_7d": 48.4,
+      "support_30d": 0.01228523605280373,
+      "resistance_30d": 0.01840727883909944,
+      "as_of": "2026-08-25 20:59:32",
       "stale": false
     },
     "zcash": {
@@ -439,7 +439,7 @@
         ],
         [
           "Stretch from long-term average",
-          "+90.7% above its long-term average - very stretched",
+          "+88.0% above its long-term average - very stretched",
           -2
         ],
         [
@@ -452,12 +452,12 @@
       "id": "zcash",
       "symbol": "ZEC",
       "name": "Zcash",
-      "price": 784.49,
-      "pct_24h": -4.21681,
+      "price": 773.32,
+      "pct_24h": -5.69173,
       "pct_7d": 54.9,
       "support_30d": 458.62204779933427,
       "resistance_30d": 851.7729918130331,
-      "as_of": "2026-08-25 20:38:22",
+      "as_of": "2026-08-25 20:59:32",
       "stale": false
     },
     "leo-token": {
@@ -501,11 +501,11 @@
       "symbol": "LEO",
       "name": "LEO Token",
       "price": 9.38,
-      "pct_24h": 1.35958,
+      "pct_24h": 1.3597,
       "pct_7d": -0.9,
       "support_30d": 8.956583026357892,
       "resistance_30d": 9.783392369630901,
-      "as_of": "2026-08-25 20:38:22",
+      "as_of": "2026-08-25 20:59:32",
       "stale": false
     },
     "whitebit": {
@@ -535,7 +535,7 @@
         ],
         [
           "Stretch from long-term average",
-          "+33.8% above its long-term average - very stretched",
+          "+33.0% above its long-term average - very stretched",
           -2
         ],
         [
@@ -548,23 +548,23 @@
       "id": "whitebit",
       "symbol": "WBT",
       "name": "WhiteBIT Coin",
-      "price": 72.64,
-      "pct_24h": -0.81032,
+      "price": 72.16,
+      "pct_24h": -1.52093,
       "pct_7d": 30.5,
       "support_30d": 54.46347294921598,
       "resistance_30d": 73.34770771483034,
-      "as_of": "2026-08-25 20:38:22",
+      "as_of": "2026-08-25 20:59:32",
       "stale": false
     },
     "chainlink": {
       "label": "\ud83d\udfe1 HOLD / NEUTRAL",
       "status": "neutral",
-      "score": -1,
+      "score": 0,
       "rows": [
         [
           "Price vs. recent range",
-          "Near its 30-day high (~$12) - less room to run",
-          -1
+          "Sitting in the middle of its 30-day range",
+          0
         ],
         [
           "Crowd mood (Fear & Greed)",
@@ -583,7 +583,7 @@
         ],
         [
           "Stretch from long-term average",
-          "+26.4% above its long-term average - a bit stretched",
+          "+25.1% above its long-term average - a bit stretched",
           -1
         ],
         [
@@ -596,12 +596,12 @@
       "id": "chainlink",
       "symbol": "LINK",
       "name": "Chainlink",
-      "price": 11.41,
-      "pct_24h": -1.30702,
+      "price": 11.29,
+      "pct_24h": -2.59424,
       "pct_7d": 20.7,
       "support_30d": 8.060658731722004,
       "resistance_30d": 12.004223042196735,
-      "as_of": "2026-08-25 20:38:22",
+      "as_of": "2026-08-25 20:59:32",
       "stale": false
     },
     "monero": {
@@ -631,7 +631,7 @@
         ],
         [
           "Stretch from long-term average",
-          "+23.4% above its long-term average - a bit stretched",
+          "+21.9% above its long-term average - a bit stretched",
           -1
         ],
         [
@@ -644,12 +644,12 @@
       "id": "monero",
       "symbol": "XMR",
       "name": "Monero",
-      "price": 436.26,
-      "pct_24h": -1.30937,
+      "price": 430.97,
+      "pct_24h": -1.98858,
       "pct_7d": 5.0,
       "support_30d": 341.66098327436066,
       "resistance_30d": 442.3756562998309,
-      "as_of": "2026-08-25 20:38:22",
+      "as_of": "2026-08-25 20:59:32",
       "stale": false
     },
     "cardano": {
@@ -679,7 +679,7 @@
         ],
         [
           "Stretch from long-term average",
-          "-5.8% vs its long-term average - not stretched either way",
+          "-7.4% vs its long-term average - not stretched either way",
           0
         ],
         [
@@ -692,12 +692,12 @@
       "id": "cardano",
       "symbol": "ADA",
       "name": "Cardano",
-      "price": 0.213364,
-      "pct_24h": -2.87024,
+      "price": 0.209892,
+      "pct_24h": -4.60199,
       "pct_7d": 22.8,
       "support_30d": 0.15577734360234022,
       "resistance_30d": 0.22956344834581915,
-      "as_of": "2026-08-25 20:38:22",
+      "as_of": "2026-08-25 20:59:32",
       "stale": false
     },
     "stellar": {
@@ -727,7 +727,7 @@
         ],
         [
           "Stretch from long-term average",
-          "+7.7% vs its long-term average - not stretched either way",
+          "+6.5% vs its long-term average - not stretched either way",
           0
         ],
         [
@@ -740,12 +740,12 @@
       "id": "stellar",
       "symbol": "XLM",
       "name": "Stellar",
-      "price": 0.187035,
-      "pct_24h": -3.05403,
+      "price": 0.184817,
+      "pct_24h": -4.11153,
       "pct_7d": 22.2,
       "support_30d": 0.15470835505286148,
       "resistance_30d": 0.20296149892273674,
-      "as_of": "2026-08-25 20:38:22",
+      "as_of": "2026-08-25 20:59:32",
       "stale": false
     }
   },
@@ -753,14 +753,14 @@
     "key": "BTC",
     "name": "Bitcoin",
     "emoji": "\u20bf",
-    "price": 78754,
+    "price": 78213,
     "high_24h": 81160,
     "low_24h": 78218,
-    "pct_24h": -0.05688,
+    "pct_24h": -0.88895,
     "pct_7d": 21.9,
     "pct_30d": 22.0,
-    "sma50": 65767.27701067686,
-    "sma200": 69110.17790815722,
+    "sma50": 65756.42663656693,
+    "sma200": 69107.46531462974,
     "support_30d": 62802.63461583794,
     "resistance_30d": 78973.88693602335,
     "mark_price": 77339.83681159,
@@ -775,14 +775,14 @@
     "key": "ETH",
     "name": "Ethereum",
     "emoji": "\u039e",
-    "price": 2454.65,
+    "price": 2439.38,
     "high_24h": 2527.89,
     "low_24h": 2445.29,
-    "pct_24h": -0.73496,
+    "pct_24h": -1.37793,
     "pct_7d": 28.6,
     "pct_30d": 28.7,
-    "sma50": 1947.8293371596915,
-    "sma200": 2011.7018084139258,
+    "sma50": 1947.489759520845,
+    "sma200": 2011.616914004214,
     "support_30d": 1844.6142829481894,
     "resistance_30d": 2518.784836324378,
     "mark_price": 2460.88613178,
