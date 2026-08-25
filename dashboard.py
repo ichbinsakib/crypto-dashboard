@@ -243,6 +243,18 @@ def fmt_usd(v, decimals=2):
     return f"${v:,.{decimals}f}"
 
 
+def fmt_usd_adaptive(v):
+    """Scales decimal places to the coin's price so sub-$1 coins (ADA, DOGE, meme coins)
+    don't lose all precision under a fixed 2-decimal format."""
+    if v is None:
+        return "N/A"
+    if v >= 1:
+        return f"${v:,.2f}"
+    if v >= 0.01:
+        return f"${v:,.4f}"
+    return f"${v:,.6f}"
+
+
 def fmt_pct(v, decimals=2, sign=True):
     if v is None:
         return "N/A"
@@ -555,8 +567,21 @@ def compute_spot_signal_lite(m, chart, fng_value):
     result.update({
         "id": m.get("id"), "symbol": (m.get("symbol") or "").upper(), "name": m.get("name"),
         "price": price, "pct_24h": pct_24h, "pct_7d": pct_7d,
+        "support_30d": support, "resistance_30d": resistance,
     })
     return result
+
+
+def pick_primary_scenario(trade_levels, price):
+    """For compact card display, show whichever scenario (pullback vs breakout) is
+    currently closer to price -- i.e. the more immediately relevant one to watch."""
+    pb, bo = trade_levels["pullback"], trade_levels["breakout"]
+    pb_mid = (pb["entry_low"] + pb["entry_high"]) / 2
+    if price is None:
+        return "pullback", pb
+    if abs(price - pb_mid) <= abs(price - bo["entry"]):
+        return "pullback", pb
+    return "breakout", bo
 
 
 def build_screener(fng_value, prev_screener_state, generated_at):
@@ -925,35 +950,60 @@ def render(coins_data, fng_value, fng_classification, generated_at, any_stale,
     if screener_results:
         top_pick = screener_results[0]
         bottom_pick = screener_results[-1]
-        screener_rows_html = "\n".join(
-            f'<tr><td>{i+1}</td><td>{r["name"]} <span class="watch">({r["symbol"]})'
-            f'{" &middot; cached" if r.get("stale") else ""}</span></td>'
-            f'<td>{fmt_usd(r["price"])}</td>'
-            f'<td class="{"pos" if (r.get("pct_24h") or 0) >= 0 else "neg"}">{fmt_pct(r.get("pct_24h"))}</td>'
-            f'<td><span class="badge {r["status"]}">{r["label"]}</span></td>'
-            f'<td>{_pts_badge2(r["score"])}</td></tr>'
-            for i, r in enumerate(screener_results)
-        )
+
+        def _screener_card(r, rank):
+            tl = compute_trade_levels(r)
+            if tl:
+                scenario_name, sc = pick_primary_scenario(tl, r.get("price"))
+                if scenario_name == "pullback":
+                    scenario_title = "If it pulls back to support"
+                    entry_txt = f"{fmt_usd_adaptive(sc['entry_low'])} &ndash; {fmt_usd_adaptive(sc['entry_high'])}"
+                else:
+                    scenario_title = "If it breaks out above resistance"
+                    entry_txt = fmt_usd_adaptive(sc["entry"])
+                trade_html = f"""
+      <div class="screener-trade">
+        <div class="screener-trade-title">🎯 {scenario_title}</div>
+        <div class="kv"><span>Buy</span><span>{entry_txt}</span></div>
+        <div class="kv"><span>Stop loss</span><span class="neg">{fmt_usd_adaptive(sc['stop'])}</span></div>
+        <div class="kv"><span>Take profit</span><span class="pos">{fmt_usd_adaptive(sc['target1'])} / {fmt_usd_adaptive(sc['target2'])}</span></div>
+      </div>"""
+            else:
+                trade_html = '<div class="screener-trade sub">Not enough range data yet for trade levels.</div>'
+            cached_tag = ' <span class="watch">&middot; cached</span>' if r.get("stale") else ""
+            return f"""
+    <div class="screener-card {r['status']}">
+      <div class="screener-card-top">
+        <div class="screener-rank">#{rank}</div>
+        <div>
+          <div class="screener-name">{r['name']} <span class="watch">({r['symbol']})</span>{cached_tag}</div>
+          <div class="sub">{fmt_usd_adaptive(r['price'])} &middot; <span class="{'pos' if (r.get('pct_24h') or 0) >= 0 else 'neg'}">{fmt_pct(r.get('pct_24h'))}</span> 24h</div>
+        </div>
+      </div>
+      <div class="screener-signal">
+        <span class="badge {r['status']}">{r['label']}</span>
+        <span class="sub">Score {_pts_badge2(r['score'])}</span>
+      </div>
+      {trade_html}
+    </div>"""
+
         callouts_html = f"""
     <div class="top-grid" style="grid-template-columns:1fr 1fr; margin-bottom:20px;">
       <div class="card">
         <div class="card-title">🏆 CLOSEST TO ACCUMULATION ZONE</div>
         <div class="spot-signal-label bullish" style="font-size:19px;">{top_pick['name']} ({top_pick['symbol']})</div>
-        <div class="sub">Score {top_pick['score']:+d} &middot; {fmt_usd(top_pick['price'])} &middot; {top_pick['label']}</div>
+        <div class="sub">Score {top_pick['score']:+d} &middot; {fmt_usd_adaptive(top_pick['price'])} &middot; {top_pick['label']}</div>
       </div>
       <div class="card">
         <div class="card-title">⚠️ CLOSEST TO DISTRIBUTION ZONE</div>
         <div class="spot-signal-label bearish" style="font-size:19px;">{bottom_pick['name']} ({bottom_pick['symbol']})</div>
-        <div class="sub">Score {bottom_pick['score']:+d} &middot; {fmt_usd(bottom_pick['price'])} &middot; {bottom_pick['label']}</div>
+        <div class="sub">Score {bottom_pick['score']:+d} &middot; {fmt_usd_adaptive(bottom_pick['price'])} &middot; {bottom_pick['label']}</div>
       </div>
     </div>
 """
-        screener_table_html = f"""
-    <table class="signal-table">
-      <thead><tr><th>#</th><th>Coin</th><th>Price</th><th>24h</th><th>Signal</th><th>Score</th></tr></thead>
-      <tbody>{screener_rows_html}</tbody>
-    </table>
-"""
+        screener_table_html = ('<div class="screener-grid">'
+                                + "".join(_screener_card(r, i + 1) for i, r in enumerate(screener_results))
+                                + '</div>')
     else:
         callouts_html = ""
         screener_table_html = ('<div class="stale-note">&#9888; Screener data unavailable this run '
@@ -970,6 +1020,9 @@ def render(coins_data, fng_value, fng_classification, generated_at, any_stale,
       Ranked best-to-worst by score. This is <strong>not a recommendation to trade any coin listed</strong>:
       small/mid-cap coins carry far higher risk than BTC/ETH, this model is not backtested, and a high score
       here means "resembles a historical accumulation zone by this simple rule set" &mdash; nothing more.
+      Each card's Buy/Stop/Take-profit levels are the same formula-based calculator used on the BTC/ETH tabs,
+      showing whichever scenario (pullback to support, or breakout above resistance) is currently closer to
+      price &mdash; arithmetic on today's chart levels, not a prediction.
       Education only, not financial advice.
       <br><br><strong>Legend:</strong> 🟢 leans toward a historical accumulation zone &middot;
       🟡 no edge either way, hold &middot; 🔴 leans toward caution/distribution &mdash; reduce new buys.
@@ -1097,6 +1150,17 @@ def render(coins_data, fng_value, fng_classification, generated_at, any_stale,
   .trade-scenario {{ background:#0d1320; border:1px solid var(--border); border-radius:10px; padding:14px 16px; }}
   .trade-scenario-title {{ font-size:13px; font-weight:800; color: var(--accent); margin-bottom:10px; }}
   @media (max-width: 700px) {{ .trade-scenarios {{ grid-template-columns: 1fr; }} }}
+  .screener-grid {{ display:grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap:16px; }}
+  .screener-card {{ background: var(--panel); border:2px solid var(--border); border-radius:12px; padding:16px; }}
+  .screener-card.bullish {{ border-color:#1f6a4a; }}
+  .screener-card.bearish {{ border-color:#7a2e2e; }}
+  .screener-card.neutral {{ border-color:#5a4d18; }}
+  .screener-card-top {{ display:flex; gap:10px; align-items:flex-start; margin-bottom:10px; }}
+  .screener-rank {{ font-size:12px; font-weight:800; color: var(--muted); background:#0d1320; border-radius:6px; padding:3px 8px; white-space:nowrap; }}
+  .screener-name {{ font-size:15px; font-weight:800; }}
+  .screener-signal {{ display:flex; justify-content:space-between; align-items:center; margin-bottom:10px; }}
+  .screener-trade {{ background:#0d1320; border:1px solid var(--border); border-radius:8px; padding:10px 12px; }}
+  .screener-trade-title {{ font-size:12px; font-weight:800; color: var(--accent); margin-bottom:6px; }}
   .cyc-row {{ display:flex; align-items:center; gap:6px; margin-top:10px; }}
   .cyc-box {{ flex:1; text-align:center; padding:14px 8px; border-radius:8px; border:1px solid var(--border); color:var(--muted); font-size:13px; font-weight:700; position:relative; }}
   .cyc-here {{ border-color: var(--accent); color: var(--accent); background:#0d1c26; }}
