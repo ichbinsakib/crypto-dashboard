@@ -374,83 +374,100 @@ def compute_spot_signal(c, price_struct_label, stage, fng_value, funding_pct):
     if price and c.get("sma200"):
         dist_sma200_pct = (price - c["sma200"]) / c["sma200"] * 100
 
-    # 1. Proximity to 30d support/resistance (mean-reversion zone)
+    # 1. Distance to recent price floor/ceiling (mean-reversion zone)
     if price and support and price <= support * 1.05:
-        pts, reading = 2, f"Price within 5% of 30d support ({fmt_usd(support, 0)})"
+        pts, reading = 2, f"Near its 30-day low (~{fmt_usd(support, 0)}) - historically a better entry"
     elif price and resistance and price >= resistance * 0.95:
-        pts, reading = -1, f"Price within 5% of 30d resistance ({fmt_usd(resistance, 0)})"
+        pts, reading = -1, f"Near its 30-day high (~{fmt_usd(resistance, 0)}) - less room to run"
     else:
-        pts, reading = 0, "Mid-range between 30d support/resistance"
-    rows.append(("Proximity to key levels", reading, pts))
+        pts, reading = 0, "Sitting in the middle of its 30-day range"
+    rows.append(("Price vs. recent range", reading, pts))
     total += pts
 
     # 2. Fear & Greed (contrarian sentiment)
     if fng_value is None:
         pts, reading = 0, "No sentiment data"
     elif fng_value <= 25:
-        pts, reading = 2, f"{fng_value} - Extreme Fear (contrarian accumulate zone)"
+        pts, reading = 2, f"{fng_value}/100 - crowd is very fearful (contrarians buy here)"
     elif fng_value <= 45:
-        pts, reading = 1, f"{fng_value} - Fear"
+        pts, reading = 1, f"{fng_value}/100 - crowd is cautious/fearful"
     elif fng_value <= 54:
-        pts, reading = 0, f"{fng_value} - Neutral"
+        pts, reading = 0, f"{fng_value}/100 - crowd mood is neutral"
     elif fng_value <= 74:
-        pts, reading = -1, f"{fng_value} - Greed"
+        pts, reading = -1, f"{fng_value}/100 - crowd is greedy"
     else:
-        pts, reading = -2, f"{fng_value} - Extreme Greed (euphoria risk)"
-    rows.append(("Sentiment (Fear & Greed)", reading, pts))
+        pts, reading = -2, f"{fng_value}/100 - crowd is very greedy (euphoria risk)"
+    rows.append(("Crowd mood (Fear & Greed)", reading, pts))
     total += pts
 
     # 3. Cycle stage heuristic
     stage_points = {"Accumulation": 2, "Markup": 1, "Markdown": -1, "Distribution": -2}
+    stage_plain = {
+        "Accumulation": "Basing near the bottom - phase where smart money accumulates",
+        "Markup": "Established uptrend - phase where price marks up",
+        "Markdown": "Established downtrend - still falling, not yet a base",
+        "Distribution": "Very extended after a big run - phase where smart money sells",
+    }
     pts = stage_points.get(stage, 0)
-    rows.append(("Cycle stage (heuristic)", stage, pts))
+    rows.append(("Market phase (best guess)", stage_plain.get(stage, stage), pts))
     total += pts
 
     # 4. Price structure
     struct_points = {"Uptrend": 1, "Range / Consolidation": 0, "Downtrend": -1,
                       "Parabolic (blow-off risk)": -2}
+    struct_plain = {
+        "Uptrend": "Trending up steadily - healthy",
+        "Range / Consolidation": "Chopping sideways - no clear trend",
+        "Downtrend": "Trending down - avoid catching a falling knife",
+        "Parabolic (blow-off risk)": "Shooting straight up - classic blow-off top risk, don't chase",
+    }
     pts = struct_points.get(price_struct_label, 0)
-    rows.append(("Price structure", price_struct_label, pts))
+    rows.append(("Recent trend", struct_plain.get(price_struct_label, price_struct_label), pts))
     total += pts
 
     # 5. Extension from the 200-day average (overheat / capitulation check)
     if dist_sma200_pct is None:
-        pts, reading = 0, "No 200-day average data"
+        pts, reading = 0, "No long-term average data"
     elif dist_sma200_pct > 30:
-        pts, reading = -2, f"{dist_sma200_pct:+.1f}% above 200d avg (very extended)"
+        pts, reading = -2, f"{dist_sma200_pct:+.1f}% above its long-term average - very stretched"
     elif dist_sma200_pct > 10:
-        pts, reading = -1, f"{dist_sma200_pct:+.1f}% above 200d avg (extended)"
+        pts, reading = -1, f"{dist_sma200_pct:+.1f}% above its long-term average - a bit stretched"
     elif dist_sma200_pct < -15:
-        pts, reading = -1, f"{dist_sma200_pct:+.1f}% below 200d avg (confirmed downtrend)"
+        pts, reading = -1, f"{dist_sma200_pct:+.1f}% below its long-term average - confirmed downtrend"
     else:
-        pts, reading = 0, f"{dist_sma200_pct:+.1f}% vs 200d avg (not extended)"
-    rows.append(("Extension from 200d average", reading, pts))
+        pts, reading = 0, f"{dist_sma200_pct:+.1f}% vs its long-term average - not stretched either way"
+    rows.append(("Stretch from long-term average", reading, pts))
     total += pts
 
     # 6. Futures funding/crowd positioning (confluence only, small weight)
     if funding_pct is None:
-        pts, reading = 0, "No funding data"
+        pts, reading = 0, "No leverage data"
     elif funding_pct >= 0.03 and (fng_value or 0) >= 75:
-        pts, reading = -1, "Overheated longs confirming euphoria"
+        pts, reading = -1, "Too many leveraged buyers piled in - pullback risk"
     elif funding_pct <= -0.01:
-        pts, reading = 1, "Shorts paying - possible capitulation/squeeze setup"
+        pts, reading = 1, "Leveraged short-sellers paying up - could get squeezed higher"
     else:
-        pts, reading = 0, "Funding roughly neutral"
-    rows.append(("Futures crowd positioning", reading, pts))
+        pts, reading = 0, "Leveraged traders roughly balanced"
+    rows.append(("Leverage traders' bias", reading, pts))
     total += pts
 
     if total >= 5:
-        label, status = "ACCUMULATION ZONE", "bullish"
+        label, status = "🟢 ACCUMULATION ZONE", "bullish"
+        plain = "Strong historical buy-the-dip setup: fear is high and price is cheap relative to its range."
     elif total >= 2:
-        label, status = "LEAN ACCUMULATE", "bullish"
+        label, status = "🟢 LEAN ACCUMULATE", "bullish"
+        plain = "Leans toward a decent spot to slowly add (DCA) - not a strong signal, just a lean."
     elif total >= -1:
-        label, status = "HOLD / NEUTRAL", "neutral"
+        label, status = "🟡 HOLD / NEUTRAL", "neutral"
+        plain = "No real edge either way right now - fine to just wait and watch."
     elif total >= -4:
-        label, status = "CAUTION - REDUCE NEW BUYS", "bearish"
+        label, status = "🔴 CAUTION - REDUCE NEW BUYS", "bearish"
+        plain = "Getting risky - I'd hold off on new buys until this cools down."
     else:
-        label, status = "DISTRIBUTION ZONE", "bearish"
+        label, status = "🔴 DISTRIBUTION ZONE", "bearish"
+        plain = "Looks stretched and euphoric - historically the zone where smart money sells, not buys."
 
-    return {"label": label, "status": status, "score": total, "rows": rows}
+    return {"label": label, "status": status, "score": total, "rows": rows, "plain": plain}
 
 
 def fetch_screener_markets(limit=SCREENER_SIZE):
@@ -496,27 +513,60 @@ def compute_spot_signal_lite(m, chart, fng_value):
     return result
 
 
-def build_screener(fng_value):
+def build_screener(fng_value, prev_screener_state, generated_at):
+    """Ranks the top-market-cap universe by the lite spot signal. If a coin's live fetch
+    fails (CoinGecko free-tier rate limiting is common), falls back to its last successful
+    reading rather than dropping it -- so a coin like SOL or XRP getting rate-limited on one
+    run doesn't just vanish from the table, it shows up marked as cached."""
+    prev_screener_state = prev_screener_state or {}
     markets, err = safe_fetch("screener markets", fetch_screener_markets)
     if not markets:
-        return []
+        cached = []
+        for v in prev_screener_state.values():
+            stale_sig = dict(v)
+            stale_sig["stale"] = True
+            cached.append(stale_sig)
+        cached.sort(key=lambda r: r["score"], reverse=True)
+        return cached, prev_screener_state
+
     results = []
+    new_state = {}
+    issues = []
     for m in markets:
-        label = f"screener chart {m['id']}"
-        chart, cerr = safe_fetch(label, lambda mid=m["id"]: fetch_market_chart(mid, days=210))
+        cid = m["id"]
+        label = f"screener chart {cid}"
+        chart, cerr = safe_fetch(label, lambda mid=cid: fetch_market_chart(mid, days=210))
         if not chart:
             log(f"Retrying {label} after rate-limit backoff...")
             time.sleep(SCREENER_RETRY_BACKOFF)
-            chart, cerr = safe_fetch(label, lambda mid=m["id"]: fetch_market_chart(mid, days=210))
+            chart, cerr = safe_fetch(label, lambda mid=cid: fetch_market_chart(mid, days=210))
         time.sleep(SCREENER_RATE_LIMIT_DELAY)
-        if not chart or len(chart) < 50:
-            continue
-        try:
-            results.append(compute_spot_signal_lite(m, chart, fng_value))
-        except Exception as e:
-            log(f"SCREENER SIGNAL FAIL [{m['id']}]: {e}")
+
+        if chart and len(chart) >= 50:
+            try:
+                sig = compute_spot_signal_lite(m, chart, fng_value)
+                sig["as_of"] = generated_at
+                sig["stale"] = False
+                results.append(sig)
+                new_state[cid] = sig
+                continue
+            except Exception as e:
+                log(f"SCREENER SIGNAL FAIL [{cid}]: {e}")
+
+        prev = prev_screener_state.get(cid)
+        if prev:
+            stale_sig = dict(prev)
+            stale_sig["stale"] = True
+            results.append(stale_sig)
+            new_state[cid] = prev  # keep the last *good* snapshot, don't overwrite with a stale copy
+            issues.append(f"{cid} (using cached)")
+        else:
+            issues.append(f"{cid} (no cache, dropped)")
+
+    if issues:
+        log(f"Screener live-fetch issues: {issues}")
     results.sort(key=lambda r: r["score"], reverse=True)
-    return results
+    return results, new_state
 
 
 def badge_html(status, text):
@@ -611,6 +661,7 @@ def render(coins_data, fng_value, fng_classification, generated_at, any_stale,
     tabs_labels += '\n<label for="tab-screener">🔍 Screener</label>'
 
     panels = []
+    spot_signals_by_coin = {}
     for c in coins_data:
         price_struct_label, price_struct_status = classify_price_structure(c.get("pct_24h"), c.get("pct_7d"))
         funding_pct = (c.get("funding_rate") or 0) * 100 if c.get("funding_rate") is not None else None
@@ -627,6 +678,7 @@ def render(coins_data, fng_value, fng_classification, generated_at, any_stale,
         stage = cycle_stage(c.get("price"), c.get("sma50"), c.get("sma200"), c.get("pct_30d"))
         score = heat_score(c.get("pct_30d"), dist_sma200_pct, funding_pct, fng_value)
         spot_signal = compute_spot_signal(c, price_struct_label, stage, fng_value, funding_pct)
+        spot_signals_by_coin[c["key"]] = spot_signal
 
         stages = ["Accumulation", "Markup", "Distribution", "Markdown"]
         cycle_html = "".join(
@@ -787,7 +839,8 @@ def render(coins_data, fng_value, fng_classification, generated_at, any_stale,
         top_pick = screener_results[0]
         bottom_pick = screener_results[-1]
         screener_rows_html = "\n".join(
-            f'<tr><td>{i+1}</td><td>{r["name"]} <span class="watch">({r["symbol"]})</span></td>'
+            f'<tr><td>{i+1}</td><td>{r["name"]} <span class="watch">({r["symbol"]})'
+            f'{" &middot; cached" if r.get("stale") else ""}</span></td>'
             f'<td>{fmt_usd(r["price"])}</td>'
             f'<td class="{"pos" if (r.get("pct_24h") or 0) >= 0 else "neg"}">{fmt_pct(r.get("pct_24h"))}</td>'
             f'<td><span class="badge {r["status"]}">{r["label"]}</span></td>'
@@ -831,6 +884,8 @@ def render(coins_data, fng_value, fng_classification, generated_at, any_stale,
       small/mid-cap coins carry far higher risk than BTC/ETH, this model is not backtested, and a high score
       here means "resembles a historical accumulation zone by this simple rule set" &mdash; nothing more.
       Education only, not financial advice.
+      <br><br><strong>Legend:</strong> 🟢 leans toward a historical accumulation zone &middot;
+      🟡 no edge either way, hold &middot; 🔴 leans toward caution/distribution &mdash; reduce new buys.
     </div>
   </div>
   {callouts_html}
@@ -839,6 +894,38 @@ def render(coins_data, fng_value, fng_classification, generated_at, any_stale,
 """
 
     fng_top = f"{fng_value} ({fng_classification})" if fng_value is not None else "N/A"
+
+    glance_cards = []
+    for c in coins_data:
+        sig = spot_signals_by_coin.get(c["key"])
+        if sig:
+            glance_cards.append(f"""
+    <div class="glance-card {sig['status']}">
+      <div class="glance-coin">{c['emoji']} {c['key']}</div>
+      <div class="glance-verdict">{sig['label']}</div>
+      <div class="glance-plain">{sig['plain']}</div>
+    </div>""")
+    if screener_results:
+        top_pick, bottom_pick = screener_results[0], screener_results[-1]
+        glance_cards.append(f"""
+    <div class="glance-card {top_pick['status']}">
+      <div class="glance-coin">🏆 Best of {len(screener_results)} scanned</div>
+      <div class="glance-verdict">{top_pick['name']} ({top_pick['symbol']}) {top_pick['label']}</div>
+      <div class="glance-plain">{top_pick['plain']}</div>
+    </div>""")
+        glance_cards.append(f"""
+    <div class="glance-card {bottom_pick['status']}">
+      <div class="glance-coin">⚠️ Worst of {len(screener_results)} scanned</div>
+      <div class="glance-verdict">{bottom_pick['name']} ({bottom_pick['symbol']}) {bottom_pick['label']}</div>
+      <div class="glance-plain">{bottom_pick['plain']}</div>
+    </div>""")
+    glance_html = f"""
+<div class="glance-bar">
+  <div class="glance-title">AT A GLANCE &mdash; no clicking required</div>
+  <div class="glance-row">{"".join(glance_cards)}</div>
+  <div class="glance-footnote">Educational rule-based model, not financial advice. Full reasoning for each verdict is on its tab below.</div>
+</div>
+"""
 
     html = f"""<!DOCTYPE html>
 <html lang="en">
@@ -895,6 +982,18 @@ def render(coins_data, fng_value, fng_classification, generated_at, any_stale,
   @keyframes pulse {{ 0%,100% {{ opacity:1; }} 50% {{ opacity:0.55; }} }}
   .alert-banner {{ margin: 14px 24px 0; padding: 12px 18px; background:#3a0d0d; border:1px solid #ef4444; border-radius:10px; color:#fecaca; font-weight:700; font-size:13.5px; animation: pulse 1.6s infinite; }}
   .alert-banner-item {{ padding: 2px 0; }}
+  .glance-bar {{ margin: 16px 24px 0; padding: 16px 20px; background: var(--panel); border:2px solid var(--border); border-radius:14px; }}
+  .glance-title {{ font-size:11px; color:var(--muted); letter-spacing:1.5px; font-weight:800; margin-bottom:12px; }}
+  .glance-row {{ display:grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap:14px; }}
+  .glance-card {{ border-radius:10px; padding:14px 16px; border:2px solid var(--border); background:#0d1320; }}
+  .glance-card.bullish {{ border-color:#1f6a4a; background:#0d1c15; }}
+  .glance-card.bearish {{ border-color:#7a2e2e; background:#1c0f0f; }}
+  .glance-card.neutral {{ border-color:#5a4d18; background:#1c1810; }}
+  .glance-coin {{ font-size:12px; color:var(--muted); font-weight:700; letter-spacing:0.5px; margin-bottom:4px; }}
+  .glance-verdict {{ font-size:16px; font-weight:800; margin-bottom:6px; }}
+  .glance-plain {{ font-size:12.5px; color:var(--text); line-height:1.5; }}
+  .glance-footnote {{ font-size:11px; color:var(--muted); margin-top:12px; }}
+  @media (max-width: 700px) {{ .glance-row {{ grid-template-columns: 1fr; }} }}
   .cycle-map {{ background: var(--panel); border:1px solid var(--border); border-radius:12px; padding:16px 18px; }}
   .spot-signal-card {{ border-width:2px; }}
   .spot-signal-card.spot-bullish {{ border-color:#1f6a4a; }}
@@ -920,6 +1019,7 @@ def render(coins_data, fng_value, fng_classification, generated_at, any_stale,
   <h1>&#9889; TEKA LIVE DASHBOARD</h1>
   <div class="meta">Market Fear &amp; Greed: {fng_top} &nbsp;|&nbsp; Generated: {generated_at} &nbsp;|&nbsp; Auto-refreshes every {REFRESH_SECONDS}s in-browser, data regenerated {DATA_REFRESH_LABEL}</div>
 </header>
+{glance_html}
 {banner_html}
 {tabs_inputs}
 <div class="tabbar">{tabs_labels}</div>
@@ -975,8 +1075,10 @@ def main():
         fire_toast_notifications(newly_triggered)
 
     log(f"Running screener over top {SCREENER_SIZE} coins by market cap...")
-    screener_results = build_screener(fng_value)
-    log(f"Screener produced {len(screener_results)} ranked coins")
+    prev_screener_state = state.get("_screener", {})
+    screener_results, new_screener_state = build_screener(fng_value, prev_screener_state, generated_at)
+    log(f"Screener produced {len(screener_results)} ranked coins "
+        f"({sum(1 for r in screener_results if r.get('stale'))} cached/stale)")
 
     html = render(coins_data, fng_value, fng_classification, generated_at, any_stale,
                    alerts_results, screener_results)
@@ -984,7 +1086,7 @@ def main():
         f.write(html)
 
     new_state = {"_fng_value": fng_value, "_fng_classification": fng_classification,
-                 "_alerts_state": new_alerts_state}
+                 "_alerts_state": new_alerts_state, "_screener": new_screener_state}
     for cd in coins_data:
         new_state[cd["key"]] = {k: v for k, v in cd.items() if k != "stale"}
     save_state(new_state)
