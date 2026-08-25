@@ -2,7 +2,7 @@
 
 A BTC/ETH market dashboard that regenerates itself automatically and publishes to GitHub Pages — free-tier data only, no paid APIs, no server to maintain.
 
-**Live URL:** set after the repo is created and Pages is enabled (see below).
+**Live URL:** https://ichbinsakib.github.io/crypto-dashboard/
 
 ## What it shows
 
@@ -10,6 +10,7 @@ A BTC/ETH market dashboard that regenerates itself automatically and publishes t
 - Funding rate, open interest trend, futures mark/index premium (Binance public API)
 - Fear & Greed Index (Alternative.me), used as a retail-sentiment proxy
 - A heuristic cycle-stage model (Accumulation / Markup / Distribution / Markdown) and a 1-10 "heat score", both derived from the numbers above — not a third-party analytics product
+- **Spot Signal (educational):** a transparent, rule-based reading of whether current conditions resemble a historical spot accumulation or distribution zone. Combines proximity to key levels, Fear & Greed, cycle stage, price structure, extension from the 200-day average, and futures crowd positioning into a scored HOLD / ACCUMULATE / DISTRIBUTE-style label — every factor and its point contribution is shown, nothing is hidden. It is not backtested and not a trade instruction; see `compute_spot_signal()` in `dashboard.py` for the exact rules.
 - Price alerts you define in `data/alerts_config.json`
 
 Rows that need paid on-chain data (MVRV Z-Score, NUPL, exchange flows, ETF flows) are explicitly marked **Unavailable** rather than faked.

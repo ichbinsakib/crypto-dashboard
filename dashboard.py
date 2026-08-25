@@ -342,6 +342,102 @@ def heat_score(pct_30d, dist_from_sma200_pct, funding_pct, fng_value):
     return round(sum(parts) / len(parts), 1)
 
 
+def compute_spot_signal(c, price_struct_label, stage, fng_value, funding_pct):
+    """
+    Educational, rule-based spot (no-leverage) reading: does the current mix of
+    conditions historically resemble an accumulation zone, a distribution zone,
+    or neither? Every factor below is shown to the user alongside its point
+    contribution -- this is a teaching aid, not a trade instruction.
+    """
+    rows = []
+    total = 0
+
+    price = c.get("price")
+    support = c.get("support_30d")
+    resistance = c.get("resistance_30d")
+    dist_sma200_pct = None
+    if price and c.get("sma200"):
+        dist_sma200_pct = (price - c["sma200"]) / c["sma200"] * 100
+
+    # 1. Proximity to 30d support/resistance (mean-reversion zone)
+    if price and support and price <= support * 1.05:
+        pts, reading = 2, f"Price within 5% of 30d support ({fmt_usd(support, 0)})"
+    elif price and resistance and price >= resistance * 0.95:
+        pts, reading = -1, f"Price within 5% of 30d resistance ({fmt_usd(resistance, 0)})"
+    else:
+        pts, reading = 0, "Mid-range between 30d support/resistance"
+    rows.append(("Proximity to key levels", reading, pts))
+    total += pts
+
+    # 2. Fear & Greed (contrarian sentiment)
+    if fng_value is None:
+        pts, reading = 0, "No sentiment data"
+    elif fng_value <= 25:
+        pts, reading = 2, f"{fng_value} - Extreme Fear (contrarian accumulate zone)"
+    elif fng_value <= 45:
+        pts, reading = 1, f"{fng_value} - Fear"
+    elif fng_value <= 54:
+        pts, reading = 0, f"{fng_value} - Neutral"
+    elif fng_value <= 74:
+        pts, reading = -1, f"{fng_value} - Greed"
+    else:
+        pts, reading = -2, f"{fng_value} - Extreme Greed (euphoria risk)"
+    rows.append(("Sentiment (Fear & Greed)", reading, pts))
+    total += pts
+
+    # 3. Cycle stage heuristic
+    stage_points = {"Accumulation": 2, "Markup": 1, "Markdown": -1, "Distribution": -2}
+    pts = stage_points.get(stage, 0)
+    rows.append(("Cycle stage (heuristic)", stage, pts))
+    total += pts
+
+    # 4. Price structure
+    struct_points = {"Uptrend": 1, "Range / Consolidation": 0, "Downtrend": -1,
+                      "Parabolic (blow-off risk)": -2}
+    pts = struct_points.get(price_struct_label, 0)
+    rows.append(("Price structure", price_struct_label, pts))
+    total += pts
+
+    # 5. Extension from the 200-day average (overheat / capitulation check)
+    if dist_sma200_pct is None:
+        pts, reading = 0, "No 200-day average data"
+    elif dist_sma200_pct > 30:
+        pts, reading = -2, f"{dist_sma200_pct:+.1f}% above 200d avg (very extended)"
+    elif dist_sma200_pct > 10:
+        pts, reading = -1, f"{dist_sma200_pct:+.1f}% above 200d avg (extended)"
+    elif dist_sma200_pct < -15:
+        pts, reading = -1, f"{dist_sma200_pct:+.1f}% below 200d avg (confirmed downtrend)"
+    else:
+        pts, reading = 0, f"{dist_sma200_pct:+.1f}% vs 200d avg (not extended)"
+    rows.append(("Extension from 200d average", reading, pts))
+    total += pts
+
+    # 6. Futures funding/crowd positioning (confluence only, small weight)
+    if funding_pct is None:
+        pts, reading = 0, "No funding data"
+    elif funding_pct >= 0.03 and (fng_value or 0) >= 75:
+        pts, reading = -1, "Overheated longs confirming euphoria"
+    elif funding_pct <= -0.01:
+        pts, reading = 1, "Shorts paying - possible capitulation/squeeze setup"
+    else:
+        pts, reading = 0, "Funding roughly neutral"
+    rows.append(("Futures crowd positioning", reading, pts))
+    total += pts
+
+    if total >= 5:
+        label, status = "ACCUMULATION ZONE", "bullish"
+    elif total >= 2:
+        label, status = "LEAN ACCUMULATE", "bullish"
+    elif total >= -1:
+        label, status = "HOLD / NEUTRAL", "neutral"
+    elif total >= -4:
+        label, status = "CAUTION - REDUCE NEW BUYS", "bearish"
+    else:
+        label, status = "DISTRIBUTION ZONE", "bearish"
+
+    return {"label": label, "status": status, "score": total, "rows": rows}
+
+
 def badge_html(status, text):
     icon = {"bullish": "↗", "bearish": "↘", "neutral": "–", "locked": "\U0001F512"}.get(status, "")
     return f'<span class="badge {status}">{icon} {text}</span>'
@@ -445,6 +541,7 @@ def render(coins_data, fng_value, fng_classification, generated_at, any_stale, a
 
         stage = cycle_stage(c.get("price"), c.get("sma50"), c.get("sma200"), c.get("pct_30d"))
         score = heat_score(c.get("pct_30d"), dist_sma200_pct, funding_pct, fng_value)
+        spot_signal = compute_spot_signal(c, price_struct_label, stage, fng_value, funding_pct)
 
         stages = ["Accumulation", "Markup", "Distribution", "Markdown"]
         cycle_html = "".join(
@@ -517,9 +614,43 @@ def render(coins_data, fng_value, fng_classification, generated_at, any_stale, a
   </div>
 """
 
+        def _pts_badge(pts):
+            if pts > 0:
+                return f'<span class="badge bullish">+{pts}</span>'
+            if pts < 0:
+                return f'<span class="badge bearish">{pts}</span>'
+            return '<span class="badge neutral">0</span>'
+
+        spot_rows_html = "\n".join(
+            f'<tr><td>{name}</td><td class="watch">{reading}</td><td>{_pts_badge(pts)}</td></tr>'
+            for name, reading, pts in spot_signal["rows"]
+        )
+
+        spot_signal_card = f"""
+  <div class="cycle-map spot-signal-card spot-{spot_signal['status']}" style="margin-bottom:20px;">
+    <div class="card-title">🎓 SPOT SIGNAL (educational, rule-based model)</div>
+    <div class="spot-signal-headline">
+      <div class="spot-signal-label {spot_signal['status']}">{spot_signal['label']}</div>
+      <div class="spot-signal-score">Score: {spot_signal['score']:+d}</div>
+    </div>
+    <table class="signal-table" style="margin-top:14px; margin-bottom:0;">
+      <thead><tr><th>Factor</th><th>Current reading</th><th>Points</th></tr></thead>
+      <tbody>{spot_rows_html}</tbody>
+    </table>
+    <div class="sub" style="margin-top:10px;">
+      This is a transparent teaching model, not a trade instruction: it mechanically applies the course framework
+      (contrarian sentiment, cycle stage, trend structure, distance from key levels) to today's numbers and shows its
+      full reasoning above. It has not been backtested, carries no accuracy guarantee, and says nothing about
+      leverage or timing &mdash; it only speaks to whether conditions resemble a historical spot accumulation or
+      distribution zone. Education only, not financial advice.
+    </div>
+  </div>
+"""
+
         panel = f"""
 <div class="panel panel-{c['key'].lower()}">
   {stale_note}
+  {spot_signal_card}
   <div class="top-grid">
     <div class="card">
       <div class="card-title">PRICE ACTION</div>
@@ -616,6 +747,16 @@ def render(coins_data, fng_value, fng_classification, generated_at, any_stale, a
   .alert-banner {{ margin: 14px 24px 0; padding: 12px 18px; background:#3a0d0d; border:1px solid #ef4444; border-radius:10px; color:#fecaca; font-weight:700; font-size:13.5px; animation: pulse 1.6s infinite; }}
   .alert-banner-item {{ padding: 2px 0; }}
   .cycle-map {{ background: var(--panel); border:1px solid var(--border); border-radius:12px; padding:16px 18px; }}
+  .spot-signal-card {{ border-width:2px; }}
+  .spot-signal-card.spot-bullish {{ border-color:#1f6a4a; }}
+  .spot-signal-card.spot-bearish {{ border-color:#7a2e2e; }}
+  .spot-signal-card.spot-neutral {{ border-color:#5a4d18; }}
+  .spot-signal-headline {{ display:flex; align-items:baseline; justify-content:space-between; flex-wrap:wrap; gap:8px; margin-top:4px; }}
+  .spot-signal-label {{ font-size:22px; font-weight:800; letter-spacing:0.5px; }}
+  .spot-signal-label.bullish {{ color: var(--green); }}
+  .spot-signal-label.bearish {{ color: var(--red); }}
+  .spot-signal-label.neutral {{ color: var(--yellow); }}
+  .spot-signal-score {{ font-size:13px; color: var(--muted); font-weight:700; }}
   .cyc-row {{ display:flex; align-items:center; gap:6px; margin-top:10px; }}
   .cyc-box {{ flex:1; text-align:center; padding:14px 8px; border-radius:8px; border:1px solid var(--border); color:var(--muted); font-size:13px; font-weight:700; position:relative; }}
   .cyc-here {{ border-color: var(--accent); color: var(--accent); background:#0d1c26; }}
