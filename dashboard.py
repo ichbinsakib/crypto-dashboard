@@ -16,6 +16,7 @@ import json
 import os
 import datetime
 import subprocess
+import time
 import urllib.request
 
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
@@ -37,6 +38,20 @@ COINS = [
 
 REFRESH_SECONDS = 120  # in-browser auto-reload interval
 DATA_REFRESH_LABEL = "every ~5 min (GitHub Actions, best-effort)"  # keep in sync with .github/workflows/deploy.yml
+
+SCREENER_SIZE = 15  # how many coins to rank; raising this adds run time and CoinGecko rate-limit risk
+# GitHub Actions runners share IP pools hammered by countless other CI jobs hitting CoinGecko,
+# so they get throttled harder than a residential IP -- back off more there.
+SCREENER_RATE_LIMIT_DELAY = 12 if IS_CI else 6
+SCREENER_RETRY_BACKOFF = 15 if IS_CI else 8
+SCREENER_EXCLUDE_IDS = {
+    # stablecoins -- an accumulate/distribute reading is meaningless for these
+    "tether", "usd-coin", "binance-usd", "dai", "true-usd", "frax", "usdd",
+    "first-digital-usd", "ethena-usde", "paypal-usd", "usds", "susds",
+    # wrapped/staked duplicates of coins already covered on their own tabs
+    "wrapped-bitcoin", "weth", "staked-ether", "wrapped-steth",
+    "coinbase-wrapped-btc", "wrapped-eeth", "weeth",
+}
 
 
 def log(msg):
@@ -438,6 +453,72 @@ def compute_spot_signal(c, price_struct_label, stage, fng_value, funding_pct):
     return {"label": label, "status": status, "score": total, "rows": rows}
 
 
+def fetch_screener_markets(limit=SCREENER_SIZE):
+    fetch_n = limit + 15  # pad so exclusions still leave `limit` coins
+    url = (f"https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd"
+           f"&order=market_cap_desc&per_page={fetch_n}&page=1"
+           f"&price_change_percentage=1h,24h,7d,30d")
+    data = http_get_json(url)
+    covered_ids = {c["cg_id"] for c in COINS}
+    out = []
+    for d in data:
+        if d["id"] in SCREENER_EXCLUDE_IDS or d["id"] in covered_ids:
+            continue
+        out.append(d)
+        if len(out) >= limit:
+            break
+    return out
+
+
+def compute_spot_signal_lite(m, chart, fng_value):
+    """Same rule-based model as compute_spot_signal, minus the futures crowd-positioning
+    factor (that needs a per-symbol Binance call, too expensive to do for a whole screener
+    universe on the free tier). Reuses compute_spot_signal by building a compatible dict."""
+    price = m.get("current_price")
+    pct_24h = m.get("price_change_percentage_24h_in_currency")
+    pct_7d = m.get("price_change_percentage_7d_in_currency")
+    pct_30d = m.get("price_change_percentage_30d_in_currency")
+
+    sma50_v = sma(chart, 50)
+    sma200_v = sma(chart, 200)
+    support = min(chart[-30:]) if len(chart) >= 30 else None
+    resistance = max(chart[-30:]) if len(chart) >= 30 else None
+
+    price_struct_label, _ = classify_price_structure(pct_24h, pct_7d)
+    stage = cycle_stage(price, sma50_v, sma200_v, pct_30d)
+
+    fake_c = {"price": price, "support_30d": support, "resistance_30d": resistance, "sma200": sma200_v}
+    result = compute_spot_signal(fake_c, price_struct_label, stage, fng_value, funding_pct=None)
+    result.update({
+        "id": m.get("id"), "symbol": (m.get("symbol") or "").upper(), "name": m.get("name"),
+        "price": price, "pct_24h": pct_24h, "pct_7d": pct_7d,
+    })
+    return result
+
+
+def build_screener(fng_value):
+    markets, err = safe_fetch("screener markets", fetch_screener_markets)
+    if not markets:
+        return []
+    results = []
+    for m in markets:
+        label = f"screener chart {m['id']}"
+        chart, cerr = safe_fetch(label, lambda mid=m["id"]: fetch_market_chart(mid, days=210))
+        if not chart:
+            log(f"Retrying {label} after rate-limit backoff...")
+            time.sleep(SCREENER_RETRY_BACKOFF)
+            chart, cerr = safe_fetch(label, lambda mid=m["id"]: fetch_market_chart(mid, days=210))
+        time.sleep(SCREENER_RATE_LIMIT_DELAY)
+        if not chart or len(chart) < 50:
+            continue
+        try:
+            results.append(compute_spot_signal_lite(m, chart, fng_value))
+        except Exception as e:
+            log(f"SCREENER SIGNAL FAIL [{m['id']}]: {e}")
+    results.sort(key=lambda r: r["score"], reverse=True)
+    return results
+
+
 def badge_html(status, text):
     icon = {"bullish": "↗", "bearish": "↘", "neutral": "–", "locked": "\U0001F512"}.get(status, "")
     return f'<span class="badge {status}">{icon} {text}</span>'
@@ -504,9 +585,11 @@ def build_coin_data(coin, markets, fng_latest, fng_prev, state):
     return out
 
 
-def render(coins_data, fng_value, fng_classification, generated_at, any_stale, alerts_results=None):
+def render(coins_data, fng_value, fng_classification, generated_at, any_stale,
+           alerts_results=None, screener_results=None):
     total_stale = any_stale
     alerts_results = alerts_results or []
+    screener_results = screener_results or []
     triggered_now = [a for a in alerts_results if a["triggered"]]
 
     banner_html = ""
@@ -521,9 +604,11 @@ def render(coins_data, fng_value, fng_classification, generated_at, any_stale, a
         f'<input type="radio" name="tabs" id="tab-{c["key"].lower()}"{" checked" if i == 0 else ""}>'
         for i, c in enumerate(coins_data)
     )
+    tabs_inputs += '\n<input type="radio" name="tabs" id="tab-screener">'
     tabs_labels = "\n".join(
         f'<label for="tab-{c["key"].lower()}">{c["emoji"]} {c["key"]}</label>' for c in coins_data
     )
+    tabs_labels += '\n<label for="tab-screener">🔍 Screener</label>'
 
     panels = []
     for c in coins_data:
@@ -691,6 +776,68 @@ def render(coins_data, fng_value, fng_classification, generated_at, any_stale, a
 """
         panels.append(panel)
 
+    def _pts_badge2(pts):
+        if pts > 0:
+            return f'<span class="badge bullish">+{pts}</span>'
+        if pts < 0:
+            return f'<span class="badge bearish">{pts}</span>'
+        return '<span class="badge neutral">0</span>'
+
+    if screener_results:
+        top_pick = screener_results[0]
+        bottom_pick = screener_results[-1]
+        screener_rows_html = "\n".join(
+            f'<tr><td>{i+1}</td><td>{r["name"]} <span class="watch">({r["symbol"]})</span></td>'
+            f'<td>{fmt_usd(r["price"])}</td>'
+            f'<td class="{"pos" if (r.get("pct_24h") or 0) >= 0 else "neg"}">{fmt_pct(r.get("pct_24h"))}</td>'
+            f'<td><span class="badge {r["status"]}">{r["label"]}</span></td>'
+            f'<td>{_pts_badge2(r["score"])}</td></tr>'
+            for i, r in enumerate(screener_results)
+        )
+        callouts_html = f"""
+    <div class="top-grid" style="grid-template-columns:1fr 1fr; margin-bottom:20px;">
+      <div class="card">
+        <div class="card-title">🏆 CLOSEST TO ACCUMULATION ZONE</div>
+        <div class="spot-signal-label bullish" style="font-size:19px;">{top_pick['name']} ({top_pick['symbol']})</div>
+        <div class="sub">Score {top_pick['score']:+d} &middot; {fmt_usd(top_pick['price'])} &middot; {top_pick['label']}</div>
+      </div>
+      <div class="card">
+        <div class="card-title">⚠️ CLOSEST TO DISTRIBUTION ZONE</div>
+        <div class="spot-signal-label bearish" style="font-size:19px;">{bottom_pick['name']} ({bottom_pick['symbol']})</div>
+        <div class="sub">Score {bottom_pick['score']:+d} &middot; {fmt_usd(bottom_pick['price'])} &middot; {bottom_pick['label']}</div>
+      </div>
+    </div>
+"""
+        screener_table_html = f"""
+    <table class="signal-table">
+      <thead><tr><th>#</th><th>Coin</th><th>Price</th><th>24h</th><th>Signal</th><th>Score</th></tr></thead>
+      <tbody>{screener_rows_html}</tbody>
+    </table>
+"""
+    else:
+        callouts_html = ""
+        screener_table_html = ('<div class="stale-note">&#9888; Screener data unavailable this run '
+                                '(fetch failed or rate-limited) &mdash; will retry next cycle.</div>')
+
+    screener_panel = f"""
+<div class="panel panel-screener">
+  <div class="cycle-map spot-signal-card" style="margin-bottom:20px;">
+    <div class="card-title">🔍 COIN SCREENER (educational, rule-based ranking)</div>
+    <div class="sub">
+      Scans the top {SCREENER_SIZE} coins by market cap (excluding stablecoins and BTC/ETH wrappers) using the
+      same rule-based model as the Spot Signal on the BTC/ETH tabs &mdash; minus the futures crowd-positioning
+      factor, which needs a per-coin derivatives call too expensive to run at this scale on free-tier APIs.
+      Ranked best-to-worst by score. This is <strong>not a recommendation to trade any coin listed</strong>:
+      small/mid-cap coins carry far higher risk than BTC/ETH, this model is not backtested, and a high score
+      here means "resembles a historical accumulation zone by this simple rule set" &mdash; nothing more.
+      Education only, not financial advice.
+    </div>
+  </div>
+  {callouts_html}
+  {screener_table_html}
+</div>
+"""
+
     fng_top = f"{fng_value} ({fng_classification})" if fng_value is not None else "N/A"
 
     html = f"""<!DOCTYPE html>
@@ -713,10 +860,12 @@ def render(coins_data, fng_value, fng_classification, generated_at, any_stale, a
   .tabbar label {{ padding:8px 20px; border:1px solid var(--border); border-radius:8px; cursor:pointer; color:var(--muted); font-weight:600; }}
   input[type=radio] {{ display:none; }}
   #tab-btc:checked ~ .tabbar label[for=tab-btc],
-  #tab-eth:checked ~ .tabbar label[for=tab-eth] {{ background: var(--accent); color:#04121c; border-color:var(--accent); }}
+  #tab-eth:checked ~ .tabbar label[for=tab-eth],
+  #tab-screener:checked ~ .tabbar label[for=tab-screener] {{ background: var(--accent); color:#04121c; border-color:var(--accent); }}
   .panel {{ display:none; padding: 8px 24px 32px; }}
   #tab-btc:checked ~ .panel-btc {{ display:block; }}
   #tab-eth:checked ~ .panel-eth {{ display:block; }}
+  #tab-screener:checked ~ .panel-screener {{ display:block; }}
   .stale-note {{ background:#3f2d0f; border:1px solid #8a5a00; color:#fbbf24; padding:8px 12px; border-radius:8px; margin-bottom:16px; font-size:13px; }}
   .top-grid {{ display:grid; grid-template-columns: 1.1fr 1.3fr 1fr; gap:16px; margin-bottom: 20px; }}
   .card {{ background: var(--panel); border:1px solid var(--border); border-radius:12px; padding:16px 18px; }}
@@ -775,6 +924,7 @@ def render(coins_data, fng_value, fng_classification, generated_at, any_stale, a
 {tabs_inputs}
 <div class="tabbar">{tabs_labels}</div>
 {"".join(panels)}
+{screener_panel}
 <footer>
   Data sources: CoinGecko (price/market), Binance Futures public API (funding rate, open interest, mark/index premium), Alternative.me (Fear &amp; Greed Index). No paid subscriptions used.<br>
   Rows marked <strong>Unavailable</strong> (MVRV Z-Score, NUPL, exchange flows, ETF flows) require a paid on-chain data provider (e.g. Glassnode, CryptoQuant, Coinglass) that is not connected to this dashboard.<br>
@@ -824,7 +974,12 @@ def main():
         log(f"ALERTS NEWLY TRIGGERED: {[a['id'] for a in newly_triggered]}")
         fire_toast_notifications(newly_triggered)
 
-    html = render(coins_data, fng_value, fng_classification, generated_at, any_stale, alerts_results)
+    log(f"Running screener over top {SCREENER_SIZE} coins by market cap...")
+    screener_results = build_screener(fng_value)
+    log(f"Screener produced {len(screener_results)} ranked coins")
+
+    html = render(coins_data, fng_value, fng_classification, generated_at, any_stale,
+                   alerts_results, screener_results)
     with open(OUTPUT_PATH, "w", encoding="utf-8") as f:
         f.write(html)
 
