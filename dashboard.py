@@ -470,6 +470,52 @@ def compute_spot_signal(c, price_struct_label, stage, fng_value, funding_pct):
     return {"label": label, "status": status, "score": total, "rows": rows, "plain": plain}
 
 
+STOP_BUFFER_PCT = 0.08  # how far below support the pullback stop sits
+BREAKOUT_ENTRY_PCT = 0.01  # how far above resistance confirms a breakout entry
+BREAKOUT_STOP_PCT = 0.04  # how far below the breakout entry the stop sits
+
+
+def compute_trade_levels(c):
+    """
+    Formula-based entry/stop/target levels, derived only from the 30-day support
+    and resistance this dashboard already computes. Two explicit scenarios, same
+    structure as a manual IF/THEN trade plan: pull back to support, or confirmed
+    breakout above resistance. Not a recommendation -- a transparent calculator.
+    """
+    price = c.get("price")
+    support = c.get("support_30d")
+    resistance = c.get("resistance_30d")
+    if not (price and support and resistance and resistance > support):
+        return None
+
+    # Scenario A: pullback to support
+    pb_entry_low, pb_entry_high = support, support * 1.03
+    pb_stop = support * (1 - STOP_BUFFER_PCT)
+    pb_risk = pb_entry_low - pb_stop
+    pb_target1 = resistance
+    pb_target2 = pb_entry_low + 2 * pb_risk
+    pb_risk_pct = (pb_risk / pb_entry_low) * 100 if pb_entry_low else None
+
+    # Scenario B: confirmed breakout above resistance
+    bo_entry = resistance * (1 + BREAKOUT_ENTRY_PCT)
+    bo_stop = resistance * (1 - BREAKOUT_STOP_PCT)
+    bo_risk = bo_entry - bo_stop
+    bo_target1 = bo_entry + bo_risk
+    bo_target2 = bo_entry + 2 * bo_risk
+    bo_risk_pct = (bo_risk / bo_entry) * 100 if bo_entry else None
+
+    return {
+        "pullback": {
+            "entry_low": pb_entry_low, "entry_high": pb_entry_high, "stop": pb_stop,
+            "target1": pb_target1, "target2": pb_target2, "risk_pct": pb_risk_pct,
+        },
+        "breakout": {
+            "entry": bo_entry, "stop": bo_stop,
+            "target1": bo_target1, "target2": bo_target2, "risk_pct": bo_risk_pct,
+        },
+    }
+
+
 def fetch_screener_markets(limit=SCREENER_SIZE):
     fetch_n = limit + 15  # pad so exclusions still leave `limit` coins
     url = (f"https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd"
@@ -784,10 +830,51 @@ def render(coins_data, fng_value, fng_classification, generated_at, any_stale,
   </div>
 """
 
+        trade_levels = compute_trade_levels(c)
+        if trade_levels:
+            pb, bo = trade_levels["pullback"], trade_levels["breakout"]
+            trade_levels_card = f"""
+  <div class="cycle-map trade-levels-card" style="margin-bottom:20px;">
+    <div class="card-title">🎯 TRADE LEVELS (formula-based, educational)</div>
+    <div class="sub" style="margin-bottom:12px;">
+      Derived only from the 30-day support (~{fmt_usd(c.get('support_30d'), 0)}) and resistance
+      (~{fmt_usd(c.get('resistance_30d'), 0)}) shown above. Two scenarios &mdash; pick whichever one
+      actually happens, don't force either. <strong>Entry</strong> is where you'd consider buying,
+      <strong>stop</strong> is where the idea is proven wrong and you exit, <strong>targets</strong> are
+      where you'd take profit. This is arithmetic on today's levels, not a prediction &mdash; it has not
+      been backtested and is not a recommendation to place any trade.
+    </div>
+    <div class="trade-scenarios">
+      <div class="trade-scenario">
+        <div class="trade-scenario-title">Scenario A &mdash; pulls back to support</div>
+        <div class="kv"><span>Entry zone</span><span>{fmt_usd(pb['entry_low'], 2)} &ndash; {fmt_usd(pb['entry_high'], 2)}</span></div>
+        <div class="kv"><span>Stop loss</span><span class="neg">{fmt_usd(pb['stop'], 2)} ({pb['risk_pct']:.1f}% below entry)</span></div>
+        <div class="kv"><span>Target 1 (resistance)</span><span class="pos">{fmt_usd(pb['target1'], 2)}</span></div>
+        <div class="kv"><span>Target 2 (2R)</span><span class="pos">{fmt_usd(pb['target2'], 2)}</span></div>
+      </div>
+      <div class="trade-scenario">
+        <div class="trade-scenario-title">Scenario B &mdash; confirmed breakout above resistance</div>
+        <div class="kv"><span>Entry</span><span>{fmt_usd(bo['entry'], 2)} (1% above resistance)</span></div>
+        <div class="kv"><span>Stop loss</span><span class="neg">{fmt_usd(bo['stop'], 2)} ({bo['risk_pct']:.1f}% below entry)</span></div>
+        <div class="kv"><span>Target 1 (1R)</span><span class="pos">{fmt_usd(bo['target1'], 2)}</span></div>
+        <div class="kv"><span>Target 2 (2R)</span><span class="pos">{fmt_usd(bo['target2'], 2)}</span></div>
+      </div>
+    </div>
+    <div class="sub" style="margin-top:12px;">
+      Position size so the stop distance only costs 1-2% of your account &mdash; never the leverage, the position
+      size is what controls your risk. If price is already above the pullback entry zone and below the breakout
+      entry, this model isn't suggesting either scenario is live right now; wait for one to actually trigger.
+    </div>
+  </div>
+"""
+        else:
+            trade_levels_card = ""
+
         panel = f"""
 <div class="panel panel-{c['key'].lower()}">
   {stale_note}
   {spot_signal_card}
+  {trade_levels_card}
   <div class="top-grid">
     <div class="card">
       <div class="card-title">PRICE ACTION</div>
@@ -1005,6 +1092,11 @@ def render(coins_data, fng_value, fng_classification, generated_at, any_stale,
   .spot-signal-label.bearish {{ color: var(--red); }}
   .spot-signal-label.neutral {{ color: var(--yellow); }}
   .spot-signal-score {{ font-size:13px; color: var(--muted); font-weight:700; }}
+  .trade-levels-card {{ border-width:2px; border-color:#2a4a5a; }}
+  .trade-scenarios {{ display:grid; grid-template-columns: 1fr 1fr; gap:16px; }}
+  .trade-scenario {{ background:#0d1320; border:1px solid var(--border); border-radius:10px; padding:14px 16px; }}
+  .trade-scenario-title {{ font-size:13px; font-weight:800; color: var(--accent); margin-bottom:10px; }}
+  @media (max-width: 700px) {{ .trade-scenarios {{ grid-template-columns: 1fr; }} }}
   .cyc-row {{ display:flex; align-items:center; gap:6px; margin-top:10px; }}
   .cyc-box {{ flex:1; text-align:center; padding:14px 8px; border-radius:8px; border:1px solid var(--border); color:var(--muted); font-size:13px; font-weight:700; position:relative; }}
   .cyc-here {{ border-color: var(--accent); color: var(--accent); background:#0d1c26; }}
