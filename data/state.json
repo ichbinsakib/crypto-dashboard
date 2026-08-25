@@ -4,7 +4,7 @@
   "_alerts_state": {
     "btc-resistance-break": {
       "triggered": true,
-      "last_triggered_at": "2026-08-25 18:26:08"
+      "last_triggered_at": "2026-08-25 18:41:31"
     },
     "btc-support-break": {
       "triggered": false,
@@ -55,7 +55,7 @@
         ],
         [
           "Stretch from long-term average",
-          "+13.8% above its long-term average - a bit stretched",
+          "+13.6% above its long-term average - a bit stretched",
           -1
         ],
         [
@@ -68,10 +68,12 @@
       "id": "binancecoin",
       "symbol": "BNB",
       "name": "BNB",
-      "price": 700.76,
-      "pct_24h": -0.41095,
+      "price": 699.74,
+      "pct_24h": -0.42031,
       "pct_7d": 16.1,
-      "as_of": "2026-08-25 18:26:08",
+      "support_30d": 565.6186945632496,
+      "resistance_30d": 704.0935851533615,
+      "as_of": "2026-08-25 18:41:31",
       "stale": false
     },
     "ripple": {
@@ -167,14 +169,14 @@
       "stale": false
     },
     "tron": {
-      "label": "\ud83d\udfe1 HOLD / NEUTRAL",
-      "status": "neutral",
-      "score": 0,
+      "label": "\ud83d\udfe2 LEAN ACCUMULATE",
+      "status": "bullish",
+      "score": 3,
       "rows": [
         [
           "Price vs. recent range",
-          "Near its 30-day high (~$0) - less room to run",
-          -1
+          "Near its 30-day low (~$0) - historically a better entry",
+          2
         ],
         [
           "Crowd mood (Fear & Greed)",
@@ -193,7 +195,7 @@
         ],
         [
           "Stretch from long-term average",
-          "+5.9% vs its long-term average - not stretched either way",
+          "+5.6% vs its long-term average - not stretched either way",
           0
         ],
         [
@@ -202,14 +204,16 @@
           0
         ]
       ],
-      "plain": "No real edge either way right now - fine to just wait and watch.",
+      "plain": "Leans toward a decent spot to slowly add (DCA) - not a strong signal, just a lean.",
       "id": "tron",
       "symbol": "TRX",
       "name": "TRON",
-      "price": 0.340932,
-      "pct_24h": -0.59437,
-      "pct_7d": 2.8,
-      "as_of": "2026-08-25 17:38:47",
+      "price": 0.340022,
+      "pct_24h": -0.99917,
+      "pct_7d": 1.9,
+      "support_30d": 0.32452018457184145,
+      "resistance_30d": 0.3447899585776834,
+      "as_of": "2026-08-25 18:41:31",
       "stale": false
     },
     "figure-heloc": {
@@ -253,9 +257,11 @@
       "symbol": "FIGR_HELOC",
       "name": "Figure Heloc",
       "price": 1.041,
-      "pct_24h": -0.96949,
+      "pct_24h": -0.93375,
       "pct_7d": 2.6,
-      "as_of": "2026-08-25 18:26:08",
+      "support_30d": 1.0008548889936117,
+      "resistance_30d": 1.0443247364269224,
+      "as_of": "2026-08-25 18:41:31",
       "stale": false
     },
     "hyperliquid": {
@@ -285,7 +291,7 @@
         ],
         [
           "Stretch from long-term average",
-          "+65.3% above its long-term average - very stretched",
+          "+64.8% above its long-term average - very stretched",
           -2
         ],
         [
@@ -298,10 +304,12 @@
       "id": "hyperliquid",
       "symbol": "HYPE",
       "name": "Hyperliquid",
-      "price": 82.43,
-      "pct_24h": 6.80343,
+      "price": 82.22,
+      "pct_24h": 6.44327,
       "pct_7d": 39.4,
-      "as_of": "2026-08-25 18:26:08",
+      "support_30d": 52.199165596630266,
+      "resistance_30d": 82.18366170487917,
+      "as_of": "2026-08-25 18:41:31",
       "stale": false
     },
     "dogecoin": {
@@ -331,7 +339,7 @@
         ],
         [
           "Stretch from long-term average",
-          "-0.5% vs its long-term average - not stretched either way",
+          "-0.6% vs its long-term average - not stretched either way",
           0
         ],
         [
@@ -344,10 +352,12 @@
       "id": "dogecoin",
       "symbol": "DOGE",
       "name": "Dogecoin",
-      "price": 0.088918,
-      "pct_24h": -0.48349,
+      "price": 0.088806,
+      "pct_24h": -0.52045,
       "pct_7d": 26.3,
-      "as_of": "2026-08-25 18:26:08",
+      "support_30d": 0.06912171465773863,
+      "resistance_30d": 0.09337437185106227,
+      "as_of": "2026-08-25 18:41:31",
       "stale": false
     },
     "zcash": {
@@ -390,10 +400,12 @@
       "id": "zcash",
       "symbol": "ZEC",
       "name": "Zcash",
-      "price": 797.94,
-      "pct_24h": -2.2351,
+      "price": 798.11,
+      "pct_24h": -1.84322,
       "pct_7d": 57.7,
-      "as_of": "2026-08-25 18:26:08",
+      "support_30d": 458.62204779933427,
+      "resistance_30d": 851.7729918130331,
+      "as_of": "2026-08-25 18:41:31",
       "stale": false
     },
     "rain": {
@@ -423,7 +435,7 @@
         ],
         [
           "Stretch from long-term average",
-          "+59.1% above its long-term average - very stretched",
+          "+64.4% above its long-term average - very stretched",
           -2
         ],
         [
@@ -436,10 +448,12 @@
       "id": "rain",
       "symbol": "RAIN",
       "name": "Rain",
-      "price": 0.01745173,
-      "pct_24h": 17.19425,
+      "price": 0.01804175,
+      "pct_24h": 21.27932,
       "pct_7d": 21.0,
-      "as_of": "2026-08-25 18:26:08",
+      "support_30d": 0.01228523605280373,
+      "resistance_30d": 0.018045547619837295,
+      "as_of": "2026-08-25 18:41:31",
       "stale": false
     },
     "chainlink": {
@@ -483,9 +497,11 @@
       "symbol": "LINK",
       "name": "Chainlink",
       "price": 11.56,
-      "pct_24h": -0.13049,
+      "pct_24h": -0.23246,
       "pct_7d": 21.3,
-      "as_of": "2026-08-25 18:26:08",
+      "support_30d": 8.060658731722004,
+      "resistance_30d": 12.004223042196735,
+      "as_of": "2026-08-25 18:41:31",
       "stale": false
     },
     "whitebit": {
@@ -515,7 +531,7 @@
         ],
         [
           "Stretch from long-term average",
-          "+34.7% above its long-term average - very stretched",
+          "+34.5% above its long-term average - very stretched",
           -2
         ],
         [
@@ -528,10 +544,12 @@
       "id": "whitebit",
       "symbol": "WBT",
       "name": "WhiteBIT Coin",
-      "price": 73.1,
-      "pct_24h": -0.33928,
+      "price": 73.01,
+      "pct_24h": -0.32656,
       "pct_7d": 30.9,
-      "as_of": "2026-08-25 18:26:08",
+      "support_30d": 54.46347294921598,
+      "resistance_30d": 73.34770771483034,
+      "as_of": "2026-08-25 18:41:31",
       "stale": false
     },
     "leo-token": {
@@ -561,7 +579,7 @@
         ],
         [
           "Stretch from long-term average",
-          "-2.3% vs its long-term average - not stretched either way",
+          "-2.4% vs its long-term average - not stretched either way",
           0
         ],
         [
@@ -574,10 +592,12 @@
       "id": "leo-token",
       "symbol": "LEO",
       "name": "LEO Token",
-      "price": 9.34,
-      "pct_24h": 0.80367,
+      "price": 9.33,
+      "pct_24h": 0.81943,
       "pct_7d": -1.3,
-      "as_of": "2026-08-25 18:26:08",
+      "support_30d": 8.956583026357892,
+      "resistance_30d": 9.783392369630901,
+      "as_of": "2026-08-25 18:41:31",
       "stale": false
     },
     "monero": {
@@ -607,7 +627,7 @@
         ],
         [
           "Stretch from long-term average",
-          "+24.7% above its long-term average - a bit stretched",
+          "+25.0% above its long-term average - a bit stretched",
           -1
         ],
         [
@@ -620,10 +640,12 @@
       "id": "monero",
       "symbol": "XMR",
       "name": "Monero",
-      "price": 440.84,
-      "pct_24h": 1.51018,
+      "price": 441.94,
+      "pct_24h": -0.44642,
       "pct_7d": 5.7,
-      "as_of": "2026-08-25 18:26:08",
+      "support_30d": 341.66098327436066,
+      "resistance_30d": 442.3756562998309,
+      "as_of": "2026-08-25 18:41:31",
       "stale": false
     },
     "cardano": {
@@ -653,7 +675,7 @@
         ],
         [
           "Stretch from long-term average",
-          "-4.9% vs its long-term average - not stretched either way",
+          "-5.0% vs its long-term average - not stretched either way",
           0
         ],
         [
@@ -666,10 +688,12 @@
       "id": "cardano",
       "symbol": "ADA",
       "name": "Cardano",
-      "price": 0.215534,
-      "pct_24h": -2.17685,
+      "price": 0.215363,
+      "pct_24h": -2.09655,
       "pct_7d": 23.4,
-      "as_of": "2026-08-25 18:26:08",
+      "support_30d": 0.15577734360234022,
+      "resistance_30d": 0.22956344834581915,
+      "as_of": "2026-08-25 18:41:31",
       "stale": false
     },
     "stellar": {
@@ -699,7 +723,7 @@
         ],
         [
           "Stretch from long-term average",
-          "+9.8% vs its long-term average - not stretched either way",
+          "+9.7% vs its long-term average - not stretched either way",
           0
         ],
         [
@@ -712,10 +736,12 @@
       "id": "stellar",
       "symbol": "XLM",
       "name": "Stellar",
-      "price": 0.190575,
-      "pct_24h": -1.76533,
+      "price": 0.190509,
+      "pct_24h": -1.33961,
       "pct_7d": 23.9,
-      "as_of": "2026-08-25 18:26:08",
+      "support_30d": 0.15470835505286148,
+      "resistance_30d": 0.20296149892273674,
+      "as_of": "2026-08-25 18:41:31",
       "stale": false
     }
   },
@@ -723,16 +749,16 @@
     "key": "BTC",
     "name": "Bitcoin",
     "emoji": "\u20bf",
-    "price": 79294,
+    "price": 79133,
     "high_24h": 81160,
     "low_24h": 78218,
-    "pct_24h": 0.37297,
+    "pct_24h": 0.32922,
     "pct_7d": 22.3,
     "pct_30d": 22.5,
-    "sma50": 65778.08769366279,
-    "sma200": 69112.8805789037,
+    "sma50": 65774.65800553706,
+    "sma200": 69112.02315687228,
     "support_30d": 62802.63461583794,
-    "resistance_30d": 79295.70141089271,
+    "resistance_30d": 79124.21700460654,
     "mark_price": 77339.83681159,
     "index_price": 77341.30673913,
     "funding_rate": 0.0001,
@@ -745,14 +771,14 @@
     "key": "ETH",
     "name": "Ethereum",
     "emoji": "\u039e",
-    "price": 2473.77,
+    "price": 2468.14,
     "high_24h": 2527.89,
     "low_24h": 2445.29,
-    "pct_24h": -0.18546,
+    "pct_24h": -0.20012,
     "pct_7d": 29.0,
     "pct_30d": 29.1,
-    "sma50": 1948.194727748866,
-    "sma200": 2011.7931560612194,
+    "sma50": 1948.089231609095,
+    "sma200": 2011.7667820262766,
     "support_30d": 1844.6142829481894,
     "resistance_30d": 2518.784836324378,
     "mark_price": 2460.88613178,
