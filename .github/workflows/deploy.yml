@@ -42,7 +42,16 @@ jobs:
           git config user.email "github-actions[bot]@users.noreply.github.com"
           git add data/
           git diff --cached --quiet || git commit -m "Update dashboard data"
-          git push
+          for i in 1 2 3 4 5; do
+            if git push; then
+              exit 0
+            fi
+            echo "Push rejected (likely a concurrent run) -- rebasing onto origin/main and retrying ($i/5)..."
+            git pull --rebase origin main
+            sleep 3
+          done
+          echo "::error::Could not push after 5 attempts"
+          exit 1
 
       - uses: actions/upload-pages-artifact@v3
         with:
