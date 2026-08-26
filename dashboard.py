@@ -388,9 +388,9 @@ def compute_spot_signal(c, price_struct_label, stage, fng_value, funding_pct):
 
     # 1. Distance to recent price floor/ceiling (mean-reversion zone)
     if price and support and price <= support * 1.05:
-        pts, reading = 2, f"Near its 30-day low (~{fmt_usd(support, 0)}) - historically a better entry"
+        pts, reading = 2, f"Near its 30-day low (~{fmt_usd_adaptive(support)}) - historically a better entry"
     elif price and resistance and price >= resistance * 0.95:
-        pts, reading = -1, f"Near its 30-day high (~{fmt_usd(resistance, 0)}) - less room to run"
+        pts, reading = -1, f"Near its 30-day high (~{fmt_usd_adaptive(resistance)}) - less room to run"
     else:
         pts, reading = 0, "Sitting in the middle of its 30-day range"
     rows.append(("Price vs. recent range", reading, pts))
@@ -570,18 +570,6 @@ def compute_spot_signal_lite(m, chart, fng_value):
         "support_30d": support, "resistance_30d": resistance,
     })
     return result
-
-
-def pick_primary_scenario(trade_levels, price):
-    """For compact card display, show whichever scenario (pullback vs breakout) is
-    currently closer to price -- i.e. the more immediately relevant one to watch."""
-    pb, bo = trade_levels["pullback"], trade_levels["breakout"]
-    pb_mid = (pb["entry_low"] + pb["entry_high"]) / 2
-    if price is None:
-        return "pullback", pb
-    if abs(price - pb_mid) <= abs(price - bo["entry"]):
-        return "pullback", pb
-    return "breakout", bo
 
 
 def build_screener(fng_value, prev_screener_state, generated_at):
@@ -841,10 +829,24 @@ def render(coins_data, fng_value, fng_classification, generated_at, any_stale,
       <div class="spot-signal-label {spot_signal['status']}">{spot_signal['label']}</div>
       <div class="spot-signal-score">Score: {spot_signal['score']:+d}</div>
     </div>
+    <div class="screener-plain" style="margin-top:6px;">{spot_signal['plain']}</div>
     <table class="signal-table" style="margin-top:14px; margin-bottom:0;">
       <thead><tr><th>Factor</th><th>Current reading</th><th>Points</th></tr></thead>
       <tbody>{spot_rows_html}</tbody>
     </table>
+    <details class="screener-details" style="margin-top:12px;">
+      <summary>What do the score bands mean?</summary>
+      <table class="signal-table score-legend" style="margin-top:10px; margin-bottom:0;">
+        <thead><tr><th>Score range</th><th>Label</th><th>What it means</th></tr></thead>
+        <tbody>
+          <tr><td>&ge; +5</td><td><span class="badge bullish">🟢 ACCUMULATION ZONE</span></td><td class="watch">Strong historical buy-the-dip setup</td></tr>
+          <tr><td>+2 to +4</td><td><span class="badge bullish">🟢 LEAN ACCUMULATE</span></td><td class="watch">Leans favorable, not a strong signal</td></tr>
+          <tr><td>-1 to +1</td><td><span class="badge neutral">🟡 HOLD / NEUTRAL</span></td><td class="watch">No real edge either way</td></tr>
+          <tr><td>-4 to -2</td><td><span class="badge bearish">🔴 CAUTION</span></td><td class="watch">Getting risky, hold off on new buys</td></tr>
+          <tr><td>&le; -5</td><td><span class="badge bearish">🔴 DISTRIBUTION ZONE</span></td><td class="watch">Stretched/euphoric, historical selling zone</td></tr>
+        </tbody>
+      </table>
+    </details>
     <div class="sub" style="margin-top:10px;">
       This is a transparent teaching model, not a trade instruction: it mechanically applies the course framework
       (contrarian sentiment, cycle stage, trend structure, distance from key levels) to today's numbers and shows its
@@ -954,22 +956,38 @@ def render(coins_data, fng_value, fng_classification, generated_at, any_stale,
         def _screener_card(r, rank):
             tl = compute_trade_levels(r)
             if tl:
-                scenario_name, sc = pick_primary_scenario(tl, r.get("price"))
-                if scenario_name == "pullback":
-                    scenario_title = "If it pulls back to support"
-                    entry_txt = f"{fmt_usd_adaptive(sc['entry_low'])} &ndash; {fmt_usd_adaptive(sc['entry_high'])}"
-                else:
-                    scenario_title = "If it breaks out above resistance"
-                    entry_txt = fmt_usd_adaptive(sc["entry"])
+                pb, bo = tl["pullback"], tl["breakout"]
                 trade_html = f"""
-      <div class="screener-trade">
-        <div class="screener-trade-title">🎯 {scenario_title}</div>
-        <div class="kv"><span>Buy</span><span>{entry_txt}</span></div>
-        <div class="kv"><span>Stop loss</span><span class="neg">{fmt_usd_adaptive(sc['stop'])}</span></div>
-        <div class="kv"><span>Take profit</span><span class="pos">{fmt_usd_adaptive(sc['target1'])} / {fmt_usd_adaptive(sc['target2'])}</span></div>
+      <div class="screener-trade-grid">
+        <div class="screener-trade">
+          <div class="screener-trade-title">🎯 If it pulls back to support</div>
+          <div class="kv"><span>Buy</span><span>{fmt_usd_adaptive(pb['entry_low'])}&ndash;{fmt_usd_adaptive(pb['entry_high'])}</span></div>
+          <div class="kv"><span>Stop</span><span class="neg">{fmt_usd_adaptive(pb['stop'])}</span></div>
+          <div class="kv"><span>Target</span><span class="pos">{fmt_usd_adaptive(pb['target1'])} / {fmt_usd_adaptive(pb['target2'])}</span></div>
+        </div>
+        <div class="screener-trade">
+          <div class="screener-trade-title">🎯 If it breaks out above resistance</div>
+          <div class="kv"><span>Buy</span><span>{fmt_usd_adaptive(bo['entry'])}</span></div>
+          <div class="kv"><span>Stop</span><span class="neg">{fmt_usd_adaptive(bo['stop'])}</span></div>
+          <div class="kv"><span>Target</span><span class="pos">{fmt_usd_adaptive(bo['target1'])} / {fmt_usd_adaptive(bo['target2'])}</span></div>
+        </div>
       </div>"""
             else:
                 trade_html = '<div class="screener-trade sub">Not enough range data yet for trade levels.</div>'
+
+            reasoning_rows = "\n".join(
+                f'<tr><td>{name}</td><td class="watch">{reading}</td><td>{_pts_badge2(pts)}</td></tr>'
+                for name, reading, pts in r.get("rows", [])
+            )
+            reasoning_html = f"""
+      <details class="screener-details">
+        <summary>Why this score? ({len(r.get('rows', []))} factors)</summary>
+        <table class="signal-table" style="margin-top:10px; margin-bottom:0;">
+          <thead><tr><th>Factor</th><th>Current reading</th><th>Points</th></tr></thead>
+          <tbody>{reasoning_rows}</tbody>
+        </table>
+      </details>""" if r.get("rows") else ""
+
             cached_tag = ' <span class="watch">&middot; cached</span>' if r.get("stale") else ""
             return f"""
     <div class="screener-card {r['status']}">
@@ -984,7 +1002,9 @@ def render(coins_data, fng_value, fng_classification, generated_at, any_stale,
         <span class="badge {r['status']}">{r['label']}</span>
         <span class="sub">Score {_pts_badge2(r['score'])}</span>
       </div>
+      <div class="screener-plain">{r.get('plain', '')}</div>
       {trade_html}
+      {reasoning_html}
     </div>"""
 
         callouts_html = f"""
@@ -1020,13 +1040,21 @@ def render(coins_data, fng_value, fng_classification, generated_at, any_stale,
       Ranked best-to-worst by score. This is <strong>not a recommendation to trade any coin listed</strong>:
       small/mid-cap coins carry far higher risk than BTC/ETH, this model is not backtested, and a high score
       here means "resembles a historical accumulation zone by this simple rule set" &mdash; nothing more.
-      Each card's Buy/Stop/Take-profit levels are the same formula-based calculator used on the BTC/ETH tabs,
-      showing whichever scenario (pullback to support, or breakout above resistance) is currently closer to
-      price &mdash; arithmetic on today's chart levels, not a prediction.
+      Each card shows <strong>both</strong> trade scenarios (pullback to support, or confirmed breakout above
+      resistance) from the same formula-based calculator used on the BTC/ETH tabs &mdash; arithmetic on today's
+      chart levels, not a prediction &mdash; plus an expandable breakdown of every factor that produced the score.
       Education only, not financial advice.
-      <br><br><strong>Legend:</strong> 🟢 leans toward a historical accumulation zone &middot;
-      🟡 no edge either way, hold &middot; 🔴 leans toward caution/distribution &mdash; reduce new buys.
     </div>
+    <table class="signal-table score-legend" style="margin-top:14px; margin-bottom:0;">
+      <thead><tr><th>Score range</th><th>Label</th><th>What it means</th></tr></thead>
+      <tbody>
+        <tr><td>&ge; +5</td><td><span class="badge bullish">🟢 ACCUMULATION ZONE</span></td><td class="watch">Strong historical buy-the-dip setup</td></tr>
+        <tr><td>+2 to +4</td><td><span class="badge bullish">🟢 LEAN ACCUMULATE</span></td><td class="watch">Leans favorable, not a strong signal</td></tr>
+        <tr><td>-1 to +1</td><td><span class="badge neutral">🟡 HOLD / NEUTRAL</span></td><td class="watch">No real edge either way</td></tr>
+        <tr><td>-4 to -2</td><td><span class="badge bearish">🔴 CAUTION</span></td><td class="watch">Getting risky, hold off on new buys</td></tr>
+        <tr><td>&le; -5</td><td><span class="badge bearish">🔴 DISTRIBUTION ZONE</span></td><td class="watch">Stretched/euphoric, historical selling zone</td></tr>
+      </tbody>
+    </table>
   </div>
   {callouts_html}
   {screener_table_html}
@@ -1161,6 +1189,12 @@ def render(coins_data, fng_value, fng_classification, generated_at, any_stale,
   .screener-signal {{ display:flex; justify-content:space-between; align-items:center; margin-bottom:10px; }}
   .screener-trade {{ background:#0d1320; border:1px solid var(--border); border-radius:8px; padding:10px 12px; }}
   .screener-trade-title {{ font-size:12px; font-weight:800; color: var(--accent); margin-bottom:6px; }}
+  .screener-trade-grid {{ display:grid; grid-template-columns: 1fr 1fr; gap:10px; margin-bottom:10px; }}
+  .screener-plain {{ font-size:12.5px; color: var(--text); line-height:1.5; margin-bottom:10px; }}
+  .screener-details {{ font-size:12.5px; }}
+  .screener-details summary {{ cursor:pointer; color: var(--accent); font-weight:700; padding:4px 0; }}
+  .score-legend th, .score-legend td {{ font-size:12px; padding:8px 12px; }}
+  @media (max-width: 480px) {{ .screener-trade-grid {{ grid-template-columns: 1fr; }} }}
   .cyc-row {{ display:flex; align-items:center; gap:6px; margin-top:10px; }}
   .cyc-box {{ flex:1; text-align:center; padding:14px 8px; border-radius:8px; border:1px solid var(--border); color:var(--muted); font-size:13px; font-weight:700; position:relative; }}
   .cyc-here {{ border-color: var(--accent); color: var(--accent); background:#0d1c26; }}
