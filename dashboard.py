@@ -572,13 +572,14 @@ def compute_spot_signal_lite(m, chart, fng_value):
     return result
 
 
-def build_screener(fng_value, prev_screener_state, generated_at):
+def build_screener(fng_value, prev_screener_state, generated_at, markets=None):
     """Ranks the top-market-cap universe by the lite spot signal. If a coin's live fetch
     fails (CoinGecko free-tier rate limiting is common), falls back to its last successful
     reading rather than dropping it -- so a coin like SOL or XRP getting rate-limited on one
     run doesn't just vanish from the table, it shows up marked as cached."""
     prev_screener_state = prev_screener_state or {}
-    markets, err = safe_fetch("screener markets", fetch_screener_markets)
+    if markets is None:
+        markets, err = safe_fetch("screener markets", fetch_screener_markets)
     if not markets:
         cached = []
         for v in prev_screener_state.values():
@@ -626,6 +627,135 @@ def build_screener(fng_value, prev_screener_state, generated_at):
         log(f"Screener live-fetch issues: {issues}")
     results.sort(key=lambda r: r["score"], reverse=True)
     return results, new_state
+
+
+BINANCE_SPOT_KLINES_URL = "https://api.binance.com/api/v3/klines"
+INTRADAY_TIMEFRAMES = {
+    # interval -> (binance klines interval string, candles to fetch, candles used for range/ATR)
+    "15m": {"binance_interval": "15m", "fetch_limit": 100, "lookback": 30, "window_label": "last ~7.5 hours"},
+    "1h": {"binance_interval": "1h", "fetch_limit": 100, "lookback": 24, "window_label": "last 24 hours"},
+}
+INTRADAY_RATE_LIMIT_DELAY = 0.35  # Binance's public spot API is far more permissive than CoinGecko's
+
+
+def fetch_binance_spot_klines(symbol, interval, limit):
+    url = f"{BINANCE_SPOT_KLINES_URL}?symbol={symbol}&interval={interval}&limit={limit}"
+    return http_get_json(url)
+
+
+def compute_intraday_signal(klines, lookback, window_label):
+    """
+    Lean, technicals-only version of the spot signal for short timeframes -- no Fear & Greed
+    or cycle-stage factors, since those are daily-sentiment concepts that don't mean much on a
+    15-minute or 1-hour chart. Uses only price action from the candles themselves: where price
+    sits in its recent range, momentum vs a short average, and direction over the window.
+    Trade levels are ATR-based (scaled to actual recent volatility) instead of the fixed
+    percentage buffers used on the daily model, which matters far more at this timeframe.
+    """
+    if not klines or len(klines) < lookback + 2:
+        return None
+    highs = [float(k[2]) for k in klines]
+    lows = [float(k[3]) for k in klines]
+    closes = [float(k[4]) for k in klines]
+    price = closes[-1]
+
+    recent_high = max(highs[-lookback:])
+    recent_low = min(lows[-lookback:])
+    avg_close = sum(closes[-lookback:]) / lookback
+    atr = sum(highs[i] - lows[i] for i in range(-lookback, 0)) / lookback
+    if atr <= 0:
+        return None
+
+    rows = []
+    total = 0
+
+    if price <= recent_low + atr:
+        pts, reading = 2, f"Near the low of its {window_label} (~{fmt_usd_adaptive(recent_low)})"
+    elif price >= recent_high - atr:
+        pts, reading = -1, f"Near the high of its {window_label} (~{fmt_usd_adaptive(recent_high)})"
+    else:
+        pts, reading = 0, f"Mid-range for its {window_label}"
+    rows.append(("Price vs. recent range", reading, pts))
+    total += pts
+
+    dist_avg_pct = (price - avg_close) / avg_close * 100 if avg_close else 0
+    if dist_avg_pct > 3:
+        pts, reading = -1, f"{dist_avg_pct:+.1f}% above its short-term average - a bit stretched"
+    elif dist_avg_pct < -3:
+        pts, reading = -1, f"{dist_avg_pct:+.1f}% below its short-term average - weak right now"
+    else:
+        pts, reading = 1, f"{dist_avg_pct:+.1f}% vs its short-term average - trading near it"
+    rows.append(("Momentum vs. short-term average", reading, pts))
+    total += pts
+
+    move_pct = (closes[-1] - closes[-lookback]) / closes[-lookback] * 100 if closes[-lookback] else 0
+    if move_pct > 1:
+        pts, reading = 1, f"Up {move_pct:.1f}% over its {window_label} - short-term uptrend"
+    elif move_pct < -1:
+        pts, reading = -1, f"Down {move_pct:.1f}% over its {window_label} - short-term downtrend"
+    else:
+        pts, reading = 0, f"{move_pct:+.1f}% over its {window_label} - flat, no clear direction"
+    rows.append(("Direction over this window", reading, pts))
+    total += pts
+
+    if total >= 3:
+        label, status = "🟢 NEAR-TERM DIP ZONE", "bullish"
+        plain = "Near the bottom of its short-term range with improving momentum."
+    elif total >= 1:
+        label, status = "🟢 LEAN LONG (short-term)", "bullish"
+        plain = "Mildly favorable for a quick, tightly-managed trade -- not a strong signal."
+    elif total >= -1:
+        label, status = "🟡 NO CLEAR EDGE", "neutral"
+        plain = "Choppy on this timeframe -- no clean setup right now."
+    else:
+        label, status = "🔴 STRETCHED - AVOID CHASING", "bearish"
+        plain = "Extended on this timeframe; chasing here has poor risk/reward."
+
+    entry = recent_low
+    stop = recent_low - atr
+    risk = entry - stop
+    target1 = entry + risk
+    target2 = entry + 2 * risk
+
+    return {
+        "label": label, "status": status, "score": total, "rows": rows, "plain": plain,
+        "price": price, "atr": atr,
+        "trade": {"entry": entry, "stop": stop, "target1": target1, "target2": target2,
+                  "risk_pct": (risk / entry * 100) if entry else None},
+    }
+
+
+def build_intraday_screener(markets, timeframe_key):
+    """Runs the lean intraday model over the same coin universe as the daily screener,
+    using Binance's public spot klines (far more generous rate limits than CoinGecko).
+    Coins without a liquid BINANCE-quoted USDT pair (small-caps, tokenized RWA products
+    like FIGR_HELOC, etc.) are silently skipped rather than shown broken."""
+    cfg = INTRADAY_TIMEFRAMES[timeframe_key]
+    results = []
+    skipped = []
+    for m in markets or []:
+        symbol = (m.get("symbol") or "").upper()
+        if not symbol:
+            continue
+        pair = f"{symbol}USDT"
+        klines, err = safe_fetch(
+            f"{timeframe_key} klines {pair}",
+            lambda p=pair: fetch_binance_spot_klines(p, cfg["binance_interval"], cfg["fetch_limit"]))
+        time.sleep(INTRADAY_RATE_LIMIT_DELAY)
+        if not klines:
+            skipped.append(pair)
+            continue
+        try:
+            sig = compute_intraday_signal(klines, cfg["lookback"], cfg["window_label"])
+            if sig:
+                sig.update({"id": m.get("id"), "symbol": symbol, "name": m.get("name")})
+                results.append(sig)
+        except Exception as e:
+            log(f"INTRADAY SIGNAL FAIL [{pair}]: {e}")
+    if skipped:
+        log(f"Intraday ({timeframe_key}) skipped (no Binance pair or fetch failed): {skipped}")
+    results.sort(key=lambda r: r["score"], reverse=True)
+    return results
 
 
 def badge_html(status, text):
@@ -695,10 +825,12 @@ def build_coin_data(coin, markets, fng_latest, fng_prev, state):
 
 
 def render(coins_data, fng_value, fng_classification, generated_at, any_stale,
-           alerts_results=None, screener_results=None):
+           alerts_results=None, screener_results=None, intraday_results=None):
     total_stale = any_stale
+    generated_at_iso = generated_at.replace(" ", "T") + "Z"  # generated_at is naive UTC (GH runners run in UTC)
     alerts_results = alerts_results or []
     screener_results = screener_results or []
+    intraday_results = intraday_results or {}
     triggered_now = [a for a in alerts_results if a["triggered"]]
 
     banner_html = ""
@@ -1029,21 +1161,69 @@ def render(coins_data, fng_value, fng_classification, generated_at, any_stale,
         screener_table_html = ('<div class="stale-note">&#9888; Screener data unavailable this run '
                                 '(fetch failed or rate-limited) &mdash; will retry next cycle.</div>')
 
+    def _intraday_card(r, rank):
+        t = r["trade"]
+        reasoning_rows = "\n".join(
+            f'<tr><td>{name}</td><td class="watch">{reading}</td><td>{_pts_badge2(pts)}</td></tr>'
+            for name, reading, pts in r.get("rows", [])
+        )
+        return f"""
+    <div class="screener-card {r['status']}">
+      <div class="screener-card-top">
+        <div class="screener-rank">#{rank}</div>
+        <div>
+          <div class="screener-name">{r['name']} <span class="watch">({r['symbol']})</span></div>
+          <div class="sub">{fmt_usd_adaptive(r['price'])}</div>
+        </div>
+      </div>
+      <div class="screener-signal">
+        <span class="badge {r['status']}">{r['label']}</span>
+        <span class="sub">Score {_pts_badge2(r['score'])}</span>
+      </div>
+      <div class="screener-plain">{r.get('plain', '')}</div>
+      <div class="screener-trade">
+        <div class="screener-trade-title">🎯 Buy the recent low, ATR-based stop</div>
+        <div class="kv"><span>Buy</span><span>{fmt_usd_adaptive(t['entry'])}</span></div>
+        <div class="kv"><span>Stop</span><span class="neg">{fmt_usd_adaptive(t['stop'])} ({t['risk_pct']:.1f}% below entry)</span></div>
+        <div class="kv"><span>Target</span><span class="pos">{fmt_usd_adaptive(t['target1'])} / {fmt_usd_adaptive(t['target2'])}</span></div>
+      </div>
+      <details class="screener-details">
+        <summary>Why this score? ({len(r.get('rows', []))} factors)</summary>
+        <table class="signal-table" style="margin-top:10px; margin-bottom:0;">
+          <thead><tr><th>Factor</th><th>Current reading</th><th>Points</th></tr></thead>
+          <tbody>{reasoning_rows}</tbody>
+        </table>
+      </details>
+    </div>"""
+
+    def _intraday_panel_html(tf_key, tf_name, window_desc):
+        results = intraday_results.get(tf_key, [])
+        if not results:
+            return (f'<div class="stale-note">&#9888; {tf_name} data unavailable this run '
+                     '(no Binance-listed pairs matched, or fetch failed) &mdash; will retry next cycle.</div>')
+        cards = "".join(_intraday_card(r, i + 1) for i, r in enumerate(results))
+        return f"""
+    <div class="sub" style="margin-bottom:14px;">
+      {tf_name} setups from Binance's public {window_desc} candles &mdash; pure price-action model (no
+      sentiment/cycle factors, those are daily concepts). Coins without a liquid Binance USDT pair are skipped.
+      Buy/stop/target use each coin's own recent volatility (ATR), not a fixed percentage.
+    </div>
+    <div class="screener-grid">{cards}</div>"""
+
+    intraday_15m_html = _intraday_panel_html("15m", "15-Minute", "15-minute")
+    intraday_1h_html = _intraday_panel_html("1h", "1-Hour", "1-hour")
+    daily_html = f"{callouts_html}{screener_table_html}"
+
     screener_panel = f"""
 <div class="panel panel-screener">
   <div class="cycle-map spot-signal-card" style="margin-bottom:20px;">
     <div class="card-title">🔍 COIN SCREENER (educational, rule-based ranking)</div>
     <div class="sub">
-      Scans the top {SCREENER_SIZE} coins by market cap (excluding stablecoins and BTC/ETH wrappers) using the
-      same rule-based model as the Spot Signal on the BTC/ETH tabs &mdash; minus the futures crowd-positioning
-      factor, which needs a per-coin derivatives call too expensive to run at this scale on free-tier APIs.
-      Ranked best-to-worst by score. This is <strong>not a recommendation to trade any coin listed</strong>:
-      small/mid-cap coins carry far higher risk than BTC/ETH, this model is not backtested, and a high score
-      here means "resembles a historical accumulation zone by this simple rule set" &mdash; nothing more.
-      Each card shows <strong>both</strong> trade scenarios (pullback to support, or confirmed breakout above
-      resistance) from the same formula-based calculator used on the BTC/ETH tabs &mdash; arithmetic on today's
-      chart levels, not a prediction &mdash; plus an expandable breakdown of every factor that produced the score.
-      Education only, not financial advice.
+      Scans the top {SCREENER_SIZE} coins by market cap (excluding stablecoins and BTC/ETH wrappers).
+      Pick a timeframe below &mdash; each uses a model suited to that horizon, not the same numbers just relabeled.
+      This is <strong>not a recommendation to trade any coin listed</strong>: small/mid-cap coins carry far higher
+      risk than BTC/ETH, none of this is backtested, and a high score means "resembles a historically favorable
+      setup by this simple rule set" &mdash; nothing more. Education only, not financial advice.
     </div>
     <table class="signal-table score-legend" style="margin-top:14px; margin-bottom:0;">
       <thead><tr><th>Score range</th><th>Label</th><th>What it means</th></tr></thead>
@@ -1056,8 +1236,18 @@ def render(coins_data, fng_value, fng_classification, generated_at, any_stale,
       </tbody>
     </table>
   </div>
-  {callouts_html}
-  {screener_table_html}
+
+  <input type="radio" name="tf" id="tf-15m">
+  <input type="radio" name="tf" id="tf-1h">
+  <input type="radio" name="tf" id="tf-1d" checked>
+  <div class="tabbar" style="padding-left:0;">
+    <label for="tf-15m">⏱ 15 Min</label>
+    <label for="tf-1h">🕐 1 Hour</label>
+    <label for="tf-1d">📅 1 Day</label>
+  </div>
+  <div class="tf-panel tf-panel-15m">{intraday_15m_html}</div>
+  <div class="tf-panel tf-panel-1h">{intraday_1h_html}</div>
+  <div class="tf-panel tf-panel-1d">{daily_html}</div>
 </div>
 """
 
@@ -1099,7 +1289,6 @@ def render(coins_data, fng_value, fng_classification, generated_at, any_stale,
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<meta http-equiv="refresh" content="{REFRESH_SECONDS}">
 <title>Teka Live Dashboard</title>
 <style>
   :root {{
@@ -1121,6 +1310,13 @@ def render(coins_data, fng_value, fng_classification, generated_at, any_stale,
   #tab-btc:checked ~ .panel-btc {{ display:block; }}
   #tab-eth:checked ~ .panel-eth {{ display:block; }}
   #tab-screener:checked ~ .panel-screener {{ display:block; }}
+  .tf-panel {{ display:none; }}
+  #tf-15m:checked ~ .tf-panel-15m {{ display:block; }}
+  #tf-1h:checked ~ .tf-panel-1h {{ display:block; }}
+  #tf-1d:checked ~ .tf-panel-1d {{ display:block; }}
+  #tf-15m:checked ~ .tabbar label[for=tf-15m],
+  #tf-1h:checked ~ .tabbar label[for=tf-1h],
+  #tf-1d:checked ~ .tabbar label[for=tf-1d] {{ background: var(--accent); color:#04121c; border-color:var(--accent); }}
   .stale-note {{ background:#3f2d0f; border:1px solid #8a5a00; color:#fbbf24; padding:8px 12px; border-radius:8px; margin-bottom:16px; font-size:13px; }}
   .top-grid {{ display:grid; grid-template-columns: 1.1fr 1.3fr 1fr; gap:16px; margin-bottom: 20px; }}
   .card {{ background: var(--panel); border:1px solid var(--border); border-radius:12px; padding:16px 18px; }}
@@ -1207,7 +1403,8 @@ def render(coins_data, fng_value, fng_classification, generated_at, any_stale,
 <body>
 <header>
   <h1>&#9889; TEKA LIVE DASHBOARD</h1>
-  <div class="meta">Market Fear &amp; Greed: {fng_top} &nbsp;|&nbsp; Generated: {generated_at} &nbsp;|&nbsp; Auto-refreshes every {REFRESH_SECONDS}s in-browser, data regenerated {DATA_REFRESH_LABEL}</div>
+  <div class="meta">Market Fear &amp; Greed: {fng_top} &nbsp;|&nbsp; Generated: {generated_at} UTC
+    (<span id="updated-ago">just now</span>) &nbsp;|&nbsp; Data regenerated {DATA_REFRESH_LABEL}</div>
 </header>
 {glance_html}
 {banner_html}
@@ -1221,6 +1418,23 @@ def render(coins_data, fng_value, fng_classification, generated_at, any_stale,
   Cycle Map, Heat Score, and Liquidation Risk are Teka's own heuristic models built from the numbers above &mdash; not the output of a proprietary or third-party analytics service.<br>
   Education only, not financial advice. You trade at your own risk.
 </footer>
+<script>
+(function() {{
+  var generatedAt = new Date("{generated_at_iso}");
+  function tick() {{
+    var mins = Math.max(0, Math.round((Date.now() - generatedAt.getTime()) / 60000));
+    var el = document.getElementById('updated-ago');
+    if (el) el.textContent = mins <= 0 ? 'just now' : ('updated ' + mins + 'm ago');
+  }}
+  tick();
+  setInterval(tick, 15000);
+  // Cache-busting reload: a plain meta-refresh can be served from browser/CDN cache and
+  // silently show stale content. Appending a unique query string forces a real network fetch.
+  setTimeout(function() {{
+    location.href = location.pathname + '?t=' + Date.now();
+  }}, {REFRESH_SECONDS * 1000});
+}})();
+</script>
 </body>
 </html>
 """
@@ -1265,13 +1479,21 @@ def main():
         fire_toast_notifications(newly_triggered)
 
     log(f"Running screener over top {SCREENER_SIZE} coins by market cap...")
+    screener_markets, _ = safe_fetch("screener markets", fetch_screener_markets)
     prev_screener_state = state.get("_screener", {})
-    screener_results, new_screener_state = build_screener(fng_value, prev_screener_state, generated_at)
+    screener_results, new_screener_state = build_screener(
+        fng_value, prev_screener_state, generated_at, markets=screener_markets)
     log(f"Screener produced {len(screener_results)} ranked coins "
         f"({sum(1 for r in screener_results if r.get('stale'))} cached/stale)")
 
+    log("Running intraday screeners (15m, 1h) via Binance spot klines...")
+    intraday_results = {}
+    for tf_key in INTRADAY_TIMEFRAMES:
+        intraday_results[tf_key] = build_intraday_screener(screener_markets, tf_key)
+        log(f"Intraday {tf_key} produced {len(intraday_results[tf_key])} ranked coins")
+
     html = render(coins_data, fng_value, fng_classification, generated_at, any_stale,
-                   alerts_results, screener_results)
+                   alerts_results, screener_results, intraday_results)
     with open(OUTPUT_PATH, "w", encoding="utf-8") as f:
         f.write(html)
 
