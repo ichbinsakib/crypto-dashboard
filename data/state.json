@@ -4,7 +4,7 @@
   "_alerts_state": {
     "btc-resistance-break": {
       "triggered": true,
-      "last_triggered_at": "2026-08-26 04:20:31"
+      "last_triggered_at": "2026-08-26 04:58:32"
     },
     "btc-support-break": {
       "triggered": false,
@@ -27,25 +27,651 @@
       "last_triggered_at": null
     }
   },
+  "_screener": {
+    "binancecoin": {
+      "label": "\ud83d\udfe1 HOLD / NEUTRAL",
+      "status": "neutral",
+      "score": -1,
+      "rows": [
+        [
+          "Price vs. recent range",
+          "Near its 30-day high (~$704.60) - less room to run",
+          -1
+        ],
+        [
+          "Crowd mood (Fear & Greed)",
+          "65/100 - crowd is greedy",
+          -1
+        ],
+        [
+          "Market phase (best guess)",
+          "Established uptrend - phase where price marks up",
+          1
+        ],
+        [
+          "Recent trend",
+          "Trending up steadily - healthy",
+          1
+        ],
+        [
+          "Stretch from long-term average",
+          "+12.7% above its long-term average - a bit stretched",
+          -1
+        ],
+        [
+          "Leverage traders' bias",
+          "No leverage data",
+          0
+        ]
+      ],
+      "plain": "No real edge either way right now - fine to just wait and watch.",
+      "id": "binancecoin",
+      "symbol": "BNB",
+      "name": "BNB",
+      "price": 694.29,
+      "pct_24h": -2.72214,
+      "pct_7d": 15.7,
+      "support_30d": 571.2668124122416,
+      "resistance_30d": 704.6048099707419,
+      "as_of": "2026-08-26 04:58:32",
+      "stale": false
+    },
+    "tron": {
+      "label": "\ud83d\udfe2 LEAN ACCUMULATE",
+      "status": "bullish",
+      "score": 3,
+      "rows": [
+        [
+          "Price vs. recent range",
+          "Near its 30-day low (~$0.3246) - historically a better entry",
+          2
+        ],
+        [
+          "Crowd mood (Fear & Greed)",
+          "65/100 - crowd is greedy",
+          -1
+        ],
+        [
+          "Market phase (best guess)",
+          "Basing near the bottom - phase where smart money accumulates",
+          2
+        ],
+        [
+          "Recent trend",
+          "Chopping sideways - no clear trend",
+          0
+        ],
+        [
+          "Stretch from long-term average",
+          "+4.9% vs its long-term average - not stretched either way",
+          0
+        ],
+        [
+          "Leverage traders' bias",
+          "No leverage data",
+          0
+        ]
+      ],
+      "plain": "Leans toward a decent spot to slowly add (DCA) - not a strong signal, just a lean.",
+      "id": "tron",
+      "symbol": "TRX",
+      "name": "TRON",
+      "price": 0.33798,
+      "pct_24h": -1.83566,
+      "pct_7d": 1.6,
+      "support_30d": 0.32455587179378265,
+      "resistance_30d": 0.34466528683242237,
+      "as_of": "2026-08-26 04:58:32",
+      "stale": false
+    },
+    "figure-heloc": {
+      "label": "\ud83d\udfe1 HOLD / NEUTRAL",
+      "status": "neutral",
+      "score": 1,
+      "rows": [
+        [
+          "Price vs. recent range",
+          "Near its 30-day low (~$1.00) - historically a better entry",
+          2
+        ],
+        [
+          "Crowd mood (Fear & Greed)",
+          "65/100 - crowd is greedy",
+          -1
+        ],
+        [
+          "Market phase (best guess)",
+          "Unknown",
+          0
+        ],
+        [
+          "Recent trend",
+          "Chopping sideways - no clear trend",
+          0
+        ],
+        [
+          "Stretch from long-term average",
+          "No long-term average data",
+          0
+        ],
+        [
+          "Leverage traders' bias",
+          "No leverage data",
+          0
+        ]
+      ],
+      "plain": "No real edge either way right now - fine to just wait and watch.",
+      "id": "figure-heloc",
+      "symbol": "FIGR_HELOC",
+      "name": "Figure Heloc",
+      "price": 1.01,
+      "pct_24h": -2.79687,
+      "pct_7d": 0.5,
+      "support_30d": 1.0008548889936117,
+      "resistance_30d": 1.0443278657757245,
+      "as_of": "2026-08-26 04:58:32",
+      "stale": false
+    },
+    "hyperliquid": {
+      "label": "\ud83d\udd34 DISTRIBUTION ZONE",
+      "status": "bearish",
+      "score": -5,
+      "rows": [
+        [
+          "Price vs. recent range",
+          "Near its 30-day high (~$82.12) - less room to run",
+          -1
+        ],
+        [
+          "Crowd mood (Fear & Greed)",
+          "65/100 - crowd is greedy",
+          -1
+        ],
+        [
+          "Market phase (best guess)",
+          "Very extended after a big run - phase where smart money sells",
+          -2
+        ],
+        [
+          "Recent trend",
+          "Trending up steadily - healthy",
+          1
+        ],
+        [
+          "Stretch from long-term average",
+          "+64.1% above its long-term average - very stretched",
+          -2
+        ],
+        [
+          "Leverage traders' bias",
+          "No leverage data",
+          0
+        ]
+      ],
+      "plain": "Looks stretched and euphoric - historically the zone where smart money sells, not buys.",
+      "id": "hyperliquid",
+      "symbol": "HYPE",
+      "name": "Hyperliquid",
+      "price": 82.23,
+      "pct_24h": 1.62203,
+      "pct_7d": 39.8,
+      "support_30d": 52.199165596630266,
+      "resistance_30d": 82.12213360662557,
+      "as_of": "2026-08-26 04:58:32",
+      "stale": false
+    },
+    "dogecoin": {
+      "label": "\ud83d\udfe2 LEAN ACCUMULATE",
+      "status": "bullish",
+      "score": 2,
+      "rows": [
+        [
+          "Price vs. recent range",
+          "Sitting in the middle of its 30-day range",
+          0
+        ],
+        [
+          "Crowd mood (Fear & Greed)",
+          "65/100 - crowd is greedy",
+          -1
+        ],
+        [
+          "Market phase (best guess)",
+          "Basing near the bottom - phase where smart money accumulates",
+          2
+        ],
+        [
+          "Recent trend",
+          "Trending up steadily - healthy",
+          1
+        ],
+        [
+          "Stretch from long-term average",
+          "-3.3% vs its long-term average - not stretched either way",
+          0
+        ],
+        [
+          "Leverage traders' bias",
+          "No leverage data",
+          0
+        ]
+      ],
+      "plain": "Leans toward a decent spot to slowly add (DCA) - not a strong signal, just a lean.",
+      "id": "dogecoin",
+      "symbol": "DOGE",
+      "name": "Dogecoin",
+      "price": 0.086342,
+      "pct_24h": -6.12341,
+      "pct_7d": 24.0,
+      "support_30d": 0.06912171465773863,
+      "resistance_30d": 0.09337437185106227,
+      "as_of": "2026-08-26 04:58:32",
+      "stale": false
+    },
+    "zcash": {
+      "label": "\ud83d\udd34 CAUTION - REDUCE NEW BUYS",
+      "status": "bearish",
+      "score": -4,
+      "rows": [
+        [
+          "Price vs. recent range",
+          "Sitting in the middle of its 30-day range",
+          0
+        ],
+        [
+          "Crowd mood (Fear & Greed)",
+          "65/100 - crowd is greedy",
+          -1
+        ],
+        [
+          "Market phase (best guess)",
+          "Very extended after a big run - phase where smart money sells",
+          -2
+        ],
+        [
+          "Recent trend",
+          "Trending up steadily - healthy",
+          1
+        ],
+        [
+          "Stretch from long-term average",
+          "+89.4% above its long-term average - very stretched",
+          -2
+        ],
+        [
+          "Leverage traders' bias",
+          "No leverage data",
+          0
+        ]
+      ],
+      "plain": "Getting risky - I'd hold off on new buys until this cools down.",
+      "id": "zcash",
+      "symbol": "ZEC",
+      "name": "Zcash",
+      "price": 784.24,
+      "pct_24h": -7.37589,
+      "pct_7d": 55.1,
+      "support_30d": 458.62204779933427,
+      "resistance_30d": 851.7729918130331,
+      "as_of": "2026-08-26 04:58:32",
+      "stale": false
+    },
+    "rain": {
+      "label": "\ud83d\udd34 DISTRIBUTION ZONE",
+      "status": "bearish",
+      "score": -8,
+      "rows": [
+        [
+          "Price vs. recent range",
+          "Near its 30-day high (~$0.0182) - less room to run",
+          -1
+        ],
+        [
+          "Crowd mood (Fear & Greed)",
+          "65/100 - crowd is greedy",
+          -1
+        ],
+        [
+          "Market phase (best guess)",
+          "Very extended after a big run - phase where smart money sells",
+          -2
+        ],
+        [
+          "Recent trend",
+          "Shooting straight up - classic blow-off top risk, don't chase",
+          -2
+        ],
+        [
+          "Stretch from long-term average",
+          "+61.2% above its long-term average - very stretched",
+          -2
+        ],
+        [
+          "Leverage traders' bias",
+          "No leverage data",
+          0
+        ]
+      ],
+      "plain": "Looks stretched and euphoric - historically the zone where smart money sells, not buys.",
+      "id": "rain",
+      "symbol": "RAIN",
+      "name": "Rain",
+      "price": 0.01775715,
+      "pct_24h": 20.82872,
+      "pct_7d": 36.9,
+      "support_30d": 0.01228523605280373,
+      "resistance_30d": 0.018158429442510105,
+      "as_of": "2026-08-26 04:58:32",
+      "stale": false
+    },
+    "whitebit": {
+      "label": "\ud83d\udd34 CAUTION - REDUCE NEW BUYS",
+      "status": "bearish",
+      "score": -2,
+      "rows": [
+        [
+          "Price vs. recent range",
+          "Near its 30-day high (~$73.31) - less room to run",
+          -1
+        ],
+        [
+          "Crowd mood (Fear & Greed)",
+          "65/100 - crowd is greedy",
+          -1
+        ],
+        [
+          "Market phase (best guess)",
+          "Established uptrend - phase where price marks up",
+          1
+        ],
+        [
+          "Recent trend",
+          "Trending up steadily - healthy",
+          1
+        ],
+        [
+          "Stretch from long-term average",
+          "+33.8% above its long-term average - very stretched",
+          -2
+        ],
+        [
+          "Leverage traders' bias",
+          "No leverage data",
+          0
+        ]
+      ],
+      "plain": "Getting risky - I'd hold off on new buys until this cools down.",
+      "id": "whitebit",
+      "symbol": "WBT",
+      "name": "WhiteBIT Coin",
+      "price": 72.76,
+      "pct_24h": -1.78622,
+      "pct_7d": 31.5,
+      "support_30d": 54.46347294921598,
+      "resistance_30d": 73.30866199680308,
+      "as_of": "2026-08-26 04:58:32",
+      "stale": false
+    },
+    "leo-token": {
+      "label": "\ud83d\udfe2 LEAN ACCUMULATE",
+      "status": "bullish",
+      "score": 3,
+      "rows": [
+        [
+          "Price vs. recent range",
+          "Near its 30-day low (~$8.96) - historically a better entry",
+          2
+        ],
+        [
+          "Crowd mood (Fear & Greed)",
+          "65/100 - crowd is greedy",
+          -1
+        ],
+        [
+          "Market phase (best guess)",
+          "Basing near the bottom - phase where smart money accumulates",
+          2
+        ],
+        [
+          "Recent trend",
+          "Chopping sideways - no clear trend",
+          0
+        ],
+        [
+          "Stretch from long-term average",
+          "-2.7% vs its long-term average - not stretched either way",
+          0
+        ],
+        [
+          "Leverage traders' bias",
+          "No leverage data",
+          0
+        ]
+      ],
+      "plain": "Leans toward a decent spot to slowly add (DCA) - not a strong signal, just a lean.",
+      "id": "leo-token",
+      "symbol": "LEO",
+      "name": "LEO Token",
+      "price": 9.31,
+      "pct_24h": -0.5446,
+      "pct_7d": 0.4,
+      "support_30d": 8.956583026357892,
+      "resistance_30d": 9.783392369630901,
+      "as_of": "2026-08-26 04:58:32",
+      "stale": false
+    },
+    "chainlink": {
+      "label": "\ud83d\udfe1 HOLD / NEUTRAL",
+      "status": "neutral",
+      "score": 0,
+      "rows": [
+        [
+          "Price vs. recent range",
+          "Sitting in the middle of its 30-day range",
+          0
+        ],
+        [
+          "Crowd mood (Fear & Greed)",
+          "65/100 - crowd is greedy",
+          -1
+        ],
+        [
+          "Market phase (best guess)",
+          "Established uptrend - phase where price marks up",
+          1
+        ],
+        [
+          "Recent trend",
+          "Trending up steadily - healthy",
+          1
+        ],
+        [
+          "Stretch from long-term average",
+          "+26.1% above its long-term average - a bit stretched",
+          -1
+        ],
+        [
+          "Leverage traders' bias",
+          "No leverage data",
+          0
+        ]
+      ],
+      "plain": "No real edge either way right now - fine to just wait and watch.",
+      "id": "chainlink",
+      "symbol": "LINK",
+      "name": "Chainlink",
+      "price": 11.39,
+      "pct_24h": -2.99266,
+      "pct_7d": 19.6,
+      "support_30d": 8.060658731722004,
+      "resistance_30d": 12.004223042196735,
+      "as_of": "2026-08-26 04:58:32",
+      "stale": false
+    },
+    "monero": {
+      "label": "\ud83d\udd34 CAUTION - REDUCE NEW BUYS",
+      "status": "bearish",
+      "score": -2,
+      "rows": [
+        [
+          "Price vs. recent range",
+          "Near its 30-day high (~$443.13) - less room to run",
+          -1
+        ],
+        [
+          "Crowd mood (Fear & Greed)",
+          "65/100 - crowd is greedy",
+          -1
+        ],
+        [
+          "Market phase (best guess)",
+          "Established uptrend - phase where price marks up",
+          1
+        ],
+        [
+          "Recent trend",
+          "Chopping sideways - no clear trend",
+          0
+        ],
+        [
+          "Stretch from long-term average",
+          "+25.1% above its long-term average - a bit stretched",
+          -1
+        ],
+        [
+          "Leverage traders' bias",
+          "No leverage data",
+          0
+        ]
+      ],
+      "plain": "Getting risky - I'd hold off on new buys until this cools down.",
+      "id": "monero",
+      "symbol": "XMR",
+      "name": "Monero",
+      "price": 443.07,
+      "pct_24h": -0.40967,
+      "pct_7d": 7.9,
+      "support_30d": 341.66098327436066,
+      "resistance_30d": 443.12759084416643,
+      "as_of": "2026-08-26 04:58:32",
+      "stale": false
+    },
+    "cardano": {
+      "label": "\ud83d\udfe2 LEAN ACCUMULATE",
+      "status": "bullish",
+      "score": 2,
+      "rows": [
+        [
+          "Price vs. recent range",
+          "Sitting in the middle of its 30-day range",
+          0
+        ],
+        [
+          "Crowd mood (Fear & Greed)",
+          "65/100 - crowd is greedy",
+          -1
+        ],
+        [
+          "Market phase (best guess)",
+          "Basing near the bottom - phase where smart money accumulates",
+          2
+        ],
+        [
+          "Recent trend",
+          "Trending up steadily - healthy",
+          1
+        ],
+        [
+          "Stretch from long-term average",
+          "-7.1% vs its long-term average - not stretched either way",
+          0
+        ],
+        [
+          "Leverage traders' bias",
+          "No leverage data",
+          0
+        ]
+      ],
+      "plain": "Leans toward a decent spot to slowly add (DCA) - not a strong signal, just a lean.",
+      "id": "cardano",
+      "symbol": "ADA",
+      "name": "Cardano",
+      "price": 0.210042,
+      "pct_24h": -6.81174,
+      "pct_7d": 21.5,
+      "support_30d": 0.16191384681582516,
+      "resistance_30d": 0.22956344834581915,
+      "as_of": "2026-08-26 04:58:32",
+      "stale": false
+    },
+    "stellar": {
+      "label": "\ud83d\udfe2 LEAN ACCUMULATE",
+      "status": "bullish",
+      "score": 2,
+      "rows": [
+        [
+          "Price vs. recent range",
+          "Sitting in the middle of its 30-day range",
+          0
+        ],
+        [
+          "Crowd mood (Fear & Greed)",
+          "65/100 - crowd is greedy",
+          -1
+        ],
+        [
+          "Market phase (best guess)",
+          "Basing near the bottom - phase where smart money accumulates",
+          2
+        ],
+        [
+          "Recent trend",
+          "Trending up steadily - healthy",
+          1
+        ],
+        [
+          "Stretch from long-term average",
+          "+5.6% vs its long-term average - not stretched either way",
+          0
+        ],
+        [
+          "Leverage traders' bias",
+          "No leverage data",
+          0
+        ]
+      ],
+      "plain": "Leans toward a decent spot to slowly add (DCA) - not a strong signal, just a lean.",
+      "id": "stellar",
+      "symbol": "XLM",
+      "name": "Stellar",
+      "price": 0.18348,
+      "pct_24h": -7.37002,
+      "pct_7d": 19.3,
+      "support_30d": 0.15470835505286148,
+      "resistance_30d": 0.20296149892273674,
+      "as_of": "2026-08-26 04:58:32",
+      "stale": false
+    }
+  },
   "BTC": {
     "key": "BTC",
     "name": "Bitcoin",
     "emoji": "\u20bf",
-    "price": 79015,
+    "price": 78833,
     "high_24h": 80839,
     "low_24h": 77955,
-    "pct_24h": -1.61486,
+    "pct_24h": -1.70914,
     "pct_7d": 23.0,
     "pct_30d": 21.4,
-    "sma50": 66076.0096148052,
-    "sma200": 69157.80869559803,
+    "sma50": 66071.39749886665,
+    "sma200": 69156.65566661338,
     "support_30d": 62802.63461583794,
-    "resistance_30d": 79049.46814651655,
-    "mark_price": 77339.83681159,
-    "index_price": 77341.30673913,
-    "funding_rate": 0.0001,
-    "oi_change_pct": -0.606818423895819,
-    "oi_now": 106621.175,
+    "resistance_30d": 78940.29243672009,
+    "mark_price": 78807.5,
+    "index_price": 78835.83347826,
+    "funding_rate": 4.827e-05,
+    "oi_change_pct": -1.526059040676675,
+    "oi_now": 105895.334,
     "fng_value": 65,
     "fng_class": "Greed"
   },
@@ -53,21 +679,21 @@
     "key": "ETH",
     "name": "Ethereum",
     "emoji": "\u039e",
-    "price": 2466.45,
+    "price": 2458.23,
     "high_24h": 2512.99,
     "low_24h": 2419.7,
-    "pct_24h": -1.03475,
+    "pct_24h": -1.28079,
     "pct_7d": 29.3,
     "pct_30d": 27.0,
-    "sma50": 1961.4746850194133,
-    "sma200": 2013.5293242190965,
+    "sma50": 1961.271665131277,
+    "sma200": 2013.4785692470623,
     "support_30d": 1844.6142829481894,
     "resistance_30d": 2518.784836324378,
-    "mark_price": 2460.88613178,
-    "index_price": 2461.59488372,
-    "funding_rate": 0.0001,
-    "oi_change_pct": 0.1402408659454724,
-    "oi_now": 2395634.106,
+    "mark_price": 2456.9576124,
+    "index_price": 2457.95837209,
+    "funding_rate": 8.526e-05,
+    "oi_change_pct": -0.5015049179643498,
+    "oi_now": 2396341.309,
     "fng_value": 65,
     "fng_class": "Greed"
   }
