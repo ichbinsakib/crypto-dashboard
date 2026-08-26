@@ -2,10 +2,12 @@ name: Update Teka Dashboard
 
 on:
   schedule:
-    # Offset from round 5-minute marks (2,7,12,...) -- GitHub's shared scheduler is heavily
-    # congested exactly at :00/:05/:10 etc since that's what most cron jobs use, causing
-    # long queuing delays. Landing off-beat gets runs much closer to the intended cadence.
-    - cron: "2-59/5 * * * *"
+    # The job itself now takes ~4-5 min end to end (CoinGecko rate-limit retries + the
+    # 15m/1h intraday fetches), which left no headroom in a 5-minute interval -- runs were
+    # colliding with the still-running previous one and getting skipped. 10 minutes, offset
+    # off the round marks (GitHub's shared scheduler queues everyone's :00/:05/:10 crons
+    # hard), gives real margin.
+    - cron: "3-59/10 * * * *"
   workflow_dispatch: {}
   push:
     branches: [main]

@@ -37,7 +37,7 @@ COINS = [
 ]
 
 REFRESH_SECONDS = 120  # in-browser auto-reload interval
-DATA_REFRESH_LABEL = "every ~5 min (GitHub Actions, best-effort)"  # keep in sync with .github/workflows/deploy.yml
+DATA_REFRESH_LABEL = "every ~10 min (GitHub Actions, best-effort)"  # keep in sync with .github/workflows/deploy.yml
 
 SCREENER_SIZE = 15  # how many coins to rank; raising this adds run time and CoinGecko rate-limit risk
 # GitHub Actions runners share IP pools hammered by countless other CI jobs hitting CoinGecko,
