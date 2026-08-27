@@ -4,7 +4,7 @@
   "_alerts_state": {
     "btc-resistance-break": {
       "triggered": true,
-      "last_triggered_at": "2026-08-27 23:25:19"
+      "last_triggered_at": "2026-08-27 23:30:29"
     },
     "btc-support-break": {
       "triggered": false,
@@ -317,14 +317,14 @@
       "stale": false
     },
     "dogecoin": {
-      "label": "\ud83d\udfe2 LEAN ACCUMULATE",
-      "status": "bullish",
-      "score": 2,
+      "label": "\ud83d\udfe1 HOLD / NEUTRAL",
+      "status": "neutral",
+      "score": 1,
       "rows": [
         [
           "Price vs. recent range",
-          "Sitting in the middle of its 30-day range",
-          0
+          "Near its 30-day high (~$0.0934) - less room to run",
+          -1
         ],
         [
           "Crowd mood (Fear & Greed)",
@@ -343,7 +343,7 @@
         ],
         [
           "Stretch from long-term average",
-          "-0.6% vs its long-term average - not stretched either way",
+          "-0.0% vs its long-term average - not stretched either way",
           0
         ],
         [
@@ -352,16 +352,16 @@
           0
         ]
       ],
-      "plain": "Leans toward a decent spot to slowly add (DCA) - not a strong signal, just a lean.",
+      "plain": "No real edge either way right now - fine to just wait and watch.",
       "id": "dogecoin",
       "symbol": "DOGE",
       "name": "Dogecoin",
-      "price": 0.088664,
-      "pct_24h": 3.0789,
-      "pct_7d": 11.3,
+      "price": 0.089228,
+      "pct_24h": 2.43602,
+      "pct_7d": 11.1,
       "support_30d": 0.06901954790818378,
       "resistance_30d": 0.09337940032634065,
-      "as_of": "2026-08-27 21:20:31",
+      "as_of": "2026-08-27 23:30:29",
       "stale": false
     },
     "zcash": {
@@ -1317,11 +1317,11 @@
       "symbol": "HTX",
       "name": "HTX DAO",
       "price": 1.69e-06,
-      "pct_24h": -0.80376,
-      "pct_7d": -2.6,
-      "support_30d": 1.6921665495132653e-06,
+      "pct_24h": -1.6278,
+      "pct_7d": -3.3,
+      "support_30d": 1.6851067351164079e-06,
       "resistance_30d": 1.8259977214551937e-06,
-      "as_of": "2026-08-27 21:01:56",
+      "as_of": "2026-08-27 23:30:29",
       "stale": false
     },
     "superstate-short-duration-us-government-securities-fund-ustb": {
@@ -2325,11 +2325,11 @@
       "symbol": "GRAM",
       "name": "Gram (prev. Toncoin)",
       "price": 1.43,
-      "pct_24h": 1.71077,
-      "pct_7d": 3.3,
+      "pct_24h": 2.09948,
+      "pct_7d": 2.9,
       "support_30d": 1.316580434471296,
       "resistance_30d": 1.4926762805297678,
-      "as_of": "2026-08-27 21:40:27",
+      "as_of": "2026-08-27 23:30:29",
       "stale": false
     },
     "sky": {
@@ -2961,16 +2961,16 @@
     "key": "BTC",
     "name": "Bitcoin",
     "emoji": "\u20bf",
-    "price": 80368,
+    "price": 80315,
     "high_24h": 80793,
     "low_24h": 78598,
-    "pct_24h": 2.07831,
+    "pct_24h": 1.85553,
     "pct_7d": 10.4,
     "pct_30d": 25.6,
-    "sma50": 66431.77948443904,
-    "sma200": 69205.9963902527,
+    "sma50": 66430.65566122647,
+    "sma200": 69205.71543444955,
     "support_30d": 62772.57726413174,
-    "resistance_30d": 80367.77823513206,
+    "resistance_30d": 80311.58707450342,
     "mark_price": 80577.96281884,
     "index_price": 80601.22869565,
     "funding_rate": 8.137e-05,
@@ -2983,14 +2983,14 @@
     "key": "ETH",
     "name": "Ethereum",
     "emoji": "\u039e",
-    "price": 2514.61,
+    "price": 2513.31,
     "high_24h": 2558.47,
     "low_24h": 2482.26,
-    "pct_24h": 0.71375,
+    "pct_24h": 0.57065,
     "pct_7d": 8.5,
     "pct_30d": 30.8,
-    "sma50": 1977.623563661523,
-    "sma200": 2015.8156538539622,
+    "sma50": 1977.602897752271,
+    "sma200": 2015.810487376649,
     "support_30d": 1843.443563411847,
     "resistance_30d": 2514.967577695514,
     "mark_price": 2526.37387597,
