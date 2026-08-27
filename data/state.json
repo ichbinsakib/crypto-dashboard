@@ -4,7 +4,7 @@
   "_alerts_state": {
     "btc-resistance-break": {
       "triggered": true,
-      "last_triggered_at": "2026-08-27 21:15:22"
+      "last_triggered_at": "2026-08-27 21:20:31"
     },
     "btc-support-break": {
       "triggered": false,
@@ -317,14 +317,14 @@
       "stale": false
     },
     "dogecoin": {
-      "label": "\ud83d\udfe1 HOLD / NEUTRAL",
-      "status": "neutral",
-      "score": 1,
+      "label": "\ud83d\udfe2 LEAN ACCUMULATE",
+      "status": "bullish",
+      "score": 2,
       "rows": [
         [
           "Price vs. recent range",
-          "Near its 30-day high (~$0.0934) - less room to run",
-          -1
+          "Sitting in the middle of its 30-day range",
+          0
         ],
         [
           "Crowd mood (Fear & Greed)",
@@ -352,16 +352,16 @@
           0
         ]
       ],
-      "plain": "No real edge either way right now - fine to just wait and watch.",
+      "plain": "Leans toward a decent spot to slowly add (DCA) - not a strong signal, just a lean.",
       "id": "dogecoin",
       "symbol": "DOGE",
       "name": "Dogecoin",
-      "price": 0.088736,
-      "pct_24h": 3.5221,
+      "price": 0.088664,
+      "pct_24h": 3.0789,
       "pct_7d": 11.3,
       "support_30d": 0.06901954790818378,
       "resistance_30d": 0.09337940032634065,
-      "as_of": "2026-08-27 21:10:25",
+      "as_of": "2026-08-27 21:20:31",
       "stale": false
     },
     "zcash": {
@@ -2372,12 +2372,12 @@
       "id": "sky",
       "symbol": "SKY",
       "name": "Sky",
-      "price": 0.068205,
-      "pct_24h": 1.25744,
-      "pct_7d": 11.0,
+      "price": 0.068158,
+      "pct_24h": 0.00934,
+      "pct_7d": 10.3,
       "support_30d": 0.05081051579814886,
       "resistance_30d": 0.06893371384217392,
-      "as_of": "2026-08-27 20:40:24",
+      "as_of": "2026-08-27 21:20:31",
       "stale": false
     },
     "shiba-inu": {
@@ -2551,7 +2551,7 @@
         ],
         [
           "Stretch from long-term average",
-          "+1.6% vs its long-term average - not stretched either way",
+          "+1.5% vs its long-term average - not stretched either way",
           0
         ],
         [
@@ -2564,12 +2564,12 @@
       "id": "tether-gold",
       "symbol": "XAUT",
       "name": "Tether Gold",
-      "price": 4597.27,
-      "pct_24h": 0.26534,
-      "pct_7d": 2.2,
+      "price": 4591.12,
+      "pct_24h": 0.03428,
+      "pct_7d": 1.8,
       "support_30d": 4038.107891411404,
       "resistance_30d": 4662.510537821146,
-      "as_of": "2026-08-27 19:45:25",
+      "as_of": "2026-08-27 21:20:31",
       "stale": false
     },
     "bitway": {
@@ -2961,16 +2961,16 @@
     "key": "BTC",
     "name": "Bitcoin",
     "emoji": "\u20bf",
-    "price": 80128,
+    "price": 80074,
     "high_24h": 80793,
     "low_24h": 78565,
-    "pct_24h": 1.73781,
+    "pct_24h": 1.64734,
     "pct_7d": 10.2,
     "pct_30d": 25.5,
-    "sma50": 66426.98773592745,
-    "sma200": 69204.7984531248,
+    "sma50": 66425.51517521028,
+    "sma200": 69204.43031294551,
     "support_30d": 62772.57726413174,
-    "resistance_30d": 80128.19080955225,
+    "resistance_30d": 80054.5627736938,
     "mark_price": 80577.96281884,
     "index_price": 80601.22869565,
     "funding_rate": 8.137e-05,
@@ -2983,14 +2983,14 @@
     "key": "ETH",
     "name": "Ethereum",
     "emoji": "\u039e",
-    "price": 2508.2,
+    "price": 2504.53,
     "high_24h": 2558.47,
     "low_24h": 2482.26,
-    "pct_24h": 0.65886,
+    "pct_24h": 0.54729,
     "pct_7d": 7.9,
     "pct_30d": 30.6,
-    "sma50": 1977.4967208111277,
-    "sma200": 2015.7839431413634,
+    "sma50": 1977.4246090303973,
+    "sma200": 2015.7659151961807,
     "support_30d": 1843.443563411847,
     "resistance_30d": 2514.967577695514,
     "mark_price": 2526.37387597,
