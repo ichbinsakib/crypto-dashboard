@@ -4,7 +4,7 @@
   "_alerts_state": {
     "btc-resistance-break": {
       "triggered": true,
-      "last_triggered_at": "2026-08-27 21:01:56"
+      "last_triggered_at": "2026-08-27 21:05:23"
     },
     "btc-support-break": {
       "triggered": false,
@@ -789,17 +789,17 @@
       "symbol": "KCS",
       "name": "KuCoin",
       "price": 7.23,
-      "pct_24h": 0.81504,
-      "pct_7d": -1.7,
+      "pct_24h": 0.76119,
+      "pct_7d": -2.3,
       "support_30d": 6.440026683855254,
       "resistance_30d": 7.8821382735057615,
-      "as_of": "2026-08-27 20:15:22",
+      "as_of": "2026-08-27 21:05:23",
       "stale": false
     },
     "hedera-hashgraph": {
       "label": "\ud83d\udfe1 HOLD / NEUTRAL",
       "status": "neutral",
-      "score": 0,
+      "score": 1,
       "rows": [
         [
           "Price vs. recent range",
@@ -818,12 +818,12 @@
         ],
         [
           "Recent trend",
-          "Chopping sideways - no clear trend",
-          0
+          "Trending up steadily - healthy",
+          1
         ],
         [
           "Stretch from long-term average",
-          "-6.6% vs its long-term average - not stretched either way",
+          "-6.4% vs its long-term average - not stretched either way",
           0
         ],
         [
@@ -836,12 +836,12 @@
       "id": "hedera-hashgraph",
       "symbol": "HBAR",
       "name": "Hedera",
-      "price": 0.078566,
-      "pct_24h": 1.40519,
-      "pct_7d": 6.5,
+      "price": 0.078738,
+      "pct_24h": 1.99774,
+      "pct_7d": 9.2,
       "support_30d": 0.06461260477975343,
       "resistance_30d": 0.07985387850470703,
-      "as_of": "2026-08-27 18:31:41",
+      "as_of": "2026-08-27 21:05:23",
       "stale": false
     },
     "pepe": {
@@ -1709,9 +1709,9 @@
       "stale": false
     },
     "sui": {
-      "label": "\ud83d\udfe2 LEAN ACCUMULATE",
-      "status": "bullish",
-      "score": 2,
+      "label": "\ud83d\udfe1 HOLD / NEUTRAL",
+      "status": "neutral",
+      "score": 1,
       "rows": [
         [
           "Price vs. recent range",
@@ -1730,12 +1730,12 @@
         ],
         [
           "Recent trend",
-          "Trending up steadily - healthy",
-          1
+          "Chopping sideways - no clear trend",
+          0
         ],
         [
           "Stretch from long-term average",
-          "-9.2% vs its long-term average - not stretched either way",
+          "-10.4% vs its long-term average - not stretched either way",
           0
         ],
         [
@@ -1744,16 +1744,16 @@
           0
         ]
       ],
-      "plain": "Leans toward a decent spot to slowly add (DCA) - not a strong signal, just a lean.",
+      "plain": "No real edge either way right now - fine to just wait and watch.",
       "id": "sui",
       "symbol": "SUI",
       "name": "Sui",
-      "price": 0.787617,
-      "pct_24h": 6.86026,
-      "pct_7d": 8.4,
+      "price": 0.777604,
+      "pct_24h": 4.8069,
+      "pct_7d": 7.4,
       "support_30d": 0.6514311908607086,
       "resistance_30d": 0.8499161763231283,
-      "as_of": "2026-08-27 16:15:03",
+      "as_of": "2026-08-27 21:05:23",
       "stale": false
     },
     "lighter": {
@@ -2961,16 +2961,16 @@
     "key": "BTC",
     "name": "Bitcoin",
     "emoji": "\u20bf",
-    "price": 80063,
+    "price": 80059,
     "high_24h": 80793,
-    "low_24h": 78417,
-    "pct_24h": 2.07621,
+    "low_24h": 78565,
+    "pct_24h": 2.09324,
     "pct_7d": 10.2,
     "pct_30d": 25.5,
-    "sma50": 66426.1161937291,
-    "sma200": 69204.5805675752,
+    "sma50": 66425.54685490657,
+    "sma200": 69204.43823286958,
     "support_30d": 62772.57726413174,
-    "resistance_30d": 80084.6136996348,
+    "resistance_30d": 80056.14675850856,
     "mark_price": 80577.96281884,
     "index_price": 80601.22869565,
     "funding_rate": 8.137e-05,
@@ -2983,14 +2983,14 @@
     "key": "ETH",
     "name": "Ethereum",
     "emoji": "\u039e",
-    "price": 2506.56,
+    "price": 2505.64,
     "high_24h": 2558.47,
-    "low_24h": 2471.05,
-    "pct_24h": 1.40469,
+    "low_24h": 2482.26,
+    "pct_24h": 1.39216,
     "pct_7d": 7.9,
     "pct_30d": 30.6,
-    "sma50": 1977.4808857080498,
-    "sma200": 2015.7799843655937,
+    "sma50": 1977.4347098793594,
+    "sma200": 2015.7684404084212,
     "support_30d": 1843.443563411847,
     "resistance_30d": 2514.967577695514,
     "mark_price": 2526.37387597,
