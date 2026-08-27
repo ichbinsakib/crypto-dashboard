@@ -4,7 +4,7 @@
   "_alerts_state": {
     "btc-resistance-break": {
       "triggered": true,
-      "last_triggered_at": "2026-08-27 18:18:23"
+      "last_triggered_at": "2026-08-27 18:20:52"
     },
     "btc-support-break": {
       "triggered": false,
@@ -323,8 +323,8 @@
       "rows": [
         [
           "Price vs. recent range",
-          "Near its 30-day high (~$0.0934) - less room to run",
-          -1
+          "Sitting in the middle of its 30-day range",
+          0
         ],
         [
           "Crowd mood (Fear & Greed)",
@@ -338,12 +338,12 @@
         ],
         [
           "Recent trend",
-          "Trending up steadily - healthy",
-          1
+          "Chopping sideways - no clear trend",
+          0
         ],
         [
           "Stretch from long-term average",
-          "-0.4% vs its long-term average - not stretched either way",
+          "-1.1% vs its long-term average - not stretched either way",
           0
         ],
         [
@@ -356,12 +356,12 @@
       "id": "dogecoin",
       "symbol": "DOGE",
       "name": "Dogecoin",
-      "price": 0.088853,
-      "pct_24h": 5.18366,
-      "pct_7d": 13.7,
+      "price": 0.08826,
+      "pct_24h": 4.00265,
+      "pct_7d": 7.3,
       "support_30d": 0.06901954790818378,
       "resistance_30d": 0.09337940032634065,
-      "as_of": "2026-08-27 14:57:07",
+      "as_of": "2026-08-27 18:20:52",
       "stale": false
     },
     "zcash": {
@@ -692,12 +692,12 @@
       "id": "cardano",
       "symbol": "ADA",
       "name": "Cardano",
-      "price": 0.214012,
-      "pct_24h": 4.15879,
+      "price": 0.214116,
+      "pct_24h": 4.38399,
       "pct_7d": 8.4,
       "support_30d": 0.16199689974014272,
       "resistance_30d": 0.2291047455940254,
-      "as_of": "2026-08-27 18:18:23",
+      "as_of": "2026-08-27 18:16:49",
       "stale": false
     },
     "stellar": {
@@ -1183,7 +1183,7 @@
     "nexo": {
       "label": "\ud83d\udfe1 HOLD / NEUTRAL",
       "status": "neutral",
-      "score": 1,
+      "score": 0,
       "rows": [
         [
           "Price vs. recent range",
@@ -1202,12 +1202,12 @@
         ],
         [
           "Recent trend",
-          "Trending up steadily - healthy",
-          1
+          "Chopping sideways - no clear trend",
+          0
         ],
         [
           "Stretch from long-term average",
-          "+1.9% vs its long-term average - not stretched either way",
+          "+2.1% vs its long-term average - not stretched either way",
           0
         ],
         [
@@ -1220,12 +1220,12 @@
       "id": "nexo",
       "symbol": "NEXO",
       "name": "NEXO",
-      "price": 0.851817,
-      "pct_24h": -0.93136,
-      "pct_7d": 10.4,
+      "price": 0.853541,
+      "pct_24h": -0.34347,
+      "pct_7d": 7.8,
       "support_30d": 0.7016300793001435,
       "resistance_30d": 0.8734100764023305,
-      "as_of": "2026-08-27 15:59:43",
+      "as_of": "2026-08-27 18:20:52",
       "stale": false
     },
     "janus-henderson-anemoy-treasury-fund": {
@@ -1763,7 +1763,7 @@
       "rows": [
         [
           "Price vs. recent range",
-          "Near its 30-day high (~$3.65) - less room to run",
+          "Near its 30-day high (~$3.63) - less room to run",
           -1
         ],
         [
@@ -1783,7 +1783,7 @@
         ],
         [
           "Stretch from long-term average",
-          "+131.7% above its long-term average - very stretched",
+          "+129.8% above its long-term average - very stretched",
           -2
         ],
         [
@@ -1796,12 +1796,12 @@
       "id": "lighter",
       "symbol": "LIT",
       "name": "Lighter",
-      "price": 3.65,
-      "pct_24h": 12.20007,
-      "pct_7d": 30.0,
+      "price": 3.62,
+      "pct_24h": 9.99714,
+      "pct_7d": 30.3,
       "support_30d": 2.005076166939587,
-      "resistance_30d": 3.648377662514904,
-      "as_of": "2026-08-27 17:47:34",
+      "resistance_30d": 3.6259040500243227,
+      "as_of": "2026-08-27 18:20:52",
       "stale": false
     },
     "ethena": {
@@ -1853,9 +1853,9 @@
       "stale": false
     },
     "bitcoin-cash": {
-      "label": "\ud83d\udfe1 HOLD / NEUTRAL",
-      "status": "neutral",
-      "score": 1,
+      "label": "\ud83d\udd34 CAUTION - REDUCE NEW BUYS",
+      "status": "bearish",
+      "score": -2,
       "rows": [
         [
           "Price vs. recent range",
@@ -1874,12 +1874,12 @@
         ],
         [
           "Recent trend",
-          "Trending up steadily - healthy",
-          1
+          "Shooting straight up - classic blow-off top risk, don't chase",
+          -2
         ],
         [
           "Stretch from long-term average",
-          "-23.2% below its long-term average - confirmed downtrend",
+          "-22.2% below its long-term average - confirmed downtrend",
           -1
         ],
         [
@@ -1888,16 +1888,16 @@
           0
         ]
       ],
-      "plain": "No real edge either way right now - fine to just wait and watch.",
+      "plain": "Getting risky - I'd hold off on new buys until this cools down.",
       "id": "bitcoin-cash",
       "symbol": "BCH",
       "name": "Bitcoin Cash",
-      "price": 269.06,
-      "pct_24h": 2.95634,
-      "pct_7d": 20.3,
+      "price": 272.82,
+      "pct_24h": 5.05992,
+      "pct_7d": 23.8,
       "support_30d": 203.50169440615565,
       "resistance_30d": 288.10955405353275,
-      "as_of": "2026-08-27 18:18:23",
+      "as_of": "2026-08-27 16:53:04",
       "stale": false
     },
     "mantle": {
@@ -2564,12 +2564,12 @@
       "id": "tether-gold",
       "symbol": "XAUT",
       "name": "Tether Gold",
-      "price": 4594.63,
-      "pct_24h": 0.10078,
+      "price": 4596.14,
+      "pct_24h": 0.22117,
       "pct_7d": 2.4,
       "support_30d": 4038.107891411404,
       "resistance_30d": 4662.510537821146,
-      "as_of": "2026-08-27 18:18:23",
+      "as_of": "2026-08-27 16:10:51",
       "stale": false
     },
     "bitway": {
@@ -2743,7 +2743,7 @@
         ],
         [
           "Stretch from long-term average",
-          "+38.1% above its long-term average - very stretched",
+          "+35.5% above its long-term average - very stretched",
           -2
         ],
         [
@@ -2756,12 +2756,12 @@
       "id": "morpho",
       "symbol": "MORPHO",
       "name": "Morpho",
-      "price": 2.61,
-      "pct_24h": 7.0206,
-      "pct_7d": 11.6,
+      "price": 2.56,
+      "pct_24h": 4.8675,
+      "pct_7d": 11.7,
       "support_30d": 1.8400586135640542,
       "resistance_30d": 2.9026212482639075,
-      "as_of": "2026-08-27 17:03:12",
+      "as_of": "2026-08-27 18:20:52",
       "stale": false
     },
     "memecore": {
@@ -2863,7 +2863,7 @@
     "okb": {
       "label": "\ud83d\udd34 CAUTION - REDUCE NEW BUYS",
       "status": "bearish",
-      "score": -2,
+      "score": -3,
       "rows": [
         [
           "Price vs. recent range",
@@ -2882,12 +2882,12 @@
         ],
         [
           "Recent trend",
-          "Trending up steadily - healthy",
-          1
+          "Chopping sideways - no clear trend",
+          0
         ],
         [
           "Stretch from long-term average",
-          "+34.2% above its long-term average - very stretched",
+          "+33.6% above its long-term average - very stretched",
           -2
         ],
         [
@@ -2900,12 +2900,12 @@
       "id": "okb",
       "symbol": "OKB",
       "name": "OKB",
-      "price": 114.16,
-      "pct_24h": 4.13635,
-      "pct_7d": 8.7,
+      "price": 113.61,
+      "pct_24h": 2.49497,
+      "pct_7d": 6.2,
       "support_30d": 85.29568594571903,
       "resistance_30d": 115.8310797114581,
-      "as_of": "2026-08-27 16:37:27",
+      "as_of": "2026-08-27 18:20:52",
       "stale": false
     },
     "just": {
@@ -2961,16 +2961,16 @@
     "key": "BTC",
     "name": "Bitcoin",
     "emoji": "\u20bf",
-    "price": 80058,
+    "price": 79937,
     "high_24h": 80793,
     "low_24h": 78233,
-    "pct_24h": 1.92059,
+    "pct_24h": 1.7895,
     "pct_7d": 10.6,
     "pct_30d": 25.8,
-    "sma50": 66426.45816660946,
-    "sma200": 69204.6660607953,
+    "sma50": 66423.1814477898,
+    "sma200": 69203.84688109039,
     "support_30d": 62772.57726413174,
-    "resistance_30d": 80101.71234365267,
+    "resistance_30d": 79937.8764026696,
     "mark_price": 80577.96281884,
     "index_price": 80601.22869565,
     "funding_rate": 8.137e-05,
@@ -2983,14 +2983,14 @@
     "key": "ETH",
     "name": "Ethereum",
     "emoji": "\u039e",
-    "price": 2497.72,
+    "price": 2494.87,
     "high_24h": 2558.47,
     "low_24h": 2462.42,
-    "pct_24h": 1.22698,
+    "pct_24h": 1.09741,
     "pct_7d": 7.5,
     "pct_30d": 30.9,
-    "sma50": 1977.328800506858,
-    "sma200": 2015.7419630652957,
+    "sma50": 1977.2053093792952,
+    "sma200": 2015.7110902834052,
     "support_30d": 1843.443563411847,
     "resistance_30d": 2514.967577695514,
     "mark_price": 2526.37387597,
