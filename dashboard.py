@@ -561,14 +561,19 @@ def fetch_screener_markets(limit=SCREENER_SIZE):
 
 def _looks_pegged(d):
     """Catches tokenized money-market/treasury funds and stablecoin-likes that keep showing
-    up under new names (BUIDL, Janus Henderson's fund, BFUSD, ...) without having to chase
-    each one by id: price glued near $1 AND barely moved in a week is the signature of a peg,
-    not a real speculative asset. A genuinely volatile coin rarely sits still like that."""
-    price = d.get("current_price")
-    if price is None:
-        return False
+    up under new names (BUIDL, Janus Henderson's fund, BFUSD, a Superstate treasury fund
+    trading at $11/share, ...) without having to chase each one by id. These trade at
+    whatever per-share NAV they were issued at ($1, $11, $100...), so "price near $1" isn't
+    a reliable signature -- near-zero volatility over both a week AND a month is: they're
+    value-preservation instruments by design, and a real speculative crypto asset essentially
+    never sits that flat for that long."""
     pct_7d = d.get("price_change_percentage_7d_in_currency")
-    return 0.97 <= price <= 1.03 and pct_7d is not None and abs(pct_7d) < 3
+    if pct_7d is None:
+        return False
+    pct_30d = d.get("price_change_percentage_30d_in_currency")
+    flat_7d = abs(pct_7d) < 1.5
+    flat_30d = pct_30d is None or abs(pct_30d) < 3.0
+    return flat_7d and flat_30d
 
 
 def compute_spot_signal_lite(m, chart, fng_value):
