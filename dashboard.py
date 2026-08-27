@@ -537,32 +537,23 @@ SCREENER_POOL_SIZE = 80  # candidate pool to rotate through -- one bulk API call
                           # so widening this costs nothing extra (only the per-coin calls below are rate-limited)
 
 
-def fetch_screener_candidate_pool():
-    """Fetches the wide top-market-cap pool in a single call and filters out stablecoins,
-    tokenized funds, and BTC/ETH (covered on their own tabs). Returns the full filtered pool
-    (~75 coins) so callers can sample from it however suits them -- the daily screener takes
-    a random `SCREENER_SIZE`, while the intraday screeners need their own independent search
-    since most of this pool has no Binance listing (see build_intraday_screener)."""
+def fetch_screener_markets(limit=SCREENER_SIZE):
+    """Fetches a wide pool of top-market-cap coins in a single call, then randomly rotates
+    which `limit` of them get the (expensive, per-coin) detailed analysis each cycle. Without
+    this, the screener would greedily take the same first N coins by market-cap rank every
+    single run -- the top ~15 non-BTC/ETH coins by market cap barely change hour to hour, so
+    the list would look permanently "stuck" even though each coin's own data is fresh."""
     url = (f"https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd"
            f"&order=market_cap_desc&per_page={SCREENER_POOL_SIZE}&page=1"
            f"&price_change_percentage=1h,24h,7d,30d")
     data = http_get_json(url)
     covered_ids = {c["cg_id"] for c in COINS}
-    return [
+    candidates = [
         d for d in data
         if d["id"] not in SCREENER_EXCLUDE_IDS
         and d["id"] not in covered_ids
         and not _looks_pegged(d)
     ]
-
-
-def fetch_screener_markets(limit=SCREENER_SIZE):
-    """Randomly rotates which `limit` coins from the wide pool get the (expensive, per-coin)
-    detailed analysis each cycle. Without this, the screener would greedily take the same
-    first N coins by market-cap rank every single run -- the top ~15 non-BTC/ETH coins by
-    market cap barely change hour to hour, so the list would look permanently "stuck" even
-    though each coin's own data is fresh."""
-    candidates = fetch_screener_candidate_pool()
     if len(candidates) <= limit:
         return candidates
     return random.sample(candidates, limit)
@@ -768,27 +759,18 @@ def compute_intraday_signal(klines, lookback, window_label):
     }
 
 
-def build_intraday_screener(pool, timeframe_key, target_count=SCREENER_SIZE, max_attempts=45):
-    """Runs the lean intraday model using Binance's public spot klines (far more generous
-    rate limits than CoinGecko). Independently searches through a shuffled copy of the FULL
-    candidate pool -- not just whichever 15 the daily screener happened to randomly draw --
-    since most of the wide pool has no Binance listing (rival-exchange tokens like Gate's GT
-    or Bitget's BGB, tokenized RWA products, smaller-caps). Reusing the daily screener's exact
-    draw meant an unlucky draw could leave this tab completely empty; searching independently
-    keeps it reliably populated regardless of what the daily tab is currently showing."""
+def build_intraday_screener(markets, timeframe_key):
+    """Runs the lean intraday model over the same coin universe as the daily screener,
+    using Binance's public spot klines (far more generous rate limits than CoinGecko).
+    Coins without a liquid BINANCE-quoted USDT pair (small-caps, tokenized RWA products
+    like FIGR_HELOC, etc.) are silently skipped rather than shown broken."""
     cfg = INTRADAY_TIMEFRAMES[timeframe_key]
-    shuffled = list(pool or [])
-    random.shuffle(shuffled)
     results = []
     skipped = []
-    attempts = 0
-    for m in shuffled:
-        if len(results) >= target_count or attempts >= max_attempts:
-            break
+    for m in markets or []:
         symbol = (m.get("symbol") or "").upper()
         if not symbol:
             continue
-        attempts += 1
         pair = f"{symbol}USDT"
         klines, err = safe_fetch(
             f"{timeframe_key} klines {pair}",
@@ -805,8 +787,7 @@ def build_intraday_screener(pool, timeframe_key, target_count=SCREENER_SIZE, max
         except Exception as e:
             log(f"INTRADAY SIGNAL FAIL [{pair}]: {e}")
     if skipped:
-        log(f"Intraday ({timeframe_key}) tried {attempts} candidates, "
-            f"{len(skipped)} had no Binance pair or failed: {skipped}")
+        log(f"Intraday ({timeframe_key}) skipped (no Binance pair or fetch failed): {skipped}")
     results.sort(key=lambda r: r["score"], reverse=True)
     return results
 
@@ -1258,10 +1239,8 @@ def render(coins_data, fng_value, fng_classification, generated_at, any_stale,
         return f"""
     <div class="sub" style="margin-bottom:14px;">
       {tf_name} setups from Binance's public {window_desc} candles &mdash; pure price-action model (no
-      sentiment/cycle factors, those are daily concepts). Searches independently for coins with a liquid
-      Binance USDT pair, so this list can differ from the Daily tab's (many top-market-cap coins, e.g. rival
-      exchange tokens, simply aren't listed on Binance). Buy/stop/target use each coin's own recent
-      volatility (ATR), not a fixed percentage.
+      sentiment/cycle factors, those are daily concepts). Coins without a liquid Binance USDT pair are skipped.
+      Buy/stop/target use each coin's own recent volatility (ATR), not a fixed percentage.
     </div>
     <div class="screener-grid">{cards}</div>"""
 
@@ -1534,10 +1513,7 @@ def main():
         fire_toast_notifications(newly_triggered)
 
     log(f"Running screener over top {SCREENER_SIZE} coins by market cap...")
-    screener_pool, _ = safe_fetch("screener candidate pool", fetch_screener_candidate_pool)
-    screener_pool = screener_pool or []
-    screener_markets = (screener_pool if len(screener_pool) <= SCREENER_SIZE
-                         else random.sample(screener_pool, SCREENER_SIZE))
+    screener_markets, _ = safe_fetch("screener markets", fetch_screener_markets)
     prev_screener_state = state.get("_screener", {})
     screener_results, new_screener_state = build_screener(
         fng_value, prev_screener_state, generated_at, markets=screener_markets)
@@ -1547,9 +1523,7 @@ def main():
     log("Running intraday screeners (15m, 1h) via Binance spot klines...")
     intraday_results = {}
     for tf_key in INTRADAY_TIMEFRAMES:
-        # Searches the FULL wide pool independently (not just the daily screener's draw)
-        # since most of that pool has no Binance listing -- see build_intraday_screener.
-        intraday_results[tf_key] = build_intraday_screener(screener_pool, tf_key)
+        intraday_results[tf_key] = build_intraday_screener(screener_markets, tf_key)
         log(f"Intraday {tf_key} produced {len(intraday_results[tf_key])} ranked coins")
 
     html = render(coins_data, fng_value, fng_classification, generated_at, any_stale,
