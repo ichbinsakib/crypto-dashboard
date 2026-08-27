@@ -4,7 +4,7 @@
   "_alerts_state": {
     "btc-resistance-break": {
       "triggered": true,
-      "last_triggered_at": "2026-08-27 19:25:22"
+      "last_triggered_at": "2026-08-27 19:30:32"
     },
     "btc-support-break": {
       "triggered": false,
@@ -365,14 +365,14 @@
       "stale": false
     },
     "zcash": {
-      "label": "\ud83d\udd34 CAUTION - REDUCE NEW BUYS",
+      "label": "\ud83d\udd34 DISTRIBUTION ZONE",
       "status": "bearish",
-      "score": -4,
+      "score": -5,
       "rows": [
         [
           "Price vs. recent range",
-          "Sitting in the middle of its 30-day range",
-          0
+          "Near its 30-day high (~$852.82) - less room to run",
+          -1
         ],
         [
           "Crowd mood (Fear & Greed)",
@@ -391,7 +391,7 @@
         ],
         [
           "Stretch from long-term average",
-          "+91.0% above its long-term average - very stretched",
+          "+96.4% above its long-term average - very stretched",
           -2
         ],
         [
@@ -400,16 +400,16 @@
           0
         ]
       ],
-      "plain": "Getting risky - I'd hold off on new buys until this cools down.",
+      "plain": "Looks stretched and euphoric - historically the zone where smart money sells, not buys.",
       "id": "zcash",
       "symbol": "ZEC",
       "name": "Zcash",
-      "price": 796.41,
-      "pct_24h": 3.75583,
-      "pct_7d": 39.8,
+      "price": 819.17,
+      "pct_24h": 4.1577,
+      "pct_7d": 41.6,
       "support_30d": 457.2306328508523,
       "resistance_30d": 852.824784874028,
-      "as_of": "2026-08-27 15:14:45",
+      "as_of": "2026-08-27 19:30:32",
       "stale": false
     },
     "rain": {
@@ -1303,7 +1303,7 @@
         ],
         [
           "Stretch from long-term average",
-          "-3.6% vs its long-term average - not stretched either way",
+          "-4.1% vs its long-term average - not stretched either way",
           0
         ],
         [
@@ -1316,12 +1316,12 @@
       "id": "htx-dao",
       "symbol": "HTX",
       "name": "HTX DAO",
-      "price": 1.71e-06,
-      "pct_24h": -0.66598,
-      "pct_7d": -1.3,
-      "support_30d": 1.7050945213077731e-06,
+      "price": 1.7e-06,
+      "pct_24h": -0.94007,
+      "pct_7d": -2.0,
+      "support_30d": 1.6941249469283774e-06,
       "resistance_30d": 1.8259977214551937e-06,
-      "as_of": "2026-08-27 18:35:22",
+      "as_of": "2026-08-27 19:30:32",
       "stale": false
     },
     "superstate-short-duration-us-government-securities-fund-ustb": {
@@ -1427,7 +1427,7 @@
       "rows": [
         [
           "Price vs. recent range",
-          "Near its 30-day high (~$0.0613) - less room to run",
+          "Near its 30-day high (~$0.0618) - less room to run",
           -1
         ],
         [
@@ -1447,7 +1447,7 @@
         ],
         [
           "Stretch from long-term average",
-          "-9.6% vs its long-term average - not stretched either way",
+          "-8.8% vs its long-term average - not stretched either way",
           0
         ],
         [
@@ -1460,12 +1460,12 @@
       "id": "crypto-com-chain",
       "symbol": "CRO",
       "name": "Cronos",
-      "price": 0.061299,
-      "pct_24h": 4.82641,
-      "pct_7d": 12.6,
+      "price": 0.061797,
+      "pct_24h": 6.05032,
+      "pct_7d": 13.9,
       "support_30d": 0.04621382085807831,
-      "resistance_30d": 0.06131398895415957,
-      "as_of": "2026-08-27 18:12:47",
+      "resistance_30d": 0.061804944059293716,
+      "as_of": "2026-08-27 19:30:32",
       "stale": false
     },
     "ethereum-classic": {
@@ -2961,16 +2961,16 @@
     "key": "BTC",
     "name": "Bitcoin",
     "emoji": "\u20bf",
-    "price": 80134,
+    "price": 80113,
     "high_24h": 80793,
     "low_24h": 78233,
-    "pct_24h": 2.29142,
+    "pct_24h": 2.0268,
     "pct_7d": 10.1,
     "pct_30d": 25.9,
-    "sma50": 66427.10834207051,
-    "sma200": 69204.82860466056,
+    "sma50": 66425.835329105,
+    "sma200": 69204.51035141919,
     "support_30d": 62772.57726413174,
-    "resistance_30d": 80134.22111670538,
+    "resistance_30d": 80070.57046843009,
     "mark_price": 80577.96281884,
     "index_price": 80601.22869565,
     "funding_rate": 8.137e-05,
@@ -2983,14 +2983,14 @@
     "key": "ETH",
     "name": "Ethereum",
     "emoji": "\u039e",
-    "price": 2508.93,
+    "price": 2510.93,
     "high_24h": 2558.47,
     "low_24h": 2462.42,
-    "pct_24h": 1.50584,
+    "pct_24h": 1.28636,
     "pct_7d": 6.8,
     "pct_30d": 31.8,
-    "sma50": 1977.5189073145104,
-    "sma200": 2015.7894897672088,
+    "sma50": 1977.5290138345142,
+    "sma200": 2015.7920163972099,
     "support_30d": 1843.443563411847,
     "resistance_30d": 2514.967577695514,
     "mark_price": 2526.37387597,
