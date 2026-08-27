@@ -548,10 +548,27 @@ def fetch_screener_markets(limit=SCREENER_SIZE):
            f"&price_change_percentage=1h,24h,7d,30d")
     data = http_get_json(url)
     covered_ids = {c["cg_id"] for c in COINS}
-    candidates = [d for d in data if d["id"] not in SCREENER_EXCLUDE_IDS and d["id"] not in covered_ids]
+    candidates = [
+        d for d in data
+        if d["id"] not in SCREENER_EXCLUDE_IDS
+        and d["id"] not in covered_ids
+        and not _looks_pegged(d)
+    ]
     if len(candidates) <= limit:
         return candidates
     return random.sample(candidates, limit)
+
+
+def _looks_pegged(d):
+    """Catches tokenized money-market/treasury funds and stablecoin-likes that keep showing
+    up under new names (BUIDL, Janus Henderson's fund, BFUSD, ...) without having to chase
+    each one by id: price glued near $1 AND barely moved in a week is the signature of a peg,
+    not a real speculative asset. A genuinely volatile coin rarely sits still like that."""
+    price = d.get("current_price")
+    if price is None:
+        return False
+    pct_7d = d.get("price_change_percentage_7d_in_currency")
+    return 0.97 <= price <= 1.03 and pct_7d is not None and abs(pct_7d) < 3
 
 
 def compute_spot_signal_lite(m, chart, fng_value):
