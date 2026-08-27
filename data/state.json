@@ -4,7 +4,7 @@
   "_alerts_state": {
     "btc-resistance-break": {
       "triggered": true,
-      "last_triggered_at": "2026-08-27 23:10:22"
+      "last_triggered_at": "2026-08-27 23:15:22"
     },
     "btc-support-break": {
       "triggered": false,
@@ -943,7 +943,7 @@
     "aster-2": {
       "label": "\ud83d\udfe1 HOLD / NEUTRAL",
       "status": "neutral",
-      "score": 0,
+      "score": -1,
       "rows": [
         [
           "Price vs. recent range",
@@ -962,12 +962,12 @@
         ],
         [
           "Recent trend",
-          "Trending up steadily - healthy",
-          1
+          "Chopping sideways - no clear trend",
+          0
         ],
         [
           "Stretch from long-term average",
-          "+7.1% vs its long-term average - not stretched either way",
+          "+7.0% vs its long-term average - not stretched either way",
           0
         ],
         [
@@ -980,12 +980,12 @@
       "id": "aster-2",
       "symbol": "ASTER",
       "name": "Aster",
-      "price": 0.707597,
-      "pct_24h": -0.78345,
-      "pct_7d": 8.5,
+      "price": 0.706791,
+      "pct_24h": -1.53944,
+      "pct_7d": 6.8,
       "support_30d": 0.5982513690669262,
       "resistance_30d": 0.7276231199504045,
-      "as_of": "2026-08-27 21:40:27",
+      "as_of": "2026-08-27 23:15:22",
       "stale": false
     },
     "worldcoin-wld": {
@@ -2455,7 +2455,7 @@
         ],
         [
           "Stretch from long-term average",
-          "+18.7% above its long-term average - a bit stretched",
+          "+19.3% above its long-term average - a bit stretched",
           -1
         ],
         [
@@ -2468,12 +2468,12 @@
       "id": "near",
       "symbol": "NEAR",
       "name": "NEAR Protocol",
-      "price": 1.93,
-      "pct_24h": 3.61465,
-      "pct_7d": 12.2,
+      "price": 1.94,
+      "pct_24h": 3.14857,
+      "pct_7d": 11.6,
       "support_30d": 1.5879597131538,
       "resistance_30d": 2.0141495518834596,
-      "as_of": "2026-08-27 21:50:23",
+      "as_of": "2026-08-27 23:15:22",
       "stale": false
     },
     "quant-network": {
@@ -2695,7 +2695,7 @@
         ],
         [
           "Stretch from long-term average",
-          "+1.5% vs its long-term average - not stretched either way",
+          "+1.4% vs its long-term average - not stretched either way",
           0
         ],
         [
@@ -2708,12 +2708,12 @@
       "id": "pax-gold",
       "symbol": "PAXG",
       "name": "PAX Gold",
-      "price": 4600.66,
-      "pct_24h": -0.11358,
-      "pct_7d": 1.9,
+      "price": 4597.25,
+      "pct_24h": -0.23172,
+      "pct_7d": 2.1,
       "support_30d": 4043.9895961400557,
       "resistance_30d": 4672.307573354755,
-      "as_of": "2026-08-27 22:45:21",
+      "as_of": "2026-08-27 23:15:22",
       "stale": false
     },
     "morpho": {
@@ -2961,16 +2961,16 @@
     "key": "BTC",
     "name": "Bitcoin",
     "emoji": "\u20bf",
-    "price": 80257,
+    "price": 80222,
     "high_24h": 80793,
     "low_24h": 78598,
-    "pct_24h": 2.00487,
+    "pct_24h": 1.93757,
     "pct_7d": 10.4,
     "pct_30d": 25.6,
-    "sma50": 66429.56908184757,
-    "sma200": 69205.44378960483,
+    "sma50": 66429.19888318093,
+    "sma200": 69205.35123993817,
     "support_30d": 62772.57726413174,
-    "resistance_30d": 80257.25810555789,
+    "resistance_30d": 80238.7481722259,
     "mark_price": 80577.96281884,
     "index_price": 80601.22869565,
     "funding_rate": 8.137e-05,
@@ -2983,16 +2983,16 @@
     "key": "ETH",
     "name": "Ethereum",
     "emoji": "\u039e",
-    "price": 2515.51,
+    "price": 2512.37,
     "high_24h": 2558.47,
     "low_24h": 2482.26,
-    "pct_24h": 1.0409,
+    "pct_24h": 0.89848,
     "pct_7d": 8.5,
     "pct_30d": 30.8,
-    "sma50": 1977.6325426935975,
-    "sma200": 2015.8178986119808,
+    "sma50": 1977.5917534443934,
+    "sma200": 2015.8077012996798,
     "support_30d": 1843.443563411847,
-    "resistance_30d": 2515.062318112494,
+    "resistance_30d": 2514.967577695514,
     "mark_price": 2526.37387597,
     "index_price": 2527.29651163,
     "funding_rate": 2.111e-05,
