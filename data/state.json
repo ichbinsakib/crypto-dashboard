@@ -4,15 +4,15 @@
   "_alerts_state": {
     "btc-resistance-break": {
       "triggered": true,
-      "last_triggered_at": "2026-08-27 17:03:12"
+      "last_triggered_at": "2026-08-27 17:05:40"
     },
     "btc-support-break": {
       "triggered": false,
       "last_triggered_at": null
     },
     "eth-resistance-break": {
-      "triggered": true,
-      "last_triggered_at": "2026-08-27 17:03:12"
+      "triggered": false,
+      "last_triggered_at": "2026-08-27 17:00:25"
     },
     "eth-support-break": {
       "triggered": false,
@@ -679,7 +679,7 @@
         ],
         [
           "Stretch from long-term average",
-          "-4.4% vs its long-term average - not stretched either way",
+          "-4.8% vs its long-term average - not stretched either way",
           0
         ],
         [
@@ -692,12 +692,12 @@
       "id": "cardano",
       "symbol": "ADA",
       "name": "Cardano",
-      "price": 0.215889,
-      "pct_24h": 5.98684,
-      "pct_7d": 10.6,
+      "price": 0.215044,
+      "pct_24h": 5.50517,
+      "pct_7d": 9.7,
       "support_30d": 0.16199689974014272,
       "resistance_30d": 0.2291047455940254,
-      "as_of": "2026-08-27 16:35:03",
+      "as_of": "2026-08-27 17:05:40",
       "stale": false
     },
     "stellar": {
@@ -995,7 +995,7 @@
       "rows": [
         [
           "Price vs. recent range",
-          "Near its 30-day high (~$0.4154) - less room to run",
+          "Near its 30-day high (~$0.4162) - less room to run",
           -1
         ],
         [
@@ -1015,7 +1015,7 @@
         ],
         [
           "Stretch from long-term average",
-          "+14.8% above its long-term average - a bit stretched",
+          "+16.8% above its long-term average - a bit stretched",
           -1
         ],
         [
@@ -1028,12 +1028,12 @@
       "id": "worldcoin-wld",
       "symbol": "WLD",
       "name": "Worldcoin",
-      "price": 0.40977,
-      "pct_24h": 5.53906,
-      "pct_7d": 13.5,
+      "price": 0.416754,
+      "pct_24h": 8.43148,
+      "pct_7d": 15.3,
       "support_30d": 0.29949503410290834,
-      "resistance_30d": 0.4153748859818001,
-      "as_of": "2026-08-27 15:29:38",
+      "resistance_30d": 0.41622004969729065,
+      "as_of": "2026-08-27 17:05:40",
       "stale": false
     },
     "bfusd": {
@@ -1317,11 +1317,11 @@
       "symbol": "HTX",
       "name": "HTX DAO",
       "price": 1.71e-06,
-      "pct_24h": 0.11292,
+      "pct_24h": 0.18929,
       "pct_7d": -0.3,
       "support_30d": 1.7087911828559967e-06,
       "resistance_30d": 1.8259977214551937e-06,
-      "as_of": "2026-08-27 16:57:59",
+      "as_of": "2026-08-27 16:41:31",
       "stale": false
     },
     "superstate-short-duration-us-government-securities-fund-ustb": {
@@ -1543,7 +1543,7 @@
         ],
         [
           "Stretch from long-term average",
-          "+151.0% above its long-term average - very stretched",
+          "+151.4% above its long-term average - very stretched",
           -2
         ],
         [
@@ -1556,12 +1556,12 @@
       "id": "pump-fun",
       "symbol": "PUMP",
       "name": "Pump.fun",
-      "price": 0.00494534,
-      "pct_24h": 5.84966,
+      "price": 0.00495397,
+      "pct_24h": 6.12017,
       "pct_7d": 37.2,
       "support_30d": 0.0018629786850412205,
       "resistance_30d": 0.0052249885406471875,
-      "as_of": "2026-08-27 16:57:59",
+      "as_of": "2026-08-27 16:55:29",
       "stale": false
     },
     "venice-token": {
@@ -1571,7 +1571,7 @@
       "rows": [
         [
           "Price vs. recent range",
-          "Near its 30-day high (~$18.41) - less room to run",
+          "Near its 30-day high (~$18.13) - less room to run",
           -1
         ],
         [
@@ -1591,7 +1591,7 @@
         ],
         [
           "Stretch from long-term average",
-          "+69.3% above its long-term average - very stretched",
+          "+68.0% above its long-term average - very stretched",
           -2
         ],
         [
@@ -1604,12 +1604,12 @@
       "id": "venice-token",
       "symbol": "VVV",
       "name": "Venice Token",
-      "price": 18.26,
-      "pct_24h": 9.29796,
+      "price": 18.12,
+      "pct_24h": 7.74568,
       "pct_7d": 25.0,
       "support_30d": 11.286631406210226,
-      "resistance_30d": 18.41384144589391,
-      "as_of": "2026-08-27 16:57:59",
+      "resistance_30d": 18.125089518771876,
+      "as_of": "2026-08-27 16:21:50",
       "stale": false
     },
     "litecoin": {
@@ -1853,9 +1853,9 @@
       "stale": false
     },
     "bitcoin-cash": {
-      "label": "\ud83d\udd34 CAUTION - REDUCE NEW BUYS",
-      "status": "bearish",
-      "score": -2,
+      "label": "\ud83d\udfe1 HOLD / NEUTRAL",
+      "status": "neutral",
+      "score": 1,
       "rows": [
         [
           "Price vs. recent range",
@@ -1874,12 +1874,12 @@
         ],
         [
           "Recent trend",
-          "Shooting straight up - classic blow-off top risk, don't chase",
-          -2
+          "Trending up steadily - healthy",
+          1
         ],
         [
           "Stretch from long-term average",
-          "-22.2% below its long-term average - confirmed downtrend",
+          "-22.3% below its long-term average - confirmed downtrend",
           -1
         ],
         [
@@ -1888,16 +1888,16 @@
           0
         ]
       ],
-      "plain": "Getting risky - I'd hold off on new buys until this cools down.",
+      "plain": "No real edge either way right now - fine to just wait and watch.",
       "id": "bitcoin-cash",
       "symbol": "BCH",
       "name": "Bitcoin Cash",
-      "price": 272.82,
-      "pct_24h": 5.05992,
-      "pct_7d": 23.8,
+      "price": 272.48,
+      "pct_24h": 4.9445,
+      "pct_7d": 22.7,
       "support_30d": 203.50169440615565,
       "resistance_30d": 288.10955405353275,
-      "as_of": "2026-08-27 16:53:04",
+      "as_of": "2026-08-27 17:00:25",
       "stale": false
     },
     "mantle": {
@@ -2325,11 +2325,11 @@
       "symbol": "GRAM",
       "name": "Gram (prev. Toncoin)",
       "price": 1.44,
-      "pct_24h": 4.78351,
-      "pct_7d": 3.0,
+      "pct_24h": 4.8072,
+      "pct_7d": 2.7,
       "support_30d": 1.316580434471296,
       "resistance_30d": 1.4926762805297678,
-      "as_of": "2026-08-27 17:03:12",
+      "as_of": "2026-08-27 16:35:03",
       "stale": false
     },
     "sky": {
@@ -2407,7 +2407,7 @@
         ],
         [
           "Stretch from long-term average",
-          "-1.8% vs its long-term average - not stretched either way",
+          "-0.0% vs its long-term average - not stretched either way",
           0
         ],
         [
@@ -2420,12 +2420,12 @@
       "id": "shiba-inu",
       "symbol": "SHIB",
       "name": "Shiba Inu",
-      "price": 5.36e-06,
-      "pct_24h": 2.06209,
-      "pct_7d": 9.0,
+      "price": 5.46e-06,
+      "pct_24h": 5.26626,
+      "pct_7d": 11.0,
       "support_30d": 4.390093758351827e-06,
       "resistance_30d": 5.903506876405612e-06,
-      "as_of": "2026-08-27 13:40:27",
+      "as_of": "2026-08-27 17:05:40",
       "stale": false
     },
     "near": {
@@ -2612,12 +2612,12 @@
       "id": "bitway",
       "symbol": "BTW",
       "name": "Bitway",
-      "price": 0.397548,
-      "pct_24h": -3.67392,
-      "pct_7d": 4.8,
+      "price": 0.397957,
+      "pct_24h": -6.71364,
+      "pct_7d": 1.3,
       "support_30d": 0.08014613119704155,
       "resistance_30d": 0.48261706732469345,
-      "as_of": "2026-08-27 14:00:39",
+      "as_of": "2026-08-27 17:00:25",
       "stale": false
     },
     "world-liberty-financial": {
@@ -2647,7 +2647,7 @@
         ],
         [
           "Stretch from long-term average",
-          "-20.2% below its long-term average - confirmed downtrend",
+          "-20.1% below its long-term average - confirmed downtrend",
           -1
         ],
         [
@@ -2660,12 +2660,12 @@
       "id": "world-liberty-financial",
       "symbol": "WLFI",
       "name": "World Liberty Financial",
-      "price": 0.05921,
-      "pct_24h": 2.54277,
-      "pct_7d": -3.6,
+      "price": 0.059249,
+      "pct_24h": 2.42292,
+      "pct_7d": -4.4,
       "support_30d": 0.051301304477199876,
       "resistance_30d": 0.06254770952093733,
-      "as_of": "2026-08-27 17:03:12",
+      "as_of": "2026-08-27 16:26:07",
       "stale": false
     },
     "pax-gold": {
@@ -2695,7 +2695,7 @@
         ],
         [
           "Stretch from long-term average",
-          "+1.2% vs its long-term average - not stretched either way",
+          "+1.6% vs its long-term average - not stretched either way",
           0
         ],
         [
@@ -2708,18 +2708,18 @@
       "id": "pax-gold",
       "symbol": "PAXG",
       "name": "PAX Gold",
-      "price": 4589.56,
-      "pct_24h": -0.10762,
-      "pct_7d": 2.5,
+      "price": 4605.41,
+      "pct_24h": 0.3966,
+      "pct_7d": 2.2,
       "support_30d": 4043.9895961400557,
       "resistance_30d": 4672.307573354755,
-      "as_of": "2026-08-27 15:37:17",
+      "as_of": "2026-08-27 17:00:25",
       "stale": false
     },
     "morpho": {
-      "label": "\ud83d\udfe1 HOLD / NEUTRAL",
-      "status": "neutral",
-      "score": -1,
+      "label": "\ud83d\udd34 CAUTION - REDUCE NEW BUYS",
+      "status": "bearish",
+      "score": -4,
       "rows": [
         [
           "Price vs. recent range",
@@ -2738,12 +2738,12 @@
         ],
         [
           "Recent trend",
-          "Trending up steadily - healthy",
-          1
+          "Shooting straight up - classic blow-off top risk, don't chase",
+          -2
         ],
         [
           "Stretch from long-term average",
-          "+38.1% above its long-term average - very stretched",
+          "+39.1% above its long-term average - very stretched",
           -2
         ],
         [
@@ -2752,16 +2752,16 @@
           0
         ]
       ],
-      "plain": "No real edge either way right now - fine to just wait and watch.",
+      "plain": "Getting risky - I'd hold off on new buys until this cools down.",
       "id": "morpho",
       "symbol": "MORPHO",
       "name": "Morpho",
-      "price": 2.61,
-      "pct_24h": 7.0206,
-      "pct_7d": 11.6,
+      "price": 2.63,
+      "pct_24h": 8.23218,
+      "pct_7d": 21.0,
       "support_30d": 1.8400586135640542,
       "resistance_30d": 2.9026212482639075,
-      "as_of": "2026-08-27 17:03:12",
+      "as_of": "2026-08-27 14:30:36",
       "stale": false
     },
     "memecore": {
@@ -2813,9 +2813,9 @@
       "stale": false
     },
     "aave": {
-      "label": "\ud83d\udfe1 HOLD / NEUTRAL",
-      "status": "neutral",
-      "score": -1,
+      "label": "\ud83d\udd34 CAUTION - REDUCE NEW BUYS",
+      "status": "bearish",
+      "score": -4,
       "rows": [
         [
           "Price vs. recent range",
@@ -2834,12 +2834,12 @@
         ],
         [
           "Recent trend",
-          "Trending up steadily - healthy",
-          1
+          "Shooting straight up - classic blow-off top risk, don't chase",
+          -2
         ],
         [
           "Stretch from long-term average",
-          "+31.5% above its long-term average - very stretched",
+          "+33.1% above its long-term average - very stretched",
           -2
         ],
         [
@@ -2848,16 +2848,16 @@
           0
         ]
       ],
-      "plain": "No real edge either way right now - fine to just wait and watch.",
+      "plain": "Getting risky - I'd hold off on new buys until this cools down.",
       "id": "aave",
       "symbol": "AAVE",
       "name": "Aave",
-      "price": 127.76,
-      "pct_24h": 3.55308,
-      "pct_7d": 30.7,
+      "price": 129.31,
+      "pct_24h": 5.49034,
+      "pct_7d": 32.8,
       "support_30d": 85.94219943917633,
       "resistance_30d": 141.53047916466082,
-      "as_of": "2026-08-27 14:30:36",
+      "as_of": "2026-08-27 16:55:29",
       "stale": false
     },
     "okb": {
@@ -2961,16 +2961,16 @@
     "key": "BTC",
     "name": "Bitcoin",
     "emoji": "\u20bf",
-    "price": 80386,
+    "price": 80281,
     "high_24h": 80745,
     "low_24h": 78233,
-    "pct_24h": 3.00814,
+    "pct_24h": 2.87962,
     "pct_7d": 11.0,
     "pct_30d": 25.9,
-    "sma50": 66431.00368109341,
-    "sma200": 69205.80243941628,
+    "sma50": 66430.05028285812,
+    "sma200": 69205.56408985746,
     "support_30d": 62772.57726413174,
-    "resistance_30d": 80328.98806785008,
+    "resistance_30d": 80281.31815608613,
     "mark_price": 80231.8,
     "index_price": 80259.11956522,
     "funding_rate": 6.505e-05,
@@ -2983,16 +2983,16 @@
     "key": "ETH",
     "name": "Ethereum",
     "emoji": "\u039e",
-    "price": 2522.3,
+    "price": 2518.52,
     "high_24h": 2558.47,
     "low_24h": 2459.08,
-    "pct_24h": 3.11434,
+    "pct_24h": 2.9889,
     "pct_7d": 8.5,
     "pct_30d": 31.6,
-    "sma50": 1977.7592819276733,
-    "sma200": 2015.8495834204996,
+    "sma50": 1977.7041296713953,
+    "sma200": 2015.8357953564303,
     "support_30d": 1843.443563411847,
-    "resistance_30d": 2521.3992798163003,
+    "resistance_30d": 2518.641667002393,
     "mark_price": 2518.0699845,
     "index_price": 2519.47465116,
     "funding_rate": 1.242e-05,
