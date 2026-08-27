@@ -4,7 +4,7 @@
   "_alerts_state": {
     "btc-resistance-break": {
       "triggered": true,
-      "last_triggered_at": "2026-08-27 12:10:24"
+      "last_triggered_at": "2026-08-27 12:20:26"
     },
     "btc-support-break": {
       "triggered": false,
@@ -55,7 +55,7 @@
         ],
         [
           "Stretch from long-term average",
-          "+14.6% above its long-term average - a bit stretched",
+          "+14.7% above its long-term average - a bit stretched",
           -1
         ],
         [
@@ -68,12 +68,12 @@
       "id": "binancecoin",
       "symbol": "BNB",
       "name": "BNB",
-      "price": 706.36,
-      "pct_24h": 0.61286,
+      "price": 707.02,
+      "pct_24h": 0.75645,
       "pct_7d": 9.9,
       "support_30d": 571.3881477127459,
       "resistance_30d": 707.47963722231,
-      "as_of": "2026-08-27 12:10:24",
+      "as_of": "2026-08-27 12:20:26",
       "stale": false
     },
     "ripple": {
@@ -261,11 +261,11 @@
       "symbol": "FIGR_HELOC",
       "name": "Figure Heloc",
       "price": 1.003,
-      "pct_24h": -0.68254,
+      "pct_24h": -0.68026,
       "pct_7d": -3.9,
       "support_30d": 1.0008548889936117,
       "resistance_30d": 1.0443247364269224,
-      "as_of": "2026-08-27 12:00:35",
+      "as_of": "2026-08-27 12:20:26",
       "stale": false
     },
     "hyperliquid": {
@@ -461,9 +461,9 @@
       "stale": false
     },
     "chainlink": {
-      "label": "\ud83d\udfe1 HOLD / NEUTRAL",
-      "status": "neutral",
-      "score": -1,
+      "label": "\ud83d\udd34 CAUTION - REDUCE NEW BUYS",
+      "status": "bearish",
+      "score": -2,
       "rows": [
         [
           "Price vs. recent range",
@@ -487,8 +487,8 @@
         ],
         [
           "Stretch from long-term average",
-          "+29.4% above its long-term average - a bit stretched",
-          -1
+          "+30.2% above its long-term average - very stretched",
+          -2
         ],
         [
           "Leverage traders' bias",
@@ -496,16 +496,16 @@
           0
         ]
       ],
-      "plain": "No real edge either way right now - fine to just wait and watch.",
+      "plain": "Getting risky - I'd hold off on new buys until this cools down.",
       "id": "chainlink",
       "symbol": "LINK",
       "name": "Chainlink",
-      "price": 11.7,
-      "pct_24h": 2.7301,
-      "pct_7d": 11.0,
+      "price": 11.78,
+      "pct_24h": 3.56924,
+      "pct_7d": 9.9,
       "support_30d": 8.061001591420974,
       "resistance_30d": 11.992351770358374,
-      "as_of": "2026-08-27 11:40:24",
+      "as_of": "2026-08-27 12:20:26",
       "stale": false
     },
     "whitebit": {
@@ -597,11 +597,11 @@
       "symbol": "LEO",
       "name": "LEO Token",
       "price": 9.32,
-      "pct_24h": 0.42557,
+      "pct_24h": 0.4306,
       "pct_7d": 0.7,
       "support_30d": 8.948412455130585,
       "resistance_30d": 9.784703173040917,
-      "as_of": "2026-08-27 11:40:24",
+      "as_of": "2026-08-27 12:20:26",
       "stale": false
     },
     "monero": {
@@ -893,9 +893,9 @@
       "stale": false
     },
     "avalanche-2": {
-      "label": "\ud83d\udfe2 LEAN ACCUMULATE",
-      "status": "bullish",
-      "score": 2,
+      "label": "\ud83d\udfe1 HOLD / NEUTRAL",
+      "status": "neutral",
+      "score": 1,
       "rows": [
         [
           "Price vs. recent range",
@@ -914,12 +914,12 @@
         ],
         [
           "Recent trend",
-          "Trending up steadily - healthy",
-          1
+          "Chopping sideways - no clear trend",
+          0
         ],
         [
           "Stretch from long-term average",
-          "-8.9% vs its long-term average - not stretched either way",
+          "-9.1% vs its long-term average - not stretched either way",
           0
         ],
         [
@@ -928,16 +928,16 @@
           0
         ]
       ],
-      "plain": "Leans toward a decent spot to slowly add (DCA) - not a strong signal, just a lean.",
+      "plain": "No real edge either way right now - fine to just wait and watch.",
       "id": "avalanche-2",
       "symbol": "AVAX",
       "name": "Avalanche",
-      "price": 7.43,
-      "pct_24h": 0.44159,
-      "pct_7d": 8.0,
+      "price": 7.41,
+      "pct_24h": 1.17497,
+      "pct_7d": 7.1,
       "support_30d": 6.186861556497119,
       "resistance_30d": 7.836507914480645,
-      "as_of": "2026-08-27 11:10:22",
+      "as_of": "2026-08-27 12:20:26",
       "stale": false
     },
     "aster-2": {
@@ -1111,7 +1111,7 @@
         ],
         [
           "Stretch from long-term average",
-          "+21.1% above its long-term average - a bit stretched",
+          "+20.4% above its long-term average - a bit stretched",
           -1
         ],
         [
@@ -1124,12 +1124,12 @@
       "id": "polygon-ecosystem-token",
       "symbol": "POL",
       "name": "POL (ex-MATIC)",
-      "price": 0.107533,
-      "pct_24h": -10.25971,
+      "price": 0.106865,
+      "pct_24h": -10.57875,
       "pct_7d": 29.2,
       "support_30d": 0.07122648504650138,
       "resistance_30d": 0.12250456198546959,
-      "as_of": "2026-08-27 12:10:24",
+      "as_of": "2026-08-27 12:20:26",
       "stale": false
     },
     "blackrock-usd-institutional-digital-liquidity-fund": {
@@ -1207,7 +1207,7 @@
         ],
         [
           "Stretch from long-term average",
-          "+1.7% vs its long-term average - not stretched either way",
+          "+1.4% vs its long-term average - not stretched either way",
           0
         ],
         [
@@ -1220,12 +1220,12 @@
       "id": "nexo",
       "symbol": "NEXO",
       "name": "NEXO",
-      "price": 0.850027,
-      "pct_24h": 1.42408,
-      "pct_7d": 10.0,
+      "price": 0.847853,
+      "pct_24h": 1.78622,
+      "pct_7d": 9.0,
       "support_30d": 0.7016300793001435,
       "resistance_30d": 0.8734100764023305,
-      "as_of": "2026-08-27 11:35:02",
+      "as_of": "2026-08-27 12:20:26",
       "stale": false
     },
     "janus-henderson-anemoy-treasury-fund": {
@@ -1303,7 +1303,7 @@
         ],
         [
           "Stretch from long-term average",
-          "-3.6% vs its long-term average - not stretched either way",
+          "-3.0% vs its long-term average - not stretched either way",
           0
         ],
         [
@@ -1316,12 +1316,12 @@
       "id": "htx-dao",
       "symbol": "HTX",
       "name": "HTX DAO",
-      "price": 1.71e-06,
-      "pct_24h": 0.01993,
+      "price": 1.72e-06,
+      "pct_24h": 0.10931,
       "pct_7d": -0.3,
       "support_30d": 1.7087911828559967e-06,
       "resistance_30d": 1.8259977214551937e-06,
-      "as_of": "2026-08-27 12:00:35",
+      "as_of": "2026-08-27 12:20:26",
       "stale": false
     },
     "superstate-short-duration-us-government-securities-fund-ustb": {
@@ -1379,7 +1379,7 @@
       "rows": [
         [
           "Price vs. recent range",
-          "Near its 30-day high (~$8.14) - less room to run",
+          "Near its 30-day high (~$8.15) - less room to run",
           -1
         ],
         [
@@ -1399,7 +1399,7 @@
         ],
         [
           "Stretch from long-term average",
-          "+18.1% above its long-term average - a bit stretched",
+          "+18.2% above its long-term average - a bit stretched",
           -1
         ],
         [
@@ -1412,12 +1412,12 @@
       "id": "gatechain-token",
       "symbol": "GT",
       "name": "Gate",
-      "price": 8.14,
-      "pct_24h": 3.46626,
+      "price": 8.15,
+      "pct_24h": 3.30617,
       "pct_7d": 17.9,
       "support_30d": 6.457783260010234,
-      "resistance_30d": 8.144210387674384,
-      "as_of": "2026-08-27 12:10:24",
+      "resistance_30d": 8.146813828363047,
+      "as_of": "2026-08-27 12:20:26",
       "stale": false
     },
     "crypto-com-chain": {
@@ -1543,7 +1543,7 @@
         ],
         [
           "Stretch from long-term average",
-          "+141.2% above its long-term average - very stretched",
+          "+143.2% above its long-term average - very stretched",
           -2
         ],
         [
@@ -1556,12 +1556,12 @@
       "id": "pump-fun",
       "symbol": "PUMP",
       "name": "Pump.fun",
-      "price": 0.0047488,
-      "pct_24h": -0.52072,
-      "pct_7d": 43.6,
+      "price": 0.00478926,
+      "pct_24h": 1.19942,
+      "pct_7d": 42.7,
       "support_30d": 0.0018629786850412205,
       "resistance_30d": 0.0052249885406471875,
-      "as_of": "2026-08-27 11:40:24",
+      "as_of": "2026-08-27 12:20:26",
       "stale": false
     },
     "venice-token": {
@@ -1652,12 +1652,12 @@
       "id": "litecoin",
       "symbol": "LTC",
       "name": "Litecoin",
-      "price": 49.86,
-      "pct_24h": -1.29416,
-      "pct_7d": 5.8,
+      "price": 49.87,
+      "pct_24h": -1.46153,
+      "pct_7d": 5.3,
       "support_30d": 43.806923130603906,
       "resistance_30d": 53.12964707139583,
-      "as_of": "2026-08-27 11:50:24",
+      "as_of": "2026-08-27 12:20:26",
       "stale": false
     },
     "bitget-token": {
@@ -2180,12 +2180,12 @@
       "id": "canton-network",
       "symbol": "CC",
       "name": "Canton",
-      "price": 0.114988,
-      "pct_24h": -2.13245,
+      "price": 0.11498,
+      "pct_24h": -1.92587,
       "pct_7d": 10.4,
       "support_30d": 0.09051839499501885,
       "resistance_30d": 0.12396615653575341,
-      "as_of": "2026-08-27 12:00:35",
+      "as_of": "2026-08-27 12:20:26",
       "stale": false
     },
     "internet-computer": {
@@ -2717,9 +2717,9 @@
       "stale": false
     },
     "morpho": {
-      "label": "\ud83d\udd34 CAUTION - REDUCE NEW BUYS",
+      "label": "\ud83d\udd34 DISTRIBUTION ZONE",
       "status": "bearish",
-      "score": -4,
+      "score": -7,
       "rows": [
         [
           "Price vs. recent range",
@@ -2738,12 +2738,12 @@
         ],
         [
           "Recent trend",
-          "Trending up steadily - healthy",
-          1
+          "Shooting straight up - classic blow-off top risk, don't chase",
+          -2
         ],
         [
           "Stretch from long-term average",
-          "+42.3% above its long-term average - very stretched",
+          "+42.8% above its long-term average - very stretched",
           -2
         ],
         [
@@ -2752,16 +2752,16 @@
           0
         ]
       ],
-      "plain": "Getting risky - I'd hold off on new buys until this cools down.",
+      "plain": "Looks stretched and euphoric - historically the zone where smart money sells, not buys.",
       "id": "morpho",
       "symbol": "MORPHO",
       "name": "Morpho",
-      "price": 2.69,
-      "pct_24h": 4.79926,
+      "price": 2.7,
+      "pct_24h": 5.08349,
       "pct_7d": 22.8,
       "support_30d": 1.8400586135640542,
       "resistance_30d": 2.9026212482639075,
-      "as_of": "2026-08-27 12:10:24",
+      "as_of": "2026-08-27 12:20:26",
       "stale": false
     },
     "memecore": {
@@ -2961,16 +2961,16 @@
     "key": "BTC",
     "name": "Bitcoin",
     "emoji": "\u20bf",
-    "price": 79386,
+    "price": 79427,
     "high_24h": 80475,
     "low_24h": 77648,
-    "pct_24h": 1.23212,
+    "pct_24h": 1.34281,
     "pct_7d": 10.5,
     "pct_30d": 25.3,
-    "sma50": 66412.20899918115,
-    "sma200": 69201.10376893822,
+    "sma50": 66412.96110326708,
+    "sma200": 69201.2917949597,
     "support_30d": 62772.57726413174,
-    "resistance_30d": 79389.25397223685,
+    "resistance_30d": 79426.85917653375,
     "mark_price": 78772.74355072,
     "index_price": 78810.87586957,
     "funding_rate": 7.74e-05,
@@ -2983,14 +2983,14 @@
     "key": "ETH",
     "name": "Ethereum",
     "emoji": "\u039e",
-    "price": 2500.36,
+    "price": 2503.62,
     "high_24h": 2558.47,
     "low_24h": 2433.13,
-    "pct_24h": 1.59675,
+    "pct_24h": 1.80958,
     "pct_7d": 9.6,
     "pct_30d": 33.2,
-    "sma50": 1977.3424346844702,
-    "sma200": 2015.7453716096989,
+    "sma50": 1977.4005117261913,
+    "sma200": 2015.759890870129,
     "support_30d": 1843.443563411847,
     "resistance_30d": 2514.967577695514,
     "mark_price": 2491.84571318,
