@@ -15,7 +15,6 @@ Hosted:        .github/workflows/deploy.yml runs this on a schedule and publishe
 import json
 import os
 import datetime
-import random
 import subprocess
 import time
 import urllib.request
@@ -49,10 +48,6 @@ SCREENER_EXCLUDE_IDS = {
     # stablecoins -- an accumulate/distribute reading is meaningless for these
     "tether", "usd-coin", "binance-usd", "dai", "true-usd", "frax", "usdd",
     "first-digital-usd", "ethena-usde", "paypal-usd", "usds", "susds",
-    # yield-bearing/tokenized-treasury dollar (or other fiat) products -- pegged near $1
-    # (or 1 EUR etc), same problem as stables
-    "ondo-us-dollar-yield", "hashnote-usyc", "global-dollar", "united-stables",
-    "spiko-amundi-overnight-swap-fund-eur",
     # wrapped/staked duplicates of coins already covered on their own tabs
     "wrapped-bitcoin", "weth", "staked-ether", "wrapped-steth",
     "coinbase-wrapped-btc", "wrapped-eeth", "weeth",
@@ -533,25 +528,21 @@ def compute_trade_levels(c):
     }
 
 
-SCREENER_POOL_SIZE = 80  # candidate pool to rotate through -- one bulk API call regardless of size,
-                          # so widening this costs nothing extra (only the per-coin calls below are rate-limited)
-
-
 def fetch_screener_markets(limit=SCREENER_SIZE):
-    """Fetches a wide pool of top-market-cap coins in a single call, then randomly rotates
-    which `limit` of them get the (expensive, per-coin) detailed analysis each cycle. Without
-    this, the screener would greedily take the same first N coins by market-cap rank every
-    single run -- the top ~15 non-BTC/ETH coins by market cap barely change hour to hour, so
-    the list would look permanently "stuck" even though each coin's own data is fresh."""
+    fetch_n = limit + 15  # pad so exclusions still leave `limit` coins
     url = (f"https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd"
-           f"&order=market_cap_desc&per_page={SCREENER_POOL_SIZE}&page=1"
+           f"&order=market_cap_desc&per_page={fetch_n}&page=1"
            f"&price_change_percentage=1h,24h,7d,30d")
     data = http_get_json(url)
     covered_ids = {c["cg_id"] for c in COINS}
-    candidates = [d for d in data if d["id"] not in SCREENER_EXCLUDE_IDS and d["id"] not in covered_ids]
-    if len(candidates) <= limit:
-        return candidates
-    return random.sample(candidates, limit)
+    out = []
+    for d in data:
+        if d["id"] in SCREENER_EXCLUDE_IDS or d["id"] in covered_ids:
+            continue
+        out.append(d)
+        if len(out) >= limit:
+            break
+    return out
 
 
 def compute_spot_signal_lite(m, chart, fng_value):
@@ -599,10 +590,7 @@ def build_screener(fng_value, prev_screener_state, generated_at, markets=None):
         return cached, prev_screener_state
 
     results = []
-    # Start from the full accumulated history (not just this cycle's picks) so a coin's cache
-    # survives being rotated out and back in later -- otherwise random rotation would mean a
-    # coin only ever has a fallback if it happened to be selected last cycle too.
-    new_state = dict(prev_screener_state)
+    new_state = {}
     issues = []
     for m in markets:
         cid = m["id"]
