@@ -669,35 +669,18 @@ def build_screener(fng_value, prev_screener_state, generated_at, markets=None):
     return results, new_state
 
 
-KRAKEN_OHLC_URL = "https://api.kraken.com/0/public/OHLC"
+BINANCE_SPOT_KLINES_URL = "https://api.binance.com/api/v3/klines"
 INTRADAY_TIMEFRAMES = {
-    # interval -> (kraken OHLC interval in minutes, candles used for range/ATR)
-    "15m": {"kraken_interval": 15, "lookback": 30, "window_label": "last ~7.5 hours"},
-    "1h": {"kraken_interval": 60, "lookback": 24, "window_label": "last 24 hours"},
+    # interval -> (binance klines interval string, candles to fetch, candles used for range/ATR)
+    "15m": {"binance_interval": "15m", "fetch_limit": 100, "lookback": 30, "window_label": "last ~7.5 hours"},
+    "1h": {"binance_interval": "1h", "fetch_limit": 100, "lookback": 24, "window_label": "last 24 hours"},
 }
-# Binance's public spot API returns HTTP 451 (geo-blocked) from GitHub Actions' IP ranges --
-# confirmed in production: every single symbol failed, including major pairs that definitely
-# exist (SOLUSDT, LTCUSDT, UNIUSDT...), which only happens when the origin itself is blocked,
-# not the individual pair. Kraken's public API has no such restriction. Its rate limit is
-# tighter than Binance's though, hence the larger delay here.
-INTRADAY_RATE_LIMIT_DELAY = 1.2
+INTRADAY_RATE_LIMIT_DELAY = 0.35  # Binance's public spot API is far more permissive than CoinGecko's
 
 
-def fetch_kraken_ohlc(symbol, interval_minutes):
-    """Kraken resolves common aliases itself (BTCUSD and XBTUSD both work, DOGEUSD resolves
-    to its internal XDGUSD, etc.) so a plain {SYMBOL}USD query works without a mapping table.
-    Response OHLC rows are [time, open, high, low, close, vwap, volume, count] -- high/low/close
-    land at the same indices (2/3/4) compute_intraday_signal already expects from Binance."""
-    pair = f"{symbol}USD"
-    url = f"{KRAKEN_OHLC_URL}?pair={pair}&interval={interval_minutes}"
-    data = http_get_json(url)
-    if data.get("error"):
-        raise ValueError(f"Kraken error for {pair}: {data['error']}")
-    result = data.get("result", {})
-    keys = [k for k in result.keys() if k != "last"]
-    if not keys:
-        raise ValueError(f"Kraken returned no OHLC series for {pair}")
-    return result[keys[0]]
+def fetch_binance_spot_klines(symbol, interval, limit):
+    url = f"{BINANCE_SPOT_KLINES_URL}?symbol={symbol}&interval={interval}&limit={limit}"
+    return http_get_json(url)
 
 
 def compute_intraday_signal(klines, lookback, window_label):
@@ -782,30 +765,22 @@ def compute_intraday_signal(klines, lookback, window_label):
     }
 
 
-def build_intraday_screener(markets, timeframe_key, target_count=SCREENER_SIZE, max_attempts=45):
+def build_intraday_screener(markets, timeframe_key):
     """Runs the lean intraday model over the same coin universe as the daily screener,
-    using Kraken's public OHLC endpoint (Binance's public API is geo-blocked, HTTP 451,
-    from GitHub Actions runner IPs). Coins without a liquid Kraken-quoted USD pair
-    (small-caps, tokenized RWA products like FIGR_HELOC, etc.) are silently skipped
-    rather than shown broken. Shuffled and attempt-capped so it stops once enough
-    coins are found instead of always querying the whole pool."""
+    using Binance's public spot klines (far more generous rate limits than CoinGecko).
+    Coins without a liquid BINANCE-quoted USDT pair (small-caps, tokenized RWA products
+    like FIGR_HELOC, etc.) are silently skipped rather than shown broken."""
     cfg = INTRADAY_TIMEFRAMES[timeframe_key]
-    shuffled = list(markets or [])
-    random.shuffle(shuffled)
     results = []
     skipped = []
-    attempts = 0
-    for m in shuffled:
-        if len(results) >= target_count or attempts >= max_attempts:
-            break
+    for m in markets or []:
         symbol = (m.get("symbol") or "").upper()
         if not symbol:
             continue
-        attempts += 1
-        pair = f"{symbol}USD"
+        pair = f"{symbol}USDT"
         klines, err = safe_fetch(
             f"{timeframe_key} klines {pair}",
-            lambda p=symbol: fetch_kraken_ohlc(p, cfg["kraken_interval"]))
+            lambda p=pair: fetch_binance_spot_klines(p, cfg["binance_interval"], cfg["fetch_limit"]))
         time.sleep(INTRADAY_RATE_LIMIT_DELAY)
         if not klines:
             skipped.append(pair)
@@ -818,7 +793,7 @@ def build_intraday_screener(markets, timeframe_key, target_count=SCREENER_SIZE, 
         except Exception as e:
             log(f"INTRADAY SIGNAL FAIL [{pair}]: {e}")
     if skipped:
-        log(f"Intraday ({timeframe_key}) skipped (no Kraken pair or fetch failed): {skipped}")
+        log(f"Intraday ({timeframe_key}) skipped (no Binance pair or fetch failed): {skipped}")
     results.sort(key=lambda r: r["score"], reverse=True)
     return results
 
@@ -1265,12 +1240,12 @@ def render(coins_data, fng_value, fng_classification, generated_at, any_stale,
         results = intraday_results.get(tf_key, [])
         if not results:
             return (f'<div class="stale-note">&#9888; {tf_name} data unavailable this run '
-                     '(no Kraken-listed pairs matched, or fetch failed) &mdash; will retry next cycle.</div>')
+                     '(no Binance-listed pairs matched, or fetch failed) &mdash; will retry next cycle.</div>')
         cards = "".join(_intraday_card(r, i + 1) for i, r in enumerate(results))
         return f"""
     <div class="sub" style="margin-bottom:14px;">
-      {tf_name} setups from Kraken's public {window_desc} candles &mdash; pure price-action model (no
-      sentiment/cycle factors, those are daily concepts). Coins without a liquid Kraken USD pair are skipped.
+      {tf_name} setups from Binance's public {window_desc} candles &mdash; pure price-action model (no
+      sentiment/cycle factors, those are daily concepts). Coins without a liquid Binance USDT pair are skipped.
       Buy/stop/target use each coin's own recent volatility (ATR), not a fixed percentage.
     </div>
     <div class="screener-grid">{cards}</div>"""
@@ -1551,7 +1526,7 @@ def main():
     log(f"Screener produced {len(screener_results)} ranked coins "
         f"({sum(1 for r in screener_results if r.get('stale'))} cached/stale)")
 
-    log("Running intraday screeners (15m, 1h) via Kraken OHLC...")
+    log("Running intraday screeners (15m, 1h) via Binance spot klines...")
     intraday_results = {}
     for tf_key in INTRADAY_TIMEFRAMES:
         intraday_results[tf_key] = build_intraday_screener(screener_markets, tf_key)
