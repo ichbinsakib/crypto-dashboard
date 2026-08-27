@@ -40,7 +40,7 @@ COINS = [
 REFRESH_SECONDS = 120  # in-browser auto-reload interval
 DATA_REFRESH_LABEL = "every ~10 min (GitHub Actions, best-effort)"  # keep in sync with .github/workflows/deploy.yml
 
-SCREENER_SIZE = 5  # how many coins to rank/show per tab; raising this adds run time and CoinGecko rate-limit risk
+SCREENER_SIZE = 15  # how many coins to rank; raising this adds run time and CoinGecko rate-limit risk
 # GitHub Actions runners share IP pools hammered by countless other CI jobs hitting CoinGecko,
 # so they get throttled harder than a residential IP -- back off more there.
 SCREENER_RATE_LIMIT_DELAY = 12 if IS_CI else 6
@@ -1226,41 +1226,39 @@ def render(coins_data, fng_value, fng_classification, generated_at, any_stale,
         screener_table_html = ('<div class="stale-note">&#9888; Screener data unavailable this run '
                                 '(fetch failed or rate-limited) &mdash; will retry next cycle.</div>')
 
-    def _intraday_card(r, rank, tf_key):
+    def _intraday_card(r, rank):
         t = r["trade"]
         reasoning_rows = "\n".join(
             f'<tr><td>{name}</td><td class="watch">{reading}</td><td>{_pts_badge2(pts)}</td></tr>'
             for name, reading, pts in r.get("rows", [])
         )
-        card_id = f"ic-{tf_key}-{r['symbol']}"
         return f"""
-    <div class="screener-card {r['status']}" id="{card_id}">
+    <div class="screener-card {r['status']}">
       <div class="screener-card-top">
         <div class="screener-rank">#{rank}</div>
         <div>
           <div class="screener-name">{r['name']} <span class="watch">({r['symbol']})</span></div>
-          <div class="sub" data-role="price">{fmt_usd_adaptive(r['price'])}</div>
+          <div class="sub">{fmt_usd_adaptive(r['price'])}</div>
         </div>
       </div>
       <div class="screener-signal">
-        <span class="badge {r['status']}" data-role="badge">{r['label']}</span>
-        <span class="sub">Score <span data-role="score">{_pts_badge2(r['score'])}</span></span>
+        <span class="badge {r['status']}">{r['label']}</span>
+        <span class="sub">Score {_pts_badge2(r['score'])}</span>
       </div>
-      <div class="screener-plain" data-role="plain">{r.get('plain', '')}</div>
+      <div class="screener-plain">{r.get('plain', '')}</div>
       <div class="screener-trade">
         <div class="screener-trade-title">🎯 Buy the recent low, ATR-based stop</div>
-        <div class="kv"><span>Buy</span><span data-role="entry">{fmt_usd_adaptive(t['entry'])}</span></div>
-        <div class="kv"><span>Stop</span><span class="neg" data-role="stop">{fmt_usd_adaptive(t['stop'])} ({t['risk_pct']:.1f}% below entry)</span></div>
-        <div class="kv"><span>Target</span><span class="pos" data-role="target">{fmt_usd_adaptive(t['target1'])} / {fmt_usd_adaptive(t['target2'])}</span></div>
+        <div class="kv"><span>Buy</span><span>{fmt_usd_adaptive(t['entry'])}</span></div>
+        <div class="kv"><span>Stop</span><span class="neg">{fmt_usd_adaptive(t['stop'])} ({t['risk_pct']:.1f}% below entry)</span></div>
+        <div class="kv"><span>Target</span><span class="pos">{fmt_usd_adaptive(t['target1'])} / {fmt_usd_adaptive(t['target2'])}</span></div>
       </div>
       <details class="screener-details">
-        <summary>Why this score? (<span data-role="factor-count">{len(r.get('rows', []))}</span> factors)</summary>
+        <summary>Why this score? ({len(r.get('rows', []))} factors)</summary>
         <table class="signal-table" style="margin-top:10px; margin-bottom:0;">
           <thead><tr><th>Factor</th><th>Current reading</th><th>Points</th></tr></thead>
-          <tbody data-role="rows">{reasoning_rows}</tbody>
+          <tbody>{reasoning_rows}</tbody>
         </table>
       </details>
-      <div class="sub" data-role="live-updated" style="margin-top:8px; opacity:0.7;">&#9679; live &middot; updated on load</div>
     </div>"""
 
     def _intraday_panel_html(tf_key, tf_name, window_desc):
@@ -1268,32 +1266,17 @@ def render(coins_data, fng_value, fng_classification, generated_at, any_stale,
         if not results:
             return (f'<div class="stale-note">&#9888; {tf_name} data unavailable this run '
                      '(no Kraken-listed pairs matched, or fetch failed) &mdash; will retry next cycle.</div>')
-        cards = "".join(_intraday_card(r, i + 1, tf_key) for i, r in enumerate(results))
+        cards = "".join(_intraday_card(r, i + 1) for i, r in enumerate(results))
         return f"""
     <div class="sub" style="margin-bottom:14px;">
       {tf_name} setups from Kraken's public {window_desc} candles &mdash; pure price-action model (no
       sentiment/cycle factors, those are daily concepts). Coins without a liquid Kraken USD pair are skipped.
       Buy/stop/target use each coin's own recent volatility (ATR), not a fixed percentage.
-      Prices and scores refresh live in your browser every minute straight from Kraken &mdash; they don't wait
-      for the next site rebuild.
     </div>
     <div class="screener-grid">{cards}</div>"""
 
     intraday_15m_html = _intraday_panel_html("15m", "15-Minute", "15-minute")
     intraday_1h_html = _intraday_panel_html("1h", "1-Hour", "1-hour")
-
-    intraday_live_cards = [
-        {
-            "id": f"ic-{tf_key}-{r['symbol']}",
-            "symbol": r["symbol"],
-            "intervalMinutes": INTRADAY_TIMEFRAMES[tf_key]["kraken_interval"],
-            "lookback": INTRADAY_TIMEFRAMES[tf_key]["lookback"],
-            "windowLabel": INTRADAY_TIMEFRAMES[tf_key]["window_label"],
-        }
-        for tf_key in INTRADAY_TIMEFRAMES
-        for r in intraday_results.get(tf_key, [])
-    ]
-    intraday_live_cards_json = json.dumps(intraday_live_cards)
     daily_html = f"{callouts_html}{screener_table_html}"
 
     screener_panel = f"""
@@ -1515,150 +1498,6 @@ def render(coins_data, fng_value, fng_classification, generated_at, any_stale,
   setTimeout(function() {{
     location.href = location.pathname + '?t=' + Date.now();
   }}, {REFRESH_SECONDS * 1000});
-}})();
-</script>
-<script>
-(function() {{
-  // The page itself only regenerates every few minutes (GitHub Actions rebuild cycle), so the
-  // 15m/1h cards shown at load are already a few minutes stale by the time anyone views them.
-  // This re-fetches each shown coin's candles directly from Kraken in the browser every minute
-  // and recomputes the same rule-based score client-side, so these two tabs stay genuinely live
-  // between rebuilds instead of only updating once every {DATA_REFRESH_LABEL}.
-  var INTRADAY_CARDS = {intraday_live_cards_json};
-  if (!INTRADAY_CARDS.length) return;
-
-  function fmtUsdAdaptive(v) {{
-    if (v === null || v === undefined || isNaN(v)) return 'N/A';
-    if (v >= 1) return '$' + v.toLocaleString('en-US', {{minimumFractionDigits: 2, maximumFractionDigits: 2}});
-    if (v >= 0.01) return '$' + v.toLocaleString('en-US', {{minimumFractionDigits: 4, maximumFractionDigits: 4}});
-    return '$' + v.toLocaleString('en-US', {{minimumFractionDigits: 6, maximumFractionDigits: 6}});
-  }}
-
-  function ptsBadgeHtml(pts) {{
-    if (pts > 0) return '<span class="badge bullish">+' + pts + '</span>';
-    if (pts < 0) return '<span class="badge bearish">' + pts + '</span>';
-    return '<span class="badge neutral">0</span>';
-  }}
-
-  function computeIntradaySignal(klines, lookback, windowLabel) {{
-    if (!klines || klines.length < lookback + 2) return null;
-    var highs = klines.map(function(k) {{ return parseFloat(k[2]); }});
-    var lows = klines.map(function(k) {{ return parseFloat(k[3]); }});
-    var closes = klines.map(function(k) {{ return parseFloat(k[4]); }});
-    var price = closes[closes.length - 1];
-
-    var recentHigh = Math.max.apply(null, highs.slice(-lookback));
-    var recentLow = Math.min.apply(null, lows.slice(-lookback));
-    var avgClose = closes.slice(-lookback).reduce(function(a, b) {{ return a + b; }}, 0) / lookback;
-    var atrSum = 0;
-    for (var i = highs.length - lookback; i < highs.length; i++) {{ atrSum += highs[i] - lows[i]; }}
-    var atr = atrSum / lookback;
-    if (atr <= 0) return null;
-
-    var rows = [];
-    var total = 0;
-    var pts, reading;
-
-    if (price <= recentLow + atr) {{
-      pts = 2; reading = 'Near the low of its ' + windowLabel + ' (~' + fmtUsdAdaptive(recentLow) + ')';
-    }} else if (price >= recentHigh - atr) {{
-      pts = -1; reading = 'Near the high of its ' + windowLabel + ' (~' + fmtUsdAdaptive(recentHigh) + ')';
-    }} else {{
-      pts = 0; reading = 'Mid-range for its ' + windowLabel;
-    }}
-    rows.push(['Price vs. recent range', reading, pts]);
-    total += pts;
-
-    var distAvgPct = avgClose ? (price - avgClose) / avgClose * 100 : 0;
-    var distSign = distAvgPct >= 0 ? '+' : '';
-    if (distAvgPct > 3) {{
-      pts = -1; reading = distSign + distAvgPct.toFixed(1) + '% above its short-term average - a bit stretched';
-    }} else if (distAvgPct < -3) {{
-      pts = -1; reading = distSign + distAvgPct.toFixed(1) + '% below its short-term average - weak right now';
-    }} else {{
-      pts = 1; reading = distSign + distAvgPct.toFixed(1) + '% vs its short-term average - trading near it';
-    }}
-    rows.push(['Momentum vs. short-term average', reading, pts]);
-    total += pts;
-
-    var firstClose = closes[closes.length - lookback];
-    var movePct = firstClose ? (price - firstClose) / firstClose * 100 : 0;
-    if (movePct > 1) {{
-      pts = 1; reading = 'Up ' + movePct.toFixed(1) + '% over its ' + windowLabel + ' - short-term uptrend';
-    }} else if (movePct < -1) {{
-      pts = -1; reading = 'Down ' + movePct.toFixed(1) + '% over its ' + windowLabel + ' - short-term downtrend';
-    }} else {{
-      pts = 0; reading = (movePct >= 0 ? '+' : '') + movePct.toFixed(1) + '% over its ' + windowLabel + ' - flat, no clear direction';
-    }}
-    rows.push(['Direction over this window', reading, pts]);
-    total += pts;
-
-    var label, status, plain;
-    if (total >= 3) {{ label = '🟢 NEAR-TERM DIP ZONE'; status = 'bullish'; plain = 'Near the bottom of its short-term range with improving momentum.'; }}
-    else if (total >= 1) {{ label = '🟢 LEAN LONG (short-term)'; status = 'bullish'; plain = 'Mildly favorable for a quick, tightly-managed trade -- not a strong signal.'; }}
-    else if (total >= -1) {{ label = '🟡 NO CLEAR EDGE'; status = 'neutral'; plain = 'Choppy on this timeframe -- no clean setup right now.'; }}
-    else {{ label = '🔴 STRETCHED - AVOID CHASING'; status = 'bearish'; plain = 'Extended on this timeframe; chasing here has poor risk/reward.'; }}
-
-    var entry = recentLow;
-    var stop = recentLow - atr;
-    var risk = entry - stop;
-    var target1 = entry + risk;
-    var target2 = entry + 2 * risk;
-
-    return {{
-      label: label, status: status, score: total, rows: rows, plain: plain, price: price,
-      trade: {{entry: entry, stop: stop, target1: target1, target2: target2, riskPct: entry ? (risk / entry * 100) : null}}
-    }};
-  }}
-
-  async function refreshIntradayCard(cfg) {{
-    var el = document.getElementById(cfg.id);
-    if (!el) return;
-    try {{
-      var url = 'https://api.kraken.com/0/public/OHLC?pair=' + cfg.symbol + 'USD&interval=' + cfg.intervalMinutes;
-      var resp = await fetch(url);
-      var data = await resp.json();
-      if (data.error && data.error.length) throw new Error(data.error.join(','));
-      var result = data.result || {{}};
-      var keys = Object.keys(result).filter(function(k) {{ return k !== 'last'; }});
-      if (!keys.length) throw new Error('no OHLC series returned');
-      var sig = computeIntradaySignal(result[keys[0]], cfg.lookback, cfg.windowLabel);
-      if (!sig) return;
-
-      el.className = 'screener-card ' + sig.status;
-      var set = function(role, text) {{ var e = el.querySelector('[data-role=' + role + ']'); if (e) e.textContent = text; }};
-      set('price', fmtUsdAdaptive(sig.price));
-      var badgeEl = el.querySelector('[data-role=badge]');
-      if (badgeEl) {{ badgeEl.textContent = sig.label; badgeEl.className = 'badge ' + sig.status; }}
-      var scoreEl = el.querySelector('[data-role=score]');
-      if (scoreEl) scoreEl.innerHTML = ptsBadgeHtml(sig.score);
-      set('plain', sig.plain);
-      set('entry', fmtUsdAdaptive(sig.trade.entry));
-      set('stop', fmtUsdAdaptive(sig.trade.stop) + ' (' + sig.trade.riskPct.toFixed(1) + '% below entry)');
-      set('target', fmtUsdAdaptive(sig.trade.target1) + ' / ' + fmtUsdAdaptive(sig.trade.target2));
-      var rowsEl = el.querySelector('[data-role=rows]');
-      if (rowsEl) {{
-        rowsEl.innerHTML = sig.rows.map(function(row) {{
-          return '<tr><td>' + row[0] + '</td><td class="watch">' + row[1] + '</td><td>' + ptsBadgeHtml(row[2]) + '</td></tr>';
-        }}).join('');
-      }}
-      set('factor-count', String(sig.rows.length));
-      var updatedEl = el.querySelector('[data-role=live-updated]');
-      if (updatedEl) updatedEl.innerHTML = '&#9679; live &middot; updated ' + new Date().toLocaleTimeString();
-    }} catch (e) {{
-      console.warn('Intraday live refresh failed for', cfg.symbol, cfg.intervalMinutes + 'm', e);
-    }}
-  }}
-
-  async function refreshAllIntraday() {{
-    for (var i = 0; i < INTRADAY_CARDS.length; i++) {{
-      await refreshIntradayCard(INTRADAY_CARDS[i]);
-      await new Promise(function(res) {{ setTimeout(res, 250); }});
-    }}
-  }}
-
-  refreshAllIntraday();
-  setInterval(refreshAllIntraday, 60000);
 }})();
 </script>
 </body>
