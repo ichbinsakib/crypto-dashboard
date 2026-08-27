@@ -61,9 +61,15 @@ SCREENER_EXCLUDE_IDS = {
 
 def log(msg):
     ts = datetime.datetime.now().isoformat(timespec="seconds")
+    line = f"[{ts}] {msg}"
+    if IS_CI:
+        # dashboard.log lives only on the ephemeral runner and is never uploaded anywhere,
+        # so it's invisible after the fact -- print to stdout too, which `gh run view --log`
+        # (or the Actions UI) actually captures, or every debugging session hits a dead end.
+        print(line, flush=True)
     try:
         with open(LOG_PATH, "a", encoding="utf-8") as f:
-            f.write(f"[{ts}] {msg}\n")
+            f.write(line + "\n")
     except Exception:
         pass
 
