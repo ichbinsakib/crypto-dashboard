@@ -4,7 +4,7 @@
   "_alerts_state": {
     "btc-resistance-break": {
       "triggered": true,
-      "last_triggered_at": "2026-08-27 09:10:25"
+      "last_triggered_at": "2026-08-27 09:20:25"
     },
     "btc-support-break": {
       "triggered": false,
@@ -12,7 +12,7 @@
     },
     "eth-resistance-break": {
       "triggered": true,
-      "last_triggered_at": "2026-08-27 09:10:25"
+      "last_triggered_at": "2026-08-27 09:20:25"
     },
     "eth-support-break": {
       "triggered": false,
@@ -117,11 +117,11 @@
       "symbol": "XRP",
       "name": "XRP",
       "price": 1.44,
-      "pct_24h": 0.39966,
+      "pct_24h": 1.19616,
       "pct_7d": 29.3,
       "support_30d": 0.9927072784932938,
       "resistance_30d": 1.52050482788377,
-      "as_of": "2026-08-27 09:10:25",
+      "as_of": "2026-08-27 09:20:25",
       "stale": false
     },
     "solana": {
@@ -199,7 +199,7 @@
         ],
         [
           "Stretch from long-term average",
-          "+4.2% vs its long-term average - not stretched either way",
+          "+4.3% vs its long-term average - not stretched either way",
           0
         ],
         [
@@ -212,12 +212,12 @@
       "id": "tron",
       "symbol": "TRX",
       "name": "TRON",
-      "price": 0.33591,
-      "pct_24h": -0.59726,
-      "pct_7d": 0.6,
+      "price": 0.336348,
+      "pct_24h": -0.20688,
+      "pct_7d": 0.8,
       "support_30d": 0.32542527258577386,
       "resistance_30d": 0.3447899585776834,
-      "as_of": "2026-08-27 08:40:24",
+      "as_of": "2026-08-27 09:20:25",
       "stale": false
     },
     "figure-heloc": {
@@ -261,11 +261,11 @@
       "symbol": "FIGR_HELOC",
       "name": "Figure Heloc",
       "price": 1.003,
-      "pct_24h": -0.66393,
+      "pct_24h": -0.67267,
       "pct_7d": -3.8,
       "support_30d": 1.0008548889936117,
       "resistance_30d": 1.0443247364269224,
-      "as_of": "2026-08-27 08:00:37",
+      "as_of": "2026-08-27 09:20:25",
       "stale": false
     },
     "hyperliquid": {
@@ -317,14 +317,14 @@
       "stale": false
     },
     "dogecoin": {
-      "label": "\ud83d\udfe2 LEAN ACCUMULATE",
-      "status": "bullish",
-      "score": 2,
+      "label": "\ud83d\udfe1 HOLD / NEUTRAL",
+      "status": "neutral",
+      "score": 1,
       "rows": [
         [
           "Price vs. recent range",
-          "Sitting in the middle of its 30-day range",
-          0
+          "Near its 30-day high (~$0.0934) - less room to run",
+          -1
         ],
         [
           "Crowd mood (Fear & Greed)",
@@ -343,7 +343,7 @@
         ],
         [
           "Stretch from long-term average",
-          "-1.1% vs its long-term average - not stretched either way",
+          "-0.1% vs its long-term average - not stretched either way",
           0
         ],
         [
@@ -352,16 +352,16 @@
           0
         ]
       ],
-      "plain": "Leans toward a decent spot to slowly add (DCA) - not a strong signal, just a lean.",
+      "plain": "No real edge either way right now - fine to just wait and watch.",
       "id": "dogecoin",
       "symbol": "DOGE",
       "name": "Dogecoin",
-      "price": 0.088225,
-      "pct_24h": 1.60946,
-      "pct_7d": 15.8,
+      "price": 0.089196,
+      "pct_24h": 3.61929,
+      "pct_7d": 18.5,
       "support_30d": 0.06901954790818378,
       "resistance_30d": 0.09337940032634065,
-      "as_of": "2026-08-27 08:10:24",
+      "as_of": "2026-08-27 09:20:25",
       "stale": false
     },
     "zcash": {
@@ -452,12 +452,12 @@
       "id": "rain",
       "symbol": "RAIN",
       "name": "Rain",
-      "price": 0.01759821,
-      "pct_24h": 0.06326,
+      "price": 0.01759828,
+      "pct_24h": 0.24326,
       "pct_7d": 26.4,
       "support_30d": 0.01229013774092356,
       "resistance_30d": 0.018158429442510105,
-      "as_of": "2026-08-27 09:00:37",
+      "as_of": "2026-08-27 09:20:25",
       "stale": false
     },
     "chainlink": {
@@ -943,7 +943,7 @@
     "aster-2": {
       "label": "\ud83d\udfe1 HOLD / NEUTRAL",
       "status": "neutral",
-      "score": -1,
+      "score": 0,
       "rows": [
         [
           "Price vs. recent range",
@@ -962,12 +962,12 @@
         ],
         [
           "Recent trend",
-          "Chopping sideways - no clear trend",
-          0
+          "Trending up steadily - healthy",
+          1
         ],
         [
           "Stretch from long-term average",
-          "+7.5% vs its long-term average - not stretched either way",
+          "+8.4% vs its long-term average - not stretched either way",
           0
         ],
         [
@@ -980,12 +980,12 @@
       "id": "aster-2",
       "symbol": "ASTER",
       "name": "Aster",
-      "price": 0.710091,
-      "pct_24h": 1.39746,
-      "pct_7d": 6.8,
+      "price": 0.716329,
+      "pct_24h": 2.80575,
+      "pct_7d": 8.8,
       "support_30d": 0.5982513690669262,
       "resistance_30d": 0.7276231199504045,
-      "as_of": "2026-08-27 08:20:25",
+      "as_of": "2026-08-27 09:20:25",
       "stale": false
     },
     "worldcoin-wld": {
@@ -1427,7 +1427,7 @@
       "rows": [
         [
           "Price vs. recent range",
-          "Near its 30-day high (~$0.0605) - less room to run",
+          "Near its 30-day high (~$0.0607) - less room to run",
           -1
         ],
         [
@@ -1447,7 +1447,7 @@
         ],
         [
           "Stretch from long-term average",
-          "-11.1% vs its long-term average - not stretched either way",
+          "-10.4% vs its long-term average - not stretched either way",
           0
         ],
         [
@@ -1460,12 +1460,12 @@
       "id": "crypto-com-chain",
       "symbol": "CRO",
       "name": "Cronos",
-      "price": 0.06022,
-      "pct_24h": 2.21726,
-      "pct_7d": 20.7,
+      "price": 0.060698,
+      "pct_24h": 3.58401,
+      "pct_7d": 22.6,
       "support_30d": 0.04621382085807831,
-      "resistance_30d": 0.060517275602674975,
-      "as_of": "2026-08-27 08:10:24",
+      "resistance_30d": 0.060727493353589734,
+      "as_of": "2026-08-27 09:20:25",
       "stale": false
     },
     "ethereum-classic": {
@@ -1783,7 +1783,7 @@
         ],
         [
           "Stretch from long-term average",
-          "+118.5% above its long-term average - very stretched",
+          "+120.4% above its long-term average - very stretched",
           -2
         ],
         [
@@ -1796,12 +1796,12 @@
       "id": "lighter",
       "symbol": "LIT",
       "name": "Lighter",
-      "price": 3.44,
-      "pct_24h": 4.19005,
+      "price": 3.47,
+      "pct_24h": 5.51314,
       "pct_7d": 16.9,
       "support_30d": 2.005076166939587,
       "resistance_30d": 3.568715131930391,
-      "as_of": "2026-08-27 09:00:37",
+      "as_of": "2026-08-27 09:20:25",
       "stale": false
     },
     "ethena": {
@@ -2095,7 +2095,7 @@
     "ondo-finance": {
       "label": "\ud83d\udfe1 HOLD / NEUTRAL",
       "status": "neutral",
-      "score": 0,
+      "score": 1,
       "rows": [
         [
           "Price vs. recent range",
@@ -2114,12 +2114,12 @@
         ],
         [
           "Recent trend",
-          "Chopping sideways - no clear trend",
-          0
+          "Trending up steadily - healthy",
+          1
         ],
         [
           "Stretch from long-term average",
-          "+14.5% above its long-term average - a bit stretched",
+          "+15.2% above its long-term average - a bit stretched",
           -1
         ],
         [
@@ -2132,12 +2132,12 @@
       "id": "ondo-finance",
       "symbol": "ONDO",
       "name": "Ondo",
-      "price": 0.375409,
-      "pct_24h": 2.50213,
-      "pct_7d": 7.8,
+      "price": 0.377565,
+      "pct_24h": 3.69998,
+      "pct_7d": 9.9,
       "support_30d": 0.32338181384146436,
       "resistance_30d": 0.4155973351765416,
-      "as_of": "2026-08-27 08:20:25",
+      "as_of": "2026-08-27 09:20:25",
       "stale": false
     },
     "canton-network": {
@@ -2339,7 +2339,7 @@
       "rows": [
         [
           "Price vs. recent range",
-          "Near its 30-day high (~$0.0693) - less room to run",
+          "Near its 30-day high (~$0.0691) - less room to run",
           -1
         ],
         [
@@ -2359,7 +2359,7 @@
         ],
         [
           "Stretch from long-term average",
-          "+3.6% vs its long-term average - not stretched either way",
+          "+3.5% vs its long-term average - not stretched either way",
           0
         ],
         [
@@ -2372,12 +2372,12 @@
       "id": "sky",
       "symbol": "SKY",
       "name": "Sky",
-      "price": 0.069125,
-      "pct_24h": -0.3451,
-      "pct_7d": 13.9,
+      "price": 0.069057,
+      "pct_24h": 1.32856,
+      "pct_7d": 13.8,
       "support_30d": 0.05081051579814886,
-      "resistance_30d": 0.06925340128029517,
-      "as_of": "2026-08-27 08:30:31",
+      "resistance_30d": 0.0690905072019154,
+      "as_of": "2026-08-27 09:20:25",
       "stale": false
     },
     "shiba-inu": {
@@ -2564,12 +2564,12 @@
       "id": "tether-gold",
       "symbol": "XAUT",
       "name": "Tether Gold",
-      "price": 4585.51,
-      "pct_24h": -0.52915,
+      "price": 4586.6,
+      "pct_24h": -0.44624,
       "pct_7d": 2.8,
       "support_30d": 4038.107891411404,
       "resistance_30d": 4662.510537821146,
-      "as_of": "2026-08-27 09:10:25",
+      "as_of": "2026-08-27 09:20:25",
       "stale": false
     },
     "bitway": {
@@ -2660,12 +2660,12 @@
       "id": "world-liberty-financial",
       "symbol": "WLFI",
       "name": "World Liberty Financial",
-      "price": 0.058546,
-      "pct_24h": -0.40537,
-      "pct_7d": -6.0,
+      "price": 0.058522,
+      "pct_24h": -0.4991,
+      "pct_7d": -0.1,
       "support_30d": 0.051301304477199876,
       "resistance_30d": 0.06254770952093733,
-      "as_of": "2026-08-27 08:50:24",
+      "as_of": "2026-08-27 09:20:25",
       "stale": false
     },
     "pax-gold": {
@@ -2743,7 +2743,7 @@
         ],
         [
           "Stretch from long-term average",
-          "+39.7% above its long-term average - very stretched",
+          "+39.1% above its long-term average - very stretched",
           -2
         ],
         [
@@ -2756,12 +2756,12 @@
       "id": "morpho",
       "symbol": "MORPHO",
       "name": "Morpho",
-      "price": 2.64,
-      "pct_24h": 3.94258,
-      "pct_7d": 18.7,
+      "price": 2.63,
+      "pct_24h": 4.54834,
+      "pct_7d": 20.0,
       "support_30d": 1.8400586135640542,
       "resistance_30d": 2.9026212482639075,
-      "as_of": "2026-08-27 08:40:24",
+      "as_of": "2026-08-27 09:20:25",
       "stale": false
     },
     "memecore": {
@@ -2865,16 +2865,16 @@
     "key": "BTC",
     "name": "Bitcoin",
     "emoji": "\u20bf",
-    "price": 79784,
+    "price": 79828,
     "high_24h": 79974,
     "low_24h": 77648,
-    "pct_24h": 1.24754,
+    "pct_24h": 1.76281,
     "pct_7d": 14.3,
     "pct_30d": 25.7,
-    "sma50": 66420.62952768714,
-    "sma200": 69203.20890106472,
+    "sma50": 66421.43174017966,
+    "sma200": 69203.40945418784,
     "support_30d": 62772.57726413174,
-    "resistance_30d": 79810.28039753682,
+    "resistance_30d": 79850.39102216257,
     "mark_price": 78772.74355072,
     "index_price": 78810.87586957,
     "funding_rate": 7.74e-05,
@@ -2887,16 +2887,16 @@
     "key": "ETH",
     "name": "Ethereum",
     "emoji": "\u039e",
-    "price": 2529.98,
+    "price": 2531.83,
     "high_24h": 2540.82,
     "low_24h": 2433.13,
-    "pct_24h": 2.92811,
+    "pct_24h": 3.45704,
     "pct_7d": 12.5,
     "pct_30d": 34.5,
-    "sma50": 1977.9660189129988,
-    "sma200": 2015.901267666831,
+    "sma50": 1977.9762247215338,
+    "sma200": 2015.903819118965,
     "support_30d": 1843.443563411847,
-    "resistance_30d": 2531.7361290825625,
+    "resistance_30d": 2532.246419509312,
     "mark_price": 2491.84571318,
     "index_price": 2493.18232558,
     "funding_rate": 5.678e-05,
