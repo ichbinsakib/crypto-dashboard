@@ -4,7 +4,7 @@
   "_alerts_state": {
     "btc-resistance-break": {
       "triggered": true,
-      "last_triggered_at": "2026-08-27 16:48:16"
+      "last_triggered_at": "2026-08-27 16:50:41"
     },
     "btc-support-break": {
       "triggered": false,
@@ -12,7 +12,7 @@
     },
     "eth-resistance-break": {
       "triggered": true,
-      "last_triggered_at": "2026-08-27 16:48:16"
+      "last_triggered_at": "2026-08-27 16:50:41"
     },
     "eth-support-break": {
       "triggered": false,
@@ -77,9 +77,9 @@
       "stale": false
     },
     "ripple": {
-      "label": "\ud83d\udd34 CAUTION - REDUCE NEW BUYS",
-      "status": "bearish",
-      "score": -4,
+      "label": "\ud83d\udfe1 HOLD / NEUTRAL",
+      "status": "neutral",
+      "score": -1,
       "rows": [
         [
           "Price vs. recent range",
@@ -98,12 +98,12 @@
         ],
         [
           "Recent trend",
-          "Shooting straight up - classic blow-off top risk, don't chase",
-          -2
+          "Trending up steadily - healthy",
+          1
         ],
         [
           "Stretch from long-term average",
-          "+14.2% above its long-term average - a bit stretched",
+          "+15.0% above its long-term average - a bit stretched",
           -1
         ],
         [
@@ -112,16 +112,16 @@
           0
         ]
       ],
-      "plain": "Getting risky - I'd hold off on new buys until this cools down.",
+      "plain": "No real edge either way right now - fine to just wait and watch.",
       "id": "ripple",
       "symbol": "XRP",
       "name": "XRP",
-      "price": 1.46,
-      "pct_24h": 6.50454,
-      "pct_7d": 20.5,
+      "price": 1.47,
+      "pct_24h": 6.71354,
+      "pct_7d": 19.6,
       "support_30d": 0.9927072784932938,
       "resistance_30d": 1.52050482788377,
-      "as_of": "2026-08-27 14:47:15",
+      "as_of": "2026-08-27 16:50:41",
       "stale": false
     },
     "solana": {
@@ -260,12 +260,12 @@
       "id": "figure-heloc",
       "symbol": "FIGR_HELOC",
       "name": "Figure Heloc",
-      "price": 1.0,
-      "pct_24h": -0.7778,
-      "pct_7d": -3.7,
-      "support_30d": 1.0003704448772899,
+      "price": 1.003,
+      "pct_24h": -0.67152,
+      "pct_7d": -3.9,
+      "support_30d": 1.0008548889936117,
       "resistance_30d": 1.0443247364269224,
-      "as_of": "2026-08-27 16:48:16",
+      "as_of": "2026-08-27 14:40:22",
       "stale": false
     },
     "hyperliquid": {
@@ -919,7 +919,7 @@
         ],
         [
           "Stretch from long-term average",
-          "-7.7% vs its long-term average - not stretched either way",
+          "-7.4% vs its long-term average - not stretched either way",
           0
         ],
         [
@@ -932,12 +932,12 @@
       "id": "avalanche-2",
       "symbol": "AVAX",
       "name": "Avalanche",
-      "price": 7.53,
-      "pct_24h": 3.87935,
+      "price": 7.55,
+      "pct_24h": 4.47138,
       "pct_7d": 8.3,
       "support_30d": 6.186861556497119,
       "resistance_30d": 7.836507914480645,
-      "as_of": "2026-08-27 16:07:32",
+      "as_of": "2026-08-27 16:50:41",
       "stale": false
     },
     "aster-2": {
@@ -1111,7 +1111,7 @@
         ],
         [
           "Stretch from long-term average",
-          "+20.9% above its long-term average - a bit stretched",
+          "+22.0% above its long-term average - a bit stretched",
           -1
         ],
         [
@@ -1124,12 +1124,12 @@
       "id": "polygon-ecosystem-token",
       "symbol": "POL",
       "name": "POL (ex-MATIC)",
-      "price": 0.107292,
-      "pct_24h": -2.55468,
-      "pct_7d": 31.7,
+      "price": 0.108357,
+      "pct_24h": -3.50204,
+      "pct_7d": 32.0,
       "support_30d": 0.07122648504650138,
       "resistance_30d": 0.12250456198546959,
-      "as_of": "2026-08-27 16:48:16",
+      "as_of": "2026-08-27 14:47:15",
       "stale": false
     },
     "blackrock-usd-institutional-digital-liquidity-fund": {
@@ -1639,7 +1639,7 @@
         ],
         [
           "Stretch from long-term average",
-          "-0.3% vs its long-term average - not stretched either way",
+          "-0.8% vs its long-term average - not stretched either way",
           0
         ],
         [
@@ -1652,12 +1652,12 @@
       "id": "litecoin",
       "symbol": "LTC",
       "name": "Litecoin",
-      "price": 50.42,
-      "pct_24h": 1.4634,
-      "pct_7d": 5.2,
+      "price": 50.18,
+      "pct_24h": 1.27167,
+      "pct_7d": 6.1,
       "support_30d": 43.806923130603906,
       "resistance_30d": 53.12964707139583,
-      "as_of": "2026-08-27 16:48:16",
+      "as_of": "2026-08-27 15:59:43",
       "stale": false
     },
     "bitget-token": {
@@ -2551,7 +2551,7 @@
         ],
         [
           "Stretch from long-term average",
-          "+1.6% vs its long-term average - not stretched either way",
+          "+1.7% vs its long-term average - not stretched either way",
           0
         ],
         [
@@ -2564,12 +2564,12 @@
       "id": "tether-gold",
       "symbol": "XAUT",
       "name": "Tether Gold",
-      "price": 4596.14,
-      "pct_24h": 0.22117,
+      "price": 4601.07,
+      "pct_24h": 0.4029,
       "pct_7d": 2.4,
       "support_30d": 4038.107891411404,
       "resistance_30d": 4662.510537821146,
-      "as_of": "2026-08-27 16:10:51",
+      "as_of": "2026-08-27 16:50:41",
       "stale": false
     },
     "bitway": {
@@ -2961,16 +2961,16 @@
     "key": "BTC",
     "name": "Bitcoin",
     "emoji": "\u20bf",
-    "price": 80564,
+    "price": 80436,
     "high_24h": 80745,
     "low_24h": 77992,
-    "pct_24h": 3.30488,
+    "pct_24h": 2.9991,
     "pct_7d": 12.0,
     "pct_30d": 26.9,
-    "sma50": 66435.22610751499,
-    "sma200": 69206.85804602169,
+    "sma50": 66433.14315696732,
+    "sma200": 69206.33730838477,
     "support_30d": 62772.57726413174,
-    "resistance_30d": 80540.10938892917,
+    "resistance_30d": 80435.96186154576,
     "mark_price": 80231.8,
     "index_price": 80259.11956522,
     "funding_rate": 6.505e-05,
@@ -2983,16 +2983,16 @@
     "key": "ETH",
     "name": "Ethereum",
     "emoji": "\u039e",
-    "price": 2530.87,
+    "price": 2525.7,
     "high_24h": 2558.47,
     "low_24h": 2444.36,
-    "pct_24h": 3.56537,
+    "pct_24h": 3.14875,
     "pct_7d": 10.7,
     "pct_30d": 33.7,
-    "sma50": 1977.913018386772,
-    "sma200": 2015.8880175352742,
+    "sma50": 1977.8452979656781,
+    "sma200": 2015.8710874300007,
     "support_30d": 1843.443563411847,
-    "resistance_30d": 2529.086102771223,
+    "resistance_30d": 2525.7000817165217,
     "mark_price": 2518.0699845,
     "index_price": 2519.47465116,
     "funding_rate": 1.242e-05,
