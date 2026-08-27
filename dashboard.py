@@ -1253,6 +1253,7 @@ def render(coins_data, fng_value, fng_classification, generated_at, any_stale,
         <div class="kv"><span>Stop</span><span class="neg" data-role="stop">{fmt_usd_adaptive(t['stop'])} ({t['risk_pct']:.1f}% below entry)</span></div>
         <div class="kv"><span>Target</span><span class="pos" data-role="target">{fmt_usd_adaptive(t['target1'])} / {fmt_usd_adaptive(t['target2'])}</span></div>
       </div>
+      <div class="sub" data-role="live-updated" style="margin-top:8px; opacity:0.7;">&#9679; live &middot; updated on load</div>
       <details class="screener-details">
         <summary>Why this score? (<span data-role="factor-count">{len(r.get('rows', []))}</span> factors)</summary>
         <table class="signal-table" style="margin-top:10px; margin-bottom:0;">
@@ -1260,7 +1261,6 @@ def render(coins_data, fng_value, fng_classification, generated_at, any_stale,
           <tbody data-role="rows">{reasoning_rows}</tbody>
         </table>
       </details>
-      <div class="sub" data-role="live-updated" style="margin-top:8px; opacity:0.7;">&#9679; live &middot; updated on load</div>
     </div>"""
 
     def _intraday_panel_html(tf_key, tf_name, window_desc):
@@ -1341,22 +1341,19 @@ def render(coins_data, fng_value, fng_classification, generated_at, any_stale,
         if sig:
             glance_cards.append(f"""
     <div class="glance-card {sig['status']}">
-      <div class="glance-coin">{c['emoji']} {c['key']}</div>
-      <div class="glance-verdict">{sig['label']}</div>
+      <div class="glance-row-top"><span class="glance-coin">{c['emoji']} {c['key']}</span><span class="glance-verdict">{sig['label']}</span></div>
       <div class="glance-plain">{sig['plain']}</div>
     </div>""")
     if screener_results:
         top_pick, bottom_pick = screener_results[0], screener_results[-1]
         glance_cards.append(f"""
     <div class="glance-card {top_pick['status']}">
-      <div class="glance-coin">🏆 Best of {len(screener_results)} scanned</div>
-      <div class="glance-verdict">{top_pick['name']} ({top_pick['symbol']}) {top_pick['label']}</div>
+      <div class="glance-row-top"><span class="glance-coin">🏆 Best of {len(screener_results)}</span><span class="glance-verdict">{top_pick['symbol']} {top_pick['label']}</span></div>
       <div class="glance-plain">{top_pick['plain']}</div>
     </div>""")
         glance_cards.append(f"""
     <div class="glance-card {bottom_pick['status']}">
-      <div class="glance-coin">⚠️ Worst of {len(screener_results)} scanned</div>
-      <div class="glance-verdict">{bottom_pick['name']} ({bottom_pick['symbol']}) {bottom_pick['label']}</div>
+      <div class="glance-row-top"><span class="glance-coin">⚠️ Worst of {len(screener_results)}</span><span class="glance-verdict">{bottom_pick['symbol']} {bottom_pick['label']}</span></div>
       <div class="glance-plain">{bottom_pick['plain']}</div>
     </div>""")
     glance_html = f"""
@@ -1428,18 +1425,19 @@ def render(coins_data, fng_value, fng_classification, generated_at, any_stale,
   @keyframes pulse {{ 0%,100% {{ opacity:1; }} 50% {{ opacity:0.55; }} }}
   .alert-banner {{ margin: 14px 24px 0; padding: 12px 18px; background:#3a0d0d; border:1px solid #ef4444; border-radius:10px; color:#fecaca; font-weight:700; font-size:13.5px; animation: pulse 1.6s infinite; }}
   .alert-banner-item {{ padding: 2px 0; }}
-  .glance-bar {{ margin: 16px 24px 0; padding: 16px 20px; background: var(--panel); border:2px solid var(--border); border-radius:14px; }}
-  .glance-title {{ font-size:11px; color:var(--muted); letter-spacing:1.5px; font-weight:800; margin-bottom:12px; }}
-  .glance-row {{ display:grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap:14px; }}
-  .glance-card {{ border-radius:10px; padding:14px 16px; border:2px solid var(--border); background:#0d1320; }}
+  .glance-bar {{ margin: 16px 24px 0; padding: 10px 14px; background: var(--panel); border:2px solid var(--border); border-radius:12px; }}
+  .glance-title {{ font-size:10px; color:var(--muted); letter-spacing:1.5px; font-weight:800; margin-bottom:6px; }}
+  .glance-row {{ display:grid; grid-template-columns: repeat(auto-fit, minmax(170px, 1fr)); gap:8px; }}
+  .glance-card {{ border-radius:8px; padding:7px 10px; border:1px solid var(--border); background:#0d1320; }}
   .glance-card.bullish {{ border-color:#1f6a4a; background:#0d1c15; }}
   .glance-card.bearish {{ border-color:#7a2e2e; background:#1c0f0f; }}
   .glance-card.neutral {{ border-color:#5a4d18; background:#1c1810; }}
-  .glance-coin {{ font-size:12px; color:var(--muted); font-weight:700; letter-spacing:0.5px; margin-bottom:4px; }}
-  .glance-verdict {{ font-size:16px; font-weight:800; margin-bottom:6px; }}
-  .glance-plain {{ font-size:12.5px; color:var(--text); line-height:1.5; }}
-  .glance-footnote {{ font-size:11px; color:var(--muted); margin-top:12px; }}
-  @media (max-width: 700px) {{ .glance-row {{ grid-template-columns: 1fr; }} }}
+  .glance-row-top {{ display:flex; align-items:baseline; justify-content:space-between; gap:8px; margin-bottom:2px; }}
+  .glance-coin {{ font-size:11px; color:var(--muted); font-weight:700; letter-spacing:0.5px; white-space:nowrap; }}
+  .glance-verdict {{ font-size:12.5px; font-weight:800; text-align:right; white-space:nowrap; overflow:hidden; text-overflow:ellipsis; }}
+  .glance-plain {{ font-size:11px; color:var(--text); line-height:1.3; white-space:nowrap; overflow:hidden; text-overflow:ellipsis; }}
+  .glance-footnote {{ font-size:10px; color:var(--muted); margin-top:6px; }}
+  @media (max-width: 700px) {{ .glance-row {{ grid-template-columns: 1fr 1fr; }} .glance-verdict {{ text-align:left; }} }}
   .cycle-map {{ background: var(--panel); border:1px solid var(--border); border-radius:12px; padding:16px 18px; }}
   .spot-signal-card {{ border-width:2px; }}
   .spot-signal-card.spot-bullish {{ border-color:#1f6a4a; }}
