@@ -751,7 +751,7 @@
     "kucoin-shares": {
       "label": "\ud83d\udfe1 HOLD / NEUTRAL",
       "status": "neutral",
-      "score": 1,
+      "score": 0,
       "rows": [
         [
           "Price vs. recent range",
@@ -770,12 +770,12 @@
         ],
         [
           "Recent trend",
-          "Chopping sideways - no clear trend",
-          0
+          "Trending down - avoid catching a falling knife",
+          -1
         ],
         [
           "Stretch from long-term average",
-          "-8.4% vs its long-term average - not stretched either way",
+          "-10.3% vs its long-term average - not stretched either way",
           0
         ],
         [
@@ -788,12 +788,12 @@
       "id": "kucoin-shares",
       "symbol": "KCS",
       "name": "KuCoin",
-      "price": 7.15,
-      "pct_24h": -1.06913,
-      "pct_7d": -5.6,
+      "price": 7.0,
+      "pct_24h": -3.3748,
+      "pct_7d": -9.4,
       "support_30d": 6.440026683855254,
       "resistance_30d": 7.8821382735057615,
-      "as_of": "2026-08-28 15:20:26",
+      "as_of": "2026-08-28 17:50:24",
       "stale": false
     },
     "hedera-hashgraph": {
@@ -1399,7 +1399,7 @@
         ],
         [
           "Stretch from long-term average",
-          "+15.4% above its long-term average - a bit stretched",
+          "+13.7% above its long-term average - a bit stretched",
           -1
         ],
         [
@@ -1412,12 +1412,12 @@
       "id": "gatechain-token",
       "symbol": "GT",
       "name": "Gate",
-      "price": 7.96,
-      "pct_24h": -3.50244,
-      "pct_7d": 9.4,
+      "price": 7.84,
+      "pct_24h": -4.20179,
+      "pct_7d": 8.0,
       "support_30d": 6.457783260010234,
       "resistance_30d": 8.180325116616592,
-      "as_of": "2026-08-28 16:30:29",
+      "as_of": "2026-08-28 17:50:24",
       "stale": false
     },
     "crypto-com-chain": {
@@ -1879,7 +1879,7 @@
         ],
         [
           "Stretch from long-term average",
-          "-29.1% below its long-term average - confirmed downtrend",
+          "-29.2% below its long-term average - confirmed downtrend",
           -1
         ],
         [
@@ -1892,12 +1892,12 @@
       "id": "bitcoin-cash",
       "symbol": "BCH",
       "name": "Bitcoin Cash",
-      "price": 247.3,
-      "pct_24h": -9.15817,
-      "pct_7d": -9.9,
+      "price": 247.25,
+      "pct_24h": -8.69755,
+      "pct_7d": -13.7,
       "support_30d": 203.50169440615565,
       "resistance_30d": 288.10955405353275,
-      "as_of": "2026-08-28 16:25:18",
+      "as_of": "2026-08-28 17:50:24",
       "stale": false
     },
     "mantle": {
@@ -2961,14 +2961,14 @@
     "key": "BTC",
     "name": "Bitcoin",
     "emoji": "\u20bf",
-    "price": 77769,
+    "price": 77937,
     "high_24h": 81282,
     "low_24h": 76962,
-    "pct_24h": -3.40544,
+    "pct_24h": -3.16821,
     "pct_7d": 0.9,
     "pct_30d": 21.8,
-    "sma50": 66721.54049647276,
-    "sma200": 69243.52530066259,
+    "sma50": 66724.6991783238,
+    "sma200": 69244.31497112536,
     "support_30d": 62772.57726413174,
     "resistance_30d": 80268.37474707834,
     "mark_price": 80577.96281884,
@@ -2983,14 +2983,14 @@
     "key": "ETH",
     "name": "Ethereum",
     "emoji": "\u039e",
-    "price": 2438.85,
+    "price": 2443.74,
     "high_24h": 2532.17,
     "low_24h": 2418.11,
-    "pct_24h": -3.17188,
+    "pct_24h": -2.99442,
     "pct_7d": 2.1,
     "pct_30d": 29.3,
-    "sma50": 1991.460956712334,
-    "sma200": 2017.464550837656,
+    "sma50": 1991.5485843189144,
+    "sma200": 2017.486457739301,
     "support_30d": 1843.443563411847,
     "resistance_30d": 2514.967577695514,
     "mark_price": 2526.37387597,
