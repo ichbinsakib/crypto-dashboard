@@ -4,7 +4,7 @@
   "_alerts_state": {
     "btc-resistance-break": {
       "triggered": true,
-      "last_triggered_at": "2026-08-28 02:10:29"
+      "last_triggered_at": "2026-08-28 02:15:24"
     },
     "btc-support-break": {
       "triggered": false,
@@ -439,7 +439,7 @@
         ],
         [
           "Stretch from long-term average",
-          "+56.0% above its long-term average - very stretched",
+          "+55.9% above its long-term average - very stretched",
           -2
         ],
         [
@@ -452,12 +452,12 @@
       "id": "rain",
       "symbol": "RAIN",
       "name": "Rain",
-      "price": 0.01729772,
-      "pct_24h": -1.29765,
-      "pct_7d": 24.9,
+      "price": 0.01728342,
+      "pct_24h": -1.37586,
+      "pct_7d": 24.8,
       "support_30d": 0.01229013774092356,
       "resistance_30d": 0.018158429442510105,
-      "as_of": "2026-08-28 00:10:22",
+      "as_of": "2026-08-28 02:15:24",
       "stale": false
     },
     "chainlink": {
@@ -557,18 +557,18 @@
       "stale": false
     },
     "leo-token": {
-      "label": "\ud83d\udfe2 LEAN ACCUMULATE",
-      "status": "bullish",
-      "score": 3,
+      "label": "\ud83d\udfe1 HOLD / NEUTRAL",
+      "status": "neutral",
+      "score": 0,
       "rows": [
         [
           "Price vs. recent range",
-          "Near its 30-day low (~$8.95) - historically a better entry",
-          2
+          "Near its 30-day high (~$9.78) - less room to run",
+          -1
         ],
         [
           "Crowd mood (Fear & Greed)",
-          "71/100 - crowd is greedy",
+          "73/100 - crowd is greedy",
           -1
         ],
         [
@@ -583,7 +583,7 @@
         ],
         [
           "Stretch from long-term average",
-          "-2.2% vs its long-term average - not stretched either way",
+          "-1.1% vs its long-term average - not stretched either way",
           0
         ],
         [
@@ -592,16 +592,16 @@
           0
         ]
       ],
-      "plain": "Leans toward a decent spot to slowly add (DCA) - not a strong signal, just a lean.",
+      "plain": "No real edge either way right now - fine to just wait and watch.",
       "id": "leo-token",
       "symbol": "LEO",
       "name": "LEO Token",
-      "price": 9.36,
-      "pct_24h": 1.70172,
-      "pct_7d": 0.8,
+      "price": 9.47,
+      "pct_24h": 2.00886,
+      "pct_7d": 1.4,
       "support_30d": 8.948412455130585,
       "resistance_30d": 9.784703173040917,
-      "as_of": "2026-08-27 23:40:24",
+      "as_of": "2026-08-28 02:15:24",
       "stale": false
     },
     "monero": {
@@ -2215,7 +2215,7 @@
         ],
         [
           "Stretch from long-term average",
-          "+2.0% vs its long-term average - not stretched either way",
+          "+0.7% vs its long-term average - not stretched either way",
           0
         ],
         [
@@ -2228,12 +2228,12 @@
       "id": "internet-computer",
       "symbol": "ICP",
       "name": "Internet Computer",
-      "price": 2.49,
-      "pct_24h": 3.4797,
+      "price": 2.46,
+      "pct_24h": 2.70769,
       "pct_7d": 3.3,
       "support_30d": 2.0214924101009055,
       "resistance_30d": 2.525531974490298,
-      "as_of": "2026-08-28 01:30:29",
+      "as_of": "2026-08-28 02:15:24",
       "stale": false
     },
     "bittensor": {
@@ -2961,16 +2961,16 @@
     "key": "BTC",
     "name": "Bitcoin",
     "emoji": "\u20bf",
-    "price": 80392,
+    "price": 80311,
     "high_24h": 81282,
     "low_24h": 78598,
-    "pct_24h": 1.84514,
+    "pct_24h": 1.83507,
     "pct_7d": 9.3,
     "pct_30d": 26.0,
-    "sma50": 66773.79004900668,
-    "sma200": 69256.58768879608,
+    "sma50": 66772.45974534233,
+    "sma200": 69256.25511288,
     "support_30d": 62772.57726413174,
-    "resistance_30d": 80392.810688467,
+    "resistance_30d": 80326.29550525047,
     "mark_price": 80577.96281884,
     "index_price": 80601.22869565,
     "funding_rate": 8.137e-05,
@@ -2983,14 +2983,14 @@
     "key": "ETH",
     "name": "Ethereum",
     "emoji": "\u039e",
-    "price": 2507.93,
+    "price": 2505.95,
     "high_24h": 2558.47,
     "low_24h": 2482.26,
-    "pct_24h": 0.16553,
+    "pct_24h": 0.19423,
     "pct_7d": 7.3,
     "pct_30d": 31.1,
-    "sma50": 1992.8269835769493,
-    "sma200": 2017.8060575538098,
+    "sma50": 1992.7982480085907,
+    "sma200": 2017.7988736617199,
     "support_30d": 1843.443563411847,
     "resistance_30d": 2514.967577695514,
     "mark_price": 2526.37387597,
