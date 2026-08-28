@@ -4,7 +4,7 @@
   "_alerts_state": {
     "btc-resistance-break": {
       "triggered": true,
-      "last_triggered_at": "2026-08-28 10:10:26"
+      "last_triggered_at": "2026-08-28 10:15:28"
     },
     "btc-support-break": {
       "triggered": false,
@@ -79,7 +79,7 @@
     "ripple": {
       "label": "\ud83d\udfe1 HOLD / NEUTRAL",
       "status": "neutral",
-      "score": 0,
+      "score": -1,
       "rows": [
         [
           "Price vs. recent range",
@@ -98,12 +98,12 @@
         ],
         [
           "Recent trend",
-          "Trending up steadily - healthy",
-          1
+          "Chopping sideways - no clear trend",
+          0
         ],
         [
           "Stretch from long-term average",
-          "+11.1% above its long-term average - a bit stretched",
+          "+10.3% above its long-term average - a bit stretched",
           -1
         ],
         [
@@ -116,12 +116,12 @@
       "id": "ripple",
       "symbol": "XRP",
       "name": "XRP",
-      "price": 1.42,
-      "pct_24h": -0.90395,
-      "pct_7d": 8.1,
+      "price": 1.41,
+      "pct_24h": -2.10445,
+      "pct_7d": 0.9,
       "support_30d": 0.9927072784932938,
       "resistance_30d": 1.52050482788377,
-      "as_of": "2026-08-28 09:00:36",
+      "as_of": "2026-08-28 10:15:28",
       "stale": false
     },
     "solana": {
@@ -583,7 +583,7 @@
         ],
         [
           "Stretch from long-term average",
-          "-1.1% vs its long-term average - not stretched either way",
+          "-1.3% vs its long-term average - not stretched either way",
           0
         ],
         [
@@ -596,12 +596,12 @@
       "id": "leo-token",
       "symbol": "LEO",
       "name": "LEO Token",
-      "price": 9.47,
-      "pct_24h": 2.07899,
-      "pct_7d": 2.1,
+      "price": 9.45,
+      "pct_24h": 1.36634,
+      "pct_7d": 1.7,
       "support_30d": 8.948412455130585,
       "resistance_30d": 9.784703173040917,
-      "as_of": "2026-08-28 07:35:18",
+      "as_of": "2026-08-28 10:15:28",
       "stale": false
     },
     "monero": {
@@ -967,7 +967,7 @@
         ],
         [
           "Stretch from long-term average",
-          "+5.8% vs its long-term average - not stretched either way",
+          "+5.3% vs its long-term average - not stretched either way",
           0
         ],
         [
@@ -980,12 +980,12 @@
       "id": "aster-2",
       "symbol": "ASTER",
       "name": "Aster",
-      "price": 0.699598,
-      "pct_24h": -1.08644,
-      "pct_7d": 4.5,
+      "price": 0.696435,
+      "pct_24h": -2.544,
+      "pct_7d": -4.5,
       "support_30d": 0.5986101196690307,
       "resistance_30d": 0.7276231199504045,
-      "as_of": "2026-08-28 07:40:24",
+      "as_of": "2026-08-28 10:15:28",
       "stale": false
     },
     "worldcoin-wld": {
@@ -2961,14 +2961,14 @@
     "key": "BTC",
     "name": "Bitcoin",
     "emoji": "\u20bf",
-    "price": 79093,
+    "price": 79213,
     "high_24h": 81282,
     "low_24h": 79031,
-    "pct_24h": -1.29685,
+    "pct_24h": -0.93134,
     "pct_7d": 0.1,
     "pct_30d": 23.2,
-    "sma50": 66747.78090924436,
-    "sma200": 69250.0854038555,
+    "sma50": 66750.06486714506,
+    "sma200": 69250.65639333066,
     "support_30d": 62772.57726413174,
     "resistance_30d": 80268.37474707834,
     "mark_price": 80577.96281884,
@@ -2983,14 +2983,14 @@
     "key": "ETH",
     "name": "Ethereum",
     "emoji": "\u039e",
-    "price": 2484.48,
+    "price": 2487.75,
     "high_24h": 2532.25,
     "low_24h": 2481.49,
-    "pct_24h": -2.13256,
+    "pct_24h": -1.7104,
     "pct_7d": 1.9,
     "pct_30d": 30.1,
-    "sma50": 1992.3561363330996,
-    "sma200": 2017.688345742847,
+    "sma50": 1992.4215677325683,
+    "sma200": 2017.7047035927142,
     "support_30d": 1843.443563411847,
     "resistance_30d": 2514.967577695514,
     "mark_price": 2526.37387597,
