@@ -4,7 +4,7 @@
   "_alerts_state": {
     "btc-resistance-break": {
       "triggered": true,
-      "last_triggered_at": "2026-08-28 05:05:22"
+      "last_triggered_at": "2026-08-28 05:07:47"
     },
     "btc-support-break": {
       "triggered": false,
@@ -125,9 +125,9 @@
       "stale": false
     },
     "solana": {
-      "label": "\ud83d\udd34 CAUTION - REDUCE NEW BUYS",
+      "label": "\ud83d\udd34 DISTRIBUTION ZONE",
       "status": "bearish",
-      "score": -2,
+      "score": -5,
       "rows": [
         [
           "Price vs. recent range",
@@ -146,12 +146,12 @@
         ],
         [
           "Recent trend",
-          "Trending up steadily - healthy",
-          1
+          "Shooting straight up - classic blow-off top risk, don't chase",
+          -2
         ],
         [
           "Stretch from long-term average",
-          "+30.9% above its long-term average - very stretched",
+          "+31.5% above its long-term average - very stretched",
           -2
         ],
         [
@@ -160,16 +160,16 @@
           0
         ]
       ],
-      "plain": "Getting risky - I'd hold off on new buys until this cools down.",
+      "plain": "Looks stretched and euphoric - historically the zone where smart money sells, not buys.",
       "id": "solana",
       "symbol": "SOL",
       "name": "Solana",
-      "price": 106.82,
-      "pct_24h": 5.6202,
-      "pct_7d": 19.8,
+      "price": 107.34,
+      "pct_24h": 6.16432,
+      "pct_7d": 22.3,
       "support_30d": 71.89412540165443,
       "resistance_30d": 109.17730597799657,
-      "as_of": "2026-08-28 05:05:22",
+      "as_of": "2026-08-28 02:30:30",
       "stale": false
     },
     "tron": {
@@ -895,12 +895,12 @@
     "avalanche-2": {
       "label": "\ud83d\udfe1 HOLD / NEUTRAL",
       "status": "neutral",
-      "score": 0,
+      "score": 1,
       "rows": [
         [
           "Price vs. recent range",
-          "Near its 30-day high (~$7.84) - less room to run",
-          -1
+          "Sitting in the middle of its 30-day range",
+          0
         ],
         [
           "Crowd mood (Fear & Greed)",
@@ -919,7 +919,7 @@
         ],
         [
           "Stretch from long-term average",
-          "-7.7% vs its long-term average - not stretched either way",
+          "-8.8% vs its long-term average - not stretched either way",
           0
         ],
         [
@@ -932,12 +932,12 @@
       "id": "avalanche-2",
       "symbol": "AVAX",
       "name": "Avalanche",
-      "price": 7.52,
-      "pct_24h": 1.66911,
-      "pct_7d": 3.3,
+      "price": 7.43,
+      "pct_24h": 1.52847,
+      "pct_7d": 1.8,
       "support_30d": 6.186861556497119,
       "resistance_30d": 7.836507914480645,
-      "as_of": "2026-08-28 02:05:19",
+      "as_of": "2026-08-28 05:07:47",
       "stale": false
     },
     "aster-2": {
@@ -1399,7 +1399,7 @@
         ],
         [
           "Stretch from long-term average",
-          "+17.3% above its long-term average - a bit stretched",
+          "+17.4% above its long-term average - a bit stretched",
           -1
         ],
         [
@@ -1412,12 +1412,12 @@
       "id": "gatechain-token",
       "symbol": "GT",
       "name": "Gate",
-      "price": 8.09,
-      "pct_24h": 0.035,
-      "pct_7d": 11.8,
+      "price": 8.1,
+      "pct_24h": 0.18546,
+      "pct_7d": 13.0,
       "support_30d": 6.457783260010234,
       "resistance_30d": 8.180325116616592,
-      "as_of": "2026-08-28 05:05:22",
+      "as_of": "2026-08-28 04:55:17",
       "stale": false
     },
     "crypto-com-chain": {
@@ -2708,12 +2708,12 @@
       "id": "pax-gold",
       "symbol": "PAXG",
       "name": "PAX Gold",
-      "price": 4576.09,
-      "pct_24h": -0.74074,
+      "price": 4575.61,
+      "pct_24h": -0.78925,
       "pct_7d": 1.2,
       "support_30d": 4043.9895961400557,
       "resistance_30d": 4672.307573354755,
-      "as_of": "2026-08-28 05:05:22",
+      "as_of": "2026-08-28 05:07:47",
       "stale": false
     },
     "morpho": {
@@ -2791,7 +2791,7 @@
         ],
         [
           "Stretch from long-term average",
-          "-47.2% below its long-term average - confirmed downtrend",
+          "-47.7% below its long-term average - confirmed downtrend",
           -1
         ],
         [
@@ -2804,12 +2804,12 @@
       "id": "memecore",
       "symbol": "M",
       "name": "MemeCore",
-      "price": 1.11,
-      "pct_24h": -0.86707,
-      "pct_7d": -4.5,
+      "price": 1.1,
+      "pct_24h": -1.69317,
+      "pct_7d": -5.0,
       "support_30d": 0.9808769834438776,
       "resistance_30d": 1.2453913363052769,
-      "as_of": "2026-08-28 03:55:22",
+      "as_of": "2026-08-28 05:07:47",
       "stale": false
     },
     "aave": {
@@ -2961,14 +2961,14 @@
     "key": "BTC",
     "name": "Bitcoin",
     "emoji": "\u20bf",
-    "price": 79631,
+    "price": 79673,
     "high_24h": 81282,
     "low_24h": 78620,
-    "pct_24h": 1.10912,
+    "pct_24h": 1.29908,
     "pct_7d": 6.9,
     "pct_30d": 25.1,
-    "sma50": 66758.55820262227,
-    "sma200": 69252.77972719997,
+    "sma50": 66759.52076595469,
+    "sma200": 69253.02036803307,
     "support_30d": 62772.57726413174,
     "resistance_30d": 80268.37474707834,
     "mark_price": 80577.96281884,
@@ -2983,14 +2983,14 @@
     "key": "ETH",
     "name": "Ethereum",
     "emoji": "\u039e",
-    "price": 2485.16,
+    "price": 2486.59,
     "high_24h": 2558.47,
     "low_24h": 2481.49,
-    "pct_24h": -0.05756,
+    "pct_24h": 0.12773,
     "pct_7d": 6.2,
     "pct_30d": 31.5,
-    "sma50": 1992.3629215998903,
-    "sma200": 2017.690042059545,
+    "sma50": 1992.3984971356535,
+    "sma200": 2017.6989359434856,
     "support_30d": 1843.443563411847,
     "resistance_30d": 2514.967577695514,
     "mark_price": 2526.37387597,
