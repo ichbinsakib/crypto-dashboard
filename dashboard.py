@@ -1307,16 +1307,6 @@ def render(coins_data, fng_value, fng_classification, generated_at, any_stale,
       risk than BTC/ETH, none of this is backtested, and a high score means "resembles a historically favorable
       setup by this simple rule set" &mdash; nothing more. Education only, not financial advice.
     </div>
-    <table class="signal-table score-legend" style="margin-top:14px; margin-bottom:0;">
-      <thead><tr><th>Score range</th><th>Label</th><th>What it means</th></tr></thead>
-      <tbody>
-        <tr><td>&ge; +5</td><td><span class="badge bullish">🟢 ACCUMULATION ZONE</span></td><td class="watch">Strong historical buy-the-dip setup</td></tr>
-        <tr><td>+2 to +4</td><td><span class="badge bullish">🟢 LEAN ACCUMULATE</span></td><td class="watch">Leans favorable, not a strong signal</td></tr>
-        <tr><td>-1 to +1</td><td><span class="badge neutral">🟡 HOLD / NEUTRAL</span></td><td class="watch">No real edge either way</td></tr>
-        <tr><td>-4 to -2</td><td><span class="badge bearish">🔴 CAUTION</span></td><td class="watch">Getting risky, hold off on new buys</td></tr>
-        <tr><td>&le; -5</td><td><span class="badge bearish">🔴 DISTRIBUTION ZONE</span></td><td class="watch">Stretched/euphoric, historical selling zone</td></tr>
-      </tbody>
-    </table>
   </div>
 
   <input type="radio" name="tf" id="tf-15m">
@@ -1330,6 +1320,19 @@ def render(coins_data, fng_value, fng_classification, generated_at, any_stale,
   <div class="tf-panel tf-panel-15m">{intraday_15m_html}</div>
   <div class="tf-panel tf-panel-1h">{intraday_1h_html}</div>
   <div class="tf-panel tf-panel-1d">{daily_html}</div>
+
+  <div class="cycle-map spot-signal-card" style="margin-top:20px;">
+    <table class="signal-table score-legend" style="margin-top:0; margin-bottom:0;">
+      <thead><tr><th>Score range</th><th>Label</th><th>What it means</th></tr></thead>
+      <tbody>
+        <tr><td>&ge; +5</td><td><span class="badge bullish">🟢 ACCUMULATION ZONE</span></td><td class="watch">Strong historical buy-the-dip setup</td></tr>
+        <tr><td>+2 to +4</td><td><span class="badge bullish">🟢 LEAN ACCUMULATE</span></td><td class="watch">Leans favorable, not a strong signal</td></tr>
+        <tr><td>-1 to +1</td><td><span class="badge neutral">🟡 HOLD / NEUTRAL</span></td><td class="watch">No real edge either way</td></tr>
+        <tr><td>-4 to -2</td><td><span class="badge bearish">🔴 CAUTION</span></td><td class="watch">Getting risky, hold off on new buys</td></tr>
+        <tr><td>&le; -5</td><td><span class="badge bearish">🔴 DISTRIBUTION ZONE</span></td><td class="watch">Stretched/euphoric, historical selling zone</td></tr>
+      </tbody>
+    </table>
+  </div>
 </div>
 """
 
