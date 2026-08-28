@@ -4,7 +4,7 @@
   "_alerts_state": {
     "btc-resistance-break": {
       "triggered": true,
-      "last_triggered_at": "2026-08-28 11:50:21"
+      "last_triggered_at": "2026-08-28 11:55:19"
     },
     "btc-support-break": {
       "triggered": false,
@@ -847,7 +847,7 @@
     "pepe": {
       "label": "\ud83d\udfe1 HOLD / NEUTRAL",
       "status": "neutral",
-      "score": 0,
+      "score": -1,
       "rows": [
         [
           "Price vs. recent range",
@@ -866,8 +866,8 @@
         ],
         [
           "Recent trend",
-          "Trending up steadily - healthy",
-          1
+          "Chopping sideways - no clear trend",
+          0
         ],
         [
           "Stretch from long-term average",
@@ -885,11 +885,11 @@
       "symbol": "PEPE",
       "name": "Pepe",
       "price": 3.8e-06,
-      "pct_24h": -4.35374,
-      "pct_7d": 10.1,
+      "pct_24h": -3.07535,
+      "pct_7d": 6.8,
       "support_30d": 2.5716563906374582e-06,
       "resistance_30d": 4.122123035488615e-06,
-      "as_of": "2026-08-28 09:55:18",
+      "as_of": "2026-08-28 11:55:19",
       "stale": false
     },
     "avalanche-2": {
@@ -1783,7 +1783,7 @@
         ],
         [
           "Stretch from long-term average",
-          "+118.2% above its long-term average - very stretched",
+          "+117.0% above its long-term average - very stretched",
           -2
         ],
         [
@@ -1796,12 +1796,12 @@
       "id": "lighter",
       "symbol": "LIT",
       "name": "Lighter",
-      "price": 3.46,
-      "pct_24h": -0.1669,
-      "pct_7d": 26.3,
+      "price": 3.44,
+      "pct_24h": 0.95417,
+      "pct_7d": 28.5,
       "support_30d": 2.005076166939587,
       "resistance_30d": 3.70987819420487,
-      "as_of": "2026-08-28 09:55:18",
+      "as_of": "2026-08-28 11:55:19",
       "stale": false
     },
     "ethena": {
@@ -2037,11 +2037,11 @@
       "symbol": "UNI",
       "name": "Uniswap",
       "price": 4.63,
-      "pct_24h": 3.89569,
+      "pct_24h": 4.14775,
       "pct_7d": 16.5,
       "support_30d": 3.1971416665971573,
       "resistance_30d": 4.684913503389672,
-      "as_of": "2026-08-28 11:35:17",
+      "as_of": "2026-08-28 11:55:19",
       "stale": false
     },
     "pi-network": {
@@ -2961,14 +2961,14 @@
     "key": "BTC",
     "name": "Bitcoin",
     "emoji": "\u20bf",
-    "price": 79630,
+    "price": 79573,
     "high_24h": 81282,
     "low_24h": 79031,
-    "pct_24h": 0.25338,
+    "pct_24h": 0.14568,
     "pct_7d": 2.2,
     "pct_30d": 23.1,
-    "sma50": 66758.5129927453,
-    "sma200": 69252.76842473073,
+    "sma50": 66757.40063470764,
+    "sma200": 69252.49033522132,
     "support_30d": 62772.57726413174,
     "resistance_30d": 80268.37474707834,
     "mark_price": 80577.96281884,
@@ -2983,14 +2983,14 @@
     "key": "ETH",
     "name": "Ethereum",
     "emoji": "\u039e",
-    "price": 2505.95,
+    "price": 2504.56,
     "high_24h": 2532.25,
     "low_24h": 2481.49,
-    "pct_24h": 0.22414,
+    "pct_24h": 0.12089,
     "pct_7d": 4.3,
     "pct_30d": 30.5,
-    "sma50": 1992.785511369712,
-    "sma200": 2017.7956895020002,
+    "sma50": 1992.758563521024,
+    "sma200": 2017.7889525398284,
     "support_30d": 1843.443563411847,
     "resistance_30d": 2514.967577695514,
     "mark_price": 2526.37387597,
