@@ -847,7 +847,7 @@
     "pepe": {
       "label": "\ud83d\udfe1 HOLD / NEUTRAL",
       "status": "neutral",
-      "score": 0,
+      "score": -1,
       "rows": [
         [
           "Price vs. recent range",
@@ -866,12 +866,12 @@
         ],
         [
           "Recent trend",
-          "Chopping sideways - no clear trend",
-          0
+          "Trending down - avoid catching a falling knife",
+          -1
         ],
         [
           "Stretch from long-term average",
-          "+9.2% vs its long-term average - not stretched either way",
+          "+9.8% vs its long-term average - not stretched either way",
           0
         ],
         [
@@ -884,12 +884,12 @@
       "id": "pepe",
       "symbol": "PEPE",
       "name": "Pepe",
-      "price": 3.65e-06,
-      "pct_24h": -5.72426,
-      "pct_7d": -3.0,
+      "price": 3.67e-06,
+      "pct_24h": -6.25484,
+      "pct_7d": -8.3,
       "support_30d": 2.5716563906374582e-06,
       "resistance_30d": 4.122123035488615e-06,
-      "as_of": "2026-08-28 18:45:25",
+      "as_of": "2026-08-28 19:50:24",
       "stale": false
     },
     "avalanche-2": {
@@ -1015,7 +1015,7 @@
         ],
         [
           "Stretch from long-term average",
-          "+9.3% vs its long-term average - not stretched either way",
+          "+6.7% vs its long-term average - not stretched either way",
           0
         ],
         [
@@ -1028,12 +1028,12 @@
       "id": "worldcoin-wld",
       "symbol": "WLD",
       "name": "Worldcoin",
-      "price": 0.389931,
-      "pct_24h": -6.92515,
-      "pct_7d": -1.1,
+      "price": 0.380801,
+      "pct_24h": -7.73892,
+      "pct_7d": -3.6,
       "support_30d": 0.29949503410290834,
       "resistance_30d": 0.4153748859818001,
-      "as_of": "2026-08-28 16:55:16",
+      "as_of": "2026-08-28 19:50:24",
       "stale": false
     },
     "bfusd": {
@@ -1701,11 +1701,11 @@
       "symbol": "BGB",
       "name": "Bitget Token",
       "price": 1.87,
-      "pct_24h": -6.05108,
+      "pct_24h": -6.03388,
       "pct_7d": 2.4,
       "support_30d": 1.5973956191487853,
       "resistance_30d": 1.984790388009312,
-      "as_of": "2026-08-28 19:45:23",
+      "as_of": "2026-08-28 19:50:24",
       "stale": false
     },
     "sui": {
@@ -2961,14 +2961,14 @@
     "key": "BTC",
     "name": "Bitcoin",
     "emoji": "\u20bf",
-    "price": 77619,
+    "price": 77478,
     "high_24h": 81282,
     "low_24h": 76962,
-    "pct_24h": -2.98144,
+    "pct_24h": -3.18023,
     "pct_7d": 0.1,
     "pct_30d": 20.6,
-    "sma50": 66718.2622208174,
-    "sma200": 69242.70573174875,
+    "sma50": 66715.08079747572,
+    "sma200": 69241.91037591333,
     "support_30d": 62772.57726413174,
     "resistance_30d": 80268.37474707834,
     "mark_price": 80577.96281884,
@@ -2983,14 +2983,14 @@
     "key": "ETH",
     "name": "Ethereum",
     "emoji": "\u039e",
-    "price": 2438.06,
+    "price": 2434.62,
     "high_24h": 2532.17,
     "low_24h": 2418.11,
-    "pct_24h": -2.85899,
+    "pct_24h": -2.9047,
     "pct_7d": 0.1,
     "pct_30d": 26.6,
-    "sma50": 1991.429496853763,
-    "sma200": 2017.4566858730132,
+    "sma50": 1991.3530539373075,
+    "sma200": 2017.437575143899,
     "support_30d": 1843.443563411847,
     "resistance_30d": 2514.967577695514,
     "mark_price": 2526.37387597,
