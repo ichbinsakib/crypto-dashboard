@@ -847,7 +847,7 @@
     "pepe": {
       "label": "\ud83d\udfe1 HOLD / NEUTRAL",
       "status": "neutral",
-      "score": 0,
+      "score": -1,
       "rows": [
         [
           "Price vs. recent range",
@@ -871,8 +871,8 @@
         ],
         [
           "Stretch from long-term average",
-          "+9.8% vs its long-term average - not stretched either way",
-          0
+          "+10.4% above its long-term average - a bit stretched",
+          -1
         ],
         [
           "Leverage traders' bias",
@@ -884,12 +884,12 @@
       "id": "pepe",
       "symbol": "PEPE",
       "name": "Pepe",
-      "price": 3.67e-06,
-      "pct_24h": -5.85826,
-      "pct_7d": -3.4,
+      "price": 3.69e-06,
+      "pct_24h": -5.15843,
+      "pct_7d": -6.6,
       "support_30d": 2.5716563906374582e-06,
       "resistance_30d": 4.122123035488615e-06,
-      "as_of": "2026-08-28 21:20:25",
+      "as_of": "2026-08-28 23:45:23",
       "stale": false
     },
     "avalanche-2": {
@@ -1543,7 +1543,7 @@
         ],
         [
           "Stretch from long-term average",
-          "+132.6% above its long-term average - very stretched",
+          "+133.0% above its long-term average - very stretched",
           -2
         ],
         [
@@ -1556,12 +1556,12 @@
       "id": "pump-fun",
       "symbol": "PUMP",
       "name": "Pump.fun",
-      "price": 0.0046129,
-      "pct_24h": -5.88785,
-      "pct_7d": 18.3,
+      "price": 0.00462087,
+      "pct_24h": -5.45315,
+      "pct_7d": 13.5,
       "support_30d": 0.001984864378213491,
       "resistance_30d": 0.0052249885406471875,
-      "as_of": "2026-08-28 21:10:23",
+      "as_of": "2026-08-28 23:45:23",
       "stale": false
     },
     "venice-token": {
@@ -2765,9 +2765,9 @@
       "stale": false
     },
     "memecore": {
-      "label": "\ud83d\udd34 CAUTION - REDUCE NEW BUYS",
-      "status": "bearish",
-      "score": -3,
+      "label": "\ud83d\udfe1 HOLD / NEUTRAL",
+      "status": "neutral",
+      "score": 0,
       "rows": [
         [
           "Price vs. recent range",
@@ -2781,8 +2781,8 @@
         ],
         [
           "Market phase (best guess)",
-          "Established downtrend - still falling, not yet a base",
-          -1
+          "Basing near the bottom - phase where smart money accumulates",
+          2
         ],
         [
           "Recent trend",
@@ -2791,7 +2791,7 @@
         ],
         [
           "Stretch from long-term average",
-          "-50.4% below its long-term average - confirmed downtrend",
+          "-50.2% below its long-term average - confirmed downtrend",
           -1
         ],
         [
@@ -2800,16 +2800,16 @@
           0
         ]
       ],
-      "plain": "Getting risky - I'd hold off on new buys until this cools down.",
+      "plain": "No real edge either way right now - fine to just wait and watch.",
       "id": "memecore",
       "symbol": "M",
       "name": "MemeCore",
-      "price": 1.043,
-      "pct_24h": -7.00544,
-      "pct_7d": -6.0,
+      "price": 1.047,
+      "pct_24h": -6.58652,
+      "pct_7d": -6.9,
       "support_30d": 0.9808769834438776,
       "resistance_30d": 1.2453913363052769,
-      "as_of": "2026-08-28 20:15:22",
+      "as_of": "2026-08-28 23:45:23",
       "stale": false
     },
     "aave": {
@@ -2961,14 +2961,14 @@
     "key": "BTC",
     "name": "Bitcoin",
     "emoji": "\u20bf",
-    "price": 77702,
+    "price": 77688,
     "high_24h": 81282,
     "low_24h": 76962,
-    "pct_24h": -3.23092,
+    "pct_24h": -3.214,
     "pct_7d": -1.0,
     "pct_30d": 21.9,
-    "sma50": 66719.98108831841,
-    "sma200": 69243.135448624,
+    "sma50": 66719.51639932142,
+    "sma200": 69243.01927637476,
     "support_30d": 62772.57726413174,
     "resistance_30d": 80268.37474707834,
     "mark_price": 77468.1233913,
@@ -2983,14 +2983,14 @@
     "key": "ETH",
     "name": "Ethereum",
     "emoji": "\u039e",
-    "price": 2438.99,
+    "price": 2438.84,
     "high_24h": 2532.17,
     "low_24h": 2418.11,
-    "pct_24h": -2.94895,
+    "pct_24h": -2.88146,
     "pct_7d": -2.8,
     "pct_30d": 28.9,
-    "sma50": 1991.4408596630283,
-    "sma200": 2017.4595265753294,
+    "sma50": 1991.4378992736245,
+    "sma200": 2017.4587864779783,
     "support_30d": 1843.443563411847,
     "resistance_30d": 2514.967577695514,
     "mark_price": 2428.17973643,
