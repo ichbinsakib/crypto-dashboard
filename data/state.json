@@ -4,7 +4,7 @@
   "_alerts_state": {
     "btc-resistance-break": {
       "triggered": true,
-      "last_triggered_at": "2026-08-28 11:25:18"
+      "last_triggered_at": "2026-08-28 11:30:28"
     },
     "btc-support-break": {
       "triggered": false,
@@ -1373,9 +1373,9 @@
       "stale": false
     },
     "gatechain-token": {
-      "label": "\ud83d\udd34 CAUTION - REDUCE NEW BUYS",
-      "status": "bearish",
-      "score": -2,
+      "label": "\ud83d\udfe1 HOLD / NEUTRAL",
+      "status": "neutral",
+      "score": -1,
       "rows": [
         [
           "Price vs. recent range",
@@ -1394,12 +1394,12 @@
         ],
         [
           "Recent trend",
-          "Chopping sideways - no clear trend",
-          0
+          "Trending up steadily - healthy",
+          1
         ],
         [
           "Stretch from long-term average",
-          "+16.8% above its long-term average - a bit stretched",
+          "+17.3% above its long-term average - a bit stretched",
           -1
         ],
         [
@@ -1408,16 +1408,16 @@
           0
         ]
       ],
-      "plain": "Getting risky - I'd hold off on new buys until this cools down.",
+      "plain": "No real edge either way right now - fine to just wait and watch.",
       "id": "gatechain-token",
       "symbol": "GT",
       "name": "Gate",
-      "price": 8.06,
-      "pct_24h": -0.88793,
-      "pct_7d": 6.4,
+      "price": 8.09,
+      "pct_24h": -0.78223,
+      "pct_7d": 11.0,
       "support_30d": 6.457783260010234,
       "resistance_30d": 8.180325116616592,
-      "as_of": "2026-08-28 10:35:18",
+      "as_of": "2026-08-28 11:30:28",
       "stale": false
     },
     "crypto-com-chain": {
@@ -1879,7 +1879,7 @@
         ],
         [
           "Stretch from long-term average",
-          "-24.1% below its long-term average - confirmed downtrend",
+          "-24.0% below its long-term average - confirmed downtrend",
           -1
         ],
         [
@@ -1892,12 +1892,12 @@
       "id": "bitcoin-cash",
       "symbol": "BCH",
       "name": "Bitcoin Cash",
-      "price": 264.83,
-      "pct_24h": -1.8059,
+      "price": 265.21,
+      "pct_24h": -1.45214,
       "pct_7d": 1.0,
       "support_30d": 203.50169440615565,
       "resistance_30d": 288.10955405353275,
-      "as_of": "2026-08-28 11:05:19",
+      "as_of": "2026-08-28 11:30:28",
       "stale": false
     },
     "mantle": {
@@ -2887,7 +2887,7 @@
         ],
         [
           "Stretch from long-term average",
-          "+33.7% above its long-term average - very stretched",
+          "+33.9% above its long-term average - very stretched",
           -2
         ],
         [
@@ -2900,12 +2900,12 @@
       "id": "okb",
       "symbol": "OKB",
       "name": "OKB",
-      "price": 113.99,
-      "pct_24h": 0.96287,
+      "price": 114.15,
+      "pct_24h": 1.10713,
       "pct_7d": 5.5,
       "support_30d": 85.29568594571903,
       "resistance_30d": 115.8310797114581,
-      "as_of": "2026-08-28 11:00:38",
+      "as_of": "2026-08-28 11:30:28",
       "stale": false
     },
     "just": {
@@ -2961,14 +2961,14 @@
     "key": "BTC",
     "name": "Bitcoin",
     "emoji": "\u20bf",
-    "price": 79718,
+    "price": 79664,
     "high_24h": 81282,
     "low_24h": 79031,
-    "pct_24h": -0.00944,
+    "pct_24h": 0.19112,
     "pct_7d": 2.2,
     "pct_30d": 23.1,
-    "sma50": 66760.29161815866,
-    "sma200": 69253.21308108408,
+    "sma50": 66759.59993231641,
+    "sma200": 69253.04015962352,
     "support_30d": 62772.57726413174,
     "resistance_30d": 80268.37474707834,
     "mark_price": 80577.96281884,
@@ -2983,14 +2983,14 @@
     "key": "ETH",
     "name": "Ethereum",
     "emoji": "\u039e",
-    "price": 2508.18,
+    "price": 2505.23,
     "high_24h": 2532.25,
     "low_24h": 2481.49,
-    "pct_24h": 0.0216,
+    "pct_24h": 0.11439,
     "pct_7d": 4.3,
     "pct_30d": 30.5,
-    "sma50": 1992.8283518036412,
-    "sma200": 2017.8063996104827,
+    "sma50": 1992.7783776189813,
+    "sma200": 2017.7939060643175,
     "support_30d": 1843.443563411847,
     "resistance_30d": 2514.967577695514,
     "mark_price": 2526.37387597,
