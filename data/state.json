@@ -4,7 +4,7 @@
   "_alerts_state": {
     "btc-resistance-break": {
       "triggered": true,
-      "last_triggered_at": "2026-08-28 09:55:18"
+      "last_triggered_at": "2026-08-28 10:00:34"
     },
     "btc-support-break": {
       "triggered": false,
@@ -232,7 +232,7 @@
         ],
         [
           "Crowd mood (Fear & Greed)",
-          "71/100 - crowd is greedy",
+          "73/100 - crowd is greedy",
           -1
         ],
         [
@@ -260,12 +260,12 @@
       "id": "figure-heloc",
       "symbol": "FIGR_HELOC",
       "name": "Figure Heloc",
-      "price": 1.019,
-      "pct_24h": 1.57145,
-      "pct_7d": -2.3,
+      "price": 1.036,
+      "pct_24h": 3.3592,
+      "pct_7d": 1.0,
       "support_30d": 1.0008548889936117,
       "resistance_30d": 1.0443247364269224,
-      "as_of": "2026-08-27 23:40:24",
+      "as_of": "2026-08-28 10:00:34",
       "stale": false
     },
     "hyperliquid": {
@@ -751,7 +751,7 @@
     "kucoin-shares": {
       "label": "\ud83d\udfe1 HOLD / NEUTRAL",
       "status": "neutral",
-      "score": 1,
+      "score": 0,
       "rows": [
         [
           "Price vs. recent range",
@@ -770,12 +770,12 @@
         ],
         [
           "Recent trend",
-          "Chopping sideways - no clear trend",
-          0
+          "Trending down - avoid catching a falling knife",
+          -1
         ],
         [
           "Stretch from long-term average",
-          "-7.8% vs its long-term average - not stretched either way",
+          "-7.5% vs its long-term average - not stretched either way",
           0
         ],
         [
@@ -788,12 +788,12 @@
       "id": "kucoin-shares",
       "symbol": "KCS",
       "name": "KuCoin",
-      "price": 7.2,
-      "pct_24h": -2.55998,
-      "pct_7d": -6.2,
+      "price": 7.22,
+      "pct_24h": -0.43481,
+      "pct_7d": -8.0,
       "support_30d": 6.440026683855254,
       "resistance_30d": 7.8821382735057615,
-      "as_of": "2026-08-28 09:05:21",
+      "as_of": "2026-08-28 10:00:34",
       "stale": false
     },
     "hedera-hashgraph": {
@@ -1892,12 +1892,12 @@
       "id": "bitcoin-cash",
       "symbol": "BCH",
       "name": "Bitcoin Cash",
-      "price": 263.06,
-      "pct_24h": -3.82018,
-      "pct_7d": 5.3,
+      "price": 263.16,
+      "pct_24h": -2.4517,
+      "pct_7d": -1.0,
       "support_30d": 203.50169440615565,
       "resistance_30d": 288.10955405353275,
-      "as_of": "2026-08-28 08:45:22",
+      "as_of": "2026-08-28 10:00:34",
       "stale": false
     },
     "mantle": {
@@ -2143,7 +2143,7 @@
     "canton-network": {
       "label": "\ud83d\udfe1 HOLD / NEUTRAL",
       "status": "neutral",
-      "score": 1,
+      "score": 0,
       "rows": [
         [
           "Price vs. recent range",
@@ -2162,12 +2162,12 @@
         ],
         [
           "Recent trend",
-          "Trending up steadily - healthy",
-          1
+          "Chopping sideways - no clear trend",
+          0
         ],
         [
           "Stretch from long-term average",
-          "-21.9% below its long-term average - confirmed downtrend",
+          "-21.6% below its long-term average - confirmed downtrend",
           -1
         ],
         [
@@ -2180,12 +2180,12 @@
       "id": "canton-network",
       "symbol": "CC",
       "name": "Canton",
-      "price": 0.111712,
-      "pct_24h": -4.29156,
-      "pct_7d": 9.6,
+      "price": 0.112135,
+      "pct_24h": -3.92457,
+      "pct_7d": 7.1,
       "support_30d": 0.09051839499501885,
       "resistance_30d": 0.12396615653575341,
-      "as_of": "2026-08-28 09:15:25",
+      "as_of": "2026-08-28 10:00:34",
       "stale": false
     },
     "internet-computer": {
@@ -2961,14 +2961,14 @@
     "key": "BTC",
     "name": "Bitcoin",
     "emoji": "\u20bf",
-    "price": 79338,
+    "price": 79297,
     "high_24h": 81282,
     "low_24h": 79031,
-    "pct_24h": -0.93287,
+    "pct_24h": -0.8258,
     "pct_7d": 4.3,
     "pct_30d": 23.3,
-    "sma50": 66752.6598819937,
-    "sma200": 69251.30514704283,
+    "sma50": 66751.78593115981,
+    "sma200": 69251.08665933435,
     "support_30d": 62772.57726413174,
     "resistance_30d": 80268.37474707834,
     "mark_price": 80577.96281884,
@@ -2983,14 +2983,14 @@
     "key": "ETH",
     "name": "Ethereum",
     "emoji": "\u039e",
-    "price": 2491.14,
+    "price": 2489.75,
     "high_24h": 2538.64,
     "low_24h": 2481.49,
-    "pct_24h": -1.82633,
+    "pct_24h": -1.75541,
     "pct_7d": 5.0,
     "pct_30d": 29.5,
-    "sma50": 1992.4920571665564,
-    "sma200": 2017.7223259512114,
+    "sma50": 1992.458688062855,
+    "sma200": 2017.713983675286,
     "support_30d": 1843.443563411847,
     "resistance_30d": 2514.967577695514,
     "mark_price": 2526.37387597,
