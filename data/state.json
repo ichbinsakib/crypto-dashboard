@@ -4,7 +4,7 @@
   "_alerts_state": {
     "btc-resistance-break": {
       "triggered": true,
-      "last_triggered_at": "2026-08-28 10:30:31"
+      "last_triggered_at": "2026-08-28 10:35:18"
     },
     "btc-support-break": {
       "triggered": false,
@@ -1373,9 +1373,9 @@
       "stale": false
     },
     "gatechain-token": {
-      "label": "\ud83d\udfe1 HOLD / NEUTRAL",
-      "status": "neutral",
-      "score": -1,
+      "label": "\ud83d\udd34 CAUTION - REDUCE NEW BUYS",
+      "status": "bearish",
+      "score": -2,
       "rows": [
         [
           "Price vs. recent range",
@@ -1394,12 +1394,12 @@
         ],
         [
           "Recent trend",
-          "Trending up steadily - healthy",
-          1
+          "Chopping sideways - no clear trend",
+          0
         ],
         [
           "Stretch from long-term average",
-          "+17.4% above its long-term average - a bit stretched",
+          "+16.8% above its long-term average - a bit stretched",
           -1
         ],
         [
@@ -1408,16 +1408,16 @@
           0
         ]
       ],
-      "plain": "No real edge either way right now - fine to just wait and watch.",
+      "plain": "Getting risky - I'd hold off on new buys until this cools down.",
       "id": "gatechain-token",
       "symbol": "GT",
       "name": "Gate",
-      "price": 8.1,
-      "pct_24h": 0.48229,
-      "pct_7d": 9.4,
+      "price": 8.06,
+      "pct_24h": -0.88793,
+      "pct_7d": 6.4,
       "support_30d": 6.457783260010234,
       "resistance_30d": 8.180325116616592,
-      "as_of": "2026-08-28 08:25:18",
+      "as_of": "2026-08-28 10:35:18",
       "stale": false
     },
     "crypto-com-chain": {
@@ -1831,7 +1831,7 @@
         ],
         [
           "Stretch from long-term average",
-          "+65.6% above its long-term average - very stretched",
+          "+67.3% above its long-term average - very stretched",
           -2
         ],
         [
@@ -1844,12 +1844,12 @@
       "id": "ethena",
       "symbol": "ENA",
       "name": "Ethena",
-      "price": 0.163577,
-      "pct_24h": 2.8772,
-      "pct_7d": 29.5,
+      "price": 0.165287,
+      "pct_24h": 8.80457,
+      "pct_7d": 15.6,
       "support_30d": 0.07917494620394785,
       "resistance_30d": 0.17000615068266245,
-      "as_of": "2026-08-28 09:40:27",
+      "as_of": "2026-08-28 10:35:18",
       "stale": false
     },
     "bitcoin-cash": {
@@ -2119,7 +2119,7 @@
         ],
         [
           "Stretch from long-term average",
-          "+13.0% above its long-term average - a bit stretched",
+          "+11.9% above its long-term average - a bit stretched",
           -1
         ],
         [
@@ -2132,12 +2132,12 @@
       "id": "ondo-finance",
       "symbol": "ONDO",
       "name": "Ondo",
-      "price": 0.370971,
-      "pct_24h": 0.09132,
-      "pct_7d": 0.7,
+      "price": 0.367541,
+      "pct_24h": -1.37972,
+      "pct_7d": -4.0,
       "support_30d": 0.32338181384146436,
       "resistance_30d": 0.4155973351765416,
-      "as_of": "2026-08-28 06:35:19",
+      "as_of": "2026-08-28 10:35:18",
       "stale": false
     },
     "canton-network": {
@@ -2359,7 +2359,7 @@
         ],
         [
           "Stretch from long-term average",
-          "+1.9% vs its long-term average - not stretched either way",
+          "+2.4% vs its long-term average - not stretched either way",
           0
         ],
         [
@@ -2372,12 +2372,12 @@
       "id": "sky",
       "symbol": "SKY",
       "name": "Sky",
-      "price": 0.067969,
-      "pct_24h": -1.48846,
-      "pct_7d": 5.0,
+      "price": 0.06831,
+      "pct_24h": -0.24624,
+      "pct_7d": 3.5,
       "support_30d": 0.05081051579814886,
       "resistance_30d": 0.06893371384217392,
-      "as_of": "2026-08-28 09:05:21",
+      "as_of": "2026-08-28 10:35:18",
       "stale": false
     },
     "shiba-inu": {
@@ -2961,14 +2961,14 @@
     "key": "BTC",
     "name": "Bitcoin",
     "emoji": "\u20bf",
-    "price": 79240,
+    "price": 79357,
     "high_24h": 81282,
     "low_24h": 79031,
-    "pct_24h": -0.52307,
+    "pct_24h": -0.31399,
     "pct_7d": 0.1,
     "pct_30d": 23.2,
-    "sma50": 66750.91876136702,
-    "sma200": 69250.86986688616,
+    "sma50": 66753.12956286404,
+    "sma200": 69251.42256726041,
     "support_30d": 62772.57726413174,
     "resistance_30d": 80268.37474707834,
     "mark_price": 80577.96281884,
@@ -2983,14 +2983,14 @@
     "key": "ETH",
     "name": "Ethereum",
     "emoji": "\u039e",
-    "price": 2487.59,
+    "price": 2493.91,
     "high_24h": 2532.25,
     "low_24h": 2481.49,
-    "pct_24h": -0.93014,
+    "pct_24h": -0.55919,
     "pct_7d": 1.9,
     "pct_30d": 30.1,
-    "sma50": 1992.414224484438,
-    "sma200": 2017.7028677806818,
+    "sma50": 1992.5448385034383,
+    "sma200": 2017.7355212854318,
     "support_30d": 1843.443563411847,
     "resistance_30d": 2514.967577695514,
     "mark_price": 2526.37387597,
