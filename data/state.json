@@ -4,7 +4,7 @@
   "_alerts_state": {
     "btc-resistance-break": {
       "triggered": true,
-      "last_triggered_at": "2026-08-28 01:05:21"
+      "last_triggered_at": "2026-08-28 01:10:23"
     },
     "btc-support-break": {
       "triggered": false,
@@ -12,7 +12,7 @@
     },
     "eth-resistance-break": {
       "triggered": true,
-      "last_triggered_at": "2026-08-28 01:05:21"
+      "last_triggered_at": "2026-08-28 01:10:23"
     },
     "eth-support-break": {
       "triggered": false,
@@ -199,7 +199,7 @@
         ],
         [
           "Stretch from long-term average",
-          "+4.9% vs its long-term average - not stretched either way",
+          "+5.0% vs its long-term average - not stretched either way",
           0
         ],
         [
@@ -212,12 +212,12 @@
       "id": "tron",
       "symbol": "TRX",
       "name": "TRON",
-      "price": 0.338535,
-      "pct_24h": 0.92237,
+      "price": 0.338874,
+      "pct_24h": 1.03104,
       "pct_7d": 0.3,
       "support_30d": 0.32572923649952346,
       "resistance_30d": 0.3447899585776834,
-      "as_of": "2026-08-28 01:00:36",
+      "as_of": "2026-08-28 01:10:23",
       "stale": false
     },
     "figure-heloc": {
@@ -2325,11 +2325,11 @@
       "symbol": "GRAM",
       "name": "Gram (prev. Toncoin)",
       "price": 1.42,
-      "pct_24h": 1.90399,
-      "pct_7d": 1.6,
+      "pct_24h": 1.85144,
+      "pct_7d": 1.5,
       "support_30d": 1.316580434471296,
       "resistance_30d": 1.4926762805297678,
-      "as_of": "2026-08-28 00:40:21",
+      "as_of": "2026-08-28 01:10:23",
       "stale": false
     },
     "sky": {
@@ -2573,9 +2573,9 @@
       "stale": false
     },
     "bitway": {
-      "label": "\ud83d\udfe1 HOLD / NEUTRAL",
-      "status": "neutral",
-      "score": -1,
+      "label": "\ud83d\udd34 CAUTION - REDUCE NEW BUYS",
+      "status": "bearish",
+      "score": -2,
       "rows": [
         [
           "Price vs. recent range",
@@ -2584,7 +2584,7 @@
         ],
         [
           "Crowd mood (Fear & Greed)",
-          "71/100 - crowd is greedy",
+          "73/100 - crowd is greedy",
           -1
         ],
         [
@@ -2594,8 +2594,8 @@
         ],
         [
           "Recent trend",
-          "Chopping sideways - no clear trend",
-          0
+          "Trending down - avoid catching a falling knife",
+          -1
         ],
         [
           "Stretch from long-term average",
@@ -2608,16 +2608,16 @@
           0
         ]
       ],
-      "plain": "No real edge either way right now - fine to just wait and watch.",
+      "plain": "Getting risky - I'd hold off on new buys until this cools down.",
       "id": "bitway",
       "symbol": "BTW",
       "name": "Bitway",
-      "price": 0.398204,
-      "pct_24h": -0.73449,
-      "pct_7d": -5.8,
+      "price": 0.398678,
+      "pct_24h": -0.58152,
+      "pct_7d": -8.2,
       "support_30d": 0.08014613119704155,
       "resistance_30d": 0.48261706732469345,
-      "as_of": "2026-08-27 23:50:25",
+      "as_of": "2026-08-28 01:10:23",
       "stale": false
     },
     "world-liberty-financial": {
@@ -2961,16 +2961,16 @@
     "key": "BTC",
     "name": "Bitcoin",
     "emoji": "\u20bf",
-    "price": 80778,
+    "price": 80742,
     "high_24h": 80793,
     "low_24h": 78598,
-    "pct_24h": 2.59666,
+    "pct_24h": 2.58487,
     "pct_7d": 10.4,
     "pct_30d": 26.2,
-    "sma50": 66781.48814698184,
-    "sma200": 69258.51221328987,
+    "sma50": 66780.38380151913,
+    "sma200": 69258.23612692418,
     "support_30d": 62772.57726413174,
-    "resistance_30d": 80777.71558722535,
+    "resistance_30d": 80722.49831408967,
     "mark_price": 80577.96281884,
     "index_price": 80601.22869565,
     "funding_rate": 8.137e-05,
@@ -2983,16 +2983,16 @@
     "key": "ETH",
     "name": "Ethereum",
     "emoji": "\u039e",
-    "price": 2520.77,
+    "price": 2519.54,
     "high_24h": 2558.47,
     "low_24h": 2482.26,
-    "pct_24h": 1.16021,
+    "pct_24h": 1.17513,
     "pct_7d": 8.2,
     "pct_30d": 31.1,
-    "sma50": 1993.0804474016984,
-    "sma200": 2017.8694235099967,
+    "sma50": 1993.0346685600741,
+    "sma200": 2017.8579787995907,
     "support_30d": 1843.443563411847,
-    "resistance_30d": 2520.691700914341,
+    "resistance_30d": 2518.4027588331364,
     "mark_price": 2526.37387597,
     "index_price": 2527.29651163,
     "funding_rate": 2.111e-05,
