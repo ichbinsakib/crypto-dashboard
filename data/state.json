@@ -4,7 +4,7 @@
   "_alerts_state": {
     "btc-resistance-break": {
       "triggered": true,
-      "last_triggered_at": "2026-08-28 07:05:19"
+      "last_triggered_at": "2026-08-28 07:10:23"
     },
     "btc-support-break": {
       "triggered": false,
@@ -461,9 +461,9 @@
       "stale": false
     },
     "chainlink": {
-      "label": "\ud83d\udd34 CAUTION - REDUCE NEW BUYS",
-      "status": "bearish",
-      "score": -2,
+      "label": "\ud83d\udfe1 HOLD / NEUTRAL",
+      "status": "neutral",
+      "score": -1,
       "rows": [
         [
           "Price vs. recent range",
@@ -487,8 +487,8 @@
         ],
         [
           "Stretch from long-term average",
-          "+30.7% above its long-term average - very stretched",
-          -2
+          "+29.7% above its long-term average - a bit stretched",
+          -1
         ],
         [
           "Leverage traders' bias",
@@ -496,16 +496,16 @@
           0
         ]
       ],
-      "plain": "Getting risky - I'd hold off on new buys until this cools down.",
+      "plain": "No real edge either way right now - fine to just wait and watch.",
       "id": "chainlink",
       "symbol": "LINK",
       "name": "Chainlink",
-      "price": 11.84,
-      "pct_24h": 2.45853,
-      "pct_7d": 8.1,
+      "price": 11.75,
+      "pct_24h": 1.17389,
+      "pct_7d": 8.2,
       "support_30d": 8.061001591420974,
       "resistance_30d": 11.992351770358374,
-      "as_of": "2026-08-28 06:15:27",
+      "as_of": "2026-08-28 07:10:23",
       "stale": false
     },
     "whitebit": {
@@ -1447,7 +1447,7 @@
         ],
         [
           "Stretch from long-term average",
-          "-13.0% vs its long-term average - not stretched either way",
+          "-13.1% vs its long-term average - not stretched either way",
           0
         ],
         [
@@ -1460,12 +1460,12 @@
       "id": "crypto-com-chain",
       "symbol": "CRO",
       "name": "Cronos",
-      "price": 0.058907,
-      "pct_24h": -0.44483,
-      "pct_7d": 8.0,
+      "price": 0.058788,
+      "pct_24h": -0.63302,
+      "pct_7d": 8.2,
       "support_30d": 0.04621382085807831,
       "resistance_30d": 0.06091104752771909,
-      "as_of": "2026-08-28 06:30:27",
+      "as_of": "2026-08-28 07:10:23",
       "stale": false
     },
     "ethereum-classic": {
@@ -1735,7 +1735,7 @@
         ],
         [
           "Stretch from long-term average",
-          "-12.3% vs its long-term average - not stretched either way",
+          "-12.2% vs its long-term average - not stretched either way",
           0
         ],
         [
@@ -1748,12 +1748,12 @@
       "id": "sui",
       "symbol": "SUI",
       "name": "Sui",
-      "price": 0.759673,
-      "pct_24h": 1.42908,
-      "pct_7d": 2.6,
+      "price": 0.760965,
+      "pct_24h": 0.85438,
+      "pct_7d": -0.1,
       "support_30d": 0.6514311908607086,
       "resistance_30d": 0.8499161763231283,
-      "as_of": "2026-08-28 04:45:24",
+      "as_of": "2026-08-28 07:10:23",
       "stale": false
     },
     "lighter": {
@@ -2961,14 +2961,14 @@
     "key": "BTC",
     "name": "Bitcoin",
     "emoji": "\u20bf",
-    "price": 79868,
+    "price": 79706,
     "high_24h": 81282,
     "low_24h": 79031,
-    "pct_24h": 1.39326,
+    "pct_24h": 1.19016,
     "pct_7d": 6.0,
     "pct_30d": 24.9,
-    "sma50": 66763.30371334462,
-    "sma200": 69253.96610488056,
+    "sma50": 66760.04920654424,
+    "sma200": 69253.15247818046,
     "support_30d": 62772.57726413174,
     "resistance_30d": 80268.37474707834,
     "mark_price": 80577.96281884,
@@ -2983,14 +2983,14 @@
     "key": "ETH",
     "name": "Ethereum",
     "emoji": "\u039e",
-    "price": 2502.45,
+    "price": 2495.58,
     "high_24h": 2558.47,
     "low_24h": 2481.49,
-    "pct_24h": 0.45066,
+    "pct_24h": 0.19387,
     "pct_7d": 5.8,
     "pct_30d": 31.0,
-    "sma50": 1992.7197615793764,
-    "sma200": 2017.7792520544162,
+    "sma50": 1992.58386122778,
+    "sma200": 2017.7452769665172,
     "support_30d": 1843.443563411847,
     "resistance_30d": 2514.967577695514,
     "mark_price": 2526.37387597,
