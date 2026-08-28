@@ -4,7 +4,7 @@
   "_alerts_state": {
     "btc-resistance-break": {
       "triggered": true,
-      "last_triggered_at": "2026-08-28 03:50:22"
+      "last_triggered_at": "2026-08-28 03:55:22"
     },
     "btc-support-break": {
       "triggered": false,
@@ -29,13 +29,13 @@
   },
   "_screener": {
     "binancecoin": {
-      "label": "\ud83d\udfe1 HOLD / NEUTRAL",
-      "status": "neutral",
-      "score": -1,
+      "label": "\ud83d\udd34 CAUTION - REDUCE NEW BUYS",
+      "status": "bearish",
+      "score": -2,
       "rows": [
         [
           "Price vs. recent range",
-          "Near its 30-day high (~$714.22) - less room to run",
+          "Near its 30-day high (~$712.05) - less room to run",
           -1
         ],
         [
@@ -50,12 +50,12 @@
         ],
         [
           "Recent trend",
-          "Trending up steadily - healthy",
-          1
+          "Chopping sideways - no clear trend",
+          0
         ],
         [
           "Stretch from long-term average",
-          "+15.8% above its long-term average - a bit stretched",
+          "+15.0% above its long-term average - a bit stretched",
           -1
         ],
         [
@@ -64,16 +64,16 @@
           0
         ]
       ],
-      "plain": "No real edge either way right now - fine to just wait and watch.",
+      "plain": "Getting risky - I'd hold off on new buys until this cools down.",
       "id": "binancecoin",
       "symbol": "BNB",
       "name": "BNB",
-      "price": 714.19,
-      "pct_24h": 1.47411,
-      "pct_7d": 8.9,
+      "price": 709.14,
+      "pct_24h": 0.95753,
+      "pct_7d": 7.0,
       "support_30d": 574.7197907128979,
-      "resistance_30d": 714.2159727189211,
-      "as_of": "2026-08-28 00:40:21",
+      "resistance_30d": 712.0503878732537,
+      "as_of": "2026-08-28 03:55:22",
       "stale": false
     },
     "ripple": {
@@ -1975,7 +1975,7 @@
         ],
         [
           "Stretch from long-term average",
-          "-21.3% below its long-term average - confirmed downtrend",
+          "-22.9% below its long-term average - confirmed downtrend",
           -1
         ],
         [
@@ -1988,12 +1988,12 @@
       "id": "polkadot",
       "symbol": "DOT",
       "name": "Polkadot",
-      "price": 0.887949,
-      "pct_24h": 1.06835,
-      "pct_7d": 4.1,
+      "price": 0.870619,
+      "pct_24h": 0.20436,
+      "pct_7d": 2.6,
       "support_30d": 0.7510040523927409,
       "resistance_30d": 0.9394118398868826,
-      "as_of": "2026-08-28 01:40:24",
+      "as_of": "2026-08-28 03:55:22",
       "stale": false
     },
     "uniswap": {
@@ -2805,11 +2805,11 @@
       "symbol": "M",
       "name": "MemeCore",
       "price": 1.11,
-      "pct_24h": -1.10064,
-      "pct_7d": -4.9,
+      "pct_24h": -0.86707,
+      "pct_7d": -4.5,
       "support_30d": 0.9808769834438776,
       "resistance_30d": 1.2453913363052769,
-      "as_of": "2026-08-28 02:35:18",
+      "as_of": "2026-08-28 03:55:22",
       "stale": false
     },
     "aave": {
@@ -2961,14 +2961,14 @@
     "key": "BTC",
     "name": "Bitcoin",
     "emoji": "\u20bf",
-    "price": 79831,
+    "price": 79833,
     "high_24h": 81282,
     "low_24h": 78598,
-    "pct_24h": 1.26382,
+    "pct_24h": 1.3075,
     "pct_7d": 6.4,
     "pct_30d": 25.6,
-    "sma50": 66762.51875669305,
-    "sma200": 69253.76986571767,
+    "sma50": 66762.59820504366,
+    "sma200": 69253.78972780533,
     "support_30d": 62772.57726413174,
     "resistance_30d": 80268.37474707834,
     "mark_price": 80577.96281884,
@@ -2983,14 +2983,14 @@
     "key": "ETH",
     "name": "Ethereum",
     "emoji": "\u039e",
-    "price": 2492.06,
+    "price": 2491.59,
     "high_24h": 2558.47,
     "low_24h": 2482.26,
-    "pct_24h": 0.07901,
+    "pct_24h": 0.02188,
     "pct_7d": 5.6,
     "pct_30d": 30.9,
-    "sma50": 1992.5017820677285,
-    "sma200": 2017.7247571765045,
+    "sma50": 1992.4983178165362,
+    "sma200": 2017.7238911137063,
     "support_30d": 1843.443563411847,
     "resistance_30d": 2514.967577695514,
     "mark_price": 2526.37387597,
