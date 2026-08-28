@@ -4,7 +4,7 @@
   "_alerts_state": {
     "btc-resistance-break": {
       "triggered": true,
-      "last_triggered_at": "2026-08-28 06:50:25"
+      "last_triggered_at": "2026-08-28 06:55:20"
     },
     "btc-support-break": {
       "triggered": false,
@@ -611,7 +611,7 @@
       "rows": [
         [
           "Price vs. recent range",
-          "Near its 30-day high (~$465.18) - less room to run",
+          "Near its 30-day high (~$462.27) - less room to run",
           -1
         ],
         [
@@ -631,7 +631,7 @@
         ],
         [
           "Stretch from long-term average",
-          "+30.7% above its long-term average - very stretched",
+          "+30.2% above its long-term average - very stretched",
           -2
         ],
         [
@@ -644,12 +644,12 @@
       "id": "monero",
       "symbol": "XMR",
       "name": "Monero",
-      "price": 464.74,
-      "pct_24h": 5.46364,
-      "pct_7d": 11.5,
+      "price": 463.0,
+      "pct_24h": 4.01168,
+      "pct_7d": 9.7,
       "support_30d": 351.07100922807496,
-      "resistance_30d": 465.1832927651407,
-      "as_of": "2026-08-28 04:05:23",
+      "resistance_30d": 462.26702849282015,
+      "as_of": "2026-08-28 06:55:20",
       "stale": false
     },
     "cardano": {
@@ -989,9 +989,9 @@
       "stale": false
     },
     "worldcoin-wld": {
-      "label": "\ud83d\udd34 CAUTION - REDUCE NEW BUYS",
-      "status": "bearish",
-      "score": -2,
+      "label": "\ud83d\udfe1 HOLD / NEUTRAL",
+      "status": "neutral",
+      "score": -1,
       "rows": [
         [
           "Price vs. recent range",
@@ -1010,12 +1010,12 @@
         ],
         [
           "Recent trend",
-          "Chopping sideways - no clear trend",
-          0
+          "Trending up steadily - healthy",
+          1
         ],
         [
           "Stretch from long-term average",
-          "+14.1% above its long-term average - a bit stretched",
+          "+13.2% above its long-term average - a bit stretched",
           -1
         ],
         [
@@ -1024,16 +1024,16 @@
           0
         ]
       ],
-      "plain": "Getting risky - I'd hold off on new buys until this cools down.",
+      "plain": "No real edge either way right now - fine to just wait and watch.",
       "id": "worldcoin-wld",
       "symbol": "WLD",
       "name": "Worldcoin",
-      "price": 0.40707,
-      "pct_24h": -0.03345,
-      "pct_7d": 7.9,
+      "price": 0.404075,
+      "pct_24h": -1.13858,
+      "pct_7d": 8.1,
       "support_30d": 0.29949503410290834,
       "resistance_30d": 0.4153748859818001,
-      "as_of": "2026-08-28 03:35:18",
+      "as_of": "2026-08-28 06:55:20",
       "stale": false
     },
     "bfusd": {
@@ -2335,7 +2335,7 @@
     "sky": {
       "label": "\ud83d\udfe1 HOLD / NEUTRAL",
       "status": "neutral",
-      "score": 1,
+      "score": 0,
       "rows": [
         [
           "Price vs. recent range",
@@ -2354,12 +2354,12 @@
         ],
         [
           "Recent trend",
-          "Trending up steadily - healthy",
-          1
+          "Chopping sideways - no clear trend",
+          0
         ],
         [
           "Stretch from long-term average",
-          "+1.5% vs its long-term average - not stretched either way",
+          "+2.0% vs its long-term average - not stretched either way",
           0
         ],
         [
@@ -2372,12 +2372,12 @@
       "id": "sky",
       "symbol": "SKY",
       "name": "Sky",
-      "price": 0.067715,
-      "pct_24h": -0.50758,
-      "pct_7d": 9.3,
+      "price": 0.068054,
+      "pct_24h": -1.03131,
+      "pct_7d": 6.8,
       "support_30d": 0.05081051579814886,
       "resistance_30d": 0.06893371384217392,
-      "as_of": "2026-08-28 05:25:19",
+      "as_of": "2026-08-28 06:55:20",
       "stale": false
     },
     "shiba-inu": {
@@ -2961,14 +2961,14 @@
     "key": "BTC",
     "name": "Bitcoin",
     "emoji": "\u20bf",
-    "price": 79943,
+    "price": 79986,
     "high_24h": 81282,
     "low_24h": 78749,
-    "pct_24h": 1.49168,
+    "pct_24h": 1.48671,
     "pct_7d": 6.3,
     "pct_30d": 24.7,
-    "sma50": 66764.84529225944,
-    "sma200": 69254.35149960927,
+    "sma50": 66765.6913997108,
+    "sma200": 69254.56302647211,
     "support_30d": 62772.57726413174,
     "resistance_30d": 80268.37474707834,
     "mark_price": 80577.96281884,
@@ -2983,14 +2983,14 @@
     "key": "ETH",
     "name": "Ethereum",
     "emoji": "\u039e",
-    "price": 2503.59,
+    "price": 2504.28,
     "high_24h": 2558.47,
     "low_24h": 2481.49,
-    "pct_24h": 0.59156,
+    "pct_24h": 0.52888,
     "pct_7d": 6.0,
     "pct_30d": 31.0,
-    "sma50": 1992.7372130626975,
-    "sma200": 2017.7836149252464,
+    "sma50": 1992.7557135554418,
+    "sma200": 2017.7882400484327,
     "support_30d": 1843.443563411847,
     "resistance_30d": 2514.967577695514,
     "mark_price": 2526.37387597,
