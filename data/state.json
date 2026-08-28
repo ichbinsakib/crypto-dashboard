@@ -4,7 +4,7 @@
   "_alerts_state": {
     "btc-resistance-break": {
       "triggered": true,
-      "last_triggered_at": "2026-08-28 01:10:23"
+      "last_triggered_at": "2026-08-28 01:15:22"
     },
     "btc-support-break": {
       "triggered": false,
@@ -12,7 +12,7 @@
     },
     "eth-resistance-break": {
       "triggered": true,
-      "last_triggered_at": "2026-08-28 01:10:23"
+      "last_triggered_at": "2026-08-28 01:15:22"
     },
     "eth-support-break": {
       "triggered": false,
@@ -131,12 +131,12 @@
       "rows": [
         [
           "Price vs. recent range",
-          "Near its 30-day high (~$109.61) - less room to run",
+          "Near its 30-day high (~$109.18) - less room to run",
           -1
         ],
         [
           "Crowd mood (Fear & Greed)",
-          "71/100 - crowd is greedy",
+          "73/100 - crowd is greedy",
           -1
         ],
         [
@@ -151,7 +151,7 @@
         ],
         [
           "Stretch from long-term average",
-          "+34.4% above its long-term average - very stretched",
+          "+33.7% above its long-term average - very stretched",
           -2
         ],
         [
@@ -164,12 +164,12 @@
       "id": "solana",
       "symbol": "SOL",
       "name": "Solana",
-      "price": 109.55,
-      "pct_24h": 10.75516,
-      "pct_7d": 24.2,
+      "price": 109.14,
+      "pct_24h": 8.33562,
+      "pct_7d": 24.8,
       "support_30d": 71.89412540165443,
-      "resistance_30d": 109.60944755438618,
-      "as_of": "2026-08-27 22:15:24",
+      "resistance_30d": 109.17730597799657,
+      "as_of": "2026-08-28 01:15:22",
       "stale": false
     },
     "tron": {
@@ -799,7 +799,7 @@
     "hedera-hashgraph": {
       "label": "\ud83d\udfe1 HOLD / NEUTRAL",
       "status": "neutral",
-      "score": 1,
+      "score": 0,
       "rows": [
         [
           "Price vs. recent range",
@@ -808,7 +808,7 @@
         ],
         [
           "Crowd mood (Fear & Greed)",
-          "71/100 - crowd is greedy",
+          "73/100 - crowd is greedy",
           -1
         ],
         [
@@ -818,12 +818,12 @@
         ],
         [
           "Recent trend",
-          "Trending up steadily - healthy",
-          1
+          "Chopping sideways - no clear trend",
+          0
         ],
         [
           "Stretch from long-term average",
-          "-5.9% vs its long-term average - not stretched either way",
+          "-5.7% vs its long-term average - not stretched either way",
           0
         ],
         [
@@ -836,12 +836,12 @@
       "id": "hedera-hashgraph",
       "symbol": "HBAR",
       "name": "Hedera",
-      "price": 0.07919,
-      "pct_24h": 1.44926,
-      "pct_7d": 8.4,
+      "price": 0.079239,
+      "pct_24h": 2.28128,
+      "pct_7d": 7.8,
       "support_30d": 0.06461260477975343,
       "resistance_30d": 0.07985387850470703,
-      "as_of": "2026-08-27 22:10:28",
+      "as_of": "2026-08-28 01:15:22",
       "stale": false
     },
     "pepe": {
@@ -2167,7 +2167,7 @@
         ],
         [
           "Stretch from long-term average",
-          "-20.5% below its long-term average - confirmed downtrend",
+          "-20.3% below its long-term average - confirmed downtrend",
           -1
         ],
         [
@@ -2180,12 +2180,12 @@
       "id": "canton-network",
       "symbol": "CC",
       "name": "Canton",
-      "price": 0.113663,
-      "pct_24h": -2.3037,
+      "price": 0.1139,
+      "pct_24h": -1.86746,
       "pct_7d": 14.1,
       "support_30d": 0.09051839499501885,
       "resistance_30d": 0.12396615653575341,
-      "as_of": "2026-08-28 01:00:36",
+      "as_of": "2026-08-28 01:15:22",
       "stale": false
     },
     "internet-computer": {
@@ -2961,16 +2961,16 @@
     "key": "BTC",
     "name": "Bitcoin",
     "emoji": "\u20bf",
-    "price": 80742,
+    "price": 80797,
     "high_24h": 80793,
     "low_24h": 78598,
-    "pct_24h": 2.58487,
+    "pct_24h": 2.69919,
     "pct_7d": 10.4,
     "pct_30d": 26.2,
-    "sma50": 66780.38380151913,
-    "sma200": 69258.23612692418,
+    "sma50": 66781.41206956457,
+    "sma200": 69258.49319393554,
     "support_30d": 62772.57726413174,
-    "resistance_30d": 80722.49831408967,
+    "resistance_30d": 80773.91171636198,
     "mark_price": 80577.96281884,
     "index_price": 80601.22869565,
     "funding_rate": 8.137e-05,
@@ -2983,16 +2983,16 @@
     "key": "ETH",
     "name": "Ethereum",
     "emoji": "\u039e",
-    "price": 2519.54,
+    "price": 2523.14,
     "high_24h": 2558.47,
     "low_24h": 2482.26,
-    "pct_24h": 1.17513,
+    "pct_24h": 1.36572,
     "pct_7d": 8.2,
     "pct_30d": 31.1,
-    "sma50": 1993.0346685600741,
-    "sma200": 2017.8579787995907,
+    "sma50": 1993.1186604572158,
+    "sma200": 2017.878976773876,
     "support_30d": 1843.443563411847,
-    "resistance_30d": 2518.4027588331364,
+    "resistance_30d": 2522.60235369022,
     "mark_price": 2526.37387597,
     "index_price": 2527.29651163,
     "funding_rate": 2.111e-05,
