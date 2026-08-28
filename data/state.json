@@ -4,7 +4,7 @@
   "_alerts_state": {
     "btc-resistance-break": {
       "triggered": true,
-      "last_triggered_at": "2026-08-28 07:55:19"
+      "last_triggered_at": "2026-08-28 08:00:35"
     },
     "btc-support-break": {
       "triggered": false,
@@ -461,9 +461,9 @@
       "stale": false
     },
     "chainlink": {
-      "label": "\ud83d\udfe1 HOLD / NEUTRAL",
-      "status": "neutral",
-      "score": -1,
+      "label": "\ud83d\udd34 CAUTION - REDUCE NEW BUYS",
+      "status": "bearish",
+      "score": -2,
       "rows": [
         [
           "Price vs. recent range",
@@ -482,12 +482,12 @@
         ],
         [
           "Recent trend",
-          "Trending up steadily - healthy",
-          1
+          "Chopping sideways - no clear trend",
+          0
         ],
         [
           "Stretch from long-term average",
-          "+29.6% above its long-term average - a bit stretched",
+          "+29.1% above its long-term average - a bit stretched",
           -1
         ],
         [
@@ -496,16 +496,16 @@
           0
         ]
       ],
-      "plain": "No real edge either way right now - fine to just wait and watch.",
+      "plain": "Getting risky - I'd hold off on new buys until this cools down.",
       "id": "chainlink",
       "symbol": "LINK",
       "name": "Chainlink",
-      "price": 11.74,
-      "pct_24h": 1.00694,
-      "pct_7d": 8.2,
+      "price": 11.7,
+      "pct_24h": 0.19362,
+      "pct_7d": 6.7,
       "support_30d": 8.061001591420974,
       "resistance_30d": 11.992351770358374,
-      "as_of": "2026-08-28 07:25:20",
+      "as_of": "2026-08-28 08:00:35",
       "stale": false
     },
     "whitebit": {
@@ -1831,7 +1831,7 @@
         ],
         [
           "Stretch from long-term average",
-          "+66.7% above its long-term average - very stretched",
+          "+69.4% above its long-term average - very stretched",
           -2
         ],
         [
@@ -1844,12 +1844,12 @@
       "id": "ethena",
       "symbol": "ENA",
       "name": "Ethena",
-      "price": 0.164675,
-      "pct_24h": 13.26687,
-      "pct_7d": 28.3,
+      "price": 0.167385,
+      "pct_24h": 10.77938,
+      "pct_7d": 28.6,
       "support_30d": 0.07917494620394785,
       "resistance_30d": 0.17000615068266245,
-      "as_of": "2026-08-28 06:20:23",
+      "as_of": "2026-08-28 08:00:35",
       "stale": false
     },
     "bitcoin-cash": {
@@ -2381,9 +2381,9 @@
       "stale": false
     },
     "shiba-inu": {
-      "label": "\ud83d\udfe2 LEAN ACCUMULATE",
-      "status": "bullish",
-      "score": 2,
+      "label": "\ud83d\udfe1 HOLD / NEUTRAL",
+      "status": "neutral",
+      "score": 1,
       "rows": [
         [
           "Price vs. recent range",
@@ -2402,12 +2402,12 @@
         ],
         [
           "Recent trend",
-          "Trending up steadily - healthy",
-          1
+          "Chopping sideways - no clear trend",
+          0
         ],
         [
           "Stretch from long-term average",
-          "-0.3% vs its long-term average - not stretched either way",
+          "-2.7% vs its long-term average - not stretched either way",
           0
         ],
         [
@@ -2416,16 +2416,16 @@
           0
         ]
       ],
-      "plain": "Leans toward a decent spot to slowly add (DCA) - not a strong signal, just a lean.",
+      "plain": "No real edge either way right now - fine to just wait and watch.",
       "id": "shiba-inu",
       "symbol": "SHIB",
       "name": "Shiba Inu",
-      "price": 5.44e-06,
-      "pct_24h": 2.20672,
-      "pct_7d": 10.1,
+      "price": 5.31e-06,
+      "pct_24h": -0.12404,
+      "pct_7d": 4.0,
       "support_30d": 4.390093758351827e-06,
       "resistance_30d": 5.903506876405612e-06,
-      "as_of": "2026-08-28 00:50:20",
+      "as_of": "2026-08-28 08:00:35",
       "stale": false
     },
     "near": {
@@ -2961,14 +2961,14 @@
     "key": "BTC",
     "name": "Bitcoin",
     "emoji": "\u20bf",
-    "price": 79658,
+    "price": 79657,
     "high_24h": 81282,
     "low_24h": 79031,
-    "pct_24h": 0.91205,
+    "pct_24h": 0.75743,
     "pct_7d": 6.0,
     "pct_30d": 24.9,
-    "sma50": 66759.04371706338,
-    "sma200": 69252.90110581025,
+    "sma50": 66759.3109813648,
+    "sma200": 69252.9679218856,
     "support_30d": 62772.57726413174,
     "resistance_30d": 80268.37474707834,
     "mark_price": 80577.96281884,
@@ -2983,14 +2983,14 @@
     "key": "ETH",
     "name": "Ethereum",
     "emoji": "\u039e",
-    "price": 2496.31,
+    "price": 2495.56,
     "high_24h": 2558.47,
     "low_24h": 2481.49,
-    "pct_24h": 0.08816,
+    "pct_24h": -0.06581,
     "pct_7d": 5.8,
     "pct_30d": 31.0,
-    "sma50": 1992.5942748855525,
-    "sma200": 2017.7478803809604,
+    "sma50": 1992.5782074142398,
+    "sma200": 2017.743863513132,
     "support_30d": 1843.443563411847,
     "resistance_30d": 2514.967577695514,
     "mark_price": 2526.37387597,
