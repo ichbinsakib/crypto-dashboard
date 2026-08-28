@@ -4,7 +4,7 @@
   "_alerts_state": {
     "btc-resistance-break": {
       "triggered": true,
-      "last_triggered_at": "2026-08-28 01:40:24"
+      "last_triggered_at": "2026-08-28 01:45:24"
     },
     "btc-support-break": {
       "triggered": false,
@@ -12,7 +12,7 @@
     },
     "eth-resistance-break": {
       "triggered": true,
-      "last_triggered_at": "2026-08-28 01:40:24"
+      "last_triggered_at": "2026-08-28 01:45:24"
     },
     "eth-support-break": {
       "triggered": false,
@@ -472,7 +472,7 @@
         ],
         [
           "Crowd mood (Fear & Greed)",
-          "71/100 - crowd is greedy",
+          "73/100 - crowd is greedy",
           -1
         ],
         [
@@ -487,7 +487,7 @@
         ],
         [
           "Stretch from long-term average",
-          "+32.3% above its long-term average - very stretched",
+          "+31.8% above its long-term average - very stretched",
           -2
         ],
         [
@@ -500,12 +500,12 @@
       "id": "chainlink",
       "symbol": "LINK",
       "name": "Chainlink",
-      "price": 11.97,
-      "pct_24h": 3.02177,
-      "pct_7d": 13.3,
+      "price": 11.94,
+      "pct_24h": 3.55925,
+      "pct_7d": 12.0,
       "support_30d": 8.061001591420974,
       "resistance_30d": 11.992351770358374,
-      "as_of": "2026-08-27 23:55:20",
+      "as_of": "2026-08-28 01:45:24",
       "stale": false
     },
     "whitebit": {
@@ -653,9 +653,9 @@
       "stale": false
     },
     "cardano": {
-      "label": "\ud83d\udfe2 LEAN ACCUMULATE",
-      "status": "bullish",
-      "score": 2,
+      "label": "\ud83d\udfe1 HOLD / NEUTRAL",
+      "status": "neutral",
+      "score": 1,
       "rows": [
         [
           "Price vs. recent range",
@@ -664,7 +664,7 @@
         ],
         [
           "Crowd mood (Fear & Greed)",
-          "71/100 - crowd is greedy",
+          "73/100 - crowd is greedy",
           -1
         ],
         [
@@ -674,12 +674,12 @@
         ],
         [
           "Recent trend",
-          "Trending up steadily - healthy",
-          1
+          "Chopping sideways - no clear trend",
+          0
         ],
         [
           "Stretch from long-term average",
-          "-5.2% vs its long-term average - not stretched either way",
+          "-4.3% vs its long-term average - not stretched either way",
           0
         ],
         [
@@ -688,16 +688,16 @@
           0
         ]
       ],
-      "plain": "Leans toward a decent spot to slowly add (DCA) - not a strong signal, just a lean.",
+      "plain": "No real edge either way right now - fine to just wait and watch.",
       "id": "cardano",
       "symbol": "ADA",
       "name": "Cardano",
-      "price": 0.214136,
-      "pct_24h": 1.24198,
-      "pct_7d": 8.5,
-      "support_30d": 0.16199689974014272,
+      "price": 0.2159,
+      "pct_24h": 2.51537,
+      "pct_7d": 7.9,
+      "support_30d": 0.16804792446428854,
       "resistance_30d": 0.2291047455940254,
-      "as_of": "2026-08-27 23:25:19",
+      "as_of": "2026-08-28 01:45:24",
       "stale": false
     },
     "stellar": {
@@ -760,7 +760,7 @@
         ],
         [
           "Crowd mood (Fear & Greed)",
-          "71/100 - crowd is greedy",
+          "73/100 - crowd is greedy",
           -1
         ],
         [
@@ -775,7 +775,7 @@
         ],
         [
           "Stretch from long-term average",
-          "-7.6% vs its long-term average - not stretched either way",
+          "-7.8% vs its long-term average - not stretched either way",
           0
         ],
         [
@@ -788,12 +788,12 @@
       "id": "kucoin-shares",
       "symbol": "KCS",
       "name": "KuCoin",
-      "price": 7.22,
-      "pct_24h": -0.42252,
-      "pct_7d": -2.3,
+      "price": 7.2,
+      "pct_24h": -0.22953,
+      "pct_7d": -3.0,
       "support_30d": 6.440026683855254,
       "resistance_30d": 7.8821382735057615,
-      "as_of": "2026-08-27 22:40:23",
+      "as_of": "2026-08-28 01:45:24",
       "stale": false
     },
     "hedera-hashgraph": {
@@ -2961,16 +2961,16 @@
     "key": "BTC",
     "name": "Bitcoin",
     "emoji": "\u20bf",
-    "price": 80947,
+    "price": 80896,
     "high_24h": 80793,
     "low_24h": 78598,
-    "pct_24h": 2.66453,
+    "pct_24h": 2.75241,
     "pct_7d": 10.4,
     "pct_30d": 26.2,
-    "sma50": 66787.04137474716,
-    "sma200": 69259.9005202312,
+    "sma50": 66783.9657556451,
+    "sma200": 69259.13161545568,
     "support_30d": 62772.57726413174,
-    "resistance_30d": 81055.3769754917,
+    "resistance_30d": 80901.59602038792,
     "mark_price": 80577.96281884,
     "index_price": 80601.22869565,
     "funding_rate": 8.137e-05,
@@ -2983,16 +2983,16 @@
     "key": "ETH",
     "name": "Ethereum",
     "emoji": "\u039e",
-    "price": 2521.96,
+    "price": 2520.28,
     "high_24h": 2558.47,
     "low_24h": 2482.26,
-    "pct_24h": 0.89115,
+    "pct_24h": 1.05411,
     "pct_7d": 8.2,
     "pct_30d": 31.1,
-    "sma50": 1993.1361763160876,
-    "sma200": 2017.8833557385942,
+    "sma50": 1993.0759607178388,
+    "sma200": 2017.868301839032,
     "support_30d": 1843.443563411847,
-    "resistance_30d": 2523.478146633808,
+    "resistance_30d": 2520.467366721377,
     "mark_price": 2526.37387597,
     "index_price": 2527.29651163,
     "funding_rate": 2.111e-05,
