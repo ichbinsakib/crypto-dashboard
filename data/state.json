@@ -4,7 +4,7 @@
   "_alerts_state": {
     "btc-resistance-break": {
       "triggered": true,
-      "last_triggered_at": "2026-08-28 15:35:21"
+      "last_triggered_at": "2026-08-28 15:40:26"
     },
     "btc-support-break": {
       "triggered": false,
@@ -1903,11 +1903,11 @@
     "mantle": {
       "label": "\ud83d\udfe1 HOLD / NEUTRAL",
       "status": "neutral",
-      "score": -1,
+      "score": 0,
       "rows": [
         [
           "Price vs. recent range",
-          "Near its 30-day high (~$0.5173) - less room to run",
+          "Near its 30-day high (~$0.5200) - less room to run",
           -1
         ],
         [
@@ -1927,8 +1927,8 @@
         ],
         [
           "Stretch from long-term average",
-          "-15.9% below its long-term average - confirmed downtrend",
-          -1
+          "-14.7% vs its long-term average - not stretched either way",
+          0
         ],
         [
           "Leverage traders' bias",
@@ -1940,12 +1940,12 @@
       "id": "mantle",
       "symbol": "MNT",
       "name": "Mantle",
-      "price": 0.51303,
-      "pct_24h": -0.8677,
-      "pct_7d": 2.3,
+      "price": 0.520208,
+      "pct_24h": 0.11825,
+      "pct_7d": 0.6,
       "support_30d": 0.39219887468500014,
-      "resistance_30d": 0.5172778819747481,
-      "as_of": "2026-08-28 14:30:29",
+      "resistance_30d": 0.5200471036036286,
+      "as_of": "2026-08-28 15:40:26",
       "stale": false
     },
     "polkadot": {
@@ -2717,9 +2717,9 @@
       "stale": false
     },
     "morpho": {
-      "label": "\ud83d\udfe1 HOLD / NEUTRAL",
-      "status": "neutral",
-      "score": -1,
+      "label": "\ud83d\udd34 CAUTION - REDUCE NEW BUYS",
+      "status": "bearish",
+      "score": -2,
       "rows": [
         [
           "Price vs. recent range",
@@ -2738,12 +2738,12 @@
         ],
         [
           "Recent trend",
-          "Trending up steadily - healthy",
-          1
+          "Chopping sideways - no clear trend",
+          0
         ],
         [
           "Stretch from long-term average",
-          "+36.0% above its long-term average - very stretched",
+          "+33.9% above its long-term average - very stretched",
           -2
         ],
         [
@@ -2752,16 +2752,16 @@
           0
         ]
       ],
-      "plain": "No real edge either way right now - fine to just wait and watch.",
+      "plain": "Getting risky - I'd hold off on new buys until this cools down.",
       "id": "morpho",
       "symbol": "MORPHO",
       "name": "Morpho",
-      "price": 2.58,
-      "pct_24h": -1.44763,
-      "pct_7d": 12.8,
+      "price": 2.54,
+      "pct_24h": -3.36962,
+      "pct_7d": 3.5,
       "support_30d": 1.8400586135640542,
       "resistance_30d": 2.9026212482639075,
-      "as_of": "2026-08-28 10:25:20",
+      "as_of": "2026-08-28 15:40:26",
       "stale": false
     },
     "memecore": {
@@ -2839,7 +2839,7 @@
         ],
         [
           "Stretch from long-term average",
-          "+29.4% above its long-term average - a bit stretched",
+          "+28.4% above its long-term average - a bit stretched",
           -1
         ],
         [
@@ -2852,12 +2852,12 @@
       "id": "aave",
       "symbol": "AAVE",
       "name": "Aave",
-      "price": 125.83,
-      "pct_24h": -1.45504,
-      "pct_7d": 13.8,
+      "price": 124.82,
+      "pct_24h": -2.75521,
+      "pct_7d": 13.5,
       "support_30d": 85.94219943917633,
       "resistance_30d": 141.53047916466082,
-      "as_of": "2026-08-28 14:55:18",
+      "as_of": "2026-08-28 15:40:26",
       "stale": false
     },
     "okb": {
@@ -2961,14 +2961,14 @@
     "key": "BTC",
     "name": "Bitcoin",
     "emoji": "\u20bf",
-    "price": 79186,
+    "price": 79187,
     "high_24h": 81282,
     "low_24h": 78535,
-    "pct_24h": -1.53385,
+    "pct_24h": -1.58952,
     "pct_7d": 2.9,
     "pct_30d": 23.2,
-    "sma50": 66749.799740002,
-    "sma200": 69250.59011154491,
+    "sma50": 66749.86730285235,
+    "sma200": 69250.60700225749,
     "support_30d": 62772.57726413174,
     "resistance_30d": 80268.37474707834,
     "mark_price": 80577.96281884,
@@ -2983,14 +2983,14 @@
     "key": "ETH",
     "name": "Ethereum",
     "emoji": "\u039e",
-    "price": 2503.89,
+    "price": 2504.88,
     "high_24h": 2532.25,
     "low_24h": 2474.94,
-    "pct_24h": -0.51965,
+    "pct_24h": -0.89888,
     "pct_7d": 5.3,
     "pct_30d": 31.8,
-    "sma50": 1992.7563527237162,
-    "sma200": 2017.7883998405014,
+    "sma50": 1992.7617539200096,
+    "sma200": 2017.7897501395748,
     "support_30d": 1843.443563411847,
     "resistance_30d": 2514.967577695514,
     "mark_price": 2526.37387597,
