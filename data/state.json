@@ -319,7 +319,7 @@
     "dogecoin": {
       "label": "\ud83d\udfe1 HOLD / NEUTRAL",
       "status": "neutral",
-      "score": 0,
+      "score": 1,
       "rows": [
         [
           "Price vs. recent range",
@@ -338,12 +338,12 @@
         ],
         [
           "Recent trend",
-          "Trending down - avoid catching a falling knife",
-          -1
+          "Chopping sideways - no clear trend",
+          0
         ],
         [
           "Stretch from long-term average",
-          "-4.5% vs its long-term average - not stretched either way",
+          "-4.4% vs its long-term average - not stretched either way",
           0
         ],
         [
@@ -356,12 +356,12 @@
       "id": "dogecoin",
       "symbol": "DOGE",
       "name": "Dogecoin",
-      "price": 0.085163,
-      "pct_24h": 0.72041,
-      "pct_7d": -8.9,
+      "price": 0.085257,
+      "pct_24h": 0.13544,
+      "pct_7d": -7.2,
       "support_30d": 0.06901954790818378,
       "resistance_30d": 0.09337940032634065,
-      "as_of": "2026-08-29 21:55:17",
+      "as_of": "2026-08-29 23:50:23",
       "stale": false
     },
     "zcash": {
@@ -1701,11 +1701,11 @@
       "symbol": "BGB",
       "name": "Bitget Token",
       "price": 1.93,
-      "pct_24h": 2.37291,
+      "pct_24h": 2.48911,
       "pct_7d": 2.5,
       "support_30d": 1.5973956191487853,
       "resistance_30d": 1.984790388009312,
-      "as_of": "2026-08-29 23:40:22",
+      "as_of": "2026-08-29 23:50:23",
       "stale": false
     },
     "sui": {
@@ -2887,7 +2887,7 @@
         ],
         [
           "Stretch from long-term average",
-          "+32.4% above its long-term average - very stretched",
+          "+32.3% above its long-term average - very stretched",
           -2
         ],
         [
@@ -2900,12 +2900,12 @@
       "id": "okb",
       "symbol": "OKB",
       "name": "OKB",
-      "price": 113.03,
-      "pct_24h": 3.27375,
-      "pct_7d": 1.6,
+      "price": 113.01,
+      "pct_24h": 2.54619,
+      "pct_7d": 2.7,
       "support_30d": 85.29568594571903,
       "resistance_30d": 115.8310797114581,
-      "as_of": "2026-08-29 22:50:21",
+      "as_of": "2026-08-29 23:50:23",
       "stale": false
     },
     "just": {
@@ -2957,21 +2957,19 @@
       "stale": false
     }
   },
-  "_strong_buy_state": {
-    "1h:JST": true
-  },
+  "_strong_buy_state": {},
   "BTC": {
     "key": "BTC",
     "name": "Bitcoin",
     "emoji": "\u20bf",
-    "price": 78238,
+    "price": 78270,
     "high_24h": 78310,
     "low_24h": 77384,
-    "pct_24h": 0.71304,
+    "pct_24h": 0.80351,
     "pct_7d": 1.8,
     "pct_30d": 21.0,
-    "sma50": 67004.90472250577,
-    "sma200": 69290.71186939845,
+    "sma50": 67005.53596902317,
+    "sma200": 69290.8696810278,
     "support_30d": 62772.57726413174,
     "resistance_30d": 80268.37474707834,
     "mark_price": 77570.0,
@@ -2986,14 +2984,14 @@
     "key": "ETH",
     "name": "Ethereum",
     "emoji": "\u039e",
-    "price": 2456.8,
+    "price": 2458.47,
     "high_24h": 2458.24,
     "low_24h": 2430.82,
-    "pct_24h": 0.73117,
+    "pct_24h": 0.86251,
     "pct_7d": 1.9,
     "pct_30d": 28.0,
-    "sma50": 2004.7448599502718,
-    "sma200": 2019.6545160208436,
+    "sma50": 2004.7739517670334,
+    "sma200": 2019.661788975034,
     "support_30d": 1843.443563411847,
     "resistance_30d": 2514.967577695514,
     "mark_price": 2433.03,
