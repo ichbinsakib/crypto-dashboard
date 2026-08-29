@@ -461,9 +461,9 @@
       "stale": false
     },
     "chainlink": {
-      "label": "\ud83d\udfe1 HOLD / NEUTRAL",
-      "status": "neutral",
-      "score": -1,
+      "label": "\ud83d\udd34 CAUTION - REDUCE NEW BUYS",
+      "status": "bearish",
+      "score": -2,
       "rows": [
         [
           "Price vs. recent range",
@@ -482,12 +482,12 @@
         ],
         [
           "Recent trend",
-          "Chopping sideways - no clear trend",
-          0
+          "Trending down - avoid catching a falling knife",
+          -1
         ],
         [
           "Stretch from long-term average",
-          "+25.5% above its long-term average - a bit stretched",
+          "+25.4% above its long-term average - a bit stretched",
           -1
         ],
         [
@@ -496,16 +496,16 @@
           0
         ]
       ],
-      "plain": "No real edge either way right now - fine to just wait and watch.",
+      "plain": "Getting risky - I'd hold off on new buys until this cools down.",
       "id": "chainlink",
       "symbol": "LINK",
       "name": "Chainlink",
-      "price": 11.39,
-      "pct_24h": -2.80914,
-      "pct_7d": -5.2,
+      "price": 11.38,
+      "pct_24h": -2.89574,
+      "pct_7d": -8.2,
       "support_30d": 8.061001591420974,
       "resistance_30d": 11.992351770358374,
-      "as_of": "2026-08-29 03:05:18",
+      "as_of": "2026-08-29 05:10:23",
       "stale": false
     },
     "whitebit": {
@@ -1735,7 +1735,7 @@
         ],
         [
           "Stretch from long-term average",
-          "-14.7% vs its long-term average - not stretched either way",
+          "-14.3% vs its long-term average - not stretched either way",
           0
         ],
         [
@@ -1748,12 +1748,12 @@
       "id": "sui",
       "symbol": "SUI",
       "name": "Sui",
-      "price": 0.73782,
-      "pct_24h": -3.27689,
-      "pct_7d": -18.6,
+      "price": 0.74197,
+      "pct_24h": -2.07193,
+      "pct_7d": -19.0,
       "support_30d": 0.6514311908607086,
       "resistance_30d": 0.8499161763231283,
-      "as_of": "2026-08-29 04:05:20",
+      "as_of": "2026-08-29 05:10:23",
       "stale": false
     },
     "lighter": {
@@ -1975,7 +1975,7 @@
         ],
         [
           "Stretch from long-term average",
-          "-25.3% below its long-term average - confirmed downtrend",
+          "-25.0% below its long-term average - confirmed downtrend",
           -1
         ],
         [
@@ -1988,12 +1988,12 @@
       "id": "polkadot",
       "symbol": "DOT",
       "name": "Polkadot",
-      "price": 0.840982,
-      "pct_24h": -3.40815,
-      "pct_7d": -13.5,
+      "price": 0.844415,
+      "pct_24h": -2.5772,
+      "pct_7d": -15.7,
       "support_30d": 0.7510040523927409,
       "resistance_30d": 0.9394118398868826,
-      "as_of": "2026-08-29 03:55:20",
+      "as_of": "2026-08-29 05:10:23",
       "stale": false
     },
     "uniswap": {
@@ -2961,14 +2961,14 @@
     "key": "BTC",
     "name": "Bitcoin",
     "emoji": "\u20bf",
-    "price": 77650,
+    "price": 77667,
     "high_24h": 79992,
     "low_24h": 76962,
-    "pct_24h": -2.55523,
+    "pct_24h": -2.42906,
     "pct_7d": -1.0,
     "pct_30d": 21.1,
-    "sma50": 66993.35131582819,
-    "sma200": 69287.82351772906,
+    "sma50": 66993.56661266176,
+    "sma200": 69287.87734193746,
     "support_30d": 62772.57726413174,
     "resistance_30d": 80268.37474707834,
     "mark_price": 77766.15499275,
@@ -2983,14 +2983,14 @@
     "key": "ETH",
     "name": "Ethereum",
     "emoji": "\u039e",
-    "price": 2440.23,
+    "price": 2440.45,
     "high_24h": 2520.2,
     "low_24h": 2418.11,
-    "pct_24h": -1.87782,
+    "pct_24h": -1.7511,
     "pct_7d": -3.0,
     "pct_30d": 27.9,
-    "sma50": 2004.4190884919487,
-    "sma200": 2019.5730731562626,
+    "sma50": 2004.432714274376,
+    "sma200": 2019.5764796018693,
     "support_30d": 1843.443563411847,
     "resistance_30d": 2514.967577695514,
     "mark_price": 2442.50148837,
