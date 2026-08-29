@@ -40,6 +40,11 @@ COINS = [
 REFRESH_SECONDS = 120  # in-browser auto-reload interval
 DATA_REFRESH_LABEL = "every ~10 min (GitHub Actions, best-effort)"  # keep in sync with .github/workflows/deploy.yml
 
+DASHBOARD_URL = "https://ichbinsakib.github.io/crypto-dashboard/"
+DISCORD_WEBHOOK_URL = os.environ.get("DISCORD_WEBHOOK_URL")  # optional; strong-buy alerts are a no-op without it
+STRONG_DAILY_SCORE = 5   # matches the "ACCUMULATION ZONE" tier, not the weaker "LEAN ACCUMULATE"
+STRONG_INTRADAY_SCORE = 3  # matches the "NEAR-TERM DIP ZONE" tier, not the weaker "LEAN LONG"
+
 SCREENER_SIZE = 5  # how many coins to rank/show per tab; raising this adds run time and CoinGecko rate-limit risk
 # GitHub Actions runners share IP pools hammered by countless other CI jobs hitting CoinGecko,
 # so they get throttled harder than a residential IP -- back off more there.
@@ -213,6 +218,80 @@ def evaluate_alerts(coins_data, alerts_config, prev_alerts_state, generated_at):
             "last_triggered_at": generated_at if triggered else prev_alerts_state.get(rid, {}).get("last_triggered_at"),
         }
     return results, new_alerts_state, newly_triggered
+
+
+def find_strong_buys(coins_data, spot_signals_by_coin, screener_results, intraday_results):
+    """Only the TOP bullish tier counts as a "strong buy" -- ACCUMULATION ZONE on the daily
+    models, NEAR-TERM DIP ZONE on the 15m/1h models. The weaker LEAN ACCUMULATE/LEAN LONG
+    tier (a mild lean, not a strong signal per the model's own wording) is intentionally
+    excluded so this stays a rare, meaningful alert rather than firing constantly."""
+    price_by_key = {c["key"]: c.get("price") for c in coins_data}
+    found = []
+    for key, sig in spot_signals_by_coin.items():
+        if (sig.get("score") or 0) >= STRONG_DAILY_SCORE:
+            found.append({
+                "dedupe_key": f"daily:{key}", "symbol": key, "timeframe": "Daily",
+                "label": sig["label"], "score": sig["score"], "price": price_by_key.get(key), "trade": None,
+            })
+    for r in screener_results:
+        if (r.get("score") or 0) >= STRONG_DAILY_SCORE:
+            found.append({
+                "dedupe_key": f"daily:{r['symbol']}", "symbol": r["symbol"], "timeframe": "Daily",
+                "label": r["label"], "score": r["score"], "price": r.get("price"), "trade": None,
+            })
+    for tf_key, results in intraday_results.items():
+        tf_name = {"15m": "15-Minute", "1h": "1-Hour"}.get(tf_key, tf_key)
+        for r in results:
+            if (r.get("score") or 0) >= STRONG_INTRADAY_SCORE:
+                found.append({
+                    "dedupe_key": f"{tf_key}:{r['symbol']}", "symbol": r["symbol"], "timeframe": tf_name,
+                    "label": r["label"], "score": r["score"], "price": r.get("price"), "trade": r.get("trade"),
+                })
+    return found
+
+
+def evaluate_strong_buys(strong_buys, prev_strong_state):
+    """Level-triggered like evaluate_alerts: only the moment a coin CROSSES INTO the strong
+    tier counts as newly-alertable, not every cycle it happens to still be there -- otherwise
+    this would spam the same alert every ~5 minutes for as long as the condition holds."""
+    new_state = {}
+    newly = []
+    for sb in strong_buys:
+        dk = sb["dedupe_key"]
+        if not prev_strong_state.get(dk, False):
+            newly.append(sb)
+        new_state[dk] = True
+    return newly, new_state
+
+
+def send_discord_strong_buy_alert(newly_strong):
+    """Posts to a Discord incoming webhook, if DISCORD_WEBHOOK_URL is configured. Best-effort:
+    never raises, since a notification failure shouldn't fail the whole dashboard build."""
+    if not newly_strong or not DISCORD_WEBHOOK_URL:
+        return
+    lines = []
+    for sb in newly_strong:
+        price_str = fmt_usd_adaptive(sb["price"]) if sb.get("price") is not None else "N/A"
+        line = f"🟢 **{sb['symbol']}** ({sb['timeframe']}) — {sb['label']} | Score {sb['score']:+d} | {price_str}"
+        if sb.get("trade"):
+            t = sb["trade"]
+            line += (f"\n   Buy {fmt_usd_adaptive(t['entry'])} · Stop {fmt_usd_adaptive(t['stop'])} "
+                     f"· Target {fmt_usd_adaptive(t['target1'])} / {fmt_usd_adaptive(t['target2'])}")
+        lines.append(line)
+    content = ("🚨 **Teka Scanner — Strong Buy Alert**\n" + "\n".join(lines) +
+               f"\n\n🔗 {DASHBOARD_URL}\nEducational rule-based model, not financial advice.")
+    if len(content) > 1900:
+        content = content[:1900] + "\n… (truncated)"
+    payload = json.dumps({"content": content}).encode("utf-8")
+    req = urllib.request.Request(
+        DISCORD_WEBHOOK_URL, data=payload, method="POST",
+        headers={"Content-Type": "application/json", "User-Agent": "teka-dashboard/1.0"},
+    )
+    try:
+        urllib.request.urlopen(req, timeout=10)
+        log(f"DISCORD STRONG-BUY ALERT SENT: {[sb['dedupe_key'] for sb in newly_strong]}")
+    except Exception as e:
+        log(f"DISCORD STRONG-BUY ALERT FAIL: {e}")
 
 
 def ps_safe(s):
@@ -1665,7 +1744,7 @@ def render(coins_data, fng_value, fng_classification, generated_at, any_stale,
 </body>
 </html>
 """
-    return html
+    return html, spot_signals_by_coin
 
 
 def main():
@@ -1719,13 +1798,21 @@ def main():
         intraday_results[tf_key] = build_intraday_screener(screener_markets, tf_key)
         log(f"Intraday {tf_key} produced {len(intraday_results[tf_key])} ranked coins")
 
-    html = render(coins_data, fng_value, fng_classification, generated_at, any_stale,
-                   alerts_results, screener_results, intraday_results)
+    html, spot_signals_by_coin = render(coins_data, fng_value, fng_classification, generated_at, any_stale,
+                                         alerts_results, screener_results, intraday_results)
     with open(OUTPUT_PATH, "w", encoding="utf-8") as f:
         f.write(html)
 
+    strong_buys = find_strong_buys(coins_data, spot_signals_by_coin, screener_results, intraday_results)
+    prev_strong_state = state.get("_strong_buy_state", {})
+    newly_strong, new_strong_state = evaluate_strong_buys(strong_buys, prev_strong_state)
+    if newly_strong:
+        log(f"STRONG BUY NEWLY DETECTED: {[sb['dedupe_key'] for sb in newly_strong]}")
+        send_discord_strong_buy_alert(newly_strong)
+
     new_state = {"_fng_value": fng_value, "_fng_classification": fng_classification,
-                 "_alerts_state": new_alerts_state, "_screener": new_screener_state}
+                 "_alerts_state": new_alerts_state, "_screener": new_screener_state,
+                 "_strong_buy_state": new_strong_state}
     for cd in coins_data:
         new_state[cd["key"]] = {k: v for k, v in cd.items() if k != "stale"}
     save_state(new_state)

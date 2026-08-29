@@ -34,6 +34,8 @@ jobs:
           python-version: "3.x"
 
       - name: Generate dashboard
+        env:
+          DISCORD_WEBHOOK_URL: ${{ secrets.DISCORD_WEBHOOK_URL }}
         run: python dashboard.py
 
       - name: Persist data/ back to the repo
