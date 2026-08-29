@@ -319,7 +319,7 @@
     "dogecoin": {
       "label": "\ud83d\udfe1 HOLD / NEUTRAL",
       "status": "neutral",
-      "score": 0,
+      "score": 1,
       "rows": [
         [
           "Price vs. recent range",
@@ -338,12 +338,12 @@
         ],
         [
           "Recent trend",
-          "Trending down - avoid catching a falling knife",
-          -1
+          "Chopping sideways - no clear trend",
+          0
         ],
         [
           "Stretch from long-term average",
-          "-5.4% vs its long-term average - not stretched either way",
+          "-5.3% vs its long-term average - not stretched either way",
           0
         ],
         [
@@ -356,12 +356,12 @@
       "id": "dogecoin",
       "symbol": "DOGE",
       "name": "Dogecoin",
-      "price": 0.084333,
-      "pct_24h": -3.21819,
-      "pct_7d": -9.3,
+      "price": 0.084392,
+      "pct_24h": -2.02784,
+      "pct_7d": -7.6,
       "support_30d": 0.06901954790818378,
       "resistance_30d": 0.09337940032634065,
-      "as_of": "2026-08-29 09:00:39",
+      "as_of": "2026-08-29 10:05:22",
       "stale": false
     },
     "zcash": {
@@ -607,7 +607,7 @@
     "monero": {
       "label": "\ud83d\udd34 CAUTION - REDUCE NEW BUYS",
       "status": "bearish",
-      "score": -3,
+      "score": -2,
       "rows": [
         [
           "Price vs. recent range",
@@ -626,12 +626,12 @@
         ],
         [
           "Recent trend",
-          "Chopping sideways - no clear trend",
-          0
+          "Trending up steadily - healthy",
+          1
         ],
         [
           "Stretch from long-term average",
-          "+31.5% above its long-term average - very stretched",
+          "+31.0% above its long-term average - very stretched",
           -2
         ],
         [
@@ -644,12 +644,12 @@
       "id": "monero",
       "symbol": "XMR",
       "name": "Monero",
-      "price": 468.2,
-      "pct_24h": -0.06992,
-      "pct_7d": 7.2,
+      "price": 466.57,
+      "pct_24h": -0.3235,
+      "pct_7d": 9.2,
       "support_30d": 351.07100922807496,
       "resistance_30d": 471.94105430060944,
-      "as_of": "2026-08-29 08:20:25",
+      "as_of": "2026-08-29 10:05:22",
       "stale": false
     },
     "cardano": {
@@ -2647,7 +2647,7 @@
         ],
         [
           "Stretch from long-term average",
-          "-22.0% below its long-term average - confirmed downtrend",
+          "-21.8% below its long-term average - confirmed downtrend",
           -1
         ],
         [
@@ -2660,12 +2660,12 @@
       "id": "world-liberty-financial",
       "symbol": "WLFI",
       "name": "World Liberty Financial",
-      "price": 0.057491,
-      "pct_24h": -4.0805,
-      "pct_7d": -6.5,
+      "price": 0.057613,
+      "pct_24h": -0.94769,
+      "pct_7d": -3.2,
       "support_30d": 0.051301304477199876,
       "resistance_30d": 0.06254770952093733,
-      "as_of": "2026-08-29 08:40:28",
+      "as_of": "2026-08-29 10:05:22",
       "stale": false
     },
     "pax-gold": {
@@ -2961,14 +2961,14 @@
     "key": "BTC",
     "name": "Bitcoin",
     "emoji": "\u20bf",
-    "price": 77667,
+    "price": 77619,
     "high_24h": 79745,
     "low_24h": 76962,
-    "pct_24h": -2.05133,
-    "pct_7d": 0.4,
-    "pct_30d": 21.4,
-    "sma50": 66993.4217395456,
-    "sma200": 69287.84112365842,
+    "pct_24h": -2.00302,
+    "pct_7d": 0.6,
+    "pct_30d": 20.9,
+    "sma50": 66992.62469104247,
+    "sma200": 69287.64186153264,
     "support_30d": 62772.57726413174,
     "resistance_30d": 80268.37474707834,
     "mark_price": 77766.15499275,
@@ -2983,14 +2983,14 @@
     "key": "ETH",
     "name": "Ethereum",
     "emoji": "\u039e",
-    "price": 2435.82,
+    "price": 2434.17,
     "high_24h": 2520.2,
     "low_24h": 2418.11,
-    "pct_24h": -2.16035,
-    "pct_7d": 0.0,
-    "pct_30d": 28.0,
-    "sma50": 2004.324319650474,
-    "sma200": 2019.549380945894,
+    "pct_24h": -2.06215,
+    "pct_7d": 0.5,
+    "pct_30d": 27.3,
+    "sma50": 2004.299040627796,
+    "sma200": 2019.5430611902245,
     "support_30d": 1843.443563411847,
     "resistance_30d": 2514.967577695514,
     "mark_price": 2442.50148837,
