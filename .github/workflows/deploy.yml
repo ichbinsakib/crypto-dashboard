@@ -46,11 +46,16 @@ jobs:
           # diffable file -- a normal rebase/merge on a concurrent push will hit line-level
           # conflicts almost every time (every field changes each run). Instead of merging
           # histories, just re-base our freshly generated output on top of whatever is
-          # latest on origin: `reset --soft` moves the branch pointer without touching the
-          # working tree, so our just-written files simply become "the new commit" cleanly.
+          # latest on origin: `reset` (mixed) moves the branch pointer AND resets the index
+          # to match origin's tree, without touching the working tree, so our just-written
+          # data/ files simply become "the new commit" cleanly. Using --soft here instead
+          # (as an earlier version of this step did) leaves the index stale against origin's
+          # tree; if some other file (e.g. this workflow itself) changed upstream between
+          # jobs, the resulting commit would unintentionally revert it back too -- which
+          # GitHub's default token then refuses to push for workflow files specifically.
           for i in 1 2 3 4 5; do
             git fetch origin main
-            git reset --soft origin/main
+            git reset origin/main
             git add data/
             if git diff --cached --quiet; then
               echo "No data changes to persist."
