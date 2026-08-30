@@ -4,7 +4,7 @@
   "_alerts_state": {
     "btc-resistance-break": {
       "triggered": true,
-      "last_triggered_at": "2026-08-30 15:15:23"
+      "last_triggered_at": "2026-08-30 15:20:26"
     },
     "btc-support-break": {
       "triggered": false,
@@ -2215,7 +2215,7 @@
         ],
         [
           "Stretch from long-term average",
-          "+0.8% vs its long-term average - not stretched either way",
+          "+0.4% vs its long-term average - not stretched either way",
           0
         ],
         [
@@ -2228,12 +2228,12 @@
       "id": "internet-computer",
       "symbol": "ICP",
       "name": "Internet Computer",
-      "price": 2.46,
-      "pct_24h": -0.24935,
-      "pct_7d": 0.0,
+      "price": 2.45,
+      "pct_24h": -3.08447,
+      "pct_7d": 0.7,
       "support_30d": 2.0214924101009055,
       "resistance_30d": 2.525531974490298,
-      "as_of": "2026-08-30 13:25:21",
+      "as_of": "2026-08-30 15:20:26",
       "stale": false
     },
     "bittensor": {
@@ -2469,11 +2469,11 @@
       "symbol": "NEAR",
       "name": "NEAR Protocol",
       "price": 1.87,
-      "pct_24h": 3.84621,
-      "pct_7d": -4.0,
+      "pct_24h": 1.16223,
+      "pct_7d": -5.3,
       "support_30d": 1.5879597131538,
       "resistance_30d": 2.0141495518834596,
-      "as_of": "2026-08-30 13:40:24",
+      "as_of": "2026-08-30 15:20:26",
       "stale": false
     },
     "quant-network": {
@@ -2564,12 +2564,12 @@
       "id": "tether-gold",
       "symbol": "XAUT",
       "name": "Tether Gold",
-      "price": 4457.64,
-      "pct_24h": 0.08358,
-      "pct_7d": -2.9,
+      "price": 4454.11,
+      "pct_24h": -0.06624,
+      "pct_7d": -2.8,
       "support_30d": 4040.271654009323,
       "resistance_30d": 4662.510537821146,
-      "as_of": "2026-08-30 14:45:26",
+      "as_of": "2026-08-30 15:20:26",
       "stale": false
     },
     "bitway": {
@@ -3053,19 +3053,21 @@
       "stale": false
     }
   },
-  "_strong_buy_state": {},
+  "_strong_buy_state": {
+    "15m:NEAR": true
+  },
   "BTC": {
     "key": "BTC",
     "name": "Bitcoin",
     "emoji": "\u20bf",
-    "price": 78689,
+    "price": 78736,
     "high_24h": 78945,
     "low_24h": 77856,
-    "pct_24h": 0.98278,
+    "pct_24h": 1.09938,
     "pct_7d": 1.7,
     "pct_30d": 24.6,
-    "sma50": 67302.61199753833,
-    "sma200": 69348.64255672564,
+    "sma50": 67303.37020173979,
+    "sma200": 69348.83210777599,
     "support_30d": 62772.57726413174,
     "resistance_30d": 80268.37474707834,
     "mark_price": 77570.0,
@@ -3080,14 +3082,14 @@
     "key": "ETH",
     "name": "Ethereum",
     "emoji": "\u039e",
-    "price": 2474.39,
+    "price": 2476.5,
     "high_24h": 2478.48,
     "low_24h": 2444.63,
-    "pct_24h": 1.23278,
+    "pct_24h": 1.36493,
     "pct_7d": 0.7,
     "pct_30d": 32.8,
-    "sma50": 2018.4831639307927,
-    "sma200": 2022.3054254848973,
+    "sma50": 2018.5304439801484,
+    "sma200": 2022.3172454972362,
     "support_30d": 1843.443563411847,
     "resistance_30d": 2514.967577695514,
     "mark_price": 2433.03,
