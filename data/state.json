@@ -55,7 +55,7 @@
         ],
         [
           "Stretch from long-term average",
-          "+12.7% above its long-term average - a bit stretched",
+          "+12.3% above its long-term average - a bit stretched",
           -1
         ],
         [
@@ -68,12 +68,12 @@
       "id": "binancecoin",
       "symbol": "BNB",
       "name": "BNB",
-      "price": 695.76,
-      "pct_24h": 0.4756,
+      "price": 693.41,
+      "pct_24h": 0.12062,
       "pct_7d": -0.5,
       "support_30d": 574.7197907128979,
       "resistance_30d": 712.0503878732537,
-      "as_of": "2026-08-30 22:15:28",
+      "as_of": "2026-08-30 22:35:20",
       "stale": false
     },
     "ripple": {
@@ -1207,7 +1207,7 @@
         ],
         [
           "Stretch from long-term average",
-          "+2.6% vs its long-term average - not stretched either way",
+          "+2.5% vs its long-term average - not stretched either way",
           0
         ],
         [
@@ -1220,12 +1220,12 @@
       "id": "nexo",
       "symbol": "NEXO",
       "name": "NEXO",
-      "price": 0.857384,
-      "pct_24h": 2.01922,
-      "pct_7d": 5.3,
+      "price": 0.856859,
+      "pct_24h": 1.66503,
+      "pct_7d": 5.2,
       "support_30d": 0.7016300793001435,
       "resistance_30d": 0.8734100764023305,
-      "as_of": "2026-08-30 21:25:19",
+      "as_of": "2026-08-30 22:35:20",
       "stale": false
     },
     "janus-henderson-anemoy-treasury-fund": {
@@ -1975,7 +1975,7 @@
         ],
         [
           "Stretch from long-term average",
-          "-23.9% below its long-term average - confirmed downtrend",
+          "-25.0% below its long-term average - confirmed downtrend",
           -1
         ],
         [
@@ -1988,12 +1988,12 @@
       "id": "polkadot",
       "symbol": "DOT",
       "name": "Polkadot",
-      "price": 0.855352,
-      "pct_24h": 1.42485,
-      "pct_7d": -7.1,
+      "price": 0.842718,
+      "pct_24h": -0.67173,
+      "pct_7d": -7.7,
       "support_30d": 0.7510040523927409,
       "resistance_30d": 0.9394118398868826,
-      "as_of": "2026-08-30 20:40:24",
+      "as_of": "2026-08-30 22:35:20",
       "stale": false
     },
     "uniswap": {
@@ -3053,19 +3053,23 @@
       "stale": false
     }
   },
-  "_strong_buy_state": {},
+  "_strong_buy_state": {
+    "15m:TRX": true,
+    "15m:BNB": true,
+    "1h:TRX": true
+  },
   "BTC": {
     "key": "BTC",
     "name": "Bitcoin",
     "emoji": "\u20bf",
-    "price": 78319,
+    "price": 78404,
     "high_24h": 79347,
     "low_24h": 77963,
-    "pct_24h": 0.25447,
+    "pct_24h": 0.32522,
     "pct_7d": 1.6,
     "pct_30d": 25.0,
-    "sma50": 67295.33284232671,
-    "sma200": 69346.82276792273,
+    "sma50": 67296.39138510525,
+    "sma200": 69347.08740361736,
     "support_30d": 62772.57726413174,
     "resistance_30d": 80268.37474707834,
     "mark_price": 78489.6,
@@ -3080,14 +3084,14 @@
     "key": "ETH",
     "name": "Ethereum",
     "emoji": "\u039e",
-    "price": 2465.92,
+    "price": 2466.61,
     "high_24h": 2531.35,
     "low_24h": 2451.95,
-    "pct_24h": 0.6494,
+    "pct_24h": 0.61334,
     "pct_7d": 1.3,
     "pct_30d": 33.4,
-    "sma50": 2018.3143055773292,
-    "sma200": 2022.2632108965313,
+    "sma50": 2018.2987293778488,
+    "sma200": 2022.259316846661,
     "support_30d": 1843.443563411847,
     "resistance_30d": 2514.967577695514,
     "mark_price": 2474.04,
