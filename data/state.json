@@ -4,7 +4,7 @@
   "_alerts_state": {
     "btc-resistance-break": {
       "triggered": true,
-      "last_triggered_at": "2026-08-30 13:35:20"
+      "last_triggered_at": "2026-08-30 13:40:24"
     },
     "btc-support-break": {
       "triggered": false,
@@ -1639,7 +1639,7 @@
         ],
         [
           "Stretch from long-term average",
-          "-2.5% vs its long-term average - not stretched either way",
+          "-1.5% vs its long-term average - not stretched either way",
           0
         ],
         [
@@ -1652,12 +1652,12 @@
       "id": "litecoin",
       "symbol": "LTC",
       "name": "Litecoin",
-      "price": 49.27,
-      "pct_24h": 0.92773,
-      "pct_7d": -5.1,
+      "price": 49.75,
+      "pct_24h": 1.83701,
+      "pct_7d": -4.9,
       "support_30d": 43.806923130603906,
       "resistance_30d": 53.12964707139583,
-      "as_of": "2026-08-30 10:45:23",
+      "as_of": "2026-08-30 13:40:24",
       "stale": false
     },
     "bitget-token": {
@@ -2455,7 +2455,7 @@
         ],
         [
           "Stretch from long-term average",
-          "+15.3% above its long-term average - a bit stretched",
+          "+14.1% above its long-term average - a bit stretched",
           -1
         ],
         [
@@ -2468,12 +2468,12 @@
       "id": "near",
       "symbol": "NEAR",
       "name": "NEAR Protocol",
-      "price": 1.89,
-      "pct_24h": 5.36731,
-      "pct_7d": -3.4,
+      "price": 1.87,
+      "pct_24h": 3.84621,
+      "pct_7d": -4.0,
       "support_30d": 1.5879597131538,
       "resistance_30d": 2.0141495518834596,
-      "as_of": "2026-08-30 12:10:27",
+      "as_of": "2026-08-30 13:40:24",
       "stale": false
     },
     "quant-network": {
@@ -2757,11 +2757,11 @@
       "symbol": "MORPHO",
       "name": "Morpho",
       "price": 2.48,
-      "pct_24h": 1.67943,
+      "pct_24h": 1.7057,
       "pct_7d": 1.9,
       "support_30d": 1.8400586135640542,
       "resistance_30d": 2.9026212482639075,
-      "as_of": "2026-08-30 13:35:20",
+      "as_of": "2026-08-30 13:40:24",
       "stale": false
     },
     "memecore": {
@@ -3005,19 +3005,21 @@
       "stale": false
     }
   },
-  "_strong_buy_state": {},
+  "_strong_buy_state": {
+    "15m:NEAR": true
+  },
   "BTC": {
     "key": "BTC",
     "name": "Bitcoin",
     "emoji": "\u20bf",
-    "price": 78704,
+    "price": 78709,
     "high_24h": 78791,
     "low_24h": 77670,
-    "pct_24h": 1.35658,
+    "pct_24h": 1.33996,
     "pct_7d": 1.8,
     "pct_30d": 23.5,
-    "sma50": 67302.89725845987,
-    "sma200": 69348.71387195602,
+    "sma50": 67302.9866924896,
+    "sma200": 69348.73623046344,
     "support_30d": 62772.57726413174,
     "resistance_30d": 80268.37474707834,
     "mark_price": 77570.0,
@@ -3032,14 +3034,14 @@
     "key": "ETH",
     "name": "Ethereum",
     "emoji": "\u039e",
-    "price": 2466.92,
+    "price": 2468.35,
     "high_24h": 2470.72,
     "low_24h": 2435.23,
-    "pct_24h": 1.34941,
+    "pct_24h": 1.40253,
     "pct_7d": 1.5,
     "pct_30d": 31.1,
-    "sma50": 2018.3311207292309,
-    "sma200": 2022.2674146845065,
+    "sma50": 2018.3586812893325,
+    "sma200": 2022.274304824532,
     "support_30d": 1843.443563411847,
     "resistance_30d": 2514.967577695514,
     "mark_price": 2433.03,
