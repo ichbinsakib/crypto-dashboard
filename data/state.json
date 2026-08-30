@@ -1495,7 +1495,7 @@
         ],
         [
           "Stretch from long-term average",
-          "-8.5% vs its long-term average - not stretched either way",
+          "-8.9% vs its long-term average - not stretched either way",
           0
         ],
         [
@@ -1508,12 +1508,12 @@
       "id": "ethereum-classic",
       "symbol": "ETC",
       "name": "Ethereum Classic",
-      "price": 7.49,
-      "pct_24h": -0.36745,
-      "pct_7d": -5.1,
+      "price": 7.46,
+      "pct_24h": -0.15118,
+      "pct_7d": -6.5,
       "support_30d": 6.079473341192034,
       "resistance_30d": 8.342731558283557,
-      "as_of": "2026-08-30 01:05:19",
+      "as_of": "2026-08-30 02:35:19",
       "stale": false
     },
     "pump-fun": {
@@ -1783,7 +1783,7 @@
         ],
         [
           "Stretch from long-term average",
-          "+121.0% above its long-term average - very stretched",
+          "+121.6% above its long-term average - very stretched",
           -2
         ],
         [
@@ -1796,12 +1796,12 @@
       "id": "lighter",
       "symbol": "LIT",
       "name": "Lighter",
-      "price": 3.55,
-      "pct_24h": 2.61094,
-      "pct_7d": 11.6,
+      "price": 3.56,
+      "pct_24h": 4.55655,
+      "pct_7d": 9.8,
       "support_30d": 2.005076166939587,
       "resistance_30d": 3.70987819420487,
-      "as_of": "2026-08-30 00:15:25",
+      "as_of": "2026-08-30 02:35:19",
       "stale": false
     },
     "ethena": {
@@ -2909,9 +2909,9 @@
       "stale": false
     },
     "just": {
-      "label": "\ud83d\udfe2 LEAN ACCUMULATE",
-      "status": "bullish",
-      "score": 2,
+      "label": "\ud83d\udfe1 HOLD / NEUTRAL",
+      "status": "neutral",
+      "score": 1,
       "rows": [
         [
           "Price vs. recent range",
@@ -2920,7 +2920,7 @@
         ],
         [
           "Crowd mood (Fear & Greed)",
-          "68/100 - crowd is greedy",
+          "69/100 - crowd is greedy",
           -1
         ],
         [
@@ -2930,12 +2930,12 @@
         ],
         [
           "Recent trend",
-          "Chopping sideways - no clear trend",
-          0
+          "Trending down - avoid catching a falling knife",
+          -1
         ],
         [
           "Stretch from long-term average",
-          "+23.0% above its long-term average - a bit stretched",
+          "+21.3% above its long-term average - a bit stretched",
           -1
         ],
         [
@@ -2944,32 +2944,34 @@
           0
         ]
       ],
-      "plain": "Leans toward a decent spot to slowly add (DCA) - not a strong signal, just a lean.",
+      "plain": "No real edge either way right now - fine to just wait and watch.",
       "id": "just",
       "symbol": "JST",
       "name": "JUST",
-      "price": 0.09822,
-      "pct_24h": 0.03052,
-      "pct_7d": -6.3,
+      "price": 0.097206,
+      "pct_24h": -1.28378,
+      "pct_7d": -8.8,
       "support_30d": 0.09711508089855596,
       "resistance_30d": 0.1082125131964855,
-      "as_of": "2026-08-29 22:20:27",
+      "as_of": "2026-08-30 02:35:19",
       "stale": false
     }
   },
-  "_strong_buy_state": {},
+  "_strong_buy_state": {
+    "1h:JST": true
+  },
   "BTC": {
     "key": "BTC",
     "name": "Bitcoin",
     "emoji": "\u20bf",
-    "price": 78034,
+    "price": 78029,
     "high_24h": 78310,
     "low_24h": 77384,
-    "pct_24h": 0.51974,
+    "pct_24h": 0.54685,
     "pct_7d": 1.0,
     "pct_30d": 20.7,
-    "sma50": 67289.30919054904,
-    "sma200": 69345.3168549783,
+    "sma50": 67289.37303909658,
+    "sma200": 69345.33281711518,
     "support_30d": 62772.57726413174,
     "resistance_30d": 80268.37474707834,
     "mark_price": 77570.0,
@@ -2984,14 +2986,14 @@
     "key": "ETH",
     "name": "Ethereum",
     "emoji": "\u039e",
-    "price": 2455.26,
+    "price": 2454.47,
     "high_24h": 2466.12,
     "low_24h": 2430.82,
-    "pct_24h": 0.69151,
+    "pct_24h": 0.73931,
     "pct_7d": 1.0,
     "pct_30d": 28.2,
-    "sma50": 2018.0953736868562,
-    "sma200": 2022.2084779239128,
+    "sma50": 2018.0789071707652,
+    "sma200": 2022.20436129489,
     "support_30d": 1843.443563411847,
     "resistance_30d": 2514.967577695514,
     "mark_price": 2433.03,
