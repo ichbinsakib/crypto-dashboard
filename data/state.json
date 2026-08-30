@@ -3,8 +3,8 @@
   "_fng_classification": "Greed",
   "_alerts_state": {
     "btc-resistance-break": {
-      "triggered": false,
-      "last_triggered_at": "2026-08-30 21:02:07"
+      "triggered": true,
+      "last_triggered_at": "2026-08-30 21:10:23"
     },
     "btc-support-break": {
       "triggered": false,
@@ -295,7 +295,7 @@
         ],
         [
           "Stretch from long-term average",
-          "+63.8% above its long-term average - very stretched",
+          "+59.8% above its long-term average - very stretched",
           -2
         ],
         [
@@ -308,12 +308,12 @@
       "id": "hyperliquid",
       "symbol": "HYPE",
       "name": "Hyperliquid",
-      "price": 83.82,
-      "pct_24h": 0.75464,
-      "pct_7d": 4.6,
+      "price": 81.77,
+      "pct_24h": -1.39305,
+      "pct_7d": 1.1,
       "support_30d": 52.15632485410943,
       "resistance_30d": 84.67784032156108,
-      "as_of": "2026-08-30 16:55:19",
+      "as_of": "2026-08-30 21:10:23",
       "stale": false
     },
     "dogecoin": {
@@ -1687,7 +1687,7 @@
         ],
         [
           "Stretch from long-term average",
-          "+2.6% vs its long-term average - not stretched either way",
+          "+2.1% vs its long-term average - not stretched either way",
           0
         ],
         [
@@ -1700,12 +1700,12 @@
       "id": "bitget-token",
       "symbol": "BGB",
       "name": "Bitget Token",
-      "price": 1.97,
-      "pct_24h": 2.21379,
-      "pct_7d": 3.0,
+      "price": 1.96,
+      "pct_24h": 1.47698,
+      "pct_7d": 1.7,
       "support_30d": 1.5973956191487853,
       "resistance_30d": 1.984790388009312,
-      "as_of": "2026-08-30 19:15:25",
+      "as_of": "2026-08-30 21:10:23",
       "stale": false
     },
     "sui": {
@@ -2071,7 +2071,7 @@
         ],
         [
           "Stretch from long-term average",
-          "-37.4% below its long-term average - confirmed downtrend",
+          "-37.8% below its long-term average - confirmed downtrend",
           -1
         ],
         [
@@ -2084,12 +2084,12 @@
       "id": "pi-network",
       "symbol": "PI",
       "name": "Pi Network",
-      "price": 0.091558,
-      "pct_24h": -0.09052,
+      "price": 0.091012,
+      "pct_24h": -0.69148,
       "pct_7d": 0.7,
       "support_30d": 0.08279922535306347,
       "resistance_30d": 0.09762045155043195,
-      "as_of": "2026-08-30 20:40:24",
+      "as_of": "2026-08-30 21:10:23",
       "stale": false
     },
     "ondo-finance": {
@@ -3053,19 +3053,21 @@
       "stale": false
     }
   },
-  "_strong_buy_state": {},
+  "_strong_buy_state": {
+    "1h:PI": true
+  },
   "BTC": {
     "key": "BTC",
     "name": "Bitcoin",
     "emoji": "\u20bf",
-    "price": 78373,
+    "price": 78438,
     "high_24h": 79347,
     "low_24h": 77963,
-    "pct_24h": 0.39848,
+    "pct_24h": 0.41636,
     "pct_7d": 1.7,
     "pct_30d": 24.9,
-    "sma50": 67296.30066257983,
-    "sma200": 69347.064722986,
+    "sma50": 67298.12132329498,
+    "sma200": 69347.5198881648,
     "support_30d": 62772.57726413174,
     "resistance_30d": 80268.37474707834,
     "mark_price": 77570.0,
@@ -3080,14 +3082,14 @@
     "key": "ETH",
     "name": "Ethereum",
     "emoji": "\u039e",
-    "price": 2470.37,
+    "price": 2472.24,
     "high_24h": 2531.35,
     "low_24h": 2449.42,
-    "pct_24h": 0.83916,
+    "pct_24h": 0.8763,
     "pct_7d": 1.9,
     "pct_30d": 33.5,
-    "sma50": 2018.4141445910304,
-    "sma200": 2022.2881706499566,
+    "sma50": 2018.4661223895735,
+    "sma200": 2022.3011650995923,
     "support_30d": 1843.443563411847,
     "resistance_30d": 2514.967577695514,
     "mark_price": 2433.03,
