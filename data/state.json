@@ -4,7 +4,7 @@
   "_alerts_state": {
     "btc-resistance-break": {
       "triggered": true,
-      "last_triggered_at": "2026-08-30 21:40:26"
+      "last_triggered_at": "2026-08-30 21:45:25"
     },
     "btc-support-break": {
       "triggered": false,
@@ -871,7 +871,7 @@
         ],
         [
           "Stretch from long-term average",
-          "+9.7% vs its long-term average - not stretched either way",
+          "+9.5% vs its long-term average - not stretched either way",
           0
         ],
         [
@@ -884,12 +884,12 @@
       "id": "pepe",
       "symbol": "PEPE",
       "name": "Pepe",
-      "price": 3.67e-06,
-      "pct_24h": 0.28283,
+      "price": 3.66e-06,
+      "pct_24h": 0.09853,
       "pct_7d": -10.0,
       "support_30d": 2.5716563906374582e-06,
       "resistance_30d": 4.122123035488615e-06,
-      "as_of": "2026-08-30 21:35:20",
+      "as_of": "2026-08-30 21:45:25",
       "stale": false
     },
     "avalanche-2": {
@@ -1447,7 +1447,7 @@
         ],
         [
           "Stretch from long-term average",
-          "-11.8% vs its long-term average - not stretched either way",
+          "-12.8% vs its long-term average - not stretched either way",
           0
         ],
         [
@@ -1460,12 +1460,12 @@
       "id": "crypto-com-chain",
       "symbol": "CRO",
       "name": "Cronos",
-      "price": 0.059503,
-      "pct_24h": 3.35958,
-      "pct_7d": -0.2,
+      "price": 0.058778,
+      "pct_24h": 2.27849,
+      "pct_7d": -0.9,
       "support_30d": 0.04621382085807831,
       "resistance_30d": 0.06091104752771909,
-      "as_of": "2026-08-30 20:20:27",
+      "as_of": "2026-08-30 21:45:25",
       "stale": false
     },
     "ethereum-classic": {
@@ -2263,7 +2263,7 @@
         ],
         [
           "Stretch from long-term average",
-          "+0.5% vs its long-term average - not stretched either way",
+          "+0.0% vs its long-term average - not stretched either way",
           0
         ],
         [
@@ -2276,12 +2276,12 @@
       "id": "bittensor",
       "symbol": "TAO",
       "name": "Bittensor",
-      "price": 236.96,
-      "pct_24h": 0.45074,
-      "pct_7d": -0.7,
+      "price": 235.94,
+      "pct_24h": 0.19633,
+      "pct_7d": -2.2,
       "support_30d": 190.67093053611111,
       "resistance_30d": 254.06815196002663,
-      "as_of": "2026-08-30 20:35:22",
+      "as_of": "2026-08-30 21:45:25",
       "stale": false
     },
     "the-open-network": {
@@ -3053,19 +3053,21 @@
       "stale": false
     }
   },
-  "_strong_buy_state": {},
+  "_strong_buy_state": {
+    "1h:PEPE": true
+  },
   "BTC": {
     "key": "BTC",
     "name": "Bitcoin",
     "emoji": "\u20bf",
-    "price": 78636,
+    "price": 78604,
     "high_24h": 79347,
     "low_24h": 77963,
-    "pct_24h": 0.71341,
+    "pct_24h": 0.65369,
     "pct_7d": 1.7,
     "pct_30d": 24.9,
-    "sma50": 67301.45708796603,
-    "sma200": 69348.35382933255,
+    "sma50": 67300.88716455307,
+    "sma200": 69348.21134847932,
     "support_30d": 62772.57726413174,
     "resistance_30d": 80268.37474707834,
     "mark_price": 78489.6,
@@ -3080,14 +3082,14 @@
     "key": "ETH",
     "name": "Ethereum",
     "emoji": "\u039e",
-    "price": 2478.19,
+    "price": 2477.71,
     "high_24h": 2531.35,
     "low_24h": 2449.42,
-    "pct_24h": 1.13312,
+    "pct_24h": 1.08434,
     "pct_7d": 1.9,
     "pct_30d": 33.5,
-    "sma50": 2018.5506773652246,
-    "sma200": 2022.3223038435053,
+    "sma50": 2018.5490313412167,
+    "sma200": 2022.3218923375032,
     "support_30d": 1843.443563411847,
     "resistance_30d": 2514.967577695514,
     "mark_price": 2474.04,
