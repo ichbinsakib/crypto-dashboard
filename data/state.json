@@ -4,7 +4,7 @@
   "_alerts_state": {
     "btc-resistance-break": {
       "triggered": true,
-      "last_triggered_at": "2026-08-30 14:27:41"
+      "last_triggered_at": "2026-08-30 14:30:30"
     },
     "btc-support-break": {
       "triggered": false,
@@ -605,13 +605,13 @@
       "stale": false
     },
     "monero": {
-      "label": "\ud83d\udd34 CAUTION - REDUCE NEW BUYS",
+      "label": "\ud83d\udd34 DISTRIBUTION ZONE",
       "status": "bearish",
-      "score": -2,
+      "score": -5,
       "rows": [
         [
           "Price vs. recent range",
-          "Near its 30-day high (~$483.04) - less room to run",
+          "Near its 30-day high (~$516.21) - less room to run",
           -1
         ],
         [
@@ -621,8 +621,8 @@
         ],
         [
           "Market phase (best guess)",
-          "Established uptrend - phase where price marks up",
-          1
+          "Very extended after a big run - phase where smart money sells",
+          -2
         ],
         [
           "Recent trend",
@@ -631,7 +631,7 @@
         ],
         [
           "Stretch from long-term average",
-          "+35.3% above its long-term average - very stretched",
+          "+44.6% above its long-term average - very stretched",
           -2
         ],
         [
@@ -640,16 +640,16 @@
           0
         ]
       ],
-      "plain": "Getting risky - I'd hold off on new buys until this cools down.",
+      "plain": "Looks stretched and euphoric - historically the zone where smart money sells, not buys.",
       "id": "monero",
       "symbol": "XMR",
       "name": "Monero",
-      "price": 482.98,
-      "pct_24h": 3.70858,
-      "pct_7d": 10.6,
+      "price": 516.23,
+      "pct_24h": 11.72217,
+      "pct_7d": 19.3,
       "support_30d": 351.07100922807496,
-      "resistance_30d": 483.04123226475355,
-      "as_of": "2026-08-30 10:40:23",
+      "resistance_30d": 516.207764130291,
+      "as_of": "2026-08-30 14:30:30",
       "stale": false
     },
     "cardano": {
@@ -1111,7 +1111,7 @@
         ],
         [
           "Stretch from long-term average",
-          "+16.7% above its long-term average - a bit stretched",
+          "+15.9% above its long-term average - a bit stretched",
           -1
         ],
         [
@@ -1124,12 +1124,12 @@
       "id": "polygon-ecosystem-token",
       "symbol": "POL",
       "name": "POL (ex-MATIC)",
-      "price": 0.103832,
-      "pct_24h": -1.01096,
-      "pct_7d": -3.4,
+      "price": 0.103121,
+      "pct_24h": -1.61933,
+      "pct_7d": -3.2,
       "support_30d": 0.07164913253149428,
       "resistance_30d": 0.12250456198546959,
-      "as_of": "2026-08-30 13:30:29",
+      "as_of": "2026-08-30 14:30:30",
       "stale": false
     },
     "blackrock-usd-institutional-digital-liquidity-fund": {
@@ -1591,7 +1591,7 @@
         ],
         [
           "Stretch from long-term average",
-          "+51.7% above its long-term average - very stretched",
+          "+50.8% above its long-term average - very stretched",
           -2
         ],
         [
@@ -1604,12 +1604,12 @@
       "id": "venice-token",
       "symbol": "VVV",
       "name": "Venice Token",
-      "price": 16.69,
-      "pct_24h": 2.46444,
-      "pct_7d": -0.4,
+      "price": 16.59,
+      "pct_24h": 2.40142,
+      "pct_7d": 0.0,
       "support_30d": 11.286631406210226,
       "resistance_30d": 18.059391310500832,
-      "as_of": "2026-08-30 12:45:24",
+      "as_of": "2026-08-30 14:30:30",
       "stale": false
     },
     "litecoin": {
@@ -3005,19 +3005,21 @@
       "stale": false
     }
   },
-  "_strong_buy_state": {},
+  "_strong_buy_state": {
+    "15m:POL": true
+  },
   "BTC": {
     "key": "BTC",
     "name": "Bitcoin",
     "emoji": "\u20bf",
-    "price": 78847,
+    "price": 78840,
     "high_24h": 78945,
     "low_24h": 77815,
-    "pct_24h": 1.42725,
+    "pct_24h": 1.46565,
     "pct_7d": 2.2,
     "pct_30d": 23.9,
-    "sma50": 67305.84748783983,
-    "sma200": 69349.451429301,
+    "sma50": 67305.73438403563,
+    "sma200": 69349.42315334996,
     "support_30d": 62772.57726413174,
     "resistance_30d": 80268.37474707834,
     "mark_price": 77570.0,
@@ -3032,14 +3034,14 @@
     "key": "ETH",
     "name": "Ethereum",
     "emoji": "\u039e",
-    "price": 2476.9,
+    "price": 2475.89,
     "high_24h": 2476.67,
     "low_24h": 2442.41,
-    "pct_24h": 1.63811,
+    "pct_24h": 1.6286,
     "pct_7d": 2.1,
     "pct_30d": 31.7,
-    "sma50": 2018.528341384486,
-    "sma200": 2022.3167198483204,
+    "sma50": 2018.500430174328,
+    "sma200": 2022.309742045781,
     "support_30d": 1843.443563411847,
     "resistance_30d": 2514.967577695514,
     "mark_price": 2433.03,
