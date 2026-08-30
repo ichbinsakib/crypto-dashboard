@@ -4,7 +4,7 @@
   "_alerts_state": {
     "btc-resistance-break": {
       "triggered": true,
-      "last_triggered_at": "2026-08-30 14:30:30"
+      "last_triggered_at": "2026-08-30 14:35:24"
     },
     "btc-support-break": {
       "triggered": false,
@@ -79,7 +79,7 @@
     "ripple": {
       "label": "\ud83d\udfe1 HOLD / NEUTRAL",
       "status": "neutral",
-      "score": 0,
+      "score": -1,
       "rows": [
         [
           "Price vs. recent range",
@@ -103,8 +103,8 @@
         ],
         [
           "Stretch from long-term average",
-          "+9.5% vs its long-term average - not stretched either way",
-          0
+          "+10.3% above its long-term average - a bit stretched",
+          -1
         ],
         [
           "Leverage traders' bias",
@@ -116,12 +116,12 @@
       "id": "ripple",
       "symbol": "XRP",
       "name": "XRP",
-      "price": 1.4,
-      "pct_24h": 0.98323,
-      "pct_7d": -6.2,
+      "price": 1.41,
+      "pct_24h": 1.24319,
+      "pct_7d": -5.7,
       "support_30d": 0.9927072784932938,
       "resistance_30d": 1.52050482788377,
-      "as_of": "2026-08-30 13:35:20",
+      "as_of": "2026-08-30 14:35:24",
       "stale": false
     },
     "solana": {
@@ -1519,7 +1519,7 @@
     "pump-fun": {
       "label": "\ud83d\udd34 DISTRIBUTION ZONE",
       "status": "bearish",
-      "score": -5,
+      "score": -6,
       "rows": [
         [
           "Price vs. recent range",
@@ -1538,12 +1538,12 @@
         ],
         [
           "Recent trend",
-          "Chopping sideways - no clear trend",
-          0
+          "Trending down - avoid catching a falling knife",
+          -1
         ],
         [
           "Stretch from long-term average",
-          "+140.7% above its long-term average - very stretched",
+          "+142.3% above its long-term average - very stretched",
           -2
         ],
         [
@@ -1556,12 +1556,12 @@
       "id": "pump-fun",
       "symbol": "PUMP",
       "name": "Pump.fun",
-      "price": 0.00484664,
-      "pct_24h": 4.73345,
-      "pct_7d": -6.8,
+      "price": 0.00488037,
+      "pct_24h": 4.21476,
+      "pct_7d": -8.0,
       "support_30d": 0.002083220020057682,
       "resistance_30d": 0.0052249885406471875,
-      "as_of": "2026-08-30 12:40:24",
+      "as_of": "2026-08-30 14:35:24",
       "stale": false
     },
     "venice-token": {
@@ -2757,11 +2757,11 @@
       "symbol": "MORPHO",
       "name": "Morpho",
       "price": 2.49,
-      "pct_24h": 2.66585,
+      "pct_24h": 2.56779,
       "pct_7d": 2.7,
       "support_30d": 1.8400586135640542,
       "resistance_30d": 2.9026212482639075,
-      "as_of": "2026-08-30 14:27:41",
+      "as_of": "2026-08-30 14:35:24",
       "stale": false
     },
     "memecore": {
@@ -3005,21 +3005,19 @@
       "stale": false
     }
   },
-  "_strong_buy_state": {
-    "15m:POL": true
-  },
+  "_strong_buy_state": {},
   "BTC": {
     "key": "BTC",
     "name": "Bitcoin",
     "emoji": "\u20bf",
-    "price": 78840,
+    "price": 78894,
     "high_24h": 78945,
     "low_24h": 77815,
-    "pct_24h": 1.46565,
+    "pct_24h": 1.54387,
     "pct_7d": 2.2,
     "pct_30d": 23.9,
-    "sma50": 67305.73438403563,
-    "sma200": 69349.42315334996,
+    "sma50": 67306.68633713378,
+    "sma200": 69349.6611416245,
     "support_30d": 62772.57726413174,
     "resistance_30d": 80268.37474707834,
     "mark_price": 77570.0,
@@ -3034,14 +3032,14 @@
     "key": "ETH",
     "name": "Ethereum",
     "emoji": "\u039e",
-    "price": 2475.89,
+    "price": 2477.73,
     "high_24h": 2476.67,
     "low_24h": 2442.41,
-    "pct_24h": 1.6286,
+    "pct_24h": 1.70573,
     "pct_7d": 2.1,
     "pct_30d": 31.7,
-    "sma50": 2018.500430174328,
-    "sma200": 2022.309742045781,
+    "sma50": 2018.544417879773,
+    "sma200": 2022.3207389721422,
     "support_30d": 1843.443563411847,
     "resistance_30d": 2514.967577695514,
     "mark_price": 2433.03,
