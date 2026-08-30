@@ -4,7 +4,7 @@
   "_alerts_state": {
     "btc-resistance-break": {
       "triggered": true,
-      "last_triggered_at": "2026-08-30 19:20:29"
+      "last_triggered_at": "2026-08-30 19:25:24"
     },
     "btc-support-break": {
       "triggered": false,
@@ -1903,11 +1903,11 @@
     "mantle": {
       "label": "\ud83d\udfe1 HOLD / NEUTRAL",
       "status": "neutral",
-      "score": 0,
+      "score": 1,
       "rows": [
         [
           "Price vs. recent range",
-          "Near its 30-day high (~$0.5781) - less room to run",
+          "Near its 30-day high (~$0.5829) - less room to run",
           -1
         ],
         [
@@ -1922,12 +1922,12 @@
         ],
         [
           "Recent trend",
-          "Chopping sideways - no clear trend",
-          0
+          "Trending up steadily - healthy",
+          1
         ],
         [
           "Stretch from long-term average",
-          "-4.3% vs its long-term average - not stretched either way",
+          "-4.0% vs its long-term average - not stretched either way",
           0
         ],
         [
@@ -1940,12 +1940,12 @@
       "id": "mantle",
       "symbol": "MNT",
       "name": "Mantle",
-      "price": 0.580882,
-      "pct_24h": 11.91495,
-      "pct_7d": 6.8,
+      "price": 0.582949,
+      "pct_24h": 12.23318,
+      "pct_7d": 11.4,
       "support_30d": 0.39455109836509417,
-      "resistance_30d": 0.5780941475480923,
-      "as_of": "2026-08-30 18:55:18",
+      "resistance_30d": 0.5829485913967797,
+      "as_of": "2026-08-30 19:25:24",
       "stale": false
     },
     "polkadot": {
@@ -2084,12 +2084,12 @@
       "id": "pi-network",
       "symbol": "PI",
       "name": "Pi Network",
-      "price": 0.091556,
-      "pct_24h": -0.41138,
-      "pct_7d": 0.1,
+      "price": 0.091568,
+      "pct_24h": -0.41049,
+      "pct_7d": 0.6,
       "support_30d": 0.08279922535306347,
       "resistance_30d": 0.09762045155043195,
-      "as_of": "2026-08-30 18:45:24",
+      "as_of": "2026-08-30 19:25:24",
       "stale": false
     },
     "ondo-finance": {
@@ -2455,7 +2455,7 @@
         ],
         [
           "Stretch from long-term average",
-          "+14.1% above its long-term average - a bit stretched",
+          "+16.5% above its long-term average - a bit stretched",
           -1
         ],
         [
@@ -2468,12 +2468,12 @@
       "id": "near",
       "symbol": "NEAR",
       "name": "NEAR Protocol",
-      "price": 1.87,
-      "pct_24h": 1.77717,
-      "pct_7d": -3.9,
+      "price": 1.91,
+      "pct_24h": 2.83508,
+      "pct_7d": -2.2,
       "support_30d": 1.5879597131538,
       "resistance_30d": 2.0141495518834596,
-      "as_of": "2026-08-30 16:05:22",
+      "as_of": "2026-08-30 19:25:24",
       "stale": false
     },
     "quant-network": {
@@ -3058,14 +3058,14 @@
     "key": "BTC",
     "name": "Bitcoin",
     "emoji": "\u20bf",
-    "price": 78966,
+    "price": 78950,
     "high_24h": 79347,
     "low_24h": 77963,
-    "pct_24h": 0.88898,
+    "pct_24h": 0.8697,
     "pct_7d": 2.4,
     "pct_30d": 25.1,
-    "sma50": 67308.5801694397,
-    "sma200": 69350.13459970098,
+    "sma50": 67307.02204401628,
+    "sma200": 69349.74506834512,
     "support_30d": 62772.57726413174,
     "resistance_30d": 80268.37474707834,
     "mark_price": 77570.0,
@@ -3080,14 +3080,14 @@
     "key": "ETH",
     "name": "Ethereum",
     "emoji": "\u039e",
-    "price": 2509.04,
+    "price": 2507.13,
     "high_24h": 2531.35,
     "low_24h": 2449.42,
-    "pct_24h": 2.14585,
+    "pct_24h": 1.98723,
     "pct_7d": 2.9,
     "pct_30d": 34.0,
-    "sma50": 2019.1826401098556,
-    "sma200": 2022.4802945296628,
+    "sma50": 2019.1258465342846,
+    "sma200": 2022.4660961357702,
     "support_30d": 1843.443563411847,
     "resistance_30d": 2514.967577695514,
     "mark_price": 2433.03,
