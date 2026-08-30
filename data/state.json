@@ -655,7 +655,7 @@
     "cardano": {
       "label": "\ud83d\udfe1 HOLD / NEUTRAL",
       "status": "neutral",
-      "score": 0,
+      "score": -1,
       "rows": [
         [
           "Price vs. recent range",
@@ -679,8 +679,8 @@
         ],
         [
           "Stretch from long-term average",
-          "-11.8% vs its long-term average - not stretched either way",
-          0
+          "-15.3% below its long-term average - confirmed downtrend",
+          -1
         ],
         [
           "Leverage traders' bias",
@@ -692,12 +692,12 @@
       "id": "cardano",
       "symbol": "ADA",
       "name": "Cardano",
-      "price": 0.198228,
-      "pct_24h": -1.57357,
-      "pct_7d": -11.2,
+      "price": 0.190359,
+      "pct_24h": -5.49729,
+      "pct_7d": -12.7,
       "support_30d": 0.1741249817054162,
       "resistance_30d": 0.2291047455940254,
-      "as_of": "2026-08-30 22:50:27",
+      "as_of": "2026-08-30 23:50:31",
       "stale": false
     },
     "stellar": {
@@ -1106,13 +1106,13 @@
         ],
         [
           "Recent trend",
-          "Chopping sideways - no clear trend",
-          0
+          "Trending down - avoid catching a falling knife",
+          -1
         ],
         [
           "Stretch from long-term average",
-          "+12.1% above its long-term average - a bit stretched",
-          -1
+          "+8.6% vs its long-term average - not stretched either way",
+          0
         ],
         [
           "Leverage traders' bias",
@@ -1124,12 +1124,12 @@
       "id": "polygon-ecosystem-token",
       "symbol": "POL",
       "name": "POL (ex-MATIC)",
-      "price": 0.09977,
-      "pct_24h": -2.49427,
-      "pct_7d": -6.8,
+      "price": 0.096594,
+      "pct_24h": -9.47513,
+      "pct_7d": -9.4,
       "support_30d": 0.07164913253149428,
       "resistance_30d": 0.12250456198546959,
-      "as_of": "2026-08-30 20:05:21",
+      "as_of": "2026-08-30 23:50:31",
       "stale": false
     },
     "blackrock-usd-institutional-digital-liquidity-fund": {
@@ -2839,7 +2839,7 @@
         ],
         [
           "Stretch from long-term average",
-          "+28.5% above its long-term average - a bit stretched",
+          "+24.6% above its long-term average - a bit stretched",
           -1
         ],
         [
@@ -2852,12 +2852,12 @@
       "id": "aave",
       "symbol": "AAVE",
       "name": "Aave",
-      "price": 125.13,
-      "pct_24h": 0.01129,
-      "pct_7d": -9.7,
+      "price": 121.22,
+      "pct_24h": -4.119,
+      "pct_7d": -12.9,
       "support_30d": 85.94219943917633,
       "resistance_30d": 141.53047916466082,
-      "as_of": "2026-08-30 22:20:27",
+      "as_of": "2026-08-30 23:50:31",
       "stale": false
     },
     "okb": {
@@ -3053,21 +3053,19 @@
       "stale": false
     }
   },
-  "_strong_buy_state": {
-    "1h:MORPHO": true
-  },
+  "_strong_buy_state": {},
   "BTC": {
     "key": "BTC",
     "name": "Bitcoin",
     "emoji": "\u20bf",
-    "price": 77360,
+    "price": 77162,
     "high_24h": 79347,
     "low_24h": 77963,
-    "pct_24h": -1.12751,
+    "pct_24h": -1.41652,
     "pct_7d": 0.8,
     "pct_30d": 24.8,
-    "sma50": 67276.96876726973,
-    "sma200": 69342.23174915848,
+    "sma50": 67272.0375043879,
+    "sma200": 69340.99893343802,
     "support_30d": 62772.57726413174,
     "resistance_30d": 80268.37474707834,
     "mark_price": 78489.6,
@@ -3082,14 +3080,14 @@
     "key": "ETH",
     "name": "Ethereum",
     "emoji": "\u039e",
-    "price": 2409.58,
+    "price": 2395.45,
     "high_24h": 2531.35,
     "low_24h": 2451.95,
-    "pct_24h": -1.9236,
+    "pct_24h": -2.58501,
     "pct_7d": 0.1,
     "pct_30d": 32.9,
-    "sma50": 2017.2014998278662,
-    "sma200": 2021.9850094591654,
+    "sma50": 2016.901887355199,
+    "sma200": 2021.9101063409987,
     "support_30d": 1843.443563411847,
     "resistance_30d": 2514.967577695514,
     "mark_price": 2474.04,
