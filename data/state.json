@@ -4,7 +4,7 @@
   "_alerts_state": {
     "btc-resistance-break": {
       "triggered": true,
-      "last_triggered_at": "2026-08-30 15:35:19"
+      "last_triggered_at": "2026-08-30 15:40:23"
     },
     "btc-support-break": {
       "triggered": false,
@@ -212,12 +212,12 @@
       "id": "tron",
       "symbol": "TRX",
       "name": "TRON",
-      "price": 0.340349,
-      "pct_24h": 0.62116,
-      "pct_7d": -0.9,
+      "price": 0.34023,
+      "pct_24h": 0.59135,
+      "pct_7d": -1.1,
       "support_30d": 0.326482826227484,
       "resistance_30d": 0.3447899585776834,
-      "as_of": "2026-08-30 14:40:26",
+      "as_of": "2026-08-30 15:40:23",
       "stale": false
     },
     "figure-heloc": {
@@ -2564,12 +2564,12 @@
       "id": "tether-gold",
       "symbol": "XAUT",
       "name": "Tether Gold",
-      "price": 4454.11,
-      "pct_24h": -0.06624,
+      "price": 4455.41,
+      "pct_24h": -0.02849,
       "pct_7d": -2.8,
       "support_30d": 4040.271654009323,
       "resistance_30d": 4662.510537821146,
-      "as_of": "2026-08-30 15:20:26",
+      "as_of": "2026-08-30 15:40:23",
       "stale": false
     },
     "bitway": {
@@ -3049,23 +3049,25 @@
       "pct_7d": -1.7,
       "support_30d": 1.2145868446069132,
       "resistance_30d": 1.2357112219340618,
-      "as_of": "2026-08-30 15:25:18",
+      "as_of": "2026-08-30 15:40:23",
       "stale": false
     }
   },
-  "_strong_buy_state": {},
+  "_strong_buy_state": {
+    "15m:TRX": true
+  },
   "BTC": {
     "key": "BTC",
     "name": "Bitcoin",
     "emoji": "\u20bf",
-    "price": 78801,
+    "price": 78793,
     "high_24h": 78945,
     "low_24h": 77856,
-    "pct_24h": 1.22912,
+    "pct_24h": 1.1699,
     "pct_7d": 1.7,
     "pct_30d": 24.6,
-    "sma50": 67304.97624016536,
-    "sma200": 69349.23361738239,
+    "sma50": 67304.3928886944,
+    "sma200": 69349.08777951465,
     "support_30d": 62772.57726413174,
     "resistance_30d": 80268.37474707834,
     "mark_price": 77570.0,
@@ -3080,14 +3082,14 @@
     "key": "ETH",
     "name": "Ethereum",
     "emoji": "\u039e",
-    "price": 2478.62,
+    "price": 2477.27,
     "high_24h": 2478.48,
     "low_24h": 2444.63,
-    "pct_24h": 1.44928,
+    "pct_24h": 1.32547,
     "pct_7d": 0.7,
     "pct_30d": 32.8,
-    "sma50": 2018.5689997866416,
-    "sma200": 2022.3268844488591,
+    "sma50": 2018.529298104203,
+    "sma200": 2022.3169590282498,
     "support_30d": 1843.443563411847,
     "resistance_30d": 2514.967577695514,
     "mark_price": 2433.03,
