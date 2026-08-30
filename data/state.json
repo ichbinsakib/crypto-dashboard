@@ -4,7 +4,7 @@
   "_alerts_state": {
     "btc-resistance-break": {
       "triggered": true,
-      "last_triggered_at": "2026-08-30 19:50:25"
+      "last_triggered_at": "2026-08-30 19:55:17"
     },
     "btc-support-break": {
       "triggered": false,
@@ -125,9 +125,9 @@
       "stale": false
     },
     "solana": {
-      "label": "\ud83d\udd34 CAUTION - REDUCE NEW BUYS",
-      "status": "bearish",
-      "score": -2,
+      "label": "\ud83d\udfe1 HOLD / NEUTRAL",
+      "status": "neutral",
+      "score": -1,
       "rows": [
         [
           "Price vs. recent range",
@@ -151,8 +151,8 @@
         ],
         [
           "Stretch from long-term average",
-          "+30.4% above its long-term average - very stretched",
-          -2
+          "+29.0% above its long-term average - a bit stretched",
+          -1
         ],
         [
           "Leverage traders' bias",
@@ -160,16 +160,16 @@
           0
         ]
       ],
-      "plain": "Getting risky - I'd hold off on new buys until this cools down.",
+      "plain": "No real edge either way right now - fine to just wait and watch.",
       "id": "solana",
       "symbol": "SOL",
       "name": "Solana",
-      "price": 106.75,
-      "pct_24h": 1.55211,
+      "price": 105.58,
+      "pct_24h": 0.20623,
       "pct_7d": 12.2,
       "support_30d": 71.89412540165443,
       "resistance_30d": 109.17730597799657,
-      "as_of": "2026-08-30 19:00:35",
+      "as_of": "2026-08-30 19:55:17",
       "stale": false
     },
     "tron": {
@@ -343,7 +343,7 @@
         ],
         [
           "Stretch from long-term average",
-          "-3.1% vs its long-term average - not stretched either way",
+          "-3.8% vs its long-term average - not stretched either way",
           0
         ],
         [
@@ -356,12 +356,12 @@
       "id": "dogecoin",
       "symbol": "DOGE",
       "name": "Dogecoin",
-      "price": 0.086346,
-      "pct_24h": 1.39052,
-      "pct_7d": -7.4,
+      "price": 0.085705,
+      "pct_24h": 0.53969,
+      "pct_7d": -6.7,
       "support_30d": 0.06901954790818378,
       "resistance_30d": 0.09337940032634065,
-      "as_of": "2026-08-30 18:35:23",
+      "as_of": "2026-08-30 19:55:17",
       "stale": false
     },
     "zcash": {
@@ -2647,7 +2647,7 @@
         ],
         [
           "Stretch from long-term average",
-          "-21.0% below its long-term average - confirmed downtrend",
+          "-21.2% below its long-term average - confirmed downtrend",
           -1
         ],
         [
@@ -2660,12 +2660,12 @@
       "id": "world-liberty-financial",
       "symbol": "WLFI",
       "name": "World Liberty Financial",
-      "price": 0.058023,
-      "pct_24h": 0.33191,
+      "price": 0.057852,
+      "pct_24h": 0.21759,
       "pct_7d": -2.9,
       "support_30d": 0.051301304477199876,
       "resistance_30d": 0.06254770952093733,
-      "as_of": "2026-08-30 19:30:30",
+      "as_of": "2026-08-30 19:55:17",
       "stale": false
     },
     "pax-gold": {
@@ -3053,19 +3053,21 @@
       "stale": false
     }
   },
-  "_strong_buy_state": {},
+  "_strong_buy_state": {
+    "15m:SOL": true
+  },
   "BTC": {
     "key": "BTC",
     "name": "Bitcoin",
     "emoji": "\u20bf",
-    "price": 78791,
+    "price": 78820,
     "high_24h": 79347,
     "low_24h": 77963,
-    "pct_24h": 0.70286,
+    "pct_24h": 0.76632,
     "pct_7d": 2.4,
     "pct_30d": 25.1,
-    "sma50": 67304.82457745718,
-    "sma200": 69349.19570170534,
+    "sma50": 67305.22913603089,
+    "sma200": 69349.29684134877,
     "support_30d": 62772.57726413174,
     "resistance_30d": 80268.37474707834,
     "mark_price": 77570.0,
@@ -3080,14 +3082,14 @@
     "key": "ETH",
     "name": "Ethereum",
     "emoji": "\u039e",
-    "price": 2500.13,
+    "price": 2500.05,
     "high_24h": 2531.35,
     "low_24h": 2449.42,
-    "pct_24h": 1.84421,
+    "pct_24h": 1.89244,
     "pct_7d": 2.9,
     "pct_30d": 34.0,
-    "sma50": 2018.99974963757,
-    "sma200": 2022.4345719115913,
+    "sma50": 2018.9912796686417,
+    "sma200": 2022.4324544193594,
     "support_30d": 1843.443563411847,
     "resistance_30d": 2514.967577695514,
     "mark_price": 2433.03,
