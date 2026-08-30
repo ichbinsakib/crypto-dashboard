@@ -4,7 +4,7 @@
   "_alerts_state": {
     "btc-resistance-break": {
       "triggered": true,
-      "last_triggered_at": "2026-08-30 14:45:26"
+      "last_triggered_at": "2026-08-30 14:50:26"
     },
     "btc-support-break": {
       "triggered": false,
@@ -151,7 +151,7 @@
         ],
         [
           "Stretch from long-term average",
-          "+30.9% above its long-term average - very stretched",
+          "+30.5% above its long-term average - very stretched",
           -2
         ],
         [
@@ -164,12 +164,12 @@
       "id": "solana",
       "symbol": "SOL",
       "name": "Solana",
-      "price": 107.15,
-      "pct_24h": 3.02931,
+      "price": 106.79,
+      "pct_24h": 1.58851,
       "pct_7d": 13.4,
       "support_30d": 71.89412540165443,
       "resistance_30d": 109.17730597799657,
-      "as_of": "2026-08-30 14:15:27",
+      "as_of": "2026-08-30 14:50:26",
       "stale": false
     },
     "tron": {
@@ -1111,7 +1111,7 @@
         ],
         [
           "Stretch from long-term average",
-          "+15.9% above its long-term average - a bit stretched",
+          "+15.8% above its long-term average - a bit stretched",
           -1
         ],
         [
@@ -1124,12 +1124,12 @@
       "id": "polygon-ecosystem-token",
       "symbol": "POL",
       "name": "POL (ex-MATIC)",
-      "price": 0.103121,
-      "pct_24h": -1.61933,
+      "price": 0.103077,
+      "pct_24h": -2.1577,
       "pct_7d": -3.2,
       "support_30d": 0.07164913253149428,
       "resistance_30d": 0.12250456198546959,
-      "as_of": "2026-08-30 14:30:30",
+      "as_of": "2026-08-30 14:50:26",
       "stale": false
     },
     "blackrock-usd-institutional-digital-liquidity-fund": {
@@ -1413,11 +1413,11 @@
       "symbol": "GT",
       "name": "Gate",
       "price": 8.13,
-      "pct_24h": 2.19124,
+      "pct_24h": 2.02833,
       "pct_7d": 5.7,
       "support_30d": 6.457783260010234,
       "resistance_30d": 8.231414132069085,
-      "as_of": "2026-08-30 14:00:39",
+      "as_of": "2026-08-30 14:50:26",
       "stale": false
     },
     "crypto-com-chain": {
@@ -3005,19 +3005,21 @@
       "stale": false
     }
   },
-  "_strong_buy_state": {},
+  "_strong_buy_state": {
+    "15m:POL": true
+  },
   "BTC": {
     "key": "BTC",
     "name": "Bitcoin",
     "emoji": "\u20bf",
-    "price": 78766,
+    "price": 78754,
     "high_24h": 78945,
     "low_24h": 77815,
-    "pct_24h": 1.07036,
+    "pct_24h": 0.92541,
     "pct_7d": 2.2,
     "pct_30d": 23.9,
-    "sma50": 67304.09442674805,
-    "sma200": 69349.01316402806,
+    "sma50": 67303.87746679866,
+    "sma200": 69348.95892404071,
     "support_30d": 62772.57726413174,
     "resistance_30d": 80268.37474707834,
     "mark_price": 77570.0,
@@ -3032,14 +3034,14 @@
     "key": "ETH",
     "name": "Ethereum",
     "emoji": "\u039e",
-    "price": 2475.73,
+    "price": 2475.78,
     "high_24h": 2476.67,
     "low_24h": 2442.41,
-    "pct_24h": 1.2734,
+    "pct_24h": 1.14765,
     "pct_7d": 2.1,
     "pct_30d": 31.7,
-    "sma50": 2018.5073923095897,
-    "sma200": 2022.3114825795963,
+    "sma50": 2018.508308243503,
+    "sma200": 2022.3117115630748,
     "support_30d": 1843.443563411847,
     "resistance_30d": 2514.967577695514,
     "mark_price": 2433.03,
