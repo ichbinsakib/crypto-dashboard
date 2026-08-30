@@ -4,7 +4,7 @@
   "_alerts_state": {
     "btc-resistance-break": {
       "triggered": true,
-      "last_triggered_at": "2026-08-30 15:20:26"
+      "last_triggered_at": "2026-08-30 15:25:18"
     },
     "btc-support-break": {
       "triggered": false,
@@ -125,9 +125,9 @@
       "stale": false
     },
     "solana": {
-      "label": "\ud83d\udd34 CAUTION - REDUCE NEW BUYS",
-      "status": "bearish",
-      "score": -2,
+      "label": "\ud83d\udfe1 HOLD / NEUTRAL",
+      "status": "neutral",
+      "score": -1,
       "rows": [
         [
           "Price vs. recent range",
@@ -151,8 +151,8 @@
         ],
         [
           "Stretch from long-term average",
-          "+30.5% above its long-term average - very stretched",
-          -2
+          "+30.0% above its long-term average - a bit stretched",
+          -1
         ],
         [
           "Leverage traders' bias",
@@ -160,16 +160,16 @@
           0
         ]
       ],
-      "plain": "Getting risky - I'd hold off on new buys until this cools down.",
+      "plain": "No real edge either way right now - fine to just wait and watch.",
       "id": "solana",
       "symbol": "SOL",
       "name": "Solana",
-      "price": 106.79,
-      "pct_24h": 1.58851,
-      "pct_7d": 13.4,
+      "price": 106.38,
+      "pct_24h": 1.20932,
+      "pct_7d": 12.0,
       "support_30d": 71.89412540165443,
       "resistance_30d": 109.17730597799657,
-      "as_of": "2026-08-30 14:50:26",
+      "as_of": "2026-08-30 15:25:18",
       "stale": false
     },
     "tron": {
@@ -1639,7 +1639,7 @@
         ],
         [
           "Stretch from long-term average",
-          "-1.4% vs its long-term average - not stretched either way",
+          "-1.1% vs its long-term average - not stretched either way",
           0
         ],
         [
@@ -1652,12 +1652,12 @@
       "id": "litecoin",
       "symbol": "LTC",
       "name": "Litecoin",
-      "price": 49.81,
-      "pct_24h": 1.30686,
+      "price": 49.95,
+      "pct_24h": 1.67233,
       "pct_7d": -5.9,
       "support_30d": 43.806923130603906,
       "resistance_30d": 53.12964707139583,
-      "as_of": "2026-08-30 15:15:23",
+      "as_of": "2026-08-30 15:25:18",
       "stale": false
     },
     "bitget-token": {
@@ -3049,25 +3049,23 @@
       "pct_7d": -1.7,
       "support_30d": 1.2145868446069132,
       "resistance_30d": 1.2357112219340618,
-      "as_of": "2026-08-30 15:00:39",
+      "as_of": "2026-08-30 15:25:18",
       "stale": false
     }
   },
-  "_strong_buy_state": {
-    "15m:NEAR": true
-  },
+  "_strong_buy_state": {},
   "BTC": {
     "key": "BTC",
     "name": "Bitcoin",
     "emoji": "\u20bf",
-    "price": 78736,
+    "price": 78731,
     "high_24h": 78945,
     "low_24h": 77856,
-    "pct_24h": 1.09938,
+    "pct_24h": 0.96586,
     "pct_7d": 1.7,
     "pct_30d": 24.6,
-    "sma50": 67303.37020173979,
-    "sma200": 69348.83210777599,
+    "sma50": 67303.22322419245,
+    "sma200": 69348.79536338916,
     "support_30d": 62772.57726413174,
     "resistance_30d": 80268.37474707834,
     "mark_price": 77570.0,
@@ -3082,14 +3080,14 @@
     "key": "ETH",
     "name": "Ethereum",
     "emoji": "\u039e",
-    "price": 2476.5,
+    "price": 2476.7,
     "high_24h": 2478.48,
     "low_24h": 2444.63,
-    "pct_24h": 1.36493,
+    "pct_24h": 1.2492,
     "pct_7d": 0.7,
     "pct_30d": 32.8,
-    "sma50": 2018.5304439801484,
-    "sma200": 2022.3172454972362,
+    "sma50": 2018.5252781184913,
+    "sma200": 2022.3159540318218,
     "support_30d": 1843.443563411847,
     "resistance_30d": 2514.967577695514,
     "mark_price": 2433.03,
