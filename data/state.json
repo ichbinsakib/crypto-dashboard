@@ -4,7 +4,7 @@
   "_alerts_state": {
     "btc-resistance-break": {
       "triggered": true,
-      "last_triggered_at": "2026-08-30 15:00:39"
+      "last_triggered_at": "2026-08-30 15:05:21"
     },
     "btc-support-break": {
       "triggered": false,
@@ -1519,7 +1519,7 @@
     "pump-fun": {
       "label": "\ud83d\udd34 DISTRIBUTION ZONE",
       "status": "bearish",
-      "score": -6,
+      "score": -5,
       "rows": [
         [
           "Price vs. recent range",
@@ -1538,12 +1538,12 @@
         ],
         [
           "Recent trend",
-          "Trending down - avoid catching a falling knife",
-          -1
+          "Chopping sideways - no clear trend",
+          0
         ],
         [
           "Stretch from long-term average",
-          "+142.3% above its long-term average - very stretched",
+          "+140.5% above its long-term average - very stretched",
           -2
         ],
         [
@@ -1556,12 +1556,12 @@
       "id": "pump-fun",
       "symbol": "PUMP",
       "name": "Pump.fun",
-      "price": 0.00488037,
-      "pct_24h": 4.21476,
-      "pct_7d": -8.0,
+      "price": 0.00484227,
+      "pct_24h": 0.9789,
+      "pct_7d": -7.6,
       "support_30d": 0.002083220020057682,
       "resistance_30d": 0.0052249885406471875,
-      "as_of": "2026-08-30 14:35:24",
+      "as_of": "2026-08-30 15:05:21",
       "stale": false
     },
     "venice-token": {
@@ -1999,11 +1999,11 @@
     "uniswap": {
       "label": "\ud83d\udd34 DISTRIBUTION ZONE",
       "status": "bearish",
-      "score": -8,
+      "score": -5,
       "rows": [
         [
           "Price vs. recent range",
-          "Near its 30-day high (~$5.24) - less room to run",
+          "Near its 30-day high (~$5.16) - less room to run",
           -1
         ],
         [
@@ -2018,12 +2018,12 @@
         ],
         [
           "Recent trend",
-          "Shooting straight up - classic blow-off top risk, don't chase",
-          -2
+          "Trending up steadily - healthy",
+          1
         ],
         [
           "Stretch from long-term average",
-          "+49.3% above its long-term average - very stretched",
+          "+46.7% above its long-term average - very stretched",
           -2
         ],
         [
@@ -2036,12 +2036,12 @@
       "id": "uniswap",
       "symbol": "UNI",
       "name": "Uniswap",
-      "price": 5.24,
-      "pct_24h": 19.05985,
-      "pct_7d": 21.0,
+      "price": 5.15,
+      "pct_24h": 14.83437,
+      "pct_7d": 12.9,
       "support_30d": 3.1971416665971573,
-      "resistance_30d": 5.2423769491240595,
-      "as_of": "2026-08-30 13:55:19",
+      "resistance_30d": 5.156616766658962,
+      "as_of": "2026-08-30 15:05:21",
       "stale": false
     },
     "pi-network": {
@@ -2839,7 +2839,7 @@
         ],
         [
           "Stretch from long-term average",
-          "+29.8% above its long-term average - a bit stretched",
+          "+29.7% above its long-term average - a bit stretched",
           -1
         ],
         [
@@ -2852,12 +2852,12 @@
       "id": "aave",
       "symbol": "AAVE",
       "name": "Aave",
-      "price": 126.33,
-      "pct_24h": 1.26869,
+      "price": 126.25,
+      "pct_24h": 1.73195,
       "pct_7d": -10.4,
       "support_30d": 85.94219943917633,
       "resistance_30d": 141.53047916466082,
-      "as_of": "2026-08-30 15:00:39",
+      "as_of": "2026-08-30 15:05:21",
       "stale": false
     },
     "okb": {
@@ -3053,19 +3053,21 @@
       "stale": false
     }
   },
-  "_strong_buy_state": {},
+  "_strong_buy_state": {
+    "1h:PUMP": true
+  },
   "BTC": {
     "key": "BTC",
     "name": "Bitcoin",
     "emoji": "\u20bf",
-    "price": 78795,
+    "price": 78709,
     "high_24h": 78945,
-    "low_24h": 77815,
-    "pct_24h": 0.9903,
-    "pct_7d": 2.2,
-    "pct_30d": 23.9,
-    "sma50": 67304.279991277,
-    "sma200": 69349.0595551603,
+    "low_24h": 77856,
+    "pct_24h": 1.06463,
+    "pct_7d": 1.7,
+    "pct_30d": 24.6,
+    "sma50": 67303.48955329198,
+    "sma200": 69348.86194566404,
     "support_30d": 62772.57726413174,
     "resistance_30d": 80268.37474707834,
     "mark_price": 77570.0,
@@ -3080,14 +3082,14 @@
     "key": "ETH",
     "name": "Ethereum",
     "emoji": "\u039e",
-    "price": 2477.22,
-    "high_24h": 2476.67,
-    "low_24h": 2442.41,
-    "pct_24h": 1.1632,
-    "pct_7d": 2.1,
-    "pct_30d": 31.7,
-    "sma50": 2018.519843591534,
-    "sma200": 2022.3145954000825,
+    "price": 2475.14,
+    "high_24h": 2478.48,
+    "low_24h": 2444.63,
+    "pct_24h": 1.31036,
+    "pct_7d": 0.7,
+    "pct_30d": 32.8,
+    "sma50": 2018.499207909347,
+    "sma200": 2022.3094364795356,
     "support_30d": 1843.443563411847,
     "resistance_30d": 2514.967577695514,
     "mark_price": 2433.03,
