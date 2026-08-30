@@ -4,7 +4,7 @@
   "_alerts_state": {
     "btc-resistance-break": {
       "triggered": true,
-      "last_triggered_at": "2026-08-30 20:00:37"
+      "last_triggered_at": "2026-08-30 20:05:21"
     },
     "btc-support-break": {
       "triggered": false,
@@ -611,7 +611,7 @@
       "rows": [
         [
           "Price vs. recent range",
-          "Near its 30-day high (~$488.21) - less room to run",
+          "Near its 30-day high (~$489.78) - less room to run",
           -1
         ],
         [
@@ -631,7 +631,7 @@
         ],
         [
           "Stretch from long-term average",
-          "+36.8% above its long-term average - very stretched",
+          "+37.2% above its long-term average - very stretched",
           -2
         ],
         [
@@ -644,12 +644,12 @@
       "id": "monero",
       "symbol": "XMR",
       "name": "Monero",
-      "price": 488.21,
-      "pct_24h": 5.31393,
-      "pct_7d": 16.1,
+      "price": 489.78,
+      "pct_24h": 5.76917,
+      "pct_7d": 14.4,
       "support_30d": 351.07100922807496,
-      "resistance_30d": 488.21413791858737,
-      "as_of": "2026-08-30 19:05:24",
+      "resistance_30d": 489.7752864295744,
+      "as_of": "2026-08-30 20:05:21",
       "stale": false
     },
     "cardano": {
@@ -1111,7 +1111,7 @@
         ],
         [
           "Stretch from long-term average",
-          "+10.9% above its long-term average - a bit stretched",
+          "+12.1% above its long-term average - a bit stretched",
           -1
         ],
         [
@@ -1124,12 +1124,12 @@
       "id": "polygon-ecosystem-token",
       "symbol": "POL",
       "name": "POL (ex-MATIC)",
-      "price": 0.098683,
-      "pct_24h": -4.93396,
-      "pct_7d": -7.7,
+      "price": 0.09977,
+      "pct_24h": -2.49427,
+      "pct_7d": -6.8,
       "support_30d": 0.07164913253149428,
       "resistance_30d": 0.12250456198546959,
-      "as_of": "2026-08-30 18:00:36",
+      "as_of": "2026-08-30 20:05:21",
       "stale": false
     },
     "blackrock-usd-institutional-digital-liquidity-fund": {
@@ -2573,9 +2573,9 @@
       "stale": false
     },
     "bitway": {
-      "label": "\ud83d\udd34 CAUTION - REDUCE NEW BUYS",
-      "status": "bearish",
-      "score": -2,
+      "label": "\ud83d\udfe1 HOLD / NEUTRAL",
+      "status": "neutral",
+      "score": -1,
       "rows": [
         [
           "Price vs. recent range",
@@ -2594,8 +2594,8 @@
         ],
         [
           "Recent trend",
-          "Trending down - avoid catching a falling knife",
-          -1
+          "Chopping sideways - no clear trend",
+          0
         ],
         [
           "Stretch from long-term average",
@@ -2608,16 +2608,16 @@
           0
         ]
       ],
-      "plain": "Getting risky - I'd hold off on new buys until this cools down.",
+      "plain": "No real edge either way right now - fine to just wait and watch.",
       "id": "bitway",
       "symbol": "BTW",
       "name": "Bitway",
-      "price": 0.398594,
-      "pct_24h": -4.31565,
-      "pct_7d": -9.5,
+      "price": 0.406908,
+      "pct_24h": -6.947,
+      "pct_7d": -6.7,
       "support_30d": 0.08014613119704155,
       "resistance_30d": 0.48261706732469345,
-      "as_of": "2026-08-30 19:20:29",
+      "as_of": "2026-08-30 20:05:21",
       "stale": false
     },
     "world-liberty-financial": {
@@ -3053,21 +3053,19 @@
       "stale": false
     }
   },
-  "_strong_buy_state": {
-    "1h:HYPE": true
-  },
+  "_strong_buy_state": {},
   "BTC": {
     "key": "BTC",
     "name": "Bitcoin",
     "emoji": "\u20bf",
-    "price": 78828,
+    "price": 78878,
     "high_24h": 79347,
     "low_24h": 77963,
-    "pct_24h": 0.83791,
-    "pct_7d": 2.4,
+    "pct_24h": 0.81823,
+    "pct_7d": 2.0,
     "pct_30d": 25.1,
-    "sma50": 67305.72322466239,
-    "sma200": 69349.42036350665,
+    "sma50": 67306.43380198954,
+    "sma200": 69349.59800783843,
     "support_30d": 62772.57726413174,
     "resistance_30d": 80268.37474707834,
     "mark_price": 77570.0,
@@ -3082,14 +3080,14 @@
     "key": "ETH",
     "name": "Ethereum",
     "emoji": "\u039e",
-    "price": 2500.27,
+    "price": 2505.44,
     "high_24h": 2531.35,
     "low_24h": 2449.42,
-    "pct_24h": 1.91952,
-    "pct_7d": 2.9,
-    "pct_30d": 34.0,
-    "sma50": 2019.0261307464657,
-    "sma200": 2022.4411671888154,
+    "pct_24h": 2.13185,
+    "pct_7d": 2.2,
+    "pct_30d": 33.8,
+    "sma50": 2019.1085282938657,
+    "sma200": 2022.4617665756655,
     "support_30d": 1843.443563411847,
     "resistance_30d": 2514.967577695514,
     "mark_price": 2433.03,
