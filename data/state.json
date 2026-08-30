@@ -751,7 +751,7 @@
     "kucoin-shares": {
       "label": "\ud83d\udfe1 HOLD / NEUTRAL",
       "status": "neutral",
-      "score": 0,
+      "score": 1,
       "rows": [
         [
           "Price vs. recent range",
@@ -770,12 +770,12 @@
         ],
         [
           "Recent trend",
-          "Trending down - avoid catching a falling knife",
-          -1
+          "Chopping sideways - no clear trend",
+          0
         ],
         [
           "Stretch from long-term average",
-          "-11.8% vs its long-term average - not stretched either way",
+          "-11.2% vs its long-term average - not stretched either way",
           0
         ],
         [
@@ -788,12 +788,12 @@
       "id": "kucoin-shares",
       "symbol": "KCS",
       "name": "KuCoin",
-      "price": 6.87,
-      "pct_24h": -0.63435,
-      "pct_7d": -8.2,
+      "price": 6.92,
+      "pct_24h": 0.33475,
+      "pct_7d": -6.8,
       "support_30d": 6.440026683855254,
       "resistance_30d": 7.8821382735057615,
-      "as_of": "2026-08-30 06:05:20",
+      "as_of": "2026-08-30 08:20:27",
       "stale": false
     },
     "hedera-hashgraph": {
@@ -1373,9 +1373,9 @@
       "stale": false
     },
     "gatechain-token": {
-      "label": "\ud83d\udd34 CAUTION - REDUCE NEW BUYS",
-      "status": "bearish",
-      "score": -2,
+      "label": "\ud83d\udfe1 HOLD / NEUTRAL",
+      "status": "neutral",
+      "score": -1,
       "rows": [
         [
           "Price vs. recent range",
@@ -1394,12 +1394,12 @@
         ],
         [
           "Recent trend",
-          "Chopping sideways - no clear trend",
-          0
+          "Trending up steadily - healthy",
+          1
         ],
         [
           "Stretch from long-term average",
-          "+17.2% above its long-term average - a bit stretched",
+          "+16.9% above its long-term average - a bit stretched",
           -1
         ],
         [
@@ -1408,16 +1408,16 @@
           0
         ]
       ],
-      "plain": "Getting risky - I'd hold off on new buys until this cools down.",
+      "plain": "No real edge either way right now - fine to just wait and watch.",
       "id": "gatechain-token",
       "symbol": "GT",
       "name": "Gate",
-      "price": 8.1,
-      "pct_24h": 2.79742,
-      "pct_7d": 7.4,
+      "price": 8.08,
+      "pct_24h": 3.25299,
+      "pct_7d": 8.6,
       "support_30d": 6.457783260010234,
       "resistance_30d": 8.231414132069085,
-      "as_of": "2026-08-30 07:30:34",
+      "as_of": "2026-08-30 08:20:27",
       "stale": false
     },
     "crypto-com-chain": {
@@ -2311,7 +2311,7 @@
         ],
         [
           "Stretch from long-term average",
-          "-11.8% vs its long-term average - not stretched either way",
+          "-11.1% vs its long-term average - not stretched either way",
           0
         ],
         [
@@ -2324,12 +2324,12 @@
       "id": "the-open-network",
       "symbol": "GRAM",
       "name": "Gram (prev. Toncoin)",
-      "price": 1.35,
-      "pct_24h": -0.30258,
-      "pct_7d": -6.6,
+      "price": 1.36,
+      "pct_24h": 0.45039,
+      "pct_7d": -6.3,
       "support_30d": 1.316580434471296,
       "resistance_30d": 1.4926762805297678,
-      "as_of": "2026-08-30 03:18:54",
+      "as_of": "2026-08-30 08:20:27",
       "stale": false
     },
     "sky": {
@@ -3010,14 +3010,14 @@
     "key": "BTC",
     "name": "Bitcoin",
     "emoji": "\u20bf",
-    "price": 78142,
+    "price": 78153,
     "high_24h": 78310,
     "low_24h": 77536,
-    "pct_24h": 0.80106,
+    "pct_24h": 0.79978,
     "pct_7d": 2.7,
     "pct_30d": 21.7,
-    "sma50": 67291.62628646578,
-    "sma200": 69345.8961289575,
+    "sma50": 67291.87298232412,
+    "sma200": 69345.95780292207,
     "support_30d": 62772.57726413174,
     "resistance_30d": 80268.37474707834,
     "mark_price": 77570.0,
@@ -3032,14 +3032,14 @@
     "key": "ETH",
     "name": "Ethereum",
     "emoji": "\u039e",
-    "price": 2456.45,
+    "price": 2457.67,
     "high_24h": 2466.12,
     "low_24h": 2432.11,
-    "pct_24h": 0.9517,
+    "pct_24h": 0.98466,
     "pct_7d": 2.8,
     "pct_30d": 29.2,
-    "sma50": 2018.1218212480942,
-    "sma200": 2022.2150898142227,
+    "sma50": 2018.1376846128958,
+    "sma200": 2022.2190556554228,
     "support_30d": 1843.443563411847,
     "resistance_30d": 2514.967577695514,
     "mark_price": 2433.03,
