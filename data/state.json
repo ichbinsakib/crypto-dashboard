@@ -4,7 +4,7 @@
   "_alerts_state": {
     "btc-resistance-break": {
       "triggered": true,
-      "last_triggered_at": "2026-08-30 15:25:18"
+      "last_triggered_at": "2026-08-30 15:30:31"
     },
     "btc-support-break": {
       "triggered": false,
@@ -1711,7 +1711,7 @@
     "sui": {
       "label": "\ud83d\udfe1 HOLD / NEUTRAL",
       "status": "neutral",
-      "score": 1,
+      "score": 0,
       "rows": [
         [
           "Price vs. recent range",
@@ -1730,12 +1730,12 @@
         ],
         [
           "Recent trend",
-          "Chopping sideways - no clear trend",
-          0
+          "Trending down - avoid catching a falling knife",
+          -1
         ],
         [
           "Stretch from long-term average",
-          "-13.4% vs its long-term average - not stretched either way",
+          "-13.6% vs its long-term average - not stretched either way",
           0
         ],
         [
@@ -1748,12 +1748,12 @@
       "id": "sui",
       "symbol": "SUI",
       "name": "Sui",
-      "price": 0.748252,
-      "pct_24h": 0.91194,
-      "pct_7d": -7.9,
+      "price": 0.74721,
+      "pct_24h": 0.28979,
+      "pct_7d": -9.7,
       "support_30d": 0.6514311908607086,
       "resistance_30d": 0.8499161763231283,
-      "as_of": "2026-08-30 14:40:26",
+      "as_of": "2026-08-30 15:30:31",
       "stale": false
     },
     "lighter": {
@@ -2023,7 +2023,7 @@
         ],
         [
           "Stretch from long-term average",
-          "+46.7% above its long-term average - very stretched",
+          "+47.3% above its long-term average - very stretched",
           -2
         ],
         [
@@ -2036,12 +2036,12 @@
       "id": "uniswap",
       "symbol": "UNI",
       "name": "Uniswap",
-      "price": 5.15,
-      "pct_24h": 14.83437,
+      "price": 5.17,
+      "pct_24h": 14.96293,
       "pct_7d": 12.9,
       "support_30d": 3.1971416665971573,
-      "resistance_30d": 5.156616766658962,
-      "as_of": "2026-08-30 15:05:21",
+      "resistance_30d": 5.162411299919491,
+      "as_of": "2026-08-30 15:30:31",
       "stale": false
     },
     "pi-network": {
@@ -2455,7 +2455,7 @@
         ],
         [
           "Stretch from long-term average",
-          "+14.1% above its long-term average - a bit stretched",
+          "+14.7% above its long-term average - a bit stretched",
           -1
         ],
         [
@@ -2468,12 +2468,12 @@
       "id": "near",
       "symbol": "NEAR",
       "name": "NEAR Protocol",
-      "price": 1.87,
-      "pct_24h": 1.16223,
+      "price": 1.88,
+      "pct_24h": 1.65264,
       "pct_7d": -5.3,
       "support_30d": 1.5879597131538,
       "resistance_30d": 2.0141495518834596,
-      "as_of": "2026-08-30 15:20:26",
+      "as_of": "2026-08-30 15:30:31",
       "stale": false
     },
     "quant-network": {
@@ -3053,19 +3053,21 @@
       "stale": false
     }
   },
-  "_strong_buy_state": {},
+  "_strong_buy_state": {
+    "15m:POL": true
+  },
   "BTC": {
     "key": "BTC",
     "name": "Bitcoin",
     "emoji": "\u20bf",
-    "price": 78731,
+    "price": 78799,
     "high_24h": 78945,
     "low_24h": 77856,
-    "pct_24h": 0.96586,
+    "pct_24h": 1.13014,
     "pct_7d": 1.7,
     "pct_30d": 24.6,
-    "sma50": 67303.22322419245,
-    "sma200": 69348.79536338916,
+    "sma50": 67304.46336675785,
+    "sma200": 69349.10539903051,
     "support_30d": 62772.57726413174,
     "resistance_30d": 80268.37474707834,
     "mark_price": 77570.0,
@@ -3080,14 +3082,14 @@
     "key": "ETH",
     "name": "Ethereum",
     "emoji": "\u039e",
-    "price": 2476.7,
+    "price": 2478.16,
     "high_24h": 2478.48,
     "low_24h": 2444.63,
-    "pct_24h": 1.2492,
+    "pct_24h": 1.32186,
     "pct_7d": 0.7,
     "pct_30d": 32.8,
-    "sma50": 2018.5252781184913,
-    "sma200": 2022.3159540318218,
+    "sma50": 2018.5333003007397,
+    "sma200": 2022.3179595773838,
     "support_30d": 1843.443563411847,
     "resistance_30d": 2514.967577695514,
     "mark_price": 2433.03,
