@@ -4,7 +4,7 @@
   "_alerts_state": {
     "btc-resistance-break": {
       "triggered": true,
-      "last_triggered_at": "2026-08-30 13:40:24"
+      "last_triggered_at": "2026-08-30 13:45:24"
     },
     "btc-support-break": {
       "triggered": false,
@@ -125,9 +125,9 @@
       "stale": false
     },
     "solana": {
-      "label": "\ud83d\udfe1 HOLD / NEUTRAL",
-      "status": "neutral",
-      "score": -1,
+      "label": "\ud83d\udd34 CAUTION - REDUCE NEW BUYS",
+      "status": "bearish",
+      "score": -2,
       "rows": [
         [
           "Price vs. recent range",
@@ -151,8 +151,8 @@
         ],
         [
           "Stretch from long-term average",
-          "+28.2% above its long-term average - a bit stretched",
-          -1
+          "+30.7% above its long-term average - very stretched",
+          -2
         ],
         [
           "Leverage traders' bias",
@@ -160,16 +160,16 @@
           0
         ]
       ],
-      "plain": "No real edge either way right now - fine to just wait and watch.",
+      "plain": "Getting risky - I'd hold off on new buys until this cools down.",
       "id": "solana",
       "symbol": "SOL",
       "name": "Solana",
-      "price": 104.87,
-      "pct_24h": 1.10751,
-      "pct_7d": 13.8,
+      "price": 106.99,
+      "pct_24h": 3.17911,
+      "pct_7d": 11.8,
       "support_30d": 71.89412540165443,
       "resistance_30d": 109.17730597799657,
-      "as_of": "2026-08-30 08:00:38",
+      "as_of": "2026-08-30 13:45:24",
       "stale": false
     },
     "tron": {
@@ -535,7 +535,7 @@
         ],
         [
           "Stretch from long-term average",
-          "+31.6% above its long-term average - very stretched",
+          "+32.4% above its long-term average - very stretched",
           -2
         ],
         [
@@ -548,12 +548,12 @@
       "id": "whitebit",
       "symbol": "WBT",
       "name": "WhiteBIT Coin",
-      "price": 72.11,
-      "pct_24h": 0.72257,
-      "pct_7d": 1.0,
+      "price": 72.56,
+      "pct_24h": 1.37005,
+      "pct_7d": 0.6,
       "support_30d": 54.452558710928955,
       "resistance_30d": 73.98079079810731,
-      "as_of": "2026-08-30 11:45:22",
+      "as_of": "2026-08-30 13:45:24",
       "stale": false
     },
     "leo-token": {
@@ -1907,7 +1907,7 @@
       "rows": [
         [
           "Price vs. recent range",
-          "Near its 30-day high (~$0.5301) - less room to run",
+          "Near its 30-day high (~$0.5308) - less room to run",
           -1
         ],
         [
@@ -1927,7 +1927,7 @@
         ],
         [
           "Stretch from long-term average",
-          "-12.7% vs its long-term average - not stretched either way",
+          "-12.5% vs its long-term average - not stretched either way",
           0
         ],
         [
@@ -1940,12 +1940,12 @@
       "id": "mantle",
       "symbol": "MNT",
       "name": "Mantle",
-      "price": 0.530014,
-      "pct_24h": 3.35835,
+      "price": 0.530901,
+      "pct_24h": 3.53633,
       "pct_7d": 10.2,
       "support_30d": 0.39455109836509417,
-      "resistance_30d": 0.530073385980811,
-      "as_of": "2026-08-30 13:15:26",
+      "resistance_30d": 0.5308336246360562,
+      "as_of": "2026-08-30 13:45:24",
       "stale": false
     },
     "polkadot": {
@@ -3005,21 +3005,19 @@
       "stale": false
     }
   },
-  "_strong_buy_state": {
-    "15m:NEAR": true
-  },
+  "_strong_buy_state": {},
   "BTC": {
     "key": "BTC",
     "name": "Bitcoin",
     "emoji": "\u20bf",
-    "price": 78709,
+    "price": 78727,
     "high_24h": 78791,
     "low_24h": 77670,
-    "pct_24h": 1.33996,
+    "pct_24h": 1.37144,
     "pct_7d": 1.8,
     "pct_30d": 23.5,
-    "sma50": 67302.9866924896,
-    "sma200": 69348.73623046344,
+    "sma50": 67304.20599894618,
+    "sma200": 69349.04105707759,
     "support_30d": 62772.57726413174,
     "resistance_30d": 80268.37474707834,
     "mark_price": 77570.0,
@@ -3034,14 +3032,14 @@
     "key": "ETH",
     "name": "Ethereum",
     "emoji": "\u039e",
-    "price": 2468.35,
+    "price": 2469.35,
     "high_24h": 2470.72,
     "low_24h": 2435.23,
-    "pct_24h": 1.40253,
+    "pct_24h": 1.43701,
     "pct_7d": 1.5,
     "pct_30d": 31.1,
-    "sma50": 2018.3586812893325,
-    "sma200": 2022.274304824532,
+    "sma50": 2018.3979447141971,
+    "sma200": 2022.2841206807484,
     "support_30d": 1843.443563411847,
     "resistance_30d": 2514.967577695514,
     "mark_price": 2433.03,
