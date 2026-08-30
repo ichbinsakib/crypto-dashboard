@@ -4,7 +4,7 @@
   "_alerts_state": {
     "btc-resistance-break": {
       "triggered": true,
-      "last_triggered_at": "2026-08-30 17:25:22"
+      "last_triggered_at": "2026-08-30 17:30:30"
     },
     "btc-support-break": {
       "triggered": false,
@@ -1543,7 +1543,7 @@
         ],
         [
           "Stretch from long-term average",
-          "+141.0% above its long-term average - very stretched",
+          "+139.4% above its long-term average - very stretched",
           -2
         ],
         [
@@ -1556,12 +1556,12 @@
       "id": "pump-fun",
       "symbol": "PUMP",
       "name": "Pump.fun",
-      "price": 0.0048534,
-      "pct_24h": 1.01442,
-      "pct_7d": -7.6,
+      "price": 0.00482038,
+      "pct_24h": 0.65075,
+      "pct_7d": -4.0,
       "support_30d": 0.002083220020057682,
       "resistance_30d": 0.0052249885406471875,
-      "as_of": "2026-08-30 15:45:23",
+      "as_of": "2026-08-30 17:30:30",
       "stale": false
     },
     "venice-token": {
@@ -2564,12 +2564,12 @@
       "id": "tether-gold",
       "symbol": "XAUT",
       "name": "Tether Gold",
-      "price": 4457.21,
-      "pct_24h": 0.03426,
-      "pct_7d": -2.8,
+      "price": 4457.17,
+      "pct_24h": 0.0143,
+      "pct_7d": -2.9,
       "support_30d": 4040.271654009323,
       "resistance_30d": 4662.510537821146,
-      "as_of": "2026-08-30 16:25:19",
+      "as_of": "2026-08-30 17:30:30",
       "stale": false
     },
     "bitway": {
@@ -2791,7 +2791,7 @@
         ],
         [
           "Stretch from long-term average",
-          "-47.9% below its long-term average - confirmed downtrend",
+          "-48.0% below its long-term average - confirmed downtrend",
           -1
         ],
         [
@@ -2804,12 +2804,12 @@
       "id": "memecore",
       "symbol": "M",
       "name": "MemeCore",
-      "price": 1.093,
-      "pct_24h": 4.88914,
+      "price": 1.091,
+      "pct_24h": 4.65654,
       "pct_7d": -1.9,
       "support_30d": 1.0428585856494421,
       "resistance_30d": 1.2453913363052769,
-      "as_of": "2026-08-30 17:10:25",
+      "as_of": "2026-08-30 17:30:30",
       "stale": false
     },
     "aave": {
@@ -3053,19 +3053,22 @@
       "stale": false
     }
   },
-  "_strong_buy_state": {},
+  "_strong_buy_state": {
+    "15m:PUMP": true,
+    "1h:PUMP": true
+  },
   "BTC": {
     "key": "BTC",
     "name": "Bitcoin",
     "emoji": "\u20bf",
-    "price": 78965,
+    "price": 78874,
     "high_24h": 79347,
     "low_24h": 77963,
-    "pct_24h": 1.20699,
+    "pct_24h": 1.1669,
     "pct_7d": 2.8,
     "pct_30d": 26.6,
-    "sma50": 67308.06671709608,
-    "sma200": 69350.00623661507,
+    "sma50": 67307.0829757763,
+    "sma200": 69349.76030128513,
     "support_30d": 62772.57726413174,
     "resistance_30d": 80268.37474707834,
     "mark_price": 77570.0,
@@ -3080,14 +3083,14 @@
     "key": "ETH",
     "name": "Ethereum",
     "emoji": "\u039e",
-    "price": 2507.88,
+    "price": 2497.56,
     "high_24h": 2531.35,
     "low_24h": 2446.03,
-    "pct_24h": 2.31409,
+    "pct_24h": 2.08747,
     "pct_7d": 3.6,
     "pct_30d": 35.8,
-    "sma50": 2019.1481614591894,
-    "sma200": 2022.4716748669962,
+    "sma50": 2018.98874084728,
+    "sma200": 2022.4318197140192,
     "support_30d": 1843.443563411847,
     "resistance_30d": 2514.967577695514,
     "mark_price": 2433.03,
