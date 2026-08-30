@@ -655,7 +655,7 @@
     "cardano": {
       "label": "\ud83d\udfe1 HOLD / NEUTRAL",
       "status": "neutral",
-      "score": 1,
+      "score": 0,
       "rows": [
         [
           "Price vs. recent range",
@@ -674,12 +674,12 @@
         ],
         [
           "Recent trend",
-          "Chopping sideways - no clear trend",
-          0
+          "Trending down - avoid catching a falling knife",
+          -1
         ],
         [
           "Stretch from long-term average",
-          "-10.9% vs its long-term average - not stretched either way",
+          "-10.5% vs its long-term average - not stretched either way",
           0
         ],
         [
@@ -692,12 +692,12 @@
       "id": "cardano",
       "symbol": "ADA",
       "name": "Cardano",
-      "price": 0.200395,
-      "pct_24h": 0.51274,
-      "pct_7d": -6.7,
+      "price": 0.201214,
+      "pct_24h": 0.55554,
+      "pct_7d": -9.2,
       "support_30d": 0.1741249817054162,
       "resistance_30d": 0.2291047455940254,
-      "as_of": "2026-08-30 08:45:32",
+      "as_of": "2026-08-30 12:05:22",
       "stale": false
     },
     "stellar": {
@@ -775,7 +775,7 @@
         ],
         [
           "Stretch from long-term average",
-          "-11.3% vs its long-term average - not stretched either way",
+          "-10.7% vs its long-term average - not stretched either way",
           0
         ],
         [
@@ -788,12 +788,12 @@
       "id": "kucoin-shares",
       "symbol": "KCS",
       "name": "KuCoin",
-      "price": 6.91,
-      "pct_24h": 0.12091,
-      "pct_7d": -6.8,
+      "price": 6.96,
+      "pct_24h": 0.66701,
+      "pct_7d": -5.6,
       "support_30d": 6.440026683855254,
       "resistance_30d": 7.8821382735057615,
-      "as_of": "2026-08-30 08:50:23",
+      "as_of": "2026-08-30 12:05:22",
       "stale": false
     },
     "hedera-hashgraph": {
@@ -2119,7 +2119,7 @@
         ],
         [
           "Stretch from long-term average",
-          "+8.0% vs its long-term average - not stretched either way",
+          "+8.1% vs its long-term average - not stretched either way",
           0
         ],
         [
@@ -2132,12 +2132,12 @@
       "id": "ondo-finance",
       "symbol": "ONDO",
       "name": "Ondo",
-      "price": 0.35529,
-      "pct_24h": 1.28083,
-      "pct_7d": -1.7,
+      "price": 0.355635,
+      "pct_24h": 1.63901,
+      "pct_7d": -3.4,
       "support_30d": 0.32338181384146436,
       "resistance_30d": 0.3969475338902824,
-      "as_of": "2026-08-30 11:20:24",
+      "as_of": "2026-08-30 12:05:22",
       "stale": false
     },
     "canton-network": {
@@ -3010,14 +3010,14 @@
     "key": "BTC",
     "name": "Bitcoin",
     "emoji": "\u20bf",
-    "price": 78147,
+    "price": 78182,
     "high_24h": 78310,
-    "low_24h": 77536,
-    "pct_24h": 0.73798,
-    "pct_7d": 2.1,
-    "pct_30d": 22.7,
-    "sma50": 67291.74148851456,
-    "sma200": 69345.92492946968,
+    "low_24h": 77573,
+    "pct_24h": 0.76022,
+    "pct_7d": 1.8,
+    "pct_30d": 22.4,
+    "sma50": 67292.81490476232,
+    "sma200": 69346.19328353163,
     "support_30d": 62772.57726413174,
     "resistance_30d": 80268.37474707834,
     "mark_price": 77570.0,
@@ -3032,14 +3032,14 @@
     "key": "ETH",
     "name": "Ethereum",
     "emoji": "\u039e",
-    "price": 2458.34,
+    "price": 2460.37,
     "high_24h": 2466.12,
     "low_24h": 2433.03,
-    "pct_24h": 0.93941,
-    "pct_7d": 2.0,
-    "pct_30d": 30.7,
-    "sma50": 2018.1656007833067,
-    "sma200": 2022.2260346980256,
+    "pct_24h": 0.98651,
+    "pct_7d": 1.8,
+    "pct_30d": 30.4,
+    "sma50": 2018.200246160031,
+    "sma200": 2022.2346960422067,
     "support_30d": 1843.443563411847,
     "resistance_30d": 2514.967577695514,
     "mark_price": 2433.03,
