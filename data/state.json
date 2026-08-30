@@ -4,7 +4,7 @@
   "_alerts_state": {
     "btc-resistance-break": {
       "triggered": true,
-      "last_triggered_at": "2026-08-30 22:05:20"
+      "last_triggered_at": "2026-08-30 22:10:27"
     },
     "btc-support-break": {
       "triggered": false,
@@ -775,7 +775,7 @@
         ],
         [
           "Stretch from long-term average",
-          "-9.8% vs its long-term average - not stretched either way",
+          "-10.0% vs its long-term average - not stretched either way",
           0
         ],
         [
@@ -788,12 +788,12 @@
       "id": "kucoin-shares",
       "symbol": "KCS",
       "name": "KuCoin",
-      "price": 7.03,
-      "pct_24h": 2.25031,
-      "pct_7d": -5.2,
+      "price": 7.01,
+      "pct_24h": 2.28929,
+      "pct_7d": -4.5,
       "support_30d": 6.440026683855254,
       "resistance_30d": 7.8821382735057615,
-      "as_of": "2026-08-30 20:25:20",
+      "as_of": "2026-08-30 22:10:27",
       "stale": false
     },
     "hedera-hashgraph": {
@@ -823,7 +823,7 @@
         ],
         [
           "Stretch from long-term average",
-          "-10.0% vs its long-term average - not stretched either way",
+          "-10.5% vs its long-term average - not stretched either way",
           0
         ],
         [
@@ -836,12 +836,12 @@
       "id": "hedera-hashgraph",
       "symbol": "HBAR",
       "name": "Hedera",
-      "price": 0.075487,
-      "pct_24h": 0.07144,
-      "pct_7d": -4.0,
+      "price": 0.075059,
+      "pct_24h": -0.53563,
+      "pct_7d": -5.0,
       "support_30d": 0.06461260477975343,
       "resistance_30d": 0.07985387850470703,
-      "as_of": "2026-08-30 20:35:22",
+      "as_of": "2026-08-30 22:10:27",
       "stale": false
     },
     "pepe": {
@@ -2339,7 +2339,7 @@
       "rows": [
         [
           "Price vs. recent range",
-          "Near its 30-day high (~$0.0709) - less room to run",
+          "Near its 30-day high (~$0.0708) - less room to run",
           -1
         ],
         [
@@ -2372,12 +2372,12 @@
       "id": "sky",
       "symbol": "SKY",
       "name": "Sky",
-      "price": 0.070824,
-      "pct_24h": 3.33983,
-      "pct_7d": 7.4,
+      "price": 0.070839,
+      "pct_24h": 3.71948,
+      "pct_7d": 1.5,
       "support_30d": 0.05081051579814886,
-      "resistance_30d": 0.07089939582716766,
-      "as_of": "2026-08-30 14:55:20",
+      "resistance_30d": 0.07081399612630504,
+      "as_of": "2026-08-30 22:10:27",
       "stale": false
     },
     "shiba-inu": {
@@ -3053,19 +3053,21 @@
       "stale": false
     }
   },
-  "_strong_buy_state": {},
+  "_strong_buy_state": {
+    "15m:HBAR": true
+  },
   "BTC": {
     "key": "BTC",
     "name": "Bitcoin",
     "emoji": "\u20bf",
-    "price": 78751,
+    "price": 78647,
     "high_24h": 79347,
     "low_24h": 77963,
-    "pct_24h": 0.73367,
+    "pct_24h": 0.61013,
     "pct_7d": 1.6,
     "pct_30d": 25.0,
-    "sma50": 67303.49798118768,
-    "sma200": 69348.86405263797,
+    "sma50": 67302.34169596848,
+    "sma200": 69348.57498133316,
     "support_30d": 62772.57726413174,
     "resistance_30d": 80268.37474707834,
     "mark_price": 78489.6,
@@ -3080,14 +3082,14 @@
     "key": "ETH",
     "name": "Ethereum",
     "emoji": "\u039e",
-    "price": 2486.31,
+    "price": 2480.54,
     "high_24h": 2531.35,
     "low_24h": 2451.95,
-    "pct_24h": 1.42598,
+    "pct_24h": 1.22604,
     "pct_7d": 1.3,
     "pct_30d": 33.4,
-    "sma50": 2018.7035772919123,
-    "sma200": 2022.360528825177,
+    "sma50": 2018.6282853824794,
+    "sma200": 2022.3417058478187,
     "support_30d": 1843.443563411847,
     "resistance_30d": 2514.967577695514,
     "mark_price": 2474.04,
