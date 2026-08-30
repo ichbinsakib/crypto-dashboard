@@ -4,7 +4,7 @@
   "_alerts_state": {
     "btc-resistance-break": {
       "triggered": true,
-      "last_triggered_at": "2026-08-30 13:25:21"
+      "last_triggered_at": "2026-08-30 13:30:29"
     },
     "btc-support-break": {
       "triggered": false,
@@ -1111,7 +1111,7 @@
         ],
         [
           "Stretch from long-term average",
-          "+16.2% above its long-term average - a bit stretched",
+          "+16.7% above its long-term average - a bit stretched",
           -1
         ],
         [
@@ -1124,12 +1124,12 @@
       "id": "polygon-ecosystem-token",
       "symbol": "POL",
       "name": "POL (ex-MATIC)",
-      "price": 0.103448,
-      "pct_24h": -1.32382,
-      "pct_7d": -2.5,
+      "price": 0.103832,
+      "pct_24h": -1.01096,
+      "pct_7d": -3.4,
       "support_30d": 0.07164913253149428,
       "resistance_30d": 0.12250456198546959,
-      "as_of": "2026-08-30 12:55:18",
+      "as_of": "2026-08-30 13:30:29",
       "stale": false
     },
     "blackrock-usd-institutional-digital-liquidity-fund": {
@@ -1317,11 +1317,11 @@
       "symbol": "HTX",
       "name": "HTX DAO",
       "price": 1.68e-06,
-      "pct_24h": -0.01273,
-      "pct_7d": -3.8,
-      "support_30d": 1.6816665818494315e-06,
+      "pct_24h": -0.0091,
+      "pct_7d": -4.0,
+      "support_30d": 1.681589424358388e-06,
       "resistance_30d": 1.8259977214551937e-06,
-      "as_of": "2026-08-30 12:35:23",
+      "as_of": "2026-08-30 13:30:29",
       "stale": false
     },
     "superstate-short-duration-us-government-securities-fund-ustb": {
@@ -2717,9 +2717,9 @@
       "stale": false
     },
     "morpho": {
-      "label": "\ud83d\udfe1 HOLD / NEUTRAL",
-      "status": "neutral",
-      "score": -1,
+      "label": "\ud83d\udd34 CAUTION - REDUCE NEW BUYS",
+      "status": "bearish",
+      "score": -2,
       "rows": [
         [
           "Price vs. recent range",
@@ -2743,8 +2743,8 @@
         ],
         [
           "Stretch from long-term average",
-          "+26.8% above its long-term average - a bit stretched",
-          -1
+          "+30.4% above its long-term average - very stretched",
+          -2
         ],
         [
           "Leverage traders' bias",
@@ -2752,16 +2752,16 @@
           0
         ]
       ],
-      "plain": "No real edge either way right now - fine to just wait and watch.",
+      "plain": "Getting risky - I'd hold off on new buys until this cools down.",
       "id": "morpho",
       "symbol": "MORPHO",
       "name": "Morpho",
-      "price": 2.42,
-      "pct_24h": 0.73368,
-      "pct_7d": 5.7,
+      "price": 2.49,
+      "pct_24h": 2.47869,
+      "pct_7d": 1.9,
       "support_30d": 1.8400586135640542,
       "resistance_30d": 2.9026212482639075,
-      "as_of": "2026-08-30 08:45:32",
+      "as_of": "2026-08-30 13:30:29",
       "stale": false
     },
     "memecore": {
@@ -3010,14 +3010,14 @@
     "key": "BTC",
     "name": "Bitcoin",
     "emoji": "\u20bf",
-    "price": 78686,
+    "price": 78703,
     "high_24h": 78791,
     "low_24h": 77670,
-    "pct_24h": 1.28827,
+    "pct_24h": 1.34484,
     "pct_7d": 1.8,
     "pct_30d": 23.5,
-    "sma50": 67302.59667303771,
-    "sma200": 69348.63872560048,
+    "sma50": 67302.85539911929,
+    "sma200": 69348.70340712088,
     "support_30d": 62772.57726413174,
     "resistance_30d": 80268.37474707834,
     "mark_price": 77570.0,
@@ -3032,14 +3032,14 @@
     "key": "ETH",
     "name": "Ethereum",
     "emoji": "\u039e",
-    "price": 2464.82,
+    "price": 2465.93,
     "high_24h": 2470.72,
     "low_24h": 2435.23,
-    "pct_24h": 1.24498,
+    "pct_24h": 1.29553,
     "pct_7d": 1.5,
     "pct_30d": 31.1,
-    "sma50": 2018.2954608626108,
-    "sma200": 2022.258499717852,
+    "sma50": 2018.3098425707453,
+    "sma200": 2022.2620951448853,
     "support_30d": 1843.443563411847,
     "resistance_30d": 2514.967577695514,
     "mark_price": 2433.03,
