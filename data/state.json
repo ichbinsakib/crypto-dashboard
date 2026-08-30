@@ -4,7 +4,7 @@
   "_alerts_state": {
     "btc-resistance-break": {
       "triggered": true,
-      "last_triggered_at": "2026-08-30 17:35:21"
+      "last_triggered_at": "2026-08-30 17:40:27"
     },
     "btc-support-break": {
       "triggered": false,
@@ -125,9 +125,9 @@
       "stale": false
     },
     "solana": {
-      "label": "\ud83d\udd34 CAUTION - REDUCE NEW BUYS",
-      "status": "bearish",
-      "score": -2,
+      "label": "\ud83d\udfe1 HOLD / NEUTRAL",
+      "status": "neutral",
+      "score": -1,
       "rows": [
         [
           "Price vs. recent range",
@@ -151,8 +151,8 @@
         ],
         [
           "Stretch from long-term average",
-          "+30.3% above its long-term average - very stretched",
-          -2
+          "+29.5% above its long-term average - a bit stretched",
+          -1
         ],
         [
           "Leverage traders' bias",
@@ -160,16 +160,16 @@
           0
         ]
       ],
-      "plain": "Getting risky - I'd hold off on new buys until this cools down.",
+      "plain": "No real edge either way right now - fine to just wait and watch.",
       "id": "solana",
       "symbol": "SOL",
       "name": "Solana",
-      "price": 106.67,
-      "pct_24h": 1.55203,
-      "pct_7d": 11.8,
+      "price": 105.98,
+      "pct_24h": 1.3766,
+      "pct_7d": 12.0,
       "support_30d": 71.89412540165443,
       "resistance_30d": 109.17730597799657,
-      "as_of": "2026-08-30 16:30:32",
+      "as_of": "2026-08-30 17:40:27",
       "stale": false
     },
     "tron": {
@@ -1975,7 +1975,7 @@
         ],
         [
           "Stretch from long-term average",
-          "-23.6% below its long-term average - confirmed downtrend",
+          "-23.4% below its long-term average - confirmed downtrend",
           -1
         ],
         [
@@ -1988,12 +1988,12 @@
       "id": "polkadot",
       "symbol": "DOT",
       "name": "Polkadot",
-      "price": 0.85928,
-      "pct_24h": 2.44175,
-      "pct_7d": -6.6,
+      "price": 0.861049,
+      "pct_24h": 2.71025,
+      "pct_7d": -6.9,
       "support_30d": 0.7510040523927409,
       "resistance_30d": 0.9394118398868826,
-      "as_of": "2026-08-30 13:15:26",
+      "as_of": "2026-08-30 17:40:27",
       "stale": false
     },
     "uniswap": {
@@ -2743,7 +2743,7 @@
         ],
         [
           "Stretch from long-term average",
-          "+31.5% above its long-term average - very stretched",
+          "+32.0% above its long-term average - very stretched",
           -2
         ],
         [
@@ -2756,12 +2756,12 @@
       "id": "morpho",
       "symbol": "MORPHO",
       "name": "Morpho",
-      "price": 2.51,
-      "pct_24h": 3.65181,
-      "pct_7d": -5.0,
+      "price": 2.52,
+      "pct_24h": 5.13839,
+      "pct_7d": -4.6,
       "support_30d": 1.8400586135640542,
       "resistance_30d": 2.9026212482639075,
-      "as_of": "2026-08-30 16:15:28",
+      "as_of": "2026-08-30 17:40:27",
       "stale": false
     },
     "memecore": {
@@ -3058,14 +3058,14 @@
     "key": "BTC",
     "name": "Bitcoin",
     "emoji": "\u20bf",
-    "price": 78933,
+    "price": 78981,
     "high_24h": 79347,
     "low_24h": 77963,
-    "pct_24h": 1.25324,
+    "pct_24h": 1.35798,
     "pct_7d": 2.8,
     "pct_30d": 26.6,
-    "sma50": 67307.5550342834,
-    "sma200": 69349.8783159119,
+    "sma50": 67308.90137881706,
+    "sma200": 69350.2149020453,
     "support_30d": 62772.57726413174,
     "resistance_30d": 80268.37474707834,
     "mark_price": 77570.0,
@@ -3080,14 +3080,14 @@
     "key": "ETH",
     "name": "Ethereum",
     "emoji": "\u039e",
-    "price": 2499.47,
+    "price": 2503.45,
     "high_24h": 2531.35,
     "low_24h": 2446.03,
-    "pct_24h": 2.13254,
+    "pct_24h": 2.28024,
     "pct_7d": 3.6,
     "pct_30d": 35.8,
-    "sma50": 2018.9811111235,
-    "sma200": 2022.429912283074,
+    "sma50": 2019.068063750473,
+    "sma200": 2022.451650439817,
     "support_30d": 1843.443563411847,
     "resistance_30d": 2514.967577695514,
     "mark_price": 2433.03,
