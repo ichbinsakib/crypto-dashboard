@@ -4,7 +4,7 @@
   "_alerts_state": {
     "btc-resistance-break": {
       "triggered": true,
-      "last_triggered_at": "2026-08-30 20:30:33"
+      "last_triggered_at": "2026-08-30 20:35:22"
     },
     "btc-support-break": {
       "triggered": false,
@@ -151,7 +151,7 @@
         ],
         [
           "Stretch from long-term average",
-          "+29.0% above its long-term average - a bit stretched",
+          "+28.6% above its long-term average - a bit stretched",
           -1
         ],
         [
@@ -164,12 +164,12 @@
       "id": "solana",
       "symbol": "SOL",
       "name": "Solana",
-      "price": 105.58,
-      "pct_24h": 0.20623,
-      "pct_7d": 12.2,
+      "price": 105.21,
+      "pct_24h": 0.02311,
+      "pct_7d": 11.0,
       "support_30d": 71.89412540165443,
       "resistance_30d": 109.17730597799657,
-      "as_of": "2026-08-30 19:55:17",
+      "as_of": "2026-08-30 20:35:22",
       "stale": false
     },
     "tron": {
@@ -823,7 +823,7 @@
         ],
         [
           "Stretch from long-term average",
-          "-9.8% vs its long-term average - not stretched either way",
+          "-10.0% vs its long-term average - not stretched either way",
           0
         ],
         [
@@ -836,12 +836,12 @@
       "id": "hedera-hashgraph",
       "symbol": "HBAR",
       "name": "Hedera",
-      "price": 0.075706,
-      "pct_24h": 0.24323,
-      "pct_7d": -3.4,
+      "price": 0.075487,
+      "pct_24h": 0.07144,
+      "pct_7d": -4.0,
       "support_30d": 0.06461260477975343,
       "resistance_30d": 0.07985387850470703,
-      "as_of": "2026-08-30 19:50:25",
+      "as_of": "2026-08-30 20:35:22",
       "stale": false
     },
     "pepe": {
@@ -2263,7 +2263,7 @@
         ],
         [
           "Stretch from long-term average",
-          "+2.0% vs its long-term average - not stretched either way",
+          "+0.5% vs its long-term average - not stretched either way",
           0
         ],
         [
@@ -2276,12 +2276,12 @@
       "id": "bittensor",
       "symbol": "TAO",
       "name": "Bittensor",
-      "price": 240.57,
-      "pct_24h": 1.55958,
-      "pct_7d": 3.2,
+      "price": 236.96,
+      "pct_24h": 0.45074,
+      "pct_7d": -0.7,
       "support_30d": 190.67093053611111,
       "resistance_30d": 254.06815196002663,
-      "as_of": "2026-08-30 19:20:29",
+      "as_of": "2026-08-30 20:35:22",
       "stale": false
     },
     "the-open-network": {
@@ -3054,21 +3054,22 @@
     }
   },
   "_strong_buy_state": {
-    "15m:ONDO": true,
-    "15m:DOGE": true
+    "15m:TRX": true,
+    "15m:SOL": true,
+    "1h:TRX": true
   },
   "BTC": {
     "key": "BTC",
     "name": "Bitcoin",
     "emoji": "\u20bf",
-    "price": 78858,
+    "price": 78765,
     "high_24h": 79347,
     "low_24h": 77963,
-    "pct_24h": 0.87309,
+    "pct_24h": 0.82442,
     "pct_7d": 2.0,
     "pct_30d": 25.1,
-    "sma50": 67305.95659284391,
-    "sma200": 69349.47870555203,
+    "sma50": 67304.35849734239,
+    "sma200": 69349.07918167664,
     "support_30d": 62772.57726413174,
     "resistance_30d": 80268.37474707834,
     "mark_price": 77570.0,
@@ -3083,14 +3084,14 @@
     "key": "ETH",
     "name": "Ethereum",
     "emoji": "\u039e",
-    "price": 2505.11,
+    "price": 2498.59,
     "high_24h": 2531.35,
     "low_24h": 2449.42,
-    "pct_24h": 2.11637,
+    "pct_24h": 1.90775,
     "pct_7d": 2.2,
     "pct_30d": 33.8,
-    "sma50": 2019.0949129921219,
-    "sma200": 2022.4583627502295,
+    "sma50": 2018.9841456341962,
+    "sma200": 2022.430670910748,
     "support_30d": 1843.443563411847,
     "resistance_30d": 2514.967577695514,
     "mark_price": 2433.03,
