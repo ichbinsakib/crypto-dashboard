@@ -1111,7 +1111,7 @@
         ],
         [
           "Stretch from long-term average",
-          "+0.9% vs its long-term average - not stretched either way",
+          "-1.3% vs its long-term average - not stretched either way",
           0
         ],
         [
@@ -1124,12 +1124,12 @@
       "id": "polygon-ecosystem-token",
       "symbol": "POL",
       "name": "POL (ex-MATIC)",
-      "price": 0.089777,
-      "pct_24h": -12.90915,
-      "pct_7d": -22.5,
+      "price": 0.087745,
+      "pct_24h": -15.00314,
+      "pct_7d": -23.9,
       "support_30d": 0.07289693930084962,
       "resistance_30d": 0.12250456198546959,
-      "as_of": "2026-08-31 12:45:24",
+      "as_of": "2026-08-31 14:20:30",
       "stale": false
     },
     "blackrock-usd-institutional-digital-liquidity-fund": {
@@ -1855,7 +1855,7 @@
     "bitcoin-cash": {
       "label": "\ud83d\udfe1 HOLD / NEUTRAL",
       "status": "neutral",
-      "score": 0,
+      "score": -1,
       "rows": [
         [
           "Price vs. recent range",
@@ -1874,12 +1874,12 @@
         ],
         [
           "Recent trend",
-          "Chopping sideways - no clear trend",
-          0
+          "Trending down - avoid catching a falling knife",
+          -1
         ],
         [
           "Stretch from long-term average",
-          "-28.2% below its long-term average - confirmed downtrend",
+          "-29.0% below its long-term average - confirmed downtrend",
           -1
         ],
         [
@@ -1892,12 +1892,12 @@
       "id": "bitcoin-cash",
       "symbol": "BCH",
       "name": "Bitcoin Cash",
-      "price": 247.55,
-      "pct_24h": 0.90704,
-      "pct_7d": -7.8,
+      "price": 244.78,
+      "pct_24h": -2.827,
+      "pct_7d": -13.6,
       "support_30d": 203.50169440615565,
       "resistance_30d": 288.10955405353275,
-      "as_of": "2026-08-31 08:20:26",
+      "as_of": "2026-08-31 14:20:30",
       "stale": false
     },
     "mantle": {
@@ -2743,7 +2743,7 @@
         ],
         [
           "Stretch from long-term average",
-          "+34.7% above its long-term average - very stretched",
+          "+35.7% above its long-term average - very stretched",
           -2
         ],
         [
@@ -2756,12 +2756,12 @@
       "id": "morpho",
       "symbol": "MORPHO",
       "name": "Morpho",
-      "price": 2.58,
-      "pct_24h": 5.77663,
-      "pct_7d": -7.7,
+      "price": 2.6,
+      "pct_24h": 3.99812,
+      "pct_7d": -6.6,
       "support_30d": 1.8400586135640542,
       "resistance_30d": 2.9026212482639075,
-      "as_of": "2026-08-31 10:40:25",
+      "as_of": "2026-08-31 14:20:30",
       "stale": false
     },
     "memecore": {
@@ -3053,22 +3053,19 @@
       "stale": false
     }
   },
-  "_strong_buy_state": {
-    "15m:PUMP": true,
-    "15m:DOT": true
-  },
+  "_strong_buy_state": {},
   "BTC": {
     "key": "BTC",
     "name": "Bitcoin",
     "emoji": "\u20bf",
-    "price": 77920,
+    "price": 77884,
     "high_24h": 79347,
     "low_24h": 77162,
-    "pct_24h": -1.24447,
+    "pct_24h": -1.18182,
     "pct_7d": -1.6,
     "pct_30d": 23.5,
-    "sma50": 67565.38514708613,
-    "sma200": 69401.77647615486,
+    "sma50": 67565.68389387401,
+    "sma200": 69401.85116285185,
     "support_30d": 62843.70368466329,
     "resistance_30d": 80268.37474707834,
     "mark_price": 78586.99342579,
@@ -3083,14 +3080,14 @@
     "key": "ETH",
     "name": "Ethereum",
     "emoji": "\u039e",
-    "price": 2441.71,
+    "price": 2441.02,
     "high_24h": 2531.35,
     "low_24h": 2394.91,
-    "pct_24h": -1.46275,
+    "pct_24h": -1.3521,
     "pct_7d": -2.8,
     "pct_30d": 30.7,
-    "sma50": 2030.0295703697254,
-    "sma200": 2024.4802589124965,
+    "sma50": 2030.0473155006505,
+    "sma200": 2024.4846951952277,
     "support_30d": 1858.5376969949996,
     "resistance_30d": 2514.967577695514,
     "mark_price": 2453.84000401,
