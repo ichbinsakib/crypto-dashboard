@@ -4,7 +4,7 @@
   "_alerts_state": {
     "btc-resistance-break": {
       "triggered": true,
-      "last_triggered_at": "2026-08-31 18:20:25"
+      "last_triggered_at": "2026-08-31 18:25:19"
     },
     "btc-support-break": {
       "triggered": false,
@@ -607,11 +607,11 @@
     "monero": {
       "label": "\ud83d\udd34 DISTRIBUTION ZONE",
       "status": "bearish",
-      "score": -5,
+      "score": -8,
       "rows": [
         [
           "Price vs. recent range",
-          "Near its 30-day high (~$521.78) - less room to run",
+          "Near its 30-day high (~$530.12) - less room to run",
           -1
         ],
         [
@@ -626,12 +626,12 @@
         ],
         [
           "Recent trend",
-          "Trending up steadily - healthy",
-          1
+          "Shooting straight up - classic blow-off top risk, don't chase",
+          -2
         ],
         [
           "Stretch from long-term average",
-          "+45.7% above its long-term average - very stretched",
+          "+49.1% above its long-term average - very stretched",
           -2
         ],
         [
@@ -644,12 +644,12 @@
       "id": "monero",
       "symbol": "XMR",
       "name": "Monero",
-      "price": 521.32,
-      "pct_24h": 4.55367,
-      "pct_7d": 23.2,
+      "price": 533.54,
+      "pct_24h": 8.66243,
+      "pct_7d": 21.7,
       "support_30d": 351.07100922807496,
-      "resistance_30d": 521.7793256581283,
-      "as_of": "2026-08-31 16:50:25",
+      "resistance_30d": 530.1199984908812,
+      "as_of": "2026-08-31 18:25:19",
       "stale": false
     },
     "cardano": {
@@ -1220,12 +1220,12 @@
       "id": "nexo",
       "symbol": "NEXO",
       "name": "NEXO",
-      "price": 0.84383,
-      "pct_24h": -2.56141,
-      "pct_7d": 1.7,
+      "price": 0.843159,
+      "pct_24h": -1.26847,
+      "pct_7d": 2.5,
       "support_30d": 0.7016300793001435,
       "resistance_30d": 0.8734100764023305,
-      "as_of": "2026-08-31 13:10:24",
+      "as_of": "2026-08-31 18:25:19",
       "stale": false
     },
     "janus-henderson-anemoy-treasury-fund": {
@@ -2143,12 +2143,12 @@
     "canton-network": {
       "label": "\ud83d\udfe1 HOLD / NEUTRAL",
       "status": "neutral",
-      "score": -1,
+      "score": 0,
       "rows": [
         [
           "Price vs. recent range",
-          "Near its 30-day high (~$0.1240) - less room to run",
-          -1
+          "Sitting in the middle of its 30-day range",
+          0
         ],
         [
           "Crowd mood (Fear & Greed)",
@@ -2167,7 +2167,7 @@
         ],
         [
           "Stretch from long-term average",
-          "-16.8% below its long-term average - confirmed downtrend",
+          "-17.3% below its long-term average - confirmed downtrend",
           -1
         ],
         [
@@ -2180,12 +2180,12 @@
       "id": "canton-network",
       "symbol": "CC",
       "name": "Canton",
-      "price": 0.118375,
-      "pct_24h": 0.27061,
-      "pct_7d": -5.9,
+      "price": 0.117687,
+      "pct_24h": -0.48614,
+      "pct_7d": -4.3,
       "support_30d": 0.09051839499501885,
       "resistance_30d": 0.12396615653575341,
-      "as_of": "2026-08-31 17:55:19",
+      "as_of": "2026-08-31 18:25:19",
       "stale": false
     },
     "internet-computer": {
@@ -3058,14 +3058,14 @@
     "key": "BTC",
     "name": "Bitcoin",
     "emoji": "\u20bf",
-    "price": 79032,
+    "price": 78901,
     "high_24h": 79022,
     "low_24h": 77162,
-    "pct_24h": 0.19162,
+    "pct_24h": 0.05112,
     "pct_7d": -0.2,
     "pct_30d": 25.5,
-    "sma50": 67587.3824596879,
-    "sma200": 69407.2758043053,
+    "sma50": 67586.20822939283,
+    "sma200": 69406.98224673155,
     "support_30d": 62843.70368466329,
     "resistance_30d": 80268.37474707834,
     "mark_price": 78505.64311594,
@@ -3080,14 +3080,14 @@
     "key": "ETH",
     "name": "Ethereum",
     "emoji": "\u039e",
-    "price": 2477.8,
+    "price": 2472.14,
     "high_24h": 2512.12,
     "low_24h": 2394.91,
-    "pct_24h": -0.98241,
+    "pct_24h": -1.2085,
     "pct_7d": -0.1,
     "pct_30d": 32.5,
-    "sma50": 2030.753878004408,
-    "sma200": 2024.661335821167,
+    "sma50": 2030.695343034209,
+    "sma200": 2024.6467020786172,
     "support_30d": 1858.5376969949996,
     "resistance_30d": 2514.967577695514,
     "mark_price": 2465.81127907,
