@@ -1783,7 +1783,7 @@
         ],
         [
           "Stretch from long-term average",
-          "+122.0% above its long-term average - very stretched",
+          "+122.6% above its long-term average - very stretched",
           -2
         ],
         [
@@ -1796,12 +1796,12 @@
       "id": "lighter",
       "symbol": "LIT",
       "name": "Lighter",
-      "price": 3.59,
-      "pct_24h": 0.60125,
+      "price": 3.6,
+      "pct_24h": 1.10301,
       "pct_7d": 2.5,
       "support_30d": 2.005076166939587,
       "resistance_30d": 3.70987819420487,
-      "as_of": "2026-08-31 14:25:17",
+      "as_of": "2026-08-31 14:30:33",
       "stale": false
     },
     "ethena": {
@@ -2095,7 +2095,7 @@
     "ondo-finance": {
       "label": "\ud83d\udfe1 HOLD / NEUTRAL",
       "status": "neutral",
-      "score": 1,
+      "score": 0,
       "rows": [
         [
           "Price vs. recent range",
@@ -2114,12 +2114,12 @@
         ],
         [
           "Recent trend",
-          "Chopping sideways - no clear trend",
-          0
+          "Trending down - avoid catching a falling knife",
+          -1
         ],
         [
           "Stretch from long-term average",
-          "+5.4% vs its long-term average - not stretched either way",
+          "+4.1% vs its long-term average - not stretched either way",
           0
         ],
         [
@@ -2132,12 +2132,12 @@
       "id": "ondo-finance",
       "symbol": "ONDO",
       "name": "Ondo",
-      "price": 0.347123,
-      "pct_24h": -2.67457,
-      "pct_7d": -7.5,
+      "price": 0.34294,
+      "pct_24h": -4.73933,
+      "pct_7d": -11.0,
       "support_30d": 0.32338181384146436,
       "resistance_30d": 0.3969475338902824,
-      "as_of": "2026-08-31 12:25:20",
+      "as_of": "2026-08-31 14:30:33",
       "stale": false
     },
     "canton-network": {
@@ -2671,12 +2671,12 @@
     "pax-gold": {
       "label": "\ud83d\udfe1 HOLD / NEUTRAL",
       "status": "neutral",
-      "score": 0,
+      "score": 1,
       "rows": [
         [
           "Price vs. recent range",
-          "Near its 30-day high (~$4,672.31) - less room to run",
-          -1
+          "Sitting in the middle of its 30-day range",
+          0
         ],
         [
           "Crowd mood (Fear & Greed)",
@@ -2695,7 +2695,7 @@
         ],
         [
           "Stretch from long-term average",
-          "-1.8% vs its long-term average - not stretched either way",
+          "-2.3% vs its long-term average - not stretched either way",
           0
         ],
         [
@@ -2708,12 +2708,12 @@
       "id": "pax-gold",
       "symbol": "PAXG",
       "name": "PAX Gold",
-      "price": 4440.98,
-      "pct_24h": -0.54883,
-      "pct_7d": -4.6,
+      "price": 4420.4,
+      "pct_24h": -1.1114,
+      "pct_7d": -5.0,
       "support_30d": 4048.0991146410097,
       "resistance_30d": 4672.307573354755,
-      "as_of": "2026-08-31 13:35:22",
+      "as_of": "2026-08-31 14:30:33",
       "stale": false
     },
     "morpho": {
@@ -3053,19 +3053,21 @@
       "stale": false
     }
   },
-  "_strong_buy_state": {},
+  "_strong_buy_state": {
+    "15m:PAXG": true
+  },
   "BTC": {
     "key": "BTC",
     "name": "Bitcoin",
     "emoji": "\u20bf",
-    "price": 77992,
+    "price": 77830,
     "high_24h": 79347,
     "low_24h": 77162,
-    "pct_24h": -1.07753,
+    "pct_24h": -1.28364,
     "pct_7d": -1.6,
     "pct_30d": 23.5,
-    "sma50": 67566.31140860617,
-    "sma200": 69402.00804153488,
+    "sma50": 67564.43489084073,
+    "sma200": 69401.53891209351,
     "support_30d": 62843.70368466329,
     "resistance_30d": 80268.37474707834,
     "mark_price": 78586.99342579,
@@ -3080,14 +3082,14 @@
     "key": "ETH",
     "name": "Ethereum",
     "emoji": "\u039e",
-    "price": 2446.13,
+    "price": 2440.03,
     "high_24h": 2531.35,
     "low_24h": 2394.91,
-    "pct_24h": -1.22131,
+    "pct_24h": -1.4524,
     "pct_7d": -2.8,
     "pct_30d": 30.7,
-    "sma50": 2030.1304344665778,
-    "sma200": 2024.5054749367096,
+    "sma50": 2030.0377219864426,
+    "sma200": 2024.482296816676,
     "support_30d": 1858.5376969949996,
     "resistance_30d": 2514.967577695514,
     "mark_price": 2453.84000401,
