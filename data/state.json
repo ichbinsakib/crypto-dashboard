@@ -127,7 +127,7 @@
     "solana": {
       "label": "\ud83d\udfe1 HOLD / NEUTRAL",
       "status": "neutral",
-      "score": -1,
+      "score": 0,
       "rows": [
         [
           "Price vs. recent range",
@@ -146,12 +146,12 @@
         ],
         [
           "Recent trend",
-          "Chopping sideways - no clear trend",
-          0
+          "Trending up steadily - healthy",
+          1
         ],
         [
           "Stretch from long-term average",
-          "+24.7% above its long-term average - a bit stretched",
+          "+23.8% above its long-term average - a bit stretched",
           -1
         ],
         [
@@ -164,12 +164,12 @@
       "id": "solana",
       "symbol": "SOL",
       "name": "Solana",
-      "price": 102.18,
-      "pct_24h": -2.99375,
-      "pct_7d": 6.6,
+      "price": 101.4,
+      "pct_24h": -3.63848,
+      "pct_7d": 8.0,
       "support_30d": 72.63053979307217,
       "resistance_30d": 109.17730597799657,
-      "as_of": "2026-08-31 00:35:19",
+      "as_of": "2026-08-31 03:00:34",
       "stale": false
     },
     "tron": {
@@ -1831,7 +1831,7 @@
         ],
         [
           "Stretch from long-term average",
-          "+49.2% above its long-term average - very stretched",
+          "+48.1% above its long-term average - very stretched",
           -2
         ],
         [
@@ -1844,12 +1844,12 @@
       "id": "ethena",
       "symbol": "ENA",
       "name": "Ethena",
-      "price": 0.148167,
-      "pct_24h": -7.79702,
-      "pct_7d": -9.8,
+      "price": 0.147089,
+      "pct_24h": -7.9899,
+      "pct_7d": -8.7,
       "support_30d": 0.08231050586125944,
       "resistance_30d": 0.17000615068266245,
-      "as_of": "2026-08-31 02:15:26",
+      "as_of": "2026-08-31 03:00:34",
       "stale": false
     },
     "bitcoin-cash": {
@@ -2551,7 +2551,7 @@
         ],
         [
           "Stretch from long-term average",
-          "-1.8% vs its long-term average - not stretched either way",
+          "-2.3% vs its long-term average - not stretched either way",
           0
         ],
         [
@@ -2564,12 +2564,12 @@
       "id": "tether-gold",
       "symbol": "XAUT",
       "name": "Tether Gold",
-      "price": 4428.72,
-      "pct_24h": -0.65226,
-      "pct_7d": -3.4,
+      "price": 4408.53,
+      "pct_24h": -1.05717,
+      "pct_7d": -4.4,
       "support_30d": 4040.271654009323,
       "resistance_30d": 4662.510537821146,
-      "as_of": "2026-08-31 01:55:21",
+      "as_of": "2026-08-31 03:00:34",
       "stale": false
     },
     "bitway": {
@@ -3053,19 +3053,21 @@
       "stale": false
     }
   },
-  "_strong_buy_state": {},
+  "_strong_buy_state": {
+    "1h:SKY": true
+  },
   "BTC": {
     "key": "BTC",
     "name": "Bitcoin",
     "emoji": "\u20bf",
-    "price": 77491,
+    "price": 77465,
     "high_24h": 79347,
     "low_24h": 77162,
-    "pct_24h": -0.83356,
+    "pct_24h": -0.93417,
     "pct_7d": 0.0,
     "pct_30d": 23.5,
-    "sma50": 67556.95244769011,
-    "sma200": 69399.66830130586,
+    "sma50": 67556.04709715348,
+    "sma200": 69399.4419636717,
     "support_30d": 62843.70368466329,
     "resistance_30d": 80268.37474707834,
     "mark_price": 78489.6,
@@ -3080,14 +3082,14 @@
     "key": "ETH",
     "name": "Ethereum",
     "emoji": "\u039e",
-    "price": 2404.33,
+    "price": 2406.03,
     "high_24h": 2531.35,
     "low_24h": 2394.91,
-    "pct_24h": -2.17415,
+    "pct_24h": -2.13826,
     "pct_7d": -2.0,
     "pct_30d": 29.6,
-    "sma50": 2029.3048083163978,
-    "sma200": 2024.2990683991645,
+    "sma50": 2029.3284312455364,
+    "sma200": 2024.3049741314492,
     "support_30d": 1858.5376969949996,
     "resistance_30d": 2514.967577695514,
     "mark_price": 2474.04,
