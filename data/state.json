@@ -4,7 +4,7 @@
   "_alerts_state": {
     "btc-resistance-break": {
       "triggered": true,
-      "last_triggered_at": "2026-08-31 23:50:24"
+      "last_triggered_at": "2026-08-31 23:55:16"
     },
     "btc-support-break": {
       "triggered": false,
@@ -885,11 +885,11 @@
       "symbol": "PEPE",
       "name": "Pepe",
       "price": 3.55e-06,
-      "pct_24h": 2.69669,
+      "pct_24h": 4.34532,
       "pct_7d": -11.6,
       "support_30d": 2.5716563906374582e-06,
       "resistance_30d": 4.122123035488615e-06,
-      "as_of": "2026-08-31 23:30:33",
+      "as_of": "2026-08-31 23:55:16",
       "stale": false
     },
     "avalanche-2": {
@@ -933,11 +933,11 @@
       "symbol": "AVAX",
       "name": "Avalanche",
       "price": 7.23,
-      "pct_24h": 1.75327,
+      "pct_24h": 1.94736,
       "pct_7d": -4.6,
       "support_30d": 6.313391080113916,
       "resistance_30d": 7.836507914480645,
-      "as_of": "2026-08-31 23:45:21",
+      "as_of": "2026-08-31 23:55:16",
       "stale": false
     },
     "aster-2": {
@@ -1903,11 +1903,11 @@
     "mantle": {
       "label": "\ud83d\udfe1 HOLD / NEUTRAL",
       "status": "neutral",
-      "score": 1,
+      "score": 0,
       "rows": [
         [
           "Price vs. recent range",
-          "Near its 30-day high (~$0.5612) - less room to run",
+          "Near its 30-day high (~$0.5481) - less room to run",
           -1
         ],
         [
@@ -1922,12 +1922,12 @@
         ],
         [
           "Recent trend",
-          "Trending up steadily - healthy",
-          1
+          "Chopping sideways - no clear trend",
+          0
         ],
         [
           "Stretch from long-term average",
-          "-7.2% vs its long-term average - not stretched either way",
+          "-9.7% vs its long-term average - not stretched either way",
           0
         ],
         [
@@ -1940,12 +1940,12 @@
       "id": "mantle",
       "symbol": "MNT",
       "name": "Mantle",
-      "price": 0.561201,
-      "pct_24h": 0.08356,
-      "pct_7d": 9.0,
+      "price": 0.54625,
+      "pct_24h": -0.11657,
+      "pct_7d": 6.5,
       "support_30d": 0.39667739023975906,
-      "resistance_30d": 0.5611961305962965,
-      "as_of": "2026-08-31 22:30:28",
+      "resistance_30d": 0.548083731863849,
+      "as_of": "2026-08-31 23:55:16",
       "stale": false
     },
     "polkadot": {
@@ -3054,20 +3054,20 @@
     }
   },
   "_strong_buy_state": {
-    "15m:ETC": true
+    "15m:PEPE": true
   },
   "BTC": {
     "key": "BTC",
     "name": "Bitcoin",
     "emoji": "\u20bf",
-    "price": 78537,
+    "price": 78549,
     "high_24h": 79230,
     "low_24h": 77388,
-    "pct_24h": 1.67944,
+    "pct_24h": 1.30196,
     "pct_7d": -0.5,
     "pct_30d": 25.2,
-    "sma50": 67577.7038347552,
-    "sma200": 69404.85614807214,
+    "sma50": 67577.94045549486,
+    "sma200": 69404.91530325705,
     "support_30d": 62843.70368466329,
     "resistance_30d": 80268.37474707834,
     "mark_price": 78505.64311594,
@@ -3082,14 +3082,14 @@
     "key": "ETH",
     "name": "Ethereum",
     "emoji": "\u039e",
-    "price": 2466.25,
+    "price": 2466.8,
     "high_24h": 2488.52,
     "low_24h": 2401.8,
-    "pct_24h": 2.86322,
+    "pct_24h": 2.30182,
     "pct_7d": -0.6,
     "pct_30d": 33.9,
-    "sma50": 2030.5321754786219,
-    "sma200": 2024.6059101897204,
+    "sma50": 2030.5423085662237,
+    "sma200": 2024.6084434616212,
     "support_30d": 1858.5376969949996,
     "resistance_30d": 2514.967577695514,
     "mark_price": 2465.81127907,
