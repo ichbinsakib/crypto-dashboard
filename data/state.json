@@ -991,7 +991,7 @@
     "worldcoin-wld": {
       "label": "\ud83d\udfe1 HOLD / NEUTRAL",
       "status": "neutral",
-      "score": 1,
+      "score": 0,
       "rows": [
         [
           "Price vs. recent range",
@@ -1010,12 +1010,12 @@
         ],
         [
           "Recent trend",
-          "Chopping sideways - no clear trend",
-          0
+          "Trending down - avoid catching a falling knife",
+          -1
         ],
         [
           "Stretch from long-term average",
-          "+1.6% vs its long-term average - not stretched either way",
+          "+1.9% vs its long-term average - not stretched either way",
           0
         ],
         [
@@ -1028,12 +1028,12 @@
       "id": "worldcoin-wld",
       "symbol": "WLD",
       "name": "Worldcoin",
-      "price": 0.362211,
-      "pct_24h": -3.97358,
-      "pct_7d": -7.9,
+      "price": 0.363641,
+      "pct_24h": -3.49058,
+      "pct_7d": -8.2,
       "support_30d": 0.3029636206131486,
       "resistance_30d": 0.4153748859818001,
-      "as_of": "2026-08-31 05:15:21",
+      "as_of": "2026-08-31 06:10:23",
       "stale": false
     },
     "bfusd": {
@@ -1975,7 +1975,7 @@
         ],
         [
           "Stretch from long-term average",
-          "-26.0% below its long-term average - confirmed downtrend",
+          "-26.2% below its long-term average - confirmed downtrend",
           -1
         ],
         [
@@ -1988,12 +1988,12 @@
       "id": "polkadot",
       "symbol": "DOT",
       "name": "Polkadot",
-      "price": 0.830023,
-      "pct_24h": -1.50169,
-      "pct_7d": -9.0,
+      "price": 0.82775,
+      "pct_24h": -1.66808,
+      "pct_7d": -8.7,
       "support_30d": 0.7510040523927409,
       "resistance_30d": 0.9394118398868826,
-      "as_of": "2026-08-31 05:25:17",
+      "as_of": "2026-08-31 06:10:23",
       "stale": false
     },
     "uniswap": {
@@ -2084,12 +2084,12 @@
       "id": "pi-network",
       "symbol": "PI",
       "name": "Pi Network",
-      "price": 0.090661,
-      "pct_24h": -0.95481,
+      "price": 0.090621,
+      "pct_24h": -0.85281,
       "pct_7d": 1.8,
       "support_30d": 0.08279922535306347,
       "resistance_30d": 0.09762045155043195,
-      "as_of": "2026-08-31 05:45:22",
+      "as_of": "2026-08-31 06:10:23",
       "stale": false
     },
     "ondo-finance": {
@@ -3058,14 +3058,14 @@
     "key": "BTC",
     "name": "Bitcoin",
     "emoji": "\u20bf",
-    "price": 78030,
+    "price": 77864,
     "high_24h": 79347,
     "low_24h": 77162,
-    "pct_24h": -0.13417,
+    "pct_24h": -0.32283,
     "pct_7d": 1.5,
     "pct_30d": 23.7,
-    "sma50": 67567.750524737,
-    "sma200": 69402.36782056758,
+    "sma50": 67565.20623455272,
+    "sma200": 69401.73174802153,
     "support_30d": 62843.70368466329,
     "resistance_30d": 80268.37474707834,
     "mark_price": 78489.6,
@@ -3080,14 +3080,14 @@
     "key": "ETH",
     "name": "Ethereum",
     "emoji": "\u039e",
-    "price": 2436.01,
+    "price": 2431.29,
     "high_24h": 2531.35,
     "low_24h": 2394.91,
-    "pct_24h": -0.80954,
+    "pct_24h": -0.98004,
     "pct_7d": -0.1,
     "pct_30d": 30.4,
-    "sma50": 2029.9421557229434,
-    "sma200": 2024.458405250801,
+    "sma50": 2029.8563426120122,
+    "sma200": 2024.436951973068,
     "support_30d": 1858.5376969949996,
     "resistance_30d": 2514.967577695514,
     "mark_price": 2474.04,
