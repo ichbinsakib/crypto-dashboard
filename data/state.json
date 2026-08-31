@@ -4,7 +4,7 @@
   "_alerts_state": {
     "btc-resistance-break": {
       "triggered": true,
-      "last_triggered_at": "2026-08-31 23:45:21"
+      "last_triggered_at": "2026-08-31 23:50:24"
     },
     "btc-support-break": {
       "triggered": false,
@@ -295,7 +295,7 @@
         ],
         [
           "Stretch from long-term average",
-          "+63.8% above its long-term average - very stretched",
+          "+63.6% above its long-term average - very stretched",
           -2
         ],
         [
@@ -308,12 +308,12 @@
       "id": "hyperliquid",
       "symbol": "HYPE",
       "name": "Hyperliquid",
-      "price": 84.22,
-      "pct_24h": 4.38596,
+      "price": 84.11,
+      "pct_24h": 6.16876,
       "pct_7d": 8.4,
       "support_30d": 52.550690257877115,
       "resistance_30d": 84.67784032156108,
-      "as_of": "2026-08-31 23:05:18",
+      "as_of": "2026-08-31 23:50:24",
       "stale": false
     },
     "dogecoin": {
@@ -1495,7 +1495,7 @@
         ],
         [
           "Stretch from long-term average",
-          "-10.8% vs its long-term average - not stretched either way",
+          "-10.9% vs its long-term average - not stretched either way",
           0
         ],
         [
@@ -1508,12 +1508,12 @@
       "id": "ethereum-classic",
       "symbol": "ETC",
       "name": "Ethereum Classic",
-      "price": 7.29,
-      "pct_24h": -0.55656,
-      "pct_7d": -6.2,
+      "price": 7.28,
+      "pct_24h": 2.2177,
+      "pct_7d": -6.4,
       "support_30d": 6.079473341192034,
       "resistance_30d": 8.342731558283557,
-      "as_of": "2026-08-31 22:55:19",
+      "as_of": "2026-08-31 23:50:24",
       "stale": false
     },
     "pump-fun": {
@@ -2229,11 +2229,11 @@
       "symbol": "ICP",
       "name": "Internet Computer",
       "price": 2.4,
-      "pct_24h": -0.09253,
-      "pct_7d": -0.7,
+      "pct_24h": 2.80154,
+      "pct_7d": -1.3,
       "support_30d": 2.074131885532741,
       "resistance_30d": 2.525531974490298,
-      "as_of": "2026-08-31 22:35:21",
+      "as_of": "2026-08-31 23:50:24",
       "stale": false
     },
     "bittensor": {
@@ -3053,19 +3053,21 @@
       "stale": false
     }
   },
-  "_strong_buy_state": {},
+  "_strong_buy_state": {
+    "15m:ETC": true
+  },
   "BTC": {
     "key": "BTC",
     "name": "Bitcoin",
     "emoji": "\u20bf",
-    "price": 78543,
+    "price": 78537,
     "high_24h": 79230,
     "low_24h": 77388,
-    "pct_24h": 1.39038,
+    "pct_24h": 1.67944,
     "pct_7d": -0.5,
     "pct_30d": 25.2,
-    "sma50": 67578.01953740111,
-    "sma200": 69404.9350737336,
+    "sma50": 67577.7038347552,
+    "sma200": 69404.85614807214,
     "support_30d": 62843.70368466329,
     "resistance_30d": 80268.37474707834,
     "mark_price": 78505.64311594,
@@ -3080,14 +3082,14 @@
     "key": "ETH",
     "name": "Ethereum",
     "emoji": "\u039e",
-    "price": 2466.14,
+    "price": 2466.25,
     "high_24h": 2488.52,
     "low_24h": 2401.8,
-    "pct_24h": 2.27864,
+    "pct_24h": 2.86322,
     "pct_7d": -0.6,
     "pct_30d": 33.9,
-    "sma50": 2030.5411737315887,
-    "sma200": 2024.6081597529621,
+    "sma50": 2030.5321754786219,
+    "sma200": 2024.6059101897204,
     "support_30d": 1858.5376969949996,
     "resistance_30d": 2514.967577695514,
     "mark_price": 2465.81127907,
