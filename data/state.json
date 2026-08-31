@@ -2003,7 +2003,7 @@
       "rows": [
         [
           "Price vs. recent range",
-          "Near its 30-day high (~$5.17) - less room to run",
+          "Near its 30-day high (~$5.13) - less room to run",
           -1
         ],
         [
@@ -2023,7 +2023,7 @@
         ],
         [
           "Stretch from long-term average",
-          "+46.6% above its long-term average - very stretched",
+          "+44.1% above its long-term average - very stretched",
           -2
         ],
         [
@@ -2036,12 +2036,12 @@
       "id": "uniswap",
       "symbol": "UNI",
       "name": "Uniswap",
-      "price": 5.16,
-      "pct_24h": 4.80878,
-      "pct_7d": 19.5,
+      "price": 5.07,
+      "pct_24h": -3.26708,
+      "pct_7d": 14.2,
       "support_30d": 3.1971416665971573,
-      "resistance_30d": 5.166167635956509,
-      "as_of": "2026-08-31 10:55:18",
+      "resistance_30d": 5.132216930650087,
+      "as_of": "2026-08-31 14:05:20",
       "stale": false
     },
     "pi-network": {
@@ -2215,7 +2215,7 @@
         ],
         [
           "Stretch from long-term average",
-          "-2.1% vs its long-term average - not stretched either way",
+          "-2.5% vs its long-term average - not stretched either way",
           0
         ],
         [
@@ -2228,12 +2228,12 @@
       "id": "internet-computer",
       "symbol": "ICP",
       "name": "Internet Computer",
-      "price": 2.39,
-      "pct_24h": -2.78627,
-      "pct_7d": -2.1,
+      "price": 2.38,
+      "pct_24h": -3.30723,
+      "pct_7d": -1.8,
       "support_30d": 2.074131885532741,
       "resistance_30d": 2.525531974490298,
-      "as_of": "2026-08-31 13:45:24",
+      "as_of": "2026-08-31 14:05:20",
       "stale": false
     },
     "bittensor": {
@@ -2429,9 +2429,9 @@
       "stale": false
     },
     "near": {
-      "label": "\ud83d\udfe1 HOLD / NEUTRAL",
-      "status": "neutral",
-      "score": -1,
+      "label": "\ud83d\udd34 CAUTION - REDUCE NEW BUYS",
+      "status": "bearish",
+      "score": -2,
       "rows": [
         [
           "Price vs. recent range",
@@ -2450,12 +2450,12 @@
         ],
         [
           "Recent trend",
-          "Chopping sideways - no clear trend",
-          0
+          "Trending down - avoid catching a falling knife",
+          -1
         ],
         [
           "Stretch from long-term average",
-          "+12.6% above its long-term average - a bit stretched",
+          "+12.0% above its long-term average - a bit stretched",
           -1
         ],
         [
@@ -2464,16 +2464,16 @@
           0
         ]
       ],
-      "plain": "No real edge either way right now - fine to just wait and watch.",
+      "plain": "Getting risky - I'd hold off on new buys until this cools down.",
       "id": "near",
       "symbol": "NEAR",
       "name": "NEAR Protocol",
-      "price": 1.85,
-      "pct_24h": -1.13165,
-      "pct_7d": -7.4,
+      "price": 1.84,
+      "pct_24h": -2.10363,
+      "pct_7d": -8.8,
       "support_30d": 1.5879597131538,
       "resistance_30d": 2.0141495518834596,
-      "as_of": "2026-08-31 13:40:25",
+      "as_of": "2026-08-31 14:05:20",
       "stale": false
     },
     "quant-network": {
@@ -3053,19 +3053,22 @@
       "stale": false
     }
   },
-  "_strong_buy_state": {},
+  "_strong_buy_state": {
+    "15m:ICP": true,
+    "15m:NEAR": true
+  },
   "BTC": {
     "key": "BTC",
     "name": "Bitcoin",
     "emoji": "\u20bf",
-    "price": 77846,
+    "price": 77914,
     "high_24h": 79347,
     "low_24h": 77162,
-    "pct_24h": -1.30477,
-    "pct_7d": -0.6,
-    "pct_30d": 23.6,
-    "sma50": 67563.96120722759,
-    "sma200": 69401.42049119023,
+    "pct_24h": -1.23826,
+    "pct_7d": -1.6,
+    "pct_30d": 23.5,
+    "sma50": 67565.03452653666,
+    "sma200": 69401.6888210175,
     "support_30d": 62843.70368466329,
     "resistance_30d": 80268.37474707834,
     "mark_price": 78586.99342579,
@@ -3080,14 +3083,14 @@
     "key": "ETH",
     "name": "Ethereum",
     "emoji": "\u039e",
-    "price": 2440.8,
+    "price": 2442.82,
     "high_24h": 2531.35,
     "low_24h": 2394.91,
-    "pct_24h": -1.4342,
-    "pct_7d": -1.7,
-    "pct_30d": 31.4,
-    "sma50": 2030.0103252834056,
-    "sma200": 2024.4754476409164,
+    "pct_24h": -1.26241,
+    "pct_7d": -2.8,
+    "pct_30d": 30.7,
+    "sma50": 2030.0551728289806,
+    "sma200": 2024.4866595273102,
     "support_30d": 1858.5376969949996,
     "resistance_30d": 2514.967577695514,
     "mark_price": 2453.84000401,
