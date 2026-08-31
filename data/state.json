@@ -4,7 +4,7 @@
   "_alerts_state": {
     "btc-resistance-break": {
       "triggered": true,
-      "last_triggered_at": "2026-08-31 21:05:24"
+      "last_triggered_at": "2026-08-31 21:10:26"
     },
     "btc-support-break": {
       "triggered": false,
@@ -79,7 +79,7 @@
     "ripple": {
       "label": "\ud83d\udfe1 HOLD / NEUTRAL",
       "status": "neutral",
-      "score": -1,
+      "score": 0,
       "rows": [
         [
           "Price vs. recent range",
@@ -98,12 +98,12 @@
         ],
         [
           "Recent trend",
-          "Trending down - avoid catching a falling knife",
-          -1
+          "Chopping sideways - no clear trend",
+          0
         ],
         [
           "Stretch from long-term average",
-          "+8.0% vs its long-term average - not stretched either way",
+          "+8.8% vs its long-term average - not stretched either way",
           0
         ],
         [
@@ -116,12 +116,12 @@
       "id": "ripple",
       "symbol": "XRP",
       "name": "XRP",
-      "price": 1.38,
-      "pct_24h": -2.93561,
-      "pct_7d": -8.1,
+      "price": 1.39,
+      "pct_24h": -0.48701,
+      "pct_7d": -6.4,
       "support_30d": 0.9927072784932938,
       "resistance_30d": 1.52050482788377,
-      "as_of": "2026-08-31 17:35:20",
+      "as_of": "2026-08-31 21:10:26",
       "stale": false
     },
     "solana": {
@@ -1831,7 +1831,7 @@
         ],
         [
           "Stretch from long-term average",
-          "+51.6% above its long-term average - very stretched",
+          "+49.1% above its long-term average - very stretched",
           -2
         ],
         [
@@ -1844,12 +1844,12 @@
       "id": "ethena",
       "symbol": "ENA",
       "name": "Ethena",
-      "price": 0.150569,
-      "pct_24h": -7.36784,
-      "pct_7d": -2.0,
+      "price": 0.148156,
+      "pct_24h": -6.86941,
+      "pct_7d": -2.4,
       "support_30d": 0.08231050586125944,
       "resistance_30d": 0.17000615068266245,
-      "as_of": "2026-08-31 19:00:34",
+      "as_of": "2026-08-31 21:10:26",
       "stale": false
     },
     "bitcoin-cash": {
@@ -2887,7 +2887,7 @@
         ],
         [
           "Stretch from long-term average",
-          "+31.1% above its long-term average - very stretched",
+          "+31.0% above its long-term average - very stretched",
           -2
         ],
         [
@@ -2900,12 +2900,12 @@
       "id": "okb",
       "symbol": "OKB",
       "name": "OKB",
-      "price": 112.48,
-      "pct_24h": -1.2077,
+      "price": 112.41,
+      "pct_24h": -1.28621,
       "pct_7d": -1.5,
       "support_30d": 85.29568594571903,
       "resistance_30d": 115.8310797114581,
-      "as_of": "2026-08-31 21:05:24",
+      "as_of": "2026-08-31 21:10:26",
       "stale": false
     },
     "just": {
@@ -3053,19 +3053,21 @@
       "stale": false
     }
   },
-  "_strong_buy_state": {},
+  "_strong_buy_state": {
+    "15m:ENA": true
+  },
   "BTC": {
     "key": "BTC",
     "name": "Bitcoin",
     "emoji": "\u20bf",
-    "price": 78825,
+    "price": 78773,
     "high_24h": 79230,
     "low_24h": 77162,
-    "pct_24h": 0.46594,
+    "pct_24h": 0.40156,
     "pct_7d": 0.1,
     "pct_30d": 26.2,
-    "sma50": 67582.99698128685,
-    "sma200": 69406.17943470505,
+    "sma50": 67583.27533402073,
+    "sma200": 69406.24902288853,
     "support_30d": 62843.70368466329,
     "resistance_30d": 80268.37474707834,
     "mark_price": 78505.64311594,
@@ -3080,14 +3082,14 @@
     "key": "ETH",
     "name": "Ethereum",
     "emoji": "\u039e",
-    "price": 2471.02,
+    "price": 2471.17,
     "high_24h": 2488.52,
     "low_24h": 2394.91,
-    "pct_24h": -0.10825,
+    "pct_24h": -0.07308,
     "pct_7d": 0.0,
     "pct_30d": 34.7,
-    "sma50": 2030.6283318918709,
-    "sma200": 2024.6299492930327,
+    "sma50": 2030.6703611777486,
+    "sma200": 2024.6404566145022,
     "support_30d": 1858.5376969949996,
     "resistance_30d": 2514.967577695514,
     "mark_price": 2465.81127907,
