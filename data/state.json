@@ -4,7 +4,7 @@
   "_alerts_state": {
     "btc-resistance-break": {
       "triggered": true,
-      "last_triggered_at": "2026-08-31 15:45:23"
+      "last_triggered_at": "2026-08-31 15:50:27"
     },
     "btc-support-break": {
       "triggered": false,
@@ -597,11 +597,11 @@
       "symbol": "LEO",
       "name": "LEO Token",
       "price": 9.64,
-      "pct_24h": 0.62783,
-      "pct_7d": 2.8,
+      "pct_24h": 0.70054,
+      "pct_7d": 3.0,
       "support_30d": 8.948412455130585,
       "resistance_30d": 9.784703173040917,
-      "as_of": "2026-08-31 14:50:30",
+      "as_of": "2026-08-31 15:50:27",
       "stale": false
     },
     "monero": {
@@ -1471,7 +1471,7 @@
     "ethereum-classic": {
       "label": "\ud83d\udfe1 HOLD / NEUTRAL",
       "status": "neutral",
-      "score": 0,
+      "score": 1,
       "rows": [
         [
           "Price vs. recent range",
@@ -1490,12 +1490,12 @@
         ],
         [
           "Recent trend",
-          "Trending down - avoid catching a falling knife",
-          -1
+          "Chopping sideways - no clear trend",
+          0
         ],
         [
           "Stretch from long-term average",
-          "-11.8% vs its long-term average - not stretched either way",
+          "-10.9% vs its long-term average - not stretched either way",
           0
         ],
         [
@@ -1508,12 +1508,12 @@
       "id": "ethereum-classic",
       "symbol": "ETC",
       "name": "Ethereum Classic",
-      "price": 7.21,
-      "pct_24h": -3.38008,
-      "pct_7d": -8.9,
+      "price": 7.28,
+      "pct_24h": -2.18606,
+      "pct_7d": -6.0,
       "support_30d": 6.079473341192034,
       "resistance_30d": 8.342731558283557,
-      "as_of": "2026-08-31 14:00:35",
+      "as_of": "2026-08-31 15:50:27",
       "stale": false
     },
     "pump-fun": {
@@ -2429,9 +2429,9 @@
       "stale": false
     },
     "near": {
-      "label": "\ud83d\udd34 CAUTION - REDUCE NEW BUYS",
-      "status": "bearish",
-      "score": -2,
+      "label": "\ud83d\udfe1 HOLD / NEUTRAL",
+      "status": "neutral",
+      "score": -1,
       "rows": [
         [
           "Price vs. recent range",
@@ -2450,12 +2450,12 @@
         ],
         [
           "Recent trend",
-          "Trending down - avoid catching a falling knife",
-          -1
+          "Chopping sideways - no clear trend",
+          0
         ],
         [
           "Stretch from long-term average",
-          "+12.0% above its long-term average - a bit stretched",
+          "+13.8% above its long-term average - a bit stretched",
           -1
         ],
         [
@@ -2464,16 +2464,16 @@
           0
         ]
       ],
-      "plain": "Getting risky - I'd hold off on new buys until this cools down.",
+      "plain": "No real edge either way right now - fine to just wait and watch.",
       "id": "near",
       "symbol": "NEAR",
       "name": "NEAR Protocol",
-      "price": 1.84,
-      "pct_24h": -2.10363,
-      "pct_7d": -8.8,
+      "price": 1.87,
+      "pct_24h": -0.13633,
+      "pct_7d": -3.8,
       "support_30d": 1.5879597131538,
       "resistance_30d": 2.0141495518834596,
-      "as_of": "2026-08-31 14:05:20",
+      "as_of": "2026-08-31 15:50:27",
       "stale": false
     },
     "quant-network": {
@@ -3058,14 +3058,14 @@
     "key": "BTC",
     "name": "Bitcoin",
     "emoji": "\u20bf",
-    "price": 78601,
+    "price": 78616,
     "high_24h": 79347,
     "low_24h": 77162,
-    "pct_24h": -0.22031,
+    "pct_24h": -0.25343,
     "pct_7d": 0.0,
     "pct_30d": 24.7,
-    "sma50": 67580.70402354164,
-    "sma200": 69405.60619526875,
+    "sma50": 67579.48076775909,
+    "sma200": 69405.3003813231,
     "support_30d": 62843.70368466329,
     "resistance_30d": 80268.37474707834,
     "mark_price": 78586.99342579,
@@ -3080,14 +3080,14 @@
     "key": "ETH",
     "name": "Ethereum",
     "emoji": "\u039e",
-    "price": 2471.47,
+    "price": 2472.18,
     "high_24h": 2531.35,
     "low_24h": 2394.91,
-    "pct_24h": -0.22393,
+    "pct_24h": -0.28752,
     "pct_7d": -1.1,
     "pct_30d": 32.1,
-    "sma50": 2030.6923845613292,
-    "sma200": 2024.6459624603972,
+    "sma50": 2030.6513318887548,
+    "sma200": 2024.6356992922538,
     "support_30d": 1858.5376969949996,
     "resistance_30d": 2514.967577695514,
     "mark_price": 2453.84000401,
