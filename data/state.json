@@ -4,7 +4,7 @@
   "_alerts_state": {
     "btc-resistance-break": {
       "triggered": true,
-      "last_triggered_at": "2026-08-31 19:30:28"
+      "last_triggered_at": "2026-08-31 19:35:22"
     },
     "btc-support-break": {
       "triggered": false,
@@ -452,12 +452,12 @@
       "id": "rain",
       "symbol": "RAIN",
       "name": "Rain",
-      "price": 0.0168146,
-      "pct_24h": -3.49827,
-      "pct_7d": 13.7,
+      "price": 0.01681131,
+      "pct_24h": -3.13824,
+      "pct_7d": 13.8,
       "support_30d": 0.012452326374071652,
       "resistance_30d": 0.018158429442510105,
-      "as_of": "2026-08-31 18:40:24",
+      "as_of": "2026-08-31 19:35:22",
       "stale": false
     },
     "chainlink": {
@@ -2516,12 +2516,12 @@
       "id": "quant-network",
       "symbol": "QNT",
       "name": "Quant",
-      "price": 61.61,
-      "pct_24h": 0.07003,
-      "pct_7d": -4.7,
+      "price": 61.56,
+      "pct_24h": 0.14431,
+      "pct_7d": -4.4,
       "support_30d": 55.905981995619285,
       "resistance_30d": 66.68821517512447,
-      "as_of": "2026-08-31 18:10:25",
+      "as_of": "2026-08-31 19:35:22",
       "stale": false
     },
     "tether-gold": {
@@ -2765,14 +2765,14 @@
       "stale": false
     },
     "memecore": {
-      "label": "\ud83d\udfe2 LEAN ACCUMULATE",
-      "status": "bullish",
-      "score": 2,
+      "label": "\ud83d\udfe1 HOLD / NEUTRAL",
+      "status": "neutral",
+      "score": 0,
       "rows": [
         [
           "Price vs. recent range",
-          "Near its 30-day low (~$1.04) - historically a better entry",
-          2
+          "Sitting in the middle of its 30-day range",
+          0
         ],
         [
           "Crowd mood (Fear & Greed)",
@@ -2791,7 +2791,7 @@
         ],
         [
           "Stretch from long-term average",
-          "-48.1% below its long-term average - confirmed downtrend",
+          "-47.7% below its long-term average - confirmed downtrend",
           -1
         ],
         [
@@ -2800,16 +2800,16 @@
           0
         ]
       ],
-      "plain": "Leans toward a decent spot to slowly add (DCA) - not a strong signal, just a lean.",
+      "plain": "No real edge either way right now - fine to just wait and watch.",
       "id": "memecore",
       "symbol": "M",
       "name": "MemeCore",
-      "price": 1.089,
-      "pct_24h": -0.94163,
-      "pct_7d": -3.5,
+      "price": 1.096,
+      "pct_24h": 0.55232,
+      "pct_7d": -2.7,
       "support_30d": 1.0428585856494421,
       "resistance_30d": 1.2453913363052769,
-      "as_of": "2026-08-31 18:15:27",
+      "as_of": "2026-08-31 19:35:22",
       "stale": false
     },
     "aave": {
@@ -3058,14 +3058,14 @@
     "key": "BTC",
     "name": "Bitcoin",
     "emoji": "\u20bf",
-    "price": 79087,
+    "price": 79047,
     "high_24h": 79166,
     "low_24h": 77162,
-    "pct_24h": 0.23839,
+    "pct_24h": 0.21111,
     "pct_7d": 0.4,
     "pct_30d": 26.1,
-    "sma50": 67587.84888063576,
-    "sma200": 69407.39240954228,
+    "sma50": 67588.02726255641,
+    "sma200": 69407.43700502244,
     "support_30d": 62843.70368466329,
     "resistance_30d": 80268.37474707834,
     "mark_price": 78505.64311594,
@@ -3080,14 +3080,14 @@
     "key": "ETH",
     "name": "Ethereum",
     "emoji": "\u039e",
-    "price": 2485.07,
+    "price": 2482.9,
     "high_24h": 2507.36,
     "low_24h": 2394.91,
-    "pct_24h": -0.80426,
+    "pct_24h": -0.86935,
     "pct_7d": 0.4,
     "pct_30d": 33.2,
-    "sma50": 2030.8763519051602,
-    "sma200": 2024.6919542963549,
+    "sma50": 2030.8739534772958,
+    "sma200": 2024.691354689389,
     "support_30d": 1858.5376969949996,
     "resistance_30d": 2514.967577695514,
     "mark_price": 2465.81127907,
