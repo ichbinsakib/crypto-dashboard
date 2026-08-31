@@ -3,8 +3,8 @@
   "_fng_classification": "Greed",
   "_alerts_state": {
     "btc-resistance-break": {
-      "triggered": false,
-      "last_triggered_at": "2026-08-31 15:12:37"
+      "triggered": true,
+      "last_triggered_at": "2026-08-31 15:35:21"
     },
     "btc-support-break": {
       "triggered": false,
@@ -295,7 +295,7 @@
         ],
         [
           "Stretch from long-term average",
-          "+58.5% above its long-term average - very stretched",
+          "+60.3% above its long-term average - very stretched",
           -2
         ],
         [
@@ -308,12 +308,12 @@
       "id": "hyperliquid",
       "symbol": "HYPE",
       "name": "Hyperliquid",
-      "price": 81.48,
-      "pct_24h": -2.45663,
-      "pct_7d": 0.2,
+      "price": 82.39,
+      "pct_24h": -1.58209,
+      "pct_7d": 3.5,
       "support_30d": 52.550690257877115,
       "resistance_30d": 84.67784032156108,
-      "as_of": "2026-08-31 14:55:25",
+      "as_of": "2026-08-31 15:35:21",
       "stale": false
     },
     "dogecoin": {
@@ -823,7 +823,7 @@
         ],
         [
           "Stretch from long-term average",
-          "-11.3% vs its long-term average - not stretched either way",
+          "-12.1% vs its long-term average - not stretched either way",
           0
         ],
         [
@@ -836,12 +836,12 @@
       "id": "hedera-hashgraph",
       "symbol": "HBAR",
       "name": "Hedera",
-      "price": 0.074307,
-      "pct_24h": -0.79281,
-      "pct_7d": -6.2,
+      "price": 0.073668,
+      "pct_24h": -1.88891,
+      "pct_7d": -6.7,
       "support_30d": 0.06461260477975343,
       "resistance_30d": 0.07985387850470703,
-      "as_of": "2026-08-31 11:40:22",
+      "as_of": "2026-08-31 15:35:21",
       "stale": false
     },
     "pepe": {
@@ -1975,7 +1975,7 @@
         ],
         [
           "Stretch from long-term average",
-          "-26.6% below its long-term average - confirmed downtrend",
+          "-26.2% below its long-term average - confirmed downtrend",
           -1
         ],
         [
@@ -1988,12 +1988,12 @@
       "id": "polkadot",
       "symbol": "DOT",
       "name": "Polkadot",
-      "price": 0.822827,
-      "pct_24h": -4.46847,
-      "pct_7d": -10.8,
+      "price": 0.827693,
+      "pct_24h": -2.95204,
+      "pct_7d": -8.6,
       "support_30d": 0.7510040523927409,
       "resistance_30d": 0.9394118398868826,
-      "as_of": "2026-08-31 14:15:24",
+      "as_of": "2026-08-31 15:35:21",
       "stale": false
     },
     "uniswap": {
@@ -2813,9 +2813,9 @@
       "stale": false
     },
     "aave": {
-      "label": "\ud83d\udd34 CAUTION - REDUCE NEW BUYS",
-      "status": "bearish",
-      "score": -2,
+      "label": "\ud83d\udfe1 HOLD / NEUTRAL",
+      "status": "neutral",
+      "score": -1,
       "rows": [
         [
           "Price vs. recent range",
@@ -2834,12 +2834,12 @@
         ],
         [
           "Recent trend",
-          "Trending down - avoid catching a falling knife",
-          -1
+          "Chopping sideways - no clear trend",
+          0
         ],
         [
           "Stretch from long-term average",
-          "+26.6% above its long-term average - a bit stretched",
+          "+27.8% above its long-term average - a bit stretched",
           -1
         ],
         [
@@ -2848,16 +2848,16 @@
           0
         ]
       ],
-      "plain": "Getting risky - I'd hold off on new buys until this cools down.",
+      "plain": "No real edge either way right now - fine to just wait and watch.",
       "id": "aave",
       "symbol": "AAVE",
       "name": "Aave",
-      "price": 123.29,
-      "pct_24h": -0.60691,
-      "pct_7d": -12.8,
+      "price": 124.41,
+      "pct_24h": -1.44696,
+      "pct_7d": -7.9,
       "support_30d": 85.94219943917633,
       "resistance_30d": 141.53047916466082,
-      "as_of": "2026-08-31 08:25:19",
+      "as_of": "2026-08-31 15:35:21",
       "stale": false
     },
     "okb": {
@@ -3058,14 +3058,14 @@
     "key": "BTC",
     "name": "Bitcoin",
     "emoji": "\u20bf",
-    "price": 78356,
+    "price": 78535,
     "high_24h": 79347,
     "low_24h": 77162,
-    "pct_24h": -0.53687,
+    "pct_24h": -0.32755,
     "pct_7d": 0.0,
     "pct_30d": 24.7,
-    "sma50": 67576.38291991384,
-    "sma200": 69404.5259193618,
+    "sma50": 67577.86286226154,
+    "sma200": 69404.89590494872,
     "support_30d": 62843.70368466329,
     "resistance_30d": 80268.37474707834,
     "mark_price": 78586.99342579,
@@ -3080,14 +3080,14 @@
     "key": "ETH",
     "name": "Ethereum",
     "emoji": "\u039e",
-    "price": 2465.47,
+    "price": 2470.84,
     "high_24h": 2531.35,
     "low_24h": 2394.91,
-    "pct_24h": -0.47311,
+    "pct_24h": -0.284,
     "pct_7d": -1.1,
     "pct_30d": 32.1,
-    "sma50": 2030.5199358710274,
-    "sma200": 2024.6028502878219,
+    "sma50": 2030.613435404876,
+    "sma200": 2024.6262251712842,
     "support_30d": 1858.5376969949996,
     "resistance_30d": 2514.967577695514,
     "mark_price": 2453.84000401,
