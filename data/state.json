@@ -1087,7 +1087,7 @@
     "polygon-ecosystem-token": {
       "label": "\ud83d\udfe1 HOLD / NEUTRAL",
       "status": "neutral",
-      "score": -1,
+      "score": 0,
       "rows": [
         [
           "Price vs. recent range",
@@ -1101,8 +1101,8 @@
         ],
         [
           "Market phase (best guess)",
-          "Established uptrend - phase where price marks up",
-          1
+          "Basing near the bottom - phase where smart money accumulates",
+          2
         ],
         [
           "Recent trend",
@@ -1111,7 +1111,7 @@
         ],
         [
           "Stretch from long-term average",
-          "+5.7% vs its long-term average - not stretched either way",
+          "+0.8% vs its long-term average - not stretched either way",
           0
         ],
         [
@@ -1124,12 +1124,12 @@
       "id": "polygon-ecosystem-token",
       "symbol": "POL",
       "name": "POL (ex-MATIC)",
-      "price": 0.093984,
-      "pct_24h": -9.33061,
-      "pct_7d": -13.8,
+      "price": 0.08962,
+      "pct_24h": -13.59942,
+      "pct_7d": -22.5,
       "support_30d": 0.07289693930084962,
       "resistance_30d": 0.12250456198546959,
-      "as_of": "2026-08-31 10:15:23",
+      "as_of": "2026-08-31 12:25:20",
       "stale": false
     },
     "blackrock-usd-institutional-digital-liquidity-fund": {
@@ -1207,7 +1207,7 @@
         ],
         [
           "Stretch from long-term average",
-          "+1.0% vs its long-term average - not stretched either way",
+          "+0.7% vs its long-term average - not stretched either way",
           0
         ],
         [
@@ -1220,12 +1220,12 @@
       "id": "nexo",
       "symbol": "NEXO",
       "name": "NEXO",
-      "price": 0.844066,
-      "pct_24h": -1.63924,
-      "pct_7d": 3.3,
+      "price": 0.84146,
+      "pct_24h": -1.84722,
+      "pct_7d": 2.9,
       "support_30d": 0.7016300793001435,
       "resistance_30d": 0.8734100764023305,
-      "as_of": "2026-08-31 11:50:25",
+      "as_of": "2026-08-31 12:25:20",
       "stale": false
     },
     "janus-henderson-anemoy-treasury-fund": {
@@ -2119,7 +2119,7 @@
         ],
         [
           "Stretch from long-term average",
-          "+5.0% vs its long-term average - not stretched either way",
+          "+5.4% vs its long-term average - not stretched either way",
           0
         ],
         [
@@ -2132,12 +2132,12 @@
       "id": "ondo-finance",
       "symbol": "ONDO",
       "name": "Ondo",
-      "price": 0.345755,
-      "pct_24h": -2.56107,
-      "pct_7d": -7.4,
+      "price": 0.347123,
+      "pct_24h": -2.67457,
+      "pct_7d": -7.5,
       "support_30d": 0.32338181384146436,
       "resistance_30d": 0.3969475338902824,
-      "as_of": "2026-08-31 11:50:25",
+      "as_of": "2026-08-31 12:25:20",
       "stale": false
     },
     "canton-network": {
@@ -3053,19 +3053,21 @@
       "stale": false
     }
   },
-  "_strong_buy_state": {},
+  "_strong_buy_state": {
+    "15m:ONDO": true
+  },
   "BTC": {
     "key": "BTC",
     "name": "Bitcoin",
     "emoji": "\u20bf",
-    "price": 78383,
+    "price": 78339,
     "high_24h": 79347,
     "low_24h": 77162,
-    "pct_24h": -0.17922,
+    "pct_24h": -0.22987,
     "pct_7d": 0.9,
     "pct_30d": 24.3,
-    "sma50": 67574.03131188617,
-    "sma200": 69403.93801735487,
+    "sma50": 67573.81327458347,
+    "sma200": 69403.8835080292,
     "support_30d": 62843.70368466329,
     "resistance_30d": 80268.37474707834,
     "mark_price": 78586.99342579,
@@ -3080,14 +3082,14 @@
     "key": "ETH",
     "name": "Ethereum",
     "emoji": "\u039e",
-    "price": 2454.69,
+    "price": 2457.62,
     "high_24h": 2531.35,
     "low_24h": 2394.91,
-    "pct_24h": -0.4413,
+    "pct_24h": -0.27893,
     "pct_7d": -0.8,
     "pct_30d": 31.0,
-    "sma50": 2030.3016102028068,
-    "sma200": 2024.5482688707666,
+    "sma50": 2030.360316373695,
+    "sma200": 2024.5629454134887,
     "support_30d": 1858.5376969949996,
     "resistance_30d": 2514.967577695514,
     "mark_price": 2453.84000401,
