@@ -79,7 +79,7 @@
     "ripple": {
       "label": "\ud83d\udfe1 HOLD / NEUTRAL",
       "status": "neutral",
-      "score": 0,
+      "score": -1,
       "rows": [
         [
           "Price vs. recent range",
@@ -98,8 +98,8 @@
         ],
         [
           "Recent trend",
-          "Chopping sideways - no clear trend",
-          0
+          "Trending down - avoid catching a falling knife",
+          -1
         ],
         [
           "Stretch from long-term average",
@@ -117,11 +117,11 @@
       "symbol": "XRP",
       "name": "XRP",
       "price": 1.37,
-      "pct_24h": -1.91376,
-      "pct_7d": -7.6,
+      "pct_24h": -2.44162,
+      "pct_7d": -8.9,
       "support_30d": 0.9927072784932938,
       "resistance_30d": 1.52050482788377,
-      "as_of": "2026-08-31 12:35:19",
+      "as_of": "2026-08-31 13:25:20",
       "stale": false
     },
     "solana": {
@@ -535,7 +535,7 @@
         ],
         [
           "Stretch from long-term average",
-          "+31.7% above its long-term average - very stretched",
+          "+31.0% above its long-term average - very stretched",
           -2
         ],
         [
@@ -548,12 +548,12 @@
       "id": "whitebit",
       "symbol": "WBT",
       "name": "WhiteBIT Coin",
-      "price": 72.29,
-      "pct_24h": 0.43618,
-      "pct_7d": 0.3,
+      "price": 71.92,
+      "pct_24h": -0.78134,
+      "pct_7d": -1.8,
       "support_30d": 54.452558710928955,
       "resistance_30d": 73.98079079810731,
-      "as_of": "2026-08-31 10:00:39",
+      "as_of": "2026-08-31 13:25:20",
       "stale": false
     },
     "leo-token": {
@@ -1015,7 +1015,7 @@
         ],
         [
           "Stretch from long-term average",
-          "+0.2% vs its long-term average - not stretched either way",
+          "+0.3% vs its long-term average - not stretched either way",
           0
         ],
         [
@@ -1028,12 +1028,12 @@
       "id": "worldcoin-wld",
       "symbol": "WLD",
       "name": "Worldcoin",
-      "price": 0.357394,
-      "pct_24h": -5.64704,
-      "pct_7d": -9.3,
+      "price": 0.357653,
+      "pct_24h": -6.19949,
+      "pct_7d": -10.6,
       "support_30d": 0.3029636206131486,
       "resistance_30d": 0.4153748859818001,
-      "as_of": "2026-08-31 12:50:26",
+      "as_of": "2026-08-31 13:25:20",
       "stale": false
     },
     "bfusd": {
@@ -3054,20 +3054,21 @@
     }
   },
   "_strong_buy_state": {
-    "15m:TAO": true
+    "15m:XRP": true,
+    "15m:SUI": true
   },
   "BTC": {
     "key": "BTC",
     "name": "Bitcoin",
     "emoji": "\u20bf",
-    "price": 78005,
+    "price": 77996,
     "high_24h": 79347,
     "low_24h": 77162,
-    "pct_24h": -0.82611,
+    "pct_24h": -0.89438,
     "pct_7d": -0.6,
     "pct_30d": 23.6,
-    "sma50": 67567.40770375483,
-    "sma200": 69402.28211532204,
+    "sma50": 67566.95327823133,
+    "sma200": 69402.16850894116,
     "support_30d": 62843.70368466329,
     "resistance_30d": 80268.37474707834,
     "mark_price": 78586.99342579,
@@ -3082,14 +3083,14 @@
     "key": "ETH",
     "name": "Ethereum",
     "emoji": "\u039e",
-    "price": 2450.85,
+    "price": 2450.78,
     "high_24h": 2531.35,
     "low_24h": 2394.91,
-    "pct_24h": -0.515,
+    "pct_24h": -0.62753,
     "pct_7d": -1.7,
     "pct_30d": 31.4,
-    "sma50": 2030.2410632122776,
-    "sma200": 2024.5331321231345,
+    "sma50": 2030.2160046236343,
+    "sma200": 2024.5268674759736,
     "support_30d": 1858.5376969949996,
     "resistance_30d": 2514.967577695514,
     "mark_price": 2453.84000401,
