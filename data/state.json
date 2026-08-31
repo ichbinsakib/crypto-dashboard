@@ -1015,7 +1015,7 @@
         ],
         [
           "Stretch from long-term average",
-          "+1.9% vs its long-term average - not stretched either way",
+          "+2.5% vs its long-term average - not stretched either way",
           0
         ],
         [
@@ -1028,12 +1028,12 @@
       "id": "worldcoin-wld",
       "symbol": "WLD",
       "name": "Worldcoin",
-      "price": 0.363641,
-      "pct_24h": -3.49058,
-      "pct_7d": -8.2,
+      "price": 0.365722,
+      "pct_24h": -2.94704,
+      "pct_7d": -8.7,
       "support_30d": 0.3029636206131486,
       "resistance_30d": 0.4153748859818001,
-      "as_of": "2026-08-31 06:10:23",
+      "as_of": "2026-08-31 07:30:33",
       "stale": false
     },
     "bfusd": {
@@ -1759,12 +1759,12 @@
     "lighter": {
       "label": "\ud83d\udd34 DISTRIBUTION ZONE",
       "status": "bearish",
-      "score": -5,
+      "score": -6,
       "rows": [
         [
           "Price vs. recent range",
-          "Sitting in the middle of its 30-day range",
-          0
+          "Near its 30-day high (~$3.71) - less room to run",
+          -1
         ],
         [
           "Crowd mood (Fear & Greed)",
@@ -1783,7 +1783,7 @@
         ],
         [
           "Stretch from long-term average",
-          "+115.8% above its long-term average - very stretched",
+          "+129.3% above its long-term average - very stretched",
           -2
         ],
         [
@@ -1796,12 +1796,12 @@
       "id": "lighter",
       "symbol": "LIT",
       "name": "Lighter",
-      "price": 3.49,
-      "pct_24h": -1.0086,
-      "pct_7d": -5.1,
+      "price": 3.71,
+      "pct_24h": 7.49364,
+      "pct_7d": -0.7,
       "support_30d": 2.005076166939587,
       "resistance_30d": 3.70987819420487,
-      "as_of": "2026-08-31 03:35:19",
+      "as_of": "2026-08-31 07:30:33",
       "stale": false
     },
     "ethena": {
@@ -1907,7 +1907,7 @@
       "rows": [
         [
           "Price vs. recent range",
-          "Near its 30-day high (~$0.5676) - less room to run",
+          "Near its 30-day high (~$0.5754) - less room to run",
           -1
         ],
         [
@@ -1927,7 +1927,7 @@
         ],
         [
           "Stretch from long-term average",
-          "-6.3% vs its long-term average - not stretched either way",
+          "-4.8% vs its long-term average - not stretched either way",
           0
         ],
         [
@@ -1940,12 +1940,12 @@
       "id": "mantle",
       "symbol": "MNT",
       "name": "Mantle",
-      "price": 0.566679,
-      "pct_24h": 7.94798,
+      "price": 0.575505,
+      "pct_24h": 10.10994,
       "pct_7d": 9.1,
       "support_30d": 0.39667739023975906,
-      "resistance_30d": 0.567621041935345,
-      "as_of": "2026-08-31 07:05:18",
+      "resistance_30d": 0.5754337991385484,
+      "as_of": "2026-08-31 07:30:33",
       "stale": false
     },
     "polkadot": {
@@ -3053,19 +3053,21 @@
       "stale": false
     }
   },
-  "_strong_buy_state": {},
+  "_strong_buy_state": {
+    "15m:LIT": true
+  },
   "BTC": {
     "key": "BTC",
     "name": "Bitcoin",
     "emoji": "\u20bf",
-    "price": 78176,
+    "price": 78220,
     "high_24h": 79347,
     "low_24h": 77162,
-    "pct_24h": -0.06773,
+    "pct_24h": -0.02305,
     "pct_7d": 1.2,
     "pct_30d": 24.0,
-    "sma50": 67570.52777680816,
-    "sma200": 69403.06213358538,
+    "sma50": 67571.1465231069,
+    "sma200": 69403.21682016007,
     "support_30d": 62843.70368466329,
     "resistance_30d": 80268.37474707834,
     "mark_price": 78489.6,
@@ -3080,14 +3082,14 @@
     "key": "ETH",
     "name": "Ethereum",
     "emoji": "\u039e",
-    "price": 2441.83,
+    "price": 2443.82,
     "high_24h": 2531.35,
     "low_24h": 2394.91,
-    "pct_24h": -0.65648,
+    "pct_24h": -0.60258,
     "pct_7d": -0.4,
     "pct_30d": 30.8,
-    "sma50": 2030.0415552102336,
-    "sma200": 2024.4832551226236,
+    "sma50": 2030.064562255045,
+    "sma200": 2024.4890068838263,
     "support_30d": 1858.5376969949996,
     "resistance_30d": 2514.967577695514,
     "mark_price": 2474.04,
