@@ -605,9 +605,9 @@
       "stale": false
     },
     "monero": {
-      "label": "\ud83d\udd34 CAUTION - REDUCE NEW BUYS",
+      "label": "\ud83d\udd34 DISTRIBUTION ZONE",
       "status": "bearish",
-      "score": -2,
+      "score": -5,
       "rows": [
         [
           "Price vs. recent range",
@@ -621,8 +621,8 @@
         ],
         [
           "Market phase (best guess)",
-          "Established uptrend - phase where price marks up",
-          1
+          "Very extended after a big run - phase where smart money sells",
+          -2
         ],
         [
           "Recent trend",
@@ -631,7 +631,7 @@
         ],
         [
           "Stretch from long-term average",
-          "+39.1% above its long-term average - very stretched",
+          "+40.4% above its long-term average - very stretched",
           -2
         ],
         [
@@ -640,16 +640,16 @@
           0
         ]
       ],
-      "plain": "Getting risky - I'd hold off on new buys until this cools down.",
+      "plain": "Looks stretched and euphoric - historically the zone where smart money sells, not buys.",
       "id": "monero",
       "symbol": "XMR",
       "name": "Monero",
-      "price": 498.83,
-      "pct_24h": -3.25132,
-      "pct_7d": 11.6,
+      "price": 503.54,
+      "pct_24h": -3.73947,
+      "pct_7d": 13.6,
       "support_30d": 351.07100922807496,
       "resistance_30d": 520.61378590197,
-      "as_of": "2026-09-01 17:22:49",
+      "as_of": "2026-09-01 20:00:42",
       "stale": false
     },
     "cardano": {
@@ -1759,7 +1759,7 @@
     "lighter": {
       "label": "\ud83d\udd34 DISTRIBUTION ZONE",
       "status": "bearish",
-      "score": -6,
+      "score": -5,
       "rows": [
         [
           "Price vs. recent range",
@@ -1778,12 +1778,12 @@
         ],
         [
           "Recent trend",
-          "Chopping sideways - no clear trend",
-          0
+          "Trending up steadily - healthy",
+          1
         ],
         [
           "Stretch from long-term average",
-          "+127.9% above its long-term average - very stretched",
+          "+124.9% above its long-term average - very stretched",
           -2
         ],
         [
@@ -1796,12 +1796,12 @@
       "id": "lighter",
       "symbol": "LIT",
       "name": "Lighter",
-      "price": 3.71,
-      "pct_24h": 1.88706,
-      "pct_7d": 4.1,
+      "price": 3.66,
+      "pct_24h": 1.98328,
+      "pct_7d": 8.9,
       "support_30d": 2.005076166939587,
       "resistance_30d": 3.70987819420487,
-      "as_of": "2026-09-01 18:45:21",
+      "as_of": "2026-09-01 20:00:42",
       "stale": false
     },
     "ethena": {
@@ -2071,7 +2071,7 @@
         ],
         [
           "Stretch from long-term average",
-          "-37.3% below its long-term average - confirmed downtrend",
+          "-36.8% below its long-term average - confirmed downtrend",
           -1
         ],
         [
@@ -2084,12 +2084,12 @@
       "id": "pi-network",
       "symbol": "PI",
       "name": "Pi Network",
-      "price": 0.09123,
-      "pct_24h": 0.32447,
-      "pct_7d": 2.0,
+      "price": 0.091846,
+      "pct_24h": 1.13732,
+      "pct_7d": 1.5,
       "support_30d": 0.08279922535306347,
       "resistance_30d": 0.09762045155043195,
-      "as_of": "2026-09-01 18:45:21",
+      "as_of": "2026-09-01 20:00:42",
       "stale": false
     },
     "ondo-finance": {
@@ -3053,19 +3053,21 @@
       "stale": false
     }
   },
-  "_strong_buy_state": {},
+  "_strong_buy_state": {
+    "15m:PAXG": true
+  },
   "BTC": {
     "key": "BTC",
     "name": "Bitcoin",
     "emoji": "\u20bf",
-    "price": 77188,
+    "price": 77226,
     "high_24h": 79179,
     "low_24h": 76454,
-    "pct_24h": -2.17382,
+    "pct_24h": -2.11215,
     "pct_7d": -2.8,
     "pct_30d": 21.8,
-    "sma50": 67876.34226799561,
-    "sma200": 69446.72266584003,
+    "sma50": 67877.11806126885,
+    "sma200": 69446.91661415836,
     "support_30d": 62843.70368466329,
     "resistance_30d": 80268.37474707834,
     "mark_price": 79166.78271014,
@@ -3080,14 +3082,14 @@
     "key": "ETH",
     "name": "Ethereum",
     "emoji": "\u039e",
-    "price": 2412.77,
+    "price": 2414.75,
     "high_24h": 2485.01,
     "low_24h": 2385.53,
-    "pct_24h": -2.70894,
+    "pct_24h": -2.66644,
     "pct_7d": -2.4,
     "pct_30d": 29.1,
-    "sma50": 2043.3217335197385,
-    "sma200": 2026.4321603878125,
+    "sma50": 2043.3590407485387,
+    "sma200": 2026.4414871950125,
     "support_30d": 1858.5376969949996,
     "resistance_30d": 2514.967577695514,
     "mark_price": 2483.38844961,
