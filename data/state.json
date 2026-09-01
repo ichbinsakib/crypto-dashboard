@@ -847,7 +847,7 @@
     "pepe": {
       "label": "\ud83d\udfe1 HOLD / NEUTRAL",
       "status": "neutral",
-      "score": 0,
+      "score": -1,
       "rows": [
         [
           "Price vs. recent range",
@@ -861,8 +861,8 @@
         ],
         [
           "Market phase (best guess)",
-          "Basing near the bottom - phase where smart money accumulates",
-          2
+          "Established uptrend - phase where price marks up",
+          1
         ],
         [
           "Recent trend",
@@ -871,7 +871,7 @@
         ],
         [
           "Stretch from long-term average",
-          "+4.2% vs its long-term average - not stretched either way",
+          "+5.4% vs its long-term average - not stretched either way",
           0
         ],
         [
@@ -884,12 +884,12 @@
       "id": "pepe",
       "symbol": "PEPE",
       "name": "Pepe",
-      "price": 3.48e-06,
-      "pct_24h": -2.89676,
+      "price": 3.52e-06,
+      "pct_24h": -0.80785,
       "pct_7d": -10.4,
       "support_30d": 2.5716563906374582e-06,
       "resistance_30d": 4.122123035488615e-06,
-      "as_of": "2026-09-01 15:10:23",
+      "as_of": "2026-09-01 15:55:26",
       "stale": false
     },
     "avalanche-2": {
@@ -2095,7 +2095,7 @@
     "ondo-finance": {
       "label": "\ud83d\udfe1 HOLD / NEUTRAL",
       "status": "neutral",
-      "score": 0,
+      "score": 1,
       "rows": [
         [
           "Price vs. recent range",
@@ -2114,12 +2114,12 @@
         ],
         [
           "Recent trend",
-          "Trending down - avoid catching a falling knife",
-          -1
+          "Chopping sideways - no clear trend",
+          0
         ],
         [
           "Stretch from long-term average",
-          "+5.6% vs its long-term average - not stretched either way",
+          "+5.5% vs its long-term average - not stretched either way",
           0
         ],
         [
@@ -2132,12 +2132,12 @@
       "id": "ondo-finance",
       "symbol": "ONDO",
       "name": "Ondo",
-      "price": 0.347614,
-      "pct_24h": 0.26672,
-      "pct_7d": -8.2,
+      "price": 0.346993,
+      "pct_24h": 0.78202,
+      "pct_7d": -6.5,
       "support_30d": 0.32338181384146436,
       "resistance_30d": 0.3969475338902824,
-      "as_of": "2026-09-01 12:25:19",
+      "as_of": "2026-09-01 15:55:26",
       "stale": false
     },
     "canton-network": {
@@ -2479,12 +2479,12 @@
     "quant-network": {
       "label": "\ud83d\udfe1 HOLD / NEUTRAL",
       "status": "neutral",
-      "score": 0,
+      "score": 1,
       "rows": [
         [
           "Price vs. recent range",
-          "Near its 30-day high (~$66.69) - less room to run",
-          -1
+          "Sitting in the middle of its 30-day range",
+          0
         ],
         [
           "Crowd mood (Fear & Greed)",
@@ -2503,7 +2503,7 @@
         ],
         [
           "Stretch from long-term average",
-          "-7.9% vs its long-term average - not stretched either way",
+          "-8.0% vs its long-term average - not stretched either way",
           0
         ],
         [
@@ -2516,12 +2516,12 @@
       "id": "quant-network",
       "symbol": "QNT",
       "name": "Quant",
-      "price": 63.36,
-      "pct_24h": 2.92023,
+      "price": 63.29,
+      "pct_24h": 3.39328,
       "pct_7d": -2.7,
       "support_30d": 55.905981995619285,
       "resistance_30d": 66.68821517512447,
-      "as_of": "2026-09-01 15:00:35",
+      "as_of": "2026-09-01 15:55:26",
       "stale": false
     },
     "tether-gold": {
@@ -3058,14 +3058,14 @@
     "key": "BTC",
     "name": "Bitcoin",
     "emoji": "\u20bf",
-    "price": 77915,
+    "price": 78016,
     "high_24h": 79230,
     "low_24h": 77523,
-    "pct_24h": -0.99222,
+    "pct_24h": -0.70658,
     "pct_7d": -0.5,
     "pct_30d": 24.0,
-    "sma50": 67890.34795602871,
-    "sma200": 69450.22408784831,
+    "sma50": 67892.61774117801,
+    "sma200": 69450.79153413563,
     "support_30d": 62843.70368466329,
     "resistance_30d": 80268.37474707834,
     "mark_price": 79166.78271014,
@@ -3080,14 +3080,14 @@
     "key": "ETH",
     "name": "Ethereum",
     "emoji": "\u039e",
-    "price": 2445.88,
+    "price": 2451.03,
     "high_24h": 2488.52,
     "low_24h": 2432.33,
-    "pct_24h": -1.21009,
+    "pct_24h": -0.78874,
     "pct_7d": -0.4,
     "pct_30d": 32.1,
-    "sma50": 2043.971311693658,
-    "sma200": 2026.5945549312924,
+    "sma50": 2044.0747436962108,
+    "sma200": 2026.6204129319306,
     "support_30d": 1858.5376969949996,
     "resistance_30d": 2514.967577695514,
     "mark_price": 2483.38844961,
