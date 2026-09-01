@@ -4,7 +4,7 @@
   "_alerts_state": {
     "btc-resistance-break": {
       "triggered": true,
-      "last_triggered_at": "2026-09-01 01:00:33"
+      "last_triggered_at": "2026-09-01 01:05:19"
     },
     "btc-support-break": {
       "triggered": false,
@@ -319,7 +319,7 @@
     "dogecoin": {
       "label": "\ud83d\udfe1 HOLD / NEUTRAL",
       "status": "neutral",
-      "score": 0,
+      "score": 1,
       "rows": [
         [
           "Price vs. recent range",
@@ -328,7 +328,7 @@
         ],
         [
           "Crowd mood (Fear & Greed)",
-          "62/100 - crowd is greedy",
+          "69/100 - crowd is greedy",
           -1
         ],
         [
@@ -338,12 +338,12 @@
         ],
         [
           "Recent trend",
-          "Trending down - avoid catching a falling knife",
-          -1
+          "Chopping sideways - no clear trend",
+          0
         ],
         [
           "Stretch from long-term average",
-          "-6.9% vs its long-term average - not stretched either way",
+          "-6.7% vs its long-term average - not stretched either way",
           0
         ],
         [
@@ -356,12 +356,12 @@
       "id": "dogecoin",
       "symbol": "DOGE",
       "name": "Dogecoin",
-      "price": 0.082869,
-      "pct_24h": 0.96733,
-      "pct_7d": -8.0,
+      "price": 0.083008,
+      "pct_24h": 0.98246,
+      "pct_7d": -7.8,
       "support_30d": 0.06901954790818378,
       "resistance_30d": 0.09337940032634065,
-      "as_of": "2026-08-31 23:35:19",
+      "as_of": "2026-09-01 01:05:19",
       "stale": false
     },
     "zcash": {
@@ -919,7 +919,7 @@
         ],
         [
           "Stretch from long-term average",
-          "-10.5% vs its long-term average - not stretched either way",
+          "-10.3% vs its long-term average - not stretched either way",
           0
         ],
         [
@@ -932,12 +932,12 @@
       "id": "avalanche-2",
       "symbol": "AVAX",
       "name": "Avalanche",
-      "price": 7.26,
-      "pct_24h": 1.42463,
-      "pct_7d": -3.9,
+      "price": 7.28,
+      "pct_24h": 2.02348,
+      "pct_7d": -3.6,
       "support_30d": 6.313391080113916,
       "resistance_30d": 7.836507914480645,
-      "as_of": "2026-09-01 00:40:23",
+      "as_of": "2026-09-01 01:05:19",
       "stale": false
     },
     "aster-2": {
@@ -2372,12 +2372,12 @@
       "id": "sky",
       "symbol": "SKY",
       "name": "Sky",
-      "price": 0.067634,
-      "pct_24h": -2.0354,
+      "price": 0.067632,
+      "pct_24h": -1.97639,
       "pct_7d": -0.8,
       "support_30d": 0.05081051579814886,
       "resistance_30d": 0.06901365589177483,
-      "as_of": "2026-09-01 01:00:33",
+      "as_of": "2026-09-01 01:05:19",
       "stale": false
     },
     "shiba-inu": {
@@ -3054,21 +3054,20 @@
     }
   },
   "_strong_buy_state": {
-    "15m:SOL": true,
     "1h:SKY": true
   },
   "BTC": {
     "key": "BTC",
     "name": "Bitcoin",
     "emoji": "\u20bf",
-    "price": 78623,
+    "price": 78644,
     "high_24h": 79230,
     "low_24h": 77388,
-    "pct_24h": 0.91134,
-    "pct_7d": -0.2,
-    "pct_30d": 25.1,
-    "sma50": 67904.69193724335,
-    "sma200": 69453.81008315197,
+    "pct_24h": 1.05687,
+    "pct_7d": -0.5,
+    "pct_30d": 25.2,
+    "sma50": 67905.31794253107,
+    "sma200": 69453.96658447389,
     "support_30d": 62843.70368466329,
     "resistance_30d": 80268.37474707834,
     "mark_price": 78505.64311594,
@@ -3083,14 +3082,14 @@
     "key": "ETH",
     "name": "Ethereum",
     "emoji": "\u039e",
-    "price": 2470.39,
+    "price": 2469.89,
     "high_24h": 2488.52,
     "low_24h": 2401.8,
-    "pct_24h": 1.81287,
-    "pct_7d": -0.3,
-    "pct_30d": 33.6,
-    "sma50": 2044.4675817613618,
-    "sma200": 2026.7186224482182,
+    "pct_24h": 1.86865,
+    "pct_7d": -0.5,
+    "pct_30d": 34.0,
+    "sma50": 2044.455786924798,
+    "sma200": 2026.7156737390774,
     "support_30d": 1858.5376969949996,
     "resistance_30d": 2514.967577695514,
     "mark_price": 2465.81127907,
