@@ -3,7 +3,7 @@
   "_fng_classification": "Greed",
   "_alerts_state": {
     "btc-resistance-break": {
-      "triggered": true,
+      "triggered": false,
       "last_triggered_at": "2026-09-01 08:05:20"
     },
     "btc-support-break": {
@@ -727,7 +727,7 @@
         ],
         [
           "Stretch from long-term average",
-          "+2.0% vs its long-term average - not stretched either way",
+          "+1.6% vs its long-term average - not stretched either way",
           0
         ],
         [
@@ -740,12 +740,12 @@
       "id": "stellar",
       "symbol": "XLM",
       "name": "Stellar",
-      "price": 0.17784,
-      "pct_24h": 0.74482,
-      "pct_7d": -10.7,
+      "price": 0.177133,
+      "pct_24h": 0.28594,
+      "pct_7d": -9.3,
       "support_30d": 0.15472912151335613,
       "resistance_30d": 0.20181319711037435,
-      "as_of": "2026-09-01 07:50:24",
+      "as_of": "2026-09-01 08:10:29",
       "stale": false
     },
     "kucoin-shares": {
@@ -2003,7 +2003,7 @@
       "rows": [
         [
           "Price vs. recent range",
-          "Near its 30-day high (~$5.77) - less room to run",
+          "Near its 30-day high (~$5.78) - less room to run",
           -1
         ],
         [
@@ -2037,11 +2037,11 @@
       "symbol": "UNI",
       "name": "Uniswap",
       "price": 5.78,
-      "pct_24h": 11.90887,
-      "pct_7d": 30.3,
+      "pct_24h": 12.27788,
+      "pct_7d": 33.0,
       "support_30d": 3.1971416665971573,
-      "resistance_30d": 5.7735497661115405,
-      "as_of": "2026-09-01 07:45:25",
+      "resistance_30d": 5.778434147677995,
+      "as_of": "2026-09-01 08:10:29",
       "stale": false
     },
     "pi-network": {
@@ -2743,7 +2743,7 @@
         ],
         [
           "Stretch from long-term average",
-          "+32.2% above its long-term average - very stretched",
+          "+33.7% above its long-term average - very stretched",
           -2
         ],
         [
@@ -2756,12 +2756,12 @@
       "id": "morpho",
       "symbol": "MORPHO",
       "name": "Morpho",
-      "price": 2.54,
-      "pct_24h": 2.54663,
-      "pct_7d": -4.1,
+      "price": 2.57,
+      "pct_24h": 1.87581,
+      "pct_7d": -3.7,
       "support_30d": 1.8400586135640542,
       "resistance_30d": 2.9026212482639075,
-      "as_of": "2026-09-01 05:17:28",
+      "as_of": "2026-09-01 08:10:29",
       "stale": false
     },
     "memecore": {
@@ -3054,20 +3054,21 @@
     }
   },
   "_strong_buy_state": {
-    "15m:HYPE": true
+    "15m:BNB": true,
+    "15m:XLM": true
   },
   "BTC": {
     "key": "BTC",
     "name": "Bitcoin",
     "emoji": "\u20bf",
-    "price": 78556,
+    "price": 78393,
     "high_24h": 79230,
     "low_24h": 77758,
-    "pct_24h": 0.59253,
+    "pct_24h": 0.31008,
     "pct_7d": -2.4,
     "pct_30d": 23.9,
-    "sma50": 67903.64889335838,
-    "sma200": 69453.54932218073,
+    "sma50": 67900.37586293774,
+    "sma200": 69452.73106457556,
     "support_30d": 62843.70368466329,
     "resistance_30d": 80268.37474707834,
     "mark_price": 79166.78271014,
@@ -3082,14 +3083,14 @@
     "key": "ETH",
     "name": "Ethereum",
     "emoji": "\u039e",
-    "price": 2470.35,
+    "price": 2464.44,
     "high_24h": 2488.52,
     "low_24h": 2438.19,
-    "pct_24h": 1.37305,
+    "pct_24h": 1.07149,
     "pct_7d": -1.1,
     "pct_30d": 31.7,
-    "sma50": 2044.4804187712466,
-    "sma200": 2026.7218317006896,
+    "sma50": 2044.3505086701634,
+    "sma200": 2026.6893541754189,
     "support_30d": 1858.5376969949996,
     "resistance_30d": 2514.967577695514,
     "mark_price": 2483.38844961,
