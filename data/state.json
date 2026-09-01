@@ -4,7 +4,7 @@
   "_alerts_state": {
     "btc-resistance-break": {
       "triggered": true,
-      "last_triggered_at": "2026-09-01 07:35:23"
+      "last_triggered_at": "2026-09-01 07:40:26"
     },
     "btc-support-break": {
       "triggered": false,
@@ -199,7 +199,7 @@
         ],
         [
           "Stretch from long-term average",
-          "+2.4% vs its long-term average - not stretched either way",
+          "+2.3% vs its long-term average - not stretched either way",
           0
         ],
         [
@@ -212,12 +212,12 @@
       "id": "tron",
       "symbol": "TRX",
       "name": "TRON",
-      "price": 0.331762,
-      "pct_24h": -1.4368,
-      "pct_7d": -3.9,
+      "price": 0.331469,
+      "pct_24h": -1.57994,
+      "pct_7d": -3.8,
       "support_30d": 0.32688870085502136,
       "resistance_30d": 0.3447899585776834,
-      "as_of": "2026-09-01 04:35:16",
+      "as_of": "2026-09-01 07:40:26",
       "stale": false
     },
     "figure-heloc": {
@@ -343,7 +343,7 @@
         ],
         [
           "Stretch from long-term average",
-          "-6.2% vs its long-term average - not stretched either way",
+          "-6.4% vs its long-term average - not stretched either way",
           0
         ],
         [
@@ -356,12 +356,12 @@
       "id": "dogecoin",
       "symbol": "DOGE",
       "name": "Dogecoin",
-      "price": 0.083494,
-      "pct_24h": 0.9317,
+      "price": 0.08328,
+      "pct_24h": 0.72895,
       "pct_7d": -10.0,
       "support_30d": 0.06901954790818378,
       "resistance_30d": 0.09337940032634065,
-      "as_of": "2026-09-01 07:15:24",
+      "as_of": "2026-09-01 07:40:26",
       "stale": false
     },
     "zcash": {
@@ -2003,7 +2003,7 @@
       "rows": [
         [
           "Price vs. recent range",
-          "Near its 30-day high (~$5.49) - less room to run",
+          "Near its 30-day high (~$5.78) - less room to run",
           -1
         ],
         [
@@ -2023,7 +2023,7 @@
         ],
         [
           "Stretch from long-term average",
-          "+55.6% above its long-term average - very stretched",
+          "+64.0% above its long-term average - very stretched",
           -2
         ],
         [
@@ -2036,12 +2036,12 @@
       "id": "uniswap",
       "symbol": "UNI",
       "name": "Uniswap",
-      "price": 5.49,
-      "pct_24h": 6.4194,
-      "pct_7d": 22.9,
+      "price": 5.79,
+      "pct_24h": 12.367,
+      "pct_7d": 30.3,
       "support_30d": 3.1971416665971573,
-      "resistance_30d": 5.48770563387285,
-      "as_of": "2026-09-01 05:40:33",
+      "resistance_30d": 5.778396166806231,
+      "as_of": "2026-09-01 07:40:26",
       "stale": false
     },
     "pi-network": {
@@ -3053,19 +3053,22 @@
       "stale": false
     }
   },
-  "_strong_buy_state": {},
+  "_strong_buy_state": {
+    "15m:TRX": true,
+    "15m:SUI": true
+  },
   "BTC": {
     "key": "BTC",
     "name": "Bitcoin",
     "emoji": "\u20bf",
-    "price": 78748,
+    "price": 78612,
     "high_24h": 79230,
     "low_24h": 77758,
-    "pct_24h": 0.74496,
+    "pct_24h": 0.4998,
     "pct_7d": -2.4,
     "pct_30d": 24.2,
-    "sma50": 67907.54367047324,
-    "sma200": 69454.52301645945,
+    "sma50": 67904.75151002556,
+    "sma200": 69453.82497634752,
     "support_30d": 62843.70368466329,
     "resistance_30d": 80268.37474707834,
     "mark_price": 79166.78271014,
@@ -3080,14 +3083,14 @@
     "key": "ETH",
     "name": "Ethereum",
     "emoji": "\u039e",
-    "price": 2473.95,
+    "price": 2469.84,
     "high_24h": 2488.52,
     "low_24h": 2433.73,
-    "pct_24h": 1.36169,
+    "pct_24h": 1.14271,
     "pct_7d": -1.4,
     "pct_30d": 31.9,
-    "sma50": 2044.5399793482604,
-    "sma200": 2026.7367218449428,
+    "sma50": 2044.4533715864009,
+    "sma200": 2026.7150699044782,
     "support_30d": 1858.5376969949996,
     "resistance_30d": 2514.967577695514,
     "mark_price": 2483.38844961,
