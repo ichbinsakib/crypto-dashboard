@@ -847,7 +847,7 @@
     "pepe": {
       "label": "\ud83d\udfe1 HOLD / NEUTRAL",
       "status": "neutral",
-      "score": -1,
+      "score": 0,
       "rows": [
         [
           "Price vs. recent range",
@@ -861,8 +861,8 @@
         ],
         [
           "Market phase (best guess)",
-          "Established uptrend - phase where price marks up",
-          1
+          "Basing near the bottom - phase where smart money accumulates",
+          2
         ],
         [
           "Recent trend",
@@ -871,7 +871,7 @@
         ],
         [
           "Stretch from long-term average",
-          "+6.3% vs its long-term average - not stretched either way",
+          "+4.5% vs its long-term average - not stretched either way",
           0
         ],
         [
@@ -884,12 +884,12 @@
       "id": "pepe",
       "symbol": "PEPE",
       "name": "Pepe",
-      "price": 3.55e-06,
-      "pct_24h": 1.9041,
-      "pct_7d": -14.8,
+      "price": 3.49e-06,
+      "pct_24h": -0.65982,
+      "pct_7d": -14.6,
       "support_30d": 2.5716563906374582e-06,
       "resistance_30d": 4.122123035488615e-06,
-      "as_of": "2026-09-01 06:40:23",
+      "as_of": "2026-09-01 08:25:21",
       "stale": false
     },
     "avalanche-2": {
@@ -2695,7 +2695,7 @@
         ],
         [
           "Stretch from long-term average",
-          "-2.6% vs its long-term average - not stretched either way",
+          "-2.8% vs its long-term average - not stretched either way",
           0
         ],
         [
@@ -2708,12 +2708,12 @@
       "id": "pax-gold",
       "symbol": "PAXG",
       "name": "PAX Gold",
-      "price": 4404.11,
-      "pct_24h": -0.78106,
+      "price": 4393.25,
+      "pct_24h": -1.02608,
       "pct_7d": -4.5,
       "support_30d": 4048.0991146410097,
       "resistance_30d": 4672.307573354755,
-      "as_of": "2026-09-01 08:15:24",
+      "as_of": "2026-09-01 08:25:21",
       "stale": false
     },
     "morpho": {
@@ -2935,7 +2935,7 @@
         ],
         [
           "Stretch from long-term average",
-          "+25.6% above its long-term average - a bit stretched",
+          "+25.7% above its long-term average - a bit stretched",
           -1
         ],
         [
@@ -2948,12 +2948,12 @@
       "id": "just",
       "symbol": "JST",
       "name": "JUST",
-      "price": 0.101366,
-      "pct_24h": 6.74326,
-      "pct_7d": -0.9,
+      "price": 0.101465,
+      "pct_24h": 6.88461,
+      "pct_7d": -1.5,
       "support_30d": 0.0946830738697126,
       "resistance_30d": 0.1082125131964855,
-      "as_of": "2026-09-01 07:50:24",
+      "as_of": "2026-09-01 08:25:21",
       "stale": false
     },
     "algorand": {
@@ -3054,21 +3054,20 @@
     }
   },
   "_strong_buy_state": {
-    "15m:ONDO": true,
-    "15m:NEAR": true
+    "15m:WBT": true
   },
   "BTC": {
     "key": "BTC",
     "name": "Bitcoin",
     "emoji": "\u20bf",
-    "price": 78155,
+    "price": 78181,
     "high_24h": 79230,
     "low_24h": 77758,
-    "pct_24h": 0.12605,
+    "pct_24h": 0.25278,
     "pct_7d": -2.4,
     "pct_30d": 23.9,
-    "sma50": 67896.09959991285,
-    "sma200": 69451.66199881934,
+    "sma50": 67896.22652497957,
+    "sma200": 69451.69373008603,
     "support_30d": 62843.70368466329,
     "resistance_30d": 80268.37474707834,
     "mark_price": 79166.78271014,
@@ -3083,14 +3082,14 @@
     "key": "ETH",
     "name": "Ethereum",
     "emoji": "\u039e",
-    "price": 2458.58,
+    "price": 2459.83,
     "high_24h": 2488.52,
     "low_24h": 2438.19,
-    "pct_24h": 0.89623,
+    "pct_24h": 1.0334,
     "pct_7d": -1.1,
     "pct_30d": 31.7,
-    "sma50": 2044.2517245498345,
-    "sma200": 2026.6646581453365,
+    "sma50": 2044.2540501531555,
+    "sma200": 2026.665239546167,
     "support_30d": 1858.5376969949996,
     "resistance_30d": 2514.967577695514,
     "mark_price": 2483.38844961,
