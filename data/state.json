@@ -919,7 +919,7 @@
         ],
         [
           "Stretch from long-term average",
-          "-10.9% vs its long-term average - not stretched either way",
+          "-11.5% vs its long-term average - not stretched either way",
           0
         ],
         [
@@ -932,12 +932,12 @@
       "id": "avalanche-2",
       "symbol": "AVAX",
       "name": "Avalanche",
-      "price": 7.23,
-      "pct_24h": 0.2798,
-      "pct_7d": -3.1,
+      "price": 7.18,
+      "pct_24h": -0.47254,
+      "pct_7d": -2.0,
       "support_30d": 6.313391080113916,
       "resistance_30d": 7.836507914480645,
-      "as_of": "2026-09-01 21:05:19",
+      "as_of": "2026-09-01 22:36:38",
       "stale": false
     },
     "aster-2": {
@@ -1399,7 +1399,7 @@
         ],
         [
           "Stretch from long-term average",
-          "+14.2% above its long-term average - a bit stretched",
+          "+14.0% above its long-term average - a bit stretched",
           -1
         ],
         [
@@ -1412,12 +1412,12 @@
       "id": "gatechain-token",
       "symbol": "GT",
       "name": "Gate",
-      "price": 7.9,
-      "pct_24h": -2.0886,
-      "pct_7d": 0.9,
+      "price": 7.89,
+      "pct_24h": -1.21769,
+      "pct_7d": -0.2,
       "support_30d": 6.45861921769994,
       "resistance_30d": 8.231414132069085,
-      "as_of": "2026-09-01 22:34:17",
+      "as_of": "2026-09-01 21:35:21",
       "stale": false
     },
     "crypto-com-chain": {
@@ -1495,7 +1495,7 @@
         ],
         [
           "Stretch from long-term average",
-          "-11.3% vs its long-term average - not stretched either way",
+          "-11.7% vs its long-term average - not stretched either way",
           0
         ],
         [
@@ -1508,12 +1508,12 @@
       "id": "ethereum-classic",
       "symbol": "ETC",
       "name": "Ethereum Classic",
-      "price": 7.24,
-      "pct_24h": -0.64261,
-      "pct_7d": -6.4,
+      "price": 7.2,
+      "pct_24h": -1.22598,
+      "pct_7d": -5.7,
       "support_30d": 6.079473341192034,
       "resistance_30d": 8.342731558283557,
-      "as_of": "2026-09-01 21:25:21",
+      "as_of": "2026-09-01 22:36:38",
       "stale": false
     },
     "pump-fun": {
@@ -1543,7 +1543,7 @@
         ],
         [
           "Stretch from long-term average",
-          "+113.8% above its long-term average - very stretched",
+          "+113.7% above its long-term average - very stretched",
           -2
         ],
         [
@@ -1556,12 +1556,12 @@
       "id": "pump-fun",
       "symbol": "PUMP",
       "name": "Pump.fun",
-      "price": 0.00435159,
-      "pct_24h": -1.85011,
+      "price": 0.00435051,
+      "pct_24h": -2.15373,
       "pct_7d": -2.1,
       "support_30d": 0.002132412678654718,
       "resistance_30d": 0.0052249885406471875,
-      "as_of": "2026-09-01 22:05:22",
+      "as_of": "2026-09-01 22:36:38",
       "stale": false
     },
     "venice-token": {
@@ -2003,7 +2003,7 @@
       "rows": [
         [
           "Price vs. recent range",
-          "Near its 30-day high (~$5.79) - less room to run",
+          "Near its 30-day high (~$5.78) - less room to run",
           -1
         ],
         [
@@ -2023,7 +2023,7 @@
         ],
         [
           "Stretch from long-term average",
-          "+64.0% above its long-term average - very stretched",
+          "+63.7% above its long-term average - very stretched",
           -2
         ],
         [
@@ -2036,12 +2036,12 @@
       "id": "uniswap",
       "symbol": "UNI",
       "name": "Uniswap",
-      "price": 5.79,
-      "pct_24h": 10.58528,
+      "price": 5.78,
+      "pct_24h": 10.87009,
       "pct_7d": 37.1,
       "support_30d": 3.1971416665971573,
-      "resistance_30d": 5.7861431808466035,
-      "as_of": "2026-09-01 22:34:17",
+      "resistance_30d": 5.783497202878799,
+      "as_of": "2026-09-01 22:20:25",
       "stale": false
     },
     "pi-network": {
@@ -2564,12 +2564,12 @@
       "id": "tether-gold",
       "symbol": "XAUT",
       "name": "Tether Gold",
-      "price": 4330.99,
-      "pct_24h": -2.4548,
-      "pct_7d": -6.5,
+      "price": 4331.94,
+      "pct_24h": -2.12374,
+      "pct_7d": -6.4,
       "support_30d": 4040.271654009323,
       "resistance_30d": 4662.510537821146,
-      "as_of": "2026-09-01 22:34:17",
+      "as_of": "2026-09-01 19:10:25",
       "stale": false
     },
     "bitway": {
@@ -3053,19 +3053,22 @@
       "stale": false
     }
   },
-  "_strong_buy_state": {},
+  "_strong_buy_state": {
+    "1h:AVAX": true,
+    "1h:ETC": true
+  },
   "BTC": {
     "key": "BTC",
     "name": "Bitcoin",
     "emoji": "\u20bf",
-    "price": 77009,
+    "price": 77042,
     "high_24h": 79179,
     "low_24h": 76454,
-    "pct_24h": -2.14553,
+    "pct_24h": -2.07534,
     "pct_7d": -1.3,
     "pct_30d": 21.7,
-    "sma50": 67872.83888313486,
-    "sma200": 69445.84681962484,
+    "sma50": 67873.35081291616,
+    "sma200": 69445.97480207018,
     "support_30d": 62843.70368466329,
     "resistance_30d": 80268.37474707834,
     "mark_price": 79166.78271014,
@@ -3080,14 +3083,14 @@
     "key": "ETH",
     "name": "Ethereum",
     "emoji": "\u039e",
-    "price": 2406.16,
+    "price": 2406.23,
     "high_24h": 2483.82,
     "low_24h": 2385.53,
-    "pct_24h": -2.58048,
+    "pct_24h": -2.5536,
     "pct_7d": -0.9,
     "pct_30d": 28.3,
-    "sma50": 2043.1805127058167,
-    "sma200": 2026.396855184332,
+    "sma50": 2043.1826106385552,
+    "sma200": 2026.3973796675168,
     "support_30d": 1858.5376969949996,
     "resistance_30d": 2514.967577695514,
     "mark_price": 2483.38844961,
