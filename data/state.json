@@ -79,7 +79,7 @@
     "ripple": {
       "label": "\ud83d\udfe1 HOLD / NEUTRAL",
       "status": "neutral",
-      "score": 0,
+      "score": -1,
       "rows": [
         [
           "Price vs. recent range",
@@ -98,12 +98,12 @@
         ],
         [
           "Recent trend",
-          "Chopping sideways - no clear trend",
-          0
+          "Trending down - avoid catching a falling knife",
+          -1
         ],
         [
           "Stretch from long-term average",
-          "+7.2% vs its long-term average - not stretched either way",
+          "+6.4% vs its long-term average - not stretched either way",
           0
         ],
         [
@@ -116,12 +116,12 @@
       "id": "ripple",
       "symbol": "XRP",
       "name": "XRP",
-      "price": 1.37,
-      "pct_24h": -0.24149,
-      "pct_7d": -6.4,
+      "price": 1.36,
+      "pct_24h": -2.29303,
+      "pct_7d": -8.2,
       "support_30d": 0.9927072784932938,
       "resistance_30d": 1.52050482788377,
-      "as_of": "2026-09-01 16:20:24",
+      "as_of": "2026-09-01 19:00:57",
       "stale": false
     },
     "solana": {
@@ -1805,9 +1805,9 @@
       "stale": false
     },
     "ethena": {
-      "label": "\ud83d\udd34 CAUTION - REDUCE NEW BUYS",
+      "label": "\ud83d\udd34 DISTRIBUTION ZONE",
       "status": "bearish",
-      "score": -4,
+      "score": -5,
       "rows": [
         [
           "Price vs. recent range",
@@ -1826,12 +1826,12 @@
         ],
         [
           "Recent trend",
-          "Trending up steadily - healthy",
-          1
+          "Chopping sideways - no clear trend",
+          0
         ],
         [
           "Stretch from long-term average",
-          "+62.2% above its long-term average - very stretched",
+          "+58.0% above its long-term average - very stretched",
           -2
         ],
         [
@@ -1840,16 +1840,16 @@
           0
         ]
       ],
-      "plain": "Getting risky - I'd hold off on new buys until this cools down.",
+      "plain": "Looks stretched and euphoric - historically the zone where smart money sells, not buys.",
       "id": "ethena",
       "symbol": "ENA",
       "name": "Ethena",
-      "price": 0.161447,
-      "pct_24h": 6.84402,
-      "pct_7d": 10.1,
+      "price": 0.157241,
+      "pct_24h": 4.45944,
+      "pct_7d": 4.4,
       "support_30d": 0.08231050586125944,
       "resistance_30d": 0.17000615068266245,
-      "as_of": "2026-09-01 16:20:24",
+      "as_of": "2026-09-01 19:00:57",
       "stale": false
     },
     "bitcoin-cash": {
@@ -2003,7 +2003,7 @@
       "rows": [
         [
           "Price vs. recent range",
-          "Near its 30-day high (~$5.73) - less room to run",
+          "Near its 30-day high (~$5.66) - less room to run",
           -1
         ],
         [
@@ -2023,7 +2023,7 @@
         ],
         [
           "Stretch from long-term average",
-          "+62.6% above its long-term average - very stretched",
+          "+60.4% above its long-term average - very stretched",
           -2
         ],
         [
@@ -2036,12 +2036,12 @@
       "id": "uniswap",
       "symbol": "UNI",
       "name": "Uniswap",
-      "price": 5.74,
-      "pct_24h": 11.68301,
-      "pct_7d": 29.6,
+      "price": 5.66,
+      "pct_24h": 8.28862,
+      "pct_7d": 30.6,
       "support_30d": 3.1971416665971573,
-      "resistance_30d": 5.731729346295856,
-      "as_of": "2026-09-01 17:30:30",
+      "resistance_30d": 5.656097010943251,
+      "as_of": "2026-09-01 19:00:57",
       "stale": false
     },
     "pi-network": {
@@ -2132,12 +2132,12 @@
       "id": "ondo-finance",
       "symbol": "ONDO",
       "name": "Ondo",
-      "price": 0.342807,
-      "pct_24h": -1.1559,
-      "pct_7d": -7.9,
+      "price": 0.34272,
+      "pct_24h": -1.56811,
+      "pct_7d": -7.7,
       "support_30d": 0.32338181384146436,
       "resistance_30d": 0.3969475338902824,
-      "as_of": "2026-09-01 18:10:24",
+      "as_of": "2026-09-01 19:00:57",
       "stale": false
     },
     "canton-network": {
@@ -2407,7 +2407,7 @@
         ],
         [
           "Stretch from long-term average",
-          "-4.6% vs its long-term average - not stretched either way",
+          "-5.0% vs its long-term average - not stretched either way",
           0
         ],
         [
@@ -2420,12 +2420,12 @@
       "id": "shiba-inu",
       "symbol": "SHIB",
       "name": "Shiba Inu",
-      "price": 5.18e-06,
-      "pct_24h": 3.03382,
-      "pct_7d": -6.3,
+      "price": 5.16e-06,
+      "pct_24h": 1.78915,
+      "pct_7d": -5.4,
       "support_30d": 4.390093758351827e-06,
       "resistance_30d": 5.903506876405612e-06,
-      "as_of": "2026-09-01 14:21:39",
+      "as_of": "2026-09-01 19:00:57",
       "stale": false
     },
     "near": {
@@ -3058,14 +3058,14 @@
     "key": "BTC",
     "name": "Bitcoin",
     "emoji": "\u20bf",
-    "price": 76903,
+    "price": 77012,
     "high_24h": 79230,
     "low_24h": 77225,
-    "pct_24h": -2.63634,
+    "pct_24h": -2.55211,
     "pct_7d": -2.3,
     "pct_30d": 22.4,
-    "sma50": 67870.56326365173,
-    "sma200": 69445.27791475407,
+    "sma50": 67873.18306934641,
+    "sma200": 69445.93286617774,
     "support_30d": 62843.70368466329,
     "resistance_30d": 80268.37474707834,
     "mark_price": 79166.78271014,
@@ -3080,14 +3080,14 @@
     "key": "ETH",
     "name": "Ethereum",
     "emoji": "\u039e",
-    "price": 2405.25,
+    "price": 2409.86,
     "high_24h": 2488.52,
     "low_24h": 2417.26,
-    "pct_24h": -2.88086,
+    "pct_24h": -2.76365,
     "pct_7d": -2.0,
     "pct_30d": 30.0,
-    "sma50": 2043.141380119668,
-    "sma200": 2026.387072037795,
+    "sma50": 2043.2606826304805,
+    "sma200": 2026.416897665498,
     "support_30d": 1858.5376969949996,
     "resistance_30d": 2514.967577695514,
     "mark_price": 2483.38844961,
