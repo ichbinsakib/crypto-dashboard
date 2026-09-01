@@ -371,7 +371,7 @@
       "rows": [
         [
           "Price vs. recent range",
-          "Near its 30-day high (~$855.75) - less room to run",
+          "Near its 30-day high (~$852.82) - less room to run",
           -1
         ],
         [
@@ -391,7 +391,7 @@
         ],
         [
           "Stretch from long-term average",
-          "+98.0% above its long-term average - very stretched",
+          "+95.1% above its long-term average - very stretched",
           -2
         ],
         [
@@ -404,12 +404,12 @@
       "id": "zcash",
       "symbol": "ZEC",
       "name": "Zcash",
-      "price": 855.32,
-      "pct_24h": 3.3119,
-      "pct_7d": 1.0,
+      "price": 842.65,
+      "pct_24h": 0.19671,
+      "pct_7d": 0.5,
       "support_30d": 480.66499804092575,
-      "resistance_30d": 855.750558832859,
-      "as_of": "2026-09-01 07:30:31",
+      "resistance_30d": 852.824784874028,
+      "as_of": "2026-09-01 11:20:27",
       "stale": false
     },
     "rain": {
@@ -452,12 +452,12 @@
       "id": "rain",
       "symbol": "RAIN",
       "name": "Rain",
-      "price": 0.01666002,
-      "pct_24h": 1.62633,
-      "pct_7d": 14.4,
+      "price": 0.01666478,
+      "pct_24h": 0.53308,
+      "pct_7d": 14.5,
       "support_30d": 0.012452326374071652,
       "resistance_30d": 0.018158429442510105,
-      "as_of": "2026-09-01 10:55:19",
+      "as_of": "2026-09-01 11:20:27",
       "stale": false
     },
     "chainlink": {
@@ -548,12 +548,12 @@
       "id": "whitebit",
       "symbol": "WBT",
       "name": "WhiteBIT Coin",
-      "price": 71.96,
-      "pct_24h": -0.55189,
+      "price": 71.94,
+      "pct_24h": -0.57796,
       "pct_7d": -1.6,
       "support_30d": 54.452558710928955,
       "resistance_30d": 73.98079079810731,
-      "as_of": "2026-09-01 11:05:20",
+      "as_of": "2026-09-01 11:20:27",
       "stale": false
     },
     "leo-token": {
@@ -3053,19 +3053,22 @@
       "stale": false
     }
   },
-  "_strong_buy_state": {},
+  "_strong_buy_state": {
+    "15m:WBT": true,
+    "1h:WBT": true
+  },
   "BTC": {
     "key": "BTC",
     "name": "Bitcoin",
     "emoji": "\u20bf",
-    "price": 77950,
+    "price": 77975,
     "high_24h": 79230,
     "low_24h": 77758,
-    "pct_24h": -0.82481,
+    "pct_24h": -0.76637,
     "pct_7d": -1.5,
     "pct_30d": 23.4,
-    "sma50": 67891.66639626701,
-    "sma200": 69450.55369790789,
+    "sma50": 67892.0106487512,
+    "sma200": 69450.63976102893,
     "support_30d": 62843.70368466329,
     "resistance_30d": 80268.37474707834,
     "mark_price": 79166.78271014,
@@ -3080,14 +3083,14 @@
     "key": "ETH",
     "name": "Ethereum",
     "emoji": "\u039e",
-    "price": 2453.58,
+    "price": 2454.76,
     "high_24h": 2488.52,
     "low_24h": 2438.19,
-    "pct_24h": -0.01462,
+    "pct_24h": -0.02229,
     "pct_7d": -0.7,
     "pct_30d": 31.4,
-    "sma50": 2044.1306664420129,
-    "sma200": 2026.634393618381,
+    "sma50": 2044.1511873817444,
+    "sma200": 2026.639523853314,
     "support_30d": 1858.5376969949996,
     "resistance_30d": 2514.967577695514,
     "mark_price": 2483.38844961,
