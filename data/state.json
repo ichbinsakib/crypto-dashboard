@@ -199,7 +199,7 @@
         ],
         [
           "Stretch from long-term average",
-          "+2.3% vs its long-term average - not stretched either way",
+          "+2.0% vs its long-term average - not stretched either way",
           0
         ],
         [
@@ -212,12 +212,12 @@
       "id": "tron",
       "symbol": "TRX",
       "name": "TRON",
-      "price": 0.331469,
-      "pct_24h": -1.57994,
-      "pct_7d": -3.8,
+      "price": 0.330253,
+      "pct_24h": -1.83738,
+      "pct_7d": -4.0,
       "support_30d": 0.32688870085502136,
       "resistance_30d": 0.3447899585776834,
-      "as_of": "2026-09-01 07:40:26",
+      "as_of": "2026-09-01 09:00:35",
       "stale": false
     },
     "figure-heloc": {
@@ -343,7 +343,7 @@
         ],
         [
           "Stretch from long-term average",
-          "-7.3% vs its long-term average - not stretched either way",
+          "-7.5% vs its long-term average - not stretched either way",
           0
         ],
         [
@@ -356,12 +356,12 @@
       "id": "dogecoin",
       "symbol": "DOGE",
       "name": "Dogecoin",
-      "price": 0.082511,
-      "pct_24h": -0.28336,
-      "pct_7d": -9.3,
+      "price": 0.082315,
+      "pct_24h": -0.56622,
+      "pct_7d": -9.4,
       "support_30d": 0.06901954790818378,
       "resistance_30d": 0.09337940032634065,
-      "as_of": "2026-09-01 08:45:22",
+      "as_of": "2026-09-01 09:00:35",
       "stale": false
     },
     "zcash": {
@@ -1831,7 +1831,7 @@
         ],
         [
           "Stretch from long-term average",
-          "+51.7% above its long-term average - very stretched",
+          "+50.8% above its long-term average - very stretched",
           -2
         ],
         [
@@ -1844,12 +1844,12 @@
       "id": "ethena",
       "symbol": "ENA",
       "name": "Ethena",
-      "price": 0.150945,
-      "pct_24h": 0.16582,
-      "pct_7d": -0.3,
+      "price": 0.150049,
+      "pct_24h": -0.57923,
+      "pct_7d": -1.1,
       "support_30d": 0.08231050586125944,
       "resistance_30d": 0.17000615068266245,
-      "as_of": "2026-09-01 08:55:19",
+      "as_of": "2026-09-01 09:00:35",
       "stale": false
     },
     "bitcoin-cash": {
@@ -3053,19 +3053,24 @@
       "stale": false
     }
   },
-  "_strong_buy_state": {},
+  "_strong_buy_state": {
+    "15m:DOGE": true,
+    "15m:AVAX": true,
+    "15m:TRX": true,
+    "1h:DOGE": true
+  },
   "BTC": {
     "key": "BTC",
     "name": "Bitcoin",
     "emoji": "\u20bf",
-    "price": 77897,
+    "price": 77875,
     "high_24h": 79230,
     "low_24h": 77758,
-    "pct_24h": -0.6547,
+    "pct_24h": -0.7766,
     "pct_7d": -2.4,
     "pct_30d": 23.9,
-    "sma50": 67890.62721135795,
-    "sma200": 69450.29390168062,
+    "sma50": 67889.98408621893,
+    "sma200": 69450.13312039587,
     "support_30d": 62843.70368466329,
     "resistance_30d": 80268.37474707834,
     "mark_price": 79166.78271014,
@@ -3080,14 +3085,14 @@
     "key": "ETH",
     "name": "Ethereum",
     "emoji": "\u039e",
-    "price": 2449.33,
+    "price": 2449.56,
     "high_24h": 2488.52,
     "low_24h": 2438.19,
-    "pct_24h": 0.12414,
+    "pct_24h": 0.10597,
     "pct_7d": -1.1,
     "pct_30d": 31.7,
-    "sma50": 2044.0450671615158,
-    "sma200": 2026.6129937982569,
+    "sma50": 2044.0460392956375,
+    "sma200": 2026.6132368317872,
     "support_30d": 1858.5376969949996,
     "resistance_30d": 2514.967577695514,
     "mark_price": 2483.38844961,
