@@ -4,7 +4,7 @@
   "_alerts_state": {
     "btc-resistance-break": {
       "triggered": true,
-      "last_triggered_at": "2026-09-01 08:00:35"
+      "last_triggered_at": "2026-09-01 08:05:20"
     },
     "btc-support-break": {
       "triggered": false,
@@ -1831,7 +1831,7 @@
         ],
         [
           "Stretch from long-term average",
-          "+50.9% above its long-term average - very stretched",
+          "+52.9% above its long-term average - very stretched",
           -2
         ],
         [
@@ -1844,18 +1844,18 @@
       "id": "ethena",
       "symbol": "ENA",
       "name": "Ethena",
-      "price": 0.150177,
-      "pct_24h": 2.4434,
-      "pct_7d": -3.0,
+      "price": 0.152103,
+      "pct_24h": 1.18427,
+      "pct_7d": -0.3,
       "support_30d": 0.08231050586125944,
       "resistance_30d": 0.17000615068266245,
-      "as_of": "2026-09-01 04:50:21",
+      "as_of": "2026-09-01 08:05:20",
       "stale": false
     },
     "bitcoin-cash": {
       "label": "\ud83d\udfe1 HOLD / NEUTRAL",
       "status": "neutral",
-      "score": -1,
+      "score": 0,
       "rows": [
         [
           "Price vs. recent range",
@@ -1874,8 +1874,8 @@
         ],
         [
           "Recent trend",
-          "Trending down - avoid catching a falling knife",
-          -1
+          "Chopping sideways - no clear trend",
+          0
         ],
         [
           "Stretch from long-term average",
@@ -1892,12 +1892,12 @@
       "id": "bitcoin-cash",
       "symbol": "BCH",
       "name": "Bitcoin Cash",
-      "price": 250.2,
-      "pct_24h": 1.29157,
-      "pct_7d": -10.2,
+      "price": 250.34,
+      "pct_24h": 1.40815,
+      "pct_7d": -7.9,
       "support_30d": 203.50169440615565,
       "resistance_30d": 288.10955405353275,
-      "as_of": "2026-09-01 07:20:25",
+      "as_of": "2026-09-01 08:05:20",
       "stale": false
     },
     "mantle": {
@@ -2359,7 +2359,7 @@
         ],
         [
           "Stretch from long-term average",
-          "+0.0% vs its long-term average - not stretched either way",
+          "+0.9% vs its long-term average - not stretched either way",
           0
         ],
         [
@@ -2372,12 +2372,12 @@
       "id": "sky",
       "symbol": "SKY",
       "name": "Sky",
-      "price": 0.066735,
-      "pct_24h": -3.5253,
-      "pct_7d": -4.3,
+      "price": 0.067334,
+      "pct_24h": -2.62216,
+      "pct_7d": -3.9,
       "support_30d": 0.05081051579814886,
       "resistance_30d": 0.06901365589177483,
-      "as_of": "2026-09-01 07:35:23",
+      "as_of": "2026-09-01 08:05:20",
       "stale": false
     },
     "shiba-inu": {
@@ -3053,19 +3053,21 @@
       "stale": false
     }
   },
-  "_strong_buy_state": {},
+  "_strong_buy_state": {
+    "15m:HYPE": true
+  },
   "BTC": {
     "key": "BTC",
     "name": "Bitcoin",
     "emoji": "\u20bf",
-    "price": 78611,
+    "price": 78556,
     "high_24h": 79230,
     "low_24h": 77758,
-    "pct_24h": 0.51995,
+    "pct_24h": 0.59253,
     "pct_7d": -2.4,
-    "pct_30d": 24.2,
-    "sma50": 67904.64882209992,
-    "sma200": 69453.79930436611,
+    "pct_30d": 23.9,
+    "sma50": 67903.64889335838,
+    "sma200": 69453.54932218073,
     "support_30d": 62843.70368466329,
     "resistance_30d": 80268.37474707834,
     "mark_price": 79166.78271014,
@@ -3080,14 +3082,14 @@
     "key": "ETH",
     "name": "Ethereum",
     "emoji": "\u039e",
-    "price": 2471.15,
+    "price": 2470.35,
     "high_24h": 2488.52,
-    "low_24h": 2433.73,
-    "pct_24h": 1.27055,
-    "pct_7d": -1.4,
-    "pct_30d": 31.9,
-    "sma50": 2044.480724844643,
-    "sma200": 2026.7219082190388,
+    "low_24h": 2438.19,
+    "pct_24h": 1.37305,
+    "pct_7d": -1.1,
+    "pct_30d": 31.7,
+    "sma50": 2044.4804187712466,
+    "sma200": 2026.7218317006896,
     "support_30d": 1858.5376969949996,
     "resistance_30d": 2514.967577695514,
     "mark_price": 2483.38844961,
