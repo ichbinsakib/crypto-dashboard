@@ -727,7 +727,7 @@
         ],
         [
           "Stretch from long-term average",
-          "+2.0% vs its long-term average - not stretched either way",
+          "+1.1% vs its long-term average - not stretched either way",
           0
         ],
         [
@@ -740,12 +740,12 @@
       "id": "stellar",
       "symbol": "XLM",
       "name": "Stellar",
-      "price": 0.177699,
-      "pct_24h": 1.02305,
-      "pct_7d": -6.0,
+      "price": 0.176204,
+      "pct_24h": -0.53127,
+      "pct_7d": -7.1,
       "support_30d": 0.15472912151335613,
       "resistance_30d": 0.20181319711037435,
-      "as_of": "2026-09-01 15:25:19",
+      "as_of": "2026-09-01 17:05:20",
       "stale": false
     },
     "kucoin-shares": {
@@ -1207,7 +1207,7 @@
         ],
         [
           "Stretch from long-term average",
-          "+0.1% vs its long-term average - not stretched either way",
+          "-0.5% vs its long-term average - not stretched either way",
           0
         ],
         [
@@ -1220,12 +1220,12 @@
       "id": "nexo",
       "symbol": "NEXO",
       "name": "NEXO",
-      "price": 0.836824,
-      "pct_24h": -0.41138,
-      "pct_7d": 3.4,
+      "price": 0.831606,
+      "pct_24h": -0.75301,
+      "pct_7d": 0.4,
       "support_30d": 0.7016300793001435,
       "resistance_30d": 0.8734100764023305,
-      "as_of": "2026-09-01 15:15:22",
+      "as_of": "2026-09-01 17:05:20",
       "stale": false
     },
     "janus-henderson-anemoy-treasury-fund": {
@@ -2215,7 +2215,7 @@
         ],
         [
           "Stretch from long-term average",
-          "+0.8% vs its long-term average - not stretched either way",
+          "+1.7% vs its long-term average - not stretched either way",
           0
         ],
         [
@@ -2228,12 +2228,12 @@
       "id": "internet-computer",
       "symbol": "ICP",
       "name": "Internet Computer",
-      "price": 2.46,
-      "pct_24h": 2.81272,
-      "pct_7d": 2.2,
+      "price": 2.48,
+      "pct_24h": 3.30932,
+      "pct_7d": 2.7,
       "support_30d": 2.088992450455863,
       "resistance_30d": 2.525531974490298,
-      "as_of": "2026-09-01 16:25:18",
+      "as_of": "2026-09-01 17:05:20",
       "stale": false
     },
     "bittensor": {
@@ -3053,19 +3053,21 @@
       "stale": false
     }
   },
-  "_strong_buy_state": {},
+  "_strong_buy_state": {
+    "15m:XLM": true
+  },
   "BTC": {
     "key": "BTC",
     "name": "Bitcoin",
     "emoji": "\u20bf",
-    "price": 77576,
+    "price": 77600,
     "high_24h": 79230,
-    "low_24h": 77523,
-    "pct_24h": -1.36869,
-    "pct_7d": -1.6,
-    "pct_30d": 23.7,
-    "sma50": 67884.16940846828,
-    "sma200": 69448.67945095821,
+    "low_24h": 77375,
+    "pct_24h": -1.32793,
+    "pct_7d": -2.4,
+    "pct_30d": 23.0,
+    "sma50": 67884.74455739194,
+    "sma200": 69448.82323818911,
     "support_30d": 62843.70368466329,
     "resistance_30d": 80268.37474707834,
     "mark_price": 79166.78271014,
@@ -3080,14 +3082,14 @@
     "key": "ETH",
     "name": "Ethereum",
     "emoji": "\u039e",
-    "price": 2432.6,
+    "price": 2432.69,
     "high_24h": 2488.52,
-    "low_24h": 2432.33,
-    "pct_24h": -1.50842,
-    "pct_7d": -1.1,
-    "pct_30d": 32.1,
-    "sma50": 2043.7213497316648,
-    "sma200": 2026.532064440794,
+    "low_24h": 2424.47,
+    "pct_24h": -1.44429,
+    "pct_7d": -2.0,
+    "pct_30d": 31.0,
+    "sma50": 2043.7206019557113,
+    "sma200": 2026.5318774968057,
     "support_30d": 1858.5376969949996,
     "resistance_30d": 2514.967577695514,
     "mark_price": 2483.38844961,
