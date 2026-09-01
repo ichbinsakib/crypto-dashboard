@@ -4,7 +4,7 @@
   "_alerts_state": {
     "btc-resistance-break": {
       "triggered": true,
-      "last_triggered_at": "2026-09-01 00:55:19"
+      "last_triggered_at": "2026-09-01 01:00:33"
     },
     "btc-support-break": {
       "triggered": false,
@@ -151,7 +151,7 @@
         ],
         [
           "Stretch from long-term average",
-          "+25.8% above its long-term average - a bit stretched",
+          "+25.7% above its long-term average - a bit stretched",
           -1
         ],
         [
@@ -164,12 +164,12 @@
       "id": "solana",
       "symbol": "SOL",
       "name": "Solana",
-      "price": 103.17,
-      "pct_24h": 1.49016,
-      "pct_7d": 5.7,
+      "price": 103.11,
+      "pct_24h": 0.98373,
+      "pct_7d": 4.3,
       "support_30d": 72.63053979307217,
       "resistance_30d": 109.17730597799657,
-      "as_of": "2026-09-01 00:15:20",
+      "as_of": "2026-09-01 01:00:33",
       "stale": false
     },
     "tron": {
@@ -1480,7 +1480,7 @@
         ],
         [
           "Crowd mood (Fear & Greed)",
-          "62/100 - crowd is greedy",
+          "69/100 - crowd is greedy",
           -1
         ],
         [
@@ -1495,7 +1495,7 @@
         ],
         [
           "Stretch from long-term average",
-          "-10.9% vs its long-term average - not stretched either way",
+          "-10.3% vs its long-term average - not stretched either way",
           0
         ],
         [
@@ -1508,12 +1508,12 @@
       "id": "ethereum-classic",
       "symbol": "ETC",
       "name": "Ethereum Classic",
-      "price": 7.28,
-      "pct_24h": 2.2177,
-      "pct_7d": -6.4,
+      "price": 7.32,
+      "pct_24h": 1.28436,
+      "pct_7d": -5.5,
       "support_30d": 6.079473341192034,
       "resistance_30d": 8.342731558283557,
-      "as_of": "2026-08-31 23:50:24",
+      "as_of": "2026-09-01 01:00:33",
       "stale": false
     },
     "pump-fun": {
@@ -2344,7 +2344,7 @@
         ],
         [
           "Crowd mood (Fear & Greed)",
-          "62/100 - crowd is greedy",
+          "69/100 - crowd is greedy",
           -1
         ],
         [
@@ -2359,7 +2359,7 @@
         ],
         [
           "Stretch from long-term average",
-          "+2.8% vs its long-term average - not stretched either way",
+          "+1.4% vs its long-term average - not stretched either way",
           0
         ],
         [
@@ -2372,12 +2372,12 @@
       "id": "sky",
       "symbol": "SKY",
       "name": "Sky",
-      "price": 0.06863,
-      "pct_24h": -3.17419,
-      "pct_7d": 1.8,
+      "price": 0.067634,
+      "pct_24h": -2.0354,
+      "pct_7d": -0.8,
       "support_30d": 0.05081051579814886,
       "resistance_30d": 0.06901365589177483,
-      "as_of": "2026-08-31 20:20:27",
+      "as_of": "2026-09-01 01:00:33",
       "stale": false
     },
     "shiba-inu": {
@@ -3054,20 +3054,21 @@
     }
   },
   "_strong_buy_state": {
-    "15m:SOL": true
+    "15m:SOL": true,
+    "1h:SKY": true
   },
   "BTC": {
     "key": "BTC",
     "name": "Bitcoin",
     "emoji": "\u20bf",
-    "price": 78718,
+    "price": 78623,
     "high_24h": 79230,
     "low_24h": 77388,
-    "pct_24h": 0.88066,
+    "pct_24h": 0.91134,
     "pct_7d": -0.2,
     "pct_30d": 25.1,
-    "sma50": 67906.28703990969,
-    "sma200": 69454.20885881856,
+    "sma50": 67904.69193724335,
+    "sma200": 69453.81008315197,
     "support_30d": 62843.70368466329,
     "resistance_30d": 80268.37474707834,
     "mark_price": 78505.64311594,
@@ -3082,14 +3083,14 @@
     "key": "ETH",
     "name": "Ethereum",
     "emoji": "\u039e",
-    "price": 2472.81,
+    "price": 2470.39,
     "high_24h": 2488.52,
     "low_24h": 2401.8,
-    "pct_24h": 1.63238,
+    "pct_24h": 1.81287,
     "pct_7d": -0.3,
     "pct_30d": 33.6,
-    "sma50": 2044.4931326600158,
-    "sma200": 2026.7250101728819,
+    "sma50": 2044.4675817613618,
+    "sma200": 2026.7186224482182,
     "support_30d": 1858.5376969949996,
     "resistance_30d": 2514.967577695514,
     "mark_price": 2465.81127907,
