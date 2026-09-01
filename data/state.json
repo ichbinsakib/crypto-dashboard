@@ -4,7 +4,7 @@
   "_alerts_state": {
     "btc-resistance-break": {
       "triggered": true,
-      "last_triggered_at": "2026-09-01 07:55:20"
+      "last_triggered_at": "2026-09-01 08:00:35"
     },
     "btc-support-break": {
       "triggered": false,
@@ -919,7 +919,7 @@
         ],
         [
           "Stretch from long-term average",
-          "-10.0% vs its long-term average - not stretched either way",
+          "-9.9% vs its long-term average - not stretched either way",
           0
         ],
         [
@@ -932,12 +932,12 @@
       "id": "avalanche-2",
       "symbol": "AVAX",
       "name": "Avalanche",
-      "price": 7.3,
-      "pct_24h": 1.1914,
-      "pct_7d": -4.7,
+      "price": 7.31,
+      "pct_24h": 1.29101,
+      "pct_7d": -3.6,
       "support_30d": 6.313391080113916,
       "resistance_30d": 7.836507914480645,
-      "as_of": "2026-09-01 05:37:33",
+      "as_of": "2026-09-01 08:00:35",
       "stale": false
     },
     "aster-2": {
@@ -1317,11 +1317,11 @@
       "symbol": "HTX",
       "name": "HTX DAO",
       "price": 1.65e-06,
-      "pct_24h": -0.38998,
-      "pct_7d": -6.8,
-      "support_30d": 1.6488321274702595e-06,
+      "pct_24h": -0.32163,
+      "pct_7d": -6.7,
+      "support_30d": 1.6476869654004553e-06,
       "resistance_30d": 1.8259977214551937e-06,
-      "as_of": "2026-09-01 07:30:31",
+      "as_of": "2026-09-01 08:00:35",
       "stale": false
     },
     "superstate-short-duration-us-government-securities-fund-ustb": {
@@ -1423,7 +1423,7 @@
     "crypto-com-chain": {
       "label": "\ud83d\udfe1 HOLD / NEUTRAL",
       "status": "neutral",
-      "score": -1,
+      "score": 0,
       "rows": [
         [
           "Price vs. recent range",
@@ -1442,12 +1442,12 @@
         ],
         [
           "Recent trend",
-          "Trending down - avoid catching a falling knife",
-          -1
+          "Chopping sideways - no clear trend",
+          0
         ],
         [
           "Stretch from long-term average",
-          "-15.3% below its long-term average - confirmed downtrend",
+          "-15.7% below its long-term average - confirmed downtrend",
           -1
         ],
         [
@@ -1460,12 +1460,12 @@
       "id": "crypto-com-chain",
       "symbol": "CRO",
       "name": "Cronos",
-      "price": 0.056852,
-      "pct_24h": -0.1488,
-      "pct_7d": -8.4,
+      "price": 0.056616,
+      "pct_24h": -0.34587,
+      "pct_7d": -7.2,
       "support_30d": 0.04621382085807831,
       "resistance_30d": 0.06091104752771909,
-      "as_of": "2026-09-01 07:35:23",
+      "as_of": "2026-09-01 08:00:35",
       "stale": false
     },
     "ethereum-classic": {
@@ -3053,22 +3053,19 @@
       "stale": false
     }
   },
-  "_strong_buy_state": {
-    "15m:PAXG": true,
-    "1h:PAXG": true
-  },
+  "_strong_buy_state": {},
   "BTC": {
     "key": "BTC",
     "name": "Bitcoin",
     "emoji": "\u20bf",
-    "price": 78624,
+    "price": 78611,
     "high_24h": 79230,
     "low_24h": 77758,
-    "pct_24h": 0.55424,
+    "pct_24h": 0.51995,
     "pct_7d": -2.4,
     "pct_30d": 24.2,
-    "sma50": 67904.92819310754,
-    "sma200": 69453.86914711802,
+    "sma50": 67904.64882209992,
+    "sma200": 69453.79930436611,
     "support_30d": 62843.70368466329,
     "resistance_30d": 80268.37474707834,
     "mark_price": 79166.78271014,
@@ -3083,14 +3080,14 @@
     "key": "ETH",
     "name": "Ethereum",
     "emoji": "\u039e",
-    "price": 2471.31,
+    "price": 2471.15,
     "high_24h": 2488.52,
     "low_24h": 2433.73,
-    "pct_24h": 1.31892,
+    "pct_24h": 1.27055,
     "pct_7d": -1.4,
     "pct_30d": 31.9,
-    "sma50": 2044.4777610604215,
-    "sma200": 2026.7211672729834,
+    "sma50": 2044.480724844643,
+    "sma200": 2026.7219082190388,
     "support_30d": 1858.5376969949996,
     "resistance_30d": 2514.967577695514,
     "mark_price": 2483.38844961,
