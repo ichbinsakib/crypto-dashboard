@@ -4,7 +4,7 @@
   "_alerts_state": {
     "btc-resistance-break": {
       "triggered": true,
-      "last_triggered_at": "2026-09-01 06:55:20"
+      "last_triggered_at": "2026-09-01 07:00:37"
     },
     "btc-support-break": {
       "triggered": false,
@@ -980,12 +980,12 @@
       "id": "aster-2",
       "symbol": "ASTER",
       "name": "Aster",
-      "price": 0.698853,
-      "pct_24h": 0.12028,
-      "pct_7d": 0.6,
+      "price": 0.698655,
+      "pct_24h": 0.04618,
+      "pct_7d": 0.0,
       "support_30d": 0.5986101196690307,
       "resistance_30d": 0.7276231199504045,
-      "as_of": "2026-09-01 06:50:24",
+      "as_of": "2026-09-01 07:00:37",
       "stale": false
     },
     "worldcoin-wld": {
@@ -2421,11 +2421,11 @@
       "symbol": "SHIB",
       "name": "Shiba Inu",
       "price": 5.18e-06,
-      "pct_24h": 3.03921,
-      "pct_7d": -8.3,
+      "pct_24h": 2.90857,
+      "pct_7d": -8.5,
       "support_30d": 4.390093758351827e-06,
       "resistance_30d": 5.903506876405612e-06,
-      "as_of": "2026-09-01 06:45:22",
+      "as_of": "2026-09-01 07:00:37",
       "stale": false
     },
     "near": {
@@ -2647,7 +2647,7 @@
         ],
         [
           "Stretch from long-term average",
-          "-21.3% below its long-term average - confirmed downtrend",
+          "-21.7% below its long-term average - confirmed downtrend",
           -1
         ],
         [
@@ -2660,12 +2660,12 @@
       "id": "world-liberty-financial",
       "symbol": "WLFI",
       "name": "World Liberty Financial",
-      "price": 0.05746,
-      "pct_24h": 0.03403,
-      "pct_7d": -0.6,
+      "price": 0.057126,
+      "pct_24h": -0.56375,
+      "pct_7d": -2.0,
       "support_30d": 0.051301304477199876,
       "resistance_30d": 0.06254770952093733,
-      "as_of": "2026-09-01 03:50:23",
+      "as_of": "2026-09-01 07:00:37",
       "stale": false
     },
     "pax-gold": {
@@ -3053,19 +3053,22 @@
       "stale": false
     }
   },
-  "_strong_buy_state": {},
+  "_strong_buy_state": {
+    "15m:WLFI": true,
+    "1h:WLFI": true
+  },
   "BTC": {
     "key": "BTC",
     "name": "Bitcoin",
     "emoji": "\u20bf",
-    "price": 78797,
+    "price": 78749,
     "high_24h": 79230,
     "low_24h": 77758,
-    "pct_24h": 0.89125,
+    "pct_24h": 0.85876,
     "pct_7d": -1.5,
     "pct_30d": 24.6,
-    "sma50": 67908.43760222198,
-    "sma200": 69454.74649939663,
+    "sma50": 67907.44636839737,
+    "sma200": 69454.49869094048,
     "support_30d": 62843.70368466329,
     "resistance_30d": 80268.37474707834,
     "mark_price": 79166.78271014,
@@ -3080,14 +3083,14 @@
     "key": "ETH",
     "name": "Ethereum",
     "emoji": "\u039e",
-    "price": 2473.98,
+    "price": 2471.82,
     "high_24h": 2488.52,
     "low_24h": 2433.73,
-    "pct_24h": 1.37714,
+    "pct_24h": 1.32246,
     "pct_7d": -0.4,
     "pct_30d": 32.1,
-    "sma50": 2044.535973216313,
-    "sma200": 2026.7357203119564,
+    "sma50": 2044.4967477238752,
+    "sma200": 2026.7259139388468,
     "support_30d": 1858.5376969949996,
     "resistance_30d": 2514.967577695514,
     "mark_price": 2483.38844961,
