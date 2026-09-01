@@ -461,14 +461,14 @@
       "stale": false
     },
     "chainlink": {
-      "label": "\ud83d\udfe1 HOLD / NEUTRAL",
-      "status": "neutral",
-      "score": -1,
+      "label": "\ud83d\udd34 CAUTION - REDUCE NEW BUYS",
+      "status": "bearish",
+      "score": -2,
       "rows": [
         [
           "Price vs. recent range",
-          "Sitting in the middle of its 30-day range",
-          0
+          "Near its 30-day high (~$11.99) - less room to run",
+          -1
         ],
         [
           "Crowd mood (Fear & Greed)",
@@ -487,7 +487,7 @@
         ],
         [
           "Stretch from long-term average",
-          "+24.5% above its long-term average - a bit stretched",
+          "+25.4% above its long-term average - a bit stretched",
           -1
         ],
         [
@@ -496,16 +496,16 @@
           0
         ]
       ],
-      "plain": "No real edge either way right now - fine to just wait and watch.",
+      "plain": "Getting risky - I'd hold off on new buys until this cools down.",
       "id": "chainlink",
       "symbol": "LINK",
       "name": "Chainlink",
-      "price": 11.33,
-      "pct_24h": 0.25011,
-      "pct_7d": -2.1,
+      "price": 11.41,
+      "pct_24h": 1.11647,
+      "pct_7d": -2.3,
       "support_30d": 8.14340732535387,
       "resistance_30d": 11.992351770358374,
-      "as_of": "2026-09-01 09:10:24",
+      "as_of": "2026-09-01 10:30:28",
       "stale": false
     },
     "whitebit": {
@@ -1423,7 +1423,7 @@
     "crypto-com-chain": {
       "label": "\ud83d\udfe1 HOLD / NEUTRAL",
       "status": "neutral",
-      "score": 0,
+      "score": -1,
       "rows": [
         [
           "Price vs. recent range",
@@ -1442,12 +1442,12 @@
         ],
         [
           "Recent trend",
-          "Chopping sideways - no clear trend",
-          0
+          "Trending down - avoid catching a falling knife",
+          -1
         ],
         [
           "Stretch from long-term average",
-          "-16.4% below its long-term average - confirmed downtrend",
+          "-16.3% below its long-term average - confirmed downtrend",
           -1
         ],
         [
@@ -1460,12 +1460,12 @@
       "id": "crypto-com-chain",
       "symbol": "CRO",
       "name": "Cronos",
-      "price": 0.056121,
-      "pct_24h": -0.51677,
-      "pct_7d": -7.7,
+      "price": 0.056176,
+      "pct_24h": -0.17739,
+      "pct_7d": -8.1,
       "support_30d": 0.04621382085807831,
       "resistance_30d": 0.06091104752771909,
-      "as_of": "2026-09-01 09:55:19",
+      "as_of": "2026-09-01 10:30:28",
       "stale": false
     },
     "ethereum-classic": {
@@ -1711,7 +1711,7 @@
     "sui": {
       "label": "\ud83d\udfe1 HOLD / NEUTRAL",
       "status": "neutral",
-      "score": 0,
+      "score": -1,
       "rows": [
         [
           "Price vs. recent range",
@@ -1735,8 +1735,8 @@
         ],
         [
           "Stretch from long-term average",
-          "-15.0% vs its long-term average - not stretched either way",
-          0
+          "-16.1% below its long-term average - confirmed downtrend",
+          -1
         ],
         [
           "Leverage traders' bias",
@@ -1748,12 +1748,12 @@
       "id": "sui",
       "symbol": "SUI",
       "name": "Sui",
-      "price": 0.732783,
-      "pct_24h": 1.43105,
-      "pct_7d": -11.6,
+      "price": 0.723469,
+      "pct_24h": 0.07402,
+      "pct_7d": -10.4,
       "support_30d": 0.6514311908607086,
       "resistance_30d": 0.8499161763231283,
-      "as_of": "2026-09-01 07:10:27",
+      "as_of": "2026-09-01 10:30:28",
       "stale": false
     },
     "lighter": {
@@ -3053,21 +3053,19 @@
       "stale": false
     }
   },
-  "_strong_buy_state": {
-    "1h:BNB": true
-  },
+  "_strong_buy_state": {},
   "BTC": {
     "key": "BTC",
     "name": "Bitcoin",
     "emoji": "\u20bf",
-    "price": 77943,
+    "price": 77967,
     "high_24h": 79230,
     "low_24h": 77758,
-    "pct_24h": -0.56161,
+    "pct_24h": -0.55966,
     "pct_7d": -2.5,
     "pct_30d": 23.4,
-    "sma50": 67891.37143788878,
-    "sma200": 69450.47995831333,
+    "sma50": 67891.7812927921,
+    "sma200": 69450.58242203917,
     "support_30d": 62843.70368466329,
     "resistance_30d": 80268.37474707834,
     "mark_price": 79166.78271014,
@@ -3082,14 +3080,14 @@
     "key": "ETH",
     "name": "Ethereum",
     "emoji": "\u039e",
-    "price": 2455.23,
+    "price": 2455.63,
     "high_24h": 2488.52,
     "low_24h": 2438.19,
-    "pct_24h": 0.36129,
+    "pct_24h": 0.29905,
     "pct_7d": -1.3,
     "pct_30d": 31.4,
-    "sma50": 2044.142464900121,
-    "sma200": 2026.6373432329083,
+    "sma50": 2044.1683242318759,
+    "sma200": 2026.643808065847,
     "support_30d": 1858.5376969949996,
     "resistance_30d": 2514.967577695514,
     "mark_price": 2483.38844961,
