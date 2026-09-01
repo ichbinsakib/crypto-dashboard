@@ -1495,7 +1495,7 @@
         ],
         [
           "Stretch from long-term average",
-          "-10.6% vs its long-term average - not stretched either way",
+          "-11.3% vs its long-term average - not stretched either way",
           0
         ],
         [
@@ -1508,12 +1508,12 @@
       "id": "ethereum-classic",
       "symbol": "ETC",
       "name": "Ethereum Classic",
-      "price": 7.29,
-      "pct_24h": 0.3035,
-      "pct_7d": -8.0,
+      "price": 7.24,
+      "pct_24h": -1.05638,
+      "pct_7d": -9.1,
       "support_30d": 6.079473341192034,
       "resistance_30d": 8.342731558283557,
-      "as_of": "2026-09-01 16:00:35",
+      "as_of": "2026-09-01 18:35:39",
       "stale": false
     },
     "pump-fun": {
@@ -1763,7 +1763,7 @@
       "rows": [
         [
           "Price vs. recent range",
-          "Near its 30-day high (~$3.73) - less room to run",
+          "Near its 30-day high (~$3.74) - less room to run",
           -1
         ],
         [
@@ -1783,7 +1783,7 @@
         ],
         [
           "Stretch from long-term average",
-          "+129.1% above its long-term average - very stretched",
+          "+131.6% above its long-term average - very stretched",
           -2
         ],
         [
@@ -1796,12 +1796,12 @@
       "id": "lighter",
       "symbol": "LIT",
       "name": "Lighter",
-      "price": 3.73,
-      "pct_24h": 2.81842,
+      "price": 3.77,
+      "pct_24h": 4.06425,
       "pct_7d": 4.1,
       "support_30d": 2.005076166939587,
-      "resistance_30d": 3.7333169409774007,
-      "as_of": "2026-09-01 18:22:10",
+      "resistance_30d": 3.7416045503792055,
+      "as_of": "2026-09-01 18:35:39",
       "stale": false
     },
     "ethena": {
@@ -2429,14 +2429,14 @@
       "stale": false
     },
     "near": {
-      "label": "\ud83d\udd34 CAUTION - REDUCE NEW BUYS",
-      "status": "bearish",
-      "score": -2,
+      "label": "\ud83d\udfe1 HOLD / NEUTRAL",
+      "status": "neutral",
+      "score": -1,
       "rows": [
         [
           "Price vs. recent range",
-          "Near its 30-day high (~$2.01) - less room to run",
-          -1
+          "Sitting in the middle of its 30-day range",
+          0
         ],
         [
           "Crowd mood (Fear & Greed)",
@@ -2455,7 +2455,7 @@
         ],
         [
           "Stretch from long-term average",
-          "+17.7% above its long-term average - a bit stretched",
+          "+15.9% above its long-term average - a bit stretched",
           -1
         ],
         [
@@ -2464,16 +2464,16 @@
           0
         ]
       ],
-      "plain": "Getting risky - I'd hold off on new buys until this cools down.",
+      "plain": "No real edge either way right now - fine to just wait and watch.",
       "id": "near",
       "symbol": "NEAR",
       "name": "NEAR Protocol",
-      "price": 1.94,
-      "pct_24h": 3.87234,
+      "price": 1.91,
+      "pct_24h": 1.74751,
       "pct_7d": 2.7,
       "support_30d": 1.5879597131538,
       "resistance_30d": 2.0141495518834596,
-      "as_of": "2026-09-01 18:10:24",
+      "as_of": "2026-09-01 18:35:39",
       "stale": false
     },
     "quant-network": {
@@ -3053,19 +3053,23 @@
       "stale": false
     }
   },
-  "_strong_buy_state": {},
+  "_strong_buy_state": {
+    "15m:LTC": true,
+    "1h:NEAR": true,
+    "1h:ETC": true
+  },
   "BTC": {
     "key": "BTC",
     "name": "Bitcoin",
     "emoji": "\u20bf",
-    "price": 76818,
+    "price": 76990,
     "high_24h": 79230,
     "low_24h": 77225,
-    "pct_24h": -2.61853,
+    "pct_24h": -2.40556,
     "pct_7d": -2.3,
     "pct_30d": 22.4,
-    "sma50": 67870.51979332462,
-    "sma200": 69445.2670471723,
+    "sma50": 67872.31143889917,
+    "sma200": 69445.71495856592,
     "support_30d": 62843.70368466329,
     "resistance_30d": 80268.37474707834,
     "mark_price": 79166.78271014,
@@ -3080,14 +3084,14 @@
     "key": "ETH",
     "name": "Ethereum",
     "emoji": "\u039e",
-    "price": 2408.43,
+    "price": 2411.1,
     "high_24h": 2488.52,
     "low_24h": 2417.26,
-    "pct_24h": -2.5024,
+    "pct_24h": -2.41388,
     "pct_7d": -2.0,
     "pct_30d": 30.0,
-    "sma50": 2043.2259114058384,
-    "sma200": 2026.4082048593375,
+    "sma50": 2043.279441541258,
+    "sma200": 2026.4215873931926,
     "support_30d": 1858.5376969949996,
     "resistance_30d": 2514.967577695514,
     "mark_price": 2483.38844961,
