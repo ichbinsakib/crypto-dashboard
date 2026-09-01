@@ -319,7 +319,7 @@
     "dogecoin": {
       "label": "\ud83d\udfe1 HOLD / NEUTRAL",
       "status": "neutral",
-      "score": 0,
+      "score": 1,
       "rows": [
         [
           "Price vs. recent range",
@@ -338,12 +338,12 @@
         ],
         [
           "Recent trend",
-          "Trending down - avoid catching a falling knife",
-          -1
+          "Chopping sideways - no clear trend",
+          0
         ],
         [
           "Stretch from long-term average",
-          "-6.7% vs its long-term average - not stretched either way",
+          "-7.5% vs its long-term average - not stretched either way",
           0
         ],
         [
@@ -356,12 +356,12 @@
       "id": "dogecoin",
       "symbol": "DOGE",
       "name": "Dogecoin",
-      "price": 0.083036,
-      "pct_24h": 0.01488,
-      "pct_7d": -8.3,
+      "price": 0.08228,
+      "pct_24h": -0.55392,
+      "pct_7d": -6.2,
       "support_30d": 0.06901954790818378,
       "resistance_30d": 0.09337940032634065,
-      "as_of": "2026-09-01 14:50:25",
+      "as_of": "2026-09-01 15:25:19",
       "stale": false
     },
     "zcash": {
@@ -727,7 +727,7 @@
         ],
         [
           "Stretch from long-term average",
-          "+2.6% vs its long-term average - not stretched either way",
+          "+2.0% vs its long-term average - not stretched either way",
           0
         ],
         [
@@ -740,12 +740,12 @@
       "id": "stellar",
       "symbol": "XLM",
       "name": "Stellar",
-      "price": 0.178904,
-      "pct_24h": 1.3413,
-      "pct_7d": -7.8,
+      "price": 0.177699,
+      "pct_24h": 1.02305,
+      "pct_7d": -6.0,
       "support_30d": 0.15472912151335613,
       "resistance_30d": 0.20181319711037435,
-      "as_of": "2026-09-01 14:45:23",
+      "as_of": "2026-09-01 15:25:19",
       "stale": false
     },
     "kucoin-shares": {
@@ -823,7 +823,7 @@
         ],
         [
           "Stretch from long-term average",
-          "-10.4% vs its long-term average - not stretched either way",
+          "-11.2% vs its long-term average - not stretched either way",
           0
         ],
         [
@@ -836,12 +836,12 @@
       "id": "hedera-hashgraph",
       "symbol": "HBAR",
       "name": "Hedera",
-      "price": 0.074947,
-      "pct_24h": 1.29621,
-      "pct_7d": -7.2,
+      "price": 0.074332,
+      "pct_24h": 0.81789,
+      "pct_7d": -6.5,
       "support_30d": 0.06461260477975343,
       "resistance_30d": 0.07985387850470703,
-      "as_of": "2026-09-01 14:50:25",
+      "as_of": "2026-09-01 15:25:19",
       "stale": false
     },
     "pepe": {
@@ -3053,19 +3053,21 @@
       "stale": false
     }
   },
-  "_strong_buy_state": {},
+  "_strong_buy_state": {
+    "1h:DOGE": true
+  },
   "BTC": {
     "key": "BTC",
     "name": "Bitcoin",
     "emoji": "\u20bf",
-    "price": 77785,
+    "price": 77808,
     "high_24h": 79230,
     "low_24h": 77523,
-    "pct_24h": -0.57495,
+    "pct_24h": -0.67131,
     "pct_7d": -0.5,
     "pct_30d": 24.0,
-    "sma50": 67887.77734055925,
-    "sma200": 69449.58143398094,
+    "sma50": 67888.66354194828,
+    "sma200": 69449.8029843282,
     "support_30d": 62843.70368466329,
     "resistance_30d": 80268.37474707834,
     "mark_price": 79166.78271014,
@@ -3080,14 +3082,14 @@
     "key": "ETH",
     "name": "Ethereum",
     "emoji": "\u039e",
-    "price": 2436.78,
+    "price": 2438.23,
     "high_24h": 2488.52,
     "low_24h": 2432.33,
-    "pct_24h": -0.92296,
+    "pct_24h": -1.09985,
     "pct_7d": -0.4,
     "pct_30d": 32.1,
-    "sma50": 2043.7790722607367,
-    "sma200": 2026.546495073062,
+    "sma50": 2043.8303526341783,
+    "sma200": 2026.5593151664225,
     "support_30d": 1858.5376969949996,
     "resistance_30d": 2514.967577695514,
     "mark_price": 2483.38844961,
