@@ -4,7 +4,7 @@
   "_alerts_state": {
     "btc-resistance-break": {
       "triggered": true,
-      "last_triggered_at": "2026-09-01 06:40:23"
+      "last_triggered_at": "2026-09-01 06:45:22"
     },
     "btc-support-break": {
       "triggered": false,
@@ -55,7 +55,7 @@
         ],
         [
           "Stretch from long-term average",
-          "+12.2% above its long-term average - a bit stretched",
+          "+11.7% above its long-term average - a bit stretched",
           -1
         ],
         [
@@ -68,12 +68,12 @@
       "id": "binancecoin",
       "symbol": "BNB",
       "name": "BNB",
-      "price": 693.88,
-      "pct_24h": 1.10641,
-      "pct_7d": -2.6,
+      "price": 690.65,
+      "pct_24h": 0.63806,
+      "pct_7d": -2.8,
       "support_30d": 588.7857285137491,
       "resistance_30d": 712.0503878732537,
-      "as_of": "2026-09-01 03:45:22",
+      "as_of": "2026-09-01 06:45:22",
       "stale": false
     },
     "ripple": {
@@ -727,7 +727,7 @@
         ],
         [
           "Stretch from long-term average",
-          "+2.6% vs its long-term average - not stretched either way",
+          "+2.3% vs its long-term average - not stretched either way",
           0
         ],
         [
@@ -740,12 +740,12 @@
       "id": "stellar",
       "symbol": "XLM",
       "name": "Stellar",
-      "price": 0.178787,
-      "pct_24h": 1.34941,
-      "pct_7d": -10.2,
+      "price": 0.178374,
+      "pct_24h": 1.18283,
+      "pct_7d": -9.5,
       "support_30d": 0.15472912151335613,
       "resistance_30d": 0.20181319711037435,
-      "as_of": "2026-09-01 05:37:33",
+      "as_of": "2026-09-01 06:45:22",
       "stale": false
     },
     "kucoin-shares": {
@@ -2407,7 +2407,7 @@
         ],
         [
           "Stretch from long-term average",
-          "-4.8% vs its long-term average - not stretched either way",
+          "-4.6% vs its long-term average - not stretched either way",
           0
         ],
         [
@@ -2420,12 +2420,12 @@
       "id": "shiba-inu",
       "symbol": "SHIB",
       "name": "Shiba Inu",
-      "price": 5.17e-06,
-      "pct_24h": 2.64504,
+      "price": 5.18e-06,
+      "pct_24h": 3.03921,
       "pct_7d": -8.3,
       "support_30d": 4.390093758351827e-06,
       "resistance_30d": 5.903506876405612e-06,
-      "as_of": "2026-09-01 06:25:22",
+      "as_of": "2026-09-01 06:45:22",
       "stale": false
     },
     "near": {
@@ -3053,19 +3053,21 @@
       "stale": false
     }
   },
-  "_strong_buy_state": {},
+  "_strong_buy_state": {
+    "15m:BNB": true
+  },
   "BTC": {
     "key": "BTC",
     "name": "Bitcoin",
     "emoji": "\u20bf",
-    "price": 78883,
+    "price": 78861,
     "high_24h": 79230,
     "low_24h": 77758,
-    "pct_24h": 1.0868,
+    "pct_24h": 1.02003,
     "pct_7d": -1.5,
     "pct_30d": 24.6,
-    "sma50": 67909.9161896259,
-    "sma200": 69455.11614624762,
+    "sma50": 67909.78490247512,
+    "sma200": 69455.0833244599,
     "support_30d": 62843.70368466329,
     "resistance_30d": 80268.37474707834,
     "mark_price": 79166.78271014,
@@ -3080,14 +3082,14 @@
     "key": "ETH",
     "name": "Ethereum",
     "emoji": "\u039e",
-    "price": 2475.76,
+    "price": 2476.0,
     "high_24h": 2488.52,
     "low_24h": 2433.73,
-    "pct_24h": 1.37992,
+    "pct_24h": 1.40375,
     "pct_7d": -0.4,
     "pct_30d": 32.1,
-    "sma50": 2044.5639521271205,
-    "sma200": 2026.7427150396582,
+    "sma50": 2044.577410257226,
+    "sma200": 2026.7460795721843,
     "support_30d": 1858.5376969949996,
     "resistance_30d": 2514.967577695514,
     "mark_price": 2483.38844961,
