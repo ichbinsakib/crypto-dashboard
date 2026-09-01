@@ -415,7 +415,7 @@
     "rain": {
       "label": "\ud83d\udd34 DISTRIBUTION ZONE",
       "status": "bearish",
-      "score": -5,
+      "score": -6,
       "rows": [
         [
           "Price vs. recent range",
@@ -434,12 +434,12 @@
         ],
         [
           "Recent trend",
-          "Chopping sideways - no clear trend",
-          0
+          "Trending down - avoid catching a falling knife",
+          -1
         ],
         [
           "Stretch from long-term average",
-          "+46.1% above its long-term average - very stretched",
+          "+46.2% above its long-term average - very stretched",
           -2
         ],
         [
@@ -452,12 +452,12 @@
       "id": "rain",
       "symbol": "RAIN",
       "name": "Rain",
-      "price": 0.01639886,
-      "pct_24h": -2.28889,
-      "pct_7d": 3.0,
+      "price": 0.01641777,
+      "pct_24h": -2.2867,
+      "pct_7d": -9.1,
       "support_30d": 0.012452326374071652,
       "resistance_30d": 0.018158429442510105,
-      "as_of": "2026-09-01 19:55:19",
+      "as_of": "2026-09-01 20:20:27",
       "stale": false
     },
     "chainlink": {
@@ -583,7 +583,7 @@
         ],
         [
           "Stretch from long-term average",
-          "-2.4% vs its long-term average - not stretched either way",
+          "-2.3% vs its long-term average - not stretched either way",
           0
         ],
         [
@@ -596,12 +596,12 @@
       "id": "leo-token",
       "symbol": "LEO",
       "name": "LEO Token",
-      "price": 9.37,
-      "pct_24h": -2.46891,
-      "pct_7d": 0.3,
+      "price": 9.38,
+      "pct_24h": -2.94381,
+      "pct_7d": 0.2,
       "support_30d": 8.948412455130585,
       "resistance_30d": 9.771990016558826,
-      "as_of": "2026-09-01 19:45:22",
+      "as_of": "2026-09-01 20:20:27",
       "stale": false
     },
     "monero": {
@@ -1735,7 +1735,7 @@
         ],
         [
           "Stretch from long-term average",
-          "-15.9% below its long-term average - confirmed downtrend",
+          "-16.0% below its long-term average - confirmed downtrend",
           -1
         ],
         [
@@ -1748,12 +1748,12 @@
       "id": "sui",
       "symbol": "SUI",
       "name": "Sui",
-      "price": 0.724824,
-      "pct_24h": -0.15517,
-      "pct_7d": -7.6,
+      "price": 0.724254,
+      "pct_24h": -0.72173,
+      "pct_7d": -7.4,
       "support_30d": 0.6514311908607086,
       "resistance_30d": 0.8499161763231283,
-      "as_of": "2026-09-01 19:45:22",
+      "as_of": "2026-09-01 20:20:27",
       "stale": false
     },
     "lighter": {
@@ -1927,7 +1927,7 @@
         ],
         [
           "Stretch from long-term average",
-          "-11.5% vs its long-term average - not stretched either way",
+          "-11.4% vs its long-term average - not stretched either way",
           0
         ],
         [
@@ -1940,12 +1940,12 @@
       "id": "mantle",
       "symbol": "MNT",
       "name": "Mantle",
-      "price": 0.532723,
-      "pct_24h": -5.61485,
+      "price": 0.533015,
+      "pct_24h": -5.60309,
       "pct_7d": 3.8,
       "support_30d": 0.39667739023975906,
       "resistance_30d": 0.548083731863849,
-      "as_of": "2026-09-01 20:12:36",
+      "as_of": "2026-09-01 20:20:27",
       "stale": false
     },
     "polkadot": {
@@ -2263,7 +2263,7 @@
         ],
         [
           "Stretch from long-term average",
-          "-5.8% vs its long-term average - not stretched either way",
+          "-5.9% vs its long-term average - not stretched either way",
           0
         ],
         [
@@ -2276,12 +2276,12 @@
       "id": "bittensor",
       "symbol": "TAO",
       "name": "Bittensor",
-      "price": 222.61,
-      "pct_24h": -3.04725,
-      "pct_7d": -5.7,
+      "price": 222.51,
+      "pct_24h": -3.20291,
+      "pct_7d": -5.4,
       "support_30d": 190.67093053611111,
       "resistance_30d": 254.06815196002663,
-      "as_of": "2026-09-01 19:05:19",
+      "as_of": "2026-09-01 20:20:27",
       "stale": false
     },
     "the-open-network": {
@@ -3053,21 +3053,19 @@
       "stale": false
     }
   },
-  "_strong_buy_state": {
-    "15m:PAXG": true
-  },
+  "_strong_buy_state": {},
   "BTC": {
     "key": "BTC",
     "name": "Bitcoin",
     "emoji": "\u20bf",
-    "price": 77313,
+    "price": 77360,
     "high_24h": 79179,
     "low_24h": 76454,
-    "pct_24h": -2.06966,
+    "pct_24h": -2.15646,
     "pct_7d": -2.4,
     "pct_30d": 22.0,
-    "sma50": 67878.39061170648,
-    "sma200": 69447.23475176776,
+    "sma50": 67879.2557846737,
+    "sma200": 69447.45104500955,
     "support_30d": 62843.70368466329,
     "resistance_30d": 80268.37474707834,
     "mark_price": 79166.78271014,
@@ -3082,14 +3080,14 @@
     "key": "ETH",
     "name": "Ethereum",
     "emoji": "\u039e",
-    "price": 2416.79,
+    "price": 2418.68,
     "high_24h": 2483.82,
     "low_24h": 2385.53,
-    "pct_24h": -2.51955,
+    "pct_24h": -2.60844,
     "pct_7d": -2.1,
     "pct_30d": 28.9,
-    "sma50": 2043.372520731942,
-    "sma200": 2026.4448571908633,
+    "sma50": 2043.4066814811504,
+    "sma200": 2026.4533973781656,
     "support_30d": 1858.5376969949996,
     "resistance_30d": 2514.967577695514,
     "mark_price": 2483.38844961,
