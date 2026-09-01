@@ -1,10 +1,10 @@
 {
-  "_fng_value": 62,
+  "_fng_value": 69,
   "_fng_classification": "Greed",
   "_alerts_state": {
     "btc-resistance-break": {
       "triggered": true,
-      "last_triggered_at": "2026-08-31 23:55:16"
+      "last_triggered_at": "2026-09-01 00:00:36"
     },
     "btc-support-break": {
       "triggered": false,
@@ -184,7 +184,7 @@
         ],
         [
           "Crowd mood (Fear & Greed)",
-          "62/100 - crowd is greedy",
+          "69/100 - crowd is greedy",
           -1
         ],
         [
@@ -199,7 +199,7 @@
         ],
         [
           "Stretch from long-term average",
-          "+3.1% vs its long-term average - not stretched either way",
+          "+2.7% vs its long-term average - not stretched either way",
           0
         ],
         [
@@ -212,12 +212,12 @@
       "id": "tron",
       "symbol": "TRX",
       "name": "TRON",
-      "price": 0.333689,
-      "pct_24h": -1.97948,
-      "pct_7d": -2.8,
+      "price": 0.33246,
+      "pct_24h": -1.04546,
+      "pct_7d": -3.4,
       "support_30d": 0.326482826227484,
       "resistance_30d": 0.3447899585776834,
-      "as_of": "2026-08-31 19:10:26",
+      "as_of": "2026-09-01 00:00:36",
       "stale": false
     },
     "figure-heloc": {
@@ -472,7 +472,7 @@
         ],
         [
           "Crowd mood (Fear & Greed)",
-          "62/100 - crowd is greedy",
+          "69/100 - crowd is greedy",
           -1
         ],
         [
@@ -487,7 +487,7 @@
         ],
         [
           "Stretch from long-term average",
-          "+24.3% above its long-term average - a bit stretched",
+          "+24.5% above its long-term average - a bit stretched",
           -1
         ],
         [
@@ -500,12 +500,12 @@
       "id": "chainlink",
       "symbol": "LINK",
       "name": "Chainlink",
-      "price": 11.3,
-      "pct_24h": -0.83828,
-      "pct_7d": -2.6,
+      "price": 11.32,
+      "pct_24h": 1.56492,
+      "pct_7d": -2.5,
       "support_30d": 8.14340732535387,
       "resistance_30d": 11.992351770358374,
-      "as_of": "2026-08-31 23:20:25",
+      "as_of": "2026-09-01 00:00:36",
       "stale": false
     },
     "whitebit": {
@@ -2765,18 +2765,18 @@
       "stale": false
     },
     "memecore": {
-      "label": "\ud83d\udfe2 LEAN ACCUMULATE",
-      "status": "bullish",
-      "score": 2,
+      "label": "\ud83d\udfe1 HOLD / NEUTRAL",
+      "status": "neutral",
+      "score": 0,
       "rows": [
         [
           "Price vs. recent range",
-          "Near its 30-day low (~$1.04) - historically a better entry",
-          2
+          "Sitting in the middle of its 30-day range",
+          0
         ],
         [
           "Crowd mood (Fear & Greed)",
-          "62/100 - crowd is greedy",
+          "69/100 - crowd is greedy",
           -1
         ],
         [
@@ -2791,7 +2791,7 @@
         ],
         [
           "Stretch from long-term average",
-          "-47.8% below its long-term average - confirmed downtrend",
+          "-47.7% below its long-term average - confirmed downtrend",
           -1
         ],
         [
@@ -2800,16 +2800,16 @@
           0
         ]
       ],
-      "plain": "Leans toward a decent spot to slowly add (DCA) - not a strong signal, just a lean.",
+      "plain": "No real edge either way right now - fine to just wait and watch.",
       "id": "memecore",
       "symbol": "M",
       "name": "MemeCore",
-      "price": 1.095,
-      "pct_24h": 1.86126,
-      "pct_7d": -2.8,
+      "price": 1.096,
+      "pct_24h": 1.48589,
+      "pct_7d": -2.3,
       "support_30d": 1.0428585856494421,
       "resistance_30d": 1.2453913363052769,
-      "as_of": "2026-08-31 23:35:19",
+      "as_of": "2026-09-01 00:00:36",
       "stale": false
     },
     "aave": {
@@ -3054,20 +3054,20 @@
     }
   },
   "_strong_buy_state": {
-    "15m:PEPE": true
+    "15m:TRX": true
   },
   "BTC": {
     "key": "BTC",
     "name": "Bitcoin",
     "emoji": "\u20bf",
-    "price": 78549,
+    "price": 78540,
     "high_24h": 79230,
     "low_24h": 77388,
-    "pct_24h": 1.30196,
+    "pct_24h": 1.09802,
     "pct_7d": -0.5,
     "pct_30d": 25.2,
-    "sma50": 67577.94045549486,
-    "sma200": 69404.91530325705,
+    "sma50": 67577.86013137212,
+    "sma200": 69404.89522222636,
     "support_30d": 62843.70368466329,
     "resistance_30d": 80268.37474707834,
     "mark_price": 78505.64311594,
@@ -3075,21 +3075,21 @@
     "funding_rate": 8.381e-05,
     "oi_change_pct": -0.4008305974104086,
     "oi_now": 107205.302,
-    "fng_value": 62,
+    "fng_value": 69,
     "fng_class": "Greed"
   },
   "ETH": {
     "key": "ETH",
     "name": "Ethereum",
     "emoji": "\u039e",
-    "price": 2466.8,
+    "price": 2466.4,
     "high_24h": 2488.52,
     "low_24h": 2401.8,
-    "pct_24h": 2.30182,
+    "pct_24h": 2.00824,
     "pct_7d": -0.6,
     "pct_30d": 33.9,
-    "sma50": 2030.5423085662237,
-    "sma200": 2024.6084434616212,
+    "sma50": 2030.5354713226352,
+    "sma200": 2024.6067341507237,
     "support_30d": 1858.5376969949996,
     "resistance_30d": 2514.967577695514,
     "mark_price": 2465.81127907,
@@ -3097,7 +3097,7 @@
     "funding_rate": 7.073e-05,
     "oi_change_pct": -0.6347640649524793,
     "oi_now": 2375639.047,
-    "fng_value": 62,
+    "fng_value": 69,
     "fng_class": "Greed"
   }
 }
