@@ -319,7 +319,7 @@
     "dogecoin": {
       "label": "\ud83d\udfe1 HOLD / NEUTRAL",
       "status": "neutral",
-      "score": 1,
+      "score": 0,
       "rows": [
         [
           "Price vs. recent range",
@@ -338,12 +338,12 @@
         ],
         [
           "Recent trend",
-          "Chopping sideways - no clear trend",
-          0
+          "Trending down - avoid catching a falling knife",
+          -1
         ],
         [
           "Stretch from long-term average",
-          "-8.8% vs its long-term average - not stretched either way",
+          "-8.0% vs its long-term average - not stretched either way",
           0
         ],
         [
@@ -356,12 +356,12 @@
       "id": "dogecoin",
       "symbol": "DOGE",
       "name": "Dogecoin",
-      "price": 0.081128,
-      "pct_24h": -2.72776,
-      "pct_7d": -7.9,
+      "price": 0.081814,
+      "pct_24h": -2.03977,
+      "pct_7d": -8.1,
       "support_30d": 0.06901954790818378,
       "resistance_30d": 0.09337940032634065,
-      "as_of": "2026-09-01 18:40:26",
+      "as_of": "2026-09-01 19:05:19",
       "stale": false
     },
     "zcash": {
@@ -1111,7 +1111,7 @@
         ],
         [
           "Stretch from long-term average",
-          "+2.6% vs its long-term average - not stretched either way",
+          "+2.4% vs its long-term average - not stretched either way",
           0
         ],
         [
@@ -1124,12 +1124,12 @@
       "id": "polygon-ecosystem-token",
       "symbol": "POL",
       "name": "POL (ex-MATIC)",
-      "price": 0.091171,
-      "pct_24h": 0.0009,
-      "pct_7d": -27.6,
+      "price": 0.091071,
+      "pct_24h": 0.31498,
+      "pct_7d": -25.1,
       "support_30d": 0.07301100776699988,
       "resistance_30d": 0.12250456198546959,
-      "as_of": "2026-09-01 18:15:57",
+      "as_of": "2026-09-01 19:05:19",
       "stale": false
     },
     "blackrock-usd-institutional-digital-liquidity-fund": {
@@ -2263,7 +2263,7 @@
         ],
         [
           "Stretch from long-term average",
-          "-6.9% vs its long-term average - not stretched either way",
+          "-5.8% vs its long-term average - not stretched either way",
           0
         ],
         [
@@ -2276,12 +2276,12 @@
       "id": "bittensor",
       "symbol": "TAO",
       "name": "Bittensor",
-      "price": 219.96,
-      "pct_24h": -3.7154,
+      "price": 222.61,
+      "pct_24h": -3.04725,
       "pct_7d": -5.7,
       "support_30d": 190.67093053611111,
       "resistance_30d": 254.06815196002663,
-      "as_of": "2026-09-01 18:40:26",
+      "as_of": "2026-09-01 19:05:19",
       "stale": false
     },
     "the-open-network": {
@@ -3053,19 +3053,22 @@
       "stale": false
     }
   },
-  "_strong_buy_state": {},
+  "_strong_buy_state": {
+    "15m:PAXG": true,
+    "1h:POL": true
+  },
   "BTC": {
     "key": "BTC",
     "name": "Bitcoin",
     "emoji": "\u20bf",
-    "price": 77012,
-    "high_24h": 79230,
-    "low_24h": 77225,
-    "pct_24h": -2.55211,
-    "pct_7d": -2.3,
-    "pct_30d": 22.4,
-    "sma50": 67873.18306934641,
-    "sma200": 69445.93286617774,
+    "price": 77139,
+    "high_24h": 79179,
+    "low_24h": 76454,
+    "pct_24h": -2.41403,
+    "pct_7d": -2.8,
+    "pct_30d": 21.8,
+    "sma50": 67875.20102891365,
+    "sma200": 69446.43735606954,
     "support_30d": 62843.70368466329,
     "resistance_30d": 80268.37474707834,
     "mark_price": 79166.78271014,
@@ -3080,14 +3083,14 @@
     "key": "ETH",
     "name": "Ethereum",
     "emoji": "\u039e",
-    "price": 2409.86,
-    "high_24h": 2488.52,
-    "low_24h": 2417.26,
-    "pct_24h": -2.76365,
-    "pct_7d": -2.0,
-    "pct_30d": 30.0,
-    "sma50": 2043.2606826304805,
-    "sma200": 2026.416897665498,
+    "price": 2413.78,
+    "high_24h": 2485.01,
+    "low_24h": 2385.53,
+    "pct_24h": -2.65332,
+    "pct_7d": -2.4,
+    "pct_30d": 29.1,
+    "sma50": 2043.3161280855554,
+    "sma200": 2026.4307590292667,
     "support_30d": 1858.5376969949996,
     "resistance_30d": 2514.967577695514,
     "mark_price": 2483.38844961,
