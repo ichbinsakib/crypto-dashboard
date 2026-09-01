@@ -452,12 +452,12 @@
       "id": "rain",
       "symbol": "RAIN",
       "name": "Rain",
-      "price": 0.01654359,
-      "pct_24h": -3.2412,
+      "price": 0.01653588,
+      "pct_24h": -3.10354,
       "pct_7d": 14.4,
       "support_30d": 0.012452326374071652,
       "resistance_30d": 0.018158429442510105,
-      "as_of": "2026-09-01 15:05:21",
+      "as_of": "2026-09-01 15:20:26",
       "stale": false
     },
     "chainlink": {
@@ -1855,7 +1855,7 @@
     "bitcoin-cash": {
       "label": "\ud83d\udfe1 HOLD / NEUTRAL",
       "status": "neutral",
-      "score": -1,
+      "score": 0,
       "rows": [
         [
           "Price vs. recent range",
@@ -1874,12 +1874,12 @@
         ],
         [
           "Recent trend",
-          "Trending down - avoid catching a falling knife",
-          -1
+          "Chopping sideways - no clear trend",
+          0
         ],
         [
           "Stretch from long-term average",
-          "-27.6% below its long-term average - confirmed downtrend",
+          "-27.8% below its long-term average - confirmed downtrend",
           -1
         ],
         [
@@ -1892,12 +1892,12 @@
       "id": "bitcoin-cash",
       "symbol": "BCH",
       "name": "Bitcoin Cash",
-      "price": 248.62,
-      "pct_24h": 1.58199,
-      "pct_7d": -8.1,
+      "price": 247.82,
+      "pct_24h": 0.93556,
+      "pct_7d": -6.8,
       "support_30d": 203.50169440615565,
       "resistance_30d": 288.10955405353275,
-      "as_of": "2026-09-01 14:10:25",
+      "as_of": "2026-09-01 15:20:26",
       "stale": false
     },
     "mantle": {
@@ -2003,7 +2003,7 @@
       "rows": [
         [
           "Price vs. recent range",
-          "Near its 30-day high (~$5.71) - less room to run",
+          "Near its 30-day high (~$5.73) - less room to run",
           -1
         ],
         [
@@ -2023,7 +2023,7 @@
         ],
         [
           "Stretch from long-term average",
-          "+62.1% above its long-term average - very stretched",
+          "+62.3% above its long-term average - very stretched",
           -2
         ],
         [
@@ -2036,12 +2036,12 @@
       "id": "uniswap",
       "symbol": "UNI",
       "name": "Uniswap",
-      "price": 5.72,
-      "pct_24h": 11.89049,
-      "pct_7d": 30.6,
+      "price": 5.73,
+      "pct_24h": 11.06695,
+      "pct_7d": 32.3,
       "support_30d": 3.1971416665971573,
-      "resistance_30d": 5.710598965658072,
-      "as_of": "2026-09-01 13:40:25",
+      "resistance_30d": 5.73148113104369,
+      "as_of": "2026-09-01 15:20:26",
       "stale": false
     },
     "pi-network": {
@@ -3053,21 +3053,19 @@
       "stale": false
     }
   },
-  "_strong_buy_state": {
-    "1h:BNB": true
-  },
+  "_strong_buy_state": {},
   "BTC": {
     "key": "BTC",
     "name": "Bitcoin",
     "emoji": "\u20bf",
-    "price": 77787,
+    "price": 77785,
     "high_24h": 79230,
     "low_24h": 77523,
-    "pct_24h": -0.66911,
+    "pct_24h": -0.57495,
     "pct_7d": -0.5,
     "pct_30d": 24.0,
-    "sma50": 67888.15819389556,
-    "sma200": 69449.67664731502,
+    "sma50": 67887.77734055925,
+    "sma200": 69449.58143398094,
     "support_30d": 62843.70368466329,
     "resistance_30d": 80268.37474707834,
     "mark_price": 79166.78271014,
@@ -3082,14 +3080,14 @@
     "key": "ETH",
     "name": "Ethereum",
     "emoji": "\u039e",
-    "price": 2437.16,
+    "price": 2436.78,
     "high_24h": 2488.52,
     "low_24h": 2432.33,
-    "pct_24h": -0.89118,
+    "pct_24h": -0.92296,
     "pct_7d": -0.4,
     "pct_30d": 32.1,
-    "sma50": 2043.8006467473376,
-    "sma200": 2026.5518886947123,
+    "sma50": 2043.7790722607367,
+    "sma200": 2026.546495073062,
     "support_30d": 1858.5376969949996,
     "resistance_30d": 2514.967577695514,
     "mark_price": 2483.38844961,
