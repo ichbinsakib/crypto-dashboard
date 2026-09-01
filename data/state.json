@@ -511,7 +511,7 @@
     "whitebit": {
       "label": "\ud83d\udd34 CAUTION - REDUCE NEW BUYS",
       "status": "bearish",
-      "score": -3,
+      "score": -2,
       "rows": [
         [
           "Price vs. recent range",
@@ -535,8 +535,8 @@
         ],
         [
           "Stretch from long-term average",
-          "+30.3% above its long-term average - very stretched",
-          -2
+          "+29.3% above its long-term average - a bit stretched",
+          -1
         ],
         [
           "Leverage traders' bias",
@@ -548,12 +548,12 @@
       "id": "whitebit",
       "symbol": "WBT",
       "name": "WhiteBIT Coin",
-      "price": 71.69,
-      "pct_24h": -0.31352,
-      "pct_7d": -1.7,
+      "price": 71.14,
+      "pct_24h": -2.35678,
+      "pct_7d": -3.0,
       "support_30d": 54.452558710928955,
       "resistance_30d": 73.98079079810731,
-      "as_of": "2026-09-01 13:25:22",
+      "as_of": "2026-09-01 19:40:25",
       "stale": false
     },
     "leo-token": {
@@ -2339,7 +2339,7 @@
       "rows": [
         [
           "Price vs. recent range",
-          "Near its 30-day high (~$0.0725) - less room to run",
+          "Near its 30-day high (~$0.0726) - less room to run",
           -1
         ],
         [
@@ -2372,12 +2372,12 @@
       "id": "sky",
       "symbol": "SKY",
       "name": "Sky",
-      "price": 0.072635,
-      "pct_24h": 5.86624,
+      "price": 0.072641,
+      "pct_24h": 5.78327,
       "pct_7d": 7.0,
       "support_30d": 0.05081051579814886,
-      "resistance_30d": 0.07250971215338349,
-      "as_of": "2026-09-01 19:30:32",
+      "resistance_30d": 0.07264098088808797,
+      "as_of": "2026-09-01 19:40:25",
       "stale": false
     },
     "shiba-inu": {
@@ -2695,7 +2695,7 @@
         ],
         [
           "Stretch from long-term average",
-          "-3.4% vs its long-term average - not stretched either way",
+          "-4.0% vs its long-term average - not stretched either way",
           0
         ],
         [
@@ -2708,12 +2708,12 @@
       "id": "pax-gold",
       "symbol": "PAXG",
       "name": "PAX Gold",
-      "price": 4365.89,
-      "pct_24h": -1.37463,
-      "pct_7d": -5.8,
+      "price": 4340.15,
+      "pct_24h": -2.33657,
+      "pct_7d": -6.4,
       "support_30d": 4048.0991146410097,
       "resistance_30d": 4672.307573354755,
-      "as_of": "2026-09-01 13:50:27",
+      "as_of": "2026-09-01 19:40:25",
       "stale": false
     },
     "morpho": {
@@ -3053,19 +3053,21 @@
       "stale": false
     }
   },
-  "_strong_buy_state": {},
+  "_strong_buy_state": {
+    "15m:PAXG": true
+  },
   "BTC": {
     "key": "BTC",
     "name": "Bitcoin",
     "emoji": "\u20bf",
-    "price": 77314,
+    "price": 77289,
     "high_24h": 79179,
     "low_24h": 76454,
-    "pct_24h": -2.22342,
+    "pct_24h": -2.22172,
     "pct_7d": -2.8,
     "pct_30d": 21.8,
-    "sma50": 67878.78296548779,
-    "sma200": 69447.33284021307,
+    "sma50": 67878.31823390571,
+    "sma200": 69447.21665731756,
     "support_30d": 62843.70368466329,
     "resistance_30d": 80268.37474707834,
     "mark_price": 79166.78271014,
@@ -3080,14 +3082,14 @@
     "key": "ETH",
     "name": "Ethereum",
     "emoji": "\u039e",
-    "price": 2418.92,
+    "price": 2417.33,
     "high_24h": 2485.01,
     "low_24h": 2385.53,
-    "pct_24h": -2.60279,
+    "pct_24h": -2.61943,
     "pct_7d": -2.4,
     "pct_30d": 29.1,
-    "sma50": 2043.4357208057297,
-    "sma200": 2026.4606572093105,
+    "sma50": 2043.4116176575426,
+    "sma200": 2026.4546314222637,
     "support_30d": 1858.5376969949996,
     "resistance_30d": 2514.967577695514,
     "mark_price": 2483.38844961,
