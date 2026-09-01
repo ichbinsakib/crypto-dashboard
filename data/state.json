@@ -4,7 +4,7 @@
   "_alerts_state": {
     "btc-resistance-break": {
       "triggered": true,
-      "last_triggered_at": "2026-09-01 00:50:21"
+      "last_triggered_at": "2026-09-01 00:55:19"
     },
     "btc-support-break": {
       "triggered": false,
@@ -611,12 +611,12 @@
       "rows": [
         [
           "Price vs. recent range",
-          "Near its 30-day high (~$522.54) - less room to run",
+          "Near its 30-day high (~$520.61) - less room to run",
           -1
         ],
         [
           "Crowd mood (Fear & Greed)",
-          "62/100 - crowd is greedy",
+          "69/100 - crowd is greedy",
           -1
         ],
         [
@@ -631,7 +631,7 @@
         ],
         [
           "Stretch from long-term average",
-          "+46.1% above its long-term average - very stretched",
+          "+44.9% above its long-term average - very stretched",
           -2
         ],
         [
@@ -644,12 +644,12 @@
       "id": "monero",
       "symbol": "XMR",
       "name": "Monero",
-      "price": 522.83,
-      "pct_24h": 4.90096,
-      "pct_7d": 19.4,
+      "price": 519.59,
+      "pct_24h": 6.14363,
+      "pct_7d": 16.8,
       "support_30d": 351.07100922807496,
-      "resistance_30d": 522.5448556023767,
-      "as_of": "2026-08-31 22:20:26",
+      "resistance_30d": 520.61378590197,
+      "as_of": "2026-09-01 00:55:19",
       "stale": false
     },
     "cardano": {
@@ -2056,7 +2056,7 @@
         ],
         [
           "Crowd mood (Fear & Greed)",
-          "62/100 - crowd is greedy",
+          "69/100 - crowd is greedy",
           -1
         ],
         [
@@ -2071,7 +2071,7 @@
         ],
         [
           "Stretch from long-term average",
-          "-37.7% below its long-term average - confirmed downtrend",
+          "-37.1% below its long-term average - confirmed downtrend",
           -1
         ],
         [
@@ -2084,12 +2084,12 @@
       "id": "pi-network",
       "symbol": "PI",
       "name": "Pi Network",
-      "price": 0.090821,
-      "pct_24h": -0.88326,
-      "pct_7d": 1.6,
+      "price": 0.091446,
+      "pct_24h": 0.6965,
+      "pct_7d": 2.3,
       "support_30d": 0.08279922535306347,
       "resistance_30d": 0.09762045155043195,
-      "as_of": "2026-08-31 16:15:23",
+      "as_of": "2026-09-01 00:55:19",
       "stale": false
     },
     "ondo-finance": {
@@ -2935,7 +2935,7 @@
         ],
         [
           "Stretch from long-term average",
-          "+23.3% above its long-term average - a bit stretched",
+          "+23.5% above its long-term average - a bit stretched",
           -1
         ],
         [
@@ -2948,12 +2948,12 @@
       "id": "just",
       "symbol": "JST",
       "name": "JUST",
-      "price": 0.099501,
-      "pct_24h": 5.27073,
+      "price": 0.099644,
+      "pct_24h": 5.77794,
       "pct_7d": -1.5,
       "support_30d": 0.0946830738697126,
       "resistance_30d": 0.1082125131964855,
-      "as_of": "2026-09-01 00:35:18",
+      "as_of": "2026-09-01 00:55:19",
       "stale": false
     },
     "algorand": {
@@ -3053,19 +3053,21 @@
       "stale": false
     }
   },
-  "_strong_buy_state": {},
+  "_strong_buy_state": {
+    "15m:SOL": true
+  },
   "BTC": {
     "key": "BTC",
     "name": "Bitcoin",
     "emoji": "\u20bf",
-    "price": 78722,
+    "price": 78718,
     "high_24h": 79230,
     "low_24h": 77388,
-    "pct_24h": 0.97963,
+    "pct_24h": 0.88066,
     "pct_7d": -0.2,
     "pct_30d": 25.1,
-    "sma50": 67907.12235837708,
-    "sma200": 69454.41768843541,
+    "sma50": 67906.28703990969,
+    "sma200": 69454.20885881856,
     "support_30d": 62843.70368466329,
     "resistance_30d": 80268.37474707834,
     "mark_price": 78505.64311594,
@@ -3080,14 +3082,14 @@
     "key": "ETH",
     "name": "Ethereum",
     "emoji": "\u039e",
-    "price": 2472.57,
+    "price": 2472.81,
     "high_24h": 2488.52,
     "low_24h": 2401.8,
-    "pct_24h": 1.7957,
+    "pct_24h": 1.63238,
     "pct_7d": -0.3,
     "pct_30d": 33.6,
-    "sma50": 2044.5054909674127,
-    "sma200": 2026.7280997497312,
+    "sma50": 2044.4931326600158,
+    "sma200": 2026.7250101728819,
     "support_30d": 1858.5376969949996,
     "resistance_30d": 2514.967577695514,
     "mark_price": 2465.81127907,
