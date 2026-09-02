@@ -117,11 +117,11 @@
       "symbol": "XRP",
       "name": "XRP",
       "price": 1.33,
-      "pct_24h": -2.55143,
-      "pct_7d": -6.4,
+      "pct_24h": -2.54701,
+      "pct_7d": -7.3,
       "support_30d": 0.9927072784932938,
       "resistance_30d": 1.52050482788377,
-      "as_of": "2026-09-02 08:50:29",
+      "as_of": "2026-09-02 09:00:36",
       "stale": false
     },
     "solana": {
@@ -679,7 +679,7 @@
         ],
         [
           "Stretch from long-term average",
-          "-11.9% vs its long-term average - not stretched either way",
+          "-12.9% vs its long-term average - not stretched either way",
           0
         ],
         [
@@ -692,12 +692,12 @@
       "id": "cardano",
       "symbol": "ADA",
       "name": "Cardano",
-      "price": 0.196662,
-      "pct_24h": -2.42514,
-      "pct_7d": -6.9,
+      "price": 0.194426,
+      "pct_24h": -1.19673,
+      "pct_7d": -7.5,
       "support_30d": 0.1741249817054162,
       "resistance_30d": 0.2291047455940254,
-      "as_of": "2026-09-02 04:30:36",
+      "as_of": "2026-09-02 09:00:36",
       "stale": false
     },
     "stellar": {
@@ -1687,7 +1687,7 @@
         ],
         [
           "Stretch from long-term average",
-          "+0.4% vs its long-term average - not stretched either way",
+          "-0.1% vs its long-term average - not stretched either way",
           0
         ],
         [
@@ -1700,12 +1700,12 @@
       "id": "bitget-token",
       "symbol": "BGB",
       "name": "Bitget Token",
-      "price": 1.92,
-      "pct_24h": -0.5688,
-      "pct_7d": 1.3,
+      "price": 1.91,
+      "pct_24h": -0.71653,
+      "pct_7d": 0.7,
       "support_30d": 1.612955058583726,
       "resistance_30d": 1.984790388009312,
-      "as_of": "2026-09-02 08:20:25",
+      "as_of": "2026-09-02 09:00:36",
       "stale": false
     },
     "sui": {
@@ -3053,19 +3053,21 @@
       "stale": false
     }
   },
-  "_strong_buy_state": {},
+  "_strong_buy_state": {
+    "1h:BGB": true
+  },
   "BTC": {
     "key": "BTC",
     "name": "Bitcoin",
     "emoji": "\u20bf",
-    "price": 76757,
+    "price": 76796,
     "high_24h": 78382,
     "low_24h": 76454,
-    "pct_24h": -1.44087,
+    "pct_24h": -1.37951,
     "pct_7d": -1.9,
     "pct_30d": 23.8,
-    "sma50": 68116.71571017487,
-    "sma200": 69482.73586694305,
+    "sma50": 68117.08679914466,
+    "sma200": 69482.8286391855,
     "support_30d": 62843.70368466329,
     "resistance_30d": 80268.37474707834,
     "mark_price": 79166.78271014,
@@ -3080,14 +3082,14 @@
     "key": "ETH",
     "name": "Ethereum",
     "emoji": "\u039e",
-    "price": 2391.81,
+    "price": 2392.33,
     "high_24h": 2462.67,
     "low_24h": 2385.53,
-    "pct_24h": -2.33939,
+    "pct_24h": -2.29432,
     "pct_7d": -1.7,
     "pct_30d": 30.9,
-    "sma50": 2053.4409252904456,
-    "sma200": 2027.9849773345375,
+    "sma50": 2053.4390255916064,
+    "sma200": 2027.9845024098279,
     "support_30d": 1868.621381582403,
     "resistance_30d": 2514.967577695514,
     "mark_price": 2483.38844961,
