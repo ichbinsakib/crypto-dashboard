@@ -1879,7 +1879,7 @@
         ],
         [
           "Stretch from long-term average",
-          "-28.6% below its long-term average - confirmed downtrend",
+          "-28.5% below its long-term average - confirmed downtrend",
           -1
         ],
         [
@@ -1892,12 +1892,12 @@
       "id": "bitcoin-cash",
       "symbol": "BCH",
       "name": "Bitcoin Cash",
-      "price": 244.05,
-      "pct_24h": -0.86088,
+      "price": 244.33,
+      "pct_24h": -0.9791,
       "pct_7d": -6.7,
       "support_30d": 203.50169440615565,
       "resistance_30d": 288.10955405353275,
-      "as_of": "2026-09-02 19:00:36",
+      "as_of": "2026-09-02 19:05:21",
       "stale": false
     },
     "mantle": {
@@ -2573,13 +2573,13 @@
       "stale": false
     },
     "bitway": {
-      "label": "\ud83d\udfe1 HOLD / NEUTRAL",
-      "status": "neutral",
-      "score": -1,
+      "label": "\ud83d\udd34 CAUTION - REDUCE NEW BUYS",
+      "status": "bearish",
+      "score": -4,
       "rows": [
         [
           "Price vs. recent range",
-          "Near its 30-day high (~$0.4826) - less room to run",
+          "Near its 30-day high (~$0.5125) - less room to run",
           -1
         ],
         [
@@ -2594,8 +2594,8 @@
         ],
         [
           "Recent trend",
-          "Trending up steadily - healthy",
-          1
+          "Shooting straight up - classic blow-off top risk, don't chase",
+          -2
         ],
         [
           "Stretch from long-term average",
@@ -2608,16 +2608,16 @@
           0
         ]
       ],
-      "plain": "No real edge either way right now - fine to just wait and watch.",
+      "plain": "Getting risky - I'd hold off on new buys until this cools down.",
       "id": "bitway",
       "symbol": "BTW",
       "name": "Bitway",
-      "price": 0.469451,
-      "pct_24h": 12.39354,
-      "pct_7d": 13.5,
+      "price": 0.510169,
+      "pct_24h": 20.33707,
+      "pct_7d": 20.9,
       "support_30d": 0.13447258308178833,
-      "resistance_30d": 0.48261706732469345,
-      "as_of": "2026-09-02 17:40:27",
+      "resistance_30d": 0.5125377322759183,
+      "as_of": "2026-09-02 19:05:21",
       "stale": false
     },
     "world-liberty-financial": {
@@ -2647,7 +2647,7 @@
         ],
         [
           "Stretch from long-term average",
-          "-22.5% below its long-term average - confirmed downtrend",
+          "-22.6% below its long-term average - confirmed downtrend",
           -1
         ],
         [
@@ -2660,12 +2660,12 @@
       "id": "world-liberty-financial",
       "symbol": "WLFI",
       "name": "World Liberty Financial",
-      "price": 0.056324,
-      "pct_24h": -1.51111,
-      "pct_7d": -3.2,
+      "price": 0.056312,
+      "pct_24h": -1.22452,
+      "pct_7d": -3.0,
       "support_30d": 0.051301304477199876,
       "resistance_30d": 0.06254770952093733,
-      "as_of": "2026-09-02 16:45:22",
+      "as_of": "2026-09-02 19:05:21",
       "stale": false
     },
     "pax-gold": {
@@ -3053,19 +3053,22 @@
       "stale": false
     }
   },
-  "_strong_buy_state": {},
+  "_strong_buy_state": {
+    "15m:WLFI": true,
+    "1h:WLFI": true
+  },
   "BTC": {
     "key": "BTC",
     "name": "Bitcoin",
     "emoji": "\u20bf",
-    "price": 77327,
+    "price": 77313,
     "high_24h": 77718,
     "low_24h": 76298,
-    "pct_24h": 0.32483,
-    "pct_7d": -0.8,
-    "pct_30d": 21.4,
-    "sma50": 68127.85083969236,
-    "sma200": 69485.51964932244,
+    "pct_24h": 0.13237,
+    "pct_7d": -1.4,
+    "pct_30d": 21.1,
+    "sma50": 68127.63002075623,
+    "sma200": 69485.4644445884,
     "support_30d": 62843.70368466329,
     "resistance_30d": 80268.37474707834,
     "mark_price": 76701.56071214,
@@ -3080,14 +3083,14 @@
     "key": "ETH",
     "name": "Ethereum",
     "emoji": "\u039e",
-    "price": 2393.3,
+    "price": 2393.25,
     "high_24h": 2426.37,
     "low_24h": 2357.48,
-    "pct_24h": -0.73464,
-    "pct_7d": -2.1,
-    "pct_30d": 28.3,
-    "sma50": 2053.480222064121,
-    "sma200": 2027.9948015279565,
+    "pct_24h": -0.95692,
+    "pct_7d": -2.7,
+    "pct_30d": 28.2,
+    "sma50": 2053.4749602688626,
+    "sma200": 2027.9934860791418,
     "support_30d": 1868.621381582403,
     "resistance_30d": 2514.967577695514,
     "mark_price": 2374.04831997,
