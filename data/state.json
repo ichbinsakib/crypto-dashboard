@@ -151,7 +151,7 @@
         ],
         [
           "Stretch from long-term average",
-          "+21.2% above its long-term average - a bit stretched",
+          "+21.1% above its long-term average - a bit stretched",
           -1
         ],
         [
@@ -164,12 +164,12 @@
       "id": "solana",
       "symbol": "SOL",
       "name": "Solana",
-      "price": 99.44,
-      "pct_24h": -1.9871,
-      "pct_7d": 4.0,
+      "price": 99.39,
+      "pct_24h": -0.68095,
+      "pct_7d": 3.4,
       "support_30d": 72.63053979307217,
       "resistance_30d": 109.17730597799657,
-      "as_of": "2026-09-02 16:15:22",
+      "as_of": "2026-09-02 18:15:22",
       "stale": false
     },
     "tron": {
@@ -199,7 +199,7 @@
         ],
         [
           "Stretch from long-term average",
-          "+0.1% vs its long-term average - not stretched either way",
+          "-0.0% vs its long-term average - not stretched either way",
           0
         ],
         [
@@ -212,12 +212,12 @@
       "id": "tron",
       "symbol": "TRX",
       "name": "TRON",
-      "price": 0.32428,
-      "pct_24h": -0.39505,
-      "pct_7d": -3.3,
+      "price": 0.324021,
+      "pct_24h": 0.50309,
+      "pct_7d": -3.2,
       "support_30d": 0.32221537516581966,
       "resistance_30d": 0.3447899585776834,
-      "as_of": "2026-09-02 14:35:22",
+      "as_of": "2026-09-02 18:15:22",
       "stale": false
     },
     "figure-heloc": {
@@ -2765,9 +2765,9 @@
       "stale": false
     },
     "memecore": {
-      "label": "\ud83d\udfe2 LEAN ACCUMULATE",
-      "status": "bullish",
-      "score": 2,
+      "label": "\ud83d\udfe1 HOLD / NEUTRAL",
+      "status": "neutral",
+      "score": -1,
       "rows": [
         [
           "Price vs. recent range",
@@ -2781,8 +2781,8 @@
         ],
         [
           "Market phase (best guess)",
-          "Basing near the bottom - phase where smart money accumulates",
-          2
+          "Established downtrend - still falling, not yet a base",
+          -1
         ],
         [
           "Recent trend",
@@ -2791,7 +2791,7 @@
         ],
         [
           "Stretch from long-term average",
-          "-50.2% below its long-term average - confirmed downtrend",
+          "-50.4% below its long-term average - confirmed downtrend",
           -1
         ],
         [
@@ -2800,16 +2800,16 @@
           0
         ]
       ],
-      "plain": "Leans toward a decent spot to slowly add (DCA) - not a strong signal, just a lean.",
+      "plain": "No real edge either way right now - fine to just wait and watch.",
       "id": "memecore",
       "symbol": "M",
       "name": "MemeCore",
-      "price": 1.043,
-      "pct_24h": -1.45525,
-      "pct_7d": -7.4,
-      "support_30d": 1.0428585856494421,
+      "price": 1.038,
+      "pct_24h": -2.86923,
+      "pct_7d": -7.6,
+      "support_30d": 1.038356160526736,
       "resistance_30d": 1.2453913363052769,
-      "as_of": "2026-09-02 16:30:36",
+      "as_of": "2026-09-02 18:15:22",
       "stale": false
     },
     "aave": {
@@ -3054,20 +3054,20 @@
     }
   },
   "_strong_buy_state": {
-    "1h:WLFI": true
+    "15m:M": true
   },
   "BTC": {
     "key": "BTC",
     "name": "Bitcoin",
     "emoji": "\u20bf",
-    "price": 77305,
+    "price": 77376,
     "high_24h": 77718,
     "low_24h": 76298,
-    "pct_24h": 0.17289,
+    "pct_24h": 0.24744,
     "pct_7d": -0.8,
     "pct_30d": 21.4,
-    "sma50": 68127.25133992093,
-    "sma200": 69485.36977437958,
+    "sma50": 68128.69180349633,
+    "sma200": 69485.72989027343,
     "support_30d": 62843.70368466329,
     "resistance_30d": 80268.37474707834,
     "mark_price": 76701.56071214,
@@ -3082,14 +3082,14 @@
     "key": "ETH",
     "name": "Ethereum",
     "emoji": "\u039e",
-    "price": 2391.28,
+    "price": 2393.74,
     "high_24h": 2426.37,
     "low_24h": 2357.48,
-    "pct_24h": -0.85361,
+    "pct_24h": -0.86961,
     "pct_7d": -2.1,
     "pct_30d": 28.3,
-    "sma50": 2053.431358318569,
-    "sma200": 2027.9825855915685,
+    "sma50": 2053.4795713454105,
+    "sma200": 2027.9946388482788,
     "support_30d": 1868.621381582403,
     "resistance_30d": 2514.967577695514,
     "mark_price": 2374.04831997,
