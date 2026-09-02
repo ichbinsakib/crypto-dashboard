@@ -1701,11 +1701,11 @@
       "symbol": "BGB",
       "name": "Bitget Token",
       "price": 1.92,
-      "pct_24h": -0.70884,
+      "pct_24h": -0.73644,
       "pct_7d": 0.9,
       "support_30d": 1.612955058583726,
       "resistance_30d": 1.984790388009312,
-      "as_of": "2026-09-02 02:10:25",
+      "as_of": "2026-09-02 02:30:35",
       "stale": false
     },
     "sui": {
@@ -2047,12 +2047,12 @@
     "pi-network": {
       "label": "\ud83d\udfe1 HOLD / NEUTRAL",
       "status": "neutral",
-      "score": 0,
+      "score": -1,
       "rows": [
         [
           "Price vs. recent range",
-          "Sitting in the middle of its 30-day range",
-          0
+          "Near its 30-day high (~$0.0976) - less room to run",
+          -1
         ],
         [
           "Crowd mood (Fear & Greed)",
@@ -2071,7 +2071,7 @@
         ],
         [
           "Stretch from long-term average",
-          "-36.9% below its long-term average - confirmed downtrend",
+          "-36.0% below its long-term average - confirmed downtrend",
           -1
         ],
         [
@@ -2084,12 +2084,12 @@
       "id": "pi-network",
       "symbol": "PI",
       "name": "Pi Network",
-      "price": 0.09182,
-      "pct_24h": 0.64139,
-      "pct_7d": 2.3,
-      "support_30d": 0.08279922535306347,
+      "price": 0.092821,
+      "pct_24h": 1.79819,
+      "pct_7d": 3.5,
+      "support_30d": 0.08336200378579053,
       "resistance_30d": 0.09762045155043195,
-      "as_of": "2026-09-02 00:05:21",
+      "as_of": "2026-09-02 02:30:35",
       "stale": false
     },
     "ondo-finance": {
@@ -2900,12 +2900,12 @@
       "id": "okb",
       "symbol": "OKB",
       "name": "OKB",
-      "price": 109.41,
-      "pct_24h": -2.14345,
-      "pct_7d": -2.7,
+      "price": 109.43,
+      "pct_24h": -1.73824,
+      "pct_7d": -3.9,
       "support_30d": 85.29568594571903,
       "resistance_30d": 115.8310797114581,
-      "as_of": "2026-09-02 01:45:23",
+      "as_of": "2026-09-02 02:30:35",
       "stale": false
     },
     "just": {
@@ -3053,19 +3053,22 @@
       "stale": false
     }
   },
-  "_strong_buy_state": {},
+  "_strong_buy_state": {
+    "15m:TRX": true,
+    "1h:BGB": true
+  },
   "BTC": {
     "key": "BTC",
     "name": "Bitcoin",
     "emoji": "\u20bf",
-    "price": 77161,
+    "price": 77256,
     "high_24h": 79179,
     "low_24h": 76454,
-    "pct_24h": -1.44756,
+    "pct_24h": -1.21508,
     "pct_7d": -2.2,
     "pct_30d": 21.6,
-    "sma50": 68124.52097518163,
-    "sma200": 69484.68718319475,
+    "sma50": 68126.85450407585,
+    "sma200": 69485.27056541831,
     "support_30d": 62843.70368466329,
     "resistance_30d": 80268.37474707834,
     "mark_price": 79166.78271014,
@@ -3080,14 +3083,14 @@
     "key": "ETH",
     "name": "Ethereum",
     "emoji": "\u039e",
-    "price": 2404.25,
+    "price": 2408.15,
     "high_24h": 2483.82,
     "low_24h": 2385.53,
-    "pct_24h": -2.23484,
+    "pct_24h": -2.03229,
     "pct_7d": -2.0,
     "pct_30d": 28.1,
-    "sma50": 2053.691500502828,
-    "sma200": 2028.0476211376333,
+    "sma50": 2053.7493076929172,
+    "sma200": 2028.0620729351556,
     "support_30d": 1868.621381582403,
     "resistance_30d": 2514.967577695514,
     "mark_price": 2483.38844961,
