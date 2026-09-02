@@ -79,7 +79,7 @@
     "ripple": {
       "label": "\ud83d\udfe1 HOLD / NEUTRAL",
       "status": "neutral",
-      "score": 0,
+      "score": 1,
       "rows": [
         [
           "Price vs. recent range",
@@ -93,8 +93,8 @@
         ],
         [
           "Market phase (best guess)",
-          "Established uptrend - phase where price marks up",
-          1
+          "Basing near the bottom - phase where smart money accumulates",
+          2
         ],
         [
           "Recent trend",
@@ -103,7 +103,7 @@
         ],
         [
           "Stretch from long-term average",
-          "+5.7% vs its long-term average - not stretched either way",
+          "+4.2% vs its long-term average - not stretched either way",
           0
         ],
         [
@@ -116,12 +116,12 @@
       "id": "ripple",
       "symbol": "XRP",
       "name": "XRP",
-      "price": 1.35,
-      "pct_24h": -2.17486,
-      "pct_7d": -6.7,
+      "price": 1.33,
+      "pct_24h": -2.55143,
+      "pct_7d": -6.4,
       "support_30d": 0.9927072784932938,
       "resistance_30d": 1.52050482788377,
-      "as_of": "2026-09-02 07:45:27",
+      "as_of": "2026-09-02 08:50:29",
       "stale": false
     },
     "solana": {
@@ -343,7 +343,7 @@
         ],
         [
           "Stretch from long-term average",
-          "-7.8% vs its long-term average - not stretched either way",
+          "-8.8% vs its long-term average - not stretched either way",
           0
         ],
         [
@@ -356,12 +356,12 @@
       "id": "dogecoin",
       "symbol": "DOGE",
       "name": "Dogecoin",
-      "price": 0.081918,
-      "pct_24h": -1.90614,
+      "price": 0.080955,
+      "pct_24h": -1.84773,
       "pct_7d": -5.8,
       "support_30d": 0.06901954790818378,
       "resistance_30d": 0.09337940032634065,
-      "as_of": "2026-09-02 07:15:28",
+      "as_of": "2026-09-02 08:50:29",
       "stale": false
     },
     "zcash": {
@@ -1447,7 +1447,7 @@
         ],
         [
           "Stretch from long-term average",
-          "-17.6% below its long-term average - confirmed downtrend",
+          "-18.3% below its long-term average - confirmed downtrend",
           -1
         ],
         [
@@ -1460,12 +1460,12 @@
       "id": "crypto-com-chain",
       "symbol": "CRO",
       "name": "Cronos",
-      "price": 0.055164,
-      "pct_24h": -2.88886,
-      "pct_7d": -6.7,
+      "price": 0.05469,
+      "pct_24h": -2.26356,
+      "pct_7d": -6.4,
       "support_30d": 0.04621382085807831,
       "resistance_30d": 0.06091104752771909,
-      "as_of": "2026-09-02 07:25:21",
+      "as_of": "2026-09-02 08:50:29",
       "stale": false
     },
     "ethereum-classic": {
@@ -3053,19 +3053,21 @@
       "stale": false
     }
   },
-  "_strong_buy_state": {},
+  "_strong_buy_state": {
+    "15m:XRP": true
+  },
   "BTC": {
     "key": "BTC",
     "name": "Bitcoin",
     "emoji": "\u20bf",
-    "price": 77007,
+    "price": 76862,
     "high_24h": 78382,
     "low_24h": 76454,
-    "pct_24h": -1.20198,
+    "pct_24h": -1.33309,
     "pct_7d": -1.9,
     "pct_30d": 23.8,
-    "sma50": 68121.34163254831,
-    "sma200": 69483.89234753643,
+    "sma50": 68118.43737037535,
+    "sma200": 69483.16628199318,
     "support_30d": 62843.70368466329,
     "resistance_30d": 80268.37474707834,
     "mark_price": 79166.78271014,
@@ -3080,14 +3082,14 @@
     "key": "ETH",
     "name": "Ethereum",
     "emoji": "\u039e",
-    "price": 2399.47,
+    "price": 2393.26,
     "high_24h": 2462.67,
     "low_24h": 2385.53,
-    "pct_24h": -2.08076,
+    "pct_24h": -2.30819,
     "pct_7d": -1.7,
     "pct_30d": 30.9,
-    "sma50": 2053.5825930834244,
-    "sma200": 2028.0203942827823,
+    "sma50": 2053.4511345514943,
+    "sma200": 2027.9875296497996,
     "support_30d": 1868.621381582403,
     "resistance_30d": 2514.967577695514,
     "mark_price": 2483.38844961,
