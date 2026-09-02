@@ -655,7 +655,7 @@
     "cardano": {
       "label": "\ud83d\udfe1 HOLD / NEUTRAL",
       "status": "neutral",
-      "score": 1,
+      "score": 0,
       "rows": [
         [
           "Price vs. recent range",
@@ -674,12 +674,12 @@
         ],
         [
           "Recent trend",
-          "Chopping sideways - no clear trend",
-          0
+          "Trending down - avoid catching a falling knife",
+          -1
         ],
         [
           "Stretch from long-term average",
-          "-13.8% vs its long-term average - not stretched either way",
+          "-12.7% vs its long-term average - not stretched either way",
           0
         ],
         [
@@ -692,12 +692,12 @@
       "id": "cardano",
       "symbol": "ADA",
       "name": "Cardano",
-      "price": 0.192486,
-      "pct_24h": -3.27357,
-      "pct_7d": -7.7,
+      "price": 0.19482,
+      "pct_24h": -2.41077,
+      "pct_7d": -8.1,
       "support_30d": 0.1741249817054162,
       "resistance_30d": 0.2291047455940254,
-      "as_of": "2026-09-02 10:55:16",
+      "as_of": "2026-09-02 12:00:34",
       "stale": false
     },
     "stellar": {
@@ -740,12 +740,12 @@
       "id": "stellar",
       "symbol": "XLM",
       "name": "Stellar",
-      "price": 0.172268,
-      "pct_24h": -2.54275,
-      "pct_7d": -6.0,
+      "price": 0.172375,
+      "pct_24h": -3.53576,
+      "pct_7d": -6.9,
       "support_30d": 0.15472912151335613,
       "resistance_30d": 0.20181319711037435,
-      "as_of": "2026-09-02 10:30:30",
+      "as_of": "2026-09-02 12:00:34",
       "stale": false
     },
     "kucoin-shares": {
@@ -1015,7 +1015,7 @@
         ],
         [
           "Stretch from long-term average",
-          "+0.7% vs its long-term average - not stretched either way",
+          "+0.8% vs its long-term average - not stretched either way",
           0
         ],
         [
@@ -1028,12 +1028,12 @@
       "id": "worldcoin-wld",
       "symbol": "WLD",
       "name": "Worldcoin",
-      "price": 0.358716,
-      "pct_24h": -3.60938,
-      "pct_7d": -8.6,
+      "price": 0.359052,
+      "pct_24h": -3.58219,
+      "pct_7d": -10.0,
       "support_30d": 0.3029636206131486,
       "resistance_30d": 0.4153748859818001,
-      "as_of": "2026-09-02 11:50:24",
+      "as_of": "2026-09-02 12:00:34",
       "stale": false
     },
     "bfusd": {
@@ -3053,21 +3053,19 @@
       "stale": false
     }
   },
-  "_strong_buy_state": {
-    "1h:BCH": true
-  },
+  "_strong_buy_state": {},
   "BTC": {
     "key": "BTC",
     "name": "Bitcoin",
     "emoji": "\u20bf",
-    "price": 76599,
+    "price": 76722,
     "high_24h": 78382,
     "low_24h": 76298,
-    "pct_24h": -1.96323,
+    "pct_24h": -1.71786,
     "pct_7d": -2.3,
     "pct_30d": 22.0,
-    "sma50": 68113.49737219654,
-    "sma200": 69481.93128244848,
+    "sma50": 68115.69010615927,
+    "sma200": 69482.47946593916,
     "support_30d": 62843.70368466329,
     "resistance_30d": 80268.37474707834,
     "mark_price": 76701.56071214,
@@ -3082,14 +3080,14 @@
     "key": "ETH",
     "name": "Ethereum",
     "emoji": "\u039e",
-    "price": 2377.62,
+    "price": 2379.32,
     "high_24h": 2458.3,
     "low_24h": 2357.48,
-    "pct_24h": -3.41951,
+    "pct_24h": -3.2238,
     "pct_7d": -3.2,
     "pct_30d": 28.1,
-    "sma50": 2053.163079038516,
-    "sma200": 2027.9155157715554,
+    "sma50": 2053.191049985054,
+    "sma200": 2027.9225085081896,
     "support_30d": 1868.621381582403,
     "resistance_30d": 2514.967577695514,
     "mark_price": 2374.04831997,
