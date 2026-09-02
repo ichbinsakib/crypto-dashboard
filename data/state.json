@@ -295,7 +295,7 @@
         ],
         [
           "Stretch from long-term average",
-          "+57.5% above its long-term average - very stretched",
+          "+56.4% above its long-term average - very stretched",
           -2
         ],
         [
@@ -308,12 +308,12 @@
       "id": "hyperliquid",
       "symbol": "HYPE",
       "name": "Hyperliquid",
-      "price": 81.76,
-      "pct_24h": -0.83214,
-      "pct_7d": 0.7,
+      "price": 81.21,
+      "pct_24h": -1.07603,
+      "pct_7d": 1.1,
       "support_30d": 53.854096460729586,
       "resistance_30d": 84.67784032156108,
-      "as_of": "2026-09-02 16:20:26",
+      "as_of": "2026-09-02 17:20:26",
       "stale": false
     },
     "dogecoin": {
@@ -1855,7 +1855,7 @@
     "bitcoin-cash": {
       "label": "\ud83d\udfe1 HOLD / NEUTRAL",
       "status": "neutral",
-      "score": -1,
+      "score": 0,
       "rows": [
         [
           "Price vs. recent range",
@@ -1874,12 +1874,12 @@
         ],
         [
           "Recent trend",
-          "Trending down - avoid catching a falling knife",
-          -1
+          "Chopping sideways - no clear trend",
+          0
         ],
         [
           "Stretch from long-term average",
-          "-28.4% below its long-term average - confirmed downtrend",
+          "-29.4% below its long-term average - confirmed downtrend",
           -1
         ],
         [
@@ -1892,12 +1892,12 @@
       "id": "bitcoin-cash",
       "symbol": "BCH",
       "name": "Bitcoin Cash",
-      "price": 244.65,
-      "pct_24h": -1.22122,
-      "pct_7d": -8.7,
+      "price": 241.44,
+      "pct_24h": -2.08459,
+      "pct_7d": -7.5,
       "support_30d": 203.50169440615565,
       "resistance_30d": 288.10955405353275,
-      "as_of": "2026-09-02 13:55:19",
+      "as_of": "2026-09-02 17:20:26",
       "stale": false
     },
     "mantle": {
@@ -1907,7 +1907,7 @@
       "rows": [
         [
           "Price vs. recent range",
-          "Near its 30-day high (~$0.5566) - less room to run",
+          "Near its 30-day high (~$0.5552) - less room to run",
           -1
         ],
         [
@@ -1927,7 +1927,7 @@
         ],
         [
           "Stretch from long-term average",
-          "-7.2% vs its long-term average - not stretched either way",
+          "-7.4% vs its long-term average - not stretched either way",
           0
         ],
         [
@@ -1940,12 +1940,12 @@
       "id": "mantle",
       "symbol": "MNT",
       "name": "Mantle",
-      "price": 0.556566,
-      "pct_24h": 3.54205,
-      "pct_7d": 11.9,
+      "price": 0.555238,
+      "pct_24h": 4.06034,
+      "pct_7d": 13.9,
       "support_30d": 0.40121505359328413,
-      "resistance_30d": 0.5565659246549677,
-      "as_of": "2026-09-02 16:55:20",
+      "resistance_30d": 0.5552381014283276,
+      "as_of": "2026-09-02 17:20:26",
       "stale": false
     },
     "polkadot": {
@@ -3053,19 +3053,21 @@
       "stale": false
     }
   },
-  "_strong_buy_state": {},
+  "_strong_buy_state": {
+    "15m:BCH": true
+  },
   "BTC": {
     "key": "BTC",
     "name": "Bitcoin",
     "emoji": "\u20bf",
-    "price": 77104,
+    "price": 77029,
     "high_24h": 77718,
     "low_24h": 76298,
-    "pct_24h": -0.51931,
+    "pct_24h": -0.58079,
     "pct_7d": -1.1,
     "pct_30d": 21.3,
-    "sma50": 68123.0797292738,
-    "sma200": 69484.3268717178,
+    "sma50": 68121.86767464728,
+    "sma200": 69484.02385806116,
     "support_30d": 62843.70368466329,
     "resistance_30d": 80268.37474707834,
     "mark_price": 76701.56071214,
@@ -3080,14 +3082,14 @@
     "key": "ETH",
     "name": "Ethereum",
     "emoji": "\u039e",
-    "price": 2379.75,
+    "price": 2375.52,
     "high_24h": 2426.37,
     "low_24h": 2357.48,
-    "pct_24h": -2.16202,
+    "pct_24h": -2.29878,
     "pct_7d": -2.6,
     "pct_30d": 28.2,
-    "sma50": 2053.2065010326082,
-    "sma200": 2027.9263712700783,
+    "sma50": 2053.133294220418,
+    "sma200": 2027.9080695670307,
     "support_30d": 1868.621381582403,
     "resistance_30d": 2514.967577695514,
     "mark_price": 2374.04831997,
