@@ -487,7 +487,7 @@
         ],
         [
           "Stretch from long-term average",
-          "+21.9% above its long-term average - a bit stretched",
+          "+21.5% above its long-term average - a bit stretched",
           -1
         ],
         [
@@ -500,12 +500,12 @@
       "id": "chainlink",
       "symbol": "LINK",
       "name": "Chainlink",
-      "price": 11.1,
-      "pct_24h": -0.7123,
-      "pct_7d": -1.5,
+      "price": 11.06,
+      "pct_24h": -0.81947,
+      "pct_7d": -1.8,
       "support_30d": 8.14340732535387,
       "resistance_30d": 11.992351770358374,
-      "as_of": "2026-09-02 21:55:17",
+      "as_of": "2026-09-02 22:45:23",
       "stale": false
     },
     "whitebit": {
@@ -1015,7 +1015,7 @@
         ],
         [
           "Stretch from long-term average",
-          "+0.6% vs its long-term average - not stretched either way",
+          "+0.9% vs its long-term average - not stretched either way",
           0
         ],
         [
@@ -1028,12 +1028,12 @@
       "id": "worldcoin-wld",
       "symbol": "WLD",
       "name": "Worldcoin",
-      "price": 0.358534,
-      "pct_24h": -0.11236,
+      "price": 0.359312,
+      "pct_24h": 0.08728,
       "pct_7d": -7.3,
       "support_30d": 0.3029636206131486,
       "resistance_30d": 0.4153748859818001,
-      "as_of": "2026-09-02 22:30:28",
+      "as_of": "2026-09-02 22:45:23",
       "stale": false
     },
     "bfusd": {
@@ -1879,7 +1879,7 @@
         ],
         [
           "Stretch from long-term average",
-          "-28.5% below its long-term average - confirmed downtrend",
+          "-29.0% below its long-term average - confirmed downtrend",
           -1
         ],
         [
@@ -1892,12 +1892,12 @@
       "id": "bitcoin-cash",
       "symbol": "BCH",
       "name": "Bitcoin Cash",
-      "price": 244.33,
-      "pct_24h": -0.9791,
-      "pct_7d": -6.7,
+      "price": 242.75,
+      "pct_24h": -0.70234,
+      "pct_7d": -7.1,
       "support_30d": 203.50169440615565,
       "resistance_30d": 288.10955405353275,
-      "as_of": "2026-09-02 19:05:21",
+      "as_of": "2026-09-02 22:45:23",
       "stale": false
     },
     "mantle": {
@@ -3101,19 +3101,22 @@
       "stale": false
     }
   },
-  "_strong_buy_state": {},
+  "_strong_buy_state": {
+    "15m:CC": true,
+    "15m:LINK": true
+  },
   "BTC": {
     "key": "BTC",
     "name": "Bitcoin",
     "emoji": "\u20bf",
-    "price": 77087,
+    "price": 77104,
     "high_24h": 77718,
     "low_24h": 76298,
-    "pct_24h": 0.02031,
+    "pct_24h": -0.00542,
     "pct_7d": -1.5,
     "pct_30d": 21.2,
-    "sma50": 68123.17833577882,
-    "sma200": 69484.35152334406,
+    "sma50": 68123.24848770705,
+    "sma200": 69484.3690613261,
     "support_30d": 62843.70368466329,
     "resistance_30d": 80268.37474707834,
     "mark_price": 77119.0,
@@ -3128,14 +3131,14 @@
     "key": "ETH",
     "name": "Ethereum",
     "emoji": "\u039e",
-    "price": 2382.32,
+    "price": 2383.04,
     "high_24h": 2426.37,
     "low_24h": 2357.48,
-    "pct_24h": -0.99141,
+    "pct_24h": -0.96579,
     "pct_7d": -3.3,
     "pct_30d": 28.0,
-    "sma50": 2053.264340311356,
-    "sma200": 2027.9408310897652,
+    "sma50": 2053.2658898574978,
+    "sma200": 2027.9412184763007,
     "support_30d": 1868.621381582403,
     "resistance_30d": 2514.967577695514,
     "mark_price": 2383.65,
