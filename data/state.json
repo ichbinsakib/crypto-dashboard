@@ -597,11 +597,11 @@
       "symbol": "LEO",
       "name": "LEO Token",
       "price": 9.24,
-      "pct_24h": -1.30437,
+      "pct_24h": -1.38183,
       "pct_7d": 0.1,
       "support_30d": 8.948412455130585,
       "resistance_30d": 9.771990016558826,
-      "as_of": "2026-09-02 23:20:23",
+      "as_of": "2026-09-02 23:40:22",
       "stale": false
     },
     "monero": {
@@ -727,7 +727,7 @@
         ],
         [
           "Stretch from long-term average",
-          "-0.6% vs its long-term average - not stretched either way",
+          "+0.2% vs its long-term average - not stretched either way",
           0
         ],
         [
@@ -740,12 +740,12 @@
       "id": "stellar",
       "symbol": "XLM",
       "name": "Stellar",
-      "price": 0.173216,
-      "pct_24h": -1.73989,
-      "pct_7d": -3.2,
+      "price": 0.174547,
+      "pct_24h": -0.67458,
+      "pct_7d": -4.2,
       "support_30d": 0.15472912151335613,
       "resistance_30d": 0.20181319711037435,
-      "as_of": "2026-09-02 19:40:23",
+      "as_of": "2026-09-02 23:40:22",
       "stale": false
     },
     "kucoin-shares": {
@@ -2167,7 +2167,7 @@
         ],
         [
           "Stretch from long-term average",
-          "-22.4% below its long-term average - confirmed downtrend",
+          "-22.9% below its long-term average - confirmed downtrend",
           -1
         ],
         [
@@ -2180,12 +2180,12 @@
       "id": "canton-network",
       "symbol": "CC",
       "name": "Canton",
-      "price": 0.110038,
-      "pct_24h": -2.87955,
-      "pct_7d": -5.8,
+      "price": 0.109304,
+      "pct_24h": -3.97868,
+      "pct_7d": -5.6,
       "support_30d": 0.09051839499501885,
       "resistance_30d": 0.12396615653575341,
-      "as_of": "2026-09-02 21:30:31",
+      "as_of": "2026-09-02 23:40:22",
       "stale": false
     },
     "internet-computer": {
@@ -3101,19 +3101,21 @@
       "stale": false
     }
   },
-  "_strong_buy_state": {},
+  "_strong_buy_state": {
+    "15m:CC": true
+  },
   "BTC": {
     "key": "BTC",
     "name": "Bitcoin",
     "emoji": "\u20bf",
-    "price": 77155,
+    "price": 77109,
     "high_24h": 77718,
     "low_24h": 76298,
-    "pct_24h": -0.33599,
+    "pct_24h": -0.4758,
     "pct_7d": -2.2,
     "pct_30d": 21.2,
-    "sma50": 68123.87573035638,
-    "sma200": 69484.52587198844,
+    "sma50": 68123.31519486348,
+    "sma200": 69484.38573811522,
     "support_30d": 62843.70368466329,
     "resistance_30d": 80268.37474707834,
     "mark_price": 77119.0,
@@ -3128,14 +3130,14 @@
     "key": "ETH",
     "name": "Ethereum",
     "emoji": "\u039e",
-    "price": 2384.79,
+    "price": 2383.76,
     "high_24h": 2426.37,
     "low_24h": 2357.48,
-    "pct_24h": -1.39835,
+    "pct_24h": -1.56038,
     "pct_7d": -4.7,
     "pct_30d": 27.7,
-    "sma50": 2053.289500017444,
-    "sma200": 2027.9471210162872,
+    "sma50": 2053.279959136884,
+    "sma200": 2027.9447357961471,
     "support_30d": 1868.621381582403,
     "resistance_30d": 2514.967577695514,
     "mark_price": 2383.65,
