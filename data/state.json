@@ -1317,11 +1317,11 @@
       "symbol": "HTX",
       "name": "HTX DAO",
       "price": 1.61e-06,
-      "pct_24h": -1.17523,
+      "pct_24h": -1.20951,
       "pct_7d": -6.0,
       "support_30d": 1.6023985995039954e-06,
       "resistance_30d": 1.8259977214551937e-06,
-      "as_of": "2026-09-02 13:10:24",
+      "as_of": "2026-09-02 13:40:26",
       "stale": false
     },
     "superstate-short-duration-us-government-securities-fund-ustb": {
@@ -2093,14 +2093,14 @@
       "stale": false
     },
     "ondo-finance": {
-      "label": "\ud83d\udfe1 HOLD / NEUTRAL",
-      "status": "neutral",
-      "score": 1,
+      "label": "\ud83d\udfe2 LEAN ACCUMULATE",
+      "status": "bullish",
+      "score": 3,
       "rows": [
         [
           "Price vs. recent range",
-          "Sitting in the middle of its 30-day range",
-          0
+          "Near its 30-day low (~$0.3234) - historically a better entry",
+          2
         ],
         [
           "Crowd mood (Fear & Greed)",
@@ -2119,7 +2119,7 @@
         ],
         [
           "Stretch from long-term average",
-          "+3.3% vs its long-term average - not stretched either way",
+          "+3.1% vs its long-term average - not stretched either way",
           0
         ],
         [
@@ -2128,16 +2128,16 @@
           0
         ]
       ],
-      "plain": "No real edge either way right now - fine to just wait and watch.",
+      "plain": "Leans toward a decent spot to slowly add (DCA) - not a strong signal, just a lean.",
       "id": "ondo-finance",
       "symbol": "ONDO",
       "name": "Ondo",
-      "price": 0.340232,
-      "pct_24h": -1.37682,
+      "price": 0.339267,
+      "pct_24h": -1.17507,
       "pct_7d": -7.1,
       "support_30d": 0.32338181384146436,
       "resistance_30d": 0.3969475338902824,
-      "as_of": "2026-09-02 13:20:29",
+      "as_of": "2026-09-02 13:40:26",
       "stale": false
     },
     "canton-network": {
@@ -2612,12 +2612,12 @@
       "id": "bitway",
       "symbol": "BTW",
       "name": "Bitway",
-      "price": 0.441058,
-      "pct_24h": 12.61316,
-      "pct_7d": 12.3,
+      "price": 0.438168,
+      "pct_24h": 12.22507,
+      "pct_7d": 9.2,
       "support_30d": 0.13447258308178833,
       "resistance_30d": 0.48261706732469345,
-      "as_of": "2026-09-02 12:30:29",
+      "as_of": "2026-09-02 13:40:26",
       "stale": false
     },
     "world-liberty-financial": {
@@ -3053,19 +3053,21 @@
       "stale": false
     }
   },
-  "_strong_buy_state": {},
+  "_strong_buy_state": {
+    "15m:M": true
+  },
   "BTC": {
     "key": "BTC",
     "name": "Bitcoin",
     "emoji": "\u20bf",
-    "price": 76721,
+    "price": 76619,
     "high_24h": 78382,
     "low_24h": 76298,
-    "pct_24h": -1.41648,
+    "pct_24h": -1.29205,
     "pct_7d": -2.4,
     "pct_30d": 22.6,
-    "sma50": 68115.57508019476,
-    "sma200": 69482.45070944802,
+    "sma50": 68113.31718659849,
+    "sma200": 69481.88623604897,
     "support_30d": 62843.70368466329,
     "resistance_30d": 80268.37474707834,
     "mark_price": 76701.56071214,
@@ -3080,14 +3082,14 @@
     "key": "ETH",
     "name": "Ethereum",
     "emoji": "\u039e",
-    "price": 2384.28,
+    "price": 2380.35,
     "high_24h": 2455.71,
     "low_24h": 2357.48,
-    "pct_24h": -2.42857,
+    "pct_24h": -2.28539,
     "pct_7d": -3.5,
     "pct_30d": 29.3,
-    "sma50": 2053.277565016527,
-    "sma200": 2027.9441372660579,
+    "sma50": 2053.2077529998064,
+    "sma200": 2027.9266842618779,
     "support_30d": 1868.621381582403,
     "resistance_30d": 2514.967577695514,
     "mark_price": 2374.04831997,
