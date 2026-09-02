@@ -439,7 +439,7 @@
         ],
         [
           "Stretch from long-term average",
-          "+48.7% above its long-term average - very stretched",
+          "+48.3% above its long-term average - very stretched",
           -2
         ],
         [
@@ -452,12 +452,12 @@
       "id": "rain",
       "symbol": "RAIN",
       "name": "Rain",
-      "price": 0.01675414,
-      "pct_24h": 0.58277,
-      "pct_7d": -5.2,
+      "price": 0.01670819,
+      "pct_24h": 0.15853,
+      "pct_7d": -5.0,
       "support_30d": 0.012452326374071652,
       "resistance_30d": 0.018158429442510105,
-      "as_of": "2026-09-02 09:10:27",
+      "as_of": "2026-09-02 10:00:37",
       "stale": false
     },
     "chainlink": {
@@ -535,7 +535,7 @@
         ],
         [
           "Stretch from long-term average",
-          "+29.4% above its long-term average - a bit stretched",
+          "+27.7% above its long-term average - a bit stretched",
           -1
         ],
         [
@@ -548,12 +548,12 @@
       "id": "whitebit",
       "symbol": "WBT",
       "name": "WhiteBIT Coin",
-      "price": 71.34,
-      "pct_24h": -1.49685,
-      "pct_7d": -2.3,
+      "price": 70.39,
+      "pct_24h": -2.02551,
+      "pct_7d": -3.1,
       "support_30d": 54.452558710928955,
       "resistance_30d": 73.98079079810731,
-      "as_of": "2026-09-02 07:40:23",
+      "as_of": "2026-09-02 10:00:37",
       "stale": false
     },
     "leo-token": {
@@ -2647,7 +2647,7 @@
         ],
         [
           "Stretch from long-term average",
-          "-21.1% below its long-term average - confirmed downtrend",
+          "-21.9% below its long-term average - confirmed downtrend",
           -1
         ],
         [
@@ -2660,12 +2660,12 @@
       "id": "world-liberty-financial",
       "symbol": "WLFI",
       "name": "World Liberty Financial",
-      "price": 0.057407,
-      "pct_24h": 0.74647,
-      "pct_7d": -2.6,
+      "price": 0.056811,
+      "pct_24h": -0.25377,
+      "pct_7d": -3.7,
       "support_30d": 0.051301304477199876,
       "resistance_30d": 0.06254770952093733,
-      "as_of": "2026-09-02 08:10:25",
+      "as_of": "2026-09-02 10:00:37",
       "stale": false
     },
     "pax-gold": {
@@ -3053,26 +3053,30 @@
       "stale": false
     }
   },
-  "_strong_buy_state": {},
+  "_strong_buy_state": {
+    "15m:WLFI": true,
+    "15m:WBT": true,
+    "15m:SUI": true
+  },
   "BTC": {
     "key": "BTC",
     "name": "Bitcoin",
     "emoji": "\u20bf",
-    "price": 76669,
+    "price": 76680,
     "high_24h": 78382,
     "low_24h": 76454,
-    "pct_24h": -1.59602,
+    "pct_24h": -1.55769,
     "pct_7d": -2.7,
     "pct_30d": 22.8,
-    "sma50": 68114.85477535927,
-    "sma200": 69482.27063323917,
+    "sma50": 68114.81213385232,
+    "sma200": 69482.25997286242,
     "support_30d": 62843.70368466329,
     "resistance_30d": 80268.37474707834,
-    "mark_price": 79166.78271014,
-    "index_price": 79184.35217391,
-    "funding_rate": 0.0001,
-    "oi_change_pct": 1.4697476008720667,
-    "oi_now": 108181.115,
+    "mark_price": 76701.56071214,
+    "index_price": 76739.72,
+    "funding_rate": 7.105e-05,
+    "oi_change_pct": 0.055131705428248155,
+    "oi_now": 108859.447,
     "fng_value": 63,
     "fng_class": "Greed"
   },
@@ -3080,21 +3084,21 @@
     "key": "ETH",
     "name": "Ethereum",
     "emoji": "\u039e",
-    "price": 2374.44,
+    "price": 2374.64,
     "high_24h": 2462.67,
     "low_24h": 2385.53,
-    "pct_24h": -3.1477,
+    "pct_24h": -3.1681,
     "pct_7d": -2.8,
     "pct_30d": 29.9,
-    "sma50": 2053.099961722418,
-    "sma200": 2027.8997364425306,
+    "sma50": 2053.0993692223624,
+    "sma200": 2027.8995883175169,
     "support_30d": 1868.621381582403,
     "resistance_30d": 2514.967577695514,
-    "mark_price": 2483.38844961,
-    "index_price": 2484.11209302,
-    "funding_rate": 9.717e-05,
-    "oi_change_pct": 1.026869805262206,
-    "oi_now": 2357998.894,
+    "mark_price": 2374.04831997,
+    "index_price": 2375.50604651,
+    "funding_rate": 1.044e-05,
+    "oi_change_pct": -0.7605967455282681,
+    "oi_now": 2342976.269,
     "fng_value": 63,
     "fng_class": "Greed"
   }
