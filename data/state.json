@@ -212,12 +212,12 @@
       "id": "tron",
       "symbol": "TRX",
       "name": "TRON",
-      "price": 0.321736,
-      "pct_24h": -3.17326,
-      "pct_7d": -4.1,
-      "support_30d": 0.3217364389735975,
+      "price": 0.32161,
+      "pct_24h": -3.20358,
+      "pct_7d": -4.3,
+      "support_30d": 0.32166326762925895,
       "resistance_30d": 0.3447899585776834,
-      "as_of": "2026-09-02 02:40:22",
+      "as_of": "2026-09-02 03:40:29",
       "stale": false
     },
     "figure-heloc": {
@@ -1495,7 +1495,7 @@
         ],
         [
           "Stretch from long-term average",
-          "-11.5% vs its long-term average - not stretched either way",
+          "-11.0% vs its long-term average - not stretched either way",
           0
         ],
         [
@@ -1508,12 +1508,12 @@
       "id": "ethereum-classic",
       "symbol": "ETC",
       "name": "Ethereum Classic",
-      "price": 7.21,
-      "pct_24h": -1.5458,
-      "pct_7d": -6.0,
+      "price": 7.25,
+      "pct_24h": -0.98786,
+      "pct_7d": -7.6,
       "support_30d": 6.079473341192034,
       "resistance_30d": 8.342731558283557,
-      "as_of": "2026-09-02 00:45:24",
+      "as_of": "2026-09-02 03:40:29",
       "stale": false
     },
     "pump-fun": {
@@ -1855,7 +1855,7 @@
     "bitcoin-cash": {
       "label": "\ud83d\udfe1 HOLD / NEUTRAL",
       "status": "neutral",
-      "score": 0,
+      "score": -1,
       "rows": [
         [
           "Price vs. recent range",
@@ -1874,12 +1874,12 @@
         ],
         [
           "Recent trend",
-          "Chopping sideways - no clear trend",
-          0
+          "Trending down - avoid catching a falling knife",
+          -1
         ],
         [
           "Stretch from long-term average",
-          "-28.2% below its long-term average - confirmed downtrend",
+          "-27.2% below its long-term average - confirmed downtrend",
           -1
         ],
         [
@@ -1892,12 +1892,12 @@
       "id": "bitcoin-cash",
       "symbol": "BCH",
       "name": "Bitcoin Cash",
-      "price": 245.54,
-      "pct_24h": -0.58844,
-      "pct_7d": -7.6,
+      "price": 248.87,
+      "pct_24h": 0.19581,
+      "pct_7d": -8.0,
       "support_30d": 203.50169440615565,
       "resistance_30d": 288.10955405353275,
-      "as_of": "2026-09-02 01:35:22",
+      "as_of": "2026-09-02 03:40:29",
       "stale": false
     },
     "mantle": {
@@ -3053,19 +3053,21 @@
       "stale": false
     }
   },
-  "_strong_buy_state": {},
+  "_strong_buy_state": {
+    "15m:TRX": true
+  },
   "BTC": {
     "key": "BTC",
     "name": "Bitcoin",
     "emoji": "\u20bf",
-    "price": 77522,
+    "price": 77483,
     "high_24h": 79179,
     "low_24h": 76454,
-    "pct_24h": -1.46664,
+    "pct_24h": -1.70707,
     "pct_7d": -2.0,
     "pct_30d": 22.3,
-    "sma50": 68131.62491978722,
-    "sma200": 69486.46316934616,
+    "sma50": 68130.95277374475,
+    "sma200": 69486.29513283554,
     "support_30d": 62843.70368466329,
     "resistance_30d": 80268.37474707834,
     "mark_price": 79166.78271014,
@@ -3080,14 +3082,14 @@
     "key": "ETH",
     "name": "Ethereum",
     "emoji": "\u039e",
-    "price": 2416.34,
+    "price": 2414.67,
     "high_24h": 2483.82,
     "low_24h": 2385.53,
-    "pct_24h": -2.40353,
+    "pct_24h": -2.60027,
     "pct_7d": -2.0,
     "pct_30d": 29.1,
-    "sma50": 2053.9335226200997,
-    "sma200": 2028.1081266669512,
+    "sma50": 2053.8981117250073,
+    "sma200": 2028.099273943178,
     "support_30d": 1868.621381582403,
     "resistance_30d": 2514.967577695514,
     "mark_price": 2483.38844961,
