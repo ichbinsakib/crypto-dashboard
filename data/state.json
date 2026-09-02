@@ -775,7 +775,7 @@
         ],
         [
           "Stretch from long-term average",
-          "-10.8% vs its long-term average - not stretched either way",
+          "-11.2% vs its long-term average - not stretched either way",
           0
         ],
         [
@@ -788,12 +788,12 @@
       "id": "kucoin-shares",
       "symbol": "KCS",
       "name": "KuCoin",
-      "price": 6.92,
-      "pct_24h": -3.3831,
+      "price": 6.89,
+      "pct_24h": -3.28803,
       "pct_7d": -4.5,
       "support_30d": 6.507516467305533,
       "resistance_30d": 7.8821382735057615,
-      "as_of": "2026-09-02 09:10:27",
+      "as_of": "2026-09-02 09:50:23",
       "stale": false
     },
     "hedera-hashgraph": {
@@ -1639,7 +1639,7 @@
         ],
         [
           "Stretch from long-term average",
-          "-2.0% vs its long-term average - not stretched either way",
+          "-3.4% vs its long-term average - not stretched either way",
           0
         ],
         [
@@ -1652,12 +1652,12 @@
       "id": "litecoin",
       "symbol": "LTC",
       "name": "Litecoin",
-      "price": 49.44,
-      "pct_24h": 1.22023,
-      "pct_7d": -1.8,
+      "price": 48.72,
+      "pct_24h": 0.42746,
+      "pct_7d": -2.8,
       "support_30d": 43.806923130603906,
       "resistance_30d": 53.12964707139583,
-      "as_of": "2026-09-02 07:00:37",
+      "as_of": "2026-09-02 09:50:23",
       "stale": false
     },
     "bitget-token": {
@@ -2813,9 +2813,9 @@
       "stale": false
     },
     "aave": {
-      "label": "\ud83d\udd34 CAUTION - REDUCE NEW BUYS",
-      "status": "bearish",
-      "score": -2,
+      "label": "\ud83d\udfe1 HOLD / NEUTRAL",
+      "status": "neutral",
+      "score": -1,
       "rows": [
         [
           "Price vs. recent range",
@@ -2839,8 +2839,8 @@
         ],
         [
           "Stretch from long-term average",
-          "+35.7% above its long-term average - very stretched",
-          -2
+          "+29.9% above its long-term average - a bit stretched",
+          -1
         ],
         [
           "Leverage traders' bias",
@@ -2848,16 +2848,16 @@
           0
         ]
       ],
-      "plain": "Getting risky - I'd hold off on new buys until this cools down.",
+      "plain": "No real edge either way right now - fine to just wait and watch.",
       "id": "aave",
       "symbol": "AAVE",
       "name": "Aave",
-      "price": 132.13,
-      "pct_24h": 4.3823,
-      "pct_7d": 3.6,
+      "price": 126.53,
+      "pct_24h": 1.01454,
+      "pct_7d": 0.7,
       "support_30d": 85.94219943917633,
       "resistance_30d": 141.53047916466082,
-      "as_of": "2026-09-02 07:40:23",
+      "as_of": "2026-09-02 09:50:23",
       "stale": false
     },
     "okb": {
@@ -3053,19 +3053,22 @@
       "stale": false
     }
   },
-  "_strong_buy_state": {},
+  "_strong_buy_state": {
+    "1h:LTC": true,
+    "1h:AAVE": true
+  },
   "BTC": {
     "key": "BTC",
     "name": "Bitcoin",
     "emoji": "\u20bf",
-    "price": 76562,
+    "price": 76584,
     "high_24h": 78382,
     "low_24h": 76454,
-    "pct_24h": -1.85936,
+    "pct_24h": -1.78112,
     "pct_7d": -2.7,
     "pct_30d": 22.8,
-    "sma50": 68112.04262721453,
-    "sma200": 69481.56759620298,
+    "sma50": 68113.01152800111,
+    "sma200": 69481.80982139961,
     "support_30d": 62843.70368466329,
     "resistance_30d": 80268.37474707834,
     "mark_price": 79166.78271014,
@@ -3080,14 +3083,14 @@
     "key": "ETH",
     "name": "Ethereum",
     "emoji": "\u039e",
-    "price": 2370.22,
+    "price": 2370.8,
     "high_24h": 2462.67,
     "low_24h": 2385.53,
-    "pct_24h": -3.4092,
+    "pct_24h": -3.31635,
     "pct_7d": -2.8,
     "pct_30d": 29.9,
-    "sma50": 2053.006585708282,
-    "sma200": 2027.8763924389966,
+    "sma50": 2053.022536857948,
+    "sma200": 2027.8803802264133,
     "support_30d": 1868.621381582403,
     "resistance_30d": 2514.967577695514,
     "mark_price": 2483.38844961,
