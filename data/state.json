@@ -597,11 +597,11 @@
       "symbol": "LEO",
       "name": "LEO Token",
       "price": 9.29,
-      "pct_24h": -0.8855,
-      "pct_7d": -0.2,
+      "pct_24h": -0.88,
+      "pct_7d": 0.8,
       "support_30d": 8.948412455130585,
       "resistance_30d": 9.771990016558826,
-      "as_of": "2026-09-02 17:15:24",
+      "as_of": "2026-09-02 19:30:30",
       "stale": false
     },
     "monero": {
@@ -1639,7 +1639,7 @@
         ],
         [
           "Stretch from long-term average",
-          "-1.3% vs its long-term average - not stretched either way",
+          "-1.4% vs its long-term average - not stretched either way",
           0
         ],
         [
@@ -1652,12 +1652,12 @@
       "id": "litecoin",
       "symbol": "LTC",
       "name": "Litecoin",
-      "price": 49.79,
-      "pct_24h": 1.11947,
+      "price": 49.72,
+      "pct_24h": 0.36963,
       "pct_7d": -0.4,
       "support_30d": 43.806923130603906,
       "resistance_30d": 53.12964707139583,
-      "as_of": "2026-09-02 19:10:22",
+      "as_of": "2026-09-02 19:30:30",
       "stale": false
     },
     "bitget-token": {
@@ -2359,7 +2359,7 @@
         ],
         [
           "Stretch from long-term average",
-          "+3.1% vs its long-term average - not stretched either way",
+          "+2.8% vs its long-term average - not stretched either way",
           0
         ],
         [
@@ -2372,12 +2372,12 @@
       "id": "sky",
       "symbol": "SKY",
       "name": "Sky",
-      "price": 0.068841,
-      "pct_24h": -4.90836,
+      "price": 0.068606,
+      "pct_24h": -5.3768,
       "pct_7d": 1.5,
       "support_30d": 0.05081051579814886,
       "resistance_30d": 0.07314868186988309,
-      "as_of": "2026-09-02 19:20:28",
+      "as_of": "2026-09-02 19:30:30",
       "stale": false
     },
     "shiba-inu": {
@@ -2813,9 +2813,9 @@
       "stale": false
     },
     "aave": {
-      "label": "\ud83d\udd34 CAUTION - REDUCE NEW BUYS",
-      "status": "bearish",
-      "score": -2,
+      "label": "\ud83d\udfe1 HOLD / NEUTRAL",
+      "status": "neutral",
+      "score": -1,
       "rows": [
         [
           "Price vs. recent range",
@@ -2839,8 +2839,8 @@
         ],
         [
           "Stretch from long-term average",
-          "+30.4% above its long-term average - very stretched",
-          -2
+          "+30.0% above its long-term average - a bit stretched",
+          -1
         ],
         [
           "Leverage traders' bias",
@@ -2848,16 +2848,16 @@
           0
         ]
       ],
-      "plain": "Getting risky - I'd hold off on new buys until this cools down.",
+      "plain": "No real edge either way right now - fine to just wait and watch.",
       "id": "aave",
       "symbol": "AAVE",
       "name": "Aave",
-      "price": 126.96,
-      "pct_24h": 1.15789,
-      "pct_7d": 3.5,
+      "price": 126.56,
+      "pct_24h": -0.1287,
+      "pct_7d": 3.0,
       "support_30d": 85.94219943917633,
       "resistance_30d": 141.53047916466082,
-      "as_of": "2026-09-02 18:30:31",
+      "as_of": "2026-09-02 19:30:30",
       "stale": false
     },
     "okb": {
@@ -2887,7 +2887,7 @@
         ],
         [
           "Stretch from long-term average",
-          "+23.1% above its long-term average - a bit stretched",
+          "+22.8% above its long-term average - a bit stretched",
           -1
         ],
         [
@@ -2900,12 +2900,12 @@
       "id": "okb",
       "symbol": "OKB",
       "name": "OKB",
-      "price": 105.95,
-      "pct_24h": -3.55377,
-      "pct_7d": -3.7,
+      "price": 105.7,
+      "pct_24h": -4.14943,
+      "pct_7d": -4.0,
       "support_30d": 85.29568594571903,
       "resistance_30d": 115.8310797114581,
-      "as_of": "2026-09-02 18:20:25",
+      "as_of": "2026-09-02 19:30:30",
       "stale": false
     },
     "just": {
@@ -3053,19 +3053,23 @@
       "stale": false
     }
   },
-  "_strong_buy_state": {},
+  "_strong_buy_state": {
+    "15m:OKB": true,
+    "15m:AAVE": true,
+    "1h:AAVE": true
+  },
   "BTC": {
     "key": "BTC",
     "name": "Bitcoin",
     "emoji": "\u20bf",
-    "price": 77232,
+    "price": 77193,
     "high_24h": 77718,
     "low_24h": 76298,
-    "pct_24h": -0.07758,
+    "pct_24h": -0.18027,
     "pct_7d": -1.4,
     "pct_30d": 21.1,
-    "sma50": 68126.1300690316,
-    "sma200": 69485.08945665724,
+    "sma50": 68125.1090956032,
+    "sma200": 69484.83421330014,
     "support_30d": 62843.70368466329,
     "resistance_30d": 80268.37474707834,
     "mark_price": 76701.56071214,
@@ -3080,14 +3084,14 @@
     "key": "ETH",
     "name": "Ethereum",
     "emoji": "\u039e",
-    "price": 2391.01,
+    "price": 2388.49,
     "high_24h": 2426.37,
     "low_24h": 2357.48,
-    "pct_24h": -1.09769,
+    "pct_24h": -1.30651,
     "pct_7d": -2.7,
     "pct_30d": 28.2,
-    "sma50": 2053.4248866387215,
-    "sma200": 2027.9809676716065,
+    "sma50": 2053.3765126442154,
+    "sma200": 2027.9688741729801,
     "support_30d": 1868.621381582403,
     "resistance_30d": 2514.967577695514,
     "mark_price": 2374.04831997,
