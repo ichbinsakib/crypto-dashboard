@@ -179,7 +179,7 @@
       "rows": [
         [
           "Price vs. recent range",
-          "Near its 30-day low (~$0.3217) - historically a better entry",
+          "Near its 30-day low (~$0.3216) - historically a better entry",
           2
         ],
         [
@@ -212,12 +212,12 @@
       "id": "tron",
       "symbol": "TRX",
       "name": "TRON",
-      "price": 0.32161,
-      "pct_24h": -3.20358,
+      "price": 0.32162,
+      "pct_24h": -3.16924,
       "pct_7d": -4.3,
-      "support_30d": 0.32166326762925895,
+      "support_30d": 0.3216198811486528,
       "resistance_30d": 0.3447899585776834,
-      "as_of": "2026-09-02 03:40:29",
+      "as_of": "2026-09-02 03:55:22",
       "stale": false
     },
     "figure-heloc": {
@@ -823,7 +823,7 @@
         ],
         [
           "Stretch from long-term average",
-          "-12.0% vs its long-term average - not stretched either way",
+          "-11.7% vs its long-term average - not stretched either way",
           0
         ],
         [
@@ -836,12 +836,12 @@
       "id": "hedera-hashgraph",
       "symbol": "HBAR",
       "name": "Hedera",
-      "price": 0.073463,
-      "pct_24h": -0.58323,
-      "pct_7d": -6.0,
+      "price": 0.073784,
+      "pct_24h": -0.76755,
+      "pct_7d": -5.9,
       "support_30d": 0.06461260477975343,
       "resistance_30d": 0.07985387850470703,
-      "as_of": "2026-09-02 02:25:18",
+      "as_of": "2026-09-02 03:55:22",
       "stale": false
     },
     "pepe": {
@@ -1975,7 +1975,7 @@
         ],
         [
           "Stretch from long-term average",
-          "-20.4% below its long-term average - confirmed downtrend",
+          "-20.8% below its long-term average - confirmed downtrend",
           -1
         ],
         [
@@ -1988,12 +1988,12 @@
       "id": "polkadot",
       "symbol": "DOT",
       "name": "Polkadot",
-      "price": 0.889333,
-      "pct_24h": 4.35514,
+      "price": 0.884777,
+      "pct_24h": 3.13999,
       "pct_7d": 2.9,
       "support_30d": 0.7510040523927409,
       "resistance_30d": 0.9394118398868826,
-      "as_of": "2026-09-02 03:30:32",
+      "as_of": "2026-09-02 03:55:22",
       "stale": false
     },
     "uniswap": {
@@ -3053,19 +3053,21 @@
       "stale": false
     }
   },
-  "_strong_buy_state": {},
+  "_strong_buy_state": {
+    "15m:TRX": true
+  },
   "BTC": {
     "key": "BTC",
     "name": "Bitcoin",
     "emoji": "\u20bf",
-    "price": 77574,
+    "price": 77550,
     "high_24h": 79179,
     "low_24h": 76454,
-    "pct_24h": -1.40109,
+    "pct_24h": -1.42055,
     "pct_7d": -2.0,
     "pct_30d": 22.3,
-    "sma50": 68132.62621701427,
-    "sma200": 69486.71349365292,
+    "sma50": 68132.12369141249,
+    "sma200": 69486.58786225246,
     "support_30d": 62843.70368466329,
     "resistance_30d": 80268.37474707834,
     "mark_price": 79166.78271014,
@@ -3080,14 +3082,14 @@
     "key": "ETH",
     "name": "Ethereum",
     "emoji": "\u039e",
-    "price": 2414.34,
+    "price": 2413.35,
     "high_24h": 2483.82,
     "low_24h": 2385.53,
-    "pct_24h": -2.39824,
+    "pct_24h": -2.38575,
     "pct_7d": -2.0,
     "pct_30d": 29.1,
-    "sma50": 2053.8907277477233,
-    "sma200": 2028.097427948857,
+    "sma50": 2053.8699460427724,
+    "sma200": 2028.0922325226193,
     "support_30d": 1868.621381582403,
     "resistance_30d": 2514.967577695514,
     "mark_price": 2483.38844961,
