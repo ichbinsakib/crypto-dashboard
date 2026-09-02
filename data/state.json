@@ -1639,7 +1639,7 @@
         ],
         [
           "Stretch from long-term average",
-          "-2.0% vs its long-term average - not stretched either way",
+          "-1.9% vs its long-term average - not stretched either way",
           0
         ],
         [
@@ -1652,12 +1652,12 @@
       "id": "litecoin",
       "symbol": "LTC",
       "name": "Litecoin",
-      "price": 49.42,
-      "pct_24h": -0.45847,
-      "pct_7d": -0.3,
+      "price": 49.5,
+      "pct_24h": -0.24658,
+      "pct_7d": -0.5,
       "support_30d": 43.806923130603906,
       "resistance_30d": 53.12964707139583,
-      "as_of": "2026-09-02 17:05:20",
+      "as_of": "2026-09-02 18:00:37",
       "stale": false
     },
     "bitget-token": {
@@ -1855,7 +1855,7 @@
     "bitcoin-cash": {
       "label": "\ud83d\udfe1 HOLD / NEUTRAL",
       "status": "neutral",
-      "score": -1,
+      "score": 0,
       "rows": [
         [
           "Price vs. recent range",
@@ -1874,12 +1874,12 @@
         ],
         [
           "Recent trend",
-          "Trending down - avoid catching a falling knife",
-          -1
+          "Chopping sideways - no clear trend",
+          0
         ],
         [
           "Stretch from long-term average",
-          "-28.4% below its long-term average - confirmed downtrend",
+          "-28.7% below its long-term average - confirmed downtrend",
           -1
         ],
         [
@@ -1892,12 +1892,12 @@
       "id": "bitcoin-cash",
       "symbol": "BCH",
       "name": "Bitcoin Cash",
-      "price": 244.65,
-      "pct_24h": -1.22122,
-      "pct_7d": -8.7,
+      "price": 243.85,
+      "pct_24h": -1.04976,
+      "pct_7d": -6.1,
       "support_30d": 203.50169440615565,
       "resistance_30d": 288.10955405353275,
-      "as_of": "2026-09-02 13:55:19",
+      "as_of": "2026-09-02 18:00:37",
       "stale": false
     },
     "mantle": {
@@ -2813,9 +2813,9 @@
       "stale": false
     },
     "aave": {
-      "label": "\ud83d\udfe1 HOLD / NEUTRAL",
-      "status": "neutral",
-      "score": -1,
+      "label": "\ud83d\udd34 CAUTION - REDUCE NEW BUYS",
+      "status": "bearish",
+      "score": -2,
       "rows": [
         [
           "Price vs. recent range",
@@ -2839,8 +2839,8 @@
         ],
         [
           "Stretch from long-term average",
-          "+30.0% above its long-term average - a bit stretched",
-          -1
+          "+30.6% above its long-term average - very stretched",
+          -2
         ],
         [
           "Leverage traders' bias",
@@ -2848,16 +2848,16 @@
           0
         ]
       ],
-      "plain": "No real edge either way right now - fine to just wait and watch.",
+      "plain": "Getting risky - I'd hold off on new buys until this cools down.",
       "id": "aave",
       "symbol": "AAVE",
       "name": "Aave",
-      "price": 126.57,
-      "pct_24h": 0.31074,
-      "pct_7d": 2.8,
+      "price": 127.21,
+      "pct_24h": 0.8409,
+      "pct_7d": 3.5,
       "support_30d": 85.94219943917633,
       "resistance_30d": 141.53047916466082,
-      "as_of": "2026-09-02 17:05:20",
+      "as_of": "2026-09-02 18:00:37",
       "stale": false
     },
     "okb": {
@@ -3053,21 +3053,19 @@
       "stale": false
     }
   },
-  "_strong_buy_state": {
-    "15m:M": true
-  },
+  "_strong_buy_state": {},
   "BTC": {
     "key": "BTC",
     "name": "Bitcoin",
     "emoji": "\u20bf",
-    "price": 77332,
+    "price": 77335,
     "high_24h": 77718,
     "low_24h": 76298,
-    "pct_24h": -0.01447,
+    "pct_24h": 0.06177,
     "pct_7d": -1.1,
     "pct_30d": 21.3,
-    "sma50": 68127.52834443525,
-    "sma200": 69485.43902550815,
+    "sma50": 68127.86699168313,
+    "sma200": 69485.52368732012,
     "support_30d": 62843.70368466329,
     "resistance_30d": 80268.37474707834,
     "mark_price": 76701.56071214,
@@ -3082,14 +3080,14 @@
     "key": "ETH",
     "name": "Ethereum",
     "emoji": "\u039e",
-    "price": 2391.99,
+    "price": 2391.96,
     "high_24h": 2426.37,
     "low_24h": 2357.48,
-    "pct_24h": -1.30272,
+    "pct_24h": -1.18347,
     "pct_7d": -2.6,
     "pct_30d": 28.2,
-    "sma50": 2053.4386786807645,
-    "sma200": 2027.9844156821173,
+    "sma50": 2053.4436949070114,
+    "sma200": 2027.9856697386792,
     "support_30d": 1868.621381582403,
     "resistance_30d": 2514.967577695514,
     "mark_price": 2374.04831997,
