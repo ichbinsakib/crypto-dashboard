@@ -1639,7 +1639,7 @@
         ],
         [
           "Stretch from long-term average",
-          "-2.3% vs its long-term average - not stretched either way",
+          "-2.8% vs its long-term average - not stretched either way",
           0
         ],
         [
@@ -1652,12 +1652,12 @@
       "id": "litecoin",
       "symbol": "LTC",
       "name": "Litecoin",
-      "price": 49.26,
-      "pct_24h": 1.0332,
-      "pct_7d": -2.5,
+      "price": 49.02,
+      "pct_24h": 0.39555,
+      "pct_7d": -2.6,
       "support_30d": 43.806923130603906,
       "resistance_30d": 53.12964707139583,
-      "as_of": "2026-09-02 02:35:23",
+      "as_of": "2026-09-02 04:15:23",
       "stale": false
     },
     "bitget-token": {
@@ -1701,11 +1701,11 @@
       "symbol": "BGB",
       "name": "Bitget Token",
       "price": 1.92,
-      "pct_24h": -0.77702,
+      "pct_24h": -0.83608,
       "pct_7d": 1.0,
       "support_30d": 1.612955058583726,
       "resistance_30d": 1.984790388009312,
-      "as_of": "2026-09-02 04:05:22",
+      "as_of": "2026-09-02 04:15:23",
       "stale": false
     },
     "sui": {
@@ -2935,7 +2935,7 @@
         ],
         [
           "Stretch from long-term average",
-          "+25.4% above its long-term average - a bit stretched",
+          "+25.6% above its long-term average - a bit stretched",
           -1
         ],
         [
@@ -2948,12 +2948,12 @@
       "id": "just",
       "symbol": "JST",
       "name": "JUST",
-      "price": 0.10161,
-      "pct_24h": 0.67967,
+      "price": 0.101728,
+      "pct_24h": 1.06193,
       "pct_7d": 1.7,
       "support_30d": 0.0946830738697126,
       "resistance_30d": 0.1082125131964855,
-      "as_of": "2026-09-02 04:10:26",
+      "as_of": "2026-09-02 04:15:23",
       "stale": false
     },
     "algorand": {
@@ -3053,19 +3053,22 @@
       "stale": false
     }
   },
-  "_strong_buy_state": {},
+  "_strong_buy_state": {
+    "15m:LTC": true,
+    "1h:BGB": true
+  },
   "BTC": {
     "key": "BTC",
     "name": "Bitcoin",
     "emoji": "\u20bf",
-    "price": 77408,
+    "price": 77330,
     "high_24h": 79179,
     "low_24h": 76454,
-    "pct_24h": -1.70161,
+    "pct_24h": -1.67158,
     "pct_7d": -2.0,
     "pct_30d": 22.9,
-    "sma50": 68129.2261562439,
-    "sma200": 69485.86347846032,
+    "sma50": 68127.84989567455,
+    "sma200": 69485.51941331798,
     "support_30d": 62843.70368466329,
     "resistance_30d": 80268.37474707834,
     "mark_price": 79166.78271014,
@@ -3080,14 +3083,14 @@
     "key": "ETH",
     "name": "Ethereum",
     "emoji": "\u039e",
-    "price": 2411.16,
+    "price": 2406.35,
     "high_24h": 2483.82,
     "low_24h": 2385.53,
-    "pct_24h": -2.4961,
+    "pct_24h": -2.65283,
     "pct_7d": -2.1,
     "pct_30d": 29.6,
-    "sma50": 2053.8300805499266,
-    "sma200": 2028.082266149408,
+    "sma50": 2053.7439946044537,
+    "sma200": 2028.0607446630395,
     "support_30d": 1868.621381582403,
     "resistance_30d": 2514.967577695514,
     "mark_price": 2483.38844961,
