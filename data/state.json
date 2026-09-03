@@ -4,7 +4,7 @@
   "_alerts_state": {
     "btc-resistance-break": {
       "triggered": true,
-      "last_triggered_at": "2026-09-03 19:10:22"
+      "last_triggered_at": "2026-09-03 19:15:23"
     },
     "btc-support-break": {
       "triggered": false,
@@ -199,7 +199,7 @@
         ],
         [
           "Stretch from long-term average",
-          "+2.4% vs its long-term average - not stretched either way",
+          "+2.1% vs its long-term average - not stretched either way",
           0
         ],
         [
@@ -212,12 +212,12 @@
       "id": "tron",
       "symbol": "TRX",
       "name": "TRON",
-      "price": 0.331973,
-      "pct_24h": 2.6001,
-      "pct_7d": -1.8,
+      "price": 0.3311,
+      "pct_24h": 1.95758,
+      "pct_7d": -2.0,
       "support_30d": 0.32221537516581966,
       "resistance_30d": 0.3447899585776834,
-      "as_of": "2026-09-03 16:55:21",
+      "as_of": "2026-09-03 19:15:23",
       "stale": false
     },
     "figure-heloc": {
@@ -2861,14 +2861,14 @@
       "stale": false
     },
     "okb": {
-      "label": "\ud83d\udd34 CAUTION - REDUCE NEW BUYS",
-      "status": "bearish",
-      "score": -2,
+      "label": "\ud83d\udfe1 HOLD / NEUTRAL",
+      "status": "neutral",
+      "score": -1,
       "rows": [
         [
           "Price vs. recent range",
-          "Near its 30-day high (~$115.83) - less room to run",
-          -1
+          "Sitting in the middle of its 30-day range",
+          0
         ],
         [
           "Crowd mood (Fear & Greed)",
@@ -2887,7 +2887,7 @@
         ],
         [
           "Stretch from long-term average",
-          "+27.7% above its long-term average - a bit stretched",
+          "+27.3% above its long-term average - a bit stretched",
           -1
         ],
         [
@@ -2896,16 +2896,16 @@
           0
         ]
       ],
-      "plain": "Getting risky - I'd hold off on new buys until this cools down.",
+      "plain": "No real edge either way right now - fine to just wait and watch.",
       "id": "okb",
       "symbol": "OKB",
       "name": "OKB",
-      "price": 110.08,
-      "pct_24h": 3.92081,
+      "price": 109.72,
+      "pct_24h": 3.60597,
       "pct_7d": -4.1,
       "support_30d": 85.29568594571903,
       "resistance_30d": 115.8310797114581,
-      "as_of": "2026-09-03 19:05:19",
+      "as_of": "2026-09-03 19:15:23",
       "stale": false
     },
     "just": {
@@ -2959,16 +2959,16 @@
     "algorand": {
       "label": "\ud83d\udfe1 HOLD / NEUTRAL",
       "status": "neutral",
-      "score": 1,
+      "score": 0,
       "rows": [
         [
           "Price vs. recent range",
-          "Sitting in the middle of its 30-day range",
-          0
+          "Near its 30-day high (~$0.0974) - less room to run",
+          -1
         ],
         [
           "Crowd mood (Fear & Greed)",
-          "63/100 - crowd is greedy",
+          "65/100 - crowd is greedy",
           -1
         ],
         [
@@ -2983,7 +2983,7 @@
         ],
         [
           "Stretch from long-term average",
-          "-9.1% vs its long-term average - not stretched either way",
+          "-6.2% vs its long-term average - not stretched either way",
           0
         ],
         [
@@ -2996,12 +2996,12 @@
       "id": "algorand",
       "symbol": "ALGO",
       "name": "Algorand",
-      "price": 0.091892,
-      "pct_24h": 4.97366,
-      "pct_7d": 4.9,
+      "price": 0.094732,
+      "pct_24h": 2.15419,
+      "pct_7d": 4.1,
       "support_30d": 0.07793708137631736,
       "resistance_30d": 0.09738149741448011,
-      "as_of": "2026-09-02 21:25:18",
+      "as_of": "2026-09-03 19:15:23",
       "stale": false
     },
     "eutbl": {
@@ -3106,16 +3106,16 @@
     "key": "BTC",
     "name": "Bitcoin",
     "emoji": "\u20bf",
-    "price": 81210,
+    "price": 81233,
     "high_24h": 81332,
     "low_24h": 76975,
-    "pct_24h": 4.98986,
+    "pct_24h": 5.02346,
     "pct_7d": 1.0,
     "pct_30d": 27.1,
-    "sma50": 68457.25126972723,
-    "sma200": 69547.56138636282,
+    "sma50": 68457.429309978,
+    "sma200": 69547.6058964255,
     "support_30d": 62843.70368466329,
-    "resistance_30d": 81224.01750080448,
+    "resistance_30d": 81232.91951334373,
     "mark_price": 81199.38161594,
     "index_price": 81228.99195652,
     "funding_rate": 0.0001,
@@ -3128,14 +3128,14 @@
     "key": "ETH",
     "name": "Ethereum",
     "emoji": "\u039e",
-    "price": 2511.72,
+    "price": 2510.3,
     "high_24h": 2515.54,
     "low_24h": 2372.43,
-    "pct_24h": 4.87661,
+    "pct_24h": 4.81054,
     "pct_7d": -0.3,
     "pct_30d": 34.5,
-    "sma50": 2065.3376264604904,
-    "sma200": 2030.7051962507671,
+    "sma50": 2065.291217164401,
+    "sma200": 2030.693593926745,
     "support_30d": 1871.3976551883159,
     "resistance_30d": 2514.967577695514,
     "mark_price": 2511.59749612,
