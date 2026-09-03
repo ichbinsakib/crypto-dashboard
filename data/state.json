@@ -4,7 +4,7 @@
   "_alerts_state": {
     "btc-resistance-break": {
       "triggered": true,
-      "last_triggered_at": "2026-09-03 22:25:17"
+      "last_triggered_at": "2026-09-03 22:30:27"
     },
     "btc-support-break": {
       "triggered": false,
@@ -151,7 +151,7 @@
         ],
         [
           "Stretch from long-term average",
-          "+27.9% above its long-term average - a bit stretched",
+          "+27.4% above its long-term average - a bit stretched",
           -1
         ],
         [
@@ -164,12 +164,12 @@
       "id": "solana",
       "symbol": "SOL",
       "name": "Solana",
-      "price": 105.13,
-      "pct_24h": 5.35727,
-      "pct_7d": -2.9,
+      "price": 104.66,
+      "pct_24h": 5.48871,
+      "pct_7d": -3.4,
       "support_30d": 72.63053979307217,
       "resistance_30d": 109.17730597799657,
-      "as_of": "2026-09-03 20:40:23",
+      "as_of": "2026-09-03 22:30:27",
       "stale": false
     },
     "tron": {
@@ -1763,7 +1763,7 @@
       "rows": [
         [
           "Price vs. recent range",
-          "Near its 30-day high (~$4.26) - less room to run",
+          "Near its 30-day high (~$4.37) - less room to run",
           -1
         ],
         [
@@ -1783,7 +1783,7 @@
         ],
         [
           "Stretch from long-term average",
-          "+158.7% above its long-term average - very stretched",
+          "+164.7% above its long-term average - very stretched",
           -2
         ],
         [
@@ -1796,12 +1796,12 @@
       "id": "lighter",
       "symbol": "LIT",
       "name": "Lighter",
-      "price": 4.27,
-      "pct_24h": 13.95215,
-      "pct_7d": 17.2,
+      "price": 4.37,
+      "pct_24h": 16.50345,
+      "pct_7d": 16.1,
       "support_30d": 2.184981396560631,
-      "resistance_30d": 4.264595480289038,
-      "as_of": "2026-09-03 18:20:24",
+      "resistance_30d": 4.366235649461741,
+      "as_of": "2026-09-03 22:30:27",
       "stale": false
     },
     "ethena": {
@@ -2839,7 +2839,7 @@
         ],
         [
           "Stretch from long-term average",
-          "+38.0% above its long-term average - very stretched",
+          "+36.9% above its long-term average - very stretched",
           -2
         ],
         [
@@ -2852,12 +2852,12 @@
       "id": "aave",
       "symbol": "AAVE",
       "name": "Aave",
-      "price": 134.45,
-      "pct_24h": 5.98391,
-      "pct_7d": 5.3,
+      "price": 133.36,
+      "pct_24h": 5.34285,
+      "pct_7d": 5.1,
       "support_30d": 85.94219943917633,
       "resistance_30d": 141.53047916466082,
-      "as_of": "2026-09-03 21:10:31",
+      "as_of": "2026-09-03 22:30:27",
       "stale": false
     },
     "okb": {
@@ -3101,21 +3101,24 @@
       "stale": false
     }
   },
-  "_strong_buy_state": {},
+  "_strong_buy_state": {
+    "15m:LIT": true,
+    "15m:SOL": true
+  },
   "BTC": {
     "key": "BTC",
     "name": "Bitcoin",
     "emoji": "\u20bf",
-    "price": 81319,
+    "price": 81187,
     "high_24h": 82108,
     "low_24h": 76975,
-    "pct_24h": 5.538,
+    "pct_24h": 5.40273,
     "pct_7d": 1.9,
     "pct_30d": 26.9,
-    "sma50": 68459.15896020281,
-    "sma200": 69548.03830898172,
+    "sma50": 68456.02060589504,
+    "sma200": 69547.25372040477,
     "support_30d": 62843.70368466329,
-    "resistance_30d": 81319.40202458377,
+    "resistance_30d": 81162.48430919564,
     "mark_price": 81199.38161594,
     "index_price": 81228.99195652,
     "funding_rate": 0.0001,
@@ -3128,14 +3131,14 @@
     "key": "ETH",
     "name": "Ethereum",
     "emoji": "\u039e",
-    "price": 2503.97,
+    "price": 2497.2,
     "high_24h": 2523.23,
     "low_24h": 2372.43,
-    "pct_24h": 5.11847,
+    "pct_24h": 4.94078,
     "pct_7d": 0.2,
     "pct_30d": 34.0,
-    "sma50": 2065.1646102510967,
-    "sma200": 2030.6619421984187,
+    "sma50": 2065.012827588026,
+    "sma200": 2030.623996532651,
     "support_30d": 1871.3976551883159,
     "resistance_30d": 2514.967577695514,
     "mark_price": 2511.59749612,
