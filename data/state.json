@@ -4,7 +4,7 @@
   "_alerts_state": {
     "btc-resistance-break": {
       "triggered": true,
-      "last_triggered_at": "2026-09-03 14:30:29"
+      "last_triggered_at": "2026-09-03 14:35:24"
     },
     "btc-support-break": {
       "triggered": false,
@@ -775,7 +775,7 @@
         ],
         [
           "Stretch from long-term average",
-          "-8.5% vs its long-term average - not stretched either way",
+          "-8.0% vs its long-term average - not stretched either way",
           0
         ],
         [
@@ -788,12 +788,12 @@
       "id": "kucoin-shares",
       "symbol": "KCS",
       "name": "KuCoin",
-      "price": 7.09,
-      "pct_24h": 2.08042,
-      "pct_7d": -2.0,
+      "price": 7.13,
+      "pct_24h": 2.04389,
+      "pct_7d": -1.6,
       "support_30d": 6.514591596607885,
       "resistance_30d": 7.8821382735057615,
-      "as_of": "2026-09-03 13:40:22",
+      "as_of": "2026-09-03 14:35:24",
       "stale": false
     },
     "hedera-hashgraph": {
@@ -2071,7 +2071,7 @@
         ],
         [
           "Stretch from long-term average",
-          "-34.6% below its long-term average - confirmed downtrend",
+          "-34.4% below its long-term average - confirmed downtrend",
           -1
         ],
         [
@@ -2084,12 +2084,12 @@
       "id": "pi-network",
       "symbol": "PI",
       "name": "Pi Network",
-      "price": 0.094485,
-      "pct_24h": 0.82244,
+      "price": 0.094887,
+      "pct_24h": 1.3964,
       "pct_7d": 4.5,
       "support_30d": 0.08559695435343688,
       "resistance_30d": 0.09762045155043195,
-      "as_of": "2026-09-03 14:15:23",
+      "as_of": "2026-09-03 14:35:24",
       "stale": false
     },
     "ondo-finance": {
@@ -2407,7 +2407,7 @@
         ],
         [
           "Stretch from long-term average",
-          "-3.9% vs its long-term average - not stretched either way",
+          "-2.5% vs its long-term average - not stretched either way",
           0
         ],
         [
@@ -2420,12 +2420,12 @@
       "id": "shiba-inu",
       "symbol": "SHIB",
       "name": "Shiba Inu",
-      "price": 5.2e-06,
-      "pct_24h": 1.85979,
-      "pct_7d": -4.1,
+      "price": 5.28e-06,
+      "pct_24h": 2.40976,
+      "pct_7d": -2.6,
       "support_30d": 4.390093758351827e-06,
       "resistance_30d": 5.903506876405612e-06,
-      "as_of": "2026-09-03 10:20:25",
+      "as_of": "2026-09-03 14:35:24",
       "stale": false
     },
     "near": {
@@ -3101,19 +3101,21 @@
       "stale": false
     }
   },
-  "_strong_buy_state": {},
+  "_strong_buy_state": {
+    "15m:ARB": true
+  },
   "BTC": {
     "key": "BTC",
     "name": "Bitcoin",
     "emoji": "\u20bf",
-    "price": 79595,
+    "price": 79790,
     "high_24h": 78926,
     "low_24h": 76733,
-    "pct_24h": 2.99372,
+    "pct_24h": 3.42027,
     "pct_7d": -0.6,
     "pct_30d": 23.5,
-    "sma50": 68424.02420469337,
-    "sma200": 69539.25462010434,
+    "sma50": 68428.5778671674,
+    "sma200": 69540.39303572285,
     "support_30d": 62843.70368466329,
     "resistance_30d": 80268.37474707834,
     "mark_price": 77914.96355797,
@@ -3128,14 +3130,14 @@
     "key": "ETH",
     "name": "Ethereum",
     "emoji": "\u039e",
-    "price": 2449.8,
+    "price": 2459.37,
     "high_24h": 2434.16,
     "low_24h": 2372.43,
-    "pct_24h": 1.98075,
+    "pct_24h": 2.62718,
     "pct_7d": -2.7,
     "pct_30d": 29.6,
-    "sma50": 2064.086375306574,
-    "sma200": 2030.392383462288,
+    "sma50": 2064.2726893294976,
+    "sma200": 2030.438961968019,
     "support_30d": 1871.3976551883159,
     "resistance_30d": 2514.967577695514,
     "mark_price": 2406.5605969,
