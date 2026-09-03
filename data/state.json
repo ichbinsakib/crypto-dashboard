@@ -4,7 +4,7 @@
   "_alerts_state": {
     "btc-resistance-break": {
       "triggered": true,
-      "last_triggered_at": "2026-09-03 22:05:20"
+      "last_triggered_at": "2026-09-03 22:10:22"
     },
     "btc-support-break": {
       "triggered": false,
@@ -319,12 +319,12 @@
     "dogecoin": {
       "label": "\ud83d\udfe1 HOLD / NEUTRAL",
       "status": "neutral",
-      "score": 0,
+      "score": 1,
       "rows": [
         [
           "Price vs. recent range",
-          "Near its 30-day high (~$0.0934) - less room to run",
-          -1
+          "Sitting in the middle of its 30-day range",
+          0
         ],
         [
           "Crowd mood (Fear & Greed)",
@@ -343,7 +343,7 @@
         ],
         [
           "Stretch from long-term average",
-          "+0.7% vs its long-term average - not stretched either way",
+          "-0.8% vs its long-term average - not stretched either way",
           0
         ],
         [
@@ -356,12 +356,12 @@
       "id": "dogecoin",
       "symbol": "DOGE",
       "name": "Dogecoin",
-      "price": 0.089365,
-      "pct_24h": 9.87533,
-      "pct_7d": 0.4,
+      "price": 0.08803,
+      "pct_24h": 8.4608,
+      "pct_7d": -0.4,
       "support_30d": 0.06901954790818378,
       "resistance_30d": 0.09337940032634065,
-      "as_of": "2026-09-03 19:21:39",
+      "as_of": "2026-09-03 22:10:22",
       "stale": false
     },
     "zcash": {
@@ -1423,12 +1423,12 @@
     "crypto-com-chain": {
       "label": "\ud83d\udfe1 HOLD / NEUTRAL",
       "status": "neutral",
-      "score": 1,
+      "score": 0,
       "rows": [
         [
           "Price vs. recent range",
-          "Sitting in the middle of its 30-day range",
-          0
+          "Near its 30-day high (~$0.0609) - less room to run",
+          -1
         ],
         [
           "Crowd mood (Fear & Greed)",
@@ -1447,7 +1447,7 @@
         ],
         [
           "Stretch from long-term average",
-          "-14.0% vs its long-term average - not stretched either way",
+          "-13.3% vs its long-term average - not stretched either way",
           0
         ],
         [
@@ -1460,12 +1460,12 @@
       "id": "crypto-com-chain",
       "symbol": "CRO",
       "name": "Cronos",
-      "price": 0.057425,
-      "pct_24h": 6.90524,
-      "pct_7d": -5.8,
+      "price": 0.057931,
+      "pct_24h": 6.92988,
+      "pct_7d": -5.7,
       "support_30d": 0.04621382085807831,
       "resistance_30d": 0.06091104752771909,
-      "as_of": "2026-09-03 17:05:23",
+      "as_of": "2026-09-03 22:10:22",
       "stale": false
     },
     "ethereum-classic": {
@@ -1639,7 +1639,7 @@
         ],
         [
           "Stretch from long-term average",
-          "+2.7% vs its long-term average - not stretched either way",
+          "+2.3% vs its long-term average - not stretched either way",
           0
         ],
         [
@@ -1652,12 +1652,12 @@
       "id": "litecoin",
       "symbol": "LTC",
       "name": "Litecoin",
-      "price": 51.76,
-      "pct_24h": 4.17621,
-      "pct_7d": 3.4,
+      "price": 51.58,
+      "pct_24h": 3.94515,
+      "pct_7d": 3.5,
       "support_30d": 43.806923130603906,
       "resistance_30d": 53.12964707139583,
-      "as_of": "2026-09-03 21:15:28",
+      "as_of": "2026-09-03 22:10:22",
       "stale": false
     },
     "bitget-token": {
@@ -3106,16 +3106,16 @@
     "key": "BTC",
     "name": "Bitcoin",
     "emoji": "\u20bf",
-    "price": 81461,
+    "price": 81459,
     "high_24h": 82108,
     "low_24h": 76975,
-    "pct_24h": 5.58461,
+    "pct_24h": 5.68413,
     "pct_7d": 1.9,
     "pct_30d": 26.9,
-    "sma50": 68461.81658648378,
-    "sma200": 69548.70271555196,
+    "sma50": 68461.94549787157,
+    "sma200": 69548.7349433989,
     "support_30d": 62843.70368466329,
-    "resistance_30d": 81452.2833386326,
+    "resistance_30d": 81458.72890802148,
     "mark_price": 81199.38161594,
     "index_price": 81228.99195652,
     "funding_rate": 0.0001,
@@ -3128,14 +3128,14 @@
     "key": "ETH",
     "name": "Ethereum",
     "emoji": "\u039e",
-    "price": 2507.54,
+    "price": 2506.76,
     "high_24h": 2523.23,
     "low_24h": 2372.43,
-    "pct_24h": 5.12256,
+    "pct_24h": 5.2183,
     "pct_7d": 0.2,
     "pct_30d": 34.0,
-    "sma50": 2065.2265578266624,
-    "sma200": 2030.6774290923101,
+    "sma50": 2065.2331861358084,
+    "sma200": 2030.6790861695968,
     "support_30d": 1871.3976551883159,
     "resistance_30d": 2514.967577695514,
     "mark_price": 2511.59749612,
