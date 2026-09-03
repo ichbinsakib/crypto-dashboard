@@ -4,7 +4,7 @@
   "_alerts_state": {
     "btc-resistance-break": {
       "triggered": true,
-      "last_triggered_at": "2026-09-03 20:10:26"
+      "last_triggered_at": "2026-09-03 20:15:37"
     },
     "btc-support-break": {
       "triggered": false,
@@ -35,7 +35,7 @@
       "rows": [
         [
           "Price vs. recent range",
-          "Near its 30-day high (~$722.03) - less room to run",
+          "Near its 30-day high (~$723.23) - less room to run",
           -1
         ],
         [
@@ -55,7 +55,7 @@
         ],
         [
           "Stretch from long-term average",
-          "+16.7% above its long-term average - a bit stretched",
+          "+16.8% above its long-term average - a bit stretched",
           -1
         ],
         [
@@ -68,12 +68,12 @@
       "id": "binancecoin",
       "symbol": "BNB",
       "name": "BNB",
-      "price": 722.37,
-      "pct_24h": 5.17393,
-      "pct_7d": 1.5,
+      "price": 723.23,
+      "pct_24h": 5.34978,
+      "pct_7d": 1.9,
       "support_30d": 591.7111094655114,
-      "resistance_30d": 722.0291257494357,
-      "as_of": "2026-09-03 17:55:22",
+      "resistance_30d": 723.2332919912096,
+      "as_of": "2026-09-03 20:15:37",
       "stale": false
     },
     "ripple": {
@@ -151,7 +151,7 @@
         ],
         [
           "Stretch from long-term average",
-          "+27.8% above its long-term average - a bit stretched",
+          "+28.2% above its long-term average - a bit stretched",
           -1
         ],
         [
@@ -164,12 +164,12 @@
       "id": "solana",
       "symbol": "SOL",
       "name": "Solana",
-      "price": 105.05,
-      "pct_24h": 5.23813,
+      "price": 105.32,
+      "pct_24h": 5.83552,
       "pct_7d": -2.9,
       "support_30d": 72.63053979307217,
       "resistance_30d": 109.17730597799657,
-      "as_of": "2026-09-03 20:05:20",
+      "as_of": "2026-09-03 20:15:37",
       "stale": false
     },
     "tron": {
@@ -2791,7 +2791,7 @@
         ],
         [
           "Stretch from long-term average",
-          "-48.9% below its long-term average - confirmed downtrend",
+          "-49.2% below its long-term average - confirmed downtrend",
           -1
         ],
         [
@@ -2804,12 +2804,12 @@
       "id": "memecore",
       "symbol": "M",
       "name": "MemeCore",
-      "price": 1.069,
-      "pct_24h": 2.79734,
-      "pct_7d": -4.6,
+      "price": 1.063,
+      "pct_24h": 0.79459,
+      "pct_7d": -4.8,
       "support_30d": 1.0428585856494421,
       "resistance_30d": 1.2453913363052769,
-      "as_of": "2026-09-03 18:45:22",
+      "as_of": "2026-09-03 20:15:37",
       "stale": false
     },
     "aave": {
@@ -3101,21 +3101,24 @@
       "stale": false
     }
   },
-  "_strong_buy_state": {},
+  "_strong_buy_state": {
+    "15m:M": true,
+    "1h:M": true
+  },
   "BTC": {
     "key": "BTC",
     "name": "Bitcoin",
     "emoji": "\u20bf",
-    "price": 81634,
+    "price": 81507,
     "high_24h": 81763,
     "low_24h": 76975,
-    "pct_24h": 5.51845,
+    "pct_24h": 5.43436,
     "pct_7d": 2.0,
     "pct_30d": 27.2,
-    "sma50": 68464.65360785561,
-    "sma200": 69549.41197089491,
+    "sma50": 68462.95112869337,
+    "sma200": 69548.98635110435,
     "support_30d": 62843.70368466329,
-    "resistance_30d": 81594.1344072243,
+    "resistance_30d": 81509.01044911196,
     "mark_price": 81199.38161594,
     "index_price": 81228.99195652,
     "funding_rate": 0.0001,
@@ -3128,14 +3131,14 @@
     "key": "ETH",
     "name": "Ethereum",
     "emoji": "\u039e",
-    "price": 2515.92,
+    "price": 2511.46,
     "high_24h": 2523.23,
     "low_24h": 2372.43,
-    "pct_24h": 5.08458,
+    "pct_24h": 5.03637,
     "pct_7d": 0.4,
     "pct_30d": 34.3,
-    "sma50": 2065.3696062682093,
-    "sma200": 2030.7131912026969,
+    "sma50": 2065.316858510951,
+    "sma200": 2030.7000042633827,
     "support_30d": 1871.3976551883159,
     "resistance_30d": 2514.967577695514,
     "mark_price": 2511.59749612,
