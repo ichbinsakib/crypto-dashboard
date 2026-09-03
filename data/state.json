@@ -4,7 +4,7 @@
   "_alerts_state": {
     "btc-resistance-break": {
       "triggered": true,
-      "last_triggered_at": "2026-09-03 16:40:27"
+      "last_triggered_at": "2026-09-03 16:45:29"
     },
     "btc-support-break": {
       "triggered": false,
@@ -1207,7 +1207,7 @@
         ],
         [
           "Stretch from long-term average",
-          "+1.1% vs its long-term average - not stretched either way",
+          "+1.8% vs its long-term average - not stretched either way",
           0
         ],
         [
@@ -1220,12 +1220,12 @@
       "id": "nexo",
       "symbol": "NEXO",
       "name": "NEXO",
-      "price": 0.844543,
-      "pct_24h": 1.31,
-      "pct_7d": -0.4,
+      "price": 0.849916,
+      "pct_24h": 0.73037,
+      "pct_7d": 0.2,
       "support_30d": 0.7016300793001435,
       "resistance_30d": 0.8734100764023305,
-      "as_of": "2026-09-03 13:40:22",
+      "as_of": "2026-09-03 16:45:29",
       "stale": false
     },
     "janus-henderson-anemoy-treasury-fund": {
@@ -2765,9 +2765,9 @@
       "stale": false
     },
     "memecore": {
-      "label": "\ud83d\udfe1 HOLD / NEUTRAL",
-      "status": "neutral",
-      "score": -1,
+      "label": "\ud83d\udfe2 LEAN ACCUMULATE",
+      "status": "bullish",
+      "score": 2,
       "rows": [
         [
           "Price vs. recent range",
@@ -2781,8 +2781,8 @@
         ],
         [
           "Market phase (best guess)",
-          "Established downtrend - still falling, not yet a base",
-          -1
+          "Basing near the bottom - phase where smart money accumulates",
+          2
         ],
         [
           "Recent trend",
@@ -2791,7 +2791,7 @@
         ],
         [
           "Stretch from long-term average",
-          "-48.9% below its long-term average - confirmed downtrend",
+          "-49.0% below its long-term average - confirmed downtrend",
           -1
         ],
         [
@@ -2800,16 +2800,16 @@
           0
         ]
       ],
-      "plain": "No real edge either way right now - fine to just wait and watch.",
+      "plain": "Leans toward a decent spot to slowly add (DCA) - not a strong signal, just a lean.",
       "id": "memecore",
       "symbol": "M",
       "name": "MemeCore",
-      "price": 1.069,
-      "pct_24h": 2.56414,
-      "pct_7d": -4.6,
+      "price": 1.068,
+      "pct_24h": 2.62634,
+      "pct_7d": -4.1,
       "support_30d": 1.0428585856494421,
       "resistance_30d": 1.2453913363052769,
-      "as_of": "2026-09-03 13:35:25",
+      "as_of": "2026-09-03 16:45:29",
       "stale": false
     },
     "aave": {
@@ -3059,7 +3059,7 @@
       "rows": [
         [
           "Price vs. recent range",
-          "Near its 30-day high (~$0.1315) - less room to run",
+          "Near its 30-day high (~$0.1308) - less room to run",
           -1
         ],
         [
@@ -3079,7 +3079,7 @@
         ],
         [
           "Stretch from long-term average",
-          "+34.9% above its long-term average - very stretched",
+          "+34.4% above its long-term average - very stretched",
           -2
         ],
         [
@@ -3092,12 +3092,12 @@
       "id": "arbitrum",
       "symbol": "ARB",
       "name": "Arbitrum",
-      "price": 0.131751,
-      "pct_24h": 11.15135,
+      "price": 0.131235,
+      "pct_24h": 5.90902,
       "pct_7d": 44.2,
       "support_30d": 0.07272258489044682,
-      "resistance_30d": 0.13147666558020976,
-      "as_of": "2026-09-03 16:05:23",
+      "resistance_30d": 0.13077767695798714,
+      "as_of": "2026-09-03 16:45:29",
       "stale": false
     }
   },
@@ -3106,16 +3106,16 @@
     "key": "BTC",
     "name": "Bitcoin",
     "emoji": "\u20bf",
-    "price": 80856,
+    "price": 80816,
     "high_24h": 81332,
     "low_24h": 76952,
-    "pct_24h": 4.48045,
+    "pct_24h": 4.58107,
     "pct_7d": 1.4,
     "pct_30d": 26.9,
-    "sma50": 68449.73783293372,
-    "sma200": 69545.68302716444,
+    "sma50": 68449.05579699579,
+    "sma200": 69545.51251817995,
     "support_30d": 62843.70368466329,
-    "resistance_30d": 80848.34566112941,
+    "resistance_30d": 80814.24386423282,
     "mark_price": 77914.96355797,
     "index_price": 77941.555,
     "funding_rate": 6.048e-05,
@@ -3128,14 +3128,14 @@
     "key": "ETH",
     "name": "Ethereum",
     "emoji": "\u039e",
-    "price": 2495.07,
+    "price": 2491.01,
     "high_24h": 2515.54,
     "low_24h": 2372.43,
-    "pct_24h": 4.14622,
+    "pct_24h": 4.22131,
     "pct_7d": -0.1,
     "pct_30d": 34.4,
-    "sma50": 2064.976787261622,
-    "sma200": 2030.6149864510503,
+    "sma50": 2064.903605325331,
+    "sma200": 2030.5966909669773,
     "support_30d": 1871.3976551883159,
     "resistance_30d": 2514.967577695514,
     "mark_price": 2406.5605969,
