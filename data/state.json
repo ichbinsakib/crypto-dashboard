@@ -4,7 +4,7 @@
   "_alerts_state": {
     "btc-resistance-break": {
       "triggered": true,
-      "last_triggered_at": "2026-09-03 13:40:22"
+      "last_triggered_at": "2026-09-03 13:45:22"
     },
     "btc-support-break": {
       "triggered": false,
@@ -1423,7 +1423,7 @@
     "crypto-com-chain": {
       "label": "\ud83d\udfe1 HOLD / NEUTRAL",
       "status": "neutral",
-      "score": 0,
+      "score": -1,
       "rows": [
         [
           "Price vs. recent range",
@@ -1442,12 +1442,12 @@
         ],
         [
           "Recent trend",
-          "Chopping sideways - no clear trend",
-          0
+          "Trending down - avoid catching a falling knife",
+          -1
         ],
         [
           "Stretch from long-term average",
-          "-17.0% below its long-term average - confirmed downtrend",
+          "-17.8% below its long-term average - confirmed downtrend",
           -1
         ],
         [
@@ -1460,12 +1460,12 @@
       "id": "crypto-com-chain",
       "symbol": "CRO",
       "name": "Cronos",
-      "price": 0.055449,
-      "pct_24h": 0.44113,
-      "pct_7d": -7.2,
+      "price": 0.054902,
+      "pct_24h": 0.33343,
+      "pct_7d": -9.8,
       "support_30d": 0.04621382085807831,
       "resistance_30d": 0.06091104752771909,
-      "as_of": "2026-09-03 07:22:55",
+      "as_of": "2026-09-03 13:45:22",
       "stale": false
     },
     "ethereum-classic": {
@@ -1879,7 +1879,7 @@
         ],
         [
           "Stretch from long-term average",
-          "-26.2% below its long-term average - confirmed downtrend",
+          "-26.1% below its long-term average - confirmed downtrend",
           -1
         ],
         [
@@ -1892,12 +1892,12 @@
       "id": "bitcoin-cash",
       "symbol": "BCH",
       "name": "Bitcoin Cash",
-      "price": 251.15,
-      "pct_24h": 3.17793,
+      "price": 251.6,
+      "pct_24h": 2.53535,
       "pct_7d": -6.5,
       "support_30d": 203.50169440615565,
       "resistance_30d": 288.10955405353275,
-      "as_of": "2026-09-03 13:35:25",
+      "as_of": "2026-09-03 13:45:22",
       "stale": false
     },
     "mantle": {
@@ -2503,7 +2503,7 @@
         ],
         [
           "Stretch from long-term average",
-          "-5.8% vs its long-term average - not stretched either way",
+          "-5.1% vs its long-term average - not stretched either way",
           0
         ],
         [
@@ -2516,12 +2516,12 @@
       "id": "quant-network",
       "symbol": "QNT",
       "name": "Quant",
-      "price": 64.7,
-      "pct_24h": -0.75345,
-      "pct_7d": 3.2,
+      "price": 65.19,
+      "pct_24h": 1.56691,
+      "pct_7d": 5.1,
       "support_30d": 55.905981995619285,
       "resistance_30d": 66.68821517512447,
-      "as_of": "2026-09-03 08:40:22",
+      "as_of": "2026-09-03 13:45:22",
       "stale": false
     },
     "tether-gold": {
@@ -3106,14 +3106,14 @@
     "key": "BTC",
     "name": "Bitcoin",
     "emoji": "\u20bf",
-    "price": 78706,
+    "price": 78875,
     "high_24h": 78725,
     "low_24h": 76733,
-    "pct_24h": 2.68188,
+    "pct_24h": 2.04905,
     "pct_7d": -1.0,
     "pct_30d": 23.3,
-    "sma50": 68405.71432523146,
-    "sma200": 69534.67715023887,
+    "sma50": 68409.4345925242,
+    "sma200": 69535.60721706206,
     "support_30d": 62843.70368466329,
     "resistance_30d": 80268.37474707834,
     "mark_price": 77914.96355797,
@@ -3128,14 +3128,14 @@
     "key": "ETH",
     "name": "Ethereum",
     "emoji": "\u039e",
-    "price": 2427.89,
+    "price": 2434.16,
     "high_24h": 2424.53,
     "low_24h": 2372.43,
-    "pct_24h": 1.97468,
+    "pct_24h": 1.05883,
     "pct_7d": -3.1,
     "pct_30d": 29.6,
-    "sma50": 2063.6134663488538,
-    "sma200": 2030.274156222858,
+    "sma50": 2063.7438002326967,
+    "sma200": 2030.3067396938186,
     "support_30d": 1871.3976551883159,
     "resistance_30d": 2514.967577695514,
     "mark_price": 2406.5605969,
