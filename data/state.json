@@ -4,7 +4,7 @@
   "_alerts_state": {
     "btc-resistance-break": {
       "triggered": true,
-      "last_triggered_at": "2026-09-03 23:45:22"
+      "last_triggered_at": "2026-09-03 23:50:23"
     },
     "btc-support-break": {
       "triggered": false,
@@ -439,7 +439,7 @@
         ],
         [
           "Stretch from long-term average",
-          "+51.7% above its long-term average - very stretched",
+          "+51.6% above its long-term average - very stretched",
           -2
         ],
         [
@@ -452,12 +452,12 @@
       "id": "rain",
       "symbol": "RAIN",
       "name": "Rain",
-      "price": 0.0171385,
-      "pct_24h": 2.45191,
-      "pct_7d": -1.4,
+      "price": 0.01713728,
+      "pct_24h": 2.39452,
+      "pct_7d": -0.9,
       "support_30d": 0.012542200634745275,
       "resistance_30d": 0.018158429442510105,
-      "as_of": "2026-09-03 19:50:27",
+      "as_of": "2026-09-03 23:50:23",
       "stale": false
     },
     "chainlink": {
@@ -941,13 +941,13 @@
       "stale": false
     },
     "aster-2": {
-      "label": "\ud83d\udd34 CAUTION - REDUCE NEW BUYS",
-      "status": "bearish",
-      "score": -2,
+      "label": "\ud83d\udfe1 HOLD / NEUTRAL",
+      "status": "neutral",
+      "score": -1,
       "rows": [
         [
           "Price vs. recent range",
-          "Near its 30-day high (~$0.7301) - less room to run",
+          "Near its 30-day high (~$0.7276) - less room to run",
           -1
         ],
         [
@@ -967,8 +967,8 @@
         ],
         [
           "Stretch from long-term average",
-          "+10.3% above its long-term average - a bit stretched",
-          -1
+          "+9.0% vs its long-term average - not stretched either way",
+          0
         ],
         [
           "Leverage traders' bias",
@@ -976,16 +976,16 @@
           0
         ]
       ],
-      "plain": "Getting risky - I'd hold off on new buys until this cools down.",
+      "plain": "No real edge either way right now - fine to just wait and watch.",
       "id": "aster-2",
       "symbol": "ASTER",
       "name": "Aster",
-      "price": 0.72921,
-      "pct_24h": -1.19609,
-      "pct_7d": 2.6,
+      "price": 0.720838,
+      "pct_24h": -0.19037,
+      "pct_7d": 1.4,
       "support_30d": 0.5986101196690307,
-      "resistance_30d": 0.7301114771985528,
-      "as_of": "2026-09-03 20:10:26",
+      "resistance_30d": 0.7276231199504045,
+      "as_of": "2026-09-03 23:50:23",
       "stale": false
     },
     "worldcoin-wld": {
@@ -1317,11 +1317,11 @@
       "symbol": "HTX",
       "name": "HTX DAO",
       "price": 1.65e-06,
-      "pct_24h": 2.61846,
+      "pct_24h": 2.69097,
       "pct_7d": -1.8,
       "support_30d": 1.6023985995039954e-06,
       "resistance_30d": 1.8259977214551937e-06,
-      "as_of": "2026-09-03 23:10:23",
+      "as_of": "2026-09-03 23:50:23",
       "stale": false
     },
     "superstate-short-duration-us-government-securities-fund-ustb": {
@@ -3101,26 +3101,28 @@
       "stale": false
     }
   },
-  "_strong_buy_state": {},
+  "_strong_buy_state": {
+    "15m:SOL": true
+  },
   "BTC": {
     "key": "BTC",
     "name": "Bitcoin",
     "emoji": "\u20bf",
-    "price": 81258,
+    "price": 81215,
     "high_24h": 82108,
     "low_24h": 76975,
-    "pct_24h": 5.38599,
+    "pct_24h": 5.21905,
     "pct_7d": 1.2,
     "pct_30d": 26.5,
-    "sma50": 68458.45263730976,
-    "sma200": 69547.86172825845,
+    "sma50": 68457.055862698,
+    "sma200": 69547.51253460551,
     "support_30d": 62843.70368466329,
-    "resistance_30d": 81284.08587993144,
-    "mark_price": 81199.38161594,
-    "index_price": 81228.99195652,
-    "funding_rate": 0.0001,
-    "oi_change_pct": 3.6171614747261063,
-    "oi_now": 111891.484,
+    "resistance_30d": 81214.24714934369,
+    "mark_price": 81220.58098551,
+    "index_price": 81251.24478261,
+    "funding_rate": 8.351e-05,
+    "oi_change_pct": 5.168658539514164,
+    "oi_now": 113155.747,
     "fng_value": 65,
     "fng_class": "Greed"
   },
@@ -3128,21 +3130,21 @@
     "key": "ETH",
     "name": "Ethereum",
     "emoji": "\u039e",
-    "price": 2506.45,
+    "price": 2505.86,
     "high_24h": 2523.23,
     "low_24h": 2372.43,
-    "pct_24h": 5.17777,
+    "pct_24h": 5.00908,
     "pct_7d": -0.2,
     "pct_30d": 33.5,
-    "sma50": 2065.2222435603308,
-    "sma200": 2030.6763505257272,
+    "sma50": 2065.2030328281435,
+    "sma200": 2030.6715478426806,
     "support_30d": 1871.3976551883159,
     "resistance_30d": 2514.967577695514,
-    "mark_price": 2511.59749612,
-    "index_price": 2512.24604651,
-    "funding_rate": 0.0001,
-    "oi_change_pct": -0.42713219532512353,
-    "oi_now": 2298170.913,
+    "mark_price": 2505.87444186,
+    "index_price": 2506.71976744,
+    "funding_rate": 9.436e-05,
+    "oi_change_pct": -0.41148401500762866,
+    "oi_now": 2293951.694,
     "fng_value": 65,
     "fng_class": "Greed"
   }
