@@ -4,7 +4,7 @@
   "_alerts_state": {
     "btc-resistance-break": {
       "triggered": true,
-      "last_triggered_at": "2026-09-03 19:00:36"
+      "last_triggered_at": "2026-09-03 19:05:19"
     },
     "btc-support-break": {
       "triggered": false,
@@ -1907,7 +1907,7 @@
       "rows": [
         [
           "Price vs. recent range",
-          "Near its 30-day high (~$0.5747) - less room to run",
+          "Near its 30-day high (~$0.5754) - less room to run",
           -1
         ],
         [
@@ -1927,7 +1927,7 @@
         ],
         [
           "Stretch from long-term average",
-          "-4.1% vs its long-term average - not stretched either way",
+          "-4.0% vs its long-term average - not stretched either way",
           0
         ],
         [
@@ -1940,12 +1940,12 @@
       "id": "mantle",
       "symbol": "MNT",
       "name": "Mantle",
-      "price": 0.574618,
-      "pct_24h": 3.09221,
-      "pct_7d": 10.7,
+      "price": 0.575155,
+      "pct_24h": 3.15785,
+      "pct_7d": 11.0,
       "support_30d": 0.4069083191693496,
-      "resistance_30d": 0.5747414846646374,
-      "as_of": "2026-09-03 18:10:25",
+      "resistance_30d": 0.575361346932941,
+      "as_of": "2026-09-03 19:05:19",
       "stale": false
     },
     "polkadot": {
@@ -2003,7 +2003,7 @@
       "rows": [
         [
           "Price vs. recent range",
-          "Near its 30-day high (~$6.18) - less room to run",
+          "Near its 30-day high (~$6.28) - less room to run",
           -1
         ],
         [
@@ -2023,7 +2023,7 @@
         ],
         [
           "Stretch from long-term average",
-          "+73.6% above its long-term average - very stretched",
+          "+76.7% above its long-term average - very stretched",
           -2
         ],
         [
@@ -2036,12 +2036,12 @@
       "id": "uniswap",
       "symbol": "UNI",
       "name": "Uniswap",
-      "price": 6.17,
-      "pct_24h": 6.35284,
-      "pct_7d": 38.4,
+      "price": 6.28,
+      "pct_24h": 8.30528,
+      "pct_7d": 35.9,
       "support_30d": 3.1971416665971573,
-      "resistance_30d": 6.175624742788961,
-      "as_of": "2026-09-03 14:40:24",
+      "resistance_30d": 6.284283345691024,
+      "as_of": "2026-09-03 19:05:19",
       "stale": false
     },
     "pi-network": {
@@ -2861,14 +2861,14 @@
       "stale": false
     },
     "okb": {
-      "label": "\ud83d\udfe1 HOLD / NEUTRAL",
-      "status": "neutral",
-      "score": -1,
+      "label": "\ud83d\udd34 CAUTION - REDUCE NEW BUYS",
+      "status": "bearish",
+      "score": -2,
       "rows": [
         [
           "Price vs. recent range",
-          "Sitting in the middle of its 30-day range",
-          0
+          "Near its 30-day high (~$115.83) - less room to run",
+          -1
         ],
         [
           "Crowd mood (Fear & Greed)",
@@ -2887,7 +2887,7 @@
         ],
         [
           "Stretch from long-term average",
-          "+27.5% above its long-term average - a bit stretched",
+          "+27.7% above its long-term average - a bit stretched",
           -1
         ],
         [
@@ -2896,16 +2896,16 @@
           0
         ]
       ],
-      "plain": "No real edge either way right now - fine to just wait and watch.",
+      "plain": "Getting risky - I'd hold off on new buys until this cools down.",
       "id": "okb",
       "symbol": "OKB",
       "name": "OKB",
-      "price": 109.93,
-      "pct_24h": 3.68406,
+      "price": 110.08,
+      "pct_24h": 3.92081,
       "pct_7d": -4.1,
       "support_30d": 85.29568594571903,
       "resistance_30d": 115.8310797114581,
-      "as_of": "2026-09-03 19:00:36",
+      "as_of": "2026-09-03 19:05:19",
       "stale": false
     },
     "just": {
@@ -3106,16 +3106,16 @@
     "key": "BTC",
     "name": "Bitcoin",
     "emoji": "\u20bf",
-    "price": 81227,
+    "price": 81242,
     "high_24h": 81332,
     "low_24h": 76975,
-    "pct_24h": 5.02487,
-    "pct_7d": 0.8,
-    "pct_30d": 26.8,
-    "sma50": 68457.7274529583,
-    "sma200": 69547.68043217059,
+    "pct_24h": 5.05225,
+    "pct_7d": 1.0,
+    "pct_30d": 27.1,
+    "sma50": 68457.6178876615,
+    "sma200": 69547.65304084639,
     "support_30d": 62843.70368466329,
-    "resistance_30d": 81247.82666235833,
+    "resistance_30d": 81242.34839751867,
     "mark_price": 81199.38161594,
     "index_price": 81228.99195652,
     "funding_rate": 0.0001,
@@ -3128,16 +3128,16 @@
     "key": "ETH",
     "name": "Ethereum",
     "emoji": "\u039e",
-    "price": 2510.9,
+    "price": 2515.93,
     "high_24h": 2515.54,
     "low_24h": 2372.43,
-    "pct_24h": 4.88545,
-    "pct_7d": -0.8,
-    "pct_30d": 33.9,
-    "sma50": 2065.315882001188,
-    "sma200": 2030.6997601359417,
+    "pct_24h": 5.0859,
+    "pct_7d": -0.3,
+    "pct_30d": 34.5,
+    "sma50": 2065.40293645441,
+    "sma200": 2030.7215237492471,
     "support_30d": 1871.3976551883159,
-    "resistance_30d": 2514.967577695514,
+    "resistance_30d": 2515.886104341258,
     "mark_price": 2511.59749612,
     "index_price": 2512.24604651,
     "funding_rate": 0.0001,
