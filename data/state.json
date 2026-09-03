@@ -4,7 +4,7 @@
   "_alerts_state": {
     "btc-resistance-break": {
       "triggered": true,
-      "last_triggered_at": "2026-09-03 16:15:29"
+      "last_triggered_at": "2026-09-03 16:20:27"
     },
     "btc-support-break": {
       "triggered": false,
@@ -367,11 +367,11 @@
     "zcash": {
       "label": "\ud83d\udd34 DISTRIBUTION ZONE",
       "status": "bearish",
-      "score": -5,
+      "score": -8,
       "rows": [
         [
           "Price vs. recent range",
-          "Near its 30-day high (~$871.33) - less room to run",
+          "Near its 30-day high (~$940.48) - less room to run",
           -1
         ],
         [
@@ -386,12 +386,12 @@
         ],
         [
           "Recent trend",
-          "Trending up steadily - healthy",
-          1
+          "Shooting straight up - classic blow-off top risk, don't chase",
+          -2
         ],
         [
           "Stretch from long-term average",
-          "+99.3% above its long-term average - very stretched",
+          "+114.7% above its long-term average - very stretched",
           -2
         ],
         [
@@ -404,12 +404,12 @@
       "id": "zcash",
       "symbol": "ZEC",
       "name": "Zcash",
-      "price": 871.18,
-      "pct_24h": 7.7458,
-      "pct_7d": 9.3,
+      "price": 939.13,
+      "pct_24h": 14.73507,
+      "pct_7d": 20.0,
       "support_30d": 480.66499804092575,
-      "resistance_30d": 871.3344400063686,
-      "as_of": "2026-09-03 15:10:22",
+      "resistance_30d": 940.4843486150097,
+      "as_of": "2026-09-03 16:20:27",
       "stale": false
     },
     "rain": {
@@ -583,7 +583,7 @@
         ],
         [
           "Stretch from long-term average",
-          "-2.3% vs its long-term average - not stretched either way",
+          "-2.8% vs its long-term average - not stretched either way",
           0
         ],
         [
@@ -596,12 +596,12 @@
       "id": "leo-token",
       "symbol": "LEO",
       "name": "LEO Token",
-      "price": 9.39,
-      "pct_24h": 1.52634,
-      "pct_7d": 0.4,
+      "price": 9.34,
+      "pct_24h": 1.08197,
+      "pct_7d": 0.1,
       "support_30d": 8.948412455130585,
       "resistance_30d": 9.755640407805231,
-      "as_of": "2026-09-03 12:05:21",
+      "as_of": "2026-09-03 16:20:27",
       "stale": false
     },
     "monero": {
@@ -1379,7 +1379,7 @@
       "rows": [
         [
           "Price vs. recent range",
-          "Near its 30-day high (~$8.60) - less room to run",
+          "Near its 30-day high (~$8.59) - less room to run",
           -1
         ],
         [
@@ -1413,11 +1413,11 @@
       "symbol": "GT",
       "name": "Gate",
       "price": 8.59,
-      "pct_24h": 7.70766,
+      "pct_24h": 7.35117,
       "pct_7d": 6.5,
       "support_30d": 6.541901758982219,
-      "resistance_30d": 8.595922577370196,
-      "as_of": "2026-09-03 16:15:29",
+      "resistance_30d": 8.590457043862878,
+      "as_of": "2026-09-03 16:20:27",
       "stale": false
     },
     "crypto-com-chain": {
@@ -1495,7 +1495,7 @@
         ],
         [
           "Stretch from long-term average",
-          "-6.2% vs its long-term average - not stretched either way",
+          "-6.4% vs its long-term average - not stretched either way",
           0
         ],
         [
@@ -1508,12 +1508,12 @@
       "id": "ethereum-classic",
       "symbol": "ETC",
       "name": "Ethereum Classic",
-      "price": 7.63,
-      "pct_24h": 5.37697,
-      "pct_7d": -3.0,
+      "price": 7.61,
+      "pct_24h": 5.19128,
+      "pct_7d": -2.0,
       "support_30d": 6.079473341192034,
       "resistance_30d": 8.342731558283557,
-      "as_of": "2026-09-03 15:45:22",
+      "as_of": "2026-09-03 16:20:27",
       "stale": false
     },
     "pump-fun": {
@@ -1907,7 +1907,7 @@
       "rows": [
         [
           "Price vs. recent range",
-          "Near its 30-day high (~$0.5690) - less room to run",
+          "Near its 30-day high (~$0.5677) - less room to run",
           -1
         ],
         [
@@ -1927,7 +1927,7 @@
         ],
         [
           "Stretch from long-term average",
-          "-5.0% vs its long-term average - not stretched either way",
+          "-5.3% vs its long-term average - not stretched either way",
           0
         ],
         [
@@ -1940,12 +1940,12 @@
       "id": "mantle",
       "symbol": "MNT",
       "name": "Mantle",
-      "price": 0.568986,
-      "pct_24h": 2.99239,
+      "price": 0.567741,
+      "pct_24h": 2.35736,
       "pct_7d": 9.7,
       "support_30d": 0.4069083191693496,
-      "resistance_30d": 0.5689861624908293,
-      "as_of": "2026-09-03 16:10:23",
+      "resistance_30d": 0.5676984346385505,
+      "as_of": "2026-09-03 16:20:27",
       "stale": false
     },
     "polkadot": {
@@ -3106,16 +3106,16 @@
     "key": "BTC",
     "name": "Bitcoin",
     "emoji": "\u20bf",
-    "price": 80951,
+    "price": 80756,
     "high_24h": 81332,
     "low_24h": 76952,
-    "pct_24h": 4.67041,
+    "pct_24h": 4.32869,
     "pct_7d": 1.4,
     "pct_30d": 26.9,
-    "sma50": 68451.43026908701,
-    "sma200": 69546.10613620277,
+    "sma50": 68447.7295474724,
+    "sma200": 69545.18095579911,
     "support_30d": 62843.70368466329,
-    "resistance_30d": 80932.96746879404,
+    "resistance_30d": 80747.93138806292,
     "mark_price": 77914.96355797,
     "index_price": 77941.555,
     "funding_rate": 6.048e-05,
@@ -3128,14 +3128,14 @@
     "key": "ETH",
     "name": "Ethereum",
     "emoji": "\u039e",
-    "price": 2500.92,
+    "price": 2494.43,
     "high_24h": 2515.54,
     "low_24h": 2372.43,
-    "pct_24h": 4.43913,
+    "pct_24h": 4.11743,
     "pct_7d": -0.1,
     "pct_30d": 34.4,
-    "sma50": 2065.103663076692,
-    "sma200": 2030.6467054048176,
+    "sma50": 2064.9796986009114,
+    "sma200": 2030.6157142858726,
     "support_30d": 1871.3976551883159,
     "resistance_30d": 2514.967577695514,
     "mark_price": 2406.5605969,
