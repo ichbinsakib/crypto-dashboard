@@ -557,14 +557,14 @@
       "stale": false
     },
     "leo-token": {
-      "label": "\ud83d\udfe1 HOLD / NEUTRAL",
-      "status": "neutral",
-      "score": 0,
+      "label": "\ud83d\udfe2 LEAN ACCUMULATE",
+      "status": "bullish",
+      "score": 3,
       "rows": [
         [
           "Price vs. recent range",
-          "Near its 30-day high (~$9.76) - less room to run",
-          -1
+          "Near its 30-day low (~$8.95) - historically a better entry",
+          2
         ],
         [
           "Crowd mood (Fear & Greed)",
@@ -583,7 +583,7 @@
         ],
         [
           "Stretch from long-term average",
-          "-1.6% vs its long-term average - not stretched either way",
+          "-2.3% vs its long-term average - not stretched either way",
           0
         ],
         [
@@ -592,16 +592,16 @@
           0
         ]
       ],
-      "plain": "No real edge either way right now - fine to just wait and watch.",
+      "plain": "Leans toward a decent spot to slowly add (DCA) - not a strong signal, just a lean.",
       "id": "leo-token",
       "symbol": "LEO",
       "name": "LEO Token",
-      "price": 9.45,
-      "pct_24h": 2.16172,
-      "pct_7d": 0.7,
+      "price": 9.39,
+      "pct_24h": 1.52634,
+      "pct_7d": 0.4,
       "support_30d": 8.948412455130585,
       "resistance_30d": 9.755640407805231,
-      "as_of": "2026-09-03 11:40:22",
+      "as_of": "2026-09-03 12:05:21",
       "stale": false
     },
     "monero": {
@@ -1111,7 +1111,7 @@
         ],
         [
           "Stretch from long-term average",
-          "+4.0% vs its long-term average - not stretched either way",
+          "+3.9% vs its long-term average - not stretched either way",
           0
         ],
         [
@@ -1124,12 +1124,12 @@
       "id": "polygon-ecosystem-token",
       "symbol": "POL",
       "name": "POL (ex-MATIC)",
-      "price": 0.092279,
-      "pct_24h": 0.06457,
-      "pct_7d": -15.5,
+      "price": 0.092202,
+      "pct_24h": 0.39991,
+      "pct_7d": -14.1,
       "support_30d": 0.07382135255393793,
       "resistance_30d": 0.12250456198546959,
-      "as_of": "2026-09-03 11:50:20",
+      "as_of": "2026-09-03 12:05:21",
       "stale": false
     },
     "blackrock-usd-institutional-digital-liquidity-fund": {
@@ -2573,9 +2573,9 @@
       "stale": false
     },
     "bitway": {
-      "label": "\ud83d\udd34 CAUTION - REDUCE NEW BUYS",
-      "status": "bearish",
-      "score": -3,
+      "label": "\ud83d\udfe1 HOLD / NEUTRAL",
+      "status": "neutral",
+      "score": -1,
       "rows": [
         [
           "Price vs. recent range",
@@ -2594,8 +2594,8 @@
         ],
         [
           "Recent trend",
-          "Shooting straight up - classic blow-off top risk, don't chase",
-          -2
+          "Chopping sideways - no clear trend",
+          0
         ],
         [
           "Stretch from long-term average",
@@ -2608,16 +2608,16 @@
           0
         ]
       ],
-      "plain": "Getting risky - I'd hold off on new buys until this cools down.",
+      "plain": "No real edge either way right now - fine to just wait and watch.",
       "id": "bitway",
       "symbol": "BTW",
       "name": "Bitway",
-      "price": 0.459942,
-      "pct_24h": 7.89267,
-      "pct_7d": 21.3,
+      "price": 0.428569,
+      "pct_24h": -2.58966,
+      "pct_7d": 6.4,
       "support_30d": 0.16210808658610265,
       "resistance_30d": 0.48788437226017506,
-      "as_of": "2026-09-03 04:55:19",
+      "as_of": "2026-09-03 12:05:21",
       "stale": false
     },
     "world-liberty-financial": {
@@ -3106,21 +3106,21 @@
     "key": "BTC",
     "name": "Bitcoin",
     "emoji": "\u20bf",
-    "price": 77901,
+    "price": 77890,
     "high_24h": 78061,
     "low_24h": 76591,
-    "pct_24h": 1.55604,
-    "pct_7d": -2.9,
+    "pct_24h": 1.56196,
+    "pct_7d": -2.1,
     "pct_30d": 22.3,
-    "sma50": 68391.38992157529,
-    "sma200": 69531.09604932483,
+    "sma50": 68390.75006999688,
+    "sma200": 69530.93608643023,
     "support_30d": 62843.70368466329,
     "resistance_30d": 80268.37474707834,
-    "mark_price": 77897.6,
-    "index_price": 77922.93282609,
-    "funding_rate": 5.253e-05,
-    "oi_change_pct": -1.910858356355992,
-    "oi_now": 106782.796,
+    "mark_price": 77914.96355797,
+    "index_price": 77941.555,
+    "funding_rate": 6.048e-05,
+    "oi_change_pct": -1.0372734933179812,
+    "oi_now": 107038.084,
     "fng_value": 65,
     "fng_class": "Greed"
   },
@@ -3128,21 +3128,21 @@
     "key": "ETH",
     "name": "Ethereum",
     "emoji": "\u039e",
-    "price": 2406.11,
+    "price": 2405.7,
     "high_24h": 2415.54,
     "low_24h": 2372.43,
-    "pct_24h": 1.14297,
-    "pct_7d": -5.5,
-    "pct_30d": 29.1,
-    "sma50": 2063.219090362477,
-    "sma200": 2030.1755622262638,
+    "pct_24h": 1.21421,
+    "pct_7d": -3.8,
+    "pct_30d": 29.0,
+    "sma50": 2063.2079242729496,
+    "sma200": 2030.172770703882,
     "support_30d": 1871.3976551883159,
     "resistance_30d": 2514.967577695514,
-    "mark_price": 2403.31565116,
-    "index_price": 2404.31930233,
-    "funding_rate": 4.721e-05,
-    "oi_change_pct": -1.874531920874271,
-    "oi_now": 2300840.611,
+    "mark_price": 2406.5605969,
+    "index_price": 2407.40348837,
+    "funding_rate": 5.364e-05,
+    "oi_change_pct": -2.0125143270197583,
+    "oi_now": 2300636.399,
     "fng_value": 65,
     "fng_class": "Greed"
   }
