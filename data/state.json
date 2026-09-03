@@ -3,8 +3,8 @@
   "_fng_classification": "Greed",
   "_alerts_state": {
     "btc-resistance-break": {
-      "triggered": false,
-      "last_triggered_at": "2026-09-01 08:05:20"
+      "triggered": true,
+      "last_triggered_at": "2026-09-03 13:01:12"
     },
     "btc-support-break": {
       "triggered": false,
@@ -1831,7 +1831,7 @@
         ],
         [
           "Stretch from long-term average",
-          "+53.2% above its long-term average - very stretched",
+          "+56.6% above its long-term average - very stretched",
           -2
         ],
         [
@@ -1844,12 +1844,12 @@
       "id": "ethena",
       "symbol": "ENA",
       "name": "Ethena",
-      "price": 0.152901,
-      "pct_24h": 1.13157,
-      "pct_7d": -2.5,
+      "price": 0.156352,
+      "pct_24h": 4.75078,
+      "pct_7d": 5.8,
       "support_30d": 0.08231050586125944,
       "resistance_30d": 0.17000615068266245,
-      "as_of": "2026-09-03 11:35:19",
+      "as_of": "2026-09-03 13:01:12",
       "stale": false
     },
     "bitcoin-cash": {
@@ -2525,14 +2525,14 @@
       "stale": false
     },
     "tether-gold": {
-      "label": "\ud83d\udfe2 LEAN ACCUMULATE",
-      "status": "bullish",
-      "score": 3,
+      "label": "\ud83d\udfe1 HOLD / NEUTRAL",
+      "status": "neutral",
+      "score": 0,
       "rows": [
         [
           "Price vs. recent range",
-          "Near its 30-day low (~$4,232.95) - historically a better entry",
-          2
+          "Near its 30-day high (~$4,662.51) - less room to run",
+          -1
         ],
         [
           "Crowd mood (Fear & Greed)",
@@ -2551,7 +2551,7 @@
         ],
         [
           "Stretch from long-term average",
-          "-1.5% vs its long-term average - not stretched either way",
+          "-0.5% vs its long-term average - not stretched either way",
           0
         ],
         [
@@ -2560,16 +2560,16 @@
           0
         ]
       ],
-      "plain": "Leans toward a decent spot to slowly add (DCA) - not a strong signal, just a lean.",
+      "plain": "No real edge either way right now - fine to just wait and watch.",
       "id": "tether-gold",
       "symbol": "XAUT",
       "name": "Tether Gold",
-      "price": 4437.05,
-      "pct_24h": 2.41565,
-      "pct_7d": -3.1,
+      "price": 4481.75,
+      "pct_24h": 3.35963,
+      "pct_7d": -2.3,
       "support_30d": 4232.950142102185,
       "resistance_30d": 4662.510537821146,
-      "as_of": "2026-09-03 12:15:22",
+      "as_of": "2026-09-03 13:01:12",
       "stale": false
     },
     "bitway": {
@@ -2909,13 +2909,13 @@
       "stale": false
     },
     "just": {
-      "label": "\ud83d\udfe1 HOLD / NEUTRAL",
-      "status": "neutral",
-      "score": -1,
+      "label": "\ud83d\udd34 CAUTION - REDUCE NEW BUYS",
+      "status": "bearish",
+      "score": -2,
       "rows": [
         [
           "Price vs. recent range",
-          "Near its 30-day high (~$0.1084) - less room to run",
+          "Near its 30-day high (~$0.1082) - less room to run",
           -1
         ],
         [
@@ -2930,12 +2930,12 @@
         ],
         [
           "Recent trend",
-          "Trending up steadily - healthy",
-          1
+          "Chopping sideways - no clear trend",
+          0
         ],
         [
           "Stretch from long-term average",
-          "+33.2% above its long-term average - very stretched",
+          "+32.6% above its long-term average - very stretched",
           -2
         ],
         [
@@ -2944,16 +2944,16 @@
           0
         ]
       ],
-      "plain": "No real edge either way right now - fine to just wait and watch.",
+      "plain": "Getting risky - I'd hold off on new buys until this cools down.",
       "id": "just",
       "symbol": "JST",
       "name": "JUST",
-      "price": 0.108386,
-      "pct_24h": 1.63083,
-      "pct_7d": 8.3,
+      "price": 0.107885,
+      "pct_24h": 1.80221,
+      "pct_7d": 7.8,
       "support_30d": 0.0946830738697126,
-      "resistance_30d": 0.10839421304121871,
-      "as_of": "2026-09-03 12:15:22",
+      "resistance_30d": 0.1082125131964855,
+      "as_of": "2026-09-03 13:01:12",
       "stale": false
     },
     "algorand": {
@@ -3106,14 +3106,14 @@
     "key": "BTC",
     "name": "Bitcoin",
     "emoji": "\u20bf",
-    "price": 78424,
+    "price": 78649,
     "high_24h": 78061,
-    "low_24h": 76591,
-    "pct_24h": 2.26229,
-    "pct_7d": -2.1,
-    "pct_30d": 22.3,
-    "sma50": 68402.00236976257,
-    "sma200": 69533.74916137166,
+    "low_24h": 76733,
+    "pct_24h": 2.74443,
+    "pct_7d": -1.0,
+    "pct_30d": 23.3,
+    "sma50": 68407.26696391251,
+    "sma200": 69535.06530990913,
     "support_30d": 62843.70368466329,
     "resistance_30d": 80268.37474707834,
     "mark_price": 77914.96355797,
@@ -3128,14 +3128,14 @@
     "key": "ETH",
     "name": "Ethereum",
     "emoji": "\u039e",
-    "price": 2417.75,
+    "price": 2422.81,
     "high_24h": 2415.54,
     "low_24h": 2372.43,
-    "pct_24h": 1.70056,
-    "pct_7d": -3.8,
-    "pct_30d": 29.0,
-    "sma50": 2063.471095845271,
-    "sma200": 2030.2385635969624,
+    "pct_24h": 1.96072,
+    "pct_7d": -3.1,
+    "pct_30d": 29.6,
+    "sma50": 2063.566728798284,
+    "sma200": 2030.2624718352156,
     "support_30d": 1871.3976551883159,
     "resistance_30d": 2514.967577695514,
     "mark_price": 2406.5605969,
