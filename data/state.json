@@ -967,7 +967,7 @@
         ],
         [
           "Stretch from long-term average",
-          "+9.4% vs its long-term average - not stretched either way",
+          "+8.2% vs its long-term average - not stretched either way",
           0
         ],
         [
@@ -980,12 +980,12 @@
       "id": "aster-2",
       "symbol": "ASTER",
       "name": "Aster",
-      "price": 0.72326,
-      "pct_24h": 4.0312,
+      "price": 0.715073,
+      "pct_24h": 2.28708,
       "pct_7d": 0.3,
       "support_30d": 0.5986101196690307,
       "resistance_30d": 0.7276231199504045,
-      "as_of": "2026-09-03 03:00:33",
+      "as_of": "2026-09-03 03:30:28",
       "stale": false
     },
     "worldcoin-wld": {
@@ -1303,7 +1303,7 @@
         ],
         [
           "Stretch from long-term average",
-          "-9.0% vs its long-term average - not stretched either way",
+          "-8.5% vs its long-term average - not stretched either way",
           0
         ],
         [
@@ -1316,12 +1316,12 @@
       "id": "htx-dao",
       "symbol": "HTX",
       "name": "HTX DAO",
-      "price": 1.61e-06,
-      "pct_24h": 0.39268,
-      "pct_7d": -6.3,
+      "price": 1.62e-06,
+      "pct_24h": 1.00026,
+      "pct_7d": -5.4,
       "support_30d": 1.6023985995039954e-06,
       "resistance_30d": 1.8259977214551937e-06,
-      "as_of": "2026-09-03 00:50:20",
+      "as_of": "2026-09-03 03:30:28",
       "stale": false
     },
     "superstate-short-duration-us-government-securities-fund-ustb": {
@@ -2071,7 +2071,7 @@
         ],
         [
           "Stretch from long-term average",
-          "-34.8% below its long-term average - confirmed downtrend",
+          "-35.1% below its long-term average - confirmed downtrend",
           -1
         ],
         [
@@ -2084,12 +2084,12 @@
       "id": "pi-network",
       "symbol": "PI",
       "name": "Pi Network",
-      "price": 0.094307,
-      "pct_24h": 1.3223,
-      "pct_7d": 4.5,
+      "price": 0.093809,
+      "pct_24h": 0.9039,
+      "pct_7d": 4.1,
       "support_30d": 0.08559695435343688,
       "resistance_30d": 0.09762045155043195,
-      "as_of": "2026-09-03 01:40:25",
+      "as_of": "2026-09-03 03:30:28",
       "stale": false
     },
     "ondo-finance": {
@@ -3101,19 +3101,21 @@
       "stale": false
     }
   },
-  "_strong_buy_state": {},
+  "_strong_buy_state": {
+    "1h:PI": true
+  },
   "BTC": {
     "key": "BTC",
     "name": "Bitcoin",
     "emoji": "\u20bf",
-    "price": 77769,
+    "price": 77748,
     "high_24h": 77831,
     "low_24h": 76298,
-    "pct_24h": 0.34804,
+    "pct_24h": 0.1749,
     "pct_7d": -1.4,
     "pct_30d": 21.9,
-    "sma50": 68388.0565305487,
-    "sma200": 69530.26270156818,
+    "sma50": 68387.82652932117,
+    "sma200": 69530.2052012613,
     "support_30d": 62843.70368466329,
     "resistance_30d": 80268.37474707834,
     "mark_price": 77119.0,
@@ -3128,14 +3130,14 @@
     "key": "ETH",
     "name": "Ethereum",
     "emoji": "\u039e",
-    "price": 2405.17,
+    "price": 2403.91,
     "high_24h": 2426.37,
     "low_24h": 2357.48,
-    "pct_24h": -0.45345,
+    "pct_24h": -0.6038,
     "pct_7d": -3.8,
     "pct_30d": 28.8,
-    "sma50": 2063.1821513860004,
-    "sma200": 2030.1663274821447,
+    "sma50": 2063.1668409855115,
+    "sma200": 2030.1624998820223,
     "support_30d": 1871.3976551883159,
     "resistance_30d": 2514.967577695514,
     "mark_price": 2383.65,
