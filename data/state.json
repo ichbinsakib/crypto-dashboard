@@ -4,7 +4,7 @@
   "_alerts_state": {
     "btc-resistance-break": {
       "triggered": true,
-      "last_triggered_at": "2026-09-03 14:55:19"
+      "last_triggered_at": "2026-09-03 15:00:33"
     },
     "btc-support-break": {
       "triggered": false,
@@ -487,7 +487,7 @@
         ],
         [
           "Stretch from long-term average",
-          "+25.5% above its long-term average - a bit stretched",
+          "+29.0% above its long-term average - a bit stretched",
           -1
         ],
         [
@@ -500,12 +500,12 @@
       "id": "chainlink",
       "symbol": "LINK",
       "name": "Chainlink",
-      "price": 11.44,
-      "pct_24h": 2.65625,
-      "pct_7d": -2.6,
+      "price": 11.76,
+      "pct_24h": 6.35523,
+      "pct_7d": -0.3,
       "support_30d": 8.153587762455743,
       "resistance_30d": 11.992351770358374,
-      "as_of": "2026-09-03 14:00:39",
+      "as_of": "2026-09-03 15:00:33",
       "stale": false
     },
     "whitebit": {
@@ -847,7 +847,7 @@
     "pepe": {
       "label": "\ud83d\udfe1 HOLD / NEUTRAL",
       "status": "neutral",
-      "score": 0,
+      "score": -1,
       "rows": [
         [
           "Price vs. recent range",
@@ -861,18 +861,18 @@
         ],
         [
           "Market phase (best guess)",
-          "Basing near the bottom - phase where smart money accumulates",
-          2
+          "Established uptrend - phase where price marks up",
+          1
         ],
         [
           "Recent trend",
-          "Trending down - avoid catching a falling knife",
-          -1
+          "Chopping sideways - no clear trend",
+          0
         ],
         [
           "Stretch from long-term average",
-          "+4.9% vs its long-term average - not stretched either way",
-          0
+          "+12.6% above its long-term average - a bit stretched",
+          -1
         ],
         [
           "Leverage traders' bias",
@@ -884,12 +884,12 @@
       "id": "pepe",
       "symbol": "PEPE",
       "name": "Pepe",
-      "price": 3.49e-06,
-      "pct_24h": 2.27518,
-      "pct_7d": -10.2,
+      "price": 3.75e-06,
+      "pct_24h": 10.19769,
+      "pct_7d": -4.9,
       "support_30d": 2.5716563906374582e-06,
       "resistance_30d": 4.122123035488615e-06,
-      "as_of": "2026-09-03 14:05:21",
+      "as_of": "2026-09-03 15:00:33",
       "stale": false
     },
     "avalanche-2": {
@@ -1831,7 +1831,7 @@
         ],
         [
           "Stretch from long-term average",
-          "+56.0% above its long-term average - very stretched",
+          "+60.4% above its long-term average - very stretched",
           -2
         ],
         [
@@ -1844,12 +1844,12 @@
       "id": "ethena",
       "symbol": "ENA",
       "name": "Ethena",
-      "price": 0.155675,
-      "pct_24h": 4.36022,
-      "pct_7d": 5.8,
+      "price": 0.160162,
+      "pct_24h": 6.81152,
+      "pct_7d": 3.4,
       "support_30d": 0.08231050586125944,
       "resistance_30d": 0.17000615068266245,
-      "as_of": "2026-09-03 13:15:25",
+      "as_of": "2026-09-03 15:00:33",
       "stale": false
     },
     "bitcoin-cash": {
@@ -2071,7 +2071,7 @@
         ],
         [
           "Stretch from long-term average",
-          "-34.4% below its long-term average - confirmed downtrend",
+          "-34.1% below its long-term average - confirmed downtrend",
           -1
         ],
         [
@@ -2084,12 +2084,12 @@
       "id": "pi-network",
       "symbol": "PI",
       "name": "Pi Network",
-      "price": 0.094887,
-      "pct_24h": 1.3964,
-      "pct_7d": 4.5,
+      "price": 0.095333,
+      "pct_24h": 1.55141,
+      "pct_7d": 4.9,
       "support_30d": 0.08559695435343688,
       "resistance_30d": 0.09762045155043195,
-      "as_of": "2026-09-03 14:35:24",
+      "as_of": "2026-09-03 15:00:33",
       "stale": false
     },
     "ondo-finance": {
@@ -3059,7 +3059,7 @@
       "rows": [
         [
           "Price vs. recent range",
-          "Near its 30-day high (~$0.1358) - less room to run",
+          "Near its 30-day high (~$0.1334) - less room to run",
           -1
         ],
         [
@@ -3079,7 +3079,7 @@
         ],
         [
           "Stretch from long-term average",
-          "+39.0% above its long-term average - very stretched",
+          "+36.6% above its long-term average - very stretched",
           -2
         ],
         [
@@ -3092,12 +3092,12 @@
       "id": "arbitrum",
       "symbol": "ARB",
       "name": "Arbitrum",
-      "price": 0.135777,
-      "pct_24h": 16.42732,
-      "pct_7d": 46.8,
+      "price": 0.133424,
+      "pct_24h": 15.19351,
+      "pct_7d": 46.7,
       "support_30d": 0.07272258489044682,
-      "resistance_30d": 0.13577674848482257,
-      "as_of": "2026-09-03 14:50:26",
+      "resistance_30d": 0.13344852746841704,
+      "as_of": "2026-09-03 15:00:33",
       "stale": false
     }
   },
@@ -3106,16 +3106,16 @@
     "key": "BTC",
     "name": "Bitcoin",
     "emoji": "\u20bf",
-    "price": 80190,
+    "price": 80272,
     "high_24h": 78926,
     "low_24h": 76733,
-    "pct_24h": 3.97484,
+    "pct_24h": 4.18924,
     "pct_7d": -0.6,
     "pct_30d": 23.5,
-    "sma50": 68436.56789453325,
-    "sma200": 69542.39054256432,
+    "sma50": 68439.33030243679,
+    "sma200": 69543.0811445402,
     "support_30d": 62843.70368466329,
-    "resistance_30d": 80268.37474707834,
+    "resistance_30d": 80327.9691362828,
     "mark_price": 77914.96355797,
     "index_price": 77941.555,
     "funding_rate": 6.048e-05,
@@ -3128,14 +3128,14 @@
     "key": "ETH",
     "name": "Ethereum",
     "emoji": "\u039e",
-    "price": 2476.63,
+    "price": 2480.0,
     "high_24h": 2434.16,
     "low_24h": 2372.43,
-    "pct_24h": 3.30464,
+    "pct_24h": 3.58738,
     "pct_7d": -2.7,
     "pct_30d": 29.6,
-    "sma50": 2064.6114682197967,
-    "sma200": 2030.523656690594,
+    "sma50": 2064.6954259149875,
+    "sma200": 2030.5446461143915,
     "support_30d": 1871.3976551883159,
     "resistance_30d": 2514.967577695514,
     "mark_price": 2406.5605969,
