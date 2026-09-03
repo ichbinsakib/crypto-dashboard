@@ -4,7 +4,7 @@
   "_alerts_state": {
     "btc-resistance-break": {
       "triggered": true,
-      "last_triggered_at": "2026-09-03 18:35:22"
+      "last_triggered_at": "2026-09-03 18:40:22"
     },
     "btc-support-break": {
       "triggered": false,
@@ -775,7 +775,7 @@
         ],
         [
           "Stretch from long-term average",
-          "-7.8% vs its long-term average - not stretched either way",
+          "-7.7% vs its long-term average - not stretched either way",
           0
         ],
         [
@@ -788,12 +788,12 @@
       "id": "kucoin-shares",
       "symbol": "KCS",
       "name": "KuCoin",
-      "price": 7.14,
-      "pct_24h": 2.27444,
-      "pct_7d": -0.3,
+      "price": 7.15,
+      "pct_24h": 2.92767,
+      "pct_7d": -2.5,
       "support_30d": 6.514591596607885,
       "resistance_30d": 7.8821382735057615,
-      "as_of": "2026-09-03 16:40:27",
+      "as_of": "2026-09-03 18:40:22",
       "stale": false
     },
     "hedera-hashgraph": {
@@ -1207,7 +1207,7 @@
         ],
         [
           "Stretch from long-term average",
-          "+2.1% vs its long-term average - not stretched either way",
+          "+1.6% vs its long-term average - not stretched either way",
           0
         ],
         [
@@ -1220,12 +1220,12 @@
       "id": "nexo",
       "symbol": "NEXO",
       "name": "NEXO",
-      "price": 0.852517,
-      "pct_24h": 1.29719,
-      "pct_7d": -0.3,
+      "price": 0.848505,
+      "pct_24h": 0.84498,
+      "pct_7d": -0.5,
       "support_30d": 0.7016300793001435,
       "resistance_30d": 0.8734100764023305,
-      "as_of": "2026-09-03 17:20:28",
+      "as_of": "2026-09-03 18:40:22",
       "stale": false
     },
     "janus-henderson-anemoy-treasury-fund": {
@@ -2717,9 +2717,9 @@
       "stale": false
     },
     "morpho": {
-      "label": "\ud83d\udfe1 HOLD / NEUTRAL",
-      "status": "neutral",
-      "score": -1,
+      "label": "\ud83d\udd34 CAUTION - REDUCE NEW BUYS",
+      "status": "bearish",
+      "score": -2,
       "rows": [
         [
           "Price vs. recent range",
@@ -2743,8 +2743,8 @@
         ],
         [
           "Stretch from long-term average",
-          "+29.3% above its long-term average - a bit stretched",
-          -1
+          "+30.9% above its long-term average - very stretched",
+          -2
         ],
         [
           "Leverage traders' bias",
@@ -2752,16 +2752,16 @@
           0
         ]
       ],
-      "plain": "No real edge either way right now - fine to just wait and watch.",
+      "plain": "Getting risky - I'd hold off on new buys until this cools down.",
       "id": "morpho",
       "symbol": "MORPHO",
       "name": "Morpho",
-      "price": 2.5,
-      "pct_24h": -0.58511,
+      "price": 2.53,
+      "pct_24h": 0.84494,
       "pct_7d": -4.4,
       "support_30d": 1.8400586135640542,
       "resistance_30d": 2.9026212482639075,
-      "as_of": "2026-09-03 18:30:50",
+      "as_of": "2026-09-03 18:40:22",
       "stale": false
     },
     "memecore": {
@@ -3106,16 +3106,16 @@
     "key": "BTC",
     "name": "Bitcoin",
     "emoji": "\u20bf",
-    "price": 80971,
+    "price": 81010,
     "high_24h": 81332,
     "low_24h": 76975,
-    "pct_24h": 4.63869,
+    "pct_24h": 4.79565,
     "pct_7d": 0.8,
     "pct_30d": 26.8,
-    "sma50": 68452.10194686074,
-    "sma200": 69546.2740556462,
+    "sma50": 68452.97325520021,
+    "sma200": 69546.49188273106,
     "support_30d": 62843.70368466329,
-    "resistance_30d": 80966.55135748039,
+    "resistance_30d": 81010.1167744539,
     "mark_price": 77914.96355797,
     "index_price": 77941.555,
     "funding_rate": 6.048e-05,
@@ -3128,14 +3128,14 @@
     "key": "ETH",
     "name": "Ethereum",
     "emoji": "\u039e",
-    "price": 2502.33,
+    "price": 2500.59,
     "high_24h": 2515.54,
     "low_24h": 2372.43,
-    "pct_24h": 4.48738,
+    "pct_24h": 4.55193,
     "pct_7d": -0.8,
     "pct_30d": 33.9,
-    "sma50": 2065.129400599788,
-    "sma200": 2030.6531397855915,
+    "sma50": 2065.0931038767003,
+    "sma200": 2030.6440656048196,
     "support_30d": 1871.3976551883159,
     "resistance_30d": 2514.967577695514,
     "mark_price": 2406.5605969,
