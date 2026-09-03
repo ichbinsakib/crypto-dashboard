@@ -4,7 +4,7 @@
   "_alerts_state": {
     "btc-resistance-break": {
       "triggered": true,
-      "last_triggered_at": "2026-09-03 22:15:22"
+      "last_triggered_at": "2026-09-03 22:20:31"
     },
     "btc-support-break": {
       "triggered": false,
@@ -356,12 +356,12 @@
       "id": "dogecoin",
       "symbol": "DOGE",
       "name": "Dogecoin",
-      "price": 0.08803,
-      "pct_24h": 8.4608,
+      "price": 0.088006,
+      "pct_24h": 8.48388,
       "pct_7d": -0.4,
       "support_30d": 0.06901954790818378,
       "resistance_30d": 0.09337940032634065,
-      "as_of": "2026-09-03 22:10:22",
+      "as_of": "2026-09-03 22:20:31",
       "stale": false
     },
     "zcash": {
@@ -501,11 +501,11 @@
       "symbol": "LINK",
       "name": "Chainlink",
       "price": 11.92,
-      "pct_24h": 7.35037,
-      "pct_7d": 0.1,
+      "pct_24h": 7.77659,
+      "pct_7d": 0.3,
       "support_30d": 8.153587762455743,
       "resistance_30d": 11.992351770358374,
-      "as_of": "2026-09-03 21:40:23",
+      "as_of": "2026-09-03 22:20:31",
       "stale": false
     },
     "whitebit": {
@@ -871,7 +871,7 @@
         ],
         [
           "Stretch from long-term average",
-          "+13.2% above its long-term average - a bit stretched",
+          "+11.7% above its long-term average - a bit stretched",
           -1
         ],
         [
@@ -884,12 +884,12 @@
       "id": "pepe",
       "symbol": "PEPE",
       "name": "Pepe",
-      "price": 3.77e-06,
-      "pct_24h": 10.81245,
-      "pct_7d": -4.1,
+      "price": 3.72e-06,
+      "pct_24h": 9.6479,
+      "pct_7d": -3.6,
       "support_30d": 2.5716563906374582e-06,
       "resistance_30d": 4.122123035488615e-06,
-      "as_of": "2026-09-03 21:50:25",
+      "as_of": "2026-09-03 22:20:31",
       "stale": false
     },
     "avalanche-2": {
@@ -3101,21 +3101,23 @@
       "stale": false
     }
   },
-  "_strong_buy_state": {},
+  "_strong_buy_state": {
+    "15m:PEPE": true
+  },
   "BTC": {
     "key": "BTC",
     "name": "Bitcoin",
     "emoji": "\u20bf",
-    "price": 81355,
+    "price": 81374,
     "high_24h": 82108,
     "low_24h": 76975,
-    "pct_24h": 5.43343,
+    "pct_24h": 5.58218,
     "pct_7d": 1.9,
     "pct_30d": 26.9,
-    "sma50": 68459.25473111706,
-    "sma200": 69548.06225171027,
+    "sma50": 68460.24203266944,
+    "sma200": 69548.30907709837,
     "support_30d": 62843.70368466329,
-    "resistance_30d": 81324.19057029688,
+    "resistance_30d": 81373.55564791504,
     "mark_price": 81199.38161594,
     "index_price": 81228.99195652,
     "funding_rate": 0.0001,
@@ -3128,14 +3130,14 @@
     "key": "ETH",
     "name": "Ethereum",
     "emoji": "\u039e",
-    "price": 2503.77,
+    "price": 2505.34,
     "high_24h": 2523.23,
     "low_24h": 2372.43,
-    "pct_24h": 4.99522,
+    "pct_24h": 5.14186,
     "pct_7d": 0.2,
     "pct_30d": 34.0,
-    "sma50": 2065.164440231557,
-    "sma200": 2030.6618996935338,
+    "sma50": 2065.192002820907,
+    "sma200": 2030.6687903408713,
     "support_30d": 1871.3976551883159,
     "resistance_30d": 2514.967577695514,
     "mark_price": 2511.59749612,
