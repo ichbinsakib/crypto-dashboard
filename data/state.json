@@ -4,7 +4,7 @@
   "_alerts_state": {
     "btc-resistance-break": {
       "triggered": true,
-      "last_triggered_at": "2026-09-03 17:35:21"
+      "last_triggered_at": "2026-09-03 17:40:23"
     },
     "btc-support-break": {
       "triggered": false,
@@ -1667,7 +1667,7 @@
       "rows": [
         [
           "Price vs. recent range",
-          "Near its 30-day high (~$1.98) - less room to run",
+          "Near its 30-day high (~$2.00) - less room to run",
           -1
         ],
         [
@@ -1687,7 +1687,7 @@
         ],
         [
           "Stretch from long-term average",
-          "+3.6% vs its long-term average - not stretched either way",
+          "+4.7% vs its long-term average - not stretched either way",
           0
         ],
         [
@@ -1700,12 +1700,12 @@
       "id": "bitget-token",
       "symbol": "BGB",
       "name": "Bitget Token",
-      "price": 1.98,
-      "pct_24h": 4.05624,
-      "pct_7d": 0.0,
+      "price": 2.0,
+      "pct_24h": 2.87505,
+      "pct_7d": 0.3,
       "support_30d": 1.612955058583726,
-      "resistance_30d": 1.984790388009312,
-      "as_of": "2026-09-03 11:40:22",
+      "resistance_30d": 1.999414022158852,
+      "as_of": "2026-09-03 17:40:23",
       "stale": false
     },
     "sui": {
@@ -1907,7 +1907,7 @@
       "rows": [
         [
           "Price vs. recent range",
-          "Near its 30-day high (~$0.5682) - less room to run",
+          "Near its 30-day high (~$0.5752) - less room to run",
           -1
         ],
         [
@@ -1927,7 +1927,7 @@
         ],
         [
           "Stretch from long-term average",
-          "-5.2% vs its long-term average - not stretched either way",
+          "-4.0% vs its long-term average - not stretched either way",
           0
         ],
         [
@@ -1940,12 +1940,12 @@
       "id": "mantle",
       "symbol": "MNT",
       "name": "Mantle",
-      "price": 0.568198,
-      "pct_24h": 1.89992,
-      "pct_7d": 9.7,
+      "price": 0.575192,
+      "pct_24h": 2.49683,
+      "pct_7d": 8.9,
       "support_30d": 0.4069083191693496,
-      "resistance_30d": 0.5681976008885459,
-      "as_of": "2026-09-03 16:35:20",
+      "resistance_30d": 0.5751606737089395,
+      "as_of": "2026-09-03 17:40:23",
       "stale": false
     },
     "polkadot": {
@@ -2119,7 +2119,7 @@
         ],
         [
           "Stretch from long-term average",
-          "+12.7% above its long-term average - a bit stretched",
+          "+11.9% above its long-term average - a bit stretched",
           -1
         ],
         [
@@ -2132,12 +2132,12 @@
       "id": "ondo-finance",
       "symbol": "ONDO",
       "name": "Ondo",
-      "price": 0.37161,
-      "pct_24h": 8.9988,
-      "pct_7d": -1.8,
+      "price": 0.368789,
+      "pct_24h": 8.67791,
+      "pct_7d": -2.6,
       "support_30d": 0.32338181384146436,
       "resistance_30d": 0.3969475338902824,
-      "as_of": "2026-09-03 16:00:33",
+      "as_of": "2026-09-03 17:40:23",
       "stale": false
     },
     "canton-network": {
@@ -3101,21 +3101,23 @@
       "stale": false
     }
   },
-  "_strong_buy_state": {},
+  "_strong_buy_state": {
+    "1h:JST": true
+  },
   "BTC": {
     "key": "BTC",
     "name": "Bitcoin",
     "emoji": "\u20bf",
-    "price": 81067,
+    "price": 81100,
     "high_24h": 81332,
     "low_24h": 76975,
-    "pct_24h": 5.06517,
+    "pct_24h": 5.15753,
     "pct_7d": 0.7,
     "pct_30d": 26.3,
-    "sma50": 68454.0573004797,
-    "sma200": 69546.76289405093,
+    "sma50": 68455.16451504492,
+    "sma200": 69547.03969769223,
     "support_30d": 62843.70368466329,
-    "resistance_30d": 81064.31903842893,
+    "resistance_30d": 81119.67976668928,
     "mark_price": 77914.96355797,
     "index_price": 77941.555,
     "funding_rate": 6.048e-05,
@@ -3128,14 +3130,14 @@
     "key": "ETH",
     "name": "Ethereum",
     "emoji": "\u039e",
-    "price": 2501.31,
+    "price": 2503.11,
     "high_24h": 2515.54,
     "low_24h": 2372.43,
-    "pct_24h": 4.97327,
+    "pct_24h": 5.04549,
     "pct_7d": -1.2,
     "pct_30d": 33.2,
-    "sma50": 2065.1077834819625,
-    "sma200": 2030.6477355061352,
+    "sma50": 2065.1591147607605,
+    "sma200": 2030.6605683258347,
     "support_30d": 1871.3976551883159,
     "resistance_30d": 2514.967577695514,
     "mark_price": 2406.5605969,
