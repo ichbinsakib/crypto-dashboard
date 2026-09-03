@@ -4,7 +4,7 @@
   "_alerts_state": {
     "btc-resistance-break": {
       "triggered": true,
-      "last_triggered_at": "2026-09-03 16:35:20"
+      "last_triggered_at": "2026-09-03 16:40:27"
     },
     "btc-support-break": {
       "triggered": false,
@@ -367,11 +367,11 @@
     "zcash": {
       "label": "\ud83d\udd34 DISTRIBUTION ZONE",
       "status": "bearish",
-      "score": -5,
+      "score": -8,
       "rows": [
         [
           "Price vs. recent range",
-          "Near its 30-day high (~$871.33) - less room to run",
+          "Near its 30-day high (~$941.74) - less room to run",
           -1
         ],
         [
@@ -386,12 +386,12 @@
         ],
         [
           "Recent trend",
-          "Trending up steadily - healthy",
-          1
+          "Shooting straight up - classic blow-off top risk, don't chase",
+          -2
         ],
         [
           "Stretch from long-term average",
-          "+99.3% above its long-term average - very stretched",
+          "+115.2% above its long-term average - very stretched",
           -2
         ],
         [
@@ -404,12 +404,12 @@
       "id": "zcash",
       "symbol": "ZEC",
       "name": "Zcash",
-      "price": 871.18,
-      "pct_24h": 7.7458,
-      "pct_7d": 9.3,
+      "price": 941.57,
+      "pct_24h": 15.46233,
+      "pct_7d": 20.0,
       "support_30d": 480.66499804092575,
-      "resistance_30d": 871.3344400063686,
-      "as_of": "2026-09-03 15:10:22",
+      "resistance_30d": 941.741052443451,
+      "as_of": "2026-09-03 16:40:27",
       "stale": false
     },
     "rain": {
@@ -775,7 +775,7 @@
         ],
         [
           "Stretch from long-term average",
-          "-8.0% vs its long-term average - not stretched either way",
+          "-7.8% vs its long-term average - not stretched either way",
           0
         ],
         [
@@ -788,12 +788,12 @@
       "id": "kucoin-shares",
       "symbol": "KCS",
       "name": "KuCoin",
-      "price": 7.13,
-      "pct_24h": 1.86579,
-      "pct_7d": -1.6,
+      "price": 7.14,
+      "pct_24h": 2.27444,
+      "pct_7d": -0.3,
       "support_30d": 6.514591596607885,
       "resistance_30d": 7.8821382735057615,
-      "as_of": "2026-09-03 14:45:22",
+      "as_of": "2026-09-03 16:40:27",
       "stale": false
     },
     "hedera-hashgraph": {
@@ -2887,7 +2887,7 @@
         ],
         [
           "Stretch from long-term average",
-          "+27.1% above its long-term average - a bit stretched",
+          "+27.4% above its long-term average - a bit stretched",
           -1
         ],
         [
@@ -2900,12 +2900,12 @@
       "id": "okb",
       "symbol": "OKB",
       "name": "OKB",
-      "price": 109.54,
-      "pct_24h": 2.58874,
+      "price": 109.83,
+      "pct_24h": 3.26651,
       "pct_7d": -2.4,
       "support_30d": 85.29568594571903,
       "resistance_30d": 115.8310797114581,
-      "as_of": "2026-09-03 16:30:30",
+      "as_of": "2026-09-03 16:40:27",
       "stale": false
     },
     "just": {
@@ -3106,16 +3106,16 @@
     "key": "BTC",
     "name": "Bitcoin",
     "emoji": "\u20bf",
-    "price": 80893,
+    "price": 80856,
     "high_24h": 81332,
     "low_24h": 76952,
-    "pct_24h": 4.38283,
+    "pct_24h": 4.48045,
     "pct_7d": 1.4,
     "pct_30d": 26.9,
-    "sma50": 68450.62203773664,
-    "sma200": 69545.90407836516,
+    "sma50": 68449.73783293372,
+    "sma200": 69545.68302716444,
     "support_30d": 62843.70368466329,
-    "resistance_30d": 80892.55590127503,
+    "resistance_30d": 80848.34566112941,
     "mark_price": 77914.96355797,
     "index_price": 77941.555,
     "funding_rate": 6.048e-05,
@@ -3128,14 +3128,14 @@
     "key": "ETH",
     "name": "Ethereum",
     "emoji": "\u039e",
-    "price": 2496.73,
+    "price": 2495.07,
     "high_24h": 2515.54,
     "low_24h": 2372.43,
-    "pct_24h": 4.02204,
+    "pct_24h": 4.14622,
     "pct_7d": -0.1,
     "pct_30d": 34.4,
-    "sma50": 2064.9913796114474,
-    "sma200": 2030.6186345385065,
+    "sma50": 2064.976787261622,
+    "sma200": 2030.6149864510503,
     "support_30d": 1871.3976551883159,
     "resistance_30d": 2514.967577695514,
     "mark_price": 2406.5605969,
