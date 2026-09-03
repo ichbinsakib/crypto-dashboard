@@ -4,7 +4,7 @@
   "_alerts_state": {
     "btc-resistance-break": {
       "triggered": true,
-      "last_triggered_at": "2026-09-03 18:00:35"
+      "last_triggered_at": "2026-09-03 18:05:19"
     },
     "btc-support-break": {
       "triggered": false,
@@ -261,11 +261,11 @@
       "symbol": "FIGR_HELOC",
       "name": "Figure Heloc",
       "price": 1.033,
-      "pct_24h": 2.00883,
+      "pct_24h": 1.99036,
       "pct_7d": 3.2,
       "support_30d": 1.0008548889936117,
       "resistance_30d": 1.0455978355177025,
-      "as_of": "2026-09-03 18:00:35",
+      "as_of": "2026-09-03 18:05:19",
       "stale": false
     },
     "hyperliquid": {
@@ -989,14 +989,14 @@
       "stale": false
     },
     "worldcoin-wld": {
-      "label": "\ud83d\udfe1 HOLD / NEUTRAL",
-      "status": "neutral",
-      "score": -1,
+      "label": "\ud83d\udd34 CAUTION - REDUCE NEW BUYS",
+      "status": "bearish",
+      "score": -2,
       "rows": [
         [
           "Price vs. recent range",
-          "Sitting in the middle of its 30-day range",
-          0
+          "Near its 30-day high (~$0.4154) - less room to run",
+          -1
         ],
         [
           "Crowd mood (Fear & Greed)",
@@ -1015,7 +1015,7 @@
         ],
         [
           "Stretch from long-term average",
-          "+10.7% above its long-term average - a bit stretched",
+          "+13.5% above its long-term average - a bit stretched",
           -1
         ],
         [
@@ -1024,16 +1024,16 @@
           0
         ]
       ],
-      "plain": "No real edge either way right now - fine to just wait and watch.",
+      "plain": "Getting risky - I'd hold off on new buys until this cools down.",
       "id": "worldcoin-wld",
       "symbol": "WLD",
       "name": "Worldcoin",
-      "price": 0.394337,
-      "pct_24h": 10.25185,
-      "pct_7d": -3.8,
+      "price": 0.404277,
+      "pct_24h": 12.42284,
+      "pct_7d": -4.6,
       "support_30d": 0.3029636206131486,
       "resistance_30d": 0.4153748859818001,
-      "as_of": "2026-09-03 17:05:23",
+      "as_of": "2026-09-03 18:05:19",
       "stale": false
     },
     "bfusd": {
@@ -2195,7 +2195,7 @@
       "rows": [
         [
           "Price vs. recent range",
-          "Near its 30-day high (~$2.53) - less room to run",
+          "Near its 30-day high (~$2.54) - less room to run",
           -1
         ],
         [
@@ -2215,7 +2215,7 @@
         ],
         [
           "Stretch from long-term average",
-          "+3.8% vs its long-term average - not stretched either way",
+          "+4.2% vs its long-term average - not stretched either way",
           0
         ],
         [
@@ -2228,12 +2228,12 @@
       "id": "internet-computer",
       "symbol": "ICP",
       "name": "Internet Computer",
-      "price": 2.53,
-      "pct_24h": 1.70596,
-      "pct_7d": 3.8,
+      "price": 2.54,
+      "pct_24h": 2.17795,
+      "pct_7d": 2.8,
       "support_30d": 2.088992450455863,
-      "resistance_30d": 2.5341563315910003,
-      "as_of": "2026-09-03 15:50:26",
+      "resistance_30d": 2.5390346843887595,
+      "as_of": "2026-09-03 18:05:19",
       "stale": false
     },
     "bittensor": {
@@ -3106,16 +3106,16 @@
     "key": "BTC",
     "name": "Bitcoin",
     "emoji": "\u20bf",
-    "price": 81027,
+    "price": 81156,
     "high_24h": 81332,
     "low_24h": 76975,
-    "pct_24h": 4.7791,
-    "pct_7d": 0.7,
-    "pct_30d": 26.3,
-    "sma50": 68453.30687529086,
-    "sma200": 69546.57528775373,
+    "pct_24h": 4.92867,
+    "pct_7d": 0.8,
+    "pct_30d": 26.8,
+    "sma50": 68455.36831603167,
+    "sma200": 69547.09064793894,
     "support_30d": 62843.70368466329,
-    "resistance_30d": 81026.79777898634,
+    "resistance_30d": 81129.86981602697,
     "mark_price": 77914.96355797,
     "index_price": 77941.555,
     "funding_rate": 6.048e-05,
@@ -3128,14 +3128,14 @@
     "key": "ETH",
     "name": "Ethereum",
     "emoji": "\u039e",
-    "price": 2501.12,
+    "price": 2503.53,
     "high_24h": 2515.54,
     "low_24h": 2372.43,
-    "pct_24h": 4.5498,
-    "pct_7d": -1.2,
-    "pct_30d": 33.2,
-    "sma50": 2065.100343490289,
-    "sma200": 2030.645875508217,
+    "pct_24h": 4.62216,
+    "pct_7d": -0.8,
+    "pct_30d": 33.9,
+    "sma50": 2065.134623377342,
+    "sma200": 2030.6544454799798,
     "support_30d": 1871.3976551883159,
     "resistance_30d": 2514.967577695514,
     "mark_price": 2406.5605969,
