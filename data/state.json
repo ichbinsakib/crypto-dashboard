@@ -4,7 +4,7 @@
   "_alerts_state": {
     "btc-resistance-break": {
       "triggered": true,
-      "last_triggered_at": "2026-09-03 22:40:23"
+      "last_triggered_at": "2026-09-03 22:45:20"
     },
     "btc-support-break": {
       "triggered": false,
@@ -343,7 +343,7 @@
         ],
         [
           "Stretch from long-term average",
-          "-0.8% vs its long-term average - not stretched either way",
+          "-1.5% vs its long-term average - not stretched either way",
           0
         ],
         [
@@ -356,12 +356,12 @@
       "id": "dogecoin",
       "symbol": "DOGE",
       "name": "Dogecoin",
-      "price": 0.088006,
-      "pct_24h": 8.48388,
+      "price": 0.087415,
+      "pct_24h": 7.73471,
       "pct_7d": -0.4,
       "support_30d": 0.06901954790818378,
       "resistance_30d": 0.09337940032634065,
-      "as_of": "2026-09-03 22:20:31",
+      "as_of": "2026-09-03 22:45:20",
       "stale": false
     },
     "zcash": {
@@ -727,7 +727,7 @@
         ],
         [
           "Stretch from long-term average",
-          "+6.8% vs its long-term average - not stretched either way",
+          "+5.3% vs its long-term average - not stretched either way",
           0
         ],
         [
@@ -740,12 +740,12 @@
       "id": "stellar",
       "symbol": "XLM",
       "name": "Stellar",
-      "price": 0.186258,
-      "pct_24h": 7.18061,
-      "pct_7d": -0.9,
+      "price": 0.183647,
+      "pct_24h": 5.33696,
+      "pct_7d": -1.0,
       "support_30d": 0.15472912151335613,
       "resistance_30d": 0.20181319711037435,
-      "as_of": "2026-09-03 19:25:17",
+      "as_of": "2026-09-03 22:45:20",
       "stale": false
     },
     "kucoin-shares": {
@@ -2839,7 +2839,7 @@
         ],
         [
           "Stretch from long-term average",
-          "+36.2% above its long-term average - very stretched",
+          "+35.9% above its long-term average - very stretched",
           -2
         ],
         [
@@ -2852,12 +2852,12 @@
       "id": "aave",
       "symbol": "AAVE",
       "name": "Aave",
-      "price": 132.62,
-      "pct_24h": 4.64696,
+      "price": 132.31,
+      "pct_24h": 4.28667,
       "pct_7d": 5.1,
       "support_30d": 85.94219943917633,
       "resistance_30d": 141.53047916466082,
-      "as_of": "2026-09-03 22:35:19",
+      "as_of": "2026-09-03 22:45:20",
       "stale": false
     },
     "okb": {
@@ -3102,23 +3102,24 @@
     }
   },
   "_strong_buy_state": {
-    "15m:SKY": true,
-    "15m:PAXG": true
+    "15m:XLM": true,
+    "15m:ETC": true,
+    "15m:DOGE": true
   },
   "BTC": {
     "key": "BTC",
     "name": "Bitcoin",
     "emoji": "\u20bf",
-    "price": 81127,
+    "price": 81199,
     "high_24h": 82108,
     "low_24h": 76975,
-    "pct_24h": 5.22973,
+    "pct_24h": 5.32499,
     "pct_7d": 1.9,
     "pct_30d": 26.9,
-    "sma50": 68455.60613114199,
-    "sma200": 69547.15010171651,
+    "sma50": 68456.88048147409,
+    "sma200": 69547.46868929954,
     "support_30d": 62843.70368466329,
-    "resistance_30d": 81141.76057154256,
+    "resistance_30d": 81205.47808814746,
     "mark_price": 81199.38161594,
     "index_price": 81228.99195652,
     "funding_rate": 0.0001,
@@ -3131,14 +3132,14 @@
     "key": "ETH",
     "name": "Ethereum",
     "emoji": "\u039e",
-    "price": 2494.08,
+    "price": 2495.99,
     "high_24h": 2523.23,
     "low_24h": 2372.43,
-    "pct_24h": 4.67601,
+    "pct_24h": 4.74589,
     "pct_7d": 0.2,
     "pct_30d": 34.0,
-    "sma50": 2064.9922936464955,
-    "sma200": 2030.6188630472686,
+    "sma50": 2064.9989807295983,
+    "sma200": 2030.620534818044,
     "support_30d": 1871.3976551883159,
     "resistance_30d": 2514.967577695514,
     "mark_price": 2511.59749612,
