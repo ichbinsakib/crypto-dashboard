@@ -4,7 +4,7 @@
   "_alerts_state": {
     "btc-resistance-break": {
       "triggered": true,
-      "last_triggered_at": "2026-09-03 22:35:19"
+      "last_triggered_at": "2026-09-03 22:40:23"
     },
     "btc-support-break": {
       "triggered": false,
@@ -275,7 +275,7 @@
       "rows": [
         [
           "Price vs. recent range",
-          "Near its 30-day high (~$84.68) - less room to run",
+          "Near its 30-day high (~$85.70) - less room to run",
           -1
         ],
         [
@@ -295,7 +295,7 @@
         ],
         [
           "Stretch from long-term average",
-          "+61.8% above its long-term average - very stretched",
+          "+64.2% above its long-term average - very stretched",
           -2
         ],
         [
@@ -308,12 +308,12 @@
       "id": "hyperliquid",
       "symbol": "HYPE",
       "name": "Hyperliquid",
-      "price": 84.43,
-      "pct_24h": 3.51127,
-      "pct_7d": -1.4,
+      "price": 85.7,
+      "pct_24h": 5.09527,
+      "pct_7d": 0.1,
       "support_30d": 53.854096460729586,
-      "resistance_30d": 84.67784032156108,
-      "as_of": "2026-09-03 19:10:22",
+      "resistance_30d": 85.70440314946873,
+      "as_of": "2026-09-03 22:40:23",
       "stale": false
     },
     "dogecoin": {
@@ -1111,7 +1111,7 @@
         ],
         [
           "Stretch from long-term average",
-          "+7.1% vs its long-term average - not stretched either way",
+          "+6.0% vs its long-term average - not stretched either way",
           0
         ],
         [
@@ -1124,12 +1124,12 @@
       "id": "polygon-ecosystem-token",
       "symbol": "POL",
       "name": "POL (ex-MATIC)",
-      "price": 0.095052,
-      "pct_24h": 4.023,
-      "pct_7d": -12.3,
+      "price": 0.094038,
+      "pct_24h": 1.73674,
+      "pct_7d": -12.6,
       "support_30d": 0.07382135255393793,
       "resistance_30d": 0.12250456198546959,
-      "as_of": "2026-09-03 21:20:24",
+      "as_of": "2026-09-03 22:40:23",
       "stale": false
     },
     "blackrock-usd-institutional-digital-liquidity-fund": {
@@ -2335,12 +2335,12 @@
     "sky": {
       "label": "\ud83d\udfe1 HOLD / NEUTRAL",
       "status": "neutral",
-      "score": 0,
+      "score": 1,
       "rows": [
         [
           "Price vs. recent range",
-          "Near its 30-day high (~$0.0731) - less room to run",
-          -1
+          "Sitting in the middle of its 30-day range",
+          0
         ],
         [
           "Crowd mood (Fear & Greed)",
@@ -2359,7 +2359,7 @@
         ],
         [
           "Stretch from long-term average",
-          "+4.4% vs its long-term average - not stretched either way",
+          "+2.6% vs its long-term average - not stretched either way",
           0
         ],
         [
@@ -2372,12 +2372,12 @@
       "id": "sky",
       "symbol": "SKY",
       "name": "Sky",
-      "price": 0.069708,
-      "pct_24h": 1.91365,
-      "pct_7d": 1.1,
+      "price": 0.068505,
+      "pct_24h": 1.25579,
+      "pct_7d": 1.4,
       "support_30d": 0.05081051579814886,
       "resistance_30d": 0.07314868186988309,
-      "as_of": "2026-09-03 20:50:23",
+      "as_of": "2026-09-03 22:40:23",
       "stale": false
     },
     "shiba-inu": {
@@ -3102,22 +3102,23 @@
     }
   },
   "_strong_buy_state": {
-    "15m:SHIB": true
+    "15m:SKY": true,
+    "15m:PAXG": true
   },
   "BTC": {
     "key": "BTC",
     "name": "Bitcoin",
     "emoji": "\u20bf",
-    "price": 80996,
+    "price": 81127,
     "high_24h": 82108,
     "low_24h": 76975,
-    "pct_24h": 5.18699,
+    "pct_24h": 5.22973,
     "pct_7d": 1.9,
     "pct_30d": 26.9,
-    "sma50": 68453.6572708497,
-    "sma200": 69546.66288664343,
+    "sma50": 68455.60613114199,
+    "sma200": 69547.15010171651,
     "support_30d": 62843.70368466329,
-    "resistance_30d": 81044.31755692845,
+    "resistance_30d": 81141.76057154256,
     "mark_price": 81199.38161594,
     "index_price": 81228.99195652,
     "funding_rate": 0.0001,
@@ -3130,14 +3131,14 @@
     "key": "ETH",
     "name": "Ethereum",
     "emoji": "\u039e",
-    "price": 2492.05,
+    "price": 2494.08,
     "high_24h": 2523.23,
     "low_24h": 2372.43,
-    "pct_24h": 4.7526,
+    "pct_24h": 4.67601,
     "pct_7d": 0.2,
     "pct_30d": 34.0,
-    "sma50": 2064.9452666469783,
-    "sma200": 2030.6071062973892,
+    "sma50": 2064.9922936464955,
+    "sma200": 2030.6188630472686,
     "support_30d": 1871.3976551883159,
     "resistance_30d": 2514.967577695514,
     "mark_price": 2511.59749612,
