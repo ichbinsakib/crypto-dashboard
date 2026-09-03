@@ -4,7 +4,7 @@
   "_alerts_state": {
     "btc-resistance-break": {
       "triggered": true,
-      "last_triggered_at": "2026-09-03 20:05:20"
+      "last_triggered_at": "2026-09-03 20:10:26"
     },
     "btc-support-break": {
       "triggered": false,
@@ -463,7 +463,7 @@
     "chainlink": {
       "label": "\ud83d\udd34 CAUTION - REDUCE NEW BUYS",
       "status": "bearish",
-      "score": -2,
+      "score": -3,
       "rows": [
         [
           "Price vs. recent range",
@@ -487,8 +487,8 @@
         ],
         [
           "Stretch from long-term average",
-          "+29.0% above its long-term average - a bit stretched",
-          -1
+          "+30.3% above its long-term average - very stretched",
+          -2
         ],
         [
           "Leverage traders' bias",
@@ -500,12 +500,12 @@
       "id": "chainlink",
       "symbol": "LINK",
       "name": "Chainlink",
-      "price": 11.76,
-      "pct_24h": 6.35523,
-      "pct_7d": -0.3,
+      "price": 11.88,
+      "pct_24h": 6.68055,
+      "pct_7d": -0.2,
       "support_30d": 8.153587762455743,
       "resistance_30d": 11.992351770358374,
-      "as_of": "2026-09-03 15:00:33",
+      "as_of": "2026-09-03 20:10:26",
       "stale": false
     },
     "whitebit": {
@@ -947,7 +947,7 @@
       "rows": [
         [
           "Price vs. recent range",
-          "Near its 30-day high (~$0.7289) - less room to run",
+          "Near its 30-day high (~$0.7301) - less room to run",
           -1
         ],
         [
@@ -980,12 +980,12 @@
       "id": "aster-2",
       "symbol": "ASTER",
       "name": "Aster",
-      "price": 0.72927,
-      "pct_24h": -0.17049,
-      "pct_7d": 1.8,
+      "price": 0.72921,
+      "pct_24h": -1.19609,
+      "pct_7d": 2.6,
       "support_30d": 0.5986101196690307,
-      "resistance_30d": 0.7289019610517816,
-      "as_of": "2026-09-03 19:55:20",
+      "resistance_30d": 0.7301114771985528,
+      "as_of": "2026-09-03 20:10:26",
       "stale": false
     },
     "worldcoin-wld": {
@@ -2084,12 +2084,12 @@
       "id": "pi-network",
       "symbol": "PI",
       "name": "Pi Network",
-      "price": 0.09607,
-      "pct_24h": 2.33529,
-      "pct_7d": 4.7,
+      "price": 0.096198,
+      "pct_24h": 2.41497,
+      "pct_7d": 5.0,
       "support_30d": 0.08559695435343688,
       "resistance_30d": 0.09762045155043195,
-      "as_of": "2026-09-03 19:50:27",
+      "as_of": "2026-09-03 20:10:26",
       "stale": false
     },
     "ondo-finance": {
@@ -3106,16 +3106,16 @@
     "key": "BTC",
     "name": "Bitcoin",
     "emoji": "\u20bf",
-    "price": 81519,
+    "price": 81634,
     "high_24h": 81763,
     "low_24h": 76975,
-    "pct_24h": 5.29237,
+    "pct_24h": 5.51845,
     "pct_7d": 2.0,
     "pct_30d": 27.2,
-    "sma50": 68462.03447874391,
-    "sma200": 69548.75718861698,
+    "sma50": 68464.65360785561,
+    "sma200": 69549.41197089491,
     "support_30d": 62843.70368466329,
-    "resistance_30d": 81463.17795163847,
+    "resistance_30d": 81594.1344072243,
     "mark_price": 81199.38161594,
     "index_price": 81228.99195652,
     "funding_rate": 0.0001,
@@ -3128,14 +3128,14 @@
     "key": "ETH",
     "name": "Ethereum",
     "emoji": "\u039e",
-    "price": 2511.1,
+    "price": 2515.92,
     "high_24h": 2523.23,
     "low_24h": 2372.43,
-    "pct_24h": 4.82655,
+    "pct_24h": 5.08458,
     "pct_7d": 0.4,
     "pct_30d": 34.3,
-    "sma50": 2065.2888304106573,
-    "sma200": 2030.6929972383089,
+    "sma50": 2065.3696062682093,
+    "sma200": 2030.7131912026969,
     "support_30d": 1871.3976551883159,
     "resistance_30d": 2514.967577695514,
     "mark_price": 2511.59749612,
