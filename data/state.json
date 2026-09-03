@@ -4,7 +4,7 @@
   "_alerts_state": {
     "btc-resistance-break": {
       "triggered": true,
-      "last_triggered_at": "2026-09-03 20:40:23"
+      "last_triggered_at": "2026-09-03 20:45:24"
     },
     "btc-support-break": {
       "triggered": false,
@@ -260,12 +260,12 @@
       "id": "figure-heloc",
       "symbol": "FIGR_HELOC",
       "name": "Figure Heloc",
-      "price": 1.034,
-      "pct_24h": 2.08479,
-      "pct_7d": 3.2,
+      "price": 1.036,
+      "pct_24h": 2.31599,
+      "pct_7d": 3.4,
       "support_30d": 1.0008548889936117,
       "resistance_30d": 1.0455978355177025,
-      "as_of": "2026-09-03 18:30:50",
+      "as_of": "2026-09-03 20:45:24",
       "stale": false
     },
     "hyperliquid": {
@@ -1207,7 +1207,7 @@
         ],
         [
           "Stretch from long-term average",
-          "+1.7% vs its long-term average - not stretched either way",
+          "+1.8% vs its long-term average - not stretched either way",
           0
         ],
         [
@@ -1220,12 +1220,12 @@
       "id": "nexo",
       "symbol": "NEXO",
       "name": "NEXO",
-      "price": 0.849496,
-      "pct_24h": 1.12214,
-      "pct_7d": -0.5,
+      "price": 0.849943,
+      "pct_24h": 2.06825,
+      "pct_7d": -0.3,
       "support_30d": 0.7016300793001435,
       "resistance_30d": 0.8734100764023305,
-      "as_of": "2026-09-03 18:55:19",
+      "as_of": "2026-09-03 20:45:24",
       "stale": false
     },
     "janus-henderson-anemoy-treasury-fund": {
@@ -1748,12 +1748,12 @@
       "id": "sui",
       "symbol": "SUI",
       "name": "Sui",
-      "price": 0.788827,
-      "pct_24h": 9.45002,
-      "pct_7d": 0.3,
+      "price": 0.788793,
+      "pct_24h": 6.78232,
+      "pct_7d": 1.2,
       "support_30d": 0.6514311908607086,
       "resistance_30d": 0.8499161763231283,
-      "as_of": "2026-09-03 17:05:23",
+      "as_of": "2026-09-03 20:45:24",
       "stale": false
     },
     "lighter": {
@@ -2861,14 +2861,14 @@
       "stale": false
     },
     "okb": {
-      "label": "\ud83d\udfe1 HOLD / NEUTRAL",
-      "status": "neutral",
-      "score": -1,
+      "label": "\ud83d\udd34 CAUTION - REDUCE NEW BUYS",
+      "status": "bearish",
+      "score": -2,
       "rows": [
         [
           "Price vs. recent range",
-          "Sitting in the middle of its 30-day range",
-          0
+          "Near its 30-day high (~$115.83) - less room to run",
+          -1
         ],
         [
           "Crowd mood (Fear & Greed)",
@@ -2887,7 +2887,7 @@
         ],
         [
           "Stretch from long-term average",
-          "+27.2% above its long-term average - a bit stretched",
+          "+27.9% above its long-term average - a bit stretched",
           -1
         ],
         [
@@ -2896,16 +2896,16 @@
           0
         ]
       ],
-      "plain": "No real edge either way right now - fine to just wait and watch.",
+      "plain": "Getting risky - I'd hold off on new buys until this cools down.",
       "id": "okb",
       "symbol": "OKB",
       "name": "OKB",
-      "price": 109.7,
-      "pct_24h": 3.65188,
+      "price": 110.25,
+      "pct_24h": 4.06674,
       "pct_7d": -3.3,
       "support_30d": 85.29568594571903,
       "resistance_30d": 115.8310797114581,
-      "as_of": "2026-09-03 20:25:22",
+      "as_of": "2026-09-03 20:45:24",
       "stale": false
     },
     "just": {
@@ -2935,7 +2935,7 @@
         ],
         [
           "Stretch from long-term average",
-          "+31.0% above its long-term average - very stretched",
+          "+30.9% above its long-term average - very stretched",
           -2
         ],
         [
@@ -2948,12 +2948,12 @@
       "id": "just",
       "symbol": "JST",
       "name": "JUST",
-      "price": 0.106615,
-      "pct_24h": -0.72115,
-      "pct_7d": 8.9,
+      "price": 0.106477,
+      "pct_24h": -0.91975,
+      "pct_7d": 9.1,
       "support_30d": 0.0946830738697126,
       "resistance_30d": 0.1082125131964855,
-      "as_of": "2026-09-03 19:00:36",
+      "as_of": "2026-09-03 20:45:24",
       "stale": false
     },
     "algorand": {
@@ -3106,16 +3106,16 @@
     "key": "BTC",
     "name": "Bitcoin",
     "emoji": "\u20bf",
-    "price": 81513,
+    "price": 81492,
     "high_24h": 81763,
     "low_24h": 76975,
-    "pct_24h": 5.29281,
+    "pct_24h": 5.37081,
     "pct_7d": 2.0,
     "pct_30d": 27.2,
-    "sma50": 68462.31364228061,
-    "sma200": 69548.82697950116,
+    "sma50": 68462.61475489287,
+    "sma200": 69548.90225765423,
     "support_30d": 62843.70368466329,
-    "resistance_30d": 81477.13612847381,
+    "resistance_30d": 81492.19175908723,
     "mark_price": 81199.38161594,
     "index_price": 81228.99195652,
     "funding_rate": 0.0001,
@@ -3128,14 +3128,14 @@
     "key": "ETH",
     "name": "Ethereum",
     "emoji": "\u039e",
-    "price": 2505.34,
+    "price": 2504.5,
     "high_24h": 2523.23,
     "low_24h": 2372.43,
-    "pct_24h": 4.68221,
+    "pct_24h": 4.77684,
     "pct_7d": 0.4,
     "pct_30d": 34.3,
-    "sma50": 2065.192011720096,
-    "sma200": 2030.6687925656688,
+    "sma50": 2065.1753800554825,
+    "sma200": 2030.6646346495152,
     "support_30d": 1871.3976551883159,
     "resistance_30d": 2514.967577695514,
     "mark_price": 2511.59749612,
