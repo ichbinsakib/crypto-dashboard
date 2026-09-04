@@ -4,7 +4,7 @@
   "_alerts_state": {
     "btc-resistance-break": {
       "triggered": true,
-      "last_triggered_at": "2026-09-04 02:40:23"
+      "last_triggered_at": "2026-09-04 02:45:22"
     },
     "btc-support-break": {
       "triggered": false,
@@ -77,18 +77,18 @@
       "stale": false
     },
     "ripple": {
-      "label": "\ud83d\udd34 CAUTION - REDUCE NEW BUYS",
-      "status": "bearish",
-      "score": -2,
+      "label": "\ud83d\udfe1 HOLD / NEUTRAL",
+      "status": "neutral",
+      "score": -1,
       "rows": [
         [
           "Price vs. recent range",
-          "Near its 30-day high (~$1.52) - less room to run",
-          -1
+          "Sitting in the middle of its 30-day range",
+          0
         ],
         [
           "Crowd mood (Fear & Greed)",
-          "65/100 - crowd is greedy",
+          "74/100 - crowd is greedy",
           -1
         ],
         [
@@ -103,7 +103,7 @@
         ],
         [
           "Stretch from long-term average",
-          "+14.4% above its long-term average - a bit stretched",
+          "+12.8% above its long-term average - a bit stretched",
           -1
         ],
         [
@@ -112,16 +112,16 @@
           0
         ]
       ],
-      "plain": "Getting risky - I'd hold off on new buys until this cools down.",
+      "plain": "No real edge either way right now - fine to just wait and watch.",
       "id": "ripple",
       "symbol": "XRP",
       "name": "XRP",
-      "price": 1.46,
-      "pct_24h": 9.11867,
-      "pct_7d": -0.3,
+      "price": 1.44,
+      "pct_24h": 5.44213,
+      "pct_7d": -0.2,
       "support_30d": 0.9927072784932938,
       "resistance_30d": 1.52050482788377,
-      "as_of": "2026-09-03 18:55:19",
+      "as_of": "2026-09-04 02:45:22",
       "stale": false
     },
     "solana": {
@@ -1543,7 +1543,7 @@
         ],
         [
           "Stretch from long-term average",
-          "+99.5% above its long-term average - very stretched",
+          "+103.3% above its long-term average - very stretched",
           -2
         ],
         [
@@ -1556,12 +1556,12 @@
       "id": "pump-fun",
       "symbol": "PUMP",
       "name": "Pump.fun",
-      "price": 0.00411857,
-      "pct_24h": -1.21948,
-      "pct_7d": -14.5,
+      "price": 0.00419939,
+      "pct_24h": -1.02719,
+      "pct_7d": -13.4,
       "support_30d": 0.0022648933670123433,
       "resistance_30d": 0.0052249885406471875,
-      "as_of": "2026-09-04 01:45:21",
+      "as_of": "2026-09-04 02:45:22",
       "stale": false
     },
     "venice-token": {
@@ -2695,7 +2695,7 @@
         ],
         [
           "Stretch from long-term average",
-          "-0.7% vs its long-term average - not stretched either way",
+          "-0.9% vs its long-term average - not stretched either way",
           0
         ],
         [
@@ -2708,12 +2708,12 @@
       "id": "pax-gold",
       "symbol": "PAXG",
       "name": "PAX Gold",
-      "price": 4480.42,
-      "pct_24h": 1.59806,
-      "pct_7d": -2.2,
+      "price": 4472.79,
+      "pct_24h": 1.15797,
+      "pct_7d": -2.3,
       "support_30d": 4245.0586940559815,
       "resistance_30d": 4672.307573354755,
-      "as_of": "2026-09-04 01:15:19",
+      "as_of": "2026-09-04 02:45:22",
       "stale": false
     },
     "morpho": {
@@ -3106,14 +3106,14 @@
     "key": "BTC",
     "name": "Bitcoin",
     "emoji": "\u20bf",
-    "price": 80785,
+    "price": 80794,
     "high_24h": 82108,
     "low_24h": 77107,
-    "pct_24h": 3.93667,
+    "pct_24h": 3.91311,
     "pct_7d": 0.5,
     "pct_30d": 26.7,
-    "sma50": 68797.91835120572,
-    "sma200": 69607.39071293226,
+    "sma50": 68798.37237394322,
+    "sma200": 69607.50421861664,
     "support_30d": 62843.70368466329,
     "resistance_30d": 81264.70153038795,
     "mark_price": 81220.58098551,
@@ -3128,14 +3128,14 @@
     "key": "ETH",
     "name": "Ethereum",
     "emoji": "\u039e",
-    "price": 2501.63,
+    "price": 2502.21,
     "high_24h": 2523.23,
     "low_24h": 2379.95,
-    "pct_24h": 4.16903,
+    "pct_24h": 4.09526,
     "pct_7d": -0.4,
     "pct_30d": 34.6,
-    "sma50": 2078.010661531113,
-    "sma200": 2033.1976075864163,
+    "sma50": 2078.032213432049,
+    "sma200": 2033.2029955616506,
     "support_30d": 1871.3976551883159,
     "resistance_30d": 2514.967577695514,
     "mark_price": 2505.87444186,
