@@ -4,7 +4,7 @@
   "_alerts_state": {
     "btc-resistance-break": {
       "triggered": true,
-      "last_triggered_at": "2026-09-04 09:25:20"
+      "last_triggered_at": "2026-09-04 09:30:29"
     },
     "btc-support-break": {
       "triggered": false,
@@ -12,7 +12,7 @@
     },
     "eth-resistance-break": {
       "triggered": true,
-      "last_triggered_at": "2026-09-04 09:25:20"
+      "last_triggered_at": "2026-09-04 09:30:29"
     },
     "eth-support-break": {
       "triggered": false,
@@ -679,7 +679,7 @@
         ],
         [
           "Stretch from long-term average",
-          "-1.1% vs its long-term average - not stretched either way",
+          "+0.1% vs its long-term average - not stretched either way",
           0
         ],
         [
@@ -692,12 +692,12 @@
       "id": "cardano",
       "symbol": "ADA",
       "name": "Cardano",
-      "price": 0.220113,
-      "pct_24h": 7.31535,
-      "pct_7d": 4.2,
+      "price": 0.222702,
+      "pct_24h": 7.45467,
+      "pct_7d": 6.3,
       "support_30d": 0.1741249817054162,
       "resistance_30d": 0.2291047455940254,
-      "as_of": "2026-09-04 08:00:38",
+      "as_of": "2026-09-04 09:30:29",
       "stale": false
     },
     "stellar": {
@@ -1015,7 +1015,7 @@
         ],
         [
           "Stretch from long-term average",
-          "+10.4% above its long-term average - a bit stretched",
+          "+10.3% above its long-term average - a bit stretched",
           -1
         ],
         [
@@ -1028,12 +1028,12 @@
       "id": "worldcoin-wld",
       "symbol": "WLD",
       "name": "Worldcoin",
-      "price": 0.393436,
-      "pct_24h": 4.91026,
+      "price": 0.39287,
+      "pct_24h": 4.87705,
       "pct_7d": -1.7,
       "support_30d": 0.3029636206131486,
       "resistance_30d": 0.4153748859818001,
-      "as_of": "2026-09-04 09:25:20",
+      "as_of": "2026-09-04 09:30:29",
       "stale": false
     },
     "bfusd": {
@@ -2407,7 +2407,7 @@
         ],
         [
           "Stretch from long-term average",
-          "-1.4% vs its long-term average - not stretched either way",
+          "-1.1% vs its long-term average - not stretched either way",
           0
         ],
         [
@@ -2420,12 +2420,12 @@
       "id": "shiba-inu",
       "symbol": "SHIB",
       "name": "Shiba Inu",
-      "price": 5.33e-06,
-      "pct_24h": 2.08113,
-      "pct_7d": -0.5,
+      "price": 5.35e-06,
+      "pct_24h": 2.75162,
+      "pct_7d": 0.8,
       "support_30d": 4.390093758351827e-06,
       "resistance_30d": 5.903506876405612e-06,
-      "as_of": "2026-09-04 08:50:26",
+      "as_of": "2026-09-04 09:30:29",
       "stale": false
     },
     "near": {
@@ -3101,19 +3101,21 @@
       "stale": false
     }
   },
-  "_strong_buy_state": {},
+  "_strong_buy_state": {
+    "15m:WLFI": true
+  },
   "BTC": {
     "key": "BTC",
     "name": "Bitcoin",
     "emoji": "\u20bf",
-    "price": 81020,
+    "price": 81008,
     "high_24h": 82108,
     "low_24h": 77452,
-    "pct_24h": 4.12928,
+    "pct_24h": 4.2146,
     "pct_7d": 1.8,
     "pct_30d": 26.5,
-    "sma50": 68802.88982919864,
-    "sma200": 69608.63358243048,
+    "sma50": 68802.38874356008,
+    "sma200": 69608.50831102085,
     "support_30d": 62843.70368466329,
     "resistance_30d": 81264.70153038795,
     "mark_price": 80817.98012319,
@@ -3128,16 +3130,16 @@
     "key": "ETH",
     "name": "Ethereum",
     "emoji": "\u039e",
-    "price": 2527.51,
+    "price": 2522.06,
     "high_24h": 2528.59,
     "low_24h": 2389.3,
-    "pct_24h": 5.25755,
+    "pct_24h": 5.13183,
     "pct_7d": 1.2,
     "pct_30d": 35.1,
-    "sma50": 2078.5271191937277,
-    "sma200": 2033.3267220020703,
+    "sma50": 2078.4270264295033,
+    "sma200": 2033.3016988110144,
     "support_30d": 1871.3976551883159,
-    "resistance_30d": 2527.4534579303067,
+    "resistance_30d": 2522.4488197191004,
     "mark_price": 2509.41939535,
     "index_price": 2511.21465116,
     "funding_rate": 6.58e-05,
