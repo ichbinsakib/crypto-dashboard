@@ -4,7 +4,7 @@
   "_alerts_state": {
     "btc-resistance-break": {
       "triggered": true,
-      "last_triggered_at": "2026-09-04 04:00:35"
+      "last_triggered_at": "2026-09-04 04:05:21"
     },
     "btc-support-break": {
       "triggered": false,
@@ -439,7 +439,7 @@
         ],
         [
           "Stretch from long-term average",
-          "+51.0% above its long-term average - very stretched",
+          "+50.7% above its long-term average - very stretched",
           -2
         ],
         [
@@ -452,12 +452,12 @@
       "id": "rain",
       "symbol": "RAIN",
       "name": "Rain",
-      "price": 0.01712376,
-      "pct_24h": 2.51314,
-      "pct_7d": -1.1,
+      "price": 0.01709041,
+      "pct_24h": 2.24574,
+      "pct_7d": -0.9,
       "support_30d": 0.012542200634745275,
       "resistance_30d": 0.018158429442510105,
-      "as_of": "2026-09-04 03:05:20",
+      "as_of": "2026-09-04 04:05:21",
       "stale": false
     },
     "chainlink": {
@@ -1639,7 +1639,7 @@
         ],
         [
           "Stretch from long-term average",
-          "+1.3% vs its long-term average - not stretched either way",
+          "+1.4% vs its long-term average - not stretched either way",
           0
         ],
         [
@@ -1652,12 +1652,12 @@
       "id": "litecoin",
       "symbol": "LTC",
       "name": "Litecoin",
-      "price": 51.04,
-      "pct_24h": 2.1625,
-      "pct_7d": 2.3,
+      "price": 51.08,
+      "pct_24h": 1.85761,
+      "pct_7d": 3.5,
       "support_30d": 43.806923130603906,
       "resistance_30d": 53.12964707139583,
-      "as_of": "2026-09-04 01:30:26",
+      "as_of": "2026-09-04 04:05:21",
       "stale": false
     },
     "bitget-token": {
@@ -2695,7 +2695,7 @@
         ],
         [
           "Stretch from long-term average",
-          "-0.9% vs its long-term average - not stretched either way",
+          "-1.0% vs its long-term average - not stretched either way",
           0
         ],
         [
@@ -2708,12 +2708,12 @@
       "id": "pax-gold",
       "symbol": "PAXG",
       "name": "PAX Gold",
-      "price": 4472.79,
-      "pct_24h": 1.15797,
-      "pct_7d": -2.3,
+      "price": 4466.91,
+      "pct_24h": 0.76944,
+      "pct_7d": -2.4,
       "support_30d": 4245.0586940559815,
       "resistance_30d": 4672.307573354755,
-      "as_of": "2026-09-04 02:45:22",
+      "as_of": "2026-09-04 04:05:21",
       "stale": false
     },
     "morpho": {
@@ -3102,20 +3102,21 @@
     }
   },
   "_strong_buy_state": {
-    "15m:TRX": true
+    "15m:PAXG": true,
+    "15m:XAUT": true
   },
   "BTC": {
     "key": "BTC",
     "name": "Bitcoin",
     "emoji": "\u20bf",
-    "price": 80881,
+    "price": 80828,
     "high_24h": 82108,
     "low_24h": 77107,
-    "pct_24h": 4.12934,
-    "pct_7d": 0.4,
-    "pct_30d": 25.7,
-    "sma50": 68799.9522410392,
-    "sma200": 69607.89918539063,
+    "pct_24h": 4.00264,
+    "pct_7d": 1.2,
+    "pct_30d": 25.8,
+    "sma50": 68798.67617200469,
+    "sma200": 69607.580168132,
     "support_30d": 62843.70368466329,
     "resistance_30d": 81264.70153038795,
     "mark_price": 81220.58098551,
@@ -3130,14 +3131,14 @@
     "key": "ETH",
     "name": "Ethereum",
     "emoji": "\u039e",
-    "price": 2506.05,
+    "price": 2502.72,
     "high_24h": 2523.23,
     "low_24h": 2379.95,
-    "pct_24h": 4.32742,
-    "pct_7d": -0.3,
+    "pct_24h": 4.12175,
+    "pct_7d": 0.6,
     "pct_30d": 33.8,
-    "sma50": 2078.1024130992805,
-    "sma200": 2033.2205454784585,
+    "sma50": 2078.0347714543705,
+    "sma200": 2033.203635067231,
     "support_30d": 1871.3976551883159,
     "resistance_30d": 2514.967577695514,
     "mark_price": 2505.87444186,
