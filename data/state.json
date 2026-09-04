@@ -4,7 +4,7 @@
   "_alerts_state": {
     "btc-resistance-break": {
       "triggered": true,
-      "last_triggered_at": "2026-09-04 22:10:24"
+      "last_triggered_at": "2026-09-04 22:15:25"
     },
     "btc-support-break": {
       "triggered": false,
@@ -1087,7 +1087,7 @@
     "polygon-ecosystem-token": {
       "label": "\ud83d\udfe1 HOLD / NEUTRAL",
       "status": "neutral",
-      "score": -1,
+      "score": 0,
       "rows": [
         [
           "Price vs. recent range",
@@ -1101,8 +1101,8 @@
         ],
         [
           "Market phase (best guess)",
-          "Established uptrend - phase where price marks up",
-          1
+          "Basing near the bottom - phase where smart money accumulates",
+          2
         ],
         [
           "Recent trend",
@@ -1111,7 +1111,7 @@
         ],
         [
           "Stretch from long-term average",
-          "+5.0% vs its long-term average - not stretched either way",
+          "+4.8% vs its long-term average - not stretched either way",
           0
         ],
         [
@@ -1124,12 +1124,12 @@
       "id": "polygon-ecosystem-token",
       "symbol": "POL",
       "name": "POL (ex-MATIC)",
-      "price": 0.093104,
-      "pct_24h": -1.85881,
-      "pct_7d": -13.3,
+      "price": 0.092918,
+      "pct_24h": -1.68856,
+      "pct_7d": -13.8,
       "support_30d": 0.07382135255393793,
       "resistance_30d": 0.12250456198546959,
-      "as_of": "2026-09-04 21:50:26",
+      "as_of": "2026-09-04 22:15:25",
       "stale": false
     },
     "blackrock-usd-institutional-digital-liquidity-fund": {
@@ -1399,7 +1399,7 @@
         ],
         [
           "Stretch from long-term average",
-          "+21.1% above its long-term average - a bit stretched",
+          "+21.0% above its long-term average - a bit stretched",
           -1
         ],
         [
@@ -1412,12 +1412,12 @@
       "id": "gatechain-token",
       "symbol": "GT",
       "name": "Gate",
-      "price": 8.4,
-      "pct_24h": -2.80431,
-      "pct_7d": 7.6,
+      "price": 8.39,
+      "pct_24h": -2.51187,
+      "pct_7d": 7.1,
       "support_30d": 6.623228679581571,
       "resistance_30d": 8.491828038614003,
-      "as_of": "2026-09-04 20:40:22",
+      "as_of": "2026-09-04 22:15:25",
       "stale": false
     },
     "crypto-com-chain": {
@@ -1543,7 +1543,7 @@
         ],
         [
           "Stretch from long-term average",
-          "+107.8% above its long-term average - very stretched",
+          "+104.2% above its long-term average - very stretched",
           -2
         ],
         [
@@ -1556,12 +1556,12 @@
       "id": "pump-fun",
       "symbol": "PUMP",
       "name": "Pump.fun",
-      "price": 0.00429316,
-      "pct_24h": -3.20191,
-      "pct_7d": -7.3,
+      "price": 0.00421664,
+      "pct_24h": -3.48216,
+      "pct_7d": -7.4,
       "support_30d": 0.0022648933670123433,
       "resistance_30d": 0.0052249885406471875,
-      "as_of": "2026-09-04 20:05:22",
+      "as_of": "2026-09-04 22:15:25",
       "stale": false
     },
     "venice-token": {
@@ -2167,7 +2167,7 @@
         ],
         [
           "Stretch from long-term average",
-          "-24.8% below its long-term average - confirmed downtrend",
+          "-24.7% below its long-term average - confirmed downtrend",
           -1
         ],
         [
@@ -2180,12 +2180,12 @@
       "id": "canton-network",
       "symbol": "CC",
       "name": "Canton",
-      "price": 0.106272,
-      "pct_24h": -4.97218,
-      "pct_7d": -3.2,
+      "price": 0.106423,
+      "pct_24h": -5.28895,
+      "pct_7d": -4.4,
       "support_30d": 0.09051839499501885,
       "resistance_30d": 0.12396615653575341,
-      "as_of": "2026-09-04 20:45:24",
+      "as_of": "2026-09-04 22:15:25",
       "stale": false
     },
     "internet-computer": {
@@ -2469,11 +2469,11 @@
       "symbol": "NEAR",
       "name": "NEAR Protocol",
       "price": 2.11,
-      "pct_24h": 5.88243,
-      "pct_7d": 16.4,
+      "pct_24h": 7.54494,
+      "pct_7d": 15.4,
       "support_30d": 1.5879597131538,
-      "resistance_30d": 2.108547303266589,
-      "as_of": "2026-09-04 21:35:23",
+      "resistance_30d": 2.1134358632386463,
+      "as_of": "2026-09-04 22:15:25",
       "stale": false
     },
     "quant-network": {
@@ -3106,14 +3106,14 @@
     "key": "BTC",
     "name": "Bitcoin",
     "emoji": "\u20bf",
-    "price": 79667,
+    "price": 79662,
     "high_24h": 81423,
     "low_24h": 78706,
-    "pct_24h": -2.19956,
+    "pct_24h": -2.11507,
     "pct_7d": 2.9,
     "pct_30d": 23.0,
-    "sma50": 68775.468558249,
-    "sma200": 69601.77826469307,
+    "sma50": 68775.3455270316,
+    "sma200": 69601.74750688873,
     "support_30d": 62843.70368466329,
     "resistance_30d": 81264.70153038795,
     "mark_price": 79691.1,
@@ -3128,14 +3128,14 @@
     "key": "ETH",
     "name": "Ethereum",
     "emoji": "\u039e",
-    "price": 2453.05,
+    "price": 2452.57,
     "high_24h": 2543.95,
     "low_24h": 2435.15,
-    "pct_24h": -2.14264,
+    "pct_24h": -2.06989,
     "pct_7d": 1.0,
     "pct_30d": 28.0,
-    "sma50": 2077.038796006322,
-    "sma200": 2032.954641205219,
+    "sma50": 2077.0294898044986,
+    "sma200": 2032.952314654763,
     "support_30d": 1871.3976551883159,
     "resistance_30d": 2514.967577695514,
     "mark_price": 2452.58,
