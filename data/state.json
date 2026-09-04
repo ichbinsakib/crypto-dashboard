@@ -4,7 +4,7 @@
   "_alerts_state": {
     "btc-resistance-break": {
       "triggered": true,
-      "last_triggered_at": "2026-09-04 20:05:22"
+      "last_triggered_at": "2026-09-04 20:10:23"
     },
     "btc-support-break": {
       "triggered": false,
@@ -439,7 +439,7 @@
         ],
         [
           "Stretch from long-term average",
-          "+46.1% above its long-term average - very stretched",
+          "+46.3% above its long-term average - very stretched",
           -2
         ],
         [
@@ -452,12 +452,12 @@
       "id": "rain",
       "symbol": "RAIN",
       "name": "Rain",
-      "price": 0.01655945,
-      "pct_24h": -3.38494,
-      "pct_7d": -7.6,
+      "price": 0.01657904,
+      "pct_24h": -3.3324,
+      "pct_7d": -5.9,
       "support_30d": 0.012542200634745275,
       "resistance_30d": 0.018158429442510105,
-      "as_of": "2026-09-04 17:30:26",
+      "as_of": "2026-09-04 20:10:23",
       "stale": false
     },
     "chainlink": {
@@ -2435,7 +2435,7 @@
       "rows": [
         [
           "Price vs. recent range",
-          "Near its 30-day high (~$2.11) - less room to run",
+          "Near its 30-day high (~$2.13) - less room to run",
           -1
         ],
         [
@@ -2455,7 +2455,7 @@
         ],
         [
           "Stretch from long-term average",
-          "+26.4% above its long-term average - a bit stretched",
+          "+28.2% above its long-term average - a bit stretched",
           -1
         ],
         [
@@ -2468,12 +2468,12 @@
       "id": "near",
       "symbol": "NEAR",
       "name": "NEAR Protocol",
-      "price": 2.1,
-      "pct_24h": 5.38686,
-      "pct_7d": 11.6,
+      "price": 2.13,
+      "pct_24h": 7.49772,
+      "pct_7d": 19.8,
       "support_30d": 1.5879597131538,
-      "resistance_30d": 2.110889543469806,
-      "as_of": "2026-09-04 19:30:27",
+      "resistance_30d": 2.1280670946954046,
+      "as_of": "2026-09-04 20:10:23",
       "stale": false
     },
     "quant-network": {
@@ -2647,7 +2647,7 @@
         ],
         [
           "Stretch from long-term average",
-          "-21.0% below its long-term average - confirmed downtrend",
+          "-22.0% below its long-term average - confirmed downtrend",
           -1
         ],
         [
@@ -2660,12 +2660,12 @@
       "id": "world-liberty-financial",
       "symbol": "WLFI",
       "name": "World Liberty Financial",
-      "price": 0.057097,
-      "pct_24h": -1.83543,
-      "pct_7d": -2.3,
+      "price": 0.056366,
+      "pct_24h": -3.04473,
+      "pct_7d": -1.2,
       "support_30d": 0.051301304477199876,
       "resistance_30d": 0.06254770952093733,
-      "as_of": "2026-09-04 15:55:18",
+      "as_of": "2026-09-04 20:10:23",
       "stale": false
     },
     "pax-gold": {
@@ -3101,19 +3101,21 @@
       "stale": false
     }
   },
-  "_strong_buy_state": {},
+  "_strong_buy_state": {
+    "15m:WLFI": true
+  },
   "BTC": {
     "key": "BTC",
     "name": "Bitcoin",
     "emoji": "\u20bf",
-    "price": 79846,
+    "price": 79784,
     "high_24h": 82108,
     "low_24h": 78706,
-    "pct_24h": -2.14432,
+    "pct_24h": -2.29645,
     "pct_7d": 2.9,
     "pct_30d": 23.2,
-    "sma50": 68778.3768871148,
-    "sma200": 69602.50534690953,
+    "sma50": 68777.89071509379,
+    "sma200": 69602.38380390427,
     "support_30d": 62843.70368466329,
     "resistance_30d": 81264.70153038795,
     "mark_price": 79509.6,
@@ -3128,14 +3130,14 @@
     "key": "ETH",
     "name": "Ethereum",
     "emoji": "\u039e",
-    "price": 2458.08,
+    "price": 2454.83,
     "high_24h": 2543.95,
     "low_24h": 2435.15,
-    "pct_24h": -2.20069,
+    "pct_24h": -2.40115,
     "pct_7d": 1.1,
     "pct_30d": 28.1,
-    "sma50": 2077.1198082704946,
-    "sma200": 2032.974894271262,
+    "sma50": 2077.074707598795,
+    "sma200": 2032.9636191033371,
     "support_30d": 1871.3976551883159,
     "resistance_30d": 2514.967577695514,
     "mark_price": 2449.88,
