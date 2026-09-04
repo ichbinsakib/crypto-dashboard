@@ -4,7 +4,7 @@
   "_alerts_state": {
     "btc-resistance-break": {
       "triggered": true,
-      "last_triggered_at": "2026-09-04 15:00:34"
+      "last_triggered_at": "2026-09-04 15:05:22"
     },
     "btc-support-break": {
       "triggered": false,
@@ -583,7 +583,7 @@
         ],
         [
           "Stretch from long-term average",
-          "-4.1% vs its long-term average - not stretched either way",
+          "-3.2% vs its long-term average - not stretched either way",
           0
         ],
         [
@@ -596,12 +596,12 @@
       "id": "leo-token",
       "symbol": "LEO",
       "name": "LEO Token",
-      "price": 9.22,
-      "pct_24h": -1.8922,
+      "price": 9.3,
+      "pct_24h": -0.10461,
       "pct_7d": -1.6,
       "support_30d": 8.948412455130585,
       "resistance_30d": 9.755640407805231,
-      "as_of": "2026-09-04 12:50:24",
+      "as_of": "2026-09-04 15:05:22",
       "stale": false
     },
     "monero": {
@@ -941,9 +941,9 @@
       "stale": false
     },
     "aster-2": {
-      "label": "\ud83d\udfe1 HOLD / NEUTRAL",
-      "status": "neutral",
-      "score": -1,
+      "label": "\ud83d\udd34 CAUTION - REDUCE NEW BUYS",
+      "status": "bearish",
+      "score": -2,
       "rows": [
         [
           "Price vs. recent range",
@@ -967,8 +967,8 @@
         ],
         [
           "Stretch from long-term average",
-          "+9.7% vs its long-term average - not stretched either way",
-          0
+          "+10.1% above its long-term average - a bit stretched",
+          -1
         ],
         [
           "Leverage traders' bias",
@@ -976,16 +976,16 @@
           0
         ]
       ],
-      "plain": "No real edge either way right now - fine to just wait and watch.",
+      "plain": "Getting risky - I'd hold off on new buys until this cools down.",
       "id": "aster-2",
       "symbol": "ASTER",
       "name": "Aster",
-      "price": 0.725405,
-      "pct_24h": -1.04032,
-      "pct_7d": 4.0,
+      "price": 0.72755,
+      "pct_24h": -0.66869,
+      "pct_7d": 3.7,
       "support_30d": 0.5986101196690307,
       "resistance_30d": 0.7276231199504045,
-      "as_of": "2026-09-04 14:25:19",
+      "as_of": "2026-09-04 15:05:22",
       "stale": false
     },
     "worldcoin-wld": {
@@ -2612,12 +2612,12 @@
       "id": "bitway",
       "symbol": "BTW",
       "name": "Bitway",
-      "price": 0.450217,
-      "pct_24h": 0.12524,
-      "pct_7d": 11.2,
+      "price": 0.450726,
+      "pct_24h": -3.58722,
+      "pct_7d": 10.7,
       "support_30d": 0.19157288401523984,
       "resistance_30d": 0.48788437226017506,
-      "as_of": "2026-09-04 13:50:27",
+      "as_of": "2026-09-04 15:05:22",
       "stale": false
     },
     "world-liberty-financial": {
@@ -3106,14 +3106,14 @@
     "key": "BTC",
     "name": "Bitcoin",
     "emoji": "\u20bf",
-    "price": 78907,
+    "price": 78934,
     "high_24h": 82108,
-    "low_24h": 79016,
-    "pct_24h": -1.82923,
-    "pct_7d": -0.1,
-    "pct_30d": 23.4,
-    "sma50": 68760.90308543238,
-    "sma200": 69598.13689648893,
+    "low_24h": 78706,
+    "pct_24h": -2.30241,
+    "pct_7d": -0.6,
+    "pct_30d": 22.7,
+    "sma50": 68760.8900001889,
+    "sma200": 69598.13362517804,
     "support_30d": 62843.70368466329,
     "resistance_30d": 81264.70153038795,
     "mark_price": 79220.43152899,
@@ -3128,14 +3128,14 @@
     "key": "ETH",
     "name": "Ethereum",
     "emoji": "\u039e",
-    "price": 2440.95,
+    "price": 2441.79,
     "high_24h": 2543.95,
-    "low_24h": 2437.03,
-    "pct_24h": -1.70899,
-    "pct_7d": -1.9,
-    "pct_30d": 30.8,
-    "sma50": 2076.818283959949,
-    "sma200": 2032.8995131936256,
+    "low_24h": 2435.15,
+    "pct_24h": -2.08008,
+    "pct_7d": -2.9,
+    "pct_30d": 30.2,
+    "sma50": 2076.8011257061094,
+    "sma200": 2032.895223630166,
     "support_30d": 1871.3976551883159,
     "resistance_30d": 2514.967577695514,
     "mark_price": 2446.3699845,
