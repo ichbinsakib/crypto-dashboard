@@ -4,7 +4,7 @@
   "_alerts_state": {
     "btc-resistance-break": {
       "triggered": true,
-      "last_triggered_at": "2026-09-04 05:25:24"
+      "last_triggered_at": "2026-09-04 05:30:26"
     },
     "btc-support-break": {
       "triggered": false,
@@ -68,12 +68,12 @@
       "id": "binancecoin",
       "symbol": "BNB",
       "name": "BNB",
-      "price": 724.96,
-      "pct_24h": 4.93502,
+      "price": 724.61,
+      "pct_24h": 4.9571,
       "pct_7d": 2.3,
       "support_30d": 591.7111094655114,
       "resistance_30d": 725.0807755091299,
-      "as_of": "2026-09-04 05:25:24",
+      "as_of": "2026-09-04 05:30:26",
       "stale": false
     },
     "ripple": {
@@ -367,11 +367,11 @@
     "zcash": {
       "label": "\ud83d\udd34 DISTRIBUTION ZONE",
       "status": "bearish",
-      "score": -5,
+      "score": -8,
       "rows": [
         [
           "Price vs. recent range",
-          "Near its 30-day high (~$952.67) - less room to run",
+          "Near its 30-day high (~$954.29) - less room to run",
           -1
         ],
         [
@@ -386,12 +386,12 @@
         ],
         [
           "Recent trend",
-          "Trending up steadily - healthy",
-          1
+          "Shooting straight up - classic blow-off top risk, don't chase",
+          -2
         ],
         [
           "Stretch from long-term average",
-          "+113.0% above its long-term average - very stretched",
+          "+116.7% above its long-term average - very stretched",
           -2
         ],
         [
@@ -404,12 +404,12 @@
       "id": "zcash",
       "symbol": "ZEC",
       "name": "Zcash",
-      "price": 938.98,
-      "pct_24h": 14.44303,
-      "pct_7d": 16.0,
+      "price": 955.43,
+      "pct_24h": 17.15482,
+      "pct_7d": 20.0,
       "support_30d": 480.66499804092575,
-      "resistance_30d": 952.6662866911287,
-      "as_of": "2026-09-04 02:25:17",
+      "resistance_30d": 954.2855819797871,
+      "as_of": "2026-09-04 05:30:26",
       "stale": false
     },
     "rain": {
@@ -919,7 +919,7 @@
         ],
         [
           "Stretch from long-term average",
-          "-7.2% vs its long-term average - not stretched either way",
+          "-7.3% vs its long-term average - not stretched either way",
           0
         ],
         [
@@ -932,12 +932,12 @@
       "id": "avalanche-2",
       "symbol": "AVAX",
       "name": "Avalanche",
-      "price": 7.5,
-      "pct_24h": 4.26018,
-      "pct_7d": -0.3,
+      "price": 7.49,
+      "pct_24h": 3.73221,
+      "pct_7d": 0.7,
       "support_30d": 6.313391080113916,
       "resistance_30d": 7.836507914480645,
-      "as_of": "2026-09-04 02:00:31",
+      "as_of": "2026-09-04 05:30:26",
       "stale": false
     },
     "aster-2": {
@@ -3101,26 +3101,28 @@
       "stale": false
     }
   },
-  "_strong_buy_state": {},
+  "_strong_buy_state": {
+    "15m:AVAX": true
+  },
   "BTC": {
     "key": "BTC",
     "name": "Bitcoin",
     "emoji": "\u20bf",
-    "price": 81070,
+    "price": 81054,
     "high_24h": 82108,
     "low_24h": 77452,
-    "pct_24h": 4.9293,
+    "pct_24h": 5.01745,
     "pct_7d": 1.6,
     "pct_30d": 26.4,
-    "sma50": 68803.3982001994,
-    "sma200": 69608.76067518067,
+    "sma50": 68803.52368791852,
+    "sma200": 69608.79204711046,
     "support_30d": 62843.70368466329,
     "resistance_30d": 81264.70153038795,
-    "mark_price": 81220.58098551,
-    "index_price": 81251.24478261,
-    "funding_rate": 8.351e-05,
-    "oi_change_pct": 5.168658539514164,
-    "oi_now": 113155.747,
+    "mark_price": 80872.81049475,
+    "index_price": 80939.87608696,
+    "funding_rate": 8.302e-05,
+    "oi_change_pct": 4.515701824357874,
+    "oi_now": 112569.802,
     "fng_value": 74,
     "fng_class": "Greed"
   },
@@ -3128,21 +3130,21 @@
     "key": "ETH",
     "name": "Ethereum",
     "emoji": "\u039e",
-    "price": 2513.7,
+    "price": 2512.4,
     "high_24h": 2523.23,
     "low_24h": 2389.3,
-    "pct_24h": 5.41883,
+    "pct_24h": 5.38321,
     "pct_7d": 0.8,
     "pct_30d": 34.5,
-    "sma50": 2078.2444143080115,
-    "sma200": 2033.2560457806412,
+    "sma50": 2078.2429457115977,
+    "sma200": 2033.2556786315379,
     "support_30d": 1871.3976551883159,
     "resistance_30d": 2514.967577695514,
-    "mark_price": 2505.87444186,
-    "index_price": 2506.71976744,
-    "funding_rate": 9.436e-05,
-    "oi_change_pct": -0.41148401500762866,
-    "oi_now": 2293951.694,
+    "mark_price": 2507.73832799,
+    "index_price": 2509.27488372,
+    "funding_rate": 0.0001,
+    "oi_change_pct": 1.171992755532077,
+    "oi_now": 2347419.603,
     "fng_value": 74,
     "fng_class": "Greed"
   }
