@@ -4,7 +4,7 @@
   "_alerts_state": {
     "btc-resistance-break": {
       "triggered": true,
-      "last_triggered_at": "2026-09-04 22:15:25"
+      "last_triggered_at": "2026-09-04 22:20:25"
     },
     "btc-support-break": {
       "triggered": false,
@@ -583,7 +583,7 @@
         ],
         [
           "Stretch from long-term average",
-          "-3.9% vs its long-term average - not stretched either way",
+          "-4.1% vs its long-term average - not stretched either way",
           0
         ],
         [
@@ -596,12 +596,12 @@
       "id": "leo-token",
       "symbol": "LEO",
       "name": "LEO Token",
-      "price": 9.24,
-      "pct_24h": -0.97526,
-      "pct_7d": -2.1,
+      "price": 9.22,
+      "pct_24h": -1.25958,
+      "pct_7d": -2.3,
       "support_30d": 8.948412455130585,
       "resistance_30d": 9.755640407805231,
-      "as_of": "2026-09-04 20:35:19",
+      "as_of": "2026-09-04 22:20:25",
       "stale": false
     },
     "monero": {
@@ -2708,12 +2708,12 @@
       "id": "pax-gold",
       "symbol": "PAXG",
       "name": "PAX Gold",
-      "price": 4431.59,
-      "pct_24h": -0.95591,
+      "price": 4431.72,
+      "pct_24h": -1.03191,
       "pct_7d": -0.5,
       "support_30d": 4245.0586940559815,
       "resistance_30d": 4672.307573354755,
-      "as_of": "2026-09-04 20:55:21",
+      "as_of": "2026-09-04 22:20:25",
       "stale": false
     },
     "morpho": {
@@ -2915,7 +2915,7 @@
       "rows": [
         [
           "Price vs. recent range",
-          "Near its 30-day high (~$0.1087) - less room to run",
+          "Near its 30-day high (~$0.1086) - less room to run",
           -1
         ],
         [
@@ -2948,12 +2948,12 @@
       "id": "just",
       "symbol": "JST",
       "name": "JUST",
-      "price": 0.108669,
-      "pct_24h": 2.09781,
-      "pct_7d": 11.6,
+      "price": 0.10863,
+      "pct_24h": 1.48077,
+      "pct_7d": 11.1,
       "support_30d": 0.0946830738697126,
-      "resistance_30d": 0.10866945953663638,
-      "as_of": "2026-09-04 20:20:26",
+      "resistance_30d": 0.1086303156530719,
+      "as_of": "2026-09-04 22:20:25",
       "stale": false
     },
     "algorand": {
@@ -3101,19 +3101,21 @@
       "stale": false
     }
   },
-  "_strong_buy_state": {},
+  "_strong_buy_state": {
+    "15m:PUMP": true
+  },
   "BTC": {
     "key": "BTC",
     "name": "Bitcoin",
     "emoji": "\u20bf",
-    "price": 79662,
+    "price": 79719,
     "high_24h": 81423,
     "low_24h": 78706,
-    "pct_24h": -2.11507,
+    "pct_24h": -1.99555,
     "pct_7d": 2.9,
     "pct_30d": 23.0,
-    "sma50": 68775.3455270316,
-    "sma200": 69601.74750688873,
+    "sma50": 68776.62242259752,
+    "sma200": 69602.0667307802,
     "support_30d": 62843.70368466329,
     "resistance_30d": 81264.70153038795,
     "mark_price": 79691.1,
@@ -3128,14 +3130,14 @@
     "key": "ETH",
     "name": "Ethereum",
     "emoji": "\u039e",
-    "price": 2452.57,
+    "price": 2452.94,
     "high_24h": 2543.95,
     "low_24h": 2435.15,
-    "pct_24h": -2.06989,
+    "pct_24h": -2.07382,
     "pct_7d": 1.0,
     "pct_30d": 28.0,
-    "sma50": 2077.0294898044986,
-    "sma200": 2032.952314654763,
+    "sma50": 2077.0381745302893,
+    "sma200": 2032.9544858362106,
     "support_30d": 1871.3976551883159,
     "resistance_30d": 2514.967577695514,
     "mark_price": 2452.58,
