@@ -4,7 +4,7 @@
   "_alerts_state": {
     "btc-resistance-break": {
       "triggered": true,
-      "last_triggered_at": "2026-09-04 21:45:21"
+      "last_triggered_at": "2026-09-04 21:50:26"
     },
     "btc-support-break": {
       "triggered": false,
@@ -199,7 +199,7 @@
         ],
         [
           "Stretch from long-term average",
-          "+2.2% vs its long-term average - not stretched either way",
+          "+2.1% vs its long-term average - not stretched either way",
           0
         ],
         [
@@ -212,12 +212,12 @@
       "id": "tron",
       "symbol": "TRX",
       "name": "TRON",
-      "price": 0.33155,
-      "pct_24h": -0.0736,
-      "pct_7d": -2.4,
+      "price": 0.331368,
+      "pct_24h": 0.02274,
+      "pct_7d": -2.8,
       "support_30d": 0.32221537516581966,
       "resistance_30d": 0.3447899585776834,
-      "as_of": "2026-09-04 20:25:20",
+      "as_of": "2026-09-04 21:50:26",
       "stale": false
     },
     "figure-heloc": {
@@ -933,11 +933,11 @@
       "symbol": "AVAX",
       "name": "Avalanche",
       "price": 7.38,
-      "pct_24h": -2.11992,
+      "pct_24h": -2.10169,
       "pct_7d": 1.6,
       "support_30d": 6.313391080113916,
       "resistance_30d": 7.836507914480645,
-      "as_of": "2026-09-04 21:40:22",
+      "as_of": "2026-09-04 21:50:26",
       "stale": false
     },
     "aster-2": {
@@ -1111,7 +1111,7 @@
         ],
         [
           "Stretch from long-term average",
-          "+5.1% vs its long-term average - not stretched either way",
+          "+5.0% vs its long-term average - not stretched either way",
           0
         ],
         [
@@ -1124,12 +1124,12 @@
       "id": "polygon-ecosystem-token",
       "symbol": "POL",
       "name": "POL (ex-MATIC)",
-      "price": 0.09314,
-      "pct_24h": -1.6178,
-      "pct_7d": -14.2,
+      "price": 0.093104,
+      "pct_24h": -1.85881,
+      "pct_7d": -13.3,
       "support_30d": 0.07382135255393793,
       "resistance_30d": 0.12250456198546959,
-      "as_of": "2026-09-04 19:45:23",
+      "as_of": "2026-09-04 21:50:26",
       "stale": false
     },
     "blackrock-usd-institutional-digital-liquidity-fund": {
@@ -3101,21 +3101,19 @@
       "stale": false
     }
   },
-  "_strong_buy_state": {
-    "15m:XMR": true
-  },
+  "_strong_buy_state": {},
   "BTC": {
     "key": "BTC",
     "name": "Bitcoin",
     "emoji": "\u20bf",
-    "price": 79784,
+    "price": 79781,
     "high_24h": 81599,
     "low_24h": 78706,
-    "pct_24h": -2.15101,
+    "pct_24h": -2.25886,
     "pct_7d": 2.8,
     "pct_30d": 23.0,
-    "sma50": 68778.11742366855,
-    "sma200": 69602.44048104796,
+    "sma50": 68778.22299575644,
+    "sma200": 69602.46687406994,
     "support_30d": 62843.70368466329,
     "resistance_30d": 81264.70153038795,
     "mark_price": 79691.1,
@@ -3130,14 +3128,14 @@
     "key": "ETH",
     "name": "Ethereum",
     "emoji": "\u039e",
-    "price": 2456.4,
+    "price": 2456.08,
     "high_24h": 2543.95,
     "low_24h": 2435.15,
-    "pct_24h": -2.10889,
+    "pct_24h": -2.2069,
     "pct_7d": 0.7,
     "pct_30d": 28.0,
-    "sma50": 2077.111720008767,
-    "sma200": 2032.97287220583,
+    "sma50": 2077.118296874008,
+    "sma200": 2032.9745164221404,
     "support_30d": 1871.3976551883159,
     "resistance_30d": 2514.967577695514,
     "mark_price": 2452.58,
