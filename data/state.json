@@ -4,7 +4,7 @@
   "_alerts_state": {
     "btc-resistance-break": {
       "triggered": true,
-      "last_triggered_at": "2026-09-04 16:01:13"
+      "last_triggered_at": "2026-09-04 16:05:21"
     },
     "btc-support-break": {
       "triggered": false,
@@ -1907,7 +1907,7 @@
       "rows": [
         [
           "Price vs. recent range",
-          "Near its 30-day high (~$0.5887) - less room to run",
+          "Near its 30-day high (~$0.5756) - less room to run",
           -1
         ],
         [
@@ -1927,7 +1927,7 @@
         ],
         [
           "Stretch from long-term average",
-          "-1.4% vs its long-term average - not stretched either way",
+          "-3.5% vs its long-term average - not stretched either way",
           0
         ],
         [
@@ -1940,12 +1940,12 @@
       "id": "mantle",
       "symbol": "MNT",
       "name": "Mantle",
-      "price": 0.588394,
-      "pct_24h": 5.03357,
-      "pct_7d": 11.8,
+      "price": 0.575559,
+      "pct_24h": 1.04749,
+      "pct_7d": 10.7,
       "support_30d": 0.40907330899083316,
-      "resistance_30d": 0.5886734682827397,
-      "as_of": "2026-09-04 12:15:23",
+      "resistance_30d": 0.5755591092108261,
+      "as_of": "2026-09-04 16:05:21",
       "stale": false
     },
     "polkadot": {
@@ -2023,7 +2023,7 @@
         ],
         [
           "Stretch from long-term average",
-          "+71.4% above its long-term average - very stretched",
+          "+75.8% above its long-term average - very stretched",
           -2
         ],
         [
@@ -2036,12 +2036,12 @@
       "id": "uniswap",
       "symbol": "UNI",
       "name": "Uniswap",
-      "price": 6.11,
-      "pct_24h": -1.64127,
-      "pct_7d": 32.1,
+      "price": 6.27,
+      "pct_24h": 1.64114,
+      "pct_7d": 36.0,
       "support_30d": 3.1971416665971573,
       "resistance_30d": 6.327780516733257,
-      "as_of": "2026-09-04 13:05:23",
+      "as_of": "2026-09-04 16:05:21",
       "stale": false
     },
     "pi-network": {
@@ -2669,14 +2669,14 @@
       "stale": false
     },
     "pax-gold": {
-      "label": "\ud83d\udfe1 HOLD / NEUTRAL",
-      "status": "neutral",
-      "score": 0,
+      "label": "\ud83d\udfe2 LEAN ACCUMULATE",
+      "status": "bullish",
+      "score": 3,
       "rows": [
         [
           "Price vs. recent range",
-          "Near its 30-day high (~$4,672.31) - less room to run",
-          -1
+          "Near its 30-day low (~$4,245.06) - historically a better entry",
+          2
         ],
         [
           "Crowd mood (Fear & Greed)",
@@ -2695,7 +2695,7 @@
         ],
         [
           "Stretch from long-term average",
-          "-0.9% vs its long-term average - not stretched either way",
+          "-1.6% vs its long-term average - not stretched either way",
           0
         ],
         [
@@ -2704,16 +2704,16 @@
           0
         ]
       ],
-      "plain": "No real edge either way right now - fine to just wait and watch.",
+      "plain": "Leans toward a decent spot to slowly add (DCA) - not a strong signal, just a lean.",
       "id": "pax-gold",
       "symbol": "PAXG",
       "name": "PAX Gold",
-      "price": 4472.89,
-      "pct_24h": 0.40743,
-      "pct_7d": -2.7,
+      "price": 4437.68,
+      "pct_24h": -1.21832,
+      "pct_7d": -3.0,
       "support_30d": 4245.0586940559815,
       "resistance_30d": 4672.307573354755,
-      "as_of": "2026-09-04 12:30:28",
+      "as_of": "2026-09-04 16:05:21",
       "stale": false
     },
     "morpho": {
@@ -3106,14 +3106,14 @@
     "key": "BTC",
     "name": "Bitcoin",
     "emoji": "\u20bf",
-    "price": 79415,
+    "price": 79446,
     "high_24h": 82108,
     "low_24h": 78706,
-    "pct_24h": -2.3476,
+    "pct_24h": -1.70898,
     "pct_7d": -0.2,
     "pct_30d": 23.3,
-    "sma50": 68770.5216343308,
-    "sma200": 69600.54153371352,
+    "sma50": 68771.02881600261,
+    "sma200": 69600.66832913148,
     "support_30d": 62843.70368466329,
     "resistance_30d": 81264.70153038795,
     "mark_price": 79220.43152899,
@@ -3128,14 +3128,14 @@
     "key": "ETH",
     "name": "Ethereum",
     "emoji": "\u039e",
-    "price": 2451.84,
+    "price": 2452.0,
     "high_24h": 2543.95,
     "low_24h": 2435.15,
-    "pct_24h": -2.53111,
+    "pct_24h": -1.94114,
     "pct_7d": -2.5,
     "pct_30d": 30.8,
-    "sma50": 2077.015455192064,
-    "sma200": 2032.9488060016542,
+    "sma50": 2077.018053773741,
+    "sma200": 2032.9494556470736,
     "support_30d": 1871.3976551883159,
     "resistance_30d": 2514.967577695514,
     "mark_price": 2446.3699845,
