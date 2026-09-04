@@ -4,7 +4,7 @@
   "_alerts_state": {
     "btc-resistance-break": {
       "triggered": true,
-      "last_triggered_at": "2026-09-04 17:00:33"
+      "last_triggered_at": "2026-09-04 17:05:24"
     },
     "btc-support-break": {
       "triggered": false,
@@ -941,13 +941,13 @@
       "stale": false
     },
     "aster-2": {
-      "label": "\ud83d\udd34 CAUTION - REDUCE NEW BUYS",
-      "status": "bearish",
-      "score": -2,
+      "label": "\ud83d\udfe1 HOLD / NEUTRAL",
+      "status": "neutral",
+      "score": -1,
       "rows": [
         [
           "Price vs. recent range",
-          "Near its 30-day high (~$0.7411) - less room to run",
+          "Near its 30-day high (~$0.7427) - less room to run",
           -1
         ],
         [
@@ -962,12 +962,12 @@
         ],
         [
           "Recent trend",
-          "Chopping sideways - no clear trend",
-          0
+          "Trending up steadily - healthy",
+          1
         ],
         [
           "Stretch from long-term average",
-          "+12.1% above its long-term average - a bit stretched",
+          "+12.4% above its long-term average - a bit stretched",
           -1
         ],
         [
@@ -976,16 +976,16 @@
           0
         ]
       ],
-      "plain": "Getting risky - I'd hold off on new buys until this cools down.",
+      "plain": "No real edge either way right now - fine to just wait and watch.",
       "id": "aster-2",
       "symbol": "ASTER",
       "name": "Aster",
-      "price": 0.741144,
-      "pct_24h": 1.03717,
-      "pct_7d": 5.1,
+      "price": 0.742772,
+      "pct_24h": 1.38128,
+      "pct_7d": 8.7,
       "support_30d": 0.5986101196690307,
-      "resistance_30d": 0.7411437642889548,
-      "as_of": "2026-09-04 16:35:22",
+      "resistance_30d": 0.7426892004261619,
+      "as_of": "2026-09-04 17:05:24",
       "stale": false
     },
     "worldcoin-wld": {
@@ -1763,7 +1763,7 @@
       "rows": [
         [
           "Price vs. recent range",
-          "Near its 30-day high (~$4.59) - less room to run",
+          "Near its 30-day high (~$4.84) - less room to run",
           -1
         ],
         [
@@ -1783,7 +1783,7 @@
         ],
         [
           "Stretch from long-term average",
-          "+174.3% above its long-term average - very stretched",
+          "+190.9% above its long-term average - very stretched",
           -2
         ],
         [
@@ -1796,12 +1796,12 @@
       "id": "lighter",
       "symbol": "LIT",
       "name": "Lighter",
-      "price": 4.57,
-      "pct_24h": 13.1781,
-      "pct_7d": 36.6,
+      "price": 4.85,
+      "pct_24h": 15.83104,
+      "pct_7d": 43.6,
       "support_30d": 2.2358662099746955,
-      "resistance_30d": 4.588324100458255,
-      "as_of": "2026-09-04 14:55:17",
+      "resistance_30d": 4.838353836357952,
+      "as_of": "2026-09-04 17:05:24",
       "stale": false
     },
     "ethena": {
@@ -2239,7 +2239,7 @@
     "bittensor": {
       "label": "\ud83d\udfe1 HOLD / NEUTRAL",
       "status": "neutral",
-      "score": 0,
+      "score": 1,
       "rows": [
         [
           "Price vs. recent range",
@@ -2258,12 +2258,12 @@
         ],
         [
           "Recent trend",
-          "Trending down - avoid catching a falling knife",
-          -1
+          "Chopping sideways - no clear trend",
+          0
         ],
         [
           "Stretch from long-term average",
-          "-5.4% vs its long-term average - not stretched either way",
+          "-5.3% vs its long-term average - not stretched either way",
           0
         ],
         [
@@ -2276,12 +2276,12 @@
       "id": "bittensor",
       "symbol": "TAO",
       "name": "Bittensor",
-      "price": 223.89,
-      "pct_24h": -1.6158,
-      "pct_7d": -9.3,
+      "price": 224.25,
+      "pct_24h": -2.25447,
+      "pct_7d": -7.0,
       "support_30d": 190.67093053611111,
       "resistance_30d": 254.06815196002663,
-      "as_of": "2026-09-04 16:30:28",
+      "as_of": "2026-09-04 17:05:24",
       "stale": false
     },
     "the-open-network": {
@@ -3101,19 +3101,21 @@
       "stale": false
     }
   },
-  "_strong_buy_state": {},
+  "_strong_buy_state": {
+    "1h:LIT": true
+  },
   "BTC": {
     "key": "BTC",
     "name": "Bitcoin",
     "emoji": "\u20bf",
-    "price": 79785,
+    "price": 79687,
     "high_24h": 82108,
     "low_24h": 78706,
-    "pct_24h": -1.44677,
-    "pct_7d": -0.2,
-    "pct_30d": 23.3,
-    "sma50": 68777.22664404556,
-    "sma200": 69602.21778614222,
+    "pct_24h": -1.50649,
+    "pct_7d": 1.8,
+    "pct_30d": 23.9,
+    "sma50": 68775.8420433777,
+    "sma200": 69601.87163597526,
     "support_30d": 62843.70368466329,
     "resistance_30d": 81264.70153038795,
     "mark_price": 79220.43152899,
@@ -3128,14 +3130,14 @@
     "key": "ETH",
     "name": "Ethereum",
     "emoji": "\u039e",
-    "price": 2460.49,
+    "price": 2457.77,
     "high_24h": 2543.95,
     "low_24h": 2435.15,
-    "pct_24h": -1.34458,
-    "pct_7d": -2.5,
-    "pct_30d": 30.8,
-    "sma50": 2077.1676729420346,
-    "sma200": 2032.986860439147,
+    "pct_24h": -1.39364,
+    "pct_7d": -0.6,
+    "pct_30d": 31.4,
+    "sma50": 2077.116613589927,
+    "sma200": 2032.97409560112,
     "support_30d": 1871.3976551883159,
     "resistance_30d": 2514.967577695514,
     "mark_price": 2446.3699845,
