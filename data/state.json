@@ -4,7 +4,7 @@
   "_alerts_state": {
     "btc-resistance-break": {
       "triggered": true,
-      "last_triggered_at": "2026-09-04 17:55:20"
+      "last_triggered_at": "2026-09-04 18:00:33"
     },
     "btc-support-break": {
       "triggered": false,
@@ -535,7 +535,7 @@
         ],
         [
           "Stretch from long-term average",
-          "+32.5% above its long-term average - very stretched",
+          "+31.9% above its long-term average - very stretched",
           -2
         ],
         [
@@ -548,12 +548,12 @@
       "id": "whitebit",
       "symbol": "WBT",
       "name": "WhiteBIT Coin",
-      "price": 73.32,
-      "pct_24h": -0.87087,
-      "pct_7d": -0.6,
+      "price": 73.02,
+      "pct_24h": -1.36052,
+      "pct_7d": 1.8,
       "support_30d": 54.452558710928955,
       "resistance_30d": 74.07423223861623,
-      "as_of": "2026-09-04 17:00:33",
+      "as_of": "2026-09-04 18:00:33",
       "stale": false
     },
     "leo-token": {
@@ -1111,7 +1111,7 @@
         ],
         [
           "Stretch from long-term average",
-          "+4.0% vs its long-term average - not stretched either way",
+          "+4.1% vs its long-term average - not stretched either way",
           0
         ],
         [
@@ -1124,12 +1124,12 @@
       "id": "polygon-ecosystem-token",
       "symbol": "POL",
       "name": "POL (ex-MATIC)",
-      "price": 0.092165,
-      "pct_24h": -2.64621,
-      "pct_7d": -13.3,
+      "price": 0.092321,
+      "pct_24h": -2.4784,
+      "pct_7d": -13.7,
       "support_30d": 0.07382135255393793,
       "resistance_30d": 0.12250456198546959,
-      "as_of": "2026-09-04 17:45:37",
+      "as_of": "2026-09-04 18:00:33",
       "stale": false
     },
     "blackrock-usd-institutional-digital-liquidity-fund": {
@@ -1639,7 +1639,7 @@
         ],
         [
           "Stretch from long-term average",
-          "+0.1% vs its long-term average - not stretched either way",
+          "-0.3% vs its long-term average - not stretched either way",
           0
         ],
         [
@@ -1652,12 +1652,12 @@
       "id": "litecoin",
       "symbol": "LTC",
       "name": "Litecoin",
-      "price": 50.44,
-      "pct_24h": -1.44849,
-      "pct_7d": 1.8,
+      "price": 50.25,
+      "pct_24h": -2.01609,
+      "pct_7d": 2.9,
       "support_30d": 43.806923130603906,
       "resistance_30d": 53.12964707139583,
-      "as_of": "2026-09-04 16:45:22",
+      "as_of": "2026-09-04 18:00:33",
       "stale": false
     },
     "bitget-token": {
@@ -2023,7 +2023,7 @@
         ],
         [
           "Stretch from long-term average",
-          "+72.8% above its long-term average - very stretched",
+          "+73.6% above its long-term average - very stretched",
           -2
         ],
         [
@@ -2036,12 +2036,12 @@
       "id": "uniswap",
       "symbol": "UNI",
       "name": "Uniswap",
-      "price": 6.16,
-      "pct_24h": 0.30382,
-      "pct_7d": 39.5,
+      "price": 6.19,
+      "pct_24h": 0.83865,
+      "pct_7d": 39.2,
       "support_30d": 3.1971416665971573,
       "resistance_30d": 6.327780516733257,
-      "as_of": "2026-09-04 17:45:37",
+      "as_of": "2026-09-04 18:00:33",
       "stale": false
     },
     "pi-network": {
@@ -2743,7 +2743,7 @@
         ],
         [
           "Stretch from long-term average",
-          "+30.5% above its long-term average - very stretched",
+          "+30.0% above its long-term average - very stretched",
           -2
         ],
         [
@@ -2756,12 +2756,12 @@
       "id": "morpho",
       "symbol": "MORPHO",
       "name": "Morpho",
-      "price": 2.53,
-      "pct_24h": 2.66388,
-      "pct_7d": -0.8,
+      "price": 2.52,
+      "pct_24h": 0.86939,
+      "pct_7d": 2.7,
       "support_30d": 1.8400586135640542,
       "resistance_30d": 2.9026212482639075,
-      "as_of": "2026-09-04 16:30:28",
+      "as_of": "2026-09-04 18:00:33",
       "stale": false
     },
     "memecore": {
@@ -3101,19 +3101,21 @@
       "stale": false
     }
   },
-  "_strong_buy_state": {},
+  "_strong_buy_state": {
+    "1h:UNI": true
+  },
   "BTC": {
     "key": "BTC",
     "name": "Bitcoin",
     "emoji": "\u20bf",
-    "price": 79406,
+    "price": 79492,
     "high_24h": 82108,
     "low_24h": 78706,
-    "pct_24h": -2.00324,
+    "pct_24h": -1.89498,
     "pct_7d": 1.8,
     "pct_30d": 23.9,
-    "sma50": 68770.34917665439,
-    "sma200": 69600.49841929442,
+    "sma50": 68772.0774318261,
+    "sma200": 69600.93048308736,
     "support_30d": 62843.70368466329,
     "resistance_30d": 81264.70153038795,
     "mark_price": 79509.6,
@@ -3128,14 +3130,14 @@
     "key": "ETH",
     "name": "Ethereum",
     "emoji": "\u039e",
-    "price": 2443.91,
+    "price": 2446.08,
     "high_24h": 2543.95,
     "low_24h": 2435.15,
-    "pct_24h": -2.26121,
+    "pct_24h": -2.15661,
     "pct_7d": -0.6,
     "pct_30d": 31.4,
-    "sma50": 2076.8562397738056,
-    "sma200": 2032.9090021470897,
+    "sma50": 2076.8950455349373,
+    "sma200": 2032.9187035873726,
     "support_30d": 1871.3976551883159,
     "resistance_30d": 2514.967577695514,
     "mark_price": 2449.88,
