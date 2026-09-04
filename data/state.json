@@ -4,7 +4,7 @@
   "_alerts_state": {
     "btc-resistance-break": {
       "triggered": true,
-      "last_triggered_at": "2026-09-04 05:40:26"
+      "last_triggered_at": "2026-09-04 05:45:22"
     },
     "btc-support-break": {
       "triggered": false,
@@ -775,7 +775,7 @@
         ],
         [
           "Stretch from long-term average",
-          "-8.1% vs its long-term average - not stretched either way",
+          "-8.2% vs its long-term average - not stretched either way",
           0
         ],
         [
@@ -788,12 +788,12 @@
       "id": "kucoin-shares",
       "symbol": "KCS",
       "name": "KuCoin",
-      "price": 7.11,
-      "pct_24h": 1.57207,
-      "pct_7d": -0.9,
+      "price": 7.1,
+      "pct_24h": 1.40893,
+      "pct_7d": -1.0,
       "support_30d": 6.514591596607885,
       "resistance_30d": 7.8821382735057615,
-      "as_of": "2026-09-04 04:55:17",
+      "as_of": "2026-09-04 05:45:22",
       "stale": false
     },
     "hedera-hashgraph": {
@@ -1960,7 +1960,7 @@
         ],
         [
           "Crowd mood (Fear & Greed)",
-          "65/100 - crowd is greedy",
+          "74/100 - crowd is greedy",
           -1
         ],
         [
@@ -1975,7 +1975,7 @@
         ],
         [
           "Stretch from long-term average",
-          "-20.4% below its long-term average - confirmed downtrend",
+          "-21.1% below its long-term average - confirmed downtrend",
           -1
         ],
         [
@@ -1988,12 +1988,12 @@
       "id": "polkadot",
       "symbol": "DOT",
       "name": "Polkadot",
-      "price": 0.886739,
-      "pct_24h": 2.98414,
-      "pct_7d": 1.7,
+      "price": 0.877734,
+      "pct_24h": 0.18422,
+      "pct_7d": 0.4,
       "support_30d": 0.7510040523927409,
       "resistance_30d": 0.9394118398868826,
-      "as_of": "2026-09-03 22:55:18",
+      "as_of": "2026-09-04 05:45:22",
       "stale": false
     },
     "uniswap": {
@@ -2191,11 +2191,11 @@
     "internet-computer": {
       "label": "\ud83d\udfe1 HOLD / NEUTRAL",
       "status": "neutral",
-      "score": -1,
+      "score": 0,
       "rows": [
         [
           "Price vs. recent range",
-          "Near its 30-day high (~$2.55) - less room to run",
+          "Near its 30-day high (~$2.53) - less room to run",
           -1
         ],
         [
@@ -2205,8 +2205,8 @@
         ],
         [
           "Market phase (best guess)",
-          "Established uptrend - phase where price marks up",
-          1
+          "Basing near the bottom - phase where smart money accumulates",
+          2
         ],
         [
           "Recent trend",
@@ -2215,7 +2215,7 @@
         ],
         [
           "Stretch from long-term average",
-          "+5.0% vs its long-term average - not stretched either way",
+          "+3.8% vs its long-term average - not stretched either way",
           0
         ],
         [
@@ -2228,12 +2228,12 @@
       "id": "internet-computer",
       "symbol": "ICP",
       "name": "Internet Computer",
-      "price": 2.56,
-      "pct_24h": 3.27806,
-      "pct_7d": 5.6,
+      "price": 2.53,
+      "pct_24h": 1.95143,
+      "pct_7d": 5.7,
       "support_30d": 2.093439580330402,
-      "resistance_30d": 2.5543499702878876,
-      "as_of": "2026-09-04 04:00:35",
+      "resistance_30d": 2.5284956266394074,
+      "as_of": "2026-09-04 05:45:22",
       "stale": false
     },
     "bittensor": {
@@ -3101,19 +3101,21 @@
       "stale": false
     }
   },
-  "_strong_buy_state": {},
+  "_strong_buy_state": {
+    "1h:DOT": true
+  },
   "BTC": {
     "key": "BTC",
     "name": "Bitcoin",
     "emoji": "\u20bf",
-    "price": 80961,
+    "price": 80948,
     "high_24h": 82108,
     "low_24h": 77452,
-    "pct_24h": 4.5925,
+    "pct_24h": 4.51191,
     "pct_7d": 1.6,
     "pct_30d": 26.4,
-    "sma50": 68801.92719987157,
-    "sma200": 69608.39292509873,
+    "sma50": 68801.43388807018,
+    "sma200": 69608.26959714838,
     "support_30d": 62843.70368466329,
     "resistance_30d": 81264.70153038795,
     "mark_price": 80872.81049475,
@@ -3128,14 +3130,14 @@
     "key": "ETH",
     "name": "Ethereum",
     "emoji": "\u039e",
-    "price": 2510.64,
+    "price": 2510.46,
     "high_24h": 2523.23,
     "low_24h": 2389.3,
-    "pct_24h": 4.85981,
+    "pct_24h": 4.81409,
     "pct_7d": 0.8,
     "pct_30d": 34.5,
-    "sma50": 2078.2048076647625,
-    "sma200": 2033.246144119829,
+    "sma50": 2078.202035921796,
+    "sma200": 2033.2454511840874,
     "support_30d": 1871.3976551883159,
     "resistance_30d": 2514.967577695514,
     "mark_price": 2507.73832799,
