@@ -4,7 +4,7 @@
   "_alerts_state": {
     "btc-resistance-break": {
       "triggered": true,
-      "last_triggered_at": "2026-09-04 01:00:33"
+      "last_triggered_at": "2026-09-04 01:05:18"
     },
     "btc-support-break": {
       "triggered": false,
@@ -679,7 +679,7 @@
         ],
         [
           "Stretch from long-term average",
-          "-0.8% vs its long-term average - not stretched either way",
+          "-1.5% vs its long-term average - not stretched either way",
           0
         ],
         [
@@ -692,12 +692,12 @@
       "id": "cardano",
       "symbol": "ADA",
       "name": "Cardano",
-      "price": 0.220628,
-      "pct_24h": 9.97102,
-      "pct_7d": 3.2,
+      "price": 0.21906,
+      "pct_24h": 9.62649,
+      "pct_7d": 2.9,
       "support_30d": 0.1741249817054162,
       "resistance_30d": 0.2291047455940254,
-      "as_of": "2026-09-04 00:50:20",
+      "as_of": "2026-09-04 01:05:18",
       "stale": false
     },
     "stellar": {
@@ -1940,12 +1940,12 @@
       "id": "mantle",
       "symbol": "MNT",
       "name": "Mantle",
-      "price": 0.568529,
-      "pct_24h": 1.36085,
+      "price": 0.568552,
+      "pct_24h": 1.41356,
       "pct_7d": 10.0,
       "support_30d": 0.40907330899083316,
       "resistance_30d": 0.5687377622965745,
-      "as_of": "2026-09-04 01:00:33",
+      "as_of": "2026-09-04 01:05:18",
       "stale": false
     },
     "polkadot": {
@@ -2575,16 +2575,16 @@
     "bitway": {
       "label": "\ud83d\udfe1 HOLD / NEUTRAL",
       "status": "neutral",
-      "score": -1,
+      "score": 0,
       "rows": [
         [
           "Price vs. recent range",
-          "Near its 30-day high (~$0.5028) - less room to run",
-          -1
+          "Sitting in the middle of its 30-day range",
+          0
         ],
         [
           "Crowd mood (Fear & Greed)",
-          "65/100 - crowd is greedy",
+          "74/100 - crowd is greedy",
           -1
         ],
         [
@@ -2612,12 +2612,12 @@
       "id": "bitway",
       "symbol": "BTW",
       "name": "Bitway",
-      "price": 0.503407,
-      "pct_24h": -6.49565,
-      "pct_7d": 29.3,
-      "support_30d": 0.16210808658610265,
-      "resistance_30d": 0.5028218834728703,
-      "as_of": "2026-09-03 22:25:17",
+      "price": 0.45123,
+      "pct_24h": -2.77693,
+      "pct_7d": 13.6,
+      "support_30d": 0.19157288401523984,
+      "resistance_30d": 0.48788437226017506,
+      "as_of": "2026-09-04 01:05:18",
       "stale": false
     },
     "world-liberty-financial": {
@@ -3101,21 +3101,19 @@
       "stale": false
     }
   },
-  "_strong_buy_state": {
-    "15m:SKY": true
-  },
+  "_strong_buy_state": {},
   "BTC": {
     "key": "BTC",
     "name": "Bitcoin",
     "emoji": "\u20bf",
-    "price": 80984,
+    "price": 80988,
     "high_24h": 82108,
-    "low_24h": 76976,
-    "pct_24h": 5.07802,
-    "pct_7d": 1.2,
-    "pct_30d": 26.6,
-    "sma50": 68801.72490828742,
-    "sma200": 69608.34235220269,
+    "low_24h": 77107,
+    "pct_24h": 5.07549,
+    "pct_7d": 0.9,
+    "pct_30d": 26.4,
+    "sma50": 68802.21942907354,
+    "sma200": 69608.46598239921,
     "support_30d": 62843.70368466329,
     "resistance_30d": 81264.70153038795,
     "mark_price": 81220.58098551,
@@ -3130,14 +3128,14 @@
     "key": "ETH",
     "name": "Ethereum",
     "emoji": "\u039e",
-    "price": 2502.85,
+    "price": 2501.0,
     "high_24h": 2523.23,
-    "low_24h": 2372.43,
-    "pct_24h": 5.13933,
-    "pct_7d": -0.3,
-    "pct_30d": 33.8,
-    "sma50": 2078.0311731249567,
-    "sma200": 2033.2027354848774,
+    "low_24h": 2379.95,
+    "pct_24h": 5.26482,
+    "pct_7d": -0.4,
+    "pct_30d": 33.9,
+    "sma50": 2078.0081178942664,
+    "sma200": 2033.196971677205,
     "support_30d": 1871.3976551883159,
     "resistance_30d": 2514.967577695514,
     "mark_price": 2505.87444186,
