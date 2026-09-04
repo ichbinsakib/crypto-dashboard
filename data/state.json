@@ -4,7 +4,7 @@
   "_alerts_state": {
     "btc-resistance-break": {
       "triggered": true,
-      "last_triggered_at": "2026-09-04 06:25:22"
+      "last_triggered_at": "2026-09-04 06:30:28"
     },
     "btc-support-break": {
       "triggered": false,
@@ -1639,7 +1639,7 @@
         ],
         [
           "Stretch from long-term average",
-          "+1.0% vs its long-term average - not stretched either way",
+          "+0.9% vs its long-term average - not stretched either way",
           0
         ],
         [
@@ -1652,12 +1652,12 @@
       "id": "litecoin",
       "symbol": "LTC",
       "name": "Litecoin",
-      "price": 50.92,
-      "pct_24h": 1.66858,
+      "price": 50.84,
+      "pct_24h": 1.35196,
       "pct_7d": 3.3,
       "support_30d": 43.806923130603906,
       "resistance_30d": 53.12964707139583,
-      "as_of": "2026-09-04 06:15:27",
+      "as_of": "2026-09-04 06:30:28",
       "stale": false
     },
     "bitget-token": {
@@ -1735,7 +1735,7 @@
         ],
         [
           "Stretch from long-term average",
-          "-9.7% vs its long-term average - not stretched either way",
+          "-10.6% vs its long-term average - not stretched either way",
           0
         ],
         [
@@ -1748,12 +1748,12 @@
       "id": "sui",
       "symbol": "SUI",
       "name": "Sui",
-      "price": 0.774972,
-      "pct_24h": -0.21961,
-      "pct_7d": -1.2,
+      "price": 0.766846,
+      "pct_24h": -0.02772,
+      "pct_7d": 1.2,
       "support_30d": 0.6514311908607086,
       "resistance_30d": 0.8499161763231283,
-      "as_of": "2026-09-04 03:00:33",
+      "as_of": "2026-09-04 06:30:28",
       "stale": false
     },
     "lighter": {
@@ -2195,7 +2195,7 @@
       "rows": [
         [
           "Price vs. recent range",
-          "Near its 30-day high (~$2.54) - less room to run",
+          "Near its 30-day high (~$2.53) - less room to run",
           -1
         ],
         [
@@ -2215,7 +2215,7 @@
         ],
         [
           "Stretch from long-term average",
-          "+4.2% vs its long-term average - not stretched either way",
+          "+3.8% vs its long-term average - not stretched either way",
           0
         ],
         [
@@ -2228,12 +2228,12 @@
       "id": "internet-computer",
       "symbol": "ICP",
       "name": "Internet Computer",
-      "price": 2.54,
-      "pct_24h": 1.75748,
+      "price": 2.53,
+      "pct_24h": 1.62933,
       "pct_7d": 4.9,
       "support_30d": 2.093439580330402,
-      "resistance_30d": 2.5352066316518833,
-      "as_of": "2026-09-04 06:25:22",
+      "resistance_30d": 2.5334808045697357,
+      "as_of": "2026-09-04 06:30:28",
       "stale": false
     },
     "bittensor": {
@@ -3102,20 +3102,22 @@
     }
   },
   "_strong_buy_state": {
-    "15m:SOL": true
+    "15m:AAVE": true,
+    "15m:LTC": true,
+    "1h:SUI": true
   },
   "BTC": {
     "key": "BTC",
     "name": "Bitcoin",
     "emoji": "\u20bf",
-    "price": 80920,
+    "price": 80745,
     "high_24h": 82108,
     "low_24h": 77452,
-    "pct_24h": 4.09577,
+    "pct_24h": 3.92193,
     "pct_7d": 1.7,
     "pct_30d": 26.3,
-    "sma50": 68800.61770172577,
-    "sma200": 69608.06555056227,
+    "sma50": 68797.43587708502,
+    "sma200": 69607.27009440209,
     "support_30d": 62843.70368466329,
     "resistance_30d": 81264.70153038795,
     "mark_price": 80872.81049475,
@@ -3130,14 +3132,14 @@
     "key": "ETH",
     "name": "Ethereum",
     "emoji": "\u039e",
-    "price": 2510.76,
+    "price": 2505.84,
     "high_24h": 2523.23,
     "low_24h": 2389.3,
-    "pct_24h": 4.41032,
+    "pct_24h": 4.15141,
     "pct_7d": 0.9,
     "pct_30d": 34.5,
-    "sma50": 2078.1884964018377,
-    "sma200": 2033.2420663040978,
+    "sma50": 2078.1009832183654,
+    "sma200": 2033.2201880082296,
     "support_30d": 1871.3976551883159,
     "resistance_30d": 2514.967577695514,
     "mark_price": 2507.73832799,
