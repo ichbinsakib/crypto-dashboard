@@ -4,7 +4,7 @@
   "_alerts_state": {
     "btc-resistance-break": {
       "triggered": true,
-      "last_triggered_at": "2026-09-04 11:35:18"
+      "last_triggered_at": "2026-09-04 11:40:22"
     },
     "btc-support-break": {
       "triggered": false,
@@ -12,7 +12,7 @@
     },
     "eth-resistance-break": {
       "triggered": true,
-      "last_triggered_at": "2026-09-04 11:35:18"
+      "last_triggered_at": "2026-09-04 11:40:22"
     },
     "eth-support-break": {
       "triggered": false,
@@ -515,7 +515,7 @@
       "rows": [
         [
           "Price vs. recent range",
-          "Near its 30-day high (~$74.07) - less room to run",
+          "Near its 30-day high (~$74.14) - less room to run",
           -1
         ],
         [
@@ -535,7 +535,7 @@
         ],
         [
           "Stretch from long-term average",
-          "+33.4% above its long-term average - very stretched",
+          "+34.0% above its long-term average - very stretched",
           -2
         ],
         [
@@ -548,12 +548,12 @@
       "id": "whitebit",
       "symbol": "WBT",
       "name": "WhiteBIT Coin",
-      "price": 73.84,
-      "pct_24h": 3.61791,
-      "pct_7d": 0.7,
+      "price": 74.14,
+      "pct_24h": 4.02595,
+      "pct_7d": 1.2,
       "support_30d": 54.452558710928955,
-      "resistance_30d": 74.07423223861623,
-      "as_of": "2026-09-04 06:45:27",
+      "resistance_30d": 74.14288415868594,
+      "as_of": "2026-09-04 11:40:22",
       "stale": false
     },
     "leo-token": {
@@ -611,7 +611,7 @@
       "rows": [
         [
           "Price vs. recent range",
-          "Near its 30-day high (~$549.94) - less room to run",
+          "Near its 30-day high (~$548.74) - less room to run",
           -1
         ],
         [
@@ -631,7 +631,7 @@
         ],
         [
           "Stretch from long-term average",
-          "+52.1% above its long-term average - very stretched",
+          "+51.9% above its long-term average - very stretched",
           -2
         ],
         [
@@ -644,12 +644,12 @@
       "id": "monero",
       "symbol": "XMR",
       "name": "Monero",
-      "price": 549.62,
-      "pct_24h": 6.92856,
+      "price": 548.89,
+      "pct_24h": 6.9109,
       "pct_7d": 16.9,
       "support_30d": 369.5125458020106,
-      "resistance_30d": 549.9425266334607,
-      "as_of": "2026-09-04 11:25:16",
+      "resistance_30d": 548.7360769403631,
+      "as_of": "2026-09-04 11:40:22",
       "stale": false
     },
     "cardano": {
@@ -3079,7 +3079,7 @@
         ],
         [
           "Stretch from long-term average",
-          "+39.7% above its long-term average - very stretched",
+          "+38.9% above its long-term average - very stretched",
           -2
         ],
         [
@@ -3092,30 +3092,32 @@
       "id": "arbitrum",
       "symbol": "ARB",
       "name": "Arbitrum",
-      "price": 0.136664,
-      "pct_24h": 0.73828,
-      "pct_7d": 56.6,
+      "price": 0.135854,
+      "pct_24h": 0.61855,
+      "pct_7d": 52.5,
       "support_30d": 0.07272258489044682,
       "resistance_30d": 0.14105858962141438,
-      "as_of": "2026-09-04 10:42:52",
+      "as_of": "2026-09-04 11:40:22",
       "stale": false
     }
   },
-  "_strong_buy_state": {},
+  "_strong_buy_state": {
+    "15m:ARB": true
+  },
   "BTC": {
     "key": "BTC",
     "name": "Bitcoin",
     "emoji": "\u20bf",
-    "price": 81268,
+    "price": 81309,
     "high_24h": 82108,
     "low_24h": 77868,
-    "pct_24h": 4.32051,
+    "pct_24h": 4.36971,
     "pct_7d": 2.3,
     "pct_30d": 26.6,
-    "sma50": 68807.92029318171,
-    "sma200": 69609.89119842625,
+    "sma50": 68808.02050997895,
+    "sma200": 69609.91625262557,
     "support_30d": 62843.70368466329,
-    "resistance_30d": 81285.05457057529,
+    "resistance_30d": 81290.0654104374,
     "mark_price": 80817.98012319,
     "index_price": 80856.42934783,
     "funding_rate": 5.976e-05,
@@ -3128,16 +3130,16 @@
     "key": "ETH",
     "name": "Ethereum",
     "emoji": "\u039e",
-    "price": 2523.6,
+    "price": 2526.8,
     "high_24h": 2543.95,
     "low_24h": 2404.8,
-    "pct_24h": 4.92297,
+    "pct_24h": 5.0907,
     "pct_7d": 1.4,
     "pct_30d": 35.0,
-    "sma50": 2078.462496052236,
-    "sma200": 2033.3105662166972,
+    "sma50": 2078.494765354533,
+    "sma200": 2033.3186335422715,
     "support_30d": 1871.3976551883159,
-    "resistance_30d": 2524.222300855749,
+    "resistance_30d": 2525.835765970553,
     "mark_price": 2509.41939535,
     "index_price": 2511.21465116,
     "funding_rate": 6.58e-05,
