@@ -4,7 +4,7 @@
   "_alerts_state": {
     "btc-resistance-break": {
       "triggered": true,
-      "last_triggered_at": "2026-09-04 11:50:26"
+      "last_triggered_at": "2026-09-04 11:55:19"
     },
     "btc-support-break": {
       "triggered": false,
@@ -12,7 +12,7 @@
     },
     "eth-resistance-break": {
       "triggered": true,
-      "last_triggered_at": "2026-09-04 11:50:26"
+      "last_triggered_at": "2026-09-04 11:55:19"
     },
     "eth-support-break": {
       "triggered": false,
@@ -199,7 +199,7 @@
         ],
         [
           "Stretch from long-term average",
-          "+1.3% vs its long-term average - not stretched either way",
+          "+1.6% vs its long-term average - not stretched either way",
           0
         ],
         [
@@ -212,12 +212,12 @@
       "id": "tron",
       "symbol": "TRX",
       "name": "TRON",
-      "price": 0.328847,
-      "pct_24h": 0.96818,
-      "pct_7d": -2.8,
+      "price": 0.329672,
+      "pct_24h": 0.56891,
+      "pct_7d": -3.1,
       "support_30d": 0.32221537516581966,
       "resistance_30d": 0.3447899585776834,
-      "as_of": "2026-09-04 05:35:37",
+      "as_of": "2026-09-04 11:55:19",
       "stale": false
     },
     "figure-heloc": {
@@ -515,7 +515,7 @@
       "rows": [
         [
           "Price vs. recent range",
-          "Near its 30-day high (~$74.14) - less room to run",
+          "Near its 30-day high (~$74.13) - less room to run",
           -1
         ],
         [
@@ -549,11 +549,11 @@
       "symbol": "WBT",
       "name": "WhiteBIT Coin",
       "price": 74.14,
-      "pct_24h": 4.02595,
+      "pct_24h": 4.01372,
       "pct_7d": 1.2,
       "support_30d": 54.452558710928955,
-      "resistance_30d": 74.14288415868594,
-      "as_of": "2026-09-04 11:40:22",
+      "resistance_30d": 74.13166565142788,
+      "as_of": "2026-09-04 11:55:19",
       "stale": false
     },
     "leo-token": {
@@ -2765,13 +2765,13 @@
       "stale": false
     },
     "memecore": {
-      "label": "\ud83d\udfe1 HOLD / NEUTRAL",
-      "status": "neutral",
-      "score": -1,
+      "label": "\ud83d\udfe2 LEAN ACCUMULATE",
+      "status": "bullish",
+      "score": 2,
       "rows": [
         [
           "Price vs. recent range",
-          "Near its 30-day low (~$1.03) - historically a better entry",
+          "Near its 30-day low (~$1.04) - historically a better entry",
           2
         ],
         [
@@ -2781,8 +2781,8 @@
         ],
         [
           "Market phase (best guess)",
-          "Established downtrend - still falling, not yet a base",
-          -1
+          "Basing near the bottom - phase where smart money accumulates",
+          2
         ],
         [
           "Recent trend",
@@ -2791,7 +2791,7 @@
         ],
         [
           "Stretch from long-term average",
-          "-50.6% below its long-term average - confirmed downtrend",
+          "-48.8% below its long-term average - confirmed downtrend",
           -1
         ],
         [
@@ -2800,16 +2800,16 @@
           0
         ]
       ],
-      "plain": "No real edge either way right now - fine to just wait and watch.",
+      "plain": "Leans toward a decent spot to slowly add (DCA) - not a strong signal, just a lean.",
       "id": "memecore",
       "symbol": "M",
       "name": "MemeCore",
-      "price": 1.034,
-      "pct_24h": -2.93678,
-      "pct_7d": -6.3,
-      "support_30d": 1.0336022782443317,
+      "price": 1.071,
+      "pct_24h": -0.80922,
+      "pct_7d": -1.1,
+      "support_30d": 1.0402044506518406,
       "resistance_30d": 1.2453913363052769,
-      "as_of": "2026-09-04 09:10:28",
+      "as_of": "2026-09-04 11:55:19",
       "stale": false
     },
     "aave": {
@@ -3106,16 +3106,16 @@
     "key": "BTC",
     "name": "Bitcoin",
     "emoji": "\u20bf",
-    "price": 81233,
+    "price": 81287,
     "high_24h": 82108,
     "low_24h": 77868,
-    "pct_24h": 4.31837,
+    "pct_24h": 4.38105,
     "pct_7d": 2.3,
     "pct_30d": 26.6,
-    "sma50": 68806.83071258622,
-    "sma200": 69609.6188032774,
+    "sma50": 68808.0319808462,
+    "sma200": 69609.91912034238,
     "support_30d": 62843.70368466329,
-    "resistance_30d": 81264.70153038795,
+    "resistance_30d": 81290.63895379977,
     "mark_price": 80817.98012319,
     "index_price": 80856.42934783,
     "funding_rate": 5.976e-05,
@@ -3128,16 +3128,16 @@
     "key": "ETH",
     "name": "Ethereum",
     "emoji": "\u039e",
-    "price": 2525.03,
+    "price": 2525.16,
     "high_24h": 2543.95,
     "low_24h": 2404.8,
-    "pct_24h": 4.94352,
+    "pct_24h": 4.99454,
     "pct_7d": 1.4,
     "pct_30d": 35.0,
-    "sma50": 2078.4781434612037,
-    "sma200": 2033.3144780689393,
+    "sma50": 2078.482254380843,
+    "sma200": 2033.3155057988492,
     "support_30d": 1871.3976551883159,
-    "resistance_30d": 2525.0046713041247,
+    "resistance_30d": 2525.210217286104,
     "mark_price": 2509.41939535,
     "index_price": 2511.21465116,
     "funding_rate": 6.58e-05,
