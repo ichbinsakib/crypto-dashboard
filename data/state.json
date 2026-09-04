@@ -4,7 +4,7 @@
   "_alerts_state": {
     "btc-resistance-break": {
       "triggered": true,
-      "last_triggered_at": "2026-09-04 12:35:24"
+      "last_triggered_at": "2026-09-04 12:40:23"
     },
     "btc-support-break": {
       "triggered": false,
@@ -77,14 +77,14 @@
       "stale": false
     },
     "ripple": {
-      "label": "\ud83d\udd34 CAUTION - REDUCE NEW BUYS",
-      "status": "bearish",
-      "score": -2,
+      "label": "\ud83d\udfe1 HOLD / NEUTRAL",
+      "status": "neutral",
+      "score": -1,
       "rows": [
         [
           "Price vs. recent range",
-          "Near its 30-day high (~$1.52) - less room to run",
-          -1
+          "Sitting in the middle of its 30-day range",
+          0
         ],
         [
           "Crowd mood (Fear & Greed)",
@@ -103,7 +103,7 @@
         ],
         [
           "Stretch from long-term average",
-          "+13.6% above its long-term average - a bit stretched",
+          "+10.5% above its long-term average - a bit stretched",
           -1
         ],
         [
@@ -112,27 +112,27 @@
           0
         ]
       ],
-      "plain": "Getting risky - I'd hold off on new buys until this cools down.",
+      "plain": "No real edge either way right now - fine to just wait and watch.",
       "id": "ripple",
       "symbol": "XRP",
       "name": "XRP",
-      "price": 1.45,
-      "pct_24h": 6.00812,
-      "pct_7d": 2.7,
+      "price": 1.41,
+      "pct_24h": 2.54235,
+      "pct_7d": 2.1,
       "support_30d": 0.9927072784932938,
       "resistance_30d": 1.52050482788377,
-      "as_of": "2026-09-04 11:35:18",
+      "as_of": "2026-09-04 12:40:23",
       "stale": false
     },
     "solana": {
-      "label": "\ud83d\udd34 CAUTION - REDUCE NEW BUYS",
-      "status": "bearish",
-      "score": -2,
+      "label": "\ud83d\udfe1 HOLD / NEUTRAL",
+      "status": "neutral",
+      "score": -1,
       "rows": [
         [
           "Price vs. recent range",
-          "Near its 30-day high (~$109.18) - less room to run",
-          -1
+          "Sitting in the middle of its 30-day range",
+          0
         ],
         [
           "Crowd mood (Fear & Greed)",
@@ -151,7 +151,7 @@
         ],
         [
           "Stretch from long-term average",
-          "+26.4% above its long-term average - a bit stretched",
+          "+23.4% above its long-term average - a bit stretched",
           -1
         ],
         [
@@ -160,16 +160,16 @@
           0
         ]
       ],
-      "plain": "Getting risky - I'd hold off on new buys until this cools down.",
+      "plain": "No real edge either way right now - fine to just wait and watch.",
       "id": "solana",
       "symbol": "SOL",
       "name": "Solana",
-      "price": 103.97,
-      "pct_24h": 3.21935,
+      "price": 101.44,
+      "pct_24h": 0.25674,
       "pct_7d": -1.9,
       "support_30d": 72.63053979307217,
       "resistance_30d": 109.17730597799657,
-      "as_of": "2026-09-04 12:25:18",
+      "as_of": "2026-09-04 12:40:23",
       "stale": false
     },
     "tron": {
@@ -2195,7 +2195,7 @@
       "rows": [
         [
           "Price vs. recent range",
-          "Near its 30-day high (~$2.54) - less room to run",
+          "Near its 30-day high (~$2.53) - less room to run",
           -1
         ],
         [
@@ -2215,7 +2215,7 @@
         ],
         [
           "Stretch from long-term average",
-          "+4.2% vs its long-term average - not stretched either way",
+          "+1.8% vs its long-term average - not stretched either way",
           0
         ],
         [
@@ -2228,12 +2228,12 @@
       "id": "internet-computer",
       "symbol": "ICP",
       "name": "Internet Computer",
-      "price": 2.54,
-      "pct_24h": 0.88458,
-      "pct_7d": 4.4,
+      "price": 2.48,
+      "pct_24h": -1.02985,
+      "pct_7d": 7.1,
       "support_30d": 2.093439580330402,
-      "resistance_30d": 2.5375692325634738,
-      "as_of": "2026-09-04 08:20:24",
+      "resistance_30d": 2.525531974490298,
+      "as_of": "2026-09-04 12:40:23",
       "stale": false
     },
     "bittensor": {
@@ -3101,21 +3101,19 @@
       "stale": false
     }
   },
-  "_strong_buy_state": {
-    "15m:HYPE": true
-  },
+  "_strong_buy_state": {},
   "BTC": {
     "key": "BTC",
     "name": "Bitcoin",
     "emoji": "\u20bf",
-    "price": 79831,
+    "price": 79505,
     "high_24h": 82108,
     "low_24h": 78446,
-    "pct_24h": 2.04155,
+    "pct_24h": 1.49872,
     "pct_7d": 2.1,
     "pct_30d": 26.9,
-    "sma50": 68779.2709773977,
-    "sma200": 69602.72886948026,
+    "sma50": 68773.97963711801,
+    "sma200": 69601.40603441033,
     "support_30d": 62843.70368466329,
     "resistance_30d": 81264.70153038795,
     "mark_price": 80817.98012319,
@@ -3130,14 +3128,14 @@
     "key": "ETH",
     "name": "Ethereum",
     "emoji": "\u039e",
-    "price": 2451.81,
+    "price": 2443.57,
     "high_24h": 2543.95,
     "low_24h": 2416.44,
-    "pct_24h": 1.52774,
+    "pct_24h": 1.12552,
     "pct_7d": 0.7,
     "pct_30d": 35.1,
-    "sma50": 2077.00629922103,
-    "sma200": 2032.946517008896,
+    "sma50": 2076.944673111012,
+    "sma200": 2032.9311104813914,
     "support_30d": 1871.3976551883159,
     "resistance_30d": 2514.967577695514,
     "mark_price": 2509.41939535,
