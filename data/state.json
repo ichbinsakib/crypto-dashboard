@@ -4,14 +4,14 @@
   "_alerts_state": {
     "btc-resistance-break": {
       "triggered": true,
-      "last_triggered_at": "2026-09-04 12:30:28"
+      "last_triggered_at": "2026-09-04 12:35:24"
     },
     "btc-support-break": {
       "triggered": false,
       "last_triggered_at": null
     },
     "eth-resistance-break": {
-      "triggered": true,
+      "triggered": false,
       "last_triggered_at": "2026-09-04 12:30:28"
     },
     "eth-support-break": {
@@ -295,7 +295,7 @@
         ],
         [
           "Stretch from long-term average",
-          "+65.8% above its long-term average - very stretched",
+          "+63.0% above its long-term average - very stretched",
           -2
         ],
         [
@@ -308,12 +308,12 @@
       "id": "hyperliquid",
       "symbol": "HYPE",
       "name": "Hyperliquid",
-      "price": 87.0,
-      "pct_24h": 6.09071,
+      "price": 85.55,
+      "pct_24h": 4.00966,
       "pct_7d": 4.5,
       "support_30d": 53.854096460729586,
       "resistance_30d": 87.4499182124614,
-      "as_of": "2026-09-04 12:20:24",
+      "as_of": "2026-09-04 12:35:24",
       "stale": false
     },
     "dogecoin": {
@@ -1687,7 +1687,7 @@
         ],
         [
           "Stretch from long-term average",
-          "+4.8% vs its long-term average - not stretched either way",
+          "+3.2% vs its long-term average - not stretched either way",
           0
         ],
         [
@@ -1700,12 +1700,12 @@
       "id": "bitget-token",
       "symbol": "BGB",
       "name": "Bitget Token",
-      "price": 2.0,
-      "pct_24h": 1.09806,
-      "pct_7d": 2.2,
+      "price": 1.97,
+      "pct_24h": -0.71162,
+      "pct_7d": 2.8,
       "support_30d": 1.612955058583726,
       "resistance_30d": 2.002531926886498,
-      "as_of": "2026-09-04 10:40:25",
+      "as_of": "2026-09-04 12:35:24",
       "stale": false
     },
     "sui": {
@@ -2647,7 +2647,7 @@
         ],
         [
           "Stretch from long-term average",
-          "-20.5% below its long-term average - confirmed downtrend",
+          "-21.4% below its long-term average - confirmed downtrend",
           -1
         ],
         [
@@ -2660,12 +2660,12 @@
       "id": "world-liberty-financial",
       "symbol": "WLFI",
       "name": "World Liberty Financial",
-      "price": 0.05747,
-      "pct_24h": 2.92807,
-      "pct_7d": -3.6,
+      "price": 0.056767,
+      "pct_24h": 0.53288,
+      "pct_7d": -2.4,
       "support_30d": 0.051301304477199876,
       "resistance_30d": 0.06254770952093733,
-      "as_of": "2026-09-04 10:10:22",
+      "as_of": "2026-09-04 12:35:24",
       "stale": false
     },
     "pax-gold": {
@@ -3102,20 +3102,20 @@
     }
   },
   "_strong_buy_state": {
-    "1h:TRX": true
+    "15m:HYPE": true
   },
   "BTC": {
     "key": "BTC",
     "name": "Bitcoin",
     "emoji": "\u20bf",
-    "price": 81264,
+    "price": 79831,
     "high_24h": 82108,
     "low_24h": 78446,
-    "pct_24h": 4.24452,
+    "pct_24h": 2.04155,
     "pct_7d": 2.1,
     "pct_30d": 26.9,
-    "sma50": 68807.19945861516,
-    "sma200": 69609.71098978462,
+    "sma50": 68779.2709773977,
+    "sma200": 69602.72886948026,
     "support_30d": 62843.70368466329,
     "resistance_30d": 81264.70153038795,
     "mark_price": 80817.98012319,
@@ -3130,16 +3130,16 @@
     "key": "ETH",
     "name": "Ethereum",
     "emoji": "\u039e",
-    "price": 2525.38,
+    "price": 2451.81,
     "high_24h": 2543.95,
     "low_24h": 2416.44,
-    "pct_24h": 4.88594,
+    "pct_24h": 1.52774,
     "pct_7d": 0.7,
     "pct_30d": 35.1,
-    "sma50": 2078.470517971752,
-    "sma200": 2033.3125716965765,
+    "sma50": 2077.00629922103,
+    "sma200": 2032.946517008896,
     "support_30d": 1871.3976551883159,
-    "resistance_30d": 2524.623396831543,
+    "resistance_30d": 2514.967577695514,
     "mark_price": 2509.41939535,
     "index_price": 2511.21465116,
     "funding_rate": 6.58e-05,
