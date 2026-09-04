@@ -4,7 +4,7 @@
   "_alerts_state": {
     "btc-resistance-break": {
       "triggered": true,
-      "last_triggered_at": "2026-09-04 13:15:25"
+      "last_triggered_at": "2026-09-04 13:20:27"
     },
     "btc-support-break": {
       "triggered": false,
@@ -463,7 +463,7 @@
     "chainlink": {
       "label": "\ud83d\udd34 CAUTION - REDUCE NEW BUYS",
       "status": "bearish",
-      "score": -3,
+      "score": -2,
       "rows": [
         [
           "Price vs. recent range",
@@ -487,8 +487,8 @@
         ],
         [
           "Stretch from long-term average",
-          "+31.3% above its long-term average - very stretched",
-          -2
+          "+27.2% above its long-term average - a bit stretched",
+          -1
         ],
         [
           "Leverage traders' bias",
@@ -500,12 +500,12 @@
       "id": "chainlink",
       "symbol": "LINK",
       "name": "Chainlink",
-      "price": 11.98,
-      "pct_24h": 7.098,
-      "pct_7d": 1.3,
+      "price": 11.61,
+      "pct_24h": 1.95366,
+      "pct_7d": -1.0,
       "support_30d": 8.18136301108558,
       "resistance_30d": 11.992351770358374,
-      "as_of": "2026-09-04 04:35:19",
+      "as_of": "2026-09-04 13:20:27",
       "stale": false
     },
     "whitebit": {
@@ -1701,11 +1701,11 @@
       "symbol": "BGB",
       "name": "Bitget Token",
       "price": 1.96,
-      "pct_24h": -1.23815,
+      "pct_24h": -1.17614,
       "pct_7d": 1.4,
       "support_30d": 1.612955058583726,
       "resistance_30d": 2.002531926886498,
-      "as_of": "2026-09-04 13:10:27",
+      "as_of": "2026-09-04 13:20:27",
       "stale": false
     },
     "sui": {
@@ -1763,7 +1763,7 @@
       "rows": [
         [
           "Price vs. recent range",
-          "Near its 30-day high (~$4.57) - less room to run",
+          "Near its 30-day high (~$4.55) - less room to run",
           -1
         ],
         [
@@ -1783,7 +1783,7 @@
         ],
         [
           "Stretch from long-term average",
-          "+171.9% above its long-term average - very stretched",
+          "+172.5% above its long-term average - very stretched",
           -2
         ],
         [
@@ -1796,12 +1796,12 @@
       "id": "lighter",
       "symbol": "LIT",
       "name": "Lighter",
-      "price": 4.53,
-      "pct_24h": 14.41018,
-      "pct_7d": 32.6,
+      "price": 4.54,
+      "pct_24h": 14.81616,
+      "pct_7d": 31.8,
       "support_30d": 2.2358662099746955,
-      "resistance_30d": 4.571050888448412,
-      "as_of": "2026-09-04 12:50:24",
+      "resistance_30d": 4.554908826349683,
+      "as_of": "2026-09-04 13:20:27",
       "stale": false
     },
     "ethena": {
@@ -2167,7 +2167,7 @@
         ],
         [
           "Stretch from long-term average",
-          "-20.5% below its long-term average - confirmed downtrend",
+          "-22.9% below its long-term average - confirmed downtrend",
           -1
         ],
         [
@@ -2180,12 +2180,12 @@
       "id": "canton-network",
       "symbol": "CC",
       "name": "Canton",
-      "price": 0.112318,
-      "pct_24h": 2.54848,
-      "pct_7d": -2.2,
+      "price": 0.108986,
+      "pct_24h": -1.22951,
+      "pct_7d": -3.8,
       "support_30d": 0.09051839499501885,
       "resistance_30d": 0.12396615653575341,
-      "as_of": "2026-09-04 08:45:27",
+      "as_of": "2026-09-04 13:20:27",
       "stale": false
     },
     "internet-computer": {
@@ -2647,7 +2647,7 @@
         ],
         [
           "Stretch from long-term average",
-          "-21.4% below its long-term average - confirmed downtrend",
+          "-21.0% below its long-term average - confirmed downtrend",
           -1
         ],
         [
@@ -2660,12 +2660,12 @@
       "id": "world-liberty-financial",
       "symbol": "WLFI",
       "name": "World Liberty Financial",
-      "price": 0.056767,
-      "pct_24h": 0.53288,
-      "pct_7d": -2.4,
+      "price": 0.057106,
+      "pct_24h": 1.3803,
+      "pct_7d": -2.7,
       "support_30d": 0.051301304477199876,
       "resistance_30d": 0.06254770952093733,
-      "as_of": "2026-09-04 12:35:24",
+      "as_of": "2026-09-04 13:20:27",
       "stale": false
     },
     "pax-gold": {
@@ -3101,19 +3101,21 @@
       "stale": false
     }
   },
-  "_strong_buy_state": {},
+  "_strong_buy_state": {
+    "1h:BGB": true
+  },
   "BTC": {
     "key": "BTC",
     "name": "Bitcoin",
     "emoji": "\u20bf",
-    "price": 79288,
+    "price": 79370,
     "high_24h": 82108,
     "low_24h": 78730,
-    "pct_24h": 0.97941,
+    "pct_24h": 1.14718,
     "pct_7d": -0.2,
     "pct_30d": 24.1,
-    "sma50": 68768.28492104157,
-    "sma200": 69599.98235539123,
+    "sma50": 68768.97593157933,
+    "sma200": 69600.15510802566,
     "support_30d": 62843.70368466329,
     "resistance_30d": 81264.70153038795,
     "mark_price": 79220.43152899,
@@ -3128,14 +3130,14 @@
     "key": "ETH",
     "name": "Ethereum",
     "emoji": "\u039e",
-    "price": 2447.55,
+    "price": 2453.44,
     "high_24h": 2543.95,
     "low_24h": 2426.1,
-    "pct_24h": 1.19379,
+    "pct_24h": 1.4887,
     "pct_7d": -2.1,
     "pct_30d": 31.4,
-    "sma50": 2076.9401432917143,
-    "sma200": 2032.929978026567,
+    "sma50": 2077.034013896939,
+    "sma200": 2032.953445677873,
     "support_30d": 1871.3976551883159,
     "resistance_30d": 2514.967577695514,
     "mark_price": 2446.3699845,
