@@ -4,7 +4,7 @@
   "_alerts_state": {
     "btc-resistance-break": {
       "triggered": true,
-      "last_triggered_at": "2026-09-04 13:05:23"
+      "last_triggered_at": "2026-09-04 13:10:27"
     },
     "btc-support-break": {
       "triggered": false,
@@ -895,12 +895,12 @@
     "avalanche-2": {
       "label": "\ud83d\udfe1 HOLD / NEUTRAL",
       "status": "neutral",
-      "score": 0,
+      "score": 1,
       "rows": [
         [
           "Price vs. recent range",
-          "Near its 30-day high (~$7.84) - less room to run",
-          -1
+          "Sitting in the middle of its 30-day range",
+          0
         ],
         [
           "Crowd mood (Fear & Greed)",
@@ -919,7 +919,7 @@
         ],
         [
           "Stretch from long-term average",
-          "-7.2% vs its long-term average - not stretched either way",
+          "-8.9% vs its long-term average - not stretched either way",
           0
         ],
         [
@@ -932,12 +932,12 @@
       "id": "avalanche-2",
       "symbol": "AVAX",
       "name": "Avalanche",
-      "price": 7.5,
-      "pct_24h": 3.29167,
-      "pct_7d": 1.8,
+      "price": 7.36,
+      "pct_24h": 0.85142,
+      "pct_7d": -0.8,
       "support_30d": 6.313391080113916,
       "resistance_30d": 7.836507914480645,
-      "as_of": "2026-09-04 11:00:38",
+      "as_of": "2026-09-04 13:10:27",
       "stale": false
     },
     "aster-2": {
@@ -1687,7 +1687,7 @@
         ],
         [
           "Stretch from long-term average",
-          "+3.2% vs its long-term average - not stretched either way",
+          "+2.7% vs its long-term average - not stretched either way",
           0
         ],
         [
@@ -1700,12 +1700,12 @@
       "id": "bitget-token",
       "symbol": "BGB",
       "name": "Bitget Token",
-      "price": 1.97,
-      "pct_24h": -0.71162,
-      "pct_7d": 2.8,
+      "price": 1.96,
+      "pct_24h": -1.23815,
+      "pct_7d": 1.4,
       "support_30d": 1.612955058583726,
       "resistance_30d": 2.002531926886498,
-      "as_of": "2026-09-04 12:35:24",
+      "as_of": "2026-09-04 13:10:27",
       "stale": false
     },
     "sui": {
@@ -2095,7 +2095,7 @@
     "ondo-finance": {
       "label": "\ud83d\udfe1 HOLD / NEUTRAL",
       "status": "neutral",
-      "score": 0,
+      "score": 1,
       "rows": [
         [
           "Price vs. recent range",
@@ -2119,8 +2119,8 @@
         ],
         [
           "Stretch from long-term average",
-          "+11.0% above its long-term average - a bit stretched",
-          -1
+          "+8.1% vs its long-term average - not stretched either way",
+          0
         ],
         [
           "Leverage traders' bias",
@@ -2132,12 +2132,12 @@
       "id": "ondo-finance",
       "symbol": "ONDO",
       "name": "Ondo",
-      "price": 0.365596,
-      "pct_24h": 2.8352,
-      "pct_7d": -0.7,
+      "price": 0.355969,
+      "pct_24h": 0.03943,
+      "pct_7d": -3.1,
       "support_30d": 0.32338181384146436,
       "resistance_30d": 0.3969475338902824,
-      "as_of": "2026-09-04 12:20:24",
+      "as_of": "2026-09-04 13:10:27",
       "stale": false
     },
     "canton-network": {
@@ -3101,28 +3101,26 @@
       "stale": false
     }
   },
-  "_strong_buy_state": {
-    "1h:UNI": true
-  },
+  "_strong_buy_state": {},
   "BTC": {
     "key": "BTC",
     "name": "Bitcoin",
     "emoji": "\u20bf",
-    "price": 79512,
+    "price": 79271,
     "high_24h": 82108,
     "low_24h": 78730,
-    "pct_24h": 1.14328,
+    "pct_24h": 0.96747,
     "pct_7d": -0.2,
     "pct_30d": 24.1,
-    "sma50": 68772.56953372911,
-    "sma200": 69601.05350856311,
+    "sma50": 68769.43513353317,
+    "sma200": 69600.26990851412,
     "support_30d": 62843.70368466329,
     "resistance_30d": 81264.70153038795,
-    "mark_price": 80817.98012319,
-    "index_price": 80856.42934783,
-    "funding_rate": 5.976e-05,
-    "oi_change_pct": 4.357968409362279,
-    "oi_now": 112416.138,
+    "mark_price": 79220.43152899,
+    "index_price": 79268.19043478,
+    "funding_rate": 4.638e-05,
+    "oi_change_pct": 2.6697712212911746,
+    "oi_now": 109932.714,
     "fng_value": 74,
     "fng_class": "Greed"
   },
@@ -3130,21 +3128,21 @@
     "key": "ETH",
     "name": "Ethereum",
     "emoji": "\u039e",
-    "price": 2452.45,
+    "price": 2446.88,
     "high_24h": 2543.95,
     "low_24h": 2426.1,
-    "pct_24h": 1.32578,
+    "pct_24h": 1.22429,
     "pct_7d": -2.1,
     "pct_30d": 31.4,
-    "sma50": 2077.0416368815486,
-    "sma200": 2032.9553514240254,
+    "sma50": 2076.923522282075,
+    "sma200": 2032.925822774157,
     "support_30d": 1871.3976551883159,
     "resistance_30d": 2514.967577695514,
-    "mark_price": 2509.41939535,
-    "index_price": 2511.21465116,
-    "funding_rate": 6.58e-05,
-    "oi_change_pct": 0.22682550080881064,
-    "oi_now": 2325562.99,
+    "mark_price": 2446.3699845,
+    "index_price": 2448.13372093,
+    "funding_rate": 3.809e-05,
+    "oi_change_pct": -1.3547565876354986,
+    "oi_now": 2277428.972,
     "fng_value": 74,
     "fng_class": "Greed"
   }
