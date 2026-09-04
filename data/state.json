@@ -4,7 +4,7 @@
   "_alerts_state": {
     "btc-resistance-break": {
       "triggered": true,
-      "last_triggered_at": "2026-09-04 21:55:19"
+      "last_triggered_at": "2026-09-04 22:00:37"
     },
     "btc-support-break": {
       "triggered": false,
@@ -452,12 +452,12 @@
       "id": "rain",
       "symbol": "RAIN",
       "name": "Rain",
-      "price": 0.01657394,
-      "pct_24h": -3.24096,
+      "price": 0.01657694,
+      "pct_24h": -3.29034,
       "pct_7d": -5.9,
       "support_30d": 0.012542200634745275,
       "resistance_30d": 0.018158429442510105,
-      "as_of": "2026-09-04 20:40:22",
+      "as_of": "2026-09-04 22:00:37",
       "stale": false
     },
     "chainlink": {
@@ -1701,11 +1701,11 @@
       "symbol": "BGB",
       "name": "Bitget Token",
       "price": 1.98,
-      "pct_24h": -1.47342,
-      "pct_7d": 4.5,
+      "pct_24h": -1.89867,
+      "pct_7d": 5.9,
       "support_30d": 1.612955058583726,
       "resistance_30d": 2.002531926886498,
-      "as_of": "2026-09-04 20:55:21",
+      "as_of": "2026-09-04 22:00:37",
       "stale": false
     },
     "sui": {
@@ -1831,7 +1831,7 @@
         ],
         [
           "Stretch from long-term average",
-          "+64.8% above its long-term average - very stretched",
+          "+63.3% above its long-term average - very stretched",
           -2
         ],
         [
@@ -1844,12 +1844,12 @@
       "id": "ethena",
       "symbol": "ENA",
       "name": "Ethena",
-      "price": 0.16493,
-      "pct_24h": -3.77767,
-      "pct_7d": 2.0,
+      "price": 0.163385,
+      "pct_24h": -3.62949,
+      "pct_7d": 1.7,
       "support_30d": 0.08231050586125944,
       "resistance_30d": 0.17000615068266245,
-      "as_of": "2026-09-04 19:15:57",
+      "as_of": "2026-09-04 22:00:37",
       "stale": false
     },
     "bitcoin-cash": {
@@ -3101,19 +3101,21 @@
       "stale": false
     }
   },
-  "_strong_buy_state": {},
+  "_strong_buy_state": {
+    "15m:BGB": true
+  },
   "BTC": {
     "key": "BTC",
     "name": "Bitcoin",
     "emoji": "\u20bf",
-    "price": 79581,
+    "price": 79626,
     "high_24h": 81599,
     "low_24h": 78706,
-    "pct_24h": -2.60586,
+    "pct_24h": -2.44478,
     "pct_7d": 2.8,
     "pct_30d": 23.0,
-    "sma50": 68776.1066992288,
-    "sma200": 69601.93779993804,
+    "sma50": 68775.37201677081,
+    "sma200": 69601.75412932353,
     "support_30d": 62843.70368466329,
     "resistance_30d": 81264.70153038795,
     "mark_price": 79691.1,
@@ -3128,14 +3130,14 @@
     "key": "ETH",
     "name": "Ethereum",
     "emoji": "\u039e",
-    "price": 2451.68,
+    "price": 2452.19,
     "high_24h": 2543.95,
     "low_24h": 2435.15,
-    "pct_24h": -2.52765,
+    "pct_24h": -2.39719,
     "pct_7d": 0.7,
     "pct_30d": 28.0,
-    "sma50": 2077.0485977836306,
-    "sma200": 2032.957091649546,
+    "sma50": 2077.020640114178,
+    "sma200": 2032.9501022321829,
     "support_30d": 1871.3976551883159,
     "resistance_30d": 2514.967577695514,
     "mark_price": 2452.58,
