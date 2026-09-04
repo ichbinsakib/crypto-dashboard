@@ -4,7 +4,7 @@
   "_alerts_state": {
     "btc-resistance-break": {
       "triggered": true,
-      "last_triggered_at": "2026-09-04 10:10:22"
+      "last_triggered_at": "2026-09-04 10:15:26"
     },
     "btc-support-break": {
       "triggered": false,
@@ -12,7 +12,7 @@
     },
     "eth-resistance-break": {
       "triggered": true,
-      "last_triggered_at": "2026-09-04 10:10:22"
+      "last_triggered_at": "2026-09-04 10:15:26"
     },
     "eth-support-break": {
       "triggered": false,
@@ -1303,7 +1303,7 @@
         ],
         [
           "Stretch from long-term average",
-          "-7.3% vs its long-term average - not stretched either way",
+          "-6.8% vs its long-term average - not stretched either way",
           0
         ],
         [
@@ -1316,12 +1316,12 @@
       "id": "htx-dao",
       "symbol": "HTX",
       "name": "HTX DAO",
-      "price": 1.64e-06,
-      "pct_24h": 1.12455,
+      "price": 1.65e-06,
+      "pct_24h": 1.49615,
       "pct_7d": -2.1,
       "support_30d": 1.6023985995039954e-06,
       "resistance_30d": 1.8259977214551937e-06,
-      "as_of": "2026-09-04 10:05:19",
+      "as_of": "2026-09-04 10:15:26",
       "stale": false
     },
     "superstate-short-duration-us-government-securities-fund-ustb": {
@@ -1519,7 +1519,7 @@
     "pump-fun": {
       "label": "\ud83d\udd34 DISTRIBUTION ZONE",
       "status": "bearish",
-      "score": -5,
+      "score": -6,
       "rows": [
         [
           "Price vs. recent range",
@@ -1538,12 +1538,12 @@
         ],
         [
           "Recent trend",
-          "Chopping sideways - no clear trend",
-          0
+          "Trending down - avoid catching a falling knife",
+          -1
         ],
         [
           "Stretch from long-term average",
-          "+109.6% above its long-term average - very stretched",
+          "+105.1% above its long-term average - very stretched",
           -2
         ],
         [
@@ -1556,12 +1556,12 @@
       "id": "pump-fun",
       "symbol": "PUMP",
       "name": "Pump.fun",
-      "price": 0.00432986,
-      "pct_24h": 0.65121,
-      "pct_7d": -7.3,
+      "price": 0.00423508,
+      "pct_24h": -2.93821,
+      "pct_7d": -8.4,
       "support_30d": 0.0022648933670123433,
       "resistance_30d": 0.0052249885406471875,
-      "as_of": "2026-09-04 09:15:24",
+      "as_of": "2026-09-04 10:15:26",
       "stale": false
     },
     "venice-token": {
@@ -1652,12 +1652,12 @@
       "id": "litecoin",
       "symbol": "LTC",
       "name": "Litecoin",
-      "price": 51.17,
-      "pct_24h": 0.90048,
-      "pct_7d": 3.6,
+      "price": 51.14,
+      "pct_24h": 1.17764,
+      "pct_7d": 4.5,
       "support_30d": 43.806923130603906,
       "resistance_30d": 53.12964707139583,
-      "as_of": "2026-09-04 08:30:29",
+      "as_of": "2026-09-04 10:15:26",
       "stale": false
     },
     "bitget-token": {
@@ -3102,20 +3102,20 @@
     }
   },
   "_strong_buy_state": {
-    "15m:WLFI": true
+    "15m:PUMP": true
   },
   "BTC": {
     "key": "BTC",
     "name": "Bitcoin",
     "emoji": "\u20bf",
-    "price": 80973,
+    "price": 80963,
     "high_24h": 82108,
     "low_24h": 77681,
-    "pct_24h": 4.34177,
+    "pct_24h": 4.41835,
     "pct_7d": 1.9,
     "pct_30d": 26.5,
-    "sma50": 68801.47776466695,
-    "sma200": 69608.28056629756,
+    "sma50": 68801.66381604467,
+    "sma200": 69608.327079142,
     "support_30d": 62843.70368466329,
     "resistance_30d": 81264.70153038795,
     "mark_price": 80817.98012319,
@@ -3130,16 +3130,16 @@
     "key": "ETH",
     "name": "Ethereum",
     "emoji": "\u039e",
-    "price": 2520.71,
+    "price": 2519.92,
     "high_24h": 2543.95,
     "low_24h": 2394.81,
-    "pct_24h": 5.34518,
+    "pct_24h": 5.40625,
     "pct_7d": 1.3,
     "pct_30d": 35.0,
-    "sma50": 2078.3785417976874,
-    "sma200": 2033.2895776530602,
+    "sma50": 2078.3949033897175,
+    "sma200": 2033.2936680510677,
     "support_30d": 1871.3976551883159,
-    "resistance_30d": 2520.0245881282976,
+    "resistance_30d": 2520.842667729803,
     "mark_price": 2509.41939535,
     "index_price": 2511.21465116,
     "funding_rate": 6.58e-05,
