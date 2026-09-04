@@ -4,7 +4,7 @@
   "_alerts_state": {
     "btc-resistance-break": {
       "triggered": true,
-      "last_triggered_at": "2026-09-04 09:55:18"
+      "last_triggered_at": "2026-09-04 10:00:37"
     },
     "btc-support-break": {
       "triggered": false,
@@ -12,7 +12,7 @@
     },
     "eth-resistance-break": {
       "triggered": true,
-      "last_triggered_at": "2026-09-04 09:55:18"
+      "last_triggered_at": "2026-09-04 10:00:37"
     },
     "eth-support-break": {
       "triggered": false,
@@ -1879,7 +1879,7 @@
         ],
         [
           "Stretch from long-term average",
-          "-24.1% below its long-term average - confirmed downtrend",
+          "-23.3% below its long-term average - confirmed downtrend",
           -1
         ],
         [
@@ -1892,12 +1892,12 @@
       "id": "bitcoin-cash",
       "symbol": "BCH",
       "name": "Bitcoin Cash",
-      "price": 256.95,
-      "pct_24h": 2.77713,
-      "pct_7d": -3.4,
+      "price": 259.91,
+      "pct_24h": 4.30075,
+      "pct_7d": -0.8,
       "support_30d": 203.50169440615565,
       "resistance_30d": 288.10955405353275,
-      "as_of": "2026-09-04 07:55:19",
+      "as_of": "2026-09-04 10:00:37",
       "stale": false
     },
     "mantle": {
@@ -2647,7 +2647,7 @@
         ],
         [
           "Stretch from long-term average",
-          "-19.8% below its long-term average - confirmed downtrend",
+          "-20.5% below its long-term average - confirmed downtrend",
           -1
         ],
         [
@@ -2660,12 +2660,12 @@
       "id": "world-liberty-financial",
       "symbol": "WLFI",
       "name": "World Liberty Financial",
-      "price": 0.057986,
-      "pct_24h": 3.32266,
+      "price": 0.057436,
+      "pct_24h": 2.83118,
       "pct_7d": -3.6,
       "support_30d": 0.051301304477199876,
       "resistance_30d": 0.06254770952093733,
-      "as_of": "2026-09-04 09:05:21",
+      "as_of": "2026-09-04 10:00:37",
       "stale": false
     },
     "pax-gold": {
@@ -2695,7 +2695,7 @@
         ],
         [
           "Stretch from long-term average",
-          "-0.7% vs its long-term average - not stretched either way",
+          "-0.9% vs its long-term average - not stretched either way",
           0
         ],
         [
@@ -2708,12 +2708,12 @@
       "id": "pax-gold",
       "symbol": "PAXG",
       "name": "PAX Gold",
-      "price": 4479.22,
-      "pct_24h": 0.90297,
-      "pct_7d": -2.6,
+      "price": 4470.38,
+      "pct_24h": 0.87325,
+      "pct_7d": -2.7,
       "support_30d": 4245.0586940559815,
       "resistance_30d": 4672.307573354755,
-      "as_of": "2026-09-04 08:40:59",
+      "as_of": "2026-09-04 10:00:37",
       "stale": false
     },
     "morpho": {
@@ -3101,19 +3101,21 @@
       "stale": false
     }
   },
-  "_strong_buy_state": {},
+  "_strong_buy_state": {
+    "15m:WLFI": true
+  },
   "BTC": {
     "key": "BTC",
     "name": "Bitcoin",
     "emoji": "\u20bf",
-    "price": 81036,
+    "price": 81121,
     "high_24h": 82108,
     "low_24h": 77452,
-    "pct_24h": 4.41708,
+    "pct_24h": 4.55003,
     "pct_7d": 1.8,
     "pct_30d": 26.5,
-    "sma50": 68802.72438710317,
-    "sma200": 69608.59222190663,
+    "sma50": 68803.68217019932,
+    "sma200": 69608.83166768066,
     "support_30d": 62843.70368466329,
     "resistance_30d": 81264.70153038795,
     "mark_price": 80817.98012319,
@@ -3128,16 +3130,16 @@
     "key": "ETH",
     "name": "Ethereum",
     "emoji": "\u039e",
-    "price": 2521.34,
+    "price": 2523.28,
     "high_24h": 2528.59,
     "low_24h": 2389.3,
-    "pct_24h": 5.30934,
+    "pct_24h": 5.45524,
     "pct_7d": 1.2,
     "pct_30d": 35.1,
-    "sma50": 2078.399198886536,
-    "sma200": 2033.2947419252723,
+    "sma50": 2078.419649776499,
+    "sma200": 2033.2998546477631,
     "support_30d": 1871.3976551883159,
-    "resistance_30d": 2521.057442570724,
+    "resistance_30d": 2522.0799870688957,
     "mark_price": 2509.41939535,
     "index_price": 2511.21465116,
     "funding_rate": 6.58e-05,
