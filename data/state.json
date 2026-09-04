@@ -4,7 +4,7 @@
   "_alerts_state": {
     "btc-resistance-break": {
       "triggered": true,
-      "last_triggered_at": "2026-09-04 10:20:23"
+      "last_triggered_at": "2026-09-04 10:25:19"
     },
     "btc-support-break": {
       "triggered": false,
@@ -583,7 +583,7 @@
         ],
         [
           "Stretch from long-term average",
-          "-3.1% vs its long-term average - not stretched either way",
+          "-3.4% vs its long-term average - not stretched either way",
           0
         ],
         [
@@ -596,12 +596,12 @@
       "id": "leo-token",
       "symbol": "LEO",
       "name": "LEO Token",
-      "price": 9.31,
-      "pct_24h": -0.02127,
-      "pct_7d": -1.7,
+      "price": 9.28,
+      "pct_24h": 0.39391,
+      "pct_7d": -1.5,
       "support_30d": 8.948412455130585,
       "resistance_30d": 9.755640407805231,
-      "as_of": "2026-09-04 09:45:23",
+      "as_of": "2026-09-04 10:25:19",
       "stale": false
     },
     "monero": {
@@ -1831,7 +1831,7 @@
         ],
         [
           "Stretch from long-term average",
-          "+66.5% above its long-term average - very stretched",
+          "+67.6% above its long-term average - very stretched",
           -2
         ],
         [
@@ -1844,12 +1844,12 @@
       "id": "ethena",
       "symbol": "ENA",
       "name": "Ethena",
-      "price": 0.16665,
-      "pct_24h": 8.95877,
-      "pct_7d": -0.5,
+      "price": 0.167803,
+      "pct_24h": 11.36928,
+      "pct_7d": 0.5,
       "support_30d": 0.08231050586125944,
       "resistance_30d": 0.17000615068266245,
-      "as_of": "2026-09-04 08:10:24",
+      "as_of": "2026-09-04 10:25:19",
       "stale": false
     },
     "bitcoin-cash": {
@@ -2551,7 +2551,7 @@
         ],
         [
           "Stretch from long-term average",
-          "-0.9% vs its long-term average - not stretched either way",
+          "-0.8% vs its long-term average - not stretched either way",
           0
         ],
         [
@@ -2564,12 +2564,12 @@
       "id": "tether-gold",
       "symbol": "XAUT",
       "name": "Tether Gold",
-      "price": 4460.02,
-      "pct_24h": 0.9433,
-      "pct_7d": -2.5,
+      "price": 4463.18,
+      "pct_24h": 1.11276,
+      "pct_7d": -2.8,
       "support_30d": 4232.950142102185,
       "resistance_30d": 4662.510537821146,
-      "as_of": "2026-09-04 07:30:28",
+      "as_of": "2026-09-04 10:25:19",
       "stale": false
     },
     "bitway": {
@@ -3101,19 +3101,22 @@
       "stale": false
     }
   },
-  "_strong_buy_state": {},
+  "_strong_buy_state": {
+    "15m:XRP": true,
+    "15m:POL": true
+  },
   "BTC": {
     "key": "BTC",
     "name": "Bitcoin",
     "emoji": "\u20bf",
-    "price": 80844,
+    "price": 80835,
     "high_24h": 82108,
     "low_24h": 77681,
-    "pct_24h": 4.22138,
+    "pct_24h": 4.14081,
     "pct_7d": 1.9,
     "pct_30d": 26.5,
-    "sma50": 68799.01020842952,
-    "sma200": 69607.6636772382,
+    "sma50": 68799.0166266459,
+    "sma200": 69607.6652817923,
     "support_30d": 62843.70368466329,
     "resistance_30d": 81264.70153038795,
     "mark_price": 80817.98012319,
@@ -3128,16 +3131,16 @@
     "key": "ETH",
     "name": "Ethereum",
     "emoji": "\u039e",
-    "price": 2516.23,
+    "price": 2516.44,
     "high_24h": 2543.95,
     "low_24h": 2394.81,
-    "pct_24h": 5.13964,
+    "pct_24h": 5.03655,
     "pct_7d": 1.3,
     "pct_30d": 35.0,
-    "sma50": 2078.2887363195227,
-    "sma200": 2033.267126283519,
+    "sma50": 2078.3292179798914,
+    "sma200": 2033.2772466986112,
     "support_30d": 1871.3976551883159,
-    "resistance_30d": 2515.534314220073,
+    "resistance_30d": 2517.5583972385,
     "mark_price": 2509.41939535,
     "index_price": 2511.21465116,
     "funding_rate": 6.58e-05,
