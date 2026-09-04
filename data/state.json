@@ -4,7 +4,7 @@
   "_alerts_state": {
     "btc-resistance-break": {
       "triggered": true,
-      "last_triggered_at": "2026-09-04 04:35:19"
+      "last_triggered_at": "2026-09-04 04:40:26"
     },
     "btc-support-break": {
       "triggered": false,
@@ -12,7 +12,7 @@
     },
     "eth-resistance-break": {
       "triggered": true,
-      "last_triggered_at": "2026-09-04 04:35:19"
+      "last_triggered_at": "2026-09-04 04:40:26"
     },
     "eth-support-break": {
       "triggered": false,
@@ -199,7 +199,7 @@
         ],
         [
           "Stretch from long-term average",
-          "+1.4% vs its long-term average - not stretched either way",
+          "+1.5% vs its long-term average - not stretched either way",
           0
         ],
         [
@@ -212,12 +212,12 @@
       "id": "tron",
       "symbol": "TRX",
       "name": "TRON",
-      "price": 0.329131,
-      "pct_24h": 1.02354,
+      "price": 0.329303,
+      "pct_24h": 1.03609,
       "pct_7d": -2.6,
       "support_30d": 0.32221537516581966,
       "resistance_30d": 0.3447899585776834,
-      "as_of": "2026-09-04 04:20:22",
+      "as_of": "2026-09-04 04:40:26",
       "stale": false
     },
     "figure-heloc": {
@@ -679,7 +679,7 @@
         ],
         [
           "Stretch from long-term average",
-          "+1.2% vs its long-term average - not stretched either way",
+          "+1.7% vs its long-term average - not stretched either way",
           0
         ],
         [
@@ -692,12 +692,12 @@
       "id": "cardano",
       "symbol": "ADA",
       "name": "Cardano",
-      "price": 0.225097,
-      "pct_24h": 10.12674,
+      "price": 0.22625,
+      "pct_24h": 10.64266,
       "pct_7d": 6.8,
       "support_30d": 0.1741249817054162,
       "resistance_30d": 0.2291047455940254,
-      "as_of": "2026-09-04 04:30:29",
+      "as_of": "2026-09-04 04:40:26",
       "stale": false
     },
     "stellar": {
@@ -1317,11 +1317,11 @@
       "symbol": "HTX",
       "name": "HTX DAO",
       "price": 1.65e-06,
-      "pct_24h": 1.68783,
+      "pct_24h": 1.72348,
       "pct_7d": -2.5,
       "support_30d": 1.6023985995039954e-06,
       "resistance_30d": 1.8259977214551937e-06,
-      "as_of": "2026-09-04 04:25:18",
+      "as_of": "2026-09-04 04:40:26",
       "stale": false
     },
     "superstate-short-duration-us-government-securities-fund-ustb": {
@@ -3101,19 +3101,21 @@
       "stale": false
     }
   },
-  "_strong_buy_state": {},
+  "_strong_buy_state": {
+    "15m:TRX": true
+  },
   "BTC": {
     "key": "BTC",
     "name": "Bitcoin",
     "emoji": "\u20bf",
-    "price": 81187,
+    "price": 81113,
     "high_24h": 82108,
     "low_24h": 77107,
-    "pct_24h": 4.66108,
+    "pct_24h": 4.57137,
     "pct_7d": 1.2,
     "pct_30d": 25.8,
-    "sma50": 68806.26645606612,
-    "sma200": 69609.47773914736,
+    "sma50": 68805.22736243843,
+    "sma200": 69609.21796574043,
     "support_30d": 62843.70368466329,
     "resistance_30d": 81264.70153038795,
     "mark_price": 81220.58098551,
@@ -3128,16 +3130,16 @@
     "key": "ETH",
     "name": "Ethereum",
     "emoji": "\u039e",
-    "price": 2520.57,
+    "price": 2518.81,
     "high_24h": 2523.23,
     "low_24h": 2379.95,
-    "pct_24h": 5.1173,
+    "pct_24h": 5.04294,
     "pct_7d": 0.6,
     "pct_30d": 33.8,
-    "sma50": 2078.3926814099877,
-    "sma200": 2033.2931125561352,
+    "sma50": 2078.3692473160104,
+    "sma200": 2033.2872540326412,
     "support_30d": 1871.3976551883159,
-    "resistance_30d": 2520.731568743317,
+    "resistance_30d": 2519.559864044452,
     "mark_price": 2505.87444186,
     "index_price": 2506.71976744,
     "funding_rate": 9.436e-05,
