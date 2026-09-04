@@ -4,7 +4,7 @@
   "_alerts_state": {
     "btc-resistance-break": {
       "triggered": true,
-      "last_triggered_at": "2026-09-04 00:15:27"
+      "last_triggered_at": "2026-09-04 00:20:21"
     },
     "btc-support-break": {
       "triggered": false,
@@ -184,7 +184,7 @@
         ],
         [
           "Crowd mood (Fear & Greed)",
-          "65/100 - crowd is greedy",
+          "74/100 - crowd is greedy",
           -1
         ],
         [
@@ -199,7 +199,7 @@
         ],
         [
           "Stretch from long-term average",
-          "+2.0% vs its long-term average - not stretched either way",
+          "+1.9% vs its long-term average - not stretched either way",
           0
         ],
         [
@@ -212,12 +212,12 @@
       "id": "tron",
       "symbol": "TRX",
       "name": "TRON",
-      "price": 0.33064,
-      "pct_24h": 1.82277,
-      "pct_7d": -2.1,
+      "price": 0.330564,
+      "pct_24h": 1.8324,
+      "pct_7d": -2.0,
       "support_30d": 0.32221537516581966,
       "resistance_30d": 0.3447899585776834,
-      "as_of": "2026-09-03 23:05:27",
+      "as_of": "2026-09-04 00:20:21",
       "stale": false
     },
     "figure-heloc": {
@@ -1111,7 +1111,7 @@
         ],
         [
           "Stretch from long-term average",
-          "+6.2% vs its long-term average - not stretched either way",
+          "+6.9% vs its long-term average - not stretched either way",
           0
         ],
         [
@@ -1124,12 +1124,12 @@
       "id": "polygon-ecosystem-token",
       "symbol": "POL",
       "name": "POL (ex-MATIC)",
-      "price": 0.094275,
-      "pct_24h": 1.73405,
+      "price": 0.094742,
+      "pct_24h": 2.38068,
       "pct_7d": -12.3,
       "support_30d": 0.07382135255393793,
       "resistance_30d": 0.12250456198546959,
-      "as_of": "2026-09-04 00:05:18",
+      "as_of": "2026-09-04 00:20:21",
       "stale": false
     },
     "blackrock-usd-institutional-digital-liquidity-fund": {
@@ -2680,7 +2680,7 @@
         ],
         [
           "Crowd mood (Fear & Greed)",
-          "65/100 - crowd is greedy",
+          "74/100 - crowd is greedy",
           -1
         ],
         [
@@ -2708,12 +2708,12 @@
       "id": "pax-gold",
       "symbol": "PAXG",
       "name": "PAX Gold",
-      "price": 4476.46,
-      "pct_24h": 1.81429,
+      "price": 4477.29,
+      "pct_24h": 1.88353,
       "pct_7d": -2.6,
       "support_30d": 4245.0586940559815,
       "resistance_30d": 4672.307573354755,
-      "as_of": "2026-09-03 22:25:17",
+      "as_of": "2026-09-04 00:20:21",
       "stale": false
     },
     "morpho": {
@@ -3101,21 +3101,23 @@
       "stale": false
     }
   },
-  "_strong_buy_state": {},
+  "_strong_buy_state": {
+    "15m:TRX": true
+  },
   "BTC": {
     "key": "BTC",
     "name": "Bitcoin",
     "emoji": "\u20bf",
-    "price": 81174,
+    "price": 81256,
     "high_24h": 82108,
     "low_24h": 76976,
-    "pct_24h": 5.22023,
+    "pct_24h": 5.4582,
     "pct_7d": 1.2,
     "pct_30d": 26.6,
-    "sma50": 68806.18267366436,
-    "sma200": 69609.45679354692,
+    "sma50": 68808.2585325534,
+    "sma200": 69609.97575826918,
     "support_30d": 62843.70368466329,
-    "resistance_30d": 81264.70153038795,
+    "resistance_30d": 81301.96653915984,
     "mark_price": 81220.58098551,
     "index_price": 81251.24478261,
     "funding_rate": 8.351e-05,
@@ -3128,14 +3130,14 @@
     "key": "ETH",
     "name": "Ethereum",
     "emoji": "\u039e",
-    "price": 2505.61,
+    "price": 2508.81,
     "high_24h": 2523.23,
     "low_24h": 2372.43,
-    "pct_24h": 4.98529,
+    "pct_24h": 5.24827,
     "pct_7d": -0.3,
     "pct_30d": 33.8,
-    "sma50": 2078.101145812569,
-    "sma200": 2033.2202286567806,
+    "sma50": 2078.18096229008,
+    "sma200": 2033.2401827761582,
     "support_30d": 1871.3976551883159,
     "resistance_30d": 2514.967577695514,
     "mark_price": 2505.87444186,
