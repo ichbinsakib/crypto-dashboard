@@ -4,7 +4,7 @@
   "_alerts_state": {
     "btc-resistance-break": {
       "triggered": true,
-      "last_triggered_at": "2026-09-04 09:40:23"
+      "last_triggered_at": "2026-09-04 09:45:23"
     },
     "btc-support-break": {
       "triggered": false,
@@ -12,7 +12,7 @@
     },
     "eth-resistance-break": {
       "triggered": true,
-      "last_triggered_at": "2026-09-04 09:40:23"
+      "last_triggered_at": "2026-09-04 09:45:23"
     },
     "eth-support-break": {
       "triggered": false,
@@ -295,7 +295,7 @@
         ],
         [
           "Stretch from long-term average",
-          "+66.4% above its long-term average - very stretched",
+          "+65.6% above its long-term average - very stretched",
           -2
         ],
         [
@@ -308,12 +308,12 @@
       "id": "hyperliquid",
       "symbol": "HYPE",
       "name": "Hyperliquid",
-      "price": 87.33,
-      "pct_24h": 6.13201,
-      "pct_7d": 3.5,
+      "price": 86.91,
+      "pct_24h": 6.06943,
+      "pct_7d": 3.3,
       "support_30d": 53.854096460729586,
       "resistance_30d": 87.4499182124614,
-      "as_of": "2026-09-04 03:55:19",
+      "as_of": "2026-09-04 09:45:23",
       "stale": false
     },
     "dogecoin": {
@@ -439,7 +439,7 @@
         ],
         [
           "Stretch from long-term average",
-          "+50.6% above its long-term average - very stretched",
+          "+49.0% above its long-term average - very stretched",
           -2
         ],
         [
@@ -452,12 +452,12 @@
       "id": "rain",
       "symbol": "RAIN",
       "name": "Rain",
-      "price": 0.01707204,
-      "pct_24h": 2.18712,
-      "pct_7d": -0.8,
+      "price": 0.01689289,
+      "pct_24h": 1.81945,
+      "pct_7d": -2.8,
       "support_30d": 0.012542200634745275,
       "resistance_30d": 0.018158429442510105,
-      "as_of": "2026-09-04 06:02:59",
+      "as_of": "2026-09-04 09:45:23",
       "stale": false
     },
     "chainlink": {
@@ -583,7 +583,7 @@
         ],
         [
           "Stretch from long-term average",
-          "-3.2% vs its long-term average - not stretched either way",
+          "-3.1% vs its long-term average - not stretched either way",
           0
         ],
         [
@@ -596,12 +596,12 @@
       "id": "leo-token",
       "symbol": "LEO",
       "name": "LEO Token",
-      "price": 9.3,
-      "pct_24h": 0.06093,
+      "price": 9.31,
+      "pct_24h": -0.02127,
       "pct_7d": -1.7,
       "support_30d": 8.948412455130585,
       "resistance_30d": 9.755640407805231,
-      "as_of": "2026-09-04 08:05:23",
+      "as_of": "2026-09-04 09:45:23",
       "stale": false
     },
     "monero": {
@@ -3101,19 +3101,21 @@
       "stale": false
     }
   },
-  "_strong_buy_state": {},
+  "_strong_buy_state": {
+    "15m:WLFI": true
+  },
   "BTC": {
     "key": "BTC",
     "name": "Bitcoin",
     "emoji": "\u20bf",
-    "price": 81165,
+    "price": 81154,
     "high_24h": 82108,
     "low_24h": 77452,
-    "pct_24h": 4.45669,
+    "pct_24h": 4.44209,
     "pct_7d": 1.8,
     "pct_30d": 26.5,
-    "sma50": 68805.52184425312,
-    "sma200": 69609.2915861941,
+    "sma50": 68805.05533479787,
+    "sma200": 69609.17495883029,
     "support_30d": 62843.70368466329,
     "resistance_30d": 81264.70153038795,
     "mark_price": 80817.98012319,
@@ -3128,16 +3130,16 @@
     "key": "ETH",
     "name": "Ethereum",
     "emoji": "\u039e",
-    "price": 2530.51,
+    "price": 2529.69,
     "high_24h": 2528.59,
     "low_24h": 2389.3,
-    "pct_24h": 5.58842,
+    "pct_24h": 5.58366,
     "pct_7d": 1.2,
     "pct_30d": 35.1,
-    "sma50": 2078.5787326366435,
-    "sma200": 2033.3396253627993,
+    "sma50": 2078.5634952089963,
+    "sma200": 2033.3358160058874,
     "support_30d": 1871.3976551883159,
-    "resistance_30d": 2530.034130076107,
+    "resistance_30d": 2529.272258693739,
     "mark_price": 2509.41939535,
     "index_price": 2511.21465116,
     "funding_rate": 6.58e-05,
