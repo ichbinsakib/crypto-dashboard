@@ -4,7 +4,7 @@
   "_alerts_state": {
     "btc-resistance-break": {
       "triggered": true,
-      "last_triggered_at": "2026-09-04 16:25:19"
+      "last_triggered_at": "2026-09-04 16:30:28"
     },
     "btc-support-break": {
       "triggered": false,
@@ -2239,7 +2239,7 @@
     "bittensor": {
       "label": "\ud83d\udfe1 HOLD / NEUTRAL",
       "status": "neutral",
-      "score": 1,
+      "score": 0,
       "rows": [
         [
           "Price vs. recent range",
@@ -2258,12 +2258,12 @@
         ],
         [
           "Recent trend",
-          "Chopping sideways - no clear trend",
-          0
+          "Trending down - avoid catching a falling knife",
+          -1
         ],
         [
           "Stretch from long-term average",
-          "-4.6% vs its long-term average - not stretched either way",
+          "-5.4% vs its long-term average - not stretched either way",
           0
         ],
         [
@@ -2276,12 +2276,12 @@
       "id": "bittensor",
       "symbol": "TAO",
       "name": "Bittensor",
-      "price": 225.85,
-      "pct_24h": 1.68782,
-      "pct_7d": -5.6,
+      "price": 223.89,
+      "pct_24h": -1.6158,
+      "pct_7d": -9.3,
       "support_30d": 190.67093053611111,
       "resistance_30d": 254.06815196002663,
-      "as_of": "2026-09-04 12:45:24",
+      "as_of": "2026-09-04 16:30:28",
       "stale": false
     },
     "the-open-network": {
@@ -2564,12 +2564,12 @@
       "id": "tether-gold",
       "symbol": "XAUT",
       "name": "Tether Gold",
-      "price": 4429.41,
-      "pct_24h": -1.19297,
+      "price": 4428.88,
+      "pct_24h": -1.22275,
       "pct_7d": -3.1,
       "support_30d": 4232.950142102185,
       "resistance_30d": 4662.510537821146,
-      "as_of": "2026-09-04 16:10:30",
+      "as_of": "2026-09-04 16:30:28",
       "stale": false
     },
     "bitway": {
@@ -2717,9 +2717,9 @@
       "stale": false
     },
     "morpho": {
-      "label": "\ud83d\udfe1 HOLD / NEUTRAL",
-      "status": "neutral",
-      "score": -1,
+      "label": "\ud83d\udd34 CAUTION - REDUCE NEW BUYS",
+      "status": "bearish",
+      "score": -2,
       "rows": [
         [
           "Price vs. recent range",
@@ -2743,8 +2743,8 @@
         ],
         [
           "Stretch from long-term average",
-          "+26.4% above its long-term average - a bit stretched",
-          -1
+          "+30.5% above its long-term average - very stretched",
+          -2
         ],
         [
           "Leverage traders' bias",
@@ -2752,16 +2752,16 @@
           0
         ]
       ],
-      "plain": "No real edge either way right now - fine to just wait and watch.",
+      "plain": "Getting risky - I'd hold off on new buys until this cools down.",
       "id": "morpho",
       "symbol": "MORPHO",
       "name": "Morpho",
-      "price": 2.45,
-      "pct_24h": 1.07488,
-      "pct_7d": -1.9,
+      "price": 2.53,
+      "pct_24h": 2.66388,
+      "pct_7d": -0.8,
       "support_30d": 1.8400586135640542,
       "resistance_30d": 2.9026212482639075,
-      "as_of": "2026-09-04 14:45:25",
+      "as_of": "2026-09-04 16:30:28",
       "stale": false
     },
     "memecore": {
@@ -3106,14 +3106,14 @@
     "key": "BTC",
     "name": "Bitcoin",
     "emoji": "\u20bf",
-    "price": 79503,
+    "price": 79543,
     "high_24h": 82108,
     "low_24h": 78706,
-    "pct_24h": -1.51657,
+    "pct_24h": -1.49895,
     "pct_7d": -0.2,
     "pct_30d": 23.3,
-    "sma50": 68771.95693719236,
-    "sma200": 69600.90035942891,
+    "sma50": 68772.8141048168,
+    "sma200": 69601.11465133502,
     "support_30d": 62843.70368466329,
     "resistance_30d": 81264.70153038795,
     "mark_price": 79220.43152899,
@@ -3128,14 +3128,14 @@
     "key": "ETH",
     "name": "Ethereum",
     "emoji": "\u039e",
-    "price": 2451.74,
+    "price": 2453.55,
     "high_24h": 2543.95,
     "low_24h": 2435.15,
-    "pct_24h": -1.60797,
+    "pct_24h": -1.54334,
     "pct_7d": -2.5,
     "pct_30d": 30.8,
-    "sma50": 2077.0140466475927,
-    "sma200": 2032.9484538655367,
+    "sma50": 2077.0334831521495,
+    "sma200": 2032.9533129916758,
     "support_30d": 1871.3976551883159,
     "resistance_30d": 2514.967577695514,
     "mark_price": 2446.3699845,
