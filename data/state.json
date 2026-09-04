@@ -4,7 +4,7 @@
   "_alerts_state": {
     "btc-resistance-break": {
       "triggered": true,
-      "last_triggered_at": "2026-09-04 14:50:28"
+      "last_triggered_at": "2026-09-04 14:55:17"
     },
     "btc-support-break": {
       "triggered": false,
@@ -79,7 +79,7 @@
     "ripple": {
       "label": "\ud83d\udfe1 HOLD / NEUTRAL",
       "status": "neutral",
-      "score": -1,
+      "score": 0,
       "rows": [
         [
           "Price vs. recent range",
@@ -103,8 +103,8 @@
         ],
         [
           "Stretch from long-term average",
-          "+10.5% above its long-term average - a bit stretched",
-          -1
+          "+8.9% vs its long-term average - not stretched either way",
+          0
         ],
         [
           "Leverage traders' bias",
@@ -116,12 +116,12 @@
       "id": "ripple",
       "symbol": "XRP",
       "name": "XRP",
-      "price": 1.41,
-      "pct_24h": 2.54235,
-      "pct_7d": 2.1,
+      "price": 1.39,
+      "pct_24h": -3.36118,
+      "pct_7d": -0.7,
       "support_30d": 0.9927072784932938,
       "resistance_30d": 1.52050482788377,
-      "as_of": "2026-09-04 12:40:23",
+      "as_of": "2026-09-04 14:55:17",
       "stale": false
     },
     "solana": {
@@ -1763,7 +1763,7 @@
       "rows": [
         [
           "Price vs. recent range",
-          "Near its 30-day high (~$4.55) - less room to run",
+          "Near its 30-day high (~$4.59) - less room to run",
           -1
         ],
         [
@@ -1783,7 +1783,7 @@
         ],
         [
           "Stretch from long-term average",
-          "+172.5% above its long-term average - very stretched",
+          "+174.3% above its long-term average - very stretched",
           -2
         ],
         [
@@ -1796,12 +1796,12 @@
       "id": "lighter",
       "symbol": "LIT",
       "name": "Lighter",
-      "price": 4.54,
-      "pct_24h": 14.81616,
-      "pct_7d": 31.8,
+      "price": 4.57,
+      "pct_24h": 13.1781,
+      "pct_7d": 36.6,
       "support_30d": 2.2358662099746955,
-      "resistance_30d": 4.554908826349683,
-      "as_of": "2026-09-04 13:20:27",
+      "resistance_30d": 4.588324100458255,
+      "as_of": "2026-09-04 14:55:17",
       "stale": false
     },
     "ethena": {
@@ -2839,7 +2839,7 @@
         ],
         [
           "Stretch from long-term average",
-          "+37.4% above its long-term average - very stretched",
+          "+33.2% above its long-term average - very stretched",
           -2
         ],
         [
@@ -2852,12 +2852,12 @@
       "id": "aave",
       "symbol": "AAVE",
       "name": "Aave",
-      "price": 133.85,
-      "pct_24h": 2.95948,
-      "pct_7d": 6.9,
+      "price": 129.73,
+      "pct_24h": -2.70259,
+      "pct_7d": 4.9,
       "support_30d": 85.94219943917633,
       "resistance_30d": 141.53047916466082,
-      "as_of": "2026-09-04 11:50:26",
+      "as_of": "2026-09-04 14:55:17",
       "stale": false
     },
     "okb": {
@@ -3101,19 +3101,21 @@
       "stale": false
     }
   },
-  "_strong_buy_state": {},
+  "_strong_buy_state": {
+    "1h:LIT": true
+  },
   "BTC": {
     "key": "BTC",
     "name": "Bitcoin",
     "emoji": "\u20bf",
-    "price": 78832,
+    "price": 78884,
     "high_24h": 82108,
     "low_24h": 79016,
-    "pct_24h": -1.97448,
+    "pct_24h": -1.65159,
     "pct_7d": -0.1,
     "pct_30d": 23.4,
-    "sma50": 68758.85732823671,
-    "sma200": 69597.62545719,
+    "sma50": 68759.73397573299,
+    "sma200": 69597.84461906408,
     "support_30d": 62843.70368466329,
     "resistance_30d": 81264.70153038795,
     "mark_price": 79220.43152899,
@@ -3128,14 +3130,14 @@
     "key": "ETH",
     "name": "Ethereum",
     "emoji": "\u039e",
-    "price": 2439.13,
+    "price": 2440.49,
     "high_24h": 2543.95,
     "low_24h": 2437.03,
-    "pct_24h": -1.61891,
+    "pct_24h": -1.56768,
     "pct_7d": -1.9,
     "pct_30d": 30.8,
-    "sma50": 2076.7623439039794,
-    "sma200": 2032.8855281796332,
+    "sma50": 2076.769240750061,
+    "sma200": 2032.8872523911537,
     "support_30d": 1871.3976551883159,
     "resistance_30d": 2514.967577695514,
     "mark_price": 2446.3699845,
