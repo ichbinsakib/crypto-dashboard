@@ -4,7 +4,7 @@
   "_alerts_state": {
     "btc-resistance-break": {
       "triggered": true,
-      "last_triggered_at": "2026-09-04 22:20:25"
+      "last_triggered_at": "2026-09-04 22:25:20"
     },
     "btc-support-break": {
       "triggered": false,
@@ -1543,7 +1543,7 @@
         ],
         [
           "Stretch from long-term average",
-          "+104.2% above its long-term average - very stretched",
+          "+104.0% above its long-term average - very stretched",
           -2
         ],
         [
@@ -1556,12 +1556,12 @@
       "id": "pump-fun",
       "symbol": "PUMP",
       "name": "Pump.fun",
-      "price": 0.00421664,
-      "pct_24h": -3.48216,
+      "price": 0.00421317,
+      "pct_24h": -3.57432,
       "pct_7d": -7.4,
       "support_30d": 0.0022648933670123433,
       "resistance_30d": 0.0052249885406471875,
-      "as_of": "2026-09-04 22:15:25",
+      "as_of": "2026-09-04 22:25:20",
       "stale": false
     },
     "venice-token": {
@@ -1571,7 +1571,7 @@
       "rows": [
         [
           "Price vs. recent range",
-          "Near its 30-day high (~$18.07) - less room to run",
+          "Near its 30-day high (~$18.06) - less room to run",
           -1
         ],
         [
@@ -1591,7 +1591,7 @@
         ],
         [
           "Stretch from long-term average",
-          "+59.2% above its long-term average - very stretched",
+          "+57.2% above its long-term average - very stretched",
           -2
         ],
         [
@@ -1604,12 +1604,12 @@
       "id": "venice-token",
       "symbol": "VVV",
       "name": "Venice Token",
-      "price": 18.05,
-      "pct_24h": 6.28009,
-      "pct_7d": 11.6,
+      "price": 17.83,
+      "pct_24h": 4.86347,
+      "pct_7d": 8.7,
       "support_30d": 11.286631406210226,
-      "resistance_30d": 18.069403322323662,
-      "as_of": "2026-09-04 20:20:26",
+      "resistance_30d": 18.059391310500832,
+      "as_of": "2026-09-04 22:25:20",
       "stale": false
     },
     "litecoin": {
@@ -1907,7 +1907,7 @@
       "rows": [
         [
           "Price vs. recent range",
-          "Near its 30-day high (~$0.5760) - less room to run",
+          "Near its 30-day high (~$0.5695) - less room to run",
           -1
         ],
         [
@@ -1927,7 +1927,7 @@
         ],
         [
           "Stretch from long-term average",
-          "-3.5% vs its long-term average - not stretched either way",
+          "-4.6% vs its long-term average - not stretched either way",
           0
         ],
         [
@@ -1940,12 +1940,12 @@
       "id": "mantle",
       "symbol": "MNT",
       "name": "Mantle",
-      "price": 0.576054,
-      "pct_24h": 0.08711,
-      "pct_7d": 12.7,
+      "price": 0.569235,
+      "pct_24h": -0.26008,
+      "pct_7d": 12.4,
       "support_30d": 0.40907330899083316,
-      "resistance_30d": 0.5760478428959477,
-      "as_of": "2026-09-04 18:45:28",
+      "resistance_30d": 0.5695385779513111,
+      "as_of": "2026-09-04 22:25:20",
       "stale": false
     },
     "polkadot": {
@@ -3101,21 +3101,19 @@
       "stale": false
     }
   },
-  "_strong_buy_state": {
-    "15m:PUMP": true
-  },
+  "_strong_buy_state": {},
   "BTC": {
     "key": "BTC",
     "name": "Bitcoin",
     "emoji": "\u20bf",
-    "price": 79719,
+    "price": 79720,
     "high_24h": 81423,
     "low_24h": 78706,
-    "pct_24h": -1.99555,
+    "pct_24h": -1.95618,
     "pct_7d": 2.9,
     "pct_30d": 23.0,
-    "sma50": 68776.62242259752,
-    "sma200": 69602.0667307802,
+    "sma50": 68776.54506740265,
+    "sma200": 69602.0473919815,
     "support_30d": 62843.70368466329,
     "resistance_30d": 81264.70153038795,
     "mark_price": 79691.1,
@@ -3130,14 +3128,14 @@
     "key": "ETH",
     "name": "Ethereum",
     "emoji": "\u039e",
-    "price": 2452.94,
+    "price": 2453.43,
     "high_24h": 2543.95,
     "low_24h": 2435.15,
-    "pct_24h": -2.07382,
+    "pct_24h": -1.991,
     "pct_7d": 1.0,
     "pct_30d": 28.0,
-    "sma50": 2077.0381745302893,
-    "sma200": 2032.9544858362106,
+    "sma50": 2077.0434309847124,
+    "sma200": 2032.9557999498165,
     "support_30d": 1871.3976551883159,
     "resistance_30d": 2514.967577695514,
     "mark_price": 2452.58,
