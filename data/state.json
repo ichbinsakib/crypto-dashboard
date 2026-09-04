@@ -4,7 +4,7 @@
   "_alerts_state": {
     "btc-resistance-break": {
       "triggered": true,
-      "last_triggered_at": "2026-09-04 00:30:31"
+      "last_triggered_at": "2026-09-04 00:35:18"
     },
     "btc-support-break": {
       "triggered": false,
@@ -712,7 +712,7 @@
         ],
         [
           "Crowd mood (Fear & Greed)",
-          "65/100 - crowd is greedy",
+          "74/100 - crowd is greedy",
           -1
         ],
         [
@@ -727,7 +727,7 @@
         ],
         [
           "Stretch from long-term average",
-          "+5.3% vs its long-term average - not stretched either way",
+          "+5.7% vs its long-term average - not stretched either way",
           0
         ],
         [
@@ -740,12 +740,12 @@
       "id": "stellar",
       "symbol": "XLM",
       "name": "Stellar",
-      "price": 0.183647,
-      "pct_24h": 5.33696,
-      "pct_7d": -1.0,
+      "price": 0.184438,
+      "pct_24h": 5.26929,
+      "pct_7d": -1.9,
       "support_30d": 0.15472912151335613,
       "resistance_30d": 0.20181319711037435,
-      "as_of": "2026-09-03 22:45:20",
+      "as_of": "2026-09-04 00:35:18",
       "stale": false
     },
     "kucoin-shares": {
@@ -2344,7 +2344,7 @@
         ],
         [
           "Crowd mood (Fear & Greed)",
-          "65/100 - crowd is greedy",
+          "74/100 - crowd is greedy",
           -1
         ],
         [
@@ -2359,7 +2359,7 @@
         ],
         [
           "Stretch from long-term average",
-          "+2.6% vs its long-term average - not stretched either way",
+          "+3.1% vs its long-term average - not stretched either way",
           0
         ],
         [
@@ -2372,12 +2372,12 @@
       "id": "sky",
       "symbol": "SKY",
       "name": "Sky",
-      "price": 0.068505,
-      "pct_24h": 1.25579,
-      "pct_7d": 1.4,
+      "price": 0.068821,
+      "pct_24h": 2.08513,
+      "pct_7d": 0.0,
       "support_30d": 0.05081051579814886,
       "resistance_30d": 0.07314868186988309,
-      "as_of": "2026-09-03 22:40:23",
+      "as_of": "2026-09-04 00:35:18",
       "stale": false
     },
     "shiba-inu": {
@@ -2791,7 +2791,7 @@
         ],
         [
           "Stretch from long-term average",
-          "-50.3% below its long-term average - confirmed downtrend",
+          "-50.4% below its long-term average - confirmed downtrend",
           -1
         ],
         [
@@ -2804,12 +2804,12 @@
       "id": "memecore",
       "symbol": "M",
       "name": "MemeCore",
-      "price": 1.039,
-      "pct_24h": -2.81995,
+      "price": 1.037,
+      "pct_24h": -2.86965,
       "pct_7d": -7.1,
-      "support_30d": 1.0385964769572362,
+      "support_30d": 1.0370339589573898,
       "resistance_30d": 1.2453913363052769,
-      "as_of": "2026-09-04 00:15:27",
+      "as_of": "2026-09-04 00:35:18",
       "stale": false
     },
     "aave": {
@@ -3101,21 +3101,23 @@
       "stale": false
     }
   },
-  "_strong_buy_state": {},
+  "_strong_buy_state": {
+    "15m:TRX": true
+  },
   "BTC": {
     "key": "BTC",
     "name": "Bitcoin",
     "emoji": "\u20bf",
-    "price": 81160,
+    "price": 81278,
     "high_24h": 82108,
     "low_24h": 76976,
-    "pct_24h": 5.3599,
+    "pct_24h": 5.55902,
     "pct_7d": 1.2,
     "pct_30d": 26.6,
-    "sma50": 68805.16947190721,
-    "sma200": 69609.20349310763,
+    "sma50": 68807.7232681382,
+    "sma200": 69609.84194216538,
     "support_30d": 62843.70368466329,
-    "resistance_30d": 81264.70153038795,
+    "resistance_30d": 81275.20331839971,
     "mark_price": 81220.58098551,
     "index_price": 81251.24478261,
     "funding_rate": 8.351e-05,
@@ -3128,14 +3130,14 @@
     "key": "ETH",
     "name": "Ethereum",
     "emoji": "\u039e",
-    "price": 2505.67,
+    "price": 2510.47,
     "high_24h": 2523.23,
     "low_24h": 2372.43,
-    "pct_24h": 5.23314,
+    "pct_24h": 5.47497,
     "pct_7d": -0.3,
     "pct_30d": 33.8,
-    "sma50": 2078.0915465269736,
-    "sma200": 2033.2178288353816,
+    "sma50": 2078.1884056780823,
+    "sma200": 2033.242043623159,
     "support_30d": 1871.3976551883159,
     "resistance_30d": 2514.967577695514,
     "mark_price": 2505.87444186,
