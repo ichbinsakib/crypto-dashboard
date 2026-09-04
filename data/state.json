@@ -4,7 +4,7 @@
   "_alerts_state": {
     "btc-resistance-break": {
       "triggered": true,
-      "last_triggered_at": "2026-09-04 03:55:19"
+      "last_triggered_at": "2026-09-04 04:00:35"
     },
     "btc-support-break": {
       "triggered": false,
@@ -1807,7 +1807,7 @@
     "ethena": {
       "label": "\ud83d\udd34 DISTRIBUTION ZONE",
       "status": "bearish",
-      "score": -7,
+      "score": -6,
       "rows": [
         [
           "Price vs. recent range",
@@ -1826,12 +1826,12 @@
         ],
         [
           "Recent trend",
-          "Trending down - avoid catching a falling knife",
-          -1
+          "Chopping sideways - no clear trend",
+          0
         ],
         [
           "Stretch from long-term average",
-          "+65.9% above its long-term average - very stretched",
+          "+66.3% above its long-term average - very stretched",
           -2
         ],
         [
@@ -1844,12 +1844,12 @@
       "id": "ethena",
       "symbol": "ENA",
       "name": "Ethena",
-      "price": 0.166101,
-      "pct_24h": 10.06472,
-      "pct_7d": -10.2,
+      "price": 0.166406,
+      "pct_24h": 10.24169,
+      "pct_7d": -1.2,
       "support_30d": 0.08231050586125944,
       "resistance_30d": 0.17000615068266245,
-      "as_of": "2026-09-04 03:50:24",
+      "as_of": "2026-09-04 04:00:35",
       "stale": false
     },
     "bitcoin-cash": {
@@ -2191,11 +2191,11 @@
     "internet-computer": {
       "label": "\ud83d\udfe1 HOLD / NEUTRAL",
       "status": "neutral",
-      "score": 0,
+      "score": -1,
       "rows": [
         [
           "Price vs. recent range",
-          "Near its 30-day high (~$2.53) - less room to run",
+          "Near its 30-day high (~$2.55) - less room to run",
           -1
         ],
         [
@@ -2205,8 +2205,8 @@
         ],
         [
           "Market phase (best guess)",
-          "Basing near the bottom - phase where smart money accumulates",
-          2
+          "Established uptrend - phase where price marks up",
+          1
         ],
         [
           "Recent trend",
@@ -2215,7 +2215,7 @@
         ],
         [
           "Stretch from long-term average",
-          "+3.8% vs its long-term average - not stretched either way",
+          "+5.0% vs its long-term average - not stretched either way",
           0
         ],
         [
@@ -2228,12 +2228,12 @@
       "id": "internet-computer",
       "symbol": "ICP",
       "name": "Internet Computer",
-      "price": 2.53,
-      "pct_24h": 1.76892,
-      "pct_7d": 2.6,
+      "price": 2.56,
+      "pct_24h": 3.27806,
+      "pct_7d": 5.6,
       "support_30d": 2.093439580330402,
-      "resistance_30d": 2.529660045180186,
-      "as_of": "2026-09-04 03:20:22",
+      "resistance_30d": 2.5543499702878876,
+      "as_of": "2026-09-04 04:00:35",
       "stale": false
     },
     "bittensor": {
@@ -2516,12 +2516,12 @@
       "id": "quant-network",
       "symbol": "QNT",
       "name": "Quant",
-      "price": 65.55,
-      "pct_24h": 1.23375,
-      "pct_7d": 3.7,
+      "price": 65.51,
+      "pct_24h": 1.47239,
+      "pct_7d": 5.3,
       "support_30d": 55.905981995619285,
       "resistance_30d": 66.68821517512447,
-      "as_of": "2026-09-04 02:55:19",
+      "as_of": "2026-09-04 04:00:35",
       "stale": false
     },
     "tether-gold": {
@@ -3102,20 +3102,20 @@
     }
   },
   "_strong_buy_state": {
-    "15m:PAXG": true
+    "15m:TRX": true
   },
   "BTC": {
     "key": "BTC",
     "name": "Bitcoin",
     "emoji": "\u20bf",
-    "price": 80934,
+    "price": 80881,
     "high_24h": 82108,
     "low_24h": 77107,
-    "pct_24h": 4.13841,
+    "pct_24h": 4.12934,
     "pct_7d": 0.4,
     "pct_30d": 25.7,
-    "sma50": 68800.68295578122,
-    "sma200": 69608.08186407614,
+    "sma50": 68799.9522410392,
+    "sma200": 69607.89918539063,
     "support_30d": 62843.70368466329,
     "resistance_30d": 81264.70153038795,
     "mark_price": 81220.58098551,
@@ -3130,14 +3130,14 @@
     "key": "ETH",
     "name": "Ethereum",
     "emoji": "\u039e",
-    "price": 2506.5,
+    "price": 2506.05,
     "high_24h": 2523.23,
     "low_24h": 2379.95,
-    "pct_24h": 4.32532,
+    "pct_24h": 4.32742,
     "pct_7d": -0.3,
     "pct_30d": 33.8,
-    "sma50": 2078.098380803263,
-    "sma200": 2033.219537404454,
+    "sma50": 2078.1024130992805,
+    "sma200": 2033.2205454784585,
     "support_30d": 1871.3976551883159,
     "resistance_30d": 2514.967577695514,
     "mark_price": 2505.87444186,
