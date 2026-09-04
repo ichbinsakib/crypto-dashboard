@@ -4,7 +4,7 @@
   "_alerts_state": {
     "btc-resistance-break": {
       "triggered": true,
-      "last_triggered_at": "2026-09-04 07:15:25"
+      "last_triggered_at": "2026-09-04 07:20:25"
     },
     "btc-support-break": {
       "triggered": false,
@@ -55,7 +55,7 @@
         ],
         [
           "Stretch from long-term average",
-          "+16.8% above its long-term average - a bit stretched",
+          "+16.5% above its long-term average - a bit stretched",
           -1
         ],
         [
@@ -68,12 +68,12 @@
       "id": "binancecoin",
       "symbol": "BNB",
       "name": "BNB",
-      "price": 723.84,
-      "pct_24h": 4.37089,
-      "pct_7d": 2.3,
+      "price": 721.53,
+      "pct_24h": 3.38192,
+      "pct_7d": 1.1,
       "support_30d": 591.7111094655114,
       "resistance_30d": 725.0807755091299,
-      "as_of": "2026-09-04 05:50:26",
+      "as_of": "2026-09-04 07:20:25",
       "stale": false
     },
     "ripple": {
@@ -2359,7 +2359,7 @@
         ],
         [
           "Stretch from long-term average",
-          "+4.1% vs its long-term average - not stretched either way",
+          "+2.7% vs its long-term average - not stretched either way",
           0
         ],
         [
@@ -2372,12 +2372,12 @@
       "id": "sky",
       "symbol": "SKY",
       "name": "Sky",
-      "price": 0.069487,
-      "pct_24h": 1.84189,
-      "pct_7d": 1.6,
+      "price": 0.068547,
+      "pct_24h": 1.04242,
+      "pct_7d": 0.5,
       "support_30d": 0.05081051579814886,
       "resistance_30d": 0.07314868186988309,
-      "as_of": "2026-09-04 04:25:18",
+      "as_of": "2026-09-04 07:20:25",
       "stale": false
     },
     "shiba-inu": {
@@ -2455,7 +2455,7 @@
         ],
         [
           "Stretch from long-term average",
-          "+15.6% above its long-term average - a bit stretched",
+          "+19.2% above its long-term average - a bit stretched",
           -1
         ],
         [
@@ -2468,12 +2468,12 @@
       "id": "near",
       "symbol": "NEAR",
       "name": "NEAR Protocol",
-      "price": 1.92,
-      "pct_24h": 1.45643,
-      "pct_7d": 2.5,
+      "price": 1.98,
+      "pct_24h": 4.30902,
+      "pct_7d": 4.1,
       "support_30d": 1.5879597131538,
       "resistance_30d": 2.0141495518834596,
-      "as_of": "2026-09-04 06:10:24",
+      "as_of": "2026-09-04 07:20:25",
       "stale": false
     },
     "quant-network": {
@@ -3101,19 +3101,22 @@
       "stale": false
     }
   },
-  "_strong_buy_state": {},
+  "_strong_buy_state": {
+    "15m:BNB": true,
+    "15m:SKY": true
+  },
   "BTC": {
     "key": "BTC",
     "name": "Bitcoin",
     "emoji": "\u20bf",
-    "price": 80945,
+    "price": 80888,
     "high_24h": 82108,
     "low_24h": 77452,
-    "pct_24h": 3.70494,
+    "pct_24h": 3.82074,
     "pct_7d": 1.3,
     "pct_30d": 25.6,
-    "sma50": 68800.93710871974,
-    "sma200": 69608.14540231077,
+    "sma50": 68799.98001648956,
+    "sma200": 69607.90612925321,
     "support_30d": 62843.70368466329,
     "resistance_30d": 81264.70153038795,
     "mark_price": 80872.81049475,
@@ -3128,16 +3131,16 @@
     "key": "ETH",
     "name": "Ethereum",
     "emoji": "\u039e",
-    "price": 2515.6,
+    "price": 2513.92,
     "high_24h": 2523.23,
     "low_24h": 2389.3,
-    "pct_24h": 4.25311,
+    "pct_24h": 4.33701,
     "pct_7d": 0.5,
     "pct_30d": 33.9,
-    "sma50": 2078.2781015716596,
-    "sma200": 2033.2644675965532,
+    "sma50": 2078.2510199121616,
+    "sma200": 2033.2576971816786,
     "support_30d": 1871.3976551883159,
-    "resistance_30d": 2515.0025768269047,
+    "resistance_30d": 2514.967577695514,
     "mark_price": 2507.73832799,
     "index_price": 2509.27488372,
     "funding_rate": 0.0001,
