@@ -4,7 +4,7 @@
   "_alerts_state": {
     "btc-resistance-break": {
       "triggered": true,
-      "last_triggered_at": "2026-09-04 03:35:21"
+      "last_triggered_at": "2026-09-04 03:40:21"
     },
     "btc-support-break": {
       "triggered": false,
@@ -2167,7 +2167,7 @@
         ],
         [
           "Stretch from long-term average",
-          "-20.9% below its long-term average - confirmed downtrend",
+          "-20.8% below its long-term average - confirmed downtrend",
           -1
         ],
         [
@@ -2180,12 +2180,12 @@
       "id": "canton-network",
       "symbol": "CC",
       "name": "Canton",
-      "price": 0.111787,
-      "pct_24h": -1.0593,
+      "price": 0.111845,
+      "pct_24h": -0.05515,
       "pct_7d": -1.6,
       "support_30d": 0.09051839499501885,
       "resistance_30d": 0.12396615653575341,
-      "as_of": "2026-09-04 03:00:33",
+      "as_of": "2026-09-04 03:40:21",
       "stale": false
     },
     "internet-computer": {
@@ -2359,7 +2359,7 @@
         ],
         [
           "Stretch from long-term average",
-          "+3.0% vs its long-term average - not stretched either way",
+          "+3.8% vs its long-term average - not stretched either way",
           0
         ],
         [
@@ -2372,12 +2372,12 @@
       "id": "sky",
       "symbol": "SKY",
       "name": "Sky",
-      "price": 0.068749,
-      "pct_24h": 1.51001,
-      "pct_7d": -0.1,
+      "price": 0.069317,
+      "pct_24h": 1.85368,
+      "pct_7d": 1.0,
       "support_30d": 0.05081051579814886,
       "resistance_30d": 0.07314868186988309,
-      "as_of": "2026-09-04 02:10:28",
+      "as_of": "2026-09-04 03:40:21",
       "stale": false
     },
     "shiba-inu": {
@@ -3055,7 +3055,7 @@
     "arbitrum": {
       "label": "\ud83d\udd34 DISTRIBUTION ZONE",
       "status": "bearish",
-      "score": -8,
+      "score": -5,
       "rows": [
         [
           "Price vs. recent range",
@@ -3069,8 +3069,8 @@
         ],
         [
           "Market phase (best guess)",
-          "Very extended after a big run - phase where smart money sells",
-          -2
+          "Established uptrend - phase where price marks up",
+          1
         ],
         [
           "Recent trend",
@@ -3079,7 +3079,7 @@
         ],
         [
           "Stretch from long-term average",
-          "+40.6% above its long-term average - very stretched",
+          "+39.7% above its long-term average - very stretched",
           -2
         ],
         [
@@ -3092,28 +3092,30 @@
       "id": "arbitrum",
       "symbol": "ARB",
       "name": "Arbitrum",
-      "price": 0.137531,
-      "pct_24h": 5.28409,
+      "price": 0.13662,
+      "pct_24h": 6.34074,
       "pct_7d": 48.9,
       "support_30d": 0.07272258489044682,
       "resistance_30d": 0.14105858962141438,
-      "as_of": "2026-09-04 03:05:20",
+      "as_of": "2026-09-04 03:40:21",
       "stale": false
     }
   },
-  "_strong_buy_state": {},
+  "_strong_buy_state": {
+    "15m:CC": true
+  },
   "BTC": {
     "key": "BTC",
     "name": "Bitcoin",
     "emoji": "\u20bf",
-    "price": 80844,
+    "price": 80858,
     "high_24h": 82108,
     "low_24h": 77107,
-    "pct_24h": 4.07704,
+    "pct_24h": 4.14571,
     "pct_7d": 0.4,
     "pct_30d": 25.7,
-    "sma50": 68799.23281813205,
-    "sma200": 69607.71932966384,
+    "sma50": 68799.34790110066,
+    "sma200": 69607.748100406,
     "support_30d": 62843.70368466329,
     "resistance_30d": 81264.70153038795,
     "mark_price": 81220.58098551,
@@ -3128,14 +3130,14 @@
     "key": "ETH",
     "name": "Ethereum",
     "emoji": "\u039e",
-    "price": 2507.5,
+    "price": 2506.23,
     "high_24h": 2523.23,
     "low_24h": 2379.95,
-    "pct_24h": 4.40192,
+    "pct_24h": 4.4213,
     "pct_7d": -0.3,
     "pct_30d": 33.8,
-    "sma50": 2078.128110862494,
-    "sma200": 2033.2269699192618,
+    "sma50": 2078.107643274221,
+    "sma200": 2033.2218530221937,
     "support_30d": 1871.3976551883159,
     "resistance_30d": 2514.967577695514,
     "mark_price": 2505.87444186,
