@@ -4,7 +4,7 @@
   "_alerts_state": {
     "btc-resistance-break": {
       "triggered": true,
-      "last_triggered_at": "2026-09-04 19:30:27"
+      "last_triggered_at": "2026-09-04 19:35:19"
     },
     "btc-support-break": {
       "triggered": false,
@@ -941,13 +941,13 @@
       "stale": false
     },
     "aster-2": {
-      "label": "\ud83d\udfe1 HOLD / NEUTRAL",
-      "status": "neutral",
-      "score": -1,
+      "label": "\ud83d\udd34 CAUTION - REDUCE NEW BUYS",
+      "status": "bearish",
+      "score": -2,
       "rows": [
         [
           "Price vs. recent range",
-          "Near its 30-day high (~$0.7316) - less room to run",
+          "Near its 30-day high (~$0.7393) - less room to run",
           -1
         ],
         [
@@ -962,12 +962,12 @@
         ],
         [
           "Recent trend",
-          "Trending up steadily - healthy",
-          1
+          "Chopping sideways - no clear trend",
+          0
         ],
         [
           "Stretch from long-term average",
-          "+10.7% above its long-term average - a bit stretched",
+          "+11.8% above its long-term average - a bit stretched",
           -1
         ],
         [
@@ -976,16 +976,16 @@
           0
         ]
       ],
-      "plain": "No real edge either way right now - fine to just wait and watch.",
+      "plain": "Getting risky - I'd hold off on new buys until this cools down.",
       "id": "aster-2",
       "symbol": "ASTER",
       "name": "Aster",
-      "price": 0.7316,
-      "pct_24h": -0.15669,
-      "pct_7d": 8.0,
+      "price": 0.738763,
+      "pct_24h": 1.11967,
+      "pct_7d": 6.9,
       "support_30d": 0.5986101196690307,
-      "resistance_30d": 0.7315702772329835,
-      "as_of": "2026-09-04 18:25:21",
+      "resistance_30d": 0.7392767801491928,
+      "as_of": "2026-09-04 19:35:19",
       "stale": false
     },
     "worldcoin-wld": {
@@ -1220,12 +1220,12 @@
       "id": "nexo",
       "symbol": "NEXO",
       "name": "NEXO",
-      "price": 0.831584,
-      "pct_24h": -2.42036,
+      "price": 0.831203,
+      "pct_24h": -2.26442,
       "pct_7d": -0.7,
       "support_30d": 0.7016300793001435,
       "resistance_30d": 0.8734100764023305,
-      "as_of": "2026-09-04 19:15:57",
+      "as_of": "2026-09-04 19:35:19",
       "stale": false
     },
     "janus-henderson-anemoy-treasury-fund": {
@@ -2612,12 +2612,12 @@
       "id": "bitway",
       "symbol": "BTW",
       "name": "Bitway",
-      "price": 0.4493,
-      "pct_24h": -10.57233,
+      "price": 0.448554,
+      "pct_24h": -10.27362,
       "pct_7d": 11.8,
       "support_30d": 0.19157288401523984,
       "resistance_30d": 0.48788437226017506,
-      "as_of": "2026-09-04 19:05:20",
+      "as_of": "2026-09-04 19:35:19",
       "stale": false
     },
     "world-liberty-financial": {
@@ -3106,14 +3106,14 @@
     "key": "BTC",
     "name": "Bitcoin",
     "emoji": "\u20bf",
-    "price": 79806,
+    "price": 79726,
     "high_24h": 82108,
     "low_24h": 78706,
-    "pct_24h": -2.12918,
+    "pct_24h": -2.08216,
     "pct_7d": 2.2,
     "pct_30d": 23.1,
-    "sma50": 68778.39473489673,
-    "sma200": 69602.50980885501,
+    "sma50": 68776.61702367531,
+    "sma200": 69602.06538104966,
     "support_30d": 62843.70368466329,
     "resistance_30d": 81264.70153038795,
     "mark_price": 79509.6,
@@ -3128,14 +3128,14 @@
     "key": "ETH",
     "name": "Ethereum",
     "emoji": "\u039e",
-    "price": 2457.11,
+    "price": 2455.86,
     "high_24h": 2543.95,
     "low_24h": 2435.15,
-    "pct_24h": -2.31058,
+    "pct_24h": -2.21072,
     "pct_7d": 0.3,
     "pct_30d": 28.0,
-    "sma50": 2077.1231102917463,
-    "sma200": 2032.975719776575,
+    "sma50": 2077.085087864315,
+    "sma200": 2032.966214169717,
     "support_30d": 1871.3976551883159,
     "resistance_30d": 2514.967577695514,
     "mark_price": 2449.88,
