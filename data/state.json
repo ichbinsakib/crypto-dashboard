@@ -4,7 +4,7 @@
   "_alerts_state": {
     "btc-resistance-break": {
       "triggered": true,
-      "last_triggered_at": "2026-09-04 05:15:19"
+      "last_triggered_at": "2026-09-04 05:20:24"
     },
     "btc-support-break": {
       "triggered": false,
@@ -212,12 +212,12 @@
       "id": "tron",
       "symbol": "TRX",
       "name": "TRON",
-      "price": 0.329129,
-      "pct_24h": 0.96308,
-      "pct_7d": -2.6,
+      "price": 0.328945,
+      "pct_24h": 1.00006,
+      "pct_7d": -2.8,
       "support_30d": 0.32221537516581966,
       "resistance_30d": 0.3447899585776834,
-      "as_of": "2026-09-04 04:55:17",
+      "as_of": "2026-09-04 05:20:24",
       "stale": false
     },
     "figure-heloc": {
@@ -535,7 +535,7 @@
         ],
         [
           "Stretch from long-term average",
-          "+33.5% above its long-term average - very stretched",
+          "+33.7% above its long-term average - very stretched",
           -2
         ],
         [
@@ -548,12 +548,12 @@
       "id": "whitebit",
       "symbol": "WBT",
       "name": "WhiteBIT Coin",
-      "price": 73.9,
-      "pct_24h": 3.62277,
-      "pct_7d": -0.5,
+      "price": 73.98,
+      "pct_24h": 4.21401,
+      "pct_7d": 0.6,
       "support_30d": 54.452558710928955,
       "resistance_30d": 74.07423223861623,
-      "as_of": "2026-09-04 03:20:22",
+      "as_of": "2026-09-04 05:20:24",
       "stale": false
     },
     "leo-token": {
@@ -1543,7 +1543,7 @@
         ],
         [
           "Stretch from long-term average",
-          "+111.1% above its long-term average - very stretched",
+          "+112.0% above its long-term average - very stretched",
           -2
         ],
         [
@@ -1556,12 +1556,12 @@
       "id": "pump-fun",
       "symbol": "PUMP",
       "name": "Pump.fun",
-      "price": 0.00436074,
-      "pct_24h": 1.84458,
+      "price": 0.00437944,
+      "pct_24h": 2.58151,
       "pct_7d": -7.1,
       "support_30d": 0.0022648933670123433,
       "resistance_30d": 0.0052249885406471875,
-      "as_of": "2026-09-04 05:15:19",
+      "as_of": "2026-09-04 05:20:24",
       "stale": false
     },
     "venice-token": {
@@ -3101,19 +3101,21 @@
       "stale": false
     }
   },
-  "_strong_buy_state": {},
+  "_strong_buy_state": {
+    "15m:TRX": true
+  },
   "BTC": {
     "key": "BTC",
     "name": "Bitcoin",
     "emoji": "\u20bf",
-    "price": 80993,
+    "price": 81044,
     "high_24h": 82108,
     "low_24h": 77452,
-    "pct_24h": 4.37714,
+    "pct_24h": 4.59062,
     "pct_7d": 1.6,
     "pct_30d": 26.4,
-    "sma50": 68802.16130717371,
-    "sma200": 69608.45145192425,
+    "sma50": 68803.09804096894,
+    "sma200": 69608.68563537305,
     "support_30d": 62843.70368466329,
     "resistance_30d": 81264.70153038795,
     "mark_price": 81220.58098551,
@@ -3128,14 +3130,14 @@
     "key": "ETH",
     "name": "Ethereum",
     "emoji": "\u039e",
-    "price": 2511.99,
+    "price": 2513.38,
     "high_24h": 2523.23,
     "low_24h": 2389.3,
-    "pct_24h": 4.63485,
+    "pct_24h": 4.86145,
     "pct_7d": 0.8,
     "pct_30d": 34.5,
-    "sma50": 2078.2245647856716,
-    "sma200": 2033.2510834000561,
+    "sma50": 2078.240449215961,
+    "sma200": 2033.2550545076288,
     "support_30d": 1871.3976551883159,
     "resistance_30d": 2514.967577695514,
     "mark_price": 2505.87444186,
