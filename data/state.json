@@ -4,7 +4,7 @@
   "_alerts_state": {
     "btc-resistance-break": {
       "triggered": true,
-      "last_triggered_at": "2026-09-04 01:55:20"
+      "last_triggered_at": "2026-09-04 02:00:31"
     },
     "btc-support-break": {
       "triggered": false,
@@ -808,7 +808,7 @@
         ],
         [
           "Crowd mood (Fear & Greed)",
-          "65/100 - crowd is greedy",
+          "74/100 - crowd is greedy",
           -1
         ],
         [
@@ -836,12 +836,12 @@
       "id": "hedera-hashgraph",
       "symbol": "HBAR",
       "name": "Hedera",
-      "price": 0.078946,
-      "pct_24h": 6.07478,
-      "pct_7d": 0.0,
+      "price": 0.078833,
+      "pct_24h": 4.84983,
+      "pct_7d": -0.4,
       "support_30d": 0.06461260477975343,
       "resistance_30d": 0.07985387850470703,
-      "as_of": "2026-09-03 23:35:55",
+      "as_of": "2026-09-04 02:00:31",
       "stale": false
     },
     "pepe": {
@@ -904,7 +904,7 @@
         ],
         [
           "Crowd mood (Fear & Greed)",
-          "65/100 - crowd is greedy",
+          "74/100 - crowd is greedy",
           -1
         ],
         [
@@ -919,7 +919,7 @@
         ],
         [
           "Stretch from long-term average",
-          "-6.9% vs its long-term average - not stretched either way",
+          "-7.2% vs its long-term average - not stretched either way",
           0
         ],
         [
@@ -932,12 +932,12 @@
       "id": "avalanche-2",
       "symbol": "AVAX",
       "name": "Avalanche",
-      "price": 7.53,
-      "pct_24h": 5.23733,
-      "pct_7d": 0.4,
+      "price": 7.5,
+      "pct_24h": 4.26018,
+      "pct_7d": -0.3,
       "support_30d": 6.313391080113916,
       "resistance_30d": 7.836507914480645,
-      "as_of": "2026-09-03 22:15:22",
+      "as_of": "2026-09-04 02:00:31",
       "stale": false
     },
     "aster-2": {
@@ -991,7 +991,7 @@
     "worldcoin-wld": {
       "label": "\ud83d\udfe1 HOLD / NEUTRAL",
       "status": "neutral",
-      "score": 0,
+      "score": -1,
       "rows": [
         [
           "Price vs. recent range",
@@ -1015,8 +1015,8 @@
         ],
         [
           "Stretch from long-term average",
-          "+9.9% vs its long-term average - not stretched either way",
-          0
+          "+10.6% above its long-term average - a bit stretched",
+          -1
         ],
         [
           "Leverage traders' bias",
@@ -1028,12 +1028,12 @@
       "id": "worldcoin-wld",
       "symbol": "WLD",
       "name": "Worldcoin",
-      "price": 0.391374,
-      "pct_24h": 5.52436,
-      "pct_7d": -4.9,
+      "price": 0.394025,
+      "pct_24h": 6.79548,
+      "pct_7d": -4.6,
       "support_30d": 0.3029636206131486,
       "resistance_30d": 0.4153748859818001,
-      "as_of": "2026-09-04 01:45:21",
+      "as_of": "2026-09-04 02:00:31",
       "stale": false
     },
     "bfusd": {
@@ -3102,20 +3102,20 @@
     }
   },
   "_strong_buy_state": {
-    "15m:CRO": true
+    "15m:AVAX": true
   },
   "BTC": {
     "key": "BTC",
     "name": "Bitcoin",
     "emoji": "\u20bf",
-    "price": 80931,
+    "price": 81006,
     "high_24h": 82108,
     "low_24h": 77107,
-    "pct_24h": 4.57638,
+    "pct_24h": 4.73603,
     "pct_7d": 0.9,
     "pct_30d": 26.4,
-    "sma50": 68800.84535677326,
-    "sma200": 69608.12246432414,
+    "sma50": 68802.22990602092,
+    "sma200": 69608.46860163606,
     "support_30d": 62843.70368466329,
     "resistance_30d": 81264.70153038795,
     "mark_price": 81220.58098551,
@@ -3130,14 +3130,14 @@
     "key": "ETH",
     "name": "Ethereum",
     "emoji": "\u039e",
-    "price": 2503.81,
+    "price": 2507.08,
     "high_24h": 2523.23,
     "low_24h": 2379.95,
-    "pct_24h": 4.80263,
+    "pct_24h": 5.04878,
     "pct_7d": -0.4,
     "pct_30d": 33.9,
-    "sma50": 2078.049615466823,
-    "sma200": 2033.207346070344,
+    "sma50": 2078.1195781055,
+    "sma200": 2033.2248367300135,
     "support_30d": 1871.3976551883159,
     "resistance_30d": 2514.967577695514,
     "mark_price": 2505.87444186,
