@@ -4,7 +4,7 @@
   "_alerts_state": {
     "btc-resistance-break": {
       "triggered": true,
-      "last_triggered_at": "2026-09-04 09:10:28"
+      "last_triggered_at": "2026-09-04 09:15:24"
     },
     "btc-support-break": {
       "triggered": false,
@@ -12,7 +12,7 @@
     },
     "eth-resistance-break": {
       "triggered": true,
-      "last_triggered_at": "2026-09-04 09:10:28"
+      "last_triggered_at": "2026-09-04 09:15:24"
     },
     "eth-support-break": {
       "triggered": false,
@@ -991,7 +991,7 @@
     "worldcoin-wld": {
       "label": "\ud83d\udfe1 HOLD / NEUTRAL",
       "status": "neutral",
-      "score": 0,
+      "score": -1,
       "rows": [
         [
           "Price vs. recent range",
@@ -1015,8 +1015,8 @@
         ],
         [
           "Stretch from long-term average",
-          "+9.5% vs its long-term average - not stretched either way",
-          0
+          "+10.3% above its long-term average - a bit stretched",
+          -1
         ],
         [
           "Leverage traders' bias",
@@ -1028,12 +1028,12 @@
       "id": "worldcoin-wld",
       "symbol": "WLD",
       "name": "Worldcoin",
-      "price": 0.390057,
-      "pct_24h": 3.94109,
-      "pct_7d": -3.6,
+      "price": 0.392781,
+      "pct_24h": 4.55866,
+      "pct_7d": -1.7,
       "support_30d": 0.3029636206131486,
       "resistance_30d": 0.4153748859818001,
-      "as_of": "2026-09-04 08:50:26",
+      "as_of": "2026-09-04 09:15:24",
       "stale": false
     },
     "bfusd": {
@@ -1519,7 +1519,7 @@
     "pump-fun": {
       "label": "\ud83d\udd34 DISTRIBUTION ZONE",
       "status": "bearish",
-      "score": -6,
+      "score": -5,
       "rows": [
         [
           "Price vs. recent range",
@@ -1538,12 +1538,12 @@
         ],
         [
           "Recent trend",
-          "Trending down - avoid catching a falling knife",
-          -1
+          "Chopping sideways - no clear trend",
+          0
         ],
         [
           "Stretch from long-term average",
-          "+111.0% above its long-term average - very stretched",
+          "+109.6% above its long-term average - very stretched",
           -2
         ],
         [
@@ -1556,12 +1556,12 @@
       "id": "pump-fun",
       "symbol": "PUMP",
       "name": "Pump.fun",
-      "price": 0.00436014,
-      "pct_24h": 1.16239,
-      "pct_7d": -8.5,
+      "price": 0.00432986,
+      "pct_24h": 0.65121,
+      "pct_7d": -7.3,
       "support_30d": 0.0022648933670123433,
       "resistance_30d": 0.0052249885406471875,
-      "as_of": "2026-09-04 08:30:29",
+      "as_of": "2026-09-04 09:15:24",
       "stale": false
     },
     "venice-token": {
@@ -1975,7 +1975,7 @@
         ],
         [
           "Stretch from long-term average",
-          "-21.1% below its long-term average - confirmed downtrend",
+          "-20.9% below its long-term average - confirmed downtrend",
           -1
         ],
         [
@@ -1988,12 +1988,12 @@
       "id": "polkadot",
       "symbol": "DOT",
       "name": "Polkadot",
-      "price": 0.877734,
-      "pct_24h": 0.18422,
-      "pct_7d": 0.4,
+      "price": 0.878984,
+      "pct_24h": 0.09654,
+      "pct_7d": 1.2,
       "support_30d": 0.7510040523927409,
       "resistance_30d": 0.9394118398868826,
-      "as_of": "2026-09-04 05:45:22",
+      "as_of": "2026-09-04 09:15:24",
       "stale": false
     },
     "uniswap": {
@@ -3106,14 +3106,14 @@
     "key": "BTC",
     "name": "Bitcoin",
     "emoji": "\u20bf",
-    "price": 81102,
+    "price": 81087,
     "high_24h": 82108,
     "low_24h": 77452,
-    "pct_24h": 4.19449,
+    "pct_24h": 4.23042,
     "pct_7d": 1.8,
     "pct_30d": 26.5,
-    "sma50": 68804.2504507498,
-    "sma200": 69608.97373781828,
+    "sma50": 68804.37435093679,
+    "sma200": 69609.00471286503,
     "support_30d": 62843.70368466329,
     "resistance_30d": 81264.70153038795,
     "mark_price": 80817.98012319,
@@ -3128,16 +3128,16 @@
     "key": "ETH",
     "name": "Ethereum",
     "emoji": "\u039e",
-    "price": 2527.75,
+    "price": 2529.06,
     "high_24h": 2528.59,
     "low_24h": 2389.3,
-    "pct_24h": 5.18669,
+    "pct_24h": 5.33638,
     "pct_7d": 1.2,
     "pct_30d": 35.1,
-    "sma50": 2078.5430197830724,
-    "sma200": 2033.3306971494064,
+    "sma50": 2078.612015159839,
+    "sma200": 2033.3479459935982,
     "support_30d": 1871.3976551883159,
-    "resistance_30d": 2528.2484873975595,
+    "resistance_30d": 2531.698256235887,
     "mark_price": 2509.41939535,
     "index_price": 2511.21465116,
     "funding_rate": 6.58e-05,
