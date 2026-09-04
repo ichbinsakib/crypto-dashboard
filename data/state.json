@@ -4,15 +4,15 @@
   "_alerts_state": {
     "btc-resistance-break": {
       "triggered": true,
-      "last_triggered_at": "2026-09-04 08:35:21"
+      "last_triggered_at": "2026-09-04 08:40:59"
     },
     "btc-support-break": {
       "triggered": false,
       "last_triggered_at": null
     },
     "eth-resistance-break": {
-      "triggered": false,
-      "last_triggered_at": "2026-09-04 04:40:26"
+      "triggered": true,
+      "last_triggered_at": "2026-09-04 08:40:59"
     },
     "eth-support-break": {
       "triggered": false,
@@ -605,13 +605,13 @@
       "stale": false
     },
     "monero": {
-      "label": "\ud83d\udd34 CAUTION - REDUCE NEW BUYS",
+      "label": "\ud83d\udd34 DISTRIBUTION ZONE",
       "status": "bearish",
-      "score": -2,
+      "score": -5,
       "rows": [
         [
           "Price vs. recent range",
-          "Near its 30-day high (~$520.61) - less room to run",
+          "Near its 30-day high (~$543.41) - less room to run",
           -1
         ],
         [
@@ -621,8 +621,8 @@
         ],
         [
           "Market phase (best guess)",
-          "Established uptrend - phase where price marks up",
-          1
+          "Very extended after a big run - phase where smart money sells",
+          -2
         ],
         [
           "Recent trend",
@@ -631,7 +631,7 @@
         ],
         [
           "Stretch from long-term average",
-          "+38.7% above its long-term average - very stretched",
+          "+50.3% above its long-term average - very stretched",
           -2
         ],
         [
@@ -640,16 +640,16 @@
           0
         ]
       ],
-      "plain": "Getting risky - I'd hold off on new buys until this cools down.",
+      "plain": "Looks stretched and euphoric - historically the zone where smart money sells, not buys.",
       "id": "monero",
       "symbol": "XMR",
       "name": "Monero",
-      "price": 501.04,
-      "pct_24h": -1.70435,
-      "pct_7d": 8.5,
+      "price": 543.37,
+      "pct_24h": 5.52521,
+      "pct_7d": 17.1,
       "support_30d": 369.5125458020106,
-      "resistance_30d": 520.61378590197,
-      "as_of": "2026-09-04 04:10:22",
+      "resistance_30d": 543.4091224245393,
+      "as_of": "2026-09-04 08:40:59",
       "stale": false
     },
     "cardano": {
@@ -2612,12 +2612,12 @@
       "id": "bitway",
       "symbol": "BTW",
       "name": "Bitway",
-      "price": 0.448338,
-      "pct_24h": -2.06262,
-      "pct_7d": 11.1,
+      "price": 0.447992,
+      "pct_24h": -0.19325,
+      "pct_7d": 14.1,
       "support_30d": 0.19157288401523984,
       "resistance_30d": 0.48788437226017506,
-      "as_of": "2026-09-04 07:40:24",
+      "as_of": "2026-09-04 08:40:59",
       "stale": false
     },
     "world-liberty-financial": {
@@ -2708,12 +2708,12 @@
       "id": "pax-gold",
       "symbol": "PAXG",
       "name": "PAX Gold",
-      "price": 4481.5,
-      "pct_24h": 1.00718,
+      "price": 4479.22,
+      "pct_24h": 0.90297,
       "pct_7d": -2.6,
       "support_30d": 4245.0586940559815,
       "resistance_30d": 4672.307573354755,
-      "as_of": "2026-09-04 08:15:23",
+      "as_of": "2026-09-04 08:40:59",
       "stale": false
     },
     "morpho": {
@@ -3101,21 +3101,19 @@
       "stale": false
     }
   },
-  "_strong_buy_state": {
-    "15m:ADA": true
-  },
+  "_strong_buy_state": {},
   "BTC": {
     "key": "BTC",
     "name": "Bitcoin",
     "emoji": "\u20bf",
-    "price": 81042,
+    "price": 81090,
     "high_24h": 82108,
     "low_24h": 77452,
-    "pct_24h": 4.02029,
+    "pct_24h": 4.09484,
     "pct_7d": 0.9,
     "pct_30d": 25.6,
-    "sma50": 68802.53388652316,
-    "sma200": 69608.54459676163,
+    "sma50": 68804.01331505722,
+    "sma200": 69608.91445389514,
     "support_30d": 62843.70368466329,
     "resistance_30d": 81264.70153038795,
     "mark_price": 80817.98012319,
@@ -3130,16 +3128,16 @@
     "key": "ETH",
     "name": "Ethereum",
     "emoji": "\u039e",
-    "price": 2516.38,
+    "price": 2519.29,
     "high_24h": 2523.23,
     "low_24h": 2389.3,
-    "pct_24h": 4.59575,
+    "pct_24h": 4.7297,
     "pct_7d": 0.0,
     "pct_30d": 34.0,
-    "sma50": 2078.2777974941814,
-    "sma200": 2033.264391577184,
+    "sma50": 2078.358428841663,
+    "sma200": 2033.2845494140543,
     "support_30d": 1871.3976551883159,
-    "resistance_30d": 2514.9873729530095,
+    "resistance_30d": 2519.0189403270983,
     "mark_price": 2509.41939535,
     "index_price": 2511.21465116,
     "funding_rate": 6.58e-05,
