@@ -4,7 +4,7 @@
   "_alerts_state": {
     "btc-resistance-break": {
       "triggered": true,
-      "last_triggered_at": "2026-09-04 03:10:24"
+      "last_triggered_at": "2026-09-04 03:15:22"
     },
     "btc-support-break": {
       "triggered": false,
@@ -77,14 +77,14 @@
       "stale": false
     },
     "ripple": {
-      "label": "\ud83d\udfe1 HOLD / NEUTRAL",
-      "status": "neutral",
-      "score": -1,
+      "label": "\ud83d\udd34 CAUTION - REDUCE NEW BUYS",
+      "status": "bearish",
+      "score": -2,
       "rows": [
         [
           "Price vs. recent range",
-          "Sitting in the middle of its 30-day range",
-          0
+          "Near its 30-day high (~$1.52) - less room to run",
+          -1
         ],
         [
           "Crowd mood (Fear & Greed)",
@@ -103,7 +103,7 @@
         ],
         [
           "Stretch from long-term average",
-          "+12.8% above its long-term average - a bit stretched",
+          "+13.6% above its long-term average - a bit stretched",
           -1
         ],
         [
@@ -112,16 +112,16 @@
           0
         ]
       ],
-      "plain": "No real edge either way right now - fine to just wait and watch.",
+      "plain": "Getting risky - I'd hold off on new buys until this cools down.",
       "id": "ripple",
       "symbol": "XRP",
       "name": "XRP",
-      "price": 1.44,
-      "pct_24h": 5.44213,
-      "pct_7d": -0.2,
+      "price": 1.45,
+      "pct_24h": 5.59731,
+      "pct_7d": -0.3,
       "support_30d": 0.9927072784932938,
       "resistance_30d": 1.52050482788377,
-      "as_of": "2026-09-04 02:45:22",
+      "as_of": "2026-09-04 03:15:22",
       "stale": false
     },
     "solana": {
@@ -199,7 +199,7 @@
         ],
         [
           "Stretch from long-term average",
-          "+1.7% vs its long-term average - not stretched either way",
+          "+1.5% vs its long-term average - not stretched either way",
           0
         ],
         [
@@ -212,12 +212,12 @@
       "id": "tron",
       "symbol": "TRX",
       "name": "TRON",
-      "price": 0.329919,
-      "pct_24h": 1.56718,
-      "pct_7d": -2.5,
+      "price": 0.329398,
+      "pct_24h": 1.20062,
+      "pct_7d": -2.8,
       "support_30d": 0.32221537516581966,
       "resistance_30d": 0.3447899585776834,
-      "as_of": "2026-09-04 02:05:24",
+      "as_of": "2026-09-04 03:15:22",
       "stale": false
     },
     "figure-heloc": {
@@ -1509,11 +1509,11 @@
       "symbol": "ETC",
       "name": "Ethereum Classic",
       "price": 7.54,
-      "pct_24h": 2.8948,
-      "pct_7d": -3.6,
+      "pct_24h": 2.3121,
+      "pct_7d": -3.4,
       "support_30d": 6.079473341192034,
       "resistance_30d": 8.342731558283557,
-      "as_of": "2026-09-04 01:45:21",
+      "as_of": "2026-09-04 03:15:22",
       "stale": false
     },
     "pump-fun": {
@@ -3101,19 +3101,22 @@
       "stale": false
     }
   },
-  "_strong_buy_state": {},
+  "_strong_buy_state": {
+    "15m:PAXG": true,
+    "15m:TRX": true
+  },
   "BTC": {
     "key": "BTC",
     "name": "Bitcoin",
     "emoji": "\u20bf",
-    "price": 80950,
+    "price": 80900,
     "high_24h": 82108,
     "low_24h": 77107,
-    "pct_24h": 4.20045,
+    "pct_24h": 4.01858,
     "pct_7d": 0.4,
     "pct_30d": 25.7,
-    "sma50": 68801.80695760802,
-    "sma200": 69608.36286453283,
+    "sma50": 68800.46826493772,
+    "sma200": 69608.02819136526,
     "support_30d": 62843.70368466329,
     "resistance_30d": 81264.70153038795,
     "mark_price": 81220.58098551,
@@ -3128,14 +3131,14 @@
     "key": "ETH",
     "name": "Ethereum",
     "emoji": "\u039e",
-    "price": 2513.03,
+    "price": 2510.62,
     "high_24h": 2523.23,
     "low_24h": 2379.95,
-    "pct_24h": 4.57183,
+    "pct_24h": 4.35853,
     "pct_7d": -0.3,
     "pct_30d": 33.8,
-    "sma50": 2078.2386804768125,
-    "sma200": 2033.2546123228415,
+    "sma50": 2078.1904660306204,
+    "sma200": 2033.2425587112934,
     "support_30d": 1871.3976551883159,
     "resistance_30d": 2514.967577695514,
     "mark_price": 2505.87444186,
