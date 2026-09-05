@@ -4,7 +4,7 @@
   "_alerts_state": {
     "btc-resistance-break": {
       "triggered": true,
-      "last_triggered_at": "2026-09-05 17:35:20"
+      "last_triggered_at": "2026-09-05 17:40:20"
     },
     "btc-support-break": {
       "triggered": false,
@@ -2311,7 +2311,7 @@
         ],
         [
           "Stretch from long-term average",
-          "-6.3% vs its long-term average - not stretched either way",
+          "-7.0% vs its long-term average - not stretched either way",
           0
         ],
         [
@@ -2324,12 +2324,12 @@
       "id": "the-open-network",
       "symbol": "GRAM",
       "name": "Gram (prev. Toncoin)",
-      "price": 1.43,
-      "pct_24h": 4.1425,
+      "price": 1.42,
+      "pct_24h": 3.73521,
       "pct_7d": 4.7,
       "support_30d": 1.316580434471296,
       "resistance_30d": 1.4926762805297678,
-      "as_of": "2026-09-05 17:05:22",
+      "as_of": "2026-09-05 17:40:20",
       "stale": false
     },
     "sky": {
@@ -3053,14 +3053,14 @@
       "stale": false
     },
     "arbitrum": {
-      "label": "\ud83d\udfe1 HOLD / NEUTRAL",
-      "status": "neutral",
-      "score": -1,
+      "label": "\ud83d\udd34 CAUTION - REDUCE NEW BUYS",
+      "status": "bearish",
+      "score": -2,
       "rows": [
         [
           "Price vs. recent range",
-          "Sitting in the middle of its 30-day range",
-          0
+          "Near its 30-day high (~$0.1411) - less room to run",
+          -1
         ],
         [
           "Crowd mood (Fear & Greed)",
@@ -3079,7 +3079,7 @@
         ],
         [
           "Stretch from long-term average",
-          "+35.6% above its long-term average - very stretched",
+          "+38.6% above its long-term average - very stretched",
           -2
         ],
         [
@@ -3088,16 +3088,16 @@
           0
         ]
       ],
-      "plain": "No real edge either way right now - fine to just wait and watch.",
+      "plain": "Getting risky - I'd hold off on new buys until this cools down.",
       "id": "arbitrum",
       "symbol": "ARB",
       "name": "Arbitrum",
-      "price": 0.132707,
-      "pct_24h": -0.636,
-      "pct_7d": 54.1,
+      "price": 0.135666,
+      "pct_24h": 1.51573,
+      "pct_7d": 54.8,
       "support_30d": 0.07272258489044682,
       "resistance_30d": 0.14105858962141438,
-      "as_of": "2026-09-05 15:30:30",
+      "as_of": "2026-09-05 17:40:20",
       "stale": false
     },
     "dash": {
@@ -3107,7 +3107,7 @@
       "rows": [
         [
           "Price vs. recent range",
-          "Near its 30-day high (~$69.21) - less room to run",
+          "Near its 30-day high (~$68.10) - less room to run",
           -1
         ],
         [
@@ -3127,7 +3127,7 @@
         ],
         [
           "Stretch from long-term average",
-          "+90.6% above its long-term average - very stretched",
+          "+88.3% above its long-term average - very stretched",
           -2
         ],
         [
@@ -3140,30 +3140,30 @@
       "id": "dash",
       "symbol": "DASH",
       "name": "Dash",
-      "price": 69.21,
-      "pct_24h": 26.6201,
+      "price": 68.39,
+      "pct_24h": 21.87981,
       "pct_7d": 65.5,
       "support_30d": 29.734917104971814,
-      "resistance_30d": 69.20898706544249,
-      "as_of": "2026-09-05 17:05:22",
+      "resistance_30d": 68.10423104678735,
+      "as_of": "2026-09-05 17:40:20",
       "stale": false
     }
   },
   "_strong_buy_state": {
-    "15m:TAO": true
+    "15m:DASH": true
   },
   "BTC": {
     "key": "BTC",
     "name": "Bitcoin",
     "emoji": "\u20bf",
-    "price": 80113,
+    "price": 80006,
     "high_24h": 80147,
     "low_24h": 79459,
-    "pct_24h": 0.75276,
+    "pct_24h": 0.559,
     "pct_7d": 2.9,
     "pct_30d": 24.0,
-    "sma50": 69099.99969921207,
-    "sma200": 69664.63934134197,
+    "sma50": 69097.66820805958,
+    "sma200": 69664.05646855386,
     "support_30d": 62843.70368466329,
     "resistance_30d": 81264.70153038795,
     "mark_price": 79637.5,
@@ -3178,14 +3178,14 @@
     "key": "ETH",
     "name": "Ethereum",
     "emoji": "\u039e",
-    "price": 2482.0,
+    "price": 2475.77,
     "high_24h": 2475.01,
     "low_24h": 2445.68,
-    "pct_24h": 1.33859,
+    "pct_24h": 1.09874,
     "pct_7d": 1.1,
     "pct_30d": 29.4,
-    "sma50": 2089.9468953611754,
-    "sma200": 2035.4137430820763,
+    "sma50": 2089.840894239263,
+    "sma200": 2035.387242801598,
     "support_30d": 1871.3976551883159,
     "resistance_30d": 2514.967577695514,
     "mark_price": 2454.0275822,
