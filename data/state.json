@@ -4,7 +4,7 @@
   "_alerts_state": {
     "btc-resistance-break": {
       "triggered": true,
-      "last_triggered_at": "2026-09-05 11:10:25"
+      "last_triggered_at": "2026-09-05 11:15:23"
     },
     "btc-support-break": {
       "triggered": false,
@@ -2359,7 +2359,7 @@
         ],
         [
           "Stretch from long-term average",
-          "+0.9% vs its long-term average - not stretched either way",
+          "+0.6% vs its long-term average - not stretched either way",
           0
         ],
         [
@@ -2372,12 +2372,12 @@
       "id": "sky",
       "symbol": "SKY",
       "name": "Sky",
-      "price": 0.067343,
-      "pct_24h": -2.08259,
-      "pct_7d": -0.1,
+      "price": 0.067147,
+      "pct_24h": -2.38074,
+      "pct_7d": -1.0,
       "support_30d": 0.05081051579814886,
       "resistance_30d": 0.07314868186988309,
-      "as_of": "2026-09-05 09:35:17",
+      "as_of": "2026-09-05 11:15:23",
       "stale": false
     },
     "shiba-inu": {
@@ -2647,7 +2647,7 @@
         ],
         [
           "Stretch from long-term average",
-          "-21.6% below its long-term average - confirmed downtrend",
+          "-21.5% below its long-term average - confirmed downtrend",
           -1
         ],
         [
@@ -2660,12 +2660,12 @@
       "id": "world-liberty-financial",
       "symbol": "WLFI",
       "name": "World Liberty Financial",
-      "price": 0.05648,
-      "pct_24h": -1.764,
-      "pct_7d": -1.7,
+      "price": 0.056495,
+      "pct_24h": -1.91151,
+      "pct_7d": -2.0,
       "support_30d": 0.051301304477199876,
       "resistance_30d": 0.06254770952093733,
-      "as_of": "2026-09-05 10:50:23",
+      "as_of": "2026-09-05 11:15:23",
       "stale": false
     },
     "pax-gold": {
@@ -3107,7 +3107,7 @@
       "rows": [
         [
           "Price vs. recent range",
-          "Near its 30-day high (~$67.82) - less room to run",
+          "Near its 30-day high (~$67.54) - less room to run",
           -1
         ],
         [
@@ -3127,7 +3127,7 @@
         ],
         [
           "Stretch from long-term average",
-          "+86.8% above its long-term average - very stretched",
+          "+86.0% above its long-term average - very stretched",
           -2
         ],
         [
@@ -3140,28 +3140,30 @@
       "id": "dash",
       "symbol": "DASH",
       "name": "Dash",
-      "price": 67.82,
-      "pct_24h": 32.19681,
-      "pct_7d": 74.3,
+      "price": 67.54,
+      "pct_24h": 28.59433,
+      "pct_7d": 76.1,
       "support_30d": 29.734917104971814,
-      "resistance_30d": 67.82074825152729,
-      "as_of": "2026-09-05 10:30:27",
+      "resistance_30d": 67.54315656526235,
+      "as_of": "2026-09-05 11:15:23",
       "stale": false
     }
   },
-  "_strong_buy_state": {},
+  "_strong_buy_state": {
+    "15m:SKY": true
+  },
   "BTC": {
     "key": "BTC",
     "name": "Bitcoin",
     "emoji": "\u20bf",
-    "price": 79669,
+    "price": 79649,
     "high_24h": 81315,
     "low_24h": 78706,
-    "pct_24h": -1.8256,
+    "pct_24h": -1.8822,
     "pct_7d": 2.6,
     "pct_30d": 23.3,
-    "sma50": 69090.89560626236,
-    "sma200": 69662.36331810454,
+    "sma50": 69090.94834840937,
+    "sma200": 69662.3765036413,
     "support_30d": 62843.70368466329,
     "resistance_30d": 81264.70153038795,
     "mark_price": 79634.81492029,
@@ -3176,14 +3178,14 @@
     "key": "ETH",
     "name": "Ethereum",
     "emoji": "\u039e",
-    "price": 2454.86,
+    "price": 2454.53,
     "high_24h": 2529.56,
     "low_24h": 2435.15,
-    "pct_24h": -2.69117,
+    "pct_24h": -2.69596,
     "pct_7d": 0.8,
     "pct_30d": 28.8,
-    "sma50": 2089.3805504095426,
-    "sma200": 2035.272156844168,
+    "sma50": 2089.390778954211,
+    "sma200": 2035.274713980335,
     "support_30d": 1871.3976551883159,
     "resistance_30d": 2514.967577695514,
     "mark_price": 2458.7092093,
