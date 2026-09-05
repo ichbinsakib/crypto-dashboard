@@ -4,7 +4,7 @@
   "_alerts_state": {
     "btc-resistance-break": {
       "triggered": true,
-      "last_triggered_at": "2026-09-05 21:15:24"
+      "last_triggered_at": "2026-09-05 21:20:24"
     },
     "btc-support-break": {
       "triggered": false,
@@ -885,11 +885,11 @@
       "symbol": "PEPE",
       "name": "Pepe",
       "price": 3.64e-06,
-      "pct_24h": 1.79778,
+      "pct_24h": 1.76029,
       "pct_7d": -0.9,
       "support_30d": 2.5716563906374582e-06,
       "resistance_30d": 4.122123035488615e-06,
-      "as_of": "2026-09-05 21:15:24",
+      "as_of": "2026-09-05 21:20:24",
       "stale": false
     },
     "avalanche-2": {
@@ -1975,7 +1975,7 @@
         ],
         [
           "Stretch from long-term average",
-          "-18.1% below its long-term average - confirmed downtrend",
+          "-17.6% below its long-term average - confirmed downtrend",
           -1
         ],
         [
@@ -1988,12 +1988,12 @@
       "id": "polkadot",
       "symbol": "DOT",
       "name": "Polkadot",
-      "price": 0.909181,
-      "pct_24h": 4.23904,
-      "pct_7d": 8.4,
+      "price": 0.914405,
+      "pct_24h": 4.42371,
+      "pct_7d": 8.1,
       "support_30d": 0.7510040523927409,
       "resistance_30d": 0.9394118398868826,
-      "as_of": "2026-09-05 19:40:24",
+      "as_of": "2026-09-05 21:20:24",
       "stale": false
     },
     "uniswap": {
@@ -2429,13 +2429,13 @@
       "stale": false
     },
     "near": {
-      "label": "\ud83d\udd34 DISTRIBUTION ZONE",
+      "label": "\ud83d\udd34 CAUTION - REDUCE NEW BUYS",
       "status": "bearish",
-      "score": -5,
+      "score": -2,
       "rows": [
         [
           "Price vs. recent range",
-          "Near its 30-day high (~$2.25) - less room to run",
+          "Near its 30-day high (~$2.17) - less room to run",
           -1
         ],
         [
@@ -2450,12 +2450,12 @@
         ],
         [
           "Recent trend",
-          "Shooting straight up - classic blow-off top risk, don't chase",
-          -2
+          "Trending up steadily - healthy",
+          1
         ],
         [
           "Stretch from long-term average",
-          "+34.9% above its long-term average - very stretched",
+          "+30.1% above its long-term average - very stretched",
           -2
         ],
         [
@@ -2464,16 +2464,16 @@
           0
         ]
       ],
-      "plain": "Looks stretched and euphoric - historically the zone where smart money sells, not buys.",
+      "plain": "Getting risky - I'd hold off on new buys until this cools down.",
       "id": "near",
       "symbol": "NEAR",
       "name": "NEAR Protocol",
-      "price": 2.25,
-      "pct_24h": 13.15706,
-      "pct_7d": 22.3,
+      "price": 2.17,
+      "pct_24h": 1.99061,
+      "pct_7d": 16.9,
       "support_30d": 1.5879597131538,
-      "resistance_30d": 2.248688347298377,
-      "as_of": "2026-09-05 18:15:19",
+      "resistance_30d": 2.1718932806854885,
+      "as_of": "2026-09-05 21:20:24",
       "stale": false
     },
     "quant-network": {
@@ -3149,19 +3149,21 @@
       "stale": false
     }
   },
-  "_strong_buy_state": {},
+  "_strong_buy_state": {
+    "15m:NEAR": true
+  },
   "BTC": {
     "key": "BTC",
     "name": "Bitcoin",
     "emoji": "\u20bf",
-    "price": 79778,
+    "price": 79804,
     "high_24h": 80147,
     "low_24h": 79459,
-    "pct_24h": -0.00953,
+    "pct_24h": -0.01442,
     "pct_7d": 2.0,
     "pct_30d": 23.9,
-    "sma50": 69092.97559557336,
-    "sma200": 69662.8833154323,
+    "sma50": 69093.63131047448,
+    "sma200": 69663.04724415758,
     "support_30d": 62843.70368466329,
     "resistance_30d": 81264.70153038795,
     "mark_price": 79774.8,
@@ -3176,14 +3178,14 @@
     "key": "ETH",
     "name": "Ethereum",
     "emoji": "\u039e",
-    "price": 2477.19,
+    "price": 2477.98,
     "high_24h": 2483.13,
     "low_24h": 2445.89,
-    "pct_24h": 0.94917,
+    "pct_24h": 0.94546,
     "pct_7d": 1.0,
     "pct_30d": 29.8,
-    "sma50": 2089.828191025521,
-    "sma200": 2035.3840669981626,
+    "sma50": 2089.8380983996703,
+    "sma200": 2035.3865438417,
     "support_30d": 1871.3976551883159,
     "resistance_30d": 2514.967577695514,
     "mark_price": 2477.11,
