@@ -4,7 +4,7 @@
   "_alerts_state": {
     "btc-resistance-break": {
       "triggered": true,
-      "last_triggered_at": "2026-09-05 02:40:23"
+      "last_triggered_at": "2026-09-05 02:45:20"
     },
     "btc-support-break": {
       "triggered": false,
@@ -184,7 +184,7 @@
         ],
         [
           "Crowd mood (Fear & Greed)",
-          "74/100 - crowd is greedy",
+          "73/100 - crowd is greedy",
           -1
         ],
         [
@@ -199,7 +199,7 @@
         ],
         [
           "Stretch from long-term average",
-          "+2.1% vs its long-term average - not stretched either way",
+          "+2.2% vs its long-term average - not stretched either way",
           0
         ],
         [
@@ -212,12 +212,12 @@
       "id": "tron",
       "symbol": "TRX",
       "name": "TRON",
-      "price": 0.331368,
-      "pct_24h": 0.02274,
-      "pct_7d": -2.8,
+      "price": 0.332,
+      "pct_24h": 0.7416,
+      "pct_7d": -2.6,
       "support_30d": 0.32221537516581966,
       "resistance_30d": 0.3447899585776834,
-      "as_of": "2026-09-04 21:50:26",
+      "as_of": "2026-09-05 02:45:20",
       "stale": false
     },
     "figure-heloc": {
@@ -727,7 +727,7 @@
         ],
         [
           "Stretch from long-term average",
-          "+2.7% vs its long-term average - not stretched either way",
+          "+3.0% vs its long-term average - not stretched either way",
           0
         ],
         [
@@ -740,12 +740,12 @@
       "id": "stellar",
       "symbol": "XLM",
       "name": "Stellar",
-      "price": 0.179256,
-      "pct_24h": -2.25769,
-      "pct_7d": -0.3,
+      "price": 0.179629,
+      "pct_24h": -1.83009,
+      "pct_7d": 0.0,
       "support_30d": 0.15472912151335613,
       "resistance_30d": 0.20181319711037435,
-      "as_of": "2026-09-05 01:20:25",
+      "as_of": "2026-09-05 02:45:20",
       "stale": false
     },
     "kucoin-shares": {
@@ -2935,7 +2935,7 @@
         ],
         [
           "Stretch from long-term average",
-          "+32.7% above its long-term average - very stretched",
+          "+32.3% above its long-term average - very stretched",
           -2
         ],
         [
@@ -2948,12 +2948,12 @@
       "id": "just",
       "symbol": "JST",
       "name": "JUST",
-      "price": 0.10888,
-      "pct_24h": 1.51096,
+      "price": 0.108523,
+      "pct_24h": 1.04726,
       "pct_7d": 10.8,
       "support_30d": 0.0946830738697126,
       "resistance_30d": 0.10903935847159649,
-      "as_of": "2026-09-05 02:15:24",
+      "as_of": "2026-09-05 02:45:20",
       "stale": false
     },
     "algorand": {
@@ -3101,19 +3101,21 @@
       "stale": false
     }
   },
-  "_strong_buy_state": {},
+  "_strong_buy_state": {
+    "15m:ASTER": true
+  },
   "BTC": {
     "key": "BTC",
     "name": "Bitcoin",
     "emoji": "\u20bf",
-    "price": 79607,
+    "price": 79627,
     "high_24h": 81379,
     "low_24h": 78706,
-    "pct_24h": -1.50465,
+    "pct_24h": -1.40434,
     "pct_7d": 2.4,
     "pct_30d": 23.2,
-    "sma50": 69089.69211441051,
-    "sma200": 69662.0624451416,
+    "sma50": 69090.10511476891,
+    "sma200": 69662.16569523119,
     "support_30d": 62843.70368466329,
     "resistance_30d": 81264.70153038795,
     "mark_price": 79691.1,
@@ -3128,14 +3130,14 @@
     "key": "ETH",
     "name": "Ethereum",
     "emoji": "\u039e",
-    "price": 2452.81,
+    "price": 2453.24,
     "high_24h": 2543.95,
     "low_24h": 2435.15,
-    "pct_24h": -2.02697,
+    "pct_24h": -1.92325,
     "pct_7d": 0.4,
     "pct_30d": 28.5,
-    "sma50": 2089.340557284903,
-    "sma200": 2035.2621585630081,
+    "sma50": 2089.350868895065,
+    "sma200": 2035.2647364655486,
     "support_30d": 1871.3976551883159,
     "resistance_30d": 2514.967577695514,
     "mark_price": 2452.58,
