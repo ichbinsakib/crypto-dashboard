@@ -4,7 +4,7 @@
   "_alerts_state": {
     "btc-resistance-break": {
       "triggered": true,
-      "last_triggered_at": "2026-09-05 11:40:22"
+      "last_triggered_at": "2026-09-05 11:45:22"
     },
     "btc-support-break": {
       "triggered": false,
@@ -151,7 +151,7 @@
         ],
         [
           "Stretch from long-term average",
-          "+24.6% above its long-term average - a bit stretched",
+          "+24.2% above its long-term average - a bit stretched",
           -1
         ],
         [
@@ -164,12 +164,12 @@
       "id": "solana",
       "symbol": "SOL",
       "name": "Solana",
-      "price": 102.58,
-      "pct_24h": -1.38649,
-      "pct_7d": -0.9,
+      "price": 102.24,
+      "pct_24h": -2.05839,
+      "pct_7d": -0.7,
       "support_30d": 73.61748637019244,
       "resistance_30d": 109.17730597799657,
-      "as_of": "2026-09-05 10:55:20",
+      "as_of": "2026-09-05 11:45:22",
       "stale": false
     },
     "tron": {
@@ -1317,11 +1317,11 @@
       "symbol": "HTX",
       "name": "HTX DAO",
       "price": 1.66e-06,
-      "pct_24h": 0.72318,
+      "pct_24h": 0.90288,
       "pct_7d": -1.4,
       "support_30d": 1.6023985995039954e-06,
       "resistance_30d": 1.8259977214551937e-06,
-      "as_of": "2026-09-05 11:00:34",
+      "as_of": "2026-09-05 11:45:22",
       "stale": false
     },
     "superstate-short-duration-us-government-securities-fund-ustb": {
@@ -1663,7 +1663,7 @@
     "bitget-token": {
       "label": "\ud83d\udfe1 HOLD / NEUTRAL",
       "status": "neutral",
-      "score": 0,
+      "score": -1,
       "rows": [
         [
           "Price vs. recent range",
@@ -1677,8 +1677,8 @@
         ],
         [
           "Market phase (best guess)",
-          "Basing near the bottom - phase where smart money accumulates",
-          2
+          "Established uptrend - phase where price marks up",
+          1
         ],
         [
           "Recent trend",
@@ -1687,7 +1687,7 @@
         ],
         [
           "Stretch from long-term average",
-          "+4.9% vs its long-term average - not stretched either way",
+          "+5.4% vs its long-term average - not stretched either way",
           0
         ],
         [
@@ -1700,12 +1700,12 @@
       "id": "bitget-token",
       "symbol": "BGB",
       "name": "Bitget Token",
-      "price": 2.0,
-      "pct_24h": 0.34613,
-      "pct_7d": 3.5,
+      "price": 2.01,
+      "pct_24h": 0.81288,
+      "pct_7d": 4.4,
       "support_30d": 1.612955058583726,
-      "resistance_30d": 2.0073022448087556,
-      "as_of": "2026-09-05 09:20:22",
+      "resistance_30d": 2.0086861100322833,
+      "as_of": "2026-09-05 11:45:22",
       "stale": false
     },
     "sui": {
@@ -3149,21 +3149,19 @@
       "stale": false
     }
   },
-  "_strong_buy_state": {
-    "1h:CRO": true
-  },
+  "_strong_buy_state": {},
   "BTC": {
     "key": "BTC",
     "name": "Bitcoin",
     "emoji": "\u20bf",
-    "price": 79636,
+    "price": 79623,
     "high_24h": 81315,
     "low_24h": 78706,
-    "pct_24h": -2.02652,
+    "pct_24h": -1.99041,
     "pct_7d": 2.6,
     "pct_30d": 23.3,
-    "sma50": 69090.25517913736,
-    "sma200": 69662.2032113233,
+    "sma50": 69090.14970193546,
+    "sma200": 69662.17684202283,
     "support_30d": 62843.70368466329,
     "resistance_30d": 81264.70153038795,
     "mark_price": 79634.81492029,
@@ -3178,14 +3176,14 @@
     "key": "ETH",
     "name": "Ethereum",
     "emoji": "\u039e",
-    "price": 2454.06,
+    "price": 2453.76,
     "high_24h": 2529.56,
     "low_24h": 2435.15,
-    "pct_24h": -2.85273,
+    "pct_24h": -2.82338,
     "pct_7d": 0.8,
     "pct_30d": 28.8,
-    "sma50": 2089.365230545217,
-    "sma200": 2035.2683268780866,
+    "sma50": 2089.3604546333377,
+    "sma200": 2035.2671329001168,
     "support_30d": 1871.3976551883159,
     "resistance_30d": 2514.967577695514,
     "mark_price": 2458.7092093,
