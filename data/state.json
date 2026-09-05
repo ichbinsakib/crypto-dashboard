@@ -4,7 +4,7 @@
   "_alerts_state": {
     "btc-resistance-break": {
       "triggered": true,
-      "last_triggered_at": "2026-09-05 08:20:22"
+      "last_triggered_at": "2026-09-05 08:25:18"
     },
     "btc-support-break": {
       "triggered": false,
@@ -549,11 +549,11 @@
       "symbol": "WBT",
       "name": "WhiteBIT Coin",
       "price": 73.21,
-      "pct_24h": -0.81861,
-      "pct_7d": 2.3,
+      "pct_24h": -0.83259,
+      "pct_7d": 2.5,
       "support_30d": 54.452558710928955,
       "resistance_30d": 74.07423223861623,
-      "as_of": "2026-09-05 07:22:50",
+      "as_of": "2026-09-05 08:25:18",
       "stale": false
     },
     "leo-token": {
@@ -727,7 +727,7 @@
         ],
         [
           "Stretch from long-term average",
-          "+3.9% vs its long-term average - not stretched either way",
+          "+4.4% vs its long-term average - not stretched either way",
           0
         ],
         [
@@ -740,12 +740,12 @@
       "id": "stellar",
       "symbol": "XLM",
       "name": "Stellar",
-      "price": 0.181229,
-      "pct_24h": -1.05307,
-      "pct_7d": 2.2,
+      "price": 0.182107,
+      "pct_24h": -0.90143,
+      "pct_7d": 2.8,
       "support_30d": 0.15472912151335613,
       "resistance_30d": 0.20181319711037435,
-      "as_of": "2026-09-05 05:00:34",
+      "as_of": "2026-09-05 08:25:18",
       "stale": false
     },
     "kucoin-shares": {
@@ -1701,11 +1701,11 @@
       "symbol": "BGB",
       "name": "Bitget Token",
       "price": 1.98,
-      "pct_24h": -0.25511,
+      "pct_24h": 0.16769,
       "pct_7d": 5.2,
       "support_30d": 1.612955058583726,
       "resistance_30d": 2.002531926886498,
-      "as_of": "2026-09-05 04:30:29",
+      "as_of": "2026-09-05 08:25:18",
       "stale": false
     },
     "sui": {
@@ -3149,19 +3149,21 @@
       "stale": false
     }
   },
-  "_strong_buy_state": {},
+  "_strong_buy_state": {
+    "1h:JST": true
+  },
   "BTC": {
     "key": "BTC",
     "name": "Bitcoin",
     "emoji": "\u20bf",
-    "price": 79720,
+    "price": 79668,
     "high_24h": 81379,
     "low_24h": 78706,
-    "pct_24h": -1.39207,
+    "pct_24h": -1.47231,
     "pct_7d": 2.9,
     "pct_30d": 23.0,
-    "sma50": 69091.95547576623,
-    "sma200": 69662.62828548052,
+    "sma50": 69090.9560523613,
+    "sma200": 69662.37842962929,
     "support_30d": 62843.70368466329,
     "resistance_30d": 81264.70153038795,
     "mark_price": 79617.51043478,
@@ -3176,14 +3178,14 @@
     "key": "ETH",
     "name": "Ethereum",
     "emoji": "\u039e",
-    "price": 2457.03,
+    "price": 2455.37,
     "high_24h": 2543.95,
     "low_24h": 2435.15,
-    "pct_24h": -2.28742,
+    "pct_24h": -2.30492,
     "pct_7d": 0.9,
     "pct_30d": 28.6,
-    "sma50": 2089.4206339541192,
-    "sma200": 2035.282177730312,
+    "sma50": 2089.3973785761395,
+    "sma200": 2035.276363885817,
     "support_30d": 1871.3976551883159,
     "resistance_30d": 2514.967577695514,
     "mark_price": 2451.77434884,
