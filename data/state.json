@@ -4,7 +4,7 @@
   "_alerts_state": {
     "btc-resistance-break": {
       "triggered": true,
-      "last_triggered_at": "2026-09-05 22:30:27"
+      "last_triggered_at": "2026-09-05 22:35:20"
     },
     "btc-support-break": {
       "triggered": false,
@@ -1667,7 +1667,7 @@
       "rows": [
         [
           "Price vs. recent range",
-          "Near its 30-day high (~$2.04) - less room to run",
+          "Near its 30-day high (~$2.05) - less room to run",
           -1
         ],
         [
@@ -1687,7 +1687,7 @@
         ],
         [
           "Stretch from long-term average",
-          "+7.0% vs its long-term average - not stretched either way",
+          "+7.5% vs its long-term average - not stretched either way",
           0
         ],
         [
@@ -1700,12 +1700,12 @@
       "id": "bitget-token",
       "symbol": "BGB",
       "name": "Bitget Token",
-      "price": 2.04,
-      "pct_24h": 3.55177,
-      "pct_7d": 6.6,
+      "price": 2.05,
+      "pct_24h": 3.62498,
+      "pct_7d": 6.3,
       "support_30d": 1.612955058583726,
-      "resistance_30d": 2.0430804723787883,
-      "as_of": "2026-09-05 18:10:21",
+      "resistance_30d": 2.0503375516782163,
+      "as_of": "2026-09-05 22:35:20",
       "stale": false
     },
     "sui": {
@@ -1748,12 +1748,12 @@
       "id": "sui",
       "symbol": "SUI",
       "name": "Sui",
-      "price": 0.798472,
-      "pct_24h": 5.14561,
-      "pct_7d": 8.1,
+      "price": 0.798677,
+      "pct_24h": 5.99394,
+      "pct_7d": 8.0,
       "support_30d": 0.6514311908607086,
       "resistance_30d": 0.8499161763231283,
-      "as_of": "2026-09-05 20:37:44",
+      "as_of": "2026-09-05 22:35:20",
       "stale": false
     },
     "lighter": {
@@ -2229,11 +2229,11 @@
       "symbol": "ICP",
       "name": "Internet Computer",
       "price": 2.69,
-      "pct_24h": 9.13983,
+      "pct_24h": 9.29035,
       "pct_7d": 7.5,
       "support_30d": 2.099773928381441,
-      "resistance_30d": 2.6856862020038856,
-      "as_of": "2026-09-05 22:25:16",
+      "resistance_30d": 2.6874261472847216,
+      "as_of": "2026-09-05 22:35:20",
       "stale": false
     },
     "bittensor": {
@@ -3149,21 +3149,19 @@
       "stale": false
     }
   },
-  "_strong_buy_state": {
-    "15m:CC": true
-  },
+  "_strong_buy_state": {},
   "BTC": {
     "key": "BTC",
     "name": "Bitcoin",
     "emoji": "\u20bf",
-    "price": 79800,
+    "price": 79838,
     "high_24h": 80147,
     "low_24h": 79459,
-    "pct_24h": 0.11608,
+    "pct_24h": 0.17941,
     "pct_7d": 2.3,
     "pct_30d": 24.1,
-    "sma50": 69093.60125982897,
-    "sma200": 69663.0397314962,
+    "sma50": 69094.19186733248,
+    "sma200": 69663.18738337207,
     "support_30d": 62843.70368466329,
     "resistance_30d": 81264.70153038795,
     "mark_price": 79774.8,
@@ -3178,14 +3176,14 @@
     "key": "ETH",
     "name": "Ethereum",
     "emoji": "\u039e",
-    "price": 2479.43,
+    "price": 2484.16,
     "high_24h": 2490.78,
     "low_24h": 2445.89,
-    "pct_24h": 1.08482,
+    "pct_24h": 1.25707,
     "pct_7d": 1.5,
     "pct_30d": 30.7,
-    "sma50": 2089.89573847457,
-    "sma200": 2035.4009538604246,
+    "sma50": 2089.9407988767102,
+    "sma200": 2035.4122189609598,
     "support_30d": 1871.3976551883159,
     "resistance_30d": 2514.967577695514,
     "mark_price": 2477.11,
