@@ -4,7 +4,7 @@
   "_alerts_state": {
     "btc-resistance-break": {
       "triggered": true,
-      "last_triggered_at": "2026-09-05 22:17:07"
+      "last_triggered_at": "2026-09-05 22:20:24"
     },
     "btc-support-break": {
       "triggered": false,
@@ -35,7 +35,7 @@
       "rows": [
         [
           "Price vs. recent range",
-          "Near its 30-day high (~$771.64) - less room to run",
+          "Near its 30-day high (~$770.24) - less room to run",
           -1
         ],
         [
@@ -55,7 +55,7 @@
         ],
         [
           "Stretch from long-term average",
-          "+24.4% above its long-term average - a bit stretched",
+          "+24.2% above its long-term average - a bit stretched",
           -1
         ],
         [
@@ -68,12 +68,12 @@
       "id": "binancecoin",
       "symbol": "BNB",
       "name": "BNB",
-      "price": 771.49,
-      "pct_24h": 7.53597,
-      "pct_7d": 11.1,
+      "price": 770.49,
+      "pct_24h": 7.30274,
+      "pct_7d": 11.4,
       "support_30d": 592.184743678635,
-      "resistance_30d": 771.6352022545425,
-      "as_of": "2026-09-05 21:55:21",
+      "resistance_30d": 770.2416457889293,
+      "as_of": "2026-09-05 22:20:24",
       "stale": false
     },
     "ripple": {
@@ -836,12 +836,12 @@
       "id": "hedera-hashgraph",
       "symbol": "HBAR",
       "name": "Hedera",
-      "price": 0.080725,
-      "pct_24h": 4.44993,
-      "pct_7d": 7.2,
+      "price": 0.080656,
+      "pct_24h": 3.55893,
+      "pct_7d": 7.1,
       "support_30d": 0.06461260477975343,
-      "resistance_30d": 0.08072544297858575,
-      "as_of": "2026-09-05 19:00:32",
+      "resistance_30d": 0.0806558621503774,
+      "as_of": "2026-09-05 22:20:24",
       "stale": false
     },
     "pepe": {
@@ -2791,7 +2791,7 @@
         ],
         [
           "Stretch from long-term average",
-          "-46.4% below its long-term average - confirmed downtrend",
+          "-46.0% below its long-term average - confirmed downtrend",
           -1
         ],
         [
@@ -2804,12 +2804,12 @@
       "id": "memecore",
       "symbol": "M",
       "name": "MemeCore",
-      "price": 1.12,
-      "pct_24h": 1.26511,
-      "pct_7d": 6.8,
+      "price": 1.13,
+      "pct_24h": 0.81436,
+      "pct_7d": 4.6,
       "support_30d": 1.0402044506518406,
       "resistance_30d": 1.2453913363052769,
-      "as_of": "2026-09-05 19:45:21",
+      "as_of": "2026-09-05 22:20:24",
       "stale": false
     },
     "aave": {
@@ -3149,19 +3149,21 @@
       "stale": false
     }
   },
-  "_strong_buy_state": {},
+  "_strong_buy_state": {
+    "15m:HBAR": true
+  },
   "BTC": {
     "key": "BTC",
     "name": "Bitcoin",
     "emoji": "\u20bf",
-    "price": 79923,
+    "price": 79874,
     "high_24h": 80147,
     "low_24h": 79459,
-    "pct_24h": 0.30168,
+    "pct_24h": 0.21315,
     "pct_7d": 2.3,
     "pct_30d": 24.1,
-    "sma50": 69095.84736149161,
-    "sma200": 69663.60125691186,
+    "sma50": 69095.74510673,
+    "sma200": 69663.57569322147,
     "support_30d": 62843.70368466329,
     "resistance_30d": 81264.70153038795,
     "mark_price": 79774.8,
@@ -3176,14 +3178,14 @@
     "key": "ETH",
     "name": "Ethereum",
     "emoji": "\u039e",
-    "price": 2486.98,
+    "price": 2486.12,
     "high_24h": 2490.78,
     "low_24h": 2445.89,
-    "pct_24h": 1.41305,
+    "pct_24h": 1.37291,
     "pct_7d": 1.5,
     "pct_30d": 30.7,
-    "sma50": 2090.0234363293057,
-    "sma200": 2035.4328783241085,
+    "sma50": 2090.025846328017,
+    "sma200": 2035.4334808237866,
     "support_30d": 1871.3976551883159,
     "resistance_30d": 2514.967577695514,
     "mark_price": 2477.11,
