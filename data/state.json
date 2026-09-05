@@ -4,7 +4,7 @@
   "_alerts_state": {
     "btc-resistance-break": {
       "triggered": true,
-      "last_triggered_at": "2026-09-05 05:10:20"
+      "last_triggered_at": "2026-09-05 05:15:21"
     },
     "btc-support-break": {
       "triggered": false,
@@ -117,11 +117,11 @@
       "symbol": "XRP",
       "name": "XRP",
       "price": 1.4,
-      "pct_24h": -3.80097,
-      "pct_7d": 1.1,
+      "pct_24h": -3.45252,
+      "pct_7d": 1.4,
       "support_30d": 0.9927072784932938,
       "resistance_30d": 1.52050482788377,
-      "as_of": "2026-09-05 04:25:19",
+      "as_of": "2026-09-05 05:15:21",
       "stale": false
     },
     "solana": {
@@ -151,7 +151,7 @@
         ],
         [
           "Stretch from long-term average",
-          "+23.5% above its long-term average - a bit stretched",
+          "+23.7% above its long-term average - a bit stretched",
           -1
         ],
         [
@@ -164,12 +164,12 @@
       "id": "solana",
       "symbol": "SOL",
       "name": "Solana",
-      "price": 101.67,
-      "pct_24h": -2.09066,
+      "price": 101.82,
+      "pct_24h": -1.91576,
       "pct_7d": -1.9,
       "support_30d": 73.61748637019244,
       "resistance_30d": 109.17730597799657,
-      "as_of": "2026-09-05 05:10:20",
+      "as_of": "2026-09-05 05:15:21",
       "stale": false
     },
     "tron": {
@@ -933,11 +933,11 @@
       "symbol": "AVAX",
       "name": "Avalanche",
       "price": 7.4,
-      "pct_24h": -1.36764,
-      "pct_7d": 1.6,
+      "pct_24h": -1.21133,
+      "pct_7d": 2.0,
       "support_30d": 6.313391080113916,
       "resistance_30d": 7.836507914480645,
-      "as_of": "2026-09-05 04:20:27",
+      "as_of": "2026-09-05 05:15:21",
       "stale": false
     },
     "aster-2": {
@@ -3149,19 +3149,21 @@
       "stale": false
     }
   },
-  "_strong_buy_state": {},
+  "_strong_buy_state": {
+    "15m:WBT": true
+  },
   "BTC": {
     "key": "BTC",
     "name": "Bitcoin",
     "emoji": "\u20bf",
-    "price": 79468,
+    "price": 79562,
     "high_24h": 81379,
     "low_24h": 78706,
-    "pct_24h": -1.95571,
+    "pct_24h": -1.76085,
     "pct_7d": 2.6,
     "pct_30d": 23.4,
-    "sma50": 69086.80228352365,
-    "sma200": 69661.33998741987,
+    "sma50": 69088.54644904302,
+    "sma200": 69661.77602879971,
     "support_30d": 62843.70368466329,
     "resistance_30d": 81264.70153038795,
     "mark_price": 79691.1,
@@ -3176,14 +3178,14 @@
     "key": "ETH",
     "name": "Ethereum",
     "emoji": "\u039e",
-    "price": 2445.91,
+    "price": 2449.93,
     "high_24h": 2543.95,
     "low_24h": 2435.15,
-    "pct_24h": -2.6279,
+    "pct_24h": -2.46819,
     "pct_7d": 0.6,
     "pct_30d": 29.2,
-    "sma50": 2089.203802208507,
-    "sma200": 2035.227969793909,
+    "sma50": 2089.28117603675,
+    "sma200": 2035.2473132509697,
     "support_30d": 1871.3976551883159,
     "resistance_30d": 2514.967577695514,
     "mark_price": 2452.58,
