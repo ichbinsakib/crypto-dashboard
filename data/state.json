@@ -4,7 +4,7 @@
   "_alerts_state": {
     "btc-resistance-break": {
       "triggered": true,
-      "last_triggered_at": "2026-09-05 09:10:23"
+      "last_triggered_at": "2026-09-05 09:15:22"
     },
     "btc-support-break": {
       "triggered": false,
@@ -29,13 +29,13 @@
   },
   "_screener": {
     "binancecoin": {
-      "label": "\ud83d\udd34 CAUTION - REDUCE NEW BUYS",
-      "status": "bearish",
-      "score": -2,
+      "label": "\ud83d\udfe1 HOLD / NEUTRAL",
+      "status": "neutral",
+      "score": -1,
       "rows": [
         [
           "Price vs. recent range",
-          "Near its 30-day high (~$749.02) - less room to run",
+          "Near its 30-day high (~$749.48) - less room to run",
           -1
         ],
         [
@@ -50,12 +50,12 @@
         ],
         [
           "Recent trend",
-          "Chopping sideways - no clear trend",
-          0
+          "Trending up steadily - healthy",
+          1
         ],
         [
           "Stretch from long-term average",
-          "+20.8% above its long-term average - a bit stretched",
+          "+20.9% above its long-term average - a bit stretched",
           -1
         ],
         [
@@ -64,16 +64,16 @@
           0
         ]
       ],
-      "plain": "Getting risky - I'd hold off on new buys until this cools down.",
+      "plain": "No real edge either way right now - fine to just wait and watch.",
       "id": "binancecoin",
       "symbol": "BNB",
       "name": "BNB",
-      "price": 749.02,
-      "pct_24h": 4.47117,
-      "pct_7d": 7.5,
+      "price": 750.01,
+      "pct_24h": 4.24968,
+      "pct_7d": 9.0,
       "support_30d": 592.184743678635,
-      "resistance_30d": 749.0204038533573,
-      "as_of": "2026-09-05 08:45:23",
+      "resistance_30d": 749.4765913839785,
+      "as_of": "2026-09-05 09:15:22",
       "stale": false
     },
     "ripple": {
@@ -947,7 +947,7 @@
       "rows": [
         [
           "Price vs. recent range",
-          "Near its 30-day high (~$0.7415) - less room to run",
+          "Near its 30-day high (~$0.7552) - less room to run",
           -1
         ],
         [
@@ -967,7 +967,7 @@
         ],
         [
           "Stretch from long-term average",
-          "+10.9% above its long-term average - a bit stretched",
+          "+14.5% above its long-term average - a bit stretched",
           -1
         ],
         [
@@ -980,12 +980,12 @@
       "id": "aster-2",
       "symbol": "ASTER",
       "name": "Aster",
-      "price": 0.732982,
-      "pct_24h": 1.40065,
-      "pct_7d": 4.8,
+      "price": 0.757306,
+      "pct_24h": 2.10516,
+      "pct_7d": 7.0,
       "support_30d": 0.5986101196690307,
-      "resistance_30d": 0.7414799489408518,
-      "as_of": "2026-09-05 08:05:19",
+      "resistance_30d": 0.7552036738939992,
+      "as_of": "2026-09-05 09:15:22",
       "stale": false
     },
     "worldcoin-wld": {
@@ -2435,7 +2435,7 @@
       "rows": [
         [
           "Price vs. recent range",
-          "Near its 30-day high (~$2.19) - less room to run",
+          "Near its 30-day high (~$2.22) - less room to run",
           -1
         ],
         [
@@ -2455,7 +2455,7 @@
         ],
         [
           "Stretch from long-term average",
-          "+31.3% above its long-term average - very stretched",
+          "+33.1% above its long-term average - very stretched",
           -2
         ],
         [
@@ -2468,12 +2468,12 @@
       "id": "near",
       "symbol": "NEAR",
       "name": "NEAR Protocol",
-      "price": 2.19,
-      "pct_24h": 12.76707,
-      "pct_7d": 23.7,
+      "price": 2.22,
+      "pct_24h": 11.48454,
+      "pct_7d": 24.1,
       "support_30d": 1.5879597131538,
-      "resistance_30d": 2.1887519944516067,
-      "as_of": "2026-09-05 05:25:17",
+      "resistance_30d": 2.2197082746669174,
+      "as_of": "2026-09-05 09:15:22",
       "stale": false
     },
     "quant-network": {
@@ -3154,14 +3154,14 @@
     "key": "BTC",
     "name": "Bitcoin",
     "emoji": "\u20bf",
-    "price": 79695,
+    "price": 79724,
     "high_24h": 81379,
     "low_24h": 78706,
-    "pct_24h": -1.74009,
+    "pct_24h": -1.68193,
     "pct_7d": 2.6,
     "pct_30d": 23.0,
-    "sma50": 69091.45241334099,
-    "sma200": 69662.50251987421,
+    "sma50": 69092.0457428342,
+    "sma200": 69662.6508522475,
     "support_30d": 62843.70368466329,
     "resistance_30d": 81264.70153038795,
     "mark_price": 79617.51043478,
@@ -3176,14 +3176,14 @@
     "key": "ETH",
     "name": "Ethereum",
     "emoji": "\u039e",
-    "price": 2458.16,
+    "price": 2459.39,
     "high_24h": 2529.56,
     "low_24h": 2435.15,
-    "pct_24h": -2.76003,
+    "pct_24h": -2.79356,
     "pct_7d": 0.8,
     "pct_30d": 28.8,
-    "sma50": 2089.4494709751466,
-    "sma200": 2035.2893869855689,
+    "sma50": 2089.472435470562,
+    "sma200": 2035.2951281094229,
     "support_30d": 1871.3976551883159,
     "resistance_30d": 2514.967577695514,
     "mark_price": 2451.77434884,
