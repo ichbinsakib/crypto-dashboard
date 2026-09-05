@@ -4,7 +4,7 @@
   "_alerts_state": {
     "btc-resistance-break": {
       "triggered": true,
-      "last_triggered_at": "2026-09-05 13:05:21"
+      "last_triggered_at": "2026-09-05 13:10:22"
     },
     "btc-support-break": {
       "triggered": false,
@@ -653,9 +653,9 @@
       "stale": false
     },
     "cardano": {
-      "label": "\ud83d\udfe1 HOLD / NEUTRAL",
-      "status": "neutral",
-      "score": 1,
+      "label": "\ud83d\udfe2 LEAN ACCUMULATE",
+      "status": "bullish",
+      "score": 2,
       "rows": [
         [
           "Price vs. recent range",
@@ -674,12 +674,12 @@
         ],
         [
           "Recent trend",
-          "Chopping sideways - no clear trend",
-          0
+          "Trending up steadily - healthy",
+          1
         ],
         [
           "Stretch from long-term average",
-          "-4.0% vs its long-term average - not stretched either way",
+          "-2.4% vs its long-term average - not stretched either way",
           0
         ],
         [
@@ -688,16 +688,16 @@
           0
         ]
       ],
-      "plain": "No real edge either way right now - fine to just wait and watch.",
+      "plain": "Leans toward a decent spot to slowly add (DCA) - not a strong signal, just a lean.",
       "id": "cardano",
       "symbol": "ADA",
       "name": "Cardano",
-      "price": 0.213195,
-      "pct_24h": -3.85988,
-      "pct_7d": 6.5,
+      "price": 0.216627,
+      "pct_24h": 1.1269,
+      "pct_7d": 8.3,
       "support_30d": 0.1741249817054162,
       "resistance_30d": 0.2291047455940254,
-      "as_of": "2026-09-05 11:55:16",
+      "as_of": "2026-09-05 13:10:22",
       "stale": false
     },
     "stellar": {
@@ -799,11 +799,11 @@
     "hedera-hashgraph": {
       "label": "\ud83d\udfe1 HOLD / NEUTRAL",
       "status": "neutral",
-      "score": 0,
+      "score": 1,
       "rows": [
         [
           "Price vs. recent range",
-          "Near its 30-day high (~$0.0803) - less room to run",
+          "Near its 30-day high (~$0.0812) - less room to run",
           -1
         ],
         [
@@ -818,12 +818,12 @@
         ],
         [
           "Recent trend",
-          "Chopping sideways - no clear trend",
-          0
+          "Trending up steadily - healthy",
+          1
         ],
         [
           "Stretch from long-term average",
-          "-3.4% vs its long-term average - not stretched either way",
+          "-2.5% vs its long-term average - not stretched either way",
           0
         ],
         [
@@ -836,12 +836,12 @@
       "id": "hedera-hashgraph",
       "symbol": "HBAR",
       "name": "Hedera",
-      "price": 0.080339,
-      "pct_24h": 1.5863,
-      "pct_7d": 7.4,
+      "price": 0.08111,
+      "pct_24h": 4.84778,
+      "pct_7d": 8.3,
       "support_30d": 0.06461260477975343,
-      "resistance_30d": 0.08031967249976232,
-      "as_of": "2026-09-05 12:25:16",
+      "resistance_30d": 0.08124471188661811,
+      "as_of": "2026-09-05 13:10:22",
       "stale": false
     },
     "pepe": {
@@ -2863,7 +2863,7 @@
     "okb": {
       "label": "\ud83d\udd34 CAUTION - REDUCE NEW BUYS",
       "status": "bearish",
-      "score": -2,
+      "score": -3,
       "rows": [
         [
           "Price vs. recent range",
@@ -2887,8 +2887,8 @@
         ],
         [
           "Stretch from long-term average",
-          "+29.0% above its long-term average - a bit stretched",
-          -1
+          "+32.0% above its long-term average - very stretched",
+          -2
         ],
         [
           "Leverage traders' bias",
@@ -2900,12 +2900,12 @@
       "id": "okb",
       "symbol": "OKB",
       "name": "OKB",
-      "price": 111.62,
-      "pct_24h": 0.50853,
-      "pct_7d": 1.1,
+      "price": 114.22,
+      "pct_24h": 6.01337,
+      "pct_7d": 2.9,
       "support_30d": 89.96309808268104,
       "resistance_30d": 115.8310797114581,
-      "as_of": "2026-09-05 12:00:34",
+      "as_of": "2026-09-05 13:10:22",
       "stale": false
     },
     "just": {
@@ -3154,14 +3154,14 @@
     "key": "BTC",
     "name": "Bitcoin",
     "emoji": "\u20bf",
-    "price": 79694,
+    "price": 79702,
     "high_24h": 79848,
     "low_24h": 78706,
-    "pct_24h": 0.33338,
+    "pct_24h": 0.47742,
     "pct_7d": 2.8,
     "pct_30d": 23.5,
-    "sma50": 69091.46016943845,
-    "sma200": 69662.50445889856,
+    "sma50": 69091.59366890047,
+    "sma200": 69662.53783376407,
     "support_30d": 62843.70368466329,
     "resistance_30d": 81264.70153038795,
     "mark_price": 79634.81492029,
@@ -3176,14 +3176,14 @@
     "key": "ETH",
     "name": "Ethereum",
     "emoji": "\u039e",
-    "price": 2458.9,
+    "price": 2459.64,
     "high_24h": 2463.12,
     "low_24h": 2435.15,
-    "pct_24h": 0.40256,
+    "pct_24h": 0.42461,
     "pct_7d": 1.0,
     "pct_30d": 29.1,
-    "sma50": 2089.4593839229947,
-    "sma200": 2035.291865222531,
+    "sma50": 2089.477461416304,
+    "sma200": 2035.2963845958584,
     "support_30d": 1871.3976551883159,
     "resistance_30d": 2514.967577695514,
     "mark_price": 2458.7092093,
