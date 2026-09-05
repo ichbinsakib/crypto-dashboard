@@ -4,7 +4,7 @@
   "_alerts_state": {
     "btc-resistance-break": {
       "triggered": true,
-      "last_triggered_at": "2026-09-05 15:05:20"
+      "last_triggered_at": "2026-09-05 15:10:22"
     },
     "btc-support-break": {
       "triggered": false,
@@ -199,7 +199,7 @@
         ],
         [
           "Stretch from long-term average",
-          "+2.5% vs its long-term average - not stretched either way",
+          "+2.6% vs its long-term average - not stretched either way",
           0
         ],
         [
@@ -212,12 +212,12 @@
       "id": "tron",
       "symbol": "TRX",
       "name": "TRON",
-      "price": 0.332965,
-      "pct_24h": 1.13531,
+      "price": 0.333161,
+      "pct_24h": 1.10173,
       "pct_7d": -1.6,
       "support_30d": 0.32221537516581966,
       "resistance_30d": 0.3447899585776834,
-      "as_of": "2026-09-05 13:25:17",
+      "as_of": "2026-09-05 15:10:22",
       "stale": false
     },
     "figure-heloc": {
@@ -463,7 +463,7 @@
     "chainlink": {
       "label": "\ud83d\udd34 CAUTION - REDUCE NEW BUYS",
       "status": "bearish",
-      "score": -2,
+      "score": -3,
       "rows": [
         [
           "Price vs. recent range",
@@ -487,8 +487,8 @@
         ],
         [
           "Stretch from long-term average",
-          "+29.8% above its long-term average - a bit stretched",
-          -1
+          "+30.3% above its long-term average - very stretched",
+          -2
         ],
         [
           "Leverage traders' bias",
@@ -500,12 +500,12 @@
       "id": "chainlink",
       "symbol": "LINK",
       "name": "Chainlink",
-      "price": 11.86,
-      "pct_24h": 1.94399,
-      "pct_7d": 4.6,
+      "price": 11.9,
+      "pct_24h": 2.83995,
+      "pct_7d": 4.9,
       "support_30d": 8.18136301108558,
       "resistance_30d": 11.992351770358374,
-      "as_of": "2026-09-05 14:15:23",
+      "as_of": "2026-09-05 15:10:22",
       "stale": false
     },
     "whitebit": {
@@ -2708,12 +2708,12 @@
       "id": "pax-gold",
       "symbol": "PAXG",
       "name": "PAX Gold",
-      "price": 4433.48,
-      "pct_24h": -0.94998,
-      "pct_7d": -0.6,
+      "price": 4430.58,
+      "pct_24h": -0.13619,
+      "pct_7d": -0.7,
       "support_30d": 4328.232996881714,
       "resistance_30d": 4672.307573354755,
-      "as_of": "2026-09-05 10:55:20",
+      "as_of": "2026-09-05 15:10:22",
       "stale": false
     },
     "morpho": {
@@ -3149,21 +3149,19 @@
       "stale": false
     }
   },
-  "_strong_buy_state": {
-    "15m:LIT": true
-  },
+  "_strong_buy_state": {},
   "BTC": {
     "key": "BTC",
     "name": "Bitcoin",
     "emoji": "\u20bf",
-    "price": 79741,
+    "price": 79758,
     "high_24h": 79848,
     "low_24h": 79380,
-    "pct_24h": 0.95429,
+    "pct_24h": 0.76369,
     "pct_7d": 2.6,
     "pct_30d": 23.9,
-    "sma50": 69092.35596692118,
-    "sma200": 69662.72840826926,
+    "sma50": 69092.74877293229,
+    "sma200": 69662.82660977203,
     "support_30d": 62843.70368466329,
     "resistance_30d": 81264.70153038795,
     "mark_price": 79637.5,
@@ -3178,14 +3176,14 @@
     "key": "ETH",
     "name": "Ethereum",
     "emoji": "\u039e",
-    "price": 2457.87,
+    "price": 2458.77,
     "high_24h": 2463.12,
     "low_24h": 2443.51,
-    "pct_24h": 0.63553,
+    "pct_24h": 0.49168,
     "pct_7d": 0.9,
     "pct_30d": 29.0,
-    "sma50": 2089.441853521464,
-    "sma200": 2035.2874826221482,
+    "sma50": 2089.4546388662934,
+    "sma200": 2035.2906789583556,
     "support_30d": 1871.3976551883159,
     "resistance_30d": 2514.967577695514,
     "mark_price": 2454.0275822,
