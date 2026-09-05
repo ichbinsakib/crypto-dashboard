@@ -4,7 +4,7 @@
   "_alerts_state": {
     "btc-resistance-break": {
       "triggered": true,
-      "last_triggered_at": "2026-09-05 07:15:22"
+      "last_triggered_at": "2026-09-05 07:20:26"
     },
     "btc-support-break": {
       "triggered": false,
@@ -1111,7 +1111,7 @@
         ],
         [
           "Stretch from long-term average",
-          "+6.0% vs its long-term average - not stretched either way",
+          "+7.5% vs its long-term average - not stretched either way",
           0
         ],
         [
@@ -1124,12 +1124,12 @@
       "id": "polygon-ecosystem-token",
       "symbol": "POL",
       "name": "POL (ex-MATIC)",
-      "price": 0.09392,
-      "pct_24h": -0.08532,
-      "pct_7d": -11.0,
+      "price": 0.095215,
+      "pct_24h": 0.4633,
+      "pct_7d": -10.6,
       "support_30d": 0.07382135255393793,
       "resistance_30d": 0.12250456198546959,
-      "as_of": "2026-09-05 05:40:22",
+      "as_of": "2026-09-05 07:20:26",
       "stale": false
     },
     "blackrock-usd-institutional-digital-liquidity-fund": {
@@ -2407,7 +2407,7 @@
         ],
         [
           "Stretch from long-term average",
-          "-0.4% vs its long-term average - not stretched either way",
+          "+0.0% vs its long-term average - not stretched either way",
           0
         ],
         [
@@ -2420,12 +2420,12 @@
       "id": "shiba-inu",
       "symbol": "SHIB",
       "name": "Shiba Inu",
-      "price": 5.38e-06,
-      "pct_24h": 1.37662,
-      "pct_7d": 3.4,
+      "price": 5.4e-06,
+      "pct_24h": 1.29524,
+      "pct_7d": 4.8,
       "support_30d": 4.390093758351827e-06,
       "resistance_30d": 5.903506876405612e-06,
-      "as_of": "2026-09-05 06:40:23",
+      "as_of": "2026-09-05 07:20:26",
       "stale": false
     },
     "near": {
@@ -2935,7 +2935,7 @@
         ],
         [
           "Stretch from long-term average",
-          "+32.4% above its long-term average - very stretched",
+          "+32.3% above its long-term average - very stretched",
           -2
         ],
         [
@@ -2948,12 +2948,12 @@
       "id": "just",
       "symbol": "JST",
       "name": "JUST",
-      "price": 0.108578,
-      "pct_24h": -0.08638,
+      "price": 0.108543,
+      "pct_24h": -0.11763,
       "pct_7d": 10.2,
       "support_30d": 0.0946830738697126,
       "resistance_30d": 0.10903935847159649,
-      "as_of": "2026-09-05 07:10:22",
+      "as_of": "2026-09-05 07:20:26",
       "stale": false
     },
     "algorand": {
@@ -3149,7 +3149,9 @@
       "stale": false
     }
   },
-  "_strong_buy_state": {},
+  "_strong_buy_state": {
+    "1h:JST": true
+  },
   "BTC": {
     "key": "BTC",
     "name": "Bitcoin",
@@ -3157,11 +3159,11 @@
     "price": 79702,
     "high_24h": 81379,
     "low_24h": 78706,
-    "pct_24h": -1.50798,
+    "pct_24h": -1.47683,
     "pct_7d": 2.6,
     "pct_30d": 22.9,
-    "sma50": 69091.51725315732,
-    "sma200": 69662.51872982828,
+    "sma50": 69091.58764916085,
+    "sma200": 69662.53632882917,
     "support_30d": 62843.70368466329,
     "resistance_30d": 81264.70153038795,
     "mark_price": 79617.51043478,
@@ -3176,14 +3178,14 @@
     "key": "ETH",
     "name": "Ethereum",
     "emoji": "\u039e",
-    "price": 2454.89,
+    "price": 2454.59,
     "high_24h": 2543.95,
     "low_24h": 2435.15,
-    "pct_24h": -2.38477,
+    "pct_24h": -2.35843,
     "pct_7d": 0.6,
     "pct_30d": 28.4,
-    "sma50": 2089.3768505554335,
-    "sma200": 2035.2712318806405,
+    "sma50": 2089.377829396286,
+    "sma200": 2035.2714765908538,
     "support_30d": 1871.3976551883159,
     "resistance_30d": 2514.967577695514,
     "mark_price": 2451.77434884,
