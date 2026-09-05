@@ -4,7 +4,7 @@
   "_alerts_state": {
     "btc-resistance-break": {
       "triggered": true,
-      "last_triggered_at": "2026-09-05 15:55:16"
+      "last_triggered_at": "2026-09-05 16:00:33"
     },
     "btc-support-break": {
       "triggered": false,
@@ -1735,7 +1735,7 @@
         ],
         [
           "Stretch from long-term average",
-          "-6.1% vs its long-term average - not stretched either way",
+          "-7.0% vs its long-term average - not stretched either way",
           0
         ],
         [
@@ -1748,12 +1748,12 @@
       "id": "sui",
       "symbol": "SUI",
       "name": "Sui",
-      "price": 0.80485,
-      "pct_24h": 6.96754,
+      "price": 0.796648,
+      "pct_24h": 6.34095,
       "pct_7d": 6.5,
       "support_30d": 0.6514311908607086,
       "resistance_30d": 0.8499161763231283,
-      "as_of": "2026-09-05 12:45:21",
+      "as_of": "2026-09-05 16:00:33",
       "stale": false
     },
     "lighter": {
@@ -2325,11 +2325,11 @@
       "symbol": "GRAM",
       "name": "Gram (prev. Toncoin)",
       "price": 1.42,
-      "pct_24h": 4.4607,
-      "pct_7d": 5.3,
+      "pct_24h": 4.57099,
+      "pct_7d": 4.2,
       "support_30d": 1.316580434471296,
       "resistance_30d": 1.4926762805297678,
-      "as_of": "2026-09-05 15:50:25",
+      "as_of": "2026-09-05 16:00:33",
       "stale": false
     },
     "sky": {
@@ -2757,11 +2757,11 @@
       "symbol": "MORPHO",
       "name": "Morpho",
       "price": 2.51,
-      "pct_24h": 2.80367,
-      "pct_7d": 3.1,
+      "pct_24h": -0.13395,
+      "pct_7d": 3.0,
       "support_30d": 1.8400586135640542,
       "resistance_30d": 2.9026212482639075,
-      "as_of": "2026-09-05 14:45:20",
+      "as_of": "2026-09-05 16:00:33",
       "stale": false
     },
     "memecore": {
@@ -3149,19 +3149,22 @@
       "stale": false
     }
   },
-  "_strong_buy_state": {},
+  "_strong_buy_state": {
+    "15m:MORPHO": true,
+    "15m:TAO": true
+  },
   "BTC": {
     "key": "BTC",
     "name": "Bitcoin",
     "emoji": "\u20bf",
-    "price": 79751,
+    "price": 79789,
     "high_24h": 79848,
     "low_24h": 79380,
-    "pct_24h": 0.39838,
+    "pct_24h": 0.46968,
     "pct_7d": 2.6,
     "pct_30d": 23.9,
-    "sma50": 69092.47453400212,
-    "sma200": 69662.7580500395,
+    "sma50": 69093.66435407911,
+    "sma200": 69663.05550505874,
     "support_30d": 62843.70368466329,
     "resistance_30d": 81264.70153038795,
     "mark_price": 79637.5,
@@ -3176,14 +3179,14 @@
     "key": "ETH",
     "name": "Ethereum",
     "emoji": "\u039e",
-    "price": 2458.94,
+    "price": 2459.03,
     "high_24h": 2463.12,
     "low_24h": 2443.51,
-    "pct_24h": 0.20639,
+    "pct_24h": 0.28229,
     "pct_7d": 0.9,
     "pct_30d": 29.0,
-    "sma50": 2089.4613264553263,
-    "sma200": 2035.2923508556137,
+    "sma50": 2089.4717561602283,
+    "sma200": 2035.2949582818392,
     "support_30d": 1871.3976551883159,
     "resistance_30d": 2514.967577695514,
     "mark_price": 2454.0275822,
