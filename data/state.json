@@ -4,7 +4,7 @@
   "_alerts_state": {
     "btc-resistance-break": {
       "triggered": true,
-      "last_triggered_at": "2026-09-05 13:25:17"
+      "last_triggered_at": "2026-09-05 13:30:26"
     },
     "btc-support-break": {
       "triggered": false,
@@ -597,11 +597,11 @@
       "symbol": "LEO",
       "name": "LEO Token",
       "price": 9.26,
-      "pct_24h": 0.2745,
+      "pct_24h": -0.48633,
       "pct_7d": -4.2,
       "support_30d": 8.948412455130585,
       "resistance_30d": 9.755640407805231,
-      "as_of": "2026-09-05 13:20:25",
+      "as_of": "2026-09-05 13:30:26",
       "stale": false
     },
     "monero": {
@@ -2407,7 +2407,7 @@
         ],
         [
           "Stretch from long-term average",
-          "+1.1% vs its long-term average - not stretched either way",
+          "+2.4% vs its long-term average - not stretched either way",
           0
         ],
         [
@@ -2420,12 +2420,12 @@
       "id": "shiba-inu",
       "symbol": "SHIB",
       "name": "Shiba Inu",
-      "price": 5.46e-06,
-      "pct_24h": 4.46952,
-      "pct_7d": 5.8,
+      "price": 5.53e-06,
+      "pct_24h": 5.47394,
+      "pct_7d": 6.8,
       "support_30d": 4.390093758351827e-06,
       "resistance_30d": 5.903506876405612e-06,
-      "as_of": "2026-09-05 12:55:16",
+      "as_of": "2026-09-05 13:30:26",
       "stale": false
     },
     "near": {
@@ -2435,7 +2435,7 @@
       "rows": [
         [
           "Price vs. recent range",
-          "Near its 30-day high (~$2.23) - less room to run",
+          "Near its 30-day high (~$2.22) - less room to run",
           -1
         ],
         [
@@ -2469,11 +2469,11 @@
       "symbol": "NEAR",
       "name": "NEAR Protocol",
       "price": 2.22,
-      "pct_24h": 14.28006,
+      "pct_24h": 13.04818,
       "pct_7d": 24.2,
       "support_30d": 1.5879597131538,
-      "resistance_30d": 2.2282710825595475,
-      "as_of": "2026-09-05 13:15:22",
+      "resistance_30d": 2.217476920222003,
+      "as_of": "2026-09-05 13:30:26",
       "stale": false
     },
     "quant-network": {
@@ -3149,19 +3149,21 @@
       "stale": false
     }
   },
-  "_strong_buy_state": {},
+  "_strong_buy_state": {
+    "15m:NEAR": true
+  },
   "BTC": {
     "key": "BTC",
     "name": "Bitcoin",
     "emoji": "\u20bf",
-    "price": 79755,
+    "price": 79753,
     "high_24h": 79848,
     "low_24h": 78706,
-    "pct_24h": 0.42434,
+    "pct_24h": 0.51174,
     "pct_7d": 2.8,
     "pct_30d": 23.5,
-    "sma50": 69092.6431604494,
-    "sma200": 69662.8002066513,
+    "sma50": 69092.61705172167,
+    "sma200": 69662.79367946938,
     "support_30d": 62843.70368466329,
     "resistance_30d": 81264.70153038795,
     "mark_price": 79634.81492029,
@@ -3176,14 +3178,14 @@
     "key": "ETH",
     "name": "Ethereum",
     "emoji": "\u039e",
-    "price": 2460.98,
+    "price": 2459.61,
     "high_24h": 2463.12,
     "low_24h": 2435.15,
-    "pct_24h": 0.30985,
+    "pct_24h": 0.34781,
     "pct_7d": 1.0,
     "pct_30d": 29.1,
-    "sma50": 2089.494234868884,
-    "sma200": 2035.3005779590032,
+    "sma50": 2089.4775355976026,
+    "sma200": 2035.296403141183,
     "support_30d": 1871.3976551883159,
     "resistance_30d": 2514.967577695514,
     "mark_price": 2458.7092093,
