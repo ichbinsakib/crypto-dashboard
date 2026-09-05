@@ -4,7 +4,7 @@
   "_alerts_state": {
     "btc-resistance-break": {
       "triggered": true,
-      "last_triggered_at": "2026-09-05 23:50:23"
+      "last_triggered_at": "2026-09-05 23:55:16"
     },
     "btc-support-break": {
       "triggered": false,
@@ -679,7 +679,7 @@
         ],
         [
           "Stretch from long-term average",
-          "-1.6% vs its long-term average - not stretched either way",
+          "-1.4% vs its long-term average - not stretched either way",
           0
         ],
         [
@@ -692,12 +692,12 @@
       "id": "cardano",
       "symbol": "ADA",
       "name": "Cardano",
-      "price": 0.218528,
-      "pct_24h": 3.45191,
+      "price": 0.218949,
+      "pct_24h": 3.66553,
       "pct_7d": 9.0,
       "support_30d": 0.1741249817054162,
       "resistance_30d": 0.2291047455940254,
-      "as_of": "2026-09-05 23:45:22",
+      "as_of": "2026-09-05 23:55:16",
       "stale": false
     },
     "stellar": {
@@ -1619,7 +1619,7 @@
       "rows": [
         [
           "Price vs. recent range",
-          "Near its 30-day high (~$54.72) - less room to run",
+          "Near its 30-day high (~$54.67) - less room to run",
           -1
         ],
         [
@@ -1652,12 +1652,12 @@
       "id": "litecoin",
       "symbol": "LTC",
       "name": "Litecoin",
-      "price": 54.71,
-      "pct_24h": 8.01158,
-      "pct_7d": 11.3,
+      "price": 54.68,
+      "pct_24h": 7.69188,
+      "pct_7d": 12.3,
       "support_30d": 43.806923130603906,
-      "resistance_30d": 54.71988011185652,
-      "as_of": "2026-09-05 22:10:24",
+      "resistance_30d": 54.67173050378631,
+      "as_of": "2026-09-05 23:55:16",
       "stale": false
     },
     "bitget-token": {
@@ -2915,7 +2915,7 @@
       "rows": [
         [
           "Price vs. recent range",
-          "Near its 30-day high (~$0.1101) - less room to run",
+          "Near its 30-day high (~$0.1102) - less room to run",
           -1
         ],
         [
@@ -2935,7 +2935,7 @@
         ],
         [
           "Stretch from long-term average",
-          "+34.1% above its long-term average - very stretched",
+          "+34.3% above its long-term average - very stretched",
           -2
         ],
         [
@@ -2948,12 +2948,12 @@
       "id": "just",
       "symbol": "JST",
       "name": "JUST",
-      "price": 0.110016,
-      "pct_24h": 1.45233,
-      "pct_7d": 10.9,
+      "price": 0.110158,
+      "pct_24h": 1.03041,
+      "pct_7d": 12.1,
       "support_30d": 0.0946830738697126,
-      "resistance_30d": 0.11006632379302439,
-      "as_of": "2026-09-05 21:35:20",
+      "resistance_30d": 0.11016713273114596,
+      "as_of": "2026-09-05 23:55:16",
       "stale": false
     },
     "algorand": {
@@ -3149,19 +3149,21 @@
       "stale": false
     }
   },
-  "_strong_buy_state": {},
+  "_strong_buy_state": {
+    "15m:ADA": true
+  },
   "BTC": {
     "key": "BTC",
     "name": "Bitcoin",
     "emoji": "\u20bf",
-    "price": 79852,
+    "price": 79849,
     "high_24h": 80147,
     "low_24h": 79459,
-    "pct_24h": 0.22815,
+    "pct_24h": 0.25242,
     "pct_7d": 2.0,
     "pct_30d": 23.9,
-    "sma50": 69094.59191668438,
-    "sma200": 69663.28739571007,
+    "sma50": 69094.5244791303,
+    "sma200": 69663.27053632154,
     "support_30d": 62843.70368466329,
     "resistance_30d": 81264.70153038795,
     "mark_price": 79760.35385307,
@@ -3176,14 +3178,14 @@
     "key": "ETH",
     "name": "Ethereum",
     "emoji": "\u039e",
-    "price": 2482.1,
+    "price": 2482.38,
     "high_24h": 2490.78,
     "low_24h": 2445.89,
-    "pct_24h": 1.09556,
+    "pct_24h": 1.12532,
     "pct_7d": 1.2,
     "pct_30d": 30.3,
-    "sma50": 2089.9277277269402,
-    "sma200": 2035.4089511735174,
+    "sma50": 2089.9352273952445,
+    "sma200": 2035.4108260905934,
     "support_30d": 1871.3976551883159,
     "resistance_30d": 2514.967577695514,
     "mark_price": 2479.87016279,
