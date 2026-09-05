@@ -4,7 +4,7 @@
   "_alerts_state": {
     "btc-resistance-break": {
       "triggered": true,
-      "last_triggered_at": "2026-09-05 18:00:32"
+      "last_triggered_at": "2026-09-05 18:05:18"
     },
     "btc-support-break": {
       "triggered": false,
@@ -947,7 +947,7 @@
       "rows": [
         [
           "Price vs. recent range",
-          "Near its 30-day high (~$0.8095) - less room to run",
+          "Near its 30-day high (~$0.7776) - less room to run",
           -1
         ],
         [
@@ -967,7 +967,7 @@
         ],
         [
           "Stretch from long-term average",
-          "+22.4% above its long-term average - a bit stretched",
+          "+17.8% above its long-term average - a bit stretched",
           -1
         ],
         [
@@ -980,12 +980,12 @@
       "id": "aster-2",
       "symbol": "ASTER",
       "name": "Aster",
-      "price": 0.809625,
-      "pct_24h": 10.95894,
-      "pct_7d": 16.1,
+      "price": 0.778962,
+      "pct_24h": 6.25426,
+      "pct_7d": 12.1,
       "support_30d": 0.5986101196690307,
-      "resistance_30d": 0.8095227984561235,
-      "as_of": "2026-09-05 15:15:22",
+      "resistance_30d": 0.7776109920546427,
+      "as_of": "2026-09-05 18:05:18",
       "stale": false
     },
     "worldcoin-wld": {
@@ -1111,7 +1111,7 @@
         ],
         [
           "Stretch from long-term average",
-          "+7.3% vs its long-term average - not stretched either way",
+          "+7.2% vs its long-term average - not stretched either way",
           0
         ],
         [
@@ -1124,12 +1124,12 @@
       "id": "polygon-ecosystem-token",
       "symbol": "POL",
       "name": "POL (ex-MATIC)",
-      "price": 0.095037,
-      "pct_24h": 3.17845,
-      "pct_7d": -9.1,
+      "price": 0.095006,
+      "pct_24h": 2.74414,
+      "pct_7d": -8.7,
       "support_30d": 0.07382135255393793,
       "resistance_30d": 0.12250456198546959,
-      "as_of": "2026-09-05 17:50:23",
+      "as_of": "2026-09-05 18:05:18",
       "stale": false
     },
     "blackrock-usd-institutional-digital-liquidity-fund": {
@@ -2119,7 +2119,7 @@
         ],
         [
           "Stretch from long-term average",
-          "+12.3% above its long-term average - a bit stretched",
+          "+12.1% above its long-term average - a bit stretched",
           -1
         ],
         [
@@ -2132,12 +2132,12 @@
       "id": "ondo-finance",
       "symbol": "ONDO",
       "name": "Ondo",
-      "price": 0.369462,
-      "pct_24h": 3.93001,
-      "pct_7d": 4.5,
+      "price": 0.368887,
+      "pct_24h": 4.37369,
+      "pct_7d": 4.7,
       "support_30d": 0.32338181384146436,
       "resistance_30d": 0.3969475338902824,
-      "as_of": "2026-09-05 17:10:23",
+      "as_of": "2026-09-05 18:05:18",
       "stale": false
     },
     "canton-network": {
@@ -3149,19 +3149,21 @@
       "stale": false
     }
   },
-  "_strong_buy_state": {},
+  "_strong_buy_state": {
+    "15m:ONDO": true
+  },
   "BTC": {
     "key": "BTC",
     "name": "Bitcoin",
     "emoji": "\u20bf",
-    "price": 80042,
+    "price": 80034,
     "high_24h": 80147,
     "low_24h": 79459,
-    "pct_24h": 0.70701,
-    "pct_7d": 2.9,
-    "pct_30d": 24.0,
-    "sma50": 69098.30078144376,
-    "sma200": 69664.2146118999,
+    "pct_24h": 0.58483,
+    "pct_7d": 2.6,
+    "pct_30d": 23.7,
+    "sma50": 69098.22197264439,
+    "sma200": 69664.19490970005,
     "support_30d": 62843.70368466329,
     "resistance_30d": 81264.70153038795,
     "mark_price": 79637.5,
@@ -3176,14 +3178,14 @@
     "key": "ETH",
     "name": "Ethereum",
     "emoji": "\u039e",
-    "price": 2479.89,
-    "high_24h": 2475.01,
-    "low_24h": 2445.68,
-    "pct_24h": 1.40497,
-    "pct_7d": 1.1,
-    "pct_30d": 29.4,
-    "sma50": 2089.899680114336,
-    "sma200": 2035.4019392703663,
+    "price": 2480.17,
+    "high_24h": 2483.13,
+    "low_24h": 2445.89,
+    "pct_24h": 1.28185,
+    "pct_7d": 1.2,
+    "pct_30d": 29.6,
+    "sma50": 2089.8877402306416,
+    "sma200": 2035.3989542994427,
     "support_30d": 1871.3976551883159,
     "resistance_30d": 2514.967577695514,
     "mark_price": 2454.0275822,
