@@ -4,7 +4,7 @@
   "_alerts_state": {
     "btc-resistance-break": {
       "triggered": true,
-      "last_triggered_at": "2026-09-05 21:40:22"
+      "last_triggered_at": "2026-09-05 21:45:21"
     },
     "btc-support-break": {
       "triggered": false,
@@ -117,22 +117,22 @@
       "symbol": "XRP",
       "name": "XRP",
       "price": 1.42,
-      "pct_24h": 1.08306,
-      "pct_7d": 1.6,
+      "pct_24h": 1.41133,
+      "pct_7d": 1.3,
       "support_30d": 0.9927072784932938,
       "resistance_30d": 1.52050482788377,
-      "as_of": "2026-09-05 20:05:20",
+      "as_of": "2026-09-05 21:45:21",
       "stale": false
     },
     "solana": {
-      "label": "\ud83d\udfe1 HOLD / NEUTRAL",
-      "status": "neutral",
-      "score": -1,
+      "label": "\ud83d\udd34 CAUTION - REDUCE NEW BUYS",
+      "status": "bearish",
+      "score": -2,
       "rows": [
         [
           "Price vs. recent range",
-          "Sitting in the middle of its 30-day range",
-          0
+          "Near its 30-day high (~$109.18) - less room to run",
+          -1
         ],
         [
           "Crowd mood (Fear & Greed)",
@@ -151,7 +151,7 @@
         ],
         [
           "Stretch from long-term average",
-          "+25.5% above its long-term average - a bit stretched",
+          "+26.1% above its long-term average - a bit stretched",
           -1
         ],
         [
@@ -160,16 +160,16 @@
           0
         ]
       ],
-      "plain": "No real edge either way right now - fine to just wait and watch.",
+      "plain": "Getting risky - I'd hold off on new buys until this cools down.",
       "id": "solana",
       "symbol": "SOL",
       "name": "Solana",
-      "price": 103.35,
-      "pct_24h": 1.58745,
+      "price": 103.86,
+      "pct_24h": 1.9419,
       "pct_7d": -1.9,
       "support_30d": 73.61748637019244,
       "resistance_30d": 109.17730597799657,
-      "as_of": "2026-09-05 21:10:25",
+      "as_of": "2026-09-05 21:45:21",
       "stale": false
     },
     "tron": {
@@ -3059,7 +3059,7 @@
       "rows": [
         [
           "Price vs. recent range",
-          "Near its 30-day high (~$0.1718) - less room to run",
+          "Near its 30-day high (~$0.1693) - less room to run",
           -1
         ],
         [
@@ -3079,7 +3079,7 @@
         ],
         [
           "Stretch from long-term average",
-          "+74.5% above its long-term average - very stretched",
+          "+72.4% above its long-term average - very stretched",
           -2
         ],
         [
@@ -3092,12 +3092,12 @@
       "id": "arbitrum",
       "symbol": "ARB",
       "name": "Arbitrum",
-      "price": 0.171177,
-      "pct_24h": 29.92397,
+      "price": 0.169042,
+      "pct_24h": 27.47703,
       "pct_7d": 84.4,
       "support_30d": 0.07272258489044682,
-      "resistance_30d": 0.17176084338525038,
-      "as_of": "2026-09-05 21:35:20",
+      "resistance_30d": 0.16928143391858474,
+      "as_of": "2026-09-05 21:45:21",
       "stale": false
     },
     "dash": {
@@ -3154,14 +3154,14 @@
     "key": "BTC",
     "name": "Bitcoin",
     "emoji": "\u20bf",
-    "price": 79845,
+    "price": 79881,
     "high_24h": 80147,
     "low_24h": 79459,
-    "pct_24h": 0.0471,
+    "pct_24h": 0.11225,
     "pct_7d": 2.0,
     "pct_30d": 23.9,
-    "sma50": 69094.36318127475,
-    "sma200": 69663.23021185765,
+    "sma50": 69095.18210229249,
+    "sma200": 69663.43494211209,
     "support_30d": 62843.70368466329,
     "resistance_30d": 81264.70153038795,
     "mark_price": 79774.8,
@@ -3176,14 +3176,14 @@
     "key": "ETH",
     "name": "Ethereum",
     "emoji": "\u039e",
-    "price": 2482.06,
+    "price": 2488.89,
     "high_24h": 2483.13,
     "low_24h": 2445.89,
-    "pct_24h": 1.0767,
+    "pct_24h": 1.30605,
     "pct_7d": 1.0,
     "pct_30d": 29.8,
-    "sma50": 2089.9104972409623,
-    "sma200": 2035.4046435520227,
+    "sma50": 2090.0650499148724,
+    "sma200": 2035.4432817205004,
     "support_30d": 1871.3976551883159,
     "resistance_30d": 2514.967577695514,
     "mark_price": 2477.11,
