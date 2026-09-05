@@ -4,7 +4,7 @@
   "_alerts_state": {
     "btc-resistance-break": {
       "triggered": true,
-      "last_triggered_at": "2026-09-05 12:10:23"
+      "last_triggered_at": "2026-09-05 12:15:21"
     },
     "btc-support-break": {
       "triggered": false,
@@ -919,7 +919,7 @@
         ],
         [
           "Stretch from long-term average",
-          "-7.2% vs its long-term average - not stretched either way",
+          "-7.0% vs its long-term average - not stretched either way",
           0
         ],
         [
@@ -932,12 +932,12 @@
       "id": "avalanche-2",
       "symbol": "AVAX",
       "name": "Avalanche",
-      "price": 7.49,
-      "pct_24h": -0.20649,
-      "pct_7d": 3.5,
+      "price": 7.51,
+      "pct_24h": 0.14835,
+      "pct_7d": 3.2,
       "support_30d": 6.313391080113916,
       "resistance_30d": 7.836507914480645,
-      "as_of": "2026-09-05 11:30:27",
+      "as_of": "2026-09-05 12:15:21",
       "stale": false
     },
     "aster-2": {
@@ -1447,7 +1447,7 @@
         ],
         [
           "Stretch from long-term average",
-          "-15.6% below its long-term average - confirmed downtrend",
+          "-15.7% below its long-term average - confirmed downtrend",
           -1
         ],
         [
@@ -1460,12 +1460,12 @@
       "id": "crypto-com-chain",
       "symbol": "CRO",
       "name": "Cronos",
-      "price": 0.056099,
-      "pct_24h": -3.00095,
-      "pct_7d": -1.6,
+      "price": 0.056054,
+      "pct_24h": -2.61792,
+      "pct_7d": -1.9,
       "support_30d": 0.04621382085807831,
       "resistance_30d": 0.06091104752771909,
-      "as_of": "2026-09-05 11:40:22",
+      "as_of": "2026-09-05 12:15:21",
       "stale": false
     },
     "ethereum-classic": {
@@ -1495,7 +1495,7 @@
         ],
         [
           "Stretch from long-term average",
-          "-5.4% vs its long-term average - not stretched either way",
+          "-5.2% vs its long-term average - not stretched either way",
           0
         ],
         [
@@ -1508,12 +1508,12 @@
       "id": "ethereum-classic",
       "symbol": "ETC",
       "name": "Ethereum Classic",
-      "price": 7.66,
-      "pct_24h": -0.15281,
-      "pct_7d": 2.6,
+      "price": 7.68,
+      "pct_24h": 0.55388,
+      "pct_7d": 2.3,
       "support_30d": 6.079473341192034,
       "resistance_30d": 8.342731558283557,
-      "as_of": "2026-09-05 11:35:17",
+      "as_of": "2026-09-05 12:15:21",
       "stale": false
     },
     "pump-fun": {
@@ -3149,19 +3149,21 @@
       "stale": false
     }
   },
-  "_strong_buy_state": {},
+  "_strong_buy_state": {
+    "1h:CRO": true
+  },
   "BTC": {
     "key": "BTC",
     "name": "Bitcoin",
     "emoji": "\u20bf",
-    "price": 79667,
+    "price": 79666,
     "high_24h": 79848,
     "low_24h": 78706,
-    "pct_24h": -1.89955,
+    "pct_24h": -1.90483,
     "pct_7d": 2.5,
     "pct_30d": 23.3,
-    "sma50": 69090.7919185762,
-    "sma200": 69662.33739618301,
+    "sma50": 69090.84479189833,
+    "sma200": 69662.35061451355,
     "support_30d": 62843.70368466329,
     "resistance_30d": 81264.70153038795,
     "mark_price": 79634.81492029,
@@ -3176,14 +3178,14 @@
     "key": "ETH",
     "name": "Ethereum",
     "emoji": "\u039e",
-    "price": 2455.57,
+    "price": 2455.25,
     "high_24h": 2463.12,
     "low_24h": 2435.15,
-    "pct_24h": -2.70252,
+    "pct_24h": -2.7039,
     "pct_7d": 0.8,
     "pct_30d": 29.1,
-    "sma50": 2089.3962199757166,
-    "sma200": 2035.2760742357113,
+    "sma50": 2089.3876736155507,
+    "sma200": 2035.27393764567,
     "support_30d": 1871.3976551883159,
     "resistance_30d": 2514.967577695514,
     "mark_price": 2458.7092093,
