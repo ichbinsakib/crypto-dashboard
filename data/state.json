@@ -4,7 +4,7 @@
   "_alerts_state": {
     "btc-resistance-break": {
       "triggered": true,
-      "last_triggered_at": "2026-09-05 06:10:24"
+      "last_triggered_at": "2026-09-05 06:15:24"
     },
     "btc-support-break": {
       "triggered": false,
@@ -1373,13 +1373,13 @@
       "stale": false
     },
     "gatechain-token": {
-      "label": "\ud83d\udfe1 HOLD / NEUTRAL",
-      "status": "neutral",
-      "score": -1,
+      "label": "\ud83d\udd34 CAUTION - REDUCE NEW BUYS",
+      "status": "bearish",
+      "score": -2,
       "rows": [
         [
           "Price vs. recent range",
-          "Near its 30-day high (~$8.52) - less room to run",
+          "Near its 30-day high (~$8.49) - less room to run",
           -1
         ],
         [
@@ -1394,12 +1394,12 @@
         ],
         [
           "Recent trend",
-          "Trending up steadily - healthy",
-          1
+          "Chopping sideways - no clear trend",
+          0
         ],
         [
           "Stretch from long-term average",
-          "+22.7% above its long-term average - a bit stretched",
+          "+22.6% above its long-term average - a bit stretched",
           -1
         ],
         [
@@ -1408,16 +1408,16 @@
           0
         ]
       ],
-      "plain": "No real edge either way right now - fine to just wait and watch.",
+      "plain": "Getting risky - I'd hold off on new buys until this cools down.",
       "id": "gatechain-token",
       "symbol": "GT",
       "name": "Gate",
-      "price": 8.52,
-      "pct_24h": -1.2998,
-      "pct_7d": 8.7,
+      "price": 8.51,
+      "pct_24h": -1.10091,
+      "pct_7d": 7.5,
       "support_30d": 6.623228679581571,
-      "resistance_30d": 8.520919275470982,
-      "as_of": "2026-09-05 04:35:18",
+      "resistance_30d": 8.494631475088537,
+      "as_of": "2026-09-05 06:15:24",
       "stale": false
     },
     "crypto-com-chain": {
@@ -1447,7 +1447,7 @@
         ],
         [
           "Stretch from long-term average",
-          "-16.3% below its long-term average - confirmed downtrend",
+          "-16.1% below its long-term average - confirmed downtrend",
           -1
         ],
         [
@@ -1460,12 +1460,12 @@
       "id": "crypto-com-chain",
       "symbol": "CRO",
       "name": "Cronos",
-      "price": 0.055674,
-      "pct_24h": -3.69007,
-      "pct_7d": -1.6,
+      "price": 0.055805,
+      "pct_24h": -2.40123,
+      "pct_7d": -2.2,
       "support_30d": 0.04621382085807831,
       "resistance_30d": 0.06091104752771909,
-      "as_of": "2026-09-05 04:50:23",
+      "as_of": "2026-09-05 06:15:24",
       "stale": false
     },
     "ethereum-classic": {
@@ -2805,11 +2805,11 @@
       "symbol": "M",
       "name": "MemeCore",
       "price": 1.13,
-      "pct_24h": 7.88281,
-      "pct_7d": 10.6,
+      "pct_24h": 8.00042,
+      "pct_7d": 9.4,
       "support_30d": 1.0402044506518406,
       "resistance_30d": 1.2453913363052769,
-      "as_of": "2026-09-05 05:40:22",
+      "as_of": "2026-09-05 06:15:24",
       "stale": false
     },
     "aave": {
@@ -3149,19 +3149,21 @@
       "stale": false
     }
   },
-  "_strong_buy_state": {},
+  "_strong_buy_state": {
+    "1h:JST": true
+  },
   "BTC": {
     "key": "BTC",
     "name": "Bitcoin",
     "emoji": "\u20bf",
-    "price": 79590,
+    "price": 79641,
     "high_24h": 81379,
     "low_24h": 78706,
-    "pct_24h": -1.74361,
+    "pct_24h": -1.71529,
     "pct_7d": 2.5,
     "pct_30d": 23.1,
-    "sma50": 69089.3748996646,
-    "sma200": 69661.98314145512,
+    "sma50": 69090.33166094446,
+    "sma200": 69662.22233177508,
     "support_30d": 62843.70368466329,
     "resistance_30d": 81264.70153038795,
     "mark_price": 79691.1,
@@ -3176,14 +3178,14 @@
     "key": "ETH",
     "name": "Ethereum",
     "emoji": "\u039e",
-    "price": 2451.42,
+    "price": 2452.37,
     "high_24h": 2543.95,
     "low_24h": 2435.15,
-    "pct_24h": -2.32396,
+    "pct_24h": -2.49214,
     "pct_7d": 0.4,
     "pct_30d": 28.6,
-    "sma50": 2089.3137421037727,
-    "sma200": 2035.2554547677253,
+    "sma50": 2089.331652675867,
+    "sma200": 2035.2599324107493,
     "support_30d": 1871.3976551883159,
     "resistance_30d": 2514.967577695514,
     "mark_price": 2452.58,
