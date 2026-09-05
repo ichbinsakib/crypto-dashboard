@@ -4,7 +4,7 @@
   "_alerts_state": {
     "btc-resistance-break": {
       "triggered": true,
-      "last_triggered_at": "2026-09-05 13:10:22"
+      "last_triggered_at": "2026-09-05 13:15:22"
     },
     "btc-support-break": {
       "triggered": false,
@@ -1317,11 +1317,11 @@
       "symbol": "HTX",
       "name": "HTX DAO",
       "price": 1.66e-06,
-      "pct_24h": 1.08541,
-      "pct_7d": -1.2,
+      "pct_24h": 1.75441,
+      "pct_7d": -1.1,
       "support_30d": 1.6023985995039954e-06,
       "resistance_30d": 1.8259977214551937e-06,
-      "as_of": "2026-09-05 12:10:23",
+      "as_of": "2026-09-05 13:15:22",
       "stale": false
     },
     "superstate-short-duration-us-government-securities-fund-ustb": {
@@ -1447,7 +1447,7 @@
         ],
         [
           "Stretch from long-term average",
-          "-15.7% below its long-term average - confirmed downtrend",
+          "-15.0% below its long-term average - confirmed downtrend",
           -1
         ],
         [
@@ -1460,12 +1460,12 @@
       "id": "crypto-com-chain",
       "symbol": "CRO",
       "name": "Cronos",
-      "price": 0.056054,
-      "pct_24h": -2.61792,
-      "pct_7d": -1.9,
+      "price": 0.056505,
+      "pct_24h": 0.92736,
+      "pct_7d": -2.0,
       "support_30d": 0.04621382085807831,
       "resistance_30d": 0.06091104752771909,
-      "as_of": "2026-09-05 12:15:21",
+      "as_of": "2026-09-05 13:15:22",
       "stale": false
     },
     "ethereum-classic": {
@@ -2435,7 +2435,7 @@
       "rows": [
         [
           "Price vs. recent range",
-          "Near its 30-day high (~$2.25) - less room to run",
+          "Near its 30-day high (~$2.23) - less room to run",
           -1
         ],
         [
@@ -2455,7 +2455,7 @@
         ],
         [
           "Stretch from long-term average",
-          "+35.5% above its long-term average - very stretched",
+          "+33.1% above its long-term average - very stretched",
           -2
         ],
         [
@@ -2468,12 +2468,12 @@
       "id": "near",
       "symbol": "NEAR",
       "name": "NEAR Protocol",
-      "price": 2.26,
-      "pct_24h": 12.14286,
-      "pct_7d": 27.2,
+      "price": 2.22,
+      "pct_24h": 14.28006,
+      "pct_7d": 24.2,
       "support_30d": 1.5879597131538,
-      "resistance_30d": 2.2467330664135767,
-      "as_of": "2026-09-05 12:20:26",
+      "resistance_30d": 2.2282710825595475,
+      "as_of": "2026-09-05 13:15:22",
       "stale": false
     },
     "quant-network": {
@@ -3149,19 +3149,21 @@
       "stale": false
     }
   },
-  "_strong_buy_state": {},
+  "_strong_buy_state": {
+    "15m:NEAR": true
+  },
   "BTC": {
     "key": "BTC",
     "name": "Bitcoin",
     "emoji": "\u20bf",
-    "price": 79702,
+    "price": 79693,
     "high_24h": 79848,
     "low_24h": 78706,
-    "pct_24h": 0.47742,
+    "pct_24h": 0.59054,
     "pct_7d": 2.8,
     "pct_30d": 23.5,
-    "sma50": 69091.59366890047,
-    "sma200": 69662.53783376407,
+    "sma50": 69091.25564087993,
+    "sma200": 69662.45332675894,
     "support_30d": 62843.70368466329,
     "resistance_30d": 81264.70153038795,
     "mark_price": 79634.81492029,
@@ -3176,14 +3178,14 @@
     "key": "ETH",
     "name": "Ethereum",
     "emoji": "\u039e",
-    "price": 2459.64,
+    "price": 2458.73,
     "high_24h": 2463.12,
     "low_24h": 2435.15,
-    "pct_24h": 0.42461,
+    "pct_24h": 0.53367,
     "pct_7d": 1.0,
     "pct_30d": 29.1,
-    "sma50": 2089.477461416304,
-    "sma200": 2035.2963845958584,
+    "sma50": 2089.4576671689415,
+    "sma200": 2035.2914360340176,
     "support_30d": 1871.3976551883159,
     "resistance_30d": 2514.967577695514,
     "mark_price": 2458.7092093,
