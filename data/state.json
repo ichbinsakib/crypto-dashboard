@@ -4,7 +4,7 @@
   "_alerts_state": {
     "btc-resistance-break": {
       "triggered": true,
-      "last_triggered_at": "2026-09-05 10:40:23"
+      "last_triggered_at": "2026-09-05 10:45:21"
     },
     "btc-support-break": {
       "triggered": false,
@@ -1831,7 +1831,7 @@
         ],
         [
           "Stretch from long-term average",
-          "+63.3% above its long-term average - very stretched",
+          "+63.4% above its long-term average - very stretched",
           -2
         ],
         [
@@ -1844,12 +1844,12 @@
       "id": "ethena",
       "symbol": "ENA",
       "name": "Ethena",
-      "price": 0.163726,
-      "pct_24h": -2.38777,
+      "price": 0.163839,
+      "pct_24h": -2.3888,
       "pct_7d": 5.4,
       "support_30d": 0.08231050586125944,
       "resistance_30d": 0.17000615068266245,
-      "as_of": "2026-09-05 10:20:21",
+      "as_of": "2026-09-05 10:45:21",
       "stale": false
     },
     "bitcoin-cash": {
@@ -2191,11 +2191,11 @@
     "internet-computer": {
       "label": "\ud83d\udfe1 HOLD / NEUTRAL",
       "status": "neutral",
-      "score": 0,
+      "score": -1,
       "rows": [
         [
           "Price vs. recent range",
-          "Near its 30-day high (~$2.65) - less room to run",
+          "Near its 30-day high (~$2.62) - less room to run",
           -1
         ],
         [
@@ -2210,12 +2210,12 @@
         ],
         [
           "Recent trend",
-          "Trending up steadily - healthy",
-          1
+          "Chopping sideways - no clear trend",
+          0
         ],
         [
           "Stretch from long-term average",
-          "+8.7% vs its long-term average - not stretched either way",
+          "+7.5% vs its long-term average - not stretched either way",
           0
         ],
         [
@@ -2228,12 +2228,12 @@
       "id": "internet-computer",
       "symbol": "ICP",
       "name": "Internet Computer",
-      "price": 2.65,
-      "pct_24h": 3.47267,
-      "pct_7d": 8.3,
+      "price": 2.62,
+      "pct_24h": 2.20426,
+      "pct_7d": 7.8,
       "support_30d": 2.099773928381441,
-      "resistance_30d": 2.654090698676396,
-      "as_of": "2026-09-05 09:00:34",
+      "resistance_30d": 2.6242661302685137,
+      "as_of": "2026-09-05 10:45:21",
       "stale": false
     },
     "bittensor": {
@@ -2852,12 +2852,12 @@
       "id": "aave",
       "symbol": "AAVE",
       "name": "Aave",
-      "price": 130.41,
-      "pct_24h": -2.75295,
-      "pct_7d": 7.6,
+      "price": 130.38,
+      "pct_24h": -2.31343,
+      "pct_7d": 7.5,
       "support_30d": 85.94219943917633,
       "resistance_30d": 141.53047916466082,
-      "as_of": "2026-09-05 04:20:27",
+      "as_of": "2026-09-05 10:45:21",
       "stale": false
     },
     "okb": {
@@ -3154,14 +3154,14 @@
     "key": "BTC",
     "name": "Bitcoin",
     "emoji": "\u20bf",
-    "price": 79613,
+    "price": 79598,
     "high_24h": 81379,
     "low_24h": 78706,
-    "pct_24h": -1.79975,
+    "pct_24h": -1.80037,
     "pct_7d": 2.6,
     "pct_30d": 22.7,
-    "sma50": 69089.80173767771,
-    "sma200": 69662.0898509584,
+    "sma50": 69089.6740308337,
+    "sma200": 69662.05792424739,
     "support_30d": 62843.70368466329,
     "resistance_30d": 81264.70153038795,
     "mark_price": 79634.81492029,
@@ -3176,14 +3176,14 @@
     "key": "ETH",
     "name": "Ethereum",
     "emoji": "\u039e",
-    "price": 2454.62,
+    "price": 2454.59,
     "high_24h": 2529.56,
     "low_24h": 2435.15,
-    "pct_24h": -2.84634,
+    "pct_24h": -2.87857,
     "pct_7d": 1.0,
     "pct_30d": 28.4,
-    "sma50": 2089.3812359697313,
-    "sma200": 2035.2723282342151,
+    "sma50": 2089.3774825342534,
+    "sma200": 2035.2713898753457,
     "support_30d": 1871.3976551883159,
     "resistance_30d": 2514.967577695514,
     "mark_price": 2458.7092093,
