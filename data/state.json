@@ -4,7 +4,7 @@
   "_alerts_state": {
     "btc-resistance-break": {
       "triggered": true,
-      "last_triggered_at": "2026-09-05 05:45:20"
+      "last_triggered_at": "2026-09-05 05:50:21"
     },
     "btc-support-break": {
       "triggered": false,
@@ -847,7 +847,7 @@
     "pepe": {
       "label": "\ud83d\udfe1 HOLD / NEUTRAL",
       "status": "neutral",
-      "score": 0,
+      "score": 1,
       "rows": [
         [
           "Price vs. recent range",
@@ -861,8 +861,8 @@
         ],
         [
           "Market phase (best guess)",
-          "Established uptrend - phase where price marks up",
-          1
+          "Basing near the bottom - phase where smart money accumulates",
+          2
         ],
         [
           "Recent trend",
@@ -871,7 +871,7 @@
         ],
         [
           "Stretch from long-term average",
-          "+6.0% vs its long-term average - not stretched either way",
+          "+4.5% vs its long-term average - not stretched either way",
           0
         ],
         [
@@ -884,12 +884,12 @@
       "id": "pepe",
       "symbol": "PEPE",
       "name": "Pepe",
-      "price": 3.52e-06,
-      "pct_24h": -4.73945,
-      "pct_7d": -4.4,
+      "price": 3.47e-06,
+      "pct_24h": -4.43268,
+      "pct_7d": -4.0,
       "support_30d": 2.5716563906374582e-06,
       "resistance_30d": 4.122123035488615e-06,
-      "as_of": "2026-09-05 00:15:21",
+      "as_of": "2026-09-05 05:50:21",
       "stale": false
     },
     "avalanche-2": {
@@ -2612,12 +2612,12 @@
       "id": "bitway",
       "symbol": "BTW",
       "name": "Bitway",
-      "price": 0.455731,
-      "pct_24h": 1.19516,
+      "price": 0.448194,
+      "pct_24h": -0.48342,
       "pct_7d": 14.3,
       "support_30d": 0.19617645794772356,
       "resistance_30d": 0.48788437226017506,
-      "as_of": "2026-09-05 05:20:58",
+      "as_of": "2026-09-05 05:50:21",
       "stale": false
     },
     "world-liberty-financial": {
@@ -3079,7 +3079,7 @@
         ],
         [
           "Stretch from long-term average",
-          "+33.3% above its long-term average - very stretched",
+          "+33.2% above its long-term average - very stretched",
           -2
         ],
         [
@@ -3092,12 +3092,12 @@
       "id": "arbitrum",
       "symbol": "ARB",
       "name": "Arbitrum",
-      "price": 0.130485,
-      "pct_24h": -3.5256,
+      "price": 0.130424,
+      "pct_24h": -3.31729,
       "pct_7d": 49.4,
       "support_30d": 0.07272258489044682,
       "resistance_30d": 0.14105858962141438,
-      "as_of": "2026-09-05 05:30:27",
+      "as_of": "2026-09-05 05:50:21",
       "stale": false
     },
     "dash": {
@@ -3149,19 +3149,21 @@
       "stale": false
     }
   },
-  "_strong_buy_state": {},
+  "_strong_buy_state": {
+    "15m:ARB": true
+  },
   "BTC": {
     "key": "BTC",
     "name": "Bitcoin",
     "emoji": "\u20bf",
-    "price": 79566,
+    "price": 79533,
     "high_24h": 81379,
     "low_24h": 78706,
-    "pct_24h": -1.7133,
+    "pct_24h": -1.703,
     "pct_7d": 2.6,
     "pct_30d": 23.4,
-    "sma50": 69088.92993449184,
-    "sma200": 69661.87190016192,
+    "sma50": 69088.19790321522,
+    "sma200": 69661.68889234276,
     "support_30d": 62843.70368466329,
     "resistance_30d": 81264.70153038795,
     "mark_price": 79691.1,
@@ -3176,14 +3178,14 @@
     "key": "ETH",
     "name": "Ethereum",
     "emoji": "\u039e",
-    "price": 2450.9,
+    "price": 2450.25,
     "high_24h": 2543.95,
     "low_24h": 2435.15,
-    "pct_24h": -2.38942,
+    "pct_24h": -2.33263,
     "pct_7d": 0.6,
     "pct_30d": 29.2,
-    "sma50": 2089.3065275306435,
-    "sma200": 2035.2536511244432,
+    "sma50": 2089.2893744172216,
+    "sma200": 2035.2493628460877,
     "support_30d": 1871.3976551883159,
     "resistance_30d": 2514.967577695514,
     "mark_price": 2452.58,
