@@ -4,7 +4,7 @@
   "_alerts_state": {
     "btc-resistance-break": {
       "triggered": true,
-      "last_triggered_at": "2026-09-05 16:00:33"
+      "last_triggered_at": "2026-09-05 16:05:20"
     },
     "btc-support-break": {
       "triggered": false,
@@ -343,7 +343,7 @@
         ],
         [
           "Stretch from long-term average",
-          "-0.8% vs its long-term average - not stretched either way",
+          "-1.1% vs its long-term average - not stretched either way",
           0
         ],
         [
@@ -356,12 +356,12 @@
       "id": "dogecoin",
       "symbol": "DOGE",
       "name": "Dogecoin",
-      "price": 0.087862,
-      "pct_24h": 4.35413,
-      "pct_7d": 3.4,
+      "price": 0.087614,
+      "pct_24h": 3.89879,
+      "pct_7d": 2.3,
       "support_30d": 0.06932686760776675,
       "resistance_30d": 0.09337940032634065,
-      "as_of": "2026-09-05 15:00:33",
+      "as_of": "2026-09-05 16:05:20",
       "stale": false
     },
     "zcash": {
@@ -2429,13 +2429,13 @@
       "stale": false
     },
     "near": {
-      "label": "\ud83d\udd34 DISTRIBUTION ZONE",
+      "label": "\ud83d\udd34 CAUTION - REDUCE NEW BUYS",
       "status": "bearish",
-      "score": -5,
+      "score": -2,
       "rows": [
         [
           "Price vs. recent range",
-          "Near its 30-day high (~$2.22) - less room to run",
+          "Near its 30-day high (~$2.18) - less room to run",
           -1
         ],
         [
@@ -2450,12 +2450,12 @@
         ],
         [
           "Recent trend",
-          "Shooting straight up - classic blow-off top risk, don't chase",
-          -2
+          "Trending up steadily - healthy",
+          1
         ],
         [
           "Stretch from long-term average",
-          "+33.1% above its long-term average - very stretched",
+          "+30.7% above its long-term average - very stretched",
           -2
         ],
         [
@@ -2464,16 +2464,16 @@
           0
         ]
       ],
-      "plain": "Looks stretched and euphoric - historically the zone where smart money sells, not buys.",
+      "plain": "Getting risky - I'd hold off on new buys until this cools down.",
       "id": "near",
       "symbol": "NEAR",
       "name": "NEAR Protocol",
-      "price": 2.22,
-      "pct_24h": 13.04818,
-      "pct_7d": 24.2,
+      "price": 2.18,
+      "pct_24h": 12.27834,
+      "pct_7d": 18.3,
       "support_30d": 1.5879597131538,
-      "resistance_30d": 2.217476920222003,
-      "as_of": "2026-09-05 13:30:26",
+      "resistance_30d": 2.1823838489280756,
+      "as_of": "2026-09-05 16:05:20",
       "stale": false
     },
     "quant-network": {
@@ -2564,12 +2564,12 @@
       "id": "tether-gold",
       "symbol": "XAUT",
       "name": "Tether Gold",
-      "price": 4424.97,
-      "pct_24h": -0.21219,
+      "price": 4425.13,
+      "pct_24h": -0.16573,
       "pct_7d": -0.7,
       "support_30d": 4313.876028573939,
       "resistance_30d": 4662.510537821146,
-      "as_of": "2026-09-05 15:55:16",
+      "as_of": "2026-09-05 16:05:20",
       "stale": false
     },
     "bitway": {
@@ -3149,22 +3149,19 @@
       "stale": false
     }
   },
-  "_strong_buy_state": {
-    "15m:MORPHO": true,
-    "15m:TAO": true
-  },
+  "_strong_buy_state": {},
   "BTC": {
     "key": "BTC",
     "name": "Bitcoin",
     "emoji": "\u20bf",
-    "price": 79789,
+    "price": 79844,
     "high_24h": 79848,
-    "low_24h": 79380,
-    "pct_24h": 0.46968,
-    "pct_7d": 2.6,
-    "pct_30d": 23.9,
-    "sma50": 69093.66435407911,
-    "sma200": 69663.05550505874,
+    "low_24h": 79406,
+    "pct_24h": 0.5363,
+    "pct_7d": 2.3,
+    "pct_30d": 23.3,
+    "sma50": 69094.16709831604,
+    "sma200": 69663.18119111797,
     "support_30d": 62843.70368466329,
     "resistance_30d": 81264.70153038795,
     "mark_price": 79637.5,
@@ -3179,14 +3176,14 @@
     "key": "ETH",
     "name": "Ethereum",
     "emoji": "\u039e",
-    "price": 2459.03,
-    "high_24h": 2463.12,
+    "price": 2460.41,
+    "high_24h": 2461.5,
     "low_24h": 2443.51,
-    "pct_24h": 0.28229,
-    "pct_7d": 0.9,
-    "pct_30d": 29.0,
-    "sma50": 2089.4717561602283,
-    "sma200": 2035.2949582818392,
+    "pct_24h": 0.391,
+    "pct_7d": 0.4,
+    "pct_30d": 28.5,
+    "sma50": 2089.4865455442396,
+    "sma200": 2035.2986556278422,
     "support_30d": 1871.3976551883159,
     "resistance_30d": 2514.967577695514,
     "mark_price": 2454.0275822,
