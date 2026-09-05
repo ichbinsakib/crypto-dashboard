@@ -4,7 +4,7 @@
   "_alerts_state": {
     "btc-resistance-break": {
       "triggered": true,
-      "last_triggered_at": "2026-09-05 12:15:21"
+      "last_triggered_at": "2026-09-05 12:20:26"
     },
     "btc-support-break": {
       "triggered": false,
@@ -212,12 +212,12 @@
       "id": "tron",
       "symbol": "TRX",
       "name": "TRON",
-      "price": 0.332811,
-      "pct_24h": 1.44234,
-      "pct_7d": -1.8,
+      "price": 0.332973,
+      "pct_24h": 1.05166,
+      "pct_7d": -1.6,
       "support_30d": 0.32221537516581966,
       "resistance_30d": 0.3447899585776834,
-      "as_of": "2026-09-05 09:35:17",
+      "as_of": "2026-09-05 12:20:26",
       "stale": false
     },
     "figure-heloc": {
@@ -727,7 +727,7 @@
         ],
         [
           "Stretch from long-term average",
-          "+4.4% vs its long-term average - not stretched either way",
+          "+5.0% vs its long-term average - not stretched either way",
           0
         ],
         [
@@ -740,12 +740,12 @@
       "id": "stellar",
       "symbol": "XLM",
       "name": "Stellar",
-      "price": 0.182107,
-      "pct_24h": -0.90143,
-      "pct_7d": 2.8,
+      "price": 0.183127,
+      "pct_24h": -0.83421,
+      "pct_7d": 3.4,
       "support_30d": 0.15472912151335613,
       "resistance_30d": 0.20181319711037435,
-      "as_of": "2026-09-05 08:25:18",
+      "as_of": "2026-09-05 12:20:26",
       "stale": false
     },
     "kucoin-shares": {
@@ -947,7 +947,7 @@
       "rows": [
         [
           "Price vs. recent range",
-          "Near its 30-day high (~$0.7738) - less room to run",
+          "Near its 30-day high (~$0.7998) - less room to run",
           -1
         ],
         [
@@ -967,7 +967,7 @@
         ],
         [
           "Stretch from long-term average",
-          "+17.1% above its long-term average - a bit stretched",
+          "+21.0% above its long-term average - a bit stretched",
           -1
         ],
         [
@@ -980,12 +980,12 @@
       "id": "aster-2",
       "symbol": "ASTER",
       "name": "Aster",
-      "price": 0.774569,
-      "pct_24h": 2.36819,
-      "pct_7d": 10.2,
+      "price": 0.800188,
+      "pct_24h": 5.90715,
+      "pct_7d": 13.4,
       "support_30d": 0.5986101196690307,
-      "resistance_30d": 0.7737883932111195,
-      "as_of": "2026-09-05 11:20:50",
+      "resistance_30d": 0.7998192582470476,
+      "as_of": "2026-09-05 12:20:26",
       "stale": false
     },
     "worldcoin-wld": {
@@ -2435,7 +2435,7 @@
       "rows": [
         [
           "Price vs. recent range",
-          "Near its 30-day high (~$2.28) - less room to run",
+          "Near its 30-day high (~$2.25) - less room to run",
           -1
         ],
         [
@@ -2455,7 +2455,7 @@
         ],
         [
           "Stretch from long-term average",
-          "+37.3% above its long-term average - very stretched",
+          "+35.5% above its long-term average - very stretched",
           -2
         ],
         [
@@ -2468,12 +2468,12 @@
       "id": "near",
       "symbol": "NEAR",
       "name": "NEAR Protocol",
-      "price": 2.29,
-      "pct_24h": 13.3447,
+      "price": 2.26,
+      "pct_24h": 12.14286,
       "pct_7d": 27.2,
       "support_30d": 1.5879597131538,
-      "resistance_30d": 2.278327010418015,
-      "as_of": "2026-09-05 12:10:23",
+      "resistance_30d": 2.2467330664135767,
+      "as_of": "2026-09-05 12:20:26",
       "stale": false
     },
     "quant-network": {
@@ -2503,7 +2503,7 @@
         ],
         [
           "Stretch from long-term average",
-          "-6.8% vs its long-term average - not stretched either way",
+          "-7.0% vs its long-term average - not stretched either way",
           0
         ],
         [
@@ -2516,12 +2516,12 @@
       "id": "quant-network",
       "symbol": "QNT",
       "name": "Quant",
-      "price": 63.94,
-      "pct_24h": -4.13316,
-      "pct_7d": 4.5,
+      "price": 63.74,
+      "pct_24h": -3.60594,
+      "pct_7d": 4.3,
       "support_30d": 55.905981995619285,
       "resistance_30d": 66.68821517512447,
-      "as_of": "2026-09-05 11:05:18",
+      "as_of": "2026-09-05 12:20:26",
       "stale": false
     },
     "tether-gold": {
@@ -3149,21 +3149,19 @@
       "stale": false
     }
   },
-  "_strong_buy_state": {
-    "1h:CRO": true
-  },
+  "_strong_buy_state": {},
   "BTC": {
     "key": "BTC",
     "name": "Bitcoin",
     "emoji": "\u20bf",
-    "price": 79666,
+    "price": 79664,
     "high_24h": 79848,
     "low_24h": 78706,
-    "pct_24h": -1.90483,
+    "pct_24h": -1.83905,
     "pct_7d": 2.5,
     "pct_30d": 23.3,
-    "sma50": 69090.84479189833,
-    "sma200": 69662.35061451355,
+    "sma50": 69090.83223468714,
+    "sma200": 69662.34747521074,
     "support_30d": 62843.70368466329,
     "resistance_30d": 81264.70153038795,
     "mark_price": 79634.81492029,
@@ -3178,14 +3176,14 @@
     "key": "ETH",
     "name": "Ethereum",
     "emoji": "\u039e",
-    "price": 2455.25,
+    "price": 2455.16,
     "high_24h": 2463.12,
     "low_24h": 2435.15,
-    "pct_24h": -2.7039,
+    "pct_24h": -2.61598,
     "pct_7d": 0.8,
     "pct_30d": 29.1,
-    "sma50": 2089.3876736155507,
-    "sma200": 2035.27393764567,
+    "sma50": 2089.3879588455297,
+    "sma200": 2035.2740089531646,
     "support_30d": 1871.3976551883159,
     "resistance_30d": 2514.967577695514,
     "mark_price": 2458.7092093,
