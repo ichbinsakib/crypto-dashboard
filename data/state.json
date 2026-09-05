@@ -4,7 +4,7 @@
   "_alerts_state": {
     "btc-resistance-break": {
       "triggered": true,
-      "last_triggered_at": "2026-09-05 21:20:24"
+      "last_triggered_at": "2026-09-05 21:25:18"
     },
     "btc-support-break": {
       "triggered": false,
@@ -295,7 +295,7 @@
         ],
         [
           "Stretch from long-term average",
-          "+61.7% above its long-term average - very stretched",
+          "+62.2% above its long-term average - very stretched",
           -2
         ],
         [
@@ -308,12 +308,12 @@
       "id": "hyperliquid",
       "symbol": "HYPE",
       "name": "Hyperliquid",
-      "price": 85.3,
-      "pct_24h": 0.57468,
-      "pct_7d": 2.7,
+      "price": 85.59,
+      "pct_24h": 1.67809,
+      "pct_7d": 2.8,
       "support_30d": 53.854096460729586,
       "resistance_30d": 87.4499182124614,
-      "as_of": "2026-09-05 20:20:23",
+      "as_of": "2026-09-05 21:25:18",
       "stale": false
     },
     "dogecoin": {
@@ -343,7 +343,7 @@
         ],
         [
           "Stretch from long-term average",
-          "+2.6% vs its long-term average - not stretched either way",
+          "+2.9% vs its long-term average - not stretched either way",
           0
         ],
         [
@@ -356,12 +356,12 @@
       "id": "dogecoin",
       "symbol": "DOGE",
       "name": "Dogecoin",
-      "price": 0.090898,
-      "pct_24h": 7.17258,
-      "pct_7d": 6.6,
+      "price": 0.091163,
+      "pct_24h": 7.39582,
+      "pct_7d": 6.4,
       "support_30d": 0.06932686760776675,
       "resistance_30d": 0.09337940032634065,
-      "as_of": "2026-09-05 20:50:24",
+      "as_of": "2026-09-05 21:25:18",
       "stale": false
     },
     "zcash": {
@@ -1999,11 +1999,11 @@
     "uniswap": {
       "label": "\ud83d\udd34 DISTRIBUTION ZONE",
       "status": "bearish",
-      "score": -5,
+      "score": -8,
       "rows": [
         [
           "Price vs. recent range",
-          "Near its 30-day high (~$6.37) - less room to run",
+          "Near its 30-day high (~$7.13) - less room to run",
           -1
         ],
         [
@@ -2018,12 +2018,12 @@
         ],
         [
           "Recent trend",
-          "Trending up steadily - healthy",
-          1
+          "Shooting straight up - classic blow-off top risk, don't chase",
+          -2
         ],
         [
           "Stretch from long-term average",
-          "+77.7% above its long-term average - very stretched",
+          "+99.6% above its long-term average - very stretched",
           -2
         ],
         [
@@ -2036,12 +2036,12 @@
       "id": "uniswap",
       "symbol": "UNI",
       "name": "Uniswap",
-      "price": 6.36,
-      "pct_24h": 1.18839,
-      "pct_7d": 40.9,
+      "price": 7.15,
+      "pct_24h": 15.83204,
+      "pct_7d": 54.0,
       "support_30d": 3.1971416665971573,
-      "resistance_30d": 6.372791529580583,
-      "as_of": "2026-09-05 16:15:24",
+      "resistance_30d": 7.133555014102871,
+      "as_of": "2026-09-05 21:25:18",
       "stale": false
     },
     "pi-network": {
@@ -3149,21 +3149,19 @@
       "stale": false
     }
   },
-  "_strong_buy_state": {
-    "15m:NEAR": true
-  },
+  "_strong_buy_state": {},
   "BTC": {
     "key": "BTC",
     "name": "Bitcoin",
     "emoji": "\u20bf",
-    "price": 79804,
+    "price": 79858,
     "high_24h": 80147,
     "low_24h": 79459,
-    "pct_24h": -0.01442,
+    "pct_24h": 0.06928,
     "pct_7d": 2.0,
     "pct_30d": 23.9,
-    "sma50": 69093.63131047448,
-    "sma200": 69663.04724415758,
+    "sma50": 69094.66258077971,
+    "sma200": 69663.30506173389,
     "support_30d": 62843.70368466329,
     "resistance_30d": 81264.70153038795,
     "mark_price": 79774.8,
@@ -3178,14 +3176,14 @@
     "key": "ETH",
     "name": "Ethereum",
     "emoji": "\u039e",
-    "price": 2477.98,
+    "price": 2480.76,
     "high_24h": 2483.13,
     "low_24h": 2445.89,
-    "pct_24h": 0.94546,
+    "pct_24h": 1.073,
     "pct_7d": 1.0,
     "pct_30d": 29.8,
-    "sma50": 2089.8380983996703,
-    "sma200": 2035.3865438417,
+    "sma50": 2089.880642003773,
+    "sma200": 2035.3971797427255,
     "support_30d": 1871.3976551883159,
     "resistance_30d": 2514.967577695514,
     "mark_price": 2477.11,
