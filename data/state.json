@@ -4,7 +4,7 @@
   "_alerts_state": {
     "btc-resistance-break": {
       "triggered": true,
-      "last_triggered_at": "2026-09-06 22:05:18"
+      "last_triggered_at": "2026-09-06 22:10:23"
     },
     "btc-support-break": {
       "triggered": false,
@@ -343,7 +343,7 @@
         ],
         [
           "Stretch from long-term average",
-          "+2.0% vs its long-term average - not stretched either way",
+          "+1.9% vs its long-term average - not stretched either way",
           0
         ],
         [
@@ -356,12 +356,12 @@
       "id": "dogecoin",
       "symbol": "DOGE",
       "name": "Dogecoin",
-      "price": 0.090303,
-      "pct_24h": -0.61887,
+      "price": 0.090193,
+      "pct_24h": -0.63452,
       "pct_7d": 6.3,
       "support_30d": 0.06932686760776675,
       "resistance_30d": 0.09337940032634065,
-      "as_of": "2026-09-06 22:05:18",
+      "as_of": "2026-09-06 22:10:23",
       "stale": false
     },
     "zcash": {
@@ -2191,11 +2191,11 @@
     "internet-computer": {
       "label": "\ud83d\udfe1 HOLD / NEUTRAL",
       "status": "neutral",
-      "score": 0,
+      "score": -1,
       "rows": [
         [
           "Price vs. recent range",
-          "Near its 30-day high (~$2.68) - less room to run",
+          "Near its 30-day high (~$2.69) - less room to run",
           -1
         ],
         [
@@ -2215,8 +2215,8 @@
         ],
         [
           "Stretch from long-term average",
-          "+9.9% vs its long-term average - not stretched either way",
-          0
+          "+10.3% above its long-term average - a bit stretched",
+          -1
         ],
         [
           "Leverage traders' bias",
@@ -2228,12 +2228,12 @@
       "id": "internet-computer",
       "symbol": "ICP",
       "name": "Internet Computer",
-      "price": 2.68,
-      "pct_24h": 0.40677,
-      "pct_7d": 8.6,
+      "price": 2.69,
+      "pct_24h": -0.0153,
+      "pct_7d": 12.0,
       "support_30d": 2.1584475030049863,
-      "resistance_30d": 2.68000271480604,
-      "as_of": "2026-09-06 20:15:23",
+      "resistance_30d": 2.6885015519213193,
+      "as_of": "2026-09-06 22:10:23",
       "stale": false
     },
     "bittensor": {
@@ -2647,7 +2647,7 @@
         ],
         [
           "Stretch from long-term average",
-          "-21.4% below its long-term average - confirmed downtrend",
+          "-21.1% below its long-term average - confirmed downtrend",
           -1
         ],
         [
@@ -2660,12 +2660,12 @@
       "id": "world-liberty-financial",
       "symbol": "WLFI",
       "name": "World Liberty Financial",
-      "price": 0.056361,
-      "pct_24h": -1.83623,
-      "pct_7d": -2.9,
+      "price": 0.056557,
+      "pct_24h": -1.42574,
+      "pct_7d": -1.7,
       "support_30d": 0.051301304477199876,
       "resistance_30d": 0.06254770952093733,
-      "as_of": "2026-09-06 18:55:18",
+      "as_of": "2026-09-06 22:10:23",
       "stale": false
     },
     "pax-gold": {
@@ -3202,14 +3202,14 @@
     "key": "BTC",
     "name": "Bitcoin",
     "emoji": "\u20bf",
-    "price": 79851,
+    "price": 79784,
     "high_24h": 80103,
     "low_24h": 79426,
-    "pct_24h": -0.06345,
+    "pct_24h": -0.12498,
     "pct_7d": 1.7,
     "pct_30d": 23.1,
-    "sma50": 69394.79629594547,
-    "sma200": 69730.18391196759,
+    "sma50": 69393.21581117579,
+    "sma200": 69729.78879077517,
     "support_30d": 62843.70368466329,
     "resistance_30d": 81264.70153038795,
     "mark_price": 79760.35385307,
@@ -3224,14 +3224,14 @@
     "key": "ETH",
     "name": "Ethereum",
     "emoji": "\u039e",
-    "price": 2503.8,
+    "price": 2500.43,
     "high_24h": 2521.39,
     "low_24h": 2473.01,
-    "pct_24h": 0.63089,
+    "pct_24h": 0.56229,
     "pct_7d": 0.7,
     "pct_30d": 31.0,
-    "sma50": 2102.703141835007,
-    "sma200": 2038.1411508660094,
+    "sma50": 2102.6506783105697,
+    "sma200": 2038.1280349849,
     "support_30d": 1871.3976551883159,
     "resistance_30d": 2514.967577695514,
     "mark_price": 2479.87016279,
