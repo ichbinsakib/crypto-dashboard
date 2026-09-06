@@ -4,7 +4,7 @@
   "_alerts_state": {
     "btc-resistance-break": {
       "triggered": true,
-      "last_triggered_at": "2026-09-06 02:25:19"
+      "last_triggered_at": "2026-09-06 02:30:27"
     },
     "btc-support-break": {
       "triggered": false,
@@ -199,7 +199,7 @@
         ],
         [
           "Stretch from long-term average",
-          "+2.8% vs its long-term average - not stretched either way",
+          "+2.6% vs its long-term average - not stretched either way",
           0
         ],
         [
@@ -212,12 +212,12 @@
       "id": "tron",
       "symbol": "TRX",
       "name": "TRON",
-      "price": 0.334197,
-      "pct_24h": 0.72106,
-      "pct_7d": -1.9,
+      "price": 0.333613,
+      "pct_24h": 0.51408,
+      "pct_7d": -1.8,
       "support_30d": 0.32221537516581966,
       "resistance_30d": 0.3447899585776834,
-      "as_of": "2026-09-06 01:40:21",
+      "as_of": "2026-09-06 02:30:27",
       "stale": false
     },
     "figure-heloc": {
@@ -2263,7 +2263,7 @@
         ],
         [
           "Stretch from long-term average",
-          "+0.2% vs its long-term average - not stretched either way",
+          "-0.3% vs its long-term average - not stretched either way",
           0
         ],
         [
@@ -2276,12 +2276,12 @@
       "id": "bittensor",
       "symbol": "TAO",
       "name": "Bittensor",
-      "price": 237.68,
-      "pct_24h": 4.51689,
-      "pct_7d": 0.7,
+      "price": 236.41,
+      "pct_24h": 4.01811,
+      "pct_7d": 1.0,
       "support_30d": 190.67093053611111,
       "resistance_30d": 254.06815196002663,
-      "as_of": "2026-09-06 01:25:16",
+      "as_of": "2026-09-06 02:30:27",
       "stale": false
     },
     "the-open-network": {
@@ -2813,9 +2813,9 @@
       "stale": false
     },
     "aave": {
-      "label": "\ud83d\udd34 DISTRIBUTION ZONE",
+      "label": "\ud83d\udd34 CAUTION - REDUCE NEW BUYS",
       "status": "bearish",
-      "score": -5,
+      "score": -2,
       "rows": [
         [
           "Price vs. recent range",
@@ -2829,8 +2829,8 @@
         ],
         [
           "Market phase (best guess)",
-          "Very extended after a big run - phase where smart money sells",
-          -2
+          "Established uptrend - phase where price marks up",
+          1
         ],
         [
           "Recent trend",
@@ -2839,7 +2839,7 @@
         ],
         [
           "Stretch from long-term average",
-          "+42.6% above its long-term average - very stretched",
+          "+40.0% above its long-term average - very stretched",
           -2
         ],
         [
@@ -2848,16 +2848,16 @@
           0
         ]
       ],
-      "plain": "Looks stretched and euphoric - historically the zone where smart money sells, not buys.",
+      "plain": "Getting risky - I'd hold off on new buys until this cools down.",
       "id": "aave",
       "symbol": "AAVE",
       "name": "Aave",
-      "price": 139.01,
-      "pct_24h": 6.19597,
-      "pct_7d": 9.6,
+      "price": 136.42,
+      "pct_24h": 4.7746,
+      "pct_7d": 11.0,
       "support_30d": 85.94219943917633,
       "resistance_30d": 141.53047916466082,
-      "as_of": "2026-09-06 01:20:22",
+      "as_of": "2026-09-06 02:30:27",
       "stale": false
     },
     "okb": {
@@ -3149,19 +3149,21 @@
       "stale": false
     }
   },
-  "_strong_buy_state": {},
+  "_strong_buy_state": {
+    "15m:TRX": true
+  },
   "BTC": {
     "key": "BTC",
     "name": "Bitcoin",
     "emoji": "\u20bf",
-    "price": 79921,
+    "price": 79923,
     "high_24h": 80147,
     "low_24h": 79459,
-    "pct_24h": 0.40613,
+    "pct_24h": 0.48262,
     "pct_7d": 2.3,
     "pct_30d": 24.4,
-    "sma50": 69396.73126004604,
-    "sma200": 69730.66765299272,
+    "sma50": 69396.39012938656,
+    "sma200": 69730.58237032786,
     "support_30d": 62843.70368466329,
     "resistance_30d": 81264.70153038795,
     "mark_price": 79760.35385307,
@@ -3176,14 +3178,14 @@
     "key": "ETH",
     "name": "Ethereum",
     "emoji": "\u039e",
-    "price": 2502.35,
+    "price": 2502.68,
     "high_24h": 2508.34,
     "low_24h": 2445.89,
-    "pct_24h": 2.00019,
+    "pct_24h": 2.09396,
     "pct_7d": 1.9,
     "pct_30d": 31.7,
-    "sma50": 2102.684924215458,
-    "sma200": 2038.136596461122,
+    "sma50": 2102.6890681126047,
+    "sma200": 2038.137632435409,
     "support_30d": 1871.3976551883159,
     "resistance_30d": 2514.967577695514,
     "mark_price": 2479.87016279,
