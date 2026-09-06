@@ -4,7 +4,7 @@
   "_alerts_state": {
     "btc-resistance-break": {
       "triggered": true,
-      "last_triggered_at": "2026-09-06 15:10:23"
+      "last_triggered_at": "2026-09-06 15:15:20"
     },
     "btc-support-break": {
       "triggered": false,
@@ -2167,7 +2167,7 @@
         ],
         [
           "Stretch from long-term average",
-          "-21.7% below its long-term average - confirmed downtrend",
+          "-22.4% below its long-term average - confirmed downtrend",
           -1
         ],
         [
@@ -2180,12 +2180,12 @@
       "id": "canton-network",
       "symbol": "CC",
       "name": "Canton",
-      "price": 0.1101,
-      "pct_24h": 0.33912,
-      "pct_7d": -7.0,
+      "price": 0.109122,
+      "pct_24h": -0.62525,
+      "pct_7d": -7.4,
       "support_30d": 0.09051839499501885,
       "resistance_30d": 0.12396615653575341,
-      "as_of": "2026-09-06 13:05:22",
+      "as_of": "2026-09-06 15:15:20",
       "stale": false
     },
     "internet-computer": {
@@ -2263,7 +2263,7 @@
         ],
         [
           "Stretch from long-term average",
-          "+2.8% vs its long-term average - not stretched either way",
+          "+2.0% vs its long-term average - not stretched either way",
           0
         ],
         [
@@ -2276,12 +2276,12 @@
       "id": "bittensor",
       "symbol": "TAO",
       "name": "Bittensor",
-      "price": 243.85,
-      "pct_24h": 1.69465,
-      "pct_7d": 1.5,
+      "price": 241.89,
+      "pct_24h": 2.06358,
+      "pct_7d": 2.3,
       "support_30d": 190.67093053611111,
       "resistance_30d": 254.06815196002663,
-      "as_of": "2026-09-06 12:35:17",
+      "as_of": "2026-09-06 15:15:20",
       "stale": false
     },
     "the-open-network": {
@@ -2407,7 +2407,7 @@
         ],
         [
           "Stretch from long-term average",
-          "+0.7% vs its long-term average - not stretched either way",
+          "-0.1% vs its long-term average - not stretched either way",
           0
         ],
         [
@@ -2420,12 +2420,12 @@
       "id": "shiba-inu",
       "symbol": "SHIB",
       "name": "Shiba Inu",
-      "price": 5.43e-06,
-      "pct_24h": -0.93685,
-      "pct_7d": 6.0,
+      "price": 5.39e-06,
+      "pct_24h": -1.38482,
+      "pct_7d": 4.7,
       "support_30d": 4.390093758351827e-06,
       "resistance_30d": 5.903506876405612e-06,
-      "as_of": "2026-09-06 13:55:17",
+      "as_of": "2026-09-06 15:15:20",
       "stale": false
     },
     "near": {
@@ -3197,19 +3197,22 @@
       "stale": false
     }
   },
-  "_strong_buy_state": {},
+  "_strong_buy_state": {
+    "15m:CRO": true,
+    "1h:CC": true
+  },
   "BTC": {
     "key": "BTC",
     "name": "Bitcoin",
     "emoji": "\u20bf",
-    "price": 79521,
+    "price": 79519,
     "high_24h": 80147,
     "low_24h": 79437,
-    "pct_24h": -0.25427,
+    "pct_24h": -0.25201,
     "pct_7d": 0.9,
     "pct_30d": 22.5,
-    "sma50": 69388.48898944756,
-    "sma200": 69728.6070853431,
+    "sma50": 69388.39009303262,
+    "sma200": 69728.58236123937,
     "support_30d": 62843.70368466329,
     "resistance_30d": 81264.70153038795,
     "mark_price": 79760.35385307,
@@ -3224,14 +3227,14 @@
     "key": "ETH",
     "name": "Ethereum",
     "emoji": "\u039e",
-    "price": 2476.69,
+    "price": 2476.03,
     "high_24h": 2521.39,
     "low_24h": 2459.16,
-    "pct_24h": 0.75994,
+    "pct_24h": 0.70516,
     "pct_7d": 0.2,
     "pct_30d": 29.0,
-    "sma50": 2102.1718149470307,
-    "sma200": 2038.0083191440153,
+    "sma50": 2102.164218685713,
+    "sma200": 2038.006420078686,
     "support_30d": 1871.3976551883159,
     "resistance_30d": 2514.967577695514,
     "mark_price": 2479.87016279,
