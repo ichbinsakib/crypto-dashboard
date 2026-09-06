@@ -4,7 +4,7 @@
   "_alerts_state": {
     "btc-resistance-break": {
       "triggered": true,
-      "last_triggered_at": "2026-09-06 00:10:23"
+      "last_triggered_at": "2026-09-06 00:15:19"
     },
     "btc-support-break": {
       "triggered": false,
@@ -1087,7 +1087,7 @@
     "polygon-ecosystem-token": {
       "label": "\ud83d\udfe1 HOLD / NEUTRAL",
       "status": "neutral",
-      "score": 0,
+      "score": -1,
       "rows": [
         [
           "Price vs. recent range",
@@ -1111,8 +1111,8 @@
         ],
         [
           "Stretch from long-term average",
-          "+9.0% vs its long-term average - not stretched either way",
-          0
+          "+10.7% above its long-term average - a bit stretched",
+          -1
         ],
         [
           "Leverage traders' bias",
@@ -1124,12 +1124,12 @@
       "id": "polygon-ecosystem-token",
       "symbol": "POL",
       "name": "POL (ex-MATIC)",
-      "price": 0.0966,
-      "pct_24h": 4.15339,
-      "pct_7d": -4.7,
+      "price": 0.098004,
+      "pct_24h": 5.66834,
+      "pct_7d": -3.8,
       "support_30d": 0.07382135255393793,
       "resistance_30d": 0.12250456198546959,
-      "as_of": "2026-09-05 22:45:22",
+      "as_of": "2026-09-06 00:15:19",
       "stale": false
     },
     "blackrock-usd-institutional-digital-liquidity-fund": {
@@ -2887,7 +2887,7 @@
         ],
         [
           "Stretch from long-term average",
-          "+31.1% above its long-term average - very stretched",
+          "+31.3% above its long-term average - very stretched",
           -2
         ],
         [
@@ -2900,12 +2900,12 @@
       "id": "okb",
       "symbol": "OKB",
       "name": "OKB",
-      "price": 113.47,
-      "pct_24h": 4.85977,
-      "pct_7d": 0.3,
-      "support_30d": 89.96309808268104,
+      "price": 113.83,
+      "pct_24h": 5.28444,
+      "pct_7d": 0.4,
+      "support_30d": 93.7685862904641,
       "resistance_30d": 115.8310797114581,
-      "as_of": "2026-09-05 23:35:17",
+      "as_of": "2026-09-06 00:15:19",
       "stale": false
     },
     "just": {
@@ -3103,11 +3103,11 @@
     "dash": {
       "label": "\ud83d\udd34 DISTRIBUTION ZONE",
       "status": "bearish",
-      "score": -8,
+      "score": -5,
       "rows": [
         [
           "Price vs. recent range",
-          "Near its 30-day high (~$67.98) - less room to run",
+          "Near its 30-day high (~$66.59) - less room to run",
           -1
         ],
         [
@@ -3122,12 +3122,12 @@
         ],
         [
           "Recent trend",
-          "Shooting straight up - classic blow-off top risk, don't chase",
-          -2
+          "Trending up steadily - healthy",
+          1
         ],
         [
           "Stretch from long-term average",
-          "+87.0% above its long-term average - very stretched",
+          "+82.5% above its long-term average - very stretched",
           -2
         ],
         [
@@ -3140,30 +3140,28 @@
       "id": "dash",
       "symbol": "DASH",
       "name": "Dash",
-      "price": 67.9,
-      "pct_24h": 24.15873,
-      "pct_7d": 59.0,
+      "price": 66.54,
+      "pct_24h": 4.90673,
+      "pct_7d": 58.2,
       "support_30d": 29.734917104971814,
-      "resistance_30d": 67.97952211923415,
-      "as_of": "2026-09-05 18:55:17",
+      "resistance_30d": 66.589021451292,
+      "as_of": "2026-09-06 00:15:19",
       "stale": false
     }
   },
-  "_strong_buy_state": {
-    "15m:XLM": true
-  },
+  "_strong_buy_state": {},
   "BTC": {
     "key": "BTC",
     "name": "Bitcoin",
     "emoji": "\u20bf",
-    "price": 79900,
+    "price": 79902,
     "high_24h": 80147,
     "low_24h": 79459,
-    "pct_24h": 0.28982,
+    "pct_24h": 0.26231,
     "pct_7d": 2.0,
     "pct_30d": 24.1,
-    "sma50": 69396.07130572594,
-    "sma200": 69730.5026644127,
+    "sma50": 69396.14348520999,
+    "sma200": 69730.52070928371,
     "support_30d": 62843.70368466329,
     "resistance_30d": 81264.70153038795,
     "mark_price": 79760.35385307,
@@ -3178,14 +3176,14 @@
     "key": "ETH",
     "name": "Ethereum",
     "emoji": "\u039e",
-    "price": 2480.14,
+    "price": 2481.43,
     "high_24h": 2490.78,
     "low_24h": 2445.89,
-    "pct_24h": 1.01171,
+    "pct_24h": 1.03573,
     "pct_7d": 1.1,
     "pct_30d": 30.3,
-    "sma50": 2102.2402545002797,
-    "sma200": 2038.0254290323276,
+    "sma50": 2102.2665210152823,
+    "sma200": 2038.0319956610783,
     "support_30d": 1871.3976551883159,
     "resistance_30d": 2514.967577695514,
     "mark_price": 2479.87016279,
