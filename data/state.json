@@ -4,7 +4,7 @@
   "_alerts_state": {
     "btc-resistance-break": {
       "triggered": true,
-      "last_triggered_at": "2026-09-06 21:00:32"
+      "last_triggered_at": "2026-09-06 21:05:18"
     },
     "btc-support-break": {
       "triggered": false,
@@ -2237,13 +2237,13 @@
       "stale": false
     },
     "bittensor": {
-      "label": "\ud83d\udd34 CAUTION - REDUCE NEW BUYS",
-      "status": "bearish",
-      "score": -2,
+      "label": "\ud83d\udfe1 HOLD / NEUTRAL",
+      "status": "neutral",
+      "score": -1,
       "rows": [
         [
           "Price vs. recent range",
-          "Near its 30-day high (~$262.85) - less room to run",
+          "Near its 30-day high (~$267.50) - less room to run",
           -1
         ],
         [
@@ -2258,12 +2258,12 @@
         ],
         [
           "Recent trend",
-          "Chopping sideways - no clear trend",
-          0
+          "Trending up steadily - healthy",
+          1
         ],
         [
           "Stretch from long-term average",
-          "+10.7% above its long-term average - a bit stretched",
+          "+12.7% above its long-term average - a bit stretched",
           -1
         ],
         [
@@ -2272,16 +2272,16 @@
           0
         ]
       ],
-      "plain": "Getting risky - I'd hold off on new buys until this cools down.",
+      "plain": "No real edge either way right now - fine to just wait and watch.",
       "id": "bittensor",
       "symbol": "TAO",
       "name": "Bittensor",
-      "price": 262.85,
-      "pct_24h": 11.85785,
-      "pct_7d": 6.8,
+      "price": 267.42,
+      "pct_24h": 14.56559,
+      "pct_7d": 12.4,
       "support_30d": 190.67093053611111,
-      "resistance_30d": 262.8496680128531,
-      "as_of": "2026-09-06 19:30:27",
+      "resistance_30d": 267.5026369161844,
+      "as_of": "2026-09-06 21:05:18",
       "stale": false
     },
     "the-open-network": {
@@ -2311,7 +2311,7 @@
         ],
         [
           "Stretch from long-term average",
-          "-6.9% vs its long-term average - not stretched either way",
+          "-6.3% vs its long-term average - not stretched either way",
           0
         ],
         [
@@ -2324,12 +2324,12 @@
       "id": "the-open-network",
       "symbol": "GRAM",
       "name": "Gram (prev. Toncoin)",
-      "price": 1.42,
-      "pct_24h": -0.29949,
-      "pct_7d": 2.9,
+      "price": 1.43,
+      "pct_24h": 0.09466,
+      "pct_7d": 3.9,
       "support_30d": 1.316580434471296,
       "resistance_30d": 1.4926762805297678,
-      "as_of": "2026-09-06 20:20:25",
+      "as_of": "2026-09-06 21:05:18",
       "stale": false
     },
     "sky": {
@@ -2915,7 +2915,7 @@
       "rows": [
         [
           "Price vs. recent range",
-          "Near its 30-day high (~$0.1124) - less room to run",
+          "Near its 30-day high (~$0.1116) - less room to run",
           -1
         ],
         [
@@ -2935,7 +2935,7 @@
         ],
         [
           "Stretch from long-term average",
-          "+36.4% above its long-term average - very stretched",
+          "+35.4% above its long-term average - very stretched",
           -2
         ],
         [
@@ -2948,12 +2948,12 @@
       "id": "just",
       "symbol": "JST",
       "name": "JUST",
-      "price": 0.112384,
-      "pct_24h": 2.45861,
-      "pct_7d": 17.4,
+      "price": 0.111581,
+      "pct_24h": 1.49315,
+      "pct_7d": 17.5,
       "support_30d": 0.0946830738697126,
-      "resistance_30d": 0.11237536702285719,
-      "as_of": "2026-09-06 19:05:21",
+      "resistance_30d": 0.11157753678741321,
+      "as_of": "2026-09-06 21:05:18",
       "stale": false
     },
     "algorand": {
@@ -3202,14 +3202,14 @@
     "key": "BTC",
     "name": "Bitcoin",
     "emoji": "\u20bf",
-    "price": 79891,
+    "price": 79945,
     "high_24h": 80103,
     "low_24h": 79426,
-    "pct_24h": 0.18163,
-    "pct_7d": 1.0,
-    "pct_30d": 23.4,
-    "sma50": 69395.87594372818,
-    "sma200": 69730.45382391327,
+    "pct_24h": 0.24373,
+    "pct_7d": 1.3,
+    "pct_30d": 23.1,
+    "sma50": 69396.95638174792,
+    "sma200": 69730.7239334182,
     "support_30d": 62843.70368466329,
     "resistance_30d": 81264.70153038795,
     "mark_price": 79760.35385307,
@@ -3224,14 +3224,14 @@
     "key": "ETH",
     "name": "Ethereum",
     "emoji": "\u039e",
-    "price": 2498.15,
+    "price": 2502.49,
     "high_24h": 2521.39,
     "low_24h": 2473.01,
-    "pct_24h": 0.84002,
-    "pct_7d": -0.8,
-    "pct_30d": 30.5,
-    "sma50": 2102.604976071978,
-    "sma200": 2038.1166094252521,
+    "pct_24h": 0.99288,
+    "pct_7d": -0.2,
+    "pct_30d": 30.3,
+    "sma50": 2102.664368093693,
+    "sma200": 2038.1314574306807,
     "support_30d": 1871.3976551883159,
     "resistance_30d": 2514.967577695514,
     "mark_price": 2479.87016279,
