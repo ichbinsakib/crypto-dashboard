@@ -4,7 +4,7 @@
   "_alerts_state": {
     "btc-resistance-break": {
       "triggered": true,
-      "last_triggered_at": "2026-09-06 05:55:18"
+      "last_triggered_at": "2026-09-06 06:00:34"
     },
     "btc-support-break": {
       "triggered": false,
@@ -823,7 +823,7 @@
         ],
         [
           "Stretch from long-term average",
-          "-1.9% vs its long-term average - not stretched either way",
+          "-1.8% vs its long-term average - not stretched either way",
           0
         ],
         [
@@ -836,12 +836,12 @@
       "id": "hedera-hashgraph",
       "symbol": "HBAR",
       "name": "Hedera",
-      "price": 0.08154,
-      "pct_24h": 2.92501,
+      "price": 0.081588,
+      "pct_24h": 2.52478,
       "pct_7d": 8.4,
       "support_30d": 0.06461260477975343,
-      "resistance_30d": 0.08155280688234644,
-      "as_of": "2026-09-06 05:50:21",
+      "resistance_30d": 0.08158843886238379,
+      "as_of": "2026-09-06 06:00:34",
       "stale": false
     },
     "pepe": {
@@ -1015,7 +1015,7 @@
         ],
         [
           "Stretch from long-term average",
-          "+11.7% above its long-term average - a bit stretched",
+          "+12.5% above its long-term average - a bit stretched",
           -1
         ],
         [
@@ -1028,12 +1028,12 @@
       "id": "worldcoin-wld",
       "symbol": "WLD",
       "name": "Worldcoin",
-      "price": 0.398091,
-      "pct_24h": 2.61712,
+      "price": 0.400773,
+      "pct_24h": 3.05476,
       "pct_7d": 5.0,
       "support_30d": 0.30546719041711023,
       "resistance_30d": 0.4153748859818001,
-      "as_of": "2026-09-06 05:25:25",
+      "as_of": "2026-09-06 06:00:34",
       "stale": false
     },
     "bfusd": {
@@ -2003,7 +2003,7 @@
       "rows": [
         [
           "Price vs. recent range",
-          "Near its 30-day high (~$7.06) - less room to run",
+          "Near its 30-day high (~$7.07) - less room to run",
           -1
         ],
         [
@@ -2023,7 +2023,7 @@
         ],
         [
           "Stretch from long-term average",
-          "+96.2% above its long-term average - very stretched",
+          "+96.4% above its long-term average - very stretched",
           -2
         ],
         [
@@ -2036,12 +2036,12 @@
       "id": "uniswap",
       "symbol": "UNI",
       "name": "Uniswap",
-      "price": 7.06,
-      "pct_24h": 11.91322,
+      "price": 7.07,
+      "pct_24h": 12.62173,
       "pct_7d": 44.2,
       "support_30d": 3.1971416665971573,
-      "resistance_30d": 7.0596255426999965,
-      "as_of": "2026-09-06 05:15:21",
+      "resistance_30d": 7.068820629990714,
+      "as_of": "2026-09-06 06:00:34",
       "stale": false
     },
     "pi-network": {
@@ -3149,19 +3149,21 @@
       "stale": false
     }
   },
-  "_strong_buy_state": {},
+  "_strong_buy_state": {
+    "15m:UNI": true
+  },
   "BTC": {
     "key": "BTC",
     "name": "Bitcoin",
     "emoji": "\u20bf",
-    "price": 79985,
+    "price": 79952,
     "high_24h": 80147,
     "low_24h": 79572,
-    "pct_24h": 0.50897,
+    "pct_24h": 0.45921,
     "pct_7d": 2.2,
     "pct_30d": 24.3,
-    "sma50": 69397.90890502061,
-    "sma200": 69730.96206423637,
+    "sma50": 69397.10863335106,
+    "sma200": 69730.761996319,
     "support_30d": 62843.70368466329,
     "resistance_30d": 81264.70153038795,
     "mark_price": 79760.35385307,
@@ -3176,14 +3178,14 @@
     "key": "ETH",
     "name": "Ethereum",
     "emoji": "\u039e",
-    "price": 2514.46,
+    "price": 2512.13,
     "high_24h": 2513.7,
     "low_24h": 2450.96,
-    "pct_24h": 2.58019,
+    "pct_24h": 2.50057,
     "pct_7d": 1.9,
     "pct_30d": 32.1,
-    "sma50": 2102.9282405351782,
-    "sma200": 2038.197425541052,
+    "sma50": 2102.886265617777,
+    "sma200": 2038.1869318117017,
     "support_30d": 1871.3976551883159,
     "resistance_30d": 2514.967577695514,
     "mark_price": 2479.87016279,
