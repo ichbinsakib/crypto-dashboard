@@ -4,7 +4,7 @@
   "_alerts_state": {
     "btc-resistance-break": {
       "triggered": true,
-      "last_triggered_at": "2026-09-06 07:55:17"
+      "last_triggered_at": "2026-09-06 08:00:36"
     },
     "btc-support-break": {
       "triggered": false,
@@ -799,11 +799,11 @@
     "hedera-hashgraph": {
       "label": "\ud83d\udfe1 HOLD / NEUTRAL",
       "status": "neutral",
-      "score": 1,
+      "score": 0,
       "rows": [
         [
           "Price vs. recent range",
-          "Near its 30-day high (~$0.0807) - less room to run",
+          "Near its 30-day high (~$0.0811) - less room to run",
           -1
         ],
         [
@@ -818,12 +818,12 @@
         ],
         [
           "Recent trend",
-          "Trending up steadily - healthy",
-          1
+          "Chopping sideways - no clear trend",
+          0
         ],
         [
           "Stretch from long-term average",
-          "-2.9% vs its long-term average - not stretched either way",
+          "-2.4% vs its long-term average - not stretched either way",
           0
         ],
         [
@@ -836,12 +836,12 @@
       "id": "hedera-hashgraph",
       "symbol": "HBAR",
       "name": "Hedera",
-      "price": 0.080683,
-      "pct_24h": 0.62543,
-      "pct_7d": 8.1,
+      "price": 0.081105,
+      "pct_24h": 1.68516,
+      "pct_7d": 7.9,
       "support_30d": 0.06461260477975343,
-      "resistance_30d": 0.08072028538910558,
-      "as_of": "2026-09-06 07:15:25",
+      "resistance_30d": 0.08106181617604057,
+      "as_of": "2026-09-06 08:00:36",
       "stale": false
     },
     "pepe": {
@@ -1399,7 +1399,7 @@
         ],
         [
           "Stretch from long-term average",
-          "+31.4% above its long-term average - very stretched",
+          "+31.7% above its long-term average - very stretched",
           -2
         ],
         [
@@ -1412,12 +1412,12 @@
       "id": "gatechain-token",
       "symbol": "GT",
       "name": "Gate",
-      "price": 9.14,
-      "pct_24h": 7.69104,
-      "pct_7d": 13.3,
+      "price": 9.16,
+      "pct_24h": 7.43201,
+      "pct_7d": 13.1,
       "support_30d": 6.673649191532821,
       "resistance_30d": 9.251357349416063,
-      "as_of": "2026-09-06 06:10:23",
+      "as_of": "2026-09-06 08:00:36",
       "stale": false
     },
     "crypto-com-chain": {
@@ -1797,11 +1797,11 @@
       "symbol": "LIT",
       "name": "Lighter",
       "price": 4.64,
-      "pct_24h": 0.95233,
-      "pct_7d": 33.8,
+      "pct_24h": 0.39208,
+      "pct_7d": 33.4,
       "support_30d": 2.2358662099746955,
       "resistance_30d": 4.815937283873233,
-      "as_of": "2026-09-06 07:40:24",
+      "as_of": "2026-09-06 08:00:36",
       "stale": false
     },
     "ethena": {
@@ -3154,14 +3154,14 @@
     "key": "BTC",
     "name": "Bitcoin",
     "emoji": "\u20bf",
-    "price": 79816,
+    "price": 79826,
     "high_24h": 80147,
     "low_24h": 79572,
-    "pct_24h": 0.09988,
+    "pct_24h": 0.14629,
     "pct_7d": 2.1,
     "pct_30d": 24.1,
-    "sma50": 69394.4029910007,
-    "sma200": 69730.0855857314,
+    "sma50": 69394.58828706681,
+    "sma200": 69730.13190974793,
     "support_30d": 62843.70368466329,
     "resistance_30d": 81264.70153038795,
     "mark_price": 79760.35385307,
@@ -3176,14 +3176,14 @@
     "key": "ETH",
     "name": "Ethereum",
     "emoji": "\u039e",
-    "price": 2495.31,
+    "price": 2496.58,
     "high_24h": 2521.39,
     "low_24h": 2451.62,
-    "pct_24h": 1.56203,
+    "pct_24h": 1.58782,
     "pct_7d": 2.1,
     "pct_30d": 31.9,
-    "sma50": 2102.554730279458,
-    "sma200": 2038.1040479771223,
+    "sma50": 2102.5700446618794,
+    "sma200": 2038.1078765727275,
     "support_30d": 1871.3976551883159,
     "resistance_30d": 2514.967577695514,
     "mark_price": 2479.87016279,
