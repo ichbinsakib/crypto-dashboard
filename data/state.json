@@ -4,7 +4,7 @@
   "_alerts_state": {
     "btc-resistance-break": {
       "triggered": true,
-      "last_triggered_at": "2026-09-06 11:25:19"
+      "last_triggered_at": "2026-09-06 11:30:28"
     },
     "btc-support-break": {
       "triggered": false,
@@ -1399,7 +1399,7 @@
         ],
         [
           "Stretch from long-term average",
-          "+31.5% above its long-term average - very stretched",
+          "+32.4% above its long-term average - very stretched",
           -2
         ],
         [
@@ -1412,12 +1412,12 @@
       "id": "gatechain-token",
       "symbol": "GT",
       "name": "Gate",
-      "price": 9.15,
-      "pct_24h": 2.48341,
-      "pct_7d": 13.1,
+      "price": 9.21,
+      "pct_24h": 2.53023,
+      "pct_7d": 13.6,
       "support_30d": 6.673649191532821,
       "resistance_30d": 9.251357349416063,
-      "as_of": "2026-09-06 10:40:21",
+      "as_of": "2026-09-06 11:30:28",
       "stale": false
     },
     "crypto-com-chain": {
@@ -2429,13 +2429,13 @@
       "stale": false
     },
     "near": {
-      "label": "\ud83d\udd34 CAUTION - REDUCE NEW BUYS",
+      "label": "\ud83d\udd34 DISTRIBUTION ZONE",
       "status": "bearish",
-      "score": -2,
+      "score": -8,
       "rows": [
         [
           "Price vs. recent range",
-          "Near its 30-day high (~$2.23) - less room to run",
+          "Near its 30-day high (~$2.40) - less room to run",
           -1
         ],
         [
@@ -2445,17 +2445,17 @@
         ],
         [
           "Market phase (best guess)",
-          "Established uptrend - phase where price marks up",
-          1
+          "Very extended after a big run - phase where smart money sells",
+          -2
         ],
         [
           "Recent trend",
-          "Trending up steadily - healthy",
-          1
+          "Shooting straight up - classic blow-off top risk, don't chase",
+          -2
         ],
         [
           "Stretch from long-term average",
-          "+33.2% above its long-term average - very stretched",
+          "+43.3% above its long-term average - very stretched",
           -2
         ],
         [
@@ -2464,16 +2464,16 @@
           0
         ]
       ],
-      "plain": "Getting risky - I'd hold off on new buys until this cools down.",
+      "plain": "Looks stretched and euphoric - historically the zone where smart money sells, not buys.",
       "id": "near",
       "symbol": "NEAR",
       "name": "NEAR Protocol",
-      "price": 2.23,
-      "pct_24h": -1.31058,
-      "pct_7d": 17.9,
+      "price": 2.4,
+      "pct_24h": 6.77192,
+      "pct_7d": 28.4,
       "support_30d": 1.5879597131538,
-      "resistance_30d": 2.228805294308994,
-      "as_of": "2026-09-06 06:45:24",
+      "resistance_30d": 2.39534963932701,
+      "as_of": "2026-09-06 11:30:28",
       "stale": false
     },
     "quant-network": {
@@ -2791,7 +2791,7 @@
         ],
         [
           "Stretch from long-term average",
-          "-45.9% below its long-term average - confirmed downtrend",
+          "-45.4% below its long-term average - confirmed downtrend",
           -1
         ],
         [
@@ -2804,12 +2804,12 @@
       "id": "memecore",
       "symbol": "M",
       "name": "MemeCore",
-      "price": 1.13,
-      "pct_24h": 0.68202,
-      "pct_7d": 4.4,
+      "price": 1.14,
+      "pct_24h": 1.72448,
+      "pct_7d": 4.3,
       "support_30d": 1.0402044506518406,
       "resistance_30d": 1.2453913363052769,
-      "as_of": "2026-09-06 09:20:23",
+      "as_of": "2026-09-06 11:30:28",
       "stale": false
     },
     "aave": {
@@ -3149,21 +3149,19 @@
       "stale": false
     }
   },
-  "_strong_buy_state": {
-    "1h:SHIB": true
-  },
+  "_strong_buy_state": {},
   "BTC": {
     "key": "BTC",
     "name": "Bitcoin",
     "emoji": "\u20bf",
-    "price": 79940,
+    "price": 79981,
     "high_24h": 80147,
     "low_24h": 79586,
-    "pct_24h": 0.39668,
+    "pct_24h": 0.44696,
     "pct_7d": 2.6,
     "pct_30d": 23.5,
-    "sma50": 69396.8653510512,
-    "sma200": 69730.70117574402,
+    "sma50": 69397.36078446197,
+    "sma200": 69730.82503409672,
     "support_30d": 62843.70368466329,
     "resistance_30d": 81264.70153038795,
     "mark_price": 79760.35385307,
@@ -3178,14 +3176,14 @@
     "key": "ETH",
     "name": "Ethereum",
     "emoji": "\u039e",
-    "price": 2502.51,
+    "price": 2502.33,
     "high_24h": 2521.39,
     "low_24h": 2451.62,
-    "pct_24h": 2.01034,
+    "pct_24h": 1.97616,
     "pct_7d": 2.0,
     "pct_30d": 30.8,
-    "sma50": 2102.6881493303686,
-    "sma200": 2038.1374027398497,
+    "sma50": 2102.686502163517,
+    "sma200": 2038.136990948137,
     "support_30d": 1871.3976551883159,
     "resistance_30d": 2514.967577695514,
     "mark_price": 2479.87016279,
