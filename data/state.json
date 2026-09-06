@@ -4,7 +4,7 @@
   "_alerts_state": {
     "btc-resistance-break": {
       "triggered": true,
-      "last_triggered_at": "2026-09-06 09:00:35"
+      "last_triggered_at": "2026-09-06 09:05:53"
     },
     "btc-support-break": {
       "triggered": false,
@@ -631,7 +631,7 @@
         ],
         [
           "Stretch from long-term average",
-          "+49.8% above its long-term average - very stretched",
+          "+49.1% above its long-term average - very stretched",
           -2
         ],
         [
@@ -644,12 +644,12 @@
       "id": "monero",
       "symbol": "XMR",
       "name": "Monero",
-      "price": 544.55,
-      "pct_24h": 2.55405,
-      "pct_7d": 15.2,
+      "price": 542.09,
+      "pct_24h": 2.30679,
+      "pct_7d": 14.6,
       "support_30d": 377.1738335746389,
       "resistance_30d": 555.6684591165193,
-      "as_of": "2026-09-06 08:50:21",
+      "as_of": "2026-09-06 09:05:53",
       "stale": false
     },
     "cardano": {
@@ -775,7 +775,7 @@
         ],
         [
           "Stretch from long-term average",
-          "-7.0% vs its long-term average - not stretched either way",
+          "-7.2% vs its long-term average - not stretched either way",
           0
         ],
         [
@@ -788,12 +788,12 @@
       "id": "kucoin-shares",
       "symbol": "KCS",
       "name": "KuCoin",
-      "price": 7.18,
-      "pct_24h": 1.47887,
-      "pct_7d": 4.9,
+      "price": 7.16,
+      "pct_24h": 1.173,
+      "pct_7d": 3.4,
       "support_30d": 6.514591596607885,
       "resistance_30d": 7.8821382735057615,
-      "as_of": "2026-09-06 07:55:17",
+      "as_of": "2026-09-06 09:05:53",
       "stale": false
     },
     "hedera-hashgraph": {
@@ -2167,7 +2167,7 @@
         ],
         [
           "Stretch from long-term average",
-          "-21.9% below its long-term average - confirmed downtrend",
+          "-22.0% below its long-term average - confirmed downtrend",
           -1
         ],
         [
@@ -2180,12 +2180,12 @@
       "id": "canton-network",
       "symbol": "CC",
       "name": "Canton",
-      "price": 0.10993,
-      "pct_24h": 1.40644,
-      "pct_7d": -7.6,
+      "price": 0.10977,
+      "pct_24h": 1.47154,
+      "pct_7d": -7.7,
       "support_30d": 0.09051839499501885,
       "resistance_30d": 0.12396615653575341,
-      "as_of": "2026-09-06 07:10:24",
+      "as_of": "2026-09-06 09:05:53",
       "stale": false
     },
     "internet-computer": {
@@ -2407,7 +2407,7 @@
         ],
         [
           "Stretch from long-term average",
-          "+2.0% vs its long-term average - not stretched either way",
+          "+0.7% vs its long-term average - not stretched either way",
           0
         ],
         [
@@ -2420,12 +2420,12 @@
       "id": "shiba-inu",
       "symbol": "SHIB",
       "name": "Shiba Inu",
-      "price": 5.5e-06,
-      "pct_24h": 3.62299,
-      "pct_7d": 7.1,
+      "price": 5.43e-06,
+      "pct_24h": 0.04475,
+      "pct_7d": 6.2,
       "support_30d": 4.390093758351827e-06,
       "resistance_30d": 5.903506876405612e-06,
-      "as_of": "2026-09-06 05:40:25",
+      "as_of": "2026-09-06 09:05:53",
       "stale": false
     },
     "near": {
@@ -2813,9 +2813,9 @@
       "stale": false
     },
     "aave": {
-      "label": "\ud83d\udd34 CAUTION - REDUCE NEW BUYS",
-      "status": "bearish",
-      "score": -2,
+      "label": "\ud83d\udfe1 HOLD / NEUTRAL",
+      "status": "neutral",
+      "score": -1,
       "rows": [
         [
           "Price vs. recent range",
@@ -2834,12 +2834,12 @@
         ],
         [
           "Recent trend",
-          "Chopping sideways - no clear trend",
-          0
+          "Trending up steadily - healthy",
+          1
         ],
         [
           "Stretch from long-term average",
-          "+37.8% above its long-term average - very stretched",
+          "+37.6% above its long-term average - very stretched",
           -2
         ],
         [
@@ -2848,16 +2848,16 @@
           0
         ]
       ],
-      "plain": "Getting risky - I'd hold off on new buys until this cools down.",
+      "plain": "No real edge either way right now - fine to just wait and watch.",
       "id": "aave",
       "symbol": "AAVE",
       "name": "Aave",
-      "price": 134.32,
-      "pct_24h": 3.36426,
-      "pct_7d": 7.3,
+      "price": 134.13,
+      "pct_24h": 3.32688,
+      "pct_7d": 8.1,
       "support_30d": 85.94219943917633,
       "resistance_30d": 141.53047916466082,
-      "as_of": "2026-09-06 08:30:30",
+      "as_of": "2026-09-06 09:05:53",
       "stale": false
     },
     "okb": {
@@ -3154,14 +3154,14 @@
     "key": "BTC",
     "name": "Bitcoin",
     "emoji": "\u20bf",
-    "price": 79841,
+    "price": 79856,
     "high_24h": 80147,
     "low_24h": 79586,
-    "pct_24h": 0.24079,
-    "pct_7d": 2.0,
+    "pct_24h": 0.20138,
+    "pct_7d": 2.2,
     "pct_30d": 24.2,
-    "sma50": 69394.85828914816,
-    "sma200": 69730.19941026827,
+    "sma50": 69395.17886271908,
+    "sma200": 69730.27955366099,
     "support_30d": 62843.70368466329,
     "resistance_30d": 81264.70153038795,
     "mark_price": 79760.35385307,
@@ -3176,14 +3176,14 @@
     "key": "ETH",
     "name": "Ethereum",
     "emoji": "\u039e",
-    "price": 2494.79,
+    "price": 2495.9,
     "high_24h": 2521.39,
     "low_24h": 2451.62,
-    "pct_24h": 1.55404,
-    "pct_7d": 1.5,
-    "pct_30d": 31.2,
-    "sma50": 2102.5367241199033,
-    "sma200": 2038.0995464372336,
+    "pct_24h": 1.52357,
+    "pct_7d": 1.6,
+    "pct_30d": 31.3,
+    "sma50": 2102.556670008526,
+    "sma200": 2038.1045329093893,
     "support_30d": 1871.3976551883159,
     "resistance_30d": 2514.967577695514,
     "mark_price": 2479.87016279,
