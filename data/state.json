@@ -4,7 +4,7 @@
   "_alerts_state": {
     "btc-resistance-break": {
       "triggered": true,
-      "last_triggered_at": "2026-09-06 04:20:24"
+      "last_triggered_at": "2026-09-06 04:25:19"
     },
     "btc-support-break": {
       "triggered": false,
@@ -1543,7 +1543,7 @@
         ],
         [
           "Stretch from long-term average",
-          "+91.4% above its long-term average - very stretched",
+          "+94.4% above its long-term average - very stretched",
           -2
         ],
         [
@@ -1556,12 +1556,12 @@
       "id": "pump-fun",
       "symbol": "PUMP",
       "name": "Pump.fun",
-      "price": 0.00398858,
-      "pct_24h": -5.4698,
-      "pct_7d": -22.4,
+      "price": 0.00405166,
+      "pct_24h": -4.76945,
+      "pct_7d": -18.0,
       "support_30d": 0.0024063627817792555,
       "resistance_30d": 0.0052249885406471875,
-      "as_of": "2026-09-06 02:35:18",
+      "as_of": "2026-09-06 04:25:19",
       "stale": false
     },
     "venice-token": {
@@ -2435,7 +2435,7 @@
       "rows": [
         [
           "Price vs. recent range",
-          "Near its 30-day high (~$2.20) - less room to run",
+          "Near its 30-day high (~$2.19) - less room to run",
           -1
         ],
         [
@@ -2455,7 +2455,7 @@
         ],
         [
           "Stretch from long-term average",
-          "+32.1% above its long-term average - very stretched",
+          "+30.9% above its long-term average - very stretched",
           -2
         ],
         [
@@ -2468,12 +2468,12 @@
       "id": "near",
       "symbol": "NEAR",
       "name": "NEAR Protocol",
-      "price": 2.21,
-      "pct_24h": -0.43746,
+      "price": 2.19,
+      "pct_24h": -1.32976,
       "pct_7d": 19.3,
       "support_30d": 1.5879597131538,
-      "resistance_30d": 2.2039320950391375,
-      "as_of": "2026-09-06 04:20:24",
+      "resistance_30d": 2.19166557571438,
+      "as_of": "2026-09-06 04:25:19",
       "stale": false
     },
     "quant-network": {
@@ -2915,7 +2915,7 @@
       "rows": [
         [
           "Price vs. recent range",
-          "Near its 30-day high (~$0.1105) - less room to run",
+          "Near its 30-day high (~$0.1103) - less room to run",
           -1
         ],
         [
@@ -2935,7 +2935,7 @@
         ],
         [
           "Stretch from long-term average",
-          "+34.2% above its long-term average - very stretched",
+          "+33.9% above its long-term average - very stretched",
           -2
         ],
         [
@@ -2948,12 +2948,12 @@
       "id": "just",
       "symbol": "JST",
       "name": "JUST",
-      "price": 0.110506,
-      "pct_24h": 2.05097,
-      "pct_7d": 13.2,
+      "price": 0.110311,
+      "pct_24h": 2.17687,
+      "pct_7d": 14.0,
       "support_30d": 0.0946830738697126,
-      "resistance_30d": 0.11050572374639457,
-      "as_of": "2026-09-06 03:50:23",
+      "resistance_30d": 0.1103113959762411,
+      "as_of": "2026-09-06 04:25:19",
       "stale": false
     },
     "algorand": {
@@ -3149,19 +3149,21 @@
       "stale": false
     }
   },
-  "_strong_buy_state": {},
+  "_strong_buy_state": {
+    "15m:WLD": true
+  },
   "BTC": {
     "key": "BTC",
     "name": "Bitcoin",
     "emoji": "\u20bf",
-    "price": 79955,
+    "price": 79913,
     "high_24h": 80147,
     "low_24h": 79459,
-    "pct_24h": 0.48057,
+    "pct_24h": 0.41822,
     "pct_7d": 2.5,
     "pct_30d": 24.4,
-    "sma50": 69397.20561566218,
-    "sma200": 69730.78624189677,
+    "sma50": 69396.51505483685,
+    "sma200": 69730.61360169043,
     "support_30d": 62843.70368466329,
     "resistance_30d": 81264.70153038795,
     "mark_price": 79760.35385307,
@@ -3176,14 +3178,14 @@
     "key": "ETH",
     "name": "Ethereum",
     "emoji": "\u039e",
-    "price": 2506.06,
+    "price": 2502.82,
     "high_24h": 2513.7,
     "low_24h": 2445.89,
-    "pct_24h": 2.19069,
+    "pct_24h": 2.05536,
     "pct_7d": 2.2,
     "pct_30d": 32.0,
-    "sma50": 2102.7674330493687,
-    "sma200": 2038.1572236696,
+    "sma50": 2102.717561133855,
+    "sma200": 2038.1447556907212,
     "support_30d": 1871.3976551883159,
     "resistance_30d": 2514.967577695514,
     "mark_price": 2479.87016279,
