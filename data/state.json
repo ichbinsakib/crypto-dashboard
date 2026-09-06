@@ -4,7 +4,7 @@
   "_alerts_state": {
     "btc-resistance-break": {
       "triggered": true,
-      "last_triggered_at": "2026-09-06 13:50:23"
+      "last_triggered_at": "2026-09-06 13:55:17"
     },
     "btc-support-break": {
       "triggered": false,
@@ -1879,7 +1879,7 @@
         ],
         [
           "Stretch from long-term average",
-          "-23.0% below its long-term average - confirmed downtrend",
+          "-22.9% below its long-term average - confirmed downtrend",
           -1
         ],
         [
@@ -1892,12 +1892,12 @@
       "id": "bitcoin-cash",
       "symbol": "BCH",
       "name": "Bitcoin Cash",
-      "price": 258.33,
-      "pct_24h": 3.16716,
+      "price": 258.77,
+      "pct_24h": 3.62669,
       "pct_7d": 5.0,
       "support_30d": 203.50169440615565,
       "resistance_30d": 288.10955405353275,
-      "as_of": "2026-09-06 13:35:32",
+      "as_of": "2026-09-06 13:55:17",
       "stale": false
     },
     "mantle": {
@@ -2003,7 +2003,7 @@
       "rows": [
         [
           "Price vs. recent range",
-          "Near its 30-day high (~$7.07) - less room to run",
+          "Near its 30-day high (~$7.05) - less room to run",
           -1
         ],
         [
@@ -2023,7 +2023,7 @@
         ],
         [
           "Stretch from long-term average",
-          "+96.2% above its long-term average - very stretched",
+          "+94.5% above its long-term average - very stretched",
           -2
         ],
         [
@@ -2036,12 +2036,12 @@
       "id": "uniswap",
       "symbol": "UNI",
       "name": "Uniswap",
-      "price": 7.06,
-      "pct_24h": 12.60323,
-      "pct_7d": 42.7,
+      "price": 7.0,
+      "pct_24h": 12.02998,
+      "pct_7d": 37.8,
       "support_30d": 3.1971416665971573,
-      "resistance_30d": 7.06622115573813,
-      "as_of": "2026-09-06 12:10:28",
+      "resistance_30d": 7.048641772873636,
+      "as_of": "2026-09-06 13:55:17",
       "stale": false
     },
     "pi-network": {
@@ -2407,7 +2407,7 @@
         ],
         [
           "Stretch from long-term average",
-          "+0.9% vs its long-term average - not stretched either way",
+          "+0.7% vs its long-term average - not stretched either way",
           0
         ],
         [
@@ -2420,12 +2420,12 @@
       "id": "shiba-inu",
       "symbol": "SHIB",
       "name": "Shiba Inu",
-      "price": 5.44e-06,
-      "pct_24h": -0.43897,
-      "pct_7d": 6.8,
+      "price": 5.43e-06,
+      "pct_24h": -0.93685,
+      "pct_7d": 6.0,
       "support_30d": 4.390093758351827e-06,
       "resistance_30d": 5.903506876405612e-06,
-      "as_of": "2026-09-06 12:50:22",
+      "as_of": "2026-09-06 13:55:17",
       "stale": false
     },
     "near": {
@@ -3149,19 +3149,21 @@
       "stale": false
     }
   },
-  "_strong_buy_state": {},
+  "_strong_buy_state": {
+    "1h:SHIB": true
+  },
   "BTC": {
     "key": "BTC",
     "name": "Bitcoin",
     "emoji": "\u20bf",
-    "price": 79818,
+    "price": 79805,
     "high_24h": 80147,
     "low_24h": 79618,
-    "pct_24h": 0.16255,
+    "pct_24h": 0.25812,
     "pct_7d": 2.3,
     "pct_30d": 23.0,
-    "sma50": 69394.38790462169,
-    "sma200": 69730.08181413665,
+    "sma50": 69394.30452121573,
+    "sma200": 69730.06096828515,
     "support_30d": 62843.70368466329,
     "resistance_30d": 81264.70153038795,
     "mark_price": 79760.35385307,
@@ -3176,14 +3178,14 @@
     "key": "ETH",
     "name": "Ethereum",
     "emoji": "\u039e",
-    "price": 2493.32,
+    "price": 2494.07,
     "high_24h": 2521.39,
     "low_24h": 2453.9,
-    "pct_24h": 1.4717,
+    "pct_24h": 1.71482,
     "pct_7d": 1.7,
     "pct_30d": 30.6,
-    "sma50": 2102.5120879670103,
-    "sma200": 2038.0933873990102,
+    "sma50": 2102.5225089644196,
+    "sma200": 2038.0959926483627,
     "support_30d": 1871.3976551883159,
     "resistance_30d": 2514.967577695514,
     "mark_price": 2479.87016279,
