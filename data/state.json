@@ -4,7 +4,7 @@
   "_alerts_state": {
     "btc-resistance-break": {
       "triggered": true,
-      "last_triggered_at": "2026-09-06 04:50:23"
+      "last_triggered_at": "2026-09-06 04:55:18"
     },
     "btc-support-break": {
       "triggered": false,
@@ -2143,7 +2143,7 @@
     "canton-network": {
       "label": "\ud83d\udfe1 HOLD / NEUTRAL",
       "status": "neutral",
-      "score": 0,
+      "score": -1,
       "rows": [
         [
           "Price vs. recent range",
@@ -2162,12 +2162,12 @@
         ],
         [
           "Recent trend",
-          "Chopping sideways - no clear trend",
-          0
+          "Trending down - avoid catching a falling knife",
+          -1
         ],
         [
           "Stretch from long-term average",
-          "-21.1% below its long-term average - confirmed downtrend",
+          "-22.2% below its long-term average - confirmed downtrend",
           -1
         ],
         [
@@ -2180,12 +2180,12 @@
       "id": "canton-network",
       "symbol": "CC",
       "name": "Canton",
-      "price": 0.110972,
-      "pct_24h": 3.62064,
-      "pct_7d": -6.4,
+      "price": 0.109393,
+      "pct_24h": 1.00351,
+      "pct_7d": -8.7,
       "support_30d": 0.09051839499501885,
       "resistance_30d": 0.12396615653575341,
-      "as_of": "2026-09-06 02:05:18",
+      "as_of": "2026-09-06 04:55:18",
       "stale": false
     },
     "internet-computer": {
@@ -2708,12 +2708,12 @@
       "id": "pax-gold",
       "symbol": "PAXG",
       "name": "PAX Gold",
-      "price": 4431.35,
-      "pct_24h": -0.03003,
+      "price": 4431.34,
+      "pct_24h": -0.03646,
       "pct_7d": -0.7,
       "support_30d": 4328.232996881714,
       "resistance_30d": 4672.307573354755,
-      "as_of": "2026-09-06 04:40:20",
+      "as_of": "2026-09-06 04:55:18",
       "stale": false
     },
     "morpho": {
@@ -3059,7 +3059,7 @@
       "rows": [
         [
           "Price vs. recent range",
-          "Near its 30-day high (~$0.1924) - less room to run",
+          "Near its 30-day high (~$0.1929) - less room to run",
           -1
         ],
         [
@@ -3079,7 +3079,7 @@
         ],
         [
           "Stretch from long-term average",
-          "+95.2% above its long-term average - very stretched",
+          "+95.9% above its long-term average - very stretched",
           -2
         ],
         [
@@ -3092,12 +3092,12 @@
       "id": "arbitrum",
       "symbol": "ARB",
       "name": "Arbitrum",
-      "price": 0.192362,
-      "pct_24h": 45.15664,
-      "pct_7d": 117.9,
+      "price": 0.193015,
+      "pct_24h": 47.69438,
+      "pct_7d": 127.3,
       "support_30d": 0.07272258489044682,
-      "resistance_30d": 0.19236244780255332,
-      "as_of": "2026-09-06 03:40:21",
+      "resistance_30d": 0.19288554593474874,
+      "as_of": "2026-09-06 04:55:18",
       "stale": false
     },
     "dash": {
@@ -3149,19 +3149,21 @@
       "stale": false
     }
   },
-  "_strong_buy_state": {},
+  "_strong_buy_state": {
+    "1h:PAXG": true
+  },
   "BTC": {
     "key": "BTC",
     "name": "Bitcoin",
     "emoji": "\u20bf",
-    "price": 79917,
+    "price": 79885,
     "high_24h": 80147,
     "low_24h": 79459,
-    "pct_24h": 0.44984,
+    "pct_24h": 0.43669,
     "pct_7d": 2.5,
     "pct_30d": 24.4,
-    "sma50": 69396.41888521396,
-    "sma200": 69730.58955928471,
+    "sma50": 69395.76395505879,
+    "sma200": 69730.42582674592,
     "support_30d": 62843.70368466329,
     "resistance_30d": 81264.70153038795,
     "mark_price": 79760.35385307,
@@ -3176,14 +3178,14 @@
     "key": "ETH",
     "name": "Ethereum",
     "emoji": "\u039e",
-    "price": 2504.48,
+    "price": 2503.07,
     "high_24h": 2513.7,
     "low_24h": 2445.89,
-    "pct_24h": 2.21204,
+    "pct_24h": 2.1537,
     "pct_7d": 2.2,
     "pct_30d": 32.0,
-    "sma50": 2102.7275911468373,
-    "sma200": 2038.1472631939669,
+    "sma50": 2102.704691210036,
+    "sma200": 2038.1415382097666,
     "support_30d": 1871.3976551883159,
     "resistance_30d": 2514.967577695514,
     "mark_price": 2479.87016279,
