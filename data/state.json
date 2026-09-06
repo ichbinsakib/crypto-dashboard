@@ -4,7 +4,7 @@
   "_alerts_state": {
     "btc-resistance-break": {
       "triggered": true,
-      "last_triggered_at": "2026-09-06 12:45:24"
+      "last_triggered_at": "2026-09-06 12:50:22"
     },
     "btc-support-break": {
       "triggered": false,
@@ -995,7 +995,7 @@
       "rows": [
         [
           "Price vs. recent range",
-          "Near its 30-day high (~$0.4154) - less room to run",
+          "Near its 30-day high (~$0.4217) - less room to run",
           -1
         ],
         [
@@ -1015,7 +1015,7 @@
         ],
         [
           "Stretch from long-term average",
-          "+13.6% above its long-term average - a bit stretched",
+          "+18.3% above its long-term average - a bit stretched",
           -1
         ],
         [
@@ -1028,12 +1028,12 @@
       "id": "worldcoin-wld",
       "symbol": "WLD",
       "name": "Worldcoin",
-      "price": 0.404817,
-      "pct_24h": 0.56599,
-      "pct_7d": 8.6,
+      "price": 0.421572,
+      "pct_24h": 4.7142,
+      "pct_7d": 12.0,
       "support_30d": 0.30546719041711023,
-      "resistance_30d": 0.4153748859818001,
-      "as_of": "2026-09-06 10:35:17",
+      "resistance_30d": 0.4216792102771141,
+      "as_of": "2026-09-06 12:50:22",
       "stale": false
     },
     "bfusd": {
@@ -2421,11 +2421,11 @@
       "symbol": "SHIB",
       "name": "Shiba Inu",
       "price": 5.44e-06,
-      "pct_24h": 0.72015,
+      "pct_24h": -0.43897,
       "pct_7d": 6.8,
       "support_30d": 4.390093758351827e-06,
       "resistance_30d": 5.903506876405612e-06,
-      "as_of": "2026-09-06 10:50:22",
+      "as_of": "2026-09-06 12:50:22",
       "stale": false
     },
     "near": {
@@ -2915,7 +2915,7 @@
       "rows": [
         [
           "Price vs. recent range",
-          "Near its 30-day high (~$0.1127) - less room to run",
+          "Near its 30-day high (~$0.1128) - less room to run",
           -1
         ],
         [
@@ -2948,12 +2948,12 @@
       "id": "just",
       "symbol": "JST",
       "name": "JUST",
-      "price": 0.112748,
-      "pct_24h": 4.02247,
+      "price": 0.112774,
+      "pct_24h": 4.02582,
       "pct_7d": 17.0,
       "support_30d": 0.0946830738697126,
-      "resistance_30d": 0.11274777116602387,
-      "as_of": "2026-09-06 12:45:24",
+      "resistance_30d": 0.112774276060706,
+      "as_of": "2026-09-06 12:50:22",
       "stale": false
     },
     "algorand": {
@@ -3149,19 +3149,21 @@
       "stale": false
     }
   },
-  "_strong_buy_state": {},
+  "_strong_buy_state": {
+    "1h:SHIB": true
+  },
   "BTC": {
     "key": "BTC",
     "name": "Bitcoin",
     "emoji": "\u20bf",
-    "price": 79956,
+    "price": 79947,
     "high_24h": 80147,
     "low_24h": 79586,
-    "pct_24h": 0.2739,
+    "pct_24h": 0.27779,
     "pct_7d": 2.3,
     "pct_30d": 23.2,
-    "sma50": 69397.31150270594,
-    "sma200": 69730.81271365771,
+    "sma50": 69396.99997015134,
+    "sma200": 69730.73483051905,
     "support_30d": 62843.70368466329,
     "resistance_30d": 81264.70153038795,
     "mark_price": 79760.35385307,
@@ -3176,14 +3178,14 @@
     "key": "ETH",
     "name": "Ethereum",
     "emoji": "\u039e",
-    "price": 2501.07,
+    "price": 2500.02,
     "high_24h": 2521.39,
     "low_24h": 2451.62,
-    "pct_24h": 1.70583,
+    "pct_24h": 1.6871,
     "pct_7d": 1.7,
     "pct_30d": 30.9,
-    "sma50": 2102.665765378813,
-    "sma200": 2038.1318067519608,
+    "sma50": 2102.6418962393423,
+    "sma200": 2038.125839467093,
     "support_30d": 1871.3976551883159,
     "resistance_30d": 2514.967577695514,
     "mark_price": 2479.87016279,
