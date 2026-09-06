@@ -4,7 +4,7 @@
   "_alerts_state": {
     "btc-resistance-break": {
       "triggered": true,
-      "last_triggered_at": "2026-09-06 14:20:25"
+      "last_triggered_at": "2026-09-06 14:23:11"
     },
     "btc-support-break": {
       "triggered": false,
@@ -995,7 +995,7 @@
       "rows": [
         [
           "Price vs. recent range",
-          "Near its 30-day high (~$0.4217) - less room to run",
+          "Near its 30-day high (~$0.4154) - less room to run",
           -1
         ],
         [
@@ -1015,7 +1015,7 @@
         ],
         [
           "Stretch from long-term average",
-          "+18.3% above its long-term average - a bit stretched",
+          "+16.6% above its long-term average - a bit stretched",
           -1
         ],
         [
@@ -1028,12 +1028,12 @@
       "id": "worldcoin-wld",
       "symbol": "WLD",
       "name": "Worldcoin",
-      "price": 0.421572,
-      "pct_24h": 4.7142,
-      "pct_7d": 12.0,
+      "price": 0.415486,
+      "pct_24h": 4.67503,
+      "pct_7d": 9.6,
       "support_30d": 0.30546719041711023,
-      "resistance_30d": 0.4216792102771141,
-      "as_of": "2026-09-06 12:50:22",
+      "resistance_30d": 0.4153748859818001,
+      "as_of": "2026-09-06 14:23:11",
       "stale": false
     },
     "bfusd": {
@@ -2143,7 +2143,7 @@
     "canton-network": {
       "label": "\ud83d\udfe1 HOLD / NEUTRAL",
       "status": "neutral",
-      "score": 0,
+      "score": -1,
       "rows": [
         [
           "Price vs. recent range",
@@ -2162,12 +2162,12 @@
         ],
         [
           "Recent trend",
-          "Chopping sideways - no clear trend",
-          0
+          "Trending down - avoid catching a falling knife",
+          -1
         ],
         [
           "Stretch from long-term average",
-          "-21.7% below its long-term average - confirmed downtrend",
+          "-22.0% below its long-term average - confirmed downtrend",
           -1
         ],
         [
@@ -2180,12 +2180,12 @@
       "id": "canton-network",
       "symbol": "CC",
       "name": "Canton",
-      "price": 0.1101,
-      "pct_24h": 0.33912,
-      "pct_7d": -7.0,
+      "price": 0.109714,
+      "pct_24h": 0.48665,
+      "pct_7d": -8.2,
       "support_30d": 0.09051839499501885,
       "resistance_30d": 0.12396615653575341,
-      "as_of": "2026-09-06 13:05:22",
+      "as_of": "2026-09-06 14:23:11",
       "stale": false
     },
     "internet-computer": {
@@ -2612,12 +2612,12 @@
       "id": "bitway",
       "symbol": "BTW",
       "name": "Bitway",
-      "price": 0.450416,
-      "pct_24h": 3.24847,
-      "pct_7d": 12.3,
+      "price": 0.44982,
+      "pct_24h": 0.23101,
+      "pct_7d": 12.2,
       "support_30d": 0.19617645794772356,
       "resistance_30d": 0.48788437226017506,
-      "as_of": "2026-09-06 12:20:25",
+      "as_of": "2026-09-06 14:23:11",
       "stale": false
     },
     "world-liberty-financial": {
@@ -3198,20 +3198,20 @@
     }
   },
   "_strong_buy_state": {
-    "1h:WLFI": true
+    "15m:ZEC": true
   },
   "BTC": {
     "key": "BTC",
     "name": "Bitcoin",
     "emoji": "\u20bf",
-    "price": 79703,
+    "price": 79647,
     "high_24h": 80147,
     "low_24h": 79627,
-    "pct_24h": 0.03894,
+    "pct_24h": -0.04496,
     "pct_7d": 1.3,
     "pct_30d": 22.3,
-    "sma50": 69392.22954116933,
-    "sma200": 69729.54222327356,
+    "sma50": 69390.95854318787,
+    "sma200": 69729.22447377819,
     "support_30d": 62843.70368466329,
     "resistance_30d": 81264.70153038795,
     "mark_price": 79760.35385307,
@@ -3226,14 +3226,14 @@
     "key": "ETH",
     "name": "Ethereum",
     "emoji": "\u039e",
-    "price": 2485.15,
+    "price": 2480.94,
     "high_24h": 2521.39,
     "low_24h": 2456.23,
-    "pct_24h": 1.22733,
+    "pct_24h": 1.05305,
     "pct_7d": 1.0,
     "pct_30d": 29.2,
-    "sma50": 2102.3432222750484,
-    "sma200": 2038.0511709760196,
+    "sma50": 2102.262351425201,
+    "sma200": 2038.0309532635576,
     "support_30d": 1871.3976551883159,
     "resistance_30d": 2514.967577695514,
     "mark_price": 2479.87016279,
