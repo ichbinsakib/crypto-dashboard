@@ -4,7 +4,7 @@
   "_alerts_state": {
     "btc-resistance-break": {
       "triggered": true,
-      "last_triggered_at": "2026-09-06 18:30:28"
+      "last_triggered_at": "2026-09-06 18:35:19"
     },
     "btc-support-break": {
       "triggered": false,
@@ -117,11 +117,11 @@
       "symbol": "XRP",
       "name": "XRP",
       "price": 1.41,
-      "pct_24h": -0.72084,
+      "pct_24h": -0.43256,
       "pct_7d": -0.9,
       "support_30d": 0.9927072784932938,
       "resistance_30d": 1.52050482788377,
-      "as_of": "2026-09-06 18:20:23",
+      "as_of": "2026-09-06 18:35:19",
       "stale": false
     },
     "solana": {
@@ -1999,11 +1999,11 @@
     "uniswap": {
       "label": "\ud83d\udd34 DISTRIBUTION ZONE",
       "status": "bearish",
-      "score": -8,
+      "score": -5,
       "rows": [
         [
           "Price vs. recent range",
-          "Near its 30-day high (~$7.21) - less room to run",
+          "Near its 30-day high (~$7.20) - less room to run",
           -1
         ],
         [
@@ -2018,8 +2018,8 @@
         ],
         [
           "Recent trend",
-          "Shooting straight up - classic blow-off top risk, don't chase",
-          -2
+          "Trending up steadily - healthy",
+          1
         ],
         [
           "Stretch from long-term average",
@@ -2037,11 +2037,11 @@
       "symbol": "UNI",
       "name": "Uniswap",
       "price": 7.21,
-      "pct_24h": 8.0863,
-      "pct_7d": 40.1,
+      "pct_24h": 3.21089,
+      "pct_7d": 33.4,
       "support_30d": 3.1971416665971573,
-      "resistance_30d": 7.2132430971483865,
-      "as_of": "2026-09-06 17:05:19",
+      "resistance_30d": 7.198314249400816,
+      "as_of": "2026-09-06 18:35:19",
       "stale": false
     },
     "pi-network": {
@@ -2805,11 +2805,11 @@
       "symbol": "M",
       "name": "MemeCore",
       "price": 1.12,
-      "pct_24h": -0.21597,
-      "pct_7d": 2.9,
+      "pct_24h": 0.19508,
+      "pct_7d": 2.6,
       "support_30d": 1.0402044506518406,
       "resistance_30d": 1.2453913363052769,
-      "as_of": "2026-09-06 16:10:22",
+      "as_of": "2026-09-06 18:35:19",
       "stale": false
     },
     "aave": {
@@ -3197,19 +3197,21 @@
       "stale": false
     }
   },
-  "_strong_buy_state": {},
+  "_strong_buy_state": {
+    "1h:AAVE": true
+  },
   "BTC": {
     "key": "BTC",
     "name": "Bitcoin",
     "emoji": "\u20bf",
-    "price": 79871,
+    "price": 79927,
     "high_24h": 80103,
     "low_24h": 79426,
-    "pct_24h": -0.12127,
+    "pct_24h": -0.05198,
     "pct_7d": 0.5,
     "pct_30d": 23.1,
-    "sma50": 69395.49561460328,
-    "sma200": 69730.35874163204,
+    "sma50": 69396.62103024159,
+    "sma200": 69730.64009554162,
     "support_30d": 62843.70368466329,
     "resistance_30d": 81264.70153038795,
     "mark_price": 79760.35385307,
@@ -3224,14 +3226,14 @@
     "key": "ETH",
     "name": "Ethereum",
     "emoji": "\u039e",
-    "price": 2494.43,
+    "price": 2497.77,
     "high_24h": 2521.39,
     "low_24h": 2473.01,
-    "pct_24h": 0.68953,
+    "pct_24h": 0.80261,
     "pct_7d": -1.4,
     "pct_30d": 30.6,
-    "sma50": 2102.529403395957,
-    "sma200": 2038.0977162562467,
+    "sma50": 2102.5831153698564,
+    "sma200": 2038.1111442497217,
     "support_30d": 1871.3976551883159,
     "resistance_30d": 2514.967577695514,
     "mark_price": 2479.87016279,
