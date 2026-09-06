@@ -4,7 +4,7 @@
   "_alerts_state": {
     "btc-resistance-break": {
       "triggered": true,
-      "last_triggered_at": "2026-09-06 07:15:25"
+      "last_triggered_at": "2026-09-06 07:17:51"
     },
     "btc-support-break": {
       "triggered": false,
@@ -295,7 +295,7 @@
         ],
         [
           "Stretch from long-term average",
-          "+61.6% above its long-term average - very stretched",
+          "+62.6% above its long-term average - very stretched",
           -2
         ],
         [
@@ -308,12 +308,12 @@
       "id": "hyperliquid",
       "symbol": "HYPE",
       "name": "Hyperliquid",
-      "price": 85.26,
-      "pct_24h": 1.27775,
-      "pct_7d": 2.6,
+      "price": 86.22,
+      "pct_24h": 2.09477,
+      "pct_7d": 3.8,
       "support_30d": 53.854096460729586,
       "resistance_30d": 87.4499182124614,
-      "as_of": "2026-09-05 23:15:21",
+      "as_of": "2026-09-06 07:17:51",
       "stale": false
     },
     "dogecoin": {
@@ -535,7 +535,7 @@
         ],
         [
           "Stretch from long-term average",
-          "+32.6% above its long-term average - very stretched",
+          "+32.3% above its long-term average - very stretched",
           -2
         ],
         [
@@ -548,12 +548,12 @@
       "id": "whitebit",
       "symbol": "WBT",
       "name": "WhiteBIT Coin",
-      "price": 73.71,
-      "pct_24h": 0.77656,
-      "pct_7d": 2.2,
+      "price": 73.52,
+      "pct_24h": 0.4356,
+      "pct_7d": 2.3,
       "support_30d": 54.452558710928955,
       "resistance_30d": 74.07423223861623,
-      "as_of": "2026-09-06 02:25:19",
+      "as_of": "2026-09-06 07:17:51",
       "stale": false
     },
     "leo-token": {
@@ -2335,7 +2335,7 @@
     "sky": {
       "label": "\ud83d\udfe1 HOLD / NEUTRAL",
       "status": "neutral",
-      "score": -1,
+      "score": 0,
       "rows": [
         [
           "Price vs. recent range",
@@ -2349,8 +2349,8 @@
         ],
         [
           "Market phase (best guess)",
-          "Established uptrend - phase where price marks up",
-          1
+          "Basing near the bottom - phase where smart money accumulates",
+          2
         ],
         [
           "Recent trend",
@@ -2359,7 +2359,7 @@
         ],
         [
           "Stretch from long-term average",
-          "+6.4% vs its long-term average - not stretched either way",
+          "+4.6% vs its long-term average - not stretched either way",
           0
         ],
         [
@@ -2372,12 +2372,12 @@
       "id": "sky",
       "symbol": "SKY",
       "name": "Sky",
-      "price": 0.071086,
-      "pct_24h": 5.97791,
-      "pct_7d": 4.1,
+      "price": 0.069915,
+      "pct_24h": 3.47144,
+      "pct_7d": 2.3,
       "support_30d": 0.05081051579814886,
       "resistance_30d": 0.07314868186988309,
-      "as_of": "2026-09-06 05:25:25",
+      "as_of": "2026-09-06 07:17:51",
       "stale": false
     },
     "shiba-inu": {
@@ -2479,7 +2479,7 @@
     "quant-network": {
       "label": "\ud83d\udfe1 HOLD / NEUTRAL",
       "status": "neutral",
-      "score": 1,
+      "score": 0,
       "rows": [
         [
           "Price vs. recent range",
@@ -2498,12 +2498,12 @@
         ],
         [
           "Recent trend",
-          "Trending up steadily - healthy",
-          1
+          "Chopping sideways - no clear trend",
+          0
         ],
         [
           "Stretch from long-term average",
-          "-3.0% vs its long-term average - not stretched either way",
+          "-3.8% vs its long-term average - not stretched either way",
           0
         ],
         [
@@ -2516,12 +2516,12 @@
       "id": "quant-network",
       "symbol": "QNT",
       "name": "Quant",
-      "price": 66.5,
-      "pct_24h": 4.179,
-      "pct_7d": 8.8,
+      "price": 65.93,
+      "pct_24h": 2.86354,
+      "pct_7d": 7.7,
       "support_30d": 55.905981995619285,
       "resistance_30d": 66.68821517512447,
-      "as_of": "2026-09-06 06:30:29",
+      "as_of": "2026-09-06 07:17:51",
       "stale": false
     },
     "tether-gold": {
@@ -2647,7 +2647,7 @@
         ],
         [
           "Stretch from long-term average",
-          "-21.1% below its long-term average - confirmed downtrend",
+          "-21.0% below its long-term average - confirmed downtrend",
           -1
         ],
         [
@@ -2660,12 +2660,12 @@
       "id": "world-liberty-financial",
       "symbol": "WLFI",
       "name": "World Liberty Financial",
-      "price": 0.056542,
-      "pct_24h": -0.44667,
+      "price": 0.056611,
+      "pct_24h": -0.23286,
       "pct_7d": -1.2,
       "support_30d": 0.051301304477199876,
       "resistance_30d": 0.06254770952093733,
-      "as_of": "2026-09-06 07:15:25",
+      "as_of": "2026-09-06 07:17:51",
       "stale": false
     },
     "pax-gold": {
@@ -3149,19 +3149,21 @@
       "stale": false
     }
   },
-  "_strong_buy_state": {},
+  "_strong_buy_state": {
+    "15m:SKY": true
+  },
   "BTC": {
     "key": "BTC",
     "name": "Bitcoin",
     "emoji": "\u20bf",
-    "price": 79665,
+    "price": 79716,
     "high_24h": 80147,
     "low_24h": 79572,
-    "pct_24h": -0.03799,
+    "pct_24h": 0.02964,
     "pct_7d": 2.1,
     "pct_30d": 24.1,
-    "sma50": 69391.87906952115,
-    "sma200": 69729.4546053615,
+    "sma50": 69392.62222059179,
+    "sma200": 69729.64039312917,
     "support_30d": 62843.70368466329,
     "resistance_30d": 81264.70153038795,
     "mark_price": 79760.35385307,
@@ -3176,14 +3178,14 @@
     "key": "ETH",
     "name": "Ethereum",
     "emoji": "\u039e",
-    "price": 2493.83,
+    "price": 2493.22,
     "high_24h": 2521.39,
     "low_24h": 2451.62,
-    "pct_24h": 1.59612,
+    "pct_24h": 1.57984,
     "pct_7d": 2.1,
     "pct_30d": 31.9,
-    "sma50": 2102.5145245892777,
-    "sma200": 2038.093996554577,
+    "sma50": 2102.502492011282,
+    "sma200": 2038.090988410078,
     "support_30d": 1871.3976551883159,
     "resistance_30d": 2514.967577695514,
     "mark_price": 2479.87016279,
