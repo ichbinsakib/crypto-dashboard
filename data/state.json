@@ -4,7 +4,7 @@
   "_alerts_state": {
     "btc-resistance-break": {
       "triggered": true,
-      "last_triggered_at": "2026-09-06 22:40:21"
+      "last_triggered_at": "2026-09-06 22:45:20"
     },
     "btc-support-break": {
       "triggered": false,
@@ -1317,11 +1317,11 @@
       "symbol": "HTX",
       "name": "HTX DAO",
       "price": 1.68e-06,
-      "pct_24h": 0.11718,
-      "pct_7d": -0.3,
+      "pct_24h": -0.04236,
+      "pct_7d": 0.0,
       "support_30d": 1.6023985995039954e-06,
       "resistance_30d": 1.8259977214551937e-06,
-      "as_of": "2026-09-06 20:50:24",
+      "as_of": "2026-09-06 22:45:20",
       "stale": false
     },
     "superstate-short-duration-us-government-securities-fund-ustb": {
@@ -1447,7 +1447,7 @@
         ],
         [
           "Stretch from long-term average",
-          "-13.0% vs its long-term average - not stretched either way",
+          "-13.4% vs its long-term average - not stretched either way",
           0
         ],
         [
@@ -1460,12 +1460,12 @@
       "id": "crypto-com-chain",
       "symbol": "CRO",
       "name": "Cronos",
-      "price": 0.057694,
-      "pct_24h": 1.80713,
-      "pct_7d": -3.1,
+      "price": 0.057427,
+      "pct_24h": 1.28708,
+      "pct_7d": -2.6,
       "support_30d": 0.04621382085807831,
       "resistance_30d": 0.06091104752771909,
-      "as_of": "2026-09-06 21:50:23",
+      "as_of": "2026-09-06 22:45:20",
       "stale": false
     },
     "ethereum-classic": {
@@ -1709,9 +1709,9 @@
       "stale": false
     },
     "sui": {
-      "label": "\ud83d\udfe1 HOLD / NEUTRAL",
-      "status": "neutral",
-      "score": 1,
+      "label": "\ud83d\udfe2 LEAN ACCUMULATE",
+      "status": "bullish",
+      "score": 2,
       "rows": [
         [
           "Price vs. recent range",
@@ -1730,12 +1730,12 @@
         ],
         [
           "Recent trend",
-          "Chopping sideways - no clear trend",
-          0
+          "Trending up steadily - healthy",
+          1
         ],
         [
           "Stretch from long-term average",
-          "-7.0% vs its long-term average - not stretched either way",
+          "-5.8% vs its long-term average - not stretched either way",
           0
         ],
         [
@@ -1744,16 +1744,16 @@
           0
         ]
       ],
-      "plain": "No real edge either way right now - fine to just wait and watch.",
+      "plain": "Leans toward a decent spot to slowly add (DCA) - not a strong signal, just a lean.",
       "id": "sui",
       "symbol": "SUI",
       "name": "Sui",
-      "price": 0.795809,
-      "pct_24h": -1.44808,
-      "pct_7d": 4.8,
+      "price": 0.806484,
+      "pct_24h": 1.09375,
+      "pct_7d": 9.0,
       "support_30d": 0.6514311908607086,
       "resistance_30d": 0.8499161763231283,
-      "as_of": "2026-09-06 19:40:22",
+      "as_of": "2026-09-06 22:45:20",
       "stale": false
     },
     "lighter": {
@@ -3202,14 +3202,14 @@
     "key": "BTC",
     "name": "Bitcoin",
     "emoji": "\u20bf",
-    "price": 79981,
+    "price": 79944,
     "high_24h": 80103,
     "low_24h": 79426,
-    "pct_24h": 0.21362,
+    "pct_24h": 0.22347,
     "pct_7d": 1.7,
     "pct_30d": 23.1,
-    "sma50": 69397.63730154592,
-    "sma200": 69730.8941633677,
+    "sma50": 69396.81088043505,
+    "sma200": 69730.68755808998,
     "support_30d": 62843.70368466329,
     "resistance_30d": 81264.70153038795,
     "mark_price": 79760.35385307,
@@ -3224,14 +3224,14 @@
     "key": "ETH",
     "name": "Ethereum",
     "emoji": "\u039e",
-    "price": 2506.07,
+    "price": 2505.27,
     "high_24h": 2521.39,
     "low_24h": 2473.01,
-    "pct_24h": 0.93975,
+    "pct_24h": 0.9683,
     "pct_7d": 0.7,
     "pct_30d": 31.0,
-    "sma50": 2102.7500024695332,
-    "sma200": 2038.152866024641,
+    "sma50": 2102.7609004440314,
+    "sma200": 2038.1555905182654,
     "support_30d": 1871.3976551883159,
     "resistance_30d": 2514.967577695514,
     "mark_price": 2479.87016279,
