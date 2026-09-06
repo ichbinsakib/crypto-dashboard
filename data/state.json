@@ -4,7 +4,7 @@
   "_alerts_state": {
     "btc-resistance-break": {
       "triggered": true,
-      "last_triggered_at": "2026-09-06 14:15:22"
+      "last_triggered_at": "2026-09-06 14:20:25"
     },
     "btc-support-break": {
       "triggered": false,
@@ -29,9 +29,9 @@
   },
   "_screener": {
     "binancecoin": {
-      "label": "\ud83d\udfe1 HOLD / NEUTRAL",
-      "status": "neutral",
-      "score": -1,
+      "label": "\ud83d\udd34 CAUTION - REDUCE NEW BUYS",
+      "status": "bearish",
+      "score": -2,
       "rows": [
         [
           "Price vs. recent range",
@@ -50,12 +50,12 @@
         ],
         [
           "Recent trend",
-          "Trending up steadily - healthy",
-          1
+          "Chopping sideways - no clear trend",
+          0
         ],
         [
           "Stretch from long-term average",
-          "+21.1% above its long-term average - a bit stretched",
+          "+20.4% above its long-term average - a bit stretched",
           -1
         ],
         [
@@ -64,16 +64,16 @@
           0
         ]
       ],
-      "plain": "No real edge either way right now - fine to just wait and watch.",
+      "plain": "Getting risky - I'd hold off on new buys until this cools down.",
       "id": "binancecoin",
       "symbol": "BNB",
       "name": "BNB",
-      "price": 751.91,
-      "pct_24h": -1.48381,
-      "pct_7d": 9.1,
+      "price": 747.74,
+      "pct_24h": -1.89205,
+      "pct_7d": 7.8,
       "support_30d": 598.6196895758089,
       "resistance_30d": 766.4092879330625,
-      "as_of": "2026-09-06 13:50:23",
+      "as_of": "2026-09-06 14:20:25",
       "stale": false
     },
     "ripple": {
@@ -1399,7 +1399,7 @@
         ],
         [
           "Stretch from long-term average",
-          "+32.0% above its long-term average - very stretched",
+          "+31.8% above its long-term average - very stretched",
           -2
         ],
         [
@@ -1412,12 +1412,12 @@
       "id": "gatechain-token",
       "symbol": "GT",
       "name": "Gate",
-      "price": 9.18,
-      "pct_24h": 1.71035,
-      "pct_7d": 13.3,
+      "price": 9.17,
+      "pct_24h": 1.73884,
+      "pct_7d": 13.5,
       "support_30d": 6.673649191532821,
       "resistance_30d": 9.251357349416063,
-      "as_of": "2026-09-06 13:40:22",
+      "as_of": "2026-09-06 14:20:25",
       "stale": false
     },
     "crypto-com-chain": {
@@ -2647,7 +2647,7 @@
         ],
         [
           "Stretch from long-term average",
-          "-20.7% below its long-term average - confirmed downtrend",
+          "-21.0% below its long-term average - confirmed downtrend",
           -1
         ],
         [
@@ -2660,12 +2660,12 @@
       "id": "world-liberty-financial",
       "symbol": "WLFI",
       "name": "World Liberty Financial",
-      "price": 0.05685,
-      "pct_24h": 0.72397,
-      "pct_7d": -0.9,
+      "price": 0.056673,
+      "pct_24h": -0.53654,
+      "pct_7d": -2.8,
       "support_30d": 0.051301304477199876,
       "resistance_30d": 0.06254770952093733,
-      "as_of": "2026-09-06 12:30:27",
+      "as_of": "2026-09-06 14:20:25",
       "stale": false
     },
     "pax-gold": {
@@ -3198,21 +3198,20 @@
     }
   },
   "_strong_buy_state": {
-    "15m:ADA": true,
-    "1h:ADA": true
+    "1h:WLFI": true
   },
   "BTC": {
     "key": "BTC",
     "name": "Bitcoin",
     "emoji": "\u20bf",
-    "price": 79747,
+    "price": 79703,
     "high_24h": 80147,
     "low_24h": 79627,
-    "pct_24h": 0.09222,
+    "pct_24h": 0.03894,
     "pct_7d": 1.3,
     "pct_30d": 22.3,
-    "sma50": 69393.00175434565,
-    "sma200": 69729.73527656763,
+    "sma50": 69392.22954116933,
+    "sma200": 69729.54222327356,
     "support_30d": 62843.70368466329,
     "resistance_30d": 81264.70153038795,
     "mark_price": 79760.35385307,
@@ -3227,14 +3226,14 @@
     "key": "ETH",
     "name": "Ethereum",
     "emoji": "\u039e",
-    "price": 2488.5,
+    "price": 2485.15,
     "high_24h": 2521.39,
     "low_24h": 2456.23,
-    "pct_24h": 1.35909,
+    "pct_24h": 1.22733,
     "pct_7d": 1.0,
     "pct_30d": 29.2,
-    "sma50": 2102.4081906384286,
-    "sma200": 2038.067413066865,
+    "sma50": 2102.3432222750484,
+    "sma200": 2038.0511709760196,
     "support_30d": 1871.3976551883159,
     "resistance_30d": 2514.967577695514,
     "mark_price": 2479.87016279,
