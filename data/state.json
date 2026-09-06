@@ -4,7 +4,7 @@
   "_alerts_state": {
     "btc-resistance-break": {
       "triggered": true,
-      "last_triggered_at": "2026-09-06 02:40:58"
+      "last_triggered_at": "2026-09-06 02:45:20"
     },
     "btc-support-break": {
       "triggered": false,
@@ -212,12 +212,12 @@
       "id": "tron",
       "symbol": "TRX",
       "name": "TRON",
-      "price": 0.333613,
-      "pct_24h": 0.51408,
+      "price": 0.33348,
+      "pct_24h": 0.49362,
       "pct_7d": -1.8,
       "support_30d": 0.32221537516581966,
       "resistance_30d": 0.3447899585776834,
-      "as_of": "2026-09-06 02:30:27",
+      "as_of": "2026-09-06 02:45:20",
       "stale": false
     },
     "figure-heloc": {
@@ -367,11 +367,11 @@
     "zcash": {
       "label": "\ud83d\udd34 DISTRIBUTION ZONE",
       "status": "bearish",
-      "score": -8,
+      "score": -5,
       "rows": [
         [
           "Price vs. recent range",
-          "Near its 30-day high (~$1,065.22) - less room to run",
+          "Near its 30-day high (~$1,063.55) - less room to run",
           -1
         ],
         [
@@ -386,12 +386,12 @@
         ],
         [
           "Recent trend",
-          "Shooting straight up - classic blow-off top risk, don't chase",
-          -2
+          "Trending up steadily - healthy",
+          1
         ],
         [
           "Stretch from long-term average",
-          "+137.8% above its long-term average - very stretched",
+          "+137.1% above its long-term average - very stretched",
           -2
         ],
         [
@@ -404,12 +404,12 @@
       "id": "zcash",
       "symbol": "ZEC",
       "name": "Zcash",
-      "price": 1067.42,
-      "pct_24h": 5.14051,
+      "price": 1064.06,
+      "pct_24h": 3.57612,
       "pct_7d": 27.0,
       "support_30d": 480.66499804092575,
-      "resistance_30d": 1065.2191664462323,
-      "as_of": "2026-09-06 02:15:21",
+      "resistance_30d": 1063.5489850423442,
+      "as_of": "2026-09-06 02:45:20",
       "stale": false
     },
     "rain": {
@@ -1735,7 +1735,7 @@
         ],
         [
           "Stretch from long-term average",
-          "-6.0% vs its long-term average - not stretched either way",
+          "-7.0% vs its long-term average - not stretched either way",
           0
         ],
         [
@@ -1748,12 +1748,12 @@
       "id": "sui",
       "symbol": "SUI",
       "name": "Sui",
-      "price": 0.805036,
-      "pct_24h": 5.62282,
+      "price": 0.796289,
+      "pct_24h": 3.90108,
       "pct_7d": 7.9,
       "support_30d": 0.6514311908607086,
       "resistance_30d": 0.8499161763231283,
-      "as_of": "2026-09-06 02:05:18",
+      "as_of": "2026-09-06 02:45:20",
       "stale": false
     },
     "lighter": {
@@ -3149,19 +3149,21 @@
       "stale": false
     }
   },
-  "_strong_buy_state": {},
+  "_strong_buy_state": {
+    "15m:TRX": true
+  },
   "BTC": {
     "key": "BTC",
     "name": "Bitcoin",
     "emoji": "\u20bf",
-    "price": 79914,
+    "price": 79891,
     "high_24h": 80147,
     "low_24h": 79459,
-    "pct_24h": 0.39641,
+    "pct_24h": 0.33484,
     "pct_7d": 2.3,
     "pct_30d": 24.4,
-    "sma50": 69396.34326788715,
-    "sma200": 69730.57065495302,
+    "sma50": 69395.84765561848,
+    "sma200": 69730.44675188583,
     "support_30d": 62843.70368466329,
     "resistance_30d": 81264.70153038795,
     "mark_price": 79760.35385307,
@@ -3176,14 +3178,14 @@
     "key": "ETH",
     "name": "Ethereum",
     "emoji": "\u039e",
-    "price": 2503.04,
+    "price": 2502.44,
     "high_24h": 2508.34,
     "low_24h": 2445.89,
-    "pct_24h": 2.04989,
+    "pct_24h": 2.00832,
     "pct_7d": 1.9,
     "pct_30d": 31.7,
-    "sma50": 2102.699760626322,
-    "sma200": 2038.140305563838,
+    "sma50": 2102.6803298493833,
+    "sma200": 2038.1354478696035,
     "support_30d": 1871.3976551883159,
     "resistance_30d": 2514.967577695514,
     "mark_price": 2479.87016279,
