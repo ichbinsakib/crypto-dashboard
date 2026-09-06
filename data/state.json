@@ -4,7 +4,7 @@
   "_alerts_state": {
     "btc-resistance-break": {
       "triggered": true,
-      "last_triggered_at": "2026-09-06 06:35:18"
+      "last_triggered_at": "2026-09-06 06:40:21"
     },
     "btc-support-break": {
       "triggered": false,
@@ -1639,7 +1639,7 @@
         ],
         [
           "Stretch from long-term average",
-          "+8.4% vs its long-term average - not stretched either way",
+          "+7.4% vs its long-term average - not stretched either way",
           0
         ],
         [
@@ -1652,12 +1652,12 @@
       "id": "litecoin",
       "symbol": "LTC",
       "name": "Litecoin",
-      "price": 54.66,
-      "pct_24h": 7.34931,
-      "pct_7d": 11.7,
+      "price": 54.15,
+      "pct_24h": 0.79972,
+      "pct_7d": 11.2,
       "support_30d": 43.806923130603906,
       "resistance_30d": 54.68767041943571,
-      "as_of": "2026-09-06 00:20:21",
+      "as_of": "2026-09-06 06:40:21",
       "stale": false
     },
     "bitget-token": {
@@ -2263,7 +2263,7 @@
         ],
         [
           "Stretch from long-term average",
-          "+0.1% vs its long-term average - not stretched either way",
+          "-0.4% vs its long-term average - not stretched either way",
           0
         ],
         [
@@ -2276,12 +2276,12 @@
       "id": "bittensor",
       "symbol": "TAO",
       "name": "Bittensor",
-      "price": 237.44,
-      "pct_24h": 4.92938,
-      "pct_7d": 1.0,
+      "price": 236.33,
+      "pct_24h": 2.8042,
+      "pct_7d": 1.3,
       "support_30d": 190.67093053611111,
       "resistance_30d": 254.06815196002663,
-      "as_of": "2026-09-06 05:10:22",
+      "as_of": "2026-09-06 06:40:21",
       "stale": false
     },
     "the-open-network": {
@@ -2435,7 +2435,7 @@
       "rows": [
         [
           "Price vs. recent range",
-          "Near its 30-day high (~$2.23) - less room to run",
+          "Near its 30-day high (~$2.22) - less room to run",
           -1
         ],
         [
@@ -2455,7 +2455,7 @@
         ],
         [
           "Stretch from long-term average",
-          "+33.2% above its long-term average - very stretched",
+          "+32.7% above its long-term average - very stretched",
           -2
         ],
         [
@@ -2468,12 +2468,12 @@
       "id": "near",
       "symbol": "NEAR",
       "name": "NEAR Protocol",
-      "price": 2.23,
-      "pct_24h": 1.1801,
-      "pct_7d": 18.5,
+      "price": 2.22,
+      "pct_24h": -2.35683,
+      "pct_7d": 17.9,
       "support_30d": 1.5879597131538,
-      "resistance_30d": 2.2283891912158547,
-      "as_of": "2026-09-06 05:45:21",
+      "resistance_30d": 2.2215841867635007,
+      "as_of": "2026-09-06 06:40:21",
       "stale": false
     },
     "quant-network": {
@@ -3149,19 +3149,21 @@
       "stale": false
     }
   },
-  "_strong_buy_state": {},
+  "_strong_buy_state": {
+    "15m:TAO": true
+  },
   "BTC": {
     "key": "BTC",
     "name": "Bitcoin",
     "emoji": "\u20bf",
-    "price": 79837,
+    "price": 79821,
     "high_24h": 80147,
     "low_24h": 79572,
-    "pct_24h": 0.2465,
+    "pct_24h": 0.14363,
     "pct_7d": 2.4,
     "pct_30d": 24.5,
-    "sma50": 69394.78201614771,
-    "sma200": 69730.18034201815,
+    "sma50": 69394.50308766057,
+    "sma200": 69730.11060989636,
     "support_30d": 62843.70368466329,
     "resistance_30d": 81264.70153038795,
     "mark_price": 79760.35385307,
@@ -3176,14 +3178,14 @@
     "key": "ETH",
     "name": "Ethereum",
     "emoji": "\u039e",
-    "price": 2507.06,
+    "price": 2507.45,
     "high_24h": 2521.39,
     "low_24h": 2451.62,
-    "pct_24h": 2.21836,
+    "pct_24h": 2.1508,
     "pct_7d": 2.3,
     "pct_30d": 32.5,
-    "sma50": 2102.7714266210837,
-    "sma200": 2038.1582220625287,
+    "sma50": 2102.783364678431,
+    "sma200": 2038.1612065768654,
     "support_30d": 1871.3976551883159,
     "resistance_30d": 2514.967577695514,
     "mark_price": 2479.87016279,
