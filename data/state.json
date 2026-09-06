@@ -4,7 +4,7 @@
   "_alerts_state": {
     "btc-resistance-break": {
       "triggered": true,
-      "last_triggered_at": "2026-09-06 06:25:19"
+      "last_triggered_at": "2026-09-06 06:30:29"
     },
     "btc-support-break": {
       "triggered": false,
@@ -727,7 +727,7 @@
         ],
         [
           "Stretch from long-term average",
-          "+6.6% vs its long-term average - not stretched either way",
+          "+6.7% vs its long-term average - not stretched either way",
           0
         ],
         [
@@ -740,12 +740,12 @@
       "id": "stellar",
       "symbol": "XLM",
       "name": "Stellar",
-      "price": 0.18616,
-      "pct_24h": 2.97476,
-      "pct_7d": 3.5,
+      "price": 0.186382,
+      "pct_24h": 2.41961,
+      "pct_7d": 4.4,
       "support_30d": 0.15472912151335613,
       "resistance_30d": 0.20181319711037435,
-      "as_of": "2026-09-06 05:05:19",
+      "as_of": "2026-09-06 06:30:29",
       "stale": false
     },
     "kucoin-shares": {
@@ -2479,11 +2479,11 @@
     "quant-network": {
       "label": "\ud83d\udfe1 HOLD / NEUTRAL",
       "status": "neutral",
-      "score": 0,
+      "score": 1,
       "rows": [
         [
           "Price vs. recent range",
-          "Near its 30-day high (~$66.90) - less room to run",
+          "Near its 30-day high (~$66.69) - less room to run",
           -1
         ],
         [
@@ -2498,12 +2498,12 @@
         ],
         [
           "Recent trend",
-          "Chopping sideways - no clear trend",
-          0
+          "Trending up steadily - healthy",
+          1
         ],
         [
           "Stretch from long-term average",
-          "-2.4% vs its long-term average - not stretched either way",
+          "-3.0% vs its long-term average - not stretched either way",
           0
         ],
         [
@@ -2516,12 +2516,12 @@
       "id": "quant-network",
       "symbol": "QNT",
       "name": "Quant",
-      "price": 66.9,
-      "pct_24h": 5.20087,
-      "pct_7d": 6.0,
+      "price": 66.5,
+      "pct_24h": 4.179,
+      "pct_7d": 8.8,
       "support_30d": 55.905981995619285,
-      "resistance_30d": 66.901370154494,
-      "as_of": "2026-09-06 05:30:26",
+      "resistance_30d": 66.68821517512447,
+      "as_of": "2026-09-06 06:30:29",
       "stale": false
     },
     "tether-gold": {
@@ -2813,9 +2813,9 @@
       "stale": false
     },
     "aave": {
-      "label": "\ud83d\udd34 DISTRIBUTION ZONE",
+      "label": "\ud83d\udd34 CAUTION - REDUCE NEW BUYS",
       "status": "bearish",
-      "score": -5,
+      "score": -2,
       "rows": [
         [
           "Price vs. recent range",
@@ -2829,8 +2829,8 @@
         ],
         [
           "Market phase (best guess)",
-          "Very extended after a big run - phase where smart money sells",
-          -2
+          "Established uptrend - phase where price marks up",
+          1
         ],
         [
           "Recent trend",
@@ -2839,7 +2839,7 @@
         ],
         [
           "Stretch from long-term average",
-          "+40.3% above its long-term average - very stretched",
+          "+39.2% above its long-term average - very stretched",
           -2
         ],
         [
@@ -2848,16 +2848,16 @@
           0
         ]
       ],
-      "plain": "Looks stretched and euphoric - historically the zone where smart money sells, not buys.",
+      "plain": "Getting risky - I'd hold off on new buys until this cools down.",
       "id": "aave",
       "symbol": "AAVE",
       "name": "Aave",
-      "price": 136.71,
-      "pct_24h": 5.72525,
+      "price": 135.7,
+      "pct_24h": 4.83137,
       "pct_7d": 8.8,
       "support_30d": 85.94219943917633,
       "resistance_30d": 141.53047916466082,
-      "as_of": "2026-09-06 06:20:26",
+      "as_of": "2026-09-06 06:30:29",
       "stale": false
     },
     "okb": {
@@ -3154,14 +3154,14 @@
     "key": "BTC",
     "name": "Bitcoin",
     "emoji": "\u20bf",
-    "price": 79886,
+    "price": 79832,
     "high_24h": 80147,
     "low_24h": 79572,
-    "pct_24h": 0.30972,
+    "pct_24h": 0.2316,
     "pct_7d": 2.4,
     "pct_30d": 24.5,
-    "sma50": 69395.69176418608,
-    "sma200": 69730.40777902774,
+    "sma50": 69394.90706757458,
+    "sma200": 69730.21160487486,
     "support_30d": 62843.70368466329,
     "resistance_30d": 81264.70153038795,
     "mark_price": 79760.35385307,
@@ -3176,14 +3176,14 @@
     "key": "ETH",
     "name": "Ethereum",
     "emoji": "\u039e",
-    "price": 2507.29,
+    "price": 2506.13,
     "high_24h": 2521.39,
     "low_24h": 2451.62,
-    "pct_24h": 2.25253,
+    "pct_24h": 2.23174,
     "pct_7d": 2.3,
     "pct_30d": 32.5,
-    "sma50": 2102.7770049638802,
-    "sma200": 2038.1596166482277,
+    "sma50": 2102.768663821759,
+    "sma200": 2038.1575313626975,
     "support_30d": 1871.3976551883159,
     "resistance_30d": 2514.967577695514,
     "mark_price": 2479.87016279,
