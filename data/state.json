@@ -4,7 +4,7 @@
   "_alerts_state": {
     "btc-resistance-break": {
       "triggered": true,
-      "last_triggered_at": "2026-09-06 17:25:18"
+      "last_triggered_at": "2026-09-06 17:30:26"
     },
     "btc-support-break": {
       "triggered": false,
@@ -319,12 +319,12 @@
     "dogecoin": {
       "label": "\ud83d\udfe1 HOLD / NEUTRAL",
       "status": "neutral",
-      "score": 1,
+      "score": 0,
       "rows": [
         [
           "Price vs. recent range",
-          "Sitting in the middle of its 30-day range",
-          0
+          "Near its 30-day high (~$0.0934) - less room to run",
+          -1
         ],
         [
           "Crowd mood (Fear & Greed)",
@@ -343,7 +343,7 @@
         ],
         [
           "Stretch from long-term average",
-          "-0.1% vs its long-term average - not stretched either way",
+          "+0.6% vs its long-term average - not stretched either way",
           0
         ],
         [
@@ -356,12 +356,12 @@
       "id": "dogecoin",
       "symbol": "DOGE",
       "name": "Dogecoin",
-      "price": 0.088426,
-      "pct_24h": 1.1495,
-      "pct_7d": 3.4,
+      "price": 0.089077,
+      "pct_24h": 0.0099,
+      "pct_7d": 4.6,
       "support_30d": 0.06932686760776675,
       "resistance_30d": 0.09337940032634065,
-      "as_of": "2026-09-06 15:20:24",
+      "as_of": "2026-09-06 17:30:26",
       "stale": false
     },
     "zcash": {
@@ -1447,7 +1447,7 @@
         ],
         [
           "Stretch from long-term average",
-          "-13.6% vs its long-term average - not stretched either way",
+          "-13.1% vs its long-term average - not stretched either way",
           0
         ],
         [
@@ -1460,12 +1460,12 @@
       "id": "crypto-com-chain",
       "symbol": "CRO",
       "name": "Cronos",
-      "price": 0.057321,
-      "pct_24h": 1.15176,
+      "price": 0.057642,
+      "pct_24h": 1.60615,
       "pct_7d": -4.6,
       "support_30d": 0.04621382085807831,
       "resistance_30d": 0.06091104752771909,
-      "as_of": "2026-09-06 17:15:36",
+      "as_of": "2026-09-06 17:30:26",
       "stale": false
     },
     "ethereum-classic": {
@@ -1543,7 +1543,7 @@
         ],
         [
           "Stretch from long-term average",
-          "+90.0% above its long-term average - very stretched",
+          "+82.7% above its long-term average - very stretched",
           -2
         ],
         [
@@ -1556,12 +1556,12 @@
       "id": "pump-fun",
       "symbol": "PUMP",
       "name": "Pump.fun",
-      "price": 0.00395922,
-      "pct_24h": -2.73278,
-      "pct_7d": -16.6,
+      "price": 0.00380531,
+      "pct_24h": -6.20506,
+      "pct_7d": -20.5,
       "support_30d": 0.0024063627817792555,
       "resistance_30d": 0.0052249885406471875,
-      "as_of": "2026-09-06 14:35:18",
+      "as_of": "2026-09-06 17:30:26",
       "stale": false
     },
     "venice-token": {
@@ -3197,19 +3197,21 @@
       "stale": false
     }
   },
-  "_strong_buy_state": {},
+  "_strong_buy_state": {
+    "15m:HYPE": true
+  },
   "BTC": {
     "key": "BTC",
     "name": "Bitcoin",
     "emoji": "\u20bf",
-    "price": 79691,
+    "price": 79708,
     "high_24h": 80103,
     "low_24h": 79426,
-    "pct_24h": -0.4718,
+    "pct_24h": -0.37482,
     "pct_7d": 1.1,
     "pct_30d": 22.8,
-    "sma50": 69392.19478052034,
-    "sma200": 69729.5335331113,
+    "sma50": 69392.16751825117,
+    "sma200": 69729.52671754401,
     "support_30d": 62843.70368466329,
     "resistance_30d": 81264.70153038795,
     "mark_price": 79760.35385307,
@@ -3224,14 +3226,14 @@
     "key": "ETH",
     "name": "Ethereum",
     "emoji": "\u039e",
-    "price": 2489.22,
+    "price": 2490.14,
     "high_24h": 2521.39,
     "low_24h": 2473.01,
-    "pct_24h": 0.41979,
+    "pct_24h": 0.50639,
     "pct_7d": 0.1,
     "pct_30d": 29.5,
-    "sma50": 2102.445058694911,
-    "sma200": 2038.0766300809853,
+    "sma50": 2102.4369391175874,
+    "sma200": 2038.0746001866544,
     "support_30d": 1871.3976551883159,
     "resistance_30d": 2514.967577695514,
     "mark_price": 2479.87016279,
