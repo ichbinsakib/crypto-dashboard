@@ -4,7 +4,7 @@
   "_alerts_state": {
     "btc-resistance-break": {
       "triggered": true,
-      "last_triggered_at": "2026-09-06 03:15:25"
+      "last_triggered_at": "2026-09-06 03:20:22"
     },
     "btc-support-break": {
       "triggered": false,
@@ -1015,7 +1015,7 @@
         ],
         [
           "Stretch from long-term average",
-          "+13.1% above its long-term average - a bit stretched",
+          "+12.2% above its long-term average - a bit stretched",
           -1
         ],
         [
@@ -1028,12 +1028,12 @@
       "id": "worldcoin-wld",
       "symbol": "WLD",
       "name": "Worldcoin",
-      "price": 0.402866,
-      "pct_24h": 3.62776,
-      "pct_7d": 4.8,
+      "price": 0.399852,
+      "pct_24h": 3.52311,
+      "pct_7d": 5.9,
       "support_30d": 0.30546719041711023,
       "resistance_30d": 0.4153748859818001,
-      "as_of": "2026-09-06 01:45:20",
+      "as_of": "2026-09-06 03:20:22",
       "stale": false
     },
     "bfusd": {
@@ -2564,12 +2564,12 @@
       "id": "tether-gold",
       "symbol": "XAUT",
       "name": "Tether Gold",
-      "price": 4424.9,
-      "pct_24h": -0.12721,
-      "pct_7d": -0.7,
+      "price": 4423.44,
+      "pct_24h": -0.09574,
+      "pct_7d": -0.8,
       "support_30d": 4313.876028573939,
       "resistance_30d": 4662.510537821146,
-      "as_of": "2026-09-06 01:30:27",
+      "as_of": "2026-09-06 03:20:22",
       "stale": false
     },
     "bitway": {
@@ -2839,7 +2839,7 @@
         ],
         [
           "Stretch from long-term average",
-          "+40.0% above its long-term average - very stretched",
+          "+39.3% above its long-term average - very stretched",
           -2
         ],
         [
@@ -2852,12 +2852,12 @@
       "id": "aave",
       "symbol": "AAVE",
       "name": "Aave",
-      "price": 136.42,
-      "pct_24h": 4.7746,
-      "pct_7d": 11.0,
+      "price": 135.75,
+      "pct_24h": 3.9057,
+      "pct_7d": 8.1,
       "support_30d": 85.94219943917633,
       "resistance_30d": 141.53047916466082,
-      "as_of": "2026-09-06 02:30:27",
+      "as_of": "2026-09-06 03:20:22",
       "stale": false
     },
     "okb": {
@@ -3149,19 +3149,22 @@
       "stale": false
     }
   },
-  "_strong_buy_state": {},
+  "_strong_buy_state": {
+    "15m:XAUT": true,
+    "1h:XAUT": true
+  },
   "BTC": {
     "key": "BTC",
     "name": "Bitcoin",
     "emoji": "\u20bf",
-    "price": 79924,
+    "price": 79960,
     "high_24h": 80147,
     "low_24h": 79459,
-    "pct_24h": 0.45484,
+    "pct_24h": 0.45483,
     "pct_7d": 2.3,
     "pct_30d": 24.1,
-    "sma50": 69396.44576260626,
-    "sma200": 69730.59627863279,
+    "sma50": 69397.25683194617,
+    "sma200": 69730.79904596777,
     "support_30d": 62843.70368466329,
     "resistance_30d": 81264.70153038795,
     "mark_price": 79760.35385307,
@@ -3176,14 +3179,14 @@
     "key": "ETH",
     "name": "Ethereum",
     "emoji": "\u039e",
-    "price": 2504.77,
+    "price": 2506.39,
     "high_24h": 2508.71,
     "low_24h": 2445.89,
-    "pct_24h": 2.12505,
+    "pct_24h": 2.17197,
     "pct_7d": 1.9,
     "pct_30d": 31.7,
-    "sma50": 2102.7078617595757,
-    "sma200": 2038.1423308471517,
+    "sma50": 2102.7625167254864,
+    "sma200": 2038.155994588629,
     "support_30d": 1871.3976551883159,
     "resistance_30d": 2514.967577695514,
     "mark_price": 2479.87016279,
