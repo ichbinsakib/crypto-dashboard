@@ -4,7 +4,7 @@
   "_alerts_state": {
     "btc-resistance-break": {
       "triggered": true,
-      "last_triggered_at": "2026-09-06 01:45:20"
+      "last_triggered_at": "2026-09-06 01:50:21"
     },
     "btc-support-break": {
       "triggered": false,
@@ -125,14 +125,14 @@
       "stale": false
     },
     "solana": {
-      "label": "\ud83d\udfe1 HOLD / NEUTRAL",
-      "status": "neutral",
-      "score": -1,
+      "label": "\ud83d\udd34 CAUTION - REDUCE NEW BUYS",
+      "status": "bearish",
+      "score": -2,
       "rows": [
         [
           "Price vs. recent range",
-          "Sitting in the middle of its 30-day range",
-          0
+          "Near its 30-day high (~$109.18) - less room to run",
+          -1
         ],
         [
           "Crowd mood (Fear & Greed)",
@@ -151,7 +151,7 @@
         ],
         [
           "Stretch from long-term average",
-          "+25.7% above its long-term average - a bit stretched",
+          "+26.0% above its long-term average - a bit stretched",
           -1
         ],
         [
@@ -160,16 +160,16 @@
           0
         ]
       ],
-      "plain": "No real edge either way right now - fine to just wait and watch.",
+      "plain": "Getting risky - I'd hold off on new buys until this cools down.",
       "id": "solana",
       "symbol": "SOL",
       "name": "Solana",
-      "price": 103.64,
-      "pct_24h": 1.58449,
+      "price": 103.84,
+      "pct_24h": 1.80177,
       "pct_7d": -2.1,
       "support_30d": 74.5477464048606,
       "resistance_30d": 109.17730597799657,
-      "as_of": "2026-09-06 01:35:17",
+      "as_of": "2026-09-06 01:50:21",
       "stale": false
     },
     "tron": {
@@ -775,7 +775,7 @@
         ],
         [
           "Stretch from long-term average",
-          "-6.1% vs its long-term average - not stretched either way",
+          "-6.0% vs its long-term average - not stretched either way",
           0
         ],
         [
@@ -788,12 +788,12 @@
       "id": "kucoin-shares",
       "symbol": "KCS",
       "name": "KuCoin",
-      "price": 7.25,
-      "pct_24h": 2.56204,
+      "price": 7.26,
+      "pct_24h": 2.77432,
       "pct_7d": 5.6,
       "support_30d": 6.514591596607885,
       "resistance_30d": 7.8821382735057615,
-      "as_of": "2026-09-06 01:35:17",
+      "as_of": "2026-09-06 01:50:21",
       "stale": false
     },
     "hedera-hashgraph": {
@@ -2935,7 +2935,7 @@
         ],
         [
           "Stretch from long-term average",
-          "+34.2% above its long-term average - very stretched",
+          "+34.3% above its long-term average - very stretched",
           -2
         ],
         [
@@ -2948,12 +2948,12 @@
       "id": "just",
       "symbol": "JST",
       "name": "JUST",
-      "price": 0.110578,
-      "pct_24h": 1.68695,
+      "price": 0.110601,
+      "pct_24h": 1.34245,
       "pct_7d": 13.1,
       "support_30d": 0.0946830738697126,
-      "resistance_30d": 0.11056586021265101,
-      "as_of": "2026-09-06 01:35:17",
+      "resistance_30d": 0.11061588060876522,
+      "as_of": "2026-09-06 01:50:21",
       "stale": false
     },
     "algorand": {
@@ -3154,14 +3154,14 @@
     "key": "BTC",
     "name": "Bitcoin",
     "emoji": "\u20bf",
-    "price": 79979,
+    "price": 79956,
     "high_24h": 80147,
     "low_24h": 79459,
-    "pct_24h": 0.41212,
+    "pct_24h": 0.42428,
     "pct_7d": 2.2,
     "pct_30d": 24.4,
-    "sma50": 69397.7574168549,
-    "sma200": 69730.92419219494,
+    "sma50": 69397.19138931515,
+    "sma200": 69730.78268531001,
     "support_30d": 62843.70368466329,
     "resistance_30d": 81264.70153038795,
     "mark_price": 79760.35385307,
@@ -3176,14 +3176,14 @@
     "key": "ETH",
     "name": "Ethereum",
     "emoji": "\u039e",
-    "price": 2501.71,
+    "price": 2502.15,
     "high_24h": 2491.92,
     "low_24h": 2445.89,
-    "pct_24h": 1.93541,
+    "pct_24h": 1.98939,
     "pct_7d": 1.4,
     "pct_30d": 31.0,
-    "sma50": 2102.668028673115,
-    "sma200": 2038.1323725755362,
+    "sma50": 2102.6844397515624,
+    "sma200": 2038.136475345148,
     "support_30d": 1871.3976551883159,
     "resistance_30d": 2514.967577695514,
     "mark_price": 2479.87016279,
