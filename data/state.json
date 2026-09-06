@@ -4,7 +4,7 @@
   "_alerts_state": {
     "btc-resistance-break": {
       "triggered": true,
-      "last_triggered_at": "2026-09-06 21:10:21"
+      "last_triggered_at": "2026-09-06 21:15:24"
     },
     "btc-support-break": {
       "triggered": false,
@@ -947,7 +947,7 @@
       "rows": [
         [
           "Price vs. recent range",
-          "Near its 30-day high (~$0.7765) - less room to run",
+          "Near its 30-day high (~$0.7822) - less room to run",
           -1
         ],
         [
@@ -967,7 +967,7 @@
         ],
         [
           "Stretch from long-term average",
-          "+15.0% above its long-term average - a bit stretched",
+          "+18.1% above its long-term average - a bit stretched",
           -1
         ],
         [
@@ -980,12 +980,12 @@
       "id": "aster-2",
       "symbol": "ASTER",
       "name": "Aster",
-      "price": 0.760878,
-      "pct_24h": -2.72972,
-      "pct_7d": 8.6,
+      "price": 0.781352,
+      "pct_24h": -0.0611,
+      "pct_7d": 11.0,
       "support_30d": 0.5986101196690307,
-      "resistance_30d": 0.7765327830687513,
-      "as_of": "2026-09-06 18:10:22",
+      "resistance_30d": 0.7822353763906734,
+      "as_of": "2026-09-06 21:15:24",
       "stale": false
     },
     "worldcoin-wld": {
@@ -2071,7 +2071,7 @@
         ],
         [
           "Stretch from long-term average",
-          "-34.0% below its long-term average - confirmed downtrend",
+          "-33.9% below its long-term average - confirmed downtrend",
           -1
         ],
         [
@@ -2084,12 +2084,12 @@
       "id": "pi-network",
       "symbol": "PI",
       "name": "Pi Network",
-      "price": 0.094437,
-      "pct_24h": -0.81403,
+      "price": 0.094534,
+      "pct_24h": -0.76811,
       "pct_7d": 3.1,
       "support_30d": 0.08559695435343688,
       "resistance_30d": 0.09762045155043195,
-      "as_of": "2026-09-06 21:00:32",
+      "as_of": "2026-09-06 21:15:24",
       "stale": false
     },
     "ondo-finance": {
@@ -2359,7 +2359,7 @@
         ],
         [
           "Stretch from long-term average",
-          "+4.9% vs its long-term average - not stretched either way",
+          "+4.5% vs its long-term average - not stretched either way",
           0
         ],
         [
@@ -2372,12 +2372,12 @@
       "id": "sky",
       "symbol": "SKY",
       "name": "Sky",
-      "price": 0.07006,
-      "pct_24h": 2.55977,
-      "pct_7d": -1.2,
+      "price": 0.069843,
+      "pct_24h": 1.35008,
+      "pct_7d": -1.9,
       "support_30d": 0.05081051579814886,
       "resistance_30d": 0.07314868186988309,
-      "as_of": "2026-09-06 19:40:22",
+      "as_of": "2026-09-06 21:15:24",
       "stale": false
     },
     "shiba-inu": {
@@ -3197,19 +3197,21 @@
       "stale": false
     }
   },
-  "_strong_buy_state": {},
+  "_strong_buy_state": {
+    "1h:SKY": true
+  },
   "BTC": {
     "key": "BTC",
     "name": "Bitcoin",
     "emoji": "\u20bf",
-    "price": 79958,
+    "price": 79987,
     "high_24h": 80103,
     "low_24h": 79426,
-    "pct_24h": 0.20611,
+    "pct_24h": 0.24576,
     "pct_7d": 1.3,
     "pct_30d": 23.1,
-    "sma50": 69396.8209634404,
-    "sma200": 69730.69007884133,
+    "sma50": 69397.8028345894,
+    "sma200": 69730.93554662858,
     "support_30d": 62843.70368466329,
     "resistance_30d": 81264.70153038795,
     "mark_price": 79760.35385307,
@@ -3224,14 +3226,14 @@
     "key": "ETH",
     "name": "Ethereum",
     "emoji": "\u039e",
-    "price": 2507.64,
+    "price": 2510.43,
     "high_24h": 2521.39,
     "low_24h": 2473.01,
-    "pct_24h": 1.10431,
+    "pct_24h": 1.28004,
     "pct_7d": -0.2,
     "pct_30d": 30.3,
-    "sma50": 2102.7410551154207,
-    "sma200": 2038.1506291861128,
+    "sma50": 2102.8138423624805,
+    "sma200": 2038.1688259978775,
     "support_30d": 1871.3976551883159,
     "resistance_30d": 2514.967577695514,
     "mark_price": 2479.87016279,
