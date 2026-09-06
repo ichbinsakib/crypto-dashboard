@@ -4,7 +4,7 @@
   "_alerts_state": {
     "btc-resistance-break": {
       "triggered": true,
-      "last_triggered_at": "2026-09-06 13:00:33"
+      "last_triggered_at": "2026-09-06 13:05:22"
     },
     "btc-support-break": {
       "triggered": false,
@@ -2071,7 +2071,7 @@
         ],
         [
           "Stretch from long-term average",
-          "-33.2% below its long-term average - confirmed downtrend",
+          "-33.4% below its long-term average - confirmed downtrend",
           -1
         ],
         [
@@ -2084,12 +2084,12 @@
       "id": "pi-network",
       "symbol": "PI",
       "name": "Pi Network",
-      "price": 0.095563,
-      "pct_24h": 0.64148,
-      "pct_7d": 4.6,
+      "price": 0.095312,
+      "pct_24h": -0.1283,
+      "pct_7d": 4.8,
       "support_30d": 0.08559695435343688,
       "resistance_30d": 0.09762045155043195,
-      "as_of": "2026-09-06 11:00:38",
+      "as_of": "2026-09-06 13:05:22",
       "stale": false
     },
     "ondo-finance": {
@@ -2167,7 +2167,7 @@
         ],
         [
           "Stretch from long-term average",
-          "-21.4% below its long-term average - confirmed downtrend",
+          "-21.7% below its long-term average - confirmed downtrend",
           -1
         ],
         [
@@ -2180,12 +2180,12 @@
       "id": "canton-network",
       "symbol": "CC",
       "name": "Canton",
-      "price": 0.11059,
-      "pct_24h": 1.86851,
-      "pct_7d": -6.8,
+      "price": 0.1101,
+      "pct_24h": 0.33912,
+      "pct_7d": -7.0,
       "support_30d": 0.09051839499501885,
       "resistance_30d": 0.12396615653575341,
-      "as_of": "2026-09-06 12:10:28",
+      "as_of": "2026-09-06 13:05:22",
       "stale": false
     },
     "internet-computer": {
@@ -3059,7 +3059,7 @@
       "rows": [
         [
           "Price vs. recent range",
-          "Near its 30-day high (~$0.1907) - less room to run",
+          "Near its 30-day high (~$0.1919) - less room to run",
           -1
         ],
         [
@@ -3092,12 +3092,12 @@
       "id": "arbitrum",
       "symbol": "ARB",
       "name": "Arbitrum",
-      "price": 0.190751,
-      "pct_24h": 42.88281,
-      "pct_7d": 121.1,
+      "price": 0.190813,
+      "pct_24h": 41.57783,
+      "pct_7d": 116.7,
       "support_30d": 0.07272258489044682,
-      "resistance_30d": 0.19065314895817112,
-      "as_of": "2026-09-06 12:45:24",
+      "resistance_30d": 0.19190855635895138,
+      "as_of": "2026-09-06 13:05:22",
       "stale": false
     },
     "dash": {
@@ -3149,19 +3149,21 @@
       "stale": false
     }
   },
-  "_strong_buy_state": {},
+  "_strong_buy_state": {
+    "15m:BNB": true
+  },
   "BTC": {
     "key": "BTC",
     "name": "Bitcoin",
     "emoji": "\u20bf",
-    "price": 79939,
+    "price": 79912,
     "high_24h": 80147,
-    "low_24h": 79586,
-    "pct_24h": 0.26801,
+    "low_24h": 79618,
+    "pct_24h": 0.27637,
     "pct_7d": 2.3,
-    "pct_30d": 23.2,
-    "sma50": 69396.70678946168,
-    "sma200": 69730.66153534663,
+    "pct_30d": 23.0,
+    "sma50": 69396.48963926036,
+    "sma200": 69730.60724779632,
     "support_30d": 62843.70368466329,
     "resistance_30d": 81264.70153038795,
     "mark_price": 79760.35385307,
@@ -3176,14 +3178,14 @@
     "key": "ETH",
     "name": "Ethereum",
     "emoji": "\u039e",
-    "price": 2500.26,
+    "price": 2498.63,
     "high_24h": 2521.39,
-    "low_24h": 2451.62,
-    "pct_24h": 1.66045,
+    "low_24h": 2453.9,
+    "pct_24h": 1.60436,
     "pct_7d": 1.7,
-    "pct_30d": 30.9,
-    "sma50": 2102.644292667786,
-    "sma200": 2038.126438574204,
+    "pct_30d": 30.6,
+    "sma50": 2102.6143228300107,
+    "sma200": 2038.11894611476,
     "support_30d": 1871.3976551883159,
     "resistance_30d": 2514.967577695514,
     "mark_price": 2479.87016279,
