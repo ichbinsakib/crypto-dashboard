@@ -4,7 +4,7 @@
   "_alerts_state": {
     "btc-resistance-break": {
       "triggered": true,
-      "last_triggered_at": "2026-09-06 08:05:18"
+      "last_triggered_at": "2026-09-06 08:10:21"
     },
     "btc-support-break": {
       "triggered": false,
@@ -343,7 +343,7 @@
         ],
         [
           "Stretch from long-term average",
-          "+3.2% vs its long-term average - not stretched either way",
+          "+2.6% vs its long-term average - not stretched either way",
           0
         ],
         [
@@ -356,12 +356,12 @@
       "id": "dogecoin",
       "symbol": "DOGE",
       "name": "Dogecoin",
-      "price": 0.09138,
-      "pct_24h": 7.95052,
-      "pct_7d": 7.2,
+      "price": 0.090895,
+      "pct_24h": 6.22385,
+      "pct_7d": 6.8,
       "support_30d": 0.06932686760776675,
       "resistance_30d": 0.09337940032634065,
-      "as_of": "2026-09-06 03:55:17",
+      "as_of": "2026-09-06 08:10:21",
       "stale": false
     },
     "zcash": {
@@ -535,7 +535,7 @@
         ],
         [
           "Stretch from long-term average",
-          "+32.4% above its long-term average - very stretched",
+          "+32.5% above its long-term average - very stretched",
           -2
         ],
         [
@@ -548,12 +548,12 @@
       "id": "whitebit",
       "symbol": "WBT",
       "name": "WhiteBIT Coin",
-      "price": 73.59,
-      "pct_24h": 0.5174,
+      "price": 73.62,
+      "pct_24h": 0.57833,
       "pct_7d": 1.9,
       "support_30d": 54.452558710928955,
       "resistance_30d": 74.07423223861623,
-      "as_of": "2026-09-06 08:05:18",
+      "as_of": "2026-09-06 08:10:21",
       "stale": false
     },
     "leo-token": {
@@ -2516,12 +2516,12 @@
       "id": "quant-network",
       "symbol": "QNT",
       "name": "Quant",
-      "price": 66.06,
-      "pct_24h": 2.97333,
-      "pct_7d": 7.7,
+      "price": 66.09,
+      "pct_24h": 2.99302,
+      "pct_7d": 7.2,
       "support_30d": 55.905981995619285,
       "resistance_30d": 66.68821517512447,
-      "as_of": "2026-09-06 07:25:17",
+      "as_of": "2026-09-06 08:10:21",
       "stale": false
     },
     "tether-gold": {
@@ -3149,19 +3149,21 @@
       "stale": false
     }
   },
-  "_strong_buy_state": {},
+  "_strong_buy_state": {
+    "15m:ADA": true
+  },
   "BTC": {
     "key": "BTC",
     "name": "Bitcoin",
     "emoji": "\u20bf",
-    "price": 79811,
+    "price": 79849,
     "high_24h": 80147,
     "low_24h": 79586,
-    "pct_24h": 0.19473,
+    "pct_24h": 0.24428,
     "pct_7d": 2.0,
     "pct_30d": 24.2,
-    "sma50": 69394.30069047926,
-    "sma200": 69730.06001060102,
+    "sma50": 69394.76015856127,
+    "sma200": 69730.17487762154,
     "support_30d": 62843.70368466329,
     "resistance_30d": 81264.70153038795,
     "mark_price": 79760.35385307,
@@ -3176,14 +3178,14 @@
     "key": "ETH",
     "name": "Ethereum",
     "emoji": "\u039e",
-    "price": 2495.04,
+    "price": 2497.17,
     "high_24h": 2521.39,
     "low_24h": 2451.62,
-    "pct_24h": 1.58785,
+    "pct_24h": 1.70452,
     "pct_7d": 1.5,
     "pct_30d": 31.2,
-    "sma50": 2102.545369373892,
-    "sma200": 2038.1017077507306,
+    "sma50": 2102.5660456755677,
+    "sma200": 2038.1068768261496,
     "support_30d": 1871.3976551883159,
     "resistance_30d": 2514.967577695514,
     "mark_price": 2479.87016279,
