@@ -4,7 +4,7 @@
   "_alerts_state": {
     "btc-resistance-break": {
       "triggered": true,
-      "last_triggered_at": "2026-09-06 14:35:18"
+      "last_triggered_at": "2026-09-06 14:40:23"
     },
     "btc-support-break": {
       "triggered": false,
@@ -319,12 +319,12 @@
     "dogecoin": {
       "label": "\ud83d\udfe1 HOLD / NEUTRAL",
       "status": "neutral",
-      "score": 0,
+      "score": 1,
       "rows": [
         [
           "Price vs. recent range",
-          "Near its 30-day high (~$0.0934) - less room to run",
-          -1
+          "Sitting in the middle of its 30-day range",
+          0
         ],
         [
           "Crowd mood (Fear & Greed)",
@@ -343,7 +343,7 @@
         ],
         [
           "Stretch from long-term average",
-          "+0.3% vs its long-term average - not stretched either way",
+          "+0.1% vs its long-term average - not stretched either way",
           0
         ],
         [
@@ -356,12 +356,12 @@
       "id": "dogecoin",
       "symbol": "DOGE",
       "name": "Dogecoin",
-      "price": 0.088841,
-      "pct_24h": 1.29753,
+      "price": 0.088668,
+      "pct_24h": 0.73374,
       "pct_7d": 5.0,
       "support_30d": 0.06932686760776675,
       "resistance_30d": 0.09337940032634065,
-      "as_of": "2026-09-06 14:26:07",
+      "as_of": "2026-09-06 14:40:23",
       "stale": false
     },
     "zcash": {
@@ -597,11 +597,11 @@
       "symbol": "LEO",
       "name": "LEO Token",
       "price": 9.33,
-      "pct_24h": 0.70357,
+      "pct_24h": 0.86554,
       "pct_7d": -2.1,
       "support_30d": 8.948412455130585,
       "resistance_30d": 9.71203644068681,
-      "as_of": "2026-09-06 14:26:07",
+      "as_of": "2026-09-06 14:40:23",
       "stale": false
     },
     "monero": {
@@ -2915,7 +2915,7 @@
       "rows": [
         [
           "Price vs. recent range",
-          "Near its 30-day high (~$0.1120) - less room to run",
+          "Near its 30-day high (~$0.1121) - less room to run",
           -1
         ],
         [
@@ -2935,7 +2935,7 @@
         ],
         [
           "Stretch from long-term average",
-          "+35.9% above its long-term average - very stretched",
+          "+36.1% above its long-term average - very stretched",
           -2
         ],
         [
@@ -2948,12 +2948,12 @@
       "id": "just",
       "symbol": "JST",
       "name": "JUST",
-      "price": 0.111976,
-      "pct_24h": 1.58954,
+      "price": 0.112081,
+      "pct_24h": 2.92548,
       "pct_7d": 17.7,
       "support_30d": 0.0946830738697126,
-      "resistance_30d": 0.11203808785718768,
-      "as_of": "2026-09-06 14:35:18",
+      "resistance_30d": 0.11212601836451527,
+      "as_of": "2026-09-06 14:40:23",
       "stale": false
     },
     "algorand": {
@@ -3202,14 +3202,14 @@
     "key": "BTC",
     "name": "Bitcoin",
     "emoji": "\u20bf",
-    "price": 79453,
+    "price": 79573,
     "high_24h": 80147,
     "low_24h": 79627,
-    "pct_24h": -0.36605,
+    "pct_24h": -0.20692,
     "pct_7d": 1.3,
     "pct_30d": 22.3,
-    "sma50": 69387.94217804422,
-    "sma200": 69728.47038249228,
+    "sma50": 69389.52259139372,
+    "sma200": 69728.86548582965,
     "support_30d": 62843.70368466329,
     "resistance_30d": 81264.70153038795,
     "mark_price": 79760.35385307,
@@ -3224,14 +3224,14 @@
     "key": "ETH",
     "name": "Ethereum",
     "emoji": "\u039e",
-    "price": 2473.01,
+    "price": 2478.33,
     "high_24h": 2521.39,
     "low_24h": 2456.23,
-    "pct_24h": 0.62343,
+    "pct_24h": 0.83146,
     "pct_7d": 1.0,
     "pct_30d": 29.2,
-    "sma50": 2102.136884628376,
-    "sma200": 2037.9995865643516,
+    "sma50": 2102.195928941528,
+    "sma200": 2038.0143476426394,
     "support_30d": 1871.3976551883159,
     "resistance_30d": 2514.967577695514,
     "mark_price": 2479.87016279,
