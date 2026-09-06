@@ -4,7 +4,7 @@
   "_alerts_state": {
     "btc-resistance-break": {
       "triggered": true,
-      "last_triggered_at": "2026-09-06 15:30:31"
+      "last_triggered_at": "2026-09-06 15:35:18"
     },
     "btc-support-break": {
       "triggered": false,
@@ -933,21 +933,21 @@
       "symbol": "AVAX",
       "name": "Avalanche",
       "price": 7.6,
-      "pct_24h": 0.9086,
+      "pct_24h": 0.93433,
       "pct_7d": 2.4,
       "support_30d": 6.313391080113916,
       "resistance_30d": 7.836507914480645,
-      "as_of": "2026-09-06 15:20:24",
+      "as_of": "2026-09-06 15:35:18",
       "stale": false
     },
     "aster-2": {
-      "label": "\ud83d\udfe1 HOLD / NEUTRAL",
-      "status": "neutral",
-      "score": -1,
+      "label": "\ud83d\udd34 CAUTION - REDUCE NEW BUYS",
+      "status": "bearish",
+      "score": -2,
       "rows": [
         [
           "Price vs. recent range",
-          "Near its 30-day high (~$0.7768) - less room to run",
+          "Near its 30-day high (~$0.7765) - less room to run",
           -1
         ],
         [
@@ -962,12 +962,12 @@
         ],
         [
           "Recent trend",
-          "Trending up steadily - healthy",
-          1
+          "Chopping sideways - no clear trend",
+          0
         ],
         [
           "Stretch from long-term average",
-          "+17.4% above its long-term average - a bit stretched",
+          "+14.5% above its long-term average - a bit stretched",
           -1
         ],
         [
@@ -976,16 +976,16 @@
           0
         ]
       ],
-      "plain": "No real edge either way right now - fine to just wait and watch.",
+      "plain": "Getting risky - I'd hold off on new buys until this cools down.",
       "id": "aster-2",
       "symbol": "ASTER",
       "name": "Aster",
-      "price": 0.77692,
-      "pct_24h": -7.61961,
-      "pct_7d": 10.7,
+      "price": 0.757656,
+      "pct_24h": -6.66106,
+      "pct_7d": 7.4,
       "support_30d": 0.5986101196690307,
-      "resistance_30d": 0.7768129887895027,
-      "as_of": "2026-09-06 13:40:22",
+      "resistance_30d": 0.7765327830687513,
+      "as_of": "2026-09-06 15:35:18",
       "stale": false
     },
     "worldcoin-wld": {
@@ -2023,7 +2023,7 @@
         ],
         [
           "Stretch from long-term average",
-          "+93.1% above its long-term average - very stretched",
+          "+92.9% above its long-term average - very stretched",
           -2
         ],
         [
@@ -2036,12 +2036,12 @@
       "id": "uniswap",
       "symbol": "UNI",
       "name": "Uniswap",
-      "price": 6.95,
-      "pct_24h": 9.88873,
+      "price": 6.94,
+      "pct_24h": 10.17232,
       "pct_7d": 33.3,
       "support_30d": 3.1971416665971573,
       "resistance_30d": 7.048641772873636,
-      "as_of": "2026-09-06 15:10:23",
+      "as_of": "2026-09-06 15:35:18",
       "stale": false
     },
     "pi-network": {
@@ -3202,14 +3202,14 @@
     "key": "BTC",
     "name": "Bitcoin",
     "emoji": "\u20bf",
-    "price": 79619,
+    "price": 79616,
     "high_24h": 80147,
     "low_24h": 79437,
-    "pct_24h": -0.10232,
+    "pct_24h": -0.13151,
     "pct_7d": 0.9,
     "pct_30d": 22.5,
-    "sma50": 69390.45647621564,
-    "sma200": 69729.09895703514,
+    "sma50": 69390.19421690414,
+    "sma200": 69729.03339220725,
     "support_30d": 62843.70368466329,
     "resistance_30d": 81264.70153038795,
     "mark_price": 79760.35385307,
@@ -3224,14 +3224,14 @@
     "key": "ETH",
     "name": "Ethereum",
     "emoji": "\u039e",
-    "price": 2478.28,
+    "price": 2477.79,
     "high_24h": 2521.39,
     "low_24h": 2459.16,
-    "pct_24h": 0.83426,
+    "pct_24h": 0.77865,
     "pct_7d": 0.2,
     "pct_30d": 29.0,
-    "sma50": 2102.206044850407,
-    "sma200": 2038.0168766198592,
+    "sma50": 2102.1873126033706,
+    "sma200": 2038.0121935581003,
     "support_30d": 1871.3976551883159,
     "resistance_30d": 2514.967577695514,
     "mark_price": 2479.87016279,
