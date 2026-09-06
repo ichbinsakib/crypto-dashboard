@@ -4,7 +4,7 @@
   "_alerts_state": {
     "btc-resistance-break": {
       "triggered": true,
-      "last_triggered_at": "2026-09-06 22:00:33"
+      "last_triggered_at": "2026-09-06 22:05:18"
     },
     "btc-support-break": {
       "triggered": false,
@@ -343,7 +343,7 @@
         ],
         [
           "Stretch from long-term average",
-          "+2.4% vs its long-term average - not stretched either way",
+          "+2.0% vs its long-term average - not stretched either way",
           0
         ],
         [
@@ -356,12 +356,12 @@
       "id": "dogecoin",
       "symbol": "DOGE",
       "name": "Dogecoin",
-      "price": 0.09071,
-      "pct_24h": -0.53546,
-      "pct_7d": 5.2,
+      "price": 0.090303,
+      "pct_24h": -0.61887,
+      "pct_7d": 6.3,
       "support_30d": 0.06932686760776675,
       "resistance_30d": 0.09337940032634065,
-      "as_of": "2026-09-06 21:45:20",
+      "as_of": "2026-09-06 22:05:18",
       "stale": false
     },
     "zcash": {
@@ -989,13 +989,13 @@
       "stale": false
     },
     "worldcoin-wld": {
-      "label": "\ud83d\udd34 CAUTION - REDUCE NEW BUYS",
-      "status": "bearish",
-      "score": -2,
+      "label": "\ud83d\udfe1 HOLD / NEUTRAL",
+      "status": "neutral",
+      "score": -1,
       "rows": [
         [
           "Price vs. recent range",
-          "Near its 30-day high (~$0.4154) - less room to run",
+          "Near its 30-day high (~$0.4196) - less room to run",
           -1
         ],
         [
@@ -1010,12 +1010,12 @@
         ],
         [
           "Recent trend",
-          "Chopping sideways - no clear trend",
-          0
+          "Trending up steadily - healthy",
+          1
         ],
         [
           "Stretch from long-term average",
-          "+16.4% above its long-term average - a bit stretched",
+          "+17.8% above its long-term average - a bit stretched",
           -1
         ],
         [
@@ -1024,16 +1024,16 @@
           0
         ]
       ],
-      "plain": "Getting risky - I'd hold off on new buys until this cools down.",
+      "plain": "No real edge either way right now - fine to just wait and watch.",
       "id": "worldcoin-wld",
       "symbol": "WLD",
       "name": "Worldcoin",
-      "price": 0.414951,
-      "pct_24h": 4.75847,
-      "pct_7d": 6.6,
+      "price": 0.42003,
+      "pct_24h": 5.38013,
+      "pct_7d": 11.7,
       "support_30d": 0.30546719041711023,
-      "resistance_30d": 0.4153748859818001,
-      "as_of": "2026-09-06 20:25:19",
+      "resistance_30d": 0.41964419610466497,
+      "as_of": "2026-09-06 22:05:18",
       "stale": false
     },
     "bfusd": {
@@ -1955,7 +1955,7 @@
       "rows": [
         [
           "Price vs. recent range",
-          "Near its 30-day high (~$0.9654) - less room to run",
+          "Near its 30-day high (~$0.9800) - less room to run",
           -1
         ],
         [
@@ -1975,7 +1975,7 @@
         ],
         [
           "Stretch from long-term average",
-          "-12.8% vs its long-term average - not stretched either way",
+          "-11.5% vs its long-term average - not stretched either way",
           0
         ],
         [
@@ -1988,12 +1988,12 @@
       "id": "polkadot",
       "symbol": "DOT",
       "name": "Polkadot",
-      "price": 0.965808,
-      "pct_24h": 5.75165,
-      "pct_7d": 11.5,
+      "price": 0.980232,
+      "pct_24h": 6.25,
+      "pct_7d": 15.5,
       "support_30d": 0.7510040523927409,
-      "resistance_30d": 0.9653966504360525,
-      "as_of": "2026-09-06 20:30:28",
+      "resistance_30d": 0.9799574334085043,
+      "as_of": "2026-09-06 22:05:18",
       "stale": false
     },
     "uniswap": {
@@ -3202,14 +3202,14 @@
     "key": "BTC",
     "name": "Bitcoin",
     "emoji": "\u20bf",
-    "price": 79929,
+    "price": 79851,
     "high_24h": 80103,
     "low_24h": 79426,
-    "pct_24h": 0.01252,
-    "pct_7d": 1.3,
+    "pct_24h": -0.06345,
+    "pct_7d": 1.7,
     "pct_30d": 23.1,
-    "sma50": 69396.82252150131,
-    "sma200": 69730.69046835654,
+    "sma50": 69394.79629594547,
+    "sma200": 69730.18391196759,
     "support_30d": 62843.70368466329,
     "resistance_30d": 81264.70153038795,
     "mark_price": 79760.35385307,
@@ -3224,14 +3224,14 @@
     "key": "ETH",
     "name": "Ethereum",
     "emoji": "\u039e",
-    "price": 2506.78,
+    "price": 2503.8,
     "high_24h": 2521.39,
     "low_24h": 2473.01,
-    "pct_24h": 0.68319,
-    "pct_7d": -0.2,
-    "pct_30d": 30.3,
-    "sma50": 2102.786358042949,
-    "sma200": 2038.1619549179948,
+    "pct_24h": 0.63089,
+    "pct_7d": 0.7,
+    "pct_30d": 31.0,
+    "sma50": 2102.703141835007,
+    "sma200": 2038.1411508660094,
     "support_30d": 1871.3976551883159,
     "resistance_30d": 2514.967577695514,
     "mark_price": 2479.87016279,
