@@ -4,7 +4,7 @@
   "_alerts_state": {
     "btc-resistance-break": {
       "triggered": true,
-      "last_triggered_at": "2026-09-06 23:00:31"
+      "last_triggered_at": "2026-09-06 23:05:17"
     },
     "btc-support-break": {
       "triggered": false,
@@ -2407,7 +2407,7 @@
         ],
         [
           "Stretch from long-term average",
-          "+1.4% vs its long-term average - not stretched either way",
+          "+2.1% vs its long-term average - not stretched either way",
           0
         ],
         [
@@ -2420,12 +2420,12 @@
       "id": "shiba-inu",
       "symbol": "SHIB",
       "name": "Shiba Inu",
-      "price": 5.47e-06,
-      "pct_24h": -0.5021,
-      "pct_7d": 7.0,
+      "price": 5.51e-06,
+      "pct_24h": 0.60498,
+      "pct_7d": 7.6,
       "support_30d": 4.390093758351827e-06,
       "resistance_30d": 5.903506876405612e-06,
-      "as_of": "2026-09-06 22:15:22",
+      "as_of": "2026-09-06 23:05:17",
       "stale": false
     },
     "near": {
@@ -2435,7 +2435,7 @@
       "rows": [
         [
           "Price vs. recent range",
-          "Near its 30-day high (~$2.41) - less room to run",
+          "Near its 30-day high (~$2.45) - less room to run",
           -1
         ],
         [
@@ -2455,7 +2455,7 @@
         ],
         [
           "Stretch from long-term average",
-          "+43.9% above its long-term average - very stretched",
+          "+46.3% above its long-term average - very stretched",
           -2
         ],
         [
@@ -2468,12 +2468,12 @@
       "id": "near",
       "symbol": "NEAR",
       "name": "NEAR Protocol",
-      "price": 2.41,
-      "pct_24h": 11.20179,
+      "price": 2.45,
+      "pct_24h": 12.3012,
       "pct_7d": 27.2,
       "support_30d": 1.5879597131538,
-      "resistance_30d": 2.4077762790254793,
-      "as_of": "2026-09-06 21:00:32",
+      "resistance_30d": 2.4490386126927555,
+      "as_of": "2026-09-06 23:05:17",
       "stale": false
     },
     "quant-network": {
@@ -2887,7 +2887,7 @@
         ],
         [
           "Stretch from long-term average",
-          "+30.5% above its long-term average - very stretched",
+          "+30.8% above its long-term average - very stretched",
           -2
         ],
         [
@@ -2900,12 +2900,12 @@
       "id": "okb",
       "symbol": "OKB",
       "name": "OKB",
-      "price": 113.17,
-      "pct_24h": -0.52715,
-      "pct_7d": -0.8,
+      "price": 113.42,
+      "pct_24h": 0.12325,
+      "pct_7d": -0.6,
       "support_30d": 93.7685862904641,
       "resistance_30d": 115.8310797114581,
-      "as_of": "2026-09-06 19:45:20",
+      "as_of": "2026-09-06 23:05:17",
       "stale": false
     },
     "just": {
@@ -3197,19 +3197,21 @@
       "stale": false
     }
   },
-  "_strong_buy_state": {},
+  "_strong_buy_state": {
+    "15m:OKB": true
+  },
   "BTC": {
     "key": "BTC",
     "name": "Bitcoin",
     "emoji": "\u20bf",
-    "price": 80026,
+    "price": 80242,
     "high_24h": 80103,
     "low_24h": 79426,
-    "pct_24h": 0.33629,
-    "pct_7d": 1.7,
-    "pct_30d": 23.1,
-    "sma50": 69398.55751471309,
-    "sma200": 69731.12421665949,
+    "pct_24h": 0.41482,
+    "pct_7d": 1.8,
+    "pct_30d": 23.3,
+    "sma50": 69402.06759257326,
+    "sma200": 69732.00173612454,
     "support_30d": 62843.70368466329,
     "resistance_30d": 81264.70153038795,
     "mark_price": 79760.35385307,
@@ -3224,14 +3226,14 @@
     "key": "ETH",
     "name": "Ethereum",
     "emoji": "\u039e",
-    "price": 2507.97,
+    "price": 2513.24,
     "high_24h": 2521.39,
     "low_24h": 2473.01,
-    "pct_24h": 1.08113,
-    "pct_7d": 0.7,
-    "pct_30d": 31.0,
-    "sma50": 2102.7888603222427,
-    "sma200": 2038.1625804878183,
+    "pct_24h": 1.18009,
+    "pct_7d": 1.1,
+    "pct_30d": 30.9,
+    "sma50": 2102.818975438347,
+    "sma200": 2038.1701092668445,
     "support_30d": 1871.3976551883159,
     "resistance_30d": 2514.967577695514,
     "mark_price": 2479.87016279,
