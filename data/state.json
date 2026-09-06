@@ -4,7 +4,7 @@
   "_alerts_state": {
     "btc-resistance-break": {
       "triggered": true,
-      "last_triggered_at": "2026-09-06 00:05:19"
+      "last_triggered_at": "2026-09-06 00:10:23"
     },
     "btc-support-break": {
       "triggered": false,
@@ -439,7 +439,7 @@
         ],
         [
           "Stretch from long-term average",
-          "+50.0% above its long-term average - very stretched",
+          "+48.5% above its long-term average - very stretched",
           -2
         ],
         [
@@ -452,12 +452,12 @@
       "id": "rain",
       "symbol": "RAIN",
       "name": "Rain",
-      "price": 0.01705475,
-      "pct_24h": 2.84063,
-      "pct_7d": -3.5,
+      "price": 0.01694277,
+      "pct_24h": 2.21618,
+      "pct_7d": -3.8,
       "support_30d": 0.012552829520986089,
       "resistance_30d": 0.018158429442510105,
-      "as_of": "2026-09-05 21:50:23",
+      "as_of": "2026-09-06 00:10:23",
       "stale": false
     },
     "chainlink": {
@@ -727,7 +727,7 @@
         ],
         [
           "Stretch from long-term average",
-          "+5.6% vs its long-term average - not stretched either way",
+          "+5.4% vs its long-term average - not stretched either way",
           0
         ],
         [
@@ -740,12 +740,12 @@
       "id": "stellar",
       "symbol": "XLM",
       "name": "Stellar",
-      "price": 0.18423,
-      "pct_24h": 2.83344,
-      "pct_7d": 3.1,
+      "price": 0.184037,
+      "pct_24h": 2.52042,
+      "pct_7d": 2.7,
       "support_30d": 0.15472912151335613,
       "resistance_30d": 0.20181319711037435,
-      "as_of": "2026-09-05 23:15:21",
+      "as_of": "2026-09-06 00:10:23",
       "stale": false
     },
     "kucoin-shares": {
@@ -2263,7 +2263,7 @@
         ],
         [
           "Stretch from long-term average",
-          "-0.3% vs its long-term average - not stretched either way",
+          "-0.6% vs its long-term average - not stretched either way",
           0
         ],
         [
@@ -2276,12 +2276,12 @@
       "id": "bittensor",
       "symbol": "TAO",
       "name": "Bittensor",
-      "price": 236.21,
-      "pct_24h": 5.05978,
+      "price": 235.78,
+      "pct_24h": 5.12063,
       "pct_7d": 0.0,
       "support_30d": 190.67093053611111,
       "resistance_30d": 254.06815196002663,
-      "as_of": "2026-09-06 00:00:39",
+      "as_of": "2026-09-06 00:10:23",
       "stale": false
     },
     "the-open-network": {
@@ -3149,19 +3149,21 @@
       "stale": false
     }
   },
-  "_strong_buy_state": {},
+  "_strong_buy_state": {
+    "15m:XLM": true
+  },
   "BTC": {
     "key": "BTC",
     "name": "Bitcoin",
     "emoji": "\u20bf",
-    "price": 79847,
+    "price": 79900,
     "high_24h": 80147,
     "low_24h": 79459,
-    "pct_24h": 0.23994,
+    "pct_24h": 0.28982,
     "pct_7d": 2.0,
     "pct_30d": 24.1,
-    "sma50": 69094.4905722734,
-    "sma200": 69663.26205960731,
+    "sma50": 69396.07130572594,
+    "sma200": 69730.5026644127,
     "support_30d": 62843.70368466329,
     "resistance_30d": 81264.70153038795,
     "mark_price": 79760.35385307,
@@ -3176,14 +3178,14 @@
     "key": "ETH",
     "name": "Ethereum",
     "emoji": "\u039e",
-    "price": 2480.06,
+    "price": 2480.14,
     "high_24h": 2490.78,
     "low_24h": 2445.89,
-    "pct_24h": 1.00438,
+    "pct_24h": 1.01171,
     "pct_7d": 1.1,
     "pct_30d": 30.3,
-    "sma50": 2089.88547890536,
-    "sma200": 2035.3983889681224,
+    "sma50": 2102.2402545002797,
+    "sma200": 2038.0254290323276,
     "support_30d": 1871.3976551883159,
     "resistance_30d": 2514.967577695514,
     "mark_price": 2479.87016279,
