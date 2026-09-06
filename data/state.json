@@ -4,7 +4,7 @@
   "_alerts_state": {
     "btc-resistance-break": {
       "triggered": true,
-      "last_triggered_at": "2026-09-06 12:05:22"
+      "last_triggered_at": "2026-09-06 12:10:28"
     },
     "btc-support-break": {
       "triggered": false,
@@ -1811,7 +1811,7 @@
       "rows": [
         [
           "Price vs. recent range",
-          "Near its 30-day high (~$0.1752) - less room to run",
+          "Near its 30-day high (~$0.1738) - less room to run",
           -1
         ],
         [
@@ -1831,7 +1831,7 @@
         ],
         [
           "Stretch from long-term average",
-          "+73.9% above its long-term average - very stretched",
+          "+72.5% above its long-term average - very stretched",
           -2
         ],
         [
@@ -1844,12 +1844,12 @@
       "id": "ethena",
       "symbol": "ENA",
       "name": "Ethena",
-      "price": 0.174992,
-      "pct_24h": 6.83762,
+      "price": 0.173627,
+      "pct_24h": 6.36437,
       "pct_7d": 10.4,
       "support_30d": 0.08231050586125944,
-      "resistance_30d": 0.17516083051526796,
-      "as_of": "2026-09-06 10:55:16",
+      "resistance_30d": 0.17382908127631536,
+      "as_of": "2026-09-06 12:10:28",
       "stale": false
     },
     "bitcoin-cash": {
@@ -2003,7 +2003,7 @@
       "rows": [
         [
           "Price vs. recent range",
-          "Near its 30-day high (~$7.05) - less room to run",
+          "Near its 30-day high (~$7.07) - less room to run",
           -1
         ],
         [
@@ -2023,7 +2023,7 @@
         ],
         [
           "Stretch from long-term average",
-          "+94.0% above its long-term average - very stretched",
+          "+96.2% above its long-term average - very stretched",
           -2
         ],
         [
@@ -2036,12 +2036,12 @@
       "id": "uniswap",
       "symbol": "UNI",
       "name": "Uniswap",
-      "price": 6.98,
-      "pct_24h": 11.61163,
-      "pct_7d": 45.1,
+      "price": 7.06,
+      "pct_24h": 12.60323,
+      "pct_7d": 42.7,
       "support_30d": 3.1971416665971573,
-      "resistance_30d": 7.048641772873636,
-      "as_of": "2026-09-06 11:05:19",
+      "resistance_30d": 7.06622115573813,
+      "as_of": "2026-09-06 12:10:28",
       "stale": false
     },
     "pi-network": {
@@ -2167,7 +2167,7 @@
         ],
         [
           "Stretch from long-term average",
-          "-21.5% below its long-term average - confirmed downtrend",
+          "-21.4% below its long-term average - confirmed downtrend",
           -1
         ],
         [
@@ -2180,12 +2180,12 @@
       "id": "canton-network",
       "symbol": "CC",
       "name": "Canton",
-      "price": 0.110385,
-      "pct_24h": 1.74652,
-      "pct_7d": -7.7,
+      "price": 0.11059,
+      "pct_24h": 1.86851,
+      "pct_7d": -6.8,
       "support_30d": 0.09051839499501885,
       "resistance_30d": 0.12396615653575341,
-      "as_of": "2026-09-06 09:40:22",
+      "as_of": "2026-09-06 12:10:28",
       "stale": false
     },
     "internet-computer": {
@@ -3149,19 +3149,21 @@
       "stale": false
     }
   },
-  "_strong_buy_state": {},
+  "_strong_buy_state": {
+    "15m:ENA": true
+  },
   "BTC": {
     "key": "BTC",
     "name": "Bitcoin",
     "emoji": "\u20bf",
-    "price": 79912,
+    "price": 79900,
     "high_24h": 80147,
     "low_24h": 79586,
-    "pct_24h": 0.32469,
+    "pct_24h": 0.28767,
     "pct_7d": 2.3,
     "pct_30d": 23.2,
-    "sma50": 69396.30584363977,
-    "sma200": 69730.56129889116,
+    "sma50": 69396.06048783578,
+    "sma200": 69730.49995994016,
     "support_30d": 62843.70368466329,
     "resistance_30d": 81264.70153038795,
     "mark_price": 79760.35385307,
@@ -3176,14 +3178,14 @@
     "key": "ETH",
     "name": "Ethereum",
     "emoji": "\u039e",
-    "price": 2501.39,
+    "price": 2499.59,
     "high_24h": 2521.39,
     "low_24h": 2451.62,
-    "pct_24h": 1.85833,
+    "pct_24h": 1.80095,
     "pct_7d": 1.7,
     "pct_30d": 30.9,
-    "sma50": 2102.659973305197,
-    "sma200": 2038.130358733557,
+    "sma50": 2102.626843498164,
+    "sma200": 2038.1220762817986,
     "support_30d": 1871.3976551883159,
     "resistance_30d": 2514.967577695514,
     "mark_price": 2479.87016279,
