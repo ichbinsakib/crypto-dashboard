@@ -4,7 +4,7 @@
   "_alerts_state": {
     "btc-resistance-break": {
       "triggered": true,
-      "last_triggered_at": "2026-09-06 17:00:35"
+      "last_triggered_at": "2026-09-06 17:05:19"
     },
     "btc-support-break": {
       "triggered": false,
@@ -597,11 +597,11 @@
       "symbol": "LEO",
       "name": "LEO Token",
       "price": 9.33,
-      "pct_24h": 0.63458,
+      "pct_24h": 0.7589,
       "pct_7d": -2.6,
       "support_30d": 8.948412455130585,
       "resistance_30d": 9.71203644068681,
-      "as_of": "2026-09-06 16:35:20",
+      "as_of": "2026-09-06 17:05:19",
       "stale": false
     },
     "monero": {
@@ -1735,7 +1735,7 @@
         ],
         [
           "Stretch from long-term average",
-          "-7.2% vs its long-term average - not stretched either way",
+          "-6.7% vs its long-term average - not stretched either way",
           0
         ],
         [
@@ -1748,12 +1748,12 @@
       "id": "sui",
       "symbol": "SUI",
       "name": "Sui",
-      "price": 0.794644,
-      "pct_24h": 0.16771,
-      "pct_7d": 5.6,
+      "price": 0.798797,
+      "pct_24h": 0.18718,
+      "pct_7d": 7.1,
       "support_30d": 0.6514311908607086,
       "resistance_30d": 0.8499161763231283,
-      "as_of": "2026-09-06 16:20:25",
+      "as_of": "2026-09-06 17:05:19",
       "stale": false
     },
     "lighter": {
@@ -2003,7 +2003,7 @@
       "rows": [
         [
           "Price vs. recent range",
-          "Near its 30-day high (~$7.05) - less room to run",
+          "Near its 30-day high (~$7.21) - less room to run",
           -1
         ],
         [
@@ -2023,7 +2023,7 @@
         ],
         [
           "Stretch from long-term average",
-          "+92.9% above its long-term average - very stretched",
+          "+100.3% above its long-term average - very stretched",
           -2
         ],
         [
@@ -2036,12 +2036,12 @@
       "id": "uniswap",
       "symbol": "UNI",
       "name": "Uniswap",
-      "price": 6.94,
-      "pct_24h": 10.17232,
-      "pct_7d": 33.3,
+      "price": 7.21,
+      "pct_24h": 8.0863,
+      "pct_7d": 40.1,
       "support_30d": 3.1971416665971573,
-      "resistance_30d": 7.048641772873636,
-      "as_of": "2026-09-06 15:35:18",
+      "resistance_30d": 7.2132430971483865,
+      "as_of": "2026-09-06 17:05:19",
       "stale": false
     },
     "pi-network": {
@@ -3197,19 +3197,21 @@
       "stale": false
     }
   },
-  "_strong_buy_state": {},
+  "_strong_buy_state": {
+    "1h:AAVE": true
+  },
   "BTC": {
     "key": "BTC",
     "name": "Bitcoin",
     "emoji": "\u20bf",
-    "price": 79655,
-    "high_24h": 80132,
+    "price": 79664,
+    "high_24h": 80103,
     "low_24h": 79426,
-    "pct_24h": -0.53425,
-    "pct_7d": 1.2,
+    "pct_24h": -0.512,
+    "pct_7d": 1.1,
     "pct_30d": 22.8,
-    "sma50": 69391.18000691044,
-    "sma200": 69729.27983970883,
+    "sma50": 69391.32938152314,
+    "sma200": 69729.31718336201,
     "support_30d": 62843.70368466329,
     "resistance_30d": 81264.70153038795,
     "mark_price": 79760.35385307,
@@ -3224,14 +3226,14 @@
     "key": "ETH",
     "name": "Ethereum",
     "emoji": "\u039e",
-    "price": 2482.02,
+    "price": 2483.51,
     "high_24h": 2521.39,
-    "low_24h": 2471.07,
-    "pct_24h": 0.43291,
+    "low_24h": 2473.01,
+    "pct_24h": 0.30684,
     "pct_7d": 0.1,
-    "pct_30d": 29.7,
-    "sma50": 2102.281713988595,
-    "sma200": 2038.0357939044063,
+    "pct_30d": 29.5,
+    "sma50": 2102.303618175889,
+    "sma200": 2038.0412699512299,
     "support_30d": 1871.3976551883159,
     "resistance_30d": 2514.967577695514,
     "mark_price": 2479.87016279,
