@@ -4,7 +4,7 @@
   "_alerts_state": {
     "btc-resistance-break": {
       "triggered": true,
-      "last_triggered_at": "2026-09-06 06:50:23"
+      "last_triggered_at": "2026-09-06 06:55:19"
     },
     "btc-support-break": {
       "triggered": false,
@@ -463,11 +463,11 @@
     "chainlink": {
       "label": "\ud83d\udd34 CAUTION - REDUCE NEW BUYS",
       "status": "bearish",
-      "score": -3,
+      "score": -2,
       "rows": [
         [
           "Price vs. recent range",
-          "Near its 30-day high (~$12.14) - less room to run",
+          "Near its 30-day high (~$12.26) - less room to run",
           -1
         ],
         [
@@ -482,12 +482,12 @@
         ],
         [
           "Recent trend",
-          "Chopping sideways - no clear trend",
-          0
+          "Trending up steadily - healthy",
+          1
         ],
         [
           "Stretch from long-term average",
-          "+32.7% above its long-term average - very stretched",
+          "+34.0% above its long-term average - very stretched",
           -2
         ],
         [
@@ -500,12 +500,12 @@
       "id": "chainlink",
       "symbol": "LINK",
       "name": "Chainlink",
-      "price": 12.14,
-      "pct_24h": 4.08215,
-      "pct_7d": 7.1,
+      "price": 12.26,
+      "pct_24h": 4.6875,
+      "pct_7d": 8.0,
       "support_30d": 8.18136301108558,
-      "resistance_30d": 12.137517857138734,
-      "as_of": "2026-09-06 04:40:20",
+      "resistance_30d": 12.264765039777062,
+      "as_of": "2026-09-06 06:55:19",
       "stale": false
     },
     "whitebit": {
@@ -1111,7 +1111,7 @@
         ],
         [
           "Stretch from long-term average",
-          "+11.0% above its long-term average - a bit stretched",
+          "+11.2% above its long-term average - a bit stretched",
           -1
         ],
         [
@@ -1124,12 +1124,12 @@
       "id": "polygon-ecosystem-token",
       "symbol": "POL",
       "name": "POL (ex-MATIC)",
-      "price": 0.098329,
-      "pct_24h": 3.67238,
+      "price": 0.098455,
+      "pct_24h": 3.51657,
       "pct_7d": -5.0,
       "support_30d": 0.07382135255393793,
       "resistance_30d": 0.12250456198546959,
-      "as_of": "2026-09-06 06:45:24",
+      "as_of": "2026-09-06 06:55:19",
       "stale": false
     },
     "blackrock-usd-institutional-digital-liquidity-fund": {
@@ -2003,7 +2003,7 @@
       "rows": [
         [
           "Price vs. recent range",
-          "Near its 30-day high (~$7.07) - less room to run",
+          "Near its 30-day high (~$7.08) - less room to run",
           -1
         ],
         [
@@ -2023,7 +2023,7 @@
         ],
         [
           "Stretch from long-term average",
-          "+96.4% above its long-term average - very stretched",
+          "+96.7% above its long-term average - very stretched",
           -2
         ],
         [
@@ -2036,12 +2036,12 @@
       "id": "uniswap",
       "symbol": "UNI",
       "name": "Uniswap",
-      "price": 7.07,
-      "pct_24h": 12.61404,
+      "price": 7.08,
+      "pct_24h": 12.3117,
       "pct_7d": 45.4,
       "support_30d": 3.1971416665971573,
-      "resistance_30d": 7.066348470828421,
-      "as_of": "2026-09-06 06:50:23",
+      "resistance_30d": 7.076021715940635,
+      "as_of": "2026-09-06 06:55:19",
       "stale": false
     },
     "pi-network": {
@@ -3156,14 +3156,14 @@
     "key": "BTC",
     "name": "Bitcoin",
     "emoji": "\u20bf",
-    "price": 79699,
+    "price": 79770,
     "high_24h": 80147,
     "low_24h": 79572,
-    "pct_24h": 0.03301,
+    "pct_24h": 0.12892,
     "pct_7d": 2.4,
     "pct_30d": 24.5,
-    "sma50": 69393.4540780819,
-    "sma200": 69729.84835750169,
+    "sma50": 69393.26888123839,
+    "sma200": 69729.80205829082,
     "support_30d": 62843.70368466329,
     "resistance_30d": 81264.70153038795,
     "mark_price": 79760.35385307,
@@ -3178,14 +3178,14 @@
     "key": "ETH",
     "name": "Ethereum",
     "emoji": "\u039e",
-    "price": 2504.0,
+    "price": 2506.62,
     "high_24h": 2521.39,
     "low_24h": 2451.62,
-    "pct_24h": 2.08308,
+    "pct_24h": 2.17846,
     "pct_7d": 2.3,
     "pct_30d": 32.5,
-    "sma50": 2102.7756254990963,
-    "sma200": 2038.159271782032,
+    "sma50": 2102.7579443916106,
+    "sma200": 2038.1548515051604,
     "support_30d": 1871.3976551883159,
     "resistance_30d": 2514.967577695514,
     "mark_price": 2479.87016279,
