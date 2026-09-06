@@ -4,7 +4,7 @@
   "_alerts_state": {
     "btc-resistance-break": {
       "triggered": true,
-      "last_triggered_at": "2026-09-06 09:20:23"
+      "last_triggered_at": "2026-09-06 09:25:18"
     },
     "btc-support-break": {
       "triggered": false,
@@ -1277,14 +1277,14 @@
       "stale": false
     },
     "htx-dao": {
-      "label": "\ud83d\udfe2 LEAN ACCUMULATE",
-      "status": "bullish",
-      "score": 3,
+      "label": "\ud83d\udfe1 HOLD / NEUTRAL",
+      "status": "neutral",
+      "score": 1,
       "rows": [
         [
           "Price vs. recent range",
-          "Near its 30-day low (~$0.000002) - historically a better entry",
-          2
+          "Sitting in the middle of its 30-day range",
+          0
         ],
         [
           "Crowd mood (Fear & Greed)",
@@ -1303,7 +1303,7 @@
         ],
         [
           "Stretch from long-term average",
-          "-5.0% vs its long-term average - not stretched either way",
+          "-4.5% vs its long-term average - not stretched either way",
           0
         ],
         [
@@ -1312,16 +1312,16 @@
           0
         ]
       ],
-      "plain": "Leans toward a decent spot to slowly add (DCA) - not a strong signal, just a lean.",
+      "plain": "No real edge either way right now - fine to just wait and watch.",
       "id": "htx-dao",
       "symbol": "HTX",
       "name": "HTX DAO",
-      "price": 1.68e-06,
-      "pct_24h": 1.74287,
-      "pct_7d": 0.1,
+      "price": 1.69e-06,
+      "pct_24h": 1.59101,
+      "pct_7d": 0.0,
       "support_30d": 1.6023985995039954e-06,
       "resistance_30d": 1.8259977214551937e-06,
-      "as_of": "2026-09-06 07:50:23",
+      "as_of": "2026-09-06 09:25:18",
       "stale": false
     },
     "superstate-short-duration-us-government-securities-fund-ustb": {
@@ -2215,7 +2215,7 @@
         ],
         [
           "Stretch from long-term average",
-          "+9.1% vs its long-term average - not stretched either way",
+          "+9.5% vs its long-term average - not stretched either way",
           0
         ],
         [
@@ -2228,12 +2228,12 @@
       "id": "internet-computer",
       "symbol": "ICP",
       "name": "Internet Computer",
-      "price": 2.66,
-      "pct_24h": 3.48648,
-      "pct_7d": 9.0,
+      "price": 2.67,
+      "pct_24h": 0.69012,
+      "pct_7d": 11.1,
       "support_30d": 2.1584475030049863,
-      "resistance_30d": 2.6692048976856895,
-      "as_of": "2026-09-06 03:50:23",
+      "resistance_30d": 2.673617427299833,
+      "as_of": "2026-09-06 09:25:18",
       "stale": false
     },
     "bittensor": {
@@ -2551,7 +2551,7 @@
         ],
         [
           "Stretch from long-term average",
-          "-1.6% vs its long-term average - not stretched either way",
+          "-1.5% vs its long-term average - not stretched either way",
           0
         ],
         [
@@ -2564,12 +2564,12 @@
       "id": "tether-gold",
       "symbol": "XAUT",
       "name": "Tether Gold",
-      "price": 4424.84,
-      "pct_24h": -0.06867,
-      "pct_7d": -0.7,
+      "price": 4426.38,
+      "pct_24h": -0.00513,
+      "pct_7d": -0.8,
       "support_30d": 4313.876028573939,
       "resistance_30d": 4662.510537821146,
-      "as_of": "2026-09-06 06:35:18",
+      "as_of": "2026-09-06 09:25:18",
       "stale": false
     },
     "bitway": {
@@ -3154,14 +3154,14 @@
     "key": "BTC",
     "name": "Bitcoin",
     "emoji": "\u20bf",
-    "price": 79946,
+    "price": 79961,
     "high_24h": 80147,
     "low_24h": 79586,
-    "pct_24h": 0.31703,
+    "pct_24h": 0.33414,
     "pct_7d": 2.2,
     "pct_30d": 24.2,
-    "sma50": 69396.99130136454,
-    "sma200": 69730.73266332236,
+    "sma50": 69397.25659740163,
+    "sma200": 69730.79898733163,
     "support_30d": 62843.70368466329,
     "resistance_30d": 81264.70153038795,
     "mark_price": 79760.35385307,
@@ -3176,14 +3176,14 @@
     "key": "ETH",
     "name": "Ethereum",
     "emoji": "\u039e",
-    "price": 2501.28,
+    "price": 2502.28,
     "high_24h": 2521.39,
     "low_24h": 2451.62,
-    "pct_24h": 1.77108,
+    "pct_24h": 1.83464,
     "pct_7d": 1.6,
     "pct_30d": 31.3,
-    "sma50": 2102.645988733053,
-    "sma200": 2038.1268625905207,
+    "sma50": 2102.69195349829,
+    "sma200": 2038.1383537818301,
     "support_30d": 1871.3976551883159,
     "resistance_30d": 2514.967577695514,
     "mark_price": 2479.87016279,
