@@ -4,7 +4,7 @@
   "_alerts_state": {
     "btc-resistance-break": {
       "triggered": true,
-      "last_triggered_at": "2026-09-06 14:40:23"
+      "last_triggered_at": "2026-09-06 14:45:21"
     },
     "btc-support-break": {
       "triggered": false,
@@ -371,7 +371,7 @@
       "rows": [
         [
           "Price vs. recent range",
-          "Near its 30-day high (~$1,182.87) - less room to run",
+          "Near its 30-day high (~$1,159.62) - less room to run",
           -1
         ],
         [
@@ -391,7 +391,7 @@
         ],
         [
           "Stretch from long-term average",
-          "+162.8% above its long-term average - very stretched",
+          "+158.1% above its long-term average - very stretched",
           -2
         ],
         [
@@ -404,12 +404,12 @@
       "id": "zcash",
       "symbol": "ZEC",
       "name": "Zcash",
-      "price": 1180.84,
-      "pct_24h": 16.4264,
+      "price": 1159.53,
+      "pct_24h": 14.35097,
       "pct_7d": 38.9,
       "support_30d": 480.66499804092575,
-      "resistance_30d": 1182.867178668856,
-      "as_of": "2026-09-06 14:00:35",
+      "resistance_30d": 1159.6242517998696,
+      "as_of": "2026-09-06 14:45:21",
       "stale": false
     },
     "rain": {
@@ -2191,11 +2191,11 @@
     "internet-computer": {
       "label": "\ud83d\udfe1 HOLD / NEUTRAL",
       "status": "neutral",
-      "score": 0,
+      "score": -1,
       "rows": [
         [
           "Price vs. recent range",
-          "Near its 30-day high (~$2.67) - less room to run",
+          "Near its 30-day high (~$2.74) - less room to run",
           -1
         ],
         [
@@ -2215,8 +2215,8 @@
         ],
         [
           "Stretch from long-term average",
-          "+9.5% vs its long-term average - not stretched either way",
-          0
+          "+12.3% above its long-term average - a bit stretched",
+          -1
         ],
         [
           "Leverage traders' bias",
@@ -2228,12 +2228,12 @@
       "id": "internet-computer",
       "symbol": "ICP",
       "name": "Internet Computer",
-      "price": 2.67,
-      "pct_24h": 1.83163,
-      "pct_7d": 11.2,
+      "price": 2.74,
+      "pct_24h": 4.94587,
+      "pct_7d": 12.8,
       "support_30d": 2.1584475030049863,
-      "resistance_30d": 2.6692048976856895,
-      "as_of": "2026-09-06 10:30:29",
+      "resistance_30d": 2.7362175008221388,
+      "as_of": "2026-09-06 14:45:21",
       "stale": false
     },
     "bittensor": {
@@ -3155,7 +3155,7 @@
       "rows": [
         [
           "Price vs. recent range",
-          "Near its 30-day high (~$0.2683) - less room to run",
+          "Near its 30-day high (~$0.2664) - less room to run",
           -1
         ],
         [
@@ -3175,7 +3175,7 @@
         ],
         [
           "Stretch from long-term average",
-          "+39.8% above its long-term average - very stretched",
+          "+39.4% above its long-term average - very stretched",
           -2
         ],
         [
@@ -3188,28 +3188,30 @@
       "id": "jupiter-exchange-solana",
       "symbol": "JUP",
       "name": "Jupiter",
-      "price": 0.267049,
-      "pct_24h": 20.2011,
+      "price": 0.266352,
+      "pct_24h": 19.56529,
       "pct_7d": 24.8,
       "support_30d": 0.16643295582889994,
-      "resistance_30d": 0.2683210447400019,
-      "as_of": "2026-09-06 14:26:07",
+      "resistance_30d": 0.266351800808899,
+      "as_of": "2026-09-06 14:45:21",
       "stale": false
     }
   },
-  "_strong_buy_state": {},
+  "_strong_buy_state": {
+    "1h:XLM": true
+  },
   "BTC": {
     "key": "BTC",
     "name": "Bitcoin",
     "emoji": "\u20bf",
-    "price": 79573,
+    "price": 79661,
     "high_24h": 80147,
     "low_24h": 79627,
-    "pct_24h": -0.20692,
+    "pct_24h": -0.03011,
     "pct_7d": 1.3,
     "pct_30d": 22.3,
-    "sma50": 69389.52259139372,
-    "sma200": 69728.86548582965,
+    "sma50": 69391.77104903114,
+    "sma200": 69729.427600239,
     "support_30d": 62843.70368466329,
     "resistance_30d": 81264.70153038795,
     "mark_price": 79760.35385307,
@@ -3224,14 +3226,14 @@
     "key": "ETH",
     "name": "Ethereum",
     "emoji": "\u039e",
-    "price": 2478.33,
+    "price": 2481.41,
     "high_24h": 2521.39,
     "low_24h": 2456.23,
-    "pct_24h": 0.83146,
+    "pct_24h": 1.05166,
     "pct_7d": 1.0,
     "pct_30d": 29.2,
-    "sma50": 2102.195928941528,
-    "sma200": 2038.0143476426394,
+    "sma50": 2102.286070189694,
+    "sma200": 2038.036882954681,
     "support_30d": 1871.3976551883159,
     "resistance_30d": 2514.967577695514,
     "mark_price": 2479.87016279,
