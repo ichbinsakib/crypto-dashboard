@@ -4,7 +4,7 @@
   "_alerts_state": {
     "btc-resistance-break": {
       "triggered": true,
-      "last_triggered_at": "2026-09-06 18:15:22"
+      "last_triggered_at": "2026-09-06 18:20:23"
     },
     "btc-support-break": {
       "triggered": false,
@@ -103,7 +103,7 @@
         ],
         [
           "Stretch from long-term average",
-          "+11.3% above its long-term average - a bit stretched",
+          "+10.5% above its long-term average - a bit stretched",
           -1
         ],
         [
@@ -116,12 +116,12 @@
       "id": "ripple",
       "symbol": "XRP",
       "name": "XRP",
-      "price": 1.42,
-      "pct_24h": 1.16512,
-      "pct_7d": 2.2,
+      "price": 1.41,
+      "pct_24h": -0.72084,
+      "pct_7d": -0.9,
       "support_30d": 0.9927072784932938,
       "resistance_30d": 1.52050482788377,
-      "as_of": "2026-09-06 12:25:20",
+      "as_of": "2026-09-06 18:20:23",
       "stale": false
     },
     "solana": {
@@ -275,7 +275,7 @@
       "rows": [
         [
           "Price vs. recent range",
-          "Near its 30-day high (~$88.15) - less room to run",
+          "Near its 30-day high (~$87.88) - less room to run",
           -1
         ],
         [
@@ -295,7 +295,7 @@
         ],
         [
           "Stretch from long-term average",
-          "+66.3% above its long-term average - very stretched",
+          "+65.8% above its long-term average - very stretched",
           -2
         ],
         [
@@ -308,12 +308,12 @@
       "id": "hyperliquid",
       "symbol": "HYPE",
       "name": "Hyperliquid",
-      "price": 88.2,
-      "pct_24h": 2.57743,
-      "pct_7d": 5.9,
+      "price": 87.96,
+      "pct_24h": 2.67952,
+      "pct_7d": 5.1,
       "support_30d": 53.854096460729586,
-      "resistance_30d": 88.14989600736796,
-      "as_of": "2026-09-06 16:55:17",
+      "resistance_30d": 87.88033329084425,
+      "as_of": "2026-09-06 18:20:23",
       "stale": false
     },
     "dogecoin": {
@@ -3059,7 +3059,7 @@
       "rows": [
         [
           "Price vs. recent range",
-          "Near its 30-day high (~$0.1837) - less room to run",
+          "Near its 30-day high (~$0.1845) - less room to run",
           -1
         ],
         [
@@ -3079,7 +3079,7 @@
         ],
         [
           "Stretch from long-term average",
-          "+86.8% above its long-term average - very stretched",
+          "+87.3% above its long-term average - very stretched",
           -2
         ],
         [
@@ -3092,12 +3092,12 @@
       "id": "arbitrum",
       "symbol": "ARB",
       "name": "Arbitrum",
-      "price": 0.183982,
-      "pct_24h": 33.74969,
-      "pct_7d": 112.9,
+      "price": 0.18446,
+      "pct_24h": 29.14543,
+      "pct_7d": 104.1,
       "support_30d": 0.07272258489044682,
-      "resistance_30d": 0.1836881387903182,
-      "as_of": "2026-09-06 17:50:26",
+      "resistance_30d": 0.18450353971057845,
+      "as_of": "2026-09-06 18:20:23",
       "stale": false
     },
     "dash": {
@@ -3197,19 +3197,21 @@
       "stale": false
     }
   },
-  "_strong_buy_state": {},
+  "_strong_buy_state": {
+    "15m:HYPE": true
+  },
   "BTC": {
     "key": "BTC",
     "name": "Bitcoin",
     "emoji": "\u20bf",
-    "price": 79839,
+    "price": 79844,
     "high_24h": 80103,
     "low_24h": 79426,
-    "pct_24h": -0.19381,
+    "pct_24h": -0.20053,
     "pct_7d": 0.5,
     "pct_30d": 23.1,
-    "sma50": 69394.85816610562,
-    "sma200": 69730.19937950763,
+    "sma50": 69395.08433445382,
+    "sma200": 69730.25592159467,
     "support_30d": 62843.70368466329,
     "resistance_30d": 81264.70153038795,
     "mark_price": 79760.35385307,
@@ -3224,14 +3226,14 @@
     "key": "ETH",
     "name": "Ethereum",
     "emoji": "\u039e",
-    "price": 2494.15,
+    "price": 2494.18,
     "high_24h": 2521.39,
     "low_24h": 2473.01,
-    "pct_24h": 0.62503,
+    "pct_24h": 0.64476,
     "pct_7d": -1.4,
     "pct_30d": 30.6,
-    "sma50": 2102.517519530227,
-    "sma200": 2038.0947452898142,
+    "sma50": 2102.5197042982027,
+    "sma200": 2038.0952914818083,
     "support_30d": 1871.3976551883159,
     "resistance_30d": 2514.967577695514,
     "mark_price": 2479.87016279,
