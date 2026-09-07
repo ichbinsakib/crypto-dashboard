@@ -4,7 +4,7 @@
   "_alerts_state": {
     "btc-resistance-break": {
       "triggered": true,
-      "last_triggered_at": "2026-09-07 06:45:21"
+      "last_triggered_at": "2026-09-07 06:50:23"
     },
     "btc-support-break": {
       "triggered": false,
@@ -184,7 +184,7 @@
         ],
         [
           "Crowd mood (Fear & Greed)",
-          "73/100 - crowd is greedy",
+          "71/100 - crowd is greedy",
           -1
         ],
         [
@@ -199,7 +199,7 @@
         ],
         [
           "Stretch from long-term average",
-          "+3.1% vs its long-term average - not stretched either way",
+          "+3.5% vs its long-term average - not stretched either way",
           0
         ],
         [
@@ -212,12 +212,12 @@
       "id": "tron",
       "symbol": "TRX",
       "name": "TRON",
-      "price": 0.335168,
-      "pct_24h": 0.32012,
-      "pct_7d": -1.8,
+      "price": 0.336809,
+      "pct_24h": 0.8603,
+      "pct_7d": 0.2,
       "support_30d": 0.32221537516581966,
       "resistance_30d": 0.3447899585776834,
-      "as_of": "2026-09-06 18:15:22",
+      "as_of": "2026-09-07 06:50:23",
       "stale": false
     },
     "figure-heloc": {
@@ -980,12 +980,12 @@
       "id": "aster-2",
       "symbol": "ASTER",
       "name": "Aster",
-      "price": 0.77963,
-      "pct_24h": -2.78631,
-      "pct_7d": 12.1,
+      "price": 0.779509,
+      "pct_24h": -1.03276,
+      "pct_7d": 13.6,
       "support_30d": 0.5986101196690307,
       "resistance_30d": 0.7868111056215635,
-      "as_of": "2026-09-07 05:15:21",
+      "as_of": "2026-09-07 06:50:23",
       "stale": false
     },
     "worldcoin-wld": {
@@ -3203,7 +3203,7 @@
       "rows": [
         [
           "Price vs. recent range",
-          "Near its 30-day high (~$0.0340) - less room to run",
+          "Near its 30-day high (~$0.0338) - less room to run",
           -1
         ],
         [
@@ -3223,7 +3223,7 @@
         ],
         [
           "Stretch from long-term average",
-          "-0.8% vs its long-term average - not stretched either way",
+          "-1.5% vs its long-term average - not stretched either way",
           0
         ],
         [
@@ -3236,28 +3236,31 @@
       "id": "kaspa",
       "symbol": "KAS",
       "name": "Kaspa",
-      "price": 0.03403558,
-      "pct_24h": 12.18885,
+      "price": 0.03377263,
+      "pct_24h": 11.53374,
       "pct_7d": 22.3,
       "support_30d": 0.025258977496893695,
-      "resistance_30d": 0.03403661316307951,
-      "as_of": "2026-09-07 06:35:17",
+      "resistance_30d": 0.03379109151303253,
+      "as_of": "2026-09-07 06:50:23",
       "stale": false
     }
   },
-  "_strong_buy_state": {},
+  "_strong_buy_state": {
+    "15m:HBAR": true,
+    "1h:HBAR": true
+  },
   "BTC": {
     "key": "BTC",
     "name": "Bitcoin",
     "emoji": "\u20bf",
-    "price": 79683,
+    "price": 79664,
     "high_24h": 80494,
     "low_24h": 79426,
-    "pct_24h": -0.15213,
+    "pct_24h": -0.0966,
     "pct_7d": 2.8,
     "pct_30d": 22.8,
-    "sma50": 69704.98367363203,
-    "sma200": 69796.20261544223,
+    "sma50": 69704.52775590066,
+    "sma200": 69796.0886360094,
     "support_30d": 62843.70368466329,
     "resistance_30d": 81264.70153038795,
     "mark_price": 79760.35385307,
@@ -3272,14 +3275,14 @@
     "key": "ETH",
     "name": "Ethereum",
     "emoji": "\u039e",
-    "price": 2499.77,
+    "price": 2499.49,
     "high_24h": 2532.72,
     "low_24h": 2473.01,
-    "pct_24h": -0.32926,
+    "pct_24h": -0.22598,
     "pct_7d": 3.6,
     "pct_30d": 30.7,
-    "sma50": 2115.4983611373636,
-    "sma200": 2040.9460066819413,
+    "sma50": 2115.4867270715854,
+    "sma200": 2040.9430981654964,
     "support_30d": 1871.3976551883159,
     "resistance_30d": 2514.967577695514,
     "mark_price": 2479.87016279,
