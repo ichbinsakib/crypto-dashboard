@@ -4,7 +4,7 @@
   "_alerts_state": {
     "btc-resistance-break": {
       "triggered": true,
-      "last_triggered_at": "2026-09-07 23:35:16"
+      "last_triggered_at": "2026-09-07 23:40:21"
     },
     "btc-support-break": {
       "triggered": false,
@@ -967,7 +967,7 @@
         ],
         [
           "Stretch from long-term average",
-          "+16.5% above its long-term average - a bit stretched",
+          "+16.2% above its long-term average - a bit stretched",
           -1
         ],
         [
@@ -980,12 +980,12 @@
       "id": "aster-2",
       "symbol": "ASTER",
       "name": "Aster",
-      "price": 0.771648,
-      "pct_24h": -1.51113,
+      "price": 0.769649,
+      "pct_24h": -2.53075,
       "pct_7d": 9.8,
       "support_30d": 0.5986101196690307,
       "resistance_30d": 0.7868111056215635,
-      "as_of": "2026-09-07 23:20:23",
+      "as_of": "2026-09-07 23:40:21",
       "stale": false
     },
     "worldcoin-wld": {
@@ -2381,9 +2381,9 @@
       "stale": false
     },
     "shiba-inu": {
-      "label": "\ud83d\udfe2 LEAN ACCUMULATE",
-      "status": "bullish",
-      "score": 2,
+      "label": "\ud83d\udfe1 HOLD / NEUTRAL",
+      "status": "neutral",
+      "score": 1,
       "rows": [
         [
           "Price vs. recent range",
@@ -2402,12 +2402,12 @@
         ],
         [
           "Recent trend",
-          "Trending up steadily - healthy",
-          1
+          "Chopping sideways - no clear trend",
+          0
         ],
         [
           "Stretch from long-term average",
-          "+1.7% vs its long-term average - not stretched either way",
+          "+0.6% vs its long-term average - not stretched either way",
           0
         ],
         [
@@ -2416,16 +2416,16 @@
           0
         ]
       ],
-      "plain": "Leans toward a decent spot to slowly add (DCA) - not a strong signal, just a lean.",
+      "plain": "No real edge either way right now - fine to just wait and watch.",
       "id": "shiba-inu",
       "symbol": "SHIB",
       "name": "Shiba Inu",
-      "price": 5.48e-06,
-      "pct_24h": 0.20089,
-      "pct_7d": 8.5,
+      "price": 5.42e-06,
+      "pct_24h": -1.84414,
+      "pct_7d": 6.4,
       "support_30d": 4.390093758351827e-06,
       "resistance_30d": 5.903506876405612e-06,
-      "as_of": "2026-09-07 21:10:59",
+      "as_of": "2026-09-07 23:40:21",
       "stale": false
     },
     "near": {
@@ -2647,7 +2647,7 @@
         ],
         [
           "Stretch from long-term average",
-          "-20.9% below its long-term average - confirmed downtrend",
+          "-21.1% below its long-term average - confirmed downtrend",
           -1
         ],
         [
@@ -2660,12 +2660,12 @@
       "id": "world-liberty-financial",
       "symbol": "WLFI",
       "name": "World Liberty Financial",
-      "price": 0.056455,
-      "pct_24h": -0.25291,
-      "pct_7d": -2.9,
+      "price": 0.056363,
+      "pct_24h": -0.70844,
+      "pct_7d": -3.1,
       "support_30d": 0.05311679629324154,
       "resistance_30d": 0.06254770952093733,
-      "as_of": "2026-09-07 21:45:22",
+      "as_of": "2026-09-07 23:40:21",
       "stale": false
     },
     "pax-gold": {
@@ -3293,21 +3293,19 @@
       "stale": false
     }
   },
-  "_strong_buy_state": {
-    "15m:LTC": true
-  },
+  "_strong_buy_state": {},
   "BTC": {
     "key": "BTC",
     "name": "Bitcoin",
     "emoji": "\u20bf",
-    "price": 79004,
+    "price": 79022,
     "high_24h": 80397,
     "low_24h": 78707,
-    "pct_24h": -1.48772,
+    "pct_24h": -1.73041,
     "pct_7d": -0.1,
     "pct_30d": 21.4,
-    "sma50": 69691.04112381404,
-    "sma200": 69792.71697798773,
+    "sma50": 69691.68481794624,
+    "sma200": 69792.8779015208,
     "support_30d": 62843.70368466329,
     "resistance_30d": 81264.70153038795,
     "mark_price": 79370.02473188,
@@ -3322,14 +3320,14 @@
     "key": "ETH",
     "name": "Ethereum",
     "emoji": "\u039e",
-    "price": 2484.39,
+    "price": 2485.51,
     "high_24h": 2532.72,
     "low_24h": 2467.8,
-    "pct_24h": -1.24567,
+    "pct_24h": -1.33111,
     "pct_7d": 0.1,
     "pct_30d": 29.3,
-    "sma50": 2115.1813127618443,
-    "sma200": 2040.8667445880615,
+    "sma50": 2115.2145004875397,
+    "sma200": 2040.8750415194852,
     "support_30d": 1871.3976551883159,
     "resistance_30d": 2514.967577695514,
     "mark_price": 2488.83603101,
