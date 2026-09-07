@@ -4,7 +4,7 @@
   "_alerts_state": {
     "btc-resistance-break": {
       "triggered": true,
-      "last_triggered_at": "2026-09-07 00:25:19"
+      "last_triggered_at": "2026-09-07 00:30:29"
     },
     "btc-support-break": {
       "triggered": false,
@@ -461,33 +461,33 @@
       "stale": false
     },
     "chainlink": {
-      "label": "\ud83d\udd34 CAUTION - REDUCE NEW BUYS",
+      "label": "\ud83d\udd34 DISTRIBUTION ZONE",
       "status": "bearish",
-      "score": -3,
+      "score": -5,
       "rows": [
         [
           "Price vs. recent range",
-          "Near its 30-day high (~$12.40) - less room to run",
+          "Near its 30-day high (~$13.28) - less room to run",
           -1
         ],
         [
           "Crowd mood (Fear & Greed)",
-          "73/100 - crowd is greedy",
+          "71/100 - crowd is greedy",
           -1
         ],
         [
           "Market phase (best guess)",
-          "Established uptrend - phase where price marks up",
-          1
+          "Very extended after a big run - phase where smart money sells",
+          -2
         ],
         [
           "Recent trend",
-          "Chopping sideways - no clear trend",
-          0
+          "Trending up steadily - healthy",
+          1
         ],
         [
           "Stretch from long-term average",
-          "+35.6% above its long-term average - very stretched",
+          "+44.8% above its long-term average - very stretched",
           -2
         ],
         [
@@ -496,16 +496,16 @@
           0
         ]
       ],
-      "plain": "Getting risky - I'd hold off on new buys until this cools down.",
+      "plain": "Looks stretched and euphoric - historically the zone where smart money sells, not buys.",
       "id": "chainlink",
       "symbol": "LINK",
       "name": "Chainlink",
-      "price": 12.41,
-      "pct_24h": 3.10311,
-      "pct_7d": 4.9,
+      "price": 13.28,
+      "pct_24h": 9.82744,
+      "pct_7d": 15.8,
       "support_30d": 8.18136301108558,
-      "resistance_30d": 12.397648828884403,
-      "as_of": "2026-09-06 18:50:23",
+      "resistance_30d": 13.276650428977765,
+      "as_of": "2026-09-07 00:30:29",
       "stale": false
     },
     "whitebit": {
@@ -611,12 +611,12 @@
       "rows": [
         [
           "Price vs. recent range",
-          "Sitting in the middle of its 30-day range",
-          0
+          "Near its 30-day high (~$555.67) - less room to run",
+          -1
         ],
         [
           "Crowd mood (Fear & Greed)",
-          "73/100 - crowd is greedy",
+          "71/100 - crowd is greedy",
           -1
         ],
         [
@@ -626,12 +626,12 @@
         ],
         [
           "Recent trend",
-          "Chopping sideways - no clear trend",
-          0
+          "Trending up steadily - healthy",
+          1
         ],
         [
           "Stretch from long-term average",
-          "+44.5% above its long-term average - very stretched",
+          "+48.1% above its long-term average - very stretched",
           -2
         ],
         [
@@ -644,12 +644,12 @@
       "id": "monero",
       "symbol": "XMR",
       "name": "Monero",
-      "price": 525.12,
-      "pct_24h": -3.6546,
-      "pct_7d": 6.8,
+      "price": 539.93,
+      "pct_24h": -2.75002,
+      "pct_7d": 11.0,
       "support_30d": 377.1738335746389,
       "resistance_30d": 555.6684591165193,
-      "as_of": "2026-09-06 20:40:21",
+      "as_of": "2026-09-07 00:30:29",
       "stale": false
     },
     "cardano": {
@@ -2296,7 +2296,7 @@
         ],
         [
           "Crowd mood (Fear & Greed)",
-          "73/100 - crowd is greedy",
+          "71/100 - crowd is greedy",
           -1
         ],
         [
@@ -2325,11 +2325,11 @@
       "symbol": "GRAM",
       "name": "Gram (prev. Toncoin)",
       "price": 1.43,
-      "pct_24h": 0.10491,
-      "pct_7d": 3.9,
+      "pct_24h": 0.1083,
+      "pct_7d": 6.1,
       "support_30d": 1.316580434471296,
       "resistance_30d": 1.4926762805297678,
-      "as_of": "2026-09-06 21:10:21",
+      "as_of": "2026-09-07 00:30:29",
       "stale": false
     },
     "sky": {
@@ -3250,14 +3250,14 @@
     "key": "BTC",
     "name": "Bitcoin",
     "emoji": "\u20bf",
-    "price": 80173,
+    "price": 80179,
     "high_24h": 80494,
     "low_24h": 79426,
-    "pct_24h": 0.3766,
+    "pct_24h": 0.31643,
     "pct_7d": 2.5,
     "pct_30d": 23.9,
-    "sma50": 69714.7462382865,
-    "sma200": 69798.64325660585,
+    "sma50": 69714.98685685168,
+    "sma200": 69798.70341124716,
     "support_30d": 62843.70368466329,
     "resistance_30d": 81264.70153038795,
     "mark_price": 79760.35385307,
@@ -3272,16 +3272,16 @@
     "key": "ETH",
     "name": "Ethereum",
     "emoji": "\u039e",
-    "price": 2514.27,
+    "price": 2515.62,
     "high_24h": 2523.33,
     "low_24h": 2473.01,
-    "pct_24h": 1.25659,
+    "pct_24h": 1.15001,
     "pct_7d": 1.8,
     "pct_30d": 31.4,
-    "sma50": 2115.789723633056,
-    "sma200": 2041.0188473058643,
+    "sma50": 2115.817119016803,
+    "sma200": 2041.0256961518012,
     "support_30d": 1871.3976551883159,
-    "resistance_30d": 2514.967577695514,
+    "resistance_30d": 2515.763447597959,
     "mark_price": 2479.87016279,
     "index_price": 2480.83883721,
     "funding_rate": 6.641e-05,
