@@ -4,7 +4,7 @@
   "_alerts_state": {
     "btc-resistance-break": {
       "triggered": true,
-      "last_triggered_at": "2026-09-07 17:50:23"
+      "last_triggered_at": "2026-09-07 17:55:21"
     },
     "btc-support-break": {
       "triggered": false,
@@ -487,7 +487,7 @@
         ],
         [
           "Stretch from long-term average",
-          "+43.7% above its long-term average - very stretched",
+          "+41.3% above its long-term average - very stretched",
           -2
         ],
         [
@@ -500,12 +500,12 @@
       "id": "chainlink",
       "symbol": "LINK",
       "name": "Chainlink",
-      "price": 13.18,
-      "pct_24h": 7.33669,
-      "pct_7d": 18.1,
+      "price": 12.96,
+      "pct_24h": 5.30877,
+      "pct_7d": 13.5,
       "support_30d": 8.18136301108558,
       "resistance_30d": 13.237155745219605,
-      "as_of": "2026-09-07 13:45:23",
+      "as_of": "2026-09-07 17:55:21",
       "stale": false
     },
     "whitebit": {
@@ -2503,7 +2503,7 @@
         ],
         [
           "Stretch from long-term average",
-          "-4.3% vs its long-term average - not stretched either way",
+          "-3.7% vs its long-term average - not stretched either way",
           0
         ],
         [
@@ -2516,12 +2516,12 @@
       "id": "quant-network",
       "symbol": "QNT",
       "name": "Quant",
-      "price": 65.57,
-      "pct_24h": -0.02824,
-      "pct_7d": 6.5,
+      "price": 66.0,
+      "pct_24h": 0.02494,
+      "pct_7d": 7.2,
       "support_30d": 55.905981995619285,
       "resistance_30d": 67.0383571823565,
-      "as_of": "2026-09-07 16:00:37",
+      "as_of": "2026-09-07 17:55:21",
       "stale": false
     },
     "tether-gold": {
@@ -2887,7 +2887,7 @@
         ],
         [
           "Stretch from long-term average",
-          "+32.7% above its long-term average - very stretched",
+          "+32.5% above its long-term average - very stretched",
           -2
         ],
         [
@@ -2900,12 +2900,12 @@
       "id": "okb",
       "symbol": "OKB",
       "name": "OKB",
-      "price": 115.27,
-      "pct_24h": 1.99423,
+      "price": 115.09,
+      "pct_24h": 1.65884,
       "pct_7d": 2.7,
       "support_30d": 93.8774603502972,
       "resistance_30d": 115.8310797114581,
-      "as_of": "2026-09-07 17:10:23",
+      "as_of": "2026-09-07 17:55:21",
       "stale": false
     },
     "just": {
@@ -3293,19 +3293,21 @@
       "stale": false
     }
   },
-  "_strong_buy_state": {},
+  "_strong_buy_state": {
+    "1h:CRO": true
+  },
   "BTC": {
     "key": "BTC",
     "name": "Bitcoin",
     "emoji": "\u20bf",
-    "price": 79138,
+    "price": 79184,
     "high_24h": 80494,
     "low_24h": 78707,
-    "pct_24h": -0.7396,
+    "pct_24h": -0.69137,
     "pct_7d": 0.5,
     "pct_30d": 21.4,
-    "sma50": 69694.00458027028,
-    "sma200": 69793.4578421018,
+    "sma50": 69694.91714440001,
+    "sma200": 69793.68598313423,
     "support_30d": 62843.70368466329,
     "resistance_30d": 81264.70153038795,
     "mark_price": 79370.02473188,
@@ -3320,14 +3322,14 @@
     "key": "ETH",
     "name": "Ethereum",
     "emoji": "\u039e",
-    "price": 2492.66,
+    "price": 2494.93,
     "high_24h": 2532.72,
     "low_24h": 2467.8,
-    "pct_24h": 0.04493,
+    "pct_24h": 0.14458,
     "pct_7d": 0.5,
     "pct_30d": 29.1,
-    "sma50": 2115.355327668748,
-    "sma200": 2040.9102483147872,
+    "sma50": 2115.402886045769,
+    "sma200": 2040.9221379090422,
     "support_30d": 1871.3976551883159,
     "resistance_30d": 2514.967577695514,
     "mark_price": 2488.83603101,
