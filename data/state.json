@@ -4,7 +4,7 @@
   "_alerts_state": {
     "btc-resistance-break": {
       "triggered": true,
-      "last_triggered_at": "2026-09-07 22:12:48"
+      "last_triggered_at": "2026-09-07 22:15:22"
     },
     "btc-support-break": {
       "triggered": false,
@@ -487,7 +487,7 @@
         ],
         [
           "Stretch from long-term average",
-          "+39.6% above its long-term average - very stretched",
+          "+39.1% above its long-term average - very stretched",
           -2
         ],
         [
@@ -500,12 +500,12 @@
       "id": "chainlink",
       "symbol": "LINK",
       "name": "Chainlink",
-      "price": 12.8,
-      "pct_24h": 3.71553,
-      "pct_7d": 12.0,
+      "price": 12.75,
+      "pct_24h": -0.82661,
+      "pct_7d": 12.1,
       "support_30d": 8.18136301108558,
       "resistance_30d": 13.237155745219605,
-      "as_of": "2026-09-07 20:10:24",
+      "as_of": "2026-09-07 22:15:22",
       "stale": false
     },
     "whitebit": {
@@ -1111,7 +1111,7 @@
         ],
         [
           "Stretch from long-term average",
-          "+7.8% vs its long-term average - not stretched either way",
+          "+7.9% vs its long-term average - not stretched either way",
           0
         ],
         [
@@ -1124,12 +1124,12 @@
       "id": "polygon-ecosystem-token",
       "symbol": "POL",
       "name": "POL (ex-MATIC)",
-      "price": 0.095387,
-      "pct_24h": -3.09685,
+      "price": 0.095498,
+      "pct_24h": -2.43756,
       "pct_7d": 5.3,
       "support_30d": 0.07382135255393793,
       "resistance_30d": 0.12250456198546959,
-      "as_of": "2026-09-07 22:00:34",
+      "as_of": "2026-09-07 22:15:22",
       "stale": false
     },
     "blackrock-usd-institutional-digital-liquidity-fund": {
@@ -1469,9 +1469,9 @@
       "stale": false
     },
     "ethereum-classic": {
-      "label": "\ud83d\udfe1 HOLD / NEUTRAL",
-      "status": "neutral",
-      "score": 1,
+      "label": "\ud83d\udfe2 LEAN ACCUMULATE",
+      "status": "bullish",
+      "score": 2,
       "rows": [
         [
           "Price vs. recent range",
@@ -1490,12 +1490,12 @@
         ],
         [
           "Recent trend",
-          "Chopping sideways - no clear trend",
-          0
+          "Trending up steadily - healthy",
+          1
         ],
         [
           "Stretch from long-term average",
-          "-2.8% vs its long-term average - not stretched either way",
+          "-2.2% vs its long-term average - not stretched either way",
           0
         ],
         [
@@ -1504,16 +1504,16 @@
           0
         ]
       ],
-      "plain": "No real edge either way right now - fine to just wait and watch.",
+      "plain": "Leans toward a decent spot to slowly add (DCA) - not a strong signal, just a lean.",
       "id": "ethereum-classic",
       "symbol": "ETC",
       "name": "Ethereum Classic",
-      "price": 7.85,
-      "pct_24h": 1.22261,
-      "pct_7d": 7.7,
+      "price": 7.9,
+      "pct_24h": 1.94034,
+      "pct_7d": 8.9,
       "support_30d": 6.079473341192034,
       "resistance_30d": 8.342731558283557,
-      "as_of": "2026-09-07 21:00:38",
+      "as_of": "2026-09-07 22:15:22",
       "stale": false
     },
     "pump-fun": {
@@ -3298,14 +3298,14 @@
     "key": "BTC",
     "name": "Bitcoin",
     "emoji": "\u20bf",
-    "price": 79193,
+    "price": 79160,
     "high_24h": 80494,
     "low_24h": 78707,
-    "pct_24h": -0.67149,
+    "pct_24h": -0.72816,
     "pct_7d": 0.4,
     "pct_30d": 21.8,
-    "sma50": 69695.09446615871,
-    "sma200": 69793.7303135739,
+    "sma50": 69694.54122009144,
+    "sma200": 69793.59200205709,
     "support_30d": 62843.70368466329,
     "resistance_30d": 81264.70153038795,
     "mark_price": 79370.02473188,
@@ -3320,14 +3320,14 @@
     "key": "ETH",
     "name": "Ethereum",
     "emoji": "\u039e",
-    "price": 2490.14,
+    "price": 2489.95,
     "high_24h": 2532.72,
     "low_24h": 2467.8,
-    "pct_24h": -0.30605,
+    "pct_24h": -0.30856,
     "pct_7d": 0.8,
     "pct_30d": 29.8,
-    "sma50": 2115.304661566761,
-    "sma200": 2040.8975817892904,
+    "sma50": 2115.304675639691,
+    "sma200": 2040.897585307523,
     "support_30d": 1871.3976551883159,
     "resistance_30d": 2514.967577695514,
     "mark_price": 2488.83603101,
