@@ -4,7 +4,7 @@
   "_alerts_state": {
     "btc-resistance-break": {
       "triggered": true,
-      "last_triggered_at": "2026-09-07 10:00:36"
+      "last_triggered_at": "2026-09-07 10:05:19"
     },
     "btc-support-break": {
       "triggered": false,
@@ -947,7 +947,7 @@
       "rows": [
         [
           "Price vs. recent range",
-          "Near its 30-day high (~$0.7868) - less room to run",
+          "Near its 30-day high (~$0.7902) - less room to run",
           -1
         ],
         [
@@ -967,7 +967,7 @@
         ],
         [
           "Stretch from long-term average",
-          "+17.7% above its long-term average - a bit stretched",
+          "+19.3% above its long-term average - a bit stretched",
           -1
         ],
         [
@@ -980,12 +980,12 @@
       "id": "aster-2",
       "symbol": "ASTER",
       "name": "Aster",
-      "price": 0.779509,
-      "pct_24h": -1.03276,
-      "pct_7d": 13.6,
+      "price": 0.78973,
+      "pct_24h": 1.06723,
+      "pct_7d": 13.3,
       "support_30d": 0.5986101196690307,
-      "resistance_30d": 0.7868111056215635,
-      "as_of": "2026-09-07 06:50:23",
+      "resistance_30d": 0.7901500943672304,
+      "as_of": "2026-09-07 10:05:19",
       "stale": false
     },
     "worldcoin-wld": {
@@ -1907,7 +1907,7 @@
       "rows": [
         [
           "Price vs. recent range",
-          "Near its 30-day high (~$0.6410) - less room to run",
+          "Near its 30-day high (~$0.6361) - less room to run",
           -1
         ],
         [
@@ -1927,7 +1927,7 @@
         ],
         [
           "Stretch from long-term average",
-          "+8.3% vs its long-term average - not stretched either way",
+          "+7.4% vs its long-term average - not stretched either way",
           0
         ],
         [
@@ -1940,12 +1940,12 @@
       "id": "mantle",
       "symbol": "MNT",
       "name": "Mantle",
-      "price": 0.641319,
-      "pct_24h": 7.26627,
-      "pct_7d": 13.0,
+      "price": 0.636055,
+      "pct_24h": 4.25417,
+      "pct_7d": 11.9,
       "support_30d": 0.42318748176329435,
-      "resistance_30d": 0.640965377756928,
-      "as_of": "2026-09-07 08:00:35",
+      "resistance_30d": 0.636055213680372,
+      "as_of": "2026-09-07 10:05:19",
       "stale": false
     },
     "polkadot": {
@@ -2805,11 +2805,11 @@
       "symbol": "M",
       "name": "MemeCore",
       "price": 1.13,
-      "pct_24h": -0.40325,
-      "pct_7d": 5.1,
+      "pct_24h": -0.58974,
+      "pct_7d": 6.0,
       "support_30d": 1.0402044506518406,
       "resistance_30d": 1.2453913363052769,
-      "as_of": "2026-09-07 09:55:18",
+      "as_of": "2026-09-07 10:05:19",
       "stale": false
     },
     "aave": {
@@ -3245,19 +3245,22 @@
       "stale": false
     }
   },
-  "_strong_buy_state": {},
+  "_strong_buy_state": {
+    "15m:XMR": true,
+    "1h:WBT": true
+  },
   "BTC": {
     "key": "BTC",
     "name": "Bitcoin",
     "emoji": "\u20bf",
-    "price": 79339,
+    "price": 79358,
     "high_24h": 80494,
     "low_24h": 79081,
-    "pct_24h": -0.68633,
-    "pct_7d": 1.6,
-    "pct_30d": 22.4,
-    "sma50": 69697.6853216115,
-    "sma200": 69794.37802743711,
+    "pct_24h": -0.71485,
+    "pct_7d": 1.1,
+    "pct_30d": 22.1,
+    "sma50": 69698.15241448667,
+    "sma200": 69794.4948006559,
     "support_30d": 62843.70368466329,
     "resistance_30d": 81264.70153038795,
     "mark_price": 79760.35385307,
@@ -3272,14 +3275,14 @@
     "key": "ETH",
     "name": "Ethereum",
     "emoji": "\u039e",
-    "price": 2486.39,
+    "price": 2486.52,
     "high_24h": 2532.72,
     "low_24h": 2473.01,
-    "pct_24h": -0.5195,
-    "pct_7d": 2.1,
-    "pct_30d": 30.2,
-    "sma50": 2115.2178846618954,
-    "sma200": 2040.875887563074,
+    "pct_24h": -0.51658,
+    "pct_7d": 1.6,
+    "pct_30d": 29.8,
+    "sma50": 2115.2218526355796,
+    "sma200": 2040.8768795564952,
     "support_30d": 1871.3976551883159,
     "resistance_30d": 2514.967577695514,
     "mark_price": 2479.87016279,
