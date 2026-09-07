@@ -4,7 +4,7 @@
   "_alerts_state": {
     "btc-resistance-break": {
       "triggered": true,
-      "last_triggered_at": "2026-09-07 04:55:17"
+      "last_triggered_at": "2026-09-07 05:00:34"
     },
     "btc-support-break": {
       "triggered": false,
@@ -117,11 +117,11 @@
       "symbol": "XRP",
       "name": "XRP",
       "price": 1.41,
-      "pct_24h": -1.06185,
-      "pct_7d": 4.6,
+      "pct_24h": -0.98365,
+      "pct_7d": 3.8,
       "support_30d": 0.9927072784932938,
       "resistance_30d": 1.52050482788377,
-      "as_of": "2026-09-07 04:55:17",
+      "as_of": "2026-09-07 05:00:34",
       "stale": false
     },
     "solana": {
@@ -967,7 +967,7 @@
         ],
         [
           "Stretch from long-term average",
-          "+18.1% above its long-term average - a bit stretched",
+          "+18.2% above its long-term average - a bit stretched",
           -1
         ],
         [
@@ -980,12 +980,12 @@
       "id": "aster-2",
       "symbol": "ASTER",
       "name": "Aster",
-      "price": 0.78182,
-      "pct_24h": -1.2696,
-      "pct_7d": 12.9,
+      "price": 0.782961,
+      "pct_24h": -1.99251,
+      "pct_7d": 12.1,
       "support_30d": 0.5986101196690307,
       "resistance_30d": 0.7868111056215635,
-      "as_of": "2026-09-07 04:55:17",
+      "as_of": "2026-09-07 05:00:34",
       "stale": false
     },
     "worldcoin-wld": {
@@ -2503,7 +2503,7 @@
         ],
         [
           "Stretch from long-term average",
-          "-2.8% vs its long-term average - not stretched either way",
+          "-2.9% vs its long-term average - not stretched either way",
           0
         ],
         [
@@ -2516,12 +2516,12 @@
       "id": "quant-network",
       "symbol": "QNT",
       "name": "Quant",
-      "price": 66.6,
-      "pct_24h": 1.49757,
-      "pct_7d": 11.0,
+      "price": 66.53,
+      "pct_24h": 1.7485,
+      "pct_7d": 10.0,
       "support_30d": 55.905981995619285,
       "resistance_30d": 67.0383571823565,
-      "as_of": "2026-09-07 03:25:20",
+      "as_of": "2026-09-07 05:00:34",
       "stale": false
     },
     "tether-gold": {
@@ -3245,19 +3245,21 @@
       "stale": false
     }
   },
-  "_strong_buy_state": {},
+  "_strong_buy_state": {
+    "1h:XRP": true
+  },
   "BTC": {
     "key": "BTC",
     "name": "Bitcoin",
     "emoji": "\u20bf",
-    "price": 79669,
+    "price": 79690,
     "high_24h": 80494,
     "low_24h": 79426,
-    "pct_24h": -0.25116,
+    "pct_24h": -0.20605,
     "pct_7d": 2.8,
     "pct_30d": 22.7,
-    "sma50": 69704.62655080331,
-    "sma200": 69796.11333473506,
+    "sma50": 69705.28805782285,
+    "sma200": 69796.27871148994,
     "support_30d": 62843.70368466329,
     "resistance_30d": 81264.70153038795,
     "mark_price": 79760.35385307,
@@ -3272,14 +3274,14 @@
     "key": "ETH",
     "name": "Ethereum",
     "emoji": "\u039e",
-    "price": 2495.63,
+    "price": 2496.11,
     "high_24h": 2532.72,
     "low_24h": 2473.01,
-    "pct_24h": -0.27799,
+    "pct_24h": -0.28908,
     "pct_7d": 3.8,
     "pct_30d": 30.7,
-    "sma50": 2115.415071884768,
-    "sma200": 2040.925184368792,
+    "sma50": 2115.4316309194946,
+    "sma200": 2040.9293241274738,
     "support_30d": 1871.3976551883159,
     "resistance_30d": 2514.967577695514,
     "mark_price": 2479.87016279,
