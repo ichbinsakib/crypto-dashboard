@@ -4,7 +4,7 @@
   "_alerts_state": {
     "btc-resistance-break": {
       "triggered": true,
-      "last_triggered_at": "2026-09-07 20:05:22"
+      "last_triggered_at": "2026-09-07 20:10:24"
     },
     "btc-support-break": {
       "triggered": false,
@@ -265,7 +265,7 @@
       "pct_7d": 5.5,
       "support_30d": 1.0008548889936117,
       "resistance_30d": 1.0455978355177025,
-      "as_of": "2026-09-07 20:05:22",
+      "as_of": "2026-09-07 20:10:24",
       "stale": false
     },
     "hyperliquid": {
@@ -461,9 +461,9 @@
       "stale": false
     },
     "chainlink": {
-      "label": "\ud83d\udd34 DISTRIBUTION ZONE",
+      "label": "\ud83d\udd34 CAUTION - REDUCE NEW BUYS",
       "status": "bearish",
-      "score": -5,
+      "score": -2,
       "rows": [
         [
           "Price vs. recent range",
@@ -477,8 +477,8 @@
         ],
         [
           "Market phase (best guess)",
-          "Very extended after a big run - phase where smart money sells",
-          -2
+          "Established uptrend - phase where price marks up",
+          1
         ],
         [
           "Recent trend",
@@ -487,7 +487,7 @@
         ],
         [
           "Stretch from long-term average",
-          "+41.3% above its long-term average - very stretched",
+          "+39.6% above its long-term average - very stretched",
           -2
         ],
         [
@@ -496,16 +496,16 @@
           0
         ]
       ],
-      "plain": "Looks stretched and euphoric - historically the zone where smart money sells, not buys.",
+      "plain": "Getting risky - I'd hold off on new buys until this cools down.",
       "id": "chainlink",
       "symbol": "LINK",
       "name": "Chainlink",
-      "price": 12.96,
-      "pct_24h": 5.30877,
-      "pct_7d": 13.5,
+      "price": 12.8,
+      "pct_24h": 3.71553,
+      "pct_7d": 12.0,
       "support_30d": 8.18136301108558,
       "resistance_30d": 13.237155745219605,
-      "as_of": "2026-09-07 17:55:21",
+      "as_of": "2026-09-07 20:10:24",
       "stale": false
     },
     "whitebit": {
@@ -1543,7 +1543,7 @@
         ],
         [
           "Stretch from long-term average",
-          "+111.2% above its long-term average - very stretched",
+          "+108.3% above its long-term average - very stretched",
           -2
         ],
         [
@@ -1556,12 +1556,12 @@
       "id": "pump-fun",
       "symbol": "PUMP",
       "name": "Pump.fun",
-      "price": 0.0044261,
-      "pct_24h": 15.67298,
-      "pct_7d": -0.9,
+      "price": 0.00436511,
+      "pct_24h": 13.06044,
+      "pct_7d": 0.4,
       "support_30d": 0.002666433318189806,
       "resistance_30d": 0.0052249885406471875,
-      "as_of": "2026-09-07 19:40:23",
+      "as_of": "2026-09-07 20:10:24",
       "stale": false
     },
     "venice-token": {
@@ -3298,14 +3298,14 @@
     "key": "BTC",
     "name": "Bitcoin",
     "emoji": "\u20bf",
-    "price": 79324,
+    "price": 79251,
     "high_24h": 80494,
     "low_24h": 78707,
-    "pct_24h": -0.58259,
+    "pct_24h": -0.67033,
     "pct_7d": 0.4,
     "pct_30d": 22.1,
-    "sma50": 69697.72720645132,
-    "sma200": 69794.38849864707,
+    "sma50": 69695.8661423061,
+    "sma200": 69793.92323261074,
     "support_30d": 62843.70368466329,
     "resistance_30d": 81264.70153038795,
     "mark_price": 79370.02473188,
@@ -3320,14 +3320,14 @@
     "key": "ETH",
     "name": "Ethereum",
     "emoji": "\u039e",
-    "price": 2493.93,
+    "price": 2491.49,
     "high_24h": 2532.72,
     "low_24h": 2467.8,
-    "pct_24h": 0.20788,
+    "pct_24h": 0.07669,
     "pct_7d": 0.7,
     "pct_30d": 30.0,
-    "sma50": 2115.399900792771,
-    "sma200": 2040.921391595793,
+    "sma50": 2115.3111732204056,
+    "sma200": 2040.8992097027015,
     "support_30d": 1871.3976551883159,
     "resistance_30d": 2514.967577695514,
     "mark_price": 2488.83603101,
