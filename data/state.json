@@ -4,7 +4,7 @@
   "_alerts_state": {
     "btc-resistance-break": {
       "triggered": true,
-      "last_triggered_at": "2026-09-07 06:55:17"
+      "last_triggered_at": "2026-09-07 07:00:42"
     },
     "btc-support-break": {
       "triggered": false,
@@ -68,12 +68,12 @@
       "id": "binancecoin",
       "symbol": "BNB",
       "name": "BNB",
-      "price": 745.28,
-      "pct_24h": -2.11905,
-      "pct_7d": 9.6,
+      "price": 745.41,
+      "pct_24h": -1.94825,
+      "pct_7d": 8.6,
       "support_30d": 598.6196895758089,
       "resistance_30d": 766.4092879330625,
-      "as_of": "2026-09-07 06:45:21",
+      "as_of": "2026-09-07 07:00:42",
       "stale": false
     },
     "ripple": {
@@ -2325,11 +2325,11 @@
       "symbol": "GRAM",
       "name": "Gram (prev. Toncoin)",
       "price": 1.42,
-      "pct_24h": -0.18227,
-      "pct_7d": 6.2,
+      "pct_24h": 0.0659,
+      "pct_7d": 5.2,
       "support_30d": 1.316580434471296,
       "resistance_30d": 1.4926762805297678,
-      "as_of": "2026-09-07 02:20:21",
+      "as_of": "2026-09-07 07:00:42",
       "stale": false
     },
     "sky": {
@@ -3127,7 +3127,7 @@
         ],
         [
           "Stretch from long-term average",
-          "+86.0% above its long-term average - very stretched",
+          "+85.0% above its long-term average - very stretched",
           -2
         ],
         [
@@ -3140,12 +3140,12 @@
       "id": "dash",
       "symbol": "DASH",
       "name": "Dash",
-      "price": 68.16,
-      "pct_24h": -8.55969,
-      "pct_7d": 63.9,
+      "price": 67.78,
+      "pct_24h": -8.41253,
+      "pct_7d": 62.0,
       "support_30d": 29.734917104971814,
       "resistance_30d": 71.33597730885,
-      "as_of": "2026-09-07 06:55:17",
+      "as_of": "2026-09-07 07:00:42",
       "stale": false
     },
     "jupiter-exchange-solana": {
@@ -3245,19 +3245,22 @@
       "stale": false
     }
   },
-  "_strong_buy_state": {},
+  "_strong_buy_state": {
+    "15m:BNB": true,
+    "1h:DASH": true
+  },
   "BTC": {
     "key": "BTC",
     "name": "Bitcoin",
     "emoji": "\u20bf",
-    "price": 79660,
+    "price": 79662,
     "high_24h": 80494,
     "low_24h": 79426,
-    "pct_24h": -0.14799,
+    "pct_24h": -0.13704,
     "pct_7d": 2.8,
     "pct_30d": 22.8,
-    "sma50": 69704.45741691714,
-    "sma200": 69796.07105126351,
+    "sma50": 69704.38594979593,
+    "sma200": 69796.05318448321,
     "support_30d": 62843.70368466329,
     "resistance_30d": 81264.70153038795,
     "mark_price": 79760.35385307,
@@ -3272,14 +3275,14 @@
     "key": "ETH",
     "name": "Ethereum",
     "emoji": "\u039e",
-    "price": 2498.96,
+    "price": 2499.28,
     "high_24h": 2532.72,
     "low_24h": 2473.01,
-    "pct_24h": -0.32308,
+    "pct_24h": -0.26658,
     "pct_7d": 3.6,
     "pct_30d": 30.7,
-    "sma50": 2115.4817217165564,
-    "sma200": 2040.9418468267393,
+    "sma50": 2115.4766524566953,
+    "sma200": 2040.940579511774,
     "support_30d": 1871.3976551883159,
     "resistance_30d": 2514.967577695514,
     "mark_price": 2479.87016279,
