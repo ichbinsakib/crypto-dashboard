@@ -4,7 +4,7 @@
   "_alerts_state": {
     "btc-resistance-break": {
       "triggered": true,
-      "last_triggered_at": "2026-09-07 01:45:22"
+      "last_triggered_at": "2026-09-07 01:50:24"
     },
     "btc-support-break": {
       "triggered": false,
@@ -79,7 +79,7 @@
     "ripple": {
       "label": "\ud83d\udfe1 HOLD / NEUTRAL",
       "status": "neutral",
-      "score": -1,
+      "score": 0,
       "rows": [
         [
           "Price vs. recent range",
@@ -103,8 +103,8 @@
         ],
         [
           "Stretch from long-term average",
-          "+10.5% above its long-term average - a bit stretched",
-          -1
+          "+9.8% vs its long-term average - not stretched either way",
+          0
         ],
         [
           "Leverage traders' bias",
@@ -116,12 +116,12 @@
       "id": "ripple",
       "symbol": "XRP",
       "name": "XRP",
-      "price": 1.41,
-      "pct_24h": -0.71365,
+      "price": 1.4,
+      "pct_24h": -0.85933,
       "pct_7d": 4.3,
       "support_30d": 0.9927072784932938,
       "resistance_30d": 1.52050482788377,
-      "as_of": "2026-09-07 01:25:16",
+      "as_of": "2026-09-07 01:50:24",
       "stale": false
     },
     "solana": {
@@ -1831,7 +1831,7 @@
         ],
         [
           "Stretch from long-term average",
-          "+73.7% above its long-term average - very stretched",
+          "+70.9% above its long-term average - very stretched",
           -2
         ],
         [
@@ -1844,12 +1844,12 @@
       "id": "ethena",
       "symbol": "ENA",
       "name": "Ethena",
-      "price": 0.175387,
-      "pct_24h": -6.4773,
+      "price": 0.172538,
+      "pct_24h": -6.80351,
       "pct_7d": 18.5,
       "support_30d": 0.08231050586125944,
       "resistance_30d": 0.17616469272611565,
-      "as_of": "2026-09-07 01:15:22",
+      "as_of": "2026-09-07 01:50:24",
       "stale": false
     },
     "bitcoin-cash": {
@@ -2431,7 +2431,7 @@
     "near": {
       "label": "\ud83d\udd34 DISTRIBUTION ZONE",
       "status": "bearish",
-      "score": -8,
+      "score": -5,
       "rows": [
         [
           "Price vs. recent range",
@@ -2440,13 +2440,13 @@
         ],
         [
           "Crowd mood (Fear & Greed)",
-          "73/100 - crowd is greedy",
+          "71/100 - crowd is greedy",
           -1
         ],
         [
           "Market phase (best guess)",
-          "Very extended after a big run - phase where smart money sells",
-          -2
+          "Established uptrend - phase where price marks up",
+          1
         ],
         [
           "Recent trend",
@@ -2455,7 +2455,7 @@
         ],
         [
           "Stretch from long-term average",
-          "+45.7% above its long-term average - very stretched",
+          "+39.8% above its long-term average - very stretched",
           -2
         ],
         [
@@ -2468,12 +2468,12 @@
       "id": "near",
       "symbol": "NEAR",
       "name": "NEAR Protocol",
-      "price": 2.44,
-      "pct_24h": 11.66443,
-      "pct_7d": 27.2,
+      "price": 2.35,
+      "pct_24h": 6.65832,
+      "pct_7d": 32.3,
       "support_30d": 1.5879597131538,
-      "resistance_30d": 2.440936283301139,
-      "as_of": "2026-09-06 23:50:20",
+      "resistance_30d": 2.436852334393612,
+      "as_of": "2026-09-07 01:50:24",
       "stale": false
     },
     "quant-network": {
@@ -3246,20 +3246,21 @@
     }
   },
   "_strong_buy_state": {
-    "15m:BCH": true
+    "15m:XRP": true,
+    "1h:XRP": true
   },
   "BTC": {
     "key": "BTC",
     "name": "Bitcoin",
     "emoji": "\u20bf",
-    "price": 79848,
+    "price": 79877,
     "high_24h": 80494,
     "low_24h": 79426,
-    "pct_24h": -0.12302,
+    "pct_24h": -0.10728,
     "pct_7d": 3.1,
     "pct_30d": 23.4,
-    "sma50": 69708.65389907888,
-    "sma200": 69797.12017180395,
+    "sma50": 69707.9763373162,
+    "sma200": 69796.95078136328,
     "support_30d": 62843.70368466329,
     "resistance_30d": 81264.70153038795,
     "mark_price": 79760.35385307,
@@ -3274,14 +3275,14 @@
     "key": "ETH",
     "name": "Ethereum",
     "emoji": "\u039e",
-    "price": 2501.4,
+    "price": 2501.36,
     "high_24h": 2523.33,
     "low_24h": 2473.01,
-    "pct_24h": 0.04255,
+    "pct_24h": -0.06617,
     "pct_7d": 3.9,
     "pct_30d": 31.2,
-    "sma50": 2115.557499194679,
-    "sma200": 2040.96079119627,
+    "sma50": 2115.5146086522636,
+    "sma200": 2040.950068560666,
     "support_30d": 1871.3976551883159,
     "resistance_30d": 2514.967577695514,
     "mark_price": 2479.87016279,
