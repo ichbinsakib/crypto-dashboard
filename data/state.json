@@ -4,7 +4,7 @@
   "_alerts_state": {
     "btc-resistance-break": {
       "triggered": true,
-      "last_triggered_at": "2026-09-07 10:50:22"
+      "last_triggered_at": "2026-09-07 10:55:17"
     },
     "btc-support-break": {
       "triggered": false,
@@ -871,7 +871,7 @@
         ],
         [
           "Stretch from long-term average",
-          "+8.0% vs its long-term average - not stretched either way",
+          "+8.9% vs its long-term average - not stretched either way",
           0
         ],
         [
@@ -884,12 +884,12 @@
       "id": "pepe",
       "symbol": "PEPE",
       "name": "Pepe",
-      "price": 3.58e-06,
-      "pct_24h": -1.23978,
-      "pct_7d": 2.2,
+      "price": 3.61e-06,
+      "pct_24h": -0.72182,
+      "pct_7d": 1.0,
       "support_30d": 2.5716563906374582e-06,
       "resistance_30d": 4.122123035488615e-06,
-      "as_of": "2026-09-07 08:20:23",
+      "as_of": "2026-09-07 10:55:17",
       "stale": false
     },
     "avalanche-2": {
@@ -2743,7 +2743,7 @@
         ],
         [
           "Stretch from long-term average",
-          "+31.0% above its long-term average - very stretched",
+          "+31.5% above its long-term average - very stretched",
           -2
         ],
         [
@@ -2756,12 +2756,12 @@
       "id": "morpho",
       "symbol": "MORPHO",
       "name": "Morpho",
-      "price": 2.56,
-      "pct_24h": 1.96284,
-      "pct_7d": 3.2,
+      "price": 2.57,
+      "pct_24h": -0.39296,
+      "pct_7d": 0.5,
       "support_30d": 1.9112322441572176,
       "resistance_30d": 2.9026212482639075,
-      "as_of": "2026-09-07 07:40:24",
+      "as_of": "2026-09-07 10:55:17",
       "stale": false
     },
     "memecore": {
@@ -3127,7 +3127,7 @@
         ],
         [
           "Stretch from long-term average",
-          "+85.6% above its long-term average - very stretched",
+          "+87.2% above its long-term average - very stretched",
           -2
         ],
         [
@@ -3140,12 +3140,12 @@
       "id": "dash",
       "symbol": "DASH",
       "name": "Dash",
-      "price": 68.0,
-      "pct_24h": -1.47931,
+      "price": 68.59,
+      "pct_24h": 0.45319,
       "pct_7d": 60.8,
       "support_30d": 29.734917104971814,
       "resistance_30d": 71.33597730885,
-      "as_of": "2026-09-07 10:20:22",
+      "as_of": "2026-09-07 10:55:17",
       "stale": false
     },
     "jupiter-exchange-solana": {
@@ -3245,19 +3245,22 @@
       "stale": false
     }
   },
-  "_strong_buy_state": {},
+  "_strong_buy_state": {
+    "15m:XMR": true,
+    "1h:DASH": true
+  },
   "BTC": {
     "key": "BTC",
     "name": "Bitcoin",
     "emoji": "\u20bf",
-    "price": 79401,
+    "price": 79415,
     "high_24h": 80494,
     "low_24h": 79081,
-    "pct_24h": -0.73194,
+    "pct_24h": -0.72375,
     "pct_7d": 1.1,
     "pct_30d": 22.1,
-    "sma50": 69699.49181536234,
-    "sma200": 69794.82965087482,
+    "sma50": 69699.55446746813,
+    "sma200": 69794.84531390126,
     "support_30d": 62843.70368466329,
     "resistance_30d": 81264.70153038795,
     "mark_price": 79760.35385307,
@@ -3272,14 +3275,14 @@
     "key": "ETH",
     "name": "Ethereum",
     "emoji": "\u039e",
-    "price": 2490.26,
+    "price": 2491.23,
     "high_24h": 2532.72,
     "low_24h": 2473.01,
-    "pct_24h": -0.39562,
+    "pct_24h": -0.36385,
     "pct_7d": 1.6,
     "pct_30d": 29.8,
-    "sma50": 2115.3148758454113,
-    "sma200": 2040.9001353589529,
+    "sma50": 2115.3260790570494,
+    "sma200": 2040.9029361618625,
     "support_30d": 1871.3976551883159,
     "resistance_30d": 2514.967577695514,
     "mark_price": 2479.87016279,
