@@ -4,7 +4,7 @@
   "_alerts_state": {
     "btc-resistance-break": {
       "triggered": true,
-      "last_triggered_at": "2026-09-07 04:25:17"
+      "last_triggered_at": "2026-09-07 04:30:29"
     },
     "btc-support-break": {
       "triggered": false,
@@ -631,7 +631,7 @@
         ],
         [
           "Stretch from long-term average",
-          "+46.1% above its long-term average - very stretched",
+          "+46.8% above its long-term average - very stretched",
           -2
         ],
         [
@@ -644,12 +644,12 @@
       "id": "monero",
       "symbol": "XMR",
       "name": "Monero",
-      "price": 532.68,
-      "pct_24h": -4.22014,
-      "pct_7d": 7.9,
+      "price": 535.25,
+      "pct_24h": -3.33333,
+      "pct_7d": 7.5,
       "support_30d": 377.1738335746389,
       "resistance_30d": 555.6684591165193,
-      "as_of": "2026-09-07 03:50:21",
+      "as_of": "2026-09-07 04:30:29",
       "stale": false
     },
     "cardano": {
@@ -919,7 +919,7 @@
         ],
         [
           "Stretch from long-term average",
-          "-3.4% vs its long-term average - not stretched either way",
+          "-3.1% vs its long-term average - not stretched either way",
           0
         ],
         [
@@ -932,12 +932,12 @@
       "id": "avalanche-2",
       "symbol": "AVAX",
       "name": "Avalanche",
-      "price": 7.79,
-      "pct_24h": 1.17835,
-      "pct_7d": 10.7,
+      "price": 7.81,
+      "pct_24h": 2.15035,
+      "pct_7d": 9.5,
       "support_30d": 6.313391080113916,
       "resistance_30d": 7.9019838410484935,
-      "as_of": "2026-09-07 03:35:17",
+      "as_of": "2026-09-07 04:30:29",
       "stale": false
     },
     "aster-2": {
@@ -1087,7 +1087,7 @@
     "polygon-ecosystem-token": {
       "label": "\ud83d\udfe1 HOLD / NEUTRAL",
       "status": "neutral",
-      "score": -1,
+      "score": 0,
       "rows": [
         [
           "Price vs. recent range",
@@ -1111,8 +1111,8 @@
         ],
         [
           "Stretch from long-term average",
-          "+10.8% above its long-term average - a bit stretched",
-          -1
+          "+9.7% vs its long-term average - not stretched either way",
+          0
         ],
         [
           "Leverage traders' bias",
@@ -1124,12 +1124,12 @@
       "id": "polygon-ecosystem-token",
       "symbol": "POL",
       "name": "POL (ex-MATIC)",
-      "price": 0.098049,
-      "pct_24h": -0.16871,
-      "pct_7d": -0.4,
+      "price": 0.09708,
+      "pct_24h": -2.79872,
+      "pct_7d": 2.2,
       "support_30d": 0.07382135255393793,
       "resistance_30d": 0.12250456198546959,
-      "as_of": "2026-09-07 00:35:52",
+      "as_of": "2026-09-07 04:30:29",
       "stale": false
     },
     "blackrock-usd-institutional-digital-liquidity-fund": {
@@ -3245,19 +3245,21 @@
       "stale": false
     }
   },
-  "_strong_buy_state": {},
+  "_strong_buy_state": {
+    "15m:SOL": true
+  },
   "BTC": {
     "key": "BTC",
     "name": "Bitcoin",
     "emoji": "\u20bf",
-    "price": 79677,
+    "price": 79633,
     "high_24h": 80494,
     "low_24h": 79426,
-    "pct_24h": -0.3037,
+    "pct_24h": -0.36207,
     "pct_7d": 2.8,
     "pct_30d": 22.7,
-    "sma50": 69704.80729513582,
-    "sma200": 69796.15852081818,
+    "sma50": 69704.03168578313,
+    "sma200": 69795.96461848001,
     "support_30d": 62843.70368466329,
     "resistance_30d": 81264.70153038795,
     "mark_price": 79760.35385307,
@@ -3272,14 +3274,14 @@
     "key": "ETH",
     "name": "Ethereum",
     "emoji": "\u039e",
-    "price": 2498.5,
+    "price": 2497.59,
     "high_24h": 2532.72,
     "low_24h": 2473.01,
-    "pct_24h": -0.11085,
+    "pct_24h": -0.20011,
     "pct_7d": 3.8,
     "pct_30d": 30.7,
-    "sma50": 2115.4658640032,
-    "sma200": 2040.9378823984,
+    "sma50": 2115.4580648171245,
+    "sma200": 2040.9359326018814,
     "support_30d": 1871.3976551883159,
     "resistance_30d": 2514.967577695514,
     "mark_price": 2479.87016279,
