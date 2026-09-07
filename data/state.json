@@ -4,7 +4,7 @@
   "_alerts_state": {
     "btc-resistance-break": {
       "triggered": true,
-      "last_triggered_at": "2026-09-07 17:45:24"
+      "last_triggered_at": "2026-09-07 17:50:23"
     },
     "btc-support-break": {
       "triggered": false,
@@ -55,7 +55,7 @@
         ],
         [
           "Stretch from long-term average",
-          "+19.0% above its long-term average - a bit stretched",
+          "+19.1% above its long-term average - a bit stretched",
           -1
         ],
         [
@@ -68,12 +68,12 @@
       "id": "binancecoin",
       "symbol": "BNB",
       "name": "BNB",
-      "price": 740.09,
-      "pct_24h": -1.00548,
+      "price": 740.55,
+      "pct_24h": -0.91026,
       "pct_7d": 7.3,
       "support_30d": 598.6196895758089,
       "resistance_30d": 766.4092879330625,
-      "as_of": "2026-09-07 17:20:26",
+      "as_of": "2026-09-07 17:50:23",
       "stale": false
     },
     "ripple": {
@@ -703,7 +703,7 @@
     "stellar": {
       "label": "\ud83d\udfe1 HOLD / NEUTRAL",
       "status": "neutral",
-      "score": 0,
+      "score": 1,
       "rows": [
         [
           "Price vs. recent range",
@@ -722,12 +722,12 @@
         ],
         [
           "Recent trend",
-          "Chopping sideways - no clear trend",
-          0
+          "Trending up steadily - healthy",
+          1
         ],
         [
           "Stretch from long-term average",
-          "+8.5% vs its long-term average - not stretched either way",
+          "+9.6% vs its long-term average - not stretched either way",
           0
         ],
         [
@@ -740,12 +740,12 @@
       "id": "stellar",
       "symbol": "XLM",
       "name": "Stellar",
-      "price": 0.189694,
-      "pct_24h": 3.23819,
-      "pct_7d": 6.7,
+      "price": 0.191506,
+      "pct_24h": 4.17574,
+      "pct_7d": 9.0,
       "support_30d": 0.15472912151335613,
       "resistance_30d": 0.20181319711037435,
-      "as_of": "2026-09-07 16:10:23",
+      "as_of": "2026-09-07 17:50:23",
       "stale": false
     },
     "kucoin-shares": {
@@ -1955,7 +1955,7 @@
       "rows": [
         [
           "Price vs. recent range",
-          "Near its 30-day high (~$1.10) - less room to run",
+          "Near its 30-day high (~$1.09) - less room to run",
           -1
         ],
         [
@@ -1975,7 +1975,7 @@
         ],
         [
           "Stretch from long-term average",
-          "-0.7% vs its long-term average - not stretched either way",
+          "-1.2% vs its long-term average - not stretched either way",
           0
         ],
         [
@@ -1988,12 +1988,12 @@
       "id": "polkadot",
       "symbol": "DOT",
       "name": "Polkadot",
-      "price": 1.099,
-      "pct_24h": 13.3037,
+      "price": 1.094,
+      "pct_24h": 13.85468,
       "pct_7d": 33.3,
       "support_30d": 0.7510040523927409,
-      "resistance_30d": 1.098323392742612,
-      "as_of": "2026-09-07 17:00:32",
+      "resistance_30d": 1.0939429223835089,
+      "as_of": "2026-09-07 17:50:23",
       "stale": false
     },
     "uniswap": {
@@ -3298,14 +3298,14 @@
     "key": "BTC",
     "name": "Bitcoin",
     "emoji": "\u20bf",
-    "price": 79150,
+    "price": 79138,
     "high_24h": 80494,
     "low_24h": 78707,
-    "pct_24h": -0.73615,
+    "pct_24h": -0.7396,
     "pct_7d": 0.5,
     "pct_30d": 21.4,
-    "sma50": 69694.30729657706,
-    "sma200": 69793.5335211785,
+    "sma50": 69694.00458027028,
+    "sma200": 69793.4578421018,
     "support_30d": 62843.70368466329,
     "resistance_30d": 81264.70153038795,
     "mark_price": 79370.02473188,
@@ -3320,14 +3320,14 @@
     "key": "ETH",
     "name": "Ethereum",
     "emoji": "\u039e",
-    "price": 2491.61,
+    "price": 2492.66,
     "high_24h": 2532.72,
     "low_24h": 2467.8,
-    "pct_24h": -0.03179,
+    "pct_24h": 0.04493,
     "pct_7d": 0.5,
     "pct_30d": 29.1,
-    "sma50": 2115.3389406869533,
-    "sma200": 2040.9061515693386,
+    "sma50": 2115.355327668748,
+    "sma200": 2040.9102483147872,
     "support_30d": 1871.3976551883159,
     "resistance_30d": 2514.967577695514,
     "mark_price": 2488.83603101,
