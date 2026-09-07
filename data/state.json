@@ -4,7 +4,7 @@
   "_alerts_state": {
     "btc-resistance-break": {
       "triggered": true,
-      "last_triggered_at": "2026-09-07 07:20:25"
+      "last_triggered_at": "2026-09-07 07:25:20"
     },
     "btc-support-break": {
       "triggered": false,
@@ -151,7 +151,7 @@
         ],
         [
           "Stretch from long-term average",
-          "+27.8% above its long-term average - a bit stretched",
+          "+27.2% above its long-term average - a bit stretched",
           -1
         ],
         [
@@ -164,12 +164,12 @@
       "id": "solana",
       "symbol": "SOL",
       "name": "Solana",
-      "price": 105.55,
-      "pct_24h": 1.85268,
-      "pct_7d": 4.2,
+      "price": 105.02,
+      "pct_24h": -0.09971,
+      "pct_7d": 2.4,
       "support_30d": 74.5477464048606,
       "resistance_30d": 109.17730597799657,
-      "as_of": "2026-09-07 01:15:22",
+      "as_of": "2026-09-07 07:25:20",
       "stale": false
     },
     "tron": {
@@ -703,7 +703,7 @@
     "stellar": {
       "label": "\ud83d\udfe1 HOLD / NEUTRAL",
       "status": "neutral",
-      "score": 1,
+      "score": 0,
       "rows": [
         [
           "Price vs. recent range",
@@ -722,12 +722,12 @@
         ],
         [
           "Recent trend",
-          "Trending up steadily - healthy",
-          1
+          "Chopping sideways - no clear trend",
+          0
         ],
         [
           "Stretch from long-term average",
-          "+9.0% vs its long-term average - not stretched either way",
+          "+8.7% vs its long-term average - not stretched either way",
           0
         ],
         [
@@ -740,12 +740,12 @@
       "id": "stellar",
       "symbol": "XLM",
       "name": "Stellar",
-      "price": 0.190566,
-      "pct_24h": 2.20713,
-      "pct_7d": 8.9,
+      "price": 0.190025,
+      "pct_24h": 2.78817,
+      "pct_7d": 7.6,
       "support_30d": 0.15472912151335613,
       "resistance_30d": 0.20181319711037435,
-      "as_of": "2026-09-07 06:25:18",
+      "as_of": "2026-09-07 07:25:20",
       "stale": false
     },
     "kucoin-shares": {
@@ -2839,7 +2839,7 @@
         ],
         [
           "Stretch from long-term average",
-          "+37.3% above its long-term average - very stretched",
+          "+37.7% above its long-term average - very stretched",
           -2
         ],
         [
@@ -2852,12 +2852,12 @@
       "id": "aave",
       "symbol": "AAVE",
       "name": "Aave",
-      "price": 133.87,
-      "pct_24h": -0.30396,
-      "pct_7d": 9.8,
+      "price": 134.27,
+      "pct_24h": -0.3802,
+      "pct_7d": 9.3,
       "support_30d": 85.94219943917633,
       "resistance_30d": 141.53047916466082,
-      "as_of": "2026-09-07 04:35:16",
+      "as_of": "2026-09-07 07:25:20",
       "stale": false
     },
     "okb": {
@@ -3246,20 +3246,21 @@
     }
   },
   "_strong_buy_state": {
-    "15m:WBT": true
+    "1h:SOL": true,
+    "1h:HBAR": true
   },
   "BTC": {
     "key": "BTC",
     "name": "Bitcoin",
     "emoji": "\u20bf",
-    "price": 79594,
+    "price": 79494,
     "high_24h": 80494,
     "low_24h": 79426,
-    "pct_24h": -0.25872,
+    "pct_24h": -0.37431,
     "pct_7d": 2.1,
     "pct_30d": 22.6,
-    "sma50": 69703.12206354382,
-    "sma200": 69795.73721292018,
+    "sma50": 69701.84516777414,
+    "sma200": 69795.41798897776,
     "support_30d": 62843.70368466329,
     "resistance_30d": 81264.70153038795,
     "mark_price": 79760.35385307,
@@ -3274,14 +3275,14 @@
     "key": "ETH",
     "name": "Ethereum",
     "emoji": "\u039e",
-    "price": 2499.44,
+    "price": 2494.41,
     "high_24h": 2532.72,
     "low_24h": 2473.01,
-    "pct_24h": 0.11441,
+    "pct_24h": -0.06197,
     "pct_7d": 2.6,
     "pct_30d": 30.4,
-    "sma50": 2115.4936367484142,
-    "sma200": 2040.944825584704,
+    "sma50": 2115.416513007948,
+    "sma200": 2040.9255446495872,
     "support_30d": 1871.3976551883159,
     "resistance_30d": 2514.967577695514,
     "mark_price": 2479.87016279,
