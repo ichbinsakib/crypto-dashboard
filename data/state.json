@@ -4,7 +4,7 @@
   "_alerts_state": {
     "btc-resistance-break": {
       "triggered": true,
-      "last_triggered_at": "2026-09-07 09:35:18"
+      "last_triggered_at": "2026-09-07 09:40:20"
     },
     "btc-support-break": {
       "triggered": false,
@@ -1495,7 +1495,7 @@
         ],
         [
           "Stretch from long-term average",
-          "-3.4% vs its long-term average - not stretched either way",
+          "-3.5% vs its long-term average - not stretched either way",
           0
         ],
         [
@@ -1508,12 +1508,12 @@
       "id": "ethereum-classic",
       "symbol": "ETC",
       "name": "Ethereum Classic",
-      "price": 7.8,
-      "pct_24h": 1.02579,
+      "price": 7.79,
+      "pct_24h": 0.81596,
       "pct_7d": 7.4,
       "support_30d": 6.079473341192034,
       "resistance_30d": 8.342731558283557,
-      "as_of": "2026-09-07 09:15:23",
+      "as_of": "2026-09-07 09:40:20",
       "stale": false
     },
     "pump-fun": {
@@ -2023,7 +2023,7 @@
         ],
         [
           "Stretch from long-term average",
-          "+97.6% above its long-term average - very stretched",
+          "+93.3% above its long-term average - very stretched",
           -2
         ],
         [
@@ -2036,12 +2036,12 @@
       "id": "uniswap",
       "symbol": "UNI",
       "name": "Uniswap",
-      "price": 7.15,
-      "pct_24h": 2.6366,
-      "pct_7d": 38.8,
+      "price": 6.99,
+      "pct_24h": 0.282,
+      "pct_7d": 36.4,
       "support_30d": 3.1971416665971573,
       "resistance_30d": 7.291165865788254,
-      "as_of": "2026-09-07 07:15:25",
+      "as_of": "2026-09-07 09:40:20",
       "stale": false
     },
     "pi-network": {
@@ -2325,11 +2325,11 @@
       "symbol": "GRAM",
       "name": "Gram (prev. Toncoin)",
       "price": 1.42,
-      "pct_24h": -0.03173,
-      "pct_7d": 4.7,
+      "pct_24h": 0.10749,
+      "pct_7d": 5.4,
       "support_30d": 1.316580434471296,
       "resistance_30d": 1.4926762805297678,
-      "as_of": "2026-09-07 08:20:23",
+      "as_of": "2026-09-07 09:40:20",
       "stale": false
     },
     "sky": {
@@ -3245,19 +3245,22 @@
       "stale": false
     }
   },
-  "_strong_buy_state": {},
+  "_strong_buy_state": {
+    "15m:UNI": true,
+    "1h:UNI": true
+  },
   "BTC": {
     "key": "BTC",
     "name": "Bitcoin",
     "emoji": "\u20bf",
-    "price": 79451,
+    "price": 79360,
     "high_24h": 80494,
     "low_24h": 79081,
-    "pct_24h": -0.65542,
+    "pct_24h": -0.68692,
     "pct_7d": 1.6,
     "pct_30d": 22.4,
-    "sma50": 69700.37678559091,
-    "sma200": 69795.05089343195,
+    "sma50": 69698.4378240625,
+    "sma200": 69794.56615304985,
     "support_30d": 62843.70368466329,
     "resistance_30d": 81264.70153038795,
     "mark_price": 79760.35385307,
@@ -3272,14 +3275,14 @@
     "key": "ETH",
     "name": "Ethereum",
     "emoji": "\u039e",
-    "price": 2493.27,
+    "price": 2490.41,
     "high_24h": 2532.72,
     "low_24h": 2473.01,
-    "pct_24h": -0.34603,
+    "pct_24h": -0.29519,
     "pct_7d": 2.1,
     "pct_30d": 30.2,
-    "sma50": 2115.373393800662,
-    "sma200": 2040.9147648477656,
+    "sma50": 2115.3034835869075,
+    "sma200": 2040.897287294327,
     "support_30d": 1871.3976551883159,
     "resistance_30d": 2514.967577695514,
     "mark_price": 2479.87016279,
