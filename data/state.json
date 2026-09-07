@@ -4,7 +4,7 @@
   "_alerts_state": {
     "btc-resistance-break": {
       "triggered": true,
-      "last_triggered_at": "2026-09-07 02:45:22"
+      "last_triggered_at": "2026-09-07 02:50:22"
     },
     "btc-support-break": {
       "triggered": false,
@@ -12,7 +12,7 @@
     },
     "eth-resistance-break": {
       "triggered": true,
-      "last_triggered_at": "2026-09-07 02:45:22"
+      "last_triggered_at": "2026-09-07 02:50:22"
     },
     "eth-support-break": {
       "triggered": false,
@@ -271,16 +271,16 @@
     "hyperliquid": {
       "label": "\ud83d\udd34 DISTRIBUTION ZONE",
       "status": "bearish",
-      "score": -6,
+      "score": -5,
       "rows": [
         [
           "Price vs. recent range",
-          "Near its 30-day high (~$87.67) - less room to run",
+          "Near its 30-day high (~$87.95) - less room to run",
           -1
         ],
         [
           "Crowd mood (Fear & Greed)",
-          "73/100 - crowd is greedy",
+          "71/100 - crowd is greedy",
           -1
         ],
         [
@@ -290,12 +290,12 @@
         ],
         [
           "Recent trend",
-          "Chopping sideways - no clear trend",
-          0
+          "Trending up steadily - healthy",
+          1
         ],
         [
           "Stretch from long-term average",
-          "+65.2% above its long-term average - very stretched",
+          "+63.9% above its long-term average - very stretched",
           -2
         ],
         [
@@ -308,12 +308,12 @@
       "id": "hyperliquid",
       "symbol": "HYPE",
       "name": "Hyperliquid",
-      "price": 87.66,
-      "pct_24h": 2.73571,
-      "pct_7d": 4.8,
+      "price": 87.44,
+      "pct_24h": 2.17707,
+      "pct_7d": 8.2,
       "support_30d": 53.854096460729586,
-      "resistance_30d": 87.6695356429311,
-      "as_of": "2026-09-06 20:35:18",
+      "resistance_30d": 87.951916819731,
+      "as_of": "2026-09-07 02:50:22",
       "stale": false
     },
     "dogecoin": {
@@ -2119,7 +2119,7 @@
         ],
         [
           "Stretch from long-term average",
-          "+15.8% above its long-term average - a bit stretched",
+          "+17.9% above its long-term average - a bit stretched",
           -1
         ],
         [
@@ -2132,12 +2132,12 @@
       "id": "ondo-finance",
       "symbol": "ONDO",
       "name": "Ondo",
-      "price": 0.382334,
-      "pct_24h": 1.83698,
-      "pct_7d": 12.8,
+      "price": 0.389263,
+      "pct_24h": 3.80195,
+      "pct_7d": 10.2,
       "support_30d": 0.32338181384146436,
       "resistance_30d": 0.3969475338902824,
-      "as_of": "2026-09-07 01:15:22",
+      "as_of": "2026-09-07 02:50:22",
       "stale": false
     },
     "canton-network": {
@@ -2335,7 +2335,7 @@
     "sky": {
       "label": "\ud83d\udfe1 HOLD / NEUTRAL",
       "status": "neutral",
-      "score": 0,
+      "score": -1,
       "rows": [
         [
           "Price vs. recent range",
@@ -2349,8 +2349,8 @@
         ],
         [
           "Market phase (best guess)",
-          "Basing near the bottom - phase where smart money accumulates",
-          2
+          "Established uptrend - phase where price marks up",
+          1
         ],
         [
           "Recent trend",
@@ -2359,7 +2359,7 @@
         ],
         [
           "Stretch from long-term average",
-          "+4.3% vs its long-term average - not stretched either way",
+          "+5.1% vs its long-term average - not stretched either way",
           0
         ],
         [
@@ -2372,12 +2372,12 @@
       "id": "sky",
       "symbol": "SKY",
       "name": "Sky",
-      "price": 0.069738,
-      "pct_24h": -1.74045,
+      "price": 0.070259,
+      "pct_24h": -1.02448,
       "pct_7d": 0.4,
       "support_30d": 0.05081051579814886,
       "resistance_30d": 0.07314868186988309,
-      "as_of": "2026-09-07 02:35:17",
+      "as_of": "2026-09-07 02:50:22",
       "stale": false
     },
     "shiba-inu": {
@@ -3250,14 +3250,14 @@
     "key": "BTC",
     "name": "Bitcoin",
     "emoji": "\u20bf",
-    "price": 80269,
+    "price": 80229,
     "high_24h": 80494,
     "low_24h": 79426,
-    "pct_24h": 0.48731,
+    "pct_24h": 0.4377,
     "pct_7d": 2.6,
     "pct_30d": 23.2,
-    "sma50": 69717.01510460005,
-    "sma200": 69799.21047318424,
+    "sma50": 69715.81620169742,
+    "sma200": 69798.91074745858,
     "support_30d": 62843.70368466329,
     "resistance_30d": 81264.70153038795,
     "mark_price": 79760.35385307,
@@ -3272,16 +3272,16 @@
     "key": "ETH",
     "name": "Ethereum",
     "emoji": "\u039e",
-    "price": 2527.44,
+    "price": 2525.69,
     "high_24h": 2523.33,
     "low_24h": 2473.01,
-    "pct_24h": 1.00458,
+    "pct_24h": 0.9669,
     "pct_7d": 3.2,
     "pct_30d": 30.9,
-    "sma50": 2116.0804668998103,
-    "sma200": 2041.0915331225528,
+    "sma50": 2116.0188345060114,
+    "sma200": 2041.076125024103,
     "support_30d": 1871.3976551883159,
-    "resistance_30d": 2528.930841748322,
+    "resistance_30d": 2525.849222058372,
     "mark_price": 2479.87016279,
     "index_price": 2480.83883721,
     "funding_rate": 6.641e-05,
