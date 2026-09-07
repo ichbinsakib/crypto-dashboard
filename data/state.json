@@ -4,7 +4,7 @@
   "_alerts_state": {
     "btc-resistance-break": {
       "triggered": true,
-      "last_triggered_at": "2026-09-07 22:05:18"
+      "last_triggered_at": "2026-09-07 22:10:23"
     },
     "btc-support-break": {
       "triggered": false,
@@ -1903,11 +1903,11 @@
     "mantle": {
       "label": "\ud83d\udfe1 HOLD / NEUTRAL",
       "status": "neutral",
-      "score": 0,
+      "score": 1,
       "rows": [
         [
           "Price vs. recent range",
-          "Near its 30-day high (~$0.6232) - less room to run",
+          "Near its 30-day high (~$0.6210) - less room to run",
           -1
         ],
         [
@@ -1917,8 +1917,8 @@
         ],
         [
           "Market phase (best guess)",
-          "Established uptrend - phase where price marks up",
-          1
+          "Basing near the bottom - phase where smart money accumulates",
+          2
         ],
         [
           "Recent trend",
@@ -1927,7 +1927,7 @@
         ],
         [
           "Stretch from long-term average",
-          "+5.2% vs its long-term average - not stretched either way",
+          "+4.8% vs its long-term average - not stretched either way",
           0
         ],
         [
@@ -1940,12 +1940,12 @@
       "id": "mantle",
       "symbol": "MNT",
       "name": "Mantle",
-      "price": 0.623006,
-      "pct_24h": 4.16253,
-      "pct_7d": 10.7,
+      "price": 0.620824,
+      "pct_24h": 2.72557,
+      "pct_7d": 10.2,
       "support_30d": 0.42318748176329435,
-      "resistance_30d": 0.6231524723886082,
-      "as_of": "2026-09-07 20:15:23",
+      "resistance_30d": 0.6209927726247949,
+      "as_of": "2026-09-07 22:10:23",
       "stale": false
     },
     "polkadot": {
@@ -2805,11 +2805,11 @@
       "symbol": "M",
       "name": "MemeCore",
       "price": 1.15,
-      "pct_24h": 2.18393,
+      "pct_24h": 2.47005,
       "pct_7d": 4.9,
       "support_30d": 1.0402044506518406,
       "resistance_30d": 1.2453913363052769,
-      "as_of": "2026-09-07 22:05:18",
+      "as_of": "2026-09-07 22:10:23",
       "stale": false
     },
     "aave": {
@@ -2935,7 +2935,7 @@
         ],
         [
           "Stretch from long-term average",
-          "+30.3% above its long-term average - very stretched",
+          "+30.0% above its long-term average - very stretched",
           -2
         ],
         [
@@ -2948,12 +2948,12 @@
       "id": "just",
       "symbol": "JST",
       "name": "JUST",
-      "price": 0.107733,
-      "pct_24h": -3.29642,
-      "pct_7d": 9.8,
+      "price": 0.107518,
+      "pct_24h": -3.40019,
+      "pct_7d": 8.7,
       "support_30d": 0.0946830738697126,
       "resistance_30d": 0.11074855268841714,
-      "as_of": "2026-09-07 21:55:17",
+      "as_of": "2026-09-07 22:10:23",
       "stale": false
     },
     "algorand": {
@@ -3298,14 +3298,14 @@
     "key": "BTC",
     "name": "Bitcoin",
     "emoji": "\u20bf",
-    "price": 79130,
+    "price": 79186,
     "high_24h": 80494,
     "low_24h": 78707,
-    "pct_24h": -0.84065,
+    "pct_24h": -0.65925,
     "pct_7d": 0.4,
     "pct_30d": 21.8,
-    "sma50": 69694.08779369672,
-    "sma200": 69793.47864545841,
+    "sma50": 69694.97452877909,
+    "sma200": 69793.700329229,
     "support_30d": 62843.70368466329,
     "resistance_30d": 81264.70153038795,
     "mark_price": 79370.02473188,
@@ -3320,14 +3320,14 @@
     "key": "ETH",
     "name": "Ethereum",
     "emoji": "\u039e",
-    "price": 2486.73,
+    "price": 2489.53,
     "high_24h": 2532.72,
     "low_24h": 2467.8,
-    "pct_24h": -0.58795,
+    "pct_24h": -0.35153,
     "pct_7d": 0.8,
     "pct_30d": 29.8,
-    "sma50": 2115.236992524087,
-    "sma200": 2040.880664528622,
+    "sma50": 2115.2882327826233,
+    "sma200": 2040.8934745932559,
     "support_30d": 1871.3976551883159,
     "resistance_30d": 2514.967577695514,
     "mark_price": 2488.83603101,
