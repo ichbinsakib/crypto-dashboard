@@ -4,7 +4,7 @@
   "_alerts_state": {
     "btc-resistance-break": {
       "triggered": true,
-      "last_triggered_at": "2026-09-07 20:40:30"
+      "last_triggered_at": "2026-09-07 20:45:21"
     },
     "btc-support-break": {
       "triggered": false,
@@ -439,7 +439,7 @@
         ],
         [
           "Stretch from long-term average",
-          "+42.5% above its long-term average - very stretched",
+          "+42.6% above its long-term average - very stretched",
           -2
         ],
         [
@@ -452,12 +452,12 @@
       "id": "rain",
       "symbol": "RAIN",
       "name": "Rain",
-      "price": 0.0162967,
-      "pct_24h": -3.28197,
-      "pct_7d": -4.0,
+      "price": 0.01630698,
+      "pct_24h": -2.64719,
+      "pct_7d": -3.0,
       "support_30d": 0.012552829520986089,
       "resistance_30d": 0.018158429442510105,
-      "as_of": "2026-09-07 18:40:24",
+      "as_of": "2026-09-07 20:45:21",
       "stale": false
     },
     "chainlink": {
@@ -1879,7 +1879,7 @@
         ],
         [
           "Stretch from long-term average",
-          "-21.8% below its long-term average - confirmed downtrend",
+          "-22.1% below its long-term average - confirmed downtrend",
           -1
         ],
         [
@@ -1892,12 +1892,12 @@
       "id": "bitcoin-cash",
       "symbol": "BCH",
       "name": "Bitcoin Cash",
-      "price": 261.3,
-      "pct_24h": 1.96425,
+      "price": 260.43,
+      "pct_24h": 1.03006,
       "pct_7d": 5.1,
       "support_30d": 203.50169440615565,
       "resistance_30d": 288.10955405353275,
-      "as_of": "2026-09-07 19:26:38",
+      "as_of": "2026-09-07 20:45:21",
       "stale": false
     },
     "mantle": {
@@ -2887,7 +2887,7 @@
         ],
         [
           "Stretch from long-term average",
-          "+32.5% above its long-term average - very stretched",
+          "+32.3% above its long-term average - very stretched",
           -2
         ],
         [
@@ -2900,12 +2900,12 @@
       "id": "okb",
       "symbol": "OKB",
       "name": "OKB",
-      "price": 115.09,
-      "pct_24h": 1.65884,
-      "pct_7d": 2.7,
+      "price": 114.93,
+      "pct_24h": 1.54522,
+      "pct_7d": 2.3,
       "support_30d": 93.8774603502972,
       "resistance_30d": 115.8310797114581,
-      "as_of": "2026-09-07 17:55:21",
+      "as_of": "2026-09-07 20:45:21",
       "stale": false
     },
     "just": {
@@ -3293,19 +3293,21 @@
       "stale": false
     }
   },
-  "_strong_buy_state": {},
+  "_strong_buy_state": {
+    "15m:BCH": true
+  },
   "BTC": {
     "key": "BTC",
     "name": "Bitcoin",
     "emoji": "\u20bf",
-    "price": 79209,
+    "price": 79197,
     "high_24h": 80494,
     "low_24h": 78707,
-    "pct_24h": -0.9054,
+    "pct_24h": -0.93218,
     "pct_7d": 0.4,
     "pct_30d": 22.1,
-    "sma50": 69695.41503529664,
-    "sma200": 69793.81045585839,
+    "sma50": 69695.15087166095,
+    "sma200": 69793.74441494947,
     "support_30d": 62843.70368466329,
     "resistance_30d": 81264.70153038795,
     "mark_price": 79370.02473188,
@@ -3320,14 +3322,14 @@
     "key": "ETH",
     "name": "Ethereum",
     "emoji": "\u039e",
-    "price": 2490.56,
+    "price": 2491.02,
     "high_24h": 2532.72,
     "low_24h": 2467.8,
-    "pct_24h": -0.20604,
+    "pct_24h": -0.21643,
     "pct_7d": 0.7,
     "pct_30d": 30.0,
-    "sma50": 2115.312296572237,
-    "sma200": 2040.8994905406594,
+    "sma50": 2115.318839273398,
+    "sma200": 2040.9011262159497,
     "support_30d": 1871.3976551883159,
     "resistance_30d": 2514.967577695514,
     "mark_price": 2488.83603101,
