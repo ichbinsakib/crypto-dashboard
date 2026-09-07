@@ -4,7 +4,7 @@
   "_alerts_state": {
     "btc-resistance-break": {
       "triggered": true,
-      "last_triggered_at": "2026-09-07 15:25:21"
+      "last_triggered_at": "2026-09-07 15:30:31"
     },
     "btc-support-break": {
       "triggered": false,
@@ -995,7 +995,7 @@
       "rows": [
         [
           "Price vs. recent range",
-          "Near its 30-day high (~$0.4508) - less room to run",
+          "Near its 30-day high (~$0.4598) - less room to run",
           -1
         ],
         [
@@ -1015,7 +1015,7 @@
         ],
         [
           "Stretch from long-term average",
-          "+26.3% above its long-term average - a bit stretched",
+          "+28.9% above its long-term average - a bit stretched",
           -1
         ],
         [
@@ -1028,12 +1028,12 @@
       "id": "worldcoin-wld",
       "symbol": "WLD",
       "name": "Worldcoin",
-      "price": 0.450594,
-      "pct_24h": 7.90628,
-      "pct_7d": 24.5,
+      "price": 0.459894,
+      "pct_24h": 12.77568,
+      "pct_7d": 33.0,
       "support_30d": 0.3126022661711148,
-      "resistance_30d": 0.45082292057308143,
-      "as_of": "2026-09-07 11:00:35",
+      "resistance_30d": 0.4598371602051744,
+      "as_of": "2026-09-07 15:30:31",
       "stale": false
     },
     "bfusd": {
@@ -1543,7 +1543,7 @@
         ],
         [
           "Stretch from long-term average",
-          "+105.7% above its long-term average - very stretched",
+          "+105.8% above its long-term average - very stretched",
           -2
         ],
         [
@@ -1556,12 +1556,12 @@
       "id": "pump-fun",
       "symbol": "PUMP",
       "name": "Pump.fun",
-      "price": 0.0043098,
-      "pct_24h": 8.40397,
+      "price": 0.00431137,
+      "pct_24h": 8.27678,
       "pct_7d": 1.8,
       "support_30d": 0.002666433318189806,
       "resistance_30d": 0.0052249885406471875,
-      "as_of": "2026-09-07 15:25:21",
+      "as_of": "2026-09-07 15:30:31",
       "stale": false
     },
     "venice-token": {
@@ -2503,7 +2503,7 @@
         ],
         [
           "Stretch from long-term average",
-          "-4.0% vs its long-term average - not stretched either way",
+          "-4.1% vs its long-term average - not stretched either way",
           0
         ],
         [
@@ -2516,12 +2516,12 @@
       "id": "quant-network",
       "symbol": "QNT",
       "name": "Quant",
-      "price": 65.78,
-      "pct_24h": 0.71531,
+      "price": 65.74,
+      "pct_24h": 0.60084,
       "pct_7d": 7.7,
       "support_30d": 55.905981995619285,
       "resistance_30d": 67.0383571823565,
-      "as_of": "2026-09-07 15:25:21",
+      "as_of": "2026-09-07 15:30:31",
       "stale": false
     },
     "tether-gold": {
@@ -3293,19 +3293,21 @@
       "stale": false
     }
   },
-  "_strong_buy_state": {},
+  "_strong_buy_state": {
+    "15m:BNB": true
+  },
   "BTC": {
     "key": "BTC",
     "name": "Bitcoin",
     "emoji": "\u20bf",
-    "price": 79085,
+    "price": 79051,
     "high_24h": 80494,
     "low_24h": 78991,
-    "pct_24h": -0.68832,
+    "pct_24h": -0.7333,
     "pct_7d": 1.7,
     "pct_30d": 21.9,
-    "sma50": 69692.93434530089,
-    "sma200": 69793.19028335945,
+    "sma50": 69692.60508893902,
+    "sma200": 69793.10796926898,
     "support_30d": 62843.70368466329,
     "resistance_30d": 81264.70153038795,
     "mark_price": 79370.02473188,
@@ -3320,14 +3322,14 @@
     "key": "ETH",
     "name": "Ethereum",
     "emoji": "\u039e",
-    "price": 2486.25,
+    "price": 2483.62,
     "high_24h": 2532.72,
     "low_24h": 2476.05,
-    "pct_24h": 0.3043,
+    "pct_24h": 0.18539,
     "pct_7d": 2.0,
     "pct_30d": 29.8,
-    "sma50": 2115.2319704126458,
-    "sma200": 2040.8794090007616,
+    "sma50": 2115.1780315605306,
+    "sma200": 2040.865924287733,
     "support_30d": 1871.3976551883159,
     "resistance_30d": 2514.967577695514,
     "mark_price": 2488.83603101,
