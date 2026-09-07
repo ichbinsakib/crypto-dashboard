@@ -4,7 +4,7 @@
   "_alerts_state": {
     "btc-resistance-break": {
       "triggered": true,
-      "last_triggered_at": "2026-09-07 11:15:25"
+      "last_triggered_at": "2026-09-07 11:20:23"
     },
     "btc-support-break": {
       "triggered": false,
@@ -1619,7 +1619,7 @@
       "rows": [
         [
           "Price vs. recent range",
-          "Near its 30-day high (~$56.00) - less room to run",
+          "Near its 30-day high (~$56.03) - less room to run",
           -1
         ],
         [
@@ -1652,12 +1652,12 @@
       "id": "litecoin",
       "symbol": "LTC",
       "name": "Litecoin",
-      "price": 56.02,
-      "pct_24h": 3.05686,
-      "pct_7d": 14.0,
+      "price": 56.0,
+      "pct_24h": 3.12646,
+      "pct_7d": 15.2,
       "support_30d": 43.806923130603906,
-      "resistance_30d": 55.997760348776964,
-      "as_of": "2026-09-07 10:40:21",
+      "resistance_30d": 56.03394194733279,
+      "as_of": "2026-09-07 11:20:23",
       "stale": false
     },
     "bitget-token": {
@@ -2143,7 +2143,7 @@
     "canton-network": {
       "label": "\ud83d\udfe1 HOLD / NEUTRAL",
       "status": "neutral",
-      "score": 0,
+      "score": -1,
       "rows": [
         [
           "Price vs. recent range",
@@ -2162,12 +2162,12 @@
         ],
         [
           "Recent trend",
-          "Chopping sideways - no clear trend",
-          0
+          "Trending down - avoid catching a falling knife",
+          -1
         ],
         [
           "Stretch from long-term average",
-          "-21.5% below its long-term average - confirmed downtrend",
+          "-23.8% below its long-term average - confirmed downtrend",
           -1
         ],
         [
@@ -2180,12 +2180,12 @@
       "id": "canton-network",
       "symbol": "CC",
       "name": "Canton",
-      "price": 0.110243,
-      "pct_24h": 0.29224,
-      "pct_7d": -6.7,
+      "price": 0.106994,
+      "pct_24h": -2.68999,
+      "pct_7d": -9.8,
       "support_30d": 0.09051839499501885,
       "resistance_30d": 0.12396615653575341,
-      "as_of": "2026-09-07 06:30:28",
+      "as_of": "2026-09-07 11:20:23",
       "stale": false
     },
     "internet-computer": {
@@ -2359,7 +2359,7 @@
         ],
         [
           "Stretch from long-term average",
-          "+2.0% vs its long-term average - not stretched either way",
+          "+2.4% vs its long-term average - not stretched either way",
           0
         ],
         [
@@ -2372,12 +2372,12 @@
       "id": "sky",
       "symbol": "SKY",
       "name": "Sky",
-      "price": 0.06815,
-      "pct_24h": -5.07091,
-      "pct_7d": -1.5,
+      "price": 0.068419,
+      "pct_24h": -4.79409,
+      "pct_7d": -0.8,
       "support_30d": 0.05081051579814886,
       "resistance_30d": 0.07314868186988309,
-      "as_of": "2026-09-07 10:30:28",
+      "as_of": "2026-09-07 11:20:23",
       "stale": false
     },
     "shiba-inu": {
@@ -3250,14 +3250,14 @@
     "key": "BTC",
     "name": "Bitcoin",
     "emoji": "\u20bf",
-    "price": 79364,
+    "price": 79394,
     "high_24h": 80494,
     "low_24h": 79081,
-    "pct_24h": -0.75612,
+    "pct_24h": -0.71444,
     "pct_7d": 1.1,
     "pct_30d": 22.2,
-    "sma50": 69698.43871471068,
-    "sma200": 69794.56637571189,
+    "sma50": 69699.1279187397,
+    "sma200": 69794.73867671915,
     "support_30d": 62843.70368466329,
     "resistance_30d": 81264.70153038795,
     "mark_price": 79370.02473188,
@@ -3272,14 +3272,14 @@
     "key": "ETH",
     "name": "Ethereum",
     "emoji": "\u039e",
-    "price": 2489.06,
+    "price": 2490.52,
     "high_24h": 2532.72,
     "low_24h": 2473.01,
-    "pct_24h": -0.51337,
+    "pct_24h": -0.52285,
     "pct_7d": 1.8,
     "pct_30d": 29.8,
-    "sma50": 2115.28077027061,
-    "sma200": 2040.8916089652528,
+    "sma50": 2115.3139505369427,
+    "sma200": 2040.8999040318358,
     "support_30d": 1871.3976551883159,
     "resistance_30d": 2514.967577695514,
     "mark_price": 2488.83603101,
