@@ -4,7 +4,7 @@
   "_alerts_state": {
     "btc-resistance-break": {
       "triggered": true,
-      "last_triggered_at": "2026-09-07 23:30:26"
+      "last_triggered_at": "2026-09-07 23:35:16"
     },
     "btc-support-break": {
       "triggered": false,
@@ -2071,7 +2071,7 @@
         ],
         [
           "Stretch from long-term average",
-          "-33.9% below its long-term average - confirmed downtrend",
+          "-34.0% below its long-term average - confirmed downtrend",
           -1
         ],
         [
@@ -2084,12 +2084,12 @@
       "id": "pi-network",
       "symbol": "PI",
       "name": "Pi Network",
-      "price": 0.094331,
-      "pct_24h": -0.35452,
-      "pct_7d": 3.8,
+      "price": 0.094179,
+      "pct_24h": -0.60465,
+      "pct_7d": 3.5,
       "support_30d": 0.08559695435343688,
       "resistance_30d": 0.09762045155043195,
-      "as_of": "2026-09-07 21:30:32",
+      "as_of": "2026-09-07 23:35:16",
       "stale": false
     },
     "ondo-finance": {
@@ -2469,11 +2469,11 @@
       "symbol": "NEAR",
       "name": "NEAR Protocol",
       "price": 2.3,
-      "pct_24h": -6.50673,
+      "pct_24h": -5.54128,
       "pct_7d": 20.5,
       "support_30d": 1.5879597131538,
       "resistance_30d": 2.436852334393612,
-      "as_of": "2026-09-07 23:25:17",
+      "as_of": "2026-09-07 23:35:16",
       "stale": false
     },
     "quant-network": {
@@ -2805,11 +2805,11 @@
       "symbol": "M",
       "name": "MemeCore",
       "price": 1.15,
-      "pct_24h": 2.18393,
-      "pct_7d": 4.9,
+      "pct_24h": 1.70909,
+      "pct_7d": 5.3,
       "support_30d": 1.0402044506518406,
       "resistance_30d": 1.2453913363052769,
-      "as_of": "2026-09-07 22:05:18",
+      "as_of": "2026-09-07 23:35:16",
       "stale": false
     },
     "aave": {
@@ -3293,19 +3293,21 @@
       "stale": false
     }
   },
-  "_strong_buy_state": {},
+  "_strong_buy_state": {
+    "15m:LTC": true
+  },
   "BTC": {
     "key": "BTC",
     "name": "Bitcoin",
     "emoji": "\u20bf",
-    "price": 79002,
+    "price": 79004,
     "high_24h": 80397,
     "low_24h": 78707,
-    "pct_24h": -1.39394,
+    "pct_24h": -1.48772,
     "pct_7d": -0.1,
     "pct_30d": 21.4,
-    "sma50": 69691.34790750756,
-    "sma200": 69792.79367391112,
+    "sma50": 69691.04112381404,
+    "sma200": 69792.71697798773,
     "support_30d": 62843.70368466329,
     "resistance_30d": 81264.70153038795,
     "mark_price": 79370.02473188,
@@ -3320,14 +3322,14 @@
     "key": "ETH",
     "name": "Ethereum",
     "emoji": "\u039e",
-    "price": 2484.36,
+    "price": 2484.39,
     "high_24h": 2532.72,
     "low_24h": 2467.8,
-    "pct_24h": -1.11458,
+    "pct_24h": -1.24567,
     "pct_7d": 0.1,
     "pct_30d": 29.3,
-    "sma50": 2115.1932688401503,
-    "sma200": 2040.8697336076377,
+    "sma50": 2115.1813127618443,
+    "sma200": 2040.8667445880615,
     "support_30d": 1871.3976551883159,
     "resistance_30d": 2514.967577695514,
     "mark_price": 2488.83603101,
