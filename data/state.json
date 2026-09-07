@@ -4,7 +4,7 @@
   "_alerts_state": {
     "btc-resistance-break": {
       "triggered": true,
-      "last_triggered_at": "2026-09-07 06:25:18"
+      "last_triggered_at": "2026-09-07 06:30:28"
     },
     "btc-support-break": {
       "triggered": false,
@@ -2167,7 +2167,7 @@
         ],
         [
           "Stretch from long-term average",
-          "-21.8% below its long-term average - confirmed downtrend",
+          "-21.5% below its long-term average - confirmed downtrend",
           -1
         ],
         [
@@ -2180,12 +2180,12 @@
       "id": "canton-network",
       "symbol": "CC",
       "name": "Canton",
-      "price": 0.109849,
-      "pct_24h": -0.18807,
-      "pct_7d": -6.9,
+      "price": 0.110243,
+      "pct_24h": 0.29224,
+      "pct_7d": -6.7,
       "support_30d": 0.09051839499501885,
       "resistance_30d": 0.12396615653575341,
-      "as_of": "2026-09-07 04:15:24",
+      "as_of": "2026-09-07 06:30:28",
       "stale": false
     },
     "internet-computer": {
@@ -2743,7 +2743,7 @@
         ],
         [
           "Stretch from long-term average",
-          "+34.5% above its long-term average - very stretched",
+          "+33.0% above its long-term average - very stretched",
           -2
         ],
         [
@@ -2756,12 +2756,12 @@
       "id": "morpho",
       "symbol": "MORPHO",
       "name": "Morpho",
-      "price": 2.63,
-      "pct_24h": 1.8365,
-      "pct_7d": 4.9,
+      "price": 2.6,
+      "pct_24h": 1.86992,
+      "pct_7d": 5.0,
       "support_30d": 1.9112322441572176,
       "resistance_30d": 2.9026212482639075,
-      "as_of": "2026-09-07 05:40:23",
+      "as_of": "2026-09-07 06:30:28",
       "stale": false
     },
     "memecore": {
@@ -2915,7 +2915,7 @@
       "rows": [
         [
           "Price vs. recent range",
-          "Near its 30-day high (~$0.1108) - less room to run",
+          "Near its 30-day high (~$0.1109) - less room to run",
           -1
         ],
         [
@@ -2948,12 +2948,12 @@
       "id": "just",
       "symbol": "JST",
       "name": "JUST",
-      "price": 0.110873,
-      "pct_24h": -0.35234,
-      "pct_7d": 17.7,
+      "price": 0.110847,
+      "pct_24h": -0.11998,
+      "pct_7d": 17.4,
       "support_30d": 0.0946830738697126,
-      "resistance_30d": 0.1108444035074211,
-      "as_of": "2026-09-07 05:30:27",
+      "resistance_30d": 0.11087162275322926,
+      "as_of": "2026-09-07 06:30:28",
       "stale": false
     },
     "algorand": {
@@ -3245,19 +3245,21 @@
       "stale": false
     }
   },
-  "_strong_buy_state": {},
+  "_strong_buy_state": {
+    "1h:JST": true
+  },
   "BTC": {
     "key": "BTC",
     "name": "Bitcoin",
     "emoji": "\u20bf",
-    "price": 79718,
+    "price": 79711,
     "high_24h": 80494,
     "low_24h": 79426,
-    "pct_24h": -0.15681,
+    "pct_24h": -0.14712,
     "pct_7d": 2.8,
     "pct_30d": 22.8,
-    "sma50": 69705.60946486608,
-    "sma200": 69796.35906325075,
+    "sma50": 69705.46424251467,
+    "sma200": 69796.3227576629,
     "support_30d": 62843.70368466329,
     "resistance_30d": 81264.70153038795,
     "mark_price": 79760.35385307,
@@ -3272,14 +3274,14 @@
     "key": "ETH",
     "name": "Ethereum",
     "emoji": "\u039e",
-    "price": 2504.8,
+    "price": 2503.66,
     "high_24h": 2532.72,
     "low_24h": 2473.01,
-    "pct_24h": -0.07051,
+    "pct_24h": -0.0989,
     "pct_7d": 3.6,
     "pct_30d": 30.7,
-    "sma50": 2115.5920563380114,
-    "sma200": 2040.969430482103,
+    "sma50": 2115.575150015779,
+    "sma200": 2040.965203901545,
     "support_30d": 1871.3976551883159,
     "resistance_30d": 2514.967577695514,
     "mark_price": 2479.87016279,
