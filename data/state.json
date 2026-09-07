@@ -4,7 +4,7 @@
   "_alerts_state": {
     "btc-resistance-break": {
       "triggered": true,
-      "last_triggered_at": "2026-09-07 22:20:24"
+      "last_triggered_at": "2026-09-07 22:25:21"
     },
     "btc-support-break": {
       "triggered": false,
@@ -265,7 +265,7 @@
       "pct_7d": 5.5,
       "support_30d": 1.0008548889936117,
       "resistance_30d": 1.0455978355177025,
-      "as_of": "2026-09-07 22:05:18",
+      "as_of": "2026-09-07 22:25:21",
       "stale": false
     },
     "hyperliquid": {
@@ -701,9 +701,9 @@
       "stale": false
     },
     "stellar": {
-      "label": "\ud83d\udd34 CAUTION - REDUCE NEW BUYS",
-      "status": "bearish",
-      "score": -2,
+      "label": "\ud83d\udfe1 HOLD / NEUTRAL",
+      "status": "neutral",
+      "score": 0,
       "rows": [
         [
           "Price vs. recent range",
@@ -722,13 +722,13 @@
         ],
         [
           "Recent trend",
-          "Chopping sideways - no clear trend",
-          0
+          "Trending up steadily - healthy",
+          1
         ],
         [
           "Stretch from long-term average",
-          "+10.3% above its long-term average - a bit stretched",
-          -1
+          "+10.0% vs its long-term average - not stretched either way",
+          0
         ],
         [
           "Leverage traders' bias",
@@ -736,16 +736,16 @@
           0
         ]
       ],
-      "plain": "Getting risky - I'd hold off on new buys until this cools down.",
+      "plain": "No real edge either way right now - fine to just wait and watch.",
       "id": "stellar",
       "symbol": "XLM",
       "name": "Stellar",
-      "price": 0.192822,
-      "pct_24h": 4.69555,
-      "pct_7d": 7.9,
+      "price": 0.192178,
+      "pct_24h": 3.80928,
+      "pct_7d": 8.4,
       "support_30d": 0.15472912151335613,
       "resistance_30d": 0.20181319711037435,
-      "as_of": "2026-09-07 20:25:18",
+      "as_of": "2026-09-07 22:25:21",
       "stale": false
     },
     "kucoin-shares": {
@@ -1687,7 +1687,7 @@
         ],
         [
           "Stretch from long-term average",
-          "+6.1% vs its long-term average - not stretched either way",
+          "+5.6% vs its long-term average - not stretched either way",
           0
         ],
         [
@@ -1700,12 +1700,12 @@
       "id": "bitget-token",
       "symbol": "BGB",
       "name": "Bitget Token",
-      "price": 2.02,
-      "pct_24h": 0.74718,
-      "pct_7d": 3.9,
+      "price": 2.01,
+      "pct_24h": -0.33152,
+      "pct_7d": 3.3,
       "support_30d": 1.612955058583726,
       "resistance_30d": 2.0284940947674617,
-      "as_of": "2026-09-07 16:50:23",
+      "as_of": "2026-09-07 22:25:21",
       "stale": false
     },
     "sui": {
@@ -3298,14 +3298,14 @@
     "key": "BTC",
     "name": "Bitcoin",
     "emoji": "\u20bf",
-    "price": 79092,
+    "price": 79128,
     "high_24h": 80494,
     "low_24h": 78707,
-    "pct_24h": -0.69206,
+    "pct_24h": -0.74827,
     "pct_7d": 0.4,
     "pct_30d": 21.8,
-    "sma50": 69693.07143605163,
-    "sma200": 69793.22455604713,
+    "sma50": 69693.80087983952,
+    "sma200": 69793.4069169941,
     "support_30d": 62843.70368466329,
     "resistance_30d": 81264.70153038795,
     "mark_price": 79370.02473188,
@@ -3320,14 +3320,14 @@
     "key": "ETH",
     "name": "Ethereum",
     "emoji": "\u039e",
-    "price": 2486.03,
+    "price": 2487.9,
     "high_24h": 2532.72,
     "low_24h": 2467.8,
-    "pct_24h": -0.23483,
+    "pct_24h": -0.3224,
     "pct_7d": 0.8,
     "pct_30d": 29.8,
-    "sma50": 2115.2009483210345,
-    "sma200": 2040.871653477859,
+    "sma50": 2115.250188685775,
+    "sma200": 2040.8839635690438,
     "support_30d": 1871.3976551883159,
     "resistance_30d": 2514.967577695514,
     "mark_price": 2488.83603101,
