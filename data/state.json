@@ -4,7 +4,7 @@
   "_alerts_state": {
     "btc-resistance-break": {
       "triggered": true,
-      "last_triggered_at": "2026-09-07 07:15:25"
+      "last_triggered_at": "2026-09-07 07:20:25"
     },
     "btc-support-break": {
       "triggered": false,
@@ -55,7 +55,7 @@
         ],
         [
           "Stretch from long-term average",
-          "+19.9% above its long-term average - a bit stretched",
+          "+19.8% above its long-term average - a bit stretched",
           -1
         ],
         [
@@ -68,12 +68,12 @@
       "id": "binancecoin",
       "symbol": "BNB",
       "name": "BNB",
-      "price": 745.41,
-      "pct_24h": -1.94825,
+      "price": 744.8,
+      "pct_24h": -1.72639,
       "pct_7d": 8.6,
       "support_30d": 598.6196895758089,
       "resistance_30d": 766.4092879330625,
-      "as_of": "2026-09-07 07:00:42",
+      "as_of": "2026-09-07 07:20:25",
       "stale": false
     },
     "ripple": {
@@ -535,7 +535,7 @@
         ],
         [
           "Stretch from long-term average",
-          "+32.0% above its long-term average - very stretched",
+          "+31.8% above its long-term average - very stretched",
           -2
         ],
         [
@@ -548,12 +548,12 @@
       "id": "whitebit",
       "symbol": "WBT",
       "name": "WhiteBIT Coin",
-      "price": 73.53,
-      "pct_24h": -0.17925,
-      "pct_7d": 2.9,
+      "price": 73.44,
+      "pct_24h": -0.15603,
+      "pct_7d": 2.3,
       "support_30d": 54.452558710928955,
       "resistance_30d": 74.07423223861623,
-      "as_of": "2026-09-07 06:05:19",
+      "as_of": "2026-09-07 07:20:25",
       "stale": false
     },
     "leo-token": {
@@ -3079,7 +3079,7 @@
         ],
         [
           "Stretch from long-term average",
-          "+74.8% above its long-term average - very stretched",
+          "+73.0% above its long-term average - very stretched",
           -2
         ],
         [
@@ -3092,12 +3092,12 @@
       "id": "arbitrum",
       "symbol": "ARB",
       "name": "Arbitrum",
-      "price": 0.172877,
-      "pct_24h": -10.04366,
-      "pct_7d": 104.7,
+      "price": 0.171114,
+      "pct_24h": -12.05786,
+      "pct_7d": 99.4,
       "support_30d": 0.07272258489044682,
       "resistance_30d": 0.18933387703114857,
-      "as_of": "2026-09-07 05:25:17",
+      "as_of": "2026-09-07 07:20:25",
       "stale": false
     },
     "dash": {
@@ -3245,19 +3245,21 @@
       "stale": false
     }
   },
-  "_strong_buy_state": {},
+  "_strong_buy_state": {
+    "15m:WBT": true
+  },
   "BTC": {
     "key": "BTC",
     "name": "Bitcoin",
     "emoji": "\u20bf",
-    "price": 79645,
+    "price": 79594,
     "high_24h": 80494,
     "low_24h": 79426,
-    "pct_24h": -0.03034,
+    "pct_24h": -0.25872,
     "pct_7d": 2.1,
     "pct_30d": 22.6,
-    "sma50": 69704.29535944859,
-    "sma200": 69796.03053689637,
+    "sma50": 69703.12206354382,
+    "sma200": 69795.73721292018,
     "support_30d": 62843.70368466329,
     "resistance_30d": 81264.70153038795,
     "mark_price": 79760.35385307,
@@ -3272,14 +3274,14 @@
     "key": "ETH",
     "name": "Ethereum",
     "emoji": "\u039e",
-    "price": 2500.79,
+    "price": 2499.44,
     "high_24h": 2532.72,
     "low_24h": 2473.01,
-    "pct_24h": 0.42189,
+    "pct_24h": 0.11441,
     "pct_7d": 2.6,
     "pct_30d": 30.4,
-    "sma50": 2115.519741186865,
-    "sma200": 2040.9513516943166,
+    "sma50": 2115.4936367484142,
+    "sma200": 2040.944825584704,
     "support_30d": 1871.3976551883159,
     "resistance_30d": 2514.967577695514,
     "mark_price": 2479.87016279,
