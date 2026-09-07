@@ -4,7 +4,7 @@
   "_alerts_state": {
     "btc-resistance-break": {
       "triggered": true,
-      "last_triggered_at": "2026-09-07 18:40:24"
+      "last_triggered_at": "2026-09-07 18:45:22"
     },
     "btc-support-break": {
       "triggered": false,
@@ -692,12 +692,12 @@
       "id": "cardano",
       "symbol": "ADA",
       "name": "Cardano",
-      "price": 0.219421,
-      "pct_24h": 0.82256,
-      "pct_7d": 14.2,
+      "price": 0.21943,
+      "pct_24h": -0.00954,
+      "pct_7d": 12.6,
       "support_30d": 0.1741249817054162,
       "resistance_30d": 0.2291047455940254,
-      "as_of": "2026-09-07 14:45:22",
+      "as_of": "2026-09-07 18:45:22",
       "stale": false
     },
     "stellar": {
@@ -995,7 +995,7 @@
       "rows": [
         [
           "Price vs. recent range",
-          "Near its 30-day high (~$0.4561) - less room to run",
+          "Near its 30-day high (~$0.4573) - less room to run",
           -1
         ],
         [
@@ -1015,7 +1015,7 @@
         ],
         [
           "Stretch from long-term average",
-          "+28.0% above its long-term average - a bit stretched",
+          "+28.2% above its long-term average - a bit stretched",
           -1
         ],
         [
@@ -1028,12 +1028,12 @@
       "id": "worldcoin-wld",
       "symbol": "WLD",
       "name": "Worldcoin",
-      "price": 0.456846,
-      "pct_24h": 11.45683,
-      "pct_7d": 25.7,
+      "price": 0.457554,
+      "pct_24h": 10.49765,
+      "pct_7d": 30.3,
       "support_30d": 0.3126022661711148,
-      "resistance_30d": 0.45606673212378646,
-      "as_of": "2026-09-07 16:15:25",
+      "resistance_30d": 0.45731454128041493,
+      "as_of": "2026-09-07 18:45:22",
       "stale": false
     },
     "bfusd": {
@@ -2023,7 +2023,7 @@
         ],
         [
           "Stretch from long-term average",
-          "+90.2% above its long-term average - very stretched",
+          "+89.4% above its long-term average - very stretched",
           -2
         ],
         [
@@ -2036,12 +2036,12 @@
       "id": "uniswap",
       "symbol": "UNI",
       "name": "Uniswap",
-      "price": 6.88,
-      "pct_24h": -4.20133,
+      "price": 6.85,
+      "pct_24h": -4.09444,
       "pct_7d": 34.5,
       "support_30d": 3.1971416665971573,
       "resistance_30d": 7.291165865788254,
-      "as_of": "2026-09-07 18:10:23",
+      "as_of": "2026-09-07 18:45:22",
       "stale": false
     },
     "pi-network": {
@@ -3293,21 +3293,19 @@
       "stale": false
     }
   },
-  "_strong_buy_state": {
-    "1h:XMR": true
-  },
+  "_strong_buy_state": {},
   "BTC": {
     "key": "BTC",
     "name": "Bitcoin",
     "emoji": "\u20bf",
-    "price": 79118,
+    "price": 79120,
     "high_24h": 80494,
     "low_24h": 78707,
-    "pct_24h": -1.04351,
+    "pct_24h": -1.0146,
     "pct_7d": 0.7,
     "pct_30d": 21.7,
-    "sma50": 69693.21749936763,
-    "sma200": 69793.26107187614,
+    "sma50": 69693.7232631928,
+    "sma200": 69793.38751283243,
     "support_30d": 62843.70368466329,
     "resistance_30d": 81264.70153038795,
     "mark_price": 79370.02473188,
@@ -3322,14 +3320,14 @@
     "key": "ETH",
     "name": "Ethereum",
     "emoji": "\u039e",
-    "price": 2488.4,
+    "price": 2487.67,
     "high_24h": 2532.72,
     "low_24h": 2467.8,
-    "pct_24h": -0.39159,
+    "pct_24h": -0.39479,
     "pct_7d": 1.0,
     "pct_30d": 29.8,
-    "sma50": 2115.256653329036,
-    "sma200": 2040.8855797298593,
+    "sma50": 2115.262959329795,
+    "sma200": 2040.887156230049,
     "support_30d": 1871.3976551883159,
     "resistance_30d": 2514.967577695514,
     "mark_price": 2488.83603101,
