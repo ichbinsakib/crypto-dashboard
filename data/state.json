@@ -4,7 +4,7 @@
   "_alerts_state": {
     "btc-resistance-break": {
       "triggered": true,
-      "last_triggered_at": "2026-09-07 16:00:37"
+      "last_triggered_at": "2026-09-07 16:05:22"
     },
     "btc-support-break": {
       "triggered": false,
@@ -967,7 +967,7 @@
         ],
         [
           "Stretch from long-term average",
-          "+15.9% above its long-term average - a bit stretched",
+          "+16.3% above its long-term average - a bit stretched",
           -1
         ],
         [
@@ -980,12 +980,12 @@
       "id": "aster-2",
       "symbol": "ASTER",
       "name": "Aster",
-      "price": 0.767596,
-      "pct_24h": 0.67857,
-      "pct_7d": 14.1,
+      "price": 0.769956,
+      "pct_24h": 0.85033,
+      "pct_7d": 10.0,
       "support_30d": 0.5986101196690307,
       "resistance_30d": 0.7868111056215635,
-      "as_of": "2026-09-07 15:55:19",
+      "as_of": "2026-09-07 16:05:22",
       "stale": false
     },
     "worldcoin-wld": {
@@ -1783,7 +1783,7 @@
         ],
         [
           "Stretch from long-term average",
-          "+156.9% above its long-term average - very stretched",
+          "+157.5% above its long-term average - very stretched",
           -2
         ],
         [
@@ -1796,12 +1796,12 @@
       "id": "lighter",
       "symbol": "LIT",
       "name": "Lighter",
-      "price": 4.4,
-      "pct_24h": -3.2658,
+      "price": 4.41,
+      "pct_24h": -2.88024,
       "pct_7d": 21.2,
       "support_30d": 2.2358662099746955,
       "resistance_30d": 4.815937283873233,
-      "as_of": "2026-09-07 16:00:37",
+      "as_of": "2026-09-07 16:05:22",
       "stale": false
     },
     "ethena": {
@@ -2813,9 +2813,9 @@
       "stale": false
     },
     "aave": {
-      "label": "\ud83d\udfe1 HOLD / NEUTRAL",
-      "status": "neutral",
-      "score": -1,
+      "label": "\ud83d\udd34 CAUTION - REDUCE NEW BUYS",
+      "status": "bearish",
+      "score": -2,
       "rows": [
         [
           "Price vs. recent range",
@@ -2834,12 +2834,12 @@
         ],
         [
           "Recent trend",
-          "Trending up steadily - healthy",
-          1
+          "Chopping sideways - no clear trend",
+          0
         ],
         [
           "Stretch from long-term average",
-          "+36.4% above its long-term average - very stretched",
+          "+34.7% above its long-term average - very stretched",
           -2
         ],
         [
@@ -2848,16 +2848,16 @@
           0
         ]
       ],
-      "plain": "No real edge either way right now - fine to just wait and watch.",
+      "plain": "Getting risky - I'd hold off on new buys until this cools down.",
       "id": "aave",
       "symbol": "AAVE",
       "name": "Aave",
-      "price": 132.99,
-      "pct_24h": -0.68356,
-      "pct_7d": 8.4,
+      "price": 131.31,
+      "pct_24h": -1.8198,
+      "pct_7d": 4.6,
       "support_30d": 85.94219943917633,
       "resistance_30d": 141.53047916466082,
-      "as_of": "2026-09-07 15:00:34",
+      "as_of": "2026-09-07 16:05:22",
       "stale": false
     },
     "okb": {
@@ -3294,20 +3294,21 @@
     }
   },
   "_strong_buy_state": {
-    "15m:LIT": true
+    "15m:LIT": true,
+    "1h:ASTER": true
   },
   "BTC": {
     "key": "BTC",
     "name": "Bitcoin",
     "emoji": "\u20bf",
-    "price": 78778,
+    "price": 78885,
     "high_24h": 80494,
-    "low_24h": 78991,
-    "pct_24h": -1.15804,
-    "pct_7d": 1.7,
-    "pct_30d": 21.9,
-    "sma50": 69687.86853469457,
-    "sma200": 69791.92383070788,
+    "low_24h": 78707,
+    "pct_24h": -0.95307,
+    "pct_7d": 0.3,
+    "pct_30d": 21.1,
+    "sma50": 69688.94188315427,
+    "sma200": 69792.1921678228,
     "support_30d": 62843.70368466329,
     "resistance_30d": 81264.70153038795,
     "mark_price": 79370.02473188,
@@ -3322,14 +3323,14 @@
     "key": "ETH",
     "name": "Ethereum",
     "emoji": "\u039e",
-    "price": 2469.71,
+    "price": 2473.79,
     "high_24h": 2532.72,
-    "low_24h": 2476.05,
-    "pct_24h": -0.42031,
-    "pct_7d": 2.0,
-    "pct_30d": 29.8,
-    "sma50": 2114.9254347327637,
-    "sma200": 2040.802775080791,
+    "low_24h": 2467.8,
+    "pct_24h": -0.12268,
+    "pct_7d": 0.2,
+    "pct_30d": 28.5,
+    "sma50": 2114.976050593606,
+    "sma200": 2040.8154290460018,
     "support_30d": 1871.3976551883159,
     "resistance_30d": 2514.967577695514,
     "mark_price": 2488.83603101,
