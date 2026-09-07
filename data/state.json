@@ -4,7 +4,7 @@
   "_alerts_state": {
     "btc-resistance-break": {
       "triggered": true,
-      "last_triggered_at": "2026-09-07 07:05:19"
+      "last_triggered_at": "2026-09-07 07:10:24"
     },
     "btc-support-break": {
       "triggered": false,
@@ -2189,13 +2189,13 @@
       "stale": false
     },
     "internet-computer": {
-      "label": "\ud83d\udfe1 HOLD / NEUTRAL",
-      "status": "neutral",
-      "score": -1,
+      "label": "\ud83d\udd34 CAUTION - REDUCE NEW BUYS",
+      "status": "bearish",
+      "score": -4,
       "rows": [
         [
           "Price vs. recent range",
-          "Near its 30-day high (~$2.78) - less room to run",
+          "Near its 30-day high (~$2.97) - less room to run",
           -1
         ],
         [
@@ -2210,12 +2210,12 @@
         ],
         [
           "Recent trend",
-          "Trending up steadily - healthy",
-          1
+          "Shooting straight up - classic blow-off top risk, don't chase",
+          -2
         ],
         [
           "Stretch from long-term average",
-          "+13.9% above its long-term average - a bit stretched",
+          "+21.6% above its long-term average - a bit stretched",
           -1
         ],
         [
@@ -2224,16 +2224,16 @@
           0
         ]
       ],
-      "plain": "No real edge either way right now - fine to just wait and watch.",
+      "plain": "Getting risky - I'd hold off on new buys until this cools down.",
       "id": "internet-computer",
       "symbol": "ICP",
       "name": "Internet Computer",
-      "price": 2.78,
-      "pct_24h": 5.02506,
-      "pct_7d": 15.5,
+      "price": 2.97,
+      "pct_24h": 12.60038,
+      "pct_7d": 22.0,
       "support_30d": 2.1584475030049863,
-      "resistance_30d": 2.7776492320951265,
-      "as_of": "2026-09-07 04:25:17",
+      "resistance_30d": 2.9732697013388156,
+      "as_of": "2026-09-07 07:10:24",
       "stale": false
     },
     "bittensor": {
@@ -2325,11 +2325,11 @@
       "symbol": "GRAM",
       "name": "Gram (prev. Toncoin)",
       "price": 1.42,
-      "pct_24h": 0.0659,
+      "pct_24h": 0.20326,
       "pct_7d": 5.2,
       "support_30d": 1.316580434471296,
       "resistance_30d": 1.4926762805297678,
-      "as_of": "2026-09-07 07:00:42",
+      "as_of": "2026-09-07 07:10:24",
       "stale": false
     },
     "sky": {
@@ -2647,7 +2647,7 @@
         ],
         [
           "Stretch from long-term average",
-          "-20.3% below its long-term average - confirmed downtrend",
+          "-20.5% below its long-term average - confirmed downtrend",
           -1
         ],
         [
@@ -2660,12 +2660,12 @@
       "id": "world-liberty-financial",
       "symbol": "WLFI",
       "name": "World Liberty Financial",
-      "price": 0.056877,
-      "pct_24h": -0.16207,
-      "pct_7d": -0.5,
+      "price": 0.056754,
+      "pct_24h": -0.00845,
+      "pct_7d": -0.8,
       "support_30d": 0.05311679629324154,
       "resistance_30d": 0.06254770952093733,
-      "as_of": "2026-09-07 06:05:19",
+      "as_of": "2026-09-07 07:10:24",
       "stale": false
     },
     "pax-gold": {
@@ -3245,21 +3245,19 @@
       "stale": false
     }
   },
-  "_strong_buy_state": {
-    "1h:JST": true
-  },
+  "_strong_buy_state": {},
   "BTC": {
     "key": "BTC",
     "name": "Bitcoin",
     "emoji": "\u20bf",
-    "price": 79625,
+    "price": 79651,
     "high_24h": 80494,
     "low_24h": 79426,
-    "pct_24h": -0.19551,
+    "pct_24h": -0.13259,
     "pct_7d": 2.1,
     "pct_30d": 22.6,
-    "sma50": 69703.88636903198,
-    "sma200": 69795.92828929222,
+    "sma50": 69704.08428147185,
+    "sma200": 69795.97776740219,
     "support_30d": 62843.70368466329,
     "resistance_30d": 81264.70153038795,
     "mark_price": 79760.35385307,
@@ -3274,14 +3272,14 @@
     "key": "ETH",
     "name": "Ethereum",
     "emoji": "\u039e",
-    "price": 2496.75,
+    "price": 2498.49,
     "high_24h": 2532.72,
     "low_24h": 2473.01,
-    "pct_24h": -0.34652,
+    "pct_24h": -0.22014,
     "pct_7d": 2.6,
     "pct_30d": 30.4,
-    "sma50": 2115.450916314889,
-    "sma200": 2040.9341454763226,
+    "sma50": 2115.4697328169445,
+    "sma200": 2040.9388496018364,
     "support_30d": 1871.3976551883159,
     "resistance_30d": 2514.967577695514,
     "mark_price": 2479.87016279,
