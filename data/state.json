@@ -4,7 +4,7 @@
   "_alerts_state": {
     "btc-resistance-break": {
       "triggered": true,
-      "last_triggered_at": "2026-09-07 18:35:18"
+      "last_triggered_at": "2026-09-07 18:40:24"
     },
     "btc-support-break": {
       "triggered": false,
@@ -439,7 +439,7 @@
         ],
         [
           "Stretch from long-term average",
-          "+42.8% above its long-term average - very stretched",
+          "+42.5% above its long-term average - very stretched",
           -2
         ],
         [
@@ -452,12 +452,12 @@
       "id": "rain",
       "symbol": "RAIN",
       "name": "Rain",
-      "price": 0.01632853,
-      "pct_24h": -2.89194,
-      "pct_7d": -3.4,
+      "price": 0.0162967,
+      "pct_24h": -3.28197,
+      "pct_7d": -4.0,
       "support_30d": 0.012552829520986089,
       "resistance_30d": 0.018158429442510105,
-      "as_of": "2026-09-07 15:55:19",
+      "as_of": "2026-09-07 18:40:24",
       "stale": false
     },
     "chainlink": {
@@ -2195,7 +2195,7 @@
       "rows": [
         [
           "Price vs. recent range",
-          "Near its 30-day high (~$2.94) - less room to run",
+          "Near its 30-day high (~$2.98) - less room to run",
           -1
         ],
         [
@@ -2215,7 +2215,7 @@
         ],
         [
           "Stretch from long-term average",
-          "+20.8% above its long-term average - a bit stretched",
+          "+22.4% above its long-term average - a bit stretched",
           -1
         ],
         [
@@ -2228,12 +2228,12 @@
       "id": "internet-computer",
       "symbol": "ICP",
       "name": "Internet Computer",
-      "price": 2.95,
-      "pct_24h": 8.84129,
-      "pct_7d": 25.0,
+      "price": 2.99,
+      "pct_24h": 11.39453,
+      "pct_7d": 26.3,
       "support_30d": 2.1584475030049863,
-      "resistance_30d": 2.9445533664651284,
-      "as_of": "2026-09-07 15:15:25",
+      "resistance_30d": 2.9838706997314906,
+      "as_of": "2026-09-07 18:40:24",
       "stale": false
     },
     "bittensor": {
@@ -2325,11 +2325,11 @@
       "symbol": "GRAM",
       "name": "Gram (prev. Toncoin)",
       "price": 1.4,
-      "pct_24h": -1.10053,
-      "pct_7d": 4.9,
+      "pct_24h": -1.78054,
+      "pct_7d": 0.0,
       "support_30d": 1.316580434471296,
       "resistance_30d": 1.4926762805297678,
-      "as_of": "2026-09-07 17:30:31",
+      "as_of": "2026-09-07 18:40:24",
       "stale": false
     },
     "sky": {
@@ -3293,19 +3293,21 @@
       "stale": false
     }
   },
-  "_strong_buy_state": {},
+  "_strong_buy_state": {
+    "1h:XMR": true
+  },
   "BTC": {
     "key": "BTC",
     "name": "Bitcoin",
     "emoji": "\u20bf",
-    "price": 79105,
+    "price": 79118,
     "high_24h": 80494,
     "low_24h": 78707,
-    "pct_24h": -1.03031,
+    "pct_24h": -1.04351,
     "pct_7d": 0.7,
     "pct_30d": 21.7,
-    "sma50": 69693.30041576391,
-    "sma200": 69793.28180097521,
+    "sma50": 69693.21749936763,
+    "sma200": 69793.26107187614,
     "support_30d": 62843.70368466329,
     "resistance_30d": 81264.70153038795,
     "mark_price": 79370.02473188,
@@ -3320,14 +3322,14 @@
     "key": "ETH",
     "name": "Ethereum",
     "emoji": "\u039e",
-    "price": 2487.93,
+    "price": 2488.4,
     "high_24h": 2532.72,
     "low_24h": 2467.8,
-    "pct_24h": -0.37062,
+    "pct_24h": -0.39159,
     "pct_7d": 1.0,
     "pct_30d": 29.8,
-    "sma50": 2115.2563498842933,
-    "sma200": 2040.8855038686736,
+    "sma50": 2115.256653329036,
+    "sma200": 2040.8855797298593,
     "support_30d": 1871.3976551883159,
     "resistance_30d": 2514.967577695514,
     "mark_price": 2488.83603101,
