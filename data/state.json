@@ -4,7 +4,7 @@
   "_alerts_state": {
     "btc-resistance-break": {
       "triggered": true,
-      "last_triggered_at": "2026-09-07 17:15:25"
+      "last_triggered_at": "2026-09-07 17:20:26"
     },
     "btc-support-break": {
       "triggered": false,
@@ -55,7 +55,7 @@
         ],
         [
           "Stretch from long-term average",
-          "+18.6% above its long-term average - a bit stretched",
+          "+19.0% above its long-term average - a bit stretched",
           -1
         ],
         [
@@ -68,12 +68,12 @@
       "id": "binancecoin",
       "symbol": "BNB",
       "name": "BNB",
-      "price": 737.52,
-      "pct_24h": -1.25764,
-      "pct_7d": 6.5,
+      "price": 740.09,
+      "pct_24h": -1.00548,
+      "pct_7d": 7.3,
       "support_30d": 598.6196895758089,
       "resistance_30d": 766.4092879330625,
-      "as_of": "2026-09-07 16:20:27",
+      "as_of": "2026-09-07 17:20:26",
       "stale": false
     },
     "ripple": {
@@ -980,12 +980,12 @@
       "id": "aster-2",
       "symbol": "ASTER",
       "name": "Aster",
-      "price": 0.768811,
-      "pct_24h": 0.48471,
+      "price": 0.768774,
+      "pct_24h": 0.75813,
       "pct_7d": 10.0,
       "support_30d": 0.5986101196690307,
       "resistance_30d": 0.7868111056215635,
-      "as_of": "2026-09-07 16:20:27",
+      "as_of": "2026-09-07 17:20:26",
       "stale": false
     },
     "worldcoin-wld": {
@@ -1855,7 +1855,7 @@
     "bitcoin-cash": {
       "label": "\ud83d\udfe1 HOLD / NEUTRAL",
       "status": "neutral",
-      "score": 0,
+      "score": 1,
       "rows": [
         [
           "Price vs. recent range",
@@ -1874,12 +1874,12 @@
         ],
         [
           "Recent trend",
-          "Chopping sideways - no clear trend",
-          0
+          "Trending up steadily - healthy",
+          1
         ],
         [
           "Stretch from long-term average",
-          "-22.4% below its long-term average - confirmed downtrend",
+          "-21.3% below its long-term average - confirmed downtrend",
           -1
         ],
         [
@@ -1892,12 +1892,12 @@
       "id": "bitcoin-cash",
       "symbol": "BCH",
       "name": "Bitcoin Cash",
-      "price": 259.48,
-      "pct_24h": 1.74525,
-      "pct_7d": 7.5,
+      "price": 263.11,
+      "pct_24h": 2.63019,
+      "pct_7d": 8.2,
       "support_30d": 203.50169440615565,
       "resistance_30d": 288.10955405353275,
-      "as_of": "2026-09-07 15:52:32",
+      "as_of": "2026-09-07 17:20:26",
       "stale": false
     },
     "mantle": {
@@ -3293,19 +3293,21 @@
       "stale": false
     }
   },
-  "_strong_buy_state": {},
+  "_strong_buy_state": {
+    "1h:ASTER": true
+  },
   "BTC": {
     "key": "BTC",
     "name": "Bitcoin",
     "emoji": "\u20bf",
-    "price": 79117,
+    "price": 79133,
     "high_24h": 80494,
     "low_24h": 78707,
-    "pct_24h": -0.63532,
+    "pct_24h": -0.71249,
     "pct_7d": 0.5,
     "pct_30d": 21.4,
-    "sma50": 69693.58074121294,
-    "sma200": 69793.35188233746,
+    "sma50": 69693.90115861267,
+    "sma200": 69793.4319866874,
     "support_30d": 62843.70368466329,
     "resistance_30d": 81264.70153038795,
     "mark_price": 79370.02473188,
@@ -3320,14 +3322,14 @@
     "key": "ETH",
     "name": "Ethereum",
     "emoji": "\u039e",
-    "price": 2488.5,
+    "price": 2490.03,
     "high_24h": 2532.72,
     "low_24h": 2467.8,
-    "pct_24h": 0.13247,
+    "pct_24h": 0.08178,
     "pct_7d": 0.5,
     "pct_30d": 29.1,
-    "sma50": 2115.2683796929186,
-    "sma200": 2040.8885113208298,
+    "sma50": 2115.2983905184897,
+    "sma200": 2040.8960140272227,
     "support_30d": 1871.3976551883159,
     "resistance_30d": 2514.967577695514,
     "mark_price": 2488.83603101,
