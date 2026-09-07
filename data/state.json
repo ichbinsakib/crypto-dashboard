@@ -4,7 +4,7 @@
   "_alerts_state": {
     "btc-resistance-break": {
       "triggered": true,
-      "last_triggered_at": "2026-09-07 14:40:23"
+      "last_triggered_at": "2026-09-07 14:45:22"
     },
     "btc-support-break": {
       "triggered": false,
@@ -679,7 +679,7 @@
         ],
         [
           "Stretch from long-term average",
-          "-0.4% vs its long-term average - not stretched either way",
+          "-0.9% vs its long-term average - not stretched either way",
           0
         ],
         [
@@ -692,12 +692,12 @@
       "id": "cardano",
       "symbol": "ADA",
       "name": "Cardano",
-      "price": 0.220474,
-      "pct_24h": 1.53931,
+      "price": 0.219421,
+      "pct_24h": 0.82256,
       "pct_7d": 14.2,
       "support_30d": 0.1741249817054162,
       "resistance_30d": 0.2291047455940254,
-      "as_of": "2026-09-07 14:30:27",
+      "as_of": "2026-09-07 14:45:22",
       "stale": false
     },
     "stellar": {
@@ -803,7 +803,7 @@
       "rows": [
         [
           "Price vs. recent range",
-          "Near its 30-day high (~$0.0815) - less room to run",
+          "Near its 30-day high (~$0.0822) - less room to run",
           -1
         ],
         [
@@ -823,7 +823,7 @@
         ],
         [
           "Stretch from long-term average",
-          "-2.5% vs its long-term average - not stretched either way",
+          "-1.0% vs its long-term average - not stretched either way",
           0
         ],
         [
@@ -836,12 +836,12 @@
       "id": "hedera-hashgraph",
       "symbol": "HBAR",
       "name": "Hedera",
-      "price": 0.080927,
-      "pct_24h": -0.65667,
-      "pct_7d": 9.5,
+      "price": 0.08217,
+      "pct_24h": 1.79218,
+      "pct_7d": 12.3,
       "support_30d": 0.06461260477975343,
-      "resistance_30d": 0.0815248500735893,
-      "as_of": "2026-09-07 06:10:22",
+      "resistance_30d": 0.08219487179651473,
+      "as_of": "2026-09-07 14:45:22",
       "stale": false
     },
     "pepe": {
@@ -947,7 +947,7 @@
       "rows": [
         [
           "Price vs. recent range",
-          "Near its 30-day high (~$0.8027) - less room to run",
+          "Near its 30-day high (~$0.7886) - less room to run",
           -1
         ],
         [
@@ -967,7 +967,7 @@
         ],
         [
           "Stretch from long-term average",
-          "+21.1% above its long-term average - a bit stretched",
+          "+19.1% above its long-term average - a bit stretched",
           -1
         ],
         [
@@ -980,12 +980,12 @@
       "id": "aster-2",
       "symbol": "ASTER",
       "name": "Aster",
-      "price": 0.80177,
-      "pct_24h": 3.51833,
-      "pct_7d": 14.9,
+      "price": 0.788558,
+      "pct_24h": 3.63,
+      "pct_7d": 16.2,
       "support_30d": 0.5986101196690307,
-      "resistance_30d": 0.8026683509973588,
-      "as_of": "2026-09-07 13:55:19",
+      "resistance_30d": 0.7885576317575893,
+      "as_of": "2026-09-07 14:45:22",
       "stale": false
     },
     "worldcoin-wld": {
@@ -3293,22 +3293,19 @@
       "stale": false
     }
   },
-  "_strong_buy_state": {
-    "15m:WBT": true,
-    "1h:WBT": true
-  },
+  "_strong_buy_state": {},
   "BTC": {
     "key": "BTC",
     "name": "Bitcoin",
     "emoji": "\u20bf",
-    "price": 79038,
+    "price": 79031,
     "high_24h": 80494,
     "low_24h": 79081,
-    "pct_24h": -0.72161,
+    "pct_24h": -0.8463,
     "pct_7d": 1.9,
     "pct_30d": 22.2,
-    "sma50": 69692.12306631221,
-    "sma200": 69792.98746361228,
+    "sma50": 69691.53956204324,
+    "sma200": 69792.84158754504,
     "support_30d": 62843.70368466329,
     "resistance_30d": 81264.70153038795,
     "mark_price": 79370.02473188,
@@ -3323,14 +3320,14 @@
     "key": "ETH",
     "name": "Ethereum",
     "emoji": "\u039e",
-    "price": 2480.17,
+    "price": 2480.24,
     "high_24h": 2532.72,
     "low_24h": 2473.53,
-    "pct_24h": -0.00934,
+    "pct_24h": -0.18434,
     "pct_7d": 2.0,
     "pct_30d": 30.3,
-    "sma50": 2115.105172836907,
-    "sma200": 2040.847709606827,
+    "sma50": 2115.0834169552054,
+    "sma200": 2040.8422706364017,
     "support_30d": 1871.3976551883159,
     "resistance_30d": 2514.967577695514,
     "mark_price": 2488.83603101,
