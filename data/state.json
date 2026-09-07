@@ -4,7 +4,7 @@
   "_alerts_state": {
     "btc-resistance-break": {
       "triggered": true,
-      "last_triggered_at": "2026-09-07 12:30:29"
+      "last_triggered_at": "2026-09-07 12:35:18"
     },
     "btc-support-break": {
       "triggered": false,
@@ -151,7 +151,7 @@
         ],
         [
           "Stretch from long-term average",
-          "+27.2% above its long-term average - a bit stretched",
+          "+27.5% above its long-term average - a bit stretched",
           -1
         ],
         [
@@ -164,12 +164,12 @@
       "id": "solana",
       "symbol": "SOL",
       "name": "Solana",
-      "price": 105.03,
-      "pct_24h": -1.36868,
+      "price": 105.3,
+      "pct_24h": -1.29631,
       "pct_7d": 1.2,
       "support_30d": 74.5477464048606,
       "resistance_30d": 109.17730597799657,
-      "as_of": "2026-09-07 12:10:23",
+      "as_of": "2026-09-07 12:35:18",
       "stale": false
     },
     "tron": {
@@ -679,7 +679,7 @@
         ],
         [
           "Stretch from long-term average",
-          "-1.1% vs its long-term average - not stretched either way",
+          "-0.2% vs its long-term average - not stretched either way",
           0
         ],
         [
@@ -692,12 +692,12 @@
       "id": "cardano",
       "symbol": "ADA",
       "name": "Cardano",
-      "price": 0.218883,
-      "pct_24h": 0.07093,
-      "pct_7d": 10.5,
+      "price": 0.220939,
+      "pct_24h": -0.03518,
+      "pct_7d": 10.9,
       "support_30d": 0.1741249817054162,
       "resistance_30d": 0.2291047455940254,
-      "as_of": "2026-09-07 10:35:19",
+      "as_of": "2026-09-07 12:35:18",
       "stale": false
     },
     "stellar": {
@@ -1543,7 +1543,7 @@
         ],
         [
           "Stretch from long-term average",
-          "+101.0% above its long-term average - very stretched",
+          "+116.5% above its long-term average - very stretched",
           -2
         ],
         [
@@ -1556,12 +1556,12 @@
       "id": "pump-fun",
       "symbol": "PUMP",
       "name": "Pump.fun",
-      "price": 0.00421078,
-      "pct_24h": 5.61057,
-      "pct_7d": -5.0,
+      "price": 0.00453717,
+      "pct_24h": 12.9579,
+      "pct_7d": 4.2,
       "support_30d": 0.002666433318189806,
       "resistance_30d": 0.0052249885406471875,
-      "as_of": "2026-09-07 09:15:23",
+      "as_of": "2026-09-07 12:35:18",
       "stale": false
     },
     "venice-token": {
@@ -3245,19 +3245,21 @@
       "stale": false
     }
   },
-  "_strong_buy_state": {},
+  "_strong_buy_state": {
+    "1h:MORPHO": true
+  },
   "BTC": {
     "key": "BTC",
     "name": "Bitcoin",
     "emoji": "\u20bf",
-    "price": 79511,
+    "price": 79502,
     "high_24h": 80494,
     "low_24h": 79081,
-    "pct_24h": -0.57346,
+    "pct_24h": -0.58958,
     "pct_7d": 0.9,
     "pct_30d": 22.2,
-    "sma50": 69701.39072417819,
-    "sma200": 69795.30437807877,
+    "sma50": 69701.31524549355,
+    "sma200": 69795.28550840761,
     "support_30d": 62843.70368466329,
     "resistance_30d": 81264.70153038795,
     "mark_price": 79370.02473188,
@@ -3272,14 +3274,14 @@
     "key": "ETH",
     "name": "Ethereum",
     "emoji": "\u039e",
-    "price": 2493.09,
+    "price": 2493.57,
     "high_24h": 2532.72,
     "low_24h": 2473.01,
-    "pct_24h": -0.34429,
+    "pct_24h": -0.37436,
     "pct_7d": 1.4,
     "pct_30d": 29.6,
-    "sma50": 2115.3591979224184,
-    "sma200": 2040.9112158782048,
+    "sma50": 2115.372641322488,
+    "sma200": 2040.9145767282223,
     "support_30d": 1871.3976551883159,
     "resistance_30d": 2514.967577695514,
     "mark_price": 2488.83603101,
