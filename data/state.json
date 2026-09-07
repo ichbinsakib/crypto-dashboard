@@ -4,7 +4,7 @@
   "_alerts_state": {
     "btc-resistance-break": {
       "triggered": true,
-      "last_triggered_at": "2026-09-07 12:00:37"
+      "last_triggered_at": "2026-09-07 12:05:20"
     },
     "btc-support-break": {
       "triggered": false,
@@ -265,7 +265,7 @@
       "pct_7d": 5.5,
       "support_30d": 1.0008548889936117,
       "resistance_30d": 1.0455978355177025,
-      "as_of": "2026-09-07 10:25:20",
+      "as_of": "2026-09-07 12:05:20",
       "stale": false
     },
     "hyperliquid": {
@@ -1955,7 +1955,7 @@
       "rows": [
         [
           "Price vs. recent range",
-          "Near its 30-day high (~$0.9881) - less room to run",
+          "Near its 30-day high (~$0.9808) - less room to run",
           -1
         ],
         [
@@ -1975,7 +1975,7 @@
         ],
         [
           "Stretch from long-term average",
-          "-10.6% vs its long-term average - not stretched either way",
+          "-11.3% vs its long-term average - not stretched either way",
           0
         ],
         [
@@ -1988,12 +1988,12 @@
       "id": "polkadot",
       "symbol": "DOT",
       "name": "Polkadot",
-      "price": 0.988846,
-      "pct_24h": 1.00411,
-      "pct_7d": 18.6,
+      "price": 0.98133,
+      "pct_24h": -0.8074,
+      "pct_7d": 17.8,
       "support_30d": 0.7510040523927409,
-      "resistance_30d": 0.9881150208111493,
-      "as_of": "2026-09-07 11:45:20",
+      "resistance_30d": 0.9808039244364034,
+      "as_of": "2026-09-07 12:05:20",
       "stale": false
     },
     "uniswap": {
@@ -2195,7 +2195,7 @@
       "rows": [
         [
           "Price vs. recent range",
-          "Near its 30-day high (~$3.00) - less room to run",
+          "Near its 30-day high (~$2.91) - less room to run",
           -1
         ],
         [
@@ -2215,7 +2215,7 @@
         ],
         [
           "Stretch from long-term average",
-          "+22.8% above its long-term average - a bit stretched",
+          "+19.6% above its long-term average - a bit stretched",
           -1
         ],
         [
@@ -2228,12 +2228,12 @@
       "id": "internet-computer",
       "symbol": "ICP",
       "name": "Internet Computer",
-      "price": 3.0,
-      "pct_24h": 13.1692,
-      "pct_7d": 22.0,
+      "price": 2.92,
+      "pct_24h": 9.06118,
+      "pct_7d": 20.5,
       "support_30d": 2.1584475030049863,
-      "resistance_30d": 3.001729591605829,
-      "as_of": "2026-09-07 07:45:22",
+      "resistance_30d": 2.9124941889737666,
+      "as_of": "2026-09-07 12:05:20",
       "stale": false
     },
     "bittensor": {
@@ -3245,19 +3245,21 @@
       "stale": false
     }
   },
-  "_strong_buy_state": {},
+  "_strong_buy_state": {
+    "1h:WBT": true
+  },
   "BTC": {
     "key": "BTC",
     "name": "Bitcoin",
     "emoji": "\u20bf",
-    "price": 79397,
+    "price": 79402,
     "high_24h": 80494,
     "low_24h": 79081,
-    "pct_24h": -0.65603,
-    "pct_7d": 1.1,
+    "pct_24h": -0.64102,
+    "pct_7d": 0.9,
     "pct_30d": 22.2,
-    "sma50": 69698.91782279639,
-    "sma200": 69794.68615273332,
+    "sma50": 69699.46174468138,
+    "sma200": 69794.82213320458,
     "support_30d": 62843.70368466329,
     "resistance_30d": 81264.70153038795,
     "mark_price": 79370.02473188,
@@ -3272,14 +3274,14 @@
     "key": "ETH",
     "name": "Ethereum",
     "emoji": "\u039e",
-    "price": 2488.89,
+    "price": 2489.29,
     "high_24h": 2532.72,
     "low_24h": 2473.01,
-    "pct_24h": -0.51197,
-    "pct_7d": 1.8,
-    "pct_30d": 29.8,
-    "sma50": 2115.29241759916,
-    "sma200": 2040.8945207973904,
+    "pct_24h": -0.44604,
+    "pct_7d": 1.4,
+    "pct_30d": 29.6,
+    "sma50": 2115.2836198548316,
+    "sma200": 2040.8923213613082,
     "support_30d": 1871.3976551883159,
     "resistance_30d": 2514.967577695514,
     "mark_price": 2488.83603101,
