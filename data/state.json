@@ -4,7 +4,7 @@
   "_alerts_state": {
     "btc-resistance-break": {
       "triggered": true,
-      "last_triggered_at": "2026-09-07 16:15:25"
+      "last_triggered_at": "2026-09-07 16:20:27"
     },
     "btc-support-break": {
       "triggered": false,
@@ -29,9 +29,9 @@
   },
   "_screener": {
     "binancecoin": {
-      "label": "\ud83d\udfe1 HOLD / NEUTRAL",
-      "status": "neutral",
-      "score": -1,
+      "label": "\ud83d\udd34 CAUTION - REDUCE NEW BUYS",
+      "status": "bearish",
+      "score": -2,
       "rows": [
         [
           "Price vs. recent range",
@@ -50,12 +50,12 @@
         ],
         [
           "Recent trend",
-          "Trending up steadily - healthy",
-          1
+          "Chopping sideways - no clear trend",
+          0
         ],
         [
           "Stretch from long-term average",
-          "+19.0% above its long-term average - a bit stretched",
+          "+18.6% above its long-term average - a bit stretched",
           -1
         ],
         [
@@ -64,16 +64,16 @@
           0
         ]
       ],
-      "plain": "No real edge either way right now - fine to just wait and watch.",
+      "plain": "Getting risky - I'd hold off on new buys until this cools down.",
       "id": "binancecoin",
       "symbol": "BNB",
       "name": "BNB",
-      "price": 739.88,
-      "pct_24h": -0.55033,
-      "pct_7d": 8.5,
+      "price": 737.52,
+      "pct_24h": -1.25764,
+      "pct_7d": 6.5,
       "support_30d": 598.6196895758089,
       "resistance_30d": 766.4092879330625,
-      "as_of": "2026-09-07 15:20:24",
+      "as_of": "2026-09-07 16:20:27",
       "stale": false
     },
     "ripple": {
@@ -899,7 +899,7 @@
       "rows": [
         [
           "Price vs. recent range",
-          "Near its 30-day high (~$8.06) - less room to run",
+          "Near its 30-day high (~$8.07) - less room to run",
           -1
         ],
         [
@@ -919,7 +919,7 @@
         ],
         [
           "Stretch from long-term average",
-          "-0.0% vs its long-term average - not stretched either way",
+          "+0.1% vs its long-term average - not stretched either way",
           0
         ],
         [
@@ -932,12 +932,12 @@
       "id": "avalanche-2",
       "symbol": "AVAX",
       "name": "Avalanche",
-      "price": 8.06,
-      "pct_24h": 5.61738,
+      "price": 8.07,
+      "pct_24h": 5.69267,
       "pct_7d": 11.6,
       "support_30d": 6.313391080113916,
-      "resistance_30d": 8.06159813194607,
-      "as_of": "2026-09-07 16:15:25",
+      "resistance_30d": 8.067766276574467,
+      "as_of": "2026-09-07 16:20:27",
       "stale": false
     },
     "aster-2": {
@@ -967,7 +967,7 @@
         ],
         [
           "Stretch from long-term average",
-          "+16.3% above its long-term average - a bit stretched",
+          "+16.1% above its long-term average - a bit stretched",
           -1
         ],
         [
@@ -980,12 +980,12 @@
       "id": "aster-2",
       "symbol": "ASTER",
       "name": "Aster",
-      "price": 0.769956,
-      "pct_24h": 0.85033,
+      "price": 0.768811,
+      "pct_24h": 0.48471,
       "pct_7d": 10.0,
       "support_30d": 0.5986101196690307,
       "resistance_30d": 0.7868111056215635,
-      "as_of": "2026-09-07 16:05:22",
+      "as_of": "2026-09-07 16:20:27",
       "stale": false
     },
     "worldcoin-wld": {
@@ -3293,19 +3293,21 @@
       "stale": false
     }
   },
-  "_strong_buy_state": {},
+  "_strong_buy_state": {
+    "1h:ASTER": true
+  },
   "BTC": {
     "key": "BTC",
     "name": "Bitcoin",
     "emoji": "\u20bf",
-    "price": 78889,
+    "price": 78883,
     "high_24h": 80494,
     "low_24h": 78707,
-    "pct_24h": -1.00832,
+    "pct_24h": -1.02196,
     "pct_7d": 0.3,
     "pct_30d": 21.1,
-    "sma50": 69688.8888977569,
-    "sma200": 69792.17892147346,
+    "sma50": 69688.83639906514,
+    "sma200": 69792.16579680052,
     "support_30d": 62843.70368466329,
     "resistance_30d": 81264.70153038795,
     "mark_price": 79370.02473188,
@@ -3320,14 +3322,14 @@
     "key": "ETH",
     "name": "Ethereum",
     "emoji": "\u039e",
-    "price": 2475.02,
+    "price": 2474.96,
     "high_24h": 2532.72,
     "low_24h": 2467.8,
-    "pct_24h": -0.29013,
+    "pct_24h": -0.28097,
     "pct_7d": 0.2,
     "pct_30d": 28.5,
-    "sma50": 2115.001038077426,
-    "sma200": 2040.8216759169568,
+    "sma50": 2115.0000974736786,
+    "sma200": 2040.8214407660198,
     "support_30d": 1871.3976551883159,
     "resistance_30d": 2514.967577695514,
     "mark_price": 2488.83603101,
