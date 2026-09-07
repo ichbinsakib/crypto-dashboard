@@ -4,7 +4,7 @@
   "_alerts_state": {
     "btc-resistance-break": {
       "triggered": true,
-      "last_triggered_at": "2026-09-07 16:05:22"
+      "last_triggered_at": "2026-09-07 16:10:23"
     },
     "btc-support-break": {
       "triggered": false,
@@ -707,8 +707,8 @@
       "rows": [
         [
           "Price vs. recent range",
-          "Near its 30-day high (~$0.2018) - less room to run",
-          -1
+          "Sitting in the middle of its 30-day range",
+          0
         ],
         [
           "Crowd mood (Fear & Greed)",
@@ -722,12 +722,12 @@
         ],
         [
           "Recent trend",
-          "Trending up steadily - healthy",
-          1
+          "Chopping sideways - no clear trend",
+          0
         ],
         [
           "Stretch from long-term average",
-          "+9.9% vs its long-term average - not stretched either way",
+          "+8.5% vs its long-term average - not stretched either way",
           0
         ],
         [
@@ -740,12 +740,12 @@
       "id": "stellar",
       "symbol": "XLM",
       "name": "Stellar",
-      "price": 0.192081,
-      "pct_24h": 4.39416,
-      "pct_7d": 9.9,
+      "price": 0.189694,
+      "pct_24h": 3.23819,
+      "pct_7d": 6.7,
       "support_30d": 0.15472912151335613,
       "resistance_30d": 0.20181319711037435,
-      "as_of": "2026-09-07 14:55:19",
+      "as_of": "2026-09-07 16:10:23",
       "stale": false
     },
     "kucoin-shares": {
@@ -1469,9 +1469,9 @@
       "stale": false
     },
     "ethereum-classic": {
-      "label": "\ud83d\udfe2 LEAN ACCUMULATE",
-      "status": "bullish",
-      "score": 2,
+      "label": "\ud83d\udfe1 HOLD / NEUTRAL",
+      "status": "neutral",
+      "score": 1,
       "rows": [
         [
           "Price vs. recent range",
@@ -1490,12 +1490,12 @@
         ],
         [
           "Recent trend",
-          "Trending up steadily - healthy",
-          1
+          "Chopping sideways - no clear trend",
+          0
         ],
         [
           "Stretch from long-term average",
-          "-2.2% vs its long-term average - not stretched either way",
+          "-2.8% vs its long-term average - not stretched either way",
           0
         ],
         [
@@ -1504,16 +1504,16 @@
           0
         ]
       ],
-      "plain": "Leans toward a decent spot to slowly add (DCA) - not a strong signal, just a lean.",
+      "plain": "No real edge either way right now - fine to just wait and watch.",
       "id": "ethereum-classic",
       "symbol": "ETC",
       "name": "Ethereum Classic",
-      "price": 7.9,
-      "pct_24h": 2.88815,
-      "pct_7d": 9.3,
+      "price": 7.85,
+      "pct_24h": 2.06826,
+      "pct_7d": 6.8,
       "support_30d": 6.079473341192034,
       "resistance_30d": 8.342731558283557,
-      "as_of": "2026-09-07 14:25:19",
+      "as_of": "2026-09-07 16:10:23",
       "stale": false
     },
     "pump-fun": {
@@ -3079,7 +3079,7 @@
         ],
         [
           "Stretch from long-term average",
-          "+66.0% above its long-term average - very stretched",
+          "+64.1% above its long-term average - very stretched",
           -2
         ],
         [
@@ -3092,12 +3092,12 @@
       "id": "arbitrum",
       "symbol": "ARB",
       "name": "Arbitrum",
-      "price": 0.164124,
-      "pct_24h": -11.72463,
-      "pct_7d": 99.4,
+      "price": 0.162175,
+      "pct_24h": -13.28014,
+      "pct_7d": 85.4,
       "support_30d": 0.07272258489044682,
       "resistance_30d": 0.18933387703114857,
-      "as_of": "2026-09-07 15:35:20",
+      "as_of": "2026-09-07 16:10:23",
       "stale": false
     },
     "dash": {
@@ -3293,22 +3293,19 @@
       "stale": false
     }
   },
-  "_strong_buy_state": {
-    "15m:LIT": true,
-    "1h:ASTER": true
-  },
+  "_strong_buy_state": {},
   "BTC": {
     "key": "BTC",
     "name": "Bitcoin",
     "emoji": "\u20bf",
-    "price": 78885,
+    "price": 78831,
     "high_24h": 80494,
     "low_24h": 78707,
-    "pct_24h": -0.95307,
+    "pct_24h": -0.98143,
     "pct_7d": 0.3,
     "pct_30d": 21.1,
-    "sma50": 69688.94188315427,
-    "sma200": 69792.1921678228,
+    "sma50": 69688.23654899975,
+    "sma200": 69792.01583428416,
     "support_30d": 62843.70368466329,
     "resistance_30d": 81264.70153038795,
     "mark_price": 79370.02473188,
@@ -3323,14 +3320,14 @@
     "key": "ETH",
     "name": "Ethereum",
     "emoji": "\u039e",
-    "price": 2473.79,
+    "price": 2472.88,
     "high_24h": 2532.72,
     "low_24h": 2467.8,
-    "pct_24h": -0.12268,
+    "pct_24h": -0.16281,
     "pct_7d": 0.2,
     "pct_30d": 28.5,
-    "sma50": 2114.976050593606,
-    "sma200": 2040.8154290460018,
+    "sma50": 2114.970897730623,
+    "sma200": 2040.8141408302558,
     "support_30d": 1871.3976551883159,
     "resistance_30d": 2514.967577695514,
     "mark_price": 2488.83603101,
