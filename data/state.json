@@ -4,7 +4,7 @@
   "_alerts_state": {
     "btc-resistance-break": {
       "triggered": true,
-      "last_triggered_at": "2026-09-07 18:30:28"
+      "last_triggered_at": "2026-09-07 18:35:18"
     },
     "btc-support-break": {
       "triggered": false,
@@ -847,7 +847,7 @@
     "pepe": {
       "label": "\ud83d\udfe1 HOLD / NEUTRAL",
       "status": "neutral",
-      "score": -1,
+      "score": 0,
       "rows": [
         [
           "Price vs. recent range",
@@ -871,8 +871,8 @@
         ],
         [
           "Stretch from long-term average",
-          "+10.1% above its long-term average - a bit stretched",
-          -1
+          "+8.3% vs its long-term average - not stretched either way",
+          0
         ],
         [
           "Leverage traders' bias",
@@ -884,12 +884,12 @@
       "id": "pepe",
       "symbol": "PEPE",
       "name": "Pepe",
-      "price": 3.65e-06,
-      "pct_24h": 1.90739,
-      "pct_7d": 2.7,
+      "price": 3.59e-06,
+      "pct_24h": -0.29614,
+      "pct_7d": 1.8,
       "support_30d": 2.5716563906374582e-06,
       "resistance_30d": 4.122123035488615e-06,
-      "as_of": "2026-09-07 14:55:19",
+      "as_of": "2026-09-07 18:35:18",
       "stale": false
     },
     "avalanche-2": {
@@ -2084,12 +2084,12 @@
       "id": "pi-network",
       "symbol": "PI",
       "name": "Pi Network",
-      "price": 0.094154,
-      "pct_24h": -0.26777,
+      "price": 0.094093,
+      "pct_24h": -0.29121,
       "pct_7d": 3.7,
       "support_30d": 0.08559695435343688,
       "resistance_30d": 0.09762045155043195,
-      "as_of": "2026-09-07 18:30:28",
+      "as_of": "2026-09-07 18:35:18",
       "stale": false
     },
     "ondo-finance": {
@@ -2119,7 +2119,7 @@
         ],
         [
           "Stretch from long-term average",
-          "+16.9% above its long-term average - a bit stretched",
+          "+16.4% above its long-term average - a bit stretched",
           -1
         ],
         [
@@ -2132,12 +2132,12 @@
       "id": "ondo-finance",
       "symbol": "ONDO",
       "name": "Ondo",
-      "price": 0.38598,
-      "pct_24h": 3.24285,
-      "pct_7d": 12.8,
+      "price": 0.38425,
+      "pct_24h": 1.53868,
+      "pct_7d": 12.6,
       "support_30d": 0.32338181384146436,
       "resistance_30d": 0.3969475338902824,
-      "as_of": "2026-09-07 14:35:20",
+      "as_of": "2026-09-07 18:35:18",
       "stale": false
     },
     "canton-network": {
@@ -3293,22 +3293,19 @@
       "stale": false
     }
   },
-  "_strong_buy_state": {
-    "15m:WLFI": true,
-    "1h:WLFI": true
-  },
+  "_strong_buy_state": {},
   "BTC": {
     "key": "BTC",
     "name": "Bitcoin",
     "emoji": "\u20bf",
-    "price": 79128,
+    "price": 79105,
     "high_24h": 80494,
     "low_24h": 78707,
-    "pct_24h": -0.96596,
+    "pct_24h": -1.03031,
     "pct_7d": 0.7,
     "pct_30d": 21.7,
-    "sma50": 69693.83645555121,
-    "sma200": 69793.41581092203,
+    "sma50": 69693.30041576391,
+    "sma200": 69793.28180097521,
     "support_30d": 62843.70368466329,
     "resistance_30d": 81264.70153038795,
     "mark_price": 79370.02473188,
@@ -3323,14 +3320,14 @@
     "key": "ETH",
     "name": "Ethereum",
     "emoji": "\u039e",
-    "price": 2489.87,
+    "price": 2487.93,
     "high_24h": 2532.72,
     "low_24h": 2467.8,
-    "pct_24h": -0.22245,
+    "pct_24h": -0.37062,
     "pct_7d": 1.0,
     "pct_30d": 29.8,
-    "sma50": 2115.303186915378,
-    "sma200": 2040.8972131264445,
+    "sma50": 2115.2563498842933,
+    "sma200": 2040.8855038686736,
     "support_30d": 1871.3976551883159,
     "resistance_30d": 2514.967577695514,
     "mark_price": 2488.83603101,
