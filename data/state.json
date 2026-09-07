@@ -4,7 +4,7 @@
   "_alerts_state": {
     "btc-resistance-break": {
       "triggered": true,
-      "last_triggered_at": "2026-09-07 11:00:35"
+      "last_triggered_at": "2026-09-07 11:05:19"
     },
     "btc-support-break": {
       "triggered": false,
@@ -467,7 +467,7 @@
       "rows": [
         [
           "Price vs. recent range",
-          "Near its 30-day high (~$13.30) - less room to run",
+          "Near its 30-day high (~$13.24) - less room to run",
           -1
         ],
         [
@@ -487,7 +487,7 @@
         ],
         [
           "Stretch from long-term average",
-          "+45.1% above its long-term average - very stretched",
+          "+44.3% above its long-term average - very stretched",
           -2
         ],
         [
@@ -500,12 +500,12 @@
       "id": "chainlink",
       "symbol": "LINK",
       "name": "Chainlink",
-      "price": 13.31,
-      "pct_24h": 8.34477,
-      "pct_7d": 18.5,
+      "price": 13.23,
+      "pct_24h": 7.63439,
+      "pct_7d": 17.1,
       "support_30d": 8.18136301108558,
-      "resistance_30d": 13.304567933930617,
-      "as_of": "2026-09-07 10:45:22",
+      "resistance_30d": 13.237155745219605,
+      "as_of": "2026-09-07 11:05:19",
       "stale": false
     },
     "whitebit": {
@@ -707,8 +707,8 @@
       "rows": [
         [
           "Price vs. recent range",
-          "Sitting in the middle of its 30-day range",
-          0
+          "Near its 30-day high (~$0.2018) - less room to run",
+          -1
         ],
         [
           "Crowd mood (Fear & Greed)",
@@ -722,12 +722,12 @@
         ],
         [
           "Recent trend",
-          "Chopping sideways - no clear trend",
-          0
+          "Trending up steadily - healthy",
+          1
         ],
         [
           "Stretch from long-term average",
-          "+8.7% vs its long-term average - not stretched either way",
+          "+10.0% vs its long-term average - not stretched either way",
           0
         ],
         [
@@ -740,12 +740,12 @@
       "id": "stellar",
       "symbol": "XLM",
       "name": "Stellar",
-      "price": 0.190025,
-      "pct_24h": 2.78817,
-      "pct_7d": 7.6,
+      "price": 0.19225,
+      "pct_24h": 2.84064,
+      "pct_7d": 8.5,
       "support_30d": 0.15472912151335613,
       "resistance_30d": 0.20181319711037435,
-      "as_of": "2026-09-07 07:25:20",
+      "as_of": "2026-09-07 11:05:19",
       "stale": false
     },
     "kucoin-shares": {
@@ -3223,7 +3223,7 @@
         ],
         [
           "Stretch from long-term average",
-          "+3.2% vs its long-term average - not stretched either way",
+          "+3.0% vs its long-term average - not stretched either way",
           0
         ],
         [
@@ -3236,30 +3236,28 @@
       "id": "kaspa",
       "symbol": "KAS",
       "name": "Kaspa",
-      "price": 0.03539038,
-      "pct_24h": 16.61297,
-      "pct_7d": 30.7,
+      "price": 0.03535109,
+      "pct_24h": 16.39829,
+      "pct_7d": 28.4,
       "support_30d": 0.025258977496893695,
-      "resistance_30d": 0.03535358237074789,
-      "as_of": "2026-09-07 10:45:22",
+      "resistance_30d": 0.0353640497734396,
+      "as_of": "2026-09-07 11:05:19",
       "stale": false
     }
   },
-  "_strong_buy_state": {
-    "1h:QNT": true
-  },
+  "_strong_buy_state": {},
   "BTC": {
     "key": "BTC",
     "name": "Bitcoin",
     "emoji": "\u20bf",
-    "price": 79361,
+    "price": 79332,
     "high_24h": 80494,
     "low_24h": 79081,
-    "pct_24h": -0.80056,
+    "pct_24h": -0.81298,
     "pct_7d": 1.1,
-    "pct_30d": 22.1,
-    "sma50": 69698.50582190596,
-    "sma200": 69794.58315251072,
+    "pct_30d": 22.2,
+    "sma50": 69697.87745408509,
+    "sma200": 69794.4260605555,
     "support_30d": 62843.70368466329,
     "resistance_30d": 81264.70153038795,
     "mark_price": 79760.35385307,
@@ -3274,14 +3272,14 @@
     "key": "ETH",
     "name": "Ethereum",
     "emoji": "\u039e",
-    "price": 2489.48,
+    "price": 2487.7,
     "high_24h": 2532.72,
     "low_24h": 2473.01,
-    "pct_24h": -0.48495,
-    "pct_7d": 1.6,
+    "pct_24h": -0.58711,
+    "pct_7d": 1.8,
     "pct_30d": 29.8,
-    "sma50": 2115.2894038500394,
-    "sma200": 2040.8937673601101,
+    "sma50": 2115.2525571417204,
+    "sma200": 2040.8845556830304,
     "support_30d": 1871.3976551883159,
     "resistance_30d": 2514.967577695514,
     "mark_price": 2479.87016279,
