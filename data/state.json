@@ -4,7 +4,7 @@
   "_alerts_state": {
     "btc-resistance-break": {
       "triggered": true,
-      "last_triggered_at": "2026-09-07 06:35:17"
+      "last_triggered_at": "2026-09-07 06:40:23"
     },
     "btc-support-break": {
       "triggered": false,
@@ -583,7 +583,7 @@
         ],
         [
           "Stretch from long-term average",
-          "-4.0% vs its long-term average - not stretched either way",
+          "-4.2% vs its long-term average - not stretched either way",
           0
         ],
         [
@@ -596,12 +596,12 @@
       "id": "leo-token",
       "symbol": "LEO",
       "name": "LEO Token",
-      "price": 9.24,
-      "pct_24h": -0.96591,
-      "pct_7d": -3.9,
+      "price": 9.22,
+      "pct_24h": -1.14612,
+      "pct_7d": -3.6,
       "support_30d": 8.948412455130585,
       "resistance_30d": 9.71203644068681,
-      "as_of": "2026-09-07 03:25:20",
+      "as_of": "2026-09-07 06:40:23",
       "stale": false
     },
     "monero": {
@@ -789,11 +789,11 @@
       "symbol": "KCS",
       "name": "KuCoin",
       "price": 7.09,
-      "pct_24h": -1.95633,
+      "pct_24h": -1.87527,
       "pct_7d": 1.0,
       "support_30d": 6.514591596607885,
       "resistance_30d": 7.8821382735057615,
-      "as_of": "2026-09-07 06:00:34",
+      "as_of": "2026-09-07 06:40:23",
       "stale": false
     },
     "hedera-hashgraph": {
@@ -3127,7 +3127,7 @@
         ],
         [
           "Stretch from long-term average",
-          "+90.0% above its long-term average - very stretched",
+          "+85.1% above its long-term average - very stretched",
           -2
         ],
         [
@@ -3140,12 +3140,12 @@
       "id": "dash",
       "symbol": "DASH",
       "name": "Dash",
-      "price": 69.65,
-      "pct_24h": -9.89426,
-      "pct_7d": 69.5,
+      "price": 67.84,
+      "pct_24h": -7.34477,
+      "pct_7d": 63.9,
       "support_30d": 29.734917104971814,
       "resistance_30d": 71.33597730885,
-      "as_of": "2026-09-07 05:30:27",
+      "as_of": "2026-09-07 06:40:23",
       "stale": false
     },
     "jupiter-exchange-solana": {
@@ -3245,19 +3245,21 @@
       "stale": false
     }
   },
-  "_strong_buy_state": {},
+  "_strong_buy_state": {
+    "1h:XRP": true
+  },
   "BTC": {
     "key": "BTC",
     "name": "Bitcoin",
     "emoji": "\u20bf",
-    "price": 79695,
+    "price": 79688,
     "high_24h": 80494,
     "low_24h": 79426,
-    "pct_24h": -0.17508,
+    "pct_24h": -0.16773,
     "pct_7d": 2.8,
     "pct_30d": 22.8,
-    "sma50": 69705.14471185773,
-    "sma200": 69796.24287499866,
+    "sma50": 69705.00704097992,
+    "sma200": 69796.20845727921,
     "support_30d": 62843.70368466329,
     "resistance_30d": 81264.70153038795,
     "mark_price": 79760.35385307,
@@ -3272,14 +3274,14 @@
     "key": "ETH",
     "name": "Ethereum",
     "emoji": "\u039e",
-    "price": 2502.74,
+    "price": 2500.89,
     "high_24h": 2532.72,
     "low_24h": 2473.01,
-    "pct_24h": -0.169,
+    "pct_24h": -0.26477,
     "pct_7d": 3.6,
     "pct_30d": 30.7,
-    "sma50": 2115.5546255596896,
-    "sma200": 2040.9600727875224,
+    "sma50": 2115.522916680453,
+    "sma200": 2040.9521455677134,
     "support_30d": 1871.3976551883159,
     "resistance_30d": 2514.967577695514,
     "mark_price": 2479.87016279,
