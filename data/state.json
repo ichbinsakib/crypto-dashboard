@@ -4,7 +4,7 @@
   "_alerts_state": {
     "btc-resistance-break": {
       "triggered": true,
-      "last_triggered_at": "2026-09-07 11:40:21"
+      "last_triggered_at": "2026-09-07 11:45:20"
     },
     "btc-support-break": {
       "triggered": false,
@@ -1447,7 +1447,7 @@
         ],
         [
           "Stretch from long-term average",
-          "-13.3% vs its long-term average - not stretched either way",
+          "-13.4% vs its long-term average - not stretched either way",
           0
         ],
         [
@@ -1460,12 +1460,12 @@
       "id": "crypto-com-chain",
       "symbol": "CRO",
       "name": "Cronos",
-      "price": 0.057392,
-      "pct_24h": -0.04502,
+      "price": 0.057348,
+      "pct_24h": -0.04156,
       "pct_7d": 2.1,
       "support_30d": 0.04621382085807831,
       "resistance_30d": 0.06091104752771909,
-      "as_of": "2026-09-07 11:35:19",
+      "as_of": "2026-09-07 11:45:20",
       "stale": false
     },
     "ethereum-classic": {
@@ -1831,7 +1831,7 @@
         ],
         [
           "Stretch from long-term average",
-          "+70.1% above its long-term average - very stretched",
+          "+68.8% above its long-term average - very stretched",
           -2
         ],
         [
@@ -1844,12 +1844,12 @@
       "id": "ethena",
       "symbol": "ENA",
       "name": "Ethena",
-      "price": 0.171728,
-      "pct_24h": -2.35008,
-      "pct_7d": 13.5,
+      "price": 0.170361,
+      "pct_24h": -2.21621,
+      "pct_7d": 13.3,
       "support_30d": 0.08231050586125944,
       "resistance_30d": 0.17616469272611565,
-      "as_of": "2026-09-07 08:50:24",
+      "as_of": "2026-09-07 11:45:20",
       "stale": false
     },
     "bitcoin-cash": {
@@ -1955,7 +1955,7 @@
       "rows": [
         [
           "Price vs. recent range",
-          "Near its 30-day high (~$0.9798) - less room to run",
+          "Near its 30-day high (~$0.9881) - less room to run",
           -1
         ],
         [
@@ -1975,7 +1975,7 @@
         ],
         [
           "Stretch from long-term average",
-          "-11.5% vs its long-term average - not stretched either way",
+          "-10.6% vs its long-term average - not stretched either way",
           0
         ],
         [
@@ -1988,12 +1988,12 @@
       "id": "polkadot",
       "symbol": "DOT",
       "name": "Polkadot",
-      "price": 0.979569,
-      "pct_24h": 2.99727,
-      "pct_7d": 17.9,
+      "price": 0.988846,
+      "pct_24h": 1.00411,
+      "pct_7d": 18.6,
       "support_30d": 0.7510040523927409,
-      "resistance_30d": 0.9798345945017737,
-      "as_of": "2026-09-07 10:30:28",
+      "resistance_30d": 0.9881150208111493,
+      "as_of": "2026-09-07 11:45:20",
       "stale": false
     },
     "uniswap": {
@@ -3245,19 +3245,22 @@
       "stale": false
     }
   },
-  "_strong_buy_state": {},
+  "_strong_buy_state": {
+    "1h:CRO": true,
+    "1h:WBT": true
+  },
   "BTC": {
     "key": "BTC",
     "name": "Bitcoin",
     "emoji": "\u20bf",
-    "price": 79416,
+    "price": 79411,
     "high_24h": 80494,
     "low_24h": 79081,
-    "pct_24h": -0.61577,
+    "pct_24h": -0.67235,
     "pct_7d": 1.1,
     "pct_30d": 22.2,
-    "sma50": 69699.6155618399,
-    "sma200": 69794.8605874942,
+    "sma50": 69699.46768051232,
+    "sma200": 69794.8236171623,
     "support_30d": 62843.70368466329,
     "resistance_30d": 81264.70153038795,
     "mark_price": 79370.02473188,
@@ -3272,14 +3275,14 @@
     "key": "ETH",
     "name": "Ethereum",
     "emoji": "\u039e",
-    "price": 2490.61,
+    "price": 2490.75,
     "high_24h": 2532.72,
     "low_24h": 2473.01,
-    "pct_24h": -0.37559,
+    "pct_24h": -0.44767,
     "pct_7d": 1.8,
     "pct_30d": 29.8,
-    "sma50": 2115.3179431033873,
-    "sma200": 2040.9009021734469,
+    "sma50": 2115.3167997008673,
+    "sma200": 2040.9006163228169,
     "support_30d": 1871.3976551883159,
     "resistance_30d": 2514.967577695514,
     "mark_price": 2488.83603101,
