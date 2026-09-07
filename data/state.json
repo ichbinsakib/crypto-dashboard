@@ -4,7 +4,7 @@
   "_alerts_state": {
     "btc-resistance-break": {
       "triggered": true,
-      "last_triggered_at": "2026-09-07 14:20:31"
+      "last_triggered_at": "2026-09-07 14:25:19"
     },
     "btc-support-break": {
       "triggered": false,
@@ -1469,9 +1469,9 @@
       "stale": false
     },
     "ethereum-classic": {
-      "label": "\ud83d\udfe1 HOLD / NEUTRAL",
-      "status": "neutral",
-      "score": 1,
+      "label": "\ud83d\udfe2 LEAN ACCUMULATE",
+      "status": "bullish",
+      "score": 2,
       "rows": [
         [
           "Price vs. recent range",
@@ -1490,8 +1490,8 @@
         ],
         [
           "Recent trend",
-          "Chopping sideways - no clear trend",
-          0
+          "Trending up steadily - healthy",
+          1
         ],
         [
           "Stretch from long-term average",
@@ -1504,16 +1504,16 @@
           0
         ]
       ],
-      "plain": "No real edge either way right now - fine to just wait and watch.",
+      "plain": "Leans toward a decent spot to slowly add (DCA) - not a strong signal, just a lean.",
       "id": "ethereum-classic",
       "symbol": "ETC",
       "name": "Ethereum Classic",
       "price": 7.9,
-      "pct_24h": 2.45726,
-      "pct_7d": 6.6,
+      "pct_24h": 2.88815,
+      "pct_7d": 9.3,
       "support_30d": 6.079473341192034,
       "resistance_30d": 8.342731558283557,
-      "as_of": "2026-09-07 12:50:26",
+      "as_of": "2026-09-07 14:25:19",
       "stale": false
     },
     "pump-fun": {
@@ -1748,12 +1748,12 @@
       "id": "sui",
       "symbol": "SUI",
       "name": "Sui",
-      "price": 0.826608,
-      "pct_24h": 3.81569,
-      "pct_7d": 16.1,
+      "price": 0.825998,
+      "pct_24h": 4.35633,
+      "pct_7d": 15.8,
       "support_30d": 0.6514311908607086,
       "resistance_30d": 0.8499161763231283,
-      "as_of": "2026-09-07 13:40:25",
+      "as_of": "2026-09-07 14:25:19",
       "stale": false
     },
     "lighter": {
@@ -2167,7 +2167,7 @@
         ],
         [
           "Stretch from long-term average",
-          "-23.1% below its long-term average - confirmed downtrend",
+          "-23.4% below its long-term average - confirmed downtrend",
           -1
         ],
         [
@@ -2180,12 +2180,12 @@
       "id": "canton-network",
       "symbol": "CC",
       "name": "Canton",
-      "price": 0.108031,
-      "pct_24h": -1.61001,
-      "pct_7d": -9.2,
+      "price": 0.107596,
+      "pct_24h": -1.9426,
+      "pct_7d": -8.9,
       "support_30d": 0.09051839499501885,
       "resistance_30d": 0.12396615653575341,
-      "as_of": "2026-09-07 13:30:29",
+      "as_of": "2026-09-07 14:25:19",
       "stale": false
     },
     "internet-computer": {
@@ -3298,14 +3298,14 @@
     "key": "BTC",
     "name": "Bitcoin",
     "emoji": "\u20bf",
-    "price": 79138,
+    "price": 79101,
     "high_24h": 80494,
     "low_24h": 79081,
-    "pct_24h": -0.79484,
+    "pct_24h": -0.68677,
     "pct_7d": 1.9,
     "pct_30d": 22.2,
-    "sma50": 69693.8822333225,
-    "sma200": 69793.42725536485,
+    "sma50": 69692.96021553023,
+    "sma200": 69793.19675091679,
     "support_30d": 62843.70368466329,
     "resistance_30d": 81264.70153038795,
     "mark_price": 79370.02473188,
@@ -3320,14 +3320,14 @@
     "key": "ETH",
     "name": "Ethereum",
     "emoji": "\u039e",
-    "price": 2485.81,
+    "price": 2485.42,
     "high_24h": 2532.72,
     "low_24h": 2473.53,
-    "pct_24h": 0.00237,
+    "pct_24h": 0.13377,
     "pct_7d": 2.0,
     "pct_30d": 30.3,
-    "sma50": 2115.221321128149,
-    "sma200": 2040.8767466796376,
+    "sma50": 2115.211226122006,
+    "sma200": 2040.8742229281017,
     "support_30d": 1871.3976551883159,
     "resistance_30d": 2514.967577695514,
     "mark_price": 2488.83603101,
