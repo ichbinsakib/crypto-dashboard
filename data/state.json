@@ -4,7 +4,7 @@
   "_alerts_state": {
     "btc-resistance-break": {
       "triggered": true,
-      "last_triggered_at": "2026-09-07 20:20:24"
+      "last_triggered_at": "2026-09-07 20:25:18"
     },
     "btc-support-break": {
       "triggered": false,
@@ -701,14 +701,14 @@
       "stale": false
     },
     "stellar": {
-      "label": "\ud83d\udfe1 HOLD / NEUTRAL",
-      "status": "neutral",
-      "score": 0,
+      "label": "\ud83d\udd34 CAUTION - REDUCE NEW BUYS",
+      "status": "bearish",
+      "score": -2,
       "rows": [
         [
           "Price vs. recent range",
-          "Sitting in the middle of its 30-day range",
-          0
+          "Near its 30-day high (~$0.2018) - less room to run",
+          -1
         ],
         [
           "Crowd mood (Fear & Greed)",
@@ -727,8 +727,8 @@
         ],
         [
           "Stretch from long-term average",
-          "+8.8% vs its long-term average - not stretched either way",
-          0
+          "+10.3% above its long-term average - a bit stretched",
+          -1
         ],
         [
           "Leverage traders' bias",
@@ -736,16 +736,16 @@
           0
         ]
       ],
-      "plain": "No real edge either way right now - fine to just wait and watch.",
+      "plain": "Getting risky - I'd hold off on new buys until this cools down.",
       "id": "stellar",
       "symbol": "XLM",
       "name": "Stellar",
-      "price": 0.190204,
-      "pct_24h": 3.23915,
-      "pct_7d": 7.6,
+      "price": 0.192822,
+      "pct_24h": 4.69555,
+      "pct_7d": 7.9,
       "support_30d": 0.15472912151335613,
       "resistance_30d": 0.20181319711037435,
-      "as_of": "2026-09-07 18:20:25",
+      "as_of": "2026-09-07 20:25:18",
       "stale": false
     },
     "kucoin-shares": {
@@ -1783,7 +1783,7 @@
         ],
         [
           "Stretch from long-term average",
-          "+173.6% above its long-term average - very stretched",
+          "+174.2% above its long-term average - very stretched",
           -2
         ],
         [
@@ -1796,12 +1796,12 @@
       "id": "lighter",
       "symbol": "LIT",
       "name": "Lighter",
-      "price": 4.69,
-      "pct_24h": 4.1853,
-      "pct_7d": 27.9,
+      "price": 4.7,
+      "pct_24h": 3.91065,
+      "pct_7d": 29.6,
       "support_30d": 2.2358662099746955,
       "resistance_30d": 4.815937283873233,
-      "as_of": "2026-09-07 19:50:27",
+      "as_of": "2026-09-07 20:25:18",
       "stale": false
     },
     "ethena": {
@@ -2119,7 +2119,7 @@
         ],
         [
           "Stretch from long-term average",
-          "+17.3% above its long-term average - a bit stretched",
+          "+16.8% above its long-term average - a bit stretched",
           -1
         ],
         [
@@ -2132,12 +2132,12 @@
       "id": "ondo-finance",
       "symbol": "ONDO",
       "name": "Ondo",
-      "price": 0.387278,
-      "pct_24h": 2.63682,
-      "pct_7d": 10.9,
+      "price": 0.385716,
+      "pct_24h": 1.86805,
+      "pct_7d": 11.2,
       "support_30d": 0.32338181384146436,
       "resistance_30d": 0.3969475338902824,
-      "as_of": "2026-09-07 19:45:26",
+      "as_of": "2026-09-07 20:25:18",
       "stale": false
     },
     "canton-network": {
@@ -3298,14 +3298,14 @@
     "key": "BTC",
     "name": "Bitcoin",
     "emoji": "\u20bf",
-    "price": 79235,
+    "price": 79198,
     "high_24h": 80494,
     "low_24h": 78707,
-    "pct_24h": -0.72356,
+    "pct_24h": -0.89945,
     "pct_7d": 0.4,
     "pct_30d": 22.1,
-    "sma50": 69695.940167264,
-    "sma200": 69793.94173885022,
+    "sma50": 69695.06679244874,
+    "sma200": 69793.72339514641,
     "support_30d": 62843.70368466329,
     "resistance_30d": 81264.70153038795,
     "mark_price": 79370.02473188,
@@ -3320,14 +3320,14 @@
     "key": "ETH",
     "name": "Ethereum",
     "emoji": "\u039e",
-    "price": 2489.12,
+    "price": 2487.69,
     "high_24h": 2532.72,
     "low_24h": 2467.8,
-    "pct_24h": -0.08668,
+    "pct_24h": -0.2908,
     "pct_7d": 0.7,
     "pct_30d": 30.0,
-    "sma50": 2115.28304354239,
-    "sma200": 2040.8921772831975,
+    "sma50": 2115.2519137025893,
+    "sma200": 2040.8843948232475,
     "support_30d": 1871.3976551883159,
     "resistance_30d": 2514.967577695514,
     "mark_price": 2488.83603101,
