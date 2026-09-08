@@ -4,7 +4,7 @@
   "_alerts_state": {
     "btc-resistance-break": {
       "triggered": true,
-      "last_triggered_at": "2026-09-08 01:10:23"
+      "last_triggered_at": "2026-09-08 01:15:23"
     },
     "btc-support-break": {
       "triggered": false,
@@ -597,11 +597,11 @@
       "symbol": "LEO",
       "name": "LEO Token",
       "price": 9.2,
-      "pct_24h": -1.9249,
-      "pct_7d": -4.0,
+      "pct_24h": -2.14911,
+      "pct_7d": -3.8,
       "support_30d": 8.948412455130585,
       "resistance_30d": 9.681775974309534,
-      "as_of": "2026-09-08 00:30:28",
+      "as_of": "2026-09-08 01:15:23",
       "stale": false
     },
     "monero": {
@@ -995,7 +995,7 @@
       "rows": [
         [
           "Price vs. recent range",
-          "Near its 30-day high (~$0.4763) - less room to run",
+          "Near its 30-day high (~$0.4979) - less room to run",
           -1
         ],
         [
@@ -1015,7 +1015,7 @@
         ],
         [
           "Stretch from long-term average",
-          "+33.7% above its long-term average - very stretched",
+          "+39.2% above its long-term average - very stretched",
           -2
         ],
         [
@@ -1028,12 +1028,12 @@
       "id": "worldcoin-wld",
       "symbol": "WLD",
       "name": "Worldcoin",
-      "price": 0.477378,
-      "pct_24h": 13.07178,
-      "pct_7d": 31.4,
-      "support_30d": 0.3126022661711148,
-      "resistance_30d": 0.47629292380748717,
-      "as_of": "2026-09-08 00:05:16",
+      "price": 0.497815,
+      "pct_24h": 20.38521,
+      "pct_7d": 34.7,
+      "support_30d": 0.319812298466522,
+      "resistance_30d": 0.4978510186532822,
+      "as_of": "2026-09-08 01:15:23",
       "stale": false
     },
     "bfusd": {
@@ -1288,7 +1288,7 @@
         ],
         [
           "Crowd mood (Fear & Greed)",
-          "71/100 - crowd is greedy",
+          "69/100 - crowd is greedy",
           -1
         ],
         [
@@ -1317,11 +1317,11 @@
       "symbol": "HTX",
       "name": "HTX DAO",
       "price": 1.67e-06,
-      "pct_24h": -0.77091,
-      "pct_7d": 1.0,
+      "pct_24h": -0.67167,
+      "pct_7d": 1.2,
       "support_30d": 1.6023985995039954e-06,
       "resistance_30d": 1.8259977214551937e-06,
-      "as_of": "2026-09-07 23:25:17",
+      "as_of": "2026-09-08 01:15:23",
       "stale": false
     },
     "superstate-short-duration-us-government-securities-fund-ustb": {
@@ -3293,19 +3293,21 @@
       "stale": false
     }
   },
-  "_strong_buy_state": {},
+  "_strong_buy_state": {
+    "15m:PI": true
+  },
   "BTC": {
     "key": "BTC",
     "name": "Bitcoin",
     "emoji": "\u20bf",
-    "price": 79325,
+    "price": 79314,
     "high_24h": 80357,
     "low_24h": 78707,
-    "pct_24h": -0.84633,
+    "pct_24h": -0.79396,
     "pct_7d": 0.9,
     "pct_30d": 22.1,
-    "sma50": 69975.90080304304,
-    "sma200": 69849.84180445538,
+    "sma50": 69975.69945388316,
+    "sma200": 69849.7914671654,
     "support_30d": 62843.70368466329,
     "resistance_30d": 81264.70153038795,
     "mark_price": 79370.02473188,
@@ -3320,14 +3322,14 @@
     "key": "ETH",
     "name": "Ethereum",
     "emoji": "\u039e",
-    "price": 2496.26,
+    "price": 2495.82,
     "high_24h": 2532.72,
     "low_24h": 2467.8,
-    "pct_24h": -0.36143,
+    "pct_24h": -0.44453,
     "pct_7d": 1.1,
     "pct_30d": 30.2,
-    "sma50": 2127.171384603913,
-    "sma200": 2043.5334882233938,
+    "sma50": 2127.1706565288814,
+    "sma200": 2043.533306204636,
     "support_30d": 1871.3976551883159,
     "resistance_30d": 2514.967577695514,
     "mark_price": 2488.83603101,
