@@ -4,7 +4,7 @@
   "_alerts_state": {
     "btc-resistance-break": {
       "triggered": true,
-      "last_triggered_at": "2026-09-08 05:30:28"
+      "last_triggered_at": "2026-09-08 05:35:20"
     },
     "btc-support-break": {
       "triggered": false,
@@ -319,7 +319,7 @@
     "dogecoin": {
       "label": "\ud83d\udfe1 HOLD / NEUTRAL",
       "status": "neutral",
-      "score": 1,
+      "score": 0,
       "rows": [
         [
           "Price vs. recent range",
@@ -338,12 +338,12 @@
         ],
         [
           "Recent trend",
-          "Trending up steadily - healthy",
-          1
+          "Chopping sideways - no clear trend",
+          0
         ],
         [
           "Stretch from long-term average",
-          "+2.5% vs its long-term average - not stretched either way",
+          "+1.7% vs its long-term average - not stretched either way",
           0
         ],
         [
@@ -356,12 +356,12 @@
       "id": "dogecoin",
       "symbol": "DOGE",
       "name": "Dogecoin",
-      "price": 0.090666,
-      "pct_24h": -0.53787,
-      "pct_7d": 9.9,
+      "price": 0.089988,
+      "pct_24h": -0.27519,
+      "pct_7d": 7.8,
       "support_30d": 0.06952870548515376,
       "resistance_30d": 0.09337940032634065,
-      "as_of": "2026-09-08 02:40:20",
+      "as_of": "2026-09-08 05:35:20",
       "stale": false
     },
     "zcash": {
@@ -1844,12 +1844,12 @@
       "id": "ethena",
       "symbol": "ENA",
       "name": "Ethena",
-      "price": 0.16555,
-      "pct_24h": -6.12248,
+      "price": 0.165546,
+      "pct_24h": -5.82886,
       "pct_7d": 8.9,
       "support_30d": 0.08231050586125944,
       "resistance_30d": 0.17616469272611565,
-      "as_of": "2026-09-08 05:25:17",
+      "as_of": "2026-09-08 05:35:20",
       "stale": false
     },
     "bitcoin-cash": {
@@ -2805,11 +2805,11 @@
       "symbol": "M",
       "name": "MemeCore",
       "price": 1.17,
-      "pct_24h": 1.54044,
-      "pct_7d": 6.8,
+      "pct_24h": 0.58315,
+      "pct_7d": 7.9,
       "support_30d": 1.0402044506518406,
       "resistance_30d": 1.2453913363052769,
-      "as_of": "2026-09-08 04:05:18",
+      "as_of": "2026-09-08 05:35:20",
       "stale": false
     },
     "aave": {
@@ -3293,19 +3293,21 @@
       "stale": false
     }
   },
-  "_strong_buy_state": {},
+  "_strong_buy_state": {
+    "15m:DOGE": true
+  },
   "BTC": {
     "key": "BTC",
     "name": "Bitcoin",
     "emoji": "\u20bf",
-    "price": 78790,
+    "price": 78733,
     "high_24h": 79804,
     "low_24h": 78609,
-    "pct_24h": -1.30946,
+    "pct_24h": -1.37322,
     "pct_7d": 0.0,
     "pct_30d": 21.5,
-    "sma50": 69965.50033845709,
-    "sma200": 69847.24168830889,
+    "sma50": 69964.0678601458,
+    "sma200": 69846.88356873106,
     "support_30d": 62843.70368466329,
     "resistance_30d": 81264.70153038795,
     "mark_price": 79370.02473188,
@@ -3320,14 +3322,14 @@
     "key": "ETH",
     "name": "Ethereum",
     "emoji": "\u039e",
-    "price": 2481.03,
+    "price": 2479.29,
     "high_24h": 2510.03,
     "low_24h": 2467.8,
-    "pct_24h": -1.22141,
+    "pct_24h": -1.29121,
     "pct_7d": 0.3,
     "pct_30d": 29.6,
-    "sma50": 2126.875239260463,
-    "sma200": 2043.4594518875313,
+    "sma50": 2126.843815870425,
+    "sma200": 2043.451596040022,
     "support_30d": 1871.3976551883159,
     "resistance_30d": 2514.967577695514,
     "mark_price": 2488.83603101,
