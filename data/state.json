@@ -4,7 +4,7 @@
   "_alerts_state": {
     "btc-resistance-break": {
       "triggered": true,
-      "last_triggered_at": "2026-09-08 00:40:24"
+      "last_triggered_at": "2026-09-08 00:45:22"
     },
     "btc-support-break": {
       "triggered": false,
@@ -2056,7 +2056,7 @@
         ],
         [
           "Crowd mood (Fear & Greed)",
-          "71/100 - crowd is greedy",
+          "69/100 - crowd is greedy",
           -1
         ],
         [
@@ -2071,7 +2071,7 @@
         ],
         [
           "Stretch from long-term average",
-          "-34.0% below its long-term average - confirmed downtrend",
+          "-33.7% below its long-term average - confirmed downtrend",
           -1
         ],
         [
@@ -2084,12 +2084,12 @@
       "id": "pi-network",
       "symbol": "PI",
       "name": "Pi Network",
-      "price": 0.094179,
-      "pct_24h": -0.60465,
+      "price": 0.094171,
+      "pct_24h": -0.62068,
       "pct_7d": 3.5,
       "support_30d": 0.08559695435343688,
       "resistance_30d": 0.09762045155043195,
-      "as_of": "2026-09-07 23:35:16",
+      "as_of": "2026-09-08 00:45:22",
       "stale": false
     },
     "ondo-finance": {
@@ -2104,7 +2104,7 @@
         ],
         [
           "Crowd mood (Fear & Greed)",
-          "71/100 - crowd is greedy",
+          "69/100 - crowd is greedy",
           -1
         ],
         [
@@ -2132,12 +2132,12 @@
       "id": "ondo-finance",
       "symbol": "ONDO",
       "name": "Ondo",
-      "price": 0.385009,
-      "pct_24h": 1.5738,
+      "price": 0.384804,
+      "pct_24h": -2.03463,
       "pct_7d": 11.2,
       "support_30d": 0.32338181384146436,
       "resistance_30d": 0.3969475338902824,
-      "as_of": "2026-09-07 20:40:30",
+      "as_of": "2026-09-08 00:45:22",
       "stale": false
     },
     "canton-network": {
@@ -3203,7 +3203,7 @@
       "rows": [
         [
           "Price vs. recent range",
-          "Near its 30-day high (~$0.0365) - less room to run",
+          "Near its 30-day high (~$0.0370) - less room to run",
           -1
         ],
         [
@@ -3223,7 +3223,7 @@
         ],
         [
           "Stretch from long-term average",
-          "+6.9% vs its long-term average - not stretched either way",
+          "+8.1% vs its long-term average - not stretched either way",
           0
         ],
         [
@@ -3236,12 +3236,12 @@
       "id": "kaspa",
       "symbol": "KAS",
       "name": "Kaspa",
-      "price": 0.03659632,
-      "pct_24h": 13.93436,
+      "price": 0.03700178,
+      "pct_24h": 15.43989,
       "pct_7d": 31.2,
       "support_30d": 0.025258977496893695,
-      "resistance_30d": 0.03652494507526152,
-      "as_of": "2026-09-08 00:15:24",
+      "resistance_30d": 0.03697558022367148,
+      "as_of": "2026-09-08 00:45:22",
       "stale": false
     },
     "cosmos": {
@@ -3293,19 +3293,21 @@
       "stale": false
     }
   },
-  "_strong_buy_state": {},
+  "_strong_buy_state": {
+    "15m:PI": true
+  },
   "BTC": {
     "key": "BTC",
     "name": "Bitcoin",
     "emoji": "\u20bf",
-    "price": 79200,
+    "price": 79210,
     "high_24h": 80357,
     "low_24h": 78707,
-    "pct_24h": -1.16923,
+    "pct_24h": -1.17347,
     "pct_7d": 0.7,
     "pct_30d": 21.9,
-    "sma50": 69973.3582836496,
-    "sma200": 69849.20617460701,
+    "sma50": 69973.7055449643,
+    "sma200": 69849.29298993568,
     "support_30d": 62843.70368466329,
     "resistance_30d": 81264.70153038795,
     "mark_price": 79370.02473188,
@@ -3320,14 +3322,14 @@
     "key": "ETH",
     "name": "Ethereum",
     "emoji": "\u039e",
-    "price": 2491.62,
+    "price": 2490.88,
     "high_24h": 2532.72,
     "low_24h": 2467.8,
-    "pct_24h": -0.91268,
+    "pct_24h": -0.99234,
     "pct_7d": 0.9,
     "pct_30d": 30.0,
-    "sma50": 2127.0867348254787,
-    "sma200": 2043.5123257787855,
+    "sma50": 2127.0769781678887,
+    "sma200": 2043.509886614388,
     "support_30d": 1871.3976551883159,
     "resistance_30d": 2514.967577695514,
     "mark_price": 2488.83603101,
