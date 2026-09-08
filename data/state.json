@@ -4,7 +4,7 @@
   "_alerts_state": {
     "btc-resistance-break": {
       "triggered": true,
-      "last_triggered_at": "2026-09-08 10:45:22"
+      "last_triggered_at": "2026-09-08 10:50:24"
     },
     "btc-support-break": {
       "triggered": false,
@@ -55,7 +55,7 @@
         ],
         [
           "Stretch from long-term average",
-          "+21.3% above its long-term average - a bit stretched",
+          "+21.7% above its long-term average - a bit stretched",
           -1
         ],
         [
@@ -68,12 +68,12 @@
       "id": "binancecoin",
       "symbol": "BNB",
       "name": "BNB",
-      "price": 754.59,
-      "pct_24h": 1.5611,
+      "price": 757.34,
+      "pct_24h": 1.77871,
       "pct_7d": 10.0,
       "support_30d": 598.6196895758089,
       "resistance_30d": 766.4092879330625,
-      "as_of": "2026-09-08 10:00:42",
+      "as_of": "2026-09-08 10:50:24",
       "stale": false
     },
     "ripple": {
@@ -173,14 +173,14 @@
       "stale": false
     },
     "tron": {
-      "label": "\ud83d\udfe1 HOLD / NEUTRAL",
-      "status": "neutral",
-      "score": 0,
+      "label": "\ud83d\udfe2 LEAN ACCUMULATE",
+      "status": "bullish",
+      "score": 3,
       "rows": [
         [
           "Price vs. recent range",
-          "Near its 30-day high (~$0.3448) - less room to run",
-          -1
+          "Near its 30-day low (~$0.3222) - historically a better entry",
+          2
         ],
         [
           "Crowd mood (Fear & Greed)",
@@ -199,7 +199,7 @@
         ],
         [
           "Stretch from long-term average",
-          "+3.9% vs its long-term average - not stretched either way",
+          "+3.8% vs its long-term average - not stretched either way",
           0
         ],
         [
@@ -208,16 +208,16 @@
           0
         ]
       ],
-      "plain": "No real edge either way right now - fine to just wait and watch.",
+      "plain": "Leans toward a decent spot to slowly add (DCA) - not a strong signal, just a lean.",
       "id": "tron",
       "symbol": "TRX",
       "name": "TRON",
-      "price": 0.338403,
-      "pct_24h": 0.52249,
-      "pct_7d": 2.0,
+      "price": 0.337839,
+      "pct_24h": 0.3078,
+      "pct_7d": 2.6,
       "support_30d": 0.32221537516581966,
       "resistance_30d": 0.3447899585776834,
-      "as_of": "2026-09-08 09:35:18",
+      "as_of": "2026-09-08 10:50:24",
       "stale": false
     },
     "figure-heloc": {
@@ -1735,7 +1735,7 @@
         ],
         [
           "Stretch from long-term average",
-          "-5.1% vs its long-term average - not stretched either way",
+          "-3.7% vs its long-term average - not stretched either way",
           0
         ],
         [
@@ -1748,12 +1748,12 @@
       "id": "sui",
       "symbol": "SUI",
       "name": "Sui",
-      "price": 0.81106,
-      "pct_24h": 0.6903,
-      "pct_7d": 10.6,
+      "price": 0.822786,
+      "pct_24h": 1.20737,
+      "pct_7d": 15.1,
       "support_30d": 0.6514311908607086,
       "resistance_30d": 0.8499161763231283,
-      "as_of": "2026-09-08 07:20:25",
+      "as_of": "2026-09-08 10:50:24",
       "stale": false
     },
     "lighter": {
@@ -3293,19 +3293,21 @@
       "stale": false
     }
   },
-  "_strong_buy_state": {},
+  "_strong_buy_state": {
+    "15m:AAVE": true
+  },
   "BTC": {
     "key": "BTC",
     "name": "Bitcoin",
     "emoji": "\u20bf",
-    "price": 78665,
+    "price": 78643,
     "high_24h": 79625,
     "low_24h": 78193,
-    "pct_24h": -0.95511,
+    "pct_24h": -0.94942,
     "pct_7d": 1.1,
     "pct_30d": 21.5,
-    "sma50": 69962.78845574292,
-    "sma200": 69846.56371763034,
+    "sma50": 69962.18699663779,
+    "sma200": 69846.41335285406,
     "support_30d": 62843.70368466329,
     "resistance_30d": 81264.70153038795,
     "mark_price": 78433.3,
@@ -3320,14 +3322,14 @@
     "key": "ETH",
     "name": "Ethereum",
     "emoji": "\u039e",
-    "price": 2484.3,
+    "price": 2484.02,
     "high_24h": 2510.03,
     "low_24h": 2463.89,
-    "pct_24h": -0.24012,
+    "pct_24h": -0.26623,
     "pct_7d": 1.8,
     "pct_30d": 30.1,
-    "sma50": 2126.9275692659207,
-    "sma200": 2043.472534388896,
+    "sma50": 2126.93265936348,
+    "sma200": 2043.473806913286,
     "support_30d": 1871.3976551883159,
     "resistance_30d": 2514.967577695514,
     "mark_price": 2473.95,
