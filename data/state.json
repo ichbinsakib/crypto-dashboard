@@ -3,8 +3,8 @@
   "_fng_classification": "Greed",
   "_alerts_state": {
     "btc-resistance-break": {
-      "triggered": false,
-      "last_triggered_at": "2026-09-08 19:45:23"
+      "triggered": true,
+      "last_triggered_at": "2026-09-08 20:03:03"
     },
     "btc-support-break": {
       "triggered": false,
@@ -740,12 +740,12 @@
       "id": "stellar",
       "symbol": "XLM",
       "name": "Stellar",
-      "price": 0.188769,
-      "pct_24h": -2.1125,
-      "pct_7d": 6.8,
+      "price": 0.188739,
+      "pct_24h": -2.66543,
+      "pct_7d": 6.9,
       "support_30d": 0.15472912151335613,
       "resistance_30d": 0.20181319711037435,
-      "as_of": "2026-09-08 19:35:20",
+      "as_of": "2026-09-08 20:03:03",
       "stale": false
     },
     "kucoin-shares": {
@@ -885,11 +885,11 @@
       "symbol": "PEPE",
       "name": "Pepe",
       "price": 3.64e-06,
-      "pct_24h": 0.46165,
-      "pct_7d": 3.8,
+      "pct_24h": 0.33585,
+      "pct_7d": 3.7,
       "support_30d": 2.5716563906374582e-06,
       "resistance_30d": 4.122123035488615e-06,
-      "as_of": "2026-09-08 19:40:26",
+      "as_of": "2026-09-08 20:03:03",
       "stale": false
     },
     "avalanche-2": {
@@ -1471,7 +1471,7 @@
     "ethereum-classic": {
       "label": "\ud83d\udfe1 HOLD / NEUTRAL",
       "status": "neutral",
-      "score": 1,
+      "score": 0,
       "rows": [
         [
           "Price vs. recent range",
@@ -1485,8 +1485,8 @@
         ],
         [
           "Market phase (best guess)",
-          "Basing near the bottom - phase where smart money accumulates",
-          2
+          "Established uptrend - phase where price marks up",
+          1
         ],
         [
           "Recent trend",
@@ -1495,7 +1495,7 @@
         ],
         [
           "Stretch from long-term average",
-          "+4.9% vs its long-term average - not stretched either way",
+          "+5.3% vs its long-term average - not stretched either way",
           0
         ],
         [
@@ -1508,12 +1508,12 @@
       "id": "ethereum-classic",
       "symbol": "ETC",
       "name": "Ethereum Classic",
-      "price": 8.46,
-      "pct_24h": 7.75782,
+      "price": 8.49,
+      "pct_24h": 8.30314,
       "pct_7d": 16.2,
       "support_30d": 6.079473341192034,
-      "resistance_30d": 8.473720578494474,
-      "as_of": "2026-09-08 20:00:35",
+      "resistance_30d": 8.47070403853423,
+      "as_of": "2026-09-08 20:03:03",
       "stale": false
     },
     "pump-fun": {
@@ -1951,11 +1951,11 @@
     "polkadot": {
       "label": "\ud83d\udd34 CAUTION - REDUCE NEW BUYS",
       "status": "bearish",
-      "score": -4,
+      "score": -3,
       "rows": [
         [
           "Price vs. recent range",
-          "Near its 30-day high (~$1.24) - less room to run",
+          "Near its 30-day high (~$1.20) - less room to run",
           -1
         ],
         [
@@ -1975,8 +1975,8 @@
         ],
         [
           "Stretch from long-term average",
-          "+12.1% above its long-term average - a bit stretched",
-          -1
+          "+9.4% vs its long-term average - not stretched either way",
+          0
         ],
         [
           "Leverage traders' bias",
@@ -1988,12 +1988,12 @@
       "id": "polkadot",
       "symbol": "DOT",
       "name": "Polkadot",
-      "price": 1.24,
-      "pct_24h": 16.75047,
-      "pct_7d": 42.7,
+      "price": 1.21,
+      "pct_24h": 11.28899,
+      "pct_7d": 38.3,
       "support_30d": 0.7510040523927409,
-      "resistance_30d": 1.2402570793665268,
-      "as_of": "2026-09-08 20:00:35",
+      "resistance_30d": 1.2012203311064025,
+      "as_of": "2026-09-08 19:05:21",
       "stale": false
     },
     "uniswap": {
@@ -2887,7 +2887,7 @@
         ],
         [
           "Stretch from long-term average",
-          "+30.8% above its long-term average - very stretched",
+          "+31.1% above its long-term average - very stretched",
           -2
         ],
         [
@@ -2900,12 +2900,12 @@
       "id": "okb",
       "symbol": "OKB",
       "name": "OKB",
-      "price": 113.89,
-      "pct_24h": -0.792,
+      "price": 114.11,
+      "pct_24h": -0.68238,
       "pct_7d": 3.4,
       "support_30d": 94.68582680773451,
       "resistance_30d": 115.8310797114581,
-      "as_of": "2026-09-08 20:00:35",
+      "as_of": "2026-09-08 18:45:22",
       "stale": false
     },
     "just": {
@@ -3298,14 +3298,14 @@
     "key": "BTC",
     "name": "Bitcoin",
     "emoji": "\u20bf",
-    "price": 78338,
+    "price": 78451,
     "high_24h": 79432,
     "low_24h": 77666,
-    "pct_24h": -1.24374,
-    "pct_7d": 1.5,
+    "pct_24h": -1.13062,
+    "pct_7d": 1.6,
     "pct_30d": 20.3,
-    "sma50": 69956.53748667428,
-    "sma200": 69845.00097536317,
+    "sma50": 69958.42909111768,
+    "sma200": 69845.47387647403,
     "support_30d": 62843.70368466329,
     "resistance_30d": 81264.70153038795,
     "mark_price": 78433.3,
@@ -3320,14 +3320,14 @@
     "key": "ETH",
     "name": "Ethereum",
     "emoji": "\u039e",
-    "price": 2478.07,
+    "price": 2484.09,
     "high_24h": 2505.13,
     "low_24h": 2442.98,
-    "pct_24h": -0.63989,
-    "pct_7d": 2.7,
-    "pct_30d": 29.2,
-    "sma50": 2126.827446933226,
-    "sma200": 2043.4475038057221,
+    "pct_24h": -0.46218,
+    "pct_7d": 2.8,
+    "pct_30d": 29.1,
+    "sma50": 2126.9261627036094,
+    "sma200": 2043.4721827483181,
     "support_30d": 1871.3976551883159,
     "resistance_30d": 2514.967577695514,
     "mark_price": 2473.95,
