@@ -4,7 +4,7 @@
   "_alerts_state": {
     "btc-resistance-break": {
       "triggered": true,
-      "last_triggered_at": "2026-09-08 06:10:22"
+      "last_triggered_at": "2026-09-08 06:15:22"
     },
     "btc-support-break": {
       "triggered": false,
@@ -295,7 +295,7 @@
         ],
         [
           "Stretch from long-term average",
-          "+57.4% above its long-term average - very stretched",
+          "+57.2% above its long-term average - very stretched",
           -2
         ],
         [
@@ -308,12 +308,12 @@
       "id": "hyperliquid",
       "symbol": "HYPE",
       "name": "Hyperliquid",
-      "price": 84.36,
-      "pct_24h": -2.4583,
-      "pct_7d": -0.1,
+      "price": 84.24,
+      "pct_24h": -3.01437,
+      "pct_7d": 0.3,
       "support_30d": 54.442530206647206,
       "resistance_30d": 87.951916819731,
-      "as_of": "2026-09-08 05:15:29",
+      "as_of": "2026-09-08 06:15:22",
       "stale": false
     },
     "dogecoin": {
@@ -343,7 +343,7 @@
         ],
         [
           "Stretch from long-term average",
-          "+1.7% vs its long-term average - not stretched either way",
+          "+1.4% vs its long-term average - not stretched either way",
           0
         ],
         [
@@ -356,12 +356,12 @@
       "id": "dogecoin",
       "symbol": "DOGE",
       "name": "Dogecoin",
-      "price": 0.089988,
-      "pct_24h": -0.27519,
+      "price": 0.089657,
+      "pct_24h": -0.9371,
       "pct_7d": 7.8,
       "support_30d": 0.06952870548515376,
       "resistance_30d": 0.09337940032634065,
-      "as_of": "2026-09-08 05:35:20",
+      "as_of": "2026-09-08 06:15:22",
       "stale": false
     },
     "zcash": {
@@ -871,7 +871,7 @@
         ],
         [
           "Stretch from long-term average",
-          "+9.3% vs its long-term average - not stretched either way",
+          "+8.4% vs its long-term average - not stretched either way",
           0
         ],
         [
@@ -884,12 +884,12 @@
       "id": "pepe",
       "symbol": "PEPE",
       "name": "Pepe",
-      "price": 3.62e-06,
-      "pct_24h": -0.25959,
-      "pct_7d": 1.3,
+      "price": 3.59e-06,
+      "pct_24h": -0.85952,
+      "pct_7d": 2.0,
       "support_30d": 2.5716563906374582e-06,
       "resistance_30d": 4.122123035488615e-06,
-      "as_of": "2026-09-08 05:40:22",
+      "as_of": "2026-09-08 06:15:22",
       "stale": false
     },
     "avalanche-2": {
@@ -3294,20 +3294,22 @@
     }
   },
   "_strong_buy_state": {
-    "15m:HBAR": true
+    "15m:PEPE": true,
+    "15m:LTC": true,
+    "1h:LTC": true
   },
   "BTC": {
     "key": "BTC",
     "name": "Bitcoin",
     "emoji": "\u20bf",
-    "price": 78534,
+    "price": 78552,
     "high_24h": 79671,
     "low_24h": 78536,
-    "pct_24h": -1.55121,
+    "pct_24h": -1.56035,
     "pct_7d": -0.2,
     "pct_30d": 21.3,
-    "sma50": 69960.2678789905,
-    "sma200": 69845.93357344223,
+    "sma50": 69960.04861993999,
+    "sma200": 69845.87875867961,
     "support_30d": 62843.70368466329,
     "resistance_30d": 81264.70153038795,
     "mark_price": 79370.02473188,
@@ -3322,14 +3324,14 @@
     "key": "ETH",
     "name": "Ethereum",
     "emoji": "\u039e",
-    "price": 2472.38,
+    "price": 2473.42,
     "high_24h": 2510.03,
     "low_24h": 2467.8,
-    "pct_24h": -1.29768,
+    "pct_24h": -1.42577,
     "pct_7d": 0.2,
     "pct_30d": 29.3,
-    "sma50": 2126.728820550672,
-    "sma200": 2043.4228472100838,
+    "sma50": 2126.714806829609,
+    "sma200": 2043.4193437798178,
     "support_30d": 1871.3976551883159,
     "resistance_30d": 2514.967577695514,
     "mark_price": 2488.83603101,
