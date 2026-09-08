@@ -3,7 +3,7 @@
   "_fng_classification": "Greed",
   "_alerts_state": {
     "btc-resistance-break": {
-      "triggered": true,
+      "triggered": false,
       "last_triggered_at": "2026-09-08 18:50:29"
     },
     "btc-support-break": {
@@ -631,7 +631,7 @@
         ],
         [
           "Stretch from long-term average",
-          "+37.1% above its long-term average - very stretched",
+          "+36.7% above its long-term average - very stretched",
           -2
         ],
         [
@@ -644,12 +644,12 @@
       "id": "monero",
       "symbol": "XMR",
       "name": "Monero",
-      "price": 500.97,
-      "pct_24h": -6.04437,
-      "pct_7d": -1.4,
+      "price": 499.28,
+      "pct_24h": -3.46168,
+      "pct_7d": 0.3,
       "support_30d": 377.1738335746389,
       "resistance_30d": 555.6684591165193,
-      "as_of": "2026-09-08 16:20:27",
+      "as_of": "2026-09-08 18:55:20",
       "stale": false
     },
     "cardano": {
@@ -823,7 +823,7 @@
         ],
         [
           "Stretch from long-term average",
-          "-3.3% vs its long-term average - not stretched either way",
+          "-4.1% vs its long-term average - not stretched either way",
           0
         ],
         [
@@ -836,12 +836,12 @@
       "id": "hedera-hashgraph",
       "symbol": "HBAR",
       "name": "Hedera",
-      "price": 0.080191,
-      "pct_24h": -2.54504,
-      "pct_7d": 7.7,
+      "price": 0.079489,
+      "pct_24h": -3.50507,
+      "pct_7d": 7.0,
       "support_30d": 0.06461260477975343,
       "resistance_30d": 0.08182180696524229,
-      "as_of": "2026-09-08 15:10:23",
+      "as_of": "2026-09-08 18:55:20",
       "stale": false
     },
     "pepe": {
@@ -2407,7 +2407,7 @@
         ],
         [
           "Stretch from long-term average",
-          "+1.6% vs its long-term average - not stretched either way",
+          "+0.3% vs its long-term average - not stretched either way",
           0
         ],
         [
@@ -2420,12 +2420,12 @@
       "id": "shiba-inu",
       "symbol": "SHIB",
       "name": "Shiba Inu",
-      "price": 5.47e-06,
-      "pct_24h": -0.39029,
-      "pct_7d": 5.4,
+      "price": 5.4e-06,
+      "pct_24h": -0.35769,
+      "pct_7d": 5.1,
       "support_30d": 4.390093758351827e-06,
       "resistance_30d": 5.903506876405612e-06,
-      "as_of": "2026-09-08 17:20:26",
+      "as_of": "2026-09-08 18:55:20",
       "stale": false
     },
     "near": {
@@ -3293,19 +3293,21 @@
       "stale": false
     }
   },
-  "_strong_buy_state": {},
+  "_strong_buy_state": {
+    "15m:HBAR": true
+  },
   "BTC": {
     "key": "BTC",
     "name": "Bitcoin",
     "emoji": "\u20bf",
-    "price": 78500,
+    "price": 78342,
     "high_24h": 79432,
     "low_24h": 77666,
-    "pct_24h": -0.86831,
+    "pct_24h": -1.09395,
     "pct_7d": 1.2,
     "pct_30d": 20.5,
-    "sma50": 69959.415620244,
-    "sma200": 69845.7205087556,
+    "sma50": 69956.75656515261,
+    "sma200": 69845.05574498276,
     "support_30d": 62843.70368466329,
     "resistance_30d": 81264.70153038795,
     "mark_price": 78433.3,
@@ -3320,14 +3322,14 @@
     "key": "ETH",
     "name": "Ethereum",
     "emoji": "\u039e",
-    "price": 2490.8,
+    "price": 2483.18,
     "high_24h": 2505.13,
     "low_24h": 2442.98,
-    "pct_24h": 0.02723,
+    "pct_24h": -0.38423,
     "pct_7d": 2.3,
     "pct_30d": 29.5,
-    "sma50": 2127.1161368387197,
-    "sma200": 2043.5196762820956,
+    "sma50": 2126.9219144635263,
+    "sma200": 2043.4711206882973,
     "support_30d": 1871.3976551883159,
     "resistance_30d": 2514.967577695514,
     "mark_price": 2473.95,
