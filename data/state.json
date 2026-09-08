@@ -4,7 +4,7 @@
   "_alerts_state": {
     "btc-resistance-break": {
       "triggered": true,
-      "last_triggered_at": "2026-09-08 23:25:19"
+      "last_triggered_at": "2026-09-08 23:30:29"
     },
     "btc-support-break": {
       "triggered": false,
@@ -515,7 +515,7 @@
       "rows": [
         [
           "Price vs. recent range",
-          "Near its 30-day high (~$81.33) - less room to run",
+          "Near its 30-day high (~$81.25) - less room to run",
           -1
         ],
         [
@@ -535,7 +535,7 @@
         ],
         [
           "Stretch from long-term average",
-          "+45.6% above its long-term average - very stretched",
+          "+45.4% above its long-term average - very stretched",
           -2
         ],
         [
@@ -548,12 +548,12 @@
       "id": "whitebit",
       "symbol": "WBT",
       "name": "WhiteBIT Coin",
-      "price": 81.34,
-      "pct_24h": 6.52554,
-      "pct_7d": 14.1,
+      "price": 81.25,
+      "pct_24h": 6.26469,
+      "pct_7d": 14.5,
       "support_30d": 54.452558710928955,
-      "resistance_30d": 81.3302382701612,
-      "as_of": "2026-09-08 22:55:19",
+      "resistance_30d": 81.2457008306264,
+      "as_of": "2026-09-08 23:30:29",
       "stale": false
     },
     "leo-token": {
@@ -727,7 +727,7 @@
         ],
         [
           "Stretch from long-term average",
-          "+7.6% vs its long-term average - not stretched either way",
+          "+7.5% vs its long-term average - not stretched either way",
           0
         ],
         [
@@ -740,12 +740,12 @@
       "id": "stellar",
       "symbol": "XLM",
       "name": "Stellar",
-      "price": 0.188208,
-      "pct_24h": -2.69556,
-      "pct_7d": 6.9,
+      "price": 0.188007,
+      "pct_24h": -2.56854,
+      "pct_7d": 7.4,
       "support_30d": 0.15472912151335613,
       "resistance_30d": 0.20181319711037435,
-      "as_of": "2026-09-08 22:00:36",
+      "as_of": "2026-09-08 23:30:29",
       "stale": false
     },
     "kucoin-shares": {
@@ -1831,7 +1831,7 @@
         ],
         [
           "Stretch from long-term average",
-          "+57.9% above its long-term average - very stretched",
+          "+57.7% above its long-term average - very stretched",
           -2
         ],
         [
@@ -1844,12 +1844,12 @@
       "id": "ethena",
       "symbol": "ENA",
       "name": "Ethena",
-      "price": 0.159689,
-      "pct_24h": -2.45014,
-      "pct_7d": 0.4,
+      "price": 0.159469,
+      "pct_24h": -2.39718,
+      "pct_7d": 1.5,
       "support_30d": 0.08231050586125944,
       "resistance_30d": 0.17616469272611565,
-      "as_of": "2026-09-08 22:35:20",
+      "as_of": "2026-09-08 23:30:29",
       "stale": false
     },
     "bitcoin-cash": {
@@ -3293,19 +3293,21 @@
       "stale": false
     }
   },
-  "_strong_buy_state": {},
+  "_strong_buy_state": {
+    "15m:WBT": true
+  },
   "BTC": {
     "key": "BTC",
     "name": "Bitcoin",
     "emoji": "\u20bf",
-    "price": 78465,
+    "price": 78441,
     "high_24h": 79432,
     "low_24h": 77666,
-    "pct_24h": -0.66727,
+    "pct_24h": -0.70119,
     "pct_7d": 1.8,
     "pct_30d": 20.6,
-    "sma50": 69958.79692076778,
-    "sma200": 69845.56583388656,
+    "sma50": 69958.49762977975,
+    "sma200": 69845.49101113956,
     "support_30d": 62843.70368466329,
     "resistance_30d": 81264.70153038795,
     "mark_price": 78433.3,
@@ -3320,14 +3322,14 @@
     "key": "ETH",
     "name": "Ethereum",
     "emoji": "\u039e",
-    "price": 2483.65,
+    "price": 2483.29,
     "high_24h": 2505.13,
     "low_24h": 2442.98,
-    "pct_24h": 0.01224,
+    "pct_24h": -0.03606,
     "pct_7d": 3.1,
     "pct_30d": 29.4,
-    "sma50": 2126.9327144276795,
-    "sma200": 2043.4738206793356,
+    "sma50": 2126.9264930755335,
+    "sma200": 2043.4722653412991,
     "support_30d": 1871.3976551883159,
     "resistance_30d": 2514.967577695514,
     "mark_price": 2473.95,
