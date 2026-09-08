@@ -4,7 +4,7 @@
   "_alerts_state": {
     "btc-resistance-break": {
       "triggered": true,
-      "last_triggered_at": "2026-09-08 21:05:19"
+      "last_triggered_at": "2026-09-08 21:10:22"
     },
     "btc-support-break": {
       "triggered": false,
@@ -260,12 +260,12 @@
       "id": "figure-heloc",
       "symbol": "FIGR_HELOC",
       "name": "Figure Heloc",
-      "price": 1.045,
+      "price": 1.039,
       "pct_24h": null,
-      "pct_7d": 3.1,
+      "pct_7d": 2.5,
       "support_30d": 1.0008548889936117,
       "resistance_30d": 1.0455978355177025,
-      "as_of": "2026-09-08 20:45:22",
+      "as_of": "2026-09-08 21:10:22",
       "stale": false
     },
     "hyperliquid": {
@@ -631,7 +631,7 @@
         ],
         [
           "Stretch from long-term average",
-          "+36.5% above its long-term average - very stretched",
+          "+36.2% above its long-term average - very stretched",
           -2
         ],
         [
@@ -644,12 +644,12 @@
       "id": "monero",
       "symbol": "XMR",
       "name": "Monero",
-      "price": 498.59,
-      "pct_24h": -3.47586,
-      "pct_7d": 0.6,
+      "price": 497.42,
+      "pct_24h": -4.1398,
+      "pct_7d": -0.7,
       "support_30d": 377.1738335746389,
       "resistance_30d": 555.6684591165193,
-      "as_of": "2026-09-08 20:50:29",
+      "as_of": "2026-09-08 21:10:22",
       "stale": false
     },
     "cardano": {
@@ -919,7 +919,7 @@
         ],
         [
           "Stretch from long-term average",
-          "-0.7% vs its long-term average - not stretched either way",
+          "-0.6% vs its long-term average - not stretched either way",
           0
         ],
         [
@@ -932,12 +932,12 @@
       "id": "avalanche-2",
       "symbol": "AVAX",
       "name": "Avalanche",
-      "price": 8.0,
-      "pct_24h": -1.44909,
+      "price": 8.01,
+      "pct_24h": -1.75894,
       "pct_7d": 10.6,
       "support_30d": 6.313391080113916,
       "resistance_30d": 8.074275746115342,
-      "as_of": "2026-09-08 21:00:35",
+      "as_of": "2026-09-08 21:10:22",
       "stale": false
     },
     "aster-2": {
@@ -3293,19 +3293,21 @@
       "stale": false
     }
   },
-  "_strong_buy_state": {},
+  "_strong_buy_state": {
+    "15m:XMR": true
+  },
   "BTC": {
     "key": "BTC",
     "name": "Bitcoin",
     "emoji": "\u20bf",
-    "price": 78518,
+    "price": 78539,
     "high_24h": 79432,
     "low_24h": 77666,
-    "pct_24h": -0.86062,
+    "pct_24h": -0.83351,
     "pct_7d": 1.6,
     "pct_30d": 20.5,
-    "sma50": 69960.06431030069,
-    "sma200": 69845.88268126978,
+    "sma50": 69960.19297934406,
+    "sma200": 69845.91484853062,
     "support_30d": 62843.70368466329,
     "resistance_30d": 81264.70153038795,
     "mark_price": 78433.3,
@@ -3320,14 +3322,14 @@
     "key": "ETH",
     "name": "Ethereum",
     "emoji": "\u039e",
-    "price": 2484.01,
+    "price": 2484.83,
     "high_24h": 2505.13,
     "low_24h": 2442.98,
-    "pct_24h": -0.34715,
+    "pct_24h": -0.29921,
     "pct_7d": 2.8,
     "pct_30d": 29.4,
-    "sma50": 2126.9345985619693,
-    "sma200": 2043.474291712908,
+    "sma50": 2126.953378032346,
+    "sma200": 2043.4789865805024,
     "support_30d": 1871.3976551883159,
     "resistance_30d": 2514.967577695514,
     "mark_price": 2473.95,
