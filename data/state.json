@@ -4,7 +4,7 @@
   "_alerts_state": {
     "btc-resistance-break": {
       "triggered": true,
-      "last_triggered_at": "2026-09-08 07:40:23"
+      "last_triggered_at": "2026-09-08 07:45:23"
     },
     "btc-support-break": {
       "triggered": false,
@@ -343,7 +343,7 @@
         ],
         [
           "Stretch from long-term average",
-          "+0.8% vs its long-term average - not stretched either way",
+          "+1.2% vs its long-term average - not stretched either way",
           0
         ],
         [
@@ -356,12 +356,12 @@
       "id": "dogecoin",
       "symbol": "DOGE",
       "name": "Dogecoin",
-      "price": 0.089142,
-      "pct_24h": -0.75334,
-      "pct_7d": 7.8,
+      "price": 0.089491,
+      "pct_24h": 0.32189,
+      "pct_7d": 6.5,
       "support_30d": 0.06952870548515376,
       "resistance_30d": 0.09337940032634065,
-      "as_of": "2026-09-08 06:45:24",
+      "as_of": "2026-09-08 07:45:23",
       "stale": false
     },
     "zcash": {
@@ -1663,7 +1663,7 @@
     "bitget-token": {
       "label": "\ud83d\udfe1 HOLD / NEUTRAL",
       "status": "neutral",
-      "score": 0,
+      "score": -1,
       "rows": [
         [
           "Price vs. recent range",
@@ -1677,8 +1677,8 @@
         ],
         [
           "Market phase (best guess)",
-          "Basing near the bottom - phase where smart money accumulates",
-          2
+          "Established uptrend - phase where price marks up",
+          1
         ],
         [
           "Recent trend",
@@ -1687,7 +1687,7 @@
         ],
         [
           "Stretch from long-term average",
-          "+4.1% vs its long-term average - not stretched either way",
+          "+5.2% vs its long-term average - not stretched either way",
           0
         ],
         [
@@ -1700,12 +1700,12 @@
       "id": "bitget-token",
       "symbol": "BGB",
       "name": "Bitget Token",
-      "price": 1.98,
-      "pct_24h": -1.80477,
+      "price": 2.0,
+      "pct_24h": -1.98363,
       "pct_7d": 1.6,
       "support_30d": 1.6296557908206382,
       "resistance_30d": 2.0284940947674617,
-      "as_of": "2026-09-08 07:10:25",
+      "as_of": "2026-09-08 07:45:23",
       "stale": false
     },
     "sui": {
@@ -2023,7 +2023,7 @@
         ],
         [
           "Stretch from long-term average",
-          "+93.8% above its long-term average - very stretched",
+          "+95.4% above its long-term average - very stretched",
           -2
         ],
         [
@@ -2036,12 +2036,12 @@
       "id": "uniswap",
       "symbol": "UNI",
       "name": "Uniswap",
-      "price": 7.04,
-      "pct_24h": 0.00687,
-      "pct_7d": 31.0,
+      "price": 7.1,
+      "pct_24h": 0.73044,
+      "pct_7d": 25.4,
       "support_30d": 3.1971416665971573,
       "resistance_30d": 7.291165865788254,
-      "as_of": "2026-09-08 06:05:17",
+      "as_of": "2026-09-08 07:45:23",
       "stale": false
     },
     "pi-network": {
@@ -3294,21 +3294,20 @@
     }
   },
   "_strong_buy_state": {
-    "1h:XLM": true,
-    "1h:ADA": true
+    "1h:DOGE": true
   },
   "BTC": {
     "key": "BTC",
     "name": "Bitcoin",
     "emoji": "\u20bf",
-    "price": 78511,
+    "price": 78464,
     "high_24h": 79625,
     "low_24h": 78271,
-    "pct_24h": -0.92273,
+    "pct_24h": -1.00778,
     "pct_7d": -1.0,
     "pct_30d": 20.9,
-    "sma50": 69959.64082102834,
-    "sma200": 69845.7768089517,
+    "sma50": 69958.98224083938,
+    "sma200": 69845.61216390446,
     "support_30d": 62843.70368466329,
     "resistance_30d": 81264.70153038795,
     "mark_price": 79370.02473188,
@@ -3323,14 +3322,14 @@
     "key": "ETH",
     "name": "Ethereum",
     "emoji": "\u039e",
-    "price": 2480.36,
+    "price": 2479.89,
     "high_24h": 2510.03,
     "low_24h": 2463.89,
-    "pct_24h": -0.07547,
+    "pct_24h": -0.21319,
     "pct_7d": -0.6,
     "pct_30d": 29.0,
-    "sma50": 2126.8652269605536,
-    "sma200": 2043.4569488125542,
+    "sma50": 2126.8460061375063,
+    "sma200": 2043.4521436067923,
     "support_30d": 1871.3976551883159,
     "resistance_30d": 2514.967577695514,
     "mark_price": 2488.83603101,
