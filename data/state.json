@@ -4,7 +4,7 @@
   "_alerts_state": {
     "btc-resistance-break": {
       "triggered": true,
-      "last_triggered_at": "2026-09-08 22:05:24"
+      "last_triggered_at": "2026-09-08 22:10:22"
     },
     "btc-support-break": {
       "triggered": false,
@@ -775,7 +775,7 @@
         ],
         [
           "Stretch from long-term average",
-          "-8.9% vs its long-term average - not stretched either way",
+          "-8.8% vs its long-term average - not stretched either way",
           0
         ],
         [
@@ -788,12 +788,12 @@
       "id": "kucoin-shares",
       "symbol": "KCS",
       "name": "KuCoin",
-      "price": 7.01,
-      "pct_24h": -0.15048,
-      "pct_7d": 0.0,
+      "price": 7.02,
+      "pct_24h": 0.10295,
+      "pct_7d": 0.2,
       "support_30d": 6.514591596607885,
       "resistance_30d": 7.8821382735057615,
-      "as_of": "2026-09-08 21:15:24",
+      "as_of": "2026-09-08 22:10:22",
       "stale": false
     },
     "hedera-hashgraph": {
@@ -1879,7 +1879,7 @@
         ],
         [
           "Stretch from long-term average",
-          "-22.8% below its long-term average - confirmed downtrend",
+          "-22.7% below its long-term average - confirmed downtrend",
           -1
         ],
         [
@@ -1892,12 +1892,12 @@
       "id": "bitcoin-cash",
       "symbol": "BCH",
       "name": "Bitcoin Cash",
-      "price": 256.79,
-      "pct_24h": -1.38094,
-      "pct_7d": 3.9,
+      "price": 257.27,
+      "pct_24h": -1.17671,
+      "pct_7d": 4.3,
       "support_30d": 203.50169440615565,
       "resistance_30d": 288.10955405353275,
-      "as_of": "2026-09-08 20:40:22",
+      "as_of": "2026-09-08 22:10:22",
       "stale": false
     },
     "mantle": {
@@ -2743,7 +2743,7 @@
         ],
         [
           "Stretch from long-term average",
-          "+24.1% above its long-term average - a bit stretched",
+          "+21.6% above its long-term average - a bit stretched",
           -1
         ],
         [
@@ -2756,12 +2756,12 @@
       "id": "morpho",
       "symbol": "MORPHO",
       "name": "Morpho",
-      "price": 2.43,
-      "pct_24h": -1.45287,
-      "pct_7d": -4.5,
+      "price": 2.38,
+      "pct_24h": -3.38632,
+      "pct_7d": -7.4,
       "support_30d": 1.9343684047565628,
       "resistance_30d": 2.9026212482639075,
-      "as_of": "2026-09-08 16:05:25",
+      "as_of": "2026-09-08 22:10:22",
       "stale": false
     },
     "memecore": {
@@ -3293,19 +3293,21 @@
       "stale": false
     }
   },
-  "_strong_buy_state": {},
+  "_strong_buy_state": {
+    "15m:DOGE": true
+  },
   "BTC": {
     "key": "BTC",
     "name": "Bitcoin",
     "emoji": "\u20bf",
-    "price": 78565,
+    "price": 78531,
     "high_24h": 79432,
     "low_24h": 77666,
-    "pct_24h": -0.74525,
+    "pct_24h": -0.83928,
     "pct_7d": 1.4,
     "pct_30d": 20.5,
-    "sma50": 69961.31547821703,
-    "sma200": 69846.19547324888,
+    "sma50": 69959.46422908224,
+    "sma200": 69845.73266096518,
     "support_30d": 62843.70368466329,
     "resistance_30d": 81264.70153038795,
     "mark_price": 78433.3,
@@ -3320,14 +3322,14 @@
     "key": "ETH",
     "name": "Ethereum",
     "emoji": "\u039e",
-    "price": 2485.97,
+    "price": 2484.18,
     "high_24h": 2505.13,
     "low_24h": 2442.98,
-    "pct_24h": -0.08612,
+    "pct_24h": -0.22786,
     "pct_7d": 2.5,
     "pct_30d": 29.3,
-    "sma50": 2126.9834478739504,
-    "sma200": 2043.4865040409031,
+    "sma50": 2126.921478352605,
+    "sma200": 2043.471011660567,
     "support_30d": 1871.3976551883159,
     "resistance_30d": 2514.967577695514,
     "mark_price": 2473.95,
