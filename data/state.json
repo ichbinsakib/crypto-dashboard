@@ -4,7 +4,7 @@
   "_alerts_state": {
     "btc-resistance-break": {
       "triggered": true,
-      "last_triggered_at": "2026-09-08 06:00:35"
+      "last_triggered_at": "2026-09-08 06:05:17"
     },
     "btc-support-break": {
       "triggered": false,
@@ -29,9 +29,9 @@
   },
   "_screener": {
     "binancecoin": {
-      "label": "\ud83d\udd34 CAUTION - REDUCE NEW BUYS",
-      "status": "bearish",
-      "score": -2,
+      "label": "\ud83d\udfe1 HOLD / NEUTRAL",
+      "status": "neutral",
+      "score": -1,
       "rows": [
         [
           "Price vs. recent range",
@@ -50,12 +50,12 @@
         ],
         [
           "Recent trend",
-          "Chopping sideways - no clear trend",
-          0
+          "Trending up steadily - healthy",
+          1
         ],
         [
           "Stretch from long-term average",
-          "+21.0% above its long-term average - a bit stretched",
+          "+20.5% above its long-term average - a bit stretched",
           -1
         ],
         [
@@ -64,16 +64,16 @@
           0
         ]
       ],
-      "plain": "Getting risky - I'd hold off on new buys until this cools down.",
+      "plain": "No real edge either way right now - fine to just wait and watch.",
       "id": "binancecoin",
       "symbol": "BNB",
       "name": "BNB",
-      "price": 752.91,
-      "pct_24h": 0.50075,
-      "pct_7d": 7.5,
+      "price": 750.06,
+      "pct_24h": 0.10814,
+      "pct_7d": 8.5,
       "support_30d": 598.6196895758089,
       "resistance_30d": 766.4092879330625,
-      "as_of": "2026-09-08 05:50:57",
+      "as_of": "2026-09-08 06:05:17",
       "stale": false
     },
     "ripple": {
@@ -151,7 +151,7 @@
         ],
         [
           "Stretch from long-term average",
-          "+24.9% above its long-term average - a bit stretched",
+          "+24.5% above its long-term average - a bit stretched",
           -1
         ],
         [
@@ -164,12 +164,12 @@
       "id": "solana",
       "symbol": "SOL",
       "name": "Solana",
-      "price": 103.22,
-      "pct_24h": -1.6835,
-      "pct_7d": 0.0,
+      "price": 102.91,
+      "pct_24h": -2.19912,
+      "pct_7d": -0.6,
       "support_30d": 74.5477464048606,
       "resistance_30d": 109.17730597799657,
-      "as_of": "2026-09-08 04:10:21",
+      "as_of": "2026-09-08 06:05:17",
       "stale": false
     },
     "tron": {
@@ -2023,7 +2023,7 @@
         ],
         [
           "Stretch from long-term average",
-          "+93.0% above its long-term average - very stretched",
+          "+93.8% above its long-term average - very stretched",
           -2
         ],
         [
@@ -2036,12 +2036,12 @@
       "id": "uniswap",
       "symbol": "UNI",
       "name": "Uniswap",
-      "price": 7.01,
-      "pct_24h": 0.64487,
-      "pct_7d": 34.4,
+      "price": 7.04,
+      "pct_24h": 0.00687,
+      "pct_7d": 31.0,
       "support_30d": 3.1971416665971573,
       "resistance_30d": 7.291165865788254,
-      "as_of": "2026-09-08 04:45:22",
+      "as_of": "2026-09-08 06:05:17",
       "stale": false
     },
     "pi-network": {
@@ -3294,20 +3294,21 @@
     }
   },
   "_strong_buy_state": {
-    "15m:QNT": true
+    "15m:SOL": true,
+    "1h:AAVE": true
   },
   "BTC": {
     "key": "BTC",
     "name": "Bitcoin",
     "emoji": "\u20bf",
-    "price": 78581,
-    "high_24h": 79804,
-    "low_24h": 78609,
-    "pct_24h": -1.4971,
-    "pct_7d": 0.0,
-    "pct_30d": 21.5,
-    "sma50": 69960.79249000078,
-    "sma200": 69846.06472619482,
+    "price": 78559,
+    "high_24h": 79671,
+    "low_24h": 78536,
+    "pct_24h": -1.5907,
+    "pct_7d": -0.2,
+    "pct_30d": 21.3,
+    "sma50": 69959.38296233985,
+    "sma200": 69845.71234427957,
     "support_30d": 62843.70368466329,
     "resistance_30d": 81264.70153038795,
     "mark_price": 79370.02473188,
@@ -3322,14 +3323,14 @@
     "key": "ETH",
     "name": "Ethereum",
     "emoji": "\u039e",
-    "price": 2473.19,
+    "price": 2472.95,
     "high_24h": 2510.03,
     "low_24h": 2467.8,
-    "pct_24h": -1.29285,
-    "pct_7d": 0.3,
-    "pct_30d": 29.6,
-    "sma50": 2126.705798482926,
-    "sma200": 2043.4170916931473,
+    "pct_24h": -1.34557,
+    "pct_7d": 0.2,
+    "pct_30d": 29.3,
+    "sma50": 2126.687051603593,
+    "sma200": 2043.4124049733139,
     "support_30d": 1871.3976551883159,
     "resistance_30d": 2514.967577695514,
     "mark_price": 2488.83603101,
