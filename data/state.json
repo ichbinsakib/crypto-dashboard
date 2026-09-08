@@ -4,7 +4,7 @@
   "_alerts_state": {
     "btc-resistance-break": {
       "triggered": true,
-      "last_triggered_at": "2026-09-08 04:52:08"
+      "last_triggered_at": "2026-09-08 04:55:53"
     },
     "btc-support-break": {
       "triggered": false,
@@ -605,9 +605,9 @@
       "stale": false
     },
     "monero": {
-      "label": "\ud83d\udd34 CAUTION - REDUCE NEW BUYS",
+      "label": "\ud83d\udd34 DISTRIBUTION ZONE",
       "status": "bearish",
-      "score": -2,
+      "score": -5,
       "rows": [
         [
           "Price vs. recent range",
@@ -621,8 +621,8 @@
         ],
         [
           "Market phase (best guess)",
-          "Established uptrend - phase where price marks up",
-          1
+          "Very extended after a big run - phase where smart money sells",
+          -2
         ],
         [
           "Recent trend",
@@ -631,7 +631,7 @@
         ],
         [
           "Stretch from long-term average",
-          "+39.7% above its long-term average - very stretched",
+          "+41.6% above its long-term average - very stretched",
           -2
         ],
         [
@@ -640,16 +640,16 @@
           0
         ]
       ],
-      "plain": "Getting risky - I'd hold off on new buys until this cools down.",
+      "plain": "Looks stretched and euphoric - historically the zone where smart money sells, not buys.",
       "id": "monero",
       "symbol": "XMR",
       "name": "Monero",
-      "price": 510.28,
-      "pct_24h": -4.34997,
+      "price": 517.49,
+      "pct_24h": -3.04036,
       "pct_7d": -1.0,
       "support_30d": 377.1738335746389,
       "resistance_30d": 555.6684591165193,
-      "as_of": "2026-09-08 04:15:22",
+      "as_of": "2026-09-08 04:55:53",
       "stale": false
     },
     "cardano": {
@@ -775,7 +775,7 @@
         ],
         [
           "Stretch from long-term average",
-          "-8.7% vs its long-term average - not stretched either way",
+          "-8.8% vs its long-term average - not stretched either way",
           0
         ],
         [
@@ -788,12 +788,12 @@
       "id": "kucoin-shares",
       "symbol": "KCS",
       "name": "KuCoin",
-      "price": 7.03,
-      "pct_24h": -1.56663,
-      "pct_7d": -1.6,
+      "price": 7.02,
+      "pct_24h": -0.60965,
+      "pct_7d": -2.1,
       "support_30d": 6.514591596607885,
       "resistance_30d": 7.8821382735057615,
-      "as_of": "2026-09-08 02:45:21",
+      "as_of": "2026-09-08 04:55:53",
       "stale": false
     },
     "hedera-hashgraph": {
@@ -1015,7 +1015,7 @@
         ],
         [
           "Stretch from long-term average",
-          "+31.9% above its long-term average - very stretched",
+          "+30.9% above its long-term average - very stretched",
           -2
         ],
         [
@@ -1028,12 +1028,12 @@
       "id": "worldcoin-wld",
       "symbol": "WLD",
       "name": "Worldcoin",
-      "price": 0.471291,
-      "pct_24h": 13.25244,
+      "price": 0.467697,
+      "pct_24h": 12.44572,
       "pct_7d": 29.4,
       "support_30d": 0.319812298466522,
       "resistance_30d": 0.4772935995106048,
-      "as_of": "2026-09-08 04:25:19",
+      "as_of": "2026-09-08 04:55:53",
       "stale": false
     },
     "bfusd": {
@@ -2095,12 +2095,12 @@
     "ondo-finance": {
       "label": "\ud83d\udfe1 HOLD / NEUTRAL",
       "status": "neutral",
-      "score": -1,
+      "score": 0,
       "rows": [
         [
           "Price vs. recent range",
-          "Near its 30-day high (~$0.3969) - less room to run",
-          -1
+          "Sitting in the middle of its 30-day range",
+          0
         ],
         [
           "Crowd mood (Fear & Greed)",
@@ -2119,7 +2119,7 @@
         ],
         [
           "Stretch from long-term average",
-          "+14.6% above its long-term average - a bit stretched",
+          "+14.2% above its long-term average - a bit stretched",
           -1
         ],
         [
@@ -2132,12 +2132,12 @@
       "id": "ondo-finance",
       "symbol": "ONDO",
       "name": "Ondo",
-      "price": 0.378129,
-      "pct_24h": -1.33668,
+      "price": 0.376785,
+      "pct_24h": -1.51931,
       "pct_7d": 9.1,
       "support_30d": 0.32338181384146436,
       "resistance_30d": 0.3969475338902824,
-      "as_of": "2026-09-08 04:35:18",
+      "as_of": "2026-09-08 04:55:53",
       "stale": false
     },
     "canton-network": {
@@ -2612,12 +2612,12 @@
       "id": "bitway",
       "symbol": "BTW",
       "name": "Bitway",
-      "price": 0.449515,
-      "pct_24h": 3.41668,
+      "price": 0.449375,
+      "pct_24h": 5.261,
       "pct_7d": 6.2,
       "support_30d": 0.19617645794772356,
       "resistance_30d": 0.48788437226017506,
-      "as_of": "2026-09-08 04:30:29",
+      "as_of": "2026-09-08 04:55:53",
       "stale": false
     },
     "world-liberty-financial": {
@@ -3294,21 +3294,20 @@
     }
   },
   "_strong_buy_state": {
-    "15m:DOGE": true,
-    "1h:ADA": true
+    "15m:WLD": true
   },
   "BTC": {
     "key": "BTC",
     "name": "Bitcoin",
     "emoji": "\u20bf",
-    "price": 78778,
+    "price": 78750,
     "high_24h": 79892,
     "low_24h": 78707,
-    "pct_24h": -1.13686,
+    "pct_24h": -1.10225,
     "pct_7d": 0.6,
     "pct_30d": 21.8,
-    "sma50": 69965.00470745409,
-    "sma200": 69847.11778055812,
+    "sma50": 69963.95470759142,
+    "sma200": 69846.85528059247,
     "support_30d": 62843.70368466329,
     "resistance_30d": 81264.70153038795,
     "mark_price": 79370.02473188,
@@ -3323,14 +3322,14 @@
     "key": "ETH",
     "name": "Ethereum",
     "emoji": "\u039e",
-    "price": 2482.28,
+    "price": 2480.91,
     "high_24h": 2512.72,
     "low_24h": 2467.8,
-    "pct_24h": -0.59204,
+    "pct_24h": -0.53106,
     "pct_7d": 0.8,
     "pct_30d": 29.9,
-    "sma50": 2126.90142545572,
-    "sma200": 2043.465998436346,
+    "sma50": 2126.8675182858824,
+    "sma200": 2043.4575216438864,
     "support_30d": 1871.3976551883159,
     "resistance_30d": 2514.967577695514,
     "mark_price": 2488.83603101,
