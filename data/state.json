@@ -4,7 +4,7 @@
   "_alerts_state": {
     "btc-resistance-break": {
       "triggered": true,
-      "last_triggered_at": "2026-09-08 20:55:24"
+      "last_triggered_at": "2026-09-08 21:00:35"
     },
     "btc-support-break": {
       "triggered": false,
@@ -919,7 +919,7 @@
         ],
         [
           "Stretch from long-term average",
-          "-0.5% vs its long-term average - not stretched either way",
+          "-0.7% vs its long-term average - not stretched either way",
           0
         ],
         [
@@ -932,12 +932,12 @@
       "id": "avalanche-2",
       "symbol": "AVAX",
       "name": "Avalanche",
-      "price": 8.02,
-      "pct_24h": -0.79078,
-      "pct_7d": 10.1,
+      "price": 8.0,
+      "pct_24h": -1.44909,
+      "pct_7d": 10.6,
       "support_30d": 6.313391080113916,
       "resistance_30d": 8.074275746115342,
-      "as_of": "2026-09-08 17:40:25",
+      "as_of": "2026-09-08 21:00:35",
       "stale": false
     },
     "aster-2": {
@@ -980,12 +980,12 @@
       "id": "aster-2",
       "symbol": "ASTER",
       "name": "Aster",
-      "price": 0.750629,
-      "pct_24h": -2.55628,
-      "pct_7d": 8.3,
+      "price": 0.751214,
+      "pct_24h": -2.45626,
+      "pct_7d": 8.6,
       "support_30d": 0.5986101196690307,
       "resistance_30d": 0.7868111056215635,
-      "as_of": "2026-09-08 20:05:30",
+      "as_of": "2026-09-08 21:00:35",
       "stale": false
     },
     "worldcoin-wld": {
@@ -1951,11 +1951,11 @@
     "polkadot": {
       "label": "\ud83d\udd34 CAUTION - REDUCE NEW BUYS",
       "status": "bearish",
-      "score": -3,
+      "score": -4,
       "rows": [
         [
           "Price vs. recent range",
-          "Near its 30-day high (~$1.20) - less room to run",
+          "Near its 30-day high (~$1.25) - less room to run",
           -1
         ],
         [
@@ -1975,8 +1975,8 @@
         ],
         [
           "Stretch from long-term average",
-          "+9.4% vs its long-term average - not stretched either way",
-          0
+          "+13.0% above its long-term average - a bit stretched",
+          -1
         ],
         [
           "Leverage traders' bias",
@@ -1988,12 +1988,12 @@
       "id": "polkadot",
       "symbol": "DOT",
       "name": "Polkadot",
-      "price": 1.21,
-      "pct_24h": 11.28899,
-      "pct_7d": 38.3,
+      "price": 1.25,
+      "pct_24h": 17.06999,
+      "pct_7d": 42.5,
       "support_30d": 0.7510040523927409,
-      "resistance_30d": 1.2012203311064025,
-      "as_of": "2026-09-08 19:05:21",
+      "resistance_30d": 1.2456364939800395,
+      "as_of": "2026-09-08 21:00:35",
       "stale": false
     },
     "uniswap": {
@@ -3293,19 +3293,21 @@
       "stale": false
     }
   },
-  "_strong_buy_state": {},
+  "_strong_buy_state": {
+    "15m:ASTER": true
+  },
   "BTC": {
     "key": "BTC",
     "name": "Bitcoin",
     "emoji": "\u20bf",
-    "price": 78544,
+    "price": 78508,
     "high_24h": 79432,
     "low_24h": 77666,
-    "pct_24h": -0.83008,
+    "pct_24h": -0.88516,
     "pct_7d": 1.6,
     "pct_30d": 20.3,
-    "sma50": 69960.36732755325,
-    "sma200": 69845.95843558293,
+    "sma50": 69959.60094699972,
+    "sma200": 69845.76684044454,
     "support_30d": 62843.70368466329,
     "resistance_30d": 81264.70153038795,
     "mark_price": 78433.3,
@@ -3320,14 +3322,14 @@
     "key": "ETH",
     "name": "Ethereum",
     "emoji": "\u039e",
-    "price": 2485.49,
+    "price": 2485.37,
     "high_24h": 2505.13,
     "low_24h": 2442.98,
-    "pct_24h": -0.319,
+    "pct_24h": -0.33048,
     "pct_7d": 2.8,
     "pct_30d": 29.1,
-    "sma50": 2126.9656650375177,
-    "sma200": 2043.4820583317953,
+    "sma50": 2126.9660031697817,
+    "sma200": 2043.4821428648613,
     "support_30d": 1871.3976551883159,
     "resistance_30d": 2514.967577695514,
     "mark_price": 2473.95,
