@@ -4,7 +4,7 @@
   "_alerts_state": {
     "btc-resistance-break": {
       "triggered": true,
-      "last_triggered_at": "2026-09-08 18:40:24"
+      "last_triggered_at": "2026-09-08 18:45:22"
     },
     "btc-support-break": {
       "triggered": false,
@@ -151,7 +151,7 @@
         ],
         [
           "Stretch from long-term average",
-          "+26.1% above its long-term average - a bit stretched",
+          "+25.9% above its long-term average - a bit stretched",
           -1
         ],
         [
@@ -164,12 +164,12 @@
       "id": "solana",
       "symbol": "SOL",
       "name": "Solana",
-      "price": 104.19,
-      "pct_24h": 0.33871,
-      "pct_7d": 2.1,
+      "price": 104.06,
+      "pct_24h": 0.21241,
+      "pct_7d": 2.8,
       "support_30d": 74.5477464048606,
       "resistance_30d": 109.17730597799657,
-      "as_of": "2026-09-08 17:00:36",
+      "as_of": "2026-09-08 18:45:22",
       "stale": false
     },
     "tron": {
@@ -439,7 +439,7 @@
         ],
         [
           "Stretch from long-term average",
-          "+45.5% above its long-term average - very stretched",
+          "+45.2% above its long-term average - very stretched",
           -2
         ],
         [
@@ -452,12 +452,12 @@
       "id": "rain",
       "symbol": "RAIN",
       "name": "Rain",
-      "price": 0.01668983,
-      "pct_24h": 2.30783,
+      "price": 0.01665913,
+      "pct_24h": 2.17002,
       "pct_7d": 0.6,
       "support_30d": 0.012552829520986089,
       "resistance_30d": 0.018158429442510105,
-      "as_of": "2026-09-08 18:20:28",
+      "as_of": "2026-09-08 18:45:22",
       "stale": false
     },
     "chainlink": {
@@ -2900,12 +2900,12 @@
       "id": "okb",
       "symbol": "OKB",
       "name": "OKB",
-      "price": 114.17,
-      "pct_24h": -1.04893,
-      "pct_7d": 3.2,
+      "price": 114.11,
+      "pct_24h": -0.68238,
+      "pct_7d": 3.4,
       "support_30d": 94.68582680773451,
       "resistance_30d": 115.8310797114581,
-      "as_of": "2026-09-08 17:25:56",
+      "as_of": "2026-09-08 18:45:22",
       "stale": false
     },
     "just": {
@@ -3293,19 +3293,21 @@
       "stale": false
     }
   },
-  "_strong_buy_state": {},
+  "_strong_buy_state": {
+    "1h:OKB": true
+  },
   "BTC": {
     "key": "BTC",
     "name": "Bitcoin",
     "emoji": "\u20bf",
-    "price": 78639,
+    "price": 78594,
     "high_24h": 79432,
     "low_24h": 77666,
-    "pct_24h": -0.58444,
+    "pct_24h": -0.69369,
     "pct_7d": 1.2,
     "pct_30d": 20.5,
-    "sma50": 69961.9048477627,
-    "sma200": 69846.34281563529,
+    "sma50": 69961.29626728453,
+    "sma200": 69846.19067051575,
     "support_30d": 62843.70368466329,
     "resistance_30d": 81264.70153038795,
     "mark_price": 78433.3,
@@ -3320,14 +3322,14 @@
     "key": "ETH",
     "name": "Ethereum",
     "emoji": "\u039e",
-    "price": 2496.4,
+    "price": 2494.93,
     "high_24h": 2505.13,
     "low_24h": 2442.98,
-    "pct_24h": 0.36184,
+    "pct_24h": 0.25657,
     "pct_7d": 2.3,
     "pct_30d": 29.5,
-    "sma50": 2127.1831990789965,
-    "sma200": 2043.5364418421648,
+    "sma50": 2127.1541916146025,
+    "sma200": 2043.5291899760664,
     "support_30d": 1871.3976551883159,
     "resistance_30d": 2514.967577695514,
     "mark_price": 2473.95,
