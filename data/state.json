@@ -79,7 +79,7 @@
     "ripple": {
       "label": "\ud83d\udfe1 HOLD / NEUTRAL",
       "status": "neutral",
-      "score": 0,
+      "score": -1,
       "rows": [
         [
           "Price vs. recent range",
@@ -103,8 +103,8 @@
         ],
         [
           "Stretch from long-term average",
-          "+9.8% vs its long-term average - not stretched either way",
-          0
+          "+10.6% above its long-term average - a bit stretched",
+          -1
         ],
         [
           "Leverage traders' bias",
@@ -116,12 +116,12 @@
       "id": "ripple",
       "symbol": "XRP",
       "name": "XRP",
-      "price": 1.4,
-      "pct_24h": -0.86968,
-      "pct_7d": 1.2,
+      "price": 1.41,
+      "pct_24h": 0.75555,
+      "pct_7d": 2.3,
       "support_30d": 0.9927072784932938,
       "resistance_30d": 1.52050482788377,
-      "as_of": "2026-09-08 13:05:23",
+      "as_of": "2026-09-08 14:30:32",
       "stale": false
     },
     "solana": {
@@ -1652,12 +1652,12 @@
       "id": "litecoin",
       "symbol": "LTC",
       "name": "Litecoin",
-      "price": 54.74,
-      "pct_24h": -4.14001,
+      "price": 54.78,
+      "pct_24h": -3.7985,
       "pct_7d": 11.7,
       "support_30d": 43.806923130603906,
       "resistance_30d": 55.20228907963863,
-      "as_of": "2026-09-08 14:20:26",
+      "as_of": "2026-09-08 14:30:32",
       "stale": false
     },
     "bitget-token": {
@@ -1949,13 +1949,13 @@
       "stale": false
     },
     "polkadot": {
-      "label": "\ud83d\udd34 CAUTION - REDUCE NEW BUYS",
-      "status": "bearish",
-      "score": -2,
+      "label": "\ud83d\udfe1 HOLD / NEUTRAL",
+      "status": "neutral",
+      "score": 1,
       "rows": [
         [
           "Price vs. recent range",
-          "Near its 30-day high (~$1.08) - less room to run",
+          "Near its 30-day high (~$1.09) - less room to run",
           -1
         ],
         [
@@ -1970,12 +1970,12 @@
         ],
         [
           "Recent trend",
-          "Shooting straight up - classic blow-off top risk, don't chase",
-          -2
+          "Trending up steadily - healthy",
+          1
         ],
         [
           "Stretch from long-term average",
-          "-2.0% vs its long-term average - not stretched either way",
+          "-1.4% vs its long-term average - not stretched either way",
           0
         ],
         [
@@ -1984,16 +1984,16 @@
           0
         ]
       ],
-      "plain": "Getting risky - I'd hold off on new buys until this cools down.",
+      "plain": "No real edge either way right now - fine to just wait and watch.",
       "id": "polkadot",
       "symbol": "DOT",
       "name": "Polkadot",
-      "price": 1.083,
-      "pct_24h": 9.88187,
-      "pct_7d": 26.7,
+      "price": 1.09,
+      "pct_24h": 3.13049,
+      "pct_7d": 25.0,
       "support_30d": 0.7510040523927409,
-      "resistance_30d": 1.0827443921434992,
-      "as_of": "2026-09-08 11:00:33",
+      "resistance_30d": 1.0904183649707706,
+      "as_of": "2026-09-08 14:30:32",
       "stale": false
     },
     "uniswap": {
@@ -3294,20 +3294,20 @@
     }
   },
   "_strong_buy_state": {
-    "1h:XLM": true
+    "15m:LTC": true
   },
   "BTC": {
     "key": "BTC",
     "name": "Bitcoin",
     "emoji": "\u20bf",
-    "price": 78337,
+    "price": 78263,
     "high_24h": 79432,
     "low_24h": 77666,
-    "pct_24h": -0.97373,
+    "pct_24h": -0.98717,
     "pct_7d": -0.1,
     "pct_30d": 20.1,
-    "sma50": 69956.1049898428,
-    "sma200": 69844.89285115531,
+    "sma50": 69955.10963874866,
+    "sma200": 69844.64401338178,
     "support_30d": 62843.70368466329,
     "resistance_30d": 81264.70153038795,
     "mark_price": 78433.3,
@@ -3322,14 +3322,14 @@
     "key": "ETH",
     "name": "Ethereum",
     "emoji": "\u039e",
-    "price": 2479.69,
+    "price": 2474.87,
     "high_24h": 2505.13,
     "low_24h": 2442.98,
-    "pct_24h": -0.2174,
+    "pct_24h": -0.29772,
     "pct_7d": 0.5,
     "pct_30d": 28.3,
-    "sma50": 2126.8480303598326,
-    "sma200": 2043.452649662374,
+    "sma50": 2126.7822962147043,
+    "sma200": 2043.436216126092,
     "support_30d": 1871.3976551883159,
     "resistance_30d": 2514.967577695514,
     "mark_price": 2473.95,
