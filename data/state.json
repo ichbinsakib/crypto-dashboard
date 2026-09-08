@@ -4,7 +4,7 @@
   "_alerts_state": {
     "btc-resistance-break": {
       "triggered": true,
-      "last_triggered_at": "2026-09-08 11:25:18"
+      "last_triggered_at": "2026-09-08 11:30:30"
     },
     "btc-support-break": {
       "triggered": false,
@@ -55,7 +55,7 @@
         ],
         [
           "Stretch from long-term average",
-          "+21.7% above its long-term average - a bit stretched",
+          "+21.2% above its long-term average - a bit stretched",
           -1
         ],
         [
@@ -68,12 +68,12 @@
       "id": "binancecoin",
       "symbol": "BNB",
       "name": "BNB",
-      "price": 757.34,
-      "pct_24h": 1.77871,
-      "pct_7d": 10.0,
+      "price": 754.16,
+      "pct_24h": 1.43005,
+      "pct_7d": 10.3,
       "support_30d": 598.6196895758089,
       "resistance_30d": 766.4092879330625,
-      "as_of": "2026-09-08 10:50:24",
+      "as_of": "2026-09-08 11:30:30",
       "stale": false
     },
     "ripple": {
@@ -933,11 +933,11 @@
       "symbol": "AVAX",
       "name": "Avalanche",
       "price": 8.05,
-      "pct_24h": 2.53815,
-      "pct_7d": 10.4,
+      "pct_24h": 2.38827,
+      "pct_7d": 11.4,
       "support_30d": 6.313391080113916,
       "resistance_30d": 8.074275746115342,
-      "as_of": "2026-09-08 08:30:31",
+      "as_of": "2026-09-08 11:30:30",
       "stale": false
     },
     "aster-2": {
@@ -2023,7 +2023,7 @@
         ],
         [
           "Stretch from long-term average",
-          "+93.5% above its long-term average - very stretched",
+          "+91.9% above its long-term average - very stretched",
           -2
         ],
         [
@@ -2036,12 +2036,12 @@
       "id": "uniswap",
       "symbol": "UNI",
       "name": "Uniswap",
-      "price": 7.03,
-      "pct_24h": -0.15375,
-      "pct_7d": 25.1,
+      "price": 6.97,
+      "pct_24h": -1.19738,
+      "pct_7d": 23.5,
       "support_30d": 3.1971416665971573,
       "resistance_30d": 7.291165865788254,
-      "as_of": "2026-09-08 10:45:22",
+      "as_of": "2026-09-08 11:30:30",
       "stale": false
     },
     "pi-network": {
@@ -2407,7 +2407,7 @@
         ],
         [
           "Stretch from long-term average",
-          "+1.1% vs its long-term average - not stretched either way",
+          "+0.9% vs its long-term average - not stretched either way",
           0
         ],
         [
@@ -2420,12 +2420,12 @@
       "id": "shiba-inu",
       "symbol": "SHIB",
       "name": "Shiba Inu",
-      "price": 5.44e-06,
-      "pct_24h": -0.474,
+      "price": 5.43e-06,
+      "pct_24h": -0.63183,
       "pct_7d": 6.6,
       "support_30d": 4.390093758351827e-06,
       "resistance_30d": 5.903506876405612e-06,
-      "as_of": "2026-09-08 11:10:23",
+      "as_of": "2026-09-08 11:30:30",
       "stale": false
     },
     "near": {
@@ -2839,7 +2839,7 @@
         ],
         [
           "Stretch from long-term average",
-          "+34.2% above its long-term average - very stretched",
+          "+33.4% above its long-term average - very stretched",
           -2
         ],
         [
@@ -2852,12 +2852,12 @@
       "id": "aave",
       "symbol": "AAVE",
       "name": "Aave",
-      "price": 130.93,
-      "pct_24h": -2.79296,
-      "pct_7d": 2.9,
+      "price": 130.08,
+      "pct_24h": -2.82558,
+      "pct_7d": 4.6,
       "support_30d": 85.94219943917633,
       "resistance_30d": 141.53047916466082,
-      "as_of": "2026-09-08 07:20:25",
+      "as_of": "2026-09-08 11:30:30",
       "stale": false
     },
     "okb": {
@@ -3293,19 +3293,21 @@
       "stale": false
     }
   },
-  "_strong_buy_state": {},
+  "_strong_buy_state": {
+    "15m:UNI": true
+  },
   "BTC": {
     "key": "BTC",
     "name": "Bitcoin",
     "emoji": "\u20bf",
-    "price": 78431,
+    "price": 78442,
     "high_24h": 79625,
     "low_24h": 78193,
-    "pct_24h": -1.26389,
+    "pct_24h": -1.24867,
     "pct_7d": 0.9,
     "pct_30d": 21.2,
-    "sma50": 69958.10208576008,
-    "sma200": 69845.39212513463,
+    "sma50": 69958.25970176245,
+    "sma200": 69845.43152913522,
     "support_30d": 62843.70368466329,
     "resistance_30d": 81264.70153038795,
     "mark_price": 78433.3,
@@ -3320,14 +3322,14 @@
     "key": "ETH",
     "name": "Ethereum",
     "emoji": "\u039e",
-    "price": 2475.61,
+    "price": 2474.97,
     "high_24h": 2510.03,
     "low_24h": 2463.89,
-    "pct_24h": -0.61873,
+    "pct_24h": -0.67834,
     "pct_7d": 1.2,
     "pct_30d": 29.3,
-    "sma50": 2126.7687260339303,
-    "sma200": 2043.4328235808985,
+    "sma50": 2126.750805807459,
+    "sma200": 2043.4283435242805,
     "support_30d": 1871.3976551883159,
     "resistance_30d": 2514.967577695514,
     "mark_price": 2473.95,
