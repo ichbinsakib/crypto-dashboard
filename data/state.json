@@ -4,7 +4,7 @@
   "_alerts_state": {
     "btc-resistance-break": {
       "triggered": true,
-      "last_triggered_at": "2026-09-08 03:15:22"
+      "last_triggered_at": "2026-09-08 03:20:24"
     },
     "btc-support-break": {
       "triggered": false,
@@ -40,7 +40,7 @@
         ],
         [
           "Crowd mood (Fear & Greed)",
-          "71/100 - crowd is greedy",
+          "69/100 - crowd is greedy",
           -1
         ],
         [
@@ -55,7 +55,7 @@
         ],
         [
           "Stretch from long-term average",
-          "+18.9% above its long-term average - a bit stretched",
+          "+18.6% above its long-term average - a bit stretched",
           -1
         ],
         [
@@ -68,12 +68,12 @@
       "id": "binancecoin",
       "symbol": "BNB",
       "name": "BNB",
-      "price": 739.27,
-      "pct_24h": -1.93518,
-      "pct_7d": 6.5,
+      "price": 738.08,
+      "pct_24h": -1.42268,
+      "pct_7d": 6.9,
       "support_30d": 598.6196895758089,
       "resistance_30d": 766.4092879330625,
-      "as_of": "2026-09-07 23:45:21",
+      "as_of": "2026-09-08 03:20:24",
       "stale": false
     },
     "ripple": {
@@ -117,11 +117,11 @@
       "symbol": "XRP",
       "name": "XRP",
       "price": 1.39,
-      "pct_24h": -1.23751,
+      "pct_24h": -1.35423,
       "pct_7d": 1.2,
       "support_30d": 0.9927072784932938,
       "resistance_30d": 1.52050482788377,
-      "as_of": "2026-09-08 03:15:22",
+      "as_of": "2026-09-08 03:20:24",
       "stale": false
     },
     "solana": {
@@ -703,7 +703,7 @@
     "stellar": {
       "label": "\ud83d\udfe1 HOLD / NEUTRAL",
       "status": "neutral",
-      "score": 1,
+      "score": 0,
       "rows": [
         [
           "Price vs. recent range",
@@ -722,12 +722,12 @@
         ],
         [
           "Recent trend",
-          "Trending up steadily - healthy",
-          1
+          "Chopping sideways - no clear trend",
+          0
         ],
         [
           "Stretch from long-term average",
-          "+8.6% vs its long-term average - not stretched either way",
+          "+8.1% vs its long-term average - not stretched either way",
           0
         ],
         [
@@ -740,12 +740,12 @@
       "id": "stellar",
       "symbol": "XLM",
       "name": "Stellar",
-      "price": 0.189989,
-      "pct_24h": 0.4011,
-      "pct_7d": 8.4,
+      "price": 0.189117,
+      "pct_24h": 0.79092,
+      "pct_7d": 6.3,
       "support_30d": 0.15472912151335613,
       "resistance_30d": 0.20181319711037435,
-      "as_of": "2026-09-08 02:55:18",
+      "as_of": "2026-09-08 03:20:24",
       "stale": false
     },
     "kucoin-shares": {
@@ -3293,19 +3293,21 @@
       "stale": false
     }
   },
-  "_strong_buy_state": {},
+  "_strong_buy_state": {
+    "15m:BNB": true
+  },
   "BTC": {
     "key": "BTC",
     "name": "Bitcoin",
     "emoji": "\u20bf",
-    "price": 78912,
+    "price": 78894,
     "high_24h": 79892,
     "low_24h": 78707,
-    "pct_24h": -1.08699,
+    "pct_24h": -1.14001,
     "pct_7d": 0.7,
     "pct_30d": 21.8,
-    "sma50": 69967.76608509949,
-    "sma200": 69847.80812496948,
+    "sma50": 69967.27146264074,
+    "sma200": 69847.6844693548,
     "support_30d": 62843.70368466329,
     "resistance_30d": 81264.70153038795,
     "mark_price": 79370.02473188,
@@ -3320,14 +3322,14 @@
     "key": "ETH",
     "name": "Ethereum",
     "emoji": "\u039e",
-    "price": 2483.53,
+    "price": 2482.86,
     "high_24h": 2512.72,
     "low_24h": 2467.8,
-    "pct_24h": -0.93924,
+    "pct_24h": -1.0154,
     "pct_7d": 1.0,
     "pct_30d": 29.8,
-    "sma50": 2126.930247956076,
-    "sma200": 2043.4732040614347,
+    "sma50": 2126.925507394949,
+    "sma200": 2043.472018921153,
     "support_30d": 1871.3976551883159,
     "resistance_30d": 2514.967577695514,
     "mark_price": 2488.83603101,
