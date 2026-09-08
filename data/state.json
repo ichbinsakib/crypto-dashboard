@@ -4,7 +4,7 @@
   "_alerts_state": {
     "btc-resistance-break": {
       "triggered": true,
-      "last_triggered_at": "2026-09-08 16:30:30"
+      "last_triggered_at": "2026-09-08 16:35:23"
     },
     "btc-support-break": {
       "triggered": false,
@@ -271,12 +271,12 @@
     "hyperliquid": {
       "label": "\ud83d\udd34 DISTRIBUTION ZONE",
       "status": "bearish",
-      "score": -5,
+      "score": -6,
       "rows": [
         [
           "Price vs. recent range",
-          "Sitting in the middle of its 30-day range",
-          0
+          "Near its 30-day high (~$87.95) - less room to run",
+          -1
         ],
         [
           "Crowd mood (Fear & Greed)",
@@ -295,7 +295,7 @@
         ],
         [
           "Stretch from long-term average",
-          "+54.5% above its long-term average - very stretched",
+          "+56.8% above its long-term average - very stretched",
           -2
         ],
         [
@@ -308,12 +308,12 @@
       "id": "hyperliquid",
       "symbol": "HYPE",
       "name": "Hyperliquid",
-      "price": 82.81,
-      "pct_24h": -5.92107,
-      "pct_7d": -0.8,
+      "price": 84.06,
+      "pct_24h": -1.60719,
+      "pct_7d": 0.3,
       "support_30d": 54.442530206647206,
       "resistance_30d": 87.951916819731,
-      "as_of": "2026-09-08 13:25:20",
+      "as_of": "2026-09-08 16:35:23",
       "stale": false
     },
     "dogecoin": {
@@ -1879,7 +1879,7 @@
         ],
         [
           "Stretch from long-term average",
-          "-22.4% below its long-term average - confirmed downtrend",
+          "-22.5% below its long-term average - confirmed downtrend",
           -1
         ],
         [
@@ -1892,12 +1892,12 @@
       "id": "bitcoin-cash",
       "symbol": "BCH",
       "name": "Bitcoin Cash",
-      "price": 258.05,
-      "pct_24h": -1.19627,
-      "pct_7d": 3.8,
+      "price": 257.73,
+      "pct_24h": -3.01485,
+      "pct_7d": 3.6,
       "support_30d": 203.50169440615565,
       "resistance_30d": 288.10955405353275,
-      "as_of": "2026-09-08 15:20:30",
+      "as_of": "2026-09-08 16:35:23",
       "stale": false
     },
     "mantle": {
@@ -2455,7 +2455,7 @@
         ],
         [
           "Stretch from long-term average",
-          "+41.0% above its long-term average - very stretched",
+          "+41.6% above its long-term average - very stretched",
           -2
         ],
         [
@@ -2468,12 +2468,12 @@
       "id": "near",
       "symbol": "NEAR",
       "name": "NEAR Protocol",
-      "price": 2.38,
-      "pct_24h": 3.58389,
+      "price": 2.39,
+      "pct_24h": 3.75958,
       "pct_7d": 19.0,
       "support_30d": 1.5879597131538,
       "resistance_30d": 2.436852334393612,
-      "as_of": "2026-09-08 16:30:30",
+      "as_of": "2026-09-08 16:35:23",
       "stale": false
     },
     "quant-network": {
@@ -3298,14 +3298,14 @@
     "key": "BTC",
     "name": "Bitcoin",
     "emoji": "\u20bf",
-    "price": 78655,
+    "price": 78675,
     "high_24h": 79432,
     "low_24h": 77666,
-    "pct_24h": -0.20818,
+    "pct_24h": -0.30923,
     "pct_7d": 0.9,
     "pct_30d": 20.9,
-    "sma50": 69962.43807139898,
-    "sma200": 69846.47612154436,
+    "sma50": 69962.81289868486,
+    "sma200": 69846.56982836583,
     "support_30d": 62843.70368466329,
     "resistance_30d": 81264.70153038795,
     "mark_price": 78433.3,
@@ -3320,14 +3320,14 @@
     "key": "ETH",
     "name": "Ethereum",
     "emoji": "\u039e",
-    "price": 2490.86,
+    "price": 2492.73,
     "high_24h": 2505.13,
     "low_24h": 2442.98,
-    "pct_24h": 0.78929,
+    "pct_24h": 0.73816,
     "pct_7d": 2.0,
     "pct_30d": 29.8,
-    "sma50": 2127.0709817450506,
-    "sma200": 2043.5083875086784,
+    "sma50": 2127.101851268305,
+    "sma200": 2043.516104889492,
     "support_30d": 1871.3976551883159,
     "resistance_30d": 2514.967577695514,
     "mark_price": 2473.95,
