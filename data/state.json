@@ -3,7 +3,7 @@
   "_fng_classification": "Greed",
   "_alerts_state": {
     "btc-resistance-break": {
-      "triggered": true,
+      "triggered": false,
       "last_triggered_at": "2026-09-08 11:45:22"
     },
     "btc-support-break": {
@@ -2095,7 +2095,7 @@
     "ondo-finance": {
       "label": "\ud83d\udfe1 HOLD / NEUTRAL",
       "status": "neutral",
-      "score": -1,
+      "score": 0,
       "rows": [
         [
           "Price vs. recent range",
@@ -2114,12 +2114,12 @@
         ],
         [
           "Recent trend",
-          "Chopping sideways - no clear trend",
-          0
+          "Trending up steadily - healthy",
+          1
         ],
         [
           "Stretch from long-term average",
-          "+14.1% above its long-term average - a bit stretched",
+          "+13.9% above its long-term average - a bit stretched",
           -1
         ],
         [
@@ -2132,12 +2132,12 @@
       "id": "ondo-finance",
       "symbol": "ONDO",
       "name": "Ondo",
-      "price": 0.37642,
-      "pct_24h": -3.49888,
-      "pct_7d": 7.5,
+      "price": 0.375969,
+      "pct_24h": -2.19767,
+      "pct_7d": 9.6,
       "support_30d": 0.32338181384146436,
       "resistance_30d": 0.3969475338902824,
-      "as_of": "2026-09-08 09:05:21",
+      "as_of": "2026-09-08 11:50:28",
       "stale": false
     },
     "canton-network": {
@@ -2195,7 +2195,7 @@
       "rows": [
         [
           "Price vs. recent range",
-          "Near its 30-day high (~$3.01) - less room to run",
+          "Near its 30-day high (~$2.99) - less room to run",
           -1
         ],
         [
@@ -2215,7 +2215,7 @@
         ],
         [
           "Stretch from long-term average",
-          "+23.1% above its long-term average - a bit stretched",
+          "+22.7% above its long-term average - a bit stretched",
           -1
         ],
         [
@@ -2228,12 +2228,12 @@
       "id": "internet-computer",
       "symbol": "ICP",
       "name": "Internet Computer",
-      "price": 3.01,
-      "pct_24h": 1.93881,
+      "price": 3.0,
+      "pct_24h": 2.83683,
       "pct_7d": 25.6,
       "support_30d": 2.1584475030049863,
-      "resistance_30d": 3.008065515744027,
-      "as_of": "2026-09-08 11:25:18",
+      "resistance_30d": 2.994929443528288,
+      "as_of": "2026-09-08 11:50:28",
       "stale": false
     },
     "bittensor": {
@@ -2867,7 +2867,7 @@
       "rows": [
         [
           "Price vs. recent range",
-          "Near its 30-day high (~$115.99) - less room to run",
+          "Near its 30-day high (~$115.83) - less room to run",
           -1
         ],
         [
@@ -2887,7 +2887,7 @@
         ],
         [
           "Stretch from long-term average",
-          "+33.2% above its long-term average - very stretched",
+          "+32.2% above its long-term average - very stretched",
           -2
         ],
         [
@@ -2900,12 +2900,12 @@
       "id": "okb",
       "symbol": "OKB",
       "name": "OKB",
-      "price": 115.99,
-      "pct_24h": 1.25513,
-      "pct_7d": 4.7,
+      "price": 115.08,
+      "pct_24h": -0.26704,
+      "pct_7d": 4.2,
       "support_30d": 94.68582680773451,
-      "resistance_30d": 115.9918817114033,
-      "as_of": "2026-09-08 10:30:28",
+      "resistance_30d": 115.8310797114581,
+      "as_of": "2026-09-08 11:50:28",
       "stale": false
     },
     "just": {
@@ -3293,19 +3293,21 @@
       "stale": false
     }
   },
-  "_strong_buy_state": {},
+  "_strong_buy_state": {
+    "15m:ICP": true
+  },
   "BTC": {
     "key": "BTC",
     "name": "Bitcoin",
     "emoji": "\u20bf",
-    "price": 78430,
+    "price": 78384,
     "high_24h": 79625,
     "low_24h": 78193,
-    "pct_24h": -1.21071,
+    "pct_24h": -1.27856,
     "pct_7d": 0.9,
     "pct_30d": 21.2,
-    "sma50": 69958.00339901898,
-    "sma200": 69845.36745344936,
+    "sma50": 69957.1056658998,
+    "sma200": 69845.14302016956,
     "support_30d": 62843.70368466329,
     "resistance_30d": 81264.70153038795,
     "mark_price": 78433.3,
@@ -3320,14 +3322,14 @@
     "key": "ETH",
     "name": "Ethereum",
     "emoji": "\u039e",
-    "price": 2474.24,
+    "price": 2473.0,
     "high_24h": 2510.03,
     "low_24h": 2463.89,
-    "pct_24h": -0.62767,
+    "pct_24h": -0.68659,
     "pct_7d": 1.2,
     "pct_30d": 29.3,
-    "sma50": 2126.7487917768362,
-    "sma200": 2043.427840016625,
+    "sma50": 2126.7137347817743,
+    "sma200": 2043.419075767859,
     "support_30d": 1871.3976551883159,
     "resistance_30d": 2514.967577695514,
     "mark_price": 2473.95,
