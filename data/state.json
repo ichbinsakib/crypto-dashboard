@@ -4,7 +4,7 @@
   "_alerts_state": {
     "btc-resistance-break": {
       "triggered": true,
-      "last_triggered_at": "2026-09-08 18:05:20"
+      "last_triggered_at": "2026-09-08 18:10:26"
     },
     "btc-support-break": {
       "triggered": false,
@@ -727,7 +727,7 @@
         ],
         [
           "Stretch from long-term average",
-          "+9.0% vs its long-term average - not stretched either way",
+          "+8.4% vs its long-term average - not stretched either way",
           0
         ],
         [
@@ -740,12 +740,12 @@
       "id": "stellar",
       "symbol": "XLM",
       "name": "Stellar",
-      "price": 0.190681,
-      "pct_24h": -0.66103,
-      "pct_7d": 7.5,
+      "price": 0.189697,
+      "pct_24h": -0.42035,
+      "pct_7d": 7.8,
       "support_30d": 0.15472912151335613,
       "resistance_30d": 0.20181319711037435,
-      "as_of": "2026-09-08 17:25:56",
+      "as_of": "2026-09-08 18:10:26",
       "stale": false
     },
     "kucoin-shares": {
@@ -1317,11 +1317,11 @@
       "symbol": "HTX",
       "name": "HTX DAO",
       "price": 1.69e-06,
-      "pct_24h": 0.42192,
-      "pct_7d": 3.8,
+      "pct_24h": 0.40457,
+      "pct_7d": 4.4,
       "support_30d": 1.6023985995039954e-06,
       "resistance_30d": 1.8259977214551937e-06,
-      "as_of": "2026-09-08 17:40:25",
+      "as_of": "2026-09-08 18:10:26",
       "stale": false
     },
     "superstate-short-duration-us-government-securities-fund-ustb": {
@@ -1701,11 +1701,11 @@
       "symbol": "BGB",
       "name": "Bitget Token",
       "price": 1.99,
-      "pct_24h": -1.56066,
-      "pct_7d": 2.6,
+      "pct_24h": -0.96166,
+      "pct_7d": 2.2,
       "support_30d": 1.6296557908206382,
       "resistance_30d": 2.0284940947674617,
-      "as_of": "2026-09-08 17:30:30",
+      "as_of": "2026-09-08 18:10:26",
       "stale": false
     },
     "sui": {
@@ -3293,19 +3293,21 @@
       "stale": false
     }
   },
-  "_strong_buy_state": {},
+  "_strong_buy_state": {
+    "1h:OKB": true
+  },
   "BTC": {
     "key": "BTC",
     "name": "Bitcoin",
     "emoji": "\u20bf",
-    "price": 78548,
+    "price": 78623,
     "high_24h": 79432,
     "low_24h": 77666,
-    "pct_24h": -0.77887,
+    "pct_24h": -0.65969,
     "pct_7d": 1.2,
     "pct_30d": 20.5,
-    "sma50": 69960.35810291044,
-    "sma200": 69845.95612942222,
+    "sma50": 69961.86805096589,
+    "sma200": 69846.33361643608,
     "support_30d": 62843.70368466329,
     "resistance_30d": 81264.70153038795,
     "mark_price": 78433.3,
@@ -3320,14 +3322,14 @@
     "key": "ETH",
     "name": "Ethereum",
     "emoji": "\u039e",
-    "price": 2490.16,
+    "price": 2495.29,
     "high_24h": 2505.13,
     "low_24h": 2442.98,
-    "pct_24h": -0.19777,
+    "pct_24h": 0.05813,
     "pct_7d": 2.3,
     "pct_30d": 29.5,
-    "sma50": 2127.056164789562,
-    "sma200": 2043.5046832698063,
+    "sma50": 2127.160041749269,
+    "sma200": 2043.530652509733,
     "support_30d": 1871.3976551883159,
     "resistance_30d": 2514.967577695514,
     "mark_price": 2473.95,
