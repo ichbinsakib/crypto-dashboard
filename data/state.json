@@ -4,7 +4,7 @@
   "_alerts_state": {
     "btc-resistance-break": {
       "triggered": true,
-      "last_triggered_at": "2026-09-08 01:00:42"
+      "last_triggered_at": "2026-09-08 01:05:19"
     },
     "btc-support-break": {
       "triggered": false,
@@ -856,7 +856,7 @@
         ],
         [
           "Crowd mood (Fear & Greed)",
-          "71/100 - crowd is greedy",
+          "69/100 - crowd is greedy",
           -1
         ],
         [
@@ -871,7 +871,7 @@
         ],
         [
           "Stretch from long-term average",
-          "+8.9% vs its long-term average - not stretched either way",
+          "+9.9% vs its long-term average - not stretched either way",
           0
         ],
         [
@@ -884,12 +884,12 @@
       "id": "pepe",
       "symbol": "PEPE",
       "name": "Pepe",
-      "price": 3.61e-06,
-      "pct_24h": -0.99336,
-      "pct_7d": 0.0,
+      "price": 3.64e-06,
+      "pct_24h": -0.17026,
+      "pct_7d": 2.4,
       "support_30d": 2.5716563906374582e-06,
       "resistance_30d": 4.122123035488615e-06,
-      "as_of": "2026-09-07 23:20:23",
+      "as_of": "2026-09-08 01:05:19",
       "stale": false
     },
     "avalanche-2": {
@@ -2612,27 +2612,27 @@
       "id": "bitway",
       "symbol": "BTW",
       "name": "Bitway",
-      "price": 0.450444,
-      "pct_24h": 1.15942,
-      "pct_7d": 10.7,
+      "price": 0.449431,
+      "pct_24h": 0.21424,
+      "pct_7d": 10.5,
       "support_30d": 0.19617645794772356,
       "resistance_30d": 0.48788437226017506,
-      "as_of": "2026-09-08 00:30:28",
+      "as_of": "2026-09-08 01:05:19",
       "stale": false
     },
     "world-liberty-financial": {
-      "label": "\ud83d\udfe1 HOLD / NEUTRAL",
-      "status": "neutral",
-      "score": 0,
+      "label": "\ud83d\udfe2 LEAN ACCUMULATE",
+      "status": "bullish",
+      "score": 2,
       "rows": [
         [
           "Price vs. recent range",
-          "Sitting in the middle of its 30-day range",
-          0
+          "Near its 30-day low (~$0.0549) - historically a better entry",
+          2
         ],
         [
           "Crowd mood (Fear & Greed)",
-          "71/100 - crowd is greedy",
+          "69/100 - crowd is greedy",
           -1
         ],
         [
@@ -2647,7 +2647,7 @@
         ],
         [
           "Stretch from long-term average",
-          "-21.1% below its long-term average - confirmed downtrend",
+          "-20.4% below its long-term average - confirmed downtrend",
           -1
         ],
         [
@@ -2656,16 +2656,16 @@
           0
         ]
       ],
-      "plain": "No real edge either way right now - fine to just wait and watch.",
+      "plain": "Leans toward a decent spot to slowly add (DCA) - not a strong signal, just a lean.",
       "id": "world-liberty-financial",
       "symbol": "WLFI",
       "name": "World Liberty Financial",
-      "price": 0.056363,
-      "pct_24h": -0.70844,
-      "pct_7d": -3.1,
-      "support_30d": 0.05311679629324154,
+      "price": 0.056542,
+      "pct_24h": -0.31063,
+      "pct_7d": -1.5,
+      "support_30d": 0.05488465746646608,
       "resistance_30d": 0.06254770952093733,
-      "as_of": "2026-09-07 23:40:21",
+      "as_of": "2026-09-08 01:05:19",
       "stale": false
     },
     "pax-gold": {
@@ -3298,14 +3298,14 @@
     "key": "BTC",
     "name": "Bitcoin",
     "emoji": "\u20bf",
-    "price": 79286,
+    "price": 79297,
     "high_24h": 80357,
     "low_24h": 78707,
-    "pct_24h": -0.99861,
-    "pct_7d": 0.7,
-    "pct_30d": 21.9,
-    "sma50": 69975.10872095326,
-    "sma200": 69849.64378393293,
+    "pct_24h": -1.13282,
+    "pct_7d": 0.9,
+    "pct_30d": 22.1,
+    "sma50": 69975.34934901269,
+    "sma200": 69849.70394094779,
     "support_30d": 62843.70368466329,
     "resistance_30d": 81264.70153038795,
     "mark_price": 79370.02473188,
@@ -3320,14 +3320,14 @@
     "key": "ETH",
     "name": "Ethereum",
     "emoji": "\u039e",
-    "price": 2493.58,
+    "price": 2494.63,
     "high_24h": 2532.72,
     "low_24h": 2467.8,
-    "pct_24h": -0.63018,
-    "pct_7d": 0.9,
-    "pct_30d": 30.0,
-    "sma50": 2127.1371953206517,
-    "sma200": 2043.5249409025785,
+    "pct_24h": -0.80818,
+    "pct_7d": 1.1,
+    "pct_30d": 30.2,
+    "sma50": 2127.1468489010967,
+    "sma200": 2043.5273542976897,
     "support_30d": 1871.3976551883159,
     "resistance_30d": 2514.967577695514,
     "mark_price": 2488.83603101,
