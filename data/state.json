@@ -4,7 +4,7 @@
   "_alerts_state": {
     "btc-resistance-break": {
       "triggered": true,
-      "last_triggered_at": "2026-09-08 22:45:23"
+      "last_triggered_at": "2026-09-08 22:50:41"
     },
     "btc-support-break": {
       "triggered": false,
@@ -173,14 +173,14 @@
       "stale": false
     },
     "tron": {
-      "label": "\ud83d\udfe2 LEAN ACCUMULATE",
-      "status": "bullish",
-      "score": 3,
+      "label": "\ud83d\udfe1 HOLD / NEUTRAL",
+      "status": "neutral",
+      "score": 0,
       "rows": [
         [
           "Price vs. recent range",
-          "Near its 30-day low (~$0.3222) - historically a better entry",
-          2
+          "Near its 30-day high (~$0.3448) - less room to run",
+          -1
         ],
         [
           "Crowd mood (Fear & Greed)",
@@ -199,7 +199,7 @@
         ],
         [
           "Stretch from long-term average",
-          "+3.9% vs its long-term average - not stretched either way",
+          "+4.0% vs its long-term average - not stretched either way",
           0
         ],
         [
@@ -208,16 +208,16 @@
           0
         ]
       ],
-      "plain": "Leans toward a decent spot to slowly add (DCA) - not a strong signal, just a lean.",
+      "plain": "No real edge either way right now - fine to just wait and watch.",
       "id": "tron",
       "symbol": "TRX",
       "name": "TRON",
-      "price": 0.338135,
-      "pct_24h": 1.06671,
-      "pct_7d": 4.9,
+      "price": 0.338706,
+      "pct_24h": 1.34509,
+      "pct_7d": 4.6,
       "support_30d": 0.32221537516581966,
       "resistance_30d": 0.3447899585776834,
-      "as_of": "2026-09-08 20:20:27",
+      "as_of": "2026-09-08 22:50:41",
       "stale": false
     },
     "figure-heloc": {
@@ -2483,7 +2483,7 @@
       "rows": [
         [
           "Price vs. recent range",
-          "Near its 30-day high (~$67.11) - less room to run",
+          "Near its 30-day high (~$67.04) - less room to run",
           -1
         ],
         [
@@ -2503,7 +2503,7 @@
         ],
         [
           "Stretch from long-term average",
-          "-2.0% vs its long-term average - not stretched either way",
+          "-2.4% vs its long-term average - not stretched either way",
           0
         ],
         [
@@ -2516,12 +2516,12 @@
       "id": "quant-network",
       "symbol": "QNT",
       "name": "Quant",
-      "price": 67.15,
-      "pct_24h": 0.44844,
-      "pct_7d": 6.2,
+      "price": 66.86,
+      "pct_24h": 1.09823,
+      "pct_7d": 6.1,
       "support_30d": 55.905981995619285,
-      "resistance_30d": 67.10825485456769,
-      "as_of": "2026-09-08 21:25:19",
+      "resistance_30d": 67.0383571823565,
+      "as_of": "2026-09-08 22:50:41",
       "stale": false
     },
     "tether-gold": {
@@ -2660,12 +2660,12 @@
       "id": "world-liberty-financial",
       "symbol": "WLFI",
       "name": "World Liberty Financial",
-      "price": 0.056352,
-      "pct_24h": 0.21876,
+      "price": 0.056348,
+      "pct_24h": 0.22146,
       "pct_7d": -1.4,
       "support_30d": 0.05488465746646608,
       "resistance_30d": 0.06254770952093733,
-      "as_of": "2026-09-08 22:45:23",
+      "as_of": "2026-09-08 22:50:41",
       "stale": false
     },
     "pax-gold": {
@@ -3298,14 +3298,14 @@
     "key": "BTC",
     "name": "Bitcoin",
     "emoji": "\u20bf",
-    "price": 78501,
+    "price": 78519,
     "high_24h": 79432,
     "low_24h": 77666,
-    "pct_24h": -0.42858,
+    "pct_24h": -0.50114,
     "pct_7d": 1.4,
     "pct_30d": 20.5,
-    "sma50": 69959.1501526712,
-    "sma200": 69845.65414186241,
+    "sma50": 69959.87580573926,
+    "sma200": 69845.83555512944,
     "support_30d": 62843.70368466329,
     "resistance_30d": 81264.70153038795,
     "mark_price": 78433.3,
@@ -3320,14 +3320,14 @@
     "key": "ETH",
     "name": "Ethereum",
     "emoji": "\u039e",
-    "price": 2485.45,
+    "price": 2485.9,
     "high_24h": 2505.13,
     "low_24h": 2442.98,
-    "pct_24h": 0.22715,
+    "pct_24h": 0.20372,
     "pct_7d": 2.5,
     "pct_30d": 29.3,
-    "sma50": 2126.9367836995443,
-    "sma200": 2043.4748379973016,
+    "sma50": 2126.98004880957,
+    "sma200": 2043.4856542748082,
     "support_30d": 1871.3976551883159,
     "resistance_30d": 2514.967577695514,
     "mark_price": 2473.95,
