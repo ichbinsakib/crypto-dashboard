@@ -4,7 +4,7 @@
   "_alerts_state": {
     "btc-resistance-break": {
       "triggered": true,
-      "last_triggered_at": "2026-09-08 17:20:26"
+      "last_triggered_at": "2026-09-08 17:23:30"
     },
     "btc-support-break": {
       "triggered": false,
@@ -221,14 +221,14 @@
       "stale": false
     },
     "figure-heloc": {
-      "label": "\ud83d\udd34 CAUTION - REDUCE NEW BUYS",
-      "status": "bearish",
-      "score": -2,
+      "label": "\ud83d\udfe1 HOLD / NEUTRAL",
+      "status": "neutral",
+      "score": 1,
       "rows": [
         [
           "Price vs. recent range",
-          "Near its 30-day high (~$1.05) - less room to run",
-          -1
+          "Near its 30-day low (~$1.00) - historically a better entry",
+          2
         ],
         [
           "Crowd mood (Fear & Greed)",
@@ -256,16 +256,16 @@
           0
         ]
       ],
-      "plain": "Getting risky - I'd hold off on new buys until this cools down.",
+      "plain": "No real edge either way right now - fine to just wait and watch.",
       "id": "figure-heloc",
       "symbol": "FIGR_HELOC",
       "name": "Figure Heloc",
-      "price": 1.055,
+      "price": 1.05,
       "pct_24h": null,
-      "pct_7d": 5.5,
+      "pct_7d": 3.7,
       "support_30d": 1.0008548889936117,
-      "resistance_30d": 1.0455978355177025,
-      "as_of": "2026-09-08 13:45:23",
+      "resistance_30d": 1.049659482173779,
+      "as_of": "2026-09-08 17:23:30",
       "stale": false
     },
     "hyperliquid": {
@@ -631,7 +631,7 @@
         ],
         [
           "Stretch from long-term average",
-          "+37.1% above its long-term average - very stretched",
+          "+37.5% above its long-term average - very stretched",
           -2
         ],
         [
@@ -644,12 +644,12 @@
       "id": "monero",
       "symbol": "XMR",
       "name": "Monero",
-      "price": 500.97,
-      "pct_24h": -6.04437,
-      "pct_7d": -1.4,
+      "price": 502.48,
+      "pct_24h": -3.46718,
+      "pct_7d": -1.0,
       "support_30d": 377.1738335746389,
       "resistance_30d": 555.6684591165193,
-      "as_of": "2026-09-08 16:20:27",
+      "as_of": "2026-09-08 17:23:30",
       "stale": false
     },
     "cardano": {
@@ -2119,7 +2119,7 @@
         ],
         [
           "Stretch from long-term average",
-          "+15.8% above its long-term average - a bit stretched",
+          "+15.1% above its long-term average - a bit stretched",
           -1
         ],
         [
@@ -2132,12 +2132,12 @@
       "id": "ondo-finance",
       "symbol": "ONDO",
       "name": "Ondo",
-      "price": 0.382089,
-      "pct_24h": -1.55664,
+      "price": 0.379899,
+      "pct_24h": -2.65653,
       "pct_7d": 10.4,
       "support_30d": 0.32338181384146436,
       "resistance_30d": 0.3969475338902824,
-      "as_of": "2026-09-08 17:10:25",
+      "as_of": "2026-09-08 17:23:30",
       "stale": false
     },
     "canton-network": {
@@ -3298,14 +3298,14 @@
     "key": "BTC",
     "name": "Bitcoin",
     "emoji": "\u20bf",
-    "price": 78682,
+    "price": 78605,
     "high_24h": 79432,
     "low_24h": 77666,
-    "pct_24h": -0.58179,
+    "pct_24h": -0.65416,
     "pct_7d": 1.1,
     "pct_30d": 20.8,
-    "sma50": 69962.84115809602,
-    "sma200": 69846.57689321862,
+    "sma50": 69961.51930200956,
+    "sma200": 69846.24642919701,
     "support_30d": 62843.70368466329,
     "resistance_30d": 81264.70153038795,
     "mark_price": 78433.3,
@@ -3320,14 +3320,14 @@
     "key": "ETH",
     "name": "Ethereum",
     "emoji": "\u039e",
-    "price": 2495.7,
+    "price": 2492.23,
     "high_24h": 2505.13,
     "low_24h": 2442.98,
-    "pct_24h": 0.20482,
+    "pct_24h": 0.11763,
     "pct_7d": 2.0,
     "pct_30d": 29.7,
-    "sma50": 2127.1593614156823,
-    "sma200": 2043.5304824263364,
+    "sma50": 2127.098933657419,
+    "sma200": 2043.5153754867704,
     "support_30d": 1871.3976551883159,
     "resistance_30d": 2514.967577695514,
     "mark_price": 2473.95,
