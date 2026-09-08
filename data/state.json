@@ -3,7 +3,7 @@
   "_fng_classification": "Greed",
   "_alerts_state": {
     "btc-resistance-break": {
-      "triggered": true,
+      "triggered": false,
       "last_triggered_at": "2026-09-08 19:20:27"
     },
     "btc-support-break": {
@@ -365,14 +365,14 @@
       "stale": false
     },
     "zcash": {
-      "label": "\ud83d\udd34 DISTRIBUTION ZONE",
+      "label": "\ud83d\udd34 CAUTION - REDUCE NEW BUYS",
       "status": "bearish",
-      "score": -5,
+      "score": -4,
       "rows": [
         [
           "Price vs. recent range",
-          "Near its 30-day high (~$1,227.11) - less room to run",
-          -1
+          "Sitting in the middle of its 30-day range",
+          0
         ],
         [
           "Crowd mood (Fear & Greed)",
@@ -391,7 +391,7 @@
         ],
         [
           "Stretch from long-term average",
-          "+159.8% above its long-term average - very stretched",
+          "+152.0% above its long-term average - very stretched",
           -2
         ],
         [
@@ -400,16 +400,16 @@
           0
         ]
       ],
-      "plain": "Looks stretched and euphoric - historically the zone where smart money sells, not buys.",
+      "plain": "Getting risky - I'd hold off on new buys until this cools down.",
       "id": "zcash",
       "symbol": "ZEC",
       "name": "Zcash",
-      "price": 1191.65,
-      "pct_24h": 2.73468,
-      "pct_7d": 38.4,
+      "price": 1155.29,
+      "pct_24h": -0.08413,
+      "pct_7d": 40.0,
       "support_30d": 480.66499804092575,
       "resistance_30d": 1227.1109403568853,
-      "as_of": "2026-09-08 16:55:21",
+      "as_of": "2026-09-08 19:25:20",
       "stale": false
     },
     "rain": {
@@ -487,7 +487,7 @@
         ],
         [
           "Stretch from long-term average",
-          "+37.4% above its long-term average - very stretched",
+          "+37.2% above its long-term average - very stretched",
           -2
         ],
         [
@@ -500,12 +500,12 @@
       "id": "chainlink",
       "symbol": "LINK",
       "name": "Chainlink",
-      "price": 12.62,
-      "pct_24h": -2.81651,
-      "pct_7d": 10.3,
+      "price": 12.6,
+      "pct_24h": -1.44689,
+      "pct_7d": 11.5,
       "support_30d": 8.290285880741026,
       "resistance_30d": 13.237155745219605,
-      "as_of": "2026-09-08 15:25:22",
+      "as_of": "2026-09-08 19:25:20",
       "stale": false
     },
     "whitebit": {
@@ -2215,7 +2215,7 @@
         ],
         [
           "Stretch from long-term average",
-          "+20.7% above its long-term average - a bit stretched",
+          "+19.4% above its long-term average - a bit stretched",
           -1
         ],
         [
@@ -2228,12 +2228,12 @@
       "id": "internet-computer",
       "symbol": "ICP",
       "name": "Internet Computer",
-      "price": 2.95,
-      "pct_24h": -1.33696,
-      "pct_7d": 18.8,
+      "price": 2.92,
+      "pct_24h": -3.0515,
+      "pct_7d": 17.9,
       "support_30d": 2.1584475030049863,
       "resistance_30d": 2.9869340549074623,
-      "as_of": "2026-09-08 18:40:24",
+      "as_of": "2026-09-08 19:25:20",
       "stale": false
     },
     "bittensor": {
@@ -3293,19 +3293,21 @@
       "stale": false
     }
   },
-  "_strong_buy_state": {},
+  "_strong_buy_state": {
+    "1h:OKB": true
+  },
   "BTC": {
     "key": "BTC",
     "name": "Bitcoin",
     "emoji": "\u20bf",
-    "price": 78456,
+    "price": 78377,
     "high_24h": 79432,
     "low_24h": 77666,
-    "pct_24h": -0.91802,
+    "pct_24h": -1.02895,
     "pct_7d": 1.5,
     "pct_30d": 20.3,
-    "sma50": 69958.26484041319,
-    "sma200": 69845.4328137979,
+    "sma50": 69957.55542942684,
+    "sma200": 69845.25546105132,
     "support_30d": 62843.70368466329,
     "resistance_30d": 81264.70153038795,
     "mark_price": 78433.3,
@@ -3320,14 +3322,14 @@
     "key": "ETH",
     "name": "Ethereum",
     "emoji": "\u039e",
-    "price": 2486.13,
+    "price": 2483.56,
     "high_24h": 2505.13,
     "low_24h": 2442.98,
-    "pct_24h": -0.19363,
+    "pct_24h": -0.28143,
     "pct_7d": 2.7,
     "pct_30d": 29.2,
-    "sma50": 2126.9702498018723,
-    "sma200": 2043.4832045228839,
+    "sma50": 2126.956609831918,
+    "sma200": 2043.4797945303953,
     "support_30d": 1871.3976551883159,
     "resistance_30d": 2514.967577695514,
     "mark_price": 2473.95,
