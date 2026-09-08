@@ -3,8 +3,8 @@
   "_fng_classification": "Greed",
   "_alerts_state": {
     "btc-resistance-break": {
-      "triggered": false,
-      "last_triggered_at": "2026-09-08 07:45:23"
+      "triggered": true,
+      "last_triggered_at": "2026-09-08 08:30:31"
     },
     "btc-support-break": {
       "triggered": false,
@@ -871,7 +871,7 @@
         ],
         [
           "Stretch from long-term average",
-          "+8.4% vs its long-term average - not stretched either way",
+          "+8.7% vs its long-term average - not stretched either way",
           0
         ],
         [
@@ -884,12 +884,12 @@
       "id": "pepe",
       "symbol": "PEPE",
       "name": "Pepe",
-      "price": 3.59e-06,
-      "pct_24h": -0.85952,
-      "pct_7d": 2.0,
+      "price": 3.6e-06,
+      "pct_24h": 0.63122,
+      "pct_7d": 2.3,
       "support_30d": 2.5716563906374582e-06,
       "resistance_30d": 4.122123035488615e-06,
-      "as_of": "2026-09-08 06:15:22",
+      "as_of": "2026-09-08 08:30:31",
       "stale": false
     },
     "avalanche-2": {
@@ -933,11 +933,11 @@
       "symbol": "AVAX",
       "name": "Avalanche",
       "price": 8.05,
-      "pct_24h": 3.52924,
-      "pct_7d": 9.9,
+      "pct_24h": 2.53815,
+      "pct_7d": 10.4,
       "support_30d": 6.313391080113916,
       "resistance_30d": 8.074275746115342,
-      "as_of": "2026-09-08 07:55:18",
+      "as_of": "2026-09-08 08:30:31",
       "stale": false
     },
     "aster-2": {
@@ -2647,7 +2647,7 @@
         ],
         [
           "Stretch from long-term average",
-          "-21.1% below its long-term average - confirmed downtrend",
+          "-21.3% below its long-term average - confirmed downtrend",
           -1
         ],
         [
@@ -2660,12 +2660,12 @@
       "id": "world-liberty-financial",
       "symbol": "WLFI",
       "name": "World Liberty Financial",
-      "price": 0.056042,
-      "pct_24h": -0.88635,
-      "pct_7d": -2.5,
+      "price": 0.055941,
+      "pct_24h": -1.19121,
+      "pct_7d": -2.0,
       "support_30d": 0.05488465746646608,
       "resistance_30d": 0.06254770952093733,
-      "as_of": "2026-09-08 03:30:28",
+      "as_of": "2026-09-08 08:30:31",
       "stale": false
     },
     "pax-gold": {
@@ -3294,27 +3294,27 @@
     }
   },
   "_strong_buy_state": {
-    "1h:DOGE": true
+    "1h:WLFI": true
   },
   "BTC": {
     "key": "BTC",
     "name": "Bitcoin",
     "emoji": "\u20bf",
-    "price": 78305,
+    "price": 78456,
     "high_24h": 79625,
     "low_24h": 78193,
-    "pct_24h": -1.4404,
+    "pct_24h": -1.26456,
     "pct_7d": -0.4,
     "pct_30d": 21.0,
-    "sma50": 69955.63187796081,
-    "sma200": 69844.77457318483,
+    "sma50": 69958.52409690288,
+    "sma200": 69845.49762792033,
     "support_30d": 62843.70368466329,
     "resistance_30d": 81264.70153038795,
-    "mark_price": 79370.02473188,
-    "index_price": 79405.46434783,
-    "funding_rate": 2.883e-05,
-    "oi_change_pct": 0.4439238797820511,
-    "oi_now": 107073.708,
+    "mark_price": 78433.3,
+    "index_price": 78460.22173913,
+    "funding_rate": 8.471e-05,
+    "oi_change_pct": 1.6728375188814353,
+    "oi_now": 108487.675,
     "fng_value": 69,
     "fng_class": "Greed"
   },
@@ -3322,21 +3322,21 @@
     "key": "ETH",
     "name": "Ethereum",
     "emoji": "\u039e",
-    "price": 2471.4,
+    "price": 2475.61,
     "high_24h": 2510.03,
     "low_24h": 2463.89,
-    "pct_24h": -0.73017,
+    "pct_24h": -0.58281,
     "pct_7d": 0.3,
     "pct_30d": 29.3,
-    "sma50": 2126.686957848788,
-    "sma200": 2043.412381534613,
+    "sma50": 2126.7649355787307,
+    "sma200": 2043.4318759670984,
     "support_30d": 1871.3976551883159,
     "resistance_30d": 2514.967577695514,
-    "mark_price": 2488.83603101,
-    "index_price": 2489.77162791,
-    "funding_rate": -2.55e-06,
-    "oi_change_pct": -0.2988221649166911,
-    "oi_now": 2297781.204,
+    "mark_price": 2473.95,
+    "index_price": 2475.53744186,
+    "funding_rate": -6.63e-06,
+    "oi_change_pct": 1.005224238772622,
+    "oi_now": 2308131.664,
     "fng_value": 69,
     "fng_class": "Greed"
   }
