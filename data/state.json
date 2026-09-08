@@ -4,7 +4,7 @@
   "_alerts_state": {
     "btc-resistance-break": {
       "triggered": true,
-      "last_triggered_at": "2026-09-08 02:20:25"
+      "last_triggered_at": "2026-09-08 02:25:18"
     },
     "btc-support-break": {
       "triggered": false,
@@ -2344,7 +2344,7 @@
         ],
         [
           "Crowd mood (Fear & Greed)",
-          "71/100 - crowd is greedy",
+          "69/100 - crowd is greedy",
           -1
         ],
         [
@@ -2359,7 +2359,7 @@
         ],
         [
           "Stretch from long-term average",
-          "+2.2% vs its long-term average - not stretched either way",
+          "+3.8% vs its long-term average - not stretched either way",
           0
         ],
         [
@@ -2372,12 +2372,12 @@
       "id": "sky",
       "symbol": "SKY",
       "name": "Sky",
-      "price": 0.068321,
-      "pct_24h": -2.72329,
-      "pct_7d": 0.5,
+      "price": 0.069368,
+      "pct_24h": -0.26624,
+      "pct_7d": 2.5,
       "support_30d": 0.05081051579814886,
       "resistance_30d": 0.07314868186988309,
-      "as_of": "2026-09-07 17:40:23",
+      "as_of": "2026-09-08 02:25:18",
       "stale": false
     },
     "shiba-inu": {
@@ -2429,18 +2429,18 @@
       "stale": false
     },
     "near": {
-      "label": "\ud83d\udfe1 HOLD / NEUTRAL",
-      "status": "neutral",
-      "score": -1,
+      "label": "\ud83d\udd34 CAUTION - REDUCE NEW BUYS",
+      "status": "bearish",
+      "score": -2,
       "rows": [
         [
           "Price vs. recent range",
-          "Sitting in the middle of its 30-day range",
-          0
+          "Near its 30-day high (~$2.44) - less room to run",
+          -1
         ],
         [
           "Crowd mood (Fear & Greed)",
-          "71/100 - crowd is greedy",
+          "69/100 - crowd is greedy",
           -1
         ],
         [
@@ -2455,7 +2455,7 @@
         ],
         [
           "Stretch from long-term average",
-          "+36.8% above its long-term average - very stretched",
+          "+39.3% above its long-term average - very stretched",
           -2
         ],
         [
@@ -2464,16 +2464,16 @@
           0
         ]
       ],
-      "plain": "No real edge either way right now - fine to just wait and watch.",
+      "plain": "Getting risky - I'd hold off on new buys until this cools down.",
       "id": "near",
       "symbol": "NEAR",
       "name": "NEAR Protocol",
-      "price": 2.3,
-      "pct_24h": -5.54128,
-      "pct_7d": 20.5,
+      "price": 2.35,
+      "pct_24h": -0.78967,
+      "pct_7d": 19.7,
       "support_30d": 1.5879597131538,
       "resistance_30d": 2.436852334393612,
-      "as_of": "2026-09-07 23:35:16",
+      "as_of": "2026-09-08 02:25:18",
       "stale": false
     },
     "quant-network": {
@@ -3079,7 +3079,7 @@
         ],
         [
           "Stretch from long-term average",
-          "+71.2% above its long-term average - very stretched",
+          "+71.9% above its long-term average - very stretched",
           -2
         ],
         [
@@ -3092,12 +3092,12 @@
       "id": "arbitrum",
       "symbol": "ARB",
       "name": "Arbitrum",
-      "price": 0.169885,
-      "pct_24h": -10.29328,
-      "pct_7d": 58.6,
+      "price": 0.17064,
+      "pct_24h": -8.30246,
+      "pct_7d": 44.2,
       "support_30d": 0.07272258489044682,
       "resistance_30d": 0.18933387703114857,
-      "as_of": "2026-09-08 00:22:47",
+      "as_of": "2026-09-08 02:25:18",
       "stale": false
     },
     "dash": {
@@ -3298,14 +3298,14 @@
     "key": "BTC",
     "name": "Bitcoin",
     "emoji": "\u20bf",
-    "price": 79312,
+    "price": 79403,
     "high_24h": 79950,
     "low_24h": 78707,
-    "pct_24h": -0.72926,
+    "pct_24h": -0.6393,
     "pct_7d": 1.0,
     "pct_30d": 22.3,
-    "sma50": 69975.13154007954,
-    "sma200": 69849.6494887145,
+    "sma50": 69976.60811318352,
+    "sma200": 69850.01863199049,
     "support_30d": 62843.70368466329,
     "resistance_30d": 81264.70153038795,
     "mark_price": 79370.02473188,
@@ -3320,14 +3320,14 @@
     "key": "ETH",
     "name": "Ethereum",
     "emoji": "\u039e",
-    "price": 2498.43,
+    "price": 2503.58,
     "high_24h": 2514.56,
     "low_24h": 2467.8,
-    "pct_24h": -0.1715,
+    "pct_24h": 0.00807,
     "pct_7d": 1.3,
     "pct_30d": 30.6,
-    "sma50": 2127.215536351481,
-    "sma200": 2043.544526160286,
+    "sma50": 2127.3259068724674,
+    "sma200": 2043.5721187905326,
     "support_30d": 1871.3976551883159,
     "resistance_30d": 2514.967577695514,
     "mark_price": 2488.83603101,
