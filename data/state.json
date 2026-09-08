@@ -4,7 +4,7 @@
   "_alerts_state": {
     "btc-resistance-break": {
       "triggered": true,
-      "last_triggered_at": "2026-09-08 21:30:31"
+      "last_triggered_at": "2026-09-08 21:35:22"
     },
     "btc-support-break": {
       "triggered": false,
@@ -265,7 +265,7 @@
       "pct_7d": 2.5,
       "support_30d": 1.0008548889936117,
       "resistance_30d": 1.0455978355177025,
-      "as_of": "2026-09-08 21:10:22",
+      "as_of": "2026-09-08 21:35:22",
       "stale": false
     },
     "hyperliquid": {
@@ -2132,12 +2132,12 @@
       "id": "ondo-finance",
       "symbol": "ONDO",
       "name": "Ondo",
-      "price": 0.375054,
-      "pct_24h": -2.4249,
-      "pct_7d": 9.3,
+      "price": 0.375311,
+      "pct_24h": -2.35819,
+      "pct_7d": 9.8,
       "support_30d": 0.32338181384146436,
       "resistance_30d": 0.3969475338902824,
-      "as_of": "2026-09-08 19:00:33",
+      "as_of": "2026-09-08 21:35:22",
       "stale": false
     },
     "canton-network": {
@@ -3079,7 +3079,7 @@
         ],
         [
           "Stretch from long-term average",
-          "+70.2% above its long-term average - very stretched",
+          "+69.2% above its long-term average - very stretched",
           -2
         ],
         [
@@ -3092,12 +3092,12 @@
       "id": "arbitrum",
       "symbol": "ARB",
       "name": "Arbitrum",
-      "price": 0.168894,
-      "pct_24h": 1.76041,
-      "pct_7d": 54.4,
+      "price": 0.167956,
+      "pct_24h": -1.5021,
+      "pct_7d": 56.0,
       "support_30d": 0.07272258489044682,
       "resistance_30d": 0.18933387703114857,
-      "as_of": "2026-09-08 15:15:25",
+      "as_of": "2026-09-08 21:35:22",
       "stale": false
     },
     "dash": {
@@ -3294,20 +3294,21 @@
     }
   },
   "_strong_buy_state": {
-    "15m:LINK": true
+    "15m:ONDO": true,
+    "1h:ARB": true
   },
   "BTC": {
     "key": "BTC",
     "name": "Bitcoin",
     "emoji": "\u20bf",
-    "price": 78544,
+    "price": 78520,
     "high_24h": 79432,
     "low_24h": 77666,
-    "pct_24h": -0.85136,
+    "pct_24h": -0.86495,
     "pct_7d": 1.6,
     "pct_30d": 20.5,
-    "sma50": 69960.61533545163,
-    "sma200": 69846.02043755753,
+    "sma50": 69959.53452896349,
+    "sma200": 69845.75023593548,
     "support_30d": 62843.70368466329,
     "resistance_30d": 81264.70153038795,
     "mark_price": 78433.3,
@@ -3322,14 +3323,14 @@
     "key": "ETH",
     "name": "Ethereum",
     "emoji": "\u039e",
-    "price": 2483.45,
+    "price": 2482.19,
     "high_24h": 2505.13,
     "low_24h": 2442.98,
-    "pct_24h": -0.36036,
+    "pct_24h": -0.41365,
     "pct_7d": 2.8,
     "pct_30d": 29.4,
-    "sma50": 2126.9262458381145,
-    "sma200": 2043.4722035319446,
+    "sma50": 2126.88824888954,
+    "sma200": 2043.462704294801,
     "support_30d": 1871.3976551883159,
     "resistance_30d": 2514.967577695514,
     "mark_price": 2473.95,
