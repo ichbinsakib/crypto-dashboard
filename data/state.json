@@ -4,7 +4,7 @@
   "_alerts_state": {
     "btc-resistance-break": {
       "triggered": true,
-      "last_triggered_at": "2026-09-08 15:15:25"
+      "last_triggered_at": "2026-09-08 15:20:30"
     },
     "btc-support-break": {
       "triggered": false,
@@ -1879,7 +1879,7 @@
         ],
         [
           "Stretch from long-term average",
-          "-23.5% below its long-term average - confirmed downtrend",
+          "-22.4% below its long-term average - confirmed downtrend",
           -1
         ],
         [
@@ -1892,12 +1892,12 @@
       "id": "bitcoin-cash",
       "symbol": "BCH",
       "name": "Bitcoin Cash",
-      "price": 254.62,
-      "pct_24h": -1.86627,
-      "pct_7d": 2.9,
+      "price": 258.05,
+      "pct_24h": -1.19627,
+      "pct_7d": 3.8,
       "support_30d": 203.50169440615565,
       "resistance_30d": 288.10955405353275,
-      "as_of": "2026-09-08 14:10:24",
+      "as_of": "2026-09-08 15:20:30",
       "stale": false
     },
     "mantle": {
@@ -1949,13 +1949,13 @@
       "stale": false
     },
     "polkadot": {
-      "label": "\ud83d\udfe1 HOLD / NEUTRAL",
-      "status": "neutral",
-      "score": 1,
+      "label": "\ud83d\udd34 CAUTION - REDUCE NEW BUYS",
+      "status": "bearish",
+      "score": -2,
       "rows": [
         [
           "Price vs. recent range",
-          "Near its 30-day high (~$1.09) - less room to run",
+          "Near its 30-day high (~$1.16) - less room to run",
           -1
         ],
         [
@@ -1970,12 +1970,12 @@
         ],
         [
           "Recent trend",
-          "Trending up steadily - healthy",
-          1
+          "Shooting straight up - classic blow-off top risk, don't chase",
+          -2
         ],
         [
           "Stretch from long-term average",
-          "-1.4% vs its long-term average - not stretched either way",
+          "+4.9% vs its long-term average - not stretched either way",
           0
         ],
         [
@@ -1984,16 +1984,16 @@
           0
         ]
       ],
-      "plain": "No real edge either way right now - fine to just wait and watch.",
+      "plain": "Getting risky - I'd hold off on new buys until this cools down.",
       "id": "polkadot",
       "symbol": "DOT",
       "name": "Polkadot",
-      "price": 1.09,
-      "pct_24h": 3.13049,
-      "pct_7d": 25.0,
+      "price": 1.16,
+      "pct_24h": 7.65534,
+      "pct_7d": 29.9,
       "support_30d": 0.7510040523927409,
-      "resistance_30d": 1.0904183649707706,
-      "as_of": "2026-09-08 14:30:32",
+      "resistance_30d": 1.1595929136472807,
+      "as_of": "2026-09-08 15:20:30",
       "stale": false
     },
     "uniswap": {
@@ -2325,11 +2325,11 @@
       "symbol": "GRAM",
       "name": "Gram (prev. Toncoin)",
       "price": 1.4,
-      "pct_24h": -1.06411,
+      "pct_24h": -0.88339,
       "pct_7d": 3.3,
       "support_30d": 1.3170990455791696,
       "resistance_30d": 1.4926762805297678,
-      "as_of": "2026-09-08 15:01:11",
+      "as_of": "2026-09-08 15:20:30",
       "stale": false
     },
     "sky": {
@@ -3298,14 +3298,14 @@
     "key": "BTC",
     "name": "Bitcoin",
     "emoji": "\u20bf",
-    "price": 78578,
+    "price": 78635,
     "high_24h": 79432,
     "low_24h": 77666,
-    "pct_24h": -0.56057,
+    "pct_24h": -0.55923,
     "pct_7d": 0.6,
     "pct_30d": 20.5,
-    "sma50": 69961.52351125015,
-    "sma200": 69846.24748150716,
+    "sma50": 69962.67263095535,
+    "sma200": 69846.53476143345,
     "support_30d": 62843.70368466329,
     "resistance_30d": 81264.70153038795,
     "mark_price": 78433.3,
@@ -3320,14 +3320,14 @@
     "key": "ETH",
     "name": "Ethereum",
     "emoji": "\u039e",
-    "price": 2486.78,
+    "price": 2488.18,
     "high_24h": 2505.13,
     "low_24h": 2442.98,
-    "pct_24h": 0.13654,
+    "pct_24h": 0.09206,
     "pct_7d": 1.7,
     "pct_30d": 29.3,
-    "sma50": 2127.0006174573587,
-    "sma200": 2043.4907964367553,
+    "sma50": 2127.0370301009966,
+    "sma200": 2043.4998995976648,
     "support_30d": 1871.3976551883159,
     "resistance_30d": 2514.967577695514,
     "mark_price": 2473.95,
