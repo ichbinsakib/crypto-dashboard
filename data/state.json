@@ -4,7 +4,7 @@
   "_alerts_state": {
     "btc-resistance-break": {
       "triggered": true,
-      "last_triggered_at": "2026-09-08 04:55:53"
+      "last_triggered_at": "2026-09-08 05:00:34"
     },
     "btc-support-break": {
       "triggered": false,
@@ -295,7 +295,7 @@
         ],
         [
           "Stretch from long-term average",
-          "+58.4% above its long-term average - very stretched",
+          "+57.2% above its long-term average - very stretched",
           -2
         ],
         [
@@ -308,12 +308,12 @@
       "id": "hyperliquid",
       "symbol": "HYPE",
       "name": "Hyperliquid",
-      "price": 84.89,
-      "pct_24h": -3.25692,
-      "pct_7d": 1.0,
+      "price": 84.26,
+      "pct_24h": -2.30714,
+      "pct_7d": -0.1,
       "support_30d": 54.442530206647206,
       "resistance_30d": 87.951916819731,
-      "as_of": "2026-09-08 00:22:47",
+      "as_of": "2026-09-08 05:00:34",
       "stale": false
     },
     "dogecoin": {
@@ -653,14 +653,14 @@
       "stale": false
     },
     "cardano": {
-      "label": "\ud83d\udfe1 HOLD / NEUTRAL",
-      "status": "neutral",
-      "score": 1,
+      "label": "\ud83d\udfe2 LEAN ACCUMULATE",
+      "status": "bullish",
+      "score": 2,
       "rows": [
         [
           "Price vs. recent range",
-          "Near its 30-day high (~$0.2291) - less room to run",
-          -1
+          "Sitting in the middle of its 30-day range",
+          0
         ],
         [
           "Crowd mood (Fear & Greed)",
@@ -679,7 +679,7 @@
         ],
         [
           "Stretch from long-term average",
-          "-1.4% vs its long-term average - not stretched either way",
+          "-1.6% vs its long-term average - not stretched either way",
           0
         ],
         [
@@ -688,16 +688,16 @@
           0
         ]
       ],
-      "plain": "No real edge either way right now - fine to just wait and watch.",
+      "plain": "Leans toward a decent spot to slowly add (DCA) - not a strong signal, just a lean.",
       "id": "cardano",
       "symbol": "ADA",
       "name": "Cardano",
-      "price": 0.217944,
-      "pct_24h": -0.40295,
-      "pct_7d": 8.9,
+      "price": 0.21742,
+      "pct_24h": -0.70012,
+      "pct_7d": 8.2,
       "support_30d": 0.1741249817054162,
       "resistance_30d": 0.2291047455940254,
-      "as_of": "2026-09-08 04:52:08",
+      "as_of": "2026-09-08 05:00:34",
       "stale": false
     },
     "stellar": {
@@ -1783,7 +1783,7 @@
         ],
         [
           "Stretch from long-term average",
-          "+173.9% above its long-term average - very stretched",
+          "+167.6% above its long-term average - very stretched",
           -2
         ],
         [
@@ -1796,12 +1796,12 @@
       "id": "lighter",
       "symbol": "LIT",
       "name": "Lighter",
-      "price": 4.74,
-      "pct_24h": 5.63141,
-      "pct_7d": 32.8,
+      "price": 4.63,
+      "pct_24h": 6.79937,
+      "pct_7d": 25.6,
       "support_30d": 2.2358662099746955,
       "resistance_30d": 4.815937283873233,
-      "as_of": "2026-09-08 01:45:21",
+      "as_of": "2026-09-08 05:00:34",
       "stale": false
     },
     "ethena": {
@@ -3293,21 +3293,19 @@
       "stale": false
     }
   },
-  "_strong_buy_state": {
-    "15m:WLD": true
-  },
+  "_strong_buy_state": {},
   "BTC": {
     "key": "BTC",
     "name": "Bitcoin",
     "emoji": "\u20bf",
-    "price": 78750,
+    "price": 78684,
     "high_24h": 79892,
     "low_24h": 78707,
-    "pct_24h": -1.10225,
+    "pct_24h": -1.29157,
     "pct_7d": 0.6,
     "pct_30d": 21.8,
-    "sma50": 69963.95470759142,
-    "sma200": 69846.85528059247,
+    "sma50": 69963.35317517557,
+    "sma200": 69846.70489748851,
     "support_30d": 62843.70368466329,
     "resistance_30d": 81264.70153038795,
     "mark_price": 79370.02473188,
@@ -3322,14 +3320,14 @@
     "key": "ETH",
     "name": "Ethereum",
     "emoji": "\u039e",
-    "price": 2480.91,
+    "price": 2479.01,
     "high_24h": 2512.72,
     "low_24h": 2467.8,
-    "pct_24h": -0.53106,
+    "pct_24h": -0.76101,
     "pct_7d": 0.8,
     "pct_30d": 29.9,
-    "sma50": 2126.8675182858824,
-    "sma200": 2043.4575216438864,
+    "sma50": 2126.836030630513,
+    "sma200": 2043.4496497300438,
     "support_30d": 1871.3976551883159,
     "resistance_30d": 2514.967577695514,
     "mark_price": 2488.83603101,
