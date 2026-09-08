@@ -4,7 +4,7 @@
   "_alerts_state": {
     "btc-resistance-break": {
       "triggered": true,
-      "last_triggered_at": "2026-09-08 15:50:24"
+      "last_triggered_at": "2026-09-08 15:55:20"
     },
     "btc-support-break": {
       "triggered": false,
@@ -365,14 +365,14 @@
       "stale": false
     },
     "zcash": {
-      "label": "\ud83d\udd34 CAUTION - REDUCE NEW BUYS",
+      "label": "\ud83d\udd34 DISTRIBUTION ZONE",
       "status": "bearish",
-      "score": -4,
+      "score": -5,
       "rows": [
         [
           "Price vs. recent range",
-          "Sitting in the middle of its 30-day range",
-          0
+          "Near its 30-day high (~$1,227.11) - less room to run",
+          -1
         ],
         [
           "Crowd mood (Fear & Greed)",
@@ -391,7 +391,7 @@
         ],
         [
           "Stretch from long-term average",
-          "+153.6% above its long-term average - very stretched",
+          "+158.4% above its long-term average - very stretched",
           -2
         ],
         [
@@ -400,16 +400,16 @@
           0
         ]
       ],
-      "plain": "Getting risky - I'd hold off on new buys until this cools down.",
+      "plain": "Looks stretched and euphoric - historically the zone where smart money sells, not buys.",
       "id": "zcash",
       "symbol": "ZEC",
       "name": "Zcash",
-      "price": 1162.62,
-      "pct_24h": -3.01318,
-      "pct_7d": 37.1,
+      "price": 1185.19,
+      "pct_24h": 2.83276,
+      "pct_7d": 37.6,
       "support_30d": 480.66499804092575,
       "resistance_30d": 1227.1109403568853,
-      "as_of": "2026-09-08 12:55:19",
+      "as_of": "2026-09-08 15:55:20",
       "stale": false
     },
     "rain": {
@@ -1567,11 +1567,11 @@
     "venice-token": {
       "label": "\ud83d\udd34 DISTRIBUTION ZONE",
       "status": "bearish",
-      "score": -5,
+      "score": -8,
       "rows": [
         [
           "Price vs. recent range",
-          "Near its 30-day high (~$19.01) - less room to run",
+          "Near its 30-day high (~$24.64) - less room to run",
           -1
         ],
         [
@@ -1586,12 +1586,12 @@
         ],
         [
           "Recent trend",
-          "Trending up steadily - healthy",
-          1
+          "Shooting straight up - classic blow-off top risk, don't chase",
+          -2
         ],
         [
           "Stretch from long-term average",
-          "+63.4% above its long-term average - very stretched",
+          "+110.0% above its long-term average - very stretched",
           -2
         ],
         [
@@ -1604,12 +1604,12 @@
       "id": "venice-token",
       "symbol": "VVV",
       "name": "Venice Token",
-      "price": 18.99,
-      "pct_24h": 10.6442,
-      "pct_7d": 10.1,
+      "price": 24.46,
+      "pct_24h": 40.98223,
+      "pct_7d": 40.5,
       "support_30d": 11.491241326615295,
-      "resistance_30d": 19.01031125780996,
-      "as_of": "2026-09-08 12:25:17",
+      "resistance_30d": 24.637192834492637,
+      "as_of": "2026-09-08 15:55:20",
       "stale": false
     },
     "litecoin": {
@@ -2407,7 +2407,7 @@
         ],
         [
           "Stretch from long-term average",
-          "+0.3% vs its long-term average - not stretched either way",
+          "+2.4% vs its long-term average - not stretched either way",
           0
         ],
         [
@@ -2420,12 +2420,12 @@
       "id": "shiba-inu",
       "symbol": "SHIB",
       "name": "Shiba Inu",
-      "price": 5.4e-06,
-      "pct_24h": -2.13978,
-      "pct_7d": 4.8,
+      "price": 5.51e-06,
+      "pct_24h": 1.70947,
+      "pct_7d": 5.5,
       "support_30d": 4.390093758351827e-06,
       "resistance_30d": 5.903506876405612e-06,
-      "as_of": "2026-09-08 14:05:21",
+      "as_of": "2026-09-08 15:55:20",
       "stale": false
     },
     "near": {
@@ -3293,19 +3293,21 @@
       "stale": false
     }
   },
-  "_strong_buy_state": {},
+  "_strong_buy_state": {
+    "1h:OKB": true
+  },
   "BTC": {
     "key": "BTC",
     "name": "Bitcoin",
     "emoji": "\u20bf",
-    "price": 78699,
+    "price": 78820,
     "high_24h": 79432,
     "low_24h": 77666,
-    "pct_24h": -0.14824,
+    "pct_24h": -0.03827,
     "pct_7d": 0.6,
     "pct_30d": 20.5,
-    "sma50": 69964.32869687698,
-    "sma200": 69846.94877791386,
+    "sma50": 69965.01626122529,
+    "sma200": 69847.12066900094,
     "support_30d": 62843.70368466329,
     "resistance_30d": 81264.70153038795,
     "mark_price": 78433.3,
@@ -3320,14 +3322,14 @@
     "key": "ETH",
     "name": "Ethereum",
     "emoji": "\u039e",
-    "price": 2494.26,
+    "price": 2497.96,
     "high_24h": 2505.13,
     "low_24h": 2442.98,
-    "pct_24h": 0.88044,
+    "pct_24h": 0.9944,
     "pct_7d": 1.7,
     "pct_30d": 29.3,
-    "sma50": 2127.188492789915,
-    "sma200": 2043.5377652698944,
+    "sma50": 2127.1704632780575,
+    "sma200": 2043.5332578919301,
     "support_30d": 1871.3976551883159,
     "resistance_30d": 2514.967577695514,
     "mark_price": 2473.95,
