@@ -4,7 +4,7 @@
   "_alerts_state": {
     "btc-resistance-break": {
       "triggered": true,
-      "last_triggered_at": "2026-09-08 10:00:42"
+      "last_triggered_at": "2026-09-08 10:05:20"
     },
     "btc-support-break": {
       "triggered": false,
@@ -679,7 +679,7 @@
         ],
         [
           "Stretch from long-term average",
-          "-0.4% vs its long-term average - not stretched either way",
+          "-0.1% vs its long-term average - not stretched either way",
           0
         ],
         [
@@ -692,12 +692,12 @@
       "id": "cardano",
       "symbol": "ADA",
       "name": "Cardano",
-      "price": 0.220154,
-      "pct_24h": 0.80538,
-      "pct_7d": 8.4,
+      "price": 0.220687,
+      "pct_24h": 1.17517,
+      "pct_7d": 12.0,
       "support_30d": 0.1741249817054162,
       "resistance_30d": 0.2291047455940254,
-      "as_of": "2026-09-08 09:45:20",
+      "as_of": "2026-09-08 10:05:20",
       "stale": false
     },
     "stellar": {
@@ -2381,9 +2381,9 @@
       "stale": false
     },
     "shiba-inu": {
-      "label": "\ud83d\udfe1 HOLD / NEUTRAL",
-      "status": "neutral",
-      "score": 1,
+      "label": "\ud83d\udfe2 LEAN ACCUMULATE",
+      "status": "bullish",
+      "score": 2,
       "rows": [
         [
           "Price vs. recent range",
@@ -2402,12 +2402,12 @@
         ],
         [
           "Recent trend",
-          "Chopping sideways - no clear trend",
-          0
+          "Trending up steadily - healthy",
+          1
         ],
         [
           "Stretch from long-term average",
-          "+0.3% vs its long-term average - not stretched either way",
+          "+2.0% vs its long-term average - not stretched either way",
           0
         ],
         [
@@ -2416,16 +2416,16 @@
           0
         ]
       ],
-      "plain": "No real edge either way right now - fine to just wait and watch.",
+      "plain": "Leans toward a decent spot to slowly add (DCA) - not a strong signal, just a lean.",
       "id": "shiba-inu",
       "symbol": "SHIB",
       "name": "Shiba Inu",
-      "price": 5.4e-06,
-      "pct_24h": -0.93797,
-      "pct_7d": 3.6,
+      "price": 5.49e-06,
+      "pct_24h": 0.4949,
+      "pct_7d": 8.0,
       "support_30d": 4.390093758351827e-06,
       "resistance_30d": 5.903506876405612e-06,
-      "as_of": "2026-09-08 07:35:18",
+      "as_of": "2026-09-08 10:05:20",
       "stale": false
     },
     "near": {
@@ -2647,7 +2647,7 @@
         ],
         [
           "Stretch from long-term average",
-          "-20.9% below its long-term average - confirmed downtrend",
+          "-20.8% below its long-term average - confirmed downtrend",
           -1
         ],
         [
@@ -2660,12 +2660,12 @@
       "id": "world-liberty-financial",
       "symbol": "WLFI",
       "name": "World Liberty Financial",
-      "price": 0.056201,
-      "pct_24h": -0.317,
+      "price": 0.05627,
+      "pct_24h": -0.18925,
       "pct_7d": -1.1,
       "support_30d": 0.05488465746646608,
       "resistance_30d": 0.06254770952093733,
-      "as_of": "2026-09-08 10:00:42",
+      "as_of": "2026-09-08 10:05:20",
       "stale": false
     },
     "pax-gold": {
@@ -3298,14 +3298,14 @@
     "key": "BTC",
     "name": "Bitcoin",
     "emoji": "\u20bf",
-    "price": 78729,
+    "price": 78703,
     "high_24h": 79625,
     "low_24h": 78193,
-    "pct_24h": -0.73441,
-    "pct_7d": -0.3,
-    "pct_30d": 21.0,
-    "sma50": 69963.80351565446,
-    "sma200": 69846.81748260822,
+    "pct_24h": -0.82624,
+    "pct_7d": 1.1,
+    "pct_30d": 21.5,
+    "sma50": 69963.69594226513,
+    "sma200": 69846.7905892609,
     "support_30d": 62843.70368466329,
     "resistance_30d": 81264.70153038795,
     "mark_price": 78433.3,
@@ -3320,14 +3320,14 @@
     "key": "ETH",
     "name": "Ethereum",
     "emoji": "\u039e",
-    "price": 2491.2,
+    "price": 2489.66,
     "high_24h": 2510.03,
     "low_24h": 2463.89,
-    "pct_24h": 0.24089,
-    "pct_7d": 0.2,
-    "pct_30d": 29.1,
-    "sma50": 2127.0667624802877,
-    "sma200": 2043.5073326924876,
+    "pct_24h": 0.11054,
+    "pct_7d": 1.8,
+    "pct_30d": 30.1,
+    "sma50": 2127.0442371814675,
+    "sma200": 2043.5017013677827,
     "support_30d": 1871.3976551883159,
     "resistance_30d": 2514.967577695514,
     "mark_price": 2473.95,
