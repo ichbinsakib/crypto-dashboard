@@ -3,7 +3,7 @@
   "_fng_classification": "Greed",
   "_alerts_state": {
     "btc-resistance-break": {
-      "triggered": true,
+      "triggered": false,
       "last_triggered_at": "2026-09-08 06:20:23"
     },
     "btc-support-break": {
@@ -823,7 +823,7 @@
         ],
         [
           "Stretch from long-term average",
-          "-2.1% vs its long-term average - not stretched either way",
+          "-2.5% vs its long-term average - not stretched either way",
           0
         ],
         [
@@ -836,12 +836,12 @@
       "id": "hedera-hashgraph",
       "symbol": "HBAR",
       "name": "Hedera",
-      "price": 0.081153,
-      "pct_24h": 0.22531,
+      "price": 0.080833,
+      "pct_24h": -0.24969,
       "pct_7d": 8.7,
       "support_30d": 0.06461260477975343,
       "resistance_30d": 0.08182180696524229,
-      "as_of": "2026-09-08 06:10:22",
+      "as_of": "2026-09-08 06:25:18",
       "stale": false
     },
     "pepe": {
@@ -2839,7 +2839,7 @@
         ],
         [
           "Stretch from long-term average",
-          "+34.6% above its long-term average - very stretched",
+          "+34.4% above its long-term average - very stretched",
           -2
         ],
         [
@@ -2852,12 +2852,12 @@
       "id": "aave",
       "symbol": "AAVE",
       "name": "Aave",
-      "price": 131.35,
-      "pct_24h": -1.4665,
-      "pct_7d": 5.1,
+      "price": 131.07,
+      "pct_24h": -2.97276,
+      "pct_7d": 4.6,
       "support_30d": 85.94219943917633,
       "resistance_30d": 141.53047916466082,
-      "as_of": "2026-09-08 03:45:22",
+      "as_of": "2026-09-08 06:25:18",
       "stale": false
     },
     "okb": {
@@ -2963,7 +2963,7 @@
       "rows": [
         [
           "Price vs. recent range",
-          "Near its 30-day high (~$0.0980) - less room to run",
+          "Near its 30-day high (~$0.0976) - less room to run",
           -1
         ],
         [
@@ -2983,7 +2983,7 @@
         ],
         [
           "Stretch from long-term average",
-          "-2.2% vs its long-term average - not stretched either way",
+          "-2.5% vs its long-term average - not stretched either way",
           0
         ],
         [
@@ -2996,12 +2996,12 @@
       "id": "algorand",
       "symbol": "ALGO",
       "name": "Algorand",
-      "price": 0.097979,
-      "pct_24h": 3.52196,
-      "pct_7d": 8.0,
+      "price": 0.097646,
+      "pct_24h": 3.57433,
+      "pct_7d": 8.5,
       "support_30d": 0.07793708137631736,
-      "resistance_30d": 0.09797911886719009,
-      "as_of": "2026-09-08 05:10:24",
+      "resistance_30d": 0.09764634701414608,
+      "as_of": "2026-09-08 06:25:18",
       "stale": false
     },
     "eutbl": {
@@ -3294,22 +3294,21 @@
     }
   },
   "_strong_buy_state": {
-    "15m:SHIB": true,
     "1h:HBAR": true,
-    "1h:SHIB": true
+    "1h:AAVE": true
   },
   "BTC": {
     "key": "BTC",
     "name": "Bitcoin",
     "emoji": "\u20bf",
-    "price": 78508,
+    "price": 78413,
     "high_24h": 79671,
     "low_24h": 78536,
-    "pct_24h": -1.51881,
+    "pct_24h": -1.6247,
     "pct_7d": -0.2,
     "pct_30d": 21.3,
-    "sma50": 69959.58288928246,
-    "sma200": 69845.76232601523,
+    "sma50": 69958.0730187024,
+    "sma200": 69845.38485837022,
     "support_30d": 62843.70368466329,
     "resistance_30d": 81264.70153038795,
     "mark_price": 79370.02473188,
@@ -3324,14 +3323,14 @@
     "key": "ETH",
     "name": "Ethereum",
     "emoji": "\u039e",
-    "price": 2471.57,
+    "price": 2466.77,
     "high_24h": 2510.03,
     "low_24h": 2467.8,
-    "pct_24h": -1.35874,
+    "pct_24h": -1.49772,
     "pct_7d": 0.2,
     "pct_30d": 29.3,
-    "sma50": 2126.695143334273,
-    "sma200": 2043.414427905984,
+    "sma50": 2126.6042466911567,
+    "sma200": 2043.391703745205,
     "support_30d": 1871.3976551883159,
     "resistance_30d": 2514.967577695514,
     "mark_price": 2488.83603101,
