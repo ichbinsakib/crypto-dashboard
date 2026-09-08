@@ -4,7 +4,7 @@
   "_alerts_state": {
     "btc-resistance-break": {
       "triggered": true,
-      "last_triggered_at": "2026-09-08 05:40:22"
+      "last_triggered_at": "2026-09-08 05:45:22"
     },
     "btc-support-break": {
       "triggered": false,
@@ -1495,7 +1495,7 @@
         ],
         [
           "Stretch from long-term average",
-          "-0.7% vs its long-term average - not stretched either way",
+          "+0.1% vs its long-term average - not stretched either way",
           0
         ],
         [
@@ -1508,12 +1508,12 @@
       "id": "ethereum-classic",
       "symbol": "ETC",
       "name": "Ethereum Classic",
-      "price": 8.01,
-      "pct_24h": 2.46435,
-      "pct_7d": 9.7,
+      "price": 8.07,
+      "pct_24h": 2.63957,
+      "pct_7d": 9.0,
       "support_30d": 6.079473341192034,
       "resistance_30d": 8.342731558283557,
-      "as_of": "2026-09-08 03:10:29",
+      "as_of": "2026-09-08 05:45:22",
       "stale": false
     },
     "pump-fun": {
@@ -2743,7 +2743,7 @@
         ],
         [
           "Stretch from long-term average",
-          "+24.6% above its long-term average - a bit stretched",
+          "+23.6% above its long-term average - a bit stretched",
           -1
         ],
         [
@@ -2756,12 +2756,12 @@
       "id": "morpho",
       "symbol": "MORPHO",
       "name": "Morpho",
-      "price": 2.44,
-      "pct_24h": -4.38858,
-      "pct_7d": -2.1,
+      "price": 2.42,
+      "pct_24h": -7.90029,
+      "pct_7d": -4.2,
       "support_30d": 1.9343684047565628,
       "resistance_30d": 2.9026212482639075,
-      "as_of": "2026-09-08 03:55:16",
+      "as_of": "2026-09-08 05:45:22",
       "stale": false
     },
     "memecore": {
@@ -3079,7 +3079,7 @@
         ],
         [
           "Stretch from long-term average",
-          "+73.1% above its long-term average - very stretched",
+          "+77.3% above its long-term average - very stretched",
           -2
         ],
         [
@@ -3092,12 +3092,12 @@
       "id": "arbitrum",
       "symbol": "ARB",
       "name": "Arbitrum",
-      "price": 0.171875,
-      "pct_24h": -1.19822,
+      "price": 0.176013,
+      "pct_24h": 2.84471,
       "pct_7d": 53.7,
       "support_30d": 0.07272258489044682,
       "resistance_30d": 0.18933387703114857,
-      "as_of": "2026-09-08 05:10:24",
+      "as_of": "2026-09-08 05:45:22",
       "stale": false
     },
     "dash": {
@@ -3293,19 +3293,21 @@
       "stale": false
     }
   },
-  "_strong_buy_state": {},
+  "_strong_buy_state": {
+    "1h:SHIB": true
+  },
   "BTC": {
     "key": "BTC",
     "name": "Bitcoin",
     "emoji": "\u20bf",
-    "price": 78693,
+    "price": 78643,
     "high_24h": 79804,
     "low_24h": 78609,
-    "pct_24h": -1.44863,
+    "pct_24h": -1.51004,
     "pct_7d": 0.0,
     "pct_30d": 21.5,
-    "sma50": 69963.2755399775,
-    "sma200": 69846.68548868899,
+    "sma50": 69962.75908974187,
+    "sma200": 69846.55637613009,
     "support_30d": 62843.70368466329,
     "resistance_30d": 81264.70153038795,
     "mark_price": 79370.02473188,
@@ -3320,14 +3322,14 @@
     "key": "ETH",
     "name": "Ethereum",
     "emoji": "\u039e",
-    "price": 2477.11,
+    "price": 2475.07,
     "high_24h": 2510.03,
     "low_24h": 2467.8,
-    "pct_24h": -1.32168,
+    "pct_24h": -1.43148,
     "pct_7d": 0.3,
     "pct_30d": 29.6,
-    "sma50": 2126.7960809236874,
-    "sma200": 2043.4396623033376,
+    "sma50": 2126.760434870813,
+    "sma200": 2043.430750790119,
     "support_30d": 1871.3976551883159,
     "resistance_30d": 2514.967577695514,
     "mark_price": 2488.83603101,
