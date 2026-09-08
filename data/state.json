@@ -4,7 +4,7 @@
   "_alerts_state": {
     "btc-resistance-break": {
       "triggered": true,
-      "last_triggered_at": "2026-09-08 23:35:18"
+      "last_triggered_at": "2026-09-08 23:40:24"
     },
     "btc-support-break": {
       "triggered": false,
@@ -1028,12 +1028,12 @@
       "id": "worldcoin-wld",
       "symbol": "WLD",
       "name": "Worldcoin",
-      "price": 0.454574,
-      "pct_24h": -4.18732,
+      "price": 0.454489,
+      "pct_24h": -4.93125,
       "pct_7d": 26.5,
       "support_30d": 0.319812298466522,
       "resistance_30d": 0.4772935995106048,
-      "as_of": "2026-09-08 23:25:19",
+      "as_of": "2026-09-08 23:40:24",
       "stale": false
     },
     "bfusd": {
@@ -2037,11 +2037,11 @@
       "symbol": "UNI",
       "name": "Uniswap",
       "price": 6.75,
-      "pct_24h": -1.67181,
+      "pct_24h": -1.77609,
       "pct_7d": 18.0,
       "support_30d": 3.1971416665971573,
       "resistance_30d": 7.291165865788254,
-      "as_of": "2026-09-08 23:35:18",
+      "as_of": "2026-09-08 23:40:24",
       "stale": false
     },
     "pi-network": {
@@ -2839,7 +2839,7 @@
         ],
         [
           "Stretch from long-term average",
-          "+32.5% above its long-term average - very stretched",
+          "+32.1% above its long-term average - very stretched",
           -2
         ],
         [
@@ -2852,12 +2852,12 @@
       "id": "aave",
       "symbol": "AAVE",
       "name": "Aave",
-      "price": 129.21,
-      "pct_24h": -1.13095,
-      "pct_7d": 2.1,
+      "price": 128.89,
+      "pct_24h": -2.29489,
+      "pct_7d": 2.5,
       "support_30d": 85.94219943917633,
       "resistance_30d": 141.53047916466082,
-      "as_of": "2026-09-08 22:45:23",
+      "as_of": "2026-09-08 23:40:24",
       "stale": false
     },
     "okb": {
@@ -3293,7 +3293,9 @@
       "stale": false
     }
   },
-  "_strong_buy_state": {},
+  "_strong_buy_state": {
+    "15m:XRP": true
+  },
   "BTC": {
     "key": "BTC",
     "name": "Bitcoin",
@@ -3301,11 +3303,11 @@
     "price": 78458,
     "high_24h": 79432,
     "low_24h": 77666,
-    "pct_24h": -0.68755,
+    "pct_24h": -0.71261,
     "pct_7d": 1.8,
     "pct_30d": 20.6,
-    "sma50": 69958.53198136491,
-    "sma200": 69845.49959903584,
+    "sma50": 69958.58588364095,
+    "sma200": 69845.51307460485,
     "support_30d": 62843.70368466329,
     "resistance_30d": 81264.70153038795,
     "mark_price": 78433.3,
@@ -3320,14 +3322,14 @@
     "key": "ETH",
     "name": "Ethereum",
     "emoji": "\u039e",
-    "price": 2484.66,
+    "price": 2485.06,
     "high_24h": 2505.13,
     "low_24h": 2442.98,
-    "pct_24h": 0.0037,
+    "pct_24h": -0.00776,
     "pct_7d": 3.1,
     "pct_30d": 29.4,
-    "sma50": 2126.943335051335,
-    "sma200": 2043.4764758352496,
+    "sma50": 2126.956748781711,
+    "sma200": 2043.4798292678433,
     "support_30d": 1871.3976551883159,
     "resistance_30d": 2514.967577695514,
     "mark_price": 2473.95,
