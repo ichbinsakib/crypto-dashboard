@@ -4,7 +4,7 @@
   "_alerts_state": {
     "btc-resistance-break": {
       "triggered": true,
-      "last_triggered_at": "2026-09-08 11:40:23"
+      "last_triggered_at": "2026-09-08 11:45:22"
     },
     "btc-support-break": {
       "triggered": false,
@@ -173,14 +173,14 @@
       "stale": false
     },
     "tron": {
-      "label": "\ud83d\udfe2 LEAN ACCUMULATE",
-      "status": "bullish",
-      "score": 3,
+      "label": "\ud83d\udfe1 HOLD / NEUTRAL",
+      "status": "neutral",
+      "score": 0,
       "rows": [
         [
           "Price vs. recent range",
-          "Near its 30-day low (~$0.3222) - historically a better entry",
-          2
+          "Near its 30-day high (~$0.3448) - less room to run",
+          -1
         ],
         [
           "Crowd mood (Fear & Greed)",
@@ -199,7 +199,7 @@
         ],
         [
           "Stretch from long-term average",
-          "+3.8% vs its long-term average - not stretched either way",
+          "+4.0% vs its long-term average - not stretched either way",
           0
         ],
         [
@@ -208,16 +208,16 @@
           0
         ]
       ],
-      "plain": "Leans toward a decent spot to slowly add (DCA) - not a strong signal, just a lean.",
+      "plain": "No real edge either way right now - fine to just wait and watch.",
       "id": "tron",
       "symbol": "TRX",
       "name": "TRON",
-      "price": 0.337839,
-      "pct_24h": 0.3078,
-      "pct_7d": 2.6,
+      "price": 0.338532,
+      "pct_24h": 0.65097,
+      "pct_7d": 2.5,
       "support_30d": 0.32221537516581966,
       "resistance_30d": 0.3447899585776834,
-      "as_of": "2026-09-08 10:50:24",
+      "as_of": "2026-09-08 11:45:22",
       "stale": false
     },
     "figure-heloc": {
@@ -509,13 +509,13 @@
       "stale": false
     },
     "whitebit": {
-      "label": "\ud83d\udd34 CAUTION - REDUCE NEW BUYS",
+      "label": "\ud83d\udd34 DISTRIBUTION ZONE",
       "status": "bearish",
-      "score": -3,
+      "score": -5,
       "rows": [
         [
           "Price vs. recent range",
-          "Near its 30-day high (~$76.51) - less room to run",
+          "Near its 30-day high (~$78.39) - less room to run",
           -1
         ],
         [
@@ -525,17 +525,17 @@
         ],
         [
           "Market phase (best guess)",
-          "Established uptrend - phase where price marks up",
-          1
+          "Very extended after a big run - phase where smart money sells",
+          -2
         ],
         [
           "Recent trend",
-          "Chopping sideways - no clear trend",
-          0
+          "Trending up steadily - healthy",
+          1
         ],
         [
           "Stretch from long-term average",
-          "+35.9% above its long-term average - very stretched",
+          "+40.4% above its long-term average - very stretched",
           -2
         ],
         [
@@ -544,16 +544,16 @@
           0
         ]
       ],
-      "plain": "Getting risky - I'd hold off on new buys until this cools down.",
+      "plain": "Looks stretched and euphoric - historically the zone where smart money sells, not buys.",
       "id": "whitebit",
       "symbol": "WBT",
       "name": "WhiteBIT Coin",
-      "price": 75.88,
-      "pct_24h": 3.21078,
-      "pct_7d": 4.8,
+      "price": 78.42,
+      "pct_24h": 7.18762,
+      "pct_7d": 9.4,
       "support_30d": 54.452558710928955,
-      "resistance_30d": 76.50750157680606,
-      "as_of": "2026-09-08 06:40:24",
+      "resistance_30d": 78.38746768443627,
+      "as_of": "2026-09-08 11:45:22",
       "stale": false
     },
     "leo-token": {
@@ -2503,7 +2503,7 @@
         ],
         [
           "Stretch from long-term average",
-          "-2.5% vs its long-term average - not stretched either way",
+          "-2.6% vs its long-term average - not stretched either way",
           0
         ],
         [
@@ -2516,12 +2516,12 @@
       "id": "quant-network",
       "symbol": "QNT",
       "name": "Quant",
-      "price": 66.83,
-      "pct_24h": 1.65336,
+      "price": 66.74,
+      "pct_24h": 2.04378,
       "pct_7d": 8.4,
       "support_30d": 55.905981995619285,
       "resistance_30d": 67.0383571823565,
-      "as_of": "2026-09-08 09:20:30",
+      "as_of": "2026-09-08 11:45:22",
       "stale": false
     },
     "tether-gold": {
@@ -3298,14 +3298,14 @@
     "key": "BTC",
     "name": "Bitcoin",
     "emoji": "\u20bf",
-    "price": 78440,
+    "price": 78430,
     "high_24h": 79625,
     "low_24h": 78193,
-    "pct_24h": -1.2165,
+    "pct_24h": -1.21071,
     "pct_7d": 0.9,
     "pct_30d": 21.2,
-    "sma50": 69958.2769471959,
-    "sma200": 69845.43584049359,
+    "sma50": 69958.00339901898,
+    "sma200": 69845.36745344936,
     "support_30d": 62843.70368466329,
     "resistance_30d": 81264.70153038795,
     "mark_price": 78433.3,
@@ -3320,14 +3320,14 @@
     "key": "ETH",
     "name": "Ethereum",
     "emoji": "\u039e",
-    "price": 2475.67,
+    "price": 2474.24,
     "high_24h": 2510.03,
     "low_24h": 2463.89,
-    "pct_24h": -0.58845,
+    "pct_24h": -0.62767,
     "pct_7d": 1.2,
     "pct_30d": 29.3,
-    "sma50": 2126.7707851765963,
-    "sma200": 2043.4333383665646,
+    "sma50": 2126.7487917768362,
+    "sma200": 2043.427840016625,
     "support_30d": 1871.3976551883159,
     "resistance_30d": 2514.967577695514,
     "mark_price": 2473.95,
