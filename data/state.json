@@ -4,7 +4,7 @@
   "_alerts_state": {
     "btc-resistance-break": {
       "triggered": true,
-      "last_triggered_at": "2026-09-08 20:30:29"
+      "last_triggered_at": "2026-09-08 20:35:21"
     },
     "btc-support-break": {
       "triggered": false,
@@ -989,9 +989,9 @@
       "stale": false
     },
     "worldcoin-wld": {
-      "label": "\ud83d\udd34 CAUTION - REDUCE NEW BUYS",
-      "status": "bearish",
-      "score": -2,
+      "label": "\ud83d\udfe1 HOLD / NEUTRAL",
+      "status": "neutral",
+      "score": -1,
       "rows": [
         [
           "Price vs. recent range",
@@ -1015,8 +1015,8 @@
         ],
         [
           "Stretch from long-term average",
-          "+33.1% above its long-term average - very stretched",
-          -2
+          "+29.0% above its long-term average - a bit stretched",
+          -1
         ],
         [
           "Leverage traders' bias",
@@ -1024,16 +1024,16 @@
           0
         ]
       ],
-      "plain": "Getting risky - I'd hold off on new buys until this cools down.",
+      "plain": "No real edge either way right now - fine to just wait and watch.",
       "id": "worldcoin-wld",
       "symbol": "WLD",
       "name": "Worldcoin",
-      "price": 0.475768,
-      "pct_24h": 2.31244,
-      "pct_7d": 29.4,
+      "price": 0.461133,
+      "pct_24h": -0.30598,
+      "pct_7d": 28.1,
       "support_30d": 0.319812298466522,
       "resistance_30d": 0.4772935995106048,
-      "as_of": "2026-09-08 15:10:23",
+      "as_of": "2026-09-08 20:35:21",
       "stale": false
     },
     "bfusd": {
@@ -1317,11 +1317,11 @@
       "symbol": "HTX",
       "name": "HTX DAO",
       "price": 1.69e-06,
-      "pct_24h": 0.40457,
-      "pct_7d": 4.4,
+      "pct_24h": 1.07811,
+      "pct_7d": 5.4,
       "support_30d": 1.6023985995039954e-06,
       "resistance_30d": 1.8259977214551937e-06,
-      "as_of": "2026-09-08 18:10:26",
+      "as_of": "2026-09-08 20:35:21",
       "stale": false
     },
     "superstate-short-duration-us-government-securities-fund-ustb": {
@@ -2791,7 +2791,7 @@
         ],
         [
           "Stretch from long-term average",
-          "-43.0% below its long-term average - confirmed downtrend",
+          "-42.1% below its long-term average - confirmed downtrend",
           -1
         ],
         [
@@ -2804,12 +2804,12 @@
       "id": "memecore",
       "symbol": "M",
       "name": "MemeCore",
-      "price": 1.19,
-      "pct_24h": 6.35237,
-      "pct_7d": 13.1,
+      "price": 1.21,
+      "pct_24h": 6.20578,
+      "pct_7d": 14.9,
       "support_30d": 1.0402044506518406,
       "resistance_30d": 1.2453913363052769,
-      "as_of": "2026-09-08 17:55:23",
+      "as_of": "2026-09-08 20:35:21",
       "stale": false
     },
     "aave": {
@@ -3298,14 +3298,14 @@
     "key": "BTC",
     "name": "Bitcoin",
     "emoji": "\u20bf",
-    "price": 78541,
+    "price": 78509,
     "high_24h": 79432,
     "low_24h": 77666,
-    "pct_24h": -0.83581,
+    "pct_24h": -0.91924,
     "pct_7d": 1.6,
     "pct_30d": 20.3,
-    "sma50": 69960.18936439621,
-    "sma200": 69845.91394479368,
+    "sma50": 69958.93055114454,
+    "sma200": 69845.59924148076,
     "support_30d": 62843.70368466329,
     "resistance_30d": 81264.70153038795,
     "mark_price": 78433.3,
@@ -3320,14 +3320,14 @@
     "key": "ETH",
     "name": "Ethereum",
     "emoji": "\u039e",
-    "price": 2486.35,
+    "price": 2483.8,
     "high_24h": 2505.13,
     "low_24h": 2442.98,
-    "pct_24h": -0.09947,
+    "pct_24h": -0.27854,
     "pct_7d": 2.8,
     "pct_30d": 29.1,
-    "sma50": 2126.9813221181366,
-    "sma200": 2043.4859726019502,
+    "sma50": 2126.9100120350063,
+    "sma200": 2043.4681450811672,
     "support_30d": 1871.3976551883159,
     "resistance_30d": 2514.967577695514,
     "mark_price": 2473.95,
