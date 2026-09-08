@@ -4,7 +4,7 @@
   "_alerts_state": {
     "btc-resistance-break": {
       "triggered": true,
-      "last_triggered_at": "2026-09-08 05:35:20"
+      "last_triggered_at": "2026-09-08 05:40:22"
     },
     "btc-support-break": {
       "triggered": false,
@@ -871,7 +871,7 @@
         ],
         [
           "Stretch from long-term average",
-          "+9.6% vs its long-term average - not stretched either way",
+          "+9.3% vs its long-term average - not stretched either way",
           0
         ],
         [
@@ -884,12 +884,12 @@
       "id": "pepe",
       "symbol": "PEPE",
       "name": "Pepe",
-      "price": 3.63e-06,
-      "pct_24h": 0.1406,
+      "price": 3.62e-06,
+      "pct_24h": -0.25959,
       "pct_7d": 1.3,
       "support_30d": 2.5716563906374582e-06,
       "resistance_30d": 4.122123035488615e-06,
-      "as_of": "2026-09-08 05:20:27",
+      "as_of": "2026-09-08 05:40:22",
       "stale": false
     },
     "avalanche-2": {
@@ -1783,7 +1783,7 @@
         ],
         [
           "Stretch from long-term average",
-          "+167.6% above its long-term average - very stretched",
+          "+168.8% above its long-term average - very stretched",
           -2
         ],
         [
@@ -1796,12 +1796,12 @@
       "id": "lighter",
       "symbol": "LIT",
       "name": "Lighter",
-      "price": 4.63,
-      "pct_24h": 6.79937,
+      "price": 4.65,
+      "pct_24h": 5.46394,
       "pct_7d": 25.6,
       "support_30d": 2.2358662099746955,
       "resistance_30d": 4.815937283873233,
-      "as_of": "2026-09-08 05:00:34",
+      "as_of": "2026-09-08 05:40:22",
       "stale": false
     },
     "ethena": {
@@ -2189,13 +2189,13 @@
       "stale": false
     },
     "internet-computer": {
-      "label": "\ud83d\udd34 CAUTION - REDUCE NEW BUYS",
-      "status": "bearish",
-      "score": -4,
+      "label": "\ud83d\udfe1 HOLD / NEUTRAL",
+      "status": "neutral",
+      "score": -1,
       "rows": [
         [
           "Price vs. recent range",
-          "Near its 30-day high (~$3.00) - less room to run",
+          "Near its 30-day high (~$3.03) - less room to run",
           -1
         ],
         [
@@ -2210,12 +2210,12 @@
         ],
         [
           "Recent trend",
-          "Shooting straight up - classic blow-off top risk, don't chase",
-          -2
+          "Trending up steadily - healthy",
+          1
         ],
         [
           "Stretch from long-term average",
-          "+22.7% above its long-term average - a bit stretched",
+          "+23.9% above its long-term average - a bit stretched",
           -1
         ],
         [
@@ -2224,16 +2224,16 @@
           0
         ]
       ],
-      "plain": "Getting risky - I'd hold off on new buys until this cools down.",
+      "plain": "No real edge either way right now - fine to just wait and watch.",
       "id": "internet-computer",
       "symbol": "ICP",
       "name": "Internet Computer",
-      "price": 3.0,
-      "pct_24h": 10.28963,
-      "pct_7d": 24.6,
+      "price": 3.03,
+      "pct_24h": 4.87619,
+      "pct_7d": 24.8,
       "support_30d": 2.1584475030049863,
-      "resistance_30d": 2.9981619444412635,
-      "as_of": "2026-09-08 04:00:34",
+      "resistance_30d": 3.0327142911831313,
+      "as_of": "2026-09-08 05:40:22",
       "stale": false
     },
     "bittensor": {
@@ -3293,21 +3293,19 @@
       "stale": false
     }
   },
-  "_strong_buy_state": {
-    "15m:DOGE": true
-  },
+  "_strong_buy_state": {},
   "BTC": {
     "key": "BTC",
     "name": "Bitcoin",
     "emoji": "\u20bf",
-    "price": 78733,
+    "price": 78693,
     "high_24h": 79804,
     "low_24h": 78609,
-    "pct_24h": -1.37322,
+    "pct_24h": -1.44863,
     "pct_7d": 0.0,
     "pct_30d": 21.5,
-    "sma50": 69964.0678601458,
-    "sma200": 69846.88356873106,
+    "sma50": 69963.2755399775,
+    "sma200": 69846.68548868899,
     "support_30d": 62843.70368466329,
     "resistance_30d": 81264.70153038795,
     "mark_price": 79370.02473188,
@@ -3322,14 +3320,14 @@
     "key": "ETH",
     "name": "Ethereum",
     "emoji": "\u039e",
-    "price": 2479.29,
+    "price": 2477.11,
     "high_24h": 2510.03,
     "low_24h": 2467.8,
-    "pct_24h": -1.29121,
+    "pct_24h": -1.32168,
     "pct_7d": 0.3,
     "pct_30d": 29.6,
-    "sma50": 2126.843815870425,
-    "sma200": 2043.451596040022,
+    "sma50": 2126.7960809236874,
+    "sma200": 2043.4396623033376,
     "support_30d": 1871.3976551883159,
     "resistance_30d": 2514.967577695514,
     "mark_price": 2488.83603101,
