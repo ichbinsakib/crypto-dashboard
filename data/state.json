@@ -4,7 +4,7 @@
   "_alerts_state": {
     "btc-resistance-break": {
       "triggered": true,
-      "last_triggered_at": "2026-09-08 21:35:22"
+      "last_triggered_at": "2026-09-08 21:40:21"
     },
     "btc-support-break": {
       "triggered": false,
@@ -1831,7 +1831,7 @@
         ],
         [
           "Stretch from long-term average",
-          "+58.1% above its long-term average - very stretched",
+          "+57.8% above its long-term average - very stretched",
           -2
         ],
         [
@@ -1844,12 +1844,12 @@
       "id": "ethena",
       "symbol": "ENA",
       "name": "Ethena",
-      "price": 0.159926,
-      "pct_24h": -3.29805,
+      "price": 0.159636,
+      "pct_24h": -3.02759,
       "pct_7d": 1.6,
       "support_30d": 0.08231050586125944,
       "resistance_30d": 0.17616469272611565,
-      "as_of": "2026-09-08 21:20:26",
+      "as_of": "2026-09-08 21:40:21",
       "stale": false
     },
     "bitcoin-cash": {
@@ -2429,14 +2429,14 @@
       "stale": false
     },
     "near": {
-      "label": "\ud83d\udd34 CAUTION - REDUCE NEW BUYS",
-      "status": "bearish",
-      "score": -2,
+      "label": "\ud83d\udfe1 HOLD / NEUTRAL",
+      "status": "neutral",
+      "score": -1,
       "rows": [
         [
           "Price vs. recent range",
-          "Near its 30-day high (~$2.44) - less room to run",
-          -1
+          "Sitting in the middle of its 30-day range",
+          0
         ],
         [
           "Crowd mood (Fear & Greed)",
@@ -2455,7 +2455,7 @@
         ],
         [
           "Stretch from long-term average",
-          "+38.7% above its long-term average - very stretched",
+          "+36.9% above its long-term average - very stretched",
           -2
         ],
         [
@@ -2464,16 +2464,16 @@
           0
         ]
       ],
-      "plain": "Getting risky - I'd hold off on new buys until this cools down.",
+      "plain": "No real edge either way right now - fine to just wait and watch.",
       "id": "near",
       "symbol": "NEAR",
       "name": "NEAR Protocol",
-      "price": 2.34,
-      "pct_24h": 1.50026,
-      "pct_7d": 20.1,
+      "price": 2.31,
+      "pct_24h": -0.18038,
+      "pct_7d": 21.7,
       "support_30d": 1.5879597131538,
       "resistance_30d": 2.436852334393612,
-      "as_of": "2026-09-08 19:00:33",
+      "as_of": "2026-09-08 21:40:21",
       "stale": false
     },
     "quant-network": {
@@ -3079,7 +3079,7 @@
         ],
         [
           "Stretch from long-term average",
-          "+69.2% above its long-term average - very stretched",
+          "+68.6% above its long-term average - very stretched",
           -2
         ],
         [
@@ -3092,12 +3092,12 @@
       "id": "arbitrum",
       "symbol": "ARB",
       "name": "Arbitrum",
-      "price": 0.167956,
-      "pct_24h": -1.5021,
+      "price": 0.16736,
+      "pct_24h": -1.8733,
       "pct_7d": 56.0,
       "support_30d": 0.07272258489044682,
       "resistance_30d": 0.18933387703114857,
-      "as_of": "2026-09-08 21:35:22",
+      "as_of": "2026-09-08 21:40:21",
       "stale": false
     },
     "dash": {
@@ -3294,21 +3294,21 @@
     }
   },
   "_strong_buy_state": {
-    "15m:ONDO": true,
-    "1h:ARB": true
+    "15m:OKB": true,
+    "15m:NEAR": true
   },
   "BTC": {
     "key": "BTC",
     "name": "Bitcoin",
     "emoji": "\u20bf",
-    "price": 78520,
+    "price": 78481,
     "high_24h": 79432,
     "low_24h": 77666,
-    "pct_24h": -0.86495,
+    "pct_24h": -0.89895,
     "pct_7d": 1.6,
     "pct_30d": 20.5,
-    "sma50": 69959.53452896349,
-    "sma200": 69845.75023593548,
+    "sma50": 69959.48353912497,
+    "sma200": 69845.73748847585,
     "support_30d": 62843.70368466329,
     "resistance_30d": 81264.70153038795,
     "mark_price": 78433.3,
@@ -3323,14 +3323,14 @@
     "key": "ETH",
     "name": "Ethereum",
     "emoji": "\u039e",
-    "price": 2482.19,
+    "price": 2481.59,
     "high_24h": 2505.13,
     "low_24h": 2442.98,
-    "pct_24h": -0.41365,
+    "pct_24h": -0.42249,
     "pct_7d": 2.8,
     "pct_30d": 29.4,
-    "sma50": 2126.88824888954,
-    "sma200": 2043.462704294801,
+    "sma50": 2126.8980836216306,
+    "sma200": 2043.4651629778234,
     "support_30d": 1871.3976551883159,
     "resistance_30d": 2514.967577695514,
     "mark_price": 2473.95,
