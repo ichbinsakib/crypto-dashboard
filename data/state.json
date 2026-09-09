@@ -4,7 +4,7 @@
   "_alerts_state": {
     "btc-resistance-break": {
       "triggered": true,
-      "last_triggered_at": "2026-09-09 01:45:20"
+      "last_triggered_at": "2026-09-09 01:50:24"
     },
     "btc-support-break": {
       "triggered": false,
@@ -727,7 +727,7 @@
         ],
         [
           "Stretch from long-term average",
-          "+7.8% vs its long-term average - not stretched either way",
+          "+7.5% vs its long-term average - not stretched either way",
           0
         ],
         [
@@ -740,12 +740,12 @@
       "id": "stellar",
       "symbol": "XLM",
       "name": "Stellar",
-      "price": 0.188658,
-      "pct_24h": -2.50047,
-      "pct_7d": 7.3,
+      "price": 0.188146,
+      "pct_24h": -2.93091,
+      "pct_7d": 7.2,
       "support_30d": 0.15472912151335613,
       "resistance_30d": 0.20181319711037435,
-      "as_of": "2026-09-09 00:15:21",
+      "as_of": "2026-09-09 01:50:24",
       "stale": false
     },
     "kucoin-shares": {
@@ -1879,7 +1879,7 @@
         ],
         [
           "Stretch from long-term average",
-          "-22.1% below its long-term average - confirmed downtrend",
+          "-22.0% below its long-term average - confirmed downtrend",
           -1
         ],
         [
@@ -1892,12 +1892,12 @@
       "id": "bitcoin-cash",
       "symbol": "BCH",
       "name": "Bitcoin Cash",
-      "price": 258.09,
-      "pct_24h": -1.15755,
+      "price": 258.39,
+      "pct_24h": -1.25713,
       "pct_7d": 5.3,
       "support_30d": 203.50169440615565,
       "resistance_30d": 288.10955405353275,
-      "as_of": "2026-09-09 01:15:24",
+      "as_of": "2026-09-09 01:50:24",
       "stale": false
     },
     "mantle": {
@@ -2632,7 +2632,7 @@
         ],
         [
           "Crowd mood (Fear & Greed)",
-          "69/100 - crowd is greedy",
+          "66/100 - crowd is greedy",
           -1
         ],
         [
@@ -2647,7 +2647,7 @@
         ],
         [
           "Stretch from long-term average",
-          "-21.1% below its long-term average - confirmed downtrend",
+          "-20.5% below its long-term average - confirmed downtrend",
           -1
         ],
         [
@@ -2660,12 +2660,12 @@
       "id": "world-liberty-financial",
       "symbol": "WLFI",
       "name": "World Liberty Financial",
-      "price": 0.05606,
-      "pct_24h": -0.63731,
-      "pct_7d": -0.8,
-      "support_30d": 0.05488465746646608,
+      "price": 0.05626,
+      "pct_24h": -0.4715,
+      "pct_7d": -1.1,
+      "support_30d": 0.05491021291540163,
       "resistance_30d": 0.06254770952093733,
-      "as_of": "2026-09-08 23:45:22",
+      "as_of": "2026-09-09 01:50:24",
       "stale": false
     },
     "pax-gold": {
@@ -3293,19 +3293,22 @@
       "stale": false
     }
   },
-  "_strong_buy_state": {},
+  "_strong_buy_state": {
+    "15m:XLM": true,
+    "1h:XLM": true
+  },
   "BTC": {
     "key": "BTC",
     "name": "Bitcoin",
     "emoji": "\u20bf",
-    "price": 78810,
+    "price": 78857,
     "high_24h": 79432,
     "low_24h": 77666,
-    "pct_24h": -0.62238,
+    "pct_24h": -0.58385,
     "pct_7d": 1.8,
     "pct_30d": 21.5,
-    "sma50": 70204.25028304146,
-    "sma200": 69899.40392646744,
+    "sma50": 70205.15404402539,
+    "sma200": 69899.62986671341,
     "support_30d": 62843.70368466329,
     "resistance_30d": 81264.70153038795,
     "mark_price": 78638.66714493,
@@ -3320,14 +3323,14 @@
     "key": "ETH",
     "name": "Ethereum",
     "emoji": "\u039e",
-    "price": 2495.57,
+    "price": 2497.52,
     "high_24h": 2505.13,
     "low_24h": 2442.98,
-    "pct_24h": -0.14087,
+    "pct_24h": -0.0453,
     "pct_7d": 3.3,
     "pct_30d": 30.8,
-    "sma50": 2138.294086549102,
-    "sma200": 2046.0226847843096,
+    "sma50": 2138.330840468159,
+    "sma200": 2046.0318732640742,
     "support_30d": 1874.401898191962,
     "resistance_30d": 2514.967577695514,
     "mark_price": 2490.71,
