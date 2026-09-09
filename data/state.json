@@ -4,7 +4,7 @@
   "_alerts_state": {
     "btc-resistance-break": {
       "triggered": true,
-      "last_triggered_at": "2026-09-09 07:55:19"
+      "last_triggered_at": "2026-09-09 08:00:39"
     },
     "btc-support-break": {
       "triggered": false,
@@ -371,7 +371,7 @@
       "rows": [
         [
           "Price vs. recent range",
-          "Near its 30-day high (~$1,233.93) - less room to run",
+          "Near its 30-day high (~$1,238.40) - less room to run",
           -1
         ],
         [
@@ -391,7 +391,7 @@
         ],
         [
           "Stretch from long-term average",
-          "+166.2% above its long-term average - very stretched",
+          "+167.2% above its long-term average - very stretched",
           -2
         ],
         [
@@ -404,12 +404,12 @@
       "id": "zcash",
       "symbol": "ZEC",
       "name": "Zcash",
-      "price": 1233.93,
-      "pct_24h": 9.709,
-      "pct_7d": 46.3,
+      "price": 1238.59,
+      "pct_24h": 10.29443,
+      "pct_7d": 48.2,
       "support_30d": 480.66499804092575,
-      "resistance_30d": 1233.9288600583923,
-      "as_of": "2026-09-09 07:30:37",
+      "resistance_30d": 1238.4044593761926,
+      "as_of": "2026-09-09 08:00:39",
       "stale": false
     },
     "rain": {
@@ -823,7 +823,7 @@
         ],
         [
           "Stretch from long-term average",
-          "-3.7% vs its long-term average - not stretched either way",
+          "-3.9% vs its long-term average - not stretched either way",
           0
         ],
         [
@@ -836,12 +836,12 @@
       "id": "hedera-hashgraph",
       "symbol": "HBAR",
       "name": "Hedera",
-      "price": 0.079722,
-      "pct_24h": -0.94519,
-      "pct_7d": 7.2,
+      "price": 0.079557,
+      "pct_24h": -0.92438,
+      "pct_7d": 7.4,
       "support_30d": 0.06461260477975343,
       "resistance_30d": 0.08182180696524229,
-      "as_of": "2026-09-09 07:15:24",
+      "as_of": "2026-09-09 08:00:39",
       "stale": false
     },
     "pepe": {
@@ -2887,7 +2887,7 @@
         ],
         [
           "Stretch from long-term average",
-          "+31.4% above its long-term average - very stretched",
+          "+31.5% above its long-term average - very stretched",
           -2
         ],
         [
@@ -2900,12 +2900,12 @@
       "id": "okb",
       "symbol": "OKB",
       "name": "OKB",
-      "price": 114.62,
-      "pct_24h": -0.51163,
-      "pct_7d": 3.8,
+      "price": 114.71,
+      "pct_24h": -0.40489,
+      "pct_7d": 4.3,
       "support_30d": 94.68582680773451,
       "resistance_30d": 115.8310797114581,
-      "as_of": "2026-09-09 06:40:25",
+      "as_of": "2026-09-09 08:00:39",
       "stale": false
     },
     "just": {
@@ -3293,19 +3293,21 @@
       "stale": false
     }
   },
-  "_strong_buy_state": {},
+  "_strong_buy_state": {
+    "15m:OKB": true
+  },
   "BTC": {
     "key": "BTC",
     "name": "Bitcoin",
     "emoji": "\u20bf",
-    "price": 79229,
+    "price": 79235,
     "high_24h": 79312,
     "low_24h": 77666,
-    "pct_24h": 1.1757,
+    "pct_24h": 1.01505,
     "pct_7d": 1.9,
     "pct_30d": 21.6,
-    "sma50": 70212.8166502825,
-    "sma200": 69901.5455182777,
+    "sma50": 70212.96584966882,
+    "sma200": 69901.58281812427,
     "support_30d": 62843.70368466329,
     "resistance_30d": 81264.70153038795,
     "mark_price": 78638.66714493,
@@ -3320,14 +3322,14 @@
     "key": "ETH",
     "name": "Ethereum",
     "emoji": "\u039e",
-    "price": 2509.83,
+    "price": 2508.7,
     "high_24h": 2510.7,
     "low_24h": 2442.98,
-    "pct_24h": 1.37959,
+    "pct_24h": 1.2269,
     "pct_7d": 3.3,
     "pct_30d": 30.1,
-    "sma50": 2138.5745115584964,
-    "sma200": 2046.0927910366584,
+    "sma50": 2138.5696258954276,
+    "sma200": 2046.0915696208913,
     "support_30d": 1874.401898191962,
     "resistance_30d": 2514.967577695514,
     "mark_price": 2490.71,
