@@ -4,7 +4,7 @@
   "_alerts_state": {
     "btc-resistance-break": {
       "triggered": true,
-      "last_triggered_at": "2026-09-09 04:25:18"
+      "last_triggered_at": "2026-09-09 04:30:30"
     },
     "btc-support-break": {
       "triggered": false,
@@ -413,9 +413,9 @@
       "stale": false
     },
     "rain": {
-      "label": "\ud83d\udd34 DISTRIBUTION ZONE",
+      "label": "\ud83d\udd34 CAUTION - REDUCE NEW BUYS",
       "status": "bearish",
-      "score": -5,
+      "score": -2,
       "rows": [
         [
           "Price vs. recent range",
@@ -429,8 +429,8 @@
         ],
         [
           "Market phase (best guess)",
-          "Very extended after a big run - phase where smart money sells",
-          -2
+          "Established uptrend - phase where price marks up",
+          1
         ],
         [
           "Recent trend",
@@ -439,7 +439,7 @@
         ],
         [
           "Stretch from long-term average",
-          "+40.1% above its long-term average - very stretched",
+          "+39.3% above its long-term average - very stretched",
           -2
         ],
         [
@@ -448,16 +448,16 @@
           0
         ]
       ],
-      "plain": "Looks stretched and euphoric - historically the zone where smart money sells, not buys.",
+      "plain": "Getting risky - I'd hold off on new buys until this cools down.",
       "id": "rain",
       "symbol": "RAIN",
       "name": "Rain",
-      "price": 0.01611721,
-      "pct_24h": -1.01504,
-      "pct_7d": -6.7,
+      "price": 0.01602439,
+      "pct_24h": -1.52737,
+      "pct_7d": -7.3,
       "support_30d": 0.012552829520986089,
       "resistance_30d": 0.018158429442510105,
-      "as_of": "2026-09-09 02:30:30",
+      "as_of": "2026-09-09 04:30:30",
       "stale": false
     },
     "chainlink": {
@@ -1471,11 +1471,11 @@
     "ethereum-classic": {
       "label": "\ud83d\udd34 CAUTION - REDUCE NEW BUYS",
       "status": "bearish",
-      "score": -4,
+      "score": -3,
       "rows": [
         [
           "Price vs. recent range",
-          "Near its 30-day high (~$8.72) - less room to run",
+          "Near its 30-day high (~$8.61) - less room to run",
           -1
         ],
         [
@@ -1495,8 +1495,8 @@
         ],
         [
           "Stretch from long-term average",
-          "+11.4% above its long-term average - a bit stretched",
-          -1
+          "+10.0% vs its long-term average - not stretched either way",
+          0
         ],
         [
           "Leverage traders' bias",
@@ -1508,12 +1508,12 @@
       "id": "ethereum-classic",
       "symbol": "ETC",
       "name": "Ethereum Classic",
-      "price": 8.72,
-      "pct_24h": 8.81858,
+      "price": 8.61,
+      "pct_24h": 8.13169,
       "pct_7d": 20.2,
       "support_30d": 6.079473341192034,
-      "resistance_30d": 8.721951994002593,
-      "as_of": "2026-09-09 04:10:23",
+      "resistance_30d": 8.609781284223262,
+      "as_of": "2026-09-09 04:30:30",
       "stale": false
     },
     "pump-fun": {
@@ -2421,11 +2421,11 @@
       "symbol": "SHIB",
       "name": "Shiba Inu",
       "price": 5.42e-06,
-      "pct_24h": 0.05056,
+      "pct_24h": 0.01703,
       "pct_7d": 4.9,
       "support_30d": 4.390093758351827e-06,
       "resistance_30d": 5.903506876405612e-06,
-      "as_of": "2026-09-09 04:25:18",
+      "as_of": "2026-09-09 04:30:30",
       "stale": false
     },
     "near": {
@@ -3293,19 +3293,21 @@
       "stale": false
     }
   },
-  "_strong_buy_state": {},
+  "_strong_buy_state": {
+    "15m:ETC": true
+  },
   "BTC": {
     "key": "BTC",
     "name": "Bitcoin",
     "emoji": "\u20bf",
-    "price": 78851,
+    "price": 78911,
     "high_24h": 78930,
     "low_24h": 77666,
-    "pct_24h": 0.08925,
+    "pct_24h": 0.15178,
     "pct_7d": 1.8,
     "pct_30d": 20.9,
-    "sma50": 70205.04149981942,
-    "sma200": 69899.60173066192,
+    "sma50": 70206.24023821283,
+    "sma200": 69899.90141526028,
     "support_30d": 62843.70368466329,
     "resistance_30d": 81264.70153038795,
     "mark_price": 78638.66714493,
@@ -3320,14 +3322,14 @@
     "key": "ETH",
     "name": "Ethereum",
     "emoji": "\u039e",
-    "price": 2497.38,
+    "price": 2497.86,
     "high_24h": 2503.59,
     "low_24h": 2442.98,
-    "pct_24h": 0.64356,
+    "pct_24h": 0.64673,
     "pct_7d": 3.4,
     "pct_30d": 29.5,
-    "sma50": 2138.330813375034,
-    "sma200": 2046.031866490793,
+    "sma50": 2138.349968762814,
+    "sma200": 2046.0366553377378,
     "support_30d": 1874.401898191962,
     "resistance_30d": 2514.967577695514,
     "mark_price": 2490.71,
