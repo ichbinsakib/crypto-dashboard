@@ -4,7 +4,7 @@
   "_alerts_state": {
     "btc-resistance-break": {
       "triggered": true,
-      "last_triggered_at": "2026-09-09 06:35:20"
+      "last_triggered_at": "2026-09-09 06:40:25"
     },
     "btc-support-break": {
       "triggered": false,
@@ -173,14 +173,14 @@
       "stale": false
     },
     "tron": {
-      "label": "\ud83d\udfe1 HOLD / NEUTRAL",
-      "status": "neutral",
-      "score": 0,
+      "label": "\ud83d\udfe2 LEAN ACCUMULATE",
+      "status": "bullish",
+      "score": 3,
       "rows": [
         [
           "Price vs. recent range",
-          "Near its 30-day high (~$0.3448) - less room to run",
-          -1
+          "Near its 30-day low (~$0.3222) - historically a better entry",
+          2
         ],
         [
           "Crowd mood (Fear & Greed)",
@@ -199,7 +199,7 @@
         ],
         [
           "Stretch from long-term average",
-          "+3.9% vs its long-term average - not stretched either way",
+          "+3.8% vs its long-term average - not stretched either way",
           0
         ],
         [
@@ -208,16 +208,16 @@
           0
         ]
       ],
-      "plain": "No real edge either way right now - fine to just wait and watch.",
+      "plain": "Leans toward a decent spot to slowly add (DCA) - not a strong signal, just a lean.",
       "id": "tron",
       "symbol": "TRX",
       "name": "TRON",
-      "price": 0.338596,
-      "pct_24h": 0.54448,
-      "pct_7d": 5.3,
+      "price": 0.338234,
+      "pct_24h": 0.26017,
+      "pct_7d": 5.2,
       "support_30d": 0.32221537516581966,
       "resistance_30d": 0.3447899585776834,
-      "as_of": "2026-09-09 05:45:20",
+      "as_of": "2026-09-09 06:40:25",
       "stale": false
     },
     "figure-heloc": {
@@ -265,7 +265,7 @@
       "pct_7d": -1.1,
       "support_30d": 1.0002702435361892,
       "resistance_30d": 1.0455978355177025,
-      "as_of": "2026-09-09 06:15:25",
+      "as_of": "2026-09-09 06:40:25",
       "stale": false
     },
     "hyperliquid": {
@@ -2887,7 +2887,7 @@
         ],
         [
           "Stretch from long-term average",
-          "+30.6% above its long-term average - very stretched",
+          "+31.4% above its long-term average - very stretched",
           -2
         ],
         [
@@ -2900,12 +2900,12 @@
       "id": "okb",
       "symbol": "OKB",
       "name": "OKB",
-      "price": 113.96,
-      "pct_24h": -2.25444,
-      "pct_7d": 5.4,
+      "price": 114.62,
+      "pct_24h": -0.51163,
+      "pct_7d": 3.8,
       "support_30d": 94.68582680773451,
       "resistance_30d": 115.8310797114581,
-      "as_of": "2026-09-09 03:45:23",
+      "as_of": "2026-09-09 06:40:25",
       "stale": false
     },
     "just": {
@@ -3294,20 +3294,20 @@
     }
   },
   "_strong_buy_state": {
-    "15m:ETC": true
+    "15m:OKB": true
   },
   "BTC": {
     "key": "BTC",
     "name": "Bitcoin",
     "emoji": "\u20bf",
-    "price": 79141,
+    "price": 79202,
     "high_24h": 79312,
     "low_24h": 77666,
-    "pct_24h": 0.98553,
+    "pct_24h": 1.03676,
     "pct_7d": 1.8,
     "pct_30d": 21.5,
-    "sma50": 70210.79794078617,
-    "sma200": 69901.04084090362,
+    "sma50": 70212.00137542651,
+    "sma200": 69901.34169956371,
     "support_30d": 62843.70368466329,
     "resistance_30d": 81264.70153038795,
     "mark_price": 78638.66714493,
@@ -3322,14 +3322,14 @@
     "key": "ETH",
     "name": "Ethereum",
     "emoji": "\u039e",
-    "price": 2498.6,
+    "price": 2501.05,
     "high_24h": 2510.7,
     "low_24h": 2442.98,
-    "pct_24h": 1.34853,
+    "pct_24h": 1.45762,
     "pct_7d": 3.4,
     "pct_30d": 30.4,
-    "sma50": 2138.3510951189596,
-    "sma200": 2046.0369369267742,
+    "sma50": 2138.4035339963416,
+    "sma200": 2046.0500466461197,
     "support_30d": 1874.401898191962,
     "resistance_30d": 2514.967577695514,
     "mark_price": 2490.71,
