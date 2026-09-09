@@ -4,7 +4,7 @@
   "_alerts_state": {
     "btc-resistance-break": {
       "triggered": true,
-      "last_triggered_at": "2026-09-09 08:40:25"
+      "last_triggered_at": "2026-09-09 08:45:23"
     },
     "btc-support-break": {
       "triggered": false,
@@ -343,7 +343,7 @@
         ],
         [
           "Stretch from long-term average",
-          "+3.0% vs its long-term average - not stretched either way",
+          "+3.1% vs its long-term average - not stretched either way",
           0
         ],
         [
@@ -356,12 +356,12 @@
       "id": "dogecoin",
       "symbol": "DOGE",
       "name": "Dogecoin",
-      "price": 0.091057,
-      "pct_24h": 2.23789,
+      "price": 0.091188,
+      "pct_24h": 2.00379,
       "pct_7d": 11.1,
       "support_30d": 0.06952870548515376,
       "resistance_30d": 0.09337940032634065,
-      "as_of": "2026-09-09 08:20:26",
+      "as_of": "2026-09-09 08:45:23",
       "stale": false
     },
     "zcash": {
@@ -823,7 +823,7 @@
         ],
         [
           "Stretch from long-term average",
-          "-3.9% vs its long-term average - not stretched either way",
+          "-3.5% vs its long-term average - not stretched either way",
           0
         ],
         [
@@ -836,12 +836,12 @@
       "id": "hedera-hashgraph",
       "symbol": "HBAR",
       "name": "Hedera",
-      "price": 0.079557,
-      "pct_24h": -0.92438,
+      "price": 0.079861,
+      "pct_24h": -0.21294,
       "pct_7d": 7.4,
       "support_30d": 0.06461260477975343,
       "resistance_30d": 0.08182180696524229,
-      "as_of": "2026-09-09 08:00:39",
+      "as_of": "2026-09-09 08:45:23",
       "stale": false
     },
     "pepe": {
@@ -1903,11 +1903,11 @@
     "mantle": {
       "label": "\ud83d\udfe1 HOLD / NEUTRAL",
       "status": "neutral",
-      "score": 0,
+      "score": -1,
       "rows": [
         [
           "Price vs. recent range",
-          "Near its 30-day high (~$0.6365) - less room to run",
+          "Near its 30-day high (~$0.6491) - less room to run",
           -1
         ],
         [
@@ -1927,8 +1927,8 @@
         ],
         [
           "Stretch from long-term average",
-          "+9.9% vs its long-term average - not stretched either way",
-          0
+          "+12.9% above its long-term average - a bit stretched",
+          -1
         ],
         [
           "Leverage traders' bias",
@@ -1940,12 +1940,12 @@
       "id": "mantle",
       "symbol": "MNT",
       "name": "Mantle",
-      "price": 0.632124,
-      "pct_24h": 1.57392,
-      "pct_7d": 15.8,
+      "price": 0.649314,
+      "pct_24h": 4.86708,
+      "pct_7d": 18.6,
       "support_30d": 0.42660592418086046,
-      "resistance_30d": 0.6365218632454678,
-      "as_of": "2026-09-09 06:25:18",
+      "resistance_30d": 0.6490747835879993,
+      "as_of": "2026-09-09 08:45:23",
       "stale": false
     },
     "polkadot": {
@@ -3298,14 +3298,14 @@
     "key": "BTC",
     "name": "Bitcoin",
     "emoji": "\u20bf",
-    "price": 79628,
+    "price": 79654,
     "high_24h": 79312,
     "low_24h": 77666,
-    "pct_24h": 1.42037,
+    "pct_24h": 1.47878,
     "pct_7d": 2.2,
     "pct_30d": 21.5,
-    "sma50": 70220.8819020122,
-    "sma200": 69903.56183121011,
+    "sma50": 70221.09476146777,
+    "sma200": 69903.615046074,
     "support_30d": 62843.70368466329,
     "resistance_30d": 81264.70153038795,
     "mark_price": 78638.66714493,
@@ -3320,16 +3320,16 @@
     "key": "ETH",
     "name": "Ethereum",
     "emoji": "\u039e",
-    "price": 2517.95,
+    "price": 2518.54,
     "high_24h": 2514.42,
     "low_24h": 2442.98,
-    "pct_24h": 1.50459,
+    "pct_24h": 1.55988,
     "pct_7d": 3.7,
     "pct_30d": 30.2,
-    "sma50": 2138.758775906226,
-    "sma200": 2046.1388571235907,
+    "sma50": 2138.735655014168,
+    "sma200": 2046.133076900576,
     "support_30d": 1874.401898191962,
-    "resistance_30d": 2518.8092446636106,
+    "resistance_30d": 2517.6532000607035,
     "mark_price": 2490.71,
     "index_price": 2491.23744186,
     "funding_rate": 6.699e-05,
