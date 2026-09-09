@@ -4,7 +4,7 @@
   "_alerts_state": {
     "btc-resistance-break": {
       "triggered": true,
-      "last_triggered_at": "2026-09-09 19:35:19"
+      "last_triggered_at": "2026-09-09 19:40:22"
     },
     "btc-support-break": {
       "triggered": false,
@@ -317,14 +317,14 @@
       "stale": false
     },
     "dogecoin": {
-      "label": "\ud83d\udfe1 HOLD / NEUTRAL",
-      "status": "neutral",
-      "score": 1,
+      "label": "\ud83d\udfe2 LEAN ACCUMULATE",
+      "status": "bullish",
+      "score": 2,
       "rows": [
         [
           "Price vs. recent range",
-          "Near its 30-day high (~$0.0934) - less room to run",
-          -1
+          "Sitting in the middle of its 30-day range",
+          0
         ],
         [
           "Crowd mood (Fear & Greed)",
@@ -343,7 +343,7 @@
         ],
         [
           "Stretch from long-term average",
-          "+0.9% vs its long-term average - not stretched either way",
+          "-0.6% vs its long-term average - not stretched either way",
           0
         ],
         [
@@ -352,16 +352,16 @@
           0
         ]
       ],
-      "plain": "No real edge either way right now - fine to just wait and watch.",
+      "plain": "Leans toward a decent spot to slowly add (DCA) - not a strong signal, just a lean.",
       "id": "dogecoin",
       "symbol": "DOGE",
       "name": "Dogecoin",
-      "price": 0.089164,
-      "pct_24h": -1.26777,
-      "pct_7d": 9.3,
+      "price": 0.087889,
+      "pct_24h": -2.30726,
+      "pct_7d": 8.9,
       "support_30d": 0.06952870548515376,
       "resistance_30d": 0.09337940032634065,
-      "as_of": "2026-09-09 17:10:24",
+      "as_of": "2026-09-09 19:40:22",
       "stale": false
     },
     "zcash": {
@@ -631,7 +631,7 @@
         ],
         [
           "Stretch from long-term average",
-          "+38.6% above its long-term average - very stretched",
+          "+38.0% above its long-term average - very stretched",
           -2
         ],
         [
@@ -644,12 +644,12 @@
       "id": "monero",
       "symbol": "XMR",
       "name": "Monero",
-      "price": 507.53,
-      "pct_24h": 1.58439,
+      "price": 505.6,
+      "pct_24h": 0.5709,
       "pct_7d": -2.3,
       "support_30d": 377.1738335746389,
       "resistance_30d": 555.6684591165193,
-      "as_of": "2026-09-09 19:35:19",
+      "as_of": "2026-09-09 19:40:22",
       "stale": false
     },
     "cardano": {
@@ -1015,7 +1015,7 @@
         ],
         [
           "Stretch from long-term average",
-          "+21.8% above its long-term average - a bit stretched",
+          "+19.6% above its long-term average - a bit stretched",
           -1
         ],
         [
@@ -1028,12 +1028,12 @@
       "id": "worldcoin-wld",
       "symbol": "WLD",
       "name": "Worldcoin",
-      "price": 0.435692,
-      "pct_24h": -9.29973,
-      "pct_7d": 21.9,
+      "price": 0.42747,
+      "pct_24h": -9.15631,
+      "pct_7d": 20.5,
       "support_30d": 0.319812298466522,
       "resistance_30d": 0.4772935995106048,
-      "as_of": "2026-09-09 18:20:27",
+      "as_of": "2026-09-09 19:40:22",
       "stale": false
     },
     "bfusd": {
@@ -3293,21 +3293,19 @@
       "stale": false
     }
   },
-  "_strong_buy_state": {
-    "15m:ZEC": true
-  },
+  "_strong_buy_state": {},
   "BTC": {
     "key": "BTC",
     "name": "Bitcoin",
     "emoji": "\u20bf",
-    "price": 78523,
+    "price": 78451,
     "high_24h": 79701,
     "low_24h": 78095,
-    "pct_24h": 0.14591,
+    "pct_24h": -0.03157,
     "pct_7d": 1.4,
     "pct_30d": 22.8,
-    "sma50": 70198.443342428,
-    "sma200": 69897.95219131406,
+    "sma50": 70196.10732575635,
+    "sma200": 69897.36818714616,
     "support_30d": 62843.70368466329,
     "resistance_30d": 81264.70153038795,
     "mark_price": 78638.66714493,
@@ -3322,14 +3320,14 @@
     "key": "ETH",
     "name": "Ethereum",
     "emoji": "\u039e",
-    "price": 2480.95,
+    "price": 2475.41,
     "high_24h": 2521.51,
     "low_24h": 2472.65,
-    "pct_24h": -0.11317,
+    "pct_24h": -0.41517,
     "pct_7d": 3.8,
     "pct_30d": 32.6,
-    "sma50": 2137.994619306039,
-    "sma200": 2045.947817973544,
+    "sma50": 2137.8765191540583,
+    "sma200": 2045.9182929355488,
     "support_30d": 1874.401898191962,
     "resistance_30d": 2514.967577695514,
     "mark_price": 2490.71,
