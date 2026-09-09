@@ -823,7 +823,7 @@
         ],
         [
           "Stretch from long-term average",
-          "-7.6% vs its long-term average - not stretched either way",
+          "-7.5% vs its long-term average - not stretched either way",
           0
         ],
         [
@@ -836,12 +836,12 @@
       "id": "hedera-hashgraph",
       "symbol": "HBAR",
       "name": "Hedera",
-      "price": 0.076507,
-      "pct_24h": -3.53247,
+      "price": 0.076598,
+      "pct_24h": -3.20761,
       "pct_7d": 2.5,
       "support_30d": 0.06461260477975343,
       "resistance_30d": 0.08182180696524229,
-      "as_of": "2026-09-09 23:35:18",
+      "as_of": "2026-09-09 23:50:22",
       "stale": false
     },
     "pepe": {
@@ -2717,9 +2717,9 @@
       "stale": false
     },
     "morpho": {
-      "label": "\ud83d\udfe1 HOLD / NEUTRAL",
-      "status": "neutral",
-      "score": -1,
+      "label": "\ud83d\udd34 CAUTION - REDUCE NEW BUYS",
+      "status": "bearish",
+      "score": -2,
       "rows": [
         [
           "Price vs. recent range",
@@ -2738,12 +2738,12 @@
         ],
         [
           "Recent trend",
-          "Chopping sideways - no clear trend",
-          0
+          "Trending down - avoid catching a falling knife",
+          -1
         ],
         [
           "Stretch from long-term average",
-          "+18.8% above its long-term average - a bit stretched",
+          "+17.8% above its long-term average - a bit stretched",
           -1
         ],
         [
@@ -2752,16 +2752,16 @@
           0
         ]
       ],
-      "plain": "No real edge either way right now - fine to just wait and watch.",
+      "plain": "Getting risky - I'd hold off on new buys until this cools down.",
       "id": "morpho",
       "symbol": "MORPHO",
       "name": "Morpho",
-      "price": 2.33,
-      "pct_24h": -1.97157,
-      "pct_7d": -6.8,
+      "price": 2.31,
+      "pct_24h": -2.74621,
+      "pct_7d": -8.7,
       "support_30d": 1.9486067634864404,
       "resistance_30d": 2.9026212482639075,
-      "as_of": "2026-09-09 21:40:27",
+      "as_of": "2026-09-09 23:50:22",
       "stale": false
     },
     "memecore": {
@@ -2839,7 +2839,7 @@
         ],
         [
           "Stretch from long-term average",
-          "+28.0% above its long-term average - a bit stretched",
+          "+28.8% above its long-term average - a bit stretched",
           -1
         ],
         [
@@ -2852,12 +2852,12 @@
       "id": "aave",
       "symbol": "AAVE",
       "name": "Aave",
-      "price": 124.8,
-      "pct_24h": -3.19401,
+      "price": 125.63,
+      "pct_24h": -2.50188,
       "pct_7d": -2.1,
       "support_30d": 85.94219943917633,
       "resistance_30d": 141.53047916466082,
-      "as_of": "2026-09-09 23:25:17",
+      "as_of": "2026-09-09 23:50:22",
       "stale": false
     },
     "okb": {
@@ -3293,19 +3293,21 @@
       "stale": false
     }
   },
-  "_strong_buy_state": {},
+  "_strong_buy_state": {
+    "1h:MORPHO": true
+  },
   "BTC": {
     "key": "BTC",
     "name": "Bitcoin",
     "emoji": "\u20bf",
-    "price": 78215,
+    "price": 78234,
     "high_24h": 79701,
     "low_24h": 77833,
-    "pct_24h": -0.29127,
+    "pct_24h": -0.26922,
     "pct_7d": 0.9,
     "pct_30d": 21.9,
-    "sma50": 70192.28395398831,
-    "sma200": 69896.41234420415,
+    "sma50": 70192.66210111705,
+    "sma200": 69896.50688098633,
     "support_30d": 62843.70368466329,
     "resistance_30d": 81264.70153038795,
     "mark_price": 78013.99077211,
@@ -3320,14 +3322,14 @@
     "key": "ETH",
     "name": "Ethereum",
     "emoji": "\u039e",
-    "price": 2465.23,
+    "price": 2467.07,
     "high_24h": 2521.51,
     "low_24h": 2445.1,
-    "pct_24h": -0.80351,
+    "pct_24h": -0.72112,
     "pct_7d": 2.5,
     "pct_30d": 30.8,
-    "sma50": 2137.681409025297,
-    "sma200": 2045.8695154033585,
+    "sma50": 2137.7233596812357,
+    "sma200": 2045.8800030673433,
     "support_30d": 1874.401898191962,
     "resistance_30d": 2514.967577695514,
     "mark_price": 2454.54047715,
