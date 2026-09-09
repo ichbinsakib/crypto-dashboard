@@ -4,7 +4,7 @@
   "_alerts_state": {
     "btc-resistance-break": {
       "triggered": true,
-      "last_triggered_at": "2026-09-09 09:22:45"
+      "last_triggered_at": "2026-09-09 09:25:20"
     },
     "btc-support-break": {
       "triggered": false,
@@ -103,7 +103,7 @@
         ],
         [
           "Stretch from long-term average",
-          "+12.9% above its long-term average - a bit stretched",
+          "+12.1% above its long-term average - a bit stretched",
           -1
         ],
         [
@@ -116,12 +116,12 @@
       "id": "ripple",
       "symbol": "XRP",
       "name": "XRP",
-      "price": 1.44,
-      "pct_24h": 3.99807,
-      "pct_7d": 7.0,
+      "price": 1.43,
+      "pct_24h": 2.74545,
+      "pct_7d": 6.9,
       "support_30d": 0.9927072784932938,
       "resistance_30d": 1.52050482788377,
-      "as_of": "2026-09-09 08:25:20",
+      "as_of": "2026-09-09 09:25:20",
       "stale": false
     },
     "solana": {
@@ -967,7 +967,7 @@
         ],
         [
           "Stretch from long-term average",
-          "+15.1% above its long-term average - a bit stretched",
+          "+14.4% above its long-term average - a bit stretched",
           -1
         ],
         [
@@ -980,12 +980,12 @@
       "id": "aster-2",
       "symbol": "ASTER",
       "name": "Aster",
-      "price": 0.762423,
-      "pct_24h": -1.31261,
-      "pct_7d": 8.4,
+      "price": 0.75784,
+      "pct_24h": -1.11291,
+      "pct_7d": 8.1,
       "support_30d": 0.5986101196690307,
       "resistance_30d": 0.7868111056215635,
-      "as_of": "2026-09-09 07:55:19",
+      "as_of": "2026-09-09 09:25:20",
       "stale": false
     },
     "worldcoin-wld": {
@@ -3197,9 +3197,9 @@
       "stale": false
     },
     "kaspa": {
-      "label": "\ud83d\udfe1 HOLD / NEUTRAL",
-      "status": "neutral",
-      "score": 1,
+      "label": "\ud83d\udd34 CAUTION - REDUCE NEW BUYS",
+      "status": "bearish",
+      "score": -3,
       "rows": [
         [
           "Price vs. recent range",
@@ -3213,17 +3213,17 @@
         ],
         [
           "Market phase (best guess)",
-          "Basing near the bottom - phase where smart money accumulates",
-          2
-        ],
-        [
-          "Recent trend",
-          "Trending up steadily - healthy",
+          "Established uptrend - phase where price marks up",
           1
         ],
         [
+          "Recent trend",
+          "Shooting straight up - classic blow-off top risk, don't chase",
+          -2
+        ],
+        [
           "Stretch from long-term average",
-          "+4.0% vs its long-term average - not stretched either way",
+          "+5.6% vs its long-term average - not stretched either way",
           0
         ],
         [
@@ -3232,16 +3232,16 @@
           0
         ]
       ],
-      "plain": "No real edge either way right now - fine to just wait and watch.",
+      "plain": "Getting risky - I'd hold off on new buys until this cools down.",
       "id": "kaspa",
       "symbol": "KAS",
       "name": "Kaspa",
-      "price": 0.03548661,
-      "pct_24h": 2.93681,
-      "pct_7d": 27.5,
+      "price": 0.03603878,
+      "pct_24h": 5.16317,
+      "pct_7d": 30.1,
       "support_30d": 0.025258977496893695,
       "resistance_30d": 0.036503009730849086,
-      "as_of": "2026-09-09 07:55:19",
+      "as_of": "2026-09-09 09:25:20",
       "stale": false
     },
     "cosmos": {
@@ -3293,19 +3293,22 @@
       "stale": false
     }
   },
-  "_strong_buy_state": {},
+  "_strong_buy_state": {
+    "15m:LIT": true,
+    "15m:BGB": true
+  },
   "BTC": {
     "key": "BTC",
     "name": "Bitcoin",
     "emoji": "\u20bf",
-    "price": 79477,
+    "price": 79468,
     "high_24h": 79701,
     "low_24h": 77666,
-    "pct_24h": 1.41757,
+    "pct_24h": 1.34157,
     "pct_7d": 2.9,
     "pct_30d": 22.3,
-    "sma50": 70217.44021430859,
-    "sma200": 69902.70140928421,
+    "sma50": 70217.30357392745,
+    "sma200": 69902.66724918893,
     "support_30d": 62843.70368466329,
     "resistance_30d": 81264.70153038795,
     "mark_price": 78638.66714493,
@@ -3320,14 +3323,14 @@
     "key": "ETH",
     "name": "Ethereum",
     "emoji": "\u039e",
-    "price": 2510.21,
+    "price": 2509.75,
     "high_24h": 2521.51,
     "low_24h": 2442.98,
-    "pct_24h": 1.30331,
+    "pct_24h": 1.22919,
     "pct_7d": 4.3,
     "pct_30d": 31.0,
-    "sma50": 2138.5794024173324,
-    "sma200": 2046.0940137513674,
+    "sma50": 2138.5740715005277,
+    "sma200": 2046.0926810221663,
     "support_30d": 1874.401898191962,
     "resistance_30d": 2514.967577695514,
     "mark_price": 2490.71,
