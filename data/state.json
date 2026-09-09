@@ -4,7 +4,7 @@
   "_alerts_state": {
     "btc-resistance-break": {
       "triggered": true,
-      "last_triggered_at": "2026-09-09 01:20:23"
+      "last_triggered_at": "2026-09-09 01:25:18"
     },
     "btc-support-break": {
       "triggered": false,
@@ -424,7 +424,7 @@
         ],
         [
           "Crowd mood (Fear & Greed)",
-          "69/100 - crowd is greedy",
+          "66/100 - crowd is greedy",
           -1
         ],
         [
@@ -439,7 +439,7 @@
         ],
         [
           "Stretch from long-term average",
-          "+42.5% above its long-term average - very stretched",
+          "+40.4% above its long-term average - very stretched",
           -2
         ],
         [
@@ -452,12 +452,12 @@
       "id": "rain",
       "symbol": "RAIN",
       "name": "Rain",
-      "price": 0.01634736,
-      "pct_24h": 0.35785,
-      "pct_7d": 0.3,
+      "price": 0.01615199,
+      "pct_24h": -1.1317,
+      "pct_7d": -4.2,
       "support_30d": 0.012552829520986089,
       "resistance_30d": 0.018158429442510105,
-      "as_of": "2026-09-08 21:55:17",
+      "as_of": "2026-09-09 01:25:18",
       "stale": false
     },
     "chainlink": {
@@ -1907,7 +1907,7 @@
       "rows": [
         [
           "Price vs. recent range",
-          "Near its 30-day high (~$0.6367) - less room to run",
+          "Near its 30-day high (~$0.6365) - less room to run",
           -1
         ],
         [
@@ -1927,7 +1927,7 @@
         ],
         [
           "Stretch from long-term average",
-          "+7.8% vs its long-term average - not stretched either way",
+          "+9.7% vs its long-term average - not stretched either way",
           0
         ],
         [
@@ -1940,12 +1940,12 @@
       "id": "mantle",
       "symbol": "MNT",
       "name": "Mantle",
-      "price": 0.636073,
-      "pct_24h": 2.43565,
-      "pct_7d": 19.1,
+      "price": 0.631179,
+      "pct_24h": 0.69555,
+      "pct_7d": 18.3,
       "support_30d": 0.42660592418086046,
-      "resistance_30d": 0.6366501371599969,
-      "as_of": "2026-09-09 00:00:38",
+      "resistance_30d": 0.6365218632454678,
+      "as_of": "2026-09-09 01:25:18",
       "stale": false
     },
     "polkadot": {
@@ -2805,11 +2805,11 @@
       "symbol": "M",
       "name": "MemeCore",
       "price": 1.21,
-      "pct_24h": 4.31325,
+      "pct_24h": 3.64814,
       "pct_7d": 13.9,
       "support_30d": 1.0402044506518406,
       "resistance_30d": 1.2453913363052769,
-      "as_of": "2026-09-09 01:05:18",
+      "as_of": "2026-09-09 01:25:18",
       "stale": false
     },
     "aave": {
@@ -3293,28 +3293,26 @@
       "stale": false
     }
   },
-  "_strong_buy_state": {
-    "1h:POL": true
-  },
+  "_strong_buy_state": {},
   "BTC": {
     "key": "BTC",
     "name": "Bitcoin",
     "emoji": "\u20bf",
-    "price": 78676,
+    "price": 78650,
     "high_24h": 79432,
     "low_24h": 77666,
-    "pct_24h": -0.79035,
+    "pct_24h": -0.90121,
     "pct_7d": 1.8,
     "pct_30d": 21.5,
-    "sma50": 70201.48213555454,
-    "sma200": 69898.71188959571,
+    "sma50": 70201.29170765841,
+    "sma200": 69898.66428262167,
     "support_30d": 62843.70368466329,
     "resistance_30d": 81264.70153038795,
-    "mark_price": 78433.3,
-    "index_price": 78460.22173913,
-    "funding_rate": 8.471e-05,
-    "oi_change_pct": 1.6728375188814353,
-    "oi_now": 108487.675,
+    "mark_price": 78638.66714493,
+    "index_price": 78674.61586957,
+    "funding_rate": 6.744e-05,
+    "oi_change_pct": -0.23605994508681874,
+    "oi_now": 106528.861,
     "fng_value": 66,
     "fng_class": "Greed"
   },
@@ -3322,21 +3320,21 @@
     "key": "ETH",
     "name": "Ethereum",
     "emoji": "\u039e",
-    "price": 2491.63,
+    "price": 2489.83,
     "high_24h": 2505.13,
     "low_24h": 2442.98,
-    "pct_24h": -0.26839,
+    "pct_24h": -0.43058,
     "pct_7d": 3.3,
     "pct_30d": 30.8,
-    "sma50": 2138.2037760529633,
-    "sma200": 2046.0001071602749,
+    "sma50": 2138.1847384153093,
+    "sma200": 2045.9953477508616,
     "support_30d": 1874.401898191962,
     "resistance_30d": 2514.967577695514,
-    "mark_price": 2473.95,
-    "index_price": 2475.53744186,
-    "funding_rate": -6.63e-06,
-    "oi_change_pct": 1.005224238772622,
-    "oi_now": 2308131.664,
+    "mark_price": 2490.71,
+    "index_price": 2491.23744186,
+    "funding_rate": 6.699e-05,
+    "oi_change_pct": -1.3714975312193338,
+    "oi_now": 2260719.572,
     "fng_value": 66,
     "fng_class": "Greed"
   }
