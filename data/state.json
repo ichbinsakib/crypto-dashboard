@@ -4,7 +4,7 @@
   "_alerts_state": {
     "btc-resistance-break": {
       "triggered": true,
-      "last_triggered_at": "2026-09-09 12:00:33"
+      "last_triggered_at": "2026-09-09 12:05:25"
     },
     "btc-support-break": {
       "triggered": false,
@@ -847,7 +847,7 @@
     "pepe": {
       "label": "\ud83d\udfe1 HOLD / NEUTRAL",
       "status": "neutral",
-      "score": -1,
+      "score": 0,
       "rows": [
         [
           "Price vs. recent range",
@@ -866,12 +866,12 @@
         ],
         [
           "Recent trend",
-          "Chopping sideways - no clear trend",
-          0
+          "Trending up steadily - healthy",
+          1
         ],
         [
           "Stretch from long-term average",
-          "+10.3% above its long-term average - a bit stretched",
+          "+12.1% above its long-term average - a bit stretched",
           -1
         ],
         [
@@ -884,12 +884,12 @@
       "id": "pepe",
       "symbol": "PEPE",
       "name": "Pepe",
-      "price": 3.65e-06,
-      "pct_24h": 1.7523,
-      "pct_7d": 7.6,
+      "price": 3.71e-06,
+      "pct_24h": 3.24304,
+      "pct_7d": 9.0,
       "support_30d": 2.5716563906374582e-06,
       "resistance_30d": 4.122123035488615e-06,
-      "as_of": "2026-09-09 11:20:28",
+      "as_of": "2026-09-09 12:05:25",
       "stale": false
     },
     "avalanche-2": {
@@ -1997,9 +1997,9 @@
       "stale": false
     },
     "uniswap": {
-      "label": "\ud83d\udd34 DISTRIBUTION ZONE",
+      "label": "\ud83d\udd34 CAUTION - REDUCE NEW BUYS",
       "status": "bearish",
-      "score": -5,
+      "score": -4,
       "rows": [
         [
           "Price vs. recent range",
@@ -2018,12 +2018,12 @@
         ],
         [
           "Recent trend",
-          "Chopping sideways - no clear trend",
-          0
+          "Trending up steadily - healthy",
+          1
         ],
         [
           "Stretch from long-term average",
-          "+82.6% above its long-term average - very stretched",
+          "+83.2% above its long-term average - very stretched",
           -2
         ],
         [
@@ -2032,16 +2032,16 @@
           0
         ]
       ],
-      "plain": "Looks stretched and euphoric - historically the zone where smart money sells, not buys.",
+      "plain": "Getting risky - I'd hold off on new buys until this cools down.",
       "id": "uniswap",
       "symbol": "UNI",
       "name": "Uniswap",
-      "price": 6.66,
-      "pct_24h": -5.07365,
-      "pct_7d": 7.7,
+      "price": 6.68,
+      "pct_24h": -4.24359,
+      "pct_7d": 10.8,
       "support_30d": 3.1971416665971573,
       "resistance_30d": 7.291165865788254,
-      "as_of": "2026-09-09 10:55:16",
+      "as_of": "2026-09-09 12:05:25",
       "stale": false
     },
     "pi-network": {
@@ -2695,7 +2695,7 @@
         ],
         [
           "Stretch from long-term average",
-          "-2.2% vs its long-term average - not stretched either way",
+          "-2.0% vs its long-term average - not stretched either way",
           0
         ],
         [
@@ -2708,12 +2708,12 @@
       "id": "pax-gold",
       "symbol": "PAXG",
       "name": "PAX Gold",
-      "price": 4399.24,
-      "pct_24h": 0.07562,
-      "pct_7d": 1.6,
+      "price": 4407.33,
+      "pct_24h": 0.09157,
+      "pct_7d": 2.1,
       "support_30d": 4333.461123702061,
       "resistance_30d": 4672.307573354755,
-      "as_of": "2026-09-09 10:40:26",
+      "as_of": "2026-09-09 12:05:25",
       "stale": false
     },
     "morpho": {
@@ -3293,21 +3293,19 @@
       "stale": false
     }
   },
-  "_strong_buy_state": {
-    "15m:QNT": true
-  },
+  "_strong_buy_state": {},
   "BTC": {
     "key": "BTC",
     "name": "Bitcoin",
     "emoji": "\u20bf",
-    "price": 79305,
+    "price": 79344,
     "high_24h": 79701,
     "low_24h": 77666,
-    "pct_24h": 1.17214,
+    "pct_24h": 1.40289,
     "pct_7d": 3.5,
     "pct_30d": 22.1,
-    "sma50": 70214.10891152528,
-    "sma200": 69901.86858358838,
+    "sma50": 70214.3423050919,
+    "sma200": 69901.92693198005,
     "support_30d": 62843.70368466329,
     "resistance_30d": 81264.70153038795,
     "mark_price": 78638.66714493,
@@ -3322,14 +3320,14 @@
     "key": "ETH",
     "name": "Ethereum",
     "emoji": "\u039e",
-    "price": 2501.98,
+    "price": 2501.75,
     "high_24h": 2521.51,
     "low_24h": 2442.98,
-    "pct_24h": 1.16787,
+    "pct_24h": 1.30909,
     "pct_7d": 5.5,
     "pct_30d": 30.6,
-    "sma50": 2138.4221376647743,
-    "sma200": 2046.0546975632276,
+    "sma50": 2138.381063756868,
+    "sma200": 2046.0444290862513,
     "support_30d": 1874.401898191962,
     "resistance_30d": 2514.967577695514,
     "mark_price": 2490.71,
