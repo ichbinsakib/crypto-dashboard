@@ -4,7 +4,7 @@
   "_alerts_state": {
     "btc-resistance-break": {
       "triggered": true,
-      "last_triggered_at": "2026-09-09 10:10:22"
+      "last_triggered_at": "2026-09-09 10:21:50"
     },
     "btc-support-break": {
       "triggered": false,
@@ -295,7 +295,7 @@
         ],
         [
           "Stretch from long-term average",
-          "+59.1% above its long-term average - very stretched",
+          "+59.2% above its long-term average - very stretched",
           -2
         ],
         [
@@ -308,12 +308,12 @@
       "id": "hyperliquid",
       "symbol": "HYPE",
       "name": "Hyperliquid",
-      "price": 85.71,
-      "pct_24h": 1.61141,
+      "price": 85.8,
+      "pct_24h": 1.65615,
       "pct_7d": 5.2,
       "support_30d": 54.442530206647206,
       "resistance_30d": 87.951916819731,
-      "as_of": "2026-09-09 10:00:35",
+      "as_of": "2026-09-09 10:21:50",
       "stale": false
     },
     "dogecoin": {
@@ -847,7 +847,7 @@
     "pepe": {
       "label": "\ud83d\udfe1 HOLD / NEUTRAL",
       "status": "neutral",
-      "score": 0,
+      "score": -1,
       "rows": [
         [
           "Price vs. recent range",
@@ -866,12 +866,12 @@
         ],
         [
           "Recent trend",
-          "Trending up steadily - healthy",
-          1
+          "Chopping sideways - no clear trend",
+          0
         ],
         [
           "Stretch from long-term average",
-          "+10.6% above its long-term average - a bit stretched",
+          "+10.9% above its long-term average - a bit stretched",
           -1
         ],
         [
@@ -884,12 +884,12 @@
       "id": "pepe",
       "symbol": "PEPE",
       "name": "Pepe",
-      "price": 3.66e-06,
-      "pct_24h": 0.52001,
-      "pct_7d": 8.4,
+      "price": 3.67e-06,
+      "pct_24h": 0.5421,
+      "pct_7d": 7.0,
       "support_30d": 2.5716563906374582e-06,
       "resistance_30d": 4.122123035488615e-06,
-      "as_of": "2026-09-09 09:55:20",
+      "as_of": "2026-09-09 10:21:50",
       "stale": false
     },
     "avalanche-2": {
@@ -1543,7 +1543,7 @@
         ],
         [
           "Stretch from long-term average",
-          "+109.6% above its long-term average - very stretched",
+          "+112.0% above its long-term average - very stretched",
           -2
         ],
         [
@@ -1556,12 +1556,12 @@
       "id": "pump-fun",
       "symbol": "PUMP",
       "name": "Pump.fun",
-      "price": 0.00443945,
-      "pct_24h": 1.72478,
+      "price": 0.00449086,
+      "pct_24h": 2.89821,
       "pct_7d": 5.3,
       "support_30d": 0.002666433318189806,
       "resistance_30d": 0.0052249885406471875,
-      "as_of": "2026-09-09 10:10:22",
+      "as_of": "2026-09-09 10:21:50",
       "stale": false
     },
     "venice-token": {
@@ -1831,7 +1831,7 @@
         ],
         [
           "Stretch from long-term average",
-          "+64.6% above its long-term average - very stretched",
+          "+61.1% above its long-term average - very stretched",
           -2
         ],
         [
@@ -1844,12 +1844,12 @@
       "id": "ethena",
       "symbol": "ENA",
       "name": "Ethena",
-      "price": 0.166992,
-      "pct_24h": 2.6566,
-      "pct_7d": 4.4,
+      "price": 0.163362,
+      "pct_24h": -0.60013,
+      "pct_7d": 4.8,
       "support_30d": 0.08231050586125944,
       "resistance_30d": 0.17616469272611565,
-      "as_of": "2026-09-09 07:45:24",
+      "as_of": "2026-09-09 10:21:50",
       "stale": false
     },
     "bitcoin-cash": {
@@ -2887,7 +2887,7 @@
         ],
         [
           "Stretch from long-term average",
-          "+31.4% above its long-term average - very stretched",
+          "+30.9% above its long-term average - very stretched",
           -2
         ],
         [
@@ -2900,12 +2900,12 @@
       "id": "okb",
       "symbol": "OKB",
       "name": "OKB",
-      "price": 114.59,
-      "pct_24h": -0.99293,
-      "pct_7d": 4.8,
+      "price": 114.22,
+      "pct_24h": -1.61619,
+      "pct_7d": 6.1,
       "support_30d": 94.68582680773451,
       "resistance_30d": 115.8310797114581,
-      "as_of": "2026-09-09 09:30:31",
+      "as_of": "2026-09-09 10:21:50",
       "stale": false
     },
     "just": {
@@ -3294,20 +3294,20 @@
     }
   },
   "_strong_buy_state": {
-    "15m:XMR": true
+    "15m:OKB": true
   },
   "BTC": {
     "key": "BTC",
     "name": "Bitcoin",
     "emoji": "\u20bf",
-    "price": 78974,
+    "price": 79002,
     "high_24h": 79701,
     "low_24h": 77666,
-    "pct_24h": 0.38633,
+    "pct_24h": 0.10222,
     "pct_7d": 2.8,
     "pct_30d": 21.1,
-    "sma50": 70207.76381237252,
-    "sma200": 69900.2823088002,
+    "sma50": 70208.67761080594,
+    "sma200": 69900.51075840856,
     "support_30d": 62843.70368466329,
     "resistance_30d": 81264.70153038795,
     "mark_price": 78638.66714493,
@@ -3322,14 +3322,14 @@
     "key": "ETH",
     "name": "Ethereum",
     "emoji": "\u039e",
-    "price": 2491.45,
+    "price": 2489.63,
     "high_24h": 2521.51,
     "low_24h": 2442.98,
-    "pct_24h": 0.17991,
+    "pct_24h": -0.30813,
     "pct_7d": 4.1,
     "pct_30d": 29.4,
-    "sma50": 2138.2116283507435,
-    "sma200": 2046.0020702347203,
+    "sma50": 2138.187777768111,
+    "sma200": 2045.996107589062,
     "support_30d": 1874.401898191962,
     "resistance_30d": 2514.967577695514,
     "mark_price": 2490.71,
