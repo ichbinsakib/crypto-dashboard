@@ -4,7 +4,7 @@
   "_alerts_state": {
     "btc-resistance-break": {
       "triggered": true,
-      "last_triggered_at": "2026-09-09 11:10:30"
+      "last_triggered_at": "2026-09-09 11:15:34"
     },
     "btc-support-break": {
       "triggered": false,
@@ -2612,12 +2612,12 @@
       "id": "bitway",
       "symbol": "BTW",
       "name": "Bitway",
-      "price": 0.449148,
-      "pct_24h": -0.31403,
+      "price": 0.449261,
+      "pct_24h": -0.09651,
       "pct_7d": 1.3,
       "support_30d": 0.20490616383406327,
       "resistance_30d": 0.48788437226017506,
-      "as_of": "2026-09-09 11:10:30",
+      "as_of": "2026-09-09 11:15:34",
       "stale": false
     },
     "world-liberty-financial": {
@@ -2647,7 +2647,7 @@
         ],
         [
           "Stretch from long-term average",
-          "-21.1% below its long-term average - confirmed downtrend",
+          "-21.4% below its long-term average - confirmed downtrend",
           -1
         ],
         [
@@ -2660,12 +2660,12 @@
       "id": "world-liberty-financial",
       "symbol": "WLFI",
       "name": "World Liberty Financial",
-      "price": 0.055845,
-      "pct_24h": -0.47291,
-      "pct_7d": -2.4,
+      "price": 0.055605,
+      "pct_24h": -0.25534,
+      "pct_7d": -1.9,
       "support_30d": 0.05491021291540163,
       "resistance_30d": 0.06254770952093733,
-      "as_of": "2026-09-09 09:35:19",
+      "as_of": "2026-09-09 11:15:34",
       "stale": false
     },
     "pax-gold": {
@@ -2743,7 +2743,7 @@
         ],
         [
           "Stretch from long-term average",
-          "+21.1% above its long-term average - a bit stretched",
+          "+19.3% above its long-term average - a bit stretched",
           -1
         ],
         [
@@ -2756,12 +2756,12 @@
       "id": "morpho",
       "symbol": "MORPHO",
       "name": "Morpho",
-      "price": 2.37,
-      "pct_24h": -3.66739,
-      "pct_7d": -8.3,
-      "support_30d": 1.9343684047565628,
+      "price": 2.34,
+      "pct_24h": -3.06822,
+      "pct_7d": -8.0,
+      "support_30d": 1.9486067634864404,
       "resistance_30d": 2.9026212482639075,
-      "as_of": "2026-09-09 00:05:18",
+      "as_of": "2026-09-09 11:15:34",
       "stale": false
     },
     "memecore": {
@@ -3294,20 +3294,22 @@
     }
   },
   "_strong_buy_state": {
-    "15m:WBT": true
+    "15m:ASTER": true,
+    "15m:WBT": true,
+    "15m:MORPHO": true
   },
   "BTC": {
     "key": "BTC",
     "name": "Bitcoin",
     "emoji": "\u20bf",
-    "price": 78772,
+    "price": 78856,
     "high_24h": 79701,
     "low_24h": 77666,
-    "pct_24h": 0.49687,
+    "pct_24h": 0.72166,
     "pct_7d": 2.9,
     "pct_30d": 21.6,
-    "sma50": 70203.92733158242,
-    "sma200": 69899.32318860268,
+    "sma50": 70205.04801648871,
+    "sma200": 69899.60335982924,
     "support_30d": 62843.70368466329,
     "resistance_30d": 81264.70153038795,
     "mark_price": 78638.66714493,
@@ -3322,14 +3324,14 @@
     "key": "ETH",
     "name": "Ethereum",
     "emoji": "\u039e",
-    "price": 2483.98,
+    "price": 2487.28,
     "high_24h": 2521.51,
     "low_24h": 2442.98,
-    "pct_24h": 0.31668,
+    "pct_24h": 0.60856,
     "pct_7d": 4.7,
     "pct_30d": 29.9,
-    "sma50": 2138.0671599967413,
-    "sma200": 2045.9659531462196,
+    "sma50": 2138.122328819075,
+    "sma200": 2045.9797453518029,
     "support_30d": 1874.401898191962,
     "resistance_30d": 2514.967577695514,
     "mark_price": 2490.71,
