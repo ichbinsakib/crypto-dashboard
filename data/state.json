@@ -4,7 +4,7 @@
   "_alerts_state": {
     "btc-resistance-break": {
       "triggered": true,
-      "last_triggered_at": "2026-09-09 02:05:19"
+      "last_triggered_at": "2026-09-09 02:10:24"
     },
     "btc-support-break": {
       "triggered": false,
@@ -583,7 +583,7 @@
         ],
         [
           "Stretch from long-term average",
-          "-4.7% vs its long-term average - not stretched either way",
+          "-4.5% vs its long-term average - not stretched either way",
           0
         ],
         [
@@ -596,12 +596,12 @@
       "id": "leo-token",
       "symbol": "LEO",
       "name": "LEO Token",
-      "price": 9.18,
-      "pct_24h": -1.00303,
-      "pct_7d": -1.9,
+      "price": 9.19,
+      "pct_24h": -0.45643,
+      "pct_7d": -2.1,
       "support_30d": 8.948412455130585,
       "resistance_30d": 9.681775974309534,
-      "as_of": "2026-09-09 01:55:20",
+      "as_of": "2026-09-09 02:10:24",
       "stale": false
     },
     "monero": {
@@ -727,7 +727,7 @@
         ],
         [
           "Stretch from long-term average",
-          "+7.5% vs its long-term average - not stretched either way",
+          "+7.4% vs its long-term average - not stretched either way",
           0
         ],
         [
@@ -740,12 +740,12 @@
       "id": "stellar",
       "symbol": "XLM",
       "name": "Stellar",
-      "price": 0.188146,
-      "pct_24h": -2.93091,
-      "pct_7d": 7.2,
+      "price": 0.188038,
+      "pct_24h": -2.51185,
+      "pct_7d": 7.8,
       "support_30d": 0.15472912151335613,
       "resistance_30d": 0.20181319711037435,
-      "as_of": "2026-09-09 01:50:24",
+      "as_of": "2026-09-09 02:10:24",
       "stale": false
     },
     "kucoin-shares": {
@@ -1763,7 +1763,7 @@
       "rows": [
         [
           "Price vs. recent range",
-          "Near its 30-day high (~$4.89) - less room to run",
+          "Near its 30-day high (~$4.93) - less room to run",
           -1
         ],
         [
@@ -1783,7 +1783,7 @@
         ],
         [
           "Stretch from long-term average",
-          "+179.2% above its long-term average - very stretched",
+          "+181.5% above its long-term average - very stretched",
           -2
         ],
         [
@@ -1796,12 +1796,12 @@
       "id": "lighter",
       "symbol": "LIT",
       "name": "Lighter",
-      "price": 4.88,
-      "pct_24h": 2.76087,
-      "pct_7d": 38.6,
+      "price": 4.92,
+      "pct_24h": 3.0196,
+      "pct_7d": 38.7,
       "support_30d": 2.2358662099746955,
-      "resistance_30d": 4.886410824477,
-      "as_of": "2026-09-09 01:15:24",
+      "resistance_30d": 4.929146600009851,
+      "as_of": "2026-09-09 02:10:24",
       "stale": false
     },
     "ethena": {
@@ -3293,19 +3293,22 @@
       "stale": false
     }
   },
-  "_strong_buy_state": {},
+  "_strong_buy_state": {
+    "15m:XLM": true,
+    "1h:XLM": true
+  },
   "BTC": {
     "key": "BTC",
     "name": "Bitcoin",
     "emoji": "\u20bf",
-    "price": 78893,
+    "price": 78890,
     "high_24h": 78970,
     "low_24h": 77666,
-    "pct_24h": -0.63293,
+    "pct_24h": -0.5515,
     "pct_7d": 2.2,
     "pct_30d": 21.5,
-    "sma50": 70205.57237594956,
-    "sma200": 69899.73444969446,
+    "sma50": 70205.87952757555,
+    "sma200": 69899.81123760095,
     "support_30d": 62843.70368466329,
     "resistance_30d": 81264.70153038795,
     "mark_price": 78638.66714493,
@@ -3320,14 +3323,14 @@
     "key": "ETH",
     "name": "Ethereum",
     "emoji": "\u039e",
-    "price": 2498.28,
+    "price": 2496.78,
     "high_24h": 2503.59,
     "low_24h": 2442.98,
-    "pct_24h": -0.15475,
+    "pct_24h": -0.07816,
     "pct_7d": 3.7,
     "pct_30d": 30.7,
-    "sma50": 2138.3300035790344,
-    "sma200": 2046.031664041793,
+    "sma50": 2138.316887804659,
+    "sma200": 2046.0283850981991,
     "support_30d": 1874.401898191962,
     "resistance_30d": 2514.967577695514,
     "mark_price": 2490.71,
