@@ -4,7 +4,7 @@
   "_alerts_state": {
     "btc-resistance-break": {
       "triggered": true,
-      "last_triggered_at": "2026-09-09 17:45:24"
+      "last_triggered_at": "2026-09-09 17:50:24"
     },
     "btc-support-break": {
       "triggered": false,
@@ -1028,12 +1028,12 @@
       "id": "worldcoin-wld",
       "symbol": "WLD",
       "name": "Worldcoin",
-      "price": 0.434378,
-      "pct_24h": -9.85357,
-      "pct_7d": 22.8,
+      "price": 0.434423,
+      "pct_24h": -9.07715,
+      "pct_7d": 20.5,
       "support_30d": 0.319812298466522,
       "resistance_30d": 0.4772935995106048,
-      "as_of": "2026-09-09 16:35:19",
+      "as_of": "2026-09-09 17:50:24",
       "stale": false
     },
     "bfusd": {
@@ -1399,7 +1399,7 @@
         ],
         [
           "Stretch from long-term average",
-          "+32.1% above its long-term average - very stretched",
+          "+32.2% above its long-term average - very stretched",
           -2
         ],
         [
@@ -1412,12 +1412,12 @@
       "id": "gatechain-token",
       "symbol": "GT",
       "name": "Gate",
-      "price": 9.23,
-      "pct_24h": 0.30111,
+      "price": 9.24,
+      "pct_24h": 0.29205,
       "pct_7d": 16.2,
       "support_30d": 6.673649191532821,
       "resistance_30d": 9.38216924975626,
-      "as_of": "2026-09-09 17:35:21",
+      "as_of": "2026-09-09 17:50:24",
       "stale": false
     },
     "crypto-com-chain": {
@@ -2071,7 +2071,7 @@
         ],
         [
           "Stretch from long-term average",
-          "-31.5% below its long-term average - confirmed downtrend",
+          "-31.6% below its long-term average - confirmed downtrend",
           -1
         ],
         [
@@ -2084,12 +2084,12 @@
       "id": "pi-network",
       "symbol": "PI",
       "name": "Pi Network",
-      "price": 0.096938,
-      "pct_24h": 0.53571,
+      "price": 0.096747,
+      "pct_24h": 0.65273,
       "pct_7d": 3.3,
       "support_30d": 0.08559695435343688,
       "resistance_30d": 0.09798925329339339,
-      "as_of": "2026-09-09 17:21:57",
+      "as_of": "2026-09-09 17:50:24",
       "stale": false
     },
     "ondo-finance": {
@@ -3293,7 +3293,9 @@
       "stale": false
     }
   },
-  "_strong_buy_state": {},
+  "_strong_buy_state": {
+    "1h:PI": true
+  },
   "BTC": {
     "key": "BTC",
     "name": "Bitcoin",
@@ -3301,11 +3303,11 @@
     "price": 78712,
     "high_24h": 79701,
     "low_24h": 78095,
-    "pct_24h": 0.22988,
+    "pct_24h": 0.24557,
     "pct_7d": 2.0,
     "pct_30d": 22.6,
-    "sma50": 70202.25276106212,
-    "sma200": 69898.9045459726,
+    "sma50": 70202.16080683429,
+    "sma200": 69898.88155741565,
     "support_30d": 62843.70368466329,
     "resistance_30d": 81264.70153038795,
     "mark_price": 78638.66714493,
@@ -3320,14 +3322,14 @@
     "key": "ETH",
     "name": "Ethereum",
     "emoji": "\u039e",
-    "price": 2490.13,
+    "price": 2490.29,
     "high_24h": 2521.51,
     "low_24h": 2472.65,
-    "pct_24h": 0.05624,
+    "pct_24h": 0.06072,
     "pct_7d": 4.5,
     "pct_30d": 33.1,
-    "sma50": 2138.191342156014,
-    "sma200": 2045.9969986860376,
+    "sma50": 2138.1898168990965,
+    "sma200": 2045.9966173718085,
     "support_30d": 1874.401898191962,
     "resistance_30d": 2514.967577695514,
     "mark_price": 2490.71,
