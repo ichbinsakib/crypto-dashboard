@@ -4,7 +4,7 @@
   "_alerts_state": {
     "btc-resistance-break": {
       "triggered": true,
-      "last_triggered_at": "2026-09-09 03:50:23"
+      "last_triggered_at": "2026-09-09 03:55:18"
     },
     "btc-support-break": {
       "triggered": false,
@@ -885,11 +885,11 @@
       "symbol": "PEPE",
       "name": "Pepe",
       "price": 3.64e-06,
-      "pct_24h": 1.2189,
+      "pct_24h": 1.07804,
       "pct_7d": 6.0,
       "support_30d": 2.5716563906374582e-06,
       "resistance_30d": 4.122123035488615e-06,
-      "as_of": "2026-09-09 03:30:28",
+      "as_of": "2026-09-09 03:55:18",
       "stale": false
     },
     "avalanche-2": {
@@ -1469,13 +1469,13 @@
       "stale": false
     },
     "ethereum-classic": {
-      "label": "\ud83d\udfe1 HOLD / NEUTRAL",
-      "status": "neutral",
-      "score": -1,
+      "label": "\ud83d\udd34 CAUTION - REDUCE NEW BUYS",
+      "status": "bearish",
+      "score": -4,
       "rows": [
         [
           "Price vs. recent range",
-          "Near its 30-day high (~$8.68) - less room to run",
+          "Near its 30-day high (~$8.67) - less room to run",
           -1
         ],
         [
@@ -1490,8 +1490,8 @@
         ],
         [
           "Recent trend",
-          "Trending up steadily - healthy",
-          1
+          "Shooting straight up - classic blow-off top risk, don't chase",
+          -2
         ],
         [
           "Stretch from long-term average",
@@ -1504,16 +1504,16 @@
           0
         ]
       ],
-      "plain": "No real edge either way right now - fine to just wait and watch.",
+      "plain": "Getting risky - I'd hold off on new buys until this cools down.",
       "id": "ethereum-classic",
       "symbol": "ETC",
       "name": "Ethereum Classic",
       "price": 8.67,
-      "pct_24h": 8.12416,
-      "pct_7d": 19.7,
+      "pct_24h": 7.59468,
+      "pct_7d": 23.7,
       "support_30d": 6.079473341192034,
-      "resistance_30d": 8.684954348776557,
-      "as_of": "2026-09-09 01:00:34",
+      "resistance_30d": 8.674150539452915,
+      "as_of": "2026-09-09 03:55:18",
       "stale": false
     },
     "pump-fun": {
@@ -2455,7 +2455,7 @@
         ],
         [
           "Stretch from long-term average",
-          "+34.0% above its long-term average - very stretched",
+          "+34.6% above its long-term average - very stretched",
           -2
         ],
         [
@@ -2468,12 +2468,12 @@
       "id": "near",
       "symbol": "NEAR",
       "name": "NEAR Protocol",
-      "price": 2.27,
-      "pct_24h": -0.27932,
+      "price": 2.28,
+      "pct_24h": -0.16567,
       "pct_7d": 24.4,
       "support_30d": 1.5879597131538,
       "resistance_30d": 2.436852334393612,
-      "as_of": "2026-09-09 03:50:23",
+      "as_of": "2026-09-09 03:55:18",
       "stale": false
     },
     "quant-network": {
@@ -3294,21 +3294,21 @@
     }
   },
   "_strong_buy_state": {
-    "15m:ENA": true,
+    "15m:PEPE": true,
     "1h:NEAR": true
   },
   "BTC": {
     "key": "BTC",
     "name": "Bitcoin",
     "emoji": "\u20bf",
-    "price": 78650,
+    "price": 78606,
     "high_24h": 78930,
     "low_24h": 77666,
-    "pct_24h": -0.30785,
+    "pct_24h": -0.35058,
     "pct_7d": 2.3,
     "pct_30d": 20.9,
-    "sma50": 70200.64320376469,
-    "sma200": 69898.50215664825,
+    "sma50": 70200.37951675359,
+    "sma200": 69898.43623489546,
     "support_30d": 62843.70368466329,
     "resistance_30d": 81264.70153038795,
     "mark_price": 78638.66714493,
@@ -3323,14 +3323,14 @@
     "key": "ETH",
     "name": "Ethereum",
     "emoji": "\u039e",
-    "price": 2491.13,
+    "price": 2487.25,
     "high_24h": 2503.59,
     "low_24h": 2442.98,
-    "pct_24h": 0.23722,
+    "pct_24h": 0.15896,
     "pct_7d": 4.0,
     "pct_30d": 29.7,
-    "sma50": 2138.1863376191536,
-    "sma200": 2045.995747551823,
+    "sma50": 2138.1407000803456,
+    "sma200": 2045.9843381671205,
     "support_30d": 1874.401898191962,
     "resistance_30d": 2514.967577695514,
     "mark_price": 2490.71,
