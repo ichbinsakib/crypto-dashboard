@@ -4,7 +4,7 @@
   "_alerts_state": {
     "btc-resistance-break": {
       "triggered": true,
-      "last_triggered_at": "2026-09-09 03:40:22"
+      "last_triggered_at": "2026-09-09 03:45:23"
     },
     "btc-support-break": {
       "triggered": false,
@@ -727,7 +727,7 @@
         ],
         [
           "Stretch from long-term average",
-          "+7.1% vs its long-term average - not stretched either way",
+          "+6.9% vs its long-term average - not stretched either way",
           0
         ],
         [
@@ -740,12 +740,12 @@
       "id": "stellar",
       "symbol": "XLM",
       "name": "Stellar",
-      "price": 0.187426,
-      "pct_24h": -0.83727,
+      "price": 0.187146,
+      "pct_24h": -1.33787,
       "pct_7d": 8.2,
       "support_30d": 0.15472912151335613,
       "resistance_30d": 0.20181319711037435,
-      "as_of": "2026-09-09 03:05:19",
+      "as_of": "2026-09-09 03:45:23",
       "stale": false
     },
     "kucoin-shares": {
@@ -2887,7 +2887,7 @@
         ],
         [
           "Stretch from long-term average",
-          "+30.7% above its long-term average - very stretched",
+          "+30.6% above its long-term average - very stretched",
           -2
         ],
         [
@@ -2900,12 +2900,12 @@
       "id": "okb",
       "symbol": "OKB",
       "name": "OKB",
-      "price": 113.98,
-      "pct_24h": -1.84879,
+      "price": 113.96,
+      "pct_24h": -2.25444,
       "pct_7d": 5.4,
       "support_30d": 94.68582680773451,
       "resistance_30d": 115.8310797114581,
-      "as_of": "2026-09-09 03:20:24",
+      "as_of": "2026-09-09 03:45:23",
       "stale": false
     },
     "just": {
@@ -3271,7 +3271,7 @@
         ],
         [
           "Stretch from long-term average",
-          "+3.5% vs its long-term average - not stretched either way",
+          "+2.3% vs its long-term average - not stretched either way",
           0
         ],
         [
@@ -3284,28 +3284,32 @@
       "id": "cosmos",
       "symbol": "ATOM",
       "name": "Cosmos Hub",
-      "price": 1.83,
-      "pct_24h": 11.2278,
-      "pct_7d": 26.0,
+      "price": 1.81,
+      "pct_24h": 10.96719,
+      "pct_7d": 24.8,
       "support_30d": 1.3984336017772225,
       "resistance_30d": 1.8581525047856993,
-      "as_of": "2026-09-09 02:20:25",
+      "as_of": "2026-09-09 03:45:23",
       "stale": false
     }
   },
-  "_strong_buy_state": {},
+  "_strong_buy_state": {
+    "15m:ATOM": true,
+    "15m:OKB": true,
+    "15m:XLM": true
+  },
   "BTC": {
     "key": "BTC",
     "name": "Bitcoin",
     "emoji": "\u20bf",
-    "price": 78587,
+    "price": 78631,
     "high_24h": 78930,
     "low_24h": 77666,
-    "pct_24h": -0.37668,
+    "pct_24h": -0.36803,
     "pct_7d": 2.3,
     "pct_30d": 20.9,
-    "sma50": 70199.83098652358,
-    "sma200": 69898.29910233797,
+    "sma50": 70200.77604333423,
+    "sma200": 69898.53536654063,
     "support_30d": 62843.70368466329,
     "resistance_30d": 81264.70153038795,
     "mark_price": 78638.66714493,
@@ -3320,14 +3324,14 @@
     "key": "ETH",
     "name": "Ethereum",
     "emoji": "\u039e",
-    "price": 2488.81,
+    "price": 2490.48,
     "high_24h": 2503.59,
     "low_24h": 2442.98,
-    "pct_24h": 0.15511,
+    "pct_24h": 0.19942,
     "pct_7d": 4.0,
     "pct_30d": 29.7,
-    "sma50": 2138.156529314634,
-    "sma200": 2045.9882954756927,
+    "sma50": 2138.199880432702,
+    "sma200": 2045.9991332552097,
     "support_30d": 1874.401898191962,
     "resistance_30d": 2514.967577695514,
     "mark_price": 2490.71,
