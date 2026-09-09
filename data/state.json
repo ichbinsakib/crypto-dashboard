@@ -3,8 +3,8 @@
   "_fng_classification": "Greed",
   "_alerts_state": {
     "btc-resistance-break": {
-      "triggered": false,
-      "last_triggered_at": "2026-09-09 19:00:34"
+      "triggered": true,
+      "last_triggered_at": "2026-09-09 19:15:23"
     },
     "btc-support-break": {
       "triggered": false,
@@ -775,7 +775,7 @@
         ],
         [
           "Stretch from long-term average",
-          "-8.4% vs its long-term average - not stretched either way",
+          "-8.8% vs its long-term average - not stretched either way",
           0
         ],
         [
@@ -788,12 +788,12 @@
       "id": "kucoin-shares",
       "symbol": "KCS",
       "name": "KuCoin",
-      "price": 7.04,
-      "pct_24h": 0.42808,
-      "pct_7d": 0.6,
+      "price": 7.01,
+      "pct_24h": 0.42041,
+      "pct_7d": 0.9,
       "support_30d": 6.514591596607885,
       "resistance_30d": 7.8821382735057615,
-      "as_of": "2026-09-09 17:21:57",
+      "as_of": "2026-09-09 19:15:23",
       "stale": false
     },
     "hedera-hashgraph": {
@@ -1317,11 +1317,11 @@
       "symbol": "HTX",
       "name": "HTX DAO",
       "price": 1.69e-06,
-      "pct_24h": 0.04917,
-      "pct_7d": 5.0,
+      "pct_24h": 0.00635,
+      "pct_7d": 5.3,
       "support_30d": 1.6023985995039954e-06,
       "resistance_30d": 1.8259977214551937e-06,
-      "as_of": "2026-09-09 18:30:29",
+      "as_of": "2026-09-09 19:15:23",
       "stale": false
     },
     "superstate-short-duration-us-government-securities-fund-ustb": {
@@ -2963,7 +2963,7 @@
       "rows": [
         [
           "Price vs. recent range",
-          "Near its 30-day high (~$0.1008) - less room to run",
+          "Near its 30-day high (~$0.1018) - less room to run",
           -1
         ],
         [
@@ -2983,7 +2983,7 @@
         ],
         [
           "Stretch from long-term average",
-          "-1.2% vs its long-term average - not stretched either way",
+          "+1.7% vs its long-term average - not stretched either way",
           0
         ],
         [
@@ -2996,12 +2996,12 @@
       "id": "algorand",
       "symbol": "ALGO",
       "name": "Algorand",
-      "price": 0.099018,
-      "pct_24h": -3.70808,
-      "pct_7d": 10.7,
+      "price": 0.101985,
+      "pct_24h": 1.51859,
+      "pct_7d": 10.0,
       "support_30d": 0.07793708137631736,
-      "resistance_30d": 0.10076397875501594,
-      "as_of": "2026-09-09 16:00:35",
+      "resistance_30d": 0.1018134596208563,
+      "as_of": "2026-09-09 19:15:23",
       "stale": false
     },
     "eutbl": {
@@ -3293,21 +3293,19 @@
       "stale": false
     }
   },
-  "_strong_buy_state": {
-    "1h:QNT": true
-  },
+  "_strong_buy_state": {},
   "BTC": {
     "key": "BTC",
     "name": "Bitcoin",
     "emoji": "\u20bf",
-    "price": 78394,
+    "price": 78430,
     "high_24h": 79701,
     "low_24h": 78095,
-    "pct_24h": -0.05794,
+    "pct_24h": -0.03993,
     "pct_7d": 1.4,
     "pct_30d": 22.8,
-    "sma50": 70195.8868518094,
-    "sma200": 69897.31306865942,
+    "sma50": 70196.58163504016,
+    "sma200": 69897.4867644671,
     "support_30d": 62843.70368466329,
     "resistance_30d": 81264.70153038795,
     "mark_price": 78638.66714493,
@@ -3322,14 +3320,14 @@
     "key": "ETH",
     "name": "Ethereum",
     "emoji": "\u039e",
-    "price": 2478.91,
+    "price": 2481.28,
     "high_24h": 2521.51,
     "low_24h": 2472.65,
-    "pct_24h": -0.32305,
+    "pct_24h": -0.20564,
     "pct_7d": 3.8,
     "pct_30d": 32.6,
-    "sma50": 2137.960806837203,
-    "sma200": 2045.9393648563348,
+    "sma50": 2138.0073636614848,
+    "sma200": 2045.9510040624052,
     "support_30d": 1874.401898191962,
     "resistance_30d": 2514.967577695514,
     "mark_price": 2490.71,
