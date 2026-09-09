@@ -4,7 +4,7 @@
   "_alerts_state": {
     "btc-resistance-break": {
       "triggered": true,
-      "last_triggered_at": "2026-09-09 05:20:25"
+      "last_triggered_at": "2026-09-09 05:25:19"
     },
     "btc-support-break": {
       "triggered": false,
@@ -1571,7 +1571,7 @@
       "rows": [
         [
           "Price vs. recent range",
-          "Near its 30-day high (~$26.74) - less room to run",
+          "Near its 30-day high (~$26.73) - less room to run",
           -1
         ],
         [
@@ -1591,7 +1591,7 @@
         ],
         [
           "Stretch from long-term average",
-          "+126.3% above its long-term average - very stretched",
+          "+127.1% above its long-term average - very stretched",
           -2
         ],
         [
@@ -1604,12 +1604,12 @@
       "id": "venice-token",
       "symbol": "VVV",
       "name": "Venice Token",
-      "price": 26.63,
-      "pct_24h": 49.52864,
+      "price": 26.72,
+      "pct_24h": 49.94484,
       "pct_7d": 57.2,
       "support_30d": 11.491241326615295,
-      "resistance_30d": 26.74494056995246,
-      "as_of": "2026-09-09 05:15:27",
+      "resistance_30d": 26.728964390891054,
+      "as_of": "2026-09-09 05:25:19",
       "stale": false
     },
     "litecoin": {
@@ -2647,7 +2647,7 @@
         ],
         [
           "Stretch from long-term average",
-          "-20.6% below its long-term average - confirmed downtrend",
+          "-20.9% below its long-term average - confirmed downtrend",
           -1
         ],
         [
@@ -2660,12 +2660,12 @@
       "id": "world-liberty-financial",
       "symbol": "WLFI",
       "name": "World Liberty Financial",
-      "price": 0.056154,
-      "pct_24h": -0.46062,
-      "pct_7d": -1.0,
+      "price": 0.05594,
+      "pct_24h": -0.66802,
+      "pct_7d": -2.0,
       "support_30d": 0.05491021291540163,
       "resistance_30d": 0.06254770952093733,
-      "as_of": "2026-09-09 02:40:23",
+      "as_of": "2026-09-09 05:25:19",
       "stale": false
     },
     "pax-gold": {
@@ -3223,7 +3223,7 @@
         ],
         [
           "Stretch from long-term average",
-          "+4.7% vs its long-term average - not stretched either way",
+          "+4.0% vs its long-term average - not stretched either way",
           0
         ],
         [
@@ -3236,12 +3236,12 @@
       "id": "kaspa",
       "symbol": "KAS",
       "name": "Kaspa",
-      "price": 0.03573415,
-      "pct_24h": 2.18427,
+      "price": 0.03546786,
+      "pct_24h": 1.30443,
       "pct_7d": 29.7,
       "support_30d": 0.025258977496893695,
       "resistance_30d": 0.036503009730849086,
-      "as_of": "2026-09-09 05:15:27",
+      "as_of": "2026-09-09 05:25:19",
       "stale": false
     },
     "cosmos": {
@@ -3293,19 +3293,21 @@
       "stale": false
     }
   },
-  "_strong_buy_state": {},
+  "_strong_buy_state": {
+    "15m:KAS": true
+  },
   "BTC": {
     "key": "BTC",
     "name": "Bitcoin",
     "emoji": "\u20bf",
-    "price": 79275,
+    "price": 79212,
     "high_24h": 79173,
     "low_24h": 77666,
-    "pct_24h": 0.58056,
+    "pct_24h": 0.49349,
     "pct_7d": 2.1,
     "pct_30d": 21.9,
-    "sma50": 70213.50155379232,
-    "sma200": 69901.71674415514,
+    "sma50": 70212.70161682178,
+    "sma200": 69901.51675991251,
     "support_30d": 62843.70368466329,
     "resistance_30d": 81264.70153038795,
     "mark_price": 78638.66714493,
@@ -3320,14 +3322,14 @@
     "key": "ETH",
     "name": "Ethereum",
     "emoji": "\u039e",
-    "price": 2507.84,
+    "price": 2505.09,
     "high_24h": 2510.7,
     "low_24h": 2442.98,
-    "pct_24h": 1.07785,
+    "pct_24h": 0.92746,
     "pct_7d": 4.0,
     "pct_30d": 31.0,
-    "sma50": 2138.5422525198505,
-    "sma200": 2046.084726276997,
+    "sma50": 2138.495553214084,
+    "sma200": 2046.073051450555,
     "support_30d": 1874.401898191962,
     "resistance_30d": 2514.967577695514,
     "mark_price": 2490.71,
