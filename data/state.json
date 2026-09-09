@@ -4,7 +4,7 @@
   "_alerts_state": {
     "btc-resistance-break": {
       "triggered": true,
-      "last_triggered_at": "2026-09-09 09:50:25"
+      "last_triggered_at": "2026-09-09 09:55:20"
     },
     "btc-support-break": {
       "triggered": false,
@@ -343,7 +343,7 @@
         ],
         [
           "Stretch from long-term average",
-          "+3.1% vs its long-term average - not stretched either way",
+          "+2.0% vs its long-term average - not stretched either way",
           0
         ],
         [
@@ -356,12 +356,12 @@
       "id": "dogecoin",
       "symbol": "DOGE",
       "name": "Dogecoin",
-      "price": 0.091202,
-      "pct_24h": 1.88807,
-      "pct_7d": 11.1,
+      "price": 0.090183,
+      "pct_24h": -0.35522,
+      "pct_7d": 12.0,
       "support_30d": 0.06952870548515376,
       "resistance_30d": 0.09337940032634065,
-      "as_of": "2026-09-09 08:50:22",
+      "as_of": "2026-09-09 09:55:20",
       "stale": false
     },
     "zcash": {
@@ -871,7 +871,7 @@
         ],
         [
           "Stretch from long-term average",
-          "+12.4% above its long-term average - a bit stretched",
+          "+10.6% above its long-term average - a bit stretched",
           -1
         ],
         [
@@ -884,12 +884,12 @@
       "id": "pepe",
       "symbol": "PEPE",
       "name": "Pepe",
-      "price": 3.72e-06,
-      "pct_24h": 2.81549,
+      "price": 3.66e-06,
+      "pct_24h": 0.52001,
       "pct_7d": 8.4,
       "support_30d": 2.5716563906374582e-06,
       "resistance_30d": 4.122123035488615e-06,
-      "as_of": "2026-09-09 09:15:27",
+      "as_of": "2026-09-09 09:55:20",
       "stale": false
     },
     "avalanche-2": {
@@ -1663,7 +1663,7 @@
     "bitget-token": {
       "label": "\ud83d\udfe1 HOLD / NEUTRAL",
       "status": "neutral",
-      "score": -1,
+      "score": 0,
       "rows": [
         [
           "Price vs. recent range",
@@ -1677,8 +1677,8 @@
         ],
         [
           "Market phase (best guess)",
-          "Established uptrend - phase where price marks up",
-          1
+          "Basing near the bottom - phase where smart money accumulates",
+          2
         ],
         [
           "Recent trend",
@@ -1687,7 +1687,7 @@
         ],
         [
           "Stretch from long-term average",
-          "+5.8% vs its long-term average - not stretched either way",
+          "+3.7% vs its long-term average - not stretched either way",
           0
         ],
         [
@@ -1700,12 +1700,12 @@
       "id": "bitget-token",
       "symbol": "BGB",
       "name": "Bitget Token",
-      "price": 2.01,
-      "pct_24h": 0.41392,
-      "pct_7d": 4.0,
+      "price": 1.97,
+      "pct_24h": -1.35171,
+      "pct_7d": 4.6,
       "support_30d": 1.6372975273518793,
       "resistance_30d": 2.0284940947674617,
-      "as_of": "2026-09-09 08:10:23",
+      "as_of": "2026-09-09 09:55:20",
       "stale": false
     },
     "sui": {
@@ -3293,19 +3293,21 @@
       "stale": false
     }
   },
-  "_strong_buy_state": {},
+  "_strong_buy_state": {
+    "15m:BGB": true
+  },
   "BTC": {
     "key": "BTC",
     "name": "Bitcoin",
     "emoji": "\u20bf",
-    "price": 79061,
+    "price": 79027,
     "high_24h": 79701,
     "low_24h": 77666,
-    "pct_24h": 0.3945,
+    "pct_24h": 0.35938,
     "pct_7d": 2.9,
     "pct_30d": 22.3,
-    "sma50": 70209.24504766172,
-    "sma200": 69900.6526176225,
+    "sma50": 70208.00832249774,
+    "sma200": 69900.3434363315,
     "support_30d": 62843.70368466329,
     "resistance_30d": 81264.70153038795,
     "mark_price": 78638.66714493,
@@ -3320,14 +3322,14 @@
     "key": "ETH",
     "name": "Ethereum",
     "emoji": "\u039e",
-    "price": 2495.48,
+    "price": 2495.18,
     "high_24h": 2521.51,
     "low_24h": 2442.98,
-    "pct_24h": 0.06056,
+    "pct_24h": 0.10469,
     "pct_7d": 4.3,
     "pct_30d": 31.0,
-    "sma50": 2138.288493622251,
-    "sma200": 2046.021286552597,
+    "sma50": 2138.269648424062,
+    "sma200": 2046.0165752530497,
     "support_30d": 1874.401898191962,
     "resistance_30d": 2514.967577695514,
     "mark_price": 2490.71,
