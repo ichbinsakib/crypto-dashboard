@@ -4,7 +4,7 @@
   "_alerts_state": {
     "btc-resistance-break": {
       "triggered": true,
-      "last_triggered_at": "2026-09-09 14:15:25"
+      "last_triggered_at": "2026-09-09 14:20:28"
     },
     "btc-support-break": {
       "triggered": false,
@@ -775,7 +775,7 @@
         ],
         [
           "Stretch from long-term average",
-          "-8.9% vs its long-term average - not stretched either way",
+          "-9.1% vs its long-term average - not stretched either way",
           0
         ],
         [
@@ -788,12 +788,12 @@
       "id": "kucoin-shares",
       "symbol": "KCS",
       "name": "KuCoin",
-      "price": 7.0,
-      "pct_24h": -0.12433,
-      "pct_7d": 1.3,
+      "price": 6.98,
+      "pct_24h": -0.57434,
+      "pct_7d": 1.0,
       "support_30d": 6.514591596607885,
       "resistance_30d": 7.8821382735057615,
-      "as_of": "2026-09-09 13:20:30",
+      "as_of": "2026-09-09 14:20:28",
       "stale": false
     },
     "hedera-hashgraph": {
@@ -1543,7 +1543,7 @@
         ],
         [
           "Stretch from long-term average",
-          "+116.8% above its long-term average - very stretched",
+          "+118.3% above its long-term average - very stretched",
           -2
         ],
         [
@@ -1556,12 +1556,12 @@
       "id": "pump-fun",
       "symbol": "PUMP",
       "name": "Pump.fun",
-      "price": 0.00459349,
-      "pct_24h": 6.84678,
-      "pct_7d": 11.3,
+      "price": 0.00462604,
+      "pct_24h": 5.85771,
+      "pct_7d": 11.4,
       "support_30d": 0.002666433318189806,
       "resistance_30d": 0.0052249885406471875,
-      "as_of": "2026-09-09 13:47:50",
+      "as_of": "2026-09-09 14:20:28",
       "stale": false
     },
     "venice-token": {
@@ -2071,7 +2071,7 @@
         ],
         [
           "Stretch from long-term average",
-          "-31.3% below its long-term average - confirmed downtrend",
+          "-31.1% below its long-term average - confirmed downtrend",
           -1
         ],
         [
@@ -2084,12 +2084,12 @@
       "id": "pi-network",
       "symbol": "PI",
       "name": "Pi Network",
-      "price": 0.097183,
-      "pct_24h": 0.57554,
-      "pct_7d": 4.5,
+      "price": 0.097471,
+      "pct_24h": 1.31056,
+      "pct_7d": 4.1,
       "support_30d": 0.08559695435343688,
       "resistance_30d": 0.09798925329339339,
-      "as_of": "2026-09-09 12:00:33",
+      "as_of": "2026-09-09 14:20:28",
       "stale": false
     },
     "ondo-finance": {
@@ -3293,19 +3293,22 @@
       "stale": false
     }
   },
-  "_strong_buy_state": {},
+  "_strong_buy_state": {
+    "15m:PI": true,
+    "1h:PI": true
+  },
   "BTC": {
     "key": "BTC",
     "name": "Bitcoin",
     "emoji": "\u20bf",
-    "price": 78943,
+    "price": 78987,
     "high_24h": 79701,
     "low_24h": 78309,
-    "pct_24h": 1.06676,
+    "pct_24h": 0.89473,
     "pct_7d": 3.5,
     "pct_30d": 22.2,
-    "sma50": 70207.22151355393,
-    "sma200": 69900.14673409556,
+    "sma50": 70208.01639579126,
+    "sma200": 69900.34545465489,
     "support_30d": 62843.70368466329,
     "resistance_30d": 81264.70153038795,
     "mark_price": 78638.66714493,
@@ -3320,14 +3323,14 @@
     "key": "ETH",
     "name": "Ethereum",
     "emoji": "\u039e",
-    "price": 2496.27,
+    "price": 2499.52,
     "high_24h": 2521.51,
     "low_24h": 2477.2,
-    "pct_24h": 1.0838,
+    "pct_24h": 0.82034,
     "pct_7d": 5.4,
     "pct_30d": 31.5,
-    "sma50": 2138.328745980838,
-    "sma200": 2046.0313496422436,
+    "sma50": 2138.397591072124,
+    "sma200": 2046.0485609150655,
     "support_30d": 1874.401898191962,
     "resistance_30d": 2514.967577695514,
     "mark_price": 2490.71,
