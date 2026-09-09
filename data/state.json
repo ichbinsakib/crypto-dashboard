@@ -4,7 +4,7 @@
   "_alerts_state": {
     "btc-resistance-break": {
       "triggered": true,
-      "last_triggered_at": "2026-09-09 17:00:34"
+      "last_triggered_at": "2026-09-09 17:05:20"
     },
     "btc-support-break": {
       "triggered": false,
@@ -1471,7 +1471,7 @@
     "ethereum-classic": {
       "label": "\ud83d\udfe1 HOLD / NEUTRAL",
       "status": "neutral",
-      "score": 1,
+      "score": 0,
       "rows": [
         [
           "Price vs. recent range",
@@ -1485,8 +1485,8 @@
         ],
         [
           "Market phase (best guess)",
-          "Basing near the bottom - phase where smart money accumulates",
-          2
+          "Established uptrend - phase where price marks up",
+          1
         ],
         [
           "Recent trend",
@@ -1495,7 +1495,7 @@
         ],
         [
           "Stretch from long-term average",
-          "+4.5% vs its long-term average - not stretched either way",
+          "+5.0% vs its long-term average - not stretched either way",
           0
         ],
         [
@@ -1508,12 +1508,12 @@
       "id": "ethereum-classic",
       "symbol": "ETC",
       "name": "Ethereum Classic",
-      "price": 8.18,
-      "pct_24h": -6.15655,
-      "pct_7d": 13.4,
+      "price": 8.22,
+      "pct_24h": -6.68855,
+      "pct_7d": 13.6,
       "support_30d": 6.079473341192034,
       "resistance_30d": 8.609781284223262,
-      "as_of": "2026-09-09 16:05:23",
+      "as_of": "2026-09-09 17:05:20",
       "stale": false
     },
     "pump-fun": {
@@ -1735,7 +1735,7 @@
         ],
         [
           "Stretch from long-term average",
-          "-7.5% vs its long-term average - not stretched either way",
+          "-6.5% vs its long-term average - not stretched either way",
           0
         ],
         [
@@ -1748,12 +1748,12 @@
       "id": "sui",
       "symbol": "SUI",
       "name": "Sui",
-      "price": 0.789179,
-      "pct_24h": -4.53629,
-      "pct_7d": 12.3,
+      "price": 0.797671,
+      "pct_24h": -3.80272,
+      "pct_7d": 10.8,
       "support_30d": 0.6514311908607086,
       "resistance_30d": 0.8499161763231283,
-      "as_of": "2026-09-09 15:25:24",
+      "as_of": "2026-09-09 17:05:20",
       "stale": false
     },
     "lighter": {
@@ -2407,7 +2407,7 @@
         ],
         [
           "Stretch from long-term average",
-          "+1.2% vs its long-term average - not stretched either way",
+          "+0.5% vs its long-term average - not stretched either way",
           0
         ],
         [
@@ -2420,12 +2420,12 @@
       "id": "shiba-inu",
       "symbol": "SHIB",
       "name": "Shiba Inu",
-      "price": 5.44e-06,
-      "pct_24h": 0.15041,
-      "pct_7d": 6.1,
+      "price": 5.4e-06,
+      "pct_24h": -1.76052,
+      "pct_7d": 4.3,
       "support_30d": 4.390093758351827e-06,
       "resistance_30d": 5.903506876405612e-06,
-      "as_of": "2026-09-09 14:35:23",
+      "as_of": "2026-09-09 17:05:20",
       "stale": false
     },
     "near": {
@@ -3294,21 +3294,20 @@
     }
   },
   "_strong_buy_state": {
-    "15m:OKB": true,
-    "1h:OKB": true
+    "1h:BGB": true
   },
   "BTC": {
     "key": "BTC",
     "name": "Bitcoin",
     "emoji": "\u20bf",
-    "price": 78774,
+    "price": 78779,
     "high_24h": 79701,
     "low_24h": 78095,
-    "pct_24h": 0.04629,
-    "pct_7d": 2.1,
-    "pct_30d": 21.7,
-    "sma50": 70203.41299868576,
-    "sma200": 69899.1946053785,
+    "pct_24h": -0.05569,
+    "pct_7d": 2.0,
+    "pct_30d": 22.6,
+    "sma50": 70203.82181463734,
+    "sma200": 69899.29680936641,
     "support_30d": 62843.70368466329,
     "resistance_30d": 81264.70153038795,
     "mark_price": 78638.66714493,
@@ -3323,14 +3322,14 @@
     "key": "ETH",
     "name": "Ethereum",
     "emoji": "\u039e",
-    "price": 2495.78,
+    "price": 2495.34,
     "high_24h": 2521.51,
     "low_24h": 2472.65,
-    "pct_24h": -0.06286,
-    "pct_7d": 4.1,
-    "pct_30d": 31.7,
-    "sma50": 2138.290693639508,
-    "sma200": 2046.0218365569112,
+    "pct_24h": -0.16498,
+    "pct_7d": 4.5,
+    "pct_30d": 33.1,
+    "sma50": 2138.3038932078316,
+    "sma200": 2046.025136448992,
     "support_30d": 1874.401898191962,
     "resistance_30d": 2514.967577695514,
     "mark_price": 2490.71,
