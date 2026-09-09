@@ -4,7 +4,7 @@
   "_alerts_state": {
     "btc-resistance-break": {
       "triggered": true,
-      "last_triggered_at": "2026-09-09 16:50:25"
+      "last_triggered_at": "2026-09-09 16:55:18"
     },
     "btc-support-break": {
       "triggered": false,
@@ -1701,11 +1701,11 @@
       "symbol": "BGB",
       "name": "Bitget Token",
       "price": 1.98,
-      "pct_24h": -0.45418,
+      "pct_24h": -0.50414,
       "pct_7d": 3.5,
       "support_30d": 1.6372975273518793,
       "resistance_30d": 2.0284940947674617,
-      "as_of": "2026-09-09 16:45:22",
+      "as_of": "2026-09-09 16:55:18",
       "stale": false
     },
     "sui": {
@@ -1831,7 +1831,7 @@
         ],
         [
           "Stretch from long-term average",
-          "+61.1% above its long-term average - very stretched",
+          "+53.7% above its long-term average - very stretched",
           -2
         ],
         [
@@ -1844,12 +1844,12 @@
       "id": "ethena",
       "symbol": "ENA",
       "name": "Ethena",
-      "price": 0.163362,
-      "pct_24h": -0.60013,
-      "pct_7d": 4.8,
+      "price": 0.155864,
+      "pct_24h": -3.90977,
+      "pct_7d": 4.5,
       "support_30d": 0.08231050586125944,
       "resistance_30d": 0.17616469272611565,
-      "as_of": "2026-09-09 10:21:50",
+      "as_of": "2026-09-09 16:55:18",
       "stale": false
     },
     "bitcoin-cash": {
@@ -1879,7 +1879,7 @@
         ],
         [
           "Stretch from long-term average",
-          "-23.0% below its long-term average - confirmed downtrend",
+          "-21.8% below its long-term average - confirmed downtrend",
           -1
         ],
         [
@@ -1892,12 +1892,12 @@
       "id": "bitcoin-cash",
       "symbol": "BCH",
       "name": "Bitcoin Cash",
-      "price": 255.06,
-      "pct_24h": -0.6918,
-      "pct_7d": 5.4,
+      "price": 258.82,
+      "pct_24h": -0.10532,
+      "pct_7d": 6.1,
       "support_30d": 203.50169440615565,
       "resistance_30d": 288.10955405353275,
-      "as_of": "2026-09-09 15:30:33",
+      "as_of": "2026-09-09 16:55:18",
       "stale": false
     },
     "mantle": {
@@ -3293,19 +3293,21 @@
       "stale": false
     }
   },
-  "_strong_buy_state": {},
+  "_strong_buy_state": {
+    "1h:BGB": true
+  },
   "BTC": {
     "key": "BTC",
     "name": "Bitcoin",
     "emoji": "\u20bf",
-    "price": 78768,
+    "price": 78760,
     "high_24h": 79701,
     "low_24h": 78095,
-    "pct_24h": -0.04964,
+    "pct_24h": -0.06834,
     "pct_7d": 2.1,
     "pct_30d": 21.7,
-    "sma50": 70203.38455925015,
-    "sma200": 69899.1874955196,
+    "sma50": 70203.09153716733,
+    "sma200": 69899.1142399989,
     "support_30d": 62843.70368466329,
     "resistance_30d": 81264.70153038795,
     "mark_price": 78638.66714493,
@@ -3320,14 +3322,14 @@
     "key": "ETH",
     "name": "Ethereum",
     "emoji": "\u039e",
-    "price": 2497.27,
+    "price": 2496.36,
     "high_24h": 2521.51,
     "low_24h": 2472.65,
-    "pct_24h": -0.01996,
+    "pct_24h": -0.10459,
     "pct_7d": 4.1,
     "pct_30d": 31.7,
-    "sma50": 2138.3340588775563,
-    "sma200": 2046.0326778664232,
+    "sma50": 2138.3051291094803,
+    "sma200": 2046.0254454244046,
     "support_30d": 1874.401898191962,
     "resistance_30d": 2514.967577695514,
     "mark_price": 2490.71,
