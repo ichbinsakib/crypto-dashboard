@@ -4,7 +4,7 @@
   "_alerts_state": {
     "btc-resistance-break": {
       "triggered": true,
-      "last_triggered_at": "2026-09-09 17:30:30"
+      "last_triggered_at": "2026-09-09 17:35:21"
     },
     "btc-support-break": {
       "triggered": false,
@@ -1317,11 +1317,11 @@
       "symbol": "HTX",
       "name": "HTX DAO",
       "price": 1.69e-06,
-      "pct_24h": -0.27101,
-      "pct_7d": 5.2,
+      "pct_24h": -0.05484,
+      "pct_7d": 4.6,
       "support_30d": 1.6023985995039954e-06,
       "resistance_30d": 1.8259977214551937e-06,
-      "as_of": "2026-09-09 10:45:22",
+      "as_of": "2026-09-09 17:35:21",
       "stale": false
     },
     "superstate-short-duration-us-government-securities-fund-ustb": {
@@ -1399,7 +1399,7 @@
         ],
         [
           "Stretch from long-term average",
-          "+32.2% above its long-term average - very stretched",
+          "+32.1% above its long-term average - very stretched",
           -2
         ],
         [
@@ -1412,12 +1412,12 @@
       "id": "gatechain-token",
       "symbol": "GT",
       "name": "Gate",
-      "price": 9.24,
-      "pct_24h": -0.07822,
-      "pct_7d": 15.8,
+      "price": 9.23,
+      "pct_24h": 0.30111,
+      "pct_7d": 16.2,
       "support_30d": 6.673649191532821,
       "resistance_30d": 9.38216924975626,
-      "as_of": "2026-09-09 16:50:25",
+      "as_of": "2026-09-09 17:35:21",
       "stale": false
     },
     "crypto-com-chain": {
@@ -1447,7 +1447,7 @@
         ],
         [
           "Stretch from long-term average",
-          "-9.0% vs its long-term average - not stretched either way",
+          "-9.4% vs its long-term average - not stretched either way",
           0
         ],
         [
@@ -1460,12 +1460,12 @@
       "id": "crypto-com-chain",
       "symbol": "CRO",
       "name": "Cronos",
-      "price": 0.05997,
-      "pct_24h": -0.51277,
+      "price": 0.059729,
+      "pct_24h": -0.72073,
       "pct_7d": 10.9,
       "support_30d": 0.04621382085807831,
       "resistance_30d": 0.06091104752771909,
-      "as_of": "2026-09-09 17:15:24",
+      "as_of": "2026-09-09 17:35:21",
       "stale": false
     },
     "ethereum-classic": {
@@ -3293,19 +3293,21 @@
       "stale": false
     }
   },
-  "_strong_buy_state": {},
+  "_strong_buy_state": {
+    "1h:PI": true
+  },
   "BTC": {
     "key": "BTC",
     "name": "Bitcoin",
     "emoji": "\u20bf",
-    "price": 78842,
+    "price": 78796,
     "high_24h": 79701,
     "low_24h": 78095,
-    "pct_24h": 0.33975,
+    "pct_24h": 0.27657,
     "pct_7d": 2.0,
     "pct_30d": 22.6,
-    "sma50": 70204.9702471659,
-    "sma200": 69899.58391749854,
+    "sma50": 70203.95571079382,
+    "sma200": 69899.33028340554,
     "support_30d": 62843.70368466329,
     "resistance_30d": 81264.70153038795,
     "mark_price": 78638.66714493,
@@ -3320,14 +3322,14 @@
     "key": "ETH",
     "name": "Ethereum",
     "emoji": "\u039e",
-    "price": 2496.81,
+    "price": 2493.81,
     "high_24h": 2521.51,
     "low_24h": 2472.65,
-    "pct_24h": 0.24948,
+    "pct_24h": 0.14194,
     "pct_7d": 4.5,
     "pct_30d": 33.1,
-    "sma50": 2138.3134039350316,
-    "sma200": 2046.027514130792,
+    "sma50": 2138.260595218996,
+    "sma200": 2046.0143119517834,
     "support_30d": 1874.401898191962,
     "resistance_30d": 2514.967577695514,
     "mark_price": 2490.71,
