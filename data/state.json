@@ -4,7 +4,7 @@
   "_alerts_state": {
     "btc-resistance-break": {
       "triggered": true,
-      "last_triggered_at": "2026-09-09 14:40:31"
+      "last_triggered_at": "2026-09-09 14:45:23"
     },
     "btc-support-break": {
       "triggered": false,
@@ -605,9 +605,9 @@
       "stale": false
     },
     "monero": {
-      "label": "\ud83d\udd34 CAUTION - REDUCE NEW BUYS",
+      "label": "\ud83d\udd34 DISTRIBUTION ZONE",
       "status": "bearish",
-      "score": -2,
+      "score": -5,
       "rows": [
         [
           "Price vs. recent range",
@@ -621,8 +621,8 @@
         ],
         [
           "Market phase (best guess)",
-          "Established uptrend - phase where price marks up",
-          1
+          "Very extended after a big run - phase where smart money sells",
+          -2
         ],
         [
           "Recent trend",
@@ -631,7 +631,7 @@
         ],
         [
           "Stretch from long-term average",
-          "+35.8% above its long-term average - very stretched",
+          "+40.0% above its long-term average - very stretched",
           -2
         ],
         [
@@ -640,16 +640,16 @@
           0
         ]
       ],
-      "plain": "Getting risky - I'd hold off on new buys until this cools down.",
+      "plain": "Looks stretched and euphoric - historically the zone where smart money sells, not buys.",
       "id": "monero",
       "symbol": "XMR",
       "name": "Monero",
-      "price": 497.17,
-      "pct_24h": -0.77402,
-      "pct_7d": -2.3,
+      "price": 512.96,
+      "pct_24h": 3.45613,
+      "pct_7d": -0.8,
       "support_30d": 377.1738335746389,
       "resistance_30d": 555.6684591165193,
-      "as_of": "2026-09-09 13:25:21",
+      "as_of": "2026-09-09 14:45:23",
       "stale": false
     },
     "cardano": {
@@ -727,7 +727,7 @@
         ],
         [
           "Stretch from long-term average",
-          "+7.1% vs its long-term average - not stretched either way",
+          "+7.4% vs its long-term average - not stretched either way",
           0
         ],
         [
@@ -740,12 +740,12 @@
       "id": "stellar",
       "symbol": "XLM",
       "name": "Stellar",
-      "price": 0.187508,
-      "pct_24h": -0.55927,
+      "price": 0.187969,
+      "pct_24h": -0.65812,
       "pct_7d": 9.4,
       "support_30d": 0.15472912151335613,
       "resistance_30d": 0.20181319711037435,
-      "as_of": "2026-09-09 14:15:25",
+      "as_of": "2026-09-09 14:45:23",
       "stale": false
     },
     "kucoin-shares": {
@@ -2084,12 +2084,12 @@
       "id": "pi-network",
       "symbol": "PI",
       "name": "Pi Network",
-      "price": 0.097471,
-      "pct_24h": 1.31056,
+      "price": 0.097484,
+      "pct_24h": 1.02722,
       "pct_7d": 4.1,
       "support_30d": 0.08559695435343688,
       "resistance_30d": 0.09798925329339339,
-      "as_of": "2026-09-09 14:20:28",
+      "as_of": "2026-09-09 14:45:23",
       "stale": false
     },
     "ondo-finance": {
@@ -3293,19 +3293,21 @@
       "stale": false
     }
   },
-  "_strong_buy_state": {},
+  "_strong_buy_state": {
+    "1h:PI": true
+  },
   "BTC": {
     "key": "BTC",
     "name": "Bitcoin",
     "emoji": "\u20bf",
-    "price": 79284,
+    "price": 79134,
     "high_24h": 79701,
     "low_24h": 78309,
-    "pct_24h": 1.23762,
+    "pct_24h": 0.96901,
     "pct_7d": 3.5,
     "pct_30d": 22.2,
-    "sma50": 70213.69247522931,
-    "sma200": 69901.76447451439,
+    "sma50": 70210.98763815062,
+    "sma200": 69901.08826524473,
     "support_30d": 62843.70368466329,
     "resistance_30d": 81264.70153038795,
     "mark_price": 78638.66714493,
@@ -3320,14 +3322,14 @@
     "key": "ETH",
     "name": "Ethereum",
     "emoji": "\u039e",
-    "price": 2510.4,
+    "price": 2505.04,
     "high_24h": 2521.51,
     "low_24h": 2477.2,
-    "pct_24h": 1.27378,
+    "pct_24h": 1.02354,
     "pct_7d": 5.4,
     "pct_30d": 31.5,
-    "sma50": 2138.590588973548,
-    "sma200": 2046.0968103904213,
+    "sma50": 2138.4976348436826,
+    "sma200": 2046.073571857955,
     "support_30d": 1874.401898191962,
     "resistance_30d": 2514.967577695514,
     "mark_price": 2490.71,
