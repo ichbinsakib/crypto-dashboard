@@ -4,7 +4,7 @@
   "_alerts_state": {
     "btc-resistance-break": {
       "triggered": true,
-      "last_triggered_at": "2026-09-09 11:15:34"
+      "last_triggered_at": "2026-09-09 11:20:28"
     },
     "btc-support-break": {
       "triggered": false,
@@ -295,7 +295,7 @@
         ],
         [
           "Stretch from long-term average",
-          "+59.5% above its long-term average - very stretched",
+          "+58.9% above its long-term average - very stretched",
           -2
         ],
         [
@@ -308,12 +308,12 @@
       "id": "hyperliquid",
       "symbol": "HYPE",
       "name": "Hyperliquid",
-      "price": 85.95,
-      "pct_24h": 2.18096,
-      "pct_7d": 5.2,
+      "price": 85.62,
+      "pct_24h": 2.46437,
+      "pct_7d": 6.0,
       "support_30d": 54.442530206647206,
       "resistance_30d": 87.951916819731,
-      "as_of": "2026-09-09 10:35:21",
+      "as_of": "2026-09-09 11:20:28",
       "stale": false
     },
     "dogecoin": {
@@ -703,7 +703,7 @@
     "stellar": {
       "label": "\ud83d\udfe1 HOLD / NEUTRAL",
       "status": "neutral",
-      "score": 0,
+      "score": 1,
       "rows": [
         [
           "Price vs. recent range",
@@ -722,12 +722,12 @@
         ],
         [
           "Recent trend",
-          "Chopping sideways - no clear trend",
-          0
+          "Trending up steadily - healthy",
+          1
         ],
         [
           "Stretch from long-term average",
-          "+7.3% vs its long-term average - not stretched either way",
+          "+6.9% vs its long-term average - not stretched either way",
           0
         ],
         [
@@ -740,12 +740,12 @@
       "id": "stellar",
       "symbol": "XLM",
       "name": "Stellar",
-      "price": 0.187769,
-      "pct_24h": -1.8185,
-      "pct_7d": 7.9,
+      "price": 0.187094,
+      "pct_24h": -1.28004,
+      "pct_7d": 8.8,
       "support_30d": 0.15472912151335613,
       "resistance_30d": 0.20181319711037435,
-      "as_of": "2026-09-09 10:05:18",
+      "as_of": "2026-09-09 11:20:28",
       "stale": false
     },
     "kucoin-shares": {
@@ -871,7 +871,7 @@
         ],
         [
           "Stretch from long-term average",
-          "+10.9% above its long-term average - a bit stretched",
+          "+10.3% above its long-term average - a bit stretched",
           -1
         ],
         [
@@ -884,12 +884,12 @@
       "id": "pepe",
       "symbol": "PEPE",
       "name": "Pepe",
-      "price": 3.67e-06,
-      "pct_24h": 0.5421,
-      "pct_7d": 7.0,
+      "price": 3.65e-06,
+      "pct_24h": 1.7523,
+      "pct_7d": 7.6,
       "support_30d": 2.5716563906374582e-06,
       "resistance_30d": 4.122123035488615e-06,
-      "as_of": "2026-09-09 10:21:50",
+      "as_of": "2026-09-09 11:20:28",
       "stale": false
     },
     "avalanche-2": {
@@ -3294,22 +3294,22 @@
     }
   },
   "_strong_buy_state": {
-    "15m:ASTER": true,
-    "15m:WBT": true,
-    "15m:MORPHO": true
+    "15m:XLM": true,
+    "15m:PEPE": true,
+    "1h:XLM": true
   },
   "BTC": {
     "key": "BTC",
     "name": "Bitcoin",
     "emoji": "\u20bf",
-    "price": 78856,
+    "price": 78820,
     "high_24h": 79701,
     "low_24h": 77666,
-    "pct_24h": 0.72166,
+    "pct_24h": 0.60302,
     "pct_7d": 2.9,
     "pct_30d": 21.6,
-    "sma50": 70205.04801648871,
-    "sma200": 69899.60335982924,
+    "sma50": 70204.47274705945,
+    "sma200": 69899.45954247193,
     "support_30d": 62843.70368466329,
     "resistance_30d": 81264.70153038795,
     "mark_price": 78638.66714493,
@@ -3324,14 +3324,14 @@
     "key": "ETH",
     "name": "Ethereum",
     "emoji": "\u039e",
-    "price": 2487.28,
+    "price": 2484.38,
     "high_24h": 2521.51,
     "low_24h": 2442.98,
-    "pct_24h": 0.60856,
+    "pct_24h": 0.46015,
     "pct_7d": 4.7,
     "pct_30d": 29.9,
-    "sma50": 2138.122328819075,
-    "sma200": 2045.9797453518029,
+    "sma50": 2138.0689413966325,
+    "sma200": 2045.9663984961924,
     "support_30d": 1874.401898191962,
     "resistance_30d": 2514.967577695514,
     "mark_price": 2490.71,
