@@ -4,7 +4,7 @@
   "_alerts_state": {
     "btc-resistance-break": {
       "triggered": true,
-      "last_triggered_at": "2026-09-09 14:50:33"
+      "last_triggered_at": "2026-09-09 14:55:21"
     },
     "btc-support-break": {
       "triggered": false,
@@ -1495,7 +1495,7 @@
         ],
         [
           "Stretch from long-term average",
-          "+6.5% vs its long-term average - not stretched either way",
+          "+5.9% vs its long-term average - not stretched either way",
           0
         ],
         [
@@ -1508,12 +1508,12 @@
       "id": "ethereum-classic",
       "symbol": "ETC",
       "name": "Ethereum Classic",
-      "price": 8.34,
-      "pct_24h": 1.20411,
-      "pct_7d": 15.6,
+      "price": 8.29,
+      "pct_24h": -1.2065,
+      "pct_7d": 15.5,
       "support_30d": 6.079473341192034,
       "resistance_30d": 8.609781284223262,
-      "as_of": "2026-09-09 10:25:18",
+      "as_of": "2026-09-09 14:55:21",
       "stale": false
     },
     "pump-fun": {
@@ -1571,7 +1571,7 @@
       "rows": [
         [
           "Price vs. recent range",
-          "Near its 30-day high (~$26.14) - less room to run",
+          "Near its 30-day high (~$25.94) - less room to run",
           -1
         ],
         [
@@ -1591,7 +1591,7 @@
         ],
         [
           "Stretch from long-term average",
-          "+122.7% above its long-term average - very stretched",
+          "+121.1% above its long-term average - very stretched",
           -2
         ],
         [
@@ -1604,12 +1604,12 @@
       "id": "venice-token",
       "symbol": "VVV",
       "name": "Venice Token",
-      "price": 26.19,
-      "pct_24h": 38.23535,
-      "pct_7d": 75.4,
+      "price": 26.0,
+      "pct_24h": 12.83115,
+      "pct_7d": 60.7,
       "support_30d": 11.491241326615295,
-      "resistance_30d": 26.138573521885387,
-      "as_of": "2026-09-09 13:35:20",
+      "resistance_30d": 25.937799268634098,
+      "as_of": "2026-09-09 14:55:21",
       "stale": false
     },
     "litecoin": {
@@ -1701,11 +1701,11 @@
       "symbol": "BGB",
       "name": "Bitget Token",
       "price": 1.99,
-      "pct_24h": 0.50514,
+      "pct_24h": 0.48516,
       "pct_7d": 4.2,
       "support_30d": 1.6372975273518793,
       "resistance_30d": 2.0284940947674617,
-      "as_of": "2026-09-09 14:00:40",
+      "as_of": "2026-09-09 14:55:21",
       "stale": false
     },
     "sui": {
@@ -3293,19 +3293,21 @@
       "stale": false
     }
   },
-  "_strong_buy_state": {},
+  "_strong_buy_state": {
+    "1h:SOL": true
+  },
   "BTC": {
     "key": "BTC",
     "name": "Bitcoin",
     "emoji": "\u20bf",
-    "price": 79034,
+    "price": 78981,
     "high_24h": 79701,
     "low_24h": 78309,
-    "pct_24h": 0.65245,
+    "pct_24h": 0.58379,
     "pct_7d": 3.5,
     "pct_30d": 22.2,
-    "sma50": 70209.1751099261,
-    "sma200": 69900.6351331886,
+    "sma50": 70207.30422077383,
+    "sma200": 69900.16741090053,
     "support_30d": 62843.70368466329,
     "resistance_30d": 81264.70153038795,
     "mark_price": 78638.66714493,
@@ -3320,14 +3322,14 @@
     "key": "ETH",
     "name": "Ethereum",
     "emoji": "\u039e",
-    "price": 2503.11,
+    "price": 2500.46,
     "high_24h": 2521.51,
     "low_24h": 2477.2,
-    "pct_24h": 0.76445,
+    "pct_24h": 0.6502,
     "pct_7d": 5.4,
     "pct_30d": 31.5,
-    "sma50": 2138.4598717616286,
-    "sma200": 2046.0641310874414,
+    "sma50": 2138.3713961760714,
+    "sma200": 2046.0420121910522,
     "support_30d": 1874.401898191962,
     "resistance_30d": 2514.967577695514,
     "mark_price": 2490.71,
