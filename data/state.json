@@ -4,7 +4,7 @@
   "_alerts_state": {
     "btc-resistance-break": {
       "triggered": true,
-      "last_triggered_at": "2026-09-09 03:25:21"
+      "last_triggered_at": "2026-09-09 03:30:28"
     },
     "btc-support-break": {
       "triggered": false,
@@ -885,11 +885,11 @@
       "symbol": "PEPE",
       "name": "Pepe",
       "price": 3.64e-06,
-      "pct_24h": -0.41458,
-      "pct_7d": 5.6,
+      "pct_24h": 1.2189,
+      "pct_7d": 6.0,
       "support_30d": 2.5716563906374582e-06,
       "resistance_30d": 4.122123035488615e-06,
-      "as_of": "2026-09-09 02:30:30",
+      "as_of": "2026-09-09 03:30:28",
       "stale": false
     },
     "avalanche-2": {
@@ -1639,7 +1639,7 @@
         ],
         [
           "Stretch from long-term average",
-          "+7.6% vs its long-term average - not stretched either way",
+          "+7.1% vs its long-term average - not stretched either way",
           0
         ],
         [
@@ -1652,12 +1652,12 @@
       "id": "litecoin",
       "symbol": "LTC",
       "name": "Litecoin",
-      "price": 54.24,
-      "pct_24h": -2.13905,
-      "pct_7d": 9.7,
+      "price": 53.98,
+      "pct_24h": -2.29252,
+      "pct_7d": 10.3,
       "support_30d": 43.806923130603906,
       "resistance_30d": 55.20228907963863,
-      "as_of": "2026-09-09 00:35:17",
+      "as_of": "2026-09-09 03:30:28",
       "stale": false
     },
     "bitget-token": {
@@ -2612,12 +2612,12 @@
       "id": "bitway",
       "symbol": "BTW",
       "name": "Bitway",
-      "price": 0.435395,
-      "pct_24h": -2.85345,
-      "pct_7d": 3.9,
+      "price": 0.435773,
+      "pct_24h": -3.03656,
+      "pct_7d": 1.2,
       "support_30d": 0.20490616383406327,
       "resistance_30d": 0.48788437226017506,
-      "as_of": "2026-09-09 02:50:26",
+      "as_of": "2026-09-09 03:30:28",
       "stale": false
     },
     "world-liberty-financial": {
@@ -3293,19 +3293,22 @@
       "stale": false
     }
   },
-  "_strong_buy_state": {},
+  "_strong_buy_state": {
+    "15m:PEPE": true,
+    "15m:LTC": true
+  },
   "BTC": {
     "key": "BTC",
     "name": "Bitcoin",
     "emoji": "\u20bf",
-    "price": 78577,
+    "price": 78563,
     "high_24h": 78930,
     "low_24h": 77666,
-    "pct_24h": -0.26684,
+    "pct_24h": -0.23892,
     "pct_7d": 2.3,
     "pct_30d": 20.9,
-    "sma50": 70199.55668044221,
-    "sma200": 69898.23052581762,
+    "sma50": 70199.17508104735,
+    "sma200": 69898.13512596891,
     "support_30d": 62843.70368466329,
     "resistance_30d": 81264.70153038795,
     "mark_price": 78638.66714493,
@@ -3320,14 +3323,14 @@
     "key": "ETH",
     "name": "Ethereum",
     "emoji": "\u039e",
-    "price": 2488.02,
+    "price": 2487.36,
     "high_24h": 2503.59,
     "low_24h": 2442.98,
-    "pct_24h": 0.31001,
+    "pct_24h": 0.27157,
     "pct_7d": 4.0,
     "pct_30d": 29.7,
-    "sma50": 2138.1419795952934,
-    "sma200": 2045.9846580458575,
+    "sma50": 2138.121277296816,
+    "sma200": 2045.9794824712383,
     "support_30d": 1874.401898191962,
     "resistance_30d": 2514.967577695514,
     "mark_price": 2490.71,
