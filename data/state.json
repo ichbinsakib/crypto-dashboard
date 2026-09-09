@@ -4,7 +4,7 @@
   "_alerts_state": {
     "btc-resistance-break": {
       "triggered": true,
-      "last_triggered_at": "2026-09-09 16:10:23"
+      "last_triggered_at": "2026-09-09 16:15:25"
     },
     "btc-support-break": {
       "triggered": false,
@@ -1399,7 +1399,7 @@
         ],
         [
           "Stretch from long-term average",
-          "+31.5% above its long-term average - very stretched",
+          "+32.1% above its long-term average - very stretched",
           -2
         ],
         [
@@ -1412,12 +1412,12 @@
       "id": "gatechain-token",
       "symbol": "GT",
       "name": "Gate",
-      "price": 9.19,
-      "pct_24h": 0.52611,
-      "pct_7d": 16.5,
+      "price": 9.23,
+      "pct_24h": 0.90803,
+      "pct_7d": 15.8,
       "support_30d": 6.673649191532821,
       "resistance_30d": 9.38216924975626,
-      "as_of": "2026-09-09 15:35:21",
+      "as_of": "2026-09-09 16:15:25",
       "stale": false
     },
     "crypto-com-chain": {
@@ -2435,7 +2435,7 @@
       "rows": [
         [
           "Price vs. recent range",
-          "Near its 30-day high (~$2.61) - less room to run",
+          "Near its 30-day high (~$2.60) - less room to run",
           -1
         ],
         [
@@ -2455,7 +2455,7 @@
         ],
         [
           "Stretch from long-term average",
-          "+54.0% above its long-term average - very stretched",
+          "+52.8% above its long-term average - very stretched",
           -2
         ],
         [
@@ -2468,12 +2468,12 @@
       "id": "near",
       "symbol": "NEAR",
       "name": "NEAR Protocol",
-      "price": 2.61,
-      "pct_24h": 10.6142,
-      "pct_7d": 40.4,
+      "price": 2.59,
+      "pct_24h": 8.64557,
+      "pct_7d": 40.7,
       "support_30d": 1.5879597131538,
-      "resistance_30d": 2.6091180062732806,
-      "as_of": "2026-09-09 15:00:39",
+      "resistance_30d": 2.5952318563298493,
+      "as_of": "2026-09-09 16:15:25",
       "stale": false
     },
     "quant-network": {
@@ -3199,7 +3199,7 @@
     "kaspa": {
       "label": "\ud83d\udfe1 HOLD / NEUTRAL",
       "status": "neutral",
-      "score": 0,
+      "score": 1,
       "rows": [
         [
           "Price vs. recent range",
@@ -3213,8 +3213,8 @@
         ],
         [
           "Market phase (best guess)",
-          "Established uptrend - phase where price marks up",
-          1
+          "Basing near the bottom - phase where smart money accumulates",
+          2
         ],
         [
           "Recent trend",
@@ -3223,7 +3223,7 @@
         ],
         [
           "Stretch from long-term average",
-          "+5.5% vs its long-term average - not stretched either way",
+          "+4.4% vs its long-term average - not stretched either way",
           0
         ],
         [
@@ -3236,12 +3236,12 @@
       "id": "kaspa",
       "symbol": "KAS",
       "name": "Kaspa",
-      "price": 0.03599799,
-      "pct_24h": 4.09669,
-      "pct_7d": 28.6,
+      "price": 0.03560564,
+      "pct_24h": -1.67613,
+      "pct_7d": 28.9,
       "support_30d": 0.025258977496893695,
       "resistance_30d": 0.036503009730849086,
-      "as_of": "2026-09-09 11:25:21",
+      "as_of": "2026-09-09 16:15:25",
       "stale": false
     },
     "cosmos": {
@@ -3293,21 +3293,19 @@
       "stale": false
     }
   },
-  "_strong_buy_state": {
-    "1h:PI": true
-  },
+  "_strong_buy_state": {},
   "BTC": {
     "key": "BTC",
     "name": "Bitcoin",
     "emoji": "\u20bf",
-    "price": 78679,
+    "price": 78581,
     "high_24h": 79701,
     "low_24h": 78095,
-    "pct_24h": -0.15155,
+    "pct_24h": -0.06044,
     "pct_7d": 2.1,
     "pct_30d": 21.7,
-    "sma50": 70200.85271845611,
-    "sma200": 69898.5545353211,
+    "sma50": 70200.08309428157,
+    "sma200": 69898.36212927746,
     "support_30d": 62843.70368466329,
     "resistance_30d": 81264.70153038795,
     "mark_price": 78638.66714493,
@@ -3322,14 +3320,14 @@
     "key": "ETH",
     "name": "Ethereum",
     "emoji": "\u039e",
-    "price": 2493.38,
+    "price": 2489.19,
     "high_24h": 2521.51,
     "low_24h": 2472.65,
-    "pct_24h": -0.12735,
+    "pct_24h": -0.0059,
     "pct_7d": 4.1,
     "pct_30d": 31.7,
-    "sma50": 2138.221596535003,
-    "sma200": 2046.004562280785,
+    "sma50": 2138.1810562525225,
+    "sma200": 2045.994427210165,
     "support_30d": 1874.401898191962,
     "resistance_30d": 2514.967577695514,
     "mark_price": 2490.71,
