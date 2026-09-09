@@ -151,7 +151,7 @@
         ],
         [
           "Stretch from long-term average",
-          "+24.7% above its long-term average - a bit stretched",
+          "+23.6% above its long-term average - a bit stretched",
           -1
         ],
         [
@@ -164,12 +164,12 @@
       "id": "solana",
       "symbol": "SOL",
       "name": "Solana",
-      "price": 103.14,
-      "pct_24h": -0.12742,
+      "price": 102.28,
+      "pct_24h": -0.65545,
       "pct_7d": 4.1,
       "support_30d": 74.5477464048606,
       "resistance_30d": 109.17730597799657,
-      "as_of": "2026-09-09 19:30:30",
+      "as_of": "2026-09-09 19:55:21",
       "stale": false
     },
     "tron": {
@@ -1015,7 +1015,7 @@
         ],
         [
           "Stretch from long-term average",
-          "+19.6% above its long-term average - a bit stretched",
+          "+19.3% above its long-term average - a bit stretched",
           -1
         ],
         [
@@ -1028,12 +1028,12 @@
       "id": "worldcoin-wld",
       "symbol": "WLD",
       "name": "Worldcoin",
-      "price": 0.42747,
-      "pct_24h": -9.15631,
+      "price": 0.426623,
+      "pct_24h": -8.29946,
       "pct_7d": 20.5,
       "support_30d": 0.319812298466522,
       "resistance_30d": 0.4772935995106048,
-      "as_of": "2026-09-09 19:40:22",
+      "as_of": "2026-09-09 19:55:21",
       "stale": false
     },
     "bfusd": {
@@ -2239,7 +2239,7 @@
     "bittensor": {
       "label": "\ud83d\udfe1 HOLD / NEUTRAL",
       "status": "neutral",
-      "score": -1,
+      "score": 0,
       "rows": [
         [
           "Price vs. recent range",
@@ -2263,8 +2263,8 @@
         ],
         [
           "Stretch from long-term average",
-          "+10.3% above its long-term average - a bit stretched",
-          -1
+          "+7.4% vs its long-term average - not stretched either way",
+          0
         ],
         [
           "Leverage traders' bias",
@@ -2276,12 +2276,12 @@
       "id": "bittensor",
       "symbol": "TAO",
       "name": "Bittensor",
-      "price": 262.99,
-      "pct_24h": 4.41031,
-      "pct_7d": 21.2,
+      "price": 256.09,
+      "pct_24h": -0.36121,
+      "pct_7d": 20.1,
       "support_30d": 190.67093053611111,
       "resistance_30d": 265.7337487161633,
-      "as_of": "2026-09-09 14:10:27",
+      "as_of": "2026-09-09 19:55:21",
       "stale": false
     },
     "the-open-network": {
@@ -3293,26 +3293,29 @@
       "stale": false
     }
   },
-  "_strong_buy_state": {},
+  "_strong_buy_state": {
+    "15m:MORPHO": true,
+    "1h:SOL": true
+  },
   "BTC": {
     "key": "BTC",
     "name": "Bitcoin",
     "emoji": "\u20bf",
-    "price": 78310,
+    "price": 78280,
     "high_24h": 79701,
     "low_24h": 78095,
-    "pct_24h": -0.03297,
+    "pct_24h": -0.15911,
     "pct_7d": 1.4,
     "pct_30d": 22.8,
-    "sma50": 70194.20831671878,
-    "sma200": 69896.89343488676,
+    "sma50": 70191.87858674704,
+    "sma200": 69896.31100239384,
     "support_30d": 62843.70368466329,
     "resistance_30d": 81264.70153038795,
-    "mark_price": 78638.66714493,
-    "index_price": 78674.61586957,
-    "funding_rate": 6.744e-05,
-    "oi_change_pct": -0.23605994508681874,
-    "oi_now": 106528.861,
+    "mark_price": 78164.71069715,
+    "index_price": 78192.62369565,
+    "funding_rate": 7.318e-05,
+    "oi_change_pct": -2.1225194764543143,
+    "oi_now": 105082.789,
     "fng_value": 66,
     "fng_class": "Greed"
   },
@@ -3320,21 +3323,21 @@
     "key": "ETH",
     "name": "Ethereum",
     "emoji": "\u039e",
-    "price": 2471.68,
+    "price": 2467.87,
     "high_24h": 2521.51,
     "low_24h": 2472.65,
-    "pct_24h": -0.23547,
+    "pct_24h": -0.54124,
     "pct_7d": 3.8,
     "pct_30d": 32.6,
-    "sma50": 2137.8161710910413,
-    "sma200": 2045.9032059197946,
+    "sma50": 2137.6769818422645,
+    "sma200": 2045.8684086076005,
     "support_30d": 1874.401898191962,
     "resistance_30d": 2514.967577695514,
-    "mark_price": 2490.71,
-    "index_price": 2491.23744186,
-    "funding_rate": 6.699e-05,
-    "oi_change_pct": -1.3714975312193338,
-    "oi_now": 2260719.572,
+    "mark_price": 2463.17,
+    "index_price": 2464.45976744,
+    "funding_rate": 1.521e-05,
+    "oi_change_pct": -0.5699271312587022,
+    "oi_now": 2262464.163,
     "fng_value": 66,
     "fng_class": "Greed"
   }
