@@ -4,7 +4,7 @@
   "_alerts_state": {
     "btc-resistance-break": {
       "triggered": true,
-      "last_triggered_at": "2026-09-09 13:50:26"
+      "last_triggered_at": "2026-09-09 13:55:20"
     },
     "btc-support-break": {
       "triggered": false,
@@ -103,7 +103,7 @@
         ],
         [
           "Stretch from long-term average",
-          "+12.9% above its long-term average - a bit stretched",
+          "+12.1% above its long-term average - a bit stretched",
           -1
         ],
         [
@@ -116,12 +116,12 @@
       "id": "ripple",
       "symbol": "XRP",
       "name": "XRP",
-      "price": 1.44,
-      "pct_24h": 2.74221,
+      "price": 1.43,
+      "pct_24h": 2.5196,
       "pct_7d": 8.6,
       "support_30d": 0.9927072784932938,
       "resistance_30d": 1.52050482788377,
-      "as_of": "2026-09-09 13:10:26",
+      "as_of": "2026-09-09 13:55:20",
       "stale": false
     },
     "solana": {
@@ -2359,7 +2359,7 @@
         ],
         [
           "Stretch from long-term average",
-          "-3.4% vs its long-term average - not stretched either way",
+          "-3.7% vs its long-term average - not stretched either way",
           0
         ],
         [
@@ -2372,12 +2372,12 @@
       "id": "sky",
       "symbol": "SKY",
       "name": "Sky",
-      "price": 0.064585,
-      "pct_24h": -3.99595,
+      "price": 0.06437,
+      "pct_24h": -3.69441,
       "pct_7d": -7.7,
       "support_30d": 0.05081051579814886,
       "resistance_30d": 0.07314868186988309,
-      "as_of": "2026-09-09 13:10:26",
+      "as_of": "2026-09-09 13:55:20",
       "stale": false
     },
     "shiba-inu": {
@@ -2805,11 +2805,11 @@
       "symbol": "M",
       "name": "MemeCore",
       "price": 1.18,
-      "pct_24h": 0.52298,
-      "pct_7d": 13.7,
+      "pct_24h": 1.59235,
+      "pct_7d": 13.5,
       "support_30d": 1.0402044506518406,
       "resistance_30d": 1.2453913363052769,
-      "as_of": "2026-09-09 12:15:22",
+      "as_of": "2026-09-09 13:55:20",
       "stale": false
     },
     "aave": {
@@ -3293,19 +3293,21 @@
       "stale": false
     }
   },
-  "_strong_buy_state": {},
+  "_strong_buy_state": {
+    "15m:M": true
+  },
   "BTC": {
     "key": "BTC",
     "name": "Bitcoin",
     "emoji": "\u20bf",
-    "price": 79293,
+    "price": 79340,
     "high_24h": 79701,
     "low_24h": 77888,
-    "pct_24h": 1.90073,
+    "pct_24h": 2.03232,
     "pct_7d": 3.7,
     "pct_30d": 22.3,
-    "sma50": 70213.60393530432,
-    "sma200": 69901.74233953314,
+    "sma50": 70214.71748866202,
+    "sma200": 69902.02072787257,
     "support_30d": 62843.70368466329,
     "resistance_30d": 81264.70153038795,
     "mark_price": 78638.66714493,
@@ -3320,14 +3322,14 @@
     "key": "ETH",
     "name": "Ethereum",
     "emoji": "\u039e",
-    "price": 2510.7,
+    "price": 2511.06,
     "high_24h": 2521.51,
     "low_24h": 2457.39,
-    "pct_24h": 2.40669,
+    "pct_24h": 2.47662,
     "pct_7d": 5.5,
     "pct_30d": 30.9,
-    "sma50": 2138.5880201777995,
-    "sma200": 2046.0961681914841,
+    "sma50": 2138.5964332105727,
+    "sma200": 2046.0982714496774,
     "support_30d": 1874.401898191962,
     "resistance_30d": 2514.967577695514,
     "mark_price": 2490.71,
