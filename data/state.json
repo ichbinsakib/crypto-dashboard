@@ -4,7 +4,7 @@
   "_alerts_state": {
     "btc-resistance-break": {
       "triggered": true,
-      "last_triggered_at": "2026-09-09 09:40:23"
+      "last_triggered_at": "2026-09-09 09:45:25"
     },
     "btc-support-break": {
       "triggered": false,
@@ -439,7 +439,7 @@
         ],
         [
           "Stretch from long-term average",
-          "+39.6% above its long-term average - very stretched",
+          "+39.4% above its long-term average - very stretched",
           -2
         ],
         [
@@ -452,12 +452,12 @@
       "id": "rain",
       "symbol": "RAIN",
       "name": "Rain",
-      "price": 0.01605664,
-      "pct_24h": -1.17124,
-      "pct_7d": -6.9,
+      "price": 0.01603707,
+      "pct_24h": -5.7173,
+      "pct_7d": -4.2,
       "support_30d": 0.012552829520986089,
       "resistance_30d": 0.018158429442510105,
-      "as_of": "2026-09-09 06:15:25",
+      "as_of": "2026-09-09 09:45:25",
       "stale": false
     },
     "chainlink": {
@@ -583,7 +583,7 @@
         ],
         [
           "Stretch from long-term average",
-          "-4.5% vs its long-term average - not stretched either way",
+          "-4.7% vs its long-term average - not stretched either way",
           0
         ],
         [
@@ -596,12 +596,12 @@
       "id": "leo-token",
       "symbol": "LEO",
       "name": "LEO Token",
-      "price": 9.19,
-      "pct_24h": -0.25554,
-      "pct_7d": -0.8,
+      "price": 9.18,
+      "pct_24h": -0.29036,
+      "pct_7d": -1.0,
       "support_30d": 8.948412455130585,
       "resistance_30d": 9.681775974309534,
-      "as_of": "2026-09-09 07:45:24",
+      "as_of": "2026-09-09 09:45:25",
       "stale": false
     },
     "monero": {
@@ -1763,7 +1763,7 @@
       "rows": [
         [
           "Price vs. recent range",
-          "Near its 30-day high (~$5.27) - less room to run",
+          "Near its 30-day high (~$5.18) - less room to run",
           -1
         ],
         [
@@ -1783,7 +1783,7 @@
         ],
         [
           "Stretch from long-term average",
-          "+201.2% above its long-term average - very stretched",
+          "+196.1% above its long-term average - very stretched",
           -2
         ],
         [
@@ -1796,12 +1796,12 @@
       "id": "lighter",
       "symbol": "LIT",
       "name": "Lighter",
-      "price": 5.27,
-      "pct_24h": 11.36492,
+      "price": 5.18,
+      "pct_24h": 6.68316,
       "pct_7d": 46.8,
       "support_30d": 2.2358662099746955,
-      "resistance_30d": 5.266234509095489,
-      "as_of": "2026-09-09 09:10:23",
+      "resistance_30d": 5.17997822061398,
+      "as_of": "2026-09-09 09:45:25",
       "stale": false
     },
     "ethena": {
@@ -3293,19 +3293,21 @@
       "stale": false
     }
   },
-  "_strong_buy_state": {},
+  "_strong_buy_state": {
+    "15m:LIT": true
+  },
   "BTC": {
     "key": "BTC",
     "name": "Bitcoin",
     "emoji": "\u20bf",
-    "price": 79339,
+    "price": 79157,
     "high_24h": 79701,
     "low_24h": 77666,
-    "pct_24h": 0.87523,
+    "pct_24h": 0.59584,
     "pct_7d": 2.9,
     "pct_30d": 22.3,
-    "sma50": 70214.78905020416,
-    "sma200": 69902.03861825811,
+    "sma50": 70211.64803776964,
+    "sma200": 69901.25336514947,
     "support_30d": 62843.70368466329,
     "resistance_30d": 81264.70153038795,
     "mark_price": 78638.66714493,
@@ -3320,14 +3322,14 @@
     "key": "ETH",
     "name": "Ethereum",
     "emoji": "\u039e",
-    "price": 2502.68,
+    "price": 2496.04,
     "high_24h": 2521.51,
     "low_24h": 2442.98,
-    "pct_24h": 0.42519,
+    "pct_24h": 0.19517,
     "pct_7d": 4.3,
     "pct_30d": 31.0,
-    "sma50": 2138.4322648633306,
-    "sma200": 2046.057229362867,
+    "sma50": 2138.3255464816234,
+    "sma200": 2046.0305497674403,
     "support_30d": 1874.401898191962,
     "resistance_30d": 2514.967577695514,
     "mark_price": 2490.71,
