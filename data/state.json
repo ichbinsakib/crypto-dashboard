@@ -4,7 +4,7 @@
   "_alerts_state": {
     "btc-resistance-break": {
       "triggered": true,
-      "last_triggered_at": "2026-09-09 12:55:18"
+      "last_triggered_at": "2026-09-09 13:00:36"
     },
     "btc-support-break": {
       "triggered": false,
@@ -413,9 +413,9 @@
       "stale": false
     },
     "rain": {
-      "label": "\ud83d\udd34 CAUTION - REDUCE NEW BUYS",
+      "label": "\ud83d\udd34 DISTRIBUTION ZONE",
       "status": "bearish",
-      "score": -2,
+      "score": -5,
       "rows": [
         [
           "Price vs. recent range",
@@ -429,8 +429,8 @@
         ],
         [
           "Market phase (best guess)",
-          "Established uptrend - phase where price marks up",
-          1
+          "Very extended after a big run - phase where smart money sells",
+          -2
         ],
         [
           "Recent trend",
@@ -439,7 +439,7 @@
         ],
         [
           "Stretch from long-term average",
-          "+38.7% above its long-term average - very stretched",
+          "+42.4% above its long-term average - very stretched",
           -2
         ],
         [
@@ -448,16 +448,16 @@
           0
         ]
       ],
-      "plain": "Getting risky - I'd hold off on new buys until this cools down.",
+      "plain": "Looks stretched and euphoric - historically the zone where smart money sells, not buys.",
       "id": "rain",
       "symbol": "RAIN",
       "name": "Rain",
-      "price": 0.01595249,
-      "pct_24h": -5.95366,
-      "pct_7d": -4.3,
+      "price": 0.01638429,
+      "pct_24h": -2.1931,
+      "pct_7d": -3.5,
       "support_30d": 0.012552829520986089,
       "resistance_30d": 0.018158429442510105,
-      "as_of": "2026-09-09 10:50:25",
+      "as_of": "2026-09-09 13:00:36",
       "stale": false
     },
     "chainlink": {
@@ -631,7 +631,7 @@
         ],
         [
           "Stretch from long-term average",
-          "+35.0% above its long-term average - very stretched",
+          "+35.9% above its long-term average - very stretched",
           -2
         ],
         [
@@ -644,12 +644,12 @@
       "id": "monero",
       "symbol": "XMR",
       "name": "Monero",
-      "price": 494.44,
-      "pct_24h": -3.08008,
-      "pct_7d": -4.3,
+      "price": 497.57,
+      "pct_24h": -1.48135,
+      "pct_7d": -2.3,
       "support_30d": 377.1738335746389,
       "resistance_30d": 555.6684591165193,
-      "as_of": "2026-09-09 11:35:20",
+      "as_of": "2026-09-09 13:00:36",
       "stale": false
     },
     "cardano": {
@@ -2243,7 +2243,7 @@
       "rows": [
         [
           "Price vs. recent range",
-          "Near its 30-day high (~$268.40) - less room to run",
+          "Near its 30-day high (~$268.01) - less room to run",
           -1
         ],
         [
@@ -2263,7 +2263,7 @@
         ],
         [
           "Stretch from long-term average",
-          "+12.6% above its long-term average - a bit stretched",
+          "+12.4% above its long-term average - a bit stretched",
           -1
         ],
         [
@@ -2276,12 +2276,12 @@
       "id": "bittensor",
       "symbol": "TAO",
       "name": "Bittensor",
-      "price": 268.53,
-      "pct_24h": 5.76806,
-      "pct_7d": 22.7,
+      "price": 268.09,
+      "pct_24h": 5.82637,
+      "pct_7d": 23.5,
       "support_30d": 190.67093053611111,
-      "resistance_30d": 268.39799146178194,
-      "as_of": "2026-09-09 12:55:18",
+      "resistance_30d": 268.00841336994154,
+      "as_of": "2026-09-09 13:00:36",
       "stale": false
     },
     "the-open-network": {
@@ -3298,14 +3298,14 @@
     "key": "BTC",
     "name": "Bitcoin",
     "emoji": "\u20bf",
-    "price": 79596,
+    "price": 79603,
     "high_24h": 79701,
     "low_24h": 77666,
-    "pct_24h": 1.53268,
-    "pct_7d": 3.5,
-    "pct_30d": 22.1,
-    "sma50": 70219.73739818971,
-    "sma200": 69903.27570525449,
+    "pct_24h": 1.53629,
+    "pct_7d": 3.7,
+    "pct_30d": 22.3,
+    "sma50": 70220.07739450758,
+    "sma200": 69903.36070433397,
     "support_30d": 62843.70368466329,
     "resistance_30d": 81264.70153038795,
     "mark_price": 78638.66714493,
@@ -3320,14 +3320,14 @@
     "key": "ETH",
     "name": "Ethereum",
     "emoji": "\u039e",
-    "price": 2510.81,
+    "price": 2511.44,
     "high_24h": 2521.51,
     "low_24h": 2442.98,
-    "pct_24h": 1.50583,
+    "pct_24h": 1.61219,
     "pct_7d": 5.5,
-    "pct_30d": 30.6,
-    "sma50": 2138.5976221116293,
-    "sma200": 2046.0985686749416,
+    "pct_30d": 30.9,
+    "sma50": 2138.611448505771,
+    "sma200": 2046.1020252734772,
     "support_30d": 1874.401898191962,
     "resistance_30d": 2514.967577695514,
     "mark_price": 2490.71,
