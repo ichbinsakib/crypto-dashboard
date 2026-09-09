@@ -4,7 +4,7 @@
   "_alerts_state": {
     "btc-resistance-break": {
       "triggered": true,
-      "last_triggered_at": "2026-09-09 17:19:32"
+      "last_triggered_at": "2026-09-09 17:21:57"
     },
     "btc-support-break": {
       "triggered": false,
@@ -679,7 +679,7 @@
         ],
         [
           "Stretch from long-term average",
-          "-1.3% vs its long-term average - not stretched either way",
+          "-1.2% vs its long-term average - not stretched either way",
           0
         ],
         [
@@ -692,12 +692,12 @@
       "id": "cardano",
       "symbol": "ADA",
       "name": "Cardano",
-      "price": 0.217727,
-      "pct_24h": -3.71419,
+      "price": 0.217937,
+      "pct_24h": -3.78831,
       "pct_7d": 11.1,
       "support_30d": 0.1741249817054162,
       "resistance_30d": 0.2291047455940254,
-      "as_of": "2026-09-09 17:19:32",
+      "as_of": "2026-09-09 17:00:34",
       "stale": false
     },
     "stellar": {
@@ -789,11 +789,11 @@
       "symbol": "KCS",
       "name": "KuCoin",
       "price": 7.04,
-      "pct_24h": 0.2375,
+      "pct_24h": 0.42808,
       "pct_7d": 0.6,
       "support_30d": 6.514591596607885,
       "resistance_30d": 7.8821382735057615,
-      "as_of": "2026-09-09 17:00:34",
+      "as_of": "2026-09-09 17:21:57",
       "stale": false
     },
     "hedera-hashgraph": {
@@ -866,13 +866,13 @@
         ],
         [
           "Recent trend",
-          "Chopping sideways - no clear trend",
-          0
+          "Trending up steadily - healthy",
+          1
         ],
         [
           "Stretch from long-term average",
-          "+9.4% vs its long-term average - not stretched either way",
-          0
+          "+11.2% above its long-term average - a bit stretched",
+          -1
         ],
         [
           "Leverage traders' bias",
@@ -884,12 +884,12 @@
       "id": "pepe",
       "symbol": "PEPE",
       "name": "Pepe",
-      "price": 3.62e-06,
-      "pct_24h": -0.87237,
-      "pct_7d": 6.1,
+      "price": 3.68e-06,
+      "pct_24h": 1.39805,
+      "pct_7d": 8.4,
       "support_30d": 2.5716563906374582e-06,
       "resistance_30d": 4.122123035488615e-06,
-      "as_of": "2026-09-09 17:19:32",
+      "as_of": "2026-09-09 14:30:36",
       "stale": false
     },
     "avalanche-2": {
@@ -941,14 +941,14 @@
       "stale": false
     },
     "aster-2": {
-      "label": "\ud83d\udfe1 HOLD / NEUTRAL",
-      "status": "neutral",
-      "score": -1,
+      "label": "\ud83d\udd34 CAUTION - REDUCE NEW BUYS",
+      "status": "bearish",
+      "score": -2,
       "rows": [
         [
           "Price vs. recent range",
-          "Sitting in the middle of its 30-day range",
-          0
+          "Near its 30-day high (~$0.7868) - less room to run",
+          -1
         ],
         [
           "Crowd mood (Fear & Greed)",
@@ -967,7 +967,7 @@
         ],
         [
           "Stretch from long-term average",
-          "+12.3% above its long-term average - a bit stretched",
+          "+13.4% above its long-term average - a bit stretched",
           -1
         ],
         [
@@ -976,16 +976,16 @@
           0
         ]
       ],
-      "plain": "No real edge either way right now - fine to just wait and watch.",
+      "plain": "Getting risky - I'd hold off on new buys until this cools down.",
       "id": "aster-2",
       "symbol": "ASTER",
       "name": "Aster",
-      "price": 0.7441,
-      "pct_24h": -2.3235,
-      "pct_7d": 1.7,
+      "price": 0.750864,
+      "pct_24h": -2.15117,
+      "pct_7d": 6.9,
       "support_30d": 0.5986101196690307,
       "resistance_30d": 0.7868111056215635,
-      "as_of": "2026-09-09 17:19:32",
+      "as_of": "2026-09-09 10:10:22",
       "stale": false
     },
     "worldcoin-wld": {
@@ -1567,12 +1567,12 @@
     "venice-token": {
       "label": "\ud83d\udd34 DISTRIBUTION ZONE",
       "status": "bearish",
-      "score": -8,
+      "score": -7,
       "rows": [
         [
           "Price vs. recent range",
-          "Near its 30-day high (~$25.94) - less room to run",
-          -1
+          "Sitting in the middle of its 30-day range",
+          0
         ],
         [
           "Crowd mood (Fear & Greed)",
@@ -1591,7 +1591,7 @@
         ],
         [
           "Stretch from long-term average",
-          "+121.1% above its long-term average - very stretched",
+          "+108.0% above its long-term average - very stretched",
           -2
         ],
         [
@@ -1604,12 +1604,12 @@
       "id": "venice-token",
       "symbol": "VVV",
       "name": "Venice Token",
-      "price": 26.0,
-      "pct_24h": 12.83115,
-      "pct_7d": 60.7,
+      "price": 24.45,
+      "pct_24h": 5.36694,
+      "pct_7d": 52.4,
       "support_30d": 11.491241326615295,
-      "resistance_30d": 25.937799268634098,
-      "as_of": "2026-09-09 14:55:21",
+      "resistance_30d": 25.88474946901688,
+      "as_of": "2026-09-09 17:21:57",
       "stale": false
     },
     "litecoin": {
@@ -2023,7 +2023,7 @@
         ],
         [
           "Stretch from long-term average",
-          "+81.6% above its long-term average - very stretched",
+          "+81.3% above its long-term average - very stretched",
           -2
         ],
         [
@@ -2036,12 +2036,12 @@
       "id": "uniswap",
       "symbol": "UNI",
       "name": "Uniswap",
-      "price": 6.62,
-      "pct_24h": -4.21816,
-      "pct_7d": 14.0,
+      "price": 6.61,
+      "pct_24h": -3.58374,
+      "pct_7d": 12.2,
       "support_30d": 3.1971416665971573,
       "resistance_30d": 7.291165865788254,
-      "as_of": "2026-09-09 14:25:21",
+      "as_of": "2026-09-09 17:21:57",
       "stale": false
     },
     "pi-network": {
@@ -2084,12 +2084,12 @@
       "id": "pi-network",
       "symbol": "PI",
       "name": "Pi Network",
-      "price": 0.096987,
-      "pct_24h": 0.61376,
+      "price": 0.096938,
+      "pct_24h": 0.53571,
       "pct_7d": 3.3,
       "support_30d": 0.08559695435343688,
       "resistance_30d": 0.09798925329339339,
-      "as_of": "2026-09-09 17:10:24",
+      "as_of": "2026-09-09 17:21:57",
       "stale": false
     },
     "ondo-finance": {
@@ -2435,7 +2435,7 @@
       "rows": [
         [
           "Price vs. recent range",
-          "Near its 30-day high (~$2.60) - less room to run",
+          "Near its 30-day high (~$2.64) - less room to run",
           -1
         ],
         [
@@ -2455,7 +2455,7 @@
         ],
         [
           "Stretch from long-term average",
-          "+52.8% above its long-term average - very stretched",
+          "+55.7% above its long-term average - very stretched",
           -2
         ],
         [
@@ -2468,12 +2468,12 @@
       "id": "near",
       "symbol": "NEAR",
       "name": "NEAR Protocol",
-      "price": 2.59,
-      "pct_24h": 8.99242,
-      "pct_7d": 40.7,
+      "price": 2.64,
+      "pct_24h": 11.21176,
+      "pct_7d": 40.2,
       "support_30d": 1.5879597131538,
-      "resistance_30d": 2.601540471924268,
-      "as_of": "2026-09-09 16:25:18",
+      "resistance_30d": 2.6380397172916776,
+      "as_of": "2026-09-09 17:21:57",
       "stale": false
     },
     "quant-network": {
@@ -3293,19 +3293,22 @@
       "stale": false
     }
   },
-  "_strong_buy_state": {},
+  "_strong_buy_state": {
+    "15m:PI": true,
+    "1h:PI": true
+  },
   "BTC": {
     "key": "BTC",
     "name": "Bitcoin",
     "emoji": "\u20bf",
-    "price": 78840,
+    "price": 78828,
     "high_24h": 79701,
     "low_24h": 78095,
-    "pct_24h": 0.22744,
+    "pct_24h": 0.27112,
     "pct_7d": 2.0,
     "pct_30d": 22.6,
-    "sma50": 70204.84348261317,
-    "sma200": 69899.55222636036,
+    "sma50": 70204.53778153619,
+    "sma200": 69899.47580109112,
     "support_30d": 62843.70368466329,
     "resistance_30d": 81264.70153038795,
     "mark_price": 78638.66714493,
@@ -3320,14 +3323,14 @@
     "key": "ETH",
     "name": "Ethereum",
     "emoji": "\u039e",
-    "price": 2496.18,
+    "price": 2496.39,
     "high_24h": 2521.51,
     "low_24h": 2472.65,
-    "pct_24h": 0.06154,
+    "pct_24h": 0.1396,
     "pct_7d": 4.5,
     "pct_30d": 33.1,
-    "sma50": 2138.3112093253244,
-    "sma200": 2046.0269654783654,
+    "sma50": 2138.316068627761,
+    "sma200": 2046.0281803039748,
     "support_30d": 1874.401898191962,
     "resistance_30d": 2514.967577695514,
     "mark_price": 2490.71,
