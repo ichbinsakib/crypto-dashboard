@@ -511,7 +511,7 @@
     "whitebit": {
       "label": "\ud83d\udd34 DISTRIBUTION ZONE",
       "status": "bearish",
-      "score": -5,
+      "score": -6,
       "rows": [
         [
           "Price vs. recent range",
@@ -530,12 +530,12 @@
         ],
         [
           "Recent trend",
-          "Trending up steadily - healthy",
-          1
+          "Chopping sideways - no clear trend",
+          0
         ],
         [
           "Stretch from long-term average",
-          "+41.6% above its long-term average - very stretched",
+          "+42.0% above its long-term average - very stretched",
           -2
         ],
         [
@@ -548,12 +548,12 @@
       "id": "whitebit",
       "symbol": "WBT",
       "name": "WhiteBIT Coin",
-      "price": 79.56,
-      "pct_24h": -2.07257,
-      "pct_7d": 8.3,
+      "price": 79.79,
+      "pct_24h": -2.02349,
+      "pct_7d": 7.3,
       "support_30d": 54.452558710928955,
       "resistance_30d": 81.2521953230761,
-      "as_of": "2026-09-10 16:15:24",
+      "as_of": "2026-09-10 17:00:35",
       "stale": false
     },
     "leo-token": {
@@ -919,7 +919,7 @@
         ],
         [
           "Stretch from long-term average",
-          "-5.4% vs its long-term average - not stretched either way",
+          "-5.8% vs its long-term average - not stretched either way",
           0
         ],
         [
@@ -932,12 +932,12 @@
       "id": "avalanche-2",
       "symbol": "AVAX",
       "name": "Avalanche",
-      "price": 7.61,
-      "pct_24h": -4.70905,
-      "pct_7d": 4.3,
+      "price": 7.58,
+      "pct_24h": -4.57637,
+      "pct_7d": 1.0,
       "support_30d": 6.313391080113916,
       "resistance_30d": 8.074275746115342,
-      "as_of": "2026-09-10 13:05:20",
+      "as_of": "2026-09-10 17:00:35",
       "stale": false
     },
     "aster-2": {
@@ -2503,7 +2503,7 @@
         ],
         [
           "Stretch from long-term average",
-          "-4.2% vs its long-term average - not stretched either way",
+          "-4.5% vs its long-term average - not stretched either way",
           0
         ],
         [
@@ -2516,12 +2516,12 @@
       "id": "quant-network",
       "symbol": "QNT",
       "name": "Quant",
-      "price": 65.59,
-      "pct_24h": -1.76423,
-      "pct_7d": 0.8,
+      "price": 65.44,
+      "pct_24h": -2.60396,
+      "pct_7d": -0.9,
       "support_30d": 55.905981995619285,
       "resistance_30d": 67.13669726469111,
-      "as_of": "2026-09-10 15:15:25",
+      "as_of": "2026-09-10 17:00:35",
       "stale": false
     },
     "tether-gold": {
@@ -3293,19 +3293,21 @@
       "stale": false
     }
   },
-  "_strong_buy_state": {},
+  "_strong_buy_state": {
+    "1h:WLFI": true
+  },
   "BTC": {
     "key": "BTC",
     "name": "Bitcoin",
     "emoji": "\u20bf",
-    "price": 77097,
+    "price": 77159,
     "high_24h": 78871,
     "low_24h": 76748,
-    "pct_24h": -2.13844,
-    "pct_7d": -4.1,
-    "pct_30d": 21.2,
-    "sma50": 70413.39188013064,
-    "sma200": 69956.11366455944,
+    "pct_24h": -2.054,
+    "pct_7d": -5.1,
+    "pct_30d": 21.4,
+    "sma50": 70414.81592896572,
+    "sma200": 69956.46967676822,
     "support_30d": 62843.70368466329,
     "resistance_30d": 81264.70153038795,
     "mark_price": 78086.0,
@@ -3320,14 +3322,14 @@
     "key": "ETH",
     "name": "Ethereum",
     "emoji": "\u039e",
-    "price": 2445.11,
+    "price": 2447.12,
     "high_24h": 2498.19,
     "low_24h": 2410.22,
-    "pct_24h": -2.07755,
-    "pct_7d": -2.0,
-    "pct_30d": 30.3,
-    "sma50": 2147.9522036291073,
-    "sma200": 2048.6720285129363,
+    "pct_24h": -1.92946,
+    "pct_7d": -2.7,
+    "pct_30d": 31.5,
+    "sma50": 2147.9844089067137,
+    "sma200": 2048.680079832338,
     "support_30d": 1874.401898191962,
     "resistance_30d": 2514.967577695514,
     "mark_price": 2470.66,
