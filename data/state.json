@@ -605,9 +605,9 @@
       "stale": false
     },
     "monero": {
-      "label": "\ud83d\udd34 DISTRIBUTION ZONE",
+      "label": "\ud83d\udd34 CAUTION - REDUCE NEW BUYS",
       "status": "bearish",
-      "score": -5,
+      "score": -2,
       "rows": [
         [
           "Price vs. recent range",
@@ -621,8 +621,8 @@
         ],
         [
           "Market phase (best guess)",
-          "Very extended after a big run - phase where smart money sells",
-          -2
+          "Established uptrend - phase where price marks up",
+          1
         ],
         [
           "Recent trend",
@@ -631,7 +631,7 @@
         ],
         [
           "Stretch from long-term average",
-          "+40.4% above its long-term average - very stretched",
+          "+39.4% above its long-term average - very stretched",
           -2
         ],
         [
@@ -640,16 +640,16 @@
           0
         ]
       ],
-      "plain": "Looks stretched and euphoric - historically the zone where smart money sells, not buys.",
+      "plain": "Getting risky - I'd hold off on new buys until this cools down.",
       "id": "monero",
       "symbol": "XMR",
       "name": "Monero",
-      "price": 515.76,
-      "pct_24h": 1.37364,
-      "pct_7d": -1.8,
+      "price": 511.93,
+      "pct_24h": 0.37555,
+      "pct_7d": -2.6,
       "support_30d": 392.7624679440011,
       "resistance_30d": 555.6684591165193,
-      "as_of": "2026-09-10 20:20:29",
+      "as_of": "2026-09-10 21:15:24",
       "stale": false
     },
     "cardano": {
@@ -2435,7 +2435,7 @@
       "rows": [
         [
           "Price vs. recent range",
-          "Near its 30-day high (~$2.48) - less room to run",
+          "Near its 30-day high (~$2.53) - less room to run",
           -1
         ],
         [
@@ -2455,7 +2455,7 @@
         ],
         [
           "Stretch from long-term average",
-          "+45.1% above its long-term average - very stretched",
+          "+48.6% above its long-term average - very stretched",
           -2
         ],
         [
@@ -2468,12 +2468,12 @@
       "id": "near",
       "symbol": "NEAR",
       "name": "NEAR Protocol",
-      "price": 2.47,
-      "pct_24h": -1.17382,
-      "pct_7d": 23.7,
+      "price": 2.53,
+      "pct_24h": 1.87324,
+      "pct_7d": 26.8,
       "support_30d": 1.5879597131538,
-      "resistance_30d": 2.4848168147865453,
-      "as_of": "2026-09-10 20:05:21",
+      "resistance_30d": 2.5296926678489426,
+      "as_of": "2026-09-10 21:15:24",
       "stale": false
     },
     "quant-network": {
@@ -2503,7 +2503,7 @@
         ],
         [
           "Stretch from long-term average",
-          "-4.1% vs its long-term average - not stretched either way",
+          "-4.6% vs its long-term average - not stretched either way",
           0
         ],
         [
@@ -2516,12 +2516,12 @@
       "id": "quant-network",
       "symbol": "QNT",
       "name": "Quant",
-      "price": 65.69,
-      "pct_24h": -1.64363,
-      "pct_7d": 0.6,
+      "price": 65.33,
+      "pct_24h": -2.093,
+      "pct_7d": 0.1,
       "support_30d": 55.905981995619285,
       "resistance_30d": 67.13669726469111,
-      "as_of": "2026-09-10 18:55:22",
+      "as_of": "2026-09-10 21:15:24",
       "stale": false
     },
     "tether-gold": {
@@ -3293,19 +3293,21 @@
       "stale": false
     }
   },
-  "_strong_buy_state": {},
+  "_strong_buy_state": {
+    "15m:BGB": true
+  },
   "BTC": {
     "key": "BTC",
     "name": "Bitcoin",
     "emoji": "\u20bf",
-    "price": 77222,
+    "price": 77262,
     "high_24h": 78510,
     "low_24h": 76748,
-    "pct_24h": -1.32902,
+    "pct_24h": -1.23024,
     "pct_7d": -5.5,
     "pct_30d": 21.7,
-    "sma50": 70416.56170427719,
-    "sma200": 69956.90612059608,
+    "sma50": 70417.55833866778,
+    "sma200": 69957.15527919373,
     "support_30d": 62843.70368466329,
     "resistance_30d": 81264.70153038795,
     "mark_price": 78086.0,
@@ -3320,14 +3322,14 @@
     "key": "ETH",
     "name": "Ethereum",
     "emoji": "\u039e",
-    "price": 2460.59,
+    "price": 2461.16,
     "high_24h": 2482.52,
     "low_24h": 2410.22,
-    "pct_24h": -0.34564,
+    "pct_24h": -0.30312,
     "pct_7d": -2.2,
     "pct_30d": 30.9,
-    "sma50": 2148.2767470586205,
-    "sma200": 2048.753164370315,
+    "sma50": 2148.2832377367695,
+    "sma200": 2048.754787039852,
     "support_30d": 1874.401898191962,
     "resistance_30d": 2514.967577695514,
     "mark_price": 2470.66,
