@@ -1447,7 +1447,7 @@
         ],
         [
           "Stretch from long-term average",
-          "-14.4% vs its long-term average - not stretched either way",
+          "-14.1% vs its long-term average - not stretched either way",
           0
         ],
         [
@@ -1460,12 +1460,12 @@
       "id": "crypto-com-chain",
       "symbol": "CRO",
       "name": "Cronos",
-      "price": 0.056306,
-      "pct_24h": -4.94997,
-      "pct_7d": -1.5,
+      "price": 0.056491,
+      "pct_24h": -4.34266,
+      "pct_7d": -2.4,
       "support_30d": 0.04621382085807831,
       "resistance_30d": 0.06091104752771909,
-      "as_of": "2026-09-10 19:30:28",
+      "as_of": "2026-09-10 20:57:45",
       "stale": false
     },
     "ethereum-classic": {
@@ -2675,7 +2675,7 @@
       "rows": [
         [
           "Price vs. recent range",
-          "Near its 30-day low (~$4,326.10) - historically a better entry",
+          "Near its 30-day low (~$4,322.67) - historically a better entry",
           2
         ],
         [
@@ -2708,12 +2708,12 @@
       "id": "pax-gold",
       "symbol": "PAXG",
       "name": "PAX Gold",
-      "price": 4327.37,
-      "pct_24h": -1.6595,
+      "price": 4323.52,
+      "pct_24h": -1.76746,
       "pct_7d": -3.4,
-      "support_30d": 4326.103864797422,
+      "support_30d": 4322.674756094785,
       "resistance_30d": 4672.307573354755,
-      "as_of": "2026-09-10 19:50:29",
+      "as_of": "2026-09-10 20:57:45",
       "stale": false
     },
     "morpho": {
@@ -3079,7 +3079,7 @@
         ],
         [
           "Stretch from long-term average",
-          "+48.3% above its long-term average - very stretched",
+          "+49.1% above its long-term average - very stretched",
           -2
         ],
         [
@@ -3092,12 +3092,12 @@
       "id": "arbitrum",
       "symbol": "ARB",
       "name": "Arbitrum",
-      "price": 0.147986,
-      "pct_24h": -1.62179,
+      "price": 0.14877,
+      "pct_24h": -0.9455,
       "pct_7d": 2.2,
       "support_30d": 0.07272258489044682,
       "resistance_30d": 0.18933387703114857,
-      "as_of": "2026-09-10 20:30:29",
+      "as_of": "2026-09-10 20:57:45",
       "stale": false
     },
     "dash": {
@@ -3294,20 +3294,22 @@
     }
   },
   "_strong_buy_state": {
+    "15m:ARB": true,
+    "15m:PAXG": true,
     "15m:BGB": true
   },
   "BTC": {
     "key": "BTC",
     "name": "Bitcoin",
     "emoji": "\u20bf",
-    "price": 77237,
+    "price": 77271,
     "high_24h": 78510,
     "low_24h": 76748,
-    "pct_24h": -1.16933,
+    "pct_24h": -1.24246,
     "pct_7d": -5.0,
     "pct_30d": 21.9,
-    "sma50": 70417.10473127746,
-    "sma200": 69957.04187734616,
+    "sma50": 70417.53474250827,
+    "sma200": 69957.14938015385,
     "support_30d": 62843.70368466329,
     "resistance_30d": 81264.70153038795,
     "mark_price": 78086.0,
@@ -3322,14 +3324,14 @@
     "key": "ETH",
     "name": "Ethereum",
     "emoji": "\u039e",
-    "price": 2461.81,
+    "price": 2462.36,
     "high_24h": 2482.52,
     "low_24h": 2410.22,
-    "pct_24h": -0.14544,
+    "pct_24h": -0.23165,
     "pct_7d": -2.0,
     "pct_30d": 32.1,
-    "sma50": 2148.302451650834,
-    "sma200": 2048.759590518368,
+    "sma50": 2148.310457488893,
+    "sma200": 2048.761591977883,
     "support_30d": 1874.401898191962,
     "resistance_30d": 2514.967577695514,
     "mark_price": 2470.66,
