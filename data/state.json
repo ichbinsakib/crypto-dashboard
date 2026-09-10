@@ -1373,9 +1373,9 @@
       "stale": false
     },
     "gatechain-token": {
-      "label": "\ud83d\udfe1 HOLD / NEUTRAL",
-      "status": "neutral",
-      "score": -1,
+      "label": "\ud83d\udd34 CAUTION - REDUCE NEW BUYS",
+      "status": "bearish",
+      "score": -2,
       "rows": [
         [
           "Price vs. recent range",
@@ -1399,8 +1399,8 @@
         ],
         [
           "Stretch from long-term average",
-          "+29.2% above its long-term average - a bit stretched",
-          -1
+          "+30.3% above its long-term average - very stretched",
+          -2
         ],
         [
           "Leverage traders' bias",
@@ -1408,16 +1408,16 @@
           0
         ]
       ],
-      "plain": "No real edge either way right now - fine to just wait and watch.",
+      "plain": "Getting risky - I'd hold off on new buys until this cools down.",
       "id": "gatechain-token",
       "symbol": "GT",
       "name": "Gate",
-      "price": 9.04,
-      "pct_24h": -1.06108,
-      "pct_7d": 12.4,
+      "price": 9.12,
+      "pct_24h": -0.15529,
+      "pct_7d": 12.9,
       "support_30d": 6.673649191532821,
       "resistance_30d": 9.38216924975626,
-      "as_of": "2026-09-10 02:30:35",
+      "as_of": "2026-09-10 04:15:21",
       "stale": false
     },
     "crypto-com-chain": {
@@ -2435,7 +2435,7 @@
       "rows": [
         [
           "Price vs. recent range",
-          "Near its 30-day high (~$2.51) - less room to run",
+          "Near its 30-day high (~$2.54) - less room to run",
           -1
         ],
         [
@@ -2455,7 +2455,7 @@
         ],
         [
           "Stretch from long-term average",
-          "+47.5% above its long-term average - very stretched",
+          "+49.2% above its long-term average - very stretched",
           -2
         ],
         [
@@ -2468,12 +2468,12 @@
       "id": "near",
       "symbol": "NEAR",
       "name": "NEAR Protocol",
-      "price": 2.51,
-      "pct_24h": 10.50362,
-      "pct_7d": 33.3,
+      "price": 2.54,
+      "pct_24h": 10.52416,
+      "pct_7d": 33.4,
       "support_30d": 1.5879597131538,
-      "resistance_30d": 2.512002373384662,
-      "as_of": "2026-09-10 03:15:22",
+      "resistance_30d": 2.536276046804316,
+      "as_of": "2026-09-10 04:15:21",
       "stale": false
     },
     "quant-network": {
@@ -2959,7 +2959,7 @@
     "algorand": {
       "label": "\ud83d\udfe1 HOLD / NEUTRAL",
       "status": "neutral",
-      "score": 0,
+      "score": 1,
       "rows": [
         [
           "Price vs. recent range",
@@ -2978,12 +2978,12 @@
         ],
         [
           "Recent trend",
-          "Chopping sideways - no clear trend",
-          0
+          "Trending up steadily - healthy",
+          1
         ],
         [
           "Stretch from long-term average",
-          "-1.9% vs its long-term average - not stretched either way",
+          "+0.1% vs its long-term average - not stretched either way",
           0
         ],
         [
@@ -2996,12 +2996,12 @@
       "id": "algorand",
       "symbol": "ALGO",
       "name": "Algorand",
-      "price": 0.098385,
-      "pct_24h": -2.69413,
-      "pct_7d": 5.8,
+      "price": 0.100431,
+      "pct_24h": -0.08487,
+      "pct_7d": 8.6,
       "support_30d": 0.07793708137631736,
       "resistance_30d": 0.10076397875501594,
-      "as_of": "2026-09-10 01:25:20",
+      "as_of": "2026-09-10 04:15:21",
       "stale": false
     },
     "eutbl": {
@@ -3298,14 +3298,14 @@
     "key": "BTC",
     "name": "Bitcoin",
     "emoji": "\u20bf",
-    "price": 78346,
+    "price": 78327,
     "high_24h": 79701,
     "low_24h": 77833,
-    "pct_24h": -0.59524,
+    "pct_24h": -0.62582,
     "pct_7d": 0.6,
     "pct_30d": 22.3,
-    "sma50": 70438.95685146196,
-    "sma200": 69962.50490739227,
+    "sma50": 70438.64589117377,
+    "sma200": 69962.42716732022,
     "support_30d": 62843.70368466329,
     "resistance_30d": 81264.70153038795,
     "mark_price": 78013.99077211,
@@ -3320,14 +3320,14 @@
     "key": "ETH",
     "name": "Ethereum",
     "emoji": "\u039e",
-    "price": 2476.91,
+    "price": 2475.02,
     "high_24h": 2521.51,
     "low_24h": 2445.1,
-    "pct_24h": -0.80322,
+    "pct_24h": -0.83933,
     "pct_7d": 2.8,
     "pct_30d": 31.8,
-    "sma50": 2148.6050915674637,
-    "sma200": 2048.8352504975255,
+    "sma50": 2148.564952561841,
+    "sma200": 2048.8252157461197,
     "support_30d": 1874.401898191962,
     "resistance_30d": 2514.967577695514,
     "mark_price": 2454.54047715,
