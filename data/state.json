@@ -12,7 +12,7 @@
     },
     "eth-resistance-break": {
       "triggered": true,
-      "last_triggered_at": "2026-09-11 20:55:19"
+      "last_triggered_at": "2026-09-11 21:00:35"
     },
     "eth-support-break": {
       "triggered": false,
@@ -439,7 +439,7 @@
         ],
         [
           "Stretch from long-term average",
-          "+35.2% above its long-term average - very stretched",
+          "+34.6% above its long-term average - very stretched",
           -2
         ],
         [
@@ -452,12 +452,12 @@
       "id": "rain",
       "symbol": "RAIN",
       "name": "Rain",
-      "price": 0.01564257,
-      "pct_24h": -1.41151,
-      "pct_7d": -5.7,
+      "price": 0.01556292,
+      "pct_24h": -1.74734,
+      "pct_7d": -6.2,
       "support_30d": 0.012552829520986089,
       "resistance_30d": 0.018158429442510105,
-      "as_of": "2026-09-11 20:05:25",
+      "as_of": "2026-09-11 21:00:35",
       "stale": false
     },
     "chainlink": {
@@ -2071,7 +2071,7 @@
         ],
         [
           "Stretch from long-term average",
-          "-32.5% below its long-term average - confirmed downtrend",
+          "-32.4% below its long-term average - confirmed downtrend",
           -1
         ],
         [
@@ -2084,12 +2084,12 @@
       "id": "pi-network",
       "symbol": "PI",
       "name": "Pi Network",
-      "price": 0.094859,
-      "pct_24h": -1.23872,
-      "pct_7d": 0.3,
+      "price": 0.095079,
+      "pct_24h": -0.7903,
+      "pct_7d": 1.0,
       "support_30d": 0.08559695435343688,
       "resistance_30d": 0.09798925329339339,
-      "as_of": "2026-09-11 20:25:21",
+      "as_of": "2026-09-11 21:00:35",
       "stale": false
     },
     "ondo-finance": {
@@ -2863,7 +2863,7 @@
     "okb": {
       "label": "\ud83d\udd34 CAUTION - REDUCE NEW BUYS",
       "status": "bearish",
-      "score": -3,
+      "score": -2,
       "rows": [
         [
           "Price vs. recent range",
@@ -2887,8 +2887,8 @@
         ],
         [
           "Stretch from long-term average",
-          "+30.4% above its long-term average - very stretched",
-          -2
+          "+29.8% above its long-term average - a bit stretched",
+          -1
         ],
         [
           "Leverage traders' bias",
@@ -2900,12 +2900,12 @@
       "id": "okb",
       "symbol": "OKB",
       "name": "OKB",
-      "price": 114.26,
-      "pct_24h": 2.48448,
-      "pct_7d": 5.7,
+      "price": 113.65,
+      "pct_24h": 2.05647,
+      "pct_7d": 5.1,
       "support_30d": 98.99707739944992,
       "resistance_30d": 115.8310797114581,
-      "as_of": "2026-09-11 15:00:38",
+      "as_of": "2026-09-11 21:00:35",
       "stale": false
     },
     "just": {
@@ -3294,8 +3294,6 @@
     }
   },
   "_strong_buy_state": {
-    "scanner-15m:XMR": true,
-    "scanner-1h:MNT": true,
     "scanner-daily:XLM": true
   },
   "_pnl_tracker": {
@@ -3304,21 +3302,21 @@
         "coin": "XMR",
         "name": "Monero",
         "tf": "15m",
-        "entry": 509.17,
-        "stop": 505.8796666666667,
-        "target1": 512.4603333333333,
-        "target2": 515.7506666666666,
-        "opened_at": "2026-09-11T20:57:15.537867"
+        "entry": 510.97,
+        "stop": 507.76933333333335,
+        "target1": 514.1706666666666,
+        "target2": 517.3713333333334,
+        "opened_at": "2026-09-11T21:02:26.079413"
       },
       "1h:MNT": {
         "coin": "MNT",
         "name": "Mantle",
         "tf": "1h",
         "entry": 0.5655,
-        "stop": 0.5598583333333333,
-        "target1": 0.5711416666666667,
-        "target2": 0.5767833333333333,
-        "opened_at": "2026-09-11T20:57:15.537867"
+        "stop": 0.5600166666666667,
+        "target1": 0.5709833333333333,
+        "target2": 0.5764666666666666,
+        "opened_at": "2026-09-11T21:02:26.079413"
       },
       "daily:XLM": {
         "coin": "XLM",
@@ -3328,7 +3326,7 @@
         "stop": 0.14140496666666666,
         "target1": 0.16294103333333335,
         "target2": 0.1737090666666667,
-        "opened_at": "2026-09-11T20:57:15.537867"
+        "opened_at": "2026-09-11T21:02:26.079413"
       }
     },
     "resolved": [
@@ -3994,6 +3992,45 @@
         "result": "win",
         "resolved_at": "2026-09-11T20:57:15.537867",
         "exit_price": 0.178349
+      },
+      {
+        "coin": "XMR",
+        "name": "Monero",
+        "tf": "15m",
+        "entry": 509.17,
+        "stop": 505.8796666666667,
+        "target1": 512.4603333333333,
+        "target2": 515.7506666666666,
+        "opened_at": "2026-09-11T20:57:15.537867",
+        "result": "win",
+        "resolved_at": "2026-09-11T21:02:26.079413",
+        "exit_price": 518.47
+      },
+      {
+        "coin": "MNT",
+        "name": "Mantle",
+        "tf": "1h",
+        "entry": 0.5655,
+        "stop": 0.5598583333333333,
+        "target1": 0.5711416666666667,
+        "target2": 0.5767833333333333,
+        "opened_at": "2026-09-11T20:57:15.537867",
+        "result": "win",
+        "resolved_at": "2026-09-11T21:02:26.079413",
+        "exit_price": 0.5825
+      },
+      {
+        "coin": "XLM",
+        "name": "Stellar",
+        "tf": "daily",
+        "entry": 0.152173,
+        "stop": 0.14140496666666666,
+        "target1": 0.16294103333333335,
+        "target2": 0.1737090666666667,
+        "opened_at": "2026-09-11T20:57:15.537867",
+        "result": "win",
+        "resolved_at": "2026-09-11T21:02:26.079413",
+        "exit_price": 0.178633
       }
     ]
   },
@@ -4001,14 +4038,14 @@
     "key": "BTC",
     "name": "Bitcoin",
     "emoji": "\u20bf",
-    "price": 77283,
+    "price": 77279,
     "high_24h": 79607,
     "low_24h": 76393,
-    "pct_24h": 0.02191,
+    "pct_24h": 0.03946,
     "pct_7d": -2.9,
     "pct_30d": 22.1,
-    "sma50": 70647.96090993391,
-    "sma200": 70016.32879551439,
+    "sma50": 70647.78398569931,
+    "sma200": 70016.28456445572,
     "support_30d": 62843.70368466329,
     "resistance_30d": 81264.70153038795,
     "mark_price": 77023.94235507,
@@ -4023,16 +4060,16 @@
     "key": "ETH",
     "name": "Ethereum",
     "emoji": "\u039e",
-    "price": 2528.54,
+    "price": 2527.92,
     "high_24h": 2647.68,
     "low_24h": 2436.69,
-    "pct_24h": 2.69152,
+    "pct_24h": 2.70401,
     "pct_7d": 3.6,
     "pct_30d": 34.7,
-    "sma50": 2160.8439813930368,
-    "sma200": 2051.9861764390166,
+    "sma50": 2160.799851246081,
+    "sma200": 2051.9751439022775,
     "support_30d": 1874.401898191962,
-    "resistance_30d": 2528.8994044940837,
+    "resistance_30d": 2526.6928971462803,
     "mark_price": 2535.88,
     "index_price": 2537.10627907,
     "funding_rate": 2.047e-05,
