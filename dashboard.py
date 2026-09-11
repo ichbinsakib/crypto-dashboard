@@ -1096,7 +1096,7 @@ def render(coins_data, fng_value, fng_classification, generated_at, any_stale,
                                 f'{c["key"]}.</td></tr>')
 
         alerts_card = f"""
-  <div class="cycle-map" style="margin-bottom:20px;">
+  <div class="cycle-map" style="margin-bottom:10px;">
     <div class="card-title">🔔 PRICE ALERTS<span class="info-tip" tabindex="0" data-tip="To add or edit alerts: edit data/alerts_config.json in the GitHub repo (web editor works fine), or run add_alert.py locally if you have this repo cloned.">&#9432;</span></div>
     <table class="signal-table" style="margin-top:10px; margin-bottom:0;">
       <thead><tr><th>Alert</th><th>Condition</th><th>Distance</th><th>Status</th></tr></thead>
@@ -1118,7 +1118,7 @@ def render(coins_data, fng_value, fng_classification, generated_at, any_stale,
         )
 
         spot_signal_card = f"""
-  <div class="cycle-map spot-signal-card spot-{spot_signal['status']}" style="margin-bottom:20px;">
+  <div class="cycle-map spot-signal-card spot-{spot_signal['status']}" style="margin-bottom:10px;">
     <div class="card-title">🎓 SPOT SIGNAL (educational, rule-based model)</div>
     <div class="spot-signal-headline">
       <div class="spot-signal-label {spot_signal['status']}">{spot_signal['label']}</div>
@@ -1156,7 +1156,7 @@ def render(coins_data, fng_value, fng_classification, generated_at, any_stale,
         if trade_levels:
             pb, bo = trade_levels["pullback"], trade_levels["breakout"]
             trade_levels_card = f"""
-  <div class="cycle-map trade-levels-card" style="margin-bottom:20px;">
+  <div class="cycle-map trade-levels-card" style="margin-bottom:10px;">
     <div class="card-title">🎯 TRADE LEVELS (formula-based, educational)</div>
     <div class="sub" style="margin-bottom:12px;">
       Derived only from the 30-day support (~{fmt_usd(c.get('support_30d'), 0)}) and resistance
@@ -1227,7 +1227,7 @@ def render(coins_data, fng_value, fng_classification, generated_at, any_stale,
     <tbody>{rows_html}</tbody>
   </table>
 
-  <div class="cycle-map" style="margin-bottom:20px;">
+  <div class="cycle-map" style="margin-bottom:10px;">
     <div class="card-title">CYCLE MAP (heuristic, price vs 50/200-day average)<span class="info-tip" tabindex="0" data-tip="A rough guess at which market-cycle phase this coin is in, based on price vs its 50-day and 200-day moving averages and recent 30-day trend. Accumulation = basing near lows, Markup = trending up, Distribution = topping out, Markdown = trending down. Educational framing, not a signal on its own.">&#9432;</span></div>
     <div class="cyc-row">{cycle_html}</div>
   </div>
@@ -1427,7 +1427,7 @@ def render(coins_data, fng_value, fng_classification, generated_at, any_stale,
   <div class="tf-panel tf-panel-1h">{intraday_1h_html}</div>
   <div class="tf-panel tf-panel-1d">{daily_html}</div>
 
-  <div class="cycle-map spot-signal-card" style="margin-top:20px;">
+  <div class="cycle-map spot-signal-card" style="margin-top:10px;">
     <table class="signal-table score-legend" style="margin-top:0; margin-bottom:0;">
       <thead><tr><th>Score range</th><th>Label</th><th>What it means</th></tr></thead>
       <tbody>
@@ -1442,7 +1442,7 @@ def render(coins_data, fng_value, fng_classification, generated_at, any_stale,
 </div>
 
 <div class="panel panel-mypicks">
-  <div class="cycle-map spot-signal-card" style="margin-bottom:20px;">
+  <div class="cycle-map spot-signal-card" style="margin-bottom:10px;">
     <div class="card-title">⭐ MY PICKS</div>
     <div class="sub">
       Coins you've followed from the Screener tab. These are saved in <strong>this browser only</strong>
@@ -1526,18 +1526,18 @@ def render(coins_data, fng_value, fng_classification, generated_at, any_stale,
     100% {{ background-position: 10% 40%, 90% 10%, 90% 90%, 10% 60%, 0 0; }}
   }}
   @media (prefers-reduced-motion: reduce) {{ body::before {{ animation:none; }} }}
-  header {{ padding: 20px 24px; border-bottom: 1px solid var(--border); display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:8px; }}
+  header {{ padding: 10px 16px; border-bottom: 1px solid var(--border); display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:8px; }}
   header h1 {{ margin:0; font-size: 22px; letter-spacing: 1px; }}
   header .meta {{ color: var(--muted); font-size: 13px; }}
-  .tabbar {{ display:flex; gap:8px; padding: 12px 24px; overflow-x:auto; -webkit-overflow-scrolling:touch; }}
-  .tabbar label {{ padding:8px 20px; border:1px solid var(--border); border-radius:8px; cursor:pointer; color:var(--muted); font-weight:600; }}
+  .tabbar {{ display:flex; gap:6px; padding: 6px 16px; overflow-x:auto; -webkit-overflow-scrolling:touch; }}
+  .tabbar label {{ padding:6px 12px; border:1px solid var(--border); border-radius:8px; cursor:pointer; color:var(--muted); font-weight:600; font-size:13.5px; }}
   input[type=radio] {{ display:none; }}
   #tab-screener:checked ~ .tabbar label[for=tab-screener],
   #tab-bigcoins:checked ~ .tabbar label[for=tab-bigcoins],
   #tab-mypicks:checked ~ .tabbar label[for=tab-mypicks],
   #bc-btc:checked ~ .tabbar label[for=bc-btc],
   #bc-eth:checked ~ .tabbar label[for=bc-eth] {{ background: var(--accent); color:#04121c; border-color:var(--accent); }}
-  .panel {{ display:none; padding: 8px 24px 32px; }}
+  .panel {{ display:none; padding: 6px 16px 20px; }}
   #tab-screener:checked ~ .panel-screener {{ display:block; }}
   #tab-bigcoins:checked ~ .panel-bigcoins {{ display:block; }}
   #tab-mypicks:checked ~ .panel-mypicks {{ display:block; }}
@@ -1552,9 +1552,9 @@ def render(coins_data, fng_value, fng_classification, generated_at, any_stale,
   #tf-1h:checked ~ .tabbar label[for=tf-1h],
   #tf-1d:checked ~ .tabbar label[for=tf-1d] {{ background: var(--accent); color:#04121c; border-color:var(--accent); }}
   .stale-note {{ background:#3f2d0f; border:1px solid #8a5a00; color:#fbbf24; padding:8px 12px; border-radius:8px; margin-bottom:16px; font-size:13px; }}
-  .top-grid {{ display:grid; grid-template-columns: 1.1fr 1.3fr 1fr; gap:16px; margin-bottom: 20px; }}
-  .card {{ background: var(--panel); border:1px solid var(--border); border-radius:12px; padding:16px 18px; }}
-  .card-title {{ font-size:12px; color:var(--muted); letter-spacing:1px; margin-bottom:10px; font-weight:700; }}
+  .top-grid {{ display:grid; grid-template-columns: 1.1fr 1.3fr 1fr; gap:10px; margin-bottom: 10px; }}
+  .card {{ background: var(--panel); border:1px solid var(--border); border-radius:12px; padding:10px 12px; }}
+  .card-title {{ font-size:12px; color:var(--muted); letter-spacing:1px; margin-bottom:6px; font-weight:700; }}
   .big-price {{ font-size:30px; font-weight:800; color: var(--green); }}
   .sub {{ font-size:12px; color:var(--muted); margin-top:4px; }}
   .kv {{ display:flex; justify-content:space-between; font-size:13px; padding:4px 0; border-top:1px solid var(--border); margin-top:6px; }}
@@ -1569,8 +1569,8 @@ def render(coins_data, fng_value, fng_classification, generated_at, any_stale,
   @media (max-width: 700px) {{
     table.signal-table {{ display:block; overflow-x:auto; -webkit-overflow-scrolling:touch; white-space:nowrap; }}
   }}
-  table.signal-table th {{ text-align:left; font-size:11px; color:var(--muted); letter-spacing:1px; padding:12px 14px; border-bottom:1px solid var(--border); }}
-  table.signal-table td {{ padding:12px 14px; border-bottom:1px solid var(--border); font-size:13.5px; }}
+  table.signal-table th {{ text-align:left; font-size:11px; color:var(--muted); letter-spacing:1px; padding:8px 10px; border-bottom:1px solid var(--border); }}
+  table.signal-table td {{ padding:8px 10px; border-bottom:1px solid var(--border); font-size:13.5px; }}
   table.signal-table td.watch {{ color: var(--muted); font-size:12.5px; }}
   table.signal-table tr:last-child td {{ border-bottom:none; }}
   .badge {{ padding:4px 10px; border-radius:20px; font-size:12.5px; font-weight:700; display:inline-block; }}
@@ -1581,9 +1581,12 @@ def render(coins_data, fng_value, fng_classification, generated_at, any_stale,
   .badge.alert-armed {{ background:#182233; color: var(--accent); }}
   .badge.alert-triggered {{ background:#4a1010; color:#fff; animation: pulse 1.4s infinite; }}
   @keyframes pulse {{ 0%,100% {{ opacity:1; }} 50% {{ opacity:0.55; }} }}
-  .alert-banner {{ margin: 14px 24px 0; padding: 12px 18px; background:#3a0d0d; border:1px solid #ef4444; border-radius:10px; color:#fecaca; font-weight:700; font-size:13.5px; animation: pulse 1.6s infinite; white-space:nowrap; overflow-x:auto; -webkit-overflow-scrolling:touch; }}
+  .top-strip {{ display:flex; gap:8px; align-items:stretch; margin: 8px 16px 0; }}
+  .top-strip > .glance-bar, .top-strip > .alert-banner {{ margin:0; flex:1; min-width:0; }}
+  @media (max-width: 700px) {{ .top-strip {{ flex-direction:column; }} }}
+  .alert-banner {{ padding: 8px 12px; background:#3a0d0d; border:1px solid #ef4444; border-radius:10px; color:#fecaca; font-weight:700; font-size:13px; animation: pulse 1.6s infinite; white-space:nowrap; overflow-x:auto; -webkit-overflow-scrolling:touch; }}
   .alert-banner-item {{ white-space:nowrap; }}
-  .glance-bar {{ margin: 16px 24px 0; padding: 10px 14px; background: var(--panel); border:2px solid var(--border); border-radius:12px; }}
+  .glance-bar {{ padding: 8px 10px; background: var(--panel); border:2px solid var(--border); border-radius:12px; }}
   .glance-bar[open] .glance-title {{ margin-bottom:6px; }}
   .glance-title {{ font-size:10px; color:var(--muted); letter-spacing:1.5px; font-weight:800; cursor:pointer; list-style:none; display:flex; align-items:center; gap:8px; }}
   .glance-title::-webkit-details-marker {{ display:none; }}
@@ -1622,7 +1625,7 @@ def render(coins_data, fng_value, fng_classification, generated_at, any_stale,
     .glance-verdict {{ white-space:normal; text-align:left; }}
     .glance-plain {{ white-space:normal; }}
   }}
-  .cycle-map {{ background: var(--panel); border:1px solid var(--border); border-radius:12px; padding:16px 18px; }}
+  .cycle-map {{ background: var(--panel); border:1px solid var(--border); border-radius:12px; padding:10px 12px; }}
   .spot-signal-card {{ border-width:2px; }}
   .spot-signal-card.spot-bullish {{ border-color:#1f6a4a; }}
   .spot-signal-card.spot-bearish {{ border-color:#7a2e2e; }}
@@ -1634,33 +1637,33 @@ def render(coins_data, fng_value, fng_classification, generated_at, any_stale,
   .spot-signal-label.neutral {{ color: var(--yellow); }}
   .spot-signal-score {{ font-size:13px; color: var(--muted); font-weight:700; }}
   .trade-levels-card {{ border-width:2px; border-color:#2a4a5a; }}
-  .trade-scenarios {{ display:grid; grid-template-columns: 1fr 1fr; gap:16px; }}
-  .trade-scenario {{ background:#0d1320; border:1px solid var(--border); border-radius:10px; padding:14px 16px; }}
+  .trade-scenarios {{ display:grid; grid-template-columns: 1fr 1fr; gap:10px; }}
+  .trade-scenario {{ background:#0d1320; border:1px solid var(--border); border-radius:10px; padding:10px 12px; }}
   .trade-scenario-title {{ font-size:13px; font-weight:800; color: var(--accent); margin-bottom:10px; }}
   @media (max-width: 700px) {{ .trade-scenarios {{ grid-template-columns: 1fr; }} }}
-  .screener-grid {{ display:grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap:16px; }}
-  .screener-card {{ background: var(--panel); border:2px solid var(--border); border-radius:12px; padding:16px; }}
+  .screener-grid {{ display:grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap:10px; }}
+  .screener-card {{ background: var(--panel); border:2px solid var(--border); border-radius:12px; padding:10px; }}
   .screener-card.bullish {{ border-color:#1f6a4a; }}
   .screener-card.bearish {{ border-color:#7a2e2e; }}
   .screener-card.neutral {{ border-color:#5a4d18; }}
-  .screener-card-top {{ display:flex; gap:10px; align-items:flex-start; margin-bottom:10px; }}
+  .screener-card-top {{ display:flex; gap:8px; align-items:flex-start; margin-bottom:6px; }}
   .screener-card-top > div:nth-child(2) {{ flex:1; min-width:0; }}
   .screener-rank {{ font-size:12px; font-weight:800; color: var(--muted); background:#0d1320; border-radius:6px; padding:3px 8px; white-space:nowrap; }}
   .follow-btn {{ margin-left:auto; flex-shrink:0; background:transparent; border:1px solid var(--border); color:var(--muted); font-size:11.5px; font-weight:700; padding:5px 10px; border-radius:20px; cursor:pointer; white-space:nowrap; transition:all 0.15s; }}
   .follow-btn:hover {{ border-color: var(--accent); color: var(--accent); }}
   .follow-btn.following {{ background: var(--accent); border-color: var(--accent); color:#04121c; }}
   .screener-name {{ font-size:15px; font-weight:800; }}
-  .screener-signal {{ display:flex; justify-content:space-between; align-items:center; margin-bottom:10px; }}
+  .screener-signal {{ display:flex; justify-content:space-between; align-items:center; margin-bottom:6px; }}
   .screener-trade {{ background:#0d1320; border:1px solid var(--border); border-radius:8px; padding:10px 12px; }}
   .screener-trade-title {{ font-size:12px; font-weight:800; color: var(--accent); margin-bottom:6px; }}
   .screener-trade-grid {{ display:grid; grid-template-columns: 1fr 1fr; gap:10px; margin-bottom:10px; }}
-  .screener-plain {{ font-size:12.5px; color: var(--text); line-height:1.5; margin-bottom:10px; }}
+  .screener-plain {{ font-size:12.5px; color: var(--text); line-height:1.4; margin-bottom:6px; }}
   .screener-details {{ font-size:12.5px; }}
   .screener-details summary {{ cursor:pointer; color: var(--accent); font-weight:700; padding:4px 0; }}
   .score-legend th, .score-legend td {{ font-size:12px; padding:8px 12px; }}
   @media (max-width: 480px) {{ .screener-trade-grid {{ grid-template-columns: 1fr; }} }}
   .cyc-row {{ display:flex; align-items:center; gap:6px; margin-top:10px; }}
-  .cyc-box {{ flex:1; min-width:0; text-align:center; padding:14px 8px; border-radius:8px; border:1px solid var(--border); color:var(--muted); font-size:13px; font-weight:700; position:relative; }}
+  .cyc-box {{ flex:1; min-width:0; text-align:center; padding:8px 6px; border-radius:8px; border:1px solid var(--border); color:var(--muted); font-size:13px; font-weight:700; position:relative; }}
   .cyc-here {{ border-color: var(--accent); color: var(--accent); background:#0d1c26; }}
   @media (max-width: 480px) {{
     .cyc-row {{ flex-wrap:wrap; }}
@@ -1678,8 +1681,7 @@ def render(coins_data, fng_value, fng_classification, generated_at, any_stale,
   <h1>&#9889; KAIRO LIVE DASHBOARD</h1>
   <div class="meta">Fear &amp; Greed: {fng_top}<span class="info-tip" tabindex="0" data-tip="A 0-100 index of overall crypto market sentiment from Alternative.me, based on volatility, volume, social media, and surveys. Low = fear (often washed-out), high = greed (often euphoric). A contrarian gauge, not a timing signal on its own.">&#9432;</span> &nbsp;|&nbsp; <span id="updated-ago">just now</span><span class="info-tip" tabindex="0" data-tip="Generated: {generated_at} UTC. Data regenerated {DATA_REFRESH_LABEL}.">&#9432;</span></div>
 </header>
-{glance_html}
-{banner_html}
+<div class="top-strip">{glance_html}{banner_html}</div>
 {tabs_inputs}
 <div class="tabbar">{tabs_labels}</div>
 {bigcoins_panel}
