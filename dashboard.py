@@ -992,9 +992,9 @@ def render(coins_data, fng_value, fng_classification, generated_at, any_stale,
     banner_html = ""
     if triggered_now:
         items = "".join(
-            f'<div class="alert-banner-item">🚨 {a["coin"]} {a["condition"]} '
-            f'{fmt_usd(a["target"], 0)} &mdash; {a["label"]} (now {fmt_usd(a["current_price"], 2)})</div>'
-            for a in triggered_now
+            f'<span class="alert-banner-item">{"&nbsp;&middot;&nbsp; " if i > 0 else ""}🚨 {a["coin"]} {a["condition"]} '
+            f'{fmt_usd(a["target"], 0)} &mdash; {a["label"]} (now {fmt_usd(a["current_price"], 2)})</span>'
+            for i, a in enumerate(triggered_now)
         )
         banner_html = f'<div class="alert-banner">{items}</div>'
     tabs_inputs = "\n".join(
@@ -1368,12 +1368,9 @@ def render(coins_data, fng_value, fng_classification, generated_at, any_stale,
                      '(no Kraken-listed pairs matched, or fetch failed) &mdash; will retry next cycle.</div>')
         cards = "".join(_intraday_card(r, i + 1, tf_key) for i, r in enumerate(results))
         return f"""
-    <div class="sub" style="margin-bottom:14px;">
-      {tf_name} setups from Kraken's public {window_desc} candles &mdash; pure price-action model (no
-      sentiment/cycle factors, those are daily concepts). Coins without a liquid Kraken USD pair are skipped.
-      Buy/stop/target use each coin's own recent volatility (ATR), not a fixed percentage.
-      Prices and scores refresh live in your browser every minute straight from Kraken &mdash; they don't wait
-      for the next site rebuild.
+    <div class="sub" style="margin-bottom:14px; display:flex; align-items:center;">
+      {tf_name} setups from Kraken &mdash; refreshes live every minute
+      <span class="info-tip" tabindex="0" data-tip="Pure price-action model using Kraken's public {window_desc} candles -- no sentiment/cycle factors, those are daily concepts. Coins without a liquid Kraken USD pair are skipped. Buy/stop/target use each coin's own recent volatility (ATR), not a fixed percentage. Prices and scores refresh live in your browser every minute straight from Kraken, they don't wait for the next site rebuild.">&#9432;</span>
     </div>
     <div class="screener-grid">{cards}</div>"""
 
@@ -1397,14 +1394,7 @@ def render(coins_data, fng_value, fng_classification, generated_at, any_stale,
     screener_panel = f"""
 <div class="panel panel-screener">
   <div class="cycle-map spot-signal-card" style="margin-bottom:20px;">
-    <div class="card-title">🔍 COIN SCREENER (educational, rule-based ranking)</div>
-    <div class="sub">
-      Scans the top {SCREENER_SIZE} coins by market cap (excluding stablecoins and BTC/ETH wrappers).
-      Pick a timeframe below &mdash; each uses a model suited to that horizon, not the same numbers just relabeled.
-      This is <strong>not a recommendation to trade any coin listed</strong>: small/mid-cap coins carry far higher
-      risk than BTC/ETH, none of this is backtested, and a high score means "resembles a historically favorable
-      setup by this simple rule set" &mdash; nothing more. Education only, not financial advice.
-    </div>
+    <div class="card-title">🔍 COIN SCREENER (educational, rule-based ranking)<span class="info-tip" tabindex="0" data-tip="Scans the top {SCREENER_SIZE} coins by market cap (excluding stablecoins and BTC/ETH wrappers). Pick a timeframe below -- each uses a model suited to that horizon, not the same numbers just relabeled. This is not a recommendation to trade any coin listed: small/mid-cap coins carry far higher risk than BTC/ETH, none of this is backtested, and a high score means &quot;resembles a historically favorable setup by this simple rule set&quot; -- nothing more. Education only, not financial advice.">&#9432;</span></div>
   </div>
 
   <input type="radio" name="tf" id="tf-15m" checked>
@@ -1500,7 +1490,24 @@ def render(coins_data, fng_value, fng_classification, generated_at, any_stale,
   }}
   * {{ box-sizing: border-box; }}
   html, body {{ max-width:100%; overflow-x:hidden; }}
-  body {{ margin:0; background: var(--bg); color: var(--text); font-family: 'Segoe UI', Arial, sans-serif; }}
+  body {{ margin:0; background: var(--bg); color: var(--text); font-family: 'Segoe UI', Arial, sans-serif; position:relative; }}
+  body::before {{
+    content:''; position:fixed; inset:0; z-index:-1; pointer-events:none;
+    background:
+      radial-gradient(circle at 15% 20%, rgba(56,189,248,0.16), transparent 42%),
+      radial-gradient(circle at 85% 15%, rgba(52,211,153,0.13), transparent 45%),
+      radial-gradient(circle at 75% 85%, rgba(248,113,113,0.11), transparent 45%),
+      radial-gradient(circle at 20% 85%, rgba(251,191,36,0.09), transparent 45%),
+      var(--bg);
+    background-size: 180% 180%, 180% 180%, 200% 200%, 200% 200%, 100% 100%;
+    animation: bgDrift 30s ease-in-out infinite alternate;
+  }}
+  @keyframes bgDrift {{
+    0%   {{ background-position: 0% 0%, 100% 0%, 100% 100%, 0% 100%, 0 0; }}
+    50%  {{ background-position: 30% 20%, 70% 30%, 70% 70%, 30% 80%, 0 0; }}
+    100% {{ background-position: 10% 40%, 90% 10%, 90% 90%, 10% 60%, 0 0; }}
+  }}
+  @media (prefers-reduced-motion: reduce) {{ body::before {{ animation:none; }} }}
   header {{ padding: 20px 24px; border-bottom: 1px solid var(--border); display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:8px; }}
   header h1 {{ margin:0; font-size: 22px; letter-spacing: 1px; }}
   header .meta {{ color: var(--muted); font-size: 13px; }}
@@ -1553,8 +1560,8 @@ def render(coins_data, fng_value, fng_classification, generated_at, any_stale,
   .badge.alert-armed {{ background:#182233; color: var(--accent); }}
   .badge.alert-triggered {{ background:#4a1010; color:#fff; animation: pulse 1.4s infinite; }}
   @keyframes pulse {{ 0%,100% {{ opacity:1; }} 50% {{ opacity:0.55; }} }}
-  .alert-banner {{ margin: 14px 24px 0; padding: 12px 18px; background:#3a0d0d; border:1px solid #ef4444; border-radius:10px; color:#fecaca; font-weight:700; font-size:13.5px; animation: pulse 1.6s infinite; }}
-  .alert-banner-item {{ padding: 2px 0; }}
+  .alert-banner {{ margin: 14px 24px 0; padding: 12px 18px; background:#3a0d0d; border:1px solid #ef4444; border-radius:10px; color:#fecaca; font-weight:700; font-size:13.5px; animation: pulse 1.6s infinite; white-space:nowrap; overflow-x:auto; -webkit-overflow-scrolling:touch; }}
+  .alert-banner-item {{ white-space:nowrap; }}
   .glance-bar {{ margin: 16px 24px 0; padding: 10px 14px; background: var(--panel); border:2px solid var(--border); border-radius:12px; }}
   .glance-bar[open] .glance-title {{ margin-bottom:6px; }}
   .glance-title {{ font-size:10px; color:var(--muted); letter-spacing:1.5px; font-weight:800; cursor:pointer; list-style:none; display:flex; align-items:center; gap:8px; }}
@@ -1648,8 +1655,7 @@ def render(coins_data, fng_value, fng_classification, generated_at, any_stale,
 <body>
 <header>
   <h1>&#9889; KAIRO LIVE DASHBOARD</h1>
-  <div class="meta">Market Fear &amp; Greed: {fng_top}<span class="info-tip" tabindex="0" data-tip="A 0-100 index of overall crypto market sentiment from Alternative.me, based on volatility, volume, social media, and surveys. Low = fear (often washed-out), high = greed (often euphoric). A contrarian gauge, not a timing signal on its own.">&#9432;</span> &nbsp;|&nbsp; Generated: {generated_at} UTC
-    (<span id="updated-ago">just now</span>) &nbsp;|&nbsp; Data regenerated {DATA_REFRESH_LABEL}</div>
+  <div class="meta">Fear &amp; Greed: {fng_top}<span class="info-tip" tabindex="0" data-tip="A 0-100 index of overall crypto market sentiment from Alternative.me, based on volatility, volume, social media, and surveys. Low = fear (often washed-out), high = greed (often euphoric). A contrarian gauge, not a timing signal on its own.">&#9432;</span> &nbsp;|&nbsp; <span id="updated-ago">just now</span><span class="info-tip" tabindex="0" data-tip="Generated: {generated_at} UTC. Data regenerated {DATA_REFRESH_LABEL}.">&#9432;</span></div>
 </header>
 {glance_html}
 {banner_html}
