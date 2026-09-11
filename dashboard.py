@@ -437,6 +437,25 @@ def fmt_usd_adaptive(v):
     return f"${v:,.6f}"
 
 
+def fmt_duration_hours(hours):
+    """Humanizes a duration given in fractional hours, e.g. 0.75 -> "45m", 26.5 -> "1d 2h"."""
+    total_minutes = round(hours * 60)
+    if total_minutes < 60:
+        return f"{max(total_minutes, 1)}m"
+    total_hours, minutes = divmod(total_minutes, 60)
+    if total_hours < 24:
+        return f"{total_hours}h {minutes}m" if minutes else f"{total_hours}h"
+    days, rem_hours = divmod(total_hours, 24)
+    return f"{days}d {rem_hours}h" if rem_hours else f"{days}d"
+
+
+def fmt_time_ago(iso_ts, now=None):
+    now = now or datetime.datetime.now()
+    then = datetime.datetime.fromisoformat(iso_ts)
+    hours = (now - then).total_seconds() / 3600
+    return f"{fmt_duration_hours(hours)} ago"
+
+
 def fmt_pct(v, decimals=2, sign=True):
     if v is None:
         return "N/A"
@@ -1558,6 +1577,7 @@ def render(coins_data, fng_value, fng_classification, generated_at, any_stale,
     if pnl_open:
         open_rows = "".join(
             f'<tr><td>{p["name"]} ({p["coin"]})</td><td class="watch">{ {"15m": "15-Minute", "1h": "1-Hour"}.get(p["tf"], p["tf"]) }</td>'
+            f'<td class="watch">{fmt_time_ago(p["opened_at"])}</td>'
             f'<td>{fmt_usd_adaptive(p["entry"])}</td><td class="neg">{fmt_usd_adaptive(p["stop"])}</td>'
             f'<td class="pos">{fmt_usd_adaptive(p["target1"])}</td></tr>'
             for p in pnl_open.values()
@@ -1566,12 +1586,35 @@ def render(coins_data, fng_value, fng_classification, generated_at, any_stale,
   <div class="cycle-map" style="margin-top:10px;">
     <div class="card-title">Currently Tracking ({len(pnl_open)})</div>
     <table class="signal-table" style="margin-top:6px; margin-bottom:0;">
-      <thead><tr><th>Coin</th><th>Timeframe</th><th>Entry</th><th>Stop</th><th>Target</th></tr></thead>
+      <thead><tr><th>Coin</th><th>Timeframe</th><th>Signal Given</th><th>Entry</th><th>Stop</th><th>Target</th></tr></thead>
       <tbody>{open_rows}</tbody>
     </table>
   </div>"""
     else:
         open_positions_html = '<div class="sub" style="margin-top:10px;">No calls currently being tracked.</div>'
+
+    pnl_resolved = sorted(pnl_state.get("resolved", []), key=lambda r: r["resolved_at"], reverse=True)[:15]
+    if pnl_resolved:
+        result_badge = {"win": '<span class="badge bullish">WIN</span>',
+                         "loss": '<span class="badge bearish">LOSS</span>',
+                         "expired": '<span class="badge neutral">EXPIRED</span>'}
+        resolved_rows = "".join(
+            f'<tr><td>{r["name"]} ({r["coin"]})</td><td class="watch">{ {"15m": "15-Minute", "1h": "1-Hour"}.get(r["tf"], r["tf"]) }</td>'
+            f'<td class="watch">{fmt_time_ago(r["opened_at"])}</td>'
+            f'<td>{result_badge.get(r["result"], r["result"])}</td>'
+            f'<td class="watch">{fmt_duration_hours((datetime.datetime.fromisoformat(r["resolved_at"]) - datetime.datetime.fromisoformat(r["opened_at"])).total_seconds() / 3600)}</td></tr>'
+            for r in pnl_resolved
+        )
+        resolved_html = f"""
+  <div class="cycle-map" style="margin-top:10px;">
+    <div class="card-title">Recent Resolved Calls<span class="info-tip" tabindex="0" data-tip="Signal Given is when the call first appeared; Time to Resolve is how long it took from then to hit its target (win) or stop (loss), or to time out (expired).">&#9432;</span></div>
+    <table class="signal-table" style="margin-top:6px; margin-bottom:0;">
+      <thead><tr><th>Coin</th><th>Timeframe</th><th>Signal Given</th><th>Result</th><th>Time to Resolve</th></tr></thead>
+      <tbody>{resolved_rows}</tbody>
+    </table>
+  </div>"""
+    else:
+        resolved_html = ""
 
     performance_panel = f"""
 <div class="panel panel-performance">
@@ -1584,6 +1627,7 @@ def render(coins_data, fng_value, fng_classification, generated_at, any_stale,
     {_pnl_stat_card("Monthly", pnl_stats.get("monthly", {}))}
   </div>
   {open_positions_html}
+  {resolved_html}
 </div>
 """
 
