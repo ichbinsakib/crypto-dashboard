@@ -199,7 +199,7 @@
         ],
         [
           "Stretch from long-term average",
-          "+3.8% vs its long-term average - not stretched either way",
+          "+3.7% vs its long-term average - not stretched either way",
           0
         ],
         [
@@ -212,12 +212,12 @@
       "id": "tron",
       "symbol": "TRX",
       "name": "TRON",
-      "price": 0.338657,
-      "pct_24h": -0.22663,
-      "pct_7d": 3.3,
+      "price": 0.338333,
+      "pct_24h": -0.6074,
+      "pct_7d": 3.0,
       "support_30d": 0.32221537516581966,
       "resistance_30d": 0.3447899585776834,
-      "as_of": "2026-09-11 09:05:21",
+      "as_of": "2026-09-11 10:45:25",
       "stale": false
     },
     "figure-heloc": {
@@ -823,7 +823,7 @@
         ],
         [
           "Stretch from long-term average",
-          "-10.7% vs its long-term average - not stretched either way",
+          "-10.8% vs its long-term average - not stretched either way",
           0
         ],
         [
@@ -836,12 +836,12 @@
       "id": "hedera-hashgraph",
       "symbol": "HBAR",
       "name": "Hedera",
-      "price": 0.073716,
-      "pct_24h": -3.17591,
+      "price": 0.07368,
+      "pct_24h": -3.23164,
       "pct_7d": -5.6,
       "support_30d": 0.06461260477975343,
       "resistance_30d": 0.08182180696524229,
-      "as_of": "2026-09-11 10:40:26",
+      "as_of": "2026-09-11 10:45:25",
       "stale": false
     },
     "pepe": {
@@ -871,7 +871,7 @@
         ],
         [
           "Stretch from long-term average",
-          "-0.3% vs its long-term average - not stretched either way",
+          "-0.9% vs its long-term average - not stretched either way",
           0
         ],
         [
@@ -884,12 +884,12 @@
       "id": "pepe",
       "symbol": "PEPE",
       "name": "Pepe",
-      "price": 3.29e-06,
-      "pct_24h": -4.01407,
+      "price": 3.27e-06,
+      "pct_24h": -4.60652,
       "pct_7d": -10.9,
       "support_30d": 2.5716563906374582e-06,
       "resistance_30d": 4.122123035488615e-06,
-      "as_of": "2026-09-11 10:05:20",
+      "as_of": "2026-09-11 10:45:25",
       "stale": false
     },
     "avalanche-2": {
@@ -2767,12 +2767,12 @@
     "memecore": {
       "label": "\ud83d\udfe1 HOLD / NEUTRAL",
       "status": "neutral",
-      "score": 0,
+      "score": 1,
       "rows": [
         [
           "Price vs. recent range",
-          "Near its 30-day high (~$1.25) - less room to run",
-          -1
+          "Sitting in the middle of its 30-day range",
+          0
         ],
         [
           "Crowd mood (Fear & Greed)",
@@ -2791,7 +2791,7 @@
         ],
         [
           "Stretch from long-term average",
-          "-42.5% below its long-term average - confirmed downtrend",
+          "-43.5% below its long-term average - confirmed downtrend",
           -1
         ],
         [
@@ -2804,12 +2804,12 @@
       "id": "memecore",
       "symbol": "M",
       "name": "MemeCore",
-      "price": 1.2,
-      "pct_24h": -1.17028,
-      "pct_7d": 15.0,
+      "price": 1.18,
+      "pct_24h": -1.52185,
+      "pct_7d": 14.8,
       "support_30d": 1.0402044506518406,
       "resistance_30d": 1.2453913363052769,
-      "as_of": "2026-09-11 09:35:19",
+      "as_of": "2026-09-11 10:45:25",
       "stale": false
     },
     "aave": {
@@ -3271,7 +3271,7 @@
         ],
         [
           "Stretch from long-term average",
-          "-0.1% vs its long-term average - not stretched either way",
+          "-2.4% vs its long-term average - not stretched either way",
           0
         ],
         [
@@ -3284,31 +3284,32 @@
       "id": "cosmos",
       "symbol": "ATOM",
       "name": "Cosmos Hub",
-      "price": 1.76,
-      "pct_24h": -3.14708,
-      "pct_7d": 16.1,
+      "price": 1.72,
+      "pct_24h": -4.28131,
+      "pct_7d": 15.1,
       "support_30d": 1.4128187654560649,
       "resistance_30d": 1.8581525047856993,
-      "as_of": "2026-09-11 08:05:20",
+      "as_of": "2026-09-11 10:45:25",
       "stale": false
     }
   },
   "_strong_buy_state": {
-    "15m:ETC": true,
-    "15m:UNI": true
+    "15m:PEPE": true,
+    "15m:TRX": true,
+    "1h:TRX": true
   },
   "BTC": {
     "key": "BTC",
     "name": "Bitcoin",
     "emoji": "\u20bf",
-    "price": 76990,
+    "price": 76994,
     "high_24h": 78017,
     "low_24h": 76546,
-    "pct_24h": -1.26642,
+    "pct_24h": -1.24207,
     "pct_7d": -5.1,
     "pct_30d": 20.9,
-    "sma50": 70641.97727905474,
-    "sma200": 70014.83288779459,
+    "sma50": 70642.0367724004,
+    "sma200": 70014.84776113101,
     "support_30d": 62843.70368466329,
     "resistance_30d": 81264.70153038795,
     "mark_price": 77230.11864493,
@@ -3323,14 +3324,14 @@
     "key": "ETH",
     "name": "Ethereum",
     "emoji": "\u039e",
-    "price": 2464.32,
+    "price": 2463.51,
     "high_24h": 2481.6,
     "low_24h": 2410.22,
-    "pct_24h": -0.17467,
+    "pct_24h": -0.17184,
     "pct_7d": -2.2,
     "pct_30d": 30.7,
-    "sma50": 2159.564559796777,
-    "sma200": 2051.6663210399515,
+    "sma50": 2159.5360829082447,
+    "sma200": 2051.6592018178185,
     "support_30d": 1874.401898191962,
     "resistance_30d": 2514.967577695514,
     "mark_price": 2466.82,
