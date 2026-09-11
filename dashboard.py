@@ -16,6 +16,7 @@ import json
 import os
 import datetime
 import random
+import shutil
 import subprocess
 import time
 import urllib.request
@@ -23,8 +24,19 @@ import urllib.request
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 SITE_DIR = os.path.join(BASE_DIR, "site")   # build output -> deployed to GitHub Pages, not committed
 DATA_DIR = os.path.join(BASE_DIR, "data")   # persisted between runs -> committed to the repo
+STATIC_DIR = os.path.join(BASE_DIR, "static")  # PWA assets (icons, manifest, service worker) -> committed, copied into site/ each run
 os.makedirs(SITE_DIR, exist_ok=True)
 os.makedirs(DATA_DIR, exist_ok=True)
+
+
+def copy_static_assets():
+    """site/ is a fresh build directory every run (not committed), so the PWA files that
+    live alongside index.html -- manifest, icons, service worker -- have to be re-copied
+    from the committed static/ source each time rather than being written once."""
+    if not os.path.isdir(STATIC_DIR):
+        return
+    for name in os.listdir(STATIC_DIR):
+        shutil.copy2(os.path.join(STATIC_DIR, name), os.path.join(SITE_DIR, name))
 
 STATE_PATH = os.path.join(DATA_DIR, "state.json")
 OUTPUT_PATH = os.path.join(SITE_DIR, "index.html")
@@ -1450,7 +1462,16 @@ def render(coins_data, fng_value, fng_classification, generated_at, any_stale,
 <html lang="en">
 <head>
 <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>Teka Live Dashboard</title>
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="icon" href="favicon-32.png" sizes="32x32" type="image/png">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<meta name="theme-color" content="#0a0e14">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-title" content="Teka">
 <style>
   :root {{
     --bg: #0a0e14; --panel: #10151f; --border: #1f2937; --text: #e5e7eb; --muted: #9ca3af;
@@ -1596,6 +1617,16 @@ def render(coins_data, fng_value, fng_classification, generated_at, any_stale,
     location.href = location.pathname + '?t=' + Date.now();
   }}, {REFRESH_SECONDS * 1000});
 }})();
+</script>
+<script>
+if ('serviceWorker' in navigator) {{
+  // Registered mainly so the site is installable as a home-screen app (Add to Home
+  // Screen / Chrome install prompt) -- the worker itself only caches static icons,
+  // never the dashboard content, so an installed copy still always shows live data.
+  window.addEventListener('load', function() {{
+    navigator.serviceWorker.register('sw.js').catch(function() {{}});
+  }});
+}}
 </script>
 <script>
 (function() {{
@@ -1802,6 +1833,7 @@ def main():
                                          alerts_results, screener_results, intraday_results)
     with open(OUTPUT_PATH, "w", encoding="utf-8") as f:
         f.write(html)
+    copy_static_assets()
 
     strong_buys = find_strong_buys(coins_data, spot_signals_by_coin, screener_results, intraday_results)
     prev_strong_state = state.get("_strong_buy_state", {})
