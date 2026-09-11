@@ -11,7 +11,7 @@
       "last_triggered_at": null
     },
     "eth-resistance-break": {
-      "triggered": true,
+      "triggered": false,
       "last_triggered_at": "2026-09-11 22:30:29"
     },
     "eth-support-break": {
@@ -1927,7 +1927,7 @@
         ],
         [
           "Stretch from long-term average",
-          "+0.9% vs its long-term average - not stretched either way",
+          "+0.8% vs its long-term average - not stretched either way",
           0
         ],
         [
@@ -1940,12 +1940,12 @@
       "id": "mantle",
       "symbol": "MNT",
       "name": "Mantle",
-      "price": 0.580216,
-      "pct_24h": 1.48383,
+      "price": 0.57929,
+      "pct_24h": 1.22207,
       "pct_7d": 1.9,
       "support_30d": 0.42660592418086046,
       "resistance_30d": 0.6365218632454678,
-      "as_of": "2026-09-11 22:15:23",
+      "as_of": "2026-09-11 22:35:20",
       "stale": false
     },
     "polkadot": {
@@ -2263,7 +2263,7 @@
         ],
         [
           "Stretch from long-term average",
-          "-1.7% vs its long-term average - not stretched either way",
+          "-2.0% vs its long-term average - not stretched either way",
           0
         ],
         [
@@ -2276,12 +2276,12 @@
       "id": "bittensor",
       "symbol": "TAO",
       "name": "Bittensor",
-      "price": 234.83,
-      "pct_24h": -2.07687,
+      "price": 234.13,
+      "pct_24h": -2.2164,
       "pct_7d": 4.0,
       "support_30d": 190.67093053611111,
       "resistance_30d": 265.7337487161633,
-      "as_of": "2026-09-11 22:30:29",
+      "as_of": "2026-09-11 22:35:20",
       "stale": false
     },
     "the-open-network": {
@@ -2627,7 +2627,7 @@
       "rows": [
         [
           "Price vs. recent range",
-          "Near its 30-day low (~$0.0539) - historically a better entry",
+          "Near its 30-day low (~$0.0544) - historically a better entry",
           2
         ],
         [
@@ -2647,7 +2647,7 @@
         ],
         [
           "Stretch from long-term average",
-          "-23.3% below its long-term average - confirmed downtrend",
+          "-22.5% below its long-term average - confirmed downtrend",
           -1
         ],
         [
@@ -2660,12 +2660,12 @@
       "id": "world-liberty-financial",
       "symbol": "WLFI",
       "name": "World Liberty Financial",
-      "price": 0.053832,
-      "pct_24h": -3.94029,
-      "pct_7d": -6.9,
-      "support_30d": 0.05390987594515436,
+      "price": 0.054383,
+      "pct_24h": -3.77892,
+      "pct_7d": -3.8,
+      "support_30d": 0.05438278352880165,
       "resistance_30d": 0.06254770952093733,
-      "as_of": "2026-09-11 19:51:06",
+      "as_of": "2026-09-11 22:35:20",
       "stale": false
     },
     "pax-gold": {
@@ -3316,7 +3316,7 @@
         "stop": 0.5601375,
         "target1": 0.5708625,
         "target2": 0.5762250000000001,
-        "opened_at": "2026-09-11T22:32:19.889564"
+        "opened_at": "2026-09-11T22:37:11.834960"
       },
       "daily:XLM": {
         "coin": "XLM",
@@ -3326,7 +3326,7 @@
         "stop": 0.14140496666666666,
         "target1": 0.16294103333333335,
         "target2": 0.1737090666666667,
-        "opened_at": "2026-09-11T22:32:19.889564"
+        "opened_at": "2026-09-11T22:37:11.834960"
       }
     },
     "resolved": [
@@ -4525,6 +4525,32 @@
         "result": "win",
         "resolved_at": "2026-09-11T22:32:19.889564",
         "exit_price": 0.177989
+      },
+      {
+        "coin": "MNT",
+        "name": "Mantle",
+        "tf": "1h",
+        "entry": 0.5655,
+        "stop": 0.5601375,
+        "target1": 0.5708625,
+        "target2": 0.5762250000000001,
+        "opened_at": "2026-09-11T22:32:19.889564",
+        "result": "win",
+        "resolved_at": "2026-09-11T22:37:11.834960",
+        "exit_price": 0.5788
+      },
+      {
+        "coin": "XLM",
+        "name": "Stellar",
+        "tf": "daily",
+        "entry": 0.152173,
+        "stop": 0.14140496666666666,
+        "target1": 0.16294103333333335,
+        "target2": 0.1737090666666667,
+        "opened_at": "2026-09-11T22:32:19.889564",
+        "result": "win",
+        "resolved_at": "2026-09-11T22:37:11.834960",
+        "exit_price": 0.177721
       }
     ]
   },
@@ -4532,14 +4558,14 @@
     "key": "BTC",
     "name": "Bitcoin",
     "emoji": "\u20bf",
-    "price": 77197,
+    "price": 77129,
     "high_24h": 79607,
     "low_24h": 76393,
-    "pct_24h": 0.14341,
+    "pct_24h": 0.19402,
     "pct_7d": -3.2,
     "pct_30d": 21.4,
-    "sma50": 70645.91656184511,
-    "sma200": 70015.81770849219,
+    "sma50": 70644.48855050477,
+    "sma200": 70015.4607056571,
     "support_30d": 62843.70368466329,
     "resistance_30d": 81264.70153038795,
     "mark_price": 77122.19098201,
@@ -4554,16 +4580,16 @@
     "key": "ETH",
     "name": "Ethereum",
     "emoji": "\u039e",
-    "price": 2521.79,
+    "price": 2518.29,
     "high_24h": 2647.68,
     "low_24h": 2436.69,
-    "pct_24h": 2.76453,
+    "pct_24h": 2.7534,
     "pct_7d": 2.6,
     "pct_30d": 33.5,
-    "sma50": 2160.6944986454228,
-    "sma200": 2051.948805752113,
+    "sma50": 2160.5971592551855,
+    "sma200": 2051.924470904554,
     "support_30d": 1874.401898191962,
-    "resistance_30d": 2521.4252671133727,
+    "resistance_30d": 2516.5582976015226,
     "mark_price": 2515.0197907,
     "index_price": 2516.48302326,
     "funding_rate": 7.82e-06,
