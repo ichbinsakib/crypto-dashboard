@@ -1,5 +1,5 @@
 """
-Teka Alerts Manager - small GUI to add, toggle, and delete BTC/ETH price
+Kairo Alerts Manager - small GUI to add, toggle, and delete BTC/ETH price
 alerts without hand-editing alerts_config.json.
 
 Run:  python add_alert.py    (or double-click add_alert.bat)
@@ -36,7 +36,7 @@ def regenerate_dashboard():
 class AlertsManager(tk.Tk):
     def __init__(self):
         super().__init__()
-        self.title("Teka - Price Alerts Manager")
+        self.title("Kairo - Price Alerts Manager")
         self.geometry("580x460")
         self.configure(bg="#0a0e14")
         self.config_data = get_config()

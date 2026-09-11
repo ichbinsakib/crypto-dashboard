@@ -1,4 +1,4 @@
-# Teka Live Dashboard
+# Kairo Live Dashboard
 
 A BTC/ETH market dashboard that regenerates itself automatically and publishes to GitHub Pages — free-tier data only, no paid APIs, no server to maintain.
 
@@ -28,7 +28,7 @@ Edit `data/alerts_config.json` directly (GitHub's web editor works fine) — eac
 {"id": "unique-id", "coin": "BTC", "condition": "above", "price": 85000, "label": "BTC above $85,000", "enabled": true}
 ```
 
-Push the change (or edit via GitHub's UI, which commits for you) and it takes effect on the next scheduled run, or trigger **Actions → Update Teka Dashboard → Run workflow** for an immediate refresh.
+Push the change (or edit via GitHub's UI, which commits for you) and it takes effect on the next scheduled run, or trigger **Actions → Update Kairo Dashboard → Run workflow** for an immediate refresh.
 
 If you have this repo cloned locally, `python add_alert.py` opens a small desktop GUI for the same thing.
 
@@ -42,4 +42,4 @@ Writes to `site/index.html`, reading/writing state and alerts in `data/`.
 
 ## Education only
 
-Not financial advice. The cycle model and heat score are Teka's own heuristics, not guaranteed signals.
+Not financial advice. The cycle model and heat score are Kairo's own heuristics, not guaranteed signals.

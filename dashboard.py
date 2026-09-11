@@ -1,5 +1,5 @@
 """
-Teka Live Dashboard - generates dashboard/index.html from free crypto data sources.
+Kairo Live Dashboard - generates dashboard/index.html from free crypto data sources.
 Data: CoinGecko (price/market), Binance Futures public API (funding/OI/premium),
 Alternative.me (Fear & Greed Index).
 
@@ -290,7 +290,7 @@ def send_discord_strong_buy_alert(newly_strong):
             line += (f"\n   Buy {fmt_usd_adaptive(t['entry'])} · Stop {fmt_usd_adaptive(t['stop'])} "
                      f"· Target {fmt_usd_adaptive(t['target1'])} / {fmt_usd_adaptive(t['target2'])}")
         lines.append(line)
-    content = ("🚨 **Teka Scanner — Strong Buy Alert**\n" + "\n".join(lines) +
+    content = ("🚨 **Kairo Scanner — Strong Buy Alert**\n" + "\n".join(lines) +
                f"\n\n🔗 {DASHBOARD_URL}\nEducational rule-based model, not financial advice.")
     if len(content) > 1900:
         content = content[:1900] + "\n… (truncated)"
@@ -317,7 +317,7 @@ def fire_toast_notifications(newly_triggered):
     if not newly_triggered or IS_CI:
         return  # no desktop to notify when running on a GitHub Actions runner
     lines = "; ".join(f"{ps_safe(r.get('label'))} (${r['current_price']:,.2f})" for r in newly_triggered)
-    title = "Teka Price Alert"
+    title = "Kairo Price Alert"
     ps_script = (
         "[Windows.UI.Notifications.ToastNotificationManager, Windows.UI.Notifications, ContentType=WindowsRuntime] > $null;"
         "[Windows.Data.Xml.Dom.XmlDocument, Windows.Data.Xml.Dom.XmlDocument, ContentType=WindowsRuntime] > $null;"
@@ -327,7 +327,7 @@ def fire_toast_notifications(newly_triggered):
         f"$textNodes.Item(0).AppendChild($template.CreateTextNode(\"{title}\")) > $null;"
         f"$textNodes.Item(1).AppendChild($template.CreateTextNode(\"{lines}\")) > $null;"
         "$toast = [Windows.UI.Notifications.ToastNotification]::new($template);"
-        "[Windows.UI.Notifications.ToastNotificationManager]::CreateToastNotifier('Teka Live Dashboard').Show($toast)"
+        "[Windows.UI.Notifications.ToastNotificationManager]::CreateToastNotifier('Kairo Live Dashboard').Show($toast)"
     )
     try:
         subprocess.Popen(
@@ -1002,10 +1002,12 @@ def render(coins_data, fng_value, fng_classification, generated_at, any_stale,
         for c in coins_data
     )
     tabs_inputs += '\n<input type="radio" name="tabs" id="tab-screener" checked>'
+    tabs_inputs += '\n<input type="radio" name="tabs" id="tab-mypicks">'
     tabs_labels = "\n".join(
         f'<label for="tab-{c["key"].lower()}">{c["emoji"]} {c["key"]}</label>' for c in coins_data
     )
     tabs_labels += '\n<label for="tab-screener">🔍 Screener</label>'
+    tabs_labels += '\n<label for="tab-mypicks">⭐ My Picks</label>'
 
     panels = []
     spot_signals_by_coin = {}
@@ -1206,7 +1208,7 @@ def render(coins_data, fng_value, fng_classification, generated_at, any_stale,
       <div class="read-text">{summary}</div>
     </div>
     <div class="card">
-      <div class="card-title">TEKA HEAT SCORE (model estimate)</div>
+      <div class="card-title">KAIRO HEAT SCORE (model estimate)<span class="info-tip" tabindex="0" data-tip="A 0-100 blend of 30-day price change, distance from the long-term average, and funding rate -- higher means the market looks more overheated/euphoric, lower means more washed-out/fearful. Not a prediction, just a heuristic gauge.">&#9432;</span></div>
       <div class="gauge-wrap">
         <div class="gauge-track"><div class="gauge-fill" style="width:{score_pct}%"></div></div>
         <div class="gauge-score">{score_display}</div>
@@ -1221,7 +1223,7 @@ def render(coins_data, fng_value, fng_classification, generated_at, any_stale,
   </table>
 
   <div class="cycle-map" style="margin-bottom:20px;">
-    <div class="card-title">CYCLE MAP (heuristic, price vs 50/200-day average)</div>
+    <div class="card-title">CYCLE MAP (heuristic, price vs 50/200-day average)<span class="info-tip" tabindex="0" data-tip="A rough guess at which market-cycle phase this coin is in, based on price vs its 50-day and 200-day moving averages and recent 30-day trend. Accumulation = basing near lows, Markup = trending up, Distribution = topping out, Markdown = trending down. Educational framing, not a signal on its own.">&#9432;</span></div>
     <div class="cyc-row">{cycle_html}</div>
   </div>
 
@@ -1277,14 +1279,16 @@ def render(coins_data, fng_value, fng_classification, generated_at, any_stale,
       </details>""" if r.get("rows") else ""
 
             cached_tag = ' <span class="watch">&middot; cached</span>' if r.get("stale") else ""
+            follow_key = f"daily:{r['symbol']}"
             return f"""
     <div class="screener-card {r['status']}">
       <div class="screener-card-top">
         <div class="screener-rank">#{rank}</div>
         <div>
           <div class="screener-name">{r['name']} <span class="watch">({r['symbol']})</span>{cached_tag}</div>
-          <div class="sub">{fmt_usd_adaptive(r['price'])} &middot; <span class="{'pos' if (r.get('pct_24h') or 0) >= 0 else 'neg'}">{fmt_pct(r.get('pct_24h'))}</span> 24h</div>
+          <div class="sub" data-role="price">{fmt_usd_adaptive(r['price'])} &middot; <span class="{'pos' if (r.get('pct_24h') or 0) >= 0 else 'neg'}">{fmt_pct(r.get('pct_24h'))}</span> 24h</div>
         </div>
+        <button class="follow-btn" data-key="{follow_key}" data-tf="Daily" title="Follow this pick -- saves it to My Picks until you remove it">&#9734; Follow</button>
       </div>
       <div class="screener-signal">
         <span class="badge {r['status']}">{r['label']}</span>
@@ -1324,6 +1328,8 @@ def render(coins_data, fng_value, fng_classification, generated_at, any_stale,
             for name, reading, pts in r.get("rows", [])
         )
         card_id = f"ic-{tf_key}-{r['symbol']}"
+        follow_key = f"{tf_key}:{r['symbol']}"
+        tf_follow_label = {"15m": "15-Minute", "1h": "1-Hour"}.get(tf_key, tf_key)
         return f"""
     <div class="screener-card {r['status']}" id="{card_id}">
       <div class="screener-card-top">
@@ -1332,6 +1338,7 @@ def render(coins_data, fng_value, fng_classification, generated_at, any_stale,
           <div class="screener-name">{r['name']} <span class="watch">({r['symbol']})</span></div>
           <div class="sub" data-role="price">{fmt_usd_adaptive(r['price'])}</div>
         </div>
+        <button class="follow-btn" data-key="{follow_key}" data-tf="{tf_follow_label}" title="Follow this pick -- saves it to My Picks until you remove it">&#9734; Follow</button>
       </div>
       <div class="screener-signal">
         <span class="badge {r['status']}" data-role="badge">{r['label']}</span>
@@ -1339,7 +1346,7 @@ def render(coins_data, fng_value, fng_classification, generated_at, any_stale,
       </div>
       <div class="screener-plain" data-role="plain">{r.get('plain', '')}</div>
       <div class="screener-trade">
-        <div class="screener-trade-title">🎯 Buy the recent low, ATR-based stop</div>
+        <div class="screener-trade-title">🎯 Buy the recent low, ATR-based stop<span class="info-tip" tabindex="0" data-tip="ATR (Average True Range) measures this coin's own recent volatility. The stop is set one ATR below the buy level, and targets are 1x/2x that same distance above it -- so the risk/reward scales to how choppy this specific coin has actually been, instead of a flat percentage that's too tight for volatile coins and too loose for calm ones.">&#9432;</span></div>
         <div class="kv"><span>Buy</span><span data-role="entry">{fmt_usd_adaptive(t['entry'])}</span></div>
         <div class="kv"><span>Stop</span><span class="neg" data-role="stop">{fmt_usd_adaptive(t['stop'])} ({t['risk_pct']:.1f}% below entry)</span></div>
         <div class="kv"><span>Target</span><span class="pos" data-role="target">{fmt_usd_adaptive(t['target1'])} / {fmt_usd_adaptive(t['target2'])}</span></div>
@@ -1425,6 +1432,20 @@ def render(coins_data, fng_value, fng_classification, generated_at, any_stale,
     </table>
   </div>
 </div>
+
+<div class="panel panel-mypicks">
+  <div class="cycle-map spot-signal-card" style="margin-bottom:20px;">
+    <div class="card-title">⭐ MY PICKS</div>
+    <div class="sub">
+      Coins you've followed from the Screener tab. These are saved in <strong>this browser only</strong>
+      (not synced anywhere) and stay here until you remove them &mdash; a personal way to track whether a
+      call played out, not a real portfolio or trade log.
+    </div>
+  </div>
+  <div id="my-picks-list" class="screener-grid">
+    <div class="sub" id="my-picks-empty">No followed picks yet. Go to the Screener tab and tap &#9734; Follow on any coin.</div>
+  </div>
+</div>
 """
 
     fng_top = f"{fng_value} ({fng_classification})" if fng_value is not None else "N/A"
@@ -1451,11 +1472,11 @@ def render(coins_data, fng_value, fng_classification, generated_at, any_stale,
       <div class="glance-plain">{bottom_pick['plain']}</div>
     </div>""")
     glance_html = f"""
-<div class="glance-bar">
-  <div class="glance-title">AT A GLANCE &mdash; no clicking required</div>
+<details class="glance-bar">
+  <summary class="glance-title">AT A GLANCE<span class="info-tip" tabindex="0" data-tip="One-line verdicts for BTC, ETH, and the best/worst-scoring coins from the last screener scan -- a quick summary of the same rule-based model used throughout the dashboard, not a separate signal.">&#9432;</span> <span class="glance-hint">(tap to expand/collapse)</span></summary>
   <div class="glance-row">{"".join(glance_cards)}</div>
   <div class="glance-footnote">Educational rule-based model, not financial advice. Full reasoning for each verdict is on its tab below.</div>
-</div>
+</details>
 """
 
     html = f"""<!DOCTYPE html>
@@ -1463,7 +1484,7 @@ def render(coins_data, fng_value, fng_classification, generated_at, any_stale,
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>Teka Live Dashboard</title>
+<title>Kairo Live Dashboard</title>
 <link rel="manifest" href="manifest.webmanifest">
 <link rel="icon" href="favicon-32.png" sizes="32x32" type="image/png">
 <link rel="apple-touch-icon" href="apple-touch-icon.png">
@@ -1471,7 +1492,7 @@ def render(coins_data, fng_value, fng_classification, generated_at, any_stale,
 <meta name="mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-<meta name="apple-mobile-web-app-title" content="Teka">
+<meta name="apple-mobile-web-app-title" content="Kairo">
 <style>
   :root {{
     --bg: #0a0e14; --panel: #10151f; --border: #1f2937; --text: #e5e7eb; --muted: #9ca3af;
@@ -1488,11 +1509,13 @@ def render(coins_data, fng_value, fng_classification, generated_at, any_stale,
   input[type=radio] {{ display:none; }}
   #tab-btc:checked ~ .tabbar label[for=tab-btc],
   #tab-eth:checked ~ .tabbar label[for=tab-eth],
-  #tab-screener:checked ~ .tabbar label[for=tab-screener] {{ background: var(--accent); color:#04121c; border-color:var(--accent); }}
+  #tab-screener:checked ~ .tabbar label[for=tab-screener],
+  #tab-mypicks:checked ~ .tabbar label[for=tab-mypicks] {{ background: var(--accent); color:#04121c; border-color:var(--accent); }}
   .panel {{ display:none; padding: 8px 24px 32px; }}
   #tab-btc:checked ~ .panel-btc {{ display:block; }}
   #tab-eth:checked ~ .panel-eth {{ display:block; }}
   #tab-screener:checked ~ .panel-screener {{ display:block; }}
+  #tab-mypicks:checked ~ .panel-mypicks {{ display:block; }}
   .tf-panel {{ display:none; }}
   #tf-15m:checked ~ .tf-panel-15m {{ display:block; }}
   #tf-1h:checked ~ .tf-panel-1h {{ display:block; }}
@@ -1533,7 +1556,26 @@ def render(coins_data, fng_value, fng_classification, generated_at, any_stale,
   .alert-banner {{ margin: 14px 24px 0; padding: 12px 18px; background:#3a0d0d; border:1px solid #ef4444; border-radius:10px; color:#fecaca; font-weight:700; font-size:13.5px; animation: pulse 1.6s infinite; }}
   .alert-banner-item {{ padding: 2px 0; }}
   .glance-bar {{ margin: 16px 24px 0; padding: 10px 14px; background: var(--panel); border:2px solid var(--border); border-radius:12px; }}
-  .glance-title {{ font-size:10px; color:var(--muted); letter-spacing:1.5px; font-weight:800; margin-bottom:6px; }}
+  .glance-bar[open] .glance-title {{ margin-bottom:6px; }}
+  .glance-title {{ font-size:10px; color:var(--muted); letter-spacing:1.5px; font-weight:800; cursor:pointer; list-style:none; display:flex; align-items:center; gap:8px; }}
+  .glance-title::-webkit-details-marker {{ display:none; }}
+  .glance-title::before {{ content:'▸'; display:inline-block; transition:transform 0.15s; font-size:11px; }}
+  .glance-bar[open] .glance-title::before {{ transform:rotate(90deg); }}
+  .glance-hint {{ font-weight:400; letter-spacing:0; color:var(--muted); font-size:10px; text-transform:none; }}
+  .info-tip {{ display:inline-flex; align-items:center; justify-content:center; width:15px; height:15px;
+    border-radius:50%; background:var(--border); color:var(--muted); font-size:11px; font-weight:700;
+    cursor:help; position:relative; margin-left:5px; vertical-align:middle; flex-shrink:0; }}
+  .info-tip:hover, .info-tip:focus {{ background: var(--accent); color:#04121c; outline:none; }}
+  .info-tip:hover::after, .info-tip:focus::after {{
+    content: attr(data-tip); position:absolute; bottom:130%; left:50%; transform:translateX(-50%);
+    background:#1c2230; color:var(--text); padding:9px 11px; border-radius:8px; font-size:12px;
+    font-weight:400; letter-spacing:0; text-transform:none; white-space:normal; width:230px;
+    box-shadow:0 4px 14px rgba(0,0,0,0.45); z-index:60; line-height:1.45; border:1px solid var(--border);
+  }}
+  .info-tip:hover::before, .info-tip:focus::before {{
+    content:''; position:absolute; bottom:112%; left:50%; transform:translateX(-50%);
+    border:5px solid transparent; border-top-color:#1c2230; z-index:60;
+  }}
   .glance-row {{ display:grid; grid-template-columns: repeat(auto-fit, minmax(170px, 1fr)); gap:8px; }}
   .glance-card {{ border-radius:8px; padding:7px 10px; border:1px solid var(--border); background:#0d1320; min-width:0; }}
   .glance-card.bullish {{ border-color:#1f6a4a; background:#0d1c15; }}
@@ -1574,7 +1616,11 @@ def render(coins_data, fng_value, fng_classification, generated_at, any_stale,
   .screener-card.bearish {{ border-color:#7a2e2e; }}
   .screener-card.neutral {{ border-color:#5a4d18; }}
   .screener-card-top {{ display:flex; gap:10px; align-items:flex-start; margin-bottom:10px; }}
+  .screener-card-top > div:nth-child(2) {{ flex:1; min-width:0; }}
   .screener-rank {{ font-size:12px; font-weight:800; color: var(--muted); background:#0d1320; border-radius:6px; padding:3px 8px; white-space:nowrap; }}
+  .follow-btn {{ margin-left:auto; flex-shrink:0; background:transparent; border:1px solid var(--border); color:var(--muted); font-size:11.5px; font-weight:700; padding:5px 10px; border-radius:20px; cursor:pointer; white-space:nowrap; transition:all 0.15s; }}
+  .follow-btn:hover {{ border-color: var(--accent); color: var(--accent); }}
+  .follow-btn.following {{ background: var(--accent); border-color: var(--accent); color:#04121c; }}
   .screener-name {{ font-size:15px; font-weight:800; }}
   .screener-signal {{ display:flex; justify-content:space-between; align-items:center; margin-bottom:10px; }}
   .screener-trade {{ background:#0d1320; border:1px solid var(--border); border-radius:8px; padding:10px 12px; }}
@@ -1601,8 +1647,8 @@ def render(coins_data, fng_value, fng_classification, generated_at, any_stale,
 </head>
 <body>
 <header>
-  <h1>&#9889; TEKA LIVE DASHBOARD</h1>
-  <div class="meta">Market Fear &amp; Greed: {fng_top} &nbsp;|&nbsp; Generated: {generated_at} UTC
+  <h1>&#9889; KAIRO LIVE DASHBOARD</h1>
+  <div class="meta">Market Fear &amp; Greed: {fng_top}<span class="info-tip" tabindex="0" data-tip="A 0-100 index of overall crypto market sentiment from Alternative.me, based on volatility, volume, social media, and surveys. Low = fear (often washed-out), high = greed (often euphoric). A contrarian gauge, not a timing signal on its own.">&#9432;</span> &nbsp;|&nbsp; Generated: {generated_at} UTC
     (<span id="updated-ago">just now</span>) &nbsp;|&nbsp; Data regenerated {DATA_REFRESH_LABEL}</div>
 </header>
 {glance_html}
@@ -1614,7 +1660,7 @@ def render(coins_data, fng_value, fng_classification, generated_at, any_stale,
 <footer>
   Data sources: CoinGecko (price/market), Binance Futures public API (funding rate, open interest, mark/index premium), Alternative.me (Fear &amp; Greed Index). No paid subscriptions used.<br>
   Rows marked <strong>Unavailable</strong> (MVRV Z-Score, NUPL, exchange flows, ETF flows) require a paid on-chain data provider (e.g. Glassnode, CryptoQuant, Coinglass) that is not connected to this dashboard.<br>
-  Cycle Map, Heat Score, and Liquidation Risk are Teka's own heuristic models built from the numbers above &mdash; not the output of a proprietary or third-party analytics service.<br>
+  Cycle Map, Heat Score, and Liquidation Risk are Kairo's own heuristic models built from the numbers above &mdash; not the output of a proprietary or third-party analytics service.<br>
   Education only, not financial advice. You trade at your own risk.
 </footer>
 <script>
@@ -1786,6 +1832,113 @@ if ('serviceWorker' in navigator) {{
 
   refreshAllIntraday();
   setInterval(refreshAllIntraday, 60000);
+}})();
+</script>
+<script>
+(function() {{
+  // "Follow" watchlist: purely client-side, saved to this browser's localStorage only (this
+  // is a static site with no backend/accounts to save it to). A followed pick captures
+  // whatever's currently on screen at the moment you follow it -- including any live-refreshed
+  // 15m/1h price -- and stays in My Picks until you explicitly remove it.
+  var STORAGE_KEY = 'kairo_followed_picks';
+
+  function getFollowed() {{
+    try {{ return JSON.parse(localStorage.getItem(STORAGE_KEY) || '{{}}'); }}
+    catch (e) {{ return {{}}; }}
+  }}
+  function saveFollowed(obj) {{
+    try {{ localStorage.setItem(STORAGE_KEY, JSON.stringify(obj)); }} catch (e) {{}}
+  }}
+  function textOf(root, selector) {{
+    var el = root.querySelector(selector);
+    return el ? el.textContent.trim() : null;
+  }}
+  function buildPayload(cardEl, key, tfLabel) {{
+    return {{
+      key: key,
+      tf: tfLabel,
+      name: textOf(cardEl, '.screener-name') || key,
+      label: textOf(cardEl, '.badge') || '',
+      price: textOf(cardEl, '[data-role=price]') || textOf(cardEl, '.sub') || '',
+      plain: textOf(cardEl, '.screener-plain') || '',
+      entry: textOf(cardEl, '[data-role=entry]'),
+      stop: textOf(cardEl, '[data-role=stop]'),
+      target: textOf(cardEl, '[data-role=target]'),
+      followedAt: new Date().toISOString(),
+    }};
+  }}
+
+  function syncFollowButtons() {{
+    var followed = getFollowed();
+    document.querySelectorAll('.follow-btn').forEach(function(btn) {{
+      var isFollowing = !!followed[btn.dataset.key];
+      btn.classList.toggle('following', isFollowing);
+      btn.innerHTML = isFollowing ? '&#9733; Following' : '&#9734; Follow';
+    }});
+  }}
+
+  function fmtWhen(iso) {{
+    try {{
+      var d = new Date(iso);
+      return d.toLocaleDateString() + ' ' + d.toLocaleTimeString([], {{hour:'2-digit', minute:'2-digit'}});
+    }} catch (e) {{ return iso; }}
+  }}
+
+  function renderMyPicks() {{
+    var listEl = document.getElementById('my-picks-list');
+    if (!listEl) return;
+    var followed = getFollowed();
+    var keys = Object.keys(followed);
+    if (!keys.length) {{
+      listEl.innerHTML = '<div class="sub" id="my-picks-empty">No followed picks yet. Go to the Screener tab and tap &#9734; Follow on any coin.</div>';
+      return;
+    }}
+    keys.sort(function(a, b) {{ return (followed[b].followedAt || '').localeCompare(followed[a].followedAt || ''); }});
+    listEl.innerHTML = keys.map(function(k) {{
+      var p = followed[k];
+      var tradeHtml = '';
+      if (p.entry) {{
+        tradeHtml = '<div class="screener-trade">' +
+          '<div class="kv"><span>Buy</span><span>' + p.entry + '</span></div>' +
+          (p.stop ? '<div class="kv"><span>Stop</span><span class="neg">' + p.stop + '</span></div>' : '') +
+          (p.target ? '<div class="kv"><span>Target</span><span class="pos">' + p.target + '</span></div>' : '') +
+          '</div>';
+      }}
+      return '<div class="screener-card">' +
+        '<div class="screener-card-top">' +
+          '<div><div class="screener-name">' + p.name + '</div>' +
+          '<div class="sub">' + p.tf + ' &middot; followed ' + fmtWhen(p.followedAt) + '</div></div>' +
+          '<button class="follow-btn following" data-key="' + k + '">&#9733; Remove</button>' +
+        '</div>' +
+        '<div class="screener-signal"><span class="badge">' + p.label + '</span></div>' +
+        '<div class="screener-plain">' + p.plain + '</div>' +
+        tradeHtml +
+        '<div class="sub" style="margin-top:8px; opacity:0.7;">' + (p.price || '') + '</div>' +
+      '</div>';
+    }}).join('');
+  }}
+
+  document.addEventListener('click', function(e) {{
+    var btn = e.target.closest('.follow-btn');
+    if (!btn) return;
+    var key = btn.dataset.key;
+    var followed = getFollowed();
+    if (followed[key]) {{
+      delete followed[key];
+    }} else {{
+      var cardEl = btn.closest('.screener-card');
+      followed[key] = buildPayload(cardEl, key, btn.dataset.tf || '');
+    }}
+    saveFollowed(followed);
+    syncFollowButtons();
+    renderMyPicks();
+  }});
+
+  syncFollowButtons();
+  renderMyPicks();
+  // Re-sync button state after each live intraday refresh (the refresh only touches price/
+  // score/etc spans, never the follow button itself, but this keeps behavior obvious/robust).
+  setInterval(syncFollowButtons, 60000);
 }})();
 </script>
 </body>
