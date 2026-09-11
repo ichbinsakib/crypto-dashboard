@@ -343,7 +343,7 @@
         ],
         [
           "Stretch from long-term average",
-          "-4.5% vs its long-term average - not stretched either way",
+          "-4.8% vs its long-term average - not stretched either way",
           0
         ],
         [
@@ -356,23 +356,23 @@
       "id": "dogecoin",
       "symbol": "DOGE",
       "name": "Dogecoin",
-      "price": 0.084303,
-      "pct_24h": 0.15937,
-      "pct_7d": -0.6,
+      "price": 0.084018,
+      "pct_24h": -0.10208,
+      "pct_7d": -1.0,
       "support_30d": 0.06952870548515376,
       "resistance_30d": 0.09337940032634065,
-      "as_of": "2026-09-11 21:50:25",
+      "as_of": "2026-09-11 22:10:23",
       "stale": false
     },
     "zcash": {
-      "label": "\ud83d\udd34 DISTRIBUTION ZONE",
+      "label": "\ud83d\udd34 CAUTION - REDUCE NEW BUYS",
       "status": "bearish",
-      "score": -5,
+      "score": -4,
       "rows": [
         [
           "Price vs. recent range",
-          "Near its 30-day high (~$1,244.29) - less room to run",
-          -1
+          "Sitting in the middle of its 30-day range",
+          0
         ],
         [
           "Crowd mood (Fear & Greed)",
@@ -391,7 +391,7 @@
         ],
         [
           "Stretch from long-term average",
-          "+151.0% above its long-term average - very stretched",
+          "+146.1% above its long-term average - very stretched",
           -2
         ],
         [
@@ -400,16 +400,16 @@
           0
         ]
       ],
-      "plain": "Looks stretched and euphoric - historically the zone where smart money sells, not buys.",
+      "plain": "Getting risky - I'd hold off on new buys until this cools down.",
       "id": "zcash",
       "symbol": "ZEC",
       "name": "Zcash",
-      "price": 1185.85,
-      "pct_24h": 4.64189,
-      "pct_7d": 14.7,
+      "price": 1162.51,
+      "pct_24h": 1.98699,
+      "pct_7d": 13.2,
       "support_30d": 486.1425018309512,
       "resistance_30d": 1244.287571383468,
-      "as_of": "2026-09-11 20:15:22",
+      "as_of": "2026-09-11 22:10:23",
       "stale": false
     },
     "rain": {
@@ -2071,7 +2071,7 @@
         ],
         [
           "Stretch from long-term average",
-          "-32.3% below its long-term average - confirmed downtrend",
+          "-32.8% below its long-term average - confirmed downtrend",
           -1
         ],
         [
@@ -2084,12 +2084,12 @@
       "id": "pi-network",
       "symbol": "PI",
       "name": "Pi Network",
-      "price": 0.095219,
-      "pct_24h": -0.54621,
-      "pct_7d": 1.0,
+      "price": 0.094437,
+      "pct_24h": -1.2941,
+      "pct_7d": 0.6,
       "support_30d": 0.08559695435343688,
       "resistance_30d": 0.09798925329339339,
-      "as_of": "2026-09-11 21:20:27",
+      "as_of": "2026-09-11 22:10:23",
       "stale": false
     },
     "ondo-finance": {
@@ -3306,7 +3306,7 @@
         "stop": 0.5601375,
         "target1": 0.5708625,
         "target2": 0.5762250000000001,
-        "opened_at": "2026-09-11T22:07:20.998828"
+        "opened_at": "2026-09-11T22:12:19.959670"
       },
       "daily:XLM": {
         "coin": "XLM",
@@ -3316,7 +3316,7 @@
         "stop": 0.14140496666666666,
         "target1": 0.16294103333333335,
         "target2": 0.1737090666666667,
-        "opened_at": "2026-09-11T22:07:20.998828"
+        "opened_at": "2026-09-11T22:12:19.959670"
       }
     },
     "resolved": [
@@ -4385,6 +4385,32 @@
         "result": "win",
         "resolved_at": "2026-09-11T22:07:20.998828",
         "exit_price": 0.17781
+      },
+      {
+        "coin": "MNT",
+        "name": "Mantle",
+        "tf": "1h",
+        "entry": 0.5655,
+        "stop": 0.5601375,
+        "target1": 0.5708625,
+        "target2": 0.5762250000000001,
+        "opened_at": "2026-09-11T22:07:20.998828",
+        "result": "win",
+        "resolved_at": "2026-09-11T22:12:19.959670",
+        "exit_price": 0.5788
+      },
+      {
+        "coin": "XLM",
+        "name": "Stellar",
+        "tf": "daily",
+        "entry": 0.152173,
+        "stop": 0.14140496666666666,
+        "target1": 0.16294103333333335,
+        "target2": 0.1737090666666667,
+        "opened_at": "2026-09-11T22:07:20.998828",
+        "result": "win",
+        "resolved_at": "2026-09-11T22:12:19.959670",
+        "exit_price": 0.177722
       }
     ]
   },
@@ -4392,14 +4418,14 @@
     "key": "BTC",
     "name": "Bitcoin",
     "emoji": "\u20bf",
-    "price": 76987,
+    "price": 77105,
     "high_24h": 79607,
     "low_24h": 76393,
-    "pct_24h": -0.16412,
+    "pct_24h": -0.05819,
     "pct_7d": -3.2,
     "pct_30d": 21.4,
-    "sma50": 70642.21541720661,
-    "sma200": 70014.89242233256,
+    "sma50": 70644.11673215027,
+    "sma200": 70015.36775106848,
     "support_30d": 62843.70368466329,
     "resistance_30d": 81264.70153038795,
     "mark_price": 77122.19098201,
@@ -4414,14 +4440,14 @@
     "key": "ETH",
     "name": "Ethereum",
     "emoji": "\u039e",
-    "price": 2508.19,
+    "price": 2514.25,
     "high_24h": 2647.68,
     "low_24h": 2436.69,
-    "pct_24h": 2.04613,
+    "pct_24h": 2.18418,
     "pct_7d": 2.6,
     "pct_30d": 33.5,
-    "sma50": 2160.4655837634887,
-    "sma200": 2051.8915770316294,
+    "sma50": 2160.551028526186,
+    "sma200": 2051.912938222304,
     "support_30d": 1874.401898191962,
     "resistance_30d": 2514.967577695514,
     "mark_price": 2515.0197907,
