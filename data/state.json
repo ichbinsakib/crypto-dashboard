@@ -12,7 +12,7 @@
     },
     "eth-resistance-break": {
       "triggered": true,
-      "last_triggered_at": "2026-09-11 21:35:21"
+      "last_triggered_at": "2026-09-11 21:40:25"
     },
     "eth-support-break": {
       "triggered": false,
@@ -1495,7 +1495,7 @@
         ],
         [
           "Stretch from long-term average",
-          "-2.2% vs its long-term average - not stretched either way",
+          "-1.9% vs its long-term average - not stretched either way",
           0
         ],
         [
@@ -1508,12 +1508,12 @@
       "id": "ethereum-classic",
       "symbol": "ETC",
       "name": "Ethereum Classic",
-      "price": 7.65,
-      "pct_24h": -0.61148,
-      "pct_7d": 4.4,
+      "price": 7.67,
+      "pct_24h": -0.45065,
+      "pct_7d": 3.6,
       "support_30d": 6.079473341192034,
       "resistance_30d": 8.609781284223262,
-      "as_of": "2026-09-11 18:20:19",
+      "as_of": "2026-09-11 21:40:25",
       "stale": false
     },
     "pump-fun": {
@@ -2229,11 +2229,11 @@
       "symbol": "ICP",
       "name": "Internet Computer",
       "price": 2.76,
-      "pct_24h": -0.38435,
-      "pct_7d": 11.6,
+      "pct_24h": -0.94778,
+      "pct_7d": 10.8,
       "support_30d": 2.1748510244961383,
       "resistance_30d": 2.9869340549074623,
-      "as_of": "2026-09-11 20:25:21",
+      "as_of": "2026-09-11 21:40:25",
       "stale": false
     },
     "bittensor": {
@@ -2372,12 +2372,12 @@
       "id": "sky",
       "symbol": "SKY",
       "name": "Sky",
-      "price": 0.061203,
-      "pct_24h": 2.17691,
+      "price": 0.061202,
+      "pct_24h": 2.13365,
       "pct_7d": -9.8,
       "support_30d": 0.05081051579814886,
       "resistance_30d": 0.07314868186988309,
-      "as_of": "2026-09-11 21:35:21",
+      "as_of": "2026-09-11 21:40:25",
       "stale": false
     },
     "shiba-inu": {
@@ -3316,7 +3316,7 @@
         "stop": 0.5599583333333333,
         "target1": 0.5710416666666667,
         "target2": 0.5765833333333333,
-        "opened_at": "2026-09-11T21:37:12.307992"
+        "opened_at": "2026-09-11T21:42:16.806797"
       },
       "daily:XLM": {
         "coin": "XLM",
@@ -3326,7 +3326,7 @@
         "stop": 0.14140496666666666,
         "target1": 0.16294103333333335,
         "target2": 0.1737090666666667,
-        "opened_at": "2026-09-11T21:37:12.307992"
+        "opened_at": "2026-09-11T21:42:16.806797"
       }
     },
     "resolved": [
@@ -4226,6 +4226,32 @@
         "result": "win",
         "resolved_at": "2026-09-11T21:37:12.307992",
         "exit_price": 0.178767
+      },
+      {
+        "coin": "MNT",
+        "name": "Mantle",
+        "tf": "1h",
+        "entry": 0.5655,
+        "stop": 0.5599583333333333,
+        "target1": 0.5710416666666667,
+        "target2": 0.5765833333333333,
+        "opened_at": "2026-09-11T21:37:12.307992",
+        "result": "win",
+        "resolved_at": "2026-09-11T21:42:16.806797",
+        "exit_price": 0.5837
+      },
+      {
+        "coin": "XLM",
+        "name": "Stellar",
+        "tf": "daily",
+        "entry": 0.152173,
+        "stop": 0.14140496666666666,
+        "target1": 0.16294103333333335,
+        "target2": 0.1737090666666667,
+        "opened_at": "2026-09-11T21:37:12.307992",
+        "result": "win",
+        "resolved_at": "2026-09-11T21:42:16.806797",
+        "exit_price": 0.178862
       }
     ]
   },
@@ -4236,11 +4262,11 @@
     "price": 77334,
     "high_24h": 79607,
     "low_24h": 76393,
-    "pct_24h": 0.21105,
+    "pct_24h": 0.24466,
     "pct_7d": -3.1,
     "pct_30d": 22.0,
-    "sma50": 70649.0579639647,
-    "sma200": 70016.60305902208,
+    "sma50": 70649.43505119583,
+    "sma200": 70016.69733082986,
     "support_30d": 62843.70368466329,
     "resistance_30d": 81264.70153038795,
     "mark_price": 77023.94235507,
@@ -4255,16 +4281,16 @@
     "key": "ETH",
     "name": "Ethereum",
     "emoji": "\u039e",
-    "price": 2534.29,
+    "price": 2535.03,
     "high_24h": 2647.68,
     "low_24h": 2436.69,
-    "pct_24h": 3.05437,
+    "pct_24h": 3.1627,
     "pct_7d": 2.9,
     "pct_30d": 34.6,
-    "sma50": 2160.9638986097943,
-    "sma200": 2052.016155743206,
+    "sma50": 2160.9893208438957,
+    "sma200": 2052.0225113017314,
     "support_30d": 1874.401898191962,
-    "resistance_30d": 2534.8952653319775,
+    "resistance_30d": 2536.16637703702,
     "mark_price": 2535.88,
     "index_price": 2537.10627907,
     "funding_rate": 2.047e-05,
