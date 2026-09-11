@@ -55,12 +55,13 @@ DATA_REFRESH_LABEL = "every ~10 min (GitHub Actions, best-effort)"  # keep in sy
 DASHBOARD_URL = "https://ichbinsakib.github.io/crypto-dashboard/"
 DISCORD_WEBHOOK_URL = os.environ.get("DISCORD_WEBHOOK_URL")  # optional; strong-buy alerts are a no-op without it
 STRONG_DAILY_SCORE = 5   # matches the "ACCUMULATION ZONE" tier, not the weaker "LEAN ACCUMULATE"
-STRONG_INTRADAY_SCORE = 4  # out of a max of 5 (range position, momentum, direction, volume).
-                            # Requiring a literal 5/5 proved too rare to be usable in practice
-                            # (empty most cycles); 4/5 still demands the strongest factor (near
-                            # the low, worth 2 pts) plus at least two of the other three agree --
-                            # still well above the old "NEAR-TERM DIP ZONE" tier (>= 3).
-INTRADAY_CHOPPY_RANGE_PCT = 1.0  # below this, a coin's whole lookback range is too flat/dead
+STRONG_INTRADAY_SCORE = 3  # out of a max of 5 (range position, momentum, direction, volume).
+                            # 4/5 was still empty most cycles in practice. 3/5 matches the
+                            # model's own "NEAR-TERM DIP ZONE" tier: requires the strongest
+                            # factor (near the low, worth 2 pts) plus at least one more of the
+                            # other three agreeing -- still meaningfully above the old "LEAN
+                            # LONG" tier (>= 1) that was producing noisy, low-confidence calls.
+INTRADAY_CHOPPY_RANGE_PCT = 0.6  # below this, a coin's whole lookback range is too flat/dead
                                   # to trust ATR-based levels against -- rejected outright
 
 PNL_EXPIRY_HOURS = {"15m": 6, "1h": 24, "daily": 24 * 7}  # how long an unresolved call stays
