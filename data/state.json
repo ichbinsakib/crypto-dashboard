@@ -12,7 +12,7 @@
     },
     "eth-resistance-break": {
       "triggered": true,
-      "last_triggered_at": "2026-09-11 21:40:25"
+      "last_triggered_at": "2026-09-11 21:45:23"
     },
     "eth-support-break": {
       "triggered": false,
@@ -173,14 +173,14 @@
       "stale": false
     },
     "tron": {
-      "label": "\ud83d\udfe2 LEAN ACCUMULATE",
-      "status": "bullish",
-      "score": 3,
+      "label": "\ud83d\udfe1 HOLD / NEUTRAL",
+      "status": "neutral",
+      "score": 0,
       "rows": [
         [
           "Price vs. recent range",
-          "Near its 30-day low (~$0.3222) - historically a better entry",
-          2
+          "Near its 30-day high (~$0.3448) - less room to run",
+          -1
         ],
         [
           "Crowd mood (Fear & Greed)",
@@ -199,7 +199,7 @@
         ],
         [
           "Stretch from long-term average",
-          "+3.2% vs its long-term average - not stretched either way",
+          "+3.7% vs its long-term average - not stretched either way",
           0
         ],
         [
@@ -208,16 +208,16 @@
           0
         ]
       ],
-      "plain": "Leans toward a decent spot to slowly add (DCA) - not a strong signal, just a lean.",
+      "plain": "No real edge either way right now - fine to just wait and watch.",
       "id": "tron",
       "symbol": "TRX",
       "name": "TRON",
-      "price": 0.336974,
-      "pct_24h": -0.7582,
-      "pct_7d": 1.5,
+      "price": 0.338339,
+      "pct_24h": -0.45113,
+      "pct_7d": 2.0,
       "support_30d": 0.32221537516581966,
       "resistance_30d": 0.3447899585776834,
-      "as_of": "2026-09-11 20:10:26",
+      "as_of": "2026-09-11 21:45:23",
       "stale": false
     },
     "figure-heloc": {
@@ -679,7 +679,7 @@
         ],
         [
           "Stretch from long-term average",
-          "-5.7% vs its long-term average - not stretched either way",
+          "-6.0% vs its long-term average - not stretched either way",
           0
         ],
         [
@@ -692,12 +692,12 @@
       "id": "cardano",
       "symbol": "ADA",
       "name": "Cardano",
-      "price": 0.207164,
-      "pct_24h": -0.5914,
+      "price": 0.206531,
+      "pct_24h": -1.00569,
       "pct_7d": -3.8,
       "support_30d": 0.1741249817054162,
       "resistance_30d": 0.2291047455940254,
-      "as_of": "2026-09-11 21:25:19",
+      "as_of": "2026-09-11 21:45:23",
       "stale": false
     },
     "stellar": {
@@ -1783,7 +1783,7 @@
         ],
         [
           "Stretch from long-term average",
-          "+153.9% above its long-term average - very stretched",
+          "+148.9% above its long-term average - very stretched",
           -2
         ],
         [
@@ -1796,12 +1796,12 @@
       "id": "lighter",
       "symbol": "LIT",
       "name": "Lighter",
-      "price": 4.51,
-      "pct_24h": 1.9577,
-      "pct_7d": -5.3,
+      "price": 4.42,
+      "pct_24h": -4.13161,
+      "pct_7d": -5.2,
       "support_30d": 2.2358662099746955,
       "resistance_30d": 4.827528632102638,
-      "as_of": "2026-09-11 18:35:23",
+      "as_of": "2026-09-11 21:45:23",
       "stale": false
     },
     "ethena": {
@@ -3316,7 +3316,7 @@
         "stop": 0.5599583333333333,
         "target1": 0.5710416666666667,
         "target2": 0.5765833333333333,
-        "opened_at": "2026-09-11T21:42:16.806797"
+        "opened_at": "2026-09-11T21:47:14.030442"
       },
       "daily:XLM": {
         "coin": "XLM",
@@ -3326,7 +3326,7 @@
         "stop": 0.14140496666666666,
         "target1": 0.16294103333333335,
         "target2": 0.1737090666666667,
-        "opened_at": "2026-09-11T21:42:16.806797"
+        "opened_at": "2026-09-11T21:47:14.030442"
       }
     },
     "resolved": [
@@ -4252,6 +4252,32 @@
         "result": "win",
         "resolved_at": "2026-09-11T21:42:16.806797",
         "exit_price": 0.178862
+      },
+      {
+        "coin": "MNT",
+        "name": "Mantle",
+        "tf": "1h",
+        "entry": 0.5655,
+        "stop": 0.5599583333333333,
+        "target1": 0.5710416666666667,
+        "target2": 0.5765833333333333,
+        "opened_at": "2026-09-11T21:42:16.806797",
+        "result": "win",
+        "resolved_at": "2026-09-11T21:47:14.030442",
+        "exit_price": 0.5837
+      },
+      {
+        "coin": "XLM",
+        "name": "Stellar",
+        "tf": "daily",
+        "entry": 0.152173,
+        "stop": 0.14140496666666666,
+        "target1": 0.16294103333333335,
+        "target2": 0.1737090666666667,
+        "opened_at": "2026-09-11T21:42:16.806797",
+        "result": "win",
+        "resolved_at": "2026-09-11T21:47:14.030442",
+        "exit_price": 0.178403
       }
     ]
   },
@@ -4259,14 +4285,14 @@
     "key": "BTC",
     "name": "Bitcoin",
     "emoji": "\u20bf",
-    "price": 77334,
+    "price": 77342,
     "high_24h": 79607,
     "low_24h": 76393,
-    "pct_24h": 0.24466,
+    "pct_24h": 0.27252,
     "pct_7d": -3.1,
     "pct_30d": 22.0,
-    "sma50": 70649.43505119583,
-    "sma200": 70016.69733082986,
+    "sma50": 70648.97293192394,
+    "sma200": 70016.58180101188,
     "support_30d": 62843.70368466329,
     "resistance_30d": 81264.70153038795,
     "mark_price": 77023.94235507,
@@ -4281,16 +4307,16 @@
     "key": "ETH",
     "name": "Ethereum",
     "emoji": "\u039e",
-    "price": 2535.03,
+    "price": 2535.9,
     "high_24h": 2647.68,
     "low_24h": 2436.69,
-    "pct_24h": 3.1627,
+    "pct_24h": 3.135,
     "pct_7d": 2.9,
     "pct_30d": 34.6,
-    "sma50": 2160.9893208438957,
-    "sma200": 2052.0225113017314,
+    "sma50": 2160.976753273223,
+    "sma200": 2052.019369409063,
     "support_30d": 1874.401898191962,
-    "resistance_30d": 2536.16637703702,
+    "resistance_30d": 2535.537998503392,
     "mark_price": 2535.88,
     "index_price": 2537.10627907,
     "funding_rate": 2.047e-05,
