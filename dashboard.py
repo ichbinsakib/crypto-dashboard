@@ -57,6 +57,9 @@ DISCORD_WEBHOOK_URL = os.environ.get("DISCORD_WEBHOOK_URL")  # optional; strong-
 STRONG_DAILY_SCORE = 5   # matches the "ACCUMULATION ZONE" tier, not the weaker "LEAN ACCUMULATE"
 STRONG_INTRADAY_SCORE = 3  # matches the "NEAR-TERM DIP ZONE" tier, not the weaker "LEAN LONG"
 
+PNL_EXPIRY_HOURS = {"15m": 6, "1h": 24}  # how long an unresolved intraday call stays open before we give up on it
+PNL_RESOLVED_RETENTION_DAYS = 120  # how far back the Monthly stats window (and state.json size) can reach
+
 SCREENER_SIZE = 5  # how many coins to rank/show per tab; raising this adds run time and CoinGecko rate-limit risk
 # GitHub Actions runners share IP pools hammered by countless other CI jobs hitting CoinGecko,
 # so they get throttled harder than a residential IP -- back off more there.
@@ -304,6 +307,83 @@ def send_discord_strong_buy_alert(newly_strong):
         log(f"DISCORD STRONG-BUY ALERT SENT: {[sb['dedupe_key'] for sb in newly_strong]}")
     except Exception as e:
         log(f"DISCORD STRONG-BUY ALERT FAIL: {e}")
+
+
+def update_pnl_tracker(prev_pnl, intraday_results):
+    """Tracks whether the scanner's own 15m/1h bullish calls actually played out. Scoped to
+    intraday signals only -- they have one unambiguous ATR-based entry/stop/target, unlike the
+    daily model's two (pullback/breakout) scenarios, and resolve on a timescale short enough to
+    actually report on. A position opens the first time a coin turns bullish on a timeframe (if
+    one isn't already open for that coin+timeframe) and closes on hitting target (win), hitting
+    stop (loss), or running past its time budget unresolved (expired, excluded from win rate)."""
+    now = datetime.datetime.now()
+    prev_open = dict(prev_pnl.get("open", {}))
+    resolved = list(prev_pnl.get("resolved", []))
+
+    # Resolve positions carried over from a PREVIOUS run only -- never check a position the
+    # same cycle it opens. Entry/target/stop are derived from the lookback low, not from
+    # where price sits right now, so a momentum-driven LEAN LONG call can open with the
+    # current price already above target1; checking immediately would record a fake instant
+    # "win" that reflects nothing about what happened after the call, not real price movement.
+    still_open = {}
+    for key, pos in prev_open.items():
+        interval = INTRADAY_TIMEFRAMES[pos["tf"]]["kraken_interval"]
+        klines, err = safe_fetch(
+            f"pnl price {pos['coin']}", lambda p=pos["coin"], i=interval: fetch_kraken_ohlc(p, i))
+        time.sleep(INTRADAY_RATE_LIMIT_DELAY)
+        if not klines:
+            still_open[key] = pos  # couldn't check this cycle; leave open, try again next run
+            continue
+        current_price = float(klines[-1][4])
+        opened_at = datetime.datetime.fromisoformat(pos["opened_at"])
+        age_hours = (now - opened_at).total_seconds() / 3600
+        result = None
+        if current_price >= pos["target1"]:
+            result = "win"
+        elif current_price <= pos["stop"]:
+            result = "loss"
+        elif age_hours >= PNL_EXPIRY_HOURS.get(pos["tf"], 24):
+            result = "expired"
+        if result:
+            resolved.append({**pos, "result": result, "resolved_at": now.isoformat(), "exit_price": current_price})
+        else:
+            still_open[key] = pos
+
+    # Open new positions for currently-bullish coins not already being tracked. These are
+    # left untouched (not resolution-checked) until at least the next run.
+    for tf_key, results in intraday_results.items():
+        for r in results:
+            if r.get("status") != "bullish":
+                continue
+            key = f"{tf_key}:{r['symbol']}"
+            if key in still_open:
+                continue
+            t = r["trade"]
+            still_open[key] = {
+                "coin": r["symbol"], "name": r.get("name", r["symbol"]), "tf": tf_key,
+                "entry": t["entry"], "stop": t["stop"], "target1": t["target1"], "target2": t["target2"],
+                "opened_at": now.isoformat(),
+            }
+
+    cutoff = now - datetime.timedelta(days=PNL_RESOLVED_RETENTION_DAYS)
+    resolved = [r for r in resolved if datetime.datetime.fromisoformat(r["resolved_at"]) >= cutoff]
+    return {"open": still_open, "resolved": resolved}
+
+
+def compute_pnl_stats(resolved):
+    now = datetime.datetime.now()
+
+    def stats_for(days):
+        cutoff = now - datetime.timedelta(days=days)
+        window = [r for r in resolved if datetime.datetime.fromisoformat(r["resolved_at"]) >= cutoff]
+        wins = sum(1 for r in window if r["result"] == "win")
+        losses = sum(1 for r in window if r["result"] == "loss")
+        expired = sum(1 for r in window if r["result"] == "expired")
+        decided = wins + losses
+        return {"wins": wins, "losses": losses, "expired": expired,
+                "win_rate": (wins / decided * 100) if decided else None}
+
+    return {"daily": stats_for(1), "weekly": stats_for(7), "monthly": stats_for(30)}
 
 
 def ps_safe(s):
@@ -981,8 +1061,11 @@ def build_coin_data(coin, markets, fng_latest, fng_prev, state):
 
 
 def render(coins_data, fng_value, fng_classification, generated_at, any_stale,
-           alerts_results=None, screener_results=None, intraday_results=None):
+           alerts_results=None, screener_results=None, intraday_results=None,
+           pnl_stats=None, pnl_state=None):
     total_stale = any_stale
+    pnl_stats = pnl_stats or {"daily": {}, "weekly": {}, "monthly": {}}
+    pnl_state = pnl_state or {}
     generated_at_iso = generated_at.replace(" ", "T") + "Z"  # generated_at is naive UTC (GH runners run in UTC)
     alerts_results = alerts_results or []
     screener_results = screener_results or []
@@ -1007,12 +1090,14 @@ def render(coins_data, fng_value, fng_classification, generated_at, any_stale,
     tabs_inputs = (
         '<input type="radio" name="tabs" id="tab-screener" checked>\n'
         '<input type="radio" name="tabs" id="tab-bigcoins">\n'
-        '<input type="radio" name="tabs" id="tab-mypicks">'
+        '<input type="radio" name="tabs" id="tab-mypicks">\n'
+        '<input type="radio" name="tabs" id="tab-performance">'
     )
     tabs_labels = (
         f'<label for="tab-screener">🔍 Screener<span class="info-tip" tabindex="0" data-tip="{screener_info_tip}">&#9432;</span></label>\n'
         '<label for="tab-bigcoins">🪙 Big Coins</label>\n'
-        '<label for="tab-mypicks">⭐ My Picks</label>'
+        '<label for="tab-mypicks">⭐ My Picks</label>\n'
+        '<label for="tab-performance">📊 Performance</label>'
     )
 
     panels = {}
@@ -1456,36 +1541,53 @@ def render(coins_data, fng_value, fng_classification, generated_at, any_stale,
 </div>
 """
 
-    fng_top = f"{fng_value} ({fng_classification})" if fng_value is not None else "N/A"
+    def _pnl_stat_card(period_label, stats):
+        wr = stats.get("win_rate")
+        wr_display = f"{wr:.0f}%" if wr is not None else "N/A"
+        wr_class = "pos" if (wr is not None and wr >= 50) else ("neg" if wr is not None else "")
+        expired = stats.get("expired", 0)
+        expired_bit = f" &middot; {expired} expired" if expired else ""
+        return f"""
+    <div class="card">
+      <div class="card-title">{period_label}</div>
+      <div class="{wr_class}" style="font-size:28px; font-weight:800;">{wr_display}</div>
+      <div class="sub">{stats.get('wins', 0)}W &middot; {stats.get('losses', 0)}L{expired_bit}</div>
+    </div>"""
 
-    glance_cards = []
-    for c in coins_data:
-        sig = spot_signals_by_coin.get(c["key"])
-        if sig:
-            glance_cards.append(f"""
-    <div class="glance-card {sig['status']}">
-      <div class="glance-row-top"><span class="glance-coin">{c['emoji']} {c['key']}</span><span class="glance-verdict">{sig['label']}</span></div>
-      <div class="glance-plain">{sig['plain']}</div>
-    </div>""")
-    if screener_results:
-        top_pick, bottom_pick = screener_results[0], screener_results[-1]
-        glance_cards.append(f"""
-    <div class="glance-card {top_pick['status']}">
-      <div class="glance-row-top"><span class="glance-coin">🏆 Best of {len(screener_results)}</span><span class="glance-verdict">{top_pick['symbol']} {top_pick['label']}</span></div>
-      <div class="glance-plain">{top_pick['plain']}</div>
-    </div>""")
-        glance_cards.append(f"""
-    <div class="glance-card {bottom_pick['status']}">
-      <div class="glance-row-top"><span class="glance-coin">⚠️ Worst of {len(screener_results)}</span><span class="glance-verdict">{bottom_pick['symbol']} {bottom_pick['label']}</span></div>
-      <div class="glance-plain">{bottom_pick['plain']}</div>
-    </div>""")
-    glance_html = f"""
-<details class="glance-bar">
-  <summary class="glance-title">AT A GLANCE<span class="info-tip" tabindex="0" data-tip="One-line verdicts for BTC, ETH, and the best/worst-scoring coins from the last screener scan -- a quick summary of the same rule-based model used throughout the dashboard, not a separate signal.">&#9432;</span> <span class="glance-hint">(tap to expand/collapse)</span></summary>
-  <div class="glance-row">{"".join(glance_cards)}</div>
-  <div class="glance-footnote">Educational rule-based model, not financial advice. Full reasoning for each verdict is on its tab below.</div>
-</details>
+    pnl_open = pnl_state.get("open", {})
+    if pnl_open:
+        open_rows = "".join(
+            f'<tr><td>{p["name"]} ({p["coin"]})</td><td class="watch">{ {"15m": "15-Minute", "1h": "1-Hour"}.get(p["tf"], p["tf"]) }</td>'
+            f'<td>{fmt_usd_adaptive(p["entry"])}</td><td class="neg">{fmt_usd_adaptive(p["stop"])}</td>'
+            f'<td class="pos">{fmt_usd_adaptive(p["target1"])}</td></tr>'
+            for p in pnl_open.values()
+        )
+        open_positions_html = f"""
+  <div class="cycle-map" style="margin-top:10px;">
+    <div class="card-title">Currently Tracking ({len(pnl_open)})</div>
+    <table class="signal-table" style="margin-top:6px; margin-bottom:0;">
+      <thead><tr><th>Coin</th><th>Timeframe</th><th>Entry</th><th>Stop</th><th>Target</th></tr></thead>
+      <tbody>{open_rows}</tbody>
+    </table>
+  </div>"""
+    else:
+        open_positions_html = '<div class="sub" style="margin-top:10px;">No calls currently being tracked.</div>'
+
+    performance_panel = f"""
+<div class="panel panel-performance">
+  <div class="cycle-map spot-signal-card" style="margin-bottom:10px;">
+    <div class="card-title">📊 SCANNER PERFORMANCE<span class="info-tip" tabindex="0" data-tip="Tracks 15m/1h bullish scanner calls from when they first appear to when they hit their target (win), hit their stop (loss), or time out unresolved (expired -- excluded from win rate). Daily models aren't tracked here: they use two scenarios (pullback/breakout) instead of one clear entry, and rotate too slowly to resolve cleanly. Educational transparency, not a trading track record.">&#9432;</span></div>
+  </div>
+  <div class="top-grid" style="grid-template-columns:1fr 1fr 1fr;">
+    {_pnl_stat_card("Daily", pnl_stats.get("daily", {}))}
+    {_pnl_stat_card("Weekly", pnl_stats.get("weekly", {}))}
+    {_pnl_stat_card("Monthly", pnl_stats.get("monthly", {}))}
+  </div>
+  {open_positions_html}
+</div>
 """
+
+    fng_top = f"{fng_value} ({fng_classification})" if fng_value is not None else "N/A"
 
     html = f"""<!DOCTYPE html>
 <html lang="en">
@@ -1535,12 +1637,14 @@ def render(coins_data, fng_value, fng_classification, generated_at, any_stale,
   #tab-screener:checked ~ .tabbar label[for=tab-screener],
   #tab-bigcoins:checked ~ .tabbar label[for=tab-bigcoins],
   #tab-mypicks:checked ~ .tabbar label[for=tab-mypicks],
+  #tab-performance:checked ~ .tabbar label[for=tab-performance],
   #bc-btc:checked ~ .tabbar label[for=bc-btc],
   #bc-eth:checked ~ .tabbar label[for=bc-eth] {{ background: var(--accent); color:#04121c; border-color:var(--accent); }}
   .panel {{ display:none; padding: 6px 16px 20px; }}
   #tab-screener:checked ~ .panel-screener {{ display:block; }}
   #tab-bigcoins:checked ~ .panel-bigcoins {{ display:block; }}
   #tab-mypicks:checked ~ .panel-mypicks {{ display:block; }}
+  #tab-performance:checked ~ .panel-performance {{ display:block; }}
   .bigcoin-panel {{ display:none; }}
   #bc-btc:checked ~ .bigcoin-panel-btc {{ display:block; }}
   #bc-eth:checked ~ .bigcoin-panel-eth {{ display:block; }}
@@ -1581,18 +1685,8 @@ def render(coins_data, fng_value, fng_classification, generated_at, any_stale,
   .badge.alert-armed {{ background:#182233; color: var(--accent); }}
   .badge.alert-triggered {{ background:#4a1010; color:#fff; animation: pulse 1.4s infinite; }}
   @keyframes pulse {{ 0%,100% {{ opacity:1; }} 50% {{ opacity:0.55; }} }}
-  .top-strip {{ display:flex; gap:8px; align-items:stretch; margin: 8px 16px 0; }}
-  .top-strip > .glance-bar, .top-strip > .alert-banner {{ margin:0; flex:1; min-width:0; }}
-  @media (max-width: 700px) {{ .top-strip {{ flex-direction:column; }} }}
-  .alert-banner {{ padding: 8px 12px; background:#3a0d0d; border:1px solid #ef4444; border-radius:10px; color:#fecaca; font-weight:700; font-size:13px; animation: pulse 1.6s infinite; white-space:nowrap; overflow-x:auto; -webkit-overflow-scrolling:touch; }}
+  .alert-banner {{ margin: 8px 16px 0; padding: 8px 12px; background:#3a0d0d; border:1px solid #ef4444; border-radius:10px; color:#fecaca; font-weight:700; font-size:13px; animation: pulse 1.6s infinite; white-space:nowrap; overflow-x:auto; -webkit-overflow-scrolling:touch; }}
   .alert-banner-item {{ white-space:nowrap; }}
-  .glance-bar {{ padding: 8px 10px; background: var(--panel); border:2px solid var(--border); border-radius:12px; }}
-  .glance-bar[open] .glance-title {{ margin-bottom:6px; }}
-  .glance-title {{ font-size:10px; color:var(--muted); letter-spacing:1.5px; font-weight:800; cursor:pointer; list-style:none; display:flex; align-items:center; gap:8px; }}
-  .glance-title::-webkit-details-marker {{ display:none; }}
-  .glance-title::before {{ content:'▸'; display:inline-block; transition:transform 0.15s; font-size:11px; }}
-  .glance-bar[open] .glance-title::before {{ transform:rotate(90deg); }}
-  .glance-hint {{ font-weight:400; letter-spacing:0; color:var(--muted); font-size:10px; text-transform:none; }}
   .info-tip {{ display:inline-flex; align-items:center; justify-content:center; width:15px; height:15px;
     border-radius:50%; background:var(--border); color:var(--muted); font-size:11px; font-weight:700;
     cursor:help; position:relative; margin-left:5px; vertical-align:middle; flex-shrink:0; }}
@@ -1606,24 +1700,6 @@ def render(coins_data, fng_value, fng_classification, generated_at, any_stale,
   .info-tip:hover::before, .info-tip:focus::before {{
     content:''; position:absolute; bottom:112%; left:50%; transform:translateX(-50%);
     border:5px solid transparent; border-top-color:#1c2230; z-index:60;
-  }}
-  .glance-row {{ display:grid; grid-template-columns: repeat(auto-fit, minmax(170px, 1fr)); gap:8px; }}
-  .glance-card {{ border-radius:8px; padding:7px 10px; border:1px solid var(--border); background:#0d1320; min-width:0; }}
-  .glance-card.bullish {{ border-color:#1f6a4a; background:#0d1c15; }}
-  .glance-card.bearish {{ border-color:#7a2e2e; background:#1c0f0f; }}
-  .glance-card.neutral {{ border-color:#5a4d18; background:#1c1810; }}
-  .glance-row-top {{ display:flex; align-items:baseline; justify-content:space-between; gap:8px; margin-bottom:2px; min-width:0; }}
-  .glance-coin {{ font-size:11px; color:var(--muted); font-weight:700; letter-spacing:0.5px; white-space:nowrap; flex-shrink:0; }}
-  .glance-verdict {{ font-size:12.5px; font-weight:800; text-align:right; white-space:nowrap; overflow:hidden; text-overflow:ellipsis; min-width:0; flex:1 1 auto; }}
-  .glance-plain {{ font-size:11px; color:var(--text); line-height:1.3; white-space:nowrap; overflow:hidden; text-overflow:ellipsis; }}
-  .glance-footnote {{ font-size:10px; color:var(--muted); margin-top:6px; }}
-  @media (max-width: 700px) {{ .glance-row {{ grid-template-columns: 1fr 1fr; }} .glance-verdict {{ text-align:left; }} }}
-  @media (max-width: 480px) {{
-    .glance-row {{ grid-template-columns: 1fr; }}
-    .glance-row-top {{ flex-wrap:wrap; }}
-    .glance-coin {{ white-space:normal; }}
-    .glance-verdict {{ white-space:normal; text-align:left; }}
-    .glance-plain {{ white-space:normal; }}
   }}
   .cycle-map {{ background: var(--panel); border:1px solid var(--border); border-radius:12px; padding:10px 12px; }}
   .spot-signal-card {{ border-width:2px; }}
@@ -1681,11 +1757,12 @@ def render(coins_data, fng_value, fng_classification, generated_at, any_stale,
   <h1>&#9889; KAIRO LIVE DASHBOARD</h1>
   <div class="meta">Fear &amp; Greed: {fng_top}<span class="info-tip" tabindex="0" data-tip="A 0-100 index of overall crypto market sentiment from Alternative.me, based on volatility, volume, social media, and surveys. Low = fear (often washed-out), high = greed (often euphoric). A contrarian gauge, not a timing signal on its own.">&#9432;</span> &nbsp;|&nbsp; <span id="updated-ago">just now</span><span class="info-tip" tabindex="0" data-tip="Generated: {generated_at} UTC. Data regenerated {DATA_REFRESH_LABEL}.">&#9432;</span></div>
 </header>
-<div class="top-strip">{glance_html}{banner_html}</div>
+{banner_html}
 {tabs_inputs}
 <div class="tabbar">{tabs_labels}</div>
 {bigcoins_panel}
 {screener_panel}
+{performance_panel}
 <footer>
   Education only, not financial advice. You trade at your own risk.
   <span class="info-tip" tabindex="0" data-tip="Data sources: CoinGecko (price/market), Binance Futures public API (funding rate, open interest, mark/index premium), Alternative.me (Fear &amp; Greed Index). No paid subscriptions used. Rows marked Unavailable (MVRV Z-Score, NUPL, exchange flows, ETF flows) require a paid on-chain data provider not connected here. Cycle Map, Heat Score, and Liquidation Risk are Kairo's own heuristic models, not a third-party analytics service.">&#9432;</span>
@@ -2025,8 +2102,15 @@ def main():
         intraday_results[tf_key] = build_intraday_screener(screener_markets, tf_key)
         log(f"Intraday {tf_key} produced {len(intraday_results[tf_key])} ranked coins")
 
+    prev_pnl_state = state.get("_pnl_tracker", {})
+    new_pnl_state = update_pnl_tracker(prev_pnl_state, intraday_results)
+    pnl_stats = compute_pnl_stats(new_pnl_state.get("resolved", []))
+    log(f"P&L tracker: {len(new_pnl_state.get('open', {}))} open, "
+        f"{len(new_pnl_state.get('resolved', []))} resolved on record")
+
     html, spot_signals_by_coin = render(coins_data, fng_value, fng_classification, generated_at, any_stale,
-                                         alerts_results, screener_results, intraday_results)
+                                         alerts_results, screener_results, intraday_results,
+                                         pnl_stats, new_pnl_state)
     with open(OUTPUT_PATH, "w", encoding="utf-8") as f:
         f.write(html)
     copy_static_assets()
@@ -2040,7 +2124,7 @@ def main():
 
     new_state = {"_fng_value": fng_value, "_fng_classification": fng_classification,
                  "_alerts_state": new_alerts_state, "_screener": new_screener_state,
-                 "_strong_buy_state": new_strong_state}
+                 "_strong_buy_state": new_strong_state, "_pnl_tracker": new_pnl_state}
     for cd in coins_data:
         new_state[cd["key"]] = {k: v for k, v in cd.items() if k != "stale"}
     save_state(new_state)
