@@ -11,7 +11,7 @@
       "last_triggered_at": null
     },
     "eth-resistance-break": {
-      "triggered": true,
+      "triggered": false,
       "last_triggered_at": "2026-09-11 22:45:21"
     },
     "eth-support-break": {
@@ -117,11 +117,11 @@
       "symbol": "XRP",
       "name": "XRP",
       "price": 1.35,
-      "pct_24h": -0.35158,
-      "pct_7d": -3.1,
+      "pct_24h": 0.21707,
+      "pct_7d": -3.4,
       "support_30d": 0.9927072784932938,
       "resistance_30d": 1.52050482788377,
-      "as_of": "2026-09-11 19:05:22",
+      "as_of": "2026-09-11 22:50:26",
       "stale": false
     },
     "solana": {
@@ -1379,7 +1379,7 @@
       "rows": [
         [
           "Price vs. recent range",
-          "Near its 30-day high (~$9.38) - less room to run",
+          "Near its 30-day high (~$9.40) - less room to run",
           -1
         ],
         [
@@ -1399,7 +1399,7 @@
         ],
         [
           "Stretch from long-term average",
-          "+33.2% above its long-term average - very stretched",
+          "+34.1% above its long-term average - very stretched",
           -2
         ],
         [
@@ -1412,12 +1412,12 @@
       "id": "gatechain-token",
       "symbol": "GT",
       "name": "Gate",
-      "price": 9.34,
-      "pct_24h": -0.15612,
-      "pct_7d": 11.2,
+      "price": 9.4,
+      "pct_24h": 0.38668,
+      "pct_7d": 12.4,
       "support_30d": 6.673649191532821,
-      "resistance_30d": 9.38216924975626,
-      "as_of": "2026-09-11 19:45:25",
+      "resistance_30d": 9.40071352121171,
+      "as_of": "2026-09-11 22:50:26",
       "stale": false
     },
     "crypto-com-chain": {
@@ -2767,12 +2767,12 @@
     "memecore": {
       "label": "\ud83d\udfe1 HOLD / NEUTRAL",
       "status": "neutral",
-      "score": -1,
+      "score": 0,
       "rows": [
         [
           "Price vs. recent range",
-          "Near its 30-day high (~$1.25) - less room to run",
-          -1
+          "Sitting in the middle of its 30-day range",
+          0
         ],
         [
           "Crowd mood (Fear & Greed)",
@@ -2791,7 +2791,7 @@
         ],
         [
           "Stretch from long-term average",
-          "-43.0% below its long-term average - confirmed downtrend",
+          "-43.5% below its long-term average - confirmed downtrend",
           -1
         ],
         [
@@ -2804,12 +2804,12 @@
       "id": "memecore",
       "symbol": "M",
       "name": "MemeCore",
-      "price": 1.19,
-      "pct_24h": 2.12525,
+      "price": 1.18,
+      "pct_24h": 1.78096,
       "pct_7d": 5.9,
       "support_30d": 1.0402044506518406,
       "resistance_30d": 1.2453913363052769,
-      "as_of": "2026-09-11 22:20:25",
+      "as_of": "2026-09-11 22:50:26",
       "stale": false
     },
     "aave": {
@@ -3313,10 +3313,10 @@
         "name": "Mantle",
         "tf": "1h",
         "entry": 0.5655,
-        "stop": 0.5601375,
-        "target1": 0.5708625,
-        "target2": 0.5762250000000001,
-        "opened_at": "2026-09-11T22:47:13.112548"
+        "stop": 0.5601208333333333,
+        "target1": 0.5708791666666667,
+        "target2": 0.5762583333333334,
+        "opened_at": "2026-09-11T22:52:17.196475"
       },
       "daily:XLM": {
         "coin": "XLM",
@@ -3326,7 +3326,7 @@
         "stop": 0.14140496666666666,
         "target1": 0.16294103333333335,
         "target2": 0.1737090666666667,
-        "opened_at": "2026-09-11T22:47:13.112548"
+        "opened_at": "2026-09-11T22:52:17.196475"
       }
     },
     "resolved": [
@@ -4603,6 +4603,32 @@
         "result": "win",
         "resolved_at": "2026-09-11T22:47:13.112548",
         "exit_price": 0.177715
+      },
+      {
+        "coin": "MNT",
+        "name": "Mantle",
+        "tf": "1h",
+        "entry": 0.5655,
+        "stop": 0.5601375,
+        "target1": 0.5708625,
+        "target2": 0.5762250000000001,
+        "opened_at": "2026-09-11T22:47:13.112548",
+        "result": "win",
+        "resolved_at": "2026-09-11T22:52:17.196475",
+        "exit_price": 0.5784
+      },
+      {
+        "coin": "XLM",
+        "name": "Stellar",
+        "tf": "daily",
+        "entry": 0.152173,
+        "stop": 0.14140496666666666,
+        "target1": 0.16294103333333335,
+        "target2": 0.1737090666666667,
+        "opened_at": "2026-09-11T22:47:13.112548",
+        "result": "win",
+        "resolved_at": "2026-09-11T22:52:17.196475",
+        "exit_price": 0.177268
       }
     ]
   },
@@ -4610,14 +4636,14 @@
     "key": "BTC",
     "name": "Bitcoin",
     "emoji": "\u20bf",
-    "price": 77166,
+    "price": 77101,
     "high_24h": 79607,
     "low_24h": 76393,
-    "pct_24h": 0.42002,
+    "pct_24h": 0.21323,
     "pct_7d": -3.2,
     "pct_30d": 21.4,
-    "sma50": 70645.47120029746,
-    "sma200": 70015.70636810527,
+    "sma50": 70644.18001088356,
+    "sma200": 70015.3835707518,
     "support_30d": 62843.70368466329,
     "resistance_30d": 81264.70153038795,
     "mark_price": 77122.19098201,
@@ -4632,16 +4658,16 @@
     "key": "ETH",
     "name": "Ethereum",
     "emoji": "\u039e",
-    "price": 2520.25,
+    "price": 2516.46,
     "high_24h": 2647.68,
     "low_24h": 2436.69,
-    "pct_24h": 3.02558,
+    "pct_24h": 2.68395,
     "pct_7d": 2.6,
     "pct_30d": 33.5,
-    "sma50": 2160.67303270495,
-    "sma200": 2051.943439266995,
+    "sma50": 2160.5938445690776,
+    "sma200": 2051.923642233027,
     "support_30d": 1874.401898191962,
-    "resistance_30d": 2520.35197008973,
+    "resistance_30d": 2516.3925632961336,
     "mark_price": 2515.0197907,
     "index_price": 2516.48302326,
     "funding_rate": 7.82e-06,
