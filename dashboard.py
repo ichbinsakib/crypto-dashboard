@@ -55,7 +55,9 @@ DATA_REFRESH_LABEL = "every ~10 min (GitHub Actions, best-effort)"  # keep in sy
 DASHBOARD_URL = "https://ichbinsakib.github.io/crypto-dashboard/"
 DISCORD_WEBHOOK_URL = os.environ.get("DISCORD_WEBHOOK_URL")  # optional; strong-buy alerts are a no-op without it
 STRONG_DAILY_SCORE = 5   # matches the "ACCUMULATION ZONE" tier, not the weaker "LEAN ACCUMULATE"
-STRONG_INTRADAY_SCORE = 3  # matches the "NEAR-TERM DIP ZONE" tier, not the weaker "LEAN LONG"
+STRONG_INTRADAY_SCORE = 4  # the maximum achievable score (all 3 factors positive) -- the
+                            # strictest possible bar under this model, not just the
+                            # "NEAR-TERM DIP ZONE" tier (which starts at 3) or "LEAN LONG" (1-2)
 
 PNL_EXPIRY_HOURS = {"15m": 6, "1h": 24}  # how long an unresolved intraday call stays open before we give up on it
 PNL_BATCH_SIZE = 8  # max confirmed signals opened per timeframe per batch; a new batch only
