@@ -4,7 +4,7 @@
   "_alerts_state": {
     "btc-resistance-break": {
       "triggered": true,
-      "last_triggered_at": "2026-09-11 14:21:34"
+      "last_triggered_at": "2026-09-11 14:25:22"
     },
     "btc-support-break": {
       "triggered": false,
@@ -12,7 +12,7 @@
     },
     "eth-resistance-break": {
       "triggered": true,
-      "last_triggered_at": "2026-09-11 14:21:34"
+      "last_triggered_at": "2026-09-11 14:25:22"
     },
     "eth-support-break": {
       "triggered": false,
@@ -343,7 +343,7 @@
         ],
         [
           "Stretch from long-term average",
-          "-5.6% vs its long-term average - not stretched either way",
+          "-2.2% vs its long-term average - not stretched either way",
           0
         ],
         [
@@ -356,12 +356,12 @@
       "id": "dogecoin",
       "symbol": "DOGE",
       "name": "Dogecoin",
-      "price": 0.083323,
-      "pct_24h": -2.12032,
-      "pct_7d": -4.6,
+      "price": 0.086401,
+      "pct_24h": 2.9525,
+      "pct_7d": 2.4,
       "support_30d": 0.06952870548515376,
       "resistance_30d": 0.09337940032634065,
-      "as_of": "2026-09-11 12:25:21",
+      "as_of": "2026-09-11 14:25:22",
       "stale": false
     },
     "zcash": {
@@ -461,9 +461,9 @@
       "stale": false
     },
     "chainlink": {
-      "label": "\ud83d\udd34 CAUTION - REDUCE NEW BUYS",
-      "status": "bearish",
-      "score": -2,
+      "label": "\ud83d\udfe1 HOLD / NEUTRAL",
+      "status": "neutral",
+      "score": -1,
       "rows": [
         [
           "Price vs. recent range",
@@ -487,8 +487,8 @@
         ],
         [
           "Stretch from long-term average",
-          "+30.0% above its long-term average - very stretched",
-          -2
+          "+29.9% above its long-term average - a bit stretched",
+          -1
         ],
         [
           "Leverage traders' bias",
@@ -496,16 +496,16 @@
           0
         ]
       ],
-      "plain": "Getting risky - I'd hold off on new buys until this cools down.",
+      "plain": "No real edge either way right now - fine to just wait and watch.",
       "id": "chainlink",
       "symbol": "LINK",
       "name": "Chainlink",
-      "price": 11.98,
-      "pct_24h": 2.71959,
+      "price": 11.97,
+      "pct_24h": 2.76674,
       "pct_7d": 3.2,
       "support_30d": 8.879252170934992,
       "resistance_30d": 13.237155745219605,
-      "as_of": "2026-09-11 14:15:22",
+      "as_of": "2026-09-11 14:25:22",
       "stale": false
     },
     "whitebit": {
@@ -2805,11 +2805,11 @@
       "symbol": "M",
       "name": "MemeCore",
       "price": 1.19,
-      "pct_24h": -0.48601,
-      "pct_7d": 9.4,
+      "pct_24h": 2.40248,
+      "pct_7d": 10.2,
       "support_30d": 1.0402044506518406,
       "resistance_30d": 1.2453913363052769,
-      "as_of": "2026-09-11 12:45:23",
+      "as_of": "2026-09-11 14:25:22",
       "stale": false
     },
     "aave": {
@@ -3298,14 +3298,14 @@
     "key": "BTC",
     "name": "Bitcoin",
     "emoji": "\u20bf",
-    "price": 79055,
+    "price": 79056,
     "high_24h": 79341,
     "low_24h": 76393,
-    "pct_24h": 2.71326,
+    "pct_24h": 2.50624,
     "pct_7d": -0.7,
     "pct_30d": 23.1,
-    "sma50": 70684.6088647481,
-    "sma200": 70025.49078421792,
+    "sma50": 70682.46791160118,
+    "sma200": 70024.9555459312,
     "support_30d": 62843.70368466329,
     "resistance_30d": 81264.70153038795,
     "mark_price": 77230.11864493,
@@ -3320,16 +3320,16 @@
     "key": "ETH",
     "name": "Ethereum",
     "emoji": "\u039e",
-    "price": 2609.93,
+    "price": 2612.03,
     "high_24h": 2631.39,
     "low_24h": 2433.27,
-    "pct_24h": 7.38053,
+    "pct_24h": 7.18632,
     "pct_7d": 6.7,
     "pct_30d": 36.9,
-    "sma50": 2162.4735073153142,
-    "sma200": 2052.393557919586,
+    "sma50": 2162.4756639135508,
+    "sma200": 2052.394097069145,
     "support_30d": 1874.401898191962,
-    "resistance_30d": 2610.375700607956,
+    "resistance_30d": 2610.4835305197985,
     "mark_price": 2466.82,
     "index_price": 2467.80488372,
     "funding_rate": 3.45e-05,
