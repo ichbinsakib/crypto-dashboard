@@ -12,7 +12,7 @@
     },
     "eth-resistance-break": {
       "triggered": true,
-      "last_triggered_at": "2026-09-11 21:15:31"
+      "last_triggered_at": "2026-09-11 21:20:27"
     },
     "eth-support-break": {
       "triggered": false,
@@ -1591,7 +1591,7 @@
         ],
         [
           "Stretch from long-term average",
-          "+101.0% above its long-term average - very stretched",
+          "+101.2% above its long-term average - very stretched",
           -2
         ],
         [
@@ -1604,12 +1604,12 @@
       "id": "venice-token",
       "symbol": "VVV",
       "name": "Venice Token",
-      "price": 24.02,
-      "pct_24h": -5.96451,
-      "pct_7d": 37.7,
+      "price": 24.04,
+      "pct_24h": -0.45645,
+      "pct_7d": 32.7,
       "support_30d": 11.794592355917386,
       "resistance_30d": 25.88474946901688,
-      "as_of": "2026-09-11 18:55:21",
+      "as_of": "2026-09-11 21:20:27",
       "stale": false
     },
     "litecoin": {
@@ -2071,7 +2071,7 @@
         ],
         [
           "Stretch from long-term average",
-          "-32.4% below its long-term average - confirmed downtrend",
+          "-32.3% below its long-term average - confirmed downtrend",
           -1
         ],
         [
@@ -2084,12 +2084,12 @@
       "id": "pi-network",
       "symbol": "PI",
       "name": "Pi Network",
-      "price": 0.095079,
-      "pct_24h": -0.7903,
+      "price": 0.095219,
+      "pct_24h": -0.54621,
       "pct_7d": 1.0,
       "support_30d": 0.08559695435343688,
       "resistance_30d": 0.09798925329339339,
-      "as_of": "2026-09-11 21:00:35",
+      "as_of": "2026-09-11 21:20:27",
       "stale": false
     },
     "ondo-finance": {
@@ -3223,7 +3223,7 @@
         ],
         [
           "Stretch from long-term average",
-          "+5.6% vs its long-term average - not stretched either way",
+          "+5.4% vs its long-term average - not stretched either way",
           0
         ],
         [
@@ -3236,12 +3236,12 @@
       "id": "kaspa",
       "symbol": "KAS",
       "name": "Kaspa",
-      "price": 0.03584885,
-      "pct_24h": -1.40744,
-      "pct_7d": 22.5,
+      "price": 0.03581257,
+      "pct_24h": -2.77074,
+      "pct_7d": 22.0,
       "support_30d": 0.025258977496893695,
       "resistance_30d": 0.03651282069323304,
-      "as_of": "2026-09-11 16:50:27",
+      "as_of": "2026-09-11 21:20:27",
       "stale": false
     },
     "cosmos": {
@@ -3317,7 +3317,7 @@
         "stop": 0.5599583333333333,
         "target1": 0.5710416666666667,
         "target2": 0.5765833333333333,
-        "opened_at": "2026-09-11T21:17:21.954020"
+        "opened_at": "2026-09-11T21:22:18.583001"
       },
       "daily:XLM": {
         "coin": "XLM",
@@ -3327,7 +3327,7 @@
         "stop": 0.14140496666666666,
         "target1": 0.16294103333333335,
         "target2": 0.1737090666666667,
-        "opened_at": "2026-09-11T21:17:21.954020"
+        "opened_at": "2026-09-11T21:22:18.583001"
       }
     },
     "resolved": [
@@ -4123,6 +4123,32 @@
         "result": "win",
         "resolved_at": "2026-09-11T21:17:21.954020",
         "exit_price": 0.179406
+      },
+      {
+        "coin": "MNT",
+        "name": "Mantle",
+        "tf": "1h",
+        "entry": 0.5655,
+        "stop": 0.5599583333333333,
+        "target1": 0.5710416666666667,
+        "target2": 0.5765833333333333,
+        "opened_at": "2026-09-11T21:17:21.954020",
+        "result": "win",
+        "resolved_at": "2026-09-11T21:22:18.583001",
+        "exit_price": 0.5837
+      },
+      {
+        "coin": "XLM",
+        "name": "Stellar",
+        "tf": "daily",
+        "entry": 0.152173,
+        "stop": 0.14140496666666666,
+        "target1": 0.16294103333333335,
+        "target2": 0.1737090666666667,
+        "opened_at": "2026-09-11T21:17:21.954020",
+        "result": "win",
+        "resolved_at": "2026-09-11T21:22:18.583001",
+        "exit_price": 0.179384
       }
     ]
   },
@@ -4130,14 +4156,14 @@
     "key": "BTC",
     "name": "Bitcoin",
     "emoji": "\u20bf",
-    "price": 77355,
+    "price": 77386,
     "high_24h": 79607,
     "low_24h": 76393,
-    "pct_24h": 0.15251,
+    "pct_24h": 0.24901,
     "pct_7d": -3.1,
     "pct_30d": 22.0,
-    "sma50": 70649.28980568124,
-    "sma200": 70016.66101945122,
+    "sma50": 70649.75231874277,
+    "sma200": 70016.7766477166,
     "support_30d": 62843.70368466329,
     "resistance_30d": 81264.70153038795,
     "mark_price": 77023.94235507,
@@ -4152,16 +4178,16 @@
     "key": "ETH",
     "name": "Ethereum",
     "emoji": "\u039e",
-    "price": 2537.85,
+    "price": 2538.67,
     "high_24h": 2647.68,
     "low_24h": 2436.69,
-    "pct_24h": 3.16985,
+    "pct_24h": 3.234,
     "pct_7d": 2.9,
     "pct_30d": 34.6,
-    "sma50": 2161.0228954111117,
-    "sma200": 2052.0309049435355,
+    "sma50": 2161.0469288508493,
+    "sma200": 2052.0369133034696,
     "support_30d": 1874.401898191962,
-    "resistance_30d": 2537.84510539783,
+    "resistance_30d": 2539.0467773847067,
     "mark_price": 2535.88,
     "index_price": 2537.10627907,
     "funding_rate": 2.047e-05,
