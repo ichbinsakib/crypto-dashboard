@@ -12,7 +12,7 @@
     },
     "eth-resistance-break": {
       "triggered": true,
-      "last_triggered_at": "2026-09-11 17:00:36"
+      "last_triggered_at": "2026-09-11 17:05:22"
     },
     "eth-support-break": {
       "triggered": false,
@@ -103,7 +103,7 @@
         ],
         [
           "Stretch from long-term average",
-          "+7.5% vs its long-term average - not stretched either way",
+          "+8.2% vs its long-term average - not stretched either way",
           0
         ],
         [
@@ -116,12 +116,12 @@
       "id": "ripple",
       "symbol": "XRP",
       "name": "XRP",
-      "price": 1.37,
-      "pct_24h": 1.99253,
-      "pct_7d": -1.0,
+      "price": 1.38,
+      "pct_24h": 1.68315,
+      "pct_7d": -1.6,
       "support_30d": 0.9927072784932938,
       "resistance_30d": 1.52050482788377,
-      "as_of": "2026-09-11 16:40:26",
+      "as_of": "2026-09-11 17:05:22",
       "stale": false
     },
     "solana": {
@@ -775,7 +775,7 @@
         ],
         [
           "Stretch from long-term average",
-          "-6.8% vs its long-term average - not stretched either way",
+          "-7.6% vs its long-term average - not stretched either way",
           0
         ],
         [
@@ -788,12 +788,12 @@
       "id": "kucoin-shares",
       "symbol": "KCS",
       "name": "KuCoin",
-      "price": 7.14,
-      "pct_24h": 4.2378,
-      "pct_7d": 1.7,
+      "price": 7.08,
+      "pct_24h": 3.36167,
+      "pct_7d": 0.8,
       "support_30d": 6.514591596607885,
       "resistance_30d": 7.8821382735057615,
-      "as_of": "2026-09-11 15:00:38",
+      "as_of": "2026-09-11 17:05:22",
       "stale": false
     },
     "hedera-hashgraph": {
@@ -823,7 +823,7 @@
         ],
         [
           "Stretch from long-term average",
-          "-8.6% vs its long-term average - not stretched either way",
+          "-8.5% vs its long-term average - not stretched either way",
           0
         ],
         [
@@ -836,12 +836,12 @@
       "id": "hedera-hashgraph",
       "symbol": "HBAR",
       "name": "Hedera",
-      "price": 0.075472,
-      "pct_24h": 0.95317,
-      "pct_7d": -1.8,
+      "price": 0.07552,
+      "pct_24h": 0.6341,
+      "pct_7d": -2.3,
       "support_30d": 0.06461260477975343,
       "resistance_30d": 0.08182180696524229,
-      "as_of": "2026-09-11 16:37:46",
+      "as_of": "2026-09-11 17:05:22",
       "stale": false
     },
     "pepe": {
@@ -3306,16 +3306,6 @@
         "target2": 1.7057133333333334,
         "opened_at": "2026-09-11T22:33:33.175542"
       },
-      "1h:LIT": {
-        "coin": "LIT",
-        "name": "Lighter",
-        "tf": "1h",
-        "entry": 0.1126,
-        "stop": 0.11094166666666667,
-        "target1": 0.11425833333333334,
-        "target2": 0.11591666666666667,
-        "opened_at": "2026-09-11T16:47:27.645606"
-      },
       "1h:PI": {
         "coin": "PI",
         "name": "Pi Network",
@@ -3336,85 +3326,75 @@
         "target2": 0.0037535833333333336,
         "opened_at": "2026-09-11T16:52:29.302065"
       },
-      "15m:LINK": {
-        "coin": "LINK",
-        "name": "Chainlink",
+      "15m:ADA": {
+        "coin": "ADA",
+        "name": "Cardano",
         "tf": "15m",
-        "entry": 11.23657,
-        "stop": 11.122934333333333,
-        "target1": 11.350205666666668,
-        "target2": 11.463841333333335,
-        "opened_at": "2026-09-11T17:02:36.412836"
+        "entry": 0.2005,
+        "stop": 0.19829863333333334,
+        "target1": 0.2027013666666667,
+        "target2": 0.20490273333333336,
+        "opened_at": "2026-09-11T17:07:22.956266"
       },
-      "15m:UNI": {
-        "coin": "UNI",
-        "name": "Uniswap",
+      "15m:XRP": {
+        "coin": "XRP",
+        "name": "XRP",
         "tf": "15m",
-        "entry": 5.8754,
-        "stop": 5.78843,
-        "target1": 5.96237,
-        "target2": 6.04934,
-        "opened_at": "2026-09-11T17:02:36.412836"
+        "entry": 1.31506,
+        "stop": 1.301324,
+        "target1": 1.3287959999999999,
+        "target2": 1.3425319999999998,
+        "opened_at": "2026-09-11T17:07:22.956266"
       },
-      "15m:TAO": {
-        "coin": "TAO",
-        "name": "Bittensor",
+      "15m:HBAR": {
+        "coin": "HBAR",
+        "name": "Hedera",
         "tf": "15m",
-        "entry": 228.4964,
-        "stop": 226.05283666666665,
-        "target1": 230.93996333333334,
-        "target2": 233.38352666666668,
-        "opened_at": "2026-09-11T17:02:36.412836"
+        "entry": 0.07331,
+        "stop": 0.07284366666666667,
+        "target1": 0.07377633333333333,
+        "target2": 0.07424266666666667,
+        "opened_at": "2026-09-11T17:07:22.956266"
       },
-      "15m:DOGE": {
-        "coin": "DOGE",
-        "name": "Dogecoin",
+      "15m:CC": {
+        "coin": "CC",
+        "name": "Canton",
         "tf": "15m",
-        "entry": 0.082297,
-        "stop": 0.08158587333333332,
-        "target1": 0.08300812666666667,
-        "target2": 0.08371925333333334,
-        "opened_at": "2026-09-11T17:02:36.412836"
+        "entry": 0.095,
+        "stop": 0.094058,
+        "target1": 0.095942,
+        "target2": 0.096884,
+        "opened_at": "2026-09-11T17:07:22.956266"
       },
-      "15m:LIT": {
-        "coin": "LIT",
-        "name": "Lighter",
-        "tf": "15m",
-        "entry": 0.1126,
-        "stop": 0.11202000000000001,
-        "target1": 0.11318,
-        "target2": 0.11376,
-        "opened_at": "2026-09-11T17:02:36.412836"
-      },
-      "1h:UNI": {
-        "coin": "UNI",
-        "name": "Uniswap",
+      "1h:XRP": {
+        "coin": "XRP",
+        "name": "XRP",
         "tf": "1h",
-        "entry": 5.8754,
-        "stop": 5.752741666666667,
-        "target1": 5.998058333333333,
-        "target2": 6.120716666666666,
-        "opened_at": "2026-09-11T17:02:36.412836"
+        "entry": 1.31506,
+        "stop": 1.2982429166666665,
+        "target1": 1.3318770833333333,
+        "target2": 1.3486941666666667,
+        "opened_at": "2026-09-11T17:07:22.956266"
       },
-      "1h:DOGE": {
-        "coin": "DOGE",
-        "name": "Dogecoin",
+      "1h:ADA": {
+        "coin": "ADA",
+        "name": "Cardano",
         "tf": "1h",
-        "entry": 0.082297,
-        "stop": 0.0813952125,
-        "target1": 0.0831987875,
-        "target2": 0.084100575,
-        "opened_at": "2026-09-11T17:02:36.412836"
+        "entry": 0.2005,
+        "stop": 0.19742295833333334,
+        "target1": 0.20357704166666668,
+        "target2": 0.20665408333333335,
+        "opened_at": "2026-09-11T17:07:22.956266"
       },
-      "1h:LINK": {
-        "coin": "LINK",
-        "name": "Chainlink",
+      "1h:HBAR": {
+        "coin": "HBAR",
+        "name": "Hedera",
         "tf": "1h",
-        "entry": 11.23657,
-        "stop": 11.09444375,
-        "target1": 11.37869625,
-        "target2": 11.520822500000001,
-        "opened_at": "2026-09-11T17:02:36.412836"
+        "entry": 0.07331,
+        "stop": 0.07262125,
+        "target1": 0.07399875,
+        "target2": 0.0746875,
+        "opened_at": "2026-09-11T17:07:22.956266"
       }
     },
     "resolved": [
@@ -4002,6 +3982,123 @@
         "result": "win",
         "resolved_at": "2026-09-11T17:02:36.412836",
         "exit_price": 54.03
+      },
+      {
+        "coin": "LIT",
+        "name": "Lighter",
+        "tf": "1h",
+        "entry": 0.1126,
+        "stop": 0.11094166666666667,
+        "target1": 0.11425833333333334,
+        "target2": 0.11591666666666667,
+        "opened_at": "2026-09-11T16:47:27.645606",
+        "result": "win",
+        "resolved_at": "2026-09-11T17:07:22.956266",
+        "exit_price": 0.1143
+      },
+      {
+        "coin": "LINK",
+        "name": "Chainlink",
+        "tf": "15m",
+        "entry": 11.23657,
+        "stop": 11.122934333333333,
+        "target1": 11.350205666666668,
+        "target2": 11.463841333333335,
+        "opened_at": "2026-09-11T17:02:36.412836",
+        "result": "win",
+        "resolved_at": "2026-09-11T17:07:22.956266",
+        "exit_price": 11.80417
+      },
+      {
+        "coin": "UNI",
+        "name": "Uniswap",
+        "tf": "15m",
+        "entry": 5.8754,
+        "stop": 5.78843,
+        "target1": 5.96237,
+        "target2": 6.04934,
+        "opened_at": "2026-09-11T17:02:36.412836",
+        "result": "win",
+        "resolved_at": "2026-09-11T17:07:22.956266",
+        "exit_price": 6.1699
+      },
+      {
+        "coin": "TAO",
+        "name": "Bittensor",
+        "tf": "15m",
+        "entry": 228.4964,
+        "stop": 226.05283666666665,
+        "target1": 230.93996333333334,
+        "target2": 233.38352666666668,
+        "opened_at": "2026-09-11T17:02:36.412836",
+        "result": "win",
+        "resolved_at": "2026-09-11T17:07:22.956266",
+        "exit_price": 237.5824
+      },
+      {
+        "coin": "DOGE",
+        "name": "Dogecoin",
+        "tf": "15m",
+        "entry": 0.082297,
+        "stop": 0.08158587333333332,
+        "target1": 0.08300812666666667,
+        "target2": 0.08371925333333334,
+        "opened_at": "2026-09-11T17:02:36.412836",
+        "result": "win",
+        "resolved_at": "2026-09-11T17:07:22.956266",
+        "exit_price": 0.0857341
+      },
+      {
+        "coin": "LIT",
+        "name": "Lighter",
+        "tf": "15m",
+        "entry": 0.1126,
+        "stop": 0.11202000000000001,
+        "target1": 0.11318,
+        "target2": 0.11376,
+        "opened_at": "2026-09-11T17:02:36.412836",
+        "result": "win",
+        "resolved_at": "2026-09-11T17:07:22.956266",
+        "exit_price": 0.1143
+      },
+      {
+        "coin": "UNI",
+        "name": "Uniswap",
+        "tf": "1h",
+        "entry": 5.8754,
+        "stop": 5.752741666666667,
+        "target1": 5.998058333333333,
+        "target2": 6.120716666666666,
+        "opened_at": "2026-09-11T17:02:36.412836",
+        "result": "win",
+        "resolved_at": "2026-09-11T17:07:22.956266",
+        "exit_price": 6.1699
+      },
+      {
+        "coin": "DOGE",
+        "name": "Dogecoin",
+        "tf": "1h",
+        "entry": 0.082297,
+        "stop": 0.0813952125,
+        "target1": 0.0831987875,
+        "target2": 0.084100575,
+        "opened_at": "2026-09-11T17:02:36.412836",
+        "result": "win",
+        "resolved_at": "2026-09-11T17:07:22.956266",
+        "exit_price": 0.0857341
+      },
+      {
+        "coin": "LINK",
+        "name": "Chainlink",
+        "tf": "1h",
+        "entry": 11.23657,
+        "stop": 11.09444375,
+        "target1": 11.37869625,
+        "target2": 11.520822500000001,
+        "opened_at": "2026-09-11T17:02:36.412836",
+        "result": "win",
+        "resolved_at": "2026-09-11T17:07:22.956266",
+        "exit_price": 11.80417
       }
     ]
   },
@@ -4009,14 +4106,14 @@
     "key": "BTC",
     "name": "Bitcoin",
     "emoji": "\u20bf",
-    "price": 77864,
+    "price": 77837,
     "high_24h": 79607,
     "low_24h": 76393,
-    "pct_24h": 0.95257,
-    "pct_7d": -1.5,
-    "pct_30d": 22.7,
-    "sma50": 70660.60264219197,
-    "sma200": 70019.4892285789,
+    "pct_24h": 0.95626,
+    "pct_7d": -1.9,
+    "pct_30d": 22.9,
+    "sma50": 70659.3358464245,
+    "sma200": 70019.17252963703,
     "support_30d": 62843.70368466329,
     "resistance_30d": 81264.70153038795,
     "mark_price": 77230.11864493,
@@ -4031,16 +4128,16 @@
     "key": "ETH",
     "name": "Ethereum",
     "emoji": "\u039e",
-    "price": 2576.69,
+    "price": 2576.56,
     "high_24h": 2647.68,
     "low_24h": 2436.69,
-    "pct_24h": 5.32967,
-    "pct_7d": 5.0,
-    "pct_30d": 35.9,
-    "sma50": 2161.8204014988514,
-    "sma200": 2052.2302814654704,
+    "pct_24h": 5.30988,
+    "pct_7d": 5.2,
+    "pct_30d": 36.3,
+    "sma50": 2161.8102125591117,
+    "sma200": 2052.227734230535,
     "support_30d": 1874.401898191962,
-    "resistance_30d": 2577.720409784816,
+    "resistance_30d": 2577.210962797837,
     "mark_price": 2466.82,
     "index_price": 2467.80488372,
     "funding_rate": 3.45e-05,
