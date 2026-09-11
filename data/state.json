@@ -12,7 +12,7 @@
     },
     "eth-resistance-break": {
       "triggered": true,
-      "last_triggered_at": "2026-09-11 16:50:27"
+      "last_triggered_at": "2026-09-11 16:53:09"
     },
     "eth-support-break": {
       "triggered": false,
@@ -1495,7 +1495,7 @@
         ],
         [
           "Stretch from long-term average",
-          "-0.8% vs its long-term average - not stretched either way",
+          "+0.3% vs its long-term average - not stretched either way",
           0
         ],
         [
@@ -1508,12 +1508,12 @@
       "id": "ethereum-classic",
       "symbol": "ETC",
       "name": "Ethereum Classic",
-      "price": 7.76,
-      "pct_24h": 0.88437,
+      "price": 7.84,
+      "pct_24h": 1.84251,
       "pct_7d": 5.6,
       "support_30d": 6.079473341192034,
       "resistance_30d": 8.609781284223262,
-      "as_of": "2026-09-11 16:05:21",
+      "as_of": "2026-09-11 16:53:09",
       "stale": false
     },
     "pump-fun": {
@@ -2071,7 +2071,7 @@
         ],
         [
           "Stretch from long-term average",
-          "-32.2% below its long-term average - confirmed downtrend",
+          "-32.4% below its long-term average - confirmed downtrend",
           -1
         ],
         [
@@ -2084,12 +2084,12 @@
       "id": "pi-network",
       "symbol": "PI",
       "name": "Pi Network",
-      "price": 0.095373,
-      "pct_24h": -1.22434,
+      "price": 0.095102,
+      "pct_24h": -1.6279,
       "pct_7d": 1.2,
       "support_30d": 0.08559695435343688,
       "resistance_30d": 0.09798925329339339,
-      "as_of": "2026-09-11 16:50:27",
+      "as_of": "2026-09-11 16:00:36",
       "stale": false
     },
     "ondo-finance": {
@@ -2167,7 +2167,7 @@
         ],
         [
           "Stretch from long-term average",
-          "-28.9% below its long-term average - confirmed downtrend",
+          "-29.4% below its long-term average - confirmed downtrend",
           -1
         ],
         [
@@ -2180,12 +2180,12 @@
       "id": "canton-network",
       "symbol": "CC",
       "name": "Canton",
-      "price": 0.099076,
-      "pct_24h": -1.43031,
-      "pct_7d": -8.9,
+      "price": 0.098316,
+      "pct_24h": -1.0879,
+      "pct_7d": -9.0,
       "support_30d": 0.09051839499501885,
       "resistance_30d": 0.12396615653575341,
-      "as_of": "2026-09-11 15:55:20",
+      "as_of": "2026-09-11 16:53:09",
       "stale": false
     },
     "internet-computer": {
@@ -2215,7 +2215,7 @@
         ],
         [
           "Stretch from long-term average",
-          "+15.4% above its long-term average - a bit stretched",
+          "+14.2% above its long-term average - a bit stretched",
           -1
         ],
         [
@@ -2228,12 +2228,12 @@
       "id": "internet-computer",
       "symbol": "ICP",
       "name": "Internet Computer",
-      "price": 2.83,
-      "pct_24h": 3.89746,
+      "price": 2.8,
+      "pct_24h": 2.20785,
       "pct_7d": 14.0,
       "support_30d": 2.1748510244961383,
       "resistance_30d": 2.9869340549074623,
-      "as_of": "2026-09-11 16:50:27",
+      "as_of": "2026-09-11 16:10:23",
       "stale": false
     },
     "bittensor": {
@@ -3223,7 +3223,7 @@
         ],
         [
           "Stretch from long-term average",
-          "+5.6% vs its long-term average - not stretched either way",
+          "+5.4% vs its long-term average - not stretched either way",
           0
         ],
         [
@@ -3236,12 +3236,12 @@
       "id": "kaspa",
       "symbol": "KAS",
       "name": "Kaspa",
-      "price": 0.03584885,
-      "pct_24h": -1.40744,
+      "price": 0.0358109,
+      "pct_24h": -1.43223,
       "pct_7d": 22.5,
       "support_30d": 0.025258977496893695,
       "resistance_30d": 0.03651282069323304,
-      "as_of": "2026-09-11 16:50:27",
+      "as_of": "2026-09-11 16:53:09",
       "stale": false
     },
     "cosmos": {
@@ -3316,25 +3316,15 @@
         "target2": 0.11591666666666667,
         "opened_at": "2026-09-11T16:47:27.645606"
       },
-      "15m:ICP": {
-        "coin": "ICP",
-        "name": "Internet Computer",
+      "15m:ETC": {
+        "coin": "ETC",
+        "name": "Ethereum Classic",
         "tf": "15m",
-        "entry": 2.7,
-        "stop": 2.6737333333333333,
-        "target1": 2.726266666666667,
-        "target2": 2.752533333333334,
-        "opened_at": "2026-09-11T16:52:29.302065"
-      },
-      "15m:MNT": {
-        "coin": "MNT",
-        "name": "Mantle",
-        "tf": "15m",
-        "entry": 0.5732,
-        "stop": 0.5706600000000001,
-        "target1": 0.57574,
-        "target2": 0.57828,
-        "opened_at": "2026-09-11T16:52:29.302065"
+        "entry": 7.4,
+        "stop": 7.345033333333334,
+        "target1": 7.4549666666666665,
+        "target2": 7.509933333333333,
+        "opened_at": "2026-09-11T16:55:11.046042"
       },
       "15m:KAS": {
         "coin": "KAS",
@@ -3344,57 +3334,37 @@
         "stop": 0.033346,
         "target1": 0.034173999999999996,
         "target2": 0.034587999999999994,
-        "opened_at": "2026-09-11T16:52:29.302065"
+        "opened_at": "2026-09-11T16:55:11.046042"
       },
-      "15m:PUMP": {
-        "coin": "PUMP",
-        "name": "Pump.fun",
+      "15m:CC": {
+        "coin": "CC",
+        "name": "Canton",
         "tf": "15m",
-        "entry": 0.00355,
-        "stop": 0.0034900666666666668,
-        "target1": 0.0036099333333333337,
-        "target2": 0.003669866666666667,
-        "opened_at": "2026-09-11T16:52:29.302065"
+        "entry": 0.095,
+        "stop": 0.09404833333333333,
+        "target1": 0.09595166666666667,
+        "target2": 0.09690333333333334,
+        "opened_at": "2026-09-11T16:55:11.046042"
       },
-      "15m:PI": {
-        "coin": "PI",
-        "name": "Pi Network",
-        "tf": "15m",
-        "entry": 0.09285,
-        "stop": 0.09167433333333333,
-        "target1": 0.09402566666666667,
-        "target2": 0.09520133333333335,
-        "opened_at": "2026-09-11T16:52:29.302065"
-      },
-      "1h:ICP": {
-        "coin": "ICP",
-        "name": "Internet Computer",
+      "1h:ETC": {
+        "coin": "ETC",
+        "name": "Ethereum Classic",
         "tf": "1h",
-        "entry": 2.7,
-        "stop": 2.656041666666667,
-        "target1": 2.7439583333333335,
-        "target2": 2.787916666666667,
-        "opened_at": "2026-09-11T16:52:29.302065"
+        "entry": 7.4,
+        "stop": 7.306041666666667,
+        "target1": 7.4939583333333335,
+        "target2": 7.587916666666667,
+        "opened_at": "2026-09-11T16:55:11.046042"
       },
-      "1h:PI": {
-        "coin": "PI",
-        "name": "Pi Network",
+      "1h:CC": {
+        "coin": "CC",
+        "name": "Canton",
         "tf": "1h",
-        "entry": 0.09285,
-        "stop": 0.09030541666666667,
-        "target1": 0.09539458333333334,
-        "target2": 0.09793916666666667,
-        "opened_at": "2026-09-11T16:52:29.302065"
-      },
-      "1h:PUMP": {
-        "coin": "PUMP",
-        "name": "Pump.fun",
-        "tf": "1h",
-        "entry": 0.00355,
-        "stop": 0.0034482083333333335,
-        "target1": 0.003651791666666667,
-        "target2": 0.0037535833333333336,
-        "opened_at": "2026-09-11T16:52:29.302065"
+        "entry": 0.095,
+        "stop": 0.09350083333333334,
+        "target1": 0.09649916666666666,
+        "target2": 0.09799833333333333,
+        "opened_at": "2026-09-11T16:55:11.046042"
       }
     },
     "resolved": [
@@ -3707,8 +3677,8 @@
         "target2": 3.245133333333333e-06,
         "opened_at": "2026-09-11T16:47:27.645606",
         "result": "win",
-        "resolved_at": "2026-09-11T16:52:29.302065",
-        "exit_price": 3.369e-06
+        "resolved_at": "2026-09-11T16:55:11.046042",
+        "exit_price": 3.371e-06
       },
       {
         "coin": "MNT",
@@ -3720,7 +3690,7 @@
         "target2": 0.57818,
         "opened_at": "2026-09-11T16:47:27.645606",
         "result": "win",
-        "resolved_at": "2026-09-11T16:52:29.302065",
+        "resolved_at": "2026-09-11T16:55:11.046042",
         "exit_price": 0.6015
       },
       {
@@ -3733,8 +3703,8 @@
         "target2": 6.047953333333333,
         "opened_at": "2026-09-11T16:47:27.645606",
         "result": "win",
-        "resolved_at": "2026-09-11T16:52:29.302065",
-        "exit_price": 6.1903
+        "resolved_at": "2026-09-11T16:55:11.046042",
+        "exit_price": 6.1993
       },
       {
         "coin": "M",
@@ -3746,7 +3716,7 @@
         "target2": 1.1577233333333334,
         "opened_at": "2026-09-11T16:47:27.645606",
         "result": "win",
-        "resolved_at": "2026-09-11T16:52:29.302065",
+        "resolved_at": "2026-09-11T16:55:11.046042",
         "exit_price": 1.18025
       },
       {
@@ -3759,7 +3729,7 @@
         "target2": 0.11376,
         "opened_at": "2026-09-11T16:47:27.645606",
         "result": "win",
-        "resolved_at": "2026-09-11T16:52:29.302065",
+        "resolved_at": "2026-09-11T16:55:11.046042",
         "exit_price": 0.1133
       },
       {
@@ -3772,8 +3742,8 @@
         "target2": 3.2694166666666663e-06,
         "opened_at": "2026-09-11T16:47:27.645606",
         "result": "win",
-        "resolved_at": "2026-09-11T16:52:29.302065",
-        "exit_price": 3.369e-06
+        "resolved_at": "2026-09-11T16:55:11.046042",
+        "exit_price": 3.371e-06
       },
       {
         "coin": "M",
@@ -3785,7 +3755,7 @@
         "target2": 1.1423908333333335,
         "opened_at": "2026-09-11T16:47:27.645606",
         "result": "win",
-        "resolved_at": "2026-09-11T16:52:29.302065",
+        "resolved_at": "2026-09-11T16:55:11.046042",
         "exit_price": 1.18025
       },
       {
@@ -3798,8 +3768,8 @@
         "target2": 6.126758333333334,
         "opened_at": "2026-09-11T16:47:27.645606",
         "result": "win",
-        "resolved_at": "2026-09-11T16:52:29.302065",
-        "exit_price": 6.1903
+        "resolved_at": "2026-09-11T16:55:11.046042",
+        "exit_price": 6.2052
       }
     ]
   },
@@ -3807,14 +3777,14 @@
     "key": "BTC",
     "name": "Bitcoin",
     "emoji": "\u20bf",
-    "price": 77872,
+    "price": 77918,
     "high_24h": 79607,
     "low_24h": 76393,
-    "pct_24h": 1.01711,
+    "pct_24h": 1.00099,
     "pct_7d": -1.5,
     "pct_30d": 22.7,
-    "sma50": 70660.16402755612,
-    "sma200": 70019.37957491993,
+    "sma50": 70659.55547037866,
+    "sma200": 70019.22743562557,
     "support_30d": 62843.70368466329,
     "resistance_30d": 81264.70153038795,
     "mark_price": 77230.11864493,
@@ -3829,16 +3799,16 @@
     "key": "ETH",
     "name": "Ethereum",
     "emoji": "\u039e",
-    "price": 2578.76,
+    "price": 2579.77,
     "high_24h": 2647.68,
     "low_24h": 2436.69,
-    "pct_24h": 5.41999,
+    "pct_24h": 5.40767,
     "pct_7d": 5.0,
     "pct_30d": 35.9,
-    "sma50": 2161.828630526142,
-    "sma200": 2052.2323387222928,
+    "sma50": 2161.8127474347866,
+    "sma200": 2052.228367949454,
     "support_30d": 1874.401898191962,
-    "resistance_30d": 2578.131861149366,
+    "resistance_30d": 2577.3377065815757,
     "mark_price": 2466.82,
     "index_price": 2467.80488372,
     "funding_rate": 3.45e-05,
