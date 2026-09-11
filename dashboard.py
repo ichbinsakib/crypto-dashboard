@@ -66,9 +66,8 @@ INTRADAY_CHOPPY_RANGE_PCT = 0.6  # below this, a coin's whole lookback range is 
 
 PNL_EXPIRY_HOURS = {"15m": 6, "1h": 24, "daily": 24 * 7}  # how long an unresolved call stays
                                                            # open before giving up on it
-PNL_BATCH_SIZE = 8  # max confirmed signals opened per timeframe per batch; a new batch only
-                     # starts once every position in the current one has resolved
-PNL_DAILY_BATCH_SIZE = 5  # daily has far fewer candidates per cycle (BTC/ETH + 5 screener coins)
+PNL_BATCH_SIZE = 8  # max confirmed signals opened per timeframe per batch (15m/1h/daily alike);
+                     # a new batch only starts once every position in the current one has resolved
 PNL_RESOLVED_RETENTION_DAYS = 120  # how far back the Monthly stats window (and state.json size) can reach
 
 SCREENER_SIZE = 5  # how many coins to rank/show per tab; raising this adds run time and CoinGecko rate-limit risk
@@ -266,11 +265,15 @@ def find_strong_buys(coins_data, spot_signals_by_coin, screener_results, intrada
                 "label": r["label"], "score": r["score"], "price": r.get("price"), "trade": None,
             })
     for tf_key, results in intraday_results.items():
-        tf_name = {"15m": "15-Minute", "1h": "1-Hour"}.get(tf_key, tf_key)
+        tf_name = {"15m": "15-Minute", "1h": "1-Hour", "daily": "1-Day"}.get(tf_key, tf_key)
         for r in results:
             if (r.get("score") or 0) >= STRONG_INTRADAY_SCORE:
+                # "scanner-" prefix keeps this distinct from the daily:{symbol} keys above --
+                # "daily" is also a valid tf_key here now (the unified Scanner model), and
+                # without this prefix its dedupe_key would collide with the older
+                # screener_results-based daily check even though they're different formulas.
                 found.append({
-                    "dedupe_key": f"{tf_key}:{r['symbol']}", "symbol": r["symbol"], "timeframe": tf_name,
+                    "dedupe_key": f"scanner-{tf_key}:{r['symbol']}", "symbol": r["symbol"], "timeframe": tf_name,
                     "label": r["label"], "score": r["score"], "price": r.get("price"), "trade": r.get("trade"),
                 })
     return found
@@ -320,15 +323,6 @@ def send_discord_strong_buy_alert(newly_strong):
         log(f"DISCORD STRONG-BUY ALERT FAIL: {e}")
 
 
-def _kraken_interval_for_tf(tf):
-    """Which Kraken candle interval to read a current price from for a given tracked
-    timeframe. Daily positions don't need a true daily candle for this -- any recent close
-    is fine, since this is just "what's the price right now", not a signal computation."""
-    if tf == "daily":
-        return 1440
-    return INTRADAY_TIMEFRAMES[tf]["kraken_interval"]
-
-
 def update_pnl_tracker(prev_pnl, signal_results):
     """Tracks whether the scanner's own bullish calls actually played out, across 15m/1h
     (one unambiguous ATR-based entry/stop/target) and daily (the breakout scenario from
@@ -348,7 +342,7 @@ def update_pnl_tracker(prev_pnl, signal_results):
     # "win" that reflects nothing about what happened after the call, not real price movement.
     still_open = {}
     for key, pos in prev_open.items():
-        interval = _kraken_interval_for_tf(pos["tf"])
+        interval = INTRADAY_TIMEFRAMES[pos["tf"]]["kraken_interval"]
         klines, err = safe_fetch(
             f"pnl price {pos['coin']}", lambda p=pos["coin"], i=interval: fetch_kraken_ohlc(p, i))
         time.sleep(INTRADAY_RATE_LIMIT_DELAY)
@@ -885,6 +879,7 @@ INTRADAY_TIMEFRAMES = {
     # interval -> (kraken OHLC interval in minutes, candles used for range/ATR)
     "15m": {"kraken_interval": 15, "lookback": 30, "window_label": "last ~7.5 hours"},
     "1h": {"kraken_interval": 60, "lookback": 24, "window_label": "last 24 hours"},
+    "daily": {"kraken_interval": 1440, "lookback": 30, "window_label": "last 30 days"},
 }
 # Binance's public spot API returns HTTP 451 (geo-blocked) from GitHub Actions' IP ranges --
 # confirmed in production: every single symbol failed, including major pairs that definitely
@@ -1168,10 +1163,12 @@ def render(coins_data, fng_value, fng_classification, generated_at, any_stale,
         banner_html = f'<div class="alert-banner">{items}</div>'
     screener_info_tip = (
         f'Scans the top {SCREENER_SIZE} coins by market cap (excluding stablecoins and BTC/ETH wrappers). '
-        'Pick a timeframe below -- each uses a model suited to that horizon, not the same numbers just relabeled. '
-        'This is not a recommendation to trade any coin listed: small/mid-cap coins carry far higher risk than '
-        'BTC/ETH, none of this is backtested, and a high score means &quot;resembles a historically favorable '
-        'setup by this simple rule set&quot; -- nothing more. Education only, not financial advice.'
+        'Pick a timeframe below -- 15 Min, 1 Hour, and 1 Day all use the exact same rule-based model '
+        '(price vs. recent range, momentum, direction, volume), just computed over a longer lookback for '
+        '1 Day, so results are directly comparable across timeframes. This is not a recommendation to trade '
+        'any coin listed: small/mid-cap coins carry far higher risk than BTC/ETH, none of this is backtested, '
+        'and a high score means &quot;resembles a historically favorable setup by this simple rule set&quot; '
+        '-- nothing more. Education only, not financial advice.'
     )
     tabs_inputs = (
         '<input type="radio" name="tabs" id="tab-screener" checked>\n'
@@ -1432,88 +1429,6 @@ def render(coins_data, fng_value, fng_classification, generated_at, any_stale,
             return f'<span class="badge bearish">{pts}</span>'
         return '<span class="badge neutral">0</span>'
 
-    if screener_results:
-        top_pick = screener_results[0]
-        bottom_pick = screener_results[-1]
-
-        def _screener_card(r, rank):
-            tl = compute_trade_levels(r)
-            if tl:
-                pb, bo = tl["pullback"], tl["breakout"]
-                trade_html = f"""
-      <div class="screener-trade-grid">
-        <div class="screener-trade">
-          <div class="screener-trade-title">🎯 If it pulls back to support</div>
-          <div class="kv"><span>Buy</span><span>{fmt_usd_adaptive(pb['entry_low'])}&ndash;{fmt_usd_adaptive(pb['entry_high'])}</span></div>
-          <div class="kv"><span>Stop</span><span class="neg">{fmt_usd_adaptive(pb['stop'])}</span></div>
-          <div class="kv"><span>Target</span><span class="pos">{fmt_usd_adaptive(pb['target1'])} / {fmt_usd_adaptive(pb['target2'])}</span></div>
-        </div>
-        <div class="screener-trade">
-          <div class="screener-trade-title">🎯 If it breaks out above resistance</div>
-          <div class="kv"><span>Buy</span><span>{fmt_usd_adaptive(bo['entry'])}</span></div>
-          <div class="kv"><span>Stop</span><span class="neg">{fmt_usd_adaptive(bo['stop'])}</span></div>
-          <div class="kv"><span>Target</span><span class="pos">{fmt_usd_adaptive(bo['target1'])} / {fmt_usd_adaptive(bo['target2'])}</span></div>
-        </div>
-      </div>"""
-            else:
-                trade_html = '<div class="screener-trade sub">Not enough range data yet for trade levels.</div>'
-
-            reasoning_rows = "\n".join(
-                f'<tr><td>{name}</td><td class="watch">{reading}</td><td>{_pts_badge2(pts)}</td></tr>'
-                for name, reading, pts in r.get("rows", [])
-            )
-            reasoning_html = f"""
-      <details class="screener-details">
-        <summary>Why this score? ({len(r.get('rows', []))} factors)</summary>
-        <table class="signal-table" style="margin-top:10px; margin-bottom:0;">
-          <thead><tr><th>Factor</th><th>Current reading</th><th>Points</th></tr></thead>
-          <tbody>{reasoning_rows}</tbody>
-        </table>
-      </details>""" if r.get("rows") else ""
-
-            cached_tag = ' <span class="watch">&middot; cached</span>' if r.get("stale") else ""
-            follow_key = f"daily:{r['symbol']}"
-            return f"""
-    <div class="screener-card {r['status']}">
-      <div class="screener-card-top">
-        <div class="screener-rank">#{rank}</div>
-        <div>
-          <div class="screener-name">{r['name']} <span class="watch">({r['symbol']})</span>{cached_tag}</div>
-          <div class="sub" data-role="price">{fmt_usd_adaptive(r['price'])} &middot; <span class="{'pos' if (r.get('pct_24h') or 0) >= 0 else 'neg'}">{fmt_pct(r.get('pct_24h'))}</span> 24h</div>
-        </div>
-        <button class="follow-btn" data-key="{follow_key}" data-tf="Daily" title="Follow this pick -- saves it to My Picks until you remove it">&#9734; Follow</button>
-      </div>
-      <div class="screener-signal">
-        <span class="badge {r['status']}">{r['label']}</span>
-        <span class="sub">Score {_pts_badge2(r['score'])}</span>
-      </div>
-      <div class="screener-plain">{r.get('plain', '')}</div>
-      {trade_html}
-      {reasoning_html}
-    </div>"""
-
-        callouts_html = f"""
-    <div class="top-grid" style="grid-template-columns:1fr 1fr; margin-bottom:20px;">
-      <div class="card">
-        <div class="card-title">🏆 CLOSEST TO ACCUMULATION ZONE</div>
-        <div class="spot-signal-label bullish" style="font-size:19px;">{top_pick['name']} ({top_pick['symbol']})</div>
-        <div class="sub">Score {top_pick['score']:+d} &middot; {fmt_usd_adaptive(top_pick['price'])} &middot; {top_pick['label']}</div>
-      </div>
-      <div class="card">
-        <div class="card-title">⚠️ CLOSEST TO DISTRIBUTION ZONE</div>
-        <div class="spot-signal-label bearish" style="font-size:19px;">{bottom_pick['name']} ({bottom_pick['symbol']})</div>
-        <div class="sub">Score {bottom_pick['score']:+d} &middot; {fmt_usd_adaptive(bottom_pick['price'])} &middot; {bottom_pick['label']}</div>
-      </div>
-    </div>
-"""
-        screener_table_html = ('<div class="screener-grid">'
-                                + "".join(_screener_card(r, i + 1) for i, r in enumerate(screener_results))
-                                + '</div>')
-    else:
-        callouts_html = ""
-        screener_table_html = ('<div class="stale-note">&#9888; Screener data unavailable this run '
-                                '(fetch failed or rate-limited) &mdash; will retry next cycle.</div>')
-
     def _intraday_card(r, rank, tf_key):
         t = r["trade"]
         reasoning_rows = "\n".join(
@@ -1522,7 +1437,7 @@ def render(coins_data, fng_value, fng_classification, generated_at, any_stale,
         )
         card_id = f"ic-{tf_key}-{r['symbol']}"
         follow_key = f"{tf_key}:{r['symbol']}"
-        tf_follow_label = {"15m": "15-Minute", "1h": "1-Hour"}.get(tf_key, tf_key)
+        tf_follow_label = {"15m": "15-Minute", "1h": "1-Hour", "daily": "1-Day"}.get(tf_key, tf_key)
         pnl_key = f"{tf_key}:{r['symbol']}"
         tracking_badge = ('<span class="badge alert-armed" title="This call is on the Performance tab\'s Currently Tracking list, being followed toward a win/loss outcome">📊 Tracking</span>'
                            if pnl_key in pnl_open_keys else '')
@@ -1574,6 +1489,7 @@ def render(coins_data, fng_value, fng_classification, generated_at, any_stale,
 
     intraday_15m_html = _intraday_panel_html("15m", "15-Minute", "15-minute")
     intraday_1h_html = _intraday_panel_html("1h", "1-Hour", "1-hour")
+    intraday_daily_html = _intraday_panel_html("daily", "1-Day", "30-day")
 
     intraday_live_cards = [
         {
@@ -1587,7 +1503,6 @@ def render(coins_data, fng_value, fng_classification, generated_at, any_stale,
         for r in intraday_results.get(tf_key, [])
     ]
     intraday_live_cards_json = json.dumps(intraday_live_cards)
-    daily_html = f"{callouts_html}{screener_table_html}"
 
     screener_panel = f"""
 <div class="panel panel-screener">
@@ -1601,17 +1516,16 @@ def render(coins_data, fng_value, fng_classification, generated_at, any_stale,
   </div>
   <div class="tf-panel tf-panel-15m">{intraday_15m_html}</div>
   <div class="tf-panel tf-panel-1h">{intraday_1h_html}</div>
-  <div class="tf-panel tf-panel-1d">{daily_html}</div>
+  <div class="tf-panel tf-panel-1d">{intraday_daily_html}</div>
 
   <div class="cycle-map spot-signal-card" style="margin-top:10px;">
     <table class="signal-table score-legend" style="margin-top:0; margin-bottom:0;">
       <thead><tr><th>Score range</th><th>Label</th><th>What it means</th></tr></thead>
       <tbody>
-        <tr><td>&ge; +5</td><td><span class="badge bullish">🟢 ACCUMULATION ZONE</span></td><td class="watch">Strong historical buy-the-dip setup</td></tr>
-        <tr><td>+2 to +4</td><td><span class="badge bullish">🟢 LEAN ACCUMULATE</span></td><td class="watch">Leans favorable, not a strong signal</td></tr>
-        <tr><td>-1 to +1</td><td><span class="badge neutral">🟡 HOLD / NEUTRAL</span></td><td class="watch">No real edge either way</td></tr>
-        <tr><td>-4 to -2</td><td><span class="badge bearish">🔴 CAUTION</span></td><td class="watch">Getting risky, hold off on new buys</td></tr>
-        <tr><td>&le; -5</td><td><span class="badge bearish">🔴 DISTRIBUTION ZONE</span></td><td class="watch">Stretched/euphoric, historical selling zone</td></tr>
+        <tr><td>&ge; +3</td><td><span class="badge bullish">🟢 NEAR-TERM DIP ZONE</span></td><td class="watch">Near the low with improving momentum -- the confirmed-signal tier tracked in Performance</td></tr>
+        <tr><td>+1 to +2</td><td><span class="badge bullish">🟢 LEAN LONG</span></td><td class="watch">Mildly favorable, not a strong signal on its own</td></tr>
+        <tr><td>-1 to 0</td><td><span class="badge neutral">🟡 NO CLEAR EDGE</span></td><td class="watch">Choppy, no clean setup right now</td></tr>
+        <tr><td>&le; -2</td><td><span class="badge bearish">🔴 STRETCHED</span></td><td class="watch">Extended on this timeframe; poor risk/reward to chase</td></tr>
       </tbody>
     </table>
   </div>
@@ -2299,37 +2213,6 @@ def main():
                 backfilled.append(pos["coin"])
         if backfilled:
             log(f"Intraday {tf_key} backfilled still-tracked coin(s) not in this cycle's rotation: {backfilled}")
-
-    # Daily batch: track the screener's own bullish ACCUMULATION-ZONE-tier calls too, using
-    # the breakout scenario from compute_trade_levels as the single trackable entry (the
-    # pullback scenario's entry is a range, not one price, which doesn't fit this win/loss
-    # model as cleanly). Only counts once the breakout has actually triggered -- current price
-    # already at or above the breakout entry -- otherwise it's a developing setup, not yet an
-    # executed call. Scoped to the rotating screener pool, not the fixed BTC/ETH cards, since
-    # those coins' signal is computed later inside render() rather than available here.
-    prev_daily_open_count = sum(1 for p in prev_pnl_open.values() if p["tf"] == "daily")
-    daily_results = []
-    if prev_daily_open_count == 0:
-        for r in screener_results:
-            if r.get("status") != "bullish" or r.get("score", 0) < STRONG_DAILY_SCORE:
-                continue
-            levels = compute_trade_levels(r)
-            if not levels:
-                continue
-            bo = levels["breakout"]
-            price = r.get("price")
-            if price is None or price < bo["entry"]:
-                continue  # breakout hasn't triggered yet -- a developing setup, not an executed call
-            daily_results.append({
-                "symbol": r["symbol"], "name": r.get("name", r["symbol"]), "status": "bullish",
-                "trade": {"entry": bo["entry"], "stop": bo["stop"], "target1": bo["target1"], "target2": bo["target2"]},
-            })
-            if len(daily_results) >= PNL_DAILY_BATCH_SIZE:
-                break
-        log(f"Daily: previous batch complete, opened new batch of {len(daily_results)} confirmed signal(s)")
-    else:
-        log(f"Daily: batch in progress ({prev_daily_open_count} still open), not adding new signals")
-    intraday_results["daily"] = daily_results
 
     new_pnl_state = update_pnl_tracker(prev_pnl_state, intraday_results)
     pnl_stats = compute_pnl_stats(new_pnl_state.get("resolved", []))
