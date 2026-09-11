@@ -58,6 +58,8 @@ STRONG_DAILY_SCORE = 5   # matches the "ACCUMULATION ZONE" tier, not the weaker 
 STRONG_INTRADAY_SCORE = 3  # matches the "NEAR-TERM DIP ZONE" tier, not the weaker "LEAN LONG"
 
 PNL_EXPIRY_HOURS = {"15m": 6, "1h": 24}  # how long an unresolved intraday call stays open before we give up on it
+PNL_BATCH_SIZE = 8  # max confirmed signals opened per timeframe per batch; a new batch only
+                     # starts once every position in the current one has resolved
 PNL_RESOLVED_RETENTION_DAYS = 120  # how far back the Monthly stats window (and state.json size) can reach
 
 SCREENER_SIZE = 5  # how many coins to rank/show per tab; raising this adds run time and CoinGecko rate-limit risk
@@ -1516,13 +1518,14 @@ def render(coins_data, fng_value, fng_classification, generated_at, any_stale,
     def _intraday_panel_html(tf_key, tf_name, window_desc):
         results = intraday_results.get(tf_key, [])
         if not results:
-            return (f'<div class="stale-note">&#9888; {tf_name} data unavailable this run '
-                     '(no Kraken-listed pairs matched, or fetch failed) &mdash; will retry next cycle.</div>')
+            return (f'<div class="stale-note">&#9888; No confirmed {tf_name} setups right now &mdash; '
+                     'nothing hit the NEAR-TERM DIP ZONE bar this cycle. Quality over quantity: an empty '
+                     'tab means no strong signal, not a fetch problem. Checking again next cycle.</div>')
         cards = "".join(_intraday_card(r, i + 1, tf_key) for i, r in enumerate(results))
         return f"""
     <div class="sub" style="margin-bottom:14px; display:flex; align-items:center;">
-      {tf_name} setups from Kraken &mdash; refreshes live every minute
-      <span class="info-tip" tabindex="0" data-tip="Pure price-action model using Kraken's public {window_desc} candles -- no sentiment/cycle factors, those are daily concepts. Coins without a liquid Kraken USD pair are skipped. Buy/stop/target use each coin's own recent volatility (ATR), not a fixed percentage. Prices and scores refresh live in your browser every minute straight from Kraken, they don't wait for the next site rebuild.">&#9432;</span>
+      {tf_name} confirmed setups &mdash; batch of up to {PNL_BATCH_SIZE}, refreshes live every minute
+      <span class="info-tip" tabindex="0" data-tip="Only shows confirmed signals (NEAR-TERM DIP ZONE tier, not the weaker LEAN LONG lean) using Kraken's public {window_desc} candles. A batch of up to {PNL_BATCH_SIZE} opens and stays fixed until every one of them resolves (win/loss/expired) -- no new coins get added mid-batch, so this list doesn't change under you while you're following it. Buy/stop/target use each coin's own recent volatility (ATR). Prices and scores refresh live in your browser every minute straight from Kraken.">&#9432;</span>
     </div>
     <div class="screener-grid">{cards}</div>"""
 
@@ -1649,7 +1652,7 @@ def render(coins_data, fng_value, fng_classification, generated_at, any_stale,
     performance_panel = f"""
 <div class="panel panel-performance">
   <div class="cycle-map spot-signal-card" style="margin-bottom:10px;">
-    <div class="card-title">📊 SCANNER PERFORMANCE<span class="info-tip" tabindex="0" data-tip="Tracks 15m/1h bullish scanner calls from when they first appear to when they hit their target (win), hit their stop (loss), or time out unresolved (expired -- excluded from win rate). Daily models aren't tracked here: they use two scenarios (pullback/breakout) instead of one clear entry, and rotate too slowly to resolve cleanly. Educational transparency, not a trading track record.">&#9432;</span></div>
+    <div class="card-title">📊 SCANNER PERFORMANCE<span class="info-tip" tabindex="0" data-tip="Tracks confirmed 15m/1h calls (NEAR-TERM DIP ZONE tier only) in batches of up to {PNL_BATCH_SIZE} per timeframe -- a new batch only opens once every position in the current one has resolved (win/loss/expired), so you're never asked to follow more than one batch at a time. Daily models aren't tracked here: they use two scenarios (pullback/breakout) instead of one clear entry, and rotate too slowly to resolve cleanly. Educational transparency, not a trading track record.">&#9432;</span></div>
   </div>
   <div class="top-grid" style="grid-template-columns:1fr 1fr 1fr;">
     {_pnl_stat_card("Daily", pnl_stats.get("daily", {}))}
@@ -2171,17 +2174,31 @@ def main():
         f"({sum(1 for r in screener_results if r.get('stale'))} cached/stale)")
 
     log("Running intraday screeners (15m, 1h) via Kraken OHLC...")
-    intraday_results = {}
-    for tf_key in INTRADAY_TIMEFRAMES:
-        intraday_results[tf_key] = build_intraday_screener(screener_markets, tf_key)
-        log(f"Intraday {tf_key} produced {len(intraday_results[tf_key])} ranked coins")
-
-    # Backfill: the Scanner's rotating pool may have moved on from a coin that's still an
-    # open P&L position, which would otherwise make the Scanner and the Performance tab's
-    # Currently Tracking list show different coins. Explicitly fetch+show every still-open
-    # position here too, even past the usual card cap, so the two views always match.
     prev_pnl_state = state.get("_pnl_tracker", {})
     prev_pnl_open = prev_pnl_state.get("open", {})
+
+    # Batch model: only pull in a fresh batch of up to PNL_BATCH_SIZE *confirmed* signals
+    # (score >= STRONG_INTRADAY_SCORE, the "NEAR-TERM DIP ZONE" tier, not the weaker "LEAN
+    # LONG" one) for a timeframe once every position from its previous batch has resolved.
+    # While a batch is still in progress, no new candidates are considered at all -- the
+    # Scanner shows exactly that batch (via the backfill below) until it's fully done.
+    intraday_results = {}
+    for tf_key in INTRADAY_TIMEFRAMES:
+        tf_open_count = sum(1 for p in prev_pnl_open.values() if p["tf"] == tf_key)
+        if tf_open_count == 0:
+            raw = build_intraday_screener(screener_markets, tf_key, target_count=PNL_BATCH_SIZE)
+            intraday_results[tf_key] = [r for r in raw if r.get("status") == "bullish"
+                                         and r.get("score", 0) >= STRONG_INTRADAY_SCORE]
+            log(f"Intraday {tf_key}: previous batch complete, opened new batch of "
+                f"{len(intraday_results[tf_key])} confirmed signal(s)")
+        else:
+            intraday_results[tf_key] = []
+            log(f"Intraday {tf_key}: batch in progress ({tf_open_count} still open), "
+                f"not adding new signals")
+
+    # Backfill: show every still-open position even past the usual card cap and even when
+    # the batch is otherwise closed to new candidates, so the Scanner and the Performance
+    # tab's Currently Tracking list always show exactly the same coins.
     for tf_key, results in intraday_results.items():
         present_symbols = {r["symbol"] for r in results}
         backfilled = []
