@@ -998,10 +998,10 @@ def render(coins_data, fng_value, fng_classification, generated_at, any_stale,
         )
         banner_html = f'<div class="alert-banner">{items}</div>'
     tabs_inputs = "\n".join(
-        f'<input type="radio" name="tabs" id="tab-{c["key"].lower()}"{" checked" if i == 0 else ""}>'
-        for i, c in enumerate(coins_data)
+        f'<input type="radio" name="tabs" id="tab-{c["key"].lower()}">'
+        for c in coins_data
     )
-    tabs_inputs += '\n<input type="radio" name="tabs" id="tab-screener">'
+    tabs_inputs += '\n<input type="radio" name="tabs" id="tab-screener" checked>'
     tabs_labels = "\n".join(
         f'<label for="tab-{c["key"].lower()}">{c["emoji"]} {c["key"]}</label>' for c in coins_data
     )
@@ -1400,9 +1400,9 @@ def render(coins_data, fng_value, fng_classification, generated_at, any_stale,
     </div>
   </div>
 
-  <input type="radio" name="tf" id="tf-15m">
+  <input type="radio" name="tf" id="tf-15m" checked>
   <input type="radio" name="tf" id="tf-1h">
-  <input type="radio" name="tf" id="tf-1d" checked>
+  <input type="radio" name="tf" id="tf-1d">
   <div class="tabbar" style="padding-left:0;">
     <label for="tf-15m">⏱ 15 Min</label>
     <label for="tf-1h">🕐 1 Hour</label>
@@ -1478,11 +1478,12 @@ def render(coins_data, fng_value, fng_classification, generated_at, any_stale,
     --green: #34d399; --red: #f87171; --yellow: #fbbf24; --gray: #6b7280; --accent: #38bdf8;
   }}
   * {{ box-sizing: border-box; }}
+  html, body {{ max-width:100%; overflow-x:hidden; }}
   body {{ margin:0; background: var(--bg); color: var(--text); font-family: 'Segoe UI', Arial, sans-serif; }}
   header {{ padding: 20px 24px; border-bottom: 1px solid var(--border); display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:8px; }}
   header h1 {{ margin:0; font-size: 22px; letter-spacing: 1px; }}
   header .meta {{ color: var(--muted); font-size: 13px; }}
-  .tabbar {{ display:flex; gap:8px; padding: 12px 24px; }}
+  .tabbar {{ display:flex; gap:8px; padding: 12px 24px; overflow-x:auto; -webkit-overflow-scrolling:touch; }}
   .tabbar label {{ padding:8px 20px; border:1px solid var(--border); border-radius:8px; cursor:pointer; color:var(--muted); font-weight:600; }}
   input[type=radio] {{ display:none; }}
   #tab-btc:checked ~ .tabbar label[for=tab-btc],
@@ -1514,6 +1515,9 @@ def render(coins_data, fng_value, fng_classification, generated_at, any_stale,
   .gauge-fill {{ position:absolute; left:0; top:0; bottom:0; background: linear-gradient(90deg,#22c55e,#fbbf24,#f87171); opacity:1; }}
   .gauge-score {{ font-size:20px; font-weight:800; color: var(--accent); min-width:52px; text-align:right; }}
   table.signal-table {{ width:100%; border-collapse: collapse; background: var(--panel); border:1px solid var(--border); border-radius:12px; overflow:hidden; margin-bottom:24px; }}
+  @media (max-width: 700px) {{
+    table.signal-table {{ display:block; overflow-x:auto; -webkit-overflow-scrolling:touch; white-space:nowrap; }}
+  }}
   table.signal-table th {{ text-align:left; font-size:11px; color:var(--muted); letter-spacing:1px; padding:12px 14px; border-bottom:1px solid var(--border); }}
   table.signal-table td {{ padding:12px 14px; border-bottom:1px solid var(--border); font-size:13.5px; }}
   table.signal-table td.watch {{ color: var(--muted); font-size:12.5px; }}
@@ -1531,16 +1535,23 @@ def render(coins_data, fng_value, fng_classification, generated_at, any_stale,
   .glance-bar {{ margin: 16px 24px 0; padding: 10px 14px; background: var(--panel); border:2px solid var(--border); border-radius:12px; }}
   .glance-title {{ font-size:10px; color:var(--muted); letter-spacing:1.5px; font-weight:800; margin-bottom:6px; }}
   .glance-row {{ display:grid; grid-template-columns: repeat(auto-fit, minmax(170px, 1fr)); gap:8px; }}
-  .glance-card {{ border-radius:8px; padding:7px 10px; border:1px solid var(--border); background:#0d1320; }}
+  .glance-card {{ border-radius:8px; padding:7px 10px; border:1px solid var(--border); background:#0d1320; min-width:0; }}
   .glance-card.bullish {{ border-color:#1f6a4a; background:#0d1c15; }}
   .glance-card.bearish {{ border-color:#7a2e2e; background:#1c0f0f; }}
   .glance-card.neutral {{ border-color:#5a4d18; background:#1c1810; }}
-  .glance-row-top {{ display:flex; align-items:baseline; justify-content:space-between; gap:8px; margin-bottom:2px; }}
-  .glance-coin {{ font-size:11px; color:var(--muted); font-weight:700; letter-spacing:0.5px; white-space:nowrap; }}
-  .glance-verdict {{ font-size:12.5px; font-weight:800; text-align:right; white-space:nowrap; overflow:hidden; text-overflow:ellipsis; }}
+  .glance-row-top {{ display:flex; align-items:baseline; justify-content:space-between; gap:8px; margin-bottom:2px; min-width:0; }}
+  .glance-coin {{ font-size:11px; color:var(--muted); font-weight:700; letter-spacing:0.5px; white-space:nowrap; flex-shrink:0; }}
+  .glance-verdict {{ font-size:12.5px; font-weight:800; text-align:right; white-space:nowrap; overflow:hidden; text-overflow:ellipsis; min-width:0; flex:1 1 auto; }}
   .glance-plain {{ font-size:11px; color:var(--text); line-height:1.3; white-space:nowrap; overflow:hidden; text-overflow:ellipsis; }}
   .glance-footnote {{ font-size:10px; color:var(--muted); margin-top:6px; }}
   @media (max-width: 700px) {{ .glance-row {{ grid-template-columns: 1fr 1fr; }} .glance-verdict {{ text-align:left; }} }}
+  @media (max-width: 480px) {{
+    .glance-row {{ grid-template-columns: 1fr; }}
+    .glance-row-top {{ flex-wrap:wrap; }}
+    .glance-coin {{ white-space:normal; }}
+    .glance-verdict {{ white-space:normal; text-align:left; }}
+    .glance-plain {{ white-space:normal; }}
+  }}
   .cycle-map {{ background: var(--panel); border:1px solid var(--border); border-radius:12px; padding:16px 18px; }}
   .spot-signal-card {{ border-width:2px; }}
   .spot-signal-card.spot-bullish {{ border-color:#1f6a4a; }}
@@ -1575,8 +1586,13 @@ def render(coins_data, fng_value, fng_classification, generated_at, any_stale,
   .score-legend th, .score-legend td {{ font-size:12px; padding:8px 12px; }}
   @media (max-width: 480px) {{ .screener-trade-grid {{ grid-template-columns: 1fr; }} }}
   .cyc-row {{ display:flex; align-items:center; gap:6px; margin-top:10px; }}
-  .cyc-box {{ flex:1; text-align:center; padding:14px 8px; border-radius:8px; border:1px solid var(--border); color:var(--muted); font-size:13px; font-weight:700; position:relative; }}
+  .cyc-box {{ flex:1; min-width:0; text-align:center; padding:14px 8px; border-radius:8px; border:1px solid var(--border); color:var(--muted); font-size:13px; font-weight:700; position:relative; }}
   .cyc-here {{ border-color: var(--accent); color: var(--accent); background:#0d1c26; }}
+  @media (max-width: 480px) {{
+    .cyc-row {{ flex-wrap:wrap; }}
+    .cyc-box {{ flex:1 1 calc(50% - 6px); font-size:11.5px; padding:10px 6px; }}
+    .cyc-here-tag {{ position:static; margin-top:4px; }}
+  }}
   .cyc-here-tag {{ position:absolute; bottom:-22px; left:0; right:0; font-size:10px; color:var(--accent); letter-spacing:1px; }}
   .cyc-arrow {{ color: var(--muted); font-size:16px; }}
   footer {{ padding: 18px 24px; color: var(--muted); font-size: 11.5px; border-top:1px solid var(--border); line-height:1.6; }}
