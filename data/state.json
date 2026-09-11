@@ -12,7 +12,7 @@
     },
     "eth-resistance-break": {
       "triggered": true,
-      "last_triggered_at": "2026-09-11 17:16:08"
+      "last_triggered_at": "2026-09-11 17:19:59"
     },
     "eth-support-break": {
       "triggered": false,
@@ -2023,7 +2023,7 @@
         ],
         [
           "Stretch from long-term average",
-          "+73.9% above its long-term average - very stretched",
+          "+67.1% above its long-term average - very stretched",
           -2
         ],
         [
@@ -2036,12 +2036,12 @@
       "id": "uniswap",
       "symbol": "UNI",
       "name": "Uniswap",
-      "price": 6.38,
-      "pct_24h": 7.42647,
-      "pct_7d": 0.7,
+      "price": 6.13,
+      "pct_24h": 2.79003,
+      "pct_7d": -1.5,
       "support_30d": 3.1971416665971573,
       "resistance_30d": 7.291165865788254,
-      "as_of": "2026-09-11 15:35:21",
+      "as_of": "2026-09-11 17:19:59",
       "stale": false
     },
     "pi-network": {
@@ -2095,7 +2095,7 @@
     "ondo-finance": {
       "label": "\ud83d\udfe1 HOLD / NEUTRAL",
       "status": "neutral",
-      "score": -1,
+      "score": 0,
       "rows": [
         [
           "Price vs. recent range",
@@ -2119,8 +2119,8 @@
         ],
         [
           "Stretch from long-term average",
-          "+10.7% above its long-term average - a bit stretched",
-          -1
+          "+9.8% vs its long-term average - not stretched either way",
+          0
         ],
         [
           "Leverage traders' bias",
@@ -2132,12 +2132,12 @@
       "id": "ondo-finance",
       "symbol": "ONDO",
       "name": "Ondo",
-      "price": 0.361373,
-      "pct_24h": 3.14777,
-      "pct_7d": 2.7,
+      "price": 0.358495,
+      "pct_24h": 3.10941,
+      "pct_7d": 1.5,
       "support_30d": 0.32338181384146436,
       "resistance_30d": 0.3969475338902824,
-      "as_of": "2026-09-11 14:50:31",
+      "as_of": "2026-09-11 17:19:59",
       "stale": false
     },
     "canton-network": {
@@ -2335,7 +2335,7 @@
     "sky": {
       "label": "\ud83d\udfe1 HOLD / NEUTRAL",
       "status": "neutral",
-      "score": 0,
+      "score": 1,
       "rows": [
         [
           "Price vs. recent range",
@@ -2354,12 +2354,12 @@
         ],
         [
           "Recent trend",
-          "Trending down - avoid catching a falling knife",
-          -1
+          "Chopping sideways - no clear trend",
+          0
         ],
         [
           "Stretch from long-term average",
-          "-9.8% vs its long-term average - not stretched either way",
+          "-6.6% vs its long-term average - not stretched either way",
           0
         ],
         [
@@ -2372,12 +2372,12 @@
       "id": "sky",
       "symbol": "SKY",
       "name": "Sky",
-      "price": 0.06029,
-      "pct_24h": 2.33116,
-      "pct_7d": -11.9,
+      "price": 0.062422,
+      "pct_24h": 3.9387,
+      "pct_7d": -7.1,
       "support_30d": 0.05081051579814886,
       "resistance_30d": 0.07314868186988309,
-      "as_of": "2026-09-11 15:35:21",
+      "as_of": "2026-09-11 17:19:59",
       "stale": false
     },
     "shiba-inu": {
@@ -3306,45 +3306,75 @@
         "target2": 1.7057133333333334,
         "opened_at": "2026-09-11T22:33:33.175542"
       },
-      "1h:PI": {
-        "coin": "PI",
-        "name": "Pi Network",
-        "tf": "1h",
-        "entry": 0.09285,
-        "stop": 0.0903075,
-        "target1": 0.0953925,
-        "target2": 0.09793500000000001,
-        "opened_at": "2026-09-11T17:12:37.416469"
+      "15m:UNI": {
+        "coin": "UNI",
+        "name": "Uniswap",
+        "tf": "15m",
+        "entry": 5.8754,
+        "stop": 5.7871033333333335,
+        "target1": 5.963696666666666,
+        "target2": 6.051993333333333,
+        "opened_at": "2026-09-11T17:22:23.165917"
+      },
+      "15m:DOGE": {
+        "coin": "DOGE",
+        "name": "Dogecoin",
+        "tf": "15m",
+        "entry": 0.082297,
+        "stop": 0.08157312666666666,
+        "target1": 0.08302087333333333,
+        "target2": 0.08374474666666666,
+        "opened_at": "2026-09-11T17:22:23.165917"
+      },
+      "15m:ONDO": {
+        "coin": "ONDO",
+        "name": "Ondo",
+        "tf": "15m",
+        "entry": 0.34296,
+        "stop": 0.33955966666666665,
+        "target1": 0.3463603333333333,
+        "target2": 0.34976066666666666,
+        "opened_at": "2026-09-11T17:22:23.165917"
+      },
+      "15m:ASTER": {
+        "coin": "ASTER",
+        "name": "Aster",
+        "tf": "15m",
+        "entry": 0.67783,
+        "stop": 0.6718453333333334,
+        "target1": 0.6838146666666667,
+        "target2": 0.6897993333333333,
+        "opened_at": "2026-09-11T17:22:23.165917"
       },
       "15m:HYPE": {
         "coin": "HYPE",
         "name": "Hyperliquid",
         "tf": "15m",
         "entry": 78.57,
-        "stop": 77.77966666666666,
-        "target1": 79.36033333333333,
-        "target2": 80.15066666666667,
-        "opened_at": "2026-09-11T17:18:22.371964"
+        "stop": 77.77566666666667,
+        "target1": 79.36433333333332,
+        "target2": 80.15866666666665,
+        "opened_at": "2026-09-11T17:22:23.165917"
       },
       "15m:CRO": {
         "coin": "CRO",
         "name": "Cronos",
         "tf": "15m",
         "entry": 0.05586,
-        "stop": 0.055677,
-        "target1": 0.056043,
-        "target2": 0.056226000000000005,
-        "opened_at": "2026-09-11T17:18:22.371964"
+        "stop": 0.055675666666666665,
+        "target1": 0.056044333333333335,
+        "target2": 0.05622866666666667,
+        "opened_at": "2026-09-11T17:22:23.165917"
       },
       "15m:CC": {
         "coin": "CC",
         "name": "Canton",
         "tf": "15m",
         "entry": 0.095,
-        "stop": 0.094045,
-        "target1": 0.095955,
-        "target2": 0.09691,
-        "opened_at": "2026-09-11T17:18:22.371964"
+        "stop": 0.09404166666666666,
+        "target1": 0.09595833333333334,
+        "target2": 0.09691666666666668,
+        "opened_at": "2026-09-11T17:22:23.165917"
       },
       "15m:BCH": {
         "coin": "BCH",
@@ -3354,37 +3384,37 @@
         "stop": 217.17333333333332,
         "target1": 221.22666666666666,
         "target2": 223.25333333333333,
-        "opened_at": "2026-09-11T17:18:22.371964"
+        "opened_at": "2026-09-11T17:22:23.165917"
       },
       "15m:POL": {
         "coin": "POL",
         "name": "POL (ex-MATIC)",
         "tf": "15m",
         "entry": 0.09235,
-        "stop": 0.09159,
-        "target1": 0.09311,
-        "target2": 0.09387,
-        "opened_at": "2026-09-11T17:18:22.371964"
+        "stop": 0.09158766666666666,
+        "target1": 0.09311233333333334,
+        "target2": 0.09387466666666668,
+        "opened_at": "2026-09-11T17:22:23.165917"
       },
       "15m:ADA": {
         "coin": "ADA",
         "name": "Cardano",
         "tf": "15m",
         "entry": 0.2005,
-        "stop": 0.1982527666666667,
-        "target1": 0.20274723333333333,
-        "target2": 0.20499446666666665,
-        "opened_at": "2026-09-11T17:18:22.371964"
+        "stop": 0.1982489666666667,
+        "target1": 0.20275103333333333,
+        "target2": 0.20500206666666665,
+        "opened_at": "2026-09-11T17:22:23.165917"
       },
       "15m:XRP": {
         "coin": "XRP",
         "name": "XRP",
         "tf": "15m",
         "entry": 1.31506,
-        "stop": 1.3011249999999999,
-        "target1": 1.328995,
-        "target2": 1.34293,
-        "opened_at": "2026-09-11T17:18:22.371964"
+        "stop": 1.3010653333333333,
+        "target1": 1.3290546666666665,
+        "target2": 1.343049333333333,
+        "opened_at": "2026-09-11T17:22:23.165917"
       },
       "15m:HBAR": {
         "coin": "HBAR",
@@ -3394,17 +3424,57 @@
         "stop": 0.07284433333333333,
         "target1": 0.07377566666666667,
         "target2": 0.07424133333333334,
-        "opened_at": "2026-09-11T17:18:22.371964"
+        "opened_at": "2026-09-11T17:22:23.165917"
+      },
+      "1h:ONDO": {
+        "coin": "ONDO",
+        "name": "Ondo",
+        "tf": "1h",
+        "entry": 0.34228,
+        "stop": 0.33758499999999997,
+        "target1": 0.346975,
+        "target2": 0.35167,
+        "opened_at": "2026-09-11T17:22:23.165917"
+      },
+      "1h:DOGE": {
+        "coin": "DOGE",
+        "name": "Dogecoin",
+        "tf": "1h",
+        "entry": 0.082297,
+        "stop": 0.08137982916666667,
+        "target1": 0.08321417083333332,
+        "target2": 0.08413134166666665,
+        "opened_at": "2026-09-11T17:22:23.165917"
+      },
+      "1h:UNI": {
+        "coin": "UNI",
+        "name": "Uniswap",
+        "tf": "1h",
+        "entry": 5.8754,
+        "stop": 5.751004166666667,
+        "target1": 5.999795833333333,
+        "target2": 6.124191666666666,
+        "opened_at": "2026-09-11T17:22:23.165917"
+      },
+      "1h:PI": {
+        "coin": "PI",
+        "name": "Pi Network",
+        "tf": "1h",
+        "entry": 0.09285,
+        "stop": 0.09030625,
+        "target1": 0.09539375,
+        "target2": 0.0979375,
+        "opened_at": "2026-09-11T17:22:23.165917"
       },
       "1h:HYPE": {
         "coin": "HYPE",
         "name": "Hyperliquid",
         "tf": "1h",
         "entry": 78.15,
-        "stop": 77.03833333333334,
-        "target1": 79.26166666666667,
-        "target2": 80.37333333333333,
-        "opened_at": "2026-09-11T17:18:22.371964"
+        "stop": 77.03708333333334,
+        "target1": 79.26291666666667,
+        "target2": 80.37583333333333,
+        "opened_at": "2026-09-11T17:22:23.165917"
       },
       "1h:CRO": {
         "coin": "CRO",
@@ -3414,7 +3484,7 @@
         "stop": 0.05544,
         "target1": 0.05628,
         "target2": 0.05669999999999999,
-        "opened_at": "2026-09-11T17:18:22.371964"
+        "opened_at": "2026-09-11T17:22:23.165917"
       },
       "1h:BCH": {
         "coin": "BCH",
@@ -3424,27 +3494,17 @@
         "stop": 216.41625,
         "target1": 221.98375,
         "target2": 224.76749999999998,
-        "opened_at": "2026-09-11T17:18:22.371964"
+        "opened_at": "2026-09-11T17:22:23.165917"
       },
       "1h:XRP": {
         "coin": "XRP",
         "name": "XRP",
         "tf": "1h",
         "entry": 1.31506,
-        "stop": 1.2980216666666666,
-        "target1": 1.3320983333333332,
-        "target2": 1.3491366666666664,
-        "opened_at": "2026-09-11T17:18:22.371964"
-      },
-      "1h:ADA": {
-        "coin": "ADA",
-        "name": "Cardano",
-        "tf": "1h",
-        "entry": 0.2005,
-        "stop": 0.19735850000000002,
-        "target1": 0.2036415,
-        "target2": 0.206783,
-        "opened_at": "2026-09-11T17:18:22.371964"
+        "stop": 1.2979741666666667,
+        "target1": 1.3321458333333331,
+        "target2": 1.3492316666666664,
+        "opened_at": "2026-09-11T17:22:23.165917"
       },
       "1h:HBAR": {
         "coin": "HBAR",
@@ -3454,7 +3514,7 @@
         "stop": 0.0726125,
         "target1": 0.0740075,
         "target2": 0.07470500000000001,
-        "opened_at": "2026-09-11T17:18:22.371964"
+        "opened_at": "2026-09-11T17:22:23.165917"
       }
     },
     "resolved": [
@@ -4432,6 +4492,201 @@
         "result": "win",
         "resolved_at": "2026-09-11T17:18:22.371964",
         "exit_price": 0.07528
+      },
+      {
+        "coin": "PI",
+        "name": "Pi Network",
+        "tf": "1h",
+        "entry": 0.09285,
+        "stop": 0.0903075,
+        "target1": 0.0953925,
+        "target2": 0.09793500000000001,
+        "opened_at": "2026-09-11T17:12:37.416469",
+        "result": "win",
+        "resolved_at": "2026-09-11T17:22:23.165917",
+        "exit_price": 0.09586
+      },
+      {
+        "coin": "HYPE",
+        "name": "Hyperliquid",
+        "tf": "15m",
+        "entry": 78.57,
+        "stop": 77.77966666666666,
+        "target1": 79.36033333333333,
+        "target2": 80.15066666666667,
+        "opened_at": "2026-09-11T17:18:22.371964",
+        "result": "win",
+        "resolved_at": "2026-09-11T17:22:23.165917",
+        "exit_price": 81.76
+      },
+      {
+        "coin": "CRO",
+        "name": "Cronos",
+        "tf": "15m",
+        "entry": 0.05586,
+        "stop": 0.055677,
+        "target1": 0.056043,
+        "target2": 0.056226000000000005,
+        "opened_at": "2026-09-11T17:18:22.371964",
+        "result": "win",
+        "resolved_at": "2026-09-11T17:22:23.165917",
+        "exit_price": 0.05702
+      },
+      {
+        "coin": "CC",
+        "name": "Canton",
+        "tf": "15m",
+        "entry": 0.095,
+        "stop": 0.094045,
+        "target1": 0.095955,
+        "target2": 0.09691,
+        "opened_at": "2026-09-11T17:18:22.371964",
+        "result": "win",
+        "resolved_at": "2026-09-11T17:22:23.165917",
+        "exit_price": 0.09789
+      },
+      {
+        "coin": "BCH",
+        "name": "Bitcoin Cash",
+        "tf": "15m",
+        "entry": 219.2,
+        "stop": 217.17333333333332,
+        "target1": 221.22666666666666,
+        "target2": 223.25333333333333,
+        "opened_at": "2026-09-11T17:18:22.371964",
+        "result": "win",
+        "resolved_at": "2026-09-11T17:22:23.165917",
+        "exit_price": 232.64
+      },
+      {
+        "coin": "POL",
+        "name": "POL (ex-MATIC)",
+        "tf": "15m",
+        "entry": 0.09235,
+        "stop": 0.09159,
+        "target1": 0.09311,
+        "target2": 0.09387,
+        "opened_at": "2026-09-11T17:18:22.371964",
+        "result": "win",
+        "resolved_at": "2026-09-11T17:22:23.165917",
+        "exit_price": 0.09666
+      },
+      {
+        "coin": "ADA",
+        "name": "Cardano",
+        "tf": "15m",
+        "entry": 0.2005,
+        "stop": 0.1982527666666667,
+        "target1": 0.20274723333333333,
+        "target2": 0.20499446666666665,
+        "opened_at": "2026-09-11T17:18:22.371964",
+        "result": "win",
+        "resolved_at": "2026-09-11T17:22:23.165917",
+        "exit_price": 0.208203
+      },
+      {
+        "coin": "XRP",
+        "name": "XRP",
+        "tf": "15m",
+        "entry": 1.31506,
+        "stop": 1.3011249999999999,
+        "target1": 1.328995,
+        "target2": 1.34293,
+        "opened_at": "2026-09-11T17:18:22.371964",
+        "result": "win",
+        "resolved_at": "2026-09-11T17:22:23.165917",
+        "exit_price": 1.36726
+      },
+      {
+        "coin": "HBAR",
+        "name": "Hedera",
+        "tf": "15m",
+        "entry": 0.07331,
+        "stop": 0.07284433333333333,
+        "target1": 0.07377566666666667,
+        "target2": 0.07424133333333334,
+        "opened_at": "2026-09-11T17:18:22.371964",
+        "result": "win",
+        "resolved_at": "2026-09-11T17:22:23.165917",
+        "exit_price": 0.07528
+      },
+      {
+        "coin": "HYPE",
+        "name": "Hyperliquid",
+        "tf": "1h",
+        "entry": 78.15,
+        "stop": 77.03833333333334,
+        "target1": 79.26166666666667,
+        "target2": 80.37333333333333,
+        "opened_at": "2026-09-11T17:18:22.371964",
+        "result": "win",
+        "resolved_at": "2026-09-11T17:22:23.165917",
+        "exit_price": 81.81
+      },
+      {
+        "coin": "CRO",
+        "name": "Cronos",
+        "tf": "1h",
+        "entry": 0.05586,
+        "stop": 0.05544,
+        "target1": 0.05628,
+        "target2": 0.05669999999999999,
+        "opened_at": "2026-09-11T17:18:22.371964",
+        "result": "win",
+        "resolved_at": "2026-09-11T17:22:23.165917",
+        "exit_price": 0.05702
+      },
+      {
+        "coin": "BCH",
+        "name": "Bitcoin Cash",
+        "tf": "1h",
+        "entry": 219.2,
+        "stop": 216.41625,
+        "target1": 221.98375,
+        "target2": 224.76749999999998,
+        "opened_at": "2026-09-11T17:18:22.371964",
+        "result": "win",
+        "resolved_at": "2026-09-11T17:22:23.165917",
+        "exit_price": 232.64
+      },
+      {
+        "coin": "XRP",
+        "name": "XRP",
+        "tf": "1h",
+        "entry": 1.31506,
+        "stop": 1.2980216666666666,
+        "target1": 1.3320983333333332,
+        "target2": 1.3491366666666664,
+        "opened_at": "2026-09-11T17:18:22.371964",
+        "result": "win",
+        "resolved_at": "2026-09-11T17:22:23.165917",
+        "exit_price": 1.3684
+      },
+      {
+        "coin": "ADA",
+        "name": "Cardano",
+        "tf": "1h",
+        "entry": 0.2005,
+        "stop": 0.19735850000000002,
+        "target1": 0.2036415,
+        "target2": 0.206783,
+        "opened_at": "2026-09-11T17:18:22.371964",
+        "result": "win",
+        "resolved_at": "2026-09-11T17:22:23.165917",
+        "exit_price": 0.208133
+      },
+      {
+        "coin": "HBAR",
+        "name": "Hedera",
+        "tf": "1h",
+        "entry": 0.07331,
+        "stop": 0.0726125,
+        "target1": 0.0740075,
+        "target2": 0.07470500000000001,
+        "opened_at": "2026-09-11T17:18:22.371964",
+        "result": "win",
+        "resolved_at": "2026-09-11T17:22:23.165917",
+        "exit_price": 0.07528
       }
     ]
   },
@@ -4439,14 +4694,14 @@
     "key": "BTC",
     "name": "Bitcoin",
     "emoji": "\u20bf",
-    "price": 77782,
+    "price": 77813,
     "high_24h": 79607,
     "low_24h": 76393,
-    "pct_24h": 0.86756,
+    "pct_24h": 0.87356,
     "pct_7d": -1.9,
     "pct_30d": 22.9,
-    "sma50": 70658.13873108581,
-    "sma200": 70018.87325080235,
+    "sma50": 70658.13599651608,
+    "sma200": 70018.87256715992,
     "support_30d": 62843.70368466329,
     "resistance_30d": 81264.70153038795,
     "mark_price": 77230.11864493,
@@ -4461,16 +4716,16 @@
     "key": "ETH",
     "name": "Ethereum",
     "emoji": "\u039e",
-    "price": 2572.38,
+    "price": 2576.18,
     "high_24h": 2647.68,
     "low_24h": 2436.69,
-    "pct_24h": 4.9499,
+    "pct_24h": 5.00273,
     "pct_7d": 5.2,
     "pct_30d": 36.3,
-    "sma50": 2161.7372467733862,
-    "sma200": 2052.209492784104,
+    "sma50": 2161.775670230423,
+    "sma200": 2052.2190986483633,
     "support_30d": 1874.401898191962,
-    "resistance_30d": 2573.5626735115516,
+    "resistance_30d": 2575.483846363394,
     "mark_price": 2466.82,
     "index_price": 2467.80488372,
     "funding_rate": 3.45e-05,
