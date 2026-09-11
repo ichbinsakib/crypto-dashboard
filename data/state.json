@@ -4,7 +4,7 @@
   "_alerts_state": {
     "btc-resistance-break": {
       "triggered": true,
-      "last_triggered_at": "2026-09-11 14:50:31"
+      "last_triggered_at": "2026-09-11 14:55:19"
     },
     "btc-support-break": {
       "triggered": false,
@@ -12,7 +12,7 @@
     },
     "eth-resistance-break": {
       "triggered": true,
-      "last_triggered_at": "2026-09-11 14:50:31"
+      "last_triggered_at": "2026-09-11 14:55:19"
     },
     "eth-support-break": {
       "triggered": false,
@@ -605,9 +605,9 @@
       "stale": false
     },
     "monero": {
-      "label": "\ud83d\udd34 CAUTION - REDUCE NEW BUYS",
+      "label": "\ud83d\udd34 DISTRIBUTION ZONE",
       "status": "bearish",
-      "score": -2,
+      "score": -5,
       "rows": [
         [
           "Price vs. recent range",
@@ -621,8 +621,8 @@
         ],
         [
           "Market phase (best guess)",
-          "Established uptrend - phase where price marks up",
-          1
+          "Very extended after a big run - phase where smart money sells",
+          -2
         ],
         [
           "Recent trend",
@@ -631,7 +631,7 @@
         ],
         [
           "Stretch from long-term average",
-          "+39.3% above its long-term average - very stretched",
+          "+40.5% above its long-term average - very stretched",
           -2
         ],
         [
@@ -640,16 +640,16 @@
           0
         ]
       ],
-      "plain": "Getting risky - I'd hold off on new buys until this cools down.",
+      "plain": "Looks stretched and euphoric - historically the zone where smart money sells, not buys.",
       "id": "monero",
       "symbol": "XMR",
       "name": "Monero",
-      "price": 513.13,
-      "pct_24h": 2.01904,
-      "pct_7d": -7.0,
+      "price": 517.67,
+      "pct_24h": 2.7357,
+      "pct_7d": -1.7,
       "support_30d": 393.1050548864613,
       "resistance_30d": 555.6684591165193,
-      "as_of": "2026-09-11 12:50:25",
+      "as_of": "2026-09-11 14:55:19",
       "stale": false
     },
     "cardano": {
@@ -2071,7 +2071,7 @@
         ],
         [
           "Stretch from long-term average",
-          "-32.8% below its long-term average - confirmed downtrend",
+          "-31.9% below its long-term average - confirmed downtrend",
           -1
         ],
         [
@@ -2084,12 +2084,12 @@
       "id": "pi-network",
       "symbol": "PI",
       "name": "Pi Network",
-      "price": 0.094483,
-      "pct_24h": -1.73758,
-      "pct_7d": 0.2,
+      "price": 0.095706,
+      "pct_24h": -1.09927,
+      "pct_7d": 1.2,
       "support_30d": 0.08559695435343688,
       "resistance_30d": 0.09798925329339339,
-      "as_of": "2026-09-11 10:35:19",
+      "as_of": "2026-09-11 14:55:19",
       "stale": false
     },
     "ondo-finance": {
@@ -2359,7 +2359,7 @@
         ],
         [
           "Stretch from long-term average",
-          "-11.3% vs its long-term average - not stretched either way",
+          "-11.5% vs its long-term average - not stretched either way",
           0
         ],
         [
@@ -2372,12 +2372,12 @@
       "id": "sky",
       "symbol": "SKY",
       "name": "Sky",
-      "price": 0.059273,
-      "pct_24h": 0.46375,
+      "price": 0.059151,
+      "pct_24h": 0.59538,
       "pct_7d": -13.5,
       "support_30d": 0.05081051579814886,
       "resistance_30d": 0.07314868186988309,
-      "as_of": "2026-09-11 14:40:25",
+      "as_of": "2026-09-11 14:55:19",
       "stale": false
     },
     "shiba-inu": {
@@ -3298,14 +3298,14 @@
     "key": "BTC",
     "name": "Bitcoin",
     "emoji": "\u20bf",
-    "price": 78593,
+    "price": 78783,
     "high_24h": 79341,
     "low_24h": 76393,
-    "pct_24h": 1.67374,
+    "pct_24h": 1.84703,
     "pct_7d": -0.7,
     "pct_30d": 23.1,
-    "sma50": 70674.04893136905,
-    "sma200": 70022.85080087316,
+    "sma50": 70676.89072296405,
+    "sma200": 70023.5612487719,
     "support_30d": 62843.70368466329,
     "resistance_30d": 81264.70153038795,
     "mark_price": 77230.11864493,
@@ -3320,16 +3320,16 @@
     "key": "ETH",
     "name": "Ethereum",
     "emoji": "\u039e",
-    "price": 2600.44,
+    "price": 2600.52,
     "high_24h": 2631.39,
     "low_24h": 2433.27,
-    "pct_24h": 6.62615,
+    "pct_24h": 6.50452,
     "pct_7d": 6.7,
     "pct_30d": 36.9,
-    "sma50": 2162.4286859637355,
-    "sma200": 2052.382352581691,
+    "sma50": 2162.276476914889,
+    "sma200": 2052.3443003194798,
     "support_30d": 1874.401898191962,
-    "resistance_30d": 2608.1346330290235,
+    "resistance_30d": 2600.524180586678,
     "mark_price": 2466.82,
     "index_price": 2467.80488372,
     "funding_rate": 3.45e-05,
