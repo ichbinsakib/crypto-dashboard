@@ -997,19 +997,25 @@ def render(coins_data, fng_value, fng_classification, generated_at, any_stale,
             for i, a in enumerate(triggered_now)
         )
         banner_html = f'<div class="alert-banner">{items}</div>'
-    tabs_inputs = "\n".join(
-        f'<input type="radio" name="tabs" id="tab-{c["key"].lower()}">'
-        for c in coins_data
+    screener_info_tip = (
+        f'Scans the top {SCREENER_SIZE} coins by market cap (excluding stablecoins and BTC/ETH wrappers). '
+        'Pick a timeframe below -- each uses a model suited to that horizon, not the same numbers just relabeled. '
+        'This is not a recommendation to trade any coin listed: small/mid-cap coins carry far higher risk than '
+        'BTC/ETH, none of this is backtested, and a high score means &quot;resembles a historically favorable '
+        'setup by this simple rule set&quot; -- nothing more. Education only, not financial advice.'
     )
-    tabs_inputs += '\n<input type="radio" name="tabs" id="tab-screener" checked>'
-    tabs_inputs += '\n<input type="radio" name="tabs" id="tab-mypicks">'
-    tabs_labels = "\n".join(
-        f'<label for="tab-{c["key"].lower()}">{c["emoji"]} {c["key"]}</label>' for c in coins_data
+    tabs_inputs = (
+        '<input type="radio" name="tabs" id="tab-screener" checked>\n'
+        '<input type="radio" name="tabs" id="tab-bigcoins">\n'
+        '<input type="radio" name="tabs" id="tab-mypicks">'
     )
-    tabs_labels += '\n<label for="tab-screener">🔍 Screener</label>'
-    tabs_labels += '\n<label for="tab-mypicks">⭐ My Picks</label>'
+    tabs_labels = (
+        f'<label for="tab-screener">🔍 Screener<span class="info-tip" tabindex="0" data-tip="{screener_info_tip}">&#9432;</span></label>\n'
+        '<label for="tab-bigcoins">🪙 Big Coins</label>\n'
+        '<label for="tab-mypicks">⭐ My Picks</label>'
+    )
 
-    panels = []
+    panels = {}
     spot_signals_by_coin = {}
     for c in coins_data:
         price_struct_label, price_struct_status = classify_price_structure(c.get("pct_24h"), c.get("pct_7d"))
@@ -1091,12 +1097,11 @@ def render(coins_data, fng_value, fng_classification, generated_at, any_stale,
 
         alerts_card = f"""
   <div class="cycle-map" style="margin-bottom:20px;">
-    <div class="card-title">🔔 PRICE ALERTS</div>
+    <div class="card-title">🔔 PRICE ALERTS<span class="info-tip" tabindex="0" data-tip="To add or edit alerts: edit data/alerts_config.json in the GitHub repo (web editor works fine), or run add_alert.py locally if you have this repo cloned.">&#9432;</span></div>
     <table class="signal-table" style="margin-top:10px; margin-bottom:0;">
       <thead><tr><th>Alert</th><th>Condition</th><th>Distance</th><th>Status</th></tr></thead>
       <tbody>{alert_rows_html}</tbody>
     </table>
-    <div class="sub" style="margin-top:10px;">To add or edit alerts: edit <strong>data/alerts_config.json</strong> in the GitHub repo (web editor works fine), or run <strong>add_alert.py</strong> locally if you have this repo cloned.</div>
   </div>
 """
 
@@ -1188,7 +1193,7 @@ def render(coins_data, fng_value, fng_classification, generated_at, any_stale,
             trade_levels_card = ""
 
         panel = f"""
-<div class="panel panel-{c['key'].lower()}">
+<div class="bigcoin-panel bigcoin-panel-{c['key'].lower()}">
   {stale_note}
   {spot_signal_card}
   {trade_levels_card}
@@ -1230,7 +1235,24 @@ def render(coins_data, fng_value, fng_classification, generated_at, any_stale,
   {alerts_card}
 </div>
 """
-        panels.append(panel)
+        panels[c["key"].lower()] = panel
+
+    bigcoin_inputs = "\n".join(
+        f'<input type="radio" name="bigcoin" id="bc-{c["key"].lower()}"{" checked" if i == 0 else ""}>'
+        for i, c in enumerate(coins_data)
+    )
+    bigcoin_labels = "\n".join(
+        f'<label for="bc-{c["key"].lower()}">{c["emoji"]} {c["key"]}</label>' for c in coins_data
+    )
+    bigcoins_panel = f"""
+<div class="panel panel-bigcoins">
+  {bigcoin_inputs}
+  <div class="tabbar" style="padding-left:0;">
+    {bigcoin_labels}
+  </div>
+  {"".join(panels[c["key"].lower()] for c in coins_data)}
+</div>
+"""
 
     def _pts_badge2(pts):
         if pts > 0:
@@ -1393,10 +1415,6 @@ def render(coins_data, fng_value, fng_classification, generated_at, any_stale,
 
     screener_panel = f"""
 <div class="panel panel-screener">
-  <div class="cycle-map spot-signal-card" style="margin-bottom:20px;">
-    <div class="card-title">🔍 COIN SCREENER (educational, rule-based ranking)<span class="info-tip" tabindex="0" data-tip="Scans the top {SCREENER_SIZE} coins by market cap (excluding stablecoins and BTC/ETH wrappers). Pick a timeframe below -- each uses a model suited to that horizon, not the same numbers just relabeled. This is not a recommendation to trade any coin listed: small/mid-cap coins carry far higher risk than BTC/ETH, none of this is backtested, and a high score means &quot;resembles a historically favorable setup by this simple rule set&quot; -- nothing more. Education only, not financial advice.">&#9432;</span></div>
-  </div>
-
   <input type="radio" name="tf" id="tf-15m" checked>
   <input type="radio" name="tf" id="tf-1h">
   <input type="radio" name="tf" id="tf-1d">
@@ -1514,15 +1532,18 @@ def render(coins_data, fng_value, fng_classification, generated_at, any_stale,
   .tabbar {{ display:flex; gap:8px; padding: 12px 24px; overflow-x:auto; -webkit-overflow-scrolling:touch; }}
   .tabbar label {{ padding:8px 20px; border:1px solid var(--border); border-radius:8px; cursor:pointer; color:var(--muted); font-weight:600; }}
   input[type=radio] {{ display:none; }}
-  #tab-btc:checked ~ .tabbar label[for=tab-btc],
-  #tab-eth:checked ~ .tabbar label[for=tab-eth],
   #tab-screener:checked ~ .tabbar label[for=tab-screener],
-  #tab-mypicks:checked ~ .tabbar label[for=tab-mypicks] {{ background: var(--accent); color:#04121c; border-color:var(--accent); }}
+  #tab-bigcoins:checked ~ .tabbar label[for=tab-bigcoins],
+  #tab-mypicks:checked ~ .tabbar label[for=tab-mypicks],
+  #bc-btc:checked ~ .tabbar label[for=bc-btc],
+  #bc-eth:checked ~ .tabbar label[for=bc-eth] {{ background: var(--accent); color:#04121c; border-color:var(--accent); }}
   .panel {{ display:none; padding: 8px 24px 32px; }}
-  #tab-btc:checked ~ .panel-btc {{ display:block; }}
-  #tab-eth:checked ~ .panel-eth {{ display:block; }}
   #tab-screener:checked ~ .panel-screener {{ display:block; }}
+  #tab-bigcoins:checked ~ .panel-bigcoins {{ display:block; }}
   #tab-mypicks:checked ~ .panel-mypicks {{ display:block; }}
+  .bigcoin-panel {{ display:none; }}
+  #bc-btc:checked ~ .bigcoin-panel-btc {{ display:block; }}
+  #bc-eth:checked ~ .bigcoin-panel-eth {{ display:block; }}
   .tf-panel {{ display:none; }}
   #tf-15m:checked ~ .tf-panel-15m {{ display:block; }}
   #tf-1h:checked ~ .tf-panel-1h {{ display:block; }}
@@ -1661,13 +1682,11 @@ def render(coins_data, fng_value, fng_classification, generated_at, any_stale,
 {banner_html}
 {tabs_inputs}
 <div class="tabbar">{tabs_labels}</div>
-{"".join(panels)}
+{bigcoins_panel}
 {screener_panel}
 <footer>
-  Data sources: CoinGecko (price/market), Binance Futures public API (funding rate, open interest, mark/index premium), Alternative.me (Fear &amp; Greed Index). No paid subscriptions used.<br>
-  Rows marked <strong>Unavailable</strong> (MVRV Z-Score, NUPL, exchange flows, ETF flows) require a paid on-chain data provider (e.g. Glassnode, CryptoQuant, Coinglass) that is not connected to this dashboard.<br>
-  Cycle Map, Heat Score, and Liquidation Risk are Kairo's own heuristic models built from the numbers above &mdash; not the output of a proprietary or third-party analytics service.<br>
   Education only, not financial advice. You trade at your own risk.
+  <span class="info-tip" tabindex="0" data-tip="Data sources: CoinGecko (price/market), Binance Futures public API (funding rate, open interest, mark/index premium), Alternative.me (Fear &amp; Greed Index). No paid subscriptions used. Rows marked Unavailable (MVRV Z-Score, NUPL, exchange flows, ETF flows) require a paid on-chain data provider not connected here. Cycle Map, Heat Score, and Liquidation Risk are Kairo's own heuristic models, not a third-party analytics service.">&#9432;</span>
 </footer>
 <script>
 (function() {{
