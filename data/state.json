@@ -12,7 +12,7 @@
     },
     "eth-resistance-break": {
       "triggered": true,
-      "last_triggered_at": "2026-09-11 16:37:46"
+      "last_triggered_at": "2026-09-11 16:40:26"
     },
     "eth-support-break": {
       "triggered": false,
@@ -117,11 +117,11 @@
       "symbol": "XRP",
       "name": "XRP",
       "price": 1.37,
-      "pct_24h": 1.70465,
+      "pct_24h": 1.99253,
       "pct_7d": -1.0,
       "support_30d": 0.9927072784932938,
       "resistance_30d": 1.52050482788377,
-      "as_of": "2026-09-11 16:25:42",
+      "as_of": "2026-09-11 16:40:26",
       "stale": false
     },
     "solana": {
@@ -679,7 +679,7 @@
         ],
         [
           "Stretch from long-term average",
-          "-4.2% vs its long-term average - not stretched either way",
+          "-5.1% vs its long-term average - not stretched either way",
           0
         ],
         [
@@ -692,12 +692,12 @@
       "id": "cardano",
       "symbol": "ADA",
       "name": "Cardano",
-      "price": 0.210471,
-      "pct_24h": 0.72742,
-      "pct_7d": -1.6,
+      "price": 0.208609,
+      "pct_24h": 1.05154,
+      "pct_7d": -1.2,
       "support_30d": 0.1741249817054162,
       "resistance_30d": 0.2291047455940254,
-      "as_of": "2026-09-11 15:55:20",
+      "as_of": "2026-09-11 16:40:26",
       "stale": false
     },
     "stellar": {
@@ -3271,7 +3271,7 @@
         ],
         [
           "Stretch from long-term average",
-          "-1.8% vs its long-term average - not stretched either way",
+          "-4.7% vs its long-term average - not stretched either way",
           0
         ],
         [
@@ -3284,12 +3284,12 @@
       "id": "cosmos",
       "symbol": "ATOM",
       "name": "Cosmos Hub",
-      "price": 1.73,
-      "pct_24h": -2.94158,
-      "pct_7d": 15.3,
+      "price": 1.68,
+      "pct_24h": -4.19209,
+      "pct_7d": 15.0,
       "support_30d": 1.4128187654560649,
       "resistance_30d": 1.8581525047856993,
-      "as_of": "2026-09-11 15:20:27",
+      "as_of": "2026-09-11 16:40:26",
       "stale": false
     }
   },
@@ -3306,26 +3306,6 @@
         "target2": 1.7057133333333334,
         "opened_at": "2026-09-11T22:33:33.175542"
       },
-      "15m:AVAX": {
-        "coin": "AVAX",
-        "name": "Avalanche",
-        "tf": "15m",
-        "entry": 7.275,
-        "stop": 7.205166666666667,
-        "target1": 7.344833333333334,
-        "target2": 7.414666666666667,
-        "opened_at": "2026-09-11T16:39:48.535302"
-      },
-      "15m:HYPE": {
-        "coin": "HYPE",
-        "name": "Hyperliquid",
-        "tf": "15m",
-        "entry": 78.57,
-        "stop": 77.77866666666667,
-        "target1": 79.36133333333332,
-        "target2": 80.15266666666665,
-        "opened_at": "2026-09-11T16:39:48.535302"
-      },
       "15m:PUMP": {
         "coin": "PUMP",
         "name": "Pump.fun",
@@ -3336,55 +3316,85 @@
         "target2": 0.0036686666666666673,
         "opened_at": "2026-09-11T16:39:48.535302"
       },
-      "15m:HBAR": {
-        "coin": "HBAR",
-        "name": "Hedera",
+      "15m:LINK": {
+        "coin": "LINK",
+        "name": "Chainlink",
         "tf": "15m",
-        "entry": 0.07331,
-        "stop": 0.072838,
-        "target1": 0.073782,
-        "target2": 0.074254,
-        "opened_at": "2026-09-11T16:39:48.535302"
+        "entry": 11.23657,
+        "stop": 11.121648666666667,
+        "target1": 11.351491333333334,
+        "target2": 11.466412666666667,
+        "opened_at": "2026-09-11T16:42:26.443225"
       },
-      "15m:QNT": {
-        "coin": "QNT",
-        "name": "Quant",
+      "15m:ADA": {
+        "coin": "ADA",
+        "name": "Cardano",
         "tf": "15m",
-        "entry": 63.82,
-        "stop": 63.385000000000005,
-        "target1": 64.255,
-        "target2": 64.69,
-        "opened_at": "2026-09-11T16:39:48.535302"
+        "entry": 0.2005,
+        "stop": 0.19823880000000002,
+        "target1": 0.2027612,
+        "target2": 0.2050224,
+        "opened_at": "2026-09-11T16:42:26.443225"
       },
-      "1h:HYPE": {
-        "coin": "HYPE",
-        "name": "Hyperliquid",
-        "tf": "1h",
-        "entry": 78.15,
-        "stop": 77.0125,
-        "target1": 79.28750000000001,
-        "target2": 80.42500000000001,
-        "opened_at": "2026-09-11T16:39:48.535302"
+      "15m:XRP": {
+        "coin": "XRP",
+        "name": "XRP",
+        "tf": "15m",
+        "entry": 1.31506,
+        "stop": 1.3011833333333334,
+        "target1": 1.3289366666666664,
+        "target2": 1.342813333333333,
+        "opened_at": "2026-09-11T16:42:26.443225"
       },
-      "1h:HBAR": {
-        "coin": "HBAR",
-        "name": "Hedera",
-        "tf": "1h",
-        "entry": 0.07331,
-        "stop": 0.07260375,
-        "target1": 0.07401625,
-        "target2": 0.07472250000000001,
-        "opened_at": "2026-09-11T16:39:48.535302"
+      "15m:CRO": {
+        "coin": "CRO",
+        "name": "Cronos",
+        "tf": "15m",
+        "entry": 0.05586,
+        "stop": 0.05567866666666667,
+        "target1": 0.05604133333333333,
+        "target2": 0.056222666666666664,
+        "opened_at": "2026-09-11T16:42:26.443225"
       },
-      "1h:AVAX": {
-        "coin": "AVAX",
-        "name": "Avalanche",
+      "1h:CRO": {
+        "coin": "CRO",
+        "name": "Cronos",
         "tf": "1h",
-        "entry": 7.275,
-        "stop": 7.179916666666667,
-        "target1": 7.3700833333333335,
-        "target2": 7.465166666666667,
-        "opened_at": "2026-09-11T16:39:48.535302"
+        "entry": 0.05586,
+        "stop": 0.05544333333333333,
+        "target1": 0.05627666666666667,
+        "target2": 0.05669333333333334,
+        "opened_at": "2026-09-11T16:42:26.443225"
+      },
+      "1h:LINK": {
+        "coin": "LINK",
+        "name": "Chainlink",
+        "tf": "1h",
+        "entry": 11.23657,
+        "stop": 11.091061666666667,
+        "target1": 11.382078333333334,
+        "target2": 11.527586666666668,
+        "opened_at": "2026-09-11T16:42:26.443225"
+      },
+      "1h:XRP": {
+        "coin": "XRP",
+        "name": "XRP",
+        "tf": "1h",
+        "entry": 1.31506,
+        "stop": 1.2979320833333332,
+        "target1": 1.3321879166666666,
+        "target2": 1.3493158333333333,
+        "opened_at": "2026-09-11T16:42:26.443225"
+      },
+      "1h:ADA": {
+        "coin": "ADA",
+        "name": "Cardano",
+        "tf": "1h",
+        "entry": 0.2005,
+        "stop": 0.19731408333333333,
+        "target1": 0.2036859166666667,
+        "target2": 0.20687183333333337,
+        "opened_at": "2026-09-11T16:42:26.443225"
       }
     },
     "resolved": [
@@ -3478,6 +3488,97 @@
         "result": "win",
         "resolved_at": "2026-09-11T16:39:48.535302",
         "exit_price": 516.79
+      },
+      {
+        "coin": "AVAX",
+        "name": "Avalanche",
+        "tf": "15m",
+        "entry": 7.275,
+        "stop": 7.205166666666667,
+        "target1": 7.344833333333334,
+        "target2": 7.414666666666667,
+        "opened_at": "2026-09-11T16:39:48.535302",
+        "result": "win",
+        "resolved_at": "2026-09-11T16:42:26.443225",
+        "exit_price": 7.561
+      },
+      {
+        "coin": "HYPE",
+        "name": "Hyperliquid",
+        "tf": "15m",
+        "entry": 78.57,
+        "stop": 77.77866666666667,
+        "target1": 79.36133333333332,
+        "target2": 80.15266666666665,
+        "opened_at": "2026-09-11T16:39:48.535302",
+        "result": "win",
+        "resolved_at": "2026-09-11T16:42:26.443225",
+        "exit_price": 81.45
+      },
+      {
+        "coin": "HBAR",
+        "name": "Hedera",
+        "tf": "15m",
+        "entry": 0.07331,
+        "stop": 0.072838,
+        "target1": 0.073782,
+        "target2": 0.074254,
+        "opened_at": "2026-09-11T16:39:48.535302",
+        "result": "win",
+        "resolved_at": "2026-09-11T16:42:26.443225",
+        "exit_price": 0.07531
+      },
+      {
+        "coin": "QNT",
+        "name": "Quant",
+        "tf": "15m",
+        "entry": 63.82,
+        "stop": 63.385000000000005,
+        "target1": 64.255,
+        "target2": 64.69,
+        "opened_at": "2026-09-11T16:39:48.535302",
+        "result": "win",
+        "resolved_at": "2026-09-11T16:42:26.443225",
+        "exit_price": 64.7
+      },
+      {
+        "coin": "HYPE",
+        "name": "Hyperliquid",
+        "tf": "1h",
+        "entry": 78.15,
+        "stop": 77.0125,
+        "target1": 79.28750000000001,
+        "target2": 80.42500000000001,
+        "opened_at": "2026-09-11T16:39:48.535302",
+        "result": "win",
+        "resolved_at": "2026-09-11T16:42:26.443225",
+        "exit_price": 81.45
+      },
+      {
+        "coin": "HBAR",
+        "name": "Hedera",
+        "tf": "1h",
+        "entry": 0.07331,
+        "stop": 0.07260375,
+        "target1": 0.07401625,
+        "target2": 0.07472250000000001,
+        "opened_at": "2026-09-11T16:39:48.535302",
+        "result": "win",
+        "resolved_at": "2026-09-11T16:42:26.443225",
+        "exit_price": 0.07531
+      },
+      {
+        "coin": "AVAX",
+        "name": "Avalanche",
+        "tf": "1h",
+        "entry": 7.275,
+        "stop": 7.179916666666667,
+        "target1": 7.3700833333333335,
+        "target2": 7.465166666666667,
+        "opened_at": "2026-09-11T16:39:48.535302",
+        "result": "win",
+        "resolved_at": "2026-09-11T16:42:26.443225",
+        "exit_price": 7.561
       }
     ]
   },
@@ -3485,14 +3586,14 @@
     "key": "BTC",
     "name": "Bitcoin",
     "emoji": "\u20bf",
-    "price": 77705,
+    "price": 77666,
     "high_24h": 79607,
     "low_24h": 76393,
-    "pct_24h": 1.12746,
+    "pct_24h": 0.92068,
     "pct_7d": -1.5,
     "pct_30d": 22.7,
-    "sma50": 70656.56702684,
-    "sma200": 70018.4803247409,
+    "sma50": 70655.1466017506,
+    "sma200": 70018.12521846856,
     "support_30d": 62843.70368466329,
     "resistance_30d": 81264.70153038795,
     "mark_price": 77230.11864493,
@@ -3507,16 +3608,16 @@
     "key": "ETH",
     "name": "Ethereum",
     "emoji": "\u039e",
-    "price": 2568.92,
+    "price": 2566.67,
     "high_24h": 2647.68,
     "low_24h": 2436.69,
-    "pct_24h": 5.49169,
+    "pct_24h": 5.24162,
     "pct_7d": 5.0,
     "pct_30d": 35.9,
-    "sma50": 2161.631803818527,
-    "sma200": 2052.183132045389,
+    "sma50": 2161.581559802301,
+    "sma200": 2052.1705710413326,
     "support_30d": 1874.401898191962,
-    "resistance_30d": 2568.290525768578,
+    "resistance_30d": 2565.778324957299,
     "mark_price": 2466.82,
     "index_price": 2467.80488372,
     "funding_rate": 3.45e-05,
