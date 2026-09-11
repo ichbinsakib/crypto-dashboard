@@ -2311,7 +2311,7 @@
         ],
         [
           "Stretch from long-term average",
-          "-10.2% vs its long-term average - not stretched either way",
+          "-10.9% vs its long-term average - not stretched either way",
           0
         ],
         [
@@ -2324,12 +2324,12 @@
       "id": "the-open-network",
       "symbol": "GRAM",
       "name": "Gram (prev. Toncoin)",
-      "price": 1.37,
-      "pct_24h": 2.29507,
-      "pct_7d": -2.4,
+      "price": 1.36,
+      "pct_24h": 1.5669,
+      "pct_7d": -2.5,
       "support_30d": 1.3170990455791696,
       "resistance_30d": 1.4926762805297678,
-      "as_of": "2026-09-11 13:52:53",
+      "as_of": "2026-09-11 23:15:22",
       "stale": false
     },
     "sky": {
@@ -2435,7 +2435,7 @@
       "rows": [
         [
           "Price vs. recent range",
-          "Near its 30-day high (~$2.50) - less room to run",
+          "Near its 30-day high (~$2.48) - less room to run",
           -1
         ],
         [
@@ -2455,7 +2455,7 @@
         ],
         [
           "Stretch from long-term average",
-          "+46.2% above its long-term average - very stretched",
+          "+40.4% above its long-term average - very stretched",
           -2
         ],
         [
@@ -2468,12 +2468,12 @@
       "id": "near",
       "symbol": "NEAR",
       "name": "NEAR Protocol",
-      "price": 2.5,
-      "pct_24h": -1.19818,
-      "pct_7d": 14.2,
+      "price": 2.4,
+      "pct_24h": -2.57031,
+      "pct_7d": 15.1,
       "support_30d": 1.5879597131538,
-      "resistance_30d": 2.498536814869422,
-      "as_of": "2026-09-11 21:30:29",
+      "resistance_30d": 2.4848168147865453,
+      "as_of": "2026-09-11 23:15:22",
       "stale": false
     },
     "quant-network": {
@@ -2627,7 +2627,7 @@
       "rows": [
         [
           "Price vs. recent range",
-          "Near its 30-day low (~$0.0544) - historically a better entry",
+          "Near its 30-day low (~$0.0548) - historically a better entry",
           2
         ],
         [
@@ -2647,7 +2647,7 @@
         ],
         [
           "Stretch from long-term average",
-          "-22.5% below its long-term average - confirmed downtrend",
+          "-21.9% below its long-term average - confirmed downtrend",
           -1
         ],
         [
@@ -2660,12 +2660,12 @@
       "id": "world-liberty-financial",
       "symbol": "WLFI",
       "name": "World Liberty Financial",
-      "price": 0.054383,
-      "pct_24h": -3.77892,
-      "pct_7d": -3.8,
-      "support_30d": 0.05438278352880165,
+      "price": 0.054812,
+      "pct_24h": -2.45628,
+      "pct_7d": -2.9,
+      "support_30d": 0.054812302447056475,
       "resistance_30d": 0.06254770952093733,
-      "as_of": "2026-09-11 22:35:20",
+      "as_of": "2026-09-11 23:15:22",
       "stale": false
     },
     "pax-gold": {
@@ -3317,7 +3317,7 @@
         "stop": 0.5602666666666667,
         "target1": 0.5707333333333333,
         "target2": 0.5759666666666666,
-        "opened_at": "2026-09-11T23:12:15.857459"
+        "opened_at": "2026-09-11T23:17:14.107617"
       },
       "daily:XLM": {
         "coin": "XLM",
@@ -3327,7 +3327,7 @@
         "stop": 0.14140496666666666,
         "target1": 0.16294103333333335,
         "target2": 0.1737090666666667,
-        "opened_at": "2026-09-11T23:12:15.857459"
+        "opened_at": "2026-09-11T23:17:14.107617"
       }
     },
     "resolved": [
@@ -4734,6 +4734,32 @@
         "result": "win",
         "resolved_at": "2026-09-11T23:12:15.857459",
         "exit_price": 0.177895
+      },
+      {
+        "coin": "MNT",
+        "name": "Mantle",
+        "tf": "1h",
+        "entry": 0.5655,
+        "stop": 0.5602666666666667,
+        "target1": 0.5707333333333333,
+        "target2": 0.5759666666666666,
+        "opened_at": "2026-09-11T23:12:15.857459",
+        "result": "win",
+        "resolved_at": "2026-09-11T23:17:14.107617",
+        "exit_price": 0.5782
+      },
+      {
+        "coin": "XLM",
+        "name": "Stellar",
+        "tf": "daily",
+        "entry": 0.152173,
+        "stop": 0.14140496666666666,
+        "target1": 0.16294103333333335,
+        "target2": 0.1737090666666667,
+        "opened_at": "2026-09-11T23:12:15.857459",
+        "result": "win",
+        "resolved_at": "2026-09-11T23:17:14.107617",
+        "exit_price": 0.177825
       }
     ]
   },
@@ -4741,14 +4767,14 @@
     "key": "BTC",
     "name": "Bitcoin",
     "emoji": "\u20bf",
-    "price": 77144,
+    "price": 77170,
     "high_24h": 79607,
     "low_24h": 76393,
-    "pct_24h": 0.59445,
+    "pct_24h": 0.69842,
     "pct_7d": -3.2,
     "pct_30d": 21.6,
-    "sma50": 70645.12153339128,
-    "sma200": 70015.61895137872,
+    "sma50": 70645.13837669023,
+    "sma200": 70015.62316220345,
     "support_30d": 62843.70368466329,
     "resistance_30d": 81264.70153038795,
     "mark_price": 77122.19098201,
@@ -4763,14 +4789,14 @@
     "key": "ETH",
     "name": "Ethereum",
     "emoji": "\u039e",
-    "price": 2510.7,
+    "price": 2513.76,
     "high_24h": 2647.68,
     "low_24h": 2437.39,
-    "pct_24h": 2.88427,
+    "pct_24h": 3.06081,
     "pct_7d": 2.4,
     "pct_30d": 33.8,
-    "sma50": 2160.483762570525,
-    "sma200": 2051.8961217333886,
+    "sma50": 2160.5343872932353,
+    "sma200": 2051.9087779140664,
     "support_30d": 1874.401898191962,
     "resistance_30d": 2514.967577695514,
     "mark_price": 2515.0197907,
