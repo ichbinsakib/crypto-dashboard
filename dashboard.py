@@ -1013,6 +1013,27 @@ def build_intraday_screener(markets, timeframe_key, target_count=SCREENER_SIZE, 
     return results
 
 
+def fetch_single_intraday_signal(symbol, name, timeframe_key):
+    """Same fetch+compute as one iteration of build_intraday_screener, for backfilling a
+    specific coin (e.g. a P&L position whose rotation slot moved on) rather than sampling
+    from the pool. Returns None if the coin has no liquid Kraken USD pair or the fetch fails."""
+    cfg = INTRADAY_TIMEFRAMES[timeframe_key]
+    klines, err = safe_fetch(
+        f"{timeframe_key} backfill klines {symbol}USD",
+        lambda: fetch_kraken_ohlc(symbol, cfg["kraken_interval"]))
+    time.sleep(INTRADAY_RATE_LIMIT_DELAY)
+    if not klines:
+        return None
+    try:
+        sig = compute_intraday_signal(klines, cfg["lookback"], cfg["window_label"])
+        if sig:
+            sig.update({"id": None, "symbol": symbol, "name": name})
+        return sig
+    except Exception as e:
+        log(f"INTRADAY SIGNAL FAIL [{symbol}USD backfill]: {e}")
+        return None
+
+
 def badge_html(status, text):
     icon = {"bullish": "↗", "bearish": "↘", "neutral": "–", "locked": "\U0001F512"}.get(status, "")
     return f'<span class="badge {status}">{icon} {text}</span>'
@@ -1085,6 +1106,7 @@ def render(coins_data, fng_value, fng_classification, generated_at, any_stale,
     total_stale = any_stale
     pnl_stats = pnl_stats or {"daily": {}, "weekly": {}, "monthly": {}}
     pnl_state = pnl_state or {}
+    pnl_open_keys = set(pnl_state.get("open", {}).keys())
     generated_at_iso = generated_at.replace(" ", "T") + "Z"  # generated_at is naive UTC (GH runners run in UTC)
     alerts_results = alerts_results or []
     screener_results = screener_results or []
@@ -1456,6 +1478,9 @@ def render(coins_data, fng_value, fng_classification, generated_at, any_stale,
         card_id = f"ic-{tf_key}-{r['symbol']}"
         follow_key = f"{tf_key}:{r['symbol']}"
         tf_follow_label = {"15m": "15-Minute", "1h": "1-Hour"}.get(tf_key, tf_key)
+        pnl_key = f"{tf_key}:{r['symbol']}"
+        tracking_badge = ('<span class="badge alert-armed" title="This call is on the Performance tab\'s Currently Tracking list, being followed toward a win/loss outcome">📊 Tracking</span>'
+                           if pnl_key in pnl_open_keys else '')
         return f"""
     <div class="screener-card {r['status']}" id="{card_id}">
       <div class="screener-card-top">
@@ -1466,6 +1491,7 @@ def render(coins_data, fng_value, fng_classification, generated_at, any_stale,
         </div>
         <button class="follow-btn" data-key="{follow_key}" data-tf="{tf_follow_label}" title="Follow this pick -- saves it to My Picks until you remove it">&#9734; Follow</button>
       </div>
+      {tracking_badge}
       <div class="screener-signal">
         <span class="badge {r['status']}" data-role="badge">{r['label']}</span>
         <span class="sub">Score <span data-role="score">{_pts_badge2(r['score'])}</span></span>
@@ -1584,7 +1610,7 @@ def render(coins_data, fng_value, fng_classification, generated_at, any_stale,
         )
         open_positions_html = f"""
   <div class="cycle-map" style="margin-top:10px;">
-    <div class="card-title">Currently Tracking ({len(pnl_open)})</div>
+    <div class="card-title">Currently Tracking ({len(pnl_open)})<span class="info-tip" tabindex="0" data-tip="Every bullish call gets tracked here from the moment it appears until it resolves, even after the Scanner's rotating pool moves on to other coins -- so this list is usually bigger than, and different from, whatever 5 coins the Scanner happens to be showing right now. A coin with a 📊 Tracking badge on its Scanner card is one of the overlapping ones.">&#9432;</span></div>
     <table class="signal-table" style="margin-top:6px; margin-bottom:0;">
       <thead><tr><th>Coin</th><th>Timeframe</th><th>Signal Given</th><th>Entry</th><th>Stop</th><th>Target</th></tr></thead>
       <tbody>{open_rows}</tbody>
@@ -1601,15 +1627,19 @@ def render(coins_data, fng_value, fng_classification, generated_at, any_stale,
         resolved_rows = "".join(
             f'<tr><td>{r["name"]} ({r["coin"]})</td><td class="watch">{ {"15m": "15-Minute", "1h": "1-Hour"}.get(r["tf"], r["tf"]) }</td>'
             f'<td class="watch">{fmt_time_ago(r["opened_at"])}</td>'
+            f'<td>{fmt_usd_adaptive(r["entry"])}</td>'
+            f'<td class="neg">{fmt_usd_adaptive(r["stop"])}</td>'
+            f'<td class="pos">{fmt_usd_adaptive(r["target1"])}</td>'
+            f'<td class="{"pos" if r["result"] == "win" else ("neg" if r["result"] == "loss" else "")}">{fmt_usd_adaptive(r.get("exit_price"))}</td>'
             f'<td>{result_badge.get(r["result"], r["result"])}</td>'
             f'<td class="watch">{fmt_duration_hours((datetime.datetime.fromisoformat(r["resolved_at"]) - datetime.datetime.fromisoformat(r["opened_at"])).total_seconds() / 3600)}</td></tr>'
             for r in pnl_resolved
         )
         resolved_html = f"""
   <div class="cycle-map" style="margin-top:10px;">
-    <div class="card-title">Recent Resolved Calls<span class="info-tip" tabindex="0" data-tip="Signal Given is when the call first appeared; Time to Resolve is how long it took from then to hit its target (win) or stop (loss), or to time out (expired).">&#9432;</span></div>
+    <div class="card-title">Recent Resolved Calls<span class="info-tip" tabindex="0" data-tip="Signal Given is when the call first appeared. Buy/Stop/Target are the levels set at that moment; Exit is the price that actually triggered the result -- so you can verify a Win genuinely closed at/above Target and a Loss at/below Stop. Time to Resolve is how long it took from signal to outcome.">&#9432;</span></div>
     <table class="signal-table" style="margin-top:6px; margin-bottom:0;">
-      <thead><tr><th>Coin</th><th>Timeframe</th><th>Signal Given</th><th>Result</th><th>Time to Resolve</th></tr></thead>
+      <thead><tr><th>Coin</th><th>Timeframe</th><th>Signal Given</th><th>Buy</th><th>Stop</th><th>Target</th><th>Exit</th><th>Result</th><th>Time to Resolve</th></tr></thead>
       <tbody>{resolved_rows}</tbody>
     </table>
   </div>"""
@@ -2146,7 +2176,26 @@ def main():
         intraday_results[tf_key] = build_intraday_screener(screener_markets, tf_key)
         log(f"Intraday {tf_key} produced {len(intraday_results[tf_key])} ranked coins")
 
+    # Backfill: the Scanner's rotating pool may have moved on from a coin that's still an
+    # open P&L position, which would otherwise make the Scanner and the Performance tab's
+    # Currently Tracking list show different coins. Explicitly fetch+show every still-open
+    # position here too, even past the usual card cap, so the two views always match.
     prev_pnl_state = state.get("_pnl_tracker", {})
+    prev_pnl_open = prev_pnl_state.get("open", {})
+    for tf_key, results in intraday_results.items():
+        present_symbols = {r["symbol"] for r in results}
+        backfilled = []
+        for pos in prev_pnl_open.values():
+            if pos["tf"] != tf_key or pos["coin"] in present_symbols:
+                continue
+            sig = fetch_single_intraday_signal(pos["coin"], pos.get("name", pos["coin"]), tf_key)
+            if sig:
+                results.append(sig)
+                present_symbols.add(pos["coin"])
+                backfilled.append(pos["coin"])
+        if backfilled:
+            log(f"Intraday {tf_key} backfilled still-tracked coin(s) not in this cycle's rotation: {backfilled}")
+
     new_pnl_state = update_pnl_tracker(prev_pnl_state, intraday_results)
     pnl_stats = compute_pnl_stats(new_pnl_state.get("resolved", []))
     log(f"P&L tracker: {len(new_pnl_state.get('open', {}))} open, "
