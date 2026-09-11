@@ -55,9 +55,10 @@ DATA_REFRESH_LABEL = "every ~10 min (GitHub Actions, best-effort)"  # keep in sy
 DASHBOARD_URL = "https://ichbinsakib.github.io/crypto-dashboard/"
 DISCORD_WEBHOOK_URL = os.environ.get("DISCORD_WEBHOOK_URL")  # optional; strong-buy alerts are a no-op without it
 STRONG_DAILY_SCORE = 5   # matches the "ACCUMULATION ZONE" tier, not the weaker "LEAN ACCUMULATE"
-STRONG_INTRADAY_SCORE = 4  # the maximum achievable score (all 3 factors positive) -- the
-                            # strictest possible bar under this model, not just the
-                            # "NEAR-TERM DIP ZONE" tier (which starts at 3) or "LEAN LONG" (1-2)
+STRONG_INTRADAY_SCORE = 5  # the maximum achievable score (all 4 factors positive: range
+                            # position, momentum, direction, AND volume) -- the strictest bar
+                            # this model can express, requiring every independent condition
+                            # to agree, not just the "NEAR-TERM DIP ZONE" label tier (>= 3)
 
 PNL_EXPIRY_HOURS = {"15m": 6, "1h": 24}  # how long an unresolved intraday call stays open before we give up on it
 PNL_BATCH_SIZE = 8  # max confirmed signals opened per timeframe per batch; a new batch only
@@ -898,16 +899,20 @@ def compute_intraday_signal(klines, lookback, window_label):
     """
     Lean, technicals-only version of the spot signal for short timeframes -- no Fear & Greed
     or cycle-stage factors, since those are daily-sentiment concepts that don't mean much on a
-    15-minute or 1-hour chart. Uses only price action from the candles themselves: where price
-    sits in its recent range, momentum vs a short average, and direction over the window.
-    Trade levels are ATR-based (scaled to actual recent volatility) instead of the fixed
-    percentage buffers used on the daily model, which matters far more at this timeframe.
+    15-minute or 1-hour chart. Four independent factors: where price sits in its recent range,
+    momentum vs a short average, direction over the window, and volume confirmation (is the
+    move backed by real participation or just drifting on thin volume). A dead/choppy range
+    (<1.5% high-low spread over the whole lookback) is rejected outright rather than scored,
+    since there's no real setup to measure ATR-based levels against. Trade levels are
+    ATR-based (scaled to actual recent volatility) instead of the fixed percentage buffers
+    used on the daily model, which matters far more at this timeframe.
     """
     if not klines or len(klines) < lookback + 2:
         return None
     highs = [float(k[2]) for k in klines]
     lows = [float(k[3]) for k in klines]
     closes = [float(k[4]) for k in klines]
+    volumes = [float(k[6]) for k in klines]
     price = closes[-1]
 
     recent_high = max(highs[-lookback:])
@@ -915,6 +920,14 @@ def compute_intraday_signal(klines, lookback, window_label):
     avg_close = sum(closes[-lookback:]) / lookback
     atr = sum(highs[i] - lows[i] for i in range(-lookback, 0)) / lookback
     if atr <= 0:
+        return None
+
+    # Reject dead/choppy conditions outright rather than scoring them low: a coin that
+    # hasn't moved more than ~1.5% of its price across the whole lookback window doesn't
+    # have a real range to set ATR-based levels against, and any level computed from that
+    # noise floor isn't a meaningful setup.
+    range_pct = (recent_high - recent_low) / price * 100 if price else 0
+    if range_pct < 1.5:
         return None
 
     rows = []
@@ -947,6 +960,18 @@ def compute_intraday_signal(klines, lookback, window_label):
     else:
         pts, reading = 0, f"{move_pct:+.1f}% over its {window_label} - flat, no clear direction"
     rows.append(("Direction over this window", reading, pts))
+    total += pts
+
+    avg_volume = sum(volumes[-lookback:]) / lookback
+    recent_volume = sum(volumes[-3:]) / min(3, len(volumes))
+    vol_ratio = (recent_volume / avg_volume) if avg_volume > 0 else 1.0
+    if vol_ratio >= 1.2:
+        pts, reading = 1, f"Recent volume {vol_ratio:.1f}x its {window_label} average - real participation behind the move"
+    elif vol_ratio <= 0.5:
+        pts, reading = -1, f"Recent volume just {vol_ratio:.1f}x its {window_label} average - thin, low-conviction trading"
+    else:
+        pts, reading = 0, f"Recent volume near its {window_label} average ({vol_ratio:.1f}x) - unremarkable participation"
+    rows.append(("Volume confirmation", reading, pts))
     total += pts
 
     if total >= 3:
@@ -1624,13 +1649,15 @@ def render(coins_data, fng_value, fng_classification, generated_at, any_stale,
     else:
         open_positions_html = '<div class="sub" style="margin-top:10px;">No calls currently being tracked.</div>'
 
-    pnl_resolved = sorted(pnl_state.get("resolved", []), key=lambda r: r["resolved_at"], reverse=True)[:15]
+    pnl_resolved_all = sorted(pnl_state.get("resolved", []), key=lambda r: r["resolved_at"], reverse=True)
+    PNL_HISTORY_DISPLAY_CAP = 100
+    pnl_resolved = pnl_resolved_all[:PNL_HISTORY_DISPLAY_CAP]
     if pnl_resolved:
         result_badge = {"win": '<span class="badge bullish">WIN</span>',
                          "loss": '<span class="badge bearish">LOSS</span>',
                          "expired": '<span class="badge neutral">EXPIRED</span>'}
         resolved_rows = "".join(
-            f'<tr><td>{r["name"]} ({r["coin"]})</td><td class="watch">{ {"15m": "15-Minute", "1h": "1-Hour"}.get(r["tf"], r["tf"]) }</td>'
+            f'<tr data-coin="{r["coin"].lower()}"><td>{r["name"]} ({r["coin"]})</td><td class="watch">{ {"15m": "15-Minute", "1h": "1-Hour"}.get(r["tf"], r["tf"]) }</td>'
             f'<td class="watch">{fmt_time_ago(r["opened_at"])}</td>'
             f'<td>{fmt_usd_adaptive(r["entry"])}</td>'
             f'<td class="neg">{fmt_usd_adaptive(r["stop"])}</td>'
@@ -1640,13 +1667,20 @@ def render(coins_data, fng_value, fng_classification, generated_at, any_stale,
             f'<td class="watch">{fmt_duration_hours((datetime.datetime.fromisoformat(r["resolved_at"]) - datetime.datetime.fromisoformat(r["opened_at"])).total_seconds() / 3600)}</td></tr>'
             for r in pnl_resolved
         )
+        showing_note = (f"Showing all {len(pnl_resolved_all)} resolved calls." if len(pnl_resolved_all) <= PNL_HISTORY_DISPLAY_CAP
+                         else f"Showing the {PNL_HISTORY_DISPLAY_CAP} most recent of {len(pnl_resolved_all)} resolved calls -- use search to find an older one.")
         resolved_html = f"""
   <div class="cycle-map" style="margin-top:10px;">
-    <div class="card-title">Recent Resolved Calls<span class="info-tip" tabindex="0" data-tip="Signal Given is when the call first appeared. Buy/Stop/Target are the levels set at that moment; Exit is the price that actually triggered the result -- so you can verify a Win genuinely closed at/above Target and a Loss at/below Stop. Time to Resolve is how long it took from signal to outcome.">&#9432;</span></div>
-    <table class="signal-table" style="margin-top:6px; margin-bottom:0;">
+    <div class="card-title" style="display:flex; align-items:center; justify-content:space-between; flex-wrap:wrap; gap:8px;">
+      <span>Performance History<span class="info-tip" tabindex="0" data-tip="Every call that has ever resolved stays here permanently -- winning, losing, and expired -- it is never deleted, only added to. Signal Given is when the call first appeared. Buy/Stop/Target are the levels set at that moment; Exit is the price that actually triggered the result, so you can verify a Win genuinely closed at/above Target and a Loss at/below Stop.">&#9432;</span></span>
+      <input type="text" id="pnl-history-search" placeholder="Search by coin..." style="background:#0d1320; border:1px solid var(--border); border-radius:6px; color:var(--text); padding:5px 10px; font-size:12.5px; width:160px;">
+    </div>
+    <div class="sub" style="margin-bottom:6px;">{showing_note}</div>
+    <table class="signal-table" style="margin-top:0; margin-bottom:0;" id="pnl-history-table">
       <thead><tr><th>Coin</th><th>Timeframe</th><th>Signal Given</th><th>Buy</th><th>Stop</th><th>Target</th><th>Exit</th><th>Result</th><th>Time to Resolve</th></tr></thead>
       <tbody>{resolved_rows}</tbody>
     </table>
+    <div class="sub" id="pnl-history-no-match" hidden style="margin-top:10px;">No resolved calls match that search.</div>
   </div>"""
     else:
         resolved_html = ""
@@ -2122,6 +2156,25 @@ if ('serviceWorker' in navigator) {{
   // Re-sync button state after each live intraday refresh (the refresh only touches price/
   // score/etc spans, never the follow button itself, but this keeps behavior obvious/robust).
   setInterval(syncFollowButtons, 60000);
+}})();
+</script>
+<script>
+(function() {{
+  var input = document.getElementById('pnl-history-search');
+  if (!input) return;
+  var table = document.getElementById('pnl-history-table');
+  var noMatch = document.getElementById('pnl-history-no-match');
+  input.addEventListener('input', function() {{
+    var q = input.value.trim().toLowerCase();
+    var rows = table.querySelectorAll('tbody tr');
+    var visible = 0;
+    rows.forEach(function(row) {{
+      var match = !q || (row.dataset.coin || '').includes(q);
+      row.hidden = !match;
+      if (match) visible++;
+    }});
+    noMatch.hidden = visible > 0;
+  }});
 }})();
 </script>
 </body>
