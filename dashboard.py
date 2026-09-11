@@ -55,14 +55,19 @@ DATA_REFRESH_LABEL = "every ~10 min (GitHub Actions, best-effort)"  # keep in sy
 DASHBOARD_URL = "https://ichbinsakib.github.io/crypto-dashboard/"
 DISCORD_WEBHOOK_URL = os.environ.get("DISCORD_WEBHOOK_URL")  # optional; strong-buy alerts are a no-op without it
 STRONG_DAILY_SCORE = 5   # matches the "ACCUMULATION ZONE" tier, not the weaker "LEAN ACCUMULATE"
-STRONG_INTRADAY_SCORE = 5  # the maximum achievable score (all 4 factors positive: range
-                            # position, momentum, direction, AND volume) -- the strictest bar
-                            # this model can express, requiring every independent condition
-                            # to agree, not just the "NEAR-TERM DIP ZONE" label tier (>= 3)
+STRONG_INTRADAY_SCORE = 4  # out of a max of 5 (range position, momentum, direction, volume).
+                            # Requiring a literal 5/5 proved too rare to be usable in practice
+                            # (empty most cycles); 4/5 still demands the strongest factor (near
+                            # the low, worth 2 pts) plus at least two of the other three agree --
+                            # still well above the old "NEAR-TERM DIP ZONE" tier (>= 3).
+INTRADAY_CHOPPY_RANGE_PCT = 1.0  # below this, a coin's whole lookback range is too flat/dead
+                                  # to trust ATR-based levels against -- rejected outright
 
-PNL_EXPIRY_HOURS = {"15m": 6, "1h": 24}  # how long an unresolved intraday call stays open before we give up on it
+PNL_EXPIRY_HOURS = {"15m": 6, "1h": 24, "daily": 24 * 7}  # how long an unresolved call stays
+                                                           # open before giving up on it
 PNL_BATCH_SIZE = 8  # max confirmed signals opened per timeframe per batch; a new batch only
                      # starts once every position in the current one has resolved
+PNL_DAILY_BATCH_SIZE = 5  # daily has far fewer candidates per cycle (BTC/ETH + 5 screener coins)
 PNL_RESOLVED_RETENTION_DAYS = 120  # how far back the Monthly stats window (and state.json size) can reach
 
 SCREENER_SIZE = 5  # how many coins to rank/show per tab; raising this adds run time and CoinGecko rate-limit risk
@@ -314,13 +319,23 @@ def send_discord_strong_buy_alert(newly_strong):
         log(f"DISCORD STRONG-BUY ALERT FAIL: {e}")
 
 
-def update_pnl_tracker(prev_pnl, intraday_results):
-    """Tracks whether the scanner's own 15m/1h bullish calls actually played out. Scoped to
-    intraday signals only -- they have one unambiguous ATR-based entry/stop/target, unlike the
-    daily model's two (pullback/breakout) scenarios, and resolve on a timescale short enough to
-    actually report on. A position opens the first time a coin turns bullish on a timeframe (if
-    one isn't already open for that coin+timeframe) and closes on hitting target (win), hitting
-    stop (loss), or running past its time budget unresolved (expired, excluded from win rate)."""
+def _kraken_interval_for_tf(tf):
+    """Which Kraken candle interval to read a current price from for a given tracked
+    timeframe. Daily positions don't need a true daily candle for this -- any recent close
+    is fine, since this is just "what's the price right now", not a signal computation."""
+    if tf == "daily":
+        return 1440
+    return INTRADAY_TIMEFRAMES[tf]["kraken_interval"]
+
+
+def update_pnl_tracker(prev_pnl, signal_results):
+    """Tracks whether the scanner's own bullish calls actually played out, across 15m/1h
+    (one unambiguous ATR-based entry/stop/target) and daily (the breakout scenario from
+    compute_trade_levels -- the pullback scenario is skipped since "accumulation zone" calls
+    pair more naturally with a confirmed breakout as the single trackable trigger). A position
+    opens the first time a coin turns bullish on a timeframe (if one isn't already open for
+    that coin+timeframe) and closes on hitting target (win), hitting stop (loss), or running
+    past its time budget unresolved (expired, excluded from win rate)."""
     now = datetime.datetime.now()
     prev_open = dict(prev_pnl.get("open", {}))
     resolved = list(prev_pnl.get("resolved", []))
@@ -332,7 +347,7 @@ def update_pnl_tracker(prev_pnl, intraday_results):
     # "win" that reflects nothing about what happened after the call, not real price movement.
     still_open = {}
     for key, pos in prev_open.items():
-        interval = INTRADAY_TIMEFRAMES[pos["tf"]]["kraken_interval"]
+        interval = _kraken_interval_for_tf(pos["tf"])
         klines, err = safe_fetch(
             f"pnl price {pos['coin']}", lambda p=pos["coin"], i=interval: fetch_kraken_ohlc(p, i))
         time.sleep(INTRADAY_RATE_LIMIT_DELAY)
@@ -356,7 +371,7 @@ def update_pnl_tracker(prev_pnl, intraday_results):
 
     # Open new positions for currently-bullish coins not already being tracked. These are
     # left untouched (not resolution-checked) until at least the next run.
-    for tf_key, results in intraday_results.items():
+    for tf_key, results in signal_results.items():
         for r in results:
             if r.get("status") != "bullish":
                 continue
@@ -923,11 +938,11 @@ def compute_intraday_signal(klines, lookback, window_label):
         return None
 
     # Reject dead/choppy conditions outright rather than scoring them low: a coin that
-    # hasn't moved more than ~1.5% of its price across the whole lookback window doesn't
-    # have a real range to set ATR-based levels against, and any level computed from that
-    # noise floor isn't a meaningful setup.
+    # hasn't moved more than INTRADAY_CHOPPY_RANGE_PCT of its price across the whole lookback
+    # window doesn't have a real range to set ATR-based levels against, and any level computed
+    # from that noise floor isn't a meaningful setup.
     range_pct = (recent_high - recent_low) / price * 100 if price else 0
-    if range_pct < 1.5:
+    if range_pct < INTRADAY_CHOPPY_RANGE_PCT:
         return None
 
     rows = []
@@ -1632,7 +1647,7 @@ def render(coins_data, fng_value, fng_classification, generated_at, any_stale,
     pnl_open = pnl_state.get("open", {})
     if pnl_open:
         open_rows = "".join(
-            f'<tr><td>{p["name"]} ({p["coin"]})</td><td class="watch">{ {"15m": "15-Minute", "1h": "1-Hour"}.get(p["tf"], p["tf"]) }</td>'
+            f'<tr><td>{p["name"]} ({p["coin"]})</td><td class="watch">{ {"15m": "15-Minute", "1h": "1-Hour", "daily": "Daily"}.get(p["tf"], p["tf"]) }</td>'
             f'<td class="watch">{fmt_time_ago(p["opened_at"])}</td>'
             f'<td>{fmt_usd_adaptive(p["entry"])}</td><td class="neg">{fmt_usd_adaptive(p["stop"])}</td>'
             f'<td class="pos">{fmt_usd_adaptive(p["target1"])}</td></tr>'
@@ -1657,7 +1672,7 @@ def render(coins_data, fng_value, fng_classification, generated_at, any_stale,
                          "loss": '<span class="badge bearish">LOSS</span>',
                          "expired": '<span class="badge neutral">EXPIRED</span>'}
         resolved_rows = "".join(
-            f'<tr data-coin="{r["coin"].lower()}"><td>{r["name"]} ({r["coin"]})</td><td class="watch">{ {"15m": "15-Minute", "1h": "1-Hour"}.get(r["tf"], r["tf"]) }</td>'
+            f'<tr data-coin="{r["coin"].lower()}"><td>{r["name"]} ({r["coin"]})</td><td class="watch">{ {"15m": "15-Minute", "1h": "1-Hour", "daily": "Daily"}.get(r["tf"], r["tf"]) }</td>'
             f'<td class="watch">{fmt_time_ago(r["opened_at"])}</td>'
             f'<td>{fmt_usd_adaptive(r["entry"])}</td>'
             f'<td class="neg">{fmt_usd_adaptive(r["stop"])}</td>'
@@ -2070,11 +2085,27 @@ if ('serviceWorker' in navigator) {{
     var el = root.querySelector(selector);
     return el ? el.textContent.trim() : null;
   }}
+  function coinNameOf(cardEl) {{
+    // .screener-name can contain a "· cached" indicator span alongside the symbol -- strip
+    // that out so a followed pick's saved name doesn't end up reading "Coin (SYM) · cached".
+    var nameEl = cardEl.querySelector('.screener-name');
+    if (!nameEl) return null;
+    var clone = nameEl.cloneNode(true);
+    clone.querySelectorAll('.watch').forEach(function(span) {{
+      if (span.textContent.trim().charAt(0) === '·') span.remove();
+    }});
+    return clone.textContent.trim();
+  }}
+  function statusOf(cardEl) {{
+    var cls = Array.from(cardEl.classList).find(function(c) {{ return c !== 'screener-card'; }});
+    return cls || '';
+  }}
   function buildPayload(cardEl, key, tfLabel) {{
     return {{
       key: key,
       tf: tfLabel,
-      name: textOf(cardEl, '.screener-name') || key,
+      name: coinNameOf(cardEl) || key,
+      status: statusOf(cardEl),
       label: textOf(cardEl, '.badge') || '',
       price: textOf(cardEl, '[data-role=price]') || textOf(cardEl, '.sub') || '',
       plain: textOf(cardEl, '.screener-plain') || '',
@@ -2121,13 +2152,13 @@ if ('serviceWorker' in navigator) {{
           (p.target ? '<div class="kv"><span>Target</span><span class="pos">' + p.target + '</span></div>' : '') +
           '</div>';
       }}
-      return '<div class="screener-card">' +
+      return '<div class="screener-card ' + (p.status || '') + '">' +
         '<div class="screener-card-top">' +
           '<div><div class="screener-name">' + p.name + '</div>' +
           '<div class="sub">' + p.tf + ' &middot; followed ' + fmtWhen(p.followedAt) + '</div></div>' +
           '<button class="follow-btn following" data-key="' + k + '">&#9733; Remove</button>' +
         '</div>' +
-        '<div class="screener-signal"><span class="badge">' + p.label + '</span></div>' +
+        '<div class="screener-signal"><span class="badge ' + (p.status || '') + '">' + p.label + '</span></div>' +
         '<div class="screener-plain">' + p.plain + '</div>' +
         tradeHtml +
         '<div class="sub" style="margin-top:8px; opacity:0.7;">' + (p.price || '') + '</div>' +
@@ -2267,6 +2298,37 @@ def main():
                 backfilled.append(pos["coin"])
         if backfilled:
             log(f"Intraday {tf_key} backfilled still-tracked coin(s) not in this cycle's rotation: {backfilled}")
+
+    # Daily batch: track the screener's own bullish ACCUMULATION-ZONE-tier calls too, using
+    # the breakout scenario from compute_trade_levels as the single trackable entry (the
+    # pullback scenario's entry is a range, not one price, which doesn't fit this win/loss
+    # model as cleanly). Only counts once the breakout has actually triggered -- current price
+    # already at or above the breakout entry -- otherwise it's a developing setup, not yet an
+    # executed call. Scoped to the rotating screener pool, not the fixed BTC/ETH cards, since
+    # those coins' signal is computed later inside render() rather than available here.
+    prev_daily_open_count = sum(1 for p in prev_pnl_open.values() if p["tf"] == "daily")
+    daily_results = []
+    if prev_daily_open_count == 0:
+        for r in screener_results:
+            if r.get("status") != "bullish" or r.get("score", 0) < STRONG_DAILY_SCORE:
+                continue
+            levels = compute_trade_levels(r)
+            if not levels:
+                continue
+            bo = levels["breakout"]
+            price = r.get("price")
+            if price is None or price < bo["entry"]:
+                continue  # breakout hasn't triggered yet -- a developing setup, not an executed call
+            daily_results.append({
+                "symbol": r["symbol"], "name": r.get("name", r["symbol"]), "status": "bullish",
+                "trade": {"entry": bo["entry"], "stop": bo["stop"], "target1": bo["target1"], "target2": bo["target2"]},
+            })
+            if len(daily_results) >= PNL_DAILY_BATCH_SIZE:
+                break
+        log(f"Daily: previous batch complete, opened new batch of {len(daily_results)} confirmed signal(s)")
+    else:
+        log(f"Daily: batch in progress ({prev_daily_open_count} still open), not adding new signals")
+    intraday_results["daily"] = daily_results
 
     new_pnl_state = update_pnl_tracker(prev_pnl_state, intraday_results)
     pnl_stats = compute_pnl_stats(new_pnl_state.get("resolved", []))
