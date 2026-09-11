@@ -12,7 +12,7 @@
     },
     "eth-resistance-break": {
       "triggered": true,
-      "last_triggered_at": "2026-09-11 19:30:29"
+      "last_triggered_at": "2026-09-11 19:35:22"
     },
     "eth-support-break": {
       "triggered": false,
@@ -1879,7 +1879,7 @@
         ],
         [
           "Stretch from long-term average",
-          "-30.5% below its long-term average - confirmed downtrend",
+          "-30.6% below its long-term average - confirmed downtrend",
           -1
         ],
         [
@@ -1892,12 +1892,12 @@
       "id": "bitcoin-cash",
       "symbol": "BCH",
       "name": "Bitcoin Cash",
-      "price": 228.08,
-      "pct_24h": 0.36936,
+      "price": 227.85,
+      "pct_24h": 0.32116,
       "pct_7d": -10.2,
       "support_30d": 203.50169440615565,
       "resistance_30d": 288.10955405353275,
-      "as_of": "2026-09-11 19:27:50",
+      "as_of": "2026-09-11 19:35:22",
       "stale": false
     },
     "mantle": {
@@ -1975,7 +1975,7 @@
         ],
         [
           "Stretch from long-term average",
-          "-3.3% vs its long-term average - not stretched either way",
+          "-5.4% vs its long-term average - not stretched either way",
           0
         ],
         [
@@ -1988,12 +1988,12 @@
       "id": "polkadot",
       "symbol": "DOT",
       "name": "Polkadot",
-      "price": 1.067,
-      "pct_24h": -1.80294,
-      "pct_7d": 25.1,
+      "price": 1.044,
+      "pct_24h": -5.07668,
+      "pct_7d": 21.9,
       "support_30d": 0.7510040523927409,
       "resistance_30d": 1.2475304252917225,
-      "as_of": "2026-09-11 17:10:21",
+      "as_of": "2026-09-11 19:35:22",
       "stale": false
     },
     "uniswap": {
@@ -2551,7 +2551,7 @@
         ],
         [
           "Stretch from long-term average",
-          "-2.0% vs its long-term average - not stretched either way",
+          "-2.9% vs its long-term average - not stretched either way",
           0
         ],
         [
@@ -2564,12 +2564,12 @@
       "id": "tether-gold",
       "symbol": "XAUT",
       "name": "Tether Gold",
-      "price": 4389.61,
-      "pct_24h": 0.7745,
-      "pct_7d": -1.9,
+      "price": 4347.11,
+      "pct_24h": 0.40897,
+      "pct_7d": -1.5,
       "support_30d": 4314.5584711704705,
       "resistance_30d": 4662.510537821146,
-      "as_of": "2026-09-11 13:30:30",
+      "as_of": "2026-09-11 19:35:22",
       "stale": false
     },
     "bitway": {
@@ -3303,20 +3303,20 @@
         "name": "Worldcoin",
         "tf": "15m",
         "entry": 0.3881,
-        "stop": 0.38279,
-        "target1": 0.39341,
-        "target2": 0.39871999999999996,
-        "opened_at": "2026-09-11T19:32:22.632289"
+        "stop": 0.3827833333333333,
+        "target1": 0.3934166666666667,
+        "target2": 0.3987333333333334,
+        "opened_at": "2026-09-11T19:37:14.909900"
       },
       "15m:LTC": {
         "coin": "LTC",
         "name": "Litecoin",
         "tf": "15m",
         "entry": 51.91,
-        "stop": 51.489666666666665,
-        "target1": 52.33033333333333,
-        "target2": 52.75066666666666,
-        "opened_at": "2026-09-11T19:32:22.632289"
+        "stop": 51.488,
+        "target1": 52.331999999999994,
+        "target2": 52.75399999999999,
+        "opened_at": "2026-09-11T19:37:14.909900"
       },
       "15m:MNT": {
         "coin": "MNT",
@@ -3326,7 +3326,7 @@
         "stop": 0.5702433333333333,
         "target1": 0.5761566666666668,
         "target2": 0.5791133333333335,
-        "opened_at": "2026-09-11T19:32:22.632289"
+        "opened_at": "2026-09-11T19:37:14.909900"
       },
       "1h:MNT": {
         "coin": "MNT",
@@ -3336,7 +3336,7 @@
         "stop": 0.5598833333333333,
         "target1": 0.5711166666666667,
         "target2": 0.5767333333333334,
-        "opened_at": "2026-09-11T19:32:22.632289"
+        "opened_at": "2026-09-11T19:37:14.909900"
       }
     },
     "resolved": [
@@ -3391,6 +3391,58 @@
         "result": "win",
         "resolved_at": "2026-09-11T19:32:22.632289",
         "exit_price": 0.5853
+      },
+      {
+        "coin": "WLD",
+        "name": "Worldcoin",
+        "tf": "15m",
+        "entry": 0.3881,
+        "stop": 0.38279,
+        "target1": 0.39341,
+        "target2": 0.39871999999999996,
+        "opened_at": "2026-09-11T19:32:22.632289",
+        "result": "win",
+        "resolved_at": "2026-09-11T19:37:14.909900",
+        "exit_price": 0.4004
+      },
+      {
+        "coin": "LTC",
+        "name": "Litecoin",
+        "tf": "15m",
+        "entry": 51.91,
+        "stop": 51.489666666666665,
+        "target1": 52.33033333333333,
+        "target2": 52.75066666666666,
+        "opened_at": "2026-09-11T19:32:22.632289",
+        "result": "win",
+        "resolved_at": "2026-09-11T19:37:14.909900",
+        "exit_price": 53.34
+      },
+      {
+        "coin": "MNT",
+        "name": "Mantle",
+        "tf": "15m",
+        "entry": 0.5732,
+        "stop": 0.5702433333333333,
+        "target1": 0.5761566666666668,
+        "target2": 0.5791133333333335,
+        "opened_at": "2026-09-11T19:32:22.632289",
+        "result": "win",
+        "resolved_at": "2026-09-11T19:37:14.909900",
+        "exit_price": 0.5853
+      },
+      {
+        "coin": "MNT",
+        "name": "Mantle",
+        "tf": "1h",
+        "entry": 0.5655,
+        "stop": 0.5598833333333333,
+        "target1": 0.5711166666666667,
+        "target2": 0.5767333333333334,
+        "opened_at": "2026-09-11T19:32:22.632289",
+        "result": "win",
+        "resolved_at": "2026-09-11T19:37:14.909900",
+        "exit_price": 0.5853
       }
     ]
   },
@@ -3398,14 +3450,14 @@
     "key": "BTC",
     "name": "Bitcoin",
     "emoji": "\u20bf",
-    "price": 77242,
+    "price": 77196,
     "high_24h": 79607,
     "low_24h": 76393,
-    "pct_24h": 0.07003,
+    "pct_24h": 0.10403,
     "pct_7d": -3.1,
     "pct_30d": 21.5,
-    "sma50": 70646.96022910689,
-    "sma200": 70016.07862530762,
+    "sma50": 70646.31128237446,
+    "sma200": 70015.91638862452,
     "support_30d": 62843.70368466329,
     "resistance_30d": 81264.70153038795,
     "mark_price": 77023.94235507,
@@ -3420,16 +3472,16 @@
     "key": "ETH",
     "name": "Ethereum",
     "emoji": "\u039e",
-    "price": 2544.67,
+    "price": 2545.35,
     "high_24h": 2647.68,
     "low_24h": 2436.69,
-    "pct_24h": 3.16085,
+    "pct_24h": 3.3549,
     "pct_7d": 3.7,
     "pct_30d": 34.4,
-    "sma50": 2161.1582421759263,
-    "sma200": 2052.064741634739,
+    "sma50": 2161.1783197778987,
+    "sma200": 2052.0697610352317,
     "support_30d": 1874.401898191962,
-    "resistance_30d": 2544.6124436385558,
+    "resistance_30d": 2545.616323737179,
     "mark_price": 2535.88,
     "index_price": 2537.10627907,
     "funding_rate": 2.047e-05,
