@@ -991,7 +991,7 @@
     "worldcoin-wld": {
       "label": "\ud83d\udfe1 HOLD / NEUTRAL",
       "status": "neutral",
-      "score": 0,
+      "score": -1,
       "rows": [
         [
           "Price vs. recent range",
@@ -1015,8 +1015,8 @@
         ],
         [
           "Stretch from long-term average",
-          "+9.8% vs its long-term average - not stretched either way",
-          0
+          "+10.1% above its long-term average - a bit stretched",
+          -1
         ],
         [
           "Leverage traders' bias",
@@ -1028,12 +1028,12 @@
       "id": "worldcoin-wld",
       "symbol": "WLD",
       "name": "Worldcoin",
-      "price": 0.392732,
-      "pct_24h": -4.188,
+      "price": 0.393731,
+      "pct_24h": -4.27879,
       "pct_7d": 1.0,
       "support_30d": 0.319812298466522,
       "resistance_30d": 0.4772935995106048,
-      "as_of": "2026-09-11 11:15:25",
+      "as_of": "2026-09-11 11:20:28",
       "stale": false
     },
     "bfusd": {
@@ -2167,7 +2167,7 @@
         ],
         [
           "Stretch from long-term average",
-          "-29.2% below its long-term average - confirmed downtrend",
+          "-31.4% below its long-term average - confirmed downtrend",
           -1
         ],
         [
@@ -2180,12 +2180,12 @@
       "id": "canton-network",
       "symbol": "CC",
       "name": "Canton",
-      "price": 0.098639,
-      "pct_24h": -4.26378,
-      "pct_7d": -11.4,
+      "price": 0.09556,
+      "pct_24h": -6.19564,
+      "pct_7d": -15.2,
       "support_30d": 0.09051839499501885,
       "resistance_30d": 0.12396615653575341,
-      "as_of": "2026-09-11 09:25:24",
+      "as_of": "2026-09-11 11:20:28",
       "stale": false
     },
     "internet-computer": {
@@ -2359,7 +2359,7 @@
         ],
         [
           "Stretch from long-term average",
-          "-11.6% vs its long-term average - not stretched either way",
+          "-12.7% vs its long-term average - not stretched either way",
           0
         ],
         [
@@ -2372,12 +2372,12 @@
       "id": "sky",
       "symbol": "SKY",
       "name": "Sky",
-      "price": 0.059084,
-      "pct_24h": -0.24704,
-      "pct_7d": -14.0,
+      "price": 0.058336,
+      "pct_24h": -2.20851,
+      "pct_7d": -15.0,
       "support_30d": 0.05081051579814886,
       "resistance_30d": 0.07314868186988309,
-      "as_of": "2026-09-11 10:35:19",
+      "as_of": "2026-09-11 11:20:28",
       "stale": false
     },
     "shiba-inu": {
@@ -3293,19 +3293,23 @@
       "stale": false
     }
   },
-  "_strong_buy_state": {},
+  "_strong_buy_state": {
+    "15m:CRO": true,
+    "1h:CRO": true,
+    "1h:SKY": true
+  },
   "BTC": {
     "key": "BTC",
     "name": "Bitcoin",
     "emoji": "\u20bf",
-    "price": 76792,
+    "price": 76787,
     "high_24h": 77850,
     "low_24h": 76546,
-    "pct_24h": -1.37082,
+    "pct_24h": -1.49806,
     "pct_7d": -5.0,
     "pct_30d": 20.2,
-    "sma50": 70637.5904950509,
-    "sma200": 70013.73619179364,
+    "sma50": 70637.79784608852,
+    "sma200": 70013.78802955303,
     "support_30d": 62843.70368466329,
     "resistance_30d": 81264.70153038795,
     "mark_price": 77230.11864493,
@@ -3320,14 +3324,14 @@
     "key": "ETH",
     "name": "Ethereum",
     "emoji": "\u039e",
-    "price": 2453.6,
+    "price": 2455.16,
     "high_24h": 2481.6,
     "low_24h": 2410.22,
-    "pct_24h": -0.28737,
+    "pct_24h": -0.3976,
     "pct_7d": -2.3,
     "pct_30d": 29.3,
-    "sma50": 2159.3261121352566,
-    "sma200": 2051.606709124572,
+    "sma50": 2159.36924154865,
+    "sma200": 2051.61749147792,
     "support_30d": 1874.401898191962,
     "resistance_30d": 2514.967577695514,
     "mark_price": 2466.82,
