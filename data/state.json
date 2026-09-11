@@ -12,7 +12,7 @@
     },
     "eth-resistance-break": {
       "triggered": true,
-      "last_triggered_at": "2026-09-11 16:30:29"
+      "last_triggered_at": "2026-09-11 16:35:21"
     },
     "eth-support-break": {
       "triggered": false,
@@ -885,11 +885,11 @@
       "symbol": "PEPE",
       "name": "Pepe",
       "price": 3.36e-06,
-      "pct_24h": 3.46016,
+      "pct_24h": 4.05242,
       "pct_7d": -4.1,
       "support_30d": 2.5716563906374582e-06,
       "resistance_30d": 4.122123035488615e-06,
-      "as_of": "2026-09-11 16:25:42",
+      "as_of": "2026-09-11 16:35:21",
       "stale": false
     },
     "avalanche-2": {
@@ -1927,7 +1927,7 @@
         ],
         [
           "Stretch from long-term average",
-          "+4.4% vs its long-term average - not stretched either way",
+          "+4.3% vs its long-term average - not stretched either way",
           0
         ],
         [
@@ -1940,12 +1940,12 @@
       "id": "mantle",
       "symbol": "MNT",
       "name": "Mantle",
-      "price": 0.600289,
-      "pct_24h": 3.56208,
-      "pct_7d": 4.0,
+      "price": 0.599786,
+      "pct_24h": 4.47728,
+      "pct_7d": 4.5,
       "support_30d": 0.42660592418086046,
       "resistance_30d": 0.6365218632454678,
-      "as_of": "2026-09-11 14:46:59",
+      "as_of": "2026-09-11 16:35:21",
       "stale": false
     },
     "polkadot": {
@@ -3199,7 +3199,7 @@
     "kaspa": {
       "label": "\ud83d\udfe1 HOLD / NEUTRAL",
       "status": "neutral",
-      "score": 0,
+      "score": 1,
       "rows": [
         [
           "Price vs. recent range",
@@ -3213,8 +3213,8 @@
         ],
         [
           "Market phase (best guess)",
-          "Established uptrend - phase where price marks up",
-          1
+          "Basing near the bottom - phase where smart money accumulates",
+          2
         ],
         [
           "Recent trend",
@@ -3223,7 +3223,7 @@
         ],
         [
           "Stretch from long-term average",
-          "+5.4% vs its long-term average - not stretched either way",
+          "+4.8% vs its long-term average - not stretched either way",
           0
         ],
         [
@@ -3236,12 +3236,12 @@
       "id": "kaspa",
       "symbol": "KAS",
       "name": "Kaspa",
-      "price": 0.03578349,
-      "pct_24h": -2.84392,
+      "price": 0.0355771,
+      "pct_24h": -2.1275,
       "pct_7d": 22.5,
       "support_30d": 0.025258977496893695,
       "resistance_30d": 0.03651282069323304,
-      "as_of": "2026-09-11 16:05:21",
+      "as_of": "2026-09-11 16:35:21",
       "stale": false
     },
     "cosmos": {
@@ -3298,14 +3298,14 @@
     "key": "BTC",
     "name": "Bitcoin",
     "emoji": "\u20bf",
-    "price": 77602,
+    "price": 77592,
     "high_24h": 79607,
     "low_24h": 76393,
-    "pct_24h": 0.96505,
+    "pct_24h": 0.93085,
     "pct_7d": -1.5,
     "pct_30d": 22.7,
-    "sma50": 70655.37869111303,
-    "sma200": 70018.18324080916,
+    "sma50": 70654.45477716118,
+    "sma200": 70017.9522623212,
     "support_30d": 62843.70368466329,
     "resistance_30d": 81264.70153038795,
     "mark_price": 77230.11864493,
@@ -3320,16 +3320,16 @@
     "key": "ETH",
     "name": "Ethereum",
     "emoji": "\u039e",
-    "price": 2560.04,
+    "price": 2562.6,
     "high_24h": 2647.68,
     "low_24h": 2436.69,
-    "pct_24h": 5.07031,
+    "pct_24h": 5.20176,
     "pct_7d": 5.0,
     "pct_30d": 35.9,
-    "sma50": 2161.5255844037874,
-    "sma200": 2052.156577191704,
+    "sma50": 2161.545325891227,
+    "sma200": 2052.161512563564,
     "support_30d": 1874.401898191962,
-    "resistance_30d": 2562.9795550315994,
+    "resistance_30d": 2563.966629403596,
     "mark_price": 2466.82,
     "index_price": 2467.80488372,
     "funding_rate": 3.45e-05,
@@ -3337,90 +3337,5 @@
     "oi_now": 2316520.736,
     "fng_value": 56,
     "fng_class": "Greed"
-  },
-  "_pnl_tracker": {
-    "open": {
-      "15m:ATOM": {
-        "coin": "ATOM",
-        "name": "Cosmos Hub",
-        "tf": "15m",
-        "entry": 1.6748,
-        "stop": 1.6593433333333334,
-        "target1": 1.6902566666666667,
-        "target2": 1.7057133333333334,
-        "opened_at": "2026-09-11T22:33:33.175542"
-      },
-      "15m:XLM": {
-        "coin": "XLM",
-        "name": "Stellar",
-        "tf": "15m",
-        "entry": 0.17252,
-        "stop": 0.17097980000000002,
-        "target1": 0.1740602,
-        "target2": 0.1756004,
-        "opened_at": "2026-09-11T22:33:33.175542"
-      },
-      "15m:ONDO": {
-        "coin": "ONDO",
-        "name": "Ondo",
-        "tf": "15m",
-        "entry": 0.34296,
-        "stop": 0.33958666666666665,
-        "target1": 0.3463333333333333,
-        "target2": 0.34970666666666667,
-        "opened_at": "2026-09-11T22:33:33.175542"
-      },
-      "15m:XMR": {
-        "coin": "XMR",
-        "name": "Monero",
-        "tf": "15m",
-        "entry": 506.34,
-        "stop": 503.4643333333333,
-        "target1": 509.21566666666666,
-        "target2": 512.0913333333333,
-        "opened_at": "2026-09-11T22:33:33.175542"
-      },
-      "15m:TAO": {
-        "coin": "TAO",
-        "name": "Bittensor",
-        "tf": "15m",
-        "entry": 228.4964,
-        "stop": 225.95483333333334,
-        "target1": 231.03796666666665,
-        "target2": 233.5795333333333,
-        "opened_at": "2026-09-11T22:33:33.175542"
-      },
-      "1h:ONDO": {
-        "coin": "ONDO",
-        "name": "Ondo",
-        "tf": "1h",
-        "entry": 0.34228,
-        "stop": 0.33752624999999997,
-        "target1": 0.34703375,
-        "target2": 0.3517875,
-        "opened_at": "2026-09-11T22:33:33.175542"
-      },
-      "1h:XLM": {
-        "coin": "XLM",
-        "name": "Stellar",
-        "tf": "1h",
-        "entry": 0.17252,
-        "stop": 0.17045858333333333,
-        "target1": 0.17458141666666668,
-        "target2": 0.17664283333333336,
-        "opened_at": "2026-09-11T22:33:33.175542"
-      },
-      "1h:XMR": {
-        "coin": "XMR",
-        "name": "Monero",
-        "tf": "1h",
-        "entry": 500.03,
-        "stop": 493.81125,
-        "target1": 506.24875,
-        "target2": 512.4675,
-        "opened_at": "2026-09-11T22:33:33.175542"
-      }
-    },
-    "resolved": []
   }
 }
