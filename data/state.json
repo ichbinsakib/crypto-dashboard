@@ -12,7 +12,7 @@
     },
     "eth-resistance-break": {
       "triggered": true,
-      "last_triggered_at": "2026-09-12 09:20:26"
+      "last_triggered_at": "2026-09-12 09:25:19"
     },
     "eth-support-break": {
       "triggered": false,
@@ -2263,7 +2263,7 @@
         ],
         [
           "Stretch from long-term average",
-          "-1.5% vs its long-term average - not stretched either way",
+          "-1.6% vs its long-term average - not stretched either way",
           0
         ],
         [
@@ -2276,12 +2276,12 @@
       "id": "bittensor",
       "symbol": "TAO",
       "name": "Bittensor",
-      "price": 235.48,
-      "pct_24h": -0.70925,
+      "price": 235.32,
+      "pct_24h": -0.61122,
       "pct_7d": 0.8,
       "support_30d": 190.67093053611111,
       "resistance_30d": 265.7337487161633,
-      "as_of": "2026-09-12 09:15:23",
+      "as_of": "2026-09-12 09:25:19",
       "stale": false
     },
     "the-open-network": {
@@ -2647,7 +2647,7 @@
         ],
         [
           "Stretch from long-term average",
-          "-20.1% below its long-term average - confirmed downtrend",
+          "-18.6% below its long-term average - confirmed downtrend",
           -1
         ],
         [
@@ -2660,12 +2660,12 @@
       "id": "world-liberty-financial",
       "symbol": "WLFI",
       "name": "World Liberty Financial",
-      "price": 0.055837,
-      "pct_24h": 0.51983,
-      "pct_7d": -2.4,
+      "price": 0.056896,
+      "pct_24h": 2.81103,
+      "pct_7d": 0.4,
       "support_30d": 0.05526589948255966,
       "resistance_30d": 0.06254770952093733,
-      "as_of": "2026-09-12 06:35:20",
+      "as_of": "2026-09-12 09:25:19",
       "stale": false
     },
     "pax-gold": {
@@ -2909,9 +2909,9 @@
       "stale": false
     },
     "just": {
-      "label": "\ud83d\udd34 CAUTION - REDUCE NEW BUYS",
-      "status": "bearish",
-      "score": -2,
+      "label": "\ud83d\udfe1 HOLD / NEUTRAL",
+      "status": "neutral",
+      "score": -1,
       "rows": [
         [
           "Price vs. recent range",
@@ -2925,8 +2925,8 @@
         ],
         [
           "Market phase (best guess)",
-          "Established uptrend - phase where price marks up",
-          1
+          "Basing near the bottom - phase where smart money accumulates",
+          2
         ],
         [
           "Recent trend",
@@ -2935,7 +2935,7 @@
         ],
         [
           "Stretch from long-term average",
-          "+28.2% above its long-term average - a bit stretched",
+          "+28.5% above its long-term average - a bit stretched",
           -1
         ],
         [
@@ -2944,16 +2944,16 @@
           0
         ]
       ],
-      "plain": "Getting risky - I'd hold off on new buys until this cools down.",
+      "plain": "No real edge either way right now - fine to just wait and watch.",
       "id": "just",
       "symbol": "JST",
       "name": "JUST",
-      "price": 0.108013,
-      "pct_24h": 4.49864,
-      "pct_7d": -0.6,
+      "price": 0.108262,
+      "pct_24h": 4.78242,
+      "pct_7d": -1.1,
       "support_30d": 0.0946830738697126,
       "resistance_30d": 0.11074855268841714,
-      "as_of": "2026-09-12 08:55:21",
+      "as_of": "2026-09-12 09:25:19",
       "stale": false
     },
     "algorand": {
@@ -3311,10 +3311,10 @@
         "name": "Monero",
         "tf": "15m",
         "entry": 521.67,
-        "stop": 518.2389999999999,
-        "target1": 525.101,
-        "target2": 528.532,
-        "opened_at": "2026-09-12T09:22:16.676823"
+        "stop": 518.222,
+        "target1": 525.1179999999999,
+        "target2": 528.5659999999999,
+        "opened_at": "2026-09-12T09:27:10.865016"
       },
       "daily:XLM": {
         "coin": "XLM",
@@ -3324,7 +3324,7 @@
         "stop": 0.14145366666666667,
         "target1": 0.16289233333333333,
         "target2": 0.17361166666666666,
-        "opened_at": "2026-09-12T09:22:16.676823"
+        "opened_at": "2026-09-12T09:27:10.865016"
       }
     },
     "resolved": [
@@ -7552,6 +7552,32 @@
         "result": "win",
         "resolved_at": "2026-09-12T09:22:16.676823",
         "exit_price": 0.180785
+      },
+      {
+        "coin": "XMR",
+        "name": "Monero",
+        "tf": "15m",
+        "entry": 521.67,
+        "stop": 518.2389999999999,
+        "target1": 525.101,
+        "target2": 528.532,
+        "opened_at": "2026-09-12T09:22:16.676823",
+        "result": "win",
+        "resolved_at": "2026-09-12T09:27:10.865016",
+        "exit_price": 539.65
+      },
+      {
+        "coin": "XLM",
+        "name": "Stellar",
+        "tf": "daily",
+        "entry": 0.152173,
+        "stop": 0.14145366666666667,
+        "target1": 0.16289233333333333,
+        "target2": 0.17361166666666666,
+        "opened_at": "2026-09-12T09:22:16.676823",
+        "result": "win",
+        "resolved_at": "2026-09-12T09:27:10.865016",
+        "exit_price": 0.181131
       }
     ]
   },
@@ -7559,14 +7585,14 @@
     "key": "BTC",
     "name": "Bitcoin",
     "emoji": "\u20bf",
-    "price": 77345,
+    "price": 77342,
     "high_24h": 79607,
     "low_24h": 76393,
-    "pct_24h": 0.11098,
+    "pct_24h": 0.18632,
     "pct_7d": -3.0,
     "pct_30d": 21.2,
-    "sma50": 70911.29334950565,
-    "sma200": 70082.25739766876,
+    "sma50": 70911.23661276087,
+    "sma200": 70082.24321348255,
     "support_30d": 62843.70368466329,
     "resistance_30d": 81264.70153038795,
     "mark_price": 77264.9,
@@ -7581,16 +7607,16 @@
     "key": "ETH",
     "name": "Ethereum",
     "emoji": "\u039e",
-    "price": 2535.09,
+    "price": 2532.87,
     "high_24h": 2647.68,
     "low_24h": 2442.02,
-    "pct_24h": 2.48554,
+    "pct_24h": 2.43848,
     "pct_7d": 3.1,
     "pct_30d": 33.7,
-    "sma50": 2174.041928800887,
-    "sma200": 2055.3274649876676,
+    "sma50": 2174.0155883383404,
+    "sma200": 2055.3208798720307,
     "support_30d": 1874.401898191962,
-    "resistance_30d": 2534.3924568682455,
+    "resistance_30d": 2533.0754337409207,
     "mark_price": 2524.73831008,
     "index_price": 2525.74674419,
     "funding_rate": 1.207e-05,
