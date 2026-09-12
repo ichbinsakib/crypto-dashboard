@@ -12,7 +12,7 @@
     },
     "eth-resistance-break": {
       "triggered": true,
-      "last_triggered_at": "2026-09-12 11:05:21"
+      "last_triggered_at": "2026-09-12 11:10:26"
     },
     "eth-support-break": {
       "triggered": false,
@@ -55,7 +55,7 @@
         ],
         [
           "Stretch from long-term average",
-          "+17.7% above its long-term average - a bit stretched",
+          "+18.0% above its long-term average - a bit stretched",
           -1
         ],
         [
@@ -68,12 +68,12 @@
       "id": "binancecoin",
       "symbol": "BNB",
       "name": "BNB",
-      "price": 735.57,
-      "pct_24h": 3.38891,
-      "pct_7d": -0.5,
+      "price": 737.48,
+      "pct_24h": 3.79304,
+      "pct_7d": -1.3,
       "support_30d": 602.4629221231862,
       "resistance_30d": 766.4092879330625,
-      "as_of": "2026-09-12 09:40:24",
+      "as_of": "2026-09-12 11:10:26",
       "stale": false
     },
     "ripple": {
@@ -391,7 +391,7 @@
         ],
         [
           "Stretch from long-term average",
-          "+141.6% above its long-term average - very stretched",
+          "+141.3% above its long-term average - very stretched",
           -2
         ],
         [
@@ -404,18 +404,18 @@
       "id": "zcash",
       "symbol": "ZEC",
       "name": "Zcash",
-      "price": 1152.55,
-      "pct_24h": 4.68382,
-      "pct_7d": 14.5,
+      "price": 1150.74,
+      "pct_24h": 5.82065,
+      "pct_7d": 14.1,
       "support_30d": 486.1425018309512,
       "resistance_30d": 1244.287571383468,
-      "as_of": "2026-09-12 10:45:21",
+      "as_of": "2026-09-12 11:10:26",
       "stale": false
     },
     "rain": {
       "label": "\ud83d\udd34 CAUTION - REDUCE NEW BUYS",
       "status": "bearish",
-      "score": -2,
+      "score": -3,
       "rows": [
         [
           "Price vs. recent range",
@@ -434,12 +434,12 @@
         ],
         [
           "Recent trend",
-          "Chopping sideways - no clear trend",
-          0
+          "Trending down - avoid catching a falling knife",
+          -1
         ],
         [
           "Stretch from long-term average",
-          "+30.4% above its long-term average - very stretched",
+          "+30.3% above its long-term average - very stretched",
           -2
         ],
         [
@@ -452,12 +452,12 @@
       "id": "rain",
       "symbol": "RAIN",
       "name": "Rain",
-      "price": 0.01512402,
-      "pct_24h": -3.53781,
-      "pct_7d": -7.9,
+      "price": 0.01511039,
+      "pct_24h": -3.06253,
+      "pct_7d": -8.0,
       "support_30d": 0.012672537640838212,
       "resistance_30d": 0.018158429442510105,
-      "as_of": "2026-09-12 09:40:24",
+      "as_of": "2026-09-12 11:10:26",
       "stale": false
     },
     "chainlink": {
@@ -3314,7 +3314,7 @@
         "stop": 0.14142006666666668,
         "target1": 0.16292593333333333,
         "target2": 0.17367886666666665,
-        "opened_at": "2026-09-12T11:07:17.004362"
+        "opened_at": "2026-09-12T11:12:21.447633"
       }
     },
     "resolved": [
@@ -8088,6 +8088,19 @@
         "result": "win",
         "resolved_at": "2026-09-12T11:07:17.004362",
         "exit_price": 0.181756
+      },
+      {
+        "coin": "XLM",
+        "name": "Stellar",
+        "tf": "daily",
+        "entry": 0.152173,
+        "stop": 0.14142006666666668,
+        "target1": 0.16292593333333333,
+        "target2": 0.17367886666666665,
+        "opened_at": "2026-09-12T11:07:17.004362",
+        "result": "win",
+        "resolved_at": "2026-09-12T11:12:21.447633",
+        "exit_price": 0.181872
       }
     ]
   },
@@ -8095,14 +8108,14 @@
     "key": "BTC",
     "name": "Bitcoin",
     "emoji": "\u20bf",
-    "price": 77299,
+    "price": 77298,
     "high_24h": 79607,
     "low_24h": 76393,
-    "pct_24h": 0.56505,
+    "pct_24h": 0.7149,
     "pct_7d": -2.9,
     "pct_30d": 21.3,
-    "sma50": 70910.38755819839,
-    "sma200": 70082.03094984194,
+    "sma50": 70910.38040352182,
+    "sma200": 70082.0291611728,
     "support_30d": 62843.70368466329,
     "resistance_30d": 81264.70153038795,
     "mark_price": 77264.9,
@@ -8117,16 +8130,16 @@
     "key": "ETH",
     "name": "Ethereum",
     "emoji": "\u039e",
-    "price": 2532.23,
+    "price": 2531.29,
     "high_24h": 2647.68,
     "low_24h": 2442.02,
-    "pct_24h": 3.07903,
+    "pct_24h": 3.21499,
     "pct_7d": 3.0,
     "pct_30d": 34.1,
-    "sma50": 2173.999735692469,
-    "sma200": 2055.316916710563,
+    "sma50": 2173.98297597346,
+    "sma200": 2055.3127267808104,
     "support_30d": 1874.401898191962,
-    "resistance_30d": 2532.2828014473503,
+    "resistance_30d": 2531.444815496883,
     "mark_price": 2524.73831008,
     "index_price": 2525.74674419,
     "funding_rate": 1.207e-05,
