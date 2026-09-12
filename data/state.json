@@ -775,7 +775,7 @@
         ],
         [
           "Stretch from long-term average",
-          "-10.1% vs its long-term average - not stretched either way",
+          "-9.9% vs its long-term average - not stretched either way",
           0
         ],
         [
@@ -788,12 +788,12 @@
       "id": "kucoin-shares",
       "symbol": "KCS",
       "name": "KuCoin",
-      "price": 6.88,
-      "pct_24h": 0.24507,
-      "pct_7d": -2.5,
+      "price": 6.89,
+      "pct_24h": -1.1027,
+      "pct_7d": -2.2,
       "support_30d": 6.514591596607885,
       "resistance_30d": 7.8821382735057615,
-      "as_of": "2026-09-12 03:40:22",
+      "as_of": "2026-09-12 05:20:24",
       "stale": false
     },
     "hedera-hashgraph": {
@@ -2263,7 +2263,7 @@
         ],
         [
           "Stretch from long-term average",
-          "-2.0% vs its long-term average - not stretched either way",
+          "-2.4% vs its long-term average - not stretched either way",
           0
         ],
         [
@@ -2276,12 +2276,12 @@
       "id": "bittensor",
       "symbol": "TAO",
       "name": "Bittensor",
-      "price": 234.26,
-      "pct_24h": -0.33229,
-      "pct_7d": 2.6,
+      "price": 233.28,
+      "pct_24h": -1.60642,
+      "pct_7d": 2.3,
       "support_30d": 190.67093053611111,
       "resistance_30d": 265.7337487161633,
-      "as_of": "2026-09-12 04:10:22",
+      "as_of": "2026-09-12 05:20:24",
       "stale": false
     },
     "the-open-network": {
@@ -3199,7 +3199,7 @@
     "kaspa": {
       "label": "\ud83d\udfe1 HOLD / NEUTRAL",
       "status": "neutral",
-      "score": 1,
+      "score": 0,
       "rows": [
         [
           "Price vs. recent range",
@@ -3208,13 +3208,13 @@
         ],
         [
           "Crowd mood (Fear & Greed)",
-          "56/100 - crowd is greedy",
+          "63/100 - crowd is greedy",
           -1
         ],
         [
           "Market phase (best guess)",
-          "Basing near the bottom - phase where smart money accumulates",
-          2
+          "Established uptrend - phase where price marks up",
+          1
         ],
         [
           "Recent trend",
@@ -3223,7 +3223,7 @@
         ],
         [
           "Stretch from long-term average",
-          "+4.3% vs its long-term average - not stretched either way",
+          "+6.0% vs its long-term average - not stretched either way",
           0
         ],
         [
@@ -3236,12 +3236,12 @@
       "id": "kaspa",
       "symbol": "KAS",
       "name": "Kaspa",
-      "price": 0.03541082,
-      "pct_24h": -2.07866,
-      "pct_7d": 20.8,
-      "support_30d": 0.025258977496893695,
+      "price": 0.03589149,
+      "pct_24h": 1.88521,
+      "pct_7d": 21.6,
+      "support_30d": 0.025275049210175406,
       "resistance_30d": 0.03651282069323304,
-      "as_of": "2026-09-11 22:01:53",
+      "as_of": "2026-09-12 05:20:24",
       "stale": false
     },
     "cosmos": {
@@ -3311,10 +3311,10 @@
         "name": "Monero",
         "tf": "15m",
         "entry": 514.06,
-        "stop": 511.55499999999995,
-        "target1": 516.5649999999999,
-        "target2": 519.0699999999999,
-        "opened_at": "2026-09-12T05:16:31.302772"
+        "stop": 511.48866666666663,
+        "target1": 516.6313333333333,
+        "target2": 519.2026666666666,
+        "opened_at": "2026-09-12T05:22:15.871210"
       },
       "daily:XLM": {
         "coin": "XLM",
@@ -3324,7 +3324,7 @@
         "stop": 0.14145653333333333,
         "target1": 0.16288946666666668,
         "target2": 0.17360593333333335,
-        "opened_at": "2026-09-12T05:16:31.302772"
+        "opened_at": "2026-09-12T05:22:15.871210"
       }
     },
     "resolved": [
@@ -6265,6 +6265,32 @@
         "result": "win",
         "resolved_at": "2026-09-12T05:16:31.302772",
         "exit_price": 0.179899
+      },
+      {
+        "coin": "XMR",
+        "name": "Monero",
+        "tf": "15m",
+        "entry": 514.06,
+        "stop": 511.55499999999995,
+        "target1": 516.5649999999999,
+        "target2": 519.0699999999999,
+        "opened_at": "2026-09-12T05:16:31.302772",
+        "result": "win",
+        "resolved_at": "2026-09-12T05:22:15.871210",
+        "exit_price": 534.0
+      },
+      {
+        "coin": "XLM",
+        "name": "Stellar",
+        "tf": "daily",
+        "entry": 0.152173,
+        "stop": 0.14145653333333333,
+        "target1": 0.16288946666666668,
+        "target2": 0.17360593333333335,
+        "opened_at": "2026-09-12T05:16:31.302772",
+        "result": "win",
+        "resolved_at": "2026-09-12T05:22:15.871210",
+        "exit_price": 0.179932
       }
     ]
   },
@@ -6272,14 +6298,14 @@
     "key": "BTC",
     "name": "Bitcoin",
     "emoji": "\u20bf",
-    "price": 77203,
+    "price": 77224,
     "high_24h": 79607,
     "low_24h": 76393,
-    "pct_24h": 0.19206,
+    "pct_24h": 0.16264,
     "pct_7d": -3.0,
     "pct_30d": 21.4,
-    "sma50": 70908.58904381096,
-    "sma200": 70081.58132124507,
+    "sma50": 70908.95733881807,
+    "sma200": 70081.67339499686,
     "support_30d": 62843.70368466329,
     "resistance_30d": 81264.70153038795,
     "mark_price": 77122.19098201,
@@ -6294,14 +6320,14 @@
     "key": "ETH",
     "name": "Ethereum",
     "emoji": "\u039e",
-    "price": 2511.7,
+    "price": 2511.23,
     "high_24h": 2647.68,
     "low_24h": 2442.02,
-    "pct_24h": 2.19646,
+    "pct_24h": 2.11355,
     "pct_7d": 2.4,
     "pct_30d": 33.3,
-    "sma50": 2173.5901289604262,
-    "sma200": 2055.2145150275524,
+    "sma50": 2173.577986339722,
+    "sma200": 2055.211479372376,
     "support_30d": 1874.401898191962,
     "resistance_30d": 2514.967577695514,
     "mark_price": 2515.0197907,
