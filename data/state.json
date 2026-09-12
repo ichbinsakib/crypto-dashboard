@@ -12,7 +12,7 @@
     },
     "eth-resistance-break": {
       "triggered": true,
-      "last_triggered_at": "2026-09-12 21:32:53"
+      "last_triggered_at": "2026-09-12 21:35:19"
     },
     "eth-support-break": {
       "triggered": false,
@@ -871,7 +871,7 @@
         ],
         [
           "Stretch from long-term average",
-          "+3.7% vs its long-term average - not stretched either way",
+          "+3.4% vs its long-term average - not stretched either way",
           0
         ],
         [
@@ -884,12 +884,12 @@
       "id": "pepe",
       "symbol": "PEPE",
       "name": "Pepe",
-      "price": 3.42e-06,
-      "pct_24h": 4.55081,
-      "pct_7d": -7.6,
+      "price": 3.41e-06,
+      "pct_24h": 3.06,
+      "pct_7d": -5.5,
       "support_30d": 2.5716563906374582e-06,
       "resistance_30d": 4.122123035488615e-06,
-      "as_of": "2026-09-12 19:20:25",
+      "as_of": "2026-09-12 21:35:19",
       "stale": false
     },
     "avalanche-2": {
@@ -1399,7 +1399,7 @@
         ],
         [
           "Stretch from long-term average",
-          "+33.4% above its long-term average - very stretched",
+          "+33.3% above its long-term average - very stretched",
           -2
         ],
         [
@@ -1412,12 +1412,12 @@
       "id": "gatechain-token",
       "symbol": "GT",
       "name": "Gate",
-      "price": 9.37,
-      "pct_24h": -0.37933,
-      "pct_7d": 0.0,
+      "price": 9.36,
+      "pct_24h": -0.86324,
+      "pct_7d": 0.1,
       "support_30d": 6.673649191532821,
       "resistance_30d": 9.38216924975626,
-      "as_of": "2026-09-12 20:55:30",
+      "as_of": "2026-09-12 21:35:19",
       "stale": false
     },
     "crypto-com-chain": {
@@ -1543,7 +1543,7 @@
         ],
         [
           "Stretch from long-term average",
-          "+80.2% above its long-term average - very stretched",
+          "+79.6% above its long-term average - very stretched",
           -2
         ],
         [
@@ -1556,12 +1556,12 @@
       "id": "pump-fun",
       "symbol": "PUMP",
       "name": "Pump.fun",
-      "price": 0.0038642,
-      "pct_24h": 7.85043,
+      "price": 0.00385253,
+      "pct_24h": 7.48484,
       "pct_7d": -2.5,
       "support_30d": 0.002666433318189806,
       "resistance_30d": 0.0052249885406471875,
-      "as_of": "2026-09-12 21:32:53",
+      "as_of": "2026-09-12 21:35:19",
       "stale": false
     },
     "venice-token": {
@@ -3324,7 +3324,7 @@
         "stop": 0.14140733333333333,
         "target1": 0.16293866666666668,
         "target2": 0.17370433333333335,
-        "opened_at": "2026-09-12T21:33:58.855751"
+        "opened_at": "2026-09-12T21:37:11.191527"
       }
     },
     "resolved": [
@@ -10334,6 +10334,19 @@
         "result": "win",
         "resolved_at": "2026-09-12T21:33:58.855751",
         "exit_price": 0.18012
+      },
+      {
+        "coin": "XLM",
+        "name": "Stellar",
+        "tf": "daily",
+        "entry": 0.152173,
+        "stop": 0.14140733333333333,
+        "target1": 0.16293866666666668,
+        "target2": 0.17370433333333335,
+        "opened_at": "2026-09-12T21:33:58.855751",
+        "result": "win",
+        "resolved_at": "2026-09-12T21:37:11.191527",
+        "exit_price": 0.180141
       }
     ]
   },
@@ -10341,14 +10354,14 @@
     "key": "BTC",
     "name": "Bitcoin",
     "emoji": "\u20bf",
-    "price": 77193,
+    "price": 77200,
     "high_24h": 77479,
     "low_24h": 76987,
-    "pct_24h": -0.18551,
+    "pct_24h": -0.19313,
     "pct_7d": -3.3,
     "pct_30d": 21.8,
-    "sma50": 70908.25358546077,
-    "sma200": 70081.49745665753,
+    "sma50": 70908.4638969784,
+    "sma200": 70081.55003453694,
     "support_30d": 62843.70368466329,
     "resistance_30d": 81264.70153038795,
     "mark_price": 77158.0,
@@ -10363,16 +10376,16 @@
     "key": "ETH",
     "name": "Ethereum",
     "emoji": "\u039e",
-    "price": 2524.15,
+    "price": 2524.22,
     "high_24h": 2543.69,
     "low_24h": 2508.19,
-    "pct_24h": -0.41853,
+    "pct_24h": -0.46894,
     "pct_7d": 1.7,
     "pct_30d": 33.6,
-    "sma50": 2173.836767485424,
-    "sma200": 2055.2761746588017,
+    "sma50": 2173.835969166361,
+    "sma200": 2055.275975079036,
     "support_30d": 1874.401898191962,
-    "resistance_30d": 2524.1343910950955,
+    "resistance_30d": 2524.094475141954,
     "mark_price": 2521.71641085,
     "index_price": 2523.12186047,
     "funding_rate": 4.325e-05,
