@@ -212,12 +212,12 @@
       "id": "tron",
       "symbol": "TRX",
       "name": "TRON",
-      "price": 0.339446,
-      "pct_24h": -0.08036,
+      "price": 0.339425,
+      "pct_24h": 0.0595,
       "pct_7d": 2.4,
       "support_30d": 0.32221537516581966,
       "resistance_30d": 0.3447899585776834,
-      "as_of": "2026-09-12 04:25:19",
+      "as_of": "2026-09-12 04:35:20",
       "stale": false
     },
     "figure-heloc": {
@@ -1543,7 +1543,7 @@
         ],
         [
           "Stretch from long-term average",
-          "+65.1% above its long-term average - very stretched",
+          "+64.7% above its long-term average - very stretched",
           -2
         ],
         [
@@ -1556,12 +1556,12 @@
       "id": "pump-fun",
       "symbol": "PUMP",
       "name": "Pump.fun",
-      "price": 0.00353897,
-      "pct_24h": -4.58709,
+      "price": 0.00352963,
+      "pct_24h": -5.57828,
       "pct_7d": -16.8,
       "support_30d": 0.002666433318189806,
       "resistance_30d": 0.0052249885406471875,
-      "as_of": "2026-09-12 04:20:25",
+      "as_of": "2026-09-12 04:35:20",
       "stale": false
     },
     "venice-token": {
@@ -1639,7 +1639,7 @@
         ],
         [
           "Stretch from long-term average",
-          "+6.6% vs its long-term average - not stretched either way",
+          "+6.7% vs its long-term average - not stretched either way",
           0
         ],
         [
@@ -1652,12 +1652,12 @@
       "id": "litecoin",
       "symbol": "LTC",
       "name": "Litecoin",
-      "price": 53.76,
-      "pct_24h": 1.29728,
+      "price": 53.83,
+      "pct_24h": 1.76712,
       "pct_7d": 3.4,
       "support_30d": 43.806923130603906,
       "resistance_30d": 55.20228907963863,
-      "as_of": "2026-09-12 04:30:31",
+      "as_of": "2026-09-12 04:35:20",
       "stale": false
     },
     "bitget-token": {
@@ -2431,12 +2431,12 @@
     "near": {
       "label": "\ud83d\udd34 CAUTION - REDUCE NEW BUYS",
       "status": "bearish",
-      "score": -2,
+      "score": -3,
       "rows": [
         [
           "Price vs. recent range",
-          "Sitting in the middle of its 30-day range",
-          0
+          "Near its 30-day high (~$2.48) - less room to run",
+          -1
         ],
         [
           "Crowd mood (Fear & Greed)",
@@ -2455,7 +2455,7 @@
         ],
         [
           "Stretch from long-term average",
-          "+37.0% above its long-term average - very stretched",
+          "+38.1% above its long-term average - very stretched",
           -2
         ],
         [
@@ -2468,12 +2468,12 @@
       "id": "near",
       "symbol": "NEAR",
       "name": "NEAR Protocol",
-      "price": 2.35,
-      "pct_24h": -4.84657,
+      "price": 2.37,
+      "pct_24h": -3.70794,
       "pct_7d": 7.4,
       "support_30d": 1.5879597131538,
       "resistance_30d": 2.4848168147865453,
-      "as_of": "2026-09-12 01:20:22",
+      "as_of": "2026-09-12 04:35:20",
       "stale": false
     },
     "quant-network": {
@@ -2503,7 +2503,7 @@
         ],
         [
           "Stretch from long-term average",
-          "-6.4% vs its long-term average - not stretched either way",
+          "-6.2% vs its long-term average - not stretched either way",
           0
         ],
         [
@@ -2516,12 +2516,12 @@
       "id": "quant-network",
       "symbol": "QNT",
       "name": "Quant",
-      "price": 64.1,
-      "pct_24h": -0.24623,
+      "price": 64.22,
+      "pct_24h": -0.86009,
       "pct_7d": 0.6,
       "support_30d": 55.905981995619285,
       "resistance_30d": 67.13669726469111,
-      "as_of": "2026-09-12 03:05:20",
+      "as_of": "2026-09-12 04:35:20",
       "stale": false
     },
     "tether-gold": {
@@ -3311,10 +3311,10 @@
         "name": "Monero",
         "tf": "15m",
         "entry": 514.06,
-        "stop": 511.80233333333325,
-        "target1": 516.3176666666666,
-        "target2": 518.5753333333333,
-        "opened_at": "2026-09-12T04:32:22.240188"
+        "stop": 511.7176666666666,
+        "target1": 516.4023333333332,
+        "target2": 518.7446666666666,
+        "opened_at": "2026-09-12T04:36:41.560175"
       },
       "daily:XLM": {
         "coin": "XLM",
@@ -3324,7 +3324,7 @@
         "stop": 0.14145653333333333,
         "target1": 0.16288946666666668,
         "target2": 0.17360593333333335,
-        "opened_at": "2026-09-12T04:32:22.240188"
+        "opened_at": "2026-09-12T04:36:41.560175"
       }
     },
     "resolved": [
@@ -6031,6 +6031,32 @@
         "result": "win",
         "resolved_at": "2026-09-12T04:32:22.240188",
         "exit_price": 0.180826
+      },
+      {
+        "coin": "XMR",
+        "name": "Monero",
+        "tf": "15m",
+        "entry": 514.06,
+        "stop": 511.80233333333325,
+        "target1": 516.3176666666666,
+        "target2": 518.5753333333333,
+        "opened_at": "2026-09-12T04:32:22.240188",
+        "result": "win",
+        "resolved_at": "2026-09-12T04:36:41.560175",
+        "exit_price": 534.26
+      },
+      {
+        "coin": "XLM",
+        "name": "Stellar",
+        "tf": "daily",
+        "entry": 0.152173,
+        "stop": 0.14145653333333333,
+        "target1": 0.16288946666666668,
+        "target2": 0.17360593333333335,
+        "opened_at": "2026-09-12T04:32:22.240188",
+        "result": "win",
+        "resolved_at": "2026-09-12T04:36:41.560175",
+        "exit_price": 0.180709
       }
     ]
   },
@@ -6038,14 +6064,14 @@
     "key": "BTC",
     "name": "Bitcoin",
     "emoji": "\u20bf",
-    "price": 77224,
+    "price": 77261,
     "high_24h": 79607,
     "low_24h": 76393,
-    "pct_24h": 0.09575,
+    "pct_24h": 0.17536,
     "pct_7d": -2.9,
     "pct_30d": 21.7,
-    "sma50": 70908.8425602017,
-    "sma200": 70081.64470034276,
+    "sma50": 70909.6125500867,
+    "sma200": 70081.83719781402,
     "support_30d": 62843.70368466329,
     "resistance_30d": 81264.70153038795,
     "mark_price": 77122.19098201,
@@ -6060,14 +6086,14 @@
     "key": "ETH",
     "name": "Ethereum",
     "emoji": "\u039e",
-    "price": 2510.43,
+    "price": 2512.94,
     "high_24h": 2647.68,
     "low_24h": 2442.02,
-    "pct_24h": 2.01605,
+    "pct_24h": 2.12792,
     "pct_7d": 2.4,
     "pct_30d": 33.7,
-    "sma50": 2173.564078956009,
-    "sma200": 2055.2080025264477,
+    "sma50": 2173.609961799833,
+    "sma200": 2055.2194732374037,
     "support_30d": 1874.401898191962,
     "resistance_30d": 2514.967577695514,
     "mark_price": 2515.0197907,
