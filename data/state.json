@@ -12,7 +12,7 @@
     },
     "eth-resistance-break": {
       "triggered": true,
-      "last_triggered_at": "2026-09-12 16:35:32"
+      "last_triggered_at": "2026-09-12 16:40:26"
     },
     "eth-support-break": {
       "triggered": false,
@@ -487,7 +487,7 @@
         ],
         [
           "Stretch from long-term average",
-          "+25.5% above its long-term average - a bit stretched",
+          "+25.3% above its long-term average - a bit stretched",
           -1
         ],
         [
@@ -500,12 +500,12 @@
       "id": "chainlink",
       "symbol": "LINK",
       "name": "Chainlink",
-      "price": 11.58,
-      "pct_24h": -2.67017,
-      "pct_7d": -2.2,
+      "price": 11.56,
+      "pct_24h": -1.37979,
+      "pct_7d": -2.4,
       "support_30d": 8.964644606125617,
       "resistance_30d": 13.237155745219605,
-      "as_of": "2026-09-12 15:05:20",
+      "as_of": "2026-09-12 16:40:26",
       "stale": false
     },
     "whitebit": {
@@ -1975,7 +1975,7 @@
         ],
         [
           "Stretch from long-term average",
-          "-6.1% vs its long-term average - not stretched either way",
+          "-5.6% vs its long-term average - not stretched either way",
           0
         ],
         [
@@ -1988,12 +1988,12 @@
       "id": "polkadot",
       "symbol": "DOT",
       "name": "Polkadot",
-      "price": 1.035,
-      "pct_24h": -3.75171,
-      "pct_7d": 13.0,
+      "price": 1.041,
+      "pct_24h": -1.90493,
+      "pct_7d": 13.4,
       "support_30d": 0.7510040523927409,
       "resistance_30d": 1.2475304252917225,
-      "as_of": "2026-09-12 15:35:21",
+      "as_of": "2026-09-12 16:40:26",
       "stale": false
     },
     "uniswap": {
@@ -2429,9 +2429,9 @@
       "stale": false
     },
     "near": {
-      "label": "\ud83d\udd34 DISTRIBUTION ZONE",
+      "label": "\ud83d\udd34 CAUTION - REDUCE NEW BUYS",
       "status": "bearish",
-      "score": -5,
+      "score": -2,
       "rows": [
         [
           "Price vs. recent range",
@@ -2445,8 +2445,8 @@
         ],
         [
           "Market phase (best guess)",
-          "Very extended after a big run - phase where smart money sells",
-          -2
+          "Established uptrend - phase where price marks up",
+          1
         ],
         [
           "Recent trend",
@@ -2455,7 +2455,7 @@
         ],
         [
           "Stretch from long-term average",
-          "+40.4% above its long-term average - very stretched",
+          "+39.3% above its long-term average - very stretched",
           -2
         ],
         [
@@ -2464,16 +2464,16 @@
           0
         ]
       ],
-      "plain": "Looks stretched and euphoric - historically the zone where smart money sells, not buys.",
+      "plain": "Getting risky - I'd hold off on new buys until this cools down.",
       "id": "near",
       "symbol": "NEAR",
       "name": "NEAR Protocol",
-      "price": 2.41,
-      "pct_24h": -10.13593,
-      "pct_7d": 8.7,
+      "price": 2.39,
+      "pct_24h": -7.03471,
+      "pct_7d": 10.1,
       "support_30d": 1.5879597131538,
       "resistance_30d": 2.4848168147865453,
-      "as_of": "2026-09-12 15:45:22",
+      "as_of": "2026-09-12 16:40:26",
       "stale": false
     },
     "quant-network": {
@@ -3326,7 +3326,7 @@
         "stop": 0.14140733333333333,
         "target1": 0.16293866666666668,
         "target2": 0.17370433333333335,
-        "opened_at": "2026-09-12T16:37:28.875004"
+        "opened_at": "2026-09-12T16:42:17.877630"
       }
     },
     "resolved": [
@@ -9504,6 +9504,19 @@
         "result": "win",
         "resolved_at": "2026-09-12T16:37:28.875004",
         "exit_price": 0.181905
+      },
+      {
+        "coin": "XLM",
+        "name": "Stellar",
+        "tf": "daily",
+        "entry": 0.152173,
+        "stop": 0.14140733333333333,
+        "target1": 0.16293866666666668,
+        "target2": 0.17370433333333335,
+        "opened_at": "2026-09-12T16:37:28.875004",
+        "result": "win",
+        "resolved_at": "2026-09-12T16:42:17.877630",
+        "exit_price": 0.181893
       }
     ]
   },
@@ -9511,14 +9524,14 @@
     "key": "BTC",
     "name": "Bitcoin",
     "emoji": "\u20bf",
-    "price": 77365,
+    "price": 77351,
     "high_24h": 77932,
     "low_24h": 76952,
-    "pct_24h": -0.45592,
+    "pct_24h": -0.36055,
     "pct_7d": -2.9,
     "pct_30d": 21.3,
-    "sma50": 70911.69806954131,
-    "sma200": 70082.35857767766,
+    "sma50": 70911.42744386068,
+    "sma200": 70082.29092125752,
     "support_30d": 62843.70368466329,
     "resistance_30d": 81264.70153038795,
     "mark_price": 77264.9,
@@ -9533,16 +9546,16 @@
     "key": "ETH",
     "name": "Ethereum",
     "emoji": "\u039e",
-    "price": 2532.07,
+    "price": 2531.59,
     "high_24h": 2579.84,
     "low_24h": 2508.19,
-    "pct_24h": -1.45187,
+    "pct_24h": -1.28083,
     "pct_7d": 3.1,
     "pct_30d": 34.0,
-    "sma50": 2173.995370916295,
-    "sma200": 2055.3158255165195,
+    "sma50": 2173.985396598592,
+    "sma200": 2055.3133319370936,
     "support_30d": 1874.401898191962,
-    "resistance_30d": 2532.0645626386386,
+    "resistance_30d": 2531.565846753519,
     "mark_price": 2524.73831008,
     "index_price": 2525.74674419,
     "funding_rate": 1.207e-05,
