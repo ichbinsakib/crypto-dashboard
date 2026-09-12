@@ -117,11 +117,11 @@
       "symbol": "XRP",
       "name": "XRP",
       "price": 1.36,
-      "pct_24h": 0.33118,
+      "pct_24h": 0.29025,
       "pct_7d": -4.4,
       "support_30d": 0.9927072784932938,
       "resistance_30d": 1.52050482788377,
-      "as_of": "2026-09-12 19:40:24",
+      "as_of": "2026-09-12 19:50:25",
       "stale": false
     },
     "solana": {
@@ -2119,7 +2119,7 @@
         ],
         [
           "Stretch from long-term average",
-          "+8.0% vs its long-term average - not stretched either way",
+          "+6.2% vs its long-term average - not stretched either way",
           0
         ],
         [
@@ -2132,12 +2132,12 @@
       "id": "ondo-finance",
       "symbol": "ONDO",
       "name": "Ondo",
-      "price": 0.353075,
-      "pct_24h": -1.08374,
-      "pct_7d": -4.5,
+      "price": 0.347184,
+      "pct_24h": -1.50531,
+      "pct_7d": -5.7,
       "support_30d": 0.32338181384146436,
       "resistance_30d": 0.3969475338902824,
-      "as_of": "2026-09-12 16:05:20",
+      "as_of": "2026-09-12 19:50:25",
       "stale": false
     },
     "canton-network": {
@@ -2215,7 +2215,7 @@
         ],
         [
           "Stretch from long-term average",
-          "+11.7% above its long-term average - a bit stretched",
+          "+11.3% above its long-term average - a bit stretched",
           -1
         ],
         [
@@ -2228,12 +2228,12 @@
       "id": "internet-computer",
       "symbol": "ICP",
       "name": "Internet Computer",
-      "price": 2.74,
-      "pct_24h": -1.75164,
-      "pct_7d": 5.6,
+      "price": 2.73,
+      "pct_24h": -0.98275,
+      "pct_7d": 4.0,
       "support_30d": 2.194804279500122,
       "resistance_30d": 2.9869340549074623,
-      "as_of": "2026-09-12 17:55:20",
+      "as_of": "2026-09-12 19:50:25",
       "stale": false
     },
     "bittensor": {
@@ -3293,9 +3293,7 @@
       "stale": false
     }
   },
-  "_strong_buy_state": {
-    "scanner-15m:BNB": true
-  },
+  "_strong_buy_state": {},
   "_pnl_tracker": {
     "open": {
       "1h:MNT": {
@@ -3326,7 +3324,7 @@
         "stop": 0.14140733333333333,
         "target1": 0.16293866666666668,
         "target2": 0.17370433333333335,
-        "opened_at": "2026-09-12T19:47:12.857201"
+        "opened_at": "2026-09-12T19:52:16.383508"
       }
     },
     "resolved": [
@@ -10063,6 +10061,19 @@
         "result": "win",
         "resolved_at": "2026-09-12T19:47:12.857201",
         "exit_price": 0.179836
+      },
+      {
+        "coin": "XLM",
+        "name": "Stellar",
+        "tf": "daily",
+        "entry": 0.152173,
+        "stop": 0.14140733333333333,
+        "target1": 0.16293866666666668,
+        "target2": 0.17370433333333335,
+        "opened_at": "2026-09-12T19:47:12.857201",
+        "result": "win",
+        "resolved_at": "2026-09-12T19:52:16.383508",
+        "exit_price": 0.179769
       }
     ]
   },
@@ -10070,14 +10081,14 @@
     "key": "BTC",
     "name": "Bitcoin",
     "emoji": "\u20bf",
-    "price": 77065,
+    "price": 77099,
     "high_24h": 77479,
     "low_24h": 76987,
-    "pct_24h": -0.26207,
+    "pct_24h": -0.24237,
     "pct_7d": -3.6,
     "pct_30d": 22.3,
-    "sma50": 70905.67320475134,
-    "sma200": 70080.85236148018,
+    "sma50": 70906.37739292729,
+    "sma200": 70081.02840852416,
     "support_30d": 62843.70368466329,
     "resistance_30d": 81264.70153038795,
     "mark_price": 77264.9,
@@ -10092,16 +10103,16 @@
     "key": "ETH",
     "name": "Ethereum",
     "emoji": "\u039e",
-    "price": 2515.18,
+    "price": 2516.8,
     "high_24h": 2545.61,
     "low_24h": 2508.19,
-    "pct_24h": -1.07879,
+    "pct_24h": -0.9199,
     "pct_7d": 1.7,
     "pct_30d": 34.5,
-    "sma50": 2173.6573510811218,
-    "sma200": 2055.231320557726,
+    "sma50": 2173.690078653266,
+    "sma200": 2055.2395024507623,
     "support_30d": 1874.401898191962,
-    "resistance_30d": 2515.1635708799927,
+    "resistance_30d": 2516.7999494871888,
     "mark_price": 2524.73831008,
     "index_price": 2525.74674419,
     "funding_rate": 1.207e-05,
