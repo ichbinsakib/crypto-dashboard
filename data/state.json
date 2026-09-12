@@ -12,7 +12,7 @@
     },
     "eth-resistance-break": {
       "triggered": true,
-      "last_triggered_at": "2026-09-12 14:10:26"
+      "last_triggered_at": "2026-09-12 14:15:23"
     },
     "eth-support-break": {
       "triggered": false,
@@ -799,7 +799,7 @@
     "hedera-hashgraph": {
       "label": "\ud83d\udfe1 HOLD / NEUTRAL",
       "status": "neutral",
-      "score": 1,
+      "score": 0,
       "rows": [
         [
           "Price vs. recent range",
@@ -818,12 +818,12 @@
         ],
         [
           "Recent trend",
-          "Chopping sideways - no clear trend",
-          0
+          "Trending down - avoid catching a falling knife",
+          -1
         ],
         [
           "Stretch from long-term average",
-          "-9.3% vs its long-term average - not stretched either way",
+          "-9.7% vs its long-term average - not stretched either way",
           0
         ],
         [
@@ -836,12 +836,12 @@
       "id": "hedera-hashgraph",
       "symbol": "HBAR",
       "name": "Hedera",
-      "price": 0.074796,
-      "pct_24h": 1.30531,
-      "pct_7d": -7.0,
+      "price": 0.074497,
+      "pct_24h": -2.47545,
+      "pct_7d": -8.0,
       "support_30d": 0.06461260477975343,
       "resistance_30d": 0.08182180696524229,
-      "as_of": "2026-09-12 12:00:37",
+      "as_of": "2026-09-12 14:15:23",
       "stale": false
     },
     "pepe": {
@@ -1748,12 +1748,12 @@
       "id": "sui",
       "symbol": "SUI",
       "name": "Sui",
-      "price": 0.725369,
-      "pct_24h": -4.41145,
+      "price": 0.725757,
+      "pct_24h": -3.7273,
       "pct_7d": -9.4,
       "support_30d": 0.6514311908607086,
       "resistance_30d": 0.8499161763231283,
-      "as_of": "2026-09-12 14:00:35",
+      "as_of": "2026-09-12 14:15:23",
       "stale": false
     },
     "lighter": {
@@ -1975,7 +1975,7 @@
         ],
         [
           "Stretch from long-term average",
-          "-5.5% vs its long-term average - not stretched either way",
+          "-5.9% vs its long-term average - not stretched either way",
           0
         ],
         [
@@ -1988,12 +1988,12 @@
       "id": "polkadot",
       "symbol": "DOT",
       "name": "Polkadot",
-      "price": 1.042,
-      "pct_24h": -4.59419,
-      "pct_7d": 15.2,
+      "price": 1.037,
+      "pct_24h": -5.5028,
+      "pct_7d": 12.9,
       "support_30d": 0.7510040523927409,
       "resistance_30d": 1.2475304252917225,
-      "as_of": "2026-09-12 13:15:23",
+      "as_of": "2026-09-12 14:15:23",
       "stale": false
     },
     "uniswap": {
@@ -3321,10 +3321,10 @@
         "name": "Sky",
         "tf": "15m",
         "entry": 0.06293,
-        "stop": 0.06266633333333332,
-        "target1": 0.06319366666666668,
-        "target2": 0.06345733333333335,
-        "opened_at": "2026-09-12T14:12:20.394126"
+        "stop": 0.062669,
+        "target1": 0.063191,
+        "target2": 0.063452,
+        "opened_at": "2026-09-12T14:17:15.080431"
       },
       "daily:XLM": {
         "coin": "XLM",
@@ -3334,7 +3334,7 @@
         "stop": 0.1414087,
         "target1": 0.1629373,
         "target2": 0.1737016,
-        "opened_at": "2026-09-12T14:12:20.394126"
+        "opened_at": "2026-09-12T14:17:15.080431"
       }
     },
     "resolved": [
@@ -8992,6 +8992,32 @@
         "result": "win",
         "resolved_at": "2026-09-12T14:12:20.394126",
         "exit_price": 0.180989
+      },
+      {
+        "coin": "SKY",
+        "name": "Sky",
+        "tf": "15m",
+        "entry": 0.06293,
+        "stop": 0.06266633333333332,
+        "target1": 0.06319366666666668,
+        "target2": 0.06345733333333335,
+        "opened_at": "2026-09-12T14:12:20.394126",
+        "result": "win",
+        "resolved_at": "2026-09-12T14:17:15.080431",
+        "exit_price": 0.06378
+      },
+      {
+        "coin": "XLM",
+        "name": "Stellar",
+        "tf": "daily",
+        "entry": 0.152173,
+        "stop": 0.1414087,
+        "target1": 0.1629373,
+        "target2": 0.1737016,
+        "opened_at": "2026-09-12T14:12:20.394126",
+        "result": "win",
+        "resolved_at": "2026-09-12T14:17:15.080431",
+        "exit_price": 0.18113
       }
     ]
   },
@@ -8999,14 +9025,14 @@
     "key": "BTC",
     "name": "Bitcoin",
     "emoji": "\u20bf",
-    "price": 77359,
+    "price": 77353,
     "high_24h": 78804,
     "low_24h": 76952,
-    "pct_24h": -2.08394,
+    "pct_24h": -2.14518,
     "pct_7d": -3.0,
     "pct_30d": 21.5,
-    "sma50": 70911.58180657764,
-    "sma200": 70082.32951193674,
+    "sma50": 70911.46118257243,
+    "sma200": 70082.29935593545,
     "support_30d": 62843.70368466329,
     "resistance_30d": 81264.70153038795,
     "mark_price": 77264.9,
@@ -9021,16 +9047,16 @@
     "key": "ETH",
     "name": "Ethereum",
     "emoji": "\u039e",
-    "price": 2542.49,
+    "price": 2540.69,
     "high_24h": 2614.36,
     "low_24h": 2508.19,
-    "pct_24h": -2.88892,
+    "pct_24h": -2.72008,
     "pct_7d": 3.4,
     "pct_30d": 34.7,
-    "sma50": 2174.2041921491636,
-    "sma200": 2055.3680308247367,
+    "sma50": 2174.167988379887,
+    "sma200": 2055.3589798824173,
     "support_30d": 1874.401898191962,
-    "resistance_30d": 2542.505624282093,
+    "resistance_30d": 2540.6954358182466,
     "mark_price": 2524.73831008,
     "index_price": 2525.74674419,
     "funding_rate": 1.207e-05,
