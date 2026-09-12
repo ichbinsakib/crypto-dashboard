@@ -12,7 +12,7 @@
     },
     "eth-resistance-break": {
       "triggered": true,
-      "last_triggered_at": "2026-09-12 15:10:22"
+      "last_triggered_at": "2026-09-12 15:15:22"
     },
     "eth-support-break": {
       "triggered": false,
@@ -68,12 +68,12 @@
       "id": "binancecoin",
       "symbol": "BNB",
       "name": "BNB",
-      "price": 736.41,
-      "pct_24h": 2.07257,
-      "pct_7d": -1.6,
+      "price": 736.49,
+      "pct_24h": 0.82964,
+      "pct_7d": -3.4,
       "support_30d": 602.4629221231862,
       "resistance_30d": 766.4092879330625,
-      "as_of": "2026-09-12 12:50:30",
+      "as_of": "2026-09-12 15:15:22",
       "stale": false
     },
     "ripple": {
@@ -343,7 +343,7 @@
         ],
         [
           "Stretch from long-term average",
-          "-3.6% vs its long-term average - not stretched either way",
+          "-3.4% vs its long-term average - not stretched either way",
           0
         ],
         [
@@ -356,12 +356,12 @@
       "id": "dogecoin",
       "symbol": "DOGE",
       "name": "Dogecoin",
-      "price": 0.085098,
-      "pct_24h": -1.55074,
-      "pct_7d": -2.8,
+      "price": 0.085216,
+      "pct_24h": -0.90231,
+      "pct_7d": -2.4,
       "support_30d": 0.06952870548515376,
       "resistance_30d": 0.09337940032634065,
-      "as_of": "2026-09-12 14:25:18",
+      "as_of": "2026-09-12 15:15:22",
       "stale": false
     },
     "zcash": {
@@ -535,7 +535,7 @@
         ],
         [
           "Stretch from long-term average",
-          "+42.5% above its long-term average - very stretched",
+          "+42.4% above its long-term average - very stretched",
           -2
         ],
         [
@@ -548,12 +548,12 @@
       "id": "whitebit",
       "symbol": "WBT",
       "name": "WhiteBIT Coin",
-      "price": 80.55,
-      "pct_24h": -1.86823,
+      "price": 80.47,
+      "pct_24h": -1.69013,
       "pct_7d": 10.2,
       "support_30d": 54.452558710928955,
       "resistance_30d": 81.2521953230761,
-      "as_of": "2026-09-12 15:10:22",
+      "as_of": "2026-09-12 15:15:22",
       "stale": false
     },
     "leo-token": {
@@ -3326,7 +3326,7 @@
         "stop": 0.1414087,
         "target1": 0.1629373,
         "target2": 0.1737016,
-        "opened_at": "2026-09-12T15:12:13.840121"
+        "opened_at": "2026-09-12T15:17:13.011440"
       }
     },
     "resolved": [
@@ -9192,6 +9192,19 @@
         "result": "win",
         "resolved_at": "2026-09-12T15:12:13.840121",
         "exit_price": 0.181689
+      },
+      {
+        "coin": "XLM",
+        "name": "Stellar",
+        "tf": "daily",
+        "entry": 0.152173,
+        "stop": 0.1414087,
+        "target1": 0.1629373,
+        "target2": 0.1737016,
+        "opened_at": "2026-09-12T15:12:13.840121",
+        "result": "win",
+        "resolved_at": "2026-09-12T15:17:13.011440",
+        "exit_price": 0.181655
       }
     ]
   },
@@ -9199,14 +9212,14 @@
     "key": "BTC",
     "name": "Bitcoin",
     "emoji": "\u20bf",
-    "price": 77433,
+    "price": 77401,
     "high_24h": 78007,
     "low_24h": 76952,
-    "pct_24h": -1.53447,
+    "pct_24h": -1.43644,
     "pct_7d": -2.7,
     "pct_30d": 21.7,
-    "sma50": 70913.07630346887,
-    "sma200": 70082.70313615956,
+    "sma50": 70912.4620039024,
+    "sma200": 70082.54956126794,
     "support_30d": 62843.70368466329,
     "resistance_30d": 81264.70153038795,
     "mark_price": 77264.9,
@@ -9221,16 +9234,16 @@
     "key": "ETH",
     "name": "Ethereum",
     "emoji": "\u039e",
-    "price": 2539.44,
+    "price": 2537.87,
     "high_24h": 2580.2,
     "low_24h": 2508.19,
-    "pct_24h": -2.61978,
+    "pct_24h": -2.5743,
     "pct_7d": 3.5,
     "pct_30d": 34.5,
-    "sma50": 2174.1424177804947,
-    "sma200": 2055.3525872325695,
+    "sma50": 2174.1015352957697,
+    "sma200": 2055.342366611388,
     "support_30d": 1874.401898191962,
-    "resistance_30d": 2539.4169058486395,
+    "resistance_30d": 2537.372781612395,
     "mark_price": 2524.73831008,
     "index_price": 2525.74674419,
     "funding_rate": 1.207e-05,
