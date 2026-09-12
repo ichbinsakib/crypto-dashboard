@@ -452,12 +452,12 @@
       "id": "rain",
       "symbol": "RAIN",
       "name": "Rain",
-      "price": 0.01533233,
-      "pct_24h": -2.21933,
+      "price": 0.01532789,
+      "pct_24h": -2.22107,
       "pct_7d": -6.7,
       "support_30d": 0.012672537640838212,
       "resistance_30d": 0.018158429442510105,
-      "as_of": "2026-09-12 03:25:17",
+      "as_of": "2026-09-12 03:45:21",
       "stale": false
     },
     "chainlink": {
@@ -2407,7 +2407,7 @@
         ],
         [
           "Stretch from long-term average",
-          "-2.9% vs its long-term average - not stretched either way",
+          "-2.5% vs its long-term average - not stretched either way",
           0
         ],
         [
@@ -2420,12 +2420,12 @@
       "id": "shiba-inu",
       "symbol": "SHIB",
       "name": "Shiba Inu",
-      "price": 5.2e-06,
-      "pct_24h": 2.94447,
+      "price": 5.22e-06,
+      "pct_24h": 2.77138,
       "pct_7d": -0.3,
       "support_30d": 4.41190416053175e-06,
       "resistance_30d": 5.903506876405612e-06,
-      "as_of": "2026-09-12 02:20:24",
+      "as_of": "2026-09-12 03:45:21",
       "stale": false
     },
     "near": {
@@ -2612,12 +2612,12 @@
       "id": "bitway",
       "symbol": "BTW",
       "name": "Bitway",
-      "price": 0.509292,
-      "pct_24h": 0.31917,
+      "price": 0.507919,
+      "pct_24h": 1.36238,
       "pct_7d": 11.6,
       "support_30d": 0.30285245757334456,
       "resistance_30d": 0.5101508112010176,
-      "as_of": "2026-09-12 03:30:29",
+      "as_of": "2026-09-12 03:45:21",
       "stale": false
     },
     "world-liberty-financial": {
@@ -3294,7 +3294,6 @@
     }
   },
   "_strong_buy_state": {
-    "scanner-15m:LINK": true,
     "scanner-1h:HYPE": true
   },
   "_pnl_tracker": {
@@ -3324,10 +3323,10 @@
         "name": "Stellar",
         "tf": "daily",
         "entry": 0.152173,
-        "stop": 0.14146046666666667,
-        "target1": 0.16288553333333333,
-        "target2": 0.17359806666666666,
-        "opened_at": "2026-09-12T03:42:04.718875"
+        "stop": 0.14145963333333333,
+        "target1": 0.16288636666666667,
+        "target2": 0.17359973333333334,
+        "opened_at": "2026-09-12T03:47:11.496530"
       }
     },
     "resolved": [
@@ -5839,6 +5838,19 @@
         "result": "win",
         "resolved_at": "2026-09-12T03:42:04.718875",
         "exit_price": 0.18107
+      },
+      {
+        "coin": "XLM",
+        "name": "Stellar",
+        "tf": "daily",
+        "entry": 0.152173,
+        "stop": 0.14146046666666667,
+        "target1": 0.16288553333333333,
+        "target2": 0.17359806666666666,
+        "opened_at": "2026-09-12T03:42:04.718875",
+        "result": "win",
+        "resolved_at": "2026-09-12T03:47:11.496530",
+        "exit_price": 0.181054
       }
     ]
   },
@@ -5846,14 +5858,14 @@
     "key": "BTC",
     "name": "Bitcoin",
     "emoji": "\u20bf",
-    "price": 77253,
+    "price": 77238,
     "high_24h": 79607,
     "low_24h": 76393,
-    "pct_24h": 0.54124,
+    "pct_24h": 0.51284,
     "pct_7d": -2.9,
     "pct_30d": 21.8,
-    "sma50": 70909.455324985,
-    "sma200": 70081.79789153859,
+    "sma50": 70909.13230890682,
+    "sma200": 70081.71713751905,
     "support_30d": 62843.70368466329,
     "resistance_30d": 81264.70153038795,
     "mark_price": 77122.19098201,
@@ -5868,14 +5880,14 @@
     "key": "ETH",
     "name": "Ethereum",
     "emoji": "\u039e",
-    "price": 2512.78,
+    "price": 2511.91,
     "high_24h": 2647.68,
     "low_24h": 2442.02,
-    "pct_24h": 2.75461,
+    "pct_24h": 2.69056,
     "pct_7d": 2.5,
     "pct_30d": 33.9,
-    "sma50": 2173.6048405739,
-    "sma200": 2055.218192930921,
+    "sma50": 2173.5915593247737,
+    "sma200": 2055.214872618639,
     "support_30d": 1874.401898191962,
     "resistance_30d": 2514.967577695514,
     "mark_price": 2515.0197907,
