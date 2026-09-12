@@ -376,7 +376,7 @@
         ],
         [
           "Crowd mood (Fear & Greed)",
-          "56/100 - crowd is greedy",
+          "63/100 - crowd is greedy",
           -1
         ],
         [
@@ -391,7 +391,7 @@
         ],
         [
           "Stretch from long-term average",
-          "+145.1% above its long-term average - very stretched",
+          "+142.7% above its long-term average - very stretched",
           -2
         ],
         [
@@ -404,12 +404,12 @@
       "id": "zcash",
       "symbol": "ZEC",
       "name": "Zcash",
-      "price": 1157.59,
-      "pct_24h": 5.57307,
-      "pct_7d": 13.8,
+      "price": 1157.45,
+      "pct_24h": 5.77816,
+      "pct_7d": 13.2,
       "support_30d": 486.1425018309512,
       "resistance_30d": 1244.287571383468,
-      "as_of": "2026-09-11 23:05:21",
+      "as_of": "2026-09-12 01:20:22",
       "stale": false
     },
     "rain": {
@@ -1000,7 +1000,7 @@
         ],
         [
           "Crowd mood (Fear & Greed)",
-          "56/100 - crowd is greedy",
+          "63/100 - crowd is greedy",
           -1
         ],
         [
@@ -1015,7 +1015,7 @@
         ],
         [
           "Stretch from long-term average",
-          "+11.1% above its long-term average - a bit stretched",
+          "+13.3% above its long-term average - a bit stretched",
           -1
         ],
         [
@@ -1028,12 +1028,12 @@
       "id": "worldcoin-wld",
       "symbol": "WLD",
       "name": "Worldcoin",
-      "price": 0.397621,
-      "pct_24h": 0.09452,
-      "pct_7d": 4.6,
+      "price": 0.405503,
+      "pct_24h": 1.267,
+      "pct_7d": 5.1,
       "support_30d": 0.319812298466522,
       "resistance_30d": 0.4772935995106048,
-      "as_of": "2026-09-11 23:35:17",
+      "as_of": "2026-09-12 01:20:22",
       "stale": false
     },
     "bfusd": {
@@ -2429,9 +2429,9 @@
       "stale": false
     },
     "near": {
-      "label": "\ud83d\udfe1 HOLD / NEUTRAL",
-      "status": "neutral",
-      "score": -1,
+      "label": "\ud83d\udd34 CAUTION - REDUCE NEW BUYS",
+      "status": "bearish",
+      "score": -2,
       "rows": [
         [
           "Price vs. recent range",
@@ -2440,7 +2440,7 @@
         ],
         [
           "Crowd mood (Fear & Greed)",
-          "56/100 - crowd is greedy",
+          "63/100 - crowd is greedy",
           -1
         ],
         [
@@ -2450,12 +2450,12 @@
         ],
         [
           "Recent trend",
-          "Trending up steadily - healthy",
-          1
+          "Chopping sideways - no clear trend",
+          0
         ],
         [
           "Stretch from long-term average",
-          "+38.1% above its long-term average - very stretched",
+          "+37.0% above its long-term average - very stretched",
           -2
         ],
         [
@@ -2464,16 +2464,16 @@
           0
         ]
       ],
-      "plain": "No real edge either way right now - fine to just wait and watch.",
+      "plain": "Getting risky - I'd hold off on new buys until this cools down.",
       "id": "near",
       "symbol": "NEAR",
       "name": "NEAR Protocol",
-      "price": 2.36,
-      "pct_24h": -4.63011,
-      "pct_7d": 15.1,
+      "price": 2.35,
+      "pct_24h": -4.84657,
+      "pct_7d": 7.4,
       "support_30d": 1.5879597131538,
       "resistance_30d": 2.4848168147865453,
-      "as_of": "2026-09-11 23:45:24",
+      "as_of": "2026-09-12 01:20:22",
       "stale": false
     },
     "quant-network": {
@@ -3296,25 +3296,15 @@
   "_strong_buy_state": {},
   "_pnl_tracker": {
     "open": {
-      "1h:MNT": {
-        "coin": "MNT",
-        "name": "Mantle",
-        "tf": "1h",
-        "entry": 0.5699,
-        "stop": 0.5650499999999999,
-        "target1": 0.57475,
-        "target2": 0.5796,
-        "opened_at": "2026-09-12T01:17:09.120803"
-      },
       "daily:XLM": {
         "coin": "XLM",
         "name": "Stellar",
         "tf": "daily",
         "entry": 0.152173,
-        "stop": 0.14148096666666668,
-        "target1": 0.16286503333333333,
-        "target2": 0.17355706666666665,
-        "opened_at": "2026-09-12T01:17:09.120803"
+        "stop": 0.1414791,
+        "target1": 0.1628669,
+        "target2": 0.17356080000000002,
+        "opened_at": "2026-09-12T01:22:18.070432"
       }
     },
     "resolved": [
@@ -5410,6 +5400,32 @@
         "result": "win",
         "resolved_at": "2026-09-12T01:17:09.120803",
         "exit_price": 0.180457
+      },
+      {
+        "coin": "MNT",
+        "name": "Mantle",
+        "tf": "1h",
+        "entry": 0.5699,
+        "stop": 0.5650499999999999,
+        "target1": 0.57475,
+        "target2": 0.5796,
+        "opened_at": "2026-09-12T01:17:09.120803",
+        "result": "win",
+        "resolved_at": "2026-09-12T01:22:18.070432",
+        "exit_price": 0.5805
+      },
+      {
+        "coin": "XLM",
+        "name": "Stellar",
+        "tf": "daily",
+        "entry": 0.152173,
+        "stop": 0.14148096666666668,
+        "target1": 0.16286503333333333,
+        "target2": 0.17355706666666665,
+        "opened_at": "2026-09-12T01:17:09.120803",
+        "result": "win",
+        "resolved_at": "2026-09-12T01:22:18.070432",
+        "exit_price": 0.180388
       }
     ]
   },
@@ -5417,14 +5433,14 @@
     "key": "BTC",
     "name": "Bitcoin",
     "emoji": "\u20bf",
-    "price": 77343,
+    "price": 77361,
     "high_24h": 79607,
     "low_24h": 76393,
-    "pct_24h": 0.63302,
+    "pct_24h": 0.64281,
     "pct_7d": -3.0,
     "pct_30d": 21.9,
-    "sma50": 70911.25344686655,
-    "sma200": 70082.24742200898,
+    "sma50": 70911.61126771105,
+    "sma200": 70082.3368772201,
     "support_30d": 62843.70368466329,
     "resistance_30d": 81264.70153038795,
     "mark_price": 77122.19098201,
@@ -5439,16 +5455,16 @@
     "key": "ETH",
     "name": "Ethereum",
     "emoji": "\u039e",
-    "price": 2513.67,
+    "price": 2515.8,
     "high_24h": 2647.68,
     "low_24h": 2440.0,
-    "pct_24h": 2.38723,
+    "pct_24h": 2.44506,
     "pct_7d": 2.3,
     "pct_30d": 33.8,
-    "sma50": 2173.6283952999893,
-    "sma200": 2055.224081612443,
+    "sma50": 2173.6658103677632,
+    "sma200": 2055.2334353793863,
     "support_30d": 1874.401898191962,
-    "resistance_30d": 2514.967577695514,
+    "resistance_30d": 2515.586535212065,
     "mark_price": 2515.0197907,
     "index_price": 2516.48302326,
     "funding_rate": 7.82e-06,
