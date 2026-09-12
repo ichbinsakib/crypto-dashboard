@@ -12,7 +12,7 @@
     },
     "eth-resistance-break": {
       "triggered": true,
-      "last_triggered_at": "2026-09-12 20:40:22"
+      "last_triggered_at": "2026-09-12 20:45:21"
     },
     "eth-support-break": {
       "triggered": false,
@@ -391,7 +391,7 @@
         ],
         [
           "Stretch from long-term average",
-          "+137.9% above its long-term average - very stretched",
+          "+136.3% above its long-term average - very stretched",
           -2
         ],
         [
@@ -404,12 +404,12 @@
       "id": "zcash",
       "symbol": "ZEC",
       "name": "Zcash",
-      "price": 1134.55,
-      "pct_24h": -3.41323,
-      "pct_7d": 10.0,
+      "price": 1126.89,
+      "pct_24h": -4.50669,
+      "pct_7d": 9.2,
       "support_30d": 486.1425018309512,
       "resistance_30d": 1244.287571383468,
-      "as_of": "2026-09-12 18:15:23",
+      "as_of": "2026-09-12 20:45:21",
       "stale": false
     },
     "rain": {
@@ -1844,12 +1844,12 @@
       "id": "ethena",
       "symbol": "ENA",
       "name": "Ethena",
-      "price": 0.141637,
-      "pct_24h": 0.10575,
-      "pct_7d": -14.6,
+      "price": 0.141624,
+      "pct_24h": 0.42447,
+      "pct_7d": -14.3,
       "support_30d": 0.08231050586125944,
       "resistance_30d": 0.17616469272611565,
-      "as_of": "2026-09-12 19:05:40",
+      "as_of": "2026-09-12 20:45:21",
       "stale": false
     },
     "bitcoin-cash": {
@@ -2647,7 +2647,7 @@
         ],
         [
           "Stretch from long-term average",
-          "-16.7% below its long-term average - confirmed downtrend",
+          "-16.8% below its long-term average - confirmed downtrend",
           -1
         ],
         [
@@ -2660,12 +2660,12 @@
       "id": "world-liberty-financial",
       "symbol": "WLFI",
       "name": "World Liberty Financial",
-      "price": 0.058242,
-      "pct_24h": 7.24413,
+      "price": 0.05816,
+      "pct_24h": 6.79832,
       "pct_7d": 0.8,
       "support_30d": 0.05526589948255966,
       "resistance_30d": 0.06254770952093733,
-      "as_of": "2026-09-12 20:30:28",
+      "as_of": "2026-09-12 20:45:21",
       "stale": false
     },
     "pax-gold": {
@@ -3324,7 +3324,7 @@
         "stop": 0.14140733333333333,
         "target1": 0.16293866666666668,
         "target2": 0.17370433333333335,
-        "opened_at": "2026-09-12T20:42:12.642886"
+        "opened_at": "2026-09-12T20:47:12.399181"
       }
     },
     "resolved": [
@@ -10204,6 +10204,19 @@
         "result": "win",
         "resolved_at": "2026-09-12T20:42:12.642886",
         "exit_price": 0.180083
+      },
+      {
+        "coin": "XLM",
+        "name": "Stellar",
+        "tf": "daily",
+        "entry": 0.152173,
+        "stop": 0.14140733333333333,
+        "target1": 0.16293866666666668,
+        "target2": 0.17370433333333335,
+        "opened_at": "2026-09-12T20:42:12.642886",
+        "result": "win",
+        "resolved_at": "2026-09-12T20:47:12.399181",
+        "exit_price": 0.180218
       }
     ]
   },
@@ -10211,14 +10224,14 @@
     "key": "BTC",
     "name": "Bitcoin",
     "emoji": "\u20bf",
-    "price": 77163,
+    "price": 77168,
     "high_24h": 77479,
     "low_24h": 76987,
-    "pct_24h": -0.32396,
+    "pct_24h": -0.29082,
     "pct_7d": -3.6,
     "pct_30d": 21.9,
-    "sma50": 70907.62069117306,
-    "sma200": 70081.3392330856,
+    "sma50": 70907.89817616808,
+    "sma200": 70081.40860433436,
     "support_30d": 62843.70368466329,
     "resistance_30d": 81264.70153038795,
     "mark_price": 77158.0,
@@ -10233,16 +10246,16 @@
     "key": "ETH",
     "name": "Ethereum",
     "emoji": "\u039e",
-    "price": 2522.04,
+    "price": 2521.91,
     "high_24h": 2543.69,
     "low_24h": 2508.19,
-    "pct_24h": -0.59544,
+    "pct_24h": -0.59575,
     "pct_7d": 1.6,
     "pct_30d": 33.7,
-    "sma50": 2173.795467435351,
-    "sma200": 2055.265849646283,
+    "sma50": 2173.7944028198663,
+    "sma200": 2055.265583492412,
     "support_30d": 1874.401898191962,
-    "resistance_30d": 2522.0693885914343,
+    "resistance_30d": 2522.016157817202,
     "mark_price": 2521.71641085,
     "index_price": 2523.12186047,
     "funding_rate": 4.325e-05,
