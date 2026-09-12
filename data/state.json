@@ -12,7 +12,7 @@
     },
     "eth-resistance-break": {
       "triggered": true,
-      "last_triggered_at": "2026-09-12 13:50:26"
+      "last_triggered_at": "2026-09-12 13:55:18"
     },
     "eth-support-break": {
       "triggered": false,
@@ -2071,7 +2071,7 @@
         ],
         [
           "Stretch from long-term average",
-          "-32.2% below its long-term average - confirmed downtrend",
+          "-31.9% below its long-term average - confirmed downtrend",
           -1
         ],
         [
@@ -2084,12 +2084,12 @@
       "id": "pi-network",
       "symbol": "PI",
       "name": "Pi Network",
-      "price": 0.095013,
-      "pct_24h": 0.2053,
-      "pct_7d": 0.0,
+      "price": 0.095359,
+      "pct_24h": -0.33496,
+      "pct_7d": 0.1,
       "support_30d": 0.08559695435343688,
       "resistance_30d": 0.09798925329339339,
-      "as_of": "2026-09-12 12:45:22",
+      "as_of": "2026-09-12 13:55:18",
       "stale": false
     },
     "ondo-finance": {
@@ -2757,11 +2757,11 @@
       "symbol": "MORPHO",
       "name": "Morpho",
       "price": 2.28,
-      "pct_24h": -4.85617,
+      "pct_24h": -6.55809,
       "pct_7d": -9.3,
       "support_30d": 1.9486067634864404,
       "resistance_30d": 2.9026212482639075,
-      "as_of": "2026-09-12 13:50:26",
+      "as_of": "2026-09-12 13:55:18",
       "stale": false
     },
     "memecore": {
@@ -2909,9 +2909,9 @@
       "stale": false
     },
     "just": {
-      "label": "\ud83d\udd34 CAUTION - REDUCE NEW BUYS",
-      "status": "bearish",
-      "score": -2,
+      "label": "\ud83d\udfe1 HOLD / NEUTRAL",
+      "status": "neutral",
+      "score": -1,
       "rows": [
         [
           "Price vs. recent range",
@@ -2925,8 +2925,8 @@
         ],
         [
           "Market phase (best guess)",
-          "Established uptrend - phase where price marks up",
-          1
+          "Basing near the bottom - phase where smart money accumulates",
+          2
         ],
         [
           "Recent trend",
@@ -2935,7 +2935,7 @@
         ],
         [
           "Stretch from long-term average",
-          "+28.9% above its long-term average - a bit stretched",
+          "+29.3% above its long-term average - a bit stretched",
           -1
         ],
         [
@@ -2944,16 +2944,16 @@
           0
         ]
       ],
-      "plain": "Getting risky - I'd hold off on new buys until this cools down.",
+      "plain": "No real edge either way right now - fine to just wait and watch.",
       "id": "just",
       "symbol": "JST",
       "name": "JUST",
-      "price": 0.108556,
-      "pct_24h": 5.70221,
-      "pct_7d": -0.5,
+      "price": 0.10895,
+      "pct_24h": 6.17634,
+      "pct_7d": 0.6,
       "support_30d": 0.0946830738697126,
       "resistance_30d": 0.11074855268841714,
-      "as_of": "2026-09-12 11:42:47",
+      "as_of": "2026-09-12 13:55:18",
       "stale": false
     },
     "algorand": {
@@ -3326,17 +3326,17 @@
         "stop": 0.06266933333333333,
         "target1": 0.06319066666666667,
         "target2": 0.06345133333333335,
-        "opened_at": "2026-09-12T13:52:20.541813"
+        "opened_at": "2026-09-12T13:57:11.112801"
       },
       "15m:PUMP": {
         "coin": "PUMP",
         "name": "Pump.fun",
         "tf": "15m",
         "entry": 0.003533,
-        "stop": 0.0035154333333333333,
-        "target1": 0.003550566666666667,
-        "target2": 0.003568133333333334,
-        "opened_at": "2026-09-12T13:52:20.541813"
+        "stop": 0.0035153333333333334,
+        "target1": 0.003550666666666667,
+        "target2": 0.0035683333333333335,
+        "opened_at": "2026-09-12T13:57:11.112801"
       },
       "daily:XLM": {
         "coin": "XLM",
@@ -3346,7 +3346,7 @@
         "stop": 0.1414087,
         "target1": 0.1629373,
         "target2": 0.1737016,
-        "opened_at": "2026-09-12T13:52:20.541813"
+        "opened_at": "2026-09-12T13:57:11.112801"
       }
     },
     "resolved": [
@@ -8848,6 +8848,45 @@
         "result": "win",
         "resolved_at": "2026-09-12T13:52:20.541813",
         "exit_price": 0.180894
+      },
+      {
+        "coin": "SKY",
+        "name": "Sky",
+        "tf": "15m",
+        "entry": 0.06293,
+        "stop": 0.06266933333333333,
+        "target1": 0.06319066666666667,
+        "target2": 0.06345133333333335,
+        "opened_at": "2026-09-12T13:52:20.541813",
+        "result": "win",
+        "resolved_at": "2026-09-12T13:57:11.112801",
+        "exit_price": 0.06395
+      },
+      {
+        "coin": "PUMP",
+        "name": "Pump.fun",
+        "tf": "15m",
+        "entry": 0.003533,
+        "stop": 0.0035154333333333333,
+        "target1": 0.003550566666666667,
+        "target2": 0.003568133333333334,
+        "opened_at": "2026-09-12T13:52:20.541813",
+        "result": "win",
+        "resolved_at": "2026-09-12T13:57:11.112801",
+        "exit_price": 0.003595
+      },
+      {
+        "coin": "XLM",
+        "name": "Stellar",
+        "tf": "daily",
+        "entry": 0.152173,
+        "stop": 0.1414087,
+        "target1": 0.1629373,
+        "target2": 0.1737016,
+        "opened_at": "2026-09-12T13:52:20.541813",
+        "result": "win",
+        "resolved_at": "2026-09-12T13:57:11.112801",
+        "exit_price": 0.180978
       }
     ]
   },
@@ -8855,14 +8894,14 @@
     "key": "BTC",
     "name": "Bitcoin",
     "emoji": "\u20bf",
-    "price": 77274,
+    "price": 77288,
     "high_24h": 79607,
     "low_24h": 76952,
-    "pct_24h": -1.25378,
+    "pct_24h": -1.75397,
     "pct_7d": -2.9,
     "pct_30d": 21.9,
-    "sma50": 70909.87789203394,
-    "sma200": 70081.90353330082,
+    "sma50": 70910.34516569722,
+    "sma200": 70082.02035171664,
     "support_30d": 62843.70368466329,
     "resistance_30d": 81264.70153038795,
     "mark_price": 77264.9,
@@ -8877,16 +8916,16 @@
     "key": "ETH",
     "name": "Ethereum",
     "emoji": "\u039e",
-    "price": 2537.91,
+    "price": 2537.89,
     "high_24h": 2647.68,
     "low_24h": 2508.19,
-    "pct_24h": -0.44143,
+    "pct_24h": -2.14965,
     "pct_7d": 3.2,
     "pct_30d": 34.9,
-    "sma50": 2174.1262520251603,
-    "sma200": 2055.348545793736,
+    "sma50": 2174.1321133349124,
+    "sma200": 2055.350011121174,
     "support_30d": 1874.401898191962,
-    "resistance_30d": 2538.608618081911,
+    "resistance_30d": 2538.901683569524,
     "mark_price": 2524.73831008,
     "index_price": 2525.74674419,
     "funding_rate": 1.207e-05,
