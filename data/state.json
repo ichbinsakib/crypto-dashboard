@@ -1480,7 +1480,7 @@
         ],
         [
           "Crowd mood (Fear & Greed)",
-          "56/100 - crowd is greedy",
+          "63/100 - crowd is greedy",
           -1
         ],
         [
@@ -1495,7 +1495,7 @@
         ],
         [
           "Stretch from long-term average",
-          "-1.9% vs its long-term average - not stretched either way",
+          "-2.4% vs its long-term average - not stretched either way",
           0
         ],
         [
@@ -1508,12 +1508,12 @@
       "id": "ethereum-classic",
       "symbol": "ETC",
       "name": "Ethereum Classic",
-      "price": 7.67,
-      "pct_24h": -0.45065,
-      "pct_7d": 3.6,
+      "price": 7.63,
+      "pct_24h": 0.52241,
+      "pct_7d": 3.5,
       "support_30d": 6.079473341192034,
       "resistance_30d": 8.609781284223262,
-      "as_of": "2026-09-11 21:40:25",
+      "as_of": "2026-09-12 00:05:29",
       "stale": false
     },
     "pump-fun": {
@@ -1663,16 +1663,16 @@
     "bitget-token": {
       "label": "\ud83d\udfe1 HOLD / NEUTRAL",
       "status": "neutral",
-      "score": 1,
+      "score": 0,
       "rows": [
         [
           "Price vs. recent range",
-          "Sitting in the middle of its 30-day range",
-          0
+          "Near its 30-day high (~$2.03) - less room to run",
+          -1
         ],
         [
           "Crowd mood (Fear & Greed)",
-          "56/100 - crowd is greedy",
+          "63/100 - crowd is greedy",
           -1
         ],
         [
@@ -1687,7 +1687,7 @@
         ],
         [
           "Stretch from long-term average",
-          "+1.2% vs its long-term average - not stretched either way",
+          "+2.3% vs its long-term average - not stretched either way",
           0
         ],
         [
@@ -1700,12 +1700,12 @@
       "id": "bitget-token",
       "symbol": "BGB",
       "name": "Bitget Token",
-      "price": 1.92,
-      "pct_24h": -1.49545,
-      "pct_7d": -3.1,
+      "price": 1.94,
+      "pct_24h": 0.45976,
+      "pct_7d": -2.3,
       "support_30d": 1.6478040912714662,
       "resistance_30d": 2.0284940947674617,
-      "as_of": "2026-09-11 21:15:31",
+      "as_of": "2026-09-12 00:05:29",
       "stale": false
     },
     "sui": {
@@ -1912,7 +1912,7 @@
         ],
         [
           "Crowd mood (Fear & Greed)",
-          "56/100 - crowd is greedy",
+          "63/100 - crowd is greedy",
           -1
         ],
         [
@@ -1927,7 +1927,7 @@
         ],
         [
           "Stretch from long-term average",
-          "+0.6% vs its long-term average - not stretched either way",
+          "+1.2% vs its long-term average - not stretched either way",
           0
         ],
         [
@@ -1940,12 +1940,12 @@
       "id": "mantle",
       "symbol": "MNT",
       "name": "Mantle",
-      "price": 0.578569,
-      "pct_24h": 1.57537,
-      "pct_7d": 1.6,
+      "price": 0.581943,
+      "pct_24h": 2.21546,
+      "pct_7d": 1.5,
       "support_30d": 0.42660592418086046,
       "resistance_30d": 0.6365218632454678,
-      "as_of": "2026-09-11 23:00:35",
+      "as_of": "2026-09-12 00:05:29",
       "stale": false
     },
     "polkadot": {
@@ -3304,17 +3304,17 @@
         "stop": 0.5629375,
         "target1": 0.5730624999999999,
         "target2": 0.5781249999999999,
-        "opened_at": "2026-09-12T00:02:34.023222"
+        "opened_at": "2026-09-12T00:07:25.371776"
       },
       "daily:XLM": {
         "coin": "XLM",
         "name": "Stellar",
         "tf": "daily",
         "entry": 0.152173,
-        "stop": 0.1415401,
-        "target1": 0.1628059,
-        "target2": 0.1734388,
-        "opened_at": "2026-09-12T00:02:34.023222"
+        "stop": 0.14153676666666667,
+        "target1": 0.16280923333333333,
+        "target2": 0.17344546666666666,
+        "opened_at": "2026-09-12T00:07:25.371776"
       }
     },
     "resolved": [
@@ -4994,6 +4994,32 @@
         "result": "win",
         "resolved_at": "2026-09-12T00:02:34.023222",
         "exit_price": 0.178612
+      },
+      {
+        "coin": "MNT",
+        "name": "Mantle",
+        "tf": "1h",
+        "entry": 0.568,
+        "stop": 0.5629375,
+        "target1": 0.5730624999999999,
+        "target2": 0.5781249999999999,
+        "opened_at": "2026-09-12T00:02:34.023222",
+        "result": "win",
+        "resolved_at": "2026-09-12T00:07:25.371776",
+        "exit_price": 0.5819
+      },
+      {
+        "coin": "XLM",
+        "name": "Stellar",
+        "tf": "daily",
+        "entry": 0.152173,
+        "stop": 0.1415401,
+        "target1": 0.1628059,
+        "target2": 0.1734388,
+        "opened_at": "2026-09-12T00:02:34.023222",
+        "result": "win",
+        "resolved_at": "2026-09-12T00:07:25.371776",
+        "exit_price": 0.178461
       }
     ]
   },
@@ -5001,14 +5027,14 @@
     "key": "BTC",
     "name": "Bitcoin",
     "emoji": "\u20bf",
-    "price": 77184,
+    "price": 77245,
     "high_24h": 79607,
     "low_24h": 76393,
-    "pct_24h": 0.82346,
-    "pct_7d": -3.2,
-    "pct_30d": 21.6,
-    "sma50": 70645.86751719209,
-    "sma200": 70015.80544732892,
+    "pct_24h": 0.76109,
+    "pct_7d": -3.1,
+    "pct_30d": 21.8,
+    "sma50": 70647.31341327383,
+    "sma200": 70016.16692134936,
     "support_30d": 62843.70368466329,
     "resistance_30d": 81264.70153038795,
     "mark_price": 77122.19098201,
@@ -5023,16 +5049,16 @@
     "key": "ETH",
     "name": "Ethereum",
     "emoji": "\u039e",
-    "price": 2514.87,
+    "price": 2514.98,
     "high_24h": 2647.68,
-    "low_24h": 2437.39,
-    "pct_24h": 3.17803,
-    "pct_7d": 2.4,
-    "pct_30d": 33.8,
-    "sma50": 2160.563059988563,
-    "sma200": 2051.915946087898,
+    "low_24h": 2440.0,
+    "pct_24h": 3.02543,
+    "pct_7d": 2.6,
+    "pct_30d": 34.0,
+    "sma50": 2160.5654348363532,
+    "sma200": 2051.916539799846,
     "support_30d": 1874.401898191962,
-    "resistance_30d": 2514.967577695514,
+    "resistance_30d": 2514.9720766599007,
     "mark_price": 2515.0197907,
     "index_price": 2516.48302326,
     "funding_rate": 7.82e-06,
