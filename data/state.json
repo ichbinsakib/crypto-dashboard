@@ -12,7 +12,7 @@
     },
     "eth-resistance-break": {
       "triggered": true,
-      "last_triggered_at": "2026-09-12 16:00:35"
+      "last_triggered_at": "2026-09-12 16:05:20"
     },
     "eth-support-break": {
       "triggered": false,
@@ -2023,7 +2023,7 @@
         ],
         [
           "Stretch from long-term average",
-          "+77.1% above its long-term average - very stretched",
+          "+77.6% above its long-term average - very stretched",
           -2
         ],
         [
@@ -2036,12 +2036,12 @@
       "id": "uniswap",
       "symbol": "UNI",
       "name": "Uniswap",
-      "price": 6.52,
-      "pct_24h": 5.27634,
+      "price": 6.54,
+      "pct_24h": 5.5568,
       "pct_7d": 2.6,
       "support_30d": 3.1971416665971573,
       "resistance_30d": 7.291165865788254,
-      "as_of": "2026-09-12 16:00:35",
+      "as_of": "2026-09-12 16:05:20",
       "stale": false
     },
     "pi-network": {
@@ -2119,7 +2119,7 @@
         ],
         [
           "Stretch from long-term average",
-          "+7.5% vs its long-term average - not stretched either way",
+          "+8.0% vs its long-term average - not stretched either way",
           0
         ],
         [
@@ -2132,12 +2132,12 @@
       "id": "ondo-finance",
       "symbol": "ONDO",
       "name": "Ondo",
-      "price": 0.351397,
-      "pct_24h": -1.48379,
-      "pct_7d": -5.3,
+      "price": 0.353075,
+      "pct_24h": -1.08374,
+      "pct_7d": -4.5,
       "support_30d": 0.32338181384146436,
       "resistance_30d": 0.3969475338902824,
-      "as_of": "2026-09-12 15:55:19",
+      "as_of": "2026-09-12 16:05:20",
       "stale": false
     },
     "canton-network": {
@@ -2215,7 +2215,7 @@
         ],
         [
           "Stretch from long-term average",
-          "+12.5% above its long-term average - a bit stretched",
+          "+12.9% above its long-term average - a bit stretched",
           -1
         ],
         [
@@ -2228,12 +2228,12 @@
       "id": "internet-computer",
       "symbol": "ICP",
       "name": "Internet Computer",
-      "price": 2.76,
-      "pct_24h": -3.28883,
-      "pct_7d": 5.9,
+      "price": 2.77,
+      "pct_24h": -0.94062,
+      "pct_7d": 6.1,
       "support_30d": 2.194804279500122,
       "resistance_30d": 2.9869340549074623,
-      "as_of": "2026-09-12 15:00:35",
+      "as_of": "2026-09-12 16:05:20",
       "stale": false
     },
     "bittensor": {
@@ -3311,10 +3311,10 @@
         "name": "Canton",
         "tf": "15m",
         "entry": 0.09778,
-        "stop": 0.09754233333333334,
-        "target1": 0.09801766666666667,
-        "target2": 0.09825533333333333,
-        "opened_at": "2026-09-12T16:02:26.730459"
+        "stop": 0.09753366666666667,
+        "target1": 0.09802633333333334,
+        "target2": 0.09827266666666667,
+        "opened_at": "2026-09-12T16:07:12.130487"
       },
       "daily:XLM": {
         "coin": "XLM",
@@ -3324,7 +3324,7 @@
         "stop": 0.14140733333333333,
         "target1": 0.16293866666666668,
         "target2": 0.17370433333333335,
-        "opened_at": "2026-09-12T16:02:26.730459"
+        "opened_at": "2026-09-12T16:07:12.130487"
       }
     },
     "resolved": [
@@ -9333,6 +9333,32 @@
         "result": "win",
         "resolved_at": "2026-09-12T16:02:26.730459",
         "exit_price": 0.182637
+      },
+      {
+        "coin": "CC",
+        "name": "Canton",
+        "tf": "15m",
+        "entry": 0.09778,
+        "stop": 0.09754233333333334,
+        "target1": 0.09801766666666667,
+        "target2": 0.09825533333333333,
+        "opened_at": "2026-09-12T16:02:26.730459",
+        "result": "win",
+        "resolved_at": "2026-09-12T16:07:12.130487",
+        "exit_price": 0.0983
+      },
+      {
+        "coin": "XLM",
+        "name": "Stellar",
+        "tf": "daily",
+        "entry": 0.152173,
+        "stop": 0.14140733333333333,
+        "target1": 0.16293866666666668,
+        "target2": 0.17370433333333335,
+        "opened_at": "2026-09-12T16:02:26.730459",
+        "result": "win",
+        "resolved_at": "2026-09-12T16:07:12.130487",
+        "exit_price": 0.18223
       }
     ]
   },
@@ -9340,14 +9366,14 @@
     "key": "BTC",
     "name": "Bitcoin",
     "emoji": "\u20bf",
-    "price": 77397,
-    "high_24h": 78007,
+    "price": 77387,
+    "high_24h": 77932,
     "low_24h": 76952,
-    "pct_24h": -0.40643,
-    "pct_7d": -2.7,
-    "pct_30d": 21.7,
-    "sma50": 70912.04421739747,
-    "sma200": 70082.44511464171,
+    "pct_24h": -0.54902,
+    "pct_7d": -2.9,
+    "pct_30d": 21.3,
+    "sma50": 70912.0773105201,
+    "sma200": 70082.45338792236,
     "support_30d": 62843.70368466329,
     "resistance_30d": 81264.70153038795,
     "mark_price": 77264.9,
@@ -9362,16 +9388,16 @@
     "key": "ETH",
     "name": "Ethereum",
     "emoji": "\u039e",
-    "price": 2534.26,
-    "high_24h": 2580.2,
+    "price": 2535.47,
+    "high_24h": 2579.84,
     "low_24h": 2508.19,
-    "pct_24h": -0.99782,
-    "pct_7d": 3.5,
-    "pct_30d": 34.5,
-    "sma50": 2174.040866690951,
-    "sma200": 2055.3271994601832,
+    "pct_24h": -1.19603,
+    "pct_7d": 3.1,
+    "pct_30d": 34.0,
+    "sma50": 2174.063867030726,
+    "sma200": 2055.332949545127,
     "support_30d": 1874.401898191962,
-    "resistance_30d": 2534.339351371458,
+    "resistance_30d": 2535.4893683602186,
     "mark_price": 2524.73831008,
     "index_price": 2525.74674419,
     "funding_rate": 1.207e-05,
