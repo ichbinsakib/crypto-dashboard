@@ -12,7 +12,7 @@
     },
     "eth-resistance-break": {
       "triggered": true,
-      "last_triggered_at": "2026-09-12 15:15:22"
+      "last_triggered_at": "2026-09-12 15:20:32"
     },
     "eth-support-break": {
       "triggered": false,
@@ -692,12 +692,12 @@
       "id": "cardano",
       "symbol": "ADA",
       "name": "Cardano",
-      "price": 0.209067,
-      "pct_24h": 3.33241,
-      "pct_7d": -1.8,
+      "price": 0.209034,
+      "pct_24h": -0.92846,
+      "pct_7d": -3.4,
       "support_30d": 0.1741249817054162,
       "resistance_30d": 0.2291047455940254,
-      "as_of": "2026-09-12 12:05:23",
+      "as_of": "2026-09-12 15:20:32",
       "stale": false
     },
     "stellar": {
@@ -2359,7 +2359,7 @@
         ],
         [
           "Stretch from long-term average",
-          "-5.4% vs its long-term average - not stretched either way",
+          "-5.1% vs its long-term average - not stretched either way",
           0
         ],
         [
@@ -2372,12 +2372,12 @@
       "id": "sky",
       "symbol": "SKY",
       "name": "Sky",
-      "price": 0.063177,
-      "pct_24h": 6.30524,
-      "pct_7d": -4.8,
+      "price": 0.063411,
+      "pct_24h": 6.28683,
+      "pct_7d": -5.8,
       "support_30d": 0.05081051579814886,
       "resistance_30d": 0.07314868186988309,
-      "as_of": "2026-09-12 12:55:23",
+      "as_of": "2026-09-12 15:20:32",
       "stale": false
     },
     "shiba-inu": {
@@ -2503,7 +2503,7 @@
         ],
         [
           "Stretch from long-term average",
-          "-6.0% vs its long-term average - not stretched either way",
+          "-5.9% vs its long-term average - not stretched either way",
           0
         ],
         [
@@ -2516,12 +2516,12 @@
       "id": "quant-network",
       "symbol": "QNT",
       "name": "Quant",
-      "price": 64.34,
-      "pct_24h": -1.78868,
+      "price": 64.43,
+      "pct_24h": -1.56707,
       "pct_7d": 0.8,
       "support_30d": 55.905981995619285,
       "resistance_30d": 67.13669726469111,
-      "as_of": "2026-09-12 15:00:35",
+      "as_of": "2026-09-12 15:20:32",
       "stale": false
     },
     "tether-gold": {
@@ -3293,9 +3293,7 @@
       "stale": false
     }
   },
-  "_strong_buy_state": {
-    "scanner-15m:CC": true
-  },
+  "_strong_buy_state": {},
   "_pnl_tracker": {
     "open": {
       "1h:MNT": {
@@ -3326,7 +3324,7 @@
         "stop": 0.1414087,
         "target1": 0.1629373,
         "target2": 0.1737016,
-        "opened_at": "2026-09-12T15:17:13.011440"
+        "opened_at": "2026-09-12T15:22:23.000621"
       }
     },
     "resolved": [
@@ -9205,6 +9203,19 @@
         "result": "win",
         "resolved_at": "2026-09-12T15:17:13.011440",
         "exit_price": 0.181655
+      },
+      {
+        "coin": "XLM",
+        "name": "Stellar",
+        "tf": "daily",
+        "entry": 0.152173,
+        "stop": 0.1414087,
+        "target1": 0.1629373,
+        "target2": 0.1737016,
+        "opened_at": "2026-09-12T15:17:13.011440",
+        "result": "win",
+        "resolved_at": "2026-09-12T15:22:23.000621",
+        "exit_price": 0.181712
       }
     ]
   },
@@ -9212,14 +9223,14 @@
     "key": "BTC",
     "name": "Bitcoin",
     "emoji": "\u20bf",
-    "price": 77401,
+    "price": 77436,
     "high_24h": 78007,
     "low_24h": 76952,
-    "pct_24h": -1.43644,
+    "pct_24h": -1.55034,
     "pct_7d": -2.7,
     "pct_30d": 21.7,
-    "sma50": 70912.4620039024,
-    "sma200": 70082.54956126794,
+    "sma50": 70913.10888693028,
+    "sma200": 70082.7112820249,
     "support_30d": 62843.70368466329,
     "resistance_30d": 81264.70153038795,
     "mark_price": 77264.9,
@@ -9234,16 +9245,16 @@
     "key": "ETH",
     "name": "Ethereum",
     "emoji": "\u039e",
-    "price": 2537.87,
+    "price": 2540.38,
     "high_24h": 2580.2,
     "low_24h": 2508.19,
-    "pct_24h": -2.5743,
+    "pct_24h": -2.82949,
     "pct_7d": 3.5,
     "pct_30d": 34.5,
-    "sma50": 2174.1015352957697,
-    "sma200": 2055.342366611388,
+    "sma50": 2174.1617451247284,
+    "sma200": 2055.3574190686277,
     "support_30d": 1874.401898191962,
-    "resistance_30d": 2537.372781612395,
+    "resistance_30d": 2540.3832730603203,
     "mark_price": 2524.73831008,
     "index_price": 2525.74674419,
     "funding_rate": 1.207e-05,
