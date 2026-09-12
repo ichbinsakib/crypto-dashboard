@@ -1687,7 +1687,7 @@
         ],
         [
           "Stretch from long-term average",
-          "+2.4% vs its long-term average - not stretched either way",
+          "+1.8% vs its long-term average - not stretched either way",
           0
         ],
         [
@@ -1700,12 +1700,12 @@
       "id": "bitget-token",
       "symbol": "BGB",
       "name": "Bitget Token",
-      "price": 1.94,
-      "pct_24h": 1.04708,
-      "pct_7d": -4.7,
+      "price": 1.93,
+      "pct_24h": 0.71563,
+      "pct_7d": -5.1,
       "support_30d": 1.6478040912714662,
       "resistance_30d": 2.0284940947674617,
-      "as_of": "2026-09-12 19:27:54",
+      "as_of": "2026-09-12 20:00:34",
       "stale": false
     },
     "sui": {
@@ -2579,7 +2579,7 @@
       "rows": [
         [
           "Price vs. recent range",
-          "Near its 30-day high (~$0.5575) - less room to run",
+          "Near its 30-day high (~$0.5562) - less room to run",
           -1
         ],
         [
@@ -2612,12 +2612,12 @@
       "id": "bitway",
       "symbol": "BTW",
       "name": "Bitway",
-      "price": 0.557485,
-      "pct_24h": 11.63507,
-      "pct_7d": 22.6,
+      "price": 0.555711,
+      "pct_24h": 11.32091,
+      "pct_7d": 21.8,
       "support_30d": 0.30285245757334456,
-      "resistance_30d": 0.5574854098288554,
-      "as_of": "2026-09-12 17:25:18",
+      "resistance_30d": 0.5561970594066817,
+      "as_of": "2026-09-12 20:00:34",
       "stale": false
     },
     "world-liberty-financial": {
@@ -2839,7 +2839,7 @@
         ],
         [
           "Stretch from long-term average",
-          "+29.6% above its long-term average - a bit stretched",
+          "+29.2% above its long-term average - a bit stretched",
           -1
         ],
         [
@@ -2852,12 +2852,12 @@
       "id": "aave",
       "symbol": "AAVE",
       "name": "Aave",
-      "price": 126.55,
-      "pct_24h": 1.41917,
-      "pct_7d": -4.0,
+      "price": 126.09,
+      "pct_24h": 1.29886,
+      "pct_7d": -6.3,
       "support_30d": 85.94219943917633,
       "resistance_30d": 141.53047916466082,
-      "as_of": "2026-09-12 18:35:20",
+      "as_of": "2026-09-12 20:00:34",
       "stale": false
     },
     "okb": {
@@ -3293,9 +3293,7 @@
       "stale": false
     }
   },
-  "_strong_buy_state": {
-    "scanner-15m:BNB": true
-  },
+  "_strong_buy_state": {},
   "_pnl_tracker": {
     "open": {
       "1h:MNT": {
@@ -3326,7 +3324,7 @@
         "stop": 0.14140733333333333,
         "target1": 0.16293866666666668,
         "target2": 0.17370433333333335,
-        "opened_at": "2026-09-12T19:57:13.646428"
+        "opened_at": "2026-09-12T20:02:24.895498"
       }
     },
     "resolved": [
@@ -10089,6 +10087,19 @@
         "result": "win",
         "resolved_at": "2026-09-12T19:57:13.646428",
         "exit_price": 0.179928
+      },
+      {
+        "coin": "XLM",
+        "name": "Stellar",
+        "tf": "daily",
+        "entry": 0.152173,
+        "stop": 0.14140733333333333,
+        "target1": 0.16293866666666668,
+        "target2": 0.17370433333333335,
+        "opened_at": "2026-09-12T19:57:13.646428",
+        "result": "win",
+        "resolved_at": "2026-09-12T20:02:24.895498",
+        "exit_price": 0.179957
       }
     ]
   },
@@ -10096,14 +10107,14 @@
     "key": "BTC",
     "name": "Bitcoin",
     "emoji": "\u20bf",
-    "price": 77103,
+    "price": 77137,
     "high_24h": 77479,
     "low_24h": 76987,
-    "pct_24h": -0.2783,
+    "pct_24h": -0.22654,
     "pct_7d": -3.6,
     "pct_30d": 22.3,
-    "sma50": 70906.45661691535,
-    "sma200": 70081.04821452117,
+    "sma50": 70906.96325379719,
+    "sma200": 70081.17487374163,
     "support_30d": 62843.70368466329,
     "resistance_30d": 81264.70153038795,
     "mark_price": 77264.9,
@@ -10118,16 +10129,16 @@
     "key": "ETH",
     "name": "Ethereum",
     "emoji": "\u039e",
-    "price": 2516.88,
+    "price": 2518.67,
     "high_24h": 2545.61,
     "low_24h": 2508.19,
-    "pct_24h": -0.92744,
+    "pct_24h": -0.80122,
     "pct_7d": 1.7,
     "pct_30d": 34.5,
-    "sma50": 2173.6977285955722,
-    "sma200": 2055.241414936339,
+    "sma50": 2173.7298806154995,
+    "sma200": 2055.2494529413207,
     "support_30d": 1874.401898191962,
-    "resistance_30d": 2517.1824466025155,
+    "resistance_30d": 2518.790047598874,
     "mark_price": 2524.73831008,
     "index_price": 2525.74674419,
     "funding_rate": 1.207e-05,
