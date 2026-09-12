@@ -12,7 +12,7 @@
     },
     "eth-resistance-break": {
       "triggered": true,
-      "last_triggered_at": "2026-09-12 15:30:30"
+      "last_triggered_at": "2026-09-12 15:35:21"
     },
     "eth-support-break": {
       "triggered": false,
@@ -434,13 +434,13 @@
         ],
         [
           "Recent trend",
-          "Chopping sideways - no clear trend",
-          0
+          "Trending down - avoid catching a falling knife",
+          -1
         ],
         [
           "Stretch from long-term average",
-          "+30.4% above its long-term average - very stretched",
-          -2
+          "+29.9% above its long-term average - a bit stretched",
+          -1
         ],
         [
           "Leverage traders' bias",
@@ -452,12 +452,12 @@
       "id": "rain",
       "symbol": "RAIN",
       "name": "Rain",
-      "price": 0.01512008,
-      "pct_24h": -4.61236,
-      "pct_7d": -7.8,
+      "price": 0.01506661,
+      "pct_24h": -5.81356,
+      "pct_7d": -8.3,
       "support_30d": 0.012672537640838212,
       "resistance_30d": 0.018158429442510105,
-      "as_of": "2026-09-12 13:00:39",
+      "as_of": "2026-09-12 15:35:21",
       "stale": false
     },
     "chainlink": {
@@ -1975,7 +1975,7 @@
         ],
         [
           "Stretch from long-term average",
-          "-6.0% vs its long-term average - not stretched either way",
+          "-6.1% vs its long-term average - not stretched either way",
           0
         ],
         [
@@ -1988,12 +1988,12 @@
       "id": "polkadot",
       "symbol": "DOT",
       "name": "Polkadot",
-      "price": 1.036,
-      "pct_24h": -2.86588,
-      "pct_7d": 12.9,
+      "price": 1.035,
+      "pct_24h": -3.75171,
+      "pct_7d": 13.0,
       "support_30d": 0.7510040523927409,
       "resistance_30d": 1.2475304252917225,
-      "as_of": "2026-09-12 14:50:28",
+      "as_of": "2026-09-12 15:35:21",
       "stale": false
     },
     "uniswap": {
@@ -2023,7 +2023,7 @@
         ],
         [
           "Stretch from long-term average",
-          "+73.3% above its long-term average - very stretched",
+          "+77.3% above its long-term average - very stretched",
           -2
         ],
         [
@@ -2036,12 +2036,12 @@
       "id": "uniswap",
       "symbol": "UNI",
       "name": "Uniswap",
-      "price": 6.38,
-      "pct_24h": 7.26151,
-      "pct_7d": 1.8,
+      "price": 6.53,
+      "pct_24h": 2.16445,
+      "pct_7d": 2.7,
       "support_30d": 3.1971416665971573,
       "resistance_30d": 7.291165865788254,
-      "as_of": "2026-09-12 12:10:24",
+      "as_of": "2026-09-12 15:35:21",
       "stale": false
     },
     "pi-network": {
@@ -3326,7 +3326,7 @@
         "stop": 0.1414087,
         "target1": 0.1629373,
         "target2": 0.1737016,
-        "opened_at": "2026-09-12T15:32:21.762332"
+        "opened_at": "2026-09-12T15:37:12.759425"
       }
     },
     "resolved": [
@@ -9244,6 +9244,19 @@
         "result": "win",
         "resolved_at": "2026-09-12T15:32:21.762332",
         "exit_price": 0.181808
+      },
+      {
+        "coin": "XLM",
+        "name": "Stellar",
+        "tf": "daily",
+        "entry": 0.152173,
+        "stop": 0.1414087,
+        "target1": 0.1629373,
+        "target2": 0.1737016,
+        "opened_at": "2026-09-12T15:32:21.762332",
+        "result": "win",
+        "resolved_at": "2026-09-12T15:37:12.759425",
+        "exit_price": 0.182015
       }
     ]
   },
@@ -9251,14 +9264,14 @@
     "key": "BTC",
     "name": "Bitcoin",
     "emoji": "\u20bf",
-    "price": 77456,
+    "price": 77398,
     "high_24h": 78007,
     "low_24h": 76952,
-    "pct_24h": -1.58499,
+    "pct_24h": -1.78429,
     "pct_7d": -2.7,
     "pct_30d": 21.7,
-    "sma50": 70913.5124467785,
-    "sma200": 70082.81217198697,
+    "sma50": 70912.8947064573,
+    "sma200": 70082.65773690667,
     "support_30d": 62843.70368466329,
     "resistance_30d": 81264.70153038795,
     "mark_price": 77264.9,
@@ -9273,16 +9286,16 @@
     "key": "ETH",
     "name": "Ethereum",
     "emoji": "\u039e",
-    "price": 2540.74,
+    "price": 2537.69,
     "high_24h": 2580.2,
     "low_24h": 2508.19,
-    "pct_24h": -2.69002,
+    "pct_24h": -2.91647,
     "pct_7d": 3.5,
     "pct_30d": 34.5,
-    "sma50": 2174.1657822764028,
-    "sma200": 2055.358428356546,
+    "sma50": 2174.137877390924,
+    "sma200": 2055.3514521351767,
     "support_30d": 1874.401898191962,
-    "resistance_30d": 2540.5851306440395,
+    "resistance_30d": 2539.1898863700917,
     "mark_price": 2524.73831008,
     "index_price": 2525.74674419,
     "funding_rate": 1.207e-05,
