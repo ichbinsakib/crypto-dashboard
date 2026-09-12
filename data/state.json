@@ -12,7 +12,7 @@
     },
     "eth-resistance-break": {
       "triggered": true,
-      "last_triggered_at": "2026-09-12 09:15:23"
+      "last_triggered_at": "2026-09-12 09:20:26"
     },
     "eth-support-break": {
       "triggered": false,
@@ -295,7 +295,7 @@
         ],
         [
           "Stretch from long-term average",
-          "+45.1% above its long-term average - very stretched",
+          "+45.2% above its long-term average - very stretched",
           -2
         ],
         [
@@ -308,12 +308,12 @@
       "id": "hyperliquid",
       "symbol": "HYPE",
       "name": "Hyperliquid",
-      "price": 79.3,
-      "pct_24h": -1.19286,
+      "price": 79.37,
+      "pct_24h": -0.82017,
       "pct_7d": -6.2,
       "support_30d": 56.463034999474225,
       "resistance_30d": 87.951916819731,
-      "as_of": "2026-09-12 08:45:24",
+      "as_of": "2026-09-12 09:20:26",
       "stale": false
     },
     "dogecoin": {
@@ -2229,11 +2229,11 @@
       "symbol": "ICP",
       "name": "Internet Computer",
       "price": 2.78,
-      "pct_24h": 1.06152,
+      "pct_24h": 0.94761,
       "pct_7d": 5.1,
       "support_30d": 2.194804279500122,
       "resistance_30d": 2.9869340549074623,
-      "as_of": "2026-09-12 09:15:23",
+      "as_of": "2026-09-12 09:20:26",
       "stale": false
     },
     "bittensor": {
@@ -2431,12 +2431,12 @@
     "near": {
       "label": "\ud83d\udd34 CAUTION - REDUCE NEW BUYS",
       "status": "bearish",
-      "score": -2,
+      "score": -3,
       "rows": [
         [
           "Price vs. recent range",
-          "Sitting in the middle of its 30-day range",
-          0
+          "Near its 30-day high (~$2.48) - less room to run",
+          -1
         ],
         [
           "Crowd mood (Fear & Greed)",
@@ -2455,7 +2455,7 @@
         ],
         [
           "Stretch from long-term average",
-          "+37.5% above its long-term average - very stretched",
+          "+38.7% above its long-term average - very stretched",
           -2
         ],
         [
@@ -2468,12 +2468,12 @@
       "id": "near",
       "symbol": "NEAR",
       "name": "NEAR Protocol",
-      "price": 2.36,
-      "pct_24h": -5.23361,
-      "pct_7d": 5.2,
+      "price": 2.38,
+      "pct_24h": -3.57858,
+      "pct_7d": 6.5,
       "support_30d": 1.5879597131538,
       "resistance_30d": 2.4848168147865453,
-      "as_of": "2026-09-12 07:40:51",
+      "as_of": "2026-09-12 09:20:26",
       "stale": false
     },
     "quant-network": {
@@ -3311,10 +3311,10 @@
         "name": "Monero",
         "tf": "15m",
         "entry": 521.67,
-        "stop": 518.2829999999999,
-        "target1": 525.057,
-        "target2": 528.4440000000001,
-        "opened_at": "2026-09-12T09:17:14.971740"
+        "stop": 518.2389999999999,
+        "target1": 525.101,
+        "target2": 528.532,
+        "opened_at": "2026-09-12T09:22:16.676823"
       },
       "daily:XLM": {
         "coin": "XLM",
@@ -3324,7 +3324,7 @@
         "stop": 0.14145366666666667,
         "target1": 0.16289233333333333,
         "target2": 0.17361166666666666,
-        "opened_at": "2026-09-12T09:17:14.971740"
+        "opened_at": "2026-09-12T09:22:16.676823"
       }
     },
     "resolved": [
@@ -7526,6 +7526,32 @@
         "result": "win",
         "resolved_at": "2026-09-12T09:17:14.971740",
         "exit_price": 0.181041
+      },
+      {
+        "coin": "XMR",
+        "name": "Monero",
+        "tf": "15m",
+        "entry": 521.67,
+        "stop": 518.2829999999999,
+        "target1": 525.057,
+        "target2": 528.4440000000001,
+        "opened_at": "2026-09-12T09:17:14.971740",
+        "result": "win",
+        "resolved_at": "2026-09-12T09:22:16.676823",
+        "exit_price": 539.42
+      },
+      {
+        "coin": "XLM",
+        "name": "Stellar",
+        "tf": "daily",
+        "entry": 0.152173,
+        "stop": 0.14145366666666667,
+        "target1": 0.16289233333333333,
+        "target2": 0.17361166666666666,
+        "opened_at": "2026-09-12T09:17:14.971740",
+        "result": "win",
+        "resolved_at": "2026-09-12T09:22:16.676823",
+        "exit_price": 0.180785
       }
     ]
   },
@@ -7533,14 +7559,14 @@
     "key": "BTC",
     "name": "Bitcoin",
     "emoji": "\u20bf",
-    "price": 77338,
+    "price": 77345,
     "high_24h": 79607,
     "low_24h": 76393,
-    "pct_24h": 0.1071,
+    "pct_24h": 0.11098,
     "pct_7d": -3.0,
     "pct_30d": 21.2,
-    "sma50": 70911.28393130907,
-    "sma200": 70082.2550431196,
+    "sma50": 70911.29334950565,
+    "sma200": 70082.25739766876,
     "support_30d": 62843.70368466329,
     "resistance_30d": 81264.70153038795,
     "mark_price": 77264.9,
@@ -7555,16 +7581,16 @@
     "key": "ETH",
     "name": "Ethereum",
     "emoji": "\u039e",
-    "price": 2532.89,
+    "price": 2535.09,
     "high_24h": 2647.68,
     "low_24h": 2442.02,
-    "pct_24h": 2.4063,
+    "pct_24h": 2.48554,
     "pct_7d": 3.1,
     "pct_30d": 33.7,
-    "sma50": 2174.012006496577,
-    "sma200": 2055.3199844115898,
+    "sma50": 2174.041928800887,
+    "sma200": 2055.3274649876676,
     "support_30d": 1874.401898191962,
-    "resistance_30d": 2532.8963416527613,
+    "resistance_30d": 2534.3924568682455,
     "mark_price": 2524.73831008,
     "index_price": 2525.74674419,
     "funding_rate": 1.207e-05,
