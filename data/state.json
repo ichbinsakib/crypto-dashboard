@@ -151,7 +151,7 @@
         ],
         [
           "Stretch from long-term average",
-          "+22.3% above its long-term average - a bit stretched",
+          "+22.4% above its long-term average - a bit stretched",
           -1
         ],
         [
@@ -164,12 +164,12 @@
       "id": "solana",
       "symbol": "SOL",
       "name": "Solana",
-      "price": 101.62,
-      "pct_24h": 1.81263,
-      "pct_7d": -0.3,
+      "price": 101.65,
+      "pct_24h": 1.79075,
+      "pct_7d": -0.1,
       "support_30d": 74.5477464048606,
       "resistance_30d": 109.17730597799657,
-      "as_of": "2026-09-12 05:55:25",
+      "as_of": "2026-09-12 06:20:24",
       "stale": false
     },
     "tron": {
@@ -1701,11 +1701,11 @@
       "symbol": "BGB",
       "name": "Bitget Token",
       "price": 1.94,
-      "pct_24h": -0.03024,
+      "pct_24h": -0.55391,
       "pct_7d": -2.0,
       "support_30d": 1.6478040912714662,
       "resistance_30d": 2.0284940947674617,
-      "as_of": "2026-09-12 05:35:18",
+      "as_of": "2026-09-12 06:20:24",
       "stale": false
     },
     "sui": {
@@ -2935,7 +2935,7 @@
         ],
         [
           "Stretch from long-term average",
-          "+28.0% above its long-term average - a bit stretched",
+          "+28.4% above its long-term average - a bit stretched",
           -1
         ],
         [
@@ -2948,12 +2948,12 @@
       "id": "just",
       "symbol": "JST",
       "name": "JUST",
-      "price": 0.107817,
-      "pct_24h": 4.0693,
-      "pct_7d": -1.0,
+      "price": 0.108142,
+      "pct_24h": 4.97095,
+      "pct_7d": 0.2,
       "support_30d": 0.0946830738697126,
       "resistance_30d": 0.11074855268841714,
-      "as_of": "2026-09-12 04:40:22",
+      "as_of": "2026-09-12 06:20:24",
       "stale": false
     },
     "algorand": {
@@ -3313,10 +3313,10 @@
         "name": "Monero",
         "tf": "15m",
         "entry": 514.33,
-        "stop": 511.59600000000006,
-        "target1": 517.0640000000001,
-        "target2": 519.798,
-        "opened_at": "2026-09-12T06:17:17.956998"
+        "stop": 511.5696666666667,
+        "target1": 517.0903333333333,
+        "target2": 519.8506666666667,
+        "opened_at": "2026-09-12T06:22:15.997290"
       },
       "daily:XLM": {
         "coin": "XLM",
@@ -3326,7 +3326,7 @@
         "stop": 0.14145653333333333,
         "target1": 0.16288946666666668,
         "target2": 0.17360593333333335,
-        "opened_at": "2026-09-12T06:17:17.956998"
+        "opened_at": "2026-09-12T06:22:15.997290"
       }
     },
     "resolved": [
@@ -6579,6 +6579,32 @@
         "result": "win",
         "resolved_at": "2026-09-12T06:17:17.956998",
         "exit_price": 0.180005
+      },
+      {
+        "coin": "XMR",
+        "name": "Monero",
+        "tf": "15m",
+        "entry": 514.33,
+        "stop": 511.59600000000006,
+        "target1": 517.0640000000001,
+        "target2": 519.798,
+        "opened_at": "2026-09-12T06:17:17.956998",
+        "result": "win",
+        "resolved_at": "2026-09-12T06:22:15.997290",
+        "exit_price": 539.7
+      },
+      {
+        "coin": "XLM",
+        "name": "Stellar",
+        "tf": "daily",
+        "entry": 0.152173,
+        "stop": 0.14145653333333333,
+        "target1": 0.16288946666666668,
+        "target2": 0.17360593333333335,
+        "opened_at": "2026-09-12T06:17:17.956998",
+        "result": "win",
+        "resolved_at": "2026-09-12T06:22:15.997290",
+        "exit_price": 0.180063
       }
     ]
   },
@@ -6586,14 +6612,14 @@
     "key": "BTC",
     "name": "Bitcoin",
     "emoji": "\u20bf",
-    "price": 77203,
+    "price": 77212,
     "high_24h": 79607,
     "low_24h": 76393,
-    "pct_24h": -0.20715,
+    "pct_24h": -0.0975,
     "pct_7d": -2.9,
     "pct_30d": 21.3,
-    "sma50": 70908.44613989728,
-    "sma200": 70081.54559526667,
+    "sma50": 70908.7271466577,
+    "sma200": 70081.61584695676,
     "support_30d": 62843.70368466329,
     "resistance_30d": 81264.70153038795,
     "mark_price": 77184.8,
@@ -6608,14 +6634,14 @@
     "key": "ETH",
     "name": "Ethereum",
     "emoji": "\u039e",
-    "price": 2510.78,
+    "price": 2511.45,
     "high_24h": 2647.68,
     "low_24h": 2442.02,
-    "pct_24h": 1.68343,
+    "pct_24h": 1.78718,
     "pct_7d": 2.5,
     "pct_30d": 32.8,
-    "sma50": 2173.569734901055,
-    "sma200": 2055.209416512709,
+    "sma50": 2173.5979893013014,
+    "sma200": 2055.216480112771,
     "support_30d": 1874.401898191962,
     "resistance_30d": 2514.967577695514,
     "mark_price": 2509.91,
