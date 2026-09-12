@@ -12,7 +12,7 @@
     },
     "eth-resistance-break": {
       "triggered": true,
-      "last_triggered_at": "2026-09-12 17:35:58"
+      "last_triggered_at": "2026-09-12 17:40:24"
     },
     "eth-support-break": {
       "triggered": false,
@@ -165,11 +165,11 @@
       "symbol": "SOL",
       "name": "Solana",
       "price": 102.03,
-      "pct_24h": -0.24848,
+      "pct_24h": 0.00696,
       "pct_7d": -0.9,
       "support_30d": 74.5477464048606,
       "resistance_30d": 109.17730597799657,
-      "as_of": "2026-09-12 17:30:30",
+      "as_of": "2026-09-12 17:40:24",
       "stale": false
     },
     "tron": {
@@ -1591,7 +1591,7 @@
         ],
         [
           "Stretch from long-term average",
-          "+94.3% above its long-term average - very stretched",
+          "+92.2% above its long-term average - very stretched",
           -2
         ],
         [
@@ -1604,12 +1604,12 @@
       "id": "venice-token",
       "symbol": "VVV",
       "name": "Venice Token",
-      "price": 23.4,
-      "pct_24h": -8.67989,
-      "pct_7d": 32.2,
+      "price": 23.15,
+      "pct_24h": -4.60897,
+      "pct_7d": 35.3,
       "support_30d": 11.794592355917386,
       "resistance_30d": 25.88474946901688,
-      "as_of": "2026-09-12 15:50:25",
+      "as_of": "2026-09-12 17:40:24",
       "stale": false
     },
     "litecoin": {
@@ -2708,12 +2708,12 @@
       "id": "pax-gold",
       "symbol": "PAXG",
       "name": "PAX Gold",
-      "price": 4355.02,
-      "pct_24h": -0.50251,
+      "price": 4355.18,
+      "pct_24h": -0.26454,
       "pct_7d": -1.7,
       "support_30d": 4318.141703998686,
       "resistance_30d": 4672.307573354755,
-      "as_of": "2026-09-12 15:40:23",
+      "as_of": "2026-09-12 17:40:24",
       "stale": false
     },
     "morpho": {
@@ -3326,7 +3326,7 @@
         "stop": 0.14140733333333333,
         "target1": 0.16293866666666668,
         "target2": 0.17370433333333335,
-        "opened_at": "2026-09-12T17:37:04.945365"
+        "opened_at": "2026-09-12T17:42:15.181189"
       }
     },
     "resolved": [
@@ -9673,6 +9673,19 @@
         "result": "win",
         "resolved_at": "2026-09-12T17:37:04.945365",
         "exit_price": 0.181285
+      },
+      {
+        "coin": "XLM",
+        "name": "Stellar",
+        "tf": "daily",
+        "entry": 0.152173,
+        "stop": 0.14140733333333333,
+        "target1": 0.16293866666666668,
+        "target2": 0.17370433333333335,
+        "opened_at": "2026-09-12T17:37:04.945365",
+        "result": "win",
+        "resolved_at": "2026-09-12T17:42:15.181189",
+        "exit_price": 0.181126
       }
     ]
   },
@@ -9680,14 +9693,14 @@
     "key": "BTC",
     "name": "Bitcoin",
     "emoji": "\u20bf",
-    "price": 77249,
+    "price": 77241,
     "high_24h": 77518,
     "low_24h": 76952,
-    "pct_24h": -0.68232,
+    "pct_24h": -0.44913,
     "pct_7d": -3.1,
     "pct_30d": 22.0,
-    "sma50": 70909.39006804569,
-    "sma200": 70081.78157730376,
+    "sma50": 70909.08498680269,
+    "sma200": 70081.70530699301,
     "support_30d": 62843.70368466329,
     "resistance_30d": 81264.70153038795,
     "mark_price": 77264.9,
@@ -9702,16 +9715,16 @@
     "key": "ETH",
     "name": "Ethereum",
     "emoji": "\u039e",
-    "price": 2525.62,
+    "price": 2525.58,
     "high_24h": 2566.64,
     "low_24h": 2508.19,
-    "pct_24h": -1.93379,
+    "pct_24h": -1.64838,
     "pct_7d": 2.9,
     "pct_30d": 34.6,
-    "sma50": 2173.867870338088,
-    "sma200": 2055.2839503719674,
+    "sma50": 2173.8650701906076,
+    "sma200": 2055.2832503350974,
     "support_30d": 1874.401898191962,
-    "resistance_30d": 2525.6895337282995,
+    "resistance_30d": 2525.549526354285,
     "mark_price": 2524.73831008,
     "index_price": 2525.74674419,
     "funding_rate": 1.207e-05,
