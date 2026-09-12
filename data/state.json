@@ -12,7 +12,7 @@
     },
     "eth-resistance-break": {
       "triggered": true,
-      "last_triggered_at": "2026-09-12 19:20:25"
+      "last_triggered_at": "2026-09-12 19:25:28"
     },
     "eth-support-break": {
       "triggered": false,
@@ -1879,7 +1879,7 @@
         ],
         [
           "Stretch from long-term average",
-          "-30.2% below its long-term average - confirmed downtrend",
+          "-30.6% below its long-term average - confirmed downtrend",
           -1
         ],
         [
@@ -1892,12 +1892,12 @@
       "id": "bitcoin-cash",
       "symbol": "BCH",
       "name": "Bitcoin Cash",
-      "price": 228.26,
-      "pct_24h": -1.84211,
-      "pct_7d": -9.3,
+      "price": 226.79,
+      "pct_24h": -0.48375,
+      "pct_7d": -12.0,
       "support_30d": 203.50169440615565,
       "resistance_30d": 288.10955405353275,
-      "as_of": "2026-09-12 17:35:58",
+      "as_of": "2026-09-12 19:25:28",
       "stale": false
     },
     "mantle": {
@@ -2935,7 +2935,7 @@
         ],
         [
           "Stretch from long-term average",
-          "+30.2% above its long-term average - very stretched",
+          "+30.4% above its long-term average - very stretched",
           -2
         ],
         [
@@ -2948,12 +2948,12 @@
       "id": "just",
       "symbol": "JST",
       "name": "JUST",
-      "price": 0.109706,
-      "pct_24h": 4.71187,
+      "price": 0.109857,
+      "pct_24h": 4.84795,
       "pct_7d": 0.0,
       "support_30d": 0.0946830738697126,
       "resistance_30d": 0.11074855268841714,
-      "as_of": "2026-09-12 19:10:24",
+      "as_of": "2026-09-12 19:25:28",
       "stale": false
     },
     "algorand": {
@@ -3079,7 +3079,7 @@
         ],
         [
           "Stretch from long-term average",
-          "+40.3% above its long-term average - very stretched",
+          "+40.1% above its long-term average - very stretched",
           -2
         ],
         [
@@ -3092,12 +3092,12 @@
       "id": "arbitrum",
       "symbol": "ARB",
       "name": "Arbitrum",
-      "price": 0.140629,
-      "pct_24h": -0.0823,
+      "price": 0.140462,
+      "pct_24h": -0.54563,
       "pct_7d": 1.1,
       "support_30d": 0.07272258489044682,
       "resistance_30d": 0.18933387703114857,
-      "as_of": "2026-09-12 19:15:26",
+      "as_of": "2026-09-12 19:25:28",
       "stale": false
     },
     "dash": {
@@ -3326,7 +3326,7 @@
         "stop": 0.14140733333333333,
         "target1": 0.16293866666666668,
         "target2": 0.17370433333333335,
-        "opened_at": "2026-09-12T19:22:15.913539"
+        "opened_at": "2026-09-12T19:27:20.269272"
       }
     },
     "resolved": [
@@ -9998,6 +9998,19 @@
         "result": "win",
         "resolved_at": "2026-09-12T19:22:15.913539",
         "exit_price": 0.180065
+      },
+      {
+        "coin": "XLM",
+        "name": "Stellar",
+        "tf": "daily",
+        "entry": 0.152173,
+        "stop": 0.14140733333333333,
+        "target1": 0.16293866666666668,
+        "target2": 0.17370433333333335,
+        "opened_at": "2026-09-12T19:22:15.913539",
+        "result": "win",
+        "resolved_at": "2026-09-12T19:27:20.269272",
+        "exit_price": 0.180112
       }
     ]
   },
@@ -10005,14 +10018,14 @@
     "key": "BTC",
     "name": "Bitcoin",
     "emoji": "\u20bf",
-    "price": 77143,
+    "price": 77148,
     "high_24h": 77479,
     "low_24h": 76987,
-    "pct_24h": 0.01692,
+    "pct_24h": -0.1102,
     "pct_7d": -3.6,
     "pct_30d": 22.3,
-    "sma50": 70907.23408862927,
-    "sma200": 70081.24258244965,
+    "sma50": 70907.35828196009,
+    "sma200": 70081.27363078235,
     "support_30d": 62843.70368466329,
     "resistance_30d": 81264.70153038795,
     "mark_price": 77264.9,
@@ -10027,16 +10040,16 @@
     "key": "ETH",
     "name": "Ethereum",
     "emoji": "\u039e",
-    "price": 2521.17,
+    "price": 2520.08,
     "high_24h": 2545.61,
     "low_24h": 2508.19,
-    "pct_24h": -0.76014,
+    "pct_24h": -0.9398,
     "pct_7d": 1.7,
     "pct_30d": 34.5,
-    "sma50": 2173.7684678970127,
-    "sma200": 2055.259099761699,
+    "sma50": 2173.7556491793275,
+    "sma200": 2055.255895082277,
     "support_30d": 1874.401898191962,
-    "resistance_30d": 2520.7194116745272,
+    "resistance_30d": 2520.0784757902566,
     "mark_price": 2524.73831008,
     "index_price": 2525.74674419,
     "funding_rate": 1.207e-05,
