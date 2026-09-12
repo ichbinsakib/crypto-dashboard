@@ -12,7 +12,7 @@
     },
     "eth-resistance-break": {
       "triggered": true,
-      "last_triggered_at": "2026-09-12 18:20:28"
+      "last_triggered_at": "2026-09-12 18:25:17"
     },
     "eth-support-break": {
       "triggered": false,
@@ -295,7 +295,7 @@
         ],
         [
           "Stretch from long-term average",
-          "+47.1% above its long-term average - very stretched",
+          "+46.7% above its long-term average - very stretched",
           -2
         ],
         [
@@ -308,12 +308,12 @@
       "id": "hyperliquid",
       "symbol": "HYPE",
       "name": "Hyperliquid",
-      "price": 80.39,
-      "pct_24h": -1.9309,
-      "pct_7d": -6.0,
+      "price": 80.16,
+      "pct_24h": -0.8455,
+      "pct_7d": -6.4,
       "support_30d": 56.463034999474225,
       "resistance_30d": 87.951916819731,
-      "as_of": "2026-09-12 17:25:18",
+      "as_of": "2026-09-12 18:25:17",
       "stale": false
     },
     "dogecoin": {
@@ -789,11 +789,11 @@
       "symbol": "KCS",
       "name": "KuCoin",
       "price": 6.9,
-      "pct_24h": -2.41732,
-      "pct_7d": -3.0,
+      "pct_24h": -1.59198,
+      "pct_7d": -3.5,
       "support_30d": 6.514591596607885,
       "resistance_30d": 7.8821382735057615,
-      "as_of": "2026-09-12 16:15:22",
+      "as_of": "2026-09-12 18:25:17",
       "stale": false
     },
     "hedera-hashgraph": {
@@ -1495,7 +1495,7 @@
         ],
         [
           "Stretch from long-term average",
-          "-1.4% vs its long-term average - not stretched either way",
+          "-1.5% vs its long-term average - not stretched either way",
           0
         ],
         [
@@ -1508,12 +1508,12 @@
       "id": "ethereum-classic",
       "symbol": "ETC",
       "name": "Ethereum Classic",
-      "price": 7.71,
-      "pct_24h": -0.89725,
-      "pct_7d": 0.1,
+      "price": 7.7,
+      "pct_24h": 0.80246,
+      "pct_7d": -0.1,
       "support_30d": 6.079473341192034,
       "resistance_30d": 8.609781284223262,
-      "as_of": "2026-09-12 17:30:30",
+      "as_of": "2026-09-12 18:25:17",
       "stale": false
     },
     "pump-fun": {
@@ -3326,7 +3326,7 @@
         "stop": 0.14140733333333333,
         "target1": 0.16293866666666668,
         "target2": 0.17370433333333335,
-        "opened_at": "2026-09-12T18:21:50.089673"
+        "opened_at": "2026-09-12T18:27:08.224915"
       }
     },
     "resolved": [
@@ -9803,6 +9803,19 @@
         "result": "win",
         "resolved_at": "2026-09-12T18:21:50.089673",
         "exit_price": 0.180649
+      },
+      {
+        "coin": "XLM",
+        "name": "Stellar",
+        "tf": "daily",
+        "entry": 0.152173,
+        "stop": 0.14140733333333333,
+        "target1": 0.16293866666666668,
+        "target2": 0.17370433333333335,
+        "opened_at": "2026-09-12T18:21:50.089673",
+        "result": "win",
+        "resolved_at": "2026-09-12T18:27:08.224915",
+        "exit_price": 0.180634
       }
     ]
   },
@@ -9810,14 +9823,14 @@
     "key": "BTC",
     "name": "Bitcoin",
     "emoji": "\u20bf",
-    "price": 77120,
+    "price": 77150,
     "high_24h": 77479,
     "low_24h": 76987,
-    "pct_24h": -0.11395,
+    "pct_24h": 0.01769,
     "pct_7d": -3.6,
     "pct_30d": 22.4,
-    "sma50": 70906.79724064561,
-    "sma200": 70081.13337045374,
+    "sma50": 70907.35335507568,
+    "sma200": 70081.27239906126,
     "support_30d": 62843.70368466329,
     "resistance_30d": 81264.70153038795,
     "mark_price": 77264.9,
@@ -9832,16 +9845,16 @@
     "key": "ETH",
     "name": "Ethereum",
     "emoji": "\u039e",
-    "price": 2522.4,
+    "price": 2524.1,
     "high_24h": 2546.39,
     "low_24h": 2508.19,
-    "pct_24h": -0.91587,
+    "pct_24h": -0.79042,
     "pct_7d": 2.2,
     "pct_30d": 34.9,
-    "sma50": 2173.8039823989857,
-    "sma200": 2055.267978387192,
+    "sma50": 2173.8332176646554,
+    "sma200": 2055.2752872036094,
     "support_30d": 1874.401898191962,
-    "resistance_30d": 2522.4951367731755,
+    "resistance_30d": 2523.9569000566567,
     "mark_price": 2524.73831008,
     "index_price": 2525.74674419,
     "funding_rate": 1.207e-05,
