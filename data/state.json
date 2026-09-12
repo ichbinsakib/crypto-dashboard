@@ -12,7 +12,7 @@
     },
     "eth-resistance-break": {
       "triggered": true,
-      "last_triggered_at": "2026-09-12 16:10:23"
+      "last_triggered_at": "2026-09-12 16:15:22"
     },
     "eth-support-break": {
       "triggered": false,
@@ -343,7 +343,7 @@
         ],
         [
           "Stretch from long-term average",
-          "-3.4% vs its long-term average - not stretched either way",
+          "-3.6% vs its long-term average - not stretched either way",
           0
         ],
         [
@@ -356,12 +356,12 @@
       "id": "dogecoin",
       "symbol": "DOGE",
       "name": "Dogecoin",
-      "price": 0.085216,
-      "pct_24h": -0.90231,
-      "pct_7d": -2.4,
+      "price": 0.085045,
+      "pct_24h": -0.31922,
+      "pct_7d": -3.1,
       "support_30d": 0.06952870548515376,
       "resistance_30d": 0.09337940032634065,
-      "as_of": "2026-09-12 15:15:22",
+      "as_of": "2026-09-12 16:15:22",
       "stale": false
     },
     "zcash": {
@@ -775,7 +775,7 @@
         ],
         [
           "Stretch from long-term average",
-          "-9.5% vs its long-term average - not stretched either way",
+          "-9.8% vs its long-term average - not stretched either way",
           0
         ],
         [
@@ -788,12 +788,12 @@
       "id": "kucoin-shares",
       "symbol": "KCS",
       "name": "KuCoin",
-      "price": 6.92,
-      "pct_24h": -3.34429,
-      "pct_7d": -2.8,
+      "price": 6.9,
+      "pct_24h": -2.41732,
+      "pct_7d": -3.0,
       "support_30d": 6.514591596607885,
       "resistance_30d": 7.8821382735057615,
-      "as_of": "2026-09-12 15:30:30",
+      "as_of": "2026-09-12 16:15:22",
       "stale": false
     },
     "hedera-hashgraph": {
@@ -919,7 +919,7 @@
         ],
         [
           "Stretch from long-term average",
-          "-7.5% vs its long-term average - not stretched either way",
+          "-7.6% vs its long-term average - not stretched either way",
           0
         ],
         [
@@ -932,12 +932,12 @@
       "id": "avalanche-2",
       "symbol": "AVAX",
       "name": "Avalanche",
-      "price": 7.43,
-      "pct_24h": -1.76866,
-      "pct_7d": -0.8,
+      "price": 7.42,
+      "pct_24h": -2.51941,
+      "pct_7d": -1.6,
       "support_30d": 6.323978670940332,
       "resistance_30d": 8.074275746115342,
-      "as_of": "2026-09-12 12:55:23",
+      "as_of": "2026-09-12 16:15:22",
       "stale": false
     },
     "aster-2": {
@@ -3311,10 +3311,10 @@
         "name": "Canton",
         "tf": "15m",
         "entry": 0.09778,
-        "stop": 0.09753366666666667,
-        "target1": 0.09802633333333334,
-        "target2": 0.09827266666666667,
-        "opened_at": "2026-09-12T16:12:13.745823"
+        "stop": 0.09754033333333334,
+        "target1": 0.09801966666666667,
+        "target2": 0.09825933333333334,
+        "opened_at": "2026-09-12T16:17:12.190510"
       },
       "daily:XLM": {
         "coin": "XLM",
@@ -3324,7 +3324,7 @@
         "stop": 0.14140733333333333,
         "target1": 0.16293866666666668,
         "target2": 0.17370433333333335,
-        "opened_at": "2026-09-12T16:12:13.745823"
+        "opened_at": "2026-09-12T16:17:12.190510"
       }
     },
     "resolved": [
@@ -9385,6 +9385,32 @@
         "result": "win",
         "resolved_at": "2026-09-12T16:12:13.745823",
         "exit_price": 0.182237
+      },
+      {
+        "coin": "CC",
+        "name": "Canton",
+        "tf": "15m",
+        "entry": 0.09778,
+        "stop": 0.09753366666666667,
+        "target1": 0.09802633333333334,
+        "target2": 0.09827266666666667,
+        "opened_at": "2026-09-12T16:12:13.745823",
+        "result": "win",
+        "resolved_at": "2026-09-12T16:17:12.190510",
+        "exit_price": 0.0983
+      },
+      {
+        "coin": "XLM",
+        "name": "Stellar",
+        "tf": "daily",
+        "entry": 0.152173,
+        "stop": 0.14140733333333333,
+        "target1": 0.16293866666666668,
+        "target2": 0.17370433333333335,
+        "opened_at": "2026-09-12T16:12:13.745823",
+        "result": "win",
+        "resolved_at": "2026-09-12T16:17:12.190510",
+        "exit_price": 0.181844
       }
     ]
   },
@@ -9392,14 +9418,14 @@
     "key": "BTC",
     "name": "Bitcoin",
     "emoji": "\u20bf",
-    "price": 77346,
+    "price": 77350,
     "high_24h": 77932,
     "low_24h": 76952,
-    "pct_24h": -0.76289,
+    "pct_24h": -0.57932,
     "pct_7d": -2.9,
     "pct_30d": 21.3,
-    "sma50": 70911.37116829268,
-    "sma200": 70082.27685236551,
+    "sma50": 70911.38009467862,
+    "sma200": 70082.279083962,
     "support_30d": 62843.70368466329,
     "resistance_30d": 81264.70153038795,
     "mark_price": 77264.9,
@@ -9414,16 +9440,16 @@
     "key": "ETH",
     "name": "Ethereum",
     "emoji": "\u039e",
-    "price": 2533.01,
+    "price": 2533.86,
     "high_24h": 2579.84,
     "low_24h": 2508.19,
-    "pct_24h": -1.50311,
+    "pct_24h": -1.07613,
     "pct_7d": 3.1,
     "pct_30d": 34.0,
-    "sma50": 2174.0136749302865,
-    "sma200": 2055.320401520017,
+    "sma50": 2174.0389405598526,
+    "sma200": 2055.326717927409,
     "support_30d": 1874.401898191962,
-    "resistance_30d": 2532.979763338226,
+    "resistance_30d": 2534.2430448165273,
     "mark_price": 2524.73831008,
     "index_price": 2525.74674419,
     "funding_rate": 1.207e-05,
