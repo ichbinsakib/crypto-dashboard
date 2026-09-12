@@ -12,7 +12,7 @@
     },
     "eth-resistance-break": {
       "triggered": true,
-      "last_triggered_at": "2026-09-12 22:10:22"
+      "last_triggered_at": "2026-09-12 22:15:23"
     },
     "eth-support-break": {
       "triggered": false,
@@ -212,12 +212,12 @@
       "id": "tron",
       "symbol": "TRX",
       "name": "TRON",
-      "price": 0.339815,
-      "pct_24h": 0.45251,
-      "pct_7d": 1.7,
+      "price": 0.339887,
+      "pct_24h": 0.52089,
+      "pct_7d": 1.5,
       "support_30d": 0.32221537516581966,
       "resistance_30d": 0.3447899585776834,
-      "as_of": "2026-09-12 21:55:21",
+      "as_of": "2026-09-12 22:15:23",
       "stale": false
     },
     "figure-heloc": {
@@ -1015,7 +1015,7 @@
         ],
         [
           "Stretch from long-term average",
-          "+12.2% above its long-term average - a bit stretched",
+          "+11.6% above its long-term average - a bit stretched",
           -1
         ],
         [
@@ -1028,12 +1028,12 @@
       "id": "worldcoin-wld",
       "symbol": "WLD",
       "name": "Worldcoin",
-      "price": 0.401708,
-      "pct_24h": 0.20564,
-      "pct_7d": 0.7,
+      "price": 0.399372,
+      "pct_24h": 0.12385,
+      "pct_7d": 0.6,
       "support_30d": 0.319812298466522,
       "resistance_30d": 0.4772935995106048,
-      "as_of": "2026-09-12 19:30:29",
+      "as_of": "2026-09-12 22:15:23",
       "stale": false
     },
     "bfusd": {
@@ -2839,7 +2839,7 @@
         ],
         [
           "Stretch from long-term average",
-          "+28.9% above its long-term average - a bit stretched",
+          "+28.5% above its long-term average - a bit stretched",
           -1
         ],
         [
@@ -2852,12 +2852,12 @@
       "id": "aave",
       "symbol": "AAVE",
       "name": "Aave",
-      "price": 125.86,
-      "pct_24h": 0.19593,
-      "pct_7d": -6.6,
+      "price": 125.45,
+      "pct_24h": 0.64698,
+      "pct_7d": -6.5,
       "support_30d": 85.94219943917633,
       "resistance_30d": 141.53047916466082,
-      "as_of": "2026-09-12 21:25:19",
+      "as_of": "2026-09-12 22:15:23",
       "stale": false
     },
     "okb": {
@@ -3324,7 +3324,7 @@
         "stop": 0.14140733333333333,
         "target1": 0.16293866666666668,
         "target2": 0.17370433333333335,
-        "opened_at": "2026-09-12T22:12:12.673953"
+        "opened_at": "2026-09-12T22:17:13.535708"
       }
     },
     "resolved": [
@@ -10438,6 +10438,19 @@
         "result": "win",
         "resolved_at": "2026-09-12T22:12:12.673953",
         "exit_price": 0.180021
+      },
+      {
+        "coin": "XLM",
+        "name": "Stellar",
+        "tf": "daily",
+        "entry": 0.152173,
+        "stop": 0.14140733333333333,
+        "target1": 0.16293866666666668,
+        "target2": 0.17370433333333335,
+        "opened_at": "2026-09-12T22:12:12.673953",
+        "result": "win",
+        "resolved_at": "2026-09-12T22:17:13.535708",
+        "exit_price": 0.180139
       }
     ]
   },
@@ -10445,14 +10458,14 @@
     "key": "BTC",
     "name": "Bitcoin",
     "emoji": "\u20bf",
-    "price": 77239,
+    "price": 77247,
     "high_24h": 77479,
     "low_24h": 77055,
-    "pct_24h": 0.20984,
+    "pct_24h": 0.1174,
     "pct_7d": -3.2,
     "pct_30d": 21.9,
-    "sma50": 70909.19579436268,
-    "sma200": 70081.733008883,
+    "sma50": 70909.34563263827,
+    "sma200": 70081.77046845191,
     "support_30d": 62843.70368466329,
     "resistance_30d": 81264.70153038795,
     "mark_price": 77158.0,
@@ -10467,16 +10480,16 @@
     "key": "ETH",
     "name": "Ethereum",
     "emoji": "\u039e",
-    "price": 2522.96,
+    "price": 2522.9,
     "high_24h": 2543.69,
     "low_24h": 2509.71,
-    "pct_24h": 0.45727,
+    "pct_24h": 0.15491,
     "pct_7d": 1.9,
     "pct_30d": 33.9,
-    "sma50": 2173.8138999558137,
-    "sma200": 2055.270457776399,
+    "sma50": 2173.8066358942924,
+    "sma200": 2055.2686417610184,
     "support_30d": 1874.401898191962,
-    "resistance_30d": 2522.9910146145726,
+    "resistance_30d": 2522.6278115385194,
     "mark_price": 2521.71641085,
     "index_price": 2523.12186047,
     "funding_rate": 4.325e-05,
