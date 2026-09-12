@@ -55,7 +55,7 @@
         ],
         [
           "Stretch from long-term average",
-          "+17.0% above its long-term average - a bit stretched",
+          "+16.8% above its long-term average - a bit stretched",
           -1
         ],
         [
@@ -68,12 +68,12 @@
       "id": "binancecoin",
       "symbol": "BNB",
       "name": "BNB",
-      "price": 730.73,
-      "pct_24h": 2.56029,
+      "price": 730.02,
+      "pct_24h": 2.73048,
       "pct_7d": 1.5,
       "support_30d": 602.4629221231862,
       "resistance_30d": 766.4092879330625,
-      "as_of": "2026-09-12 02:10:23",
+      "as_of": "2026-09-12 02:30:32",
       "stale": false
     },
     "ripple": {
@@ -295,7 +295,7 @@
         ],
         [
           "Stretch from long-term average",
-          "+44.1% above its long-term average - very stretched",
+          "+44.7% above its long-term average - very stretched",
           -2
         ],
         [
@@ -308,12 +308,12 @@
       "id": "hyperliquid",
       "symbol": "HYPE",
       "name": "Hyperliquid",
-      "price": 78.74,
-      "pct_24h": -0.28461,
-      "pct_7d": -6.7,
+      "price": 79.08,
+      "pct_24h": 0.63995,
+      "pct_7d": -6.6,
       "support_30d": 56.463034999474225,
       "resistance_30d": 87.951916819731,
-      "as_of": "2026-09-12 01:45:21",
+      "as_of": "2026-09-12 02:30:32",
       "stale": false
     },
     "dogecoin": {
@@ -3053,9 +3053,9 @@
       "stale": false
     },
     "arbitrum": {
-      "label": "\ud83d\udd34 DISTRIBUTION ZONE",
+      "label": "\ud83d\udd34 CAUTION - REDUCE NEW BUYS",
       "status": "bearish",
-      "score": -5,
+      "score": -4,
       "rows": [
         [
           "Price vs. recent range",
@@ -3074,12 +3074,12 @@
         ],
         [
           "Recent trend",
-          "Chopping sideways - no clear trend",
-          0
+          "Trending up steadily - healthy",
+          1
         ],
         [
           "Stretch from long-term average",
-          "+42.1% above its long-term average - very stretched",
+          "+40.9% above its long-term average - very stretched",
           -2
         ],
         [
@@ -3088,16 +3088,16 @@
           0
         ]
       ],
-      "plain": "Looks stretched and euphoric - historically the zone where smart money sells, not buys.",
+      "plain": "Getting risky - I'd hold off on new buys until this cools down.",
       "id": "arbitrum",
       "symbol": "ARB",
       "name": "Arbitrum",
-      "price": 0.142423,
-      "pct_24h": -0.61445,
-      "pct_7d": 7.5,
+      "price": 0.141261,
+      "pct_24h": -1.45621,
+      "pct_7d": 8.2,
       "support_30d": 0.07272258489044682,
       "resistance_30d": 0.18933387703114857,
-      "as_of": "2026-09-12 01:30:28",
+      "as_of": "2026-09-12 02:30:32",
       "stale": false
     },
     "dash": {
@@ -3308,16 +3308,6 @@
         "target2": 80.49166666666667,
         "opened_at": "2026-09-12T01:47:24.835175"
       },
-      "15m:ZEC": {
-        "coin": "ZEC",
-        "name": "Zcash",
-        "tf": "15m",
-        "entry": 1132.53,
-        "stop": 1121.6996666666666,
-        "target1": 1143.3603333333333,
-        "target2": 1154.1906666666666,
-        "opened_at": "2026-09-12T02:27:09.034820"
-      },
       "daily:XLM": {
         "coin": "XLM",
         "name": "Stellar",
@@ -3326,7 +3316,7 @@
         "stop": 0.14146976666666666,
         "target1": 0.16287623333333334,
         "target2": 0.17357946666666668,
-        "opened_at": "2026-09-12T02:27:09.034820"
+        "opened_at": "2026-09-12T02:32:22.867536"
       }
     },
     "resolved": [
@@ -5630,6 +5620,32 @@
         "result": "win",
         "resolved_at": "2026-09-12T02:27:09.034820",
         "exit_price": 0.180556
+      },
+      {
+        "coin": "ZEC",
+        "name": "Zcash",
+        "tf": "15m",
+        "entry": 1132.53,
+        "stop": 1121.6996666666666,
+        "target1": 1143.3603333333333,
+        "target2": 1154.1906666666666,
+        "opened_at": "2026-09-12T02:27:09.034820",
+        "result": "win",
+        "resolved_at": "2026-09-12T02:32:22.867536",
+        "exit_price": 1144.93
+      },
+      {
+        "coin": "XLM",
+        "name": "Stellar",
+        "tf": "daily",
+        "entry": 0.152173,
+        "stop": 0.14146976666666666,
+        "target1": 0.16287623333333334,
+        "target2": 0.17357946666666668,
+        "opened_at": "2026-09-12T02:27:09.034820",
+        "result": "win",
+        "resolved_at": "2026-09-12T02:32:22.867536",
+        "exit_price": 0.180322
       }
     ]
   },
@@ -5637,14 +5653,14 @@
     "key": "BTC",
     "name": "Bitcoin",
     "emoji": "\u20bf",
-    "price": 77295,
+    "price": 77299,
     "high_24h": 79607,
     "low_24h": 76393,
-    "pct_24h": 0.60694,
+    "pct_24h": 0.67815,
     "pct_7d": -2.9,
     "pct_30d": 21.7,
-    "sma50": 70910.30312260977,
-    "sma200": 70082.00984094478,
+    "sma50": 70910.43858776569,
+    "sma200": 70082.04370723377,
     "support_30d": 62843.70368466329,
     "resistance_30d": 81264.70153038795,
     "mark_price": 77122.19098201,
@@ -5659,14 +5675,14 @@
     "key": "ETH",
     "name": "Ethereum",
     "emoji": "\u039e",
-    "price": 2513.27,
+    "price": 2514.22,
     "high_24h": 2647.68,
     "low_24h": 2440.0,
-    "pct_24h": 2.67236,
+    "pct_24h": 2.7859,
     "pct_7d": 2.5,
     "pct_30d": 33.8,
-    "sma50": 2173.6250359781425,
-    "sma200": 2055.2232417819814,
+    "sma50": 2173.6430164786266,
+    "sma200": 2055.227736907102,
     "support_30d": 1874.401898191962,
     "resistance_30d": 2514.967577695514,
     "mark_price": 2515.0197907,
