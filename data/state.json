@@ -12,7 +12,7 @@
     },
     "eth-resistance-break": {
       "triggered": true,
-      "last_triggered_at": "2026-09-12 07:20:27"
+      "last_triggered_at": "2026-09-12 07:25:20"
     },
     "eth-support-break": {
       "triggered": false,
@@ -1543,7 +1543,7 @@
         ],
         [
           "Stretch from long-term average",
-          "+64.7% above its long-term average - very stretched",
+          "+67.3% above its long-term average - very stretched",
           -2
         ],
         [
@@ -1556,12 +1556,12 @@
       "id": "pump-fun",
       "symbol": "PUMP",
       "name": "Pump.fun",
-      "price": 0.00352963,
-      "pct_24h": -5.57828,
-      "pct_7d": -16.8,
+      "price": 0.00358556,
+      "pct_24h": -5.23761,
+      "pct_7d": -15.1,
       "support_30d": 0.002666433318189806,
       "resistance_30d": 0.0052249885406471875,
-      "as_of": "2026-09-12 04:35:20",
+      "as_of": "2026-09-12 07:25:20",
       "stale": false
     },
     "venice-token": {
@@ -1591,7 +1591,7 @@
         ],
         [
           "Stretch from long-term average",
-          "+94.7% above its long-term average - very stretched",
+          "+97.3% above its long-term average - very stretched",
           -2
         ],
         [
@@ -1604,12 +1604,12 @@
       "id": "venice-token",
       "symbol": "VVV",
       "name": "Venice Token",
-      "price": 23.45,
-      "pct_24h": -2.45419,
-      "pct_7d": 31.3,
+      "price": 23.77,
+      "pct_24h": -2.56075,
+      "pct_7d": 33.1,
       "support_30d": 11.794592355917386,
       "resistance_30d": 25.88474946901688,
-      "as_of": "2026-09-12 06:45:21",
+      "as_of": "2026-09-12 07:25:20",
       "stale": false
     },
     "litecoin": {
@@ -2431,12 +2431,12 @@
     "near": {
       "label": "\ud83d\udd34 CAUTION - REDUCE NEW BUYS",
       "status": "bearish",
-      "score": -2,
+      "score": -3,
       "rows": [
         [
           "Price vs. recent range",
-          "Sitting in the middle of its 30-day range",
-          0
+          "Near its 30-day high (~$2.48) - less room to run",
+          -1
         ],
         [
           "Crowd mood (Fear & Greed)",
@@ -2455,7 +2455,7 @@
         ],
         [
           "Stretch from long-term average",
-          "+37.5% above its long-term average - very stretched",
+          "+38.1% above its long-term average - very stretched",
           -2
         ],
         [
@@ -2468,12 +2468,12 @@
       "id": "near",
       "symbol": "NEAR",
       "name": "NEAR Protocol",
-      "price": 2.36,
-      "pct_24h": -5.18999,
-      "pct_7d": 5.6,
+      "price": 2.37,
+      "pct_24h": -5.67662,
+      "pct_7d": 5.2,
       "support_30d": 1.5879597131538,
       "resistance_30d": 2.4848168147865453,
-      "as_of": "2026-09-12 06:50:23",
+      "as_of": "2026-09-12 07:25:20",
       "stale": false
     },
     "quant-network": {
@@ -3311,10 +3311,10 @@
         "name": "Monero",
         "tf": "15m",
         "entry": 521.21,
-        "stop": 518.3573333333334,
-        "target1": 524.0626666666667,
-        "target2": 526.9153333333334,
-        "opened_at": "2026-09-12T07:22:18.840501"
+        "stop": 518.328,
+        "target1": 524.0920000000001,
+        "target2": 526.9740000000002,
+        "opened_at": "2026-09-12T07:27:11.941761"
       },
       "daily:XLM": {
         "coin": "XLM",
@@ -3324,7 +3324,7 @@
         "stop": 0.14145653333333333,
         "target1": 0.16288946666666668,
         "target2": 0.17360593333333335,
-        "opened_at": "2026-09-12T07:22:18.840501"
+        "opened_at": "2026-09-12T07:27:11.941761"
       }
     },
     "resolved": [
@@ -6915,6 +6915,32 @@
         "result": "win",
         "resolved_at": "2026-09-12T07:22:18.840501",
         "exit_price": 0.180581
+      },
+      {
+        "coin": "XMR",
+        "name": "Monero",
+        "tf": "15m",
+        "entry": 521.21,
+        "stop": 518.3573333333334,
+        "target1": 524.0626666666667,
+        "target2": 526.9153333333334,
+        "opened_at": "2026-09-12T07:22:18.840501",
+        "result": "win",
+        "resolved_at": "2026-09-12T07:27:11.941761",
+        "exit_price": 541.91
+      },
+      {
+        "coin": "XLM",
+        "name": "Stellar",
+        "tf": "daily",
+        "entry": 0.152173,
+        "stop": 0.14145653333333333,
+        "target1": 0.16288946666666668,
+        "target2": 0.17360593333333335,
+        "opened_at": "2026-09-12T07:22:18.840501",
+        "result": "win",
+        "resolved_at": "2026-09-12T07:27:11.941761",
+        "exit_price": 0.180562
       }
     ]
   },
@@ -6922,14 +6948,14 @@
     "key": "BTC",
     "name": "Bitcoin",
     "emoji": "\u20bf",
-    "price": 77316,
+    "price": 77315,
     "high_24h": 79607,
     "low_24h": 76393,
-    "pct_24h": 0.00295,
+    "pct_24h": -0.0297,
     "pct_7d": -2.9,
     "pct_30d": 21.1,
-    "sma50": 70910.72783003307,
-    "sma200": 70082.11601780061,
+    "sma50": 70910.69095808564,
+    "sma200": 70082.10679981374,
     "support_30d": 62843.70368466329,
     "resistance_30d": 81264.70153038795,
     "mark_price": 77184.8,
@@ -6944,16 +6970,16 @@
     "key": "ETH",
     "name": "Ethereum",
     "emoji": "\u039e",
-    "price": 2523.08,
+    "price": 2523.43,
     "high_24h": 2647.68,
     "low_24h": 2442.02,
-    "pct_24h": 2.20152,
+    "pct_24h": 2.12778,
     "pct_7d": 2.8,
     "pct_30d": 33.0,
-    "sma50": 2173.815529890764,
-    "sma200": 2055.2708652601364,
+    "sma50": 2173.8225896250765,
+    "sma200": 2055.2726301937146,
     "support_30d": 1874.401898191962,
-    "resistance_30d": 2523.0725113620897,
+    "resistance_30d": 2523.4254980777155,
     "mark_price": 2509.91,
     "index_price": 2510.92348837,
     "funding_rate": -9.57e-06,
