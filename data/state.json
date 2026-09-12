@@ -12,7 +12,7 @@
     },
     "eth-resistance-break": {
       "triggered": true,
-      "last_triggered_at": "2026-09-12 14:25:18"
+      "last_triggered_at": "2026-09-12 14:30:30"
     },
     "eth-support-break": {
       "triggered": false,
@@ -2229,11 +2229,11 @@
       "symbol": "ICP",
       "name": "Internet Computer",
       "price": 2.76,
-      "pct_24h": -3.44733,
+      "pct_24h": -3.81323,
       "pct_7d": 4.9,
       "support_30d": 2.194804279500122,
       "resistance_30d": 2.9869340549074623,
-      "as_of": "2026-09-12 14:25:18",
+      "as_of": "2026-09-12 14:30:30",
       "stale": false
     },
     "bittensor": {
@@ -2757,11 +2757,11 @@
       "symbol": "MORPHO",
       "name": "Morpho",
       "price": 2.28,
-      "pct_24h": -6.55809,
-      "pct_7d": -9.3,
+      "pct_24h": -6.46125,
+      "pct_7d": -9.4,
       "support_30d": 1.9486067634864404,
       "resistance_30d": 2.9026212482639075,
-      "as_of": "2026-09-12 13:55:18",
+      "as_of": "2026-09-12 14:30:30",
       "stale": false
     },
     "memecore": {
@@ -3053,9 +3053,9 @@
       "stale": false
     },
     "arbitrum": {
-      "label": "\ud83d\udd34 CAUTION - REDUCE NEW BUYS",
+      "label": "\ud83d\udd34 DISTRIBUTION ZONE",
       "status": "bearish",
-      "score": -4,
+      "score": -5,
       "rows": [
         [
           "Price vs. recent range",
@@ -3074,12 +3074,12 @@
         ],
         [
           "Recent trend",
-          "Trending up steadily - healthy",
-          1
+          "Chopping sideways - no clear trend",
+          0
         ],
         [
           "Stretch from long-term average",
-          "+42.4% above its long-term average - very stretched",
+          "+43.9% above its long-term average - very stretched",
           -2
         ],
         [
@@ -3088,16 +3088,16 @@
           0
         ]
       ],
-      "plain": "Getting risky - I'd hold off on new buys until this cools down.",
+      "plain": "Looks stretched and euphoric - historically the zone where smart money sells, not buys.",
       "id": "arbitrum",
       "symbol": "ARB",
       "name": "Arbitrum",
-      "price": 0.142745,
-      "pct_24h": 1.58778,
-      "pct_7d": 8.3,
+      "price": 0.144205,
+      "pct_24h": -2.80848,
+      "pct_7d": 6.4,
       "support_30d": 0.07272258489044682,
       "resistance_30d": 0.18933387703114857,
-      "as_of": "2026-09-12 10:50:22",
+      "as_of": "2026-09-12 14:30:30",
       "stale": false
     },
     "dash": {
@@ -3316,16 +3316,6 @@
         "target2": 0.09851533333333334,
         "opened_at": "2026-09-12T13:27:17.902024"
       },
-      "15m:SKY": {
-        "coin": "SKY",
-        "name": "Sky",
-        "tf": "15m",
-        "entry": 0.06293,
-        "stop": 0.06266733333333332,
-        "target1": 0.06319266666666667,
-        "target2": 0.06345533333333335,
-        "opened_at": "2026-09-12T14:27:11.370375"
-      },
       "daily:XLM": {
         "coin": "XLM",
         "name": "Stellar",
@@ -3334,7 +3324,7 @@
         "stop": 0.1414087,
         "target1": 0.1629373,
         "target2": 0.1737016,
-        "opened_at": "2026-09-12T14:27:11.370375"
+        "opened_at": "2026-09-12T14:32:21.621889"
       }
     },
     "resolved": [
@@ -9070,6 +9060,32 @@
         "result": "win",
         "resolved_at": "2026-09-12T14:27:11.370375",
         "exit_price": 0.181048
+      },
+      {
+        "coin": "SKY",
+        "name": "Sky",
+        "tf": "15m",
+        "entry": 0.06293,
+        "stop": 0.06266733333333332,
+        "target1": 0.06319266666666667,
+        "target2": 0.06345533333333335,
+        "opened_at": "2026-09-12T14:27:11.370375",
+        "result": "win",
+        "resolved_at": "2026-09-12T14:32:21.621889",
+        "exit_price": 0.06363
+      },
+      {
+        "coin": "XLM",
+        "name": "Stellar",
+        "tf": "daily",
+        "entry": 0.152173,
+        "stop": 0.1414087,
+        "target1": 0.1629373,
+        "target2": 0.1737016,
+        "opened_at": "2026-09-12T14:27:11.370375",
+        "result": "win",
+        "resolved_at": "2026-09-12T14:32:21.621889",
+        "exit_price": 0.180913
       }
     ]
   },
@@ -9077,14 +9093,14 @@
     "key": "BTC",
     "name": "Bitcoin",
     "emoji": "\u20bf",
-    "price": 77371,
+    "price": 77391,
     "high_24h": 78804,
     "low_24h": 76952,
-    "pct_24h": -2.07825,
+    "pct_24h": -2.08792,
     "pct_7d": -3.0,
     "pct_30d": 21.5,
-    "sma50": 70911.82086673129,
-    "sma200": 70082.38927697515,
+    "sma50": 70912.34793254915,
+    "sma200": 70082.52104342963,
     "support_30d": 62843.70368466329,
     "resistance_30d": 81264.70153038795,
     "mark_price": 77264.9,
@@ -9099,16 +9115,16 @@
     "key": "ETH",
     "name": "Ethereum",
     "emoji": "\u039e",
-    "price": 2541.57,
+    "price": 2541.82,
     "high_24h": 2614.36,
     "low_24h": 2508.19,
-    "pct_24h": -2.74824,
+    "pct_24h": -2.99274,
     "pct_7d": 3.4,
     "pct_30d": 34.7,
-    "sma50": 2174.1743481919552,
-    "sma200": 2055.3605698354345,
+    "sma50": 2174.1939944071996,
+    "sma200": 2055.3654813892454,
     "support_30d": 1874.401898191962,
-    "resistance_30d": 2541.01342642167,
+    "resistance_30d": 2541.9957371838755,
     "mark_price": 2524.73831008,
     "index_price": 2525.74674419,
     "funding_rate": 1.207e-05,
