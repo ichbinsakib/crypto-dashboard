@@ -12,7 +12,7 @@
     },
     "eth-resistance-break": {
       "triggered": true,
-      "last_triggered_at": "2026-09-12 10:50:22"
+      "last_triggered_at": "2026-09-12 10:55:18"
     },
     "eth-support-break": {
       "triggered": false,
@@ -295,7 +295,7 @@
         ],
         [
           "Stretch from long-term average",
-          "+45.9% above its long-term average - very stretched",
+          "+45.8% above its long-term average - very stretched",
           -2
         ],
         [
@@ -308,12 +308,12 @@
       "id": "hyperliquid",
       "symbol": "HYPE",
       "name": "Hyperliquid",
-      "price": 79.74,
-      "pct_24h": 0.43521,
+      "price": 79.68,
+      "pct_24h": 0.54025,
       "pct_7d": -6.4,
       "support_30d": 56.463034999474225,
       "resistance_30d": 87.951916819731,
-      "as_of": "2026-09-12 10:35:16",
+      "as_of": "2026-09-12 10:55:18",
       "stale": false
     },
     "dogecoin": {
@@ -1639,7 +1639,7 @@
         ],
         [
           "Stretch from long-term average",
-          "+7.1% vs its long-term average - not stretched either way",
+          "+7.3% vs its long-term average - not stretched either way",
           0
         ],
         [
@@ -1652,12 +1652,12 @@
       "id": "litecoin",
       "symbol": "LTC",
       "name": "Litecoin",
-      "price": 54.04,
-      "pct_24h": 1.69244,
-      "pct_7d": 0.8,
+      "price": 54.14,
+      "pct_24h": 3.58124,
+      "pct_7d": 2.0,
       "support_30d": 43.806923130603906,
       "resistance_30d": 55.20228907963863,
-      "as_of": "2026-09-12 08:35:19",
+      "as_of": "2026-09-12 10:55:18",
       "stale": false
     },
     "bitget-token": {
@@ -1975,7 +1975,7 @@
         ],
         [
           "Stretch from long-term average",
-          "-5.6% vs its long-term average - not stretched either way",
+          "-5.7% vs its long-term average - not stretched either way",
           0
         ],
         [
@@ -1988,12 +1988,12 @@
       "id": "polkadot",
       "symbol": "DOT",
       "name": "Polkadot",
-      "price": 1.041,
-      "pct_24h": -4.83593,
+      "price": 1.039,
+      "pct_24h": -4.00843,
       "pct_7d": 15.4,
       "support_30d": 0.7510040523927409,
       "resistance_30d": 1.2475304252917225,
-      "as_of": "2026-09-12 10:15:22",
+      "as_of": "2026-09-12 10:55:18",
       "stale": false
     },
     "uniswap": {
@@ -3313,10 +3313,10 @@
         "name": "Monero",
         "tf": "15m",
         "entry": 525.6,
-        "stop": 521.986,
-        "target1": 529.214,
-        "target2": 532.8280000000001,
-        "opened_at": "2026-09-12T10:52:13.965713"
+        "stop": 521.9583333333334,
+        "target1": 529.2416666666667,
+        "target2": 532.8833333333333,
+        "opened_at": "2026-09-12T10:57:08.813880"
       },
       "daily:XLM": {
         "coin": "XLM",
@@ -3326,7 +3326,7 @@
         "stop": 0.14142006666666668,
         "target1": 0.16292593333333333,
         "target2": 0.17367886666666665,
-        "opened_at": "2026-09-12T10:52:13.965713"
+        "opened_at": "2026-09-12T10:57:08.813880"
       }
     },
     "resolved": [
@@ -8035,6 +8035,32 @@
         "result": "win",
         "resolved_at": "2026-09-12T10:52:13.965713",
         "exit_price": 0.181735
+      },
+      {
+        "coin": "XMR",
+        "name": "Monero",
+        "tf": "15m",
+        "entry": 525.6,
+        "stop": 521.986,
+        "target1": 529.214,
+        "target2": 532.8280000000001,
+        "opened_at": "2026-09-12T10:52:13.965713",
+        "result": "win",
+        "resolved_at": "2026-09-12T10:57:08.813880",
+        "exit_price": 532.14
+      },
+      {
+        "coin": "XLM",
+        "name": "Stellar",
+        "tf": "daily",
+        "entry": 0.152173,
+        "stop": 0.14142006666666668,
+        "target1": 0.16292593333333333,
+        "target2": 0.17367886666666665,
+        "opened_at": "2026-09-12T10:52:13.965713",
+        "result": "win",
+        "resolved_at": "2026-09-12T10:57:08.813880",
+        "exit_price": 0.181945
       }
     ]
   },
@@ -8042,14 +8068,14 @@
     "key": "BTC",
     "name": "Bitcoin",
     "emoji": "\u20bf",
-    "price": 77339,
+    "price": 77323,
     "high_24h": 79607,
     "low_24h": 76393,
-    "pct_24h": 0.47226,
+    "pct_24h": 0.41853,
     "pct_7d": -2.9,
     "pct_30d": 21.4,
-    "sma50": 70911.16925238392,
-    "sma200": 70082.22637338832,
+    "sma50": 70910.86551771438,
+    "sma200": 70082.15043972094,
     "support_30d": 62843.70368466329,
     "resistance_30d": 81264.70153038795,
     "mark_price": 77264.9,
@@ -8064,16 +8090,16 @@
     "key": "ETH",
     "name": "Ethereum",
     "emoji": "\u039e",
-    "price": 2532.24,
+    "price": 2531.52,
     "high_24h": 2647.68,
     "low_24h": 2442.02,
-    "pct_24h": 2.80968,
+    "pct_24h": 2.76395,
     "pct_7d": 3.0,
     "pct_30d": 34.0,
-    "sma50": 2174.003614262008,
-    "sma200": 2055.317886352948,
+    "sma50": 2173.9839540919484,
+    "sma200": 2055.3129713104327,
     "support_30d": 1874.401898191962,
-    "resistance_30d": 2532.4767299242894,
+    "resistance_30d": 2531.4937214213182,
     "mark_price": 2524.73831008,
     "index_price": 2525.74674419,
     "funding_rate": 1.207e-05,
