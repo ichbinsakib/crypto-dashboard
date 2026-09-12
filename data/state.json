@@ -391,7 +391,7 @@
         ],
         [
           "Stretch from long-term average",
-          "+138.6% above its long-term average - very stretched",
+          "+137.9% above its long-term average - very stretched",
           -2
         ],
         [
@@ -404,12 +404,12 @@
       "id": "zcash",
       "symbol": "ZEC",
       "name": "Zcash",
-      "price": 1137.98,
-      "pct_24h": 4.6123,
-      "pct_7d": 10.2,
+      "price": 1134.69,
+      "pct_24h": 4.38166,
+      "pct_7d": 10.9,
       "support_30d": 486.1425018309512,
       "resistance_30d": 1244.287571383468,
-      "as_of": "2026-09-12 04:30:31",
+      "as_of": "2026-09-12 05:10:23",
       "stale": false
     },
     "rain": {
@@ -1831,7 +1831,7 @@
         ],
         [
           "Stretch from long-term average",
-          "+38.4% above its long-term average - very stretched",
+          "+37.9% above its long-term average - very stretched",
           -2
         ],
         [
@@ -1844,12 +1844,12 @@
       "id": "ethena",
       "symbol": "ENA",
       "name": "Ethena",
-      "price": 0.141203,
-      "pct_24h": -3.61833,
-      "pct_7d": -13.7,
+      "price": 0.14069,
+      "pct_24h": -4.15559,
+      "pct_7d": -14.1,
       "support_30d": 0.08231050586125944,
       "resistance_30d": 0.17616469272611565,
-      "as_of": "2026-09-12 04:25:19",
+      "as_of": "2026-09-12 05:10:23",
       "stale": false
     },
     "bitcoin-cash": {
@@ -2757,11 +2757,11 @@
       "symbol": "MORPHO",
       "name": "Morpho",
       "price": 2.27,
-      "pct_24h": -2.34662,
+      "pct_24h": -2.2447,
       "pct_7d": -10.0,
       "support_30d": 1.9486067634864404,
       "resistance_30d": 2.9026212482639075,
-      "as_of": "2026-09-12 05:00:34",
+      "as_of": "2026-09-12 05:10:23",
       "stale": false
     },
     "memecore": {
@@ -3311,10 +3311,10 @@
         "name": "Monero",
         "tf": "15m",
         "entry": 514.06,
-        "stop": 511.65799999999996,
-        "target1": 516.462,
-        "target2": 518.8639999999999,
-        "opened_at": "2026-09-12T05:07:11.931237"
+        "stop": 511.5186666666666,
+        "target1": 516.6013333333333,
+        "target2": 519.1426666666666,
+        "opened_at": "2026-09-12T05:12:13.761234"
       },
       "daily:XLM": {
         "coin": "XLM",
@@ -3324,7 +3324,7 @@
         "stop": 0.14145653333333333,
         "target1": 0.16288946666666668,
         "target2": 0.17360593333333335,
-        "opened_at": "2026-09-12T05:07:11.931237"
+        "opened_at": "2026-09-12T05:12:13.761234"
       }
     },
     "resolved": [
@@ -6213,6 +6213,32 @@
         "result": "win",
         "resolved_at": "2026-09-12T05:07:11.931237",
         "exit_price": 0.180185
+      },
+      {
+        "coin": "XMR",
+        "name": "Monero",
+        "tf": "15m",
+        "entry": 514.06,
+        "stop": 511.65799999999996,
+        "target1": 516.462,
+        "target2": 518.8639999999999,
+        "opened_at": "2026-09-12T05:07:11.931237",
+        "result": "win",
+        "resolved_at": "2026-09-12T05:12:13.761234",
+        "exit_price": 535.49
+      },
+      {
+        "coin": "XLM",
+        "name": "Stellar",
+        "tf": "daily",
+        "entry": 0.152173,
+        "stop": 0.14145653333333333,
+        "target1": 0.16288946666666668,
+        "target2": 0.17360593333333335,
+        "opened_at": "2026-09-12T05:07:11.931237",
+        "result": "win",
+        "resolved_at": "2026-09-12T05:12:13.761234",
+        "exit_price": 0.180007
       }
     ]
   },
@@ -6220,14 +6246,14 @@
     "key": "BTC",
     "name": "Bitcoin",
     "emoji": "\u20bf",
-    "price": 77208,
+    "price": 77173,
     "high_24h": 79607,
     "low_24h": 76393,
-    "pct_24h": 0.17146,
+    "pct_24h": 0.16035,
     "pct_7d": -3.0,
     "pct_30d": 21.4,
-    "sma50": 70908.34980959183,
-    "sma200": 70081.52151269029,
+    "sma50": 70907.84923391977,
+    "sma200": 70081.39636877229,
     "support_30d": 62843.70368466329,
     "resistance_30d": 81264.70153038795,
     "mark_price": 77122.19098201,
@@ -6242,14 +6268,14 @@
     "key": "ETH",
     "name": "Ethereum",
     "emoji": "\u039e",
-    "price": 2512.19,
+    "price": 2511.41,
     "high_24h": 2647.68,
     "low_24h": 2442.02,
-    "pct_24h": 2.20961,
+    "pct_24h": 2.16582,
     "pct_7d": 2.4,
     "pct_30d": 33.3,
-    "sma50": 2173.5922491216406,
-    "sma200": 2055.2150450678555,
+    "sma50": 2173.58104588554,
+    "sma200": 2055.2122442588307,
     "support_30d": 1874.401898191962,
     "resistance_30d": 2514.967577695514,
     "mark_price": 2515.0197907,
