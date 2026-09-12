@@ -12,7 +12,7 @@
     },
     "eth-resistance-break": {
       "triggered": true,
-      "last_triggered_at": "2026-09-12 14:00:35"
+      "last_triggered_at": "2026-09-12 14:05:22"
     },
     "eth-support-break": {
       "triggered": false,
@@ -295,7 +295,7 @@
         ],
         [
           "Stretch from long-term average",
-          "+45.8% above its long-term average - very stretched",
+          "+46.8% above its long-term average - very stretched",
           -2
         ],
         [
@@ -308,12 +308,12 @@
       "id": "hyperliquid",
       "symbol": "HYPE",
       "name": "Hyperliquid",
-      "price": 79.68,
-      "pct_24h": 0.54025,
-      "pct_7d": -6.4,
+      "price": 80.25,
+      "pct_24h": -3.83392,
+      "pct_7d": -5.9,
       "support_30d": 56.463034999474225,
       "resistance_30d": 87.951916819731,
-      "as_of": "2026-09-12 10:55:18",
+      "as_of": "2026-09-12 14:05:22",
       "stale": false
     },
     "dogecoin": {
@@ -727,7 +727,7 @@
         ],
         [
           "Stretch from long-term average",
-          "+3.9% vs its long-term average - not stretched either way",
+          "+3.2% vs its long-term average - not stretched either way",
           0
         ],
         [
@@ -740,12 +740,12 @@
       "id": "stellar",
       "symbol": "XLM",
       "name": "Stellar",
-      "price": 0.182328,
-      "pct_24h": 4.45256,
-      "pct_7d": -0.7,
+      "price": 0.181013,
+      "pct_24h": -1.88377,
+      "pct_7d": -1.8,
       "support_30d": 0.15472912151335613,
       "resistance_30d": 0.20181319711037435,
-      "as_of": "2026-09-12 11:50:26",
+      "as_of": "2026-09-12 14:05:22",
       "stale": false
     },
     "kucoin-shares": {
@@ -1124,12 +1124,12 @@
       "id": "polygon-ecosystem-token",
       "symbol": "POL",
       "name": "POL (ex-MATIC)",
-      "price": 0.096862,
-      "pct_24h": -0.63486,
+      "price": 0.096891,
+      "pct_24h": -1.10007,
       "pct_7d": 1.6,
       "support_30d": 0.07481366852260064,
       "resistance_30d": 0.12250456198546959,
-      "as_of": "2026-09-12 14:00:35",
+      "as_of": "2026-09-12 14:05:22",
       "stale": false
     },
     "blackrock-usd-institutional-digital-liquidity-fund": {
@@ -3293,9 +3293,7 @@
       "stale": false
     }
   },
-  "_strong_buy_state": {
-    "scanner-15m:CC": true
-  },
+  "_strong_buy_state": {},
   "_pnl_tracker": {
     "open": {
       "1h:MNT": {
@@ -3323,20 +3321,20 @@
         "name": "Sky",
         "tf": "15m",
         "entry": 0.06293,
-        "stop": 0.06267666666666666,
-        "target1": 0.06318333333333334,
-        "target2": 0.06343666666666668,
-        "opened_at": "2026-09-12T14:02:28.946964"
+        "stop": 0.06266933333333333,
+        "target1": 0.06319066666666667,
+        "target2": 0.06345133333333335,
+        "opened_at": "2026-09-12T14:07:16.375277"
       },
       "15m:PUMP": {
         "coin": "PUMP",
         "name": "Pump.fun",
         "tf": "15m",
         "entry": 0.003533,
-        "stop": 0.0035155,
-        "target1": 0.0035505000000000003,
-        "target2": 0.0035680000000000004,
-        "opened_at": "2026-09-12T14:02:28.946964"
+        "stop": 0.0035152333333333336,
+        "target1": 0.0035507666666666667,
+        "target2": 0.003568533333333333,
+        "opened_at": "2026-09-12T14:07:16.375277"
       },
       "daily:XLM": {
         "coin": "XLM",
@@ -3346,7 +3344,7 @@
         "stop": 0.1414087,
         "target1": 0.1629373,
         "target2": 0.1737016,
-        "opened_at": "2026-09-12T14:02:28.946964"
+        "opened_at": "2026-09-12T14:07:16.375277"
       }
     },
     "resolved": [
@@ -8926,6 +8924,45 @@
         "result": "win",
         "resolved_at": "2026-09-12T14:02:28.946964",
         "exit_price": 0.18102
+      },
+      {
+        "coin": "SKY",
+        "name": "Sky",
+        "tf": "15m",
+        "entry": 0.06293,
+        "stop": 0.06267666666666666,
+        "target1": 0.06318333333333334,
+        "target2": 0.06343666666666668,
+        "opened_at": "2026-09-12T14:02:28.946964",
+        "result": "win",
+        "resolved_at": "2026-09-12T14:07:16.375277",
+        "exit_price": 0.06387
+      },
+      {
+        "coin": "PUMP",
+        "name": "Pump.fun",
+        "tf": "15m",
+        "entry": 0.003533,
+        "stop": 0.0035155,
+        "target1": 0.0035505000000000003,
+        "target2": 0.0035680000000000004,
+        "opened_at": "2026-09-12T14:02:28.946964",
+        "result": "win",
+        "resolved_at": "2026-09-12T14:07:16.375277",
+        "exit_price": 0.003603
+      },
+      {
+        "coin": "XLM",
+        "name": "Stellar",
+        "tf": "daily",
+        "entry": 0.152173,
+        "stop": 0.1414087,
+        "target1": 0.1629373,
+        "target2": 0.1737016,
+        "opened_at": "2026-09-12T14:02:28.946964",
+        "result": "win",
+        "resolved_at": "2026-09-12T14:07:16.375277",
+        "exit_price": 0.18118
       }
     ]
   },
@@ -8933,14 +8970,14 @@
     "key": "BTC",
     "name": "Bitcoin",
     "emoji": "\u20bf",
-    "price": 77325,
-    "high_24h": 79607,
+    "price": 77347,
+    "high_24h": 78804,
     "low_24h": 76952,
-    "pct_24h": -2.3226,
-    "pct_7d": -2.9,
-    "pct_30d": 21.9,
-    "sma50": 70910.97631992598,
-    "sma200": 70082.17814027384,
+    "pct_24h": -2.70837,
+    "pct_7d": -3.0,
+    "pct_30d": 21.5,
+    "sma50": 70911.37086767396,
+    "sma200": 70082.27677721083,
     "support_30d": 62843.70368466329,
     "resistance_30d": 81264.70153038795,
     "mark_price": 77264.9,
@@ -8955,16 +8992,16 @@
     "key": "ETH",
     "name": "Ethereum",
     "emoji": "\u039e",
-    "price": 2542.09,
-    "high_24h": 2647.68,
+    "price": 2541.81,
+    "high_24h": 2614.36,
     "low_24h": 2508.19,
-    "pct_24h": -3.1864,
-    "pct_7d": 3.2,
-    "pct_30d": 34.9,
-    "sma50": 2174.2037721335746,
-    "sma200": 2055.3679258208394,
+    "pct_24h": -3.65627,
+    "pct_7d": 3.4,
+    "pct_30d": 34.7,
+    "sma50": 2174.1904744081908,
+    "sma200": 2055.364601389493,
     "support_30d": 1874.401898191962,
-    "resistance_30d": 2542.484623502624,
+    "resistance_30d": 2541.819737233443,
     "mark_price": 2524.73831008,
     "index_price": 2525.74674419,
     "funding_rate": 1.207e-05,
