@@ -12,7 +12,7 @@
     },
     "eth-resistance-break": {
       "triggered": true,
-      "last_triggered_at": "2026-09-12 11:30:27"
+      "last_triggered_at": "2026-09-12 11:35:19"
     },
     "eth-support-break": {
       "triggered": false,
@@ -1423,12 +1423,12 @@
     "crypto-com-chain": {
       "label": "\ud83d\udfe1 HOLD / NEUTRAL",
       "status": "neutral",
-      "score": 1,
+      "score": 0,
       "rows": [
         [
           "Price vs. recent range",
-          "Sitting in the middle of its 30-day range",
-          0
+          "Near its 30-day high (~$0.0609) - less room to run",
+          -1
         ],
         [
           "Crowd mood (Fear & Greed)",
@@ -1447,7 +1447,7 @@
         ],
         [
           "Stretch from long-term average",
-          "-11.9% vs its long-term average - not stretched either way",
+          "-11.6% vs its long-term average - not stretched either way",
           0
         ],
         [
@@ -1460,12 +1460,12 @@
       "id": "crypto-com-chain",
       "symbol": "CRO",
       "name": "Cronos",
-      "price": 0.057713,
-      "pct_24h": 2.48862,
+      "price": 0.057877,
+      "pct_24h": 3.35408,
       "pct_7d": 2.6,
       "support_30d": 0.04621382085807831,
       "resistance_30d": 0.06091104752771909,
-      "as_of": "2026-09-12 10:45:21",
+      "as_of": "2026-09-12 11:35:19",
       "stale": false
     },
     "ethereum-classic": {
@@ -2573,13 +2573,13 @@
       "stale": false
     },
     "bitway": {
-      "label": "\ud83d\udfe1 HOLD / NEUTRAL",
-      "status": "neutral",
-      "score": -1,
+      "label": "\ud83d\udd34 CAUTION - REDUCE NEW BUYS",
+      "status": "bearish",
+      "score": -4,
       "rows": [
         [
           "Price vs. recent range",
-          "Near its 30-day high (~$0.5431) - less room to run",
+          "Near its 30-day high (~$0.5626) - less room to run",
           -1
         ],
         [
@@ -2594,8 +2594,8 @@
         ],
         [
           "Recent trend",
-          "Trending up steadily - healthy",
-          1
+          "Shooting straight up - classic blow-off top risk, don't chase",
+          -2
         ],
         [
           "Stretch from long-term average",
@@ -2608,16 +2608,16 @@
           0
         ]
       ],
-      "plain": "No real edge either way right now - fine to just wait and watch.",
+      "plain": "Getting risky - I'd hold off on new buys until this cools down.",
       "id": "bitway",
       "symbol": "BTW",
       "name": "Bitway",
-      "price": 0.542147,
-      "pct_24h": 8.24604,
-      "pct_7d": 17.9,
+      "price": 0.562617,
+      "pct_24h": 12.50433,
+      "pct_7d": 23.2,
       "support_30d": 0.30285245757334456,
-      "resistance_30d": 0.5430603526541157,
-      "as_of": "2026-09-12 09:15:23",
+      "resistance_30d": 0.5626165721837186,
+      "as_of": "2026-09-12 11:35:19",
       "stale": false
     },
     "world-liberty-financial": {
@@ -2767,12 +2767,12 @@
     "memecore": {
       "label": "\ud83d\udfe1 HOLD / NEUTRAL",
       "status": "neutral",
-      "score": -1,
+      "score": 0,
       "rows": [
         [
           "Price vs. recent range",
-          "Near its 30-day high (~$1.25) - less room to run",
-          -1
+          "Sitting in the middle of its 30-day range",
+          0
         ],
         [
           "Crowd mood (Fear & Greed)",
@@ -2791,7 +2791,7 @@
         ],
         [
           "Stretch from long-term average",
-          "-42.5% below its long-term average - confirmed downtrend",
+          "-43.4% below its long-term average - confirmed downtrend",
           -1
         ],
         [
@@ -2804,12 +2804,12 @@
       "id": "memecore",
       "symbol": "M",
       "name": "MemeCore",
-      "price": 1.2,
-      "pct_24h": 1.80227,
-      "pct_7d": 6.9,
+      "price": 1.18,
+      "pct_24h": 0.9551,
+      "pct_7d": 5.8,
       "support_30d": 1.0402044506518406,
       "resistance_30d": 1.2453913363052769,
-      "as_of": "2026-09-12 07:50:24",
+      "as_of": "2026-09-12 11:35:19",
       "stale": false
     },
     "aave": {
@@ -3314,7 +3314,7 @@
         "stop": 0.14142006666666668,
         "target1": 0.16292593333333333,
         "target2": 0.17367886666666665,
-        "opened_at": "2026-09-12T11:32:23.562723"
+        "opened_at": "2026-09-12T11:37:15.263328"
       }
     },
     "resolved": [
@@ -8153,6 +8153,19 @@
         "result": "win",
         "resolved_at": "2026-09-12T11:32:23.562723",
         "exit_price": 0.181596
+      },
+      {
+        "coin": "XLM",
+        "name": "Stellar",
+        "tf": "daily",
+        "entry": 0.152173,
+        "stop": 0.14142006666666668,
+        "target1": 0.16292593333333333,
+        "target2": 0.17367886666666665,
+        "opened_at": "2026-09-12T11:32:23.562723",
+        "result": "win",
+        "resolved_at": "2026-09-12T11:37:15.263328",
+        "exit_price": 0.181682
       }
     ]
   },
@@ -8160,14 +8173,14 @@
     "key": "BTC",
     "name": "Bitcoin",
     "emoji": "\u20bf",
-    "price": 77278,
+    "price": 77284,
     "high_24h": 79607,
     "low_24h": 76393,
-    "pct_24h": 0.59351,
+    "pct_24h": 0.62626,
     "pct_7d": -2.9,
     "pct_30d": 21.3,
-    "sma50": 70909.9548471493,
-    "sma200": 70081.92277207966,
+    "sma50": 70910.09138015263,
+    "sma200": 70081.9569053305,
     "support_30d": 62843.70368466329,
     "resistance_30d": 81264.70153038795,
     "mark_price": 77264.9,
@@ -8182,16 +8195,16 @@
     "key": "ETH",
     "name": "Ethereum",
     "emoji": "\u039e",
-    "price": 2531.47,
+    "price": 2534.08,
     "high_24h": 2647.68,
     "low_24h": 2442.02,
-    "pct_24h": 3.09436,
+    "pct_24h": 3.23088,
     "pct_7d": 3.0,
     "pct_30d": 34.1,
-    "sma50": 2173.9868162688313,
-    "sma200": 2055.3136868546535,
+    "sma50": 2174.0323069497344,
+    "sma200": 2055.325059524879,
     "support_30d": 1874.401898191962,
-    "resistance_30d": 2531.6368302654573,
+    "resistance_30d": 2533.9113643106325,
     "mark_price": 2524.73831008,
     "index_price": 2525.74674419,
     "funding_rate": 1.207e-05,
