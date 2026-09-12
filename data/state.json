@@ -1639,7 +1639,7 @@
         ],
         [
           "Stretch from long-term average",
-          "+6.5% vs its long-term average - not stretched either way",
+          "+6.4% vs its long-term average - not stretched either way",
           0
         ],
         [
@@ -1652,12 +1652,12 @@
       "id": "litecoin",
       "symbol": "LTC",
       "name": "Litecoin",
-      "price": 53.72,
-      "pct_24h": 1.27024,
+      "price": 53.66,
+      "pct_24h": 0.31825,
       "pct_7d": -2.1,
       "support_30d": 43.806923130603906,
       "resistance_30d": 55.20228907963863,
-      "as_of": "2026-09-12 19:00:35",
+      "as_of": "2026-09-12 19:55:22",
       "stale": false
     },
     "bitget-token": {
@@ -2325,11 +2325,11 @@
       "symbol": "GRAM",
       "name": "Gram (prev. Toncoin)",
       "price": 1.38,
-      "pct_24h": 1.99819,
-      "pct_7d": -2.9,
+      "pct_24h": 1.12585,
+      "pct_7d": -3.2,
       "support_30d": 1.3170990455791696,
       "resistance_30d": 1.4926762805297678,
-      "as_of": "2026-09-12 18:15:23",
+      "as_of": "2026-09-12 19:55:22",
       "stale": false
     },
     "sky": {
@@ -2359,7 +2359,7 @@
         ],
         [
           "Stretch from long-term average",
-          "-5.7% vs its long-term average - not stretched either way",
+          "-6.1% vs its long-term average - not stretched either way",
           0
         ],
         [
@@ -2372,12 +2372,12 @@
       "id": "sky",
       "symbol": "SKY",
       "name": "Sky",
-      "price": 0.06302,
-      "pct_24h": 3.88862,
+      "price": 0.062707,
+      "pct_24h": 2.6942,
       "pct_7d": -7.5,
       "support_30d": 0.05081051579814886,
       "resistance_30d": 0.07314868186988309,
-      "as_of": "2026-09-12 19:20:25",
+      "as_of": "2026-09-12 19:55:22",
       "stale": false
     },
     "shiba-inu": {
@@ -3293,7 +3293,9 @@
       "stale": false
     }
   },
-  "_strong_buy_state": {},
+  "_strong_buy_state": {
+    "scanner-15m:BNB": true
+  },
   "_pnl_tracker": {
     "open": {
       "1h:MNT": {
@@ -3324,7 +3326,7 @@
         "stop": 0.14140733333333333,
         "target1": 0.16293866666666668,
         "target2": 0.17370433333333335,
-        "opened_at": "2026-09-12T19:52:16.383508"
+        "opened_at": "2026-09-12T19:57:13.646428"
       }
     },
     "resolved": [
@@ -10074,6 +10076,19 @@
         "result": "win",
         "resolved_at": "2026-09-12T19:52:16.383508",
         "exit_price": 0.179769
+      },
+      {
+        "coin": "XLM",
+        "name": "Stellar",
+        "tf": "daily",
+        "entry": 0.152173,
+        "stop": 0.14140733333333333,
+        "target1": 0.16293866666666668,
+        "target2": 0.17370433333333335,
+        "opened_at": "2026-09-12T19:52:16.383508",
+        "result": "win",
+        "resolved_at": "2026-09-12T19:57:13.646428",
+        "exit_price": 0.179928
       }
     ]
   },
@@ -10081,14 +10096,14 @@
     "key": "BTC",
     "name": "Bitcoin",
     "emoji": "\u20bf",
-    "price": 77099,
+    "price": 77103,
     "high_24h": 77479,
     "low_24h": 76987,
-    "pct_24h": -0.24237,
+    "pct_24h": -0.2783,
     "pct_7d": -3.6,
     "pct_30d": 22.3,
-    "sma50": 70906.37739292729,
-    "sma200": 70081.02840852416,
+    "sma50": 70906.45661691535,
+    "sma200": 70081.04821452117,
     "support_30d": 62843.70368466329,
     "resistance_30d": 81264.70153038795,
     "mark_price": 77264.9,
@@ -10103,16 +10118,16 @@
     "key": "ETH",
     "name": "Ethereum",
     "emoji": "\u039e",
-    "price": 2516.8,
+    "price": 2516.88,
     "high_24h": 2545.61,
     "low_24h": 2508.19,
-    "pct_24h": -0.9199,
+    "pct_24h": -0.92744,
     "pct_7d": 1.7,
     "pct_30d": 34.5,
-    "sma50": 2173.690078653266,
-    "sma200": 2055.2395024507623,
+    "sma50": 2173.6977285955722,
+    "sma200": 2055.241414936339,
     "support_30d": 1874.401898191962,
-    "resistance_30d": 2516.7999494871888,
+    "resistance_30d": 2517.1824466025155,
     "mark_price": 2524.73831008,
     "index_price": 2525.74674419,
     "funding_rate": 1.207e-05,
