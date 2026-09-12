@@ -12,7 +12,7 @@
     },
     "eth-resistance-break": {
       "triggered": true,
-      "last_triggered_at": "2026-09-12 15:40:23"
+      "last_triggered_at": "2026-09-12 15:45:22"
     },
     "eth-support-break": {
       "triggered": false,
@@ -260,12 +260,12 @@
       "id": "figure-heloc",
       "symbol": "FIGR_HELOC",
       "name": "Figure Heloc",
-      "price": 1.016,
-      "pct_24h": -1.76738,
-      "pct_7d": -2.1,
+      "price": 1.033,
+      "pct_24h": 0.65955,
+      "pct_7d": -2.3,
       "support_30d": 1.0002702435361892,
       "resistance_30d": 1.0455978355177025,
-      "as_of": "2026-09-12 13:45:22",
+      "as_of": "2026-09-12 15:45:22",
       "stale": false
     },
     "hyperliquid": {
@@ -2429,9 +2429,9 @@
       "stale": false
     },
     "near": {
-      "label": "\ud83d\udd34 CAUTION - REDUCE NEW BUYS",
+      "label": "\ud83d\udd34 DISTRIBUTION ZONE",
       "status": "bearish",
-      "score": -3,
+      "score": -5,
       "rows": [
         [
           "Price vs. recent range",
@@ -2445,17 +2445,17 @@
         ],
         [
           "Market phase (best guess)",
-          "Established uptrend - phase where price marks up",
-          1
+          "Very extended after a big run - phase where smart money sells",
+          -2
         ],
         [
           "Recent trend",
-          "Chopping sideways - no clear trend",
-          0
+          "Trending up steadily - healthy",
+          1
         ],
         [
           "Stretch from long-term average",
-          "+39.3% above its long-term average - very stretched",
+          "+40.4% above its long-term average - very stretched",
           -2
         ],
         [
@@ -2464,16 +2464,16 @@
           0
         ]
       ],
-      "plain": "Getting risky - I'd hold off on new buys until this cools down.",
+      "plain": "Looks stretched and euphoric - historically the zone where smart money sells, not buys.",
       "id": "near",
       "symbol": "NEAR",
       "name": "NEAR Protocol",
-      "price": 2.39,
-      "pct_24h": -10.30148,
-      "pct_7d": 5.6,
+      "price": 2.41,
+      "pct_24h": -10.13593,
+      "pct_7d": 8.7,
       "support_30d": 1.5879597131538,
       "resistance_30d": 2.4848168147865453,
-      "as_of": "2026-09-12 14:22:53",
+      "as_of": "2026-09-12 15:45:22",
       "stale": false
     },
     "quant-network": {
@@ -2813,9 +2813,9 @@
       "stale": false
     },
     "aave": {
-      "label": "\ud83d\udd34 CAUTION - REDUCE NEW BUYS",
-      "status": "bearish",
-      "score": -2,
+      "label": "\ud83d\udfe1 HOLD / NEUTRAL",
+      "status": "neutral",
+      "score": -1,
       "rows": [
         [
           "Price vs. recent range",
@@ -2839,8 +2839,8 @@
         ],
         [
           "Stretch from long-term average",
-          "+30.5% above its long-term average - very stretched",
-          -2
+          "+29.1% above its long-term average - a bit stretched",
+          -1
         ],
         [
           "Leverage traders' bias",
@@ -2848,16 +2848,16 @@
           0
         ]
       ],
-      "plain": "Getting risky - I'd hold off on new buys until this cools down.",
+      "plain": "No real edge either way right now - fine to just wait and watch.",
       "id": "aave",
       "symbol": "AAVE",
       "name": "Aave",
-      "price": 127.42,
-      "pct_24h": 4.44007,
-      "pct_7d": -2.2,
+      "price": 126.06,
+      "pct_24h": -1.9557,
+      "pct_7d": -3.3,
       "support_30d": 85.94219943917633,
       "resistance_30d": 141.53047916466082,
-      "as_of": "2026-09-12 12:30:32",
+      "as_of": "2026-09-12 15:45:22",
       "stale": false
     },
     "okb": {
@@ -3293,9 +3293,7 @@
       "stale": false
     }
   },
-  "_strong_buy_state": {
-    "scanner-15m:CC": true
-  },
+  "_strong_buy_state": {},
   "_pnl_tracker": {
     "open": {
       "1h:MNT": {
@@ -3326,7 +3324,7 @@
         "stop": 0.1414087,
         "target1": 0.1629373,
         "target2": 0.1737016,
-        "opened_at": "2026-09-12T15:42:13.985670"
+        "opened_at": "2026-09-12T15:47:14.002283"
       }
     },
     "resolved": [
@@ -9270,6 +9268,19 @@
         "result": "win",
         "resolved_at": "2026-09-12T15:42:13.985670",
         "exit_price": 0.182486
+      },
+      {
+        "coin": "XLM",
+        "name": "Stellar",
+        "tf": "daily",
+        "entry": 0.152173,
+        "stop": 0.1414087,
+        "target1": 0.1629373,
+        "target2": 0.1737016,
+        "opened_at": "2026-09-12T15:42:13.985670",
+        "result": "win",
+        "resolved_at": "2026-09-12T15:47:14.002283",
+        "exit_price": 0.182399
       }
     ]
   },
@@ -9277,14 +9288,14 @@
     "key": "BTC",
     "name": "Bitcoin",
     "emoji": "\u20bf",
-    "price": 77365,
+    "price": 77389,
     "high_24h": 78007,
     "low_24h": 76952,
-    "pct_24h": -1.76164,
+    "pct_24h": -1.61131,
     "pct_7d": -2.7,
     "pct_30d": 21.7,
-    "sma50": 70911.69867497915,
-    "sma200": 70082.35872903714,
+    "sma50": 70912.18602571466,
+    "sma200": 70082.480566721,
     "support_30d": 62843.70368466329,
     "resistance_30d": 81264.70153038795,
     "mark_price": 77264.9,
@@ -9299,16 +9310,16 @@
     "key": "ETH",
     "name": "Ethereum",
     "emoji": "\u039e",
-    "price": 2532.73,
+    "price": 2535.13,
     "high_24h": 2580.2,
     "low_24h": 2508.19,
-    "pct_24h": -3.00698,
+    "pct_24h": -2.81419,
     "pct_7d": 3.5,
     "pct_30d": 34.5,
-    "sma50": 2174.01026141161,
-    "sma200": 2055.319548140348,
+    "sma50": 2174.0565960657063,
+    "sma200": 2055.3311318038723,
     "support_30d": 1874.401898191962,
-    "resistance_30d": 2532.809087404395,
+    "resistance_30d": 2535.125820109219,
     "mark_price": 2524.73831008,
     "index_price": 2525.74674419,
     "funding_rate": 1.207e-05,
