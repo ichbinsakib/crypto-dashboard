@@ -12,7 +12,7 @@
     },
     "eth-resistance-break": {
       "triggered": true,
-      "last_triggered_at": "2026-09-12 17:00:41"
+      "last_triggered_at": "2026-09-12 17:05:20"
     },
     "eth-support-break": {
       "triggered": false,
@@ -260,12 +260,12 @@
       "id": "figure-heloc",
       "symbol": "FIGR_HELOC",
       "name": "Figure Heloc",
-      "price": 1.033,
-      "pct_24h": 0.65955,
-      "pct_7d": -2.3,
+      "price": 1.007,
+      "pct_24h": -2.26124,
+      "pct_7d": -2.8,
       "support_30d": 1.0002702435361892,
       "resistance_30d": 1.0455978355177025,
-      "as_of": "2026-09-12 15:45:22",
+      "as_of": "2026-09-12 17:05:20",
       "stale": false
     },
     "hyperliquid": {
@@ -1087,7 +1087,7 @@
     "polygon-ecosystem-token": {
       "label": "\ud83d\udfe1 HOLD / NEUTRAL",
       "status": "neutral",
-      "score": -1,
+      "score": 0,
       "rows": [
         [
           "Price vs. recent range",
@@ -1111,8 +1111,8 @@
         ],
         [
           "Stretch from long-term average",
-          "+10.2% above its long-term average - a bit stretched",
-          -1
+          "+9.8% vs its long-term average - not stretched either way",
+          0
         ],
         [
           "Leverage traders' bias",
@@ -1124,12 +1124,12 @@
       "id": "polygon-ecosystem-token",
       "symbol": "POL",
       "name": "POL (ex-MATIC)",
-      "price": 0.097176,
-      "pct_24h": 1.29846,
-      "pct_7d": 2.4,
+      "price": 0.096867,
+      "pct_24h": -0.09418,
+      "pct_7d": 1.7,
       "support_30d": 0.07481366852260064,
       "resistance_30d": 0.12250456198546959,
-      "as_of": "2026-09-12 15:50:25",
+      "as_of": "2026-09-12 17:05:20",
       "stale": false
     },
     "blackrock-usd-institutional-digital-liquidity-fund": {
@@ -1543,7 +1543,7 @@
         ],
         [
           "Stretch from long-term average",
-          "+70.7% above its long-term average - very stretched",
+          "+73.9% above its long-term average - very stretched",
           -2
         ],
         [
@@ -1556,12 +1556,12 @@
       "id": "pump-fun",
       "symbol": "PUMP",
       "name": "Pump.fun",
-      "price": 0.00366,
-      "pct_24h": 0.28486,
+      "price": 0.0037291,
+      "pct_24h": 2.22717,
       "pct_7d": -9.2,
       "support_30d": 0.002666433318189806,
       "resistance_30d": 0.0052249885406471875,
-      "as_of": "2026-09-12 17:00:41",
+      "as_of": "2026-09-12 17:05:20",
       "stale": false
     },
     "venice-token": {
@@ -3326,7 +3326,7 @@
         "stop": 0.14140733333333333,
         "target1": 0.16293866666666668,
         "target2": 0.17370433333333335,
-        "opened_at": "2026-09-12T17:02:32.069561"
+        "opened_at": "2026-09-12T17:07:12.110596"
       }
     },
     "resolved": [
@@ -9582,6 +9582,19 @@
         "result": "win",
         "resolved_at": "2026-09-12T17:02:32.069561",
         "exit_price": 0.181687
+      },
+      {
+        "coin": "XLM",
+        "name": "Stellar",
+        "tf": "daily",
+        "entry": 0.152173,
+        "stop": 0.14140733333333333,
+        "target1": 0.16293866666666668,
+        "target2": 0.17370433333333335,
+        "opened_at": "2026-09-12T17:02:32.069561",
+        "result": "win",
+        "resolved_at": "2026-09-12T17:07:12.110596",
+        "exit_price": 0.181863
       }
     ]
   },
@@ -9589,14 +9602,14 @@
     "key": "BTC",
     "name": "Bitcoin",
     "emoji": "\u20bf",
-    "price": 77343,
-    "high_24h": 77932,
+    "price": 77349,
+    "high_24h": 77518,
     "low_24h": 76952,
-    "pct_24h": -0.74982,
-    "pct_7d": -2.9,
-    "pct_30d": 21.3,
-    "sma50": 70911.00650753862,
-    "sma200": 70082.185687177,
+    "pct_24h": -0.60447,
+    "pct_7d": -3.1,
+    "pct_30d": 22.0,
+    "sma50": 70911.29719227446,
+    "sma200": 70082.25835836095,
     "support_30d": 62843.70368466329,
     "resistance_30d": 81264.70153038795,
     "mark_price": 77264.9,
@@ -9611,16 +9624,16 @@
     "key": "ETH",
     "name": "Ethereum",
     "emoji": "\u039e",
-    "price": 2531.84,
-    "high_24h": 2579.84,
+    "price": 2531.21,
+    "high_24h": 2566.64,
     "low_24h": 2508.19,
-    "pct_24h": -1.81647,
-    "pct_7d": 3.1,
-    "pct_30d": 34.0,
-    "sma50": 2173.974008657062,
-    "sma200": 2055.3104849517113,
+    "pct_24h": -1.74952,
+    "pct_7d": 2.9,
+    "pct_30d": 34.6,
+    "sma50": 2173.9792754355035,
+    "sma200": 2055.3118016463213,
     "support_30d": 1874.401898191962,
-    "resistance_30d": 2530.9964496769976,
+    "resistance_30d": 2531.259788599078,
     "mark_price": 2524.73831008,
     "index_price": 2525.74674419,
     "funding_rate": 1.207e-05,
