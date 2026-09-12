@@ -12,7 +12,7 @@
     },
     "eth-resistance-break": {
       "triggered": true,
-      "last_triggered_at": "2026-09-12 14:22:53"
+      "last_triggered_at": "2026-09-12 14:25:18"
     },
     "eth-support-break": {
       "triggered": false,
@@ -151,7 +151,7 @@
         ],
         [
           "Stretch from long-term average",
-          "+23.0% above its long-term average - a bit stretched",
+          "+22.7% above its long-term average - a bit stretched",
           -1
         ],
         [
@@ -164,12 +164,12 @@
       "id": "solana",
       "symbol": "SOL",
       "name": "Solana",
-      "price": 102.15,
-      "pct_24h": 0.87587,
-      "pct_7d": -0.3,
+      "price": 101.93,
+      "pct_24h": -1.69748,
+      "pct_7d": -1.3,
       "support_30d": 74.5477464048606,
       "resistance_30d": 109.17730597799657,
-      "as_of": "2026-09-12 13:10:25",
+      "as_of": "2026-09-12 14:25:18",
       "stale": false
     },
     "tron": {
@@ -343,7 +343,7 @@
         ],
         [
           "Stretch from long-term average",
-          "-4.4% vs its long-term average - not stretched either way",
+          "-3.6% vs its long-term average - not stretched either way",
           0
         ],
         [
@@ -356,12 +356,12 @@
       "id": "dogecoin",
       "symbol": "DOGE",
       "name": "Dogecoin",
-      "price": 0.084384,
-      "pct_24h": 0.50954,
-      "pct_7d": -0.3,
+      "price": 0.085098,
+      "pct_24h": -1.55074,
+      "pct_7d": -2.8,
       "support_30d": 0.06952870548515376,
       "resistance_30d": 0.09337940032634065,
-      "as_of": "2026-09-12 06:30:34",
+      "as_of": "2026-09-12 14:25:18",
       "stale": false
     },
     "zcash": {
@@ -2215,7 +2215,7 @@
         ],
         [
           "Stretch from long-term average",
-          "+12.1% above its long-term average - a bit stretched",
+          "+12.5% above its long-term average - a bit stretched",
           -1
         ],
         [
@@ -2228,12 +2228,12 @@
       "id": "internet-computer",
       "symbol": "ICP",
       "name": "Internet Computer",
-      "price": 2.75,
-      "pct_24h": -1.41815,
-      "pct_7d": 4.6,
+      "price": 2.76,
+      "pct_24h": -3.44733,
+      "pct_7d": 4.9,
       "support_30d": 2.194804279500122,
       "resistance_30d": 2.9869340549074623,
-      "as_of": "2026-09-12 13:10:25",
+      "as_of": "2026-09-12 14:25:18",
       "stale": false
     },
     "bittensor": {
@@ -3321,10 +3321,10 @@
         "name": "Sky",
         "tf": "15m",
         "entry": 0.06293,
-        "stop": 0.06266766666666666,
-        "target1": 0.06319233333333334,
-        "target2": 0.06345466666666667,
-        "opened_at": "2026-09-12T14:24:01.129066"
+        "stop": 0.06266733333333332,
+        "target1": 0.06319266666666667,
+        "target2": 0.06345533333333335,
+        "opened_at": "2026-09-12T14:27:11.370375"
       },
       "daily:XLM": {
         "coin": "XLM",
@@ -3334,7 +3334,7 @@
         "stop": 0.1414087,
         "target1": 0.1629373,
         "target2": 0.1737016,
-        "opened_at": "2026-09-12T14:24:01.129066"
+        "opened_at": "2026-09-12T14:27:11.370375"
       }
     },
     "resolved": [
@@ -9044,6 +9044,32 @@
         "result": "win",
         "resolved_at": "2026-09-12T14:24:01.129066",
         "exit_price": 0.180948
+      },
+      {
+        "coin": "SKY",
+        "name": "Sky",
+        "tf": "15m",
+        "entry": 0.06293,
+        "stop": 0.06266766666666666,
+        "target1": 0.06319233333333334,
+        "target2": 0.06345466666666667,
+        "opened_at": "2026-09-12T14:24:01.129066",
+        "result": "win",
+        "resolved_at": "2026-09-12T14:27:11.370375",
+        "exit_price": 0.06369
+      },
+      {
+        "coin": "XLM",
+        "name": "Stellar",
+        "tf": "daily",
+        "entry": 0.152173,
+        "stop": 0.1414087,
+        "target1": 0.1629373,
+        "target2": 0.1737016,
+        "opened_at": "2026-09-12T14:24:01.129066",
+        "result": "win",
+        "resolved_at": "2026-09-12T14:27:11.370375",
+        "exit_price": 0.181048
       }
     ]
   },
@@ -9051,14 +9077,14 @@
     "key": "BTC",
     "name": "Bitcoin",
     "emoji": "\u20bf",
-    "price": 77354,
+    "price": 77371,
     "high_24h": 78804,
     "low_24h": 76952,
-    "pct_24h": -2.147,
+    "pct_24h": -2.07825,
     "pct_7d": -3.0,
     "pct_30d": 21.5,
-    "sma50": 70911.52331343773,
-    "sma200": 70082.31488865177,
+    "sma50": 70911.82086673129,
+    "sma200": 70082.38927697515,
     "support_30d": 62843.70368466329,
     "resistance_30d": 81264.70153038795,
     "mark_price": 77264.9,
@@ -9073,16 +9099,16 @@
     "key": "ETH",
     "name": "Ethereum",
     "emoji": "\u039e",
-    "price": 2540.79,
+    "price": 2541.57,
     "high_24h": 2614.36,
     "low_24h": 2508.19,
-    "pct_24h": -2.71704,
+    "pct_24h": -2.74824,
     "pct_7d": 3.4,
     "pct_30d": 34.7,
-    "sma50": 2174.1752334846697,
-    "sma200": 2055.360791158613,
+    "sma50": 2174.1743481919552,
+    "sma200": 2055.3605698354345,
     "support_30d": 1874.401898191962,
-    "resistance_30d": 2541.0576910573977,
+    "resistance_30d": 2541.01342642167,
     "mark_price": 2524.73831008,
     "index_price": 2525.74674419,
     "funding_rate": 1.207e-05,
