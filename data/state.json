@@ -12,7 +12,7 @@
     },
     "eth-resistance-break": {
       "triggered": true,
-      "last_triggered_at": "2026-09-12 13:40:24"
+      "last_triggered_at": "2026-09-12 13:45:22"
     },
     "eth-support-break": {
       "triggered": false,
@@ -261,11 +261,11 @@
       "symbol": "FIGR_HELOC",
       "name": "Figure Heloc",
       "price": 1.016,
-      "pct_24h": -1.76371,
+      "pct_24h": -1.76738,
       "pct_7d": -2.1,
       "support_30d": 1.0002702435361892,
       "resistance_30d": 1.0455978355177025,
-      "as_of": "2026-09-12 13:35:20",
+      "as_of": "2026-09-12 13:45:22",
       "stale": false
     },
     "hyperliquid": {
@@ -391,7 +391,7 @@
         ],
         [
           "Stretch from long-term average",
-          "+141.1% above its long-term average - very stretched",
+          "+142.0% above its long-term average - very stretched",
           -2
         ],
         [
@@ -404,12 +404,12 @@
       "id": "zcash",
       "symbol": "ZEC",
       "name": "Zcash",
-      "price": 1150.07,
-      "pct_24h": 4.8664,
-      "pct_7d": 14.1,
+      "price": 1154.32,
+      "pct_24h": -0.2851,
+      "pct_7d": 14.4,
       "support_30d": 486.1425018309512,
       "resistance_30d": 1244.287571383468,
-      "as_of": "2026-09-12 11:50:26",
+      "as_of": "2026-09-12 13:45:22",
       "stale": false
     },
     "rain": {
@@ -2167,7 +2167,7 @@
         ],
         [
           "Stretch from long-term average",
-          "-29.2% below its long-term average - confirmed downtrend",
+          "-29.5% below its long-term average - confirmed downtrend",
           -1
         ],
         [
@@ -2180,12 +2180,12 @@
       "id": "canton-network",
       "symbol": "CC",
       "name": "Canton",
-      "price": 0.098398,
-      "pct_24h": 0.12518,
-      "pct_7d": -9.1,
+      "price": 0.09793,
+      "pct_24h": -0.02162,
+      "pct_7d": -9.3,
       "support_30d": 0.09051839499501885,
       "resistance_30d": 0.12396615653575341,
-      "as_of": "2026-09-12 12:55:23",
+      "as_of": "2026-09-12 13:45:22",
       "stale": false
     },
     "internet-computer": {
@@ -3323,20 +3323,20 @@
         "name": "Sky",
         "tf": "15m",
         "entry": 0.06293,
-        "stop": 0.06268533333333333,
-        "target1": 0.06317466666666667,
-        "target2": 0.06341933333333334,
-        "opened_at": "2026-09-12T13:42:18.243385"
+        "stop": 0.062691,
+        "target1": 0.063169,
+        "target2": 0.063408,
+        "opened_at": "2026-09-12T13:47:15.891331"
       },
       "15m:PUMP": {
         "coin": "PUMP",
         "name": "Pump.fun",
         "tf": "15m",
-        "entry": 0.003526,
-        "stop": 0.0035081,
-        "target1": 0.0035439,
-        "target2": 0.0035618,
-        "opened_at": "2026-09-12T13:42:18.243385"
+        "entry": 0.003533,
+        "stop": 0.003515666666666667,
+        "target1": 0.0035503333333333333,
+        "target2": 0.0035676666666666665,
+        "opened_at": "2026-09-12T13:47:15.891331"
       },
       "daily:XLM": {
         "coin": "XLM",
@@ -3346,7 +3346,7 @@
         "stop": 0.1414087,
         "target1": 0.1629373,
         "target2": 0.1737016,
-        "opened_at": "2026-09-12T13:42:18.243385"
+        "opened_at": "2026-09-12T13:47:15.891331"
       }
     },
     "resolved": [
@@ -8770,6 +8770,45 @@
         "result": "win",
         "resolved_at": "2026-09-12T13:42:18.243385",
         "exit_price": 0.181286
+      },
+      {
+        "coin": "SKY",
+        "name": "Sky",
+        "tf": "15m",
+        "entry": 0.06293,
+        "stop": 0.06268533333333333,
+        "target1": 0.06317466666666667,
+        "target2": 0.06341933333333334,
+        "opened_at": "2026-09-12T13:42:18.243385",
+        "result": "win",
+        "resolved_at": "2026-09-12T13:47:15.891331",
+        "exit_price": 0.06374
+      },
+      {
+        "coin": "PUMP",
+        "name": "Pump.fun",
+        "tf": "15m",
+        "entry": 0.003526,
+        "stop": 0.0035081,
+        "target1": 0.0035439,
+        "target2": 0.0035618,
+        "opened_at": "2026-09-12T13:42:18.243385",
+        "result": "win",
+        "resolved_at": "2026-09-12T13:47:15.891331",
+        "exit_price": 0.0036
+      },
+      {
+        "coin": "XLM",
+        "name": "Stellar",
+        "tf": "daily",
+        "entry": 0.152173,
+        "stop": 0.1414087,
+        "target1": 0.1629373,
+        "target2": 0.1737016,
+        "opened_at": "2026-09-12T13:42:18.243385",
+        "result": "win",
+        "resolved_at": "2026-09-12T13:47:15.891331",
+        "exit_price": 0.180902
       }
     ]
   },
@@ -8777,14 +8816,14 @@
     "key": "BTC",
     "name": "Bitcoin",
     "emoji": "\u20bf",
-    "price": 77287,
+    "price": 77283,
     "high_24h": 79607,
     "low_24h": 76952,
-    "pct_24h": -0.32426,
+    "pct_24h": -0.60794,
     "pct_7d": -2.9,
     "pct_30d": 21.9,
-    "sma50": 70910.15008061449,
-    "sma200": 70081.97158044596,
+    "sma50": 70910.20745176224,
+    "sma200": 70081.9859232329,
     "support_30d": 62843.70368466329,
     "resistance_30d": 81264.70153038795,
     "mark_price": 77264.9,
@@ -8799,16 +8838,16 @@
     "key": "ETH",
     "name": "Ethereum",
     "emoji": "\u039e",
-    "price": 2538.88,
+    "price": 2538.73,
     "high_24h": 2647.68,
     "low_24h": 2508.19,
-    "pct_24h": 1.44805,
+    "pct_24h": 0.84482,
     "pct_7d": 3.2,
     "pct_30d": 34.9,
-    "sma50": 2174.1339615349098,
-    "sma200": 2055.3504731711732,
+    "sma50": 2174.125964101975,
+    "sma200": 2055.3484738129396,
     "support_30d": 1874.401898191962,
-    "resistance_30d": 2538.9940935693808,
+    "resistance_30d": 2538.5942219226663,
     "mark_price": 2524.73831008,
     "index_price": 2525.74674419,
     "funding_rate": 1.207e-05,
