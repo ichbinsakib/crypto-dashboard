@@ -12,7 +12,7 @@
     },
     "eth-resistance-break": {
       "triggered": true,
-      "last_triggered_at": "2026-09-12 22:15:23"
+      "last_triggered_at": "2026-09-12 22:20:25"
     },
     "eth-support-break": {
       "triggered": false,
@@ -1591,7 +1591,7 @@
         ],
         [
           "Stretch from long-term average",
-          "+99.4% above its long-term average - very stretched",
+          "+103.2% above its long-term average - very stretched",
           -2
         ],
         [
@@ -1604,12 +1604,12 @@
       "id": "venice-token",
       "symbol": "VVV",
       "name": "Venice Token",
-      "price": 24.02,
-      "pct_24h": -1.45904,
-      "pct_7d": 40.1,
+      "price": 24.49,
+      "pct_24h": 1.35239,
+      "pct_7d": 41.6,
       "support_30d": 11.794592355917386,
       "resistance_30d": 25.88474946901688,
-      "as_of": "2026-09-12 21:00:35",
+      "as_of": "2026-09-12 22:20:25",
       "stale": false
     },
     "litecoin": {
@@ -2229,11 +2229,11 @@
       "symbol": "ICP",
       "name": "Internet Computer",
       "price": 2.74,
-      "pct_24h": -0.70588,
-      "pct_7d": 3.1,
+      "pct_24h": 0.16159,
+      "pct_7d": 2.3,
       "support_30d": 2.194804279500122,
       "resistance_30d": 2.9869340549074623,
-      "as_of": "2026-09-12 21:32:53",
+      "as_of": "2026-09-12 22:20:25",
       "stale": false
     },
     "bittensor": {
@@ -2695,7 +2695,7 @@
         ],
         [
           "Stretch from long-term average",
-          "-2.8% vs its long-term average - not stretched either way",
+          "-2.9% vs its long-term average - not stretched either way",
           0
         ],
         [
@@ -2708,12 +2708,12 @@
       "id": "pax-gold",
       "symbol": "PAXG",
       "name": "PAX Gold",
-      "price": 4355.4,
-      "pct_24h": 0.01817,
+      "price": 4354.45,
+      "pct_24h": -0.04796,
       "pct_7d": -1.8,
       "support_30d": 4318.141703998686,
       "resistance_30d": 4672.307573354755,
-      "as_of": "2026-09-12 19:27:54",
+      "as_of": "2026-09-12 22:20:25",
       "stale": false
     },
     "morpho": {
@@ -3324,7 +3324,7 @@
         "stop": 0.14140733333333333,
         "target1": 0.16293866666666668,
         "target2": 0.17370433333333335,
-        "opened_at": "2026-09-12T22:17:13.535708"
+        "opened_at": "2026-09-12T22:22:16.543236"
       }
     },
     "resolved": [
@@ -10451,6 +10451,19 @@
         "result": "win",
         "resolved_at": "2026-09-12T22:17:13.535708",
         "exit_price": 0.180139
+      },
+      {
+        "coin": "XLM",
+        "name": "Stellar",
+        "tf": "daily",
+        "entry": 0.152173,
+        "stop": 0.14140733333333333,
+        "target1": 0.16293866666666668,
+        "target2": 0.17370433333333335,
+        "opened_at": "2026-09-12T22:17:13.535708",
+        "result": "win",
+        "resolved_at": "2026-09-12T22:22:16.543236",
+        "exit_price": 0.180337
       }
     ]
   },
@@ -10458,14 +10471,14 @@
     "key": "BTC",
     "name": "Bitcoin",
     "emoji": "\u20bf",
-    "price": 77247,
+    "price": 77238,
     "high_24h": 77479,
     "low_24h": 77055,
-    "pct_24h": 0.1174,
+    "pct_24h": 0.11306,
     "pct_7d": -3.2,
     "pct_30d": 21.9,
-    "sma50": 70909.34563263827,
-    "sma200": 70081.77046845191,
+    "sma50": 70909.16149905542,
+    "sma200": 70081.7244350562,
     "support_30d": 62843.70368466329,
     "resistance_30d": 81264.70153038795,
     "mark_price": 77158.0,
@@ -10480,16 +10493,16 @@
     "key": "ETH",
     "name": "Ethereum",
     "emoji": "\u039e",
-    "price": 2522.9,
+    "price": 2522.64,
     "high_24h": 2543.69,
     "low_24h": 2509.71,
-    "pct_24h": 0.15491,
+    "pct_24h": 0.11219,
     "pct_7d": 1.9,
     "pct_30d": 33.9,
-    "sma50": 2173.8066358942924,
-    "sma200": 2055.2686417610184,
+    "sma50": 2173.8069367820335,
+    "sma200": 2055.268716982954,
     "support_30d": 1874.401898191962,
-    "resistance_30d": 2522.6278115385194,
+    "resistance_30d": 2522.642855925567,
     "mark_price": 2521.71641085,
     "index_price": 2523.12186047,
     "funding_rate": 4.325e-05,
