@@ -12,7 +12,7 @@
     },
     "eth-resistance-break": {
       "triggered": true,
-      "last_triggered_at": "2026-09-12 21:20:25"
+      "last_triggered_at": "2026-09-12 21:25:19"
     },
     "eth-support-break": {
       "triggered": false,
@@ -391,7 +391,7 @@
         ],
         [
           "Stretch from long-term average",
-          "+136.5% above its long-term average - very stretched",
+          "+135.4% above its long-term average - very stretched",
           -2
         ],
         [
@@ -404,12 +404,12 @@
       "id": "zcash",
       "symbol": "ZEC",
       "name": "Zcash",
-      "price": 1127.76,
-      "pct_24h": -4.88374,
+      "price": 1122.4,
+      "pct_24h": -5.1782,
       "pct_7d": 10.6,
       "support_30d": 486.1425018309512,
       "resistance_30d": 1244.287571383468,
-      "as_of": "2026-09-12 21:15:24",
+      "as_of": "2026-09-12 21:25:19",
       "stale": false
     },
     "rain": {
@@ -1783,7 +1783,7 @@
         ],
         [
           "Stretch from long-term average",
-          "+141.4% above its long-term average - very stretched",
+          "+133.6% above its long-term average - very stretched",
           -2
         ],
         [
@@ -1796,12 +1796,12 @@
       "id": "lighter",
       "symbol": "LIT",
       "name": "Lighter",
-      "price": 4.32,
-      "pct_24h": -3.88192,
-      "pct_7d": -8.9,
+      "price": 4.18,
+      "pct_24h": -6.74603,
+      "pct_7d": -11.7,
       "support_30d": 2.2358662099746955,
       "resistance_30d": 4.827528632102638,
-      "as_of": "2026-09-12 18:45:20",
+      "as_of": "2026-09-12 21:25:19",
       "stale": false
     },
     "ethena": {
@@ -2852,12 +2852,12 @@
       "id": "aave",
       "symbol": "AAVE",
       "name": "Aave",
-      "price": 125.82,
-      "pct_24h": 0.16801,
+      "price": 125.86,
+      "pct_24h": 0.19593,
       "pct_7d": -6.6,
       "support_30d": 85.94219943917633,
       "resistance_30d": 141.53047916466082,
-      "as_of": "2026-09-12 21:20:25",
+      "as_of": "2026-09-12 21:25:19",
       "stale": false
     },
     "okb": {
@@ -3324,7 +3324,7 @@
         "stop": 0.14140733333333333,
         "target1": 0.16293866666666668,
         "target2": 0.17370433333333335,
-        "opened_at": "2026-09-12T21:22:16.883661"
+        "opened_at": "2026-09-12T21:27:10.060200"
       }
     },
     "resolved": [
@@ -10308,6 +10308,19 @@
         "result": "win",
         "resolved_at": "2026-09-12T21:22:16.883661",
         "exit_price": 0.179899
+      },
+      {
+        "coin": "XLM",
+        "name": "Stellar",
+        "tf": "daily",
+        "entry": 0.152173,
+        "stop": 0.14140733333333333,
+        "target1": 0.16293866666666668,
+        "target2": 0.17370433333333335,
+        "opened_at": "2026-09-12T21:22:16.883661",
+        "result": "win",
+        "resolved_at": "2026-09-12T21:27:10.060200",
+        "exit_price": 0.180133
       }
     ]
   },
@@ -10315,14 +10328,14 @@
     "key": "BTC",
     "name": "Bitcoin",
     "emoji": "\u20bf",
-    "price": 77152,
+    "price": 77155,
     "high_24h": 77479,
     "low_24h": 76987,
-    "pct_24h": -0.29641,
+    "pct_24h": -0.29629,
     "pct_7d": -3.3,
     "pct_30d": 21.8,
-    "sma50": 70907.43423864763,
-    "sma200": 70081.29261995424,
+    "sma50": 70907.51184074981,
+    "sma200": 70081.31202047979,
     "support_30d": 62843.70368466329,
     "resistance_30d": 81264.70153038795,
     "mark_price": 77158.0,
@@ -10337,16 +10350,16 @@
     "key": "ETH",
     "name": "Ethereum",
     "emoji": "\u039e",
-    "price": 2523.47,
+    "price": 2522.93,
     "high_24h": 2543.69,
     "low_24h": 2508.19,
-    "pct_24h": -0.58444,
+    "pct_24h": -0.55297,
     "pct_7d": 1.7,
     "pct_30d": 33.6,
-    "sma50": 2173.8234548035075,
-    "sma200": 2055.2728464883226,
+    "sma50": 2173.814056254405,
+    "sma200": 2055.270496851047,
     "support_30d": 1874.401898191962,
-    "resistance_30d": 2523.468756999268,
+    "resistance_30d": 2522.9988295441335,
     "mark_price": 2521.71641085,
     "index_price": 2523.12186047,
     "funding_rate": 4.325e-05,
