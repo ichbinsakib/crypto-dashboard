@@ -12,7 +12,7 @@
     },
     "eth-resistance-break": {
       "triggered": true,
-      "last_triggered_at": "2026-09-12 09:00:36"
+      "last_triggered_at": "2026-09-12 09:05:18"
     },
     "eth-support-break": {
       "triggered": false,
@@ -679,7 +679,7 @@
         ],
         [
           "Stretch from long-term average",
-          "-5.3% vs its long-term average - not stretched either way",
+          "-4.8% vs its long-term average - not stretched either way",
           0
         ],
         [
@@ -692,12 +692,12 @@
       "id": "cardano",
       "symbol": "ADA",
       "name": "Cardano",
-      "price": 0.207837,
-      "pct_24h": -0.9263,
-      "pct_7d": -1.3,
+      "price": 0.208798,
+      "pct_24h": 0.69768,
+      "pct_7d": -2.3,
       "support_30d": 0.1741249817054162,
       "resistance_30d": 0.2291047455940254,
-      "as_of": "2026-09-12 05:45:23",
+      "as_of": "2026-09-12 09:05:18",
       "stale": false
     },
     "stellar": {
@@ -727,7 +727,7 @@
         ],
         [
           "Stretch from long-term average",
-          "+2.6% vs its long-term average - not stretched either way",
+          "+3.1% vs its long-term average - not stretched either way",
           0
         ],
         [
@@ -740,12 +740,12 @@
       "id": "stellar",
       "symbol": "XLM",
       "name": "Stellar",
-      "price": 0.179904,
-      "pct_24h": 2.10209,
-      "pct_7d": 0.3,
+      "price": 0.180944,
+      "pct_24h": 2.70871,
+      "pct_7d": -0.8,
       "support_30d": 0.15472912151335613,
       "resistance_30d": 0.20181319711037435,
-      "as_of": "2026-09-12 05:15:25",
+      "as_of": "2026-09-12 09:05:18",
       "stale": false
     },
     "kucoin-shares": {
@@ -2095,7 +2095,7 @@
     "ondo-finance": {
       "label": "\ud83d\udfe1 HOLD / NEUTRAL",
       "status": "neutral",
-      "score": 1,
+      "score": 0,
       "rows": [
         [
           "Price vs. recent range",
@@ -2109,8 +2109,8 @@
         ],
         [
           "Market phase (best guess)",
-          "Basing near the bottom - phase where smart money accumulates",
-          2
+          "Established uptrend - phase where price marks up",
+          1
         ],
         [
           "Recent trend",
@@ -2119,7 +2119,7 @@
         ],
         [
           "Stretch from long-term average",
-          "+7.1% vs its long-term average - not stretched either way",
+          "+7.6% vs its long-term average - not stretched either way",
           0
         ],
         [
@@ -2132,12 +2132,12 @@
       "id": "ondo-finance",
       "symbol": "ONDO",
       "name": "Ondo",
-      "price": 0.350096,
-      "pct_24h": 0.03934,
-      "pct_7d": -5.8,
+      "price": 0.351902,
+      "pct_24h": 0.18486,
+      "pct_7d": -4.9,
       "support_30d": 0.32338181384146436,
       "resistance_30d": 0.3969475338902824,
-      "as_of": "2026-09-12 06:55:24",
+      "as_of": "2026-09-12 09:05:18",
       "stale": false
     },
     "canton-network": {
@@ -3311,10 +3311,10 @@
         "name": "Monero",
         "tf": "15m",
         "entry": 521.67,
-        "stop": 518.4163333333333,
-        "target1": 524.9236666666666,
-        "target2": 528.1773333333332,
-        "opened_at": "2026-09-12T09:02:27.006975"
+        "stop": 518.3906666666667,
+        "target1": 524.9493333333332,
+        "target2": 528.2286666666665,
+        "opened_at": "2026-09-12T09:07:09.431782"
       },
       "daily:XLM": {
         "coin": "XLM",
@@ -3324,7 +3324,7 @@
         "stop": 0.14145366666666667,
         "target1": 0.16289233333333333,
         "target2": 0.17361166666666666,
-        "opened_at": "2026-09-12T09:02:27.006975"
+        "opened_at": "2026-09-12T09:07:09.431782"
       }
     },
     "resolved": [
@@ -7448,6 +7448,32 @@
         "result": "win",
         "resolved_at": "2026-09-12T09:02:27.006975",
         "exit_price": 0.180819
+      },
+      {
+        "coin": "XMR",
+        "name": "Monero",
+        "tf": "15m",
+        "entry": 521.67,
+        "stop": 518.4163333333333,
+        "target1": 524.9236666666666,
+        "target2": 528.1773333333332,
+        "opened_at": "2026-09-12T09:02:27.006975",
+        "result": "win",
+        "resolved_at": "2026-09-12T09:07:09.431782",
+        "exit_price": 541.98
+      },
+      {
+        "coin": "XLM",
+        "name": "Stellar",
+        "tf": "daily",
+        "entry": 0.152173,
+        "stop": 0.14145366666666667,
+        "target1": 0.16289233333333333,
+        "target2": 0.17361166666666666,
+        "opened_at": "2026-09-12T09:02:27.006975",
+        "result": "win",
+        "resolved_at": "2026-09-12T09:07:09.431782",
+        "exit_price": 0.181069
       }
     ]
   },
@@ -7455,14 +7481,14 @@
     "key": "BTC",
     "name": "Bitcoin",
     "emoji": "\u20bf",
-    "price": 77331,
+    "price": 77343,
     "high_24h": 79607,
     "low_24h": 76393,
-    "pct_24h": -0.0044,
+    "pct_24h": 0.03552,
     "pct_7d": -3.0,
-    "pct_30d": 21.0,
-    "sma50": 70910.98829152228,
-    "sma200": 70082.18113317291,
+    "pct_30d": 21.2,
+    "sma50": 70911.20039828222,
+    "sma200": 70082.2341598629,
     "support_30d": 62843.70368466329,
     "resistance_30d": 81264.70153038795,
     "mark_price": 77264.9,
@@ -7477,16 +7503,16 @@
     "key": "ETH",
     "name": "Ethereum",
     "emoji": "\u039e",
-    "price": 2532.45,
+    "price": 2534.7,
     "high_24h": 2647.68,
     "low_24h": 2442.02,
-    "pct_24h": 2.28476,
-    "pct_7d": 2.8,
-    "pct_30d": 33.0,
-    "sma50": 2174.0069135589697,
-    "sma200": 2055.318711177188,
+    "pct_24h": 2.3831,
+    "pct_7d": 3.1,
+    "pct_30d": 33.7,
+    "sma50": 2174.037502545023,
+    "sma200": 2055.326358423701,
     "support_30d": 1874.401898191962,
-    "resistance_30d": 2532.6416947723806,
+    "resistance_30d": 2534.171144075035,
     "mark_price": 2524.73831008,
     "index_price": 2525.74674419,
     "funding_rate": 1.207e-05,
