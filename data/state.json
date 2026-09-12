@@ -12,7 +12,7 @@
     },
     "eth-resistance-break": {
       "triggered": true,
-      "last_triggered_at": "2026-09-12 10:45:21"
+      "last_triggered_at": "2026-09-12 10:50:22"
     },
     "eth-support-break": {
       "triggered": false,
@@ -967,7 +967,7 @@
         ],
         [
           "Stretch from long-term average",
-          "+3.8% vs its long-term average - not stretched either way",
+          "+3.7% vs its long-term average - not stretched either way",
           0
         ],
         [
@@ -980,12 +980,12 @@
       "id": "aster-2",
       "symbol": "ASTER",
       "name": "Aster",
-      "price": 0.687448,
-      "pct_24h": -0.97625,
+      "price": 0.686669,
+      "pct_24h": -0.43278,
       "pct_7d": -8.7,
       "support_30d": 0.5986101196690307,
       "resistance_30d": 0.7868111056215635,
-      "as_of": "2026-09-12 10:25:17",
+      "as_of": "2026-09-12 10:50:22",
       "stale": false
     },
     "worldcoin-wld": {
@@ -2167,7 +2167,7 @@
         ],
         [
           "Stretch from long-term average",
-          "-28.7% below its long-term average - confirmed downtrend",
+          "-28.8% below its long-term average - confirmed downtrend",
           -1
         ],
         [
@@ -2180,12 +2180,12 @@
       "id": "canton-network",
       "symbol": "CC",
       "name": "Canton",
-      "price": 0.099014,
-      "pct_24h": 4.20089,
+      "price": 0.098884,
+      "pct_24h": 2.82026,
       "pct_7d": -8.3,
       "support_30d": 0.09051839499501885,
       "resistance_30d": 0.12396615653575341,
-      "as_of": "2026-09-12 10:40:22",
+      "as_of": "2026-09-12 10:50:22",
       "stale": false
     },
     "internet-computer": {
@@ -3053,9 +3053,9 @@
       "stale": false
     },
     "arbitrum": {
-      "label": "\ud83d\udd34 DISTRIBUTION ZONE",
+      "label": "\ud83d\udd34 CAUTION - REDUCE NEW BUYS",
       "status": "bearish",
-      "score": -5,
+      "score": -4,
       "rows": [
         [
           "Price vs. recent range",
@@ -3074,12 +3074,12 @@
         ],
         [
           "Recent trend",
-          "Chopping sideways - no clear trend",
-          0
+          "Trending up steadily - healthy",
+          1
         ],
         [
           "Stretch from long-term average",
-          "+42.7% above its long-term average - very stretched",
+          "+42.4% above its long-term average - very stretched",
           -2
         ],
         [
@@ -3088,16 +3088,16 @@
           0
         ]
       ],
-      "plain": "Looks stretched and euphoric - historically the zone where smart money sells, not buys.",
+      "plain": "Getting risky - I'd hold off on new buys until this cools down.",
       "id": "arbitrum",
       "symbol": "ARB",
       "name": "Arbitrum",
-      "price": 0.143032,
-      "pct_24h": 0.92935,
-      "pct_7d": 7.6,
+      "price": 0.142745,
+      "pct_24h": 1.58778,
+      "pct_7d": 8.3,
       "support_30d": 0.07272258489044682,
       "resistance_30d": 0.18933387703114857,
-      "as_of": "2026-09-12 09:45:23",
+      "as_of": "2026-09-12 10:50:22",
       "stale": false
     },
     "dash": {
@@ -3313,20 +3313,20 @@
         "name": "Monero",
         "tf": "15m",
         "entry": 525.6,
-        "stop": 522.0303333333334,
-        "target1": 529.1696666666667,
-        "target2": 532.7393333333333,
-        "opened_at": "2026-09-12T10:47:12.557618"
+        "stop": 521.986,
+        "target1": 529.214,
+        "target2": 532.8280000000001,
+        "opened_at": "2026-09-12T10:52:13.965713"
       },
       "daily:XLM": {
         "coin": "XLM",
         "name": "Stellar",
         "tf": "daily",
         "entry": 0.152173,
-        "stop": 0.14142953333333333,
-        "target1": 0.16291646666666668,
-        "target2": 0.17365993333333335,
-        "opened_at": "2026-09-12T10:47:12.557618"
+        "stop": 0.14142006666666668,
+        "target1": 0.16292593333333333,
+        "target2": 0.17367886666666665,
+        "opened_at": "2026-09-12T10:52:13.965713"
       }
     },
     "resolved": [
@@ -8009,6 +8009,32 @@
         "result": "win",
         "resolved_at": "2026-09-12T10:47:12.557618",
         "exit_price": 0.182
+      },
+      {
+        "coin": "XMR",
+        "name": "Monero",
+        "tf": "15m",
+        "entry": 525.6,
+        "stop": 522.0303333333334,
+        "target1": 529.1696666666667,
+        "target2": 532.7393333333333,
+        "opened_at": "2026-09-12T10:47:12.557618",
+        "result": "win",
+        "resolved_at": "2026-09-12T10:52:13.965713",
+        "exit_price": 533.88
+      },
+      {
+        "coin": "XLM",
+        "name": "Stellar",
+        "tf": "daily",
+        "entry": 0.152173,
+        "stop": 0.14142953333333333,
+        "target1": 0.16291646666666668,
+        "target2": 0.17365993333333335,
+        "opened_at": "2026-09-12T10:47:12.557618",
+        "result": "win",
+        "resolved_at": "2026-09-12T10:52:13.965713",
+        "exit_price": 0.181735
       }
     ]
   },
@@ -8016,14 +8042,14 @@
     "key": "BTC",
     "name": "Bitcoin",
     "emoji": "\u20bf",
-    "price": 77351,
+    "price": 77339,
     "high_24h": 79607,
     "low_24h": 76393,
-    "pct_24h": 0.47666,
+    "pct_24h": 0.47226,
     "pct_7d": -2.9,
     "pct_30d": 21.4,
-    "sma50": 70911.43859006616,
-    "sma200": 70082.29370780889,
+    "sma50": 70911.16925238392,
+    "sma200": 70082.22637338832,
     "support_30d": 62843.70368466329,
     "resistance_30d": 81264.70153038795,
     "mark_price": 77264.9,
@@ -8038,16 +8064,16 @@
     "key": "ETH",
     "name": "Ethereum",
     "emoji": "\u039e",
-    "price": 2532.42,
+    "price": 2532.24,
     "high_24h": 2647.68,
     "low_24h": 2442.02,
-    "pct_24h": 2.8127,
+    "pct_24h": 2.80968,
     "pct_7d": 3.0,
     "pct_30d": 34.0,
-    "sma50": 2174.0020311021995,
-    "sma200": 2055.3174905629953,
+    "sma50": 2174.003614262008,
+    "sma200": 2055.317886352948,
     "support_30d": 1874.401898191962,
-    "resistance_30d": 2532.397571933861,
+    "resistance_30d": 2532.4767299242894,
     "mark_price": 2524.73831008,
     "index_price": 2525.74674419,
     "funding_rate": 1.207e-05,
