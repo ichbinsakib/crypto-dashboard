@@ -1,5 +1,5 @@
 {
-  "_fng_value": 56,
+  "_fng_value": 63,
   "_fng_classification": "Greed",
   "_alerts_state": {
     "btc-resistance-break": {
@@ -520,7 +520,7 @@
         ],
         [
           "Crowd mood (Fear & Greed)",
-          "56/100 - crowd is greedy",
+          "63/100 - crowd is greedy",
           -1
         ],
         [
@@ -535,7 +535,7 @@
         ],
         [
           "Stretch from long-term average",
-          "+42.3% above its long-term average - very stretched",
+          "+42.2% above its long-term average - very stretched",
           -2
         ],
         [
@@ -548,12 +548,12 @@
       "id": "whitebit",
       "symbol": "WBT",
       "name": "WhiteBIT Coin",
-      "price": 80.19,
-      "pct_24h": 0.82338,
+      "price": 80.13,
+      "pct_24h": 1.1151,
       "pct_7d": 9.5,
       "support_30d": 54.452558710928955,
       "resistance_30d": 81.2521953230761,
-      "as_of": "2026-09-11 22:45:21",
+      "as_of": "2026-09-12 00:00:37",
       "stale": false
     },
     "leo-token": {
@@ -1379,12 +1379,12 @@
       "rows": [
         [
           "Price vs. recent range",
-          "Near its 30-day high (~$9.42) - less room to run",
+          "Near its 30-day high (~$9.38) - less room to run",
           -1
         ],
         [
           "Crowd mood (Fear & Greed)",
-          "56/100 - crowd is greedy",
+          "63/100 - crowd is greedy",
           -1
         ],
         [
@@ -1399,7 +1399,7 @@
         ],
         [
           "Stretch from long-term average",
-          "+34.4% above its long-term average - very stretched",
+          "+32.9% above its long-term average - very stretched",
           -2
         ],
         [
@@ -1412,12 +1412,12 @@
       "id": "gatechain-token",
       "symbol": "GT",
       "name": "Gate",
-      "price": 9.42,
-      "pct_24h": 0.59332,
-      "pct_7d": 12.4,
+      "price": 9.32,
+      "pct_24h": 2.5001,
+      "pct_7d": 11.2,
       "support_30d": 6.673649191532821,
-      "resistance_30d": 9.418974293587468,
-      "as_of": "2026-09-11 22:55:17",
+      "resistance_30d": 9.38216924975626,
+      "as_of": "2026-09-12 00:00:37",
       "stale": false
     },
     "crypto-com-chain": {
@@ -1432,7 +1432,7 @@
         ],
         [
           "Crowd mood (Fear & Greed)",
-          "56/100 - crowd is greedy",
+          "63/100 - crowd is greedy",
           -1
         ],
         [
@@ -1447,7 +1447,7 @@
         ],
         [
           "Stretch from long-term average",
-          "-14.1% vs its long-term average - not stretched either way",
+          "-14.0% vs its long-term average - not stretched either way",
           0
         ],
         [
@@ -1460,12 +1460,12 @@
       "id": "crypto-com-chain",
       "symbol": "CRO",
       "name": "Cronos",
-      "price": 0.056375,
-      "pct_24h": 0.61497,
-      "pct_7d": 1.0,
+      "price": 0.056404,
+      "pct_24h": 0.89445,
+      "pct_7d": 1.2,
       "support_30d": 0.04621382085807831,
       "resistance_30d": 0.06091104752771909,
-      "as_of": "2026-09-11 18:10:25",
+      "as_of": "2026-09-12 00:00:37",
       "stale": false
     },
     "ethereum-classic": {
@@ -3293,30 +3293,28 @@
       "stale": false
     }
   },
-  "_strong_buy_state": {
-    "scanner-daily:XLM": true
-  },
+  "_strong_buy_state": {},
   "_pnl_tracker": {
     "open": {
       "1h:MNT": {
         "coin": "MNT",
         "name": "Mantle",
         "tf": "1h",
-        "entry": 0.5655,
-        "stop": 0.5602666666666667,
-        "target1": 0.5707333333333333,
-        "target2": 0.5759666666666666,
-        "opened_at": "2026-09-11T23:57:57.417640"
+        "entry": 0.568,
+        "stop": 0.5629375,
+        "target1": 0.5730624999999999,
+        "target2": 0.5781249999999999,
+        "opened_at": "2026-09-12T00:02:34.023222"
       },
       "daily:XLM": {
         "coin": "XLM",
         "name": "Stellar",
         "tf": "daily",
         "entry": 0.152173,
-        "stop": 0.14140496666666666,
-        "target1": 0.16294103333333335,
-        "target2": 0.1737090666666667,
-        "opened_at": "2026-09-11T23:57:57.417640"
+        "stop": 0.1415401,
+        "target1": 0.1628059,
+        "target2": 0.1734388,
+        "opened_at": "2026-09-12T00:02:34.023222"
       }
     },
     "resolved": [
@@ -4970,6 +4968,32 @@
         "result": "win",
         "resolved_at": "2026-09-11T23:57:57.417640",
         "exit_price": 0.17818
+      },
+      {
+        "coin": "MNT",
+        "name": "Mantle",
+        "tf": "1h",
+        "entry": 0.5655,
+        "stop": 0.5602666666666667,
+        "target1": 0.5707333333333333,
+        "target2": 0.5759666666666666,
+        "opened_at": "2026-09-11T23:57:57.417640",
+        "result": "win",
+        "resolved_at": "2026-09-12T00:02:34.023222",
+        "exit_price": 0.5819
+      },
+      {
+        "coin": "XLM",
+        "name": "Stellar",
+        "tf": "daily",
+        "entry": 0.152173,
+        "stop": 0.14140496666666666,
+        "target1": 0.16294103333333335,
+        "target2": 0.1737090666666667,
+        "opened_at": "2026-09-11T23:57:57.417640",
+        "result": "win",
+        "resolved_at": "2026-09-12T00:02:34.023222",
+        "exit_price": 0.178612
       }
     ]
   },
@@ -4977,14 +5001,14 @@
     "key": "BTC",
     "name": "Bitcoin",
     "emoji": "\u20bf",
-    "price": 77175,
+    "price": 77184,
     "high_24h": 79607,
     "low_24h": 76393,
-    "pct_24h": 0.66796,
+    "pct_24h": 0.82346,
     "pct_7d": -3.2,
     "pct_30d": 21.6,
-    "sma50": 70645.63336723195,
-    "sma200": 70015.74690983888,
+    "sma50": 70645.86751719209,
+    "sma200": 70015.80544732892,
     "support_30d": 62843.70368466329,
     "resistance_30d": 81264.70153038795,
     "mark_price": 77122.19098201,
@@ -4992,21 +5016,21 @@
     "funding_rate": 2.839e-05,
     "oi_change_pct": -3.87587439568111,
     "oi_now": 103087.835,
-    "fng_value": 56,
+    "fng_value": 63,
     "fng_class": "Greed"
   },
   "ETH": {
     "key": "ETH",
     "name": "Ethereum",
     "emoji": "\u039e",
-    "price": 2513.07,
+    "price": 2514.87,
     "high_24h": 2647.68,
     "low_24h": 2437.39,
-    "pct_24h": 3.04934,
+    "pct_24h": 3.17803,
     "pct_7d": 2.4,
     "pct_30d": 33.8,
-    "sma50": 2160.538535252601,
-    "sma200": 2051.9098149039073,
+    "sma50": 2160.563059988563,
+    "sma200": 2051.915946087898,
     "support_30d": 1874.401898191962,
     "resistance_30d": 2514.967577695514,
     "mark_price": 2515.0197907,
@@ -5014,7 +5038,7 @@
     "funding_rate": 7.82e-06,
     "oi_change_pct": 1.0740210028873554,
     "oi_now": 2330935.347,
-    "fng_value": 56,
+    "fng_value": 63,
     "fng_class": "Greed"
   }
 }
