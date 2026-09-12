@@ -789,11 +789,11 @@
       "symbol": "KCS",
       "name": "KuCoin",
       "price": 6.88,
-      "pct_24h": 0.28925,
+      "pct_24h": 0.24507,
       "pct_7d": -2.5,
       "support_30d": 6.514591596607885,
       "resistance_30d": 7.8821382735057615,
-      "as_of": "2026-09-12 03:25:17",
+      "as_of": "2026-09-12 03:40:22",
       "stale": false
     },
     "hedera-hashgraph": {
@@ -1015,7 +1015,7 @@
         ],
         [
           "Stretch from long-term average",
-          "+13.0% above its long-term average - a bit stretched",
+          "+12.8% above its long-term average - a bit stretched",
           -1
         ],
         [
@@ -1028,12 +1028,12 @@
       "id": "worldcoin-wld",
       "symbol": "WLD",
       "name": "Worldcoin",
-      "price": 0.404371,
-      "pct_24h": 2.03573,
+      "price": 0.403831,
+      "pct_24h": 1.61034,
       "pct_7d": 4.4,
       "support_30d": 0.319812298466522,
       "resistance_30d": 0.4772935995106048,
-      "as_of": "2026-09-12 03:25:17",
+      "as_of": "2026-09-12 03:40:22",
       "stale": false
     },
     "bfusd": {
@@ -2839,7 +2839,7 @@
         ],
         [
           "Stretch from long-term average",
-          "+28.5% above its long-term average - a bit stretched",
+          "+28.6% above its long-term average - a bit stretched",
           -1
         ],
         [
@@ -2852,12 +2852,12 @@
       "id": "aave",
       "symbol": "AAVE",
       "name": "Aave",
-      "price": 125.43,
-      "pct_24h": 3.37531,
+      "price": 125.51,
+      "pct_24h": 3.10298,
       "pct_7d": -3.8,
       "support_30d": 85.94219943917633,
       "resistance_30d": 141.53047916466082,
-      "as_of": "2026-09-12 03:10:24",
+      "as_of": "2026-09-12 03:40:22",
       "stale": false
     },
     "okb": {
@@ -3294,6 +3294,7 @@
     }
   },
   "_strong_buy_state": {
+    "scanner-15m:LINK": true,
     "scanner-1h:HYPE": true
   },
   "_pnl_tracker": {
@@ -3308,15 +3309,25 @@
         "target2": 80.49166666666667,
         "opened_at": "2026-09-12T01:47:24.835175"
       },
+      "15m:LINK": {
+        "coin": "LINK",
+        "name": "Chainlink",
+        "tf": "15m",
+        "entry": 11.45684,
+        "stop": 11.419076333333333,
+        "target1": 11.494603666666666,
+        "target2": 11.532367333333333,
+        "opened_at": "2026-09-12T03:42:04.718875"
+      },
       "daily:XLM": {
         "coin": "XLM",
         "name": "Stellar",
         "tf": "daily",
         "entry": 0.152173,
-        "stop": 0.14146163333333334,
-        "target1": 0.16288436666666667,
-        "target2": 0.17359573333333334,
-        "opened_at": "2026-09-12T03:37:14.186855"
+        "stop": 0.14146046666666667,
+        "target1": 0.16288553333333333,
+        "target2": 0.17359806666666666,
+        "opened_at": "2026-09-12T03:42:04.718875"
       }
     },
     "resolved": [
@@ -5815,6 +5826,19 @@
         "result": "win",
         "resolved_at": "2026-09-12T03:37:14.186855",
         "exit_price": 0.180763
+      },
+      {
+        "coin": "XLM",
+        "name": "Stellar",
+        "tf": "daily",
+        "entry": 0.152173,
+        "stop": 0.14146163333333334,
+        "target1": 0.16288436666666667,
+        "target2": 0.17359573333333334,
+        "opened_at": "2026-09-12T03:37:14.186855",
+        "result": "win",
+        "resolved_at": "2026-09-12T03:42:04.718875",
+        "exit_price": 0.18107
       }
     ]
   },
@@ -5822,14 +5846,14 @@
     "key": "BTC",
     "name": "Bitcoin",
     "emoji": "\u20bf",
-    "price": 77274,
+    "price": 77253,
     "high_24h": 79607,
     "low_24h": 76393,
-    "pct_24h": 0.68501,
+    "pct_24h": 0.54124,
     "pct_7d": -2.9,
     "pct_30d": 21.8,
-    "sma50": 70909.73427962161,
-    "sma200": 70081.86763019774,
+    "sma50": 70909.455324985,
+    "sma200": 70081.79789153859,
     "support_30d": 62843.70368466329,
     "resistance_30d": 81264.70153038795,
     "mark_price": 77122.19098201,
@@ -5844,14 +5868,14 @@
     "key": "ETH",
     "name": "Ethereum",
     "emoji": "\u039e",
-    "price": 2513.06,
+    "price": 2512.78,
     "high_24h": 2647.68,
     "low_24h": 2442.02,
-    "pct_24h": 2.92678,
+    "pct_24h": 2.75461,
     "pct_7d": 2.5,
     "pct_30d": 33.9,
-    "sma50": 2173.6072289585923,
-    "sma200": 2055.2187900270937,
+    "sma50": 2173.6048405739,
+    "sma200": 2055.218192930921,
     "support_30d": 1874.401898191962,
     "resistance_30d": 2514.967577695514,
     "mark_price": 2515.0197907,
