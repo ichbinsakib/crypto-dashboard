@@ -12,7 +12,7 @@
     },
     "eth-resistance-break": {
       "triggered": true,
-      "last_triggered_at": "2026-09-12 17:30:30"
+      "last_triggered_at": "2026-09-12 17:35:58"
     },
     "eth-support-break": {
       "triggered": false,
@@ -823,7 +823,7 @@
         ],
         [
           "Stretch from long-term average",
-          "-9.4% vs its long-term average - not stretched either way",
+          "-9.5% vs its long-term average - not stretched either way",
           0
         ],
         [
@@ -836,12 +836,12 @@
       "id": "hedera-hashgraph",
       "symbol": "HBAR",
       "name": "Hedera",
-      "price": 0.074715,
-      "pct_24h": -2.11876,
+      "price": 0.074663,
+      "pct_24h": -0.64119,
       "pct_7d": -7.2,
       "support_30d": 0.06461260477975343,
       "resistance_30d": 0.08182180696524229,
-      "as_of": "2026-09-12 15:05:20",
+      "as_of": "2026-09-12 17:35:58",
       "stale": false
     },
     "pepe": {
@@ -1855,7 +1855,7 @@
     "bitcoin-cash": {
       "label": "\ud83d\udfe1 HOLD / NEUTRAL",
       "status": "neutral",
-      "score": 0,
+      "score": -1,
       "rows": [
         [
           "Price vs. recent range",
@@ -1874,12 +1874,12 @@
         ],
         [
           "Recent trend",
-          "Chopping sideways - no clear trend",
-          0
+          "Trending down - avoid catching a falling knife",
+          -1
         ],
         [
           "Stretch from long-term average",
-          "-29.5% below its long-term average - confirmed downtrend",
+          "-30.2% below its long-term average - confirmed downtrend",
           -1
         ],
         [
@@ -1892,12 +1892,12 @@
       "id": "bitcoin-cash",
       "symbol": "BCH",
       "name": "Bitcoin Cash",
-      "price": 230.59,
-      "pct_24h": -1.59093,
-      "pct_7d": -7.5,
+      "price": 228.26,
+      "pct_24h": -1.84211,
+      "pct_7d": -9.3,
       "support_30d": 203.50169440615565,
       "resistance_30d": 288.10955405353275,
-      "as_of": "2026-09-12 14:55:19",
+      "as_of": "2026-09-12 17:35:58",
       "stale": false
     },
     "mantle": {
@@ -2839,7 +2839,7 @@
         ],
         [
           "Stretch from long-term average",
-          "+29.2% above its long-term average - a bit stretched",
+          "+28.9% above its long-term average - a bit stretched",
           -1
         ],
         [
@@ -2852,12 +2852,12 @@
       "id": "aave",
       "symbol": "AAVE",
       "name": "Aave",
-      "price": 126.14,
-      "pct_24h": -0.12013,
-      "pct_7d": -3.5,
+      "price": 125.83,
+      "pct_24h": -0.11451,
+      "pct_7d": -4.6,
       "support_30d": 85.94219943917633,
       "resistance_30d": 141.53047916466082,
-      "as_of": "2026-09-12 16:00:35",
+      "as_of": "2026-09-12 17:35:58",
       "stale": false
     },
     "okb": {
@@ -2887,7 +2887,7 @@
         ],
         [
           "Stretch from long-term average",
-          "+29.9% above its long-term average - a bit stretched",
+          "+29.1% above its long-term average - a bit stretched",
           -1
         ],
         [
@@ -2900,12 +2900,12 @@
       "id": "okb",
       "symbol": "OKB",
       "name": "OKB",
-      "price": 114.07,
-      "pct_24h": 0.71931,
-      "pct_7d": 0.1,
+      "price": 113.36,
+      "pct_24h": -0.6669,
+      "pct_7d": -0.1,
       "support_30d": 98.99707739944992,
       "resistance_30d": 115.8310797114581,
-      "as_of": "2026-09-12 15:55:19",
+      "as_of": "2026-09-12 17:35:58",
       "stale": false
     },
     "just": {
@@ -3079,7 +3079,7 @@
         ],
         [
           "Stretch from long-term average",
-          "+43.9% above its long-term average - very stretched",
+          "+40.5% above its long-term average - very stretched",
           -2
         ],
         [
@@ -3092,12 +3092,12 @@
       "id": "arbitrum",
       "symbol": "ARB",
       "name": "Arbitrum",
-      "price": 0.144205,
-      "pct_24h": -2.80848,
-      "pct_7d": 6.4,
+      "price": 0.140803,
+      "pct_24h": -2.99708,
+      "pct_7d": 7.6,
       "support_30d": 0.07272258489044682,
       "resistance_30d": 0.18933387703114857,
-      "as_of": "2026-09-12 14:30:30",
+      "as_of": "2026-09-12 17:35:58",
       "stale": false
     },
     "dash": {
@@ -3326,7 +3326,7 @@
         "stop": 0.14140733333333333,
         "target1": 0.16293866666666668,
         "target2": 0.17370433333333335,
-        "opened_at": "2026-09-12T17:32:20.900755"
+        "opened_at": "2026-09-12T17:37:04.945365"
       }
     },
     "resolved": [
@@ -9660,6 +9660,19 @@
         "result": "win",
         "resolved_at": "2026-09-12T17:32:20.900755",
         "exit_price": 0.181469
+      },
+      {
+        "coin": "XLM",
+        "name": "Stellar",
+        "tf": "daily",
+        "entry": 0.152173,
+        "stop": 0.14140733333333333,
+        "target1": 0.16293866666666668,
+        "target2": 0.17370433333333335,
+        "opened_at": "2026-09-12T17:32:20.900755",
+        "result": "win",
+        "resolved_at": "2026-09-12T17:37:04.945365",
+        "exit_price": 0.181285
       }
     ]
   },
@@ -9667,14 +9680,14 @@
     "key": "BTC",
     "name": "Bitcoin",
     "emoji": "\u20bf",
-    "price": 77271,
+    "price": 77249,
     "high_24h": 77518,
     "low_24h": 76952,
-    "pct_24h": -0.7089,
+    "pct_24h": -0.68232,
     "pct_7d": -3.1,
     "pct_30d": 22.0,
-    "sma50": 70909.80486119734,
-    "sma200": 70081.88527559167,
+    "sma50": 70909.39006804569,
+    "sma200": 70081.78157730376,
     "support_30d": 62843.70368466329,
     "resistance_30d": 81264.70153038795,
     "mark_price": 77264.9,
@@ -9689,16 +9702,16 @@
     "key": "ETH",
     "name": "Ethereum",
     "emoji": "\u039e",
-    "price": 2527.33,
+    "price": 2525.62,
     "high_24h": 2566.64,
     "low_24h": 2508.19,
-    "pct_24h": -1.89045,
+    "pct_24h": -1.93379,
     "pct_7d": 2.9,
     "pct_30d": 34.6,
-    "sma50": 2173.898882269197,
-    "sma200": 2055.2917033547446,
+    "sma50": 2173.867870338088,
+    "sma200": 2055.2839503719674,
     "support_30d": 1874.401898191962,
-    "resistance_30d": 2527.2401302837525,
+    "resistance_30d": 2525.6895337282995,
     "mark_price": 2524.73831008,
     "index_price": 2525.74674419,
     "funding_rate": 1.207e-05,
