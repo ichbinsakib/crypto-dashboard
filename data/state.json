@@ -12,7 +12,7 @@
     },
     "eth-resistance-break": {
       "triggered": true,
-      "last_triggered_at": "2026-09-12 15:50:25"
+      "last_triggered_at": "2026-09-12 15:55:19"
     },
     "eth-support-break": {
       "triggered": false,
@@ -607,12 +607,12 @@
     "monero": {
       "label": "\ud83d\udd34 DISTRIBUTION ZONE",
       "status": "bearish",
-      "score": -6,
+      "score": -5,
       "rows": [
         [
           "Price vs. recent range",
-          "Near its 30-day high (~$555.67) - less room to run",
-          -1
+          "Sitting in the middle of its 30-day range",
+          0
         ],
         [
           "Crowd mood (Fear & Greed)",
@@ -631,7 +631,7 @@
         ],
         [
           "Stretch from long-term average",
-          "+43.4% above its long-term average - very stretched",
+          "+42.7% above its long-term average - very stretched",
           -2
         ],
         [
@@ -644,12 +644,12 @@
       "id": "monero",
       "symbol": "XMR",
       "name": "Monero",
-      "price": 529.66,
-      "pct_24h": 2.41186,
-      "pct_7d": -2.8,
+      "price": 527.22,
+      "pct_24h": 2.62894,
+      "pct_7d": -2.3,
       "support_30d": 399.75959326714917,
       "resistance_30d": 555.6684591165193,
-      "as_of": "2026-09-12 14:45:24",
+      "as_of": "2026-09-12 15:55:19",
       "stale": false
     },
     "cardano": {
@@ -2119,7 +2119,7 @@
         ],
         [
           "Stretch from long-term average",
-          "+7.1% vs its long-term average - not stretched either way",
+          "+7.5% vs its long-term average - not stretched either way",
           0
         ],
         [
@@ -2132,12 +2132,12 @@
       "id": "ondo-finance",
       "symbol": "ONDO",
       "name": "Ondo",
-      "price": 0.350297,
-      "pct_24h": -3.41231,
-      "pct_7d": -6.3,
+      "price": 0.351397,
+      "pct_24h": -1.48379,
+      "pct_7d": -5.3,
       "support_30d": 0.32338181384146436,
       "resistance_30d": 0.3969475338902824,
-      "as_of": "2026-09-12 14:10:26",
+      "as_of": "2026-09-12 15:55:19",
       "stale": false
     },
     "canton-network": {
@@ -2863,7 +2863,7 @@
     "okb": {
       "label": "\ud83d\udd34 CAUTION - REDUCE NEW BUYS",
       "status": "bearish",
-      "score": -3,
+      "score": -2,
       "rows": [
         [
           "Price vs. recent range",
@@ -2887,8 +2887,8 @@
         ],
         [
           "Stretch from long-term average",
-          "+30.1% above its long-term average - very stretched",
-          -2
+          "+29.9% above its long-term average - a bit stretched",
+          -1
         ],
         [
           "Leverage traders' bias",
@@ -2900,12 +2900,12 @@
       "id": "okb",
       "symbol": "OKB",
       "name": "OKB",
-      "price": 114.22,
-      "pct_24h": 2.13797,
-      "pct_7d": 2.5,
+      "price": 114.07,
+      "pct_24h": 0.71931,
+      "pct_7d": 0.1,
       "support_30d": 98.99707739944992,
       "resistance_30d": 115.8310797114581,
-      "as_of": "2026-09-12 12:10:24",
+      "as_of": "2026-09-12 15:55:19",
       "stale": false
     },
     "just": {
@@ -3293,9 +3293,7 @@
       "stale": false
     }
   },
-  "_strong_buy_state": {
-    "scanner-15m:CC": true
-  },
+  "_strong_buy_state": {},
   "_pnl_tracker": {
     "open": {
       "1h:MNT": {
@@ -3326,7 +3324,7 @@
         "stop": 0.1414087,
         "target1": 0.1629373,
         "target2": 0.1737016,
-        "opened_at": "2026-09-12T15:52:15.670783"
+        "opened_at": "2026-09-12T15:57:09.722055"
       }
     },
     "resolved": [
@@ -9296,6 +9294,19 @@
         "result": "win",
         "resolved_at": "2026-09-12T15:52:15.670783",
         "exit_price": 0.182259
+      },
+      {
+        "coin": "XLM",
+        "name": "Stellar",
+        "tf": "daily",
+        "entry": 0.152173,
+        "stop": 0.1414087,
+        "target1": 0.1629373,
+        "target2": 0.1737016,
+        "opened_at": "2026-09-12T15:52:15.670783",
+        "result": "win",
+        "resolved_at": "2026-09-12T15:57:09.722055",
+        "exit_price": 0.182558
       }
     ]
   },
@@ -9303,14 +9314,14 @@
     "key": "BTC",
     "name": "Bitcoin",
     "emoji": "\u20bf",
-    "price": 77368,
+    "price": 77365,
     "high_24h": 78007,
     "low_24h": 76952,
-    "pct_24h": -1.47492,
+    "pct_24h": -0.54965,
     "pct_7d": -2.7,
     "pct_30d": 21.7,
-    "sma50": 70911.80225253412,
-    "sma200": 70082.38462342587,
+    "sma50": 70911.71558364238,
+    "sma200": 70082.36295620294,
     "support_30d": 62843.70368466329,
     "resistance_30d": 81264.70153038795,
     "mark_price": 77264.9,
@@ -9325,16 +9336,16 @@
     "key": "ETH",
     "name": "Ethereum",
     "emoji": "\u039e",
-    "price": 2532.35,
+    "price": 2532.62,
     "high_24h": 2580.2,
     "low_24h": 2508.19,
-    "pct_24h": -2.82463,
+    "pct_24h": -1.55116,
     "pct_7d": 3.5,
     "pct_30d": 34.5,
-    "sma50": 2174.023296153225,
-    "sma200": 2055.3228068257517,
+    "sma50": 2174.0066724599774,
+    "sma200": 2055.31865090244,
     "support_30d": 1874.401898191962,
-    "resistance_30d": 2533.4608244851374,
+    "resistance_30d": 2532.6296398227623,
     "mark_price": 2524.73831008,
     "index_price": 2525.74674419,
     "funding_rate": 1.207e-05,
