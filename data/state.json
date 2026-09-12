@@ -12,7 +12,7 @@
     },
     "eth-resistance-break": {
       "triggered": true,
-      "last_triggered_at": "2026-09-12 18:05:19"
+      "last_triggered_at": "2026-09-12 18:10:25"
     },
     "eth-support-break": {
       "triggered": false,
@@ -103,7 +103,7 @@
         ],
         [
           "Stretch from long-term average",
-          "+7.5% vs its long-term average - not stretched either way",
+          "+6.7% vs its long-term average - not stretched either way",
           0
         ],
         [
@@ -116,12 +116,12 @@
       "id": "ripple",
       "symbol": "XRP",
       "name": "XRP",
-      "price": 1.37,
-      "pct_24h": 0.65061,
+      "price": 1.36,
+      "pct_24h": 0.87851,
       "pct_7d": -3.5,
       "support_30d": 0.9927072784932938,
       "resistance_30d": 1.52050482788377,
-      "as_of": "2026-09-12 18:05:19",
+      "as_of": "2026-09-12 18:10:25",
       "stale": false
     },
     "solana": {
@@ -549,11 +549,11 @@
       "symbol": "WBT",
       "name": "WhiteBIT Coin",
       "price": 80.25,
-      "pct_24h": -0.7231,
+      "pct_24h": -0.02454,
       "pct_7d": 9.1,
       "support_30d": 54.452558710928955,
       "resistance_30d": 81.2521953230761,
-      "as_of": "2026-09-12 18:00:36",
+      "as_of": "2026-09-12 18:10:25",
       "stale": false
     },
     "leo-token": {
@@ -2263,7 +2263,7 @@
         ],
         [
           "Stretch from long-term average",
-          "-2.0% vs its long-term average - not stretched either way",
+          "-2.3% vs its long-term average - not stretched either way",
           0
         ],
         [
@@ -2276,12 +2276,12 @@
       "id": "bittensor",
       "symbol": "TAO",
       "name": "Bittensor",
-      "price": 234.25,
-      "pct_24h": -1.23537,
-      "pct_7d": -0.3,
+      "price": 233.7,
+      "pct_24h": -0.50054,
+      "pct_7d": -0.5,
       "support_30d": 190.67093053611111,
       "resistance_30d": 265.7337487161633,
-      "as_of": "2026-09-12 17:45:22",
+      "as_of": "2026-09-12 18:10:25",
       "stale": false
     },
     "the-open-network": {
@@ -3326,7 +3326,7 @@
         "stop": 0.14140733333333333,
         "target1": 0.16293866666666668,
         "target2": 0.17370433333333335,
-        "opened_at": "2026-09-12T18:07:10.673934"
+        "opened_at": "2026-09-12T18:12:17.111687"
       }
     },
     "resolved": [
@@ -9764,6 +9764,19 @@
         "result": "win",
         "resolved_at": "2026-09-12T18:07:10.673934",
         "exit_price": 0.180876
+      },
+      {
+        "coin": "XLM",
+        "name": "Stellar",
+        "tf": "daily",
+        "entry": 0.152173,
+        "stop": 0.14140733333333333,
+        "target1": 0.16293866666666668,
+        "target2": 0.17370433333333335,
+        "opened_at": "2026-09-12T18:07:10.673934",
+        "result": "win",
+        "resolved_at": "2026-09-12T18:12:17.111687",
+        "exit_price": 0.180884
       }
     ]
   },
@@ -9771,14 +9784,14 @@
     "key": "BTC",
     "name": "Bitcoin",
     "emoji": "\u20bf",
-    "price": 77179,
+    "price": 77192,
     "high_24h": 77479,
     "low_24h": 76987,
-    "pct_24h": 0.08034,
+    "pct_24h": 0.13026,
     "pct_7d": -3.6,
     "pct_30d": 22.4,
-    "sma50": 70907.97743145894,
-    "sma200": 70081.42841815708,
+    "sma50": 70908.23513642281,
+    "sma200": 70081.49284439805,
     "support_30d": 62843.70368466329,
     "resistance_30d": 81264.70153038795,
     "mark_price": 77264.9,
@@ -9793,16 +9806,16 @@
     "key": "ETH",
     "name": "Ethereum",
     "emoji": "\u039e",
-    "price": 2524.33,
+    "price": 2525.91,
     "high_24h": 2546.39,
     "low_24h": 2508.19,
-    "pct_24h": -0.96895,
+    "pct_24h": -0.59461,
     "pct_7d": 2.2,
     "pct_30d": 34.9,
-    "sma50": 2173.8478345936996,
-    "sma200": 2055.278941435871,
+    "sma50": 2173.8726035304658,
+    "sma200": 2055.285133670062,
     "support_30d": 1874.401898191962,
-    "resistance_30d": 2524.687746508882,
+    "resistance_30d": 2525.926193347174,
     "mark_price": 2524.73831008,
     "index_price": 2525.74674419,
     "funding_rate": 1.207e-05,
