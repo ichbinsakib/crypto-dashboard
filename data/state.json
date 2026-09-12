@@ -12,7 +12,7 @@
     },
     "eth-resistance-break": {
       "triggered": true,
-      "last_triggered_at": "2026-09-12 11:55:18"
+      "last_triggered_at": "2026-09-12 12:00:37"
     },
     "eth-support-break": {
       "triggered": false,
@@ -823,7 +823,7 @@
         ],
         [
           "Stretch from long-term average",
-          "-9.7% vs its long-term average - not stretched either way",
+          "-9.3% vs its long-term average - not stretched either way",
           0
         ],
         [
@@ -836,12 +836,12 @@
       "id": "hedera-hashgraph",
       "symbol": "HBAR",
       "name": "Hedera",
-      "price": 0.074451,
-      "pct_24h": -0.34245,
-      "pct_7d": -6.4,
+      "price": 0.074796,
+      "pct_24h": 1.30531,
+      "pct_7d": -7.0,
       "support_30d": 0.06461260477975343,
       "resistance_30d": 0.08182180696524229,
-      "as_of": "2026-09-12 08:35:19",
+      "as_of": "2026-09-12 12:00:37",
       "stale": false
     },
     "pepe": {
@@ -1701,11 +1701,11 @@
       "symbol": "BGB",
       "name": "Bitget Token",
       "price": 1.95,
-      "pct_24h": 0.50283,
-      "pct_7d": -2.6,
+      "pct_24h": 0.51362,
+      "pct_7d": -2.5,
       "support_30d": 1.6478040912714662,
       "resistance_30d": 2.0284940947674617,
-      "as_of": "2026-09-12 11:20:26",
+      "as_of": "2026-09-12 12:00:37",
       "stale": false
     },
     "sui": {
@@ -2276,12 +2276,12 @@
       "id": "bittensor",
       "symbol": "TAO",
       "name": "Bittensor",
-      "price": 236.62,
-      "pct_24h": 1.89061,
-      "pct_7d": 0.0,
+      "price": 236.67,
+      "pct_24h": 1.92083,
+      "pct_7d": -0.6,
       "support_30d": 190.67093053611111,
       "resistance_30d": 265.7337487161633,
-      "as_of": "2026-09-12 11:50:26",
+      "as_of": "2026-09-12 12:00:37",
       "stale": false
     },
     "the-open-network": {
@@ -3304,7 +3304,7 @@
         "stop": 0.1414087,
         "target1": 0.1629373,
         "target2": 0.1737016,
-        "opened_at": "2026-09-12T11:57:21.073120"
+        "opened_at": "2026-09-12T12:02:38.312798"
       }
     },
     "resolved": [
@@ -8234,6 +8234,19 @@
         "result": "win",
         "resolved_at": "2026-09-12T11:57:21.073120",
         "exit_price": 0.182088
+      },
+      {
+        "coin": "XLM",
+        "name": "Stellar",
+        "tf": "daily",
+        "entry": 0.152173,
+        "stop": 0.1414087,
+        "target1": 0.1629373,
+        "target2": 0.1737016,
+        "opened_at": "2026-09-12T11:57:21.073120",
+        "result": "win",
+        "resolved_at": "2026-09-12T12:02:38.312798",
+        "exit_price": 0.182192
       }
     ]
   },
@@ -8241,14 +8254,14 @@
     "key": "BTC",
     "name": "Bitcoin",
     "emoji": "\u20bf",
-    "price": 77337,
+    "price": 77339,
     "high_24h": 79607,
     "low_24h": 76393,
-    "pct_24h": 0.49927,
+    "pct_24h": 0.45582,
     "pct_7d": -2.9,
     "pct_30d": 21.3,
-    "sma50": 70911.14360812405,
-    "sma200": 70082.21996232336,
+    "sma50": 70911.18386531292,
+    "sma200": 70082.23002662057,
     "support_30d": 62843.70368466329,
     "resistance_30d": 81264.70153038795,
     "mark_price": 77264.9,
@@ -8263,16 +8276,16 @@
     "key": "ETH",
     "name": "Ethereum",
     "emoji": "\u039e",
-    "price": 2535.06,
+    "price": 2535.08,
     "high_24h": 2647.68,
     "low_24h": 2442.02,
-    "pct_24h": 3.18346,
+    "pct_24h": 3.16675,
     "pct_7d": 3.0,
     "pct_30d": 34.1,
-    "sma50": 2174.060038799433,
-    "sma200": 2055.331992487304,
+    "sma50": 2174.054197690313,
+    "sma200": 2055.330532210024,
     "support_30d": 1874.401898191962,
-    "resistance_30d": 2535.2979567955654,
+    "resistance_30d": 2535.0059013395467,
     "mark_price": 2524.73831008,
     "index_price": 2525.74674419,
     "funding_rate": 1.207e-05,
