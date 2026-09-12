@@ -12,7 +12,7 @@
     },
     "eth-resistance-break": {
       "triggered": true,
-      "last_triggered_at": "2026-09-12 19:00:35"
+      "last_triggered_at": "2026-09-12 19:05:40"
     },
     "eth-support-break": {
       "triggered": false,
@@ -727,7 +727,7 @@
         ],
         [
           "Stretch from long-term average",
-          "+3.1% vs its long-term average - not stretched either way",
+          "+2.8% vs its long-term average - not stretched either way",
           0
         ],
         [
@@ -740,12 +740,12 @@
       "id": "stellar",
       "symbol": "XLM",
       "name": "Stellar",
-      "price": 0.180904,
-      "pct_24h": 1.69948,
-      "pct_7d": -1.7,
+      "price": 0.180361,
+      "pct_24h": 1.48337,
+      "pct_7d": -2.7,
       "support_30d": 0.15472912151335613,
       "resistance_30d": 0.20181319711037435,
-      "as_of": "2026-09-12 18:15:23",
+      "as_of": "2026-09-12 19:05:40",
       "stale": false
     },
     "kucoin-shares": {
@@ -1591,7 +1591,7 @@
         ],
         [
           "Stretch from long-term average",
-          "+92.2% above its long-term average - very stretched",
+          "+95.0% above its long-term average - very stretched",
           -2
         ],
         [
@@ -1604,12 +1604,12 @@
       "id": "venice-token",
       "symbol": "VVV",
       "name": "Venice Token",
-      "price": 23.15,
-      "pct_24h": -4.60897,
-      "pct_7d": 35.3,
+      "price": 23.49,
+      "pct_24h": -2.53397,
+      "pct_7d": 35.5,
       "support_30d": 11.794592355917386,
       "resistance_30d": 25.88474946901688,
-      "as_of": "2026-09-12 17:40:24",
+      "as_of": "2026-09-12 19:05:40",
       "stale": false
     },
     "litecoin": {
@@ -1831,7 +1831,7 @@
         ],
         [
           "Stretch from long-term average",
-          "+39.6% above its long-term average - very stretched",
+          "+38.8% above its long-term average - very stretched",
           -2
         ],
         [
@@ -1844,12 +1844,12 @@
       "id": "ethena",
       "symbol": "ENA",
       "name": "Ethena",
-      "price": 0.142396,
-      "pct_24h": -3.11888,
-      "pct_7d": -12.1,
+      "price": 0.141637,
+      "pct_24h": 0.10575,
+      "pct_7d": -14.6,
       "support_30d": 0.08231050586125944,
       "resistance_30d": 0.17616469272611565,
-      "as_of": "2026-09-12 17:30:30",
+      "as_of": "2026-09-12 19:05:40",
       "stale": false
     },
     "bitcoin-cash": {
@@ -3310,11 +3310,11 @@
         "coin": "BNB",
         "name": "BNB",
         "tf": "15m",
-        "entry": 729.26,
-        "stop": 728.323,
-        "target1": 730.197,
-        "target2": 731.134,
-        "opened_at": "2026-09-12T18:47:11.091915"
+        "entry": 727.66,
+        "stop": 726.6833333333333,
+        "target1": 728.6366666666667,
+        "target2": 729.6133333333333,
+        "opened_at": "2026-09-12T19:07:31.060217"
       },
       "daily:XLM": {
         "coin": "XLM",
@@ -3324,7 +3324,7 @@
         "stop": 0.14140733333333333,
         "target1": 0.16293866666666668,
         "target2": 0.17370433333333335,
-        "opened_at": "2026-09-12T19:02:26.690074"
+        "opened_at": "2026-09-12T19:07:31.060217"
       }
     },
     "resolved": [
@@ -9918,6 +9918,32 @@
         "result": "win",
         "resolved_at": "2026-09-12T19:02:26.690074",
         "exit_price": 0.180367
+      },
+      {
+        "coin": "BNB",
+        "name": "BNB",
+        "tf": "15m",
+        "entry": 729.26,
+        "stop": 728.323,
+        "target1": 730.197,
+        "target2": 731.134,
+        "opened_at": "2026-09-12T18:47:11.091915",
+        "result": "loss",
+        "resolved_at": "2026-09-12T19:07:31.060217",
+        "exit_price": 727.7
+      },
+      {
+        "coin": "XLM",
+        "name": "Stellar",
+        "tf": "daily",
+        "entry": 0.152173,
+        "stop": 0.14140733333333333,
+        "target1": 0.16293866666666668,
+        "target2": 0.17370433333333335,
+        "opened_at": "2026-09-12T19:02:26.690074",
+        "result": "win",
+        "resolved_at": "2026-09-12T19:07:31.060217",
+        "exit_price": 0.180357
       }
     ]
   },
@@ -9925,14 +9951,14 @@
     "key": "BTC",
     "name": "Bitcoin",
     "emoji": "\u20bf",
-    "price": 77139,
+    "price": 77135,
     "high_24h": 77479,
     "low_24h": 76987,
-    "pct_24h": 0.14433,
+    "pct_24h": 0.03326,
     "pct_7d": -3.6,
-    "pct_30d": 22.4,
-    "sma50": 70907.17525013555,
-    "sma200": 70081.22787282623,
+    "pct_30d": 22.3,
+    "sma50": 70907.05693899872,
+    "sma200": 70081.19829504202,
     "support_30d": 62843.70368466329,
     "resistance_30d": 81264.70153038795,
     "mark_price": 77264.9,
@@ -9947,16 +9973,16 @@
     "key": "ETH",
     "name": "Ethereum",
     "emoji": "\u039e",
-    "price": 2521.65,
-    "high_24h": 2546.39,
+    "price": 2520.86,
+    "high_24h": 2545.61,
     "low_24h": 2508.19,
-    "pct_24h": -0.56233,
-    "pct_7d": 2.2,
-    "pct_30d": 34.9,
-    "sma50": 2173.7855665578836,
-    "sma200": 2055.2633744269165,
+    "pct_24h": -0.68512,
+    "pct_7d": 1.7,
+    "pct_30d": 34.5,
+    "sma50": 2173.7790295069794,
+    "sma200": 2055.2617401641905,
     "support_30d": 1874.401898191962,
-    "resistance_30d": 2521.5743447180807,
+    "resistance_30d": 2521.247492172867,
     "mark_price": 2524.73831008,
     "index_price": 2525.74674419,
     "funding_rate": 1.207e-05,
