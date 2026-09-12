@@ -12,7 +12,7 @@
     },
     "eth-resistance-break": {
       "triggered": true,
-      "last_triggered_at": "2026-09-12 15:25:18"
+      "last_triggered_at": "2026-09-12 15:30:30"
     },
     "eth-support-break": {
       "triggered": false,
@@ -775,7 +775,7 @@
         ],
         [
           "Stretch from long-term average",
-          "-9.7% vs its long-term average - not stretched either way",
+          "-9.5% vs its long-term average - not stretched either way",
           0
         ],
         [
@@ -788,12 +788,12 @@
       "id": "kucoin-shares",
       "symbol": "KCS",
       "name": "KuCoin",
-      "price": 6.91,
-      "pct_24h": -1.16981,
-      "pct_7d": -2.6,
+      "price": 6.92,
+      "pct_24h": -3.34429,
+      "pct_7d": -2.8,
       "support_30d": 6.514591596607885,
       "resistance_30d": 7.8821382735057615,
-      "as_of": "2026-09-12 13:30:30",
+      "as_of": "2026-09-12 15:30:30",
       "stale": false
     },
     "hedera-hashgraph": {
@@ -1591,7 +1591,7 @@
         ],
         [
           "Stretch from long-term average",
-          "+91.8% above its long-term average - very stretched",
+          "+94.7% above its long-term average - very stretched",
           -2
         ],
         [
@@ -1604,12 +1604,12 @@
       "id": "venice-token",
       "symbol": "VVV",
       "name": "Venice Token",
-      "price": 23.1,
-      "pct_24h": -11.40893,
-      "pct_7d": 30.8,
+      "price": 23.45,
+      "pct_24h": -8.39047,
+      "pct_7d": 32.2,
       "support_30d": 11.794592355917386,
       "resistance_30d": 25.88474946901688,
-      "as_of": "2026-09-12 13:25:23",
+      "as_of": "2026-09-12 15:30:30",
       "stale": false
     },
     "litecoin": {
@@ -1805,9 +1805,9 @@
       "stale": false
     },
     "ethena": {
-      "label": "\ud83d\udd34 CAUTION - REDUCE NEW BUYS",
+      "label": "\ud83d\udd34 DISTRIBUTION ZONE",
       "status": "bearish",
-      "score": -3,
+      "score": -6,
       "rows": [
         [
           "Price vs. recent range",
@@ -1821,8 +1821,8 @@
         ],
         [
           "Market phase (best guess)",
-          "Established uptrend - phase where price marks up",
-          1
+          "Very extended after a big run - phase where smart money sells",
+          -2
         ],
         [
           "Recent trend",
@@ -1831,7 +1831,7 @@
         ],
         [
           "Stretch from long-term average",
-          "+38.9% above its long-term average - very stretched",
+          "+40.3% above its long-term average - very stretched",
           -2
         ],
         [
@@ -1840,16 +1840,16 @@
           0
         ]
       ],
-      "plain": "Getting risky - I'd hold off on new buys until this cools down.",
+      "plain": "Looks stretched and euphoric - historically the zone where smart money sells, not buys.",
       "id": "ethena",
       "symbol": "ENA",
       "name": "Ethena",
-      "price": 0.141674,
-      "pct_24h": -8.39519,
-      "pct_7d": -14.6,
+      "price": 0.143099,
+      "pct_24h": -6.53446,
+      "pct_7d": -12.7,
       "support_30d": 0.08231050586125944,
       "resistance_30d": 0.17616469272611565,
-      "as_of": "2026-09-12 14:22:53",
+      "as_of": "2026-09-12 15:30:30",
       "stale": false
     },
     "bitcoin-cash": {
@@ -3293,7 +3293,9 @@
       "stale": false
     }
   },
-  "_strong_buy_state": {},
+  "_strong_buy_state": {
+    "scanner-15m:CC": true
+  },
   "_pnl_tracker": {
     "open": {
       "1h:MNT": {
@@ -3324,7 +3326,7 @@
         "stop": 0.1414087,
         "target1": 0.1629373,
         "target2": 0.1737016,
-        "opened_at": "2026-09-12T15:27:09.349935"
+        "opened_at": "2026-09-12T15:32:21.762332"
       }
     },
     "resolved": [
@@ -9229,6 +9231,19 @@
         "result": "win",
         "resolved_at": "2026-09-12T15:27:09.349935",
         "exit_price": 0.181727
+      },
+      {
+        "coin": "XLM",
+        "name": "Stellar",
+        "tf": "daily",
+        "entry": 0.152173,
+        "stop": 0.1414087,
+        "target1": 0.1629373,
+        "target2": 0.1737016,
+        "opened_at": "2026-09-12T15:27:09.349935",
+        "result": "win",
+        "resolved_at": "2026-09-12T15:32:21.762332",
+        "exit_price": 0.181808
       }
     ]
   },
@@ -9236,14 +9251,14 @@
     "key": "BTC",
     "name": "Bitcoin",
     "emoji": "\u20bf",
-    "price": 77424,
+    "price": 77456,
     "high_24h": 78007,
     "low_24h": 76952,
-    "pct_24h": -1.58747,
+    "pct_24h": -1.58499,
     "pct_7d": -2.7,
     "pct_30d": 21.7,
-    "sma50": 70912.8640843025,
-    "sma200": 70082.65008136797,
+    "sma50": 70913.5124467785,
+    "sma200": 70082.81217198697,
     "support_30d": 62843.70368466329,
     "resistance_30d": 81264.70153038795,
     "mark_price": 77264.9,
@@ -9258,16 +9273,16 @@
     "key": "ETH",
     "name": "Ethereum",
     "emoji": "\u039e",
-    "price": 2539.94,
+    "price": 2540.74,
     "high_24h": 2580.2,
     "low_24h": 2508.19,
-    "pct_24h": -2.80479,
+    "pct_24h": -2.69002,
     "pct_7d": 3.5,
     "pct_30d": 34.5,
-    "sma50": 2174.1527913125847,
-    "sma200": 2055.355180615592,
+    "sma50": 2174.1657822764028,
+    "sma200": 2055.358428356546,
     "support_30d": 1874.401898191962,
-    "resistance_30d": 2539.935582453126,
+    "resistance_30d": 2540.5851306440395,
     "mark_price": 2524.73831008,
     "index_price": 2525.74674419,
     "funding_rate": 1.207e-05,
