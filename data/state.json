@@ -836,12 +836,12 @@
       "id": "hedera-hashgraph",
       "symbol": "HBAR",
       "name": "Hedera",
-      "price": 0.074592,
-      "pct_24h": -0.87282,
+      "price": 0.074647,
+      "pct_24h": -0.30694,
       "pct_7d": -5.5,
       "support_30d": 0.06461260477975343,
       "resistance_30d": 0.08182180696524229,
-      "as_of": "2026-09-12 02:15:21",
+      "as_of": "2026-09-12 03:10:24",
       "stale": false
     },
     "pepe": {
@@ -2824,7 +2824,7 @@
         ],
         [
           "Crowd mood (Fear & Greed)",
-          "56/100 - crowd is greedy",
+          "63/100 - crowd is greedy",
           -1
         ],
         [
@@ -2839,7 +2839,7 @@
         ],
         [
           "Stretch from long-term average",
-          "+28.0% above its long-term average - a bit stretched",
+          "+28.5% above its long-term average - a bit stretched",
           -1
         ],
         [
@@ -2852,18 +2852,18 @@
       "id": "aave",
       "symbol": "AAVE",
       "name": "Aave",
-      "price": 124.9,
-      "pct_24h": 1.61466,
-      "pct_7d": -4.7,
+      "price": 125.43,
+      "pct_24h": 3.37531,
+      "pct_7d": -3.8,
       "support_30d": 85.94219943917633,
       "resistance_30d": 141.53047916466082,
-      "as_of": "2026-09-11 21:05:20",
+      "as_of": "2026-09-12 03:10:24",
       "stale": false
     },
     "okb": {
       "label": "\ud83d\udd34 CAUTION - REDUCE NEW BUYS",
       "status": "bearish",
-      "score": -2,
+      "score": -3,
       "rows": [
         [
           "Price vs. recent range",
@@ -2887,8 +2887,8 @@
         ],
         [
           "Stretch from long-term average",
-          "+29.4% above its long-term average - a bit stretched",
-          -1
+          "+30.9% above its long-term average - very stretched",
+          -2
         ],
         [
           "Leverage traders' bias",
@@ -2900,12 +2900,12 @@
       "id": "okb",
       "symbol": "OKB",
       "name": "OKB",
-      "price": 113.57,
-      "pct_24h": 4.22878,
-      "pct_7d": 5.0,
+      "price": 114.93,
+      "pct_24h": 5.44642,
+      "pct_7d": 5.1,
       "support_30d": 98.99707739944992,
       "resistance_30d": 115.8310797114581,
-      "as_of": "2026-09-12 01:35:20",
+      "as_of": "2026-09-12 03:10:24",
       "stale": false
     },
     "just": {
@@ -3313,10 +3313,10 @@
         "name": "Stellar",
         "tf": "daily",
         "entry": 0.152173,
-        "stop": 0.1414684,
-        "target1": 0.1628776,
-        "target2": 0.17358220000000002,
-        "opened_at": "2026-09-12T03:07:17.968808"
+        "stop": 0.14146493333333335,
+        "target1": 0.16288106666666666,
+        "target2": 0.1735891333333333,
+        "opened_at": "2026-09-12T03:12:19.916931"
       }
     },
     "resolved": [
@@ -5737,6 +5737,19 @@
         "result": "win",
         "resolved_at": "2026-09-12T03:07:17.968808",
         "exit_price": 0.180558
+      },
+      {
+        "coin": "XLM",
+        "name": "Stellar",
+        "tf": "daily",
+        "entry": 0.152173,
+        "stop": 0.1414684,
+        "target1": 0.1628776,
+        "target2": 0.17358220000000002,
+        "opened_at": "2026-09-12T03:07:17.968808",
+        "result": "win",
+        "resolved_at": "2026-09-12T03:12:19.916931",
+        "exit_price": 0.180938
       }
     ]
   },
@@ -5744,14 +5757,14 @@
     "key": "BTC",
     "name": "Bitcoin",
     "emoji": "\u20bf",
-    "price": 77237,
+    "price": 77278,
     "high_24h": 79607,
     "low_24h": 76393,
-    "pct_24h": 0.60712,
+    "pct_24h": 0.72824,
     "pct_7d": -2.9,
     "pct_30d": 21.8,
-    "sma50": 70909.23641561145,
-    "sma200": 70081.7431641952,
+    "sma50": 70909.95658770722,
+    "sma200": 70081.92320721914,
     "support_30d": 62843.70368466329,
     "resistance_30d": 81264.70153038795,
     "mark_price": 77122.19098201,
@@ -5766,14 +5779,14 @@
     "key": "ETH",
     "name": "Ethereum",
     "emoji": "\u039e",
-    "price": 2512.27,
+    "price": 2513.27,
     "high_24h": 2647.68,
     "low_24h": 2442.02,
-    "pct_24h": 2.7838,
+    "pct_24h": 2.90825,
     "pct_7d": 2.5,
     "pct_30d": 33.9,
-    "sma50": 2173.60240118245,
-    "sma200": 2055.2175830830583,
+    "sma50": 2173.6134797305194,
+    "sma200": 2055.2203527200754,
     "support_30d": 1874.401898191962,
     "resistance_30d": 2514.967577695514,
     "mark_price": 2515.0197907,
