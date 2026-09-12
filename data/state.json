@@ -12,7 +12,7 @@
     },
     "eth-resistance-break": {
       "triggered": true,
-      "last_triggered_at": "2026-09-12 18:35:20"
+      "last_triggered_at": "2026-09-12 18:40:22"
     },
     "eth-support-break": {
       "triggered": false,
@@ -919,7 +919,7 @@
         ],
         [
           "Stretch from long-term average",
-          "-7.8% vs its long-term average - not stretched either way",
+          "-8.0% vs its long-term average - not stretched either way",
           0
         ],
         [
@@ -932,12 +932,12 @@
       "id": "avalanche-2",
       "symbol": "AVAX",
       "name": "Avalanche",
-      "price": 7.41,
-      "pct_24h": -2.43041,
-      "pct_7d": -1.6,
+      "price": 7.39,
+      "pct_24h": -1.28908,
+      "pct_7d": -2.1,
       "support_30d": 6.323978670940332,
       "resistance_30d": 8.074275746115342,
-      "as_of": "2026-09-12 16:50:26",
+      "as_of": "2026-09-12 18:40:22",
       "stale": false
     },
     "aster-2": {
@@ -1495,7 +1495,7 @@
         ],
         [
           "Stretch from long-term average",
-          "-1.5% vs its long-term average - not stretched either way",
+          "-1.6% vs its long-term average - not stretched either way",
           0
         ],
         [
@@ -1508,12 +1508,12 @@
       "id": "ethereum-classic",
       "symbol": "ETC",
       "name": "Ethereum Classic",
-      "price": 7.7,
-      "pct_24h": 0.80246,
+      "price": 7.69,
+      "pct_24h": 0.72177,
       "pct_7d": -0.1,
       "support_30d": 6.079473341192034,
       "resistance_30d": 8.609781284223262,
-      "as_of": "2026-09-12 18:25:17",
+      "as_of": "2026-09-12 18:40:22",
       "stale": false
     },
     "pump-fun": {
@@ -1711,7 +1711,7 @@
     "sui": {
       "label": "\ud83d\udfe1 HOLD / NEUTRAL",
       "status": "neutral",
-      "score": 0,
+      "score": -1,
       "rows": [
         [
           "Price vs. recent range",
@@ -1735,8 +1735,8 @@
         ],
         [
           "Stretch from long-term average",
-          "-14.7% vs its long-term average - not stretched either way",
-          0
+          "-15.0% below its long-term average - confirmed downtrend",
+          -1
         ],
         [
           "Leverage traders' bias",
@@ -1748,12 +1748,12 @@
       "id": "sui",
       "symbol": "SUI",
       "name": "Sui",
-      "price": 0.725757,
-      "pct_24h": -3.7273,
-      "pct_7d": -9.4,
+      "price": 0.722845,
+      "pct_24h": -0.56435,
+      "pct_7d": -9.2,
       "support_30d": 0.6514311908607086,
       "resistance_30d": 0.8499161763231283,
-      "as_of": "2026-09-12 14:15:23",
+      "as_of": "2026-09-12 18:40:22",
       "stale": false
     },
     "lighter": {
@@ -3326,7 +3326,7 @@
         "stop": 0.14140733333333333,
         "target1": 0.16293866666666668,
         "target2": 0.17370433333333335,
-        "opened_at": "2026-09-12T18:37:11.487456"
+        "opened_at": "2026-09-12T18:42:13.378902"
       }
     },
     "resolved": [
@@ -9842,6 +9842,19 @@
         "result": "win",
         "resolved_at": "2026-09-12T18:37:11.487456",
         "exit_price": 0.180548
+      },
+      {
+        "coin": "XLM",
+        "name": "Stellar",
+        "tf": "daily",
+        "entry": 0.152173,
+        "stop": 0.14140733333333333,
+        "target1": 0.16293866666666668,
+        "target2": 0.17370433333333335,
+        "opened_at": "2026-09-12T18:37:11.487456",
+        "result": "win",
+        "resolved_at": "2026-09-12T18:42:13.378902",
+        "exit_price": 0.180619
       }
     ]
   },
@@ -9849,14 +9862,14 @@
     "key": "BTC",
     "name": "Bitcoin",
     "emoji": "\u20bf",
-    "price": 77153,
+    "price": 77154,
     "high_24h": 77479,
     "low_24h": 76987,
-    "pct_24h": -0.08781,
+    "pct_24h": -0.06706,
     "pct_7d": -3.6,
     "pct_30d": 22.4,
-    "sma50": 70907.45120565475,
-    "sma200": 70081.29686170603,
+    "sma50": 70907.47584813555,
+    "sma200": 70081.30302232623,
     "support_30d": 62843.70368466329,
     "resistance_30d": 81264.70153038795,
     "mark_price": 77264.9,
@@ -9871,16 +9884,16 @@
     "key": "ETH",
     "name": "Ethereum",
     "emoji": "\u039e",
-    "price": 2523.86,
+    "price": 2524.47,
     "high_24h": 2546.39,
     "low_24h": 2508.19,
-    "pct_24h": -0.83132,
+    "pct_24h": -0.8019,
     "pct_7d": 2.2,
     "pct_30d": 34.9,
-    "sma50": 2173.8319598966673,
-    "sma200": 2055.2749727616124,
+    "sma50": 2173.8448223761934,
+    "sma200": 2055.278188381494,
     "support_30d": 1874.401898191962,
-    "resistance_30d": 2523.8940116572553,
+    "resistance_30d": 2524.5371356335604,
     "mark_price": 2524.73831008,
     "index_price": 2525.74674419,
     "funding_rate": 1.207e-05,
