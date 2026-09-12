@@ -12,7 +12,7 @@
     },
     "eth-resistance-break": {
       "triggered": true,
-      "last_triggered_at": "2026-09-12 18:10:25"
+      "last_triggered_at": "2026-09-12 18:15:23"
     },
     "eth-support-break": {
       "triggered": false,
@@ -391,7 +391,7 @@
         ],
         [
           "Stretch from long-term average",
-          "+139.5% above its long-term average - very stretched",
+          "+137.9% above its long-term average - very stretched",
           -2
         ],
         [
@@ -404,12 +404,12 @@
       "id": "zcash",
       "symbol": "ZEC",
       "name": "Zcash",
-      "price": 1142.06,
-      "pct_24h": -3.53883,
-      "pct_7d": 12.3,
+      "price": 1134.55,
+      "pct_24h": -3.41323,
+      "pct_7d": 10.0,
       "support_30d": 486.1425018309512,
       "resistance_30d": 1244.287571383468,
-      "as_of": "2026-09-12 17:10:24",
+      "as_of": "2026-09-12 18:15:23",
       "stale": false
     },
     "rain": {
@@ -727,7 +727,7 @@
         ],
         [
           "Stretch from long-term average",
-          "+3.3% vs its long-term average - not stretched either way",
+          "+3.1% vs its long-term average - not stretched either way",
           0
         ],
         [
@@ -740,12 +740,12 @@
       "id": "stellar",
       "symbol": "XLM",
       "name": "Stellar",
-      "price": 0.181133,
-      "pct_24h": -0.65947,
-      "pct_7d": -1.2,
+      "price": 0.180904,
+      "pct_24h": 1.69948,
+      "pct_7d": -1.7,
       "support_30d": 0.15472912151335613,
       "resistance_30d": 0.20181319711037435,
-      "as_of": "2026-09-12 15:00:35",
+      "as_of": "2026-09-12 18:15:23",
       "stale": false
     },
     "kucoin-shares": {
@@ -2325,11 +2325,11 @@
       "symbol": "GRAM",
       "name": "Gram (prev. Toncoin)",
       "price": 1.38,
-      "pct_24h": 1.40937,
-      "pct_7d": -3.1,
+      "pct_24h": 1.99819,
+      "pct_7d": -2.9,
       "support_30d": 1.3170990455791696,
       "resistance_30d": 1.4926762805297678,
-      "as_of": "2026-09-12 17:50:27",
+      "as_of": "2026-09-12 18:15:23",
       "stale": false
     },
     "sky": {
@@ -3326,7 +3326,7 @@
         "stop": 0.14140733333333333,
         "target1": 0.16293866666666668,
         "target2": 0.17370433333333335,
-        "opened_at": "2026-09-12T18:12:17.111687"
+        "opened_at": "2026-09-12T18:17:14.077711"
       }
     },
     "resolved": [
@@ -9777,6 +9777,19 @@
         "result": "win",
         "resolved_at": "2026-09-12T18:12:17.111687",
         "exit_price": 0.180884
+      },
+      {
+        "coin": "XLM",
+        "name": "Stellar",
+        "tf": "daily",
+        "entry": 0.152173,
+        "stop": 0.14140733333333333,
+        "target1": 0.16293866666666668,
+        "target2": 0.17370433333333335,
+        "opened_at": "2026-09-12T18:12:17.111687",
+        "result": "win",
+        "resolved_at": "2026-09-12T18:17:14.077711",
+        "exit_price": 0.180631
       }
     ]
   },
@@ -9784,14 +9797,14 @@
     "key": "BTC",
     "name": "Bitcoin",
     "emoji": "\u20bf",
-    "price": 77192,
+    "price": 77179,
     "high_24h": 77479,
     "low_24h": 76987,
-    "pct_24h": 0.13026,
+    "pct_24h": 0.23058,
     "pct_7d": -3.6,
     "pct_30d": 22.4,
-    "sma50": 70908.23513642281,
-    "sma200": 70081.49284439805,
+    "sma50": 70907.98763327925,
+    "sma200": 70081.43096861216,
     "support_30d": 62843.70368466329,
     "resistance_30d": 81264.70153038795,
     "mark_price": 77264.9,
@@ -9806,16 +9819,16 @@
     "key": "ETH",
     "name": "Ethereum",
     "emoji": "\u039e",
-    "price": 2525.91,
+    "price": 2524.96,
     "high_24h": 2546.39,
     "low_24h": 2508.19,
-    "pct_24h": -0.59461,
+    "pct_24h": -0.4739,
     "pct_7d": 2.2,
     "pct_30d": 34.9,
-    "sma50": 2173.8726035304658,
-    "sma200": 2055.285133670062,
+    "sma50": 2173.852825289,
+    "sma200": 2055.2801891096956,
     "support_30d": 1874.401898191962,
-    "resistance_30d": 2525.926193347174,
+    "resistance_30d": 2524.9372812739034,
     "mark_price": 2524.73831008,
     "index_price": 2525.74674419,
     "funding_rate": 1.207e-05,
