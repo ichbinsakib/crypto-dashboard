@@ -12,7 +12,7 @@
     },
     "eth-resistance-break": {
       "triggered": true,
-      "last_triggered_at": "2026-09-13 03:10:23"
+      "last_triggered_at": "2026-09-13 03:15:21"
     },
     "eth-support-break": {
       "triggered": false,
@@ -919,7 +919,7 @@
         ],
         [
           "Stretch from long-term average",
-          "-7.9% vs its long-term average - not stretched either way",
+          "-7.6% vs its long-term average - not stretched either way",
           0
         ],
         [
@@ -932,12 +932,12 @@
       "id": "avalanche-2",
       "symbol": "AVAX",
       "name": "Avalanche",
-      "price": 7.39,
-      "pct_24h": -0.89428,
-      "pct_7d": -2.7,
+      "price": 7.41,
+      "pct_24h": -0.56118,
+      "pct_7d": -3.8,
       "support_30d": 6.323978670940332,
       "resistance_30d": 8.074275746115342,
-      "as_of": "2026-09-13 00:45:23",
+      "as_of": "2026-09-13 03:15:21",
       "stale": false
     },
     "aster-2": {
@@ -1317,11 +1317,11 @@
       "symbol": "HTX",
       "name": "HTX DAO",
       "price": 1.7e-06,
-      "pct_24h": 0.54674,
+      "pct_24h": 0.32273,
       "pct_7d": 0.8,
       "support_30d": 1.6023985995039954e-06,
       "resistance_30d": 1.7941245244644948e-06,
-      "as_of": "2026-09-13 02:55:18",
+      "as_of": "2026-09-13 03:15:21",
       "stale": false
     },
     "superstate-short-duration-us-government-securities-fund-ustb": {
@@ -2647,7 +2647,7 @@
         ],
         [
           "Stretch from long-term average",
-          "-17.9% below its long-term average - confirmed downtrend",
+          "-18.1% below its long-term average - confirmed downtrend",
           -1
         ],
         [
@@ -2660,12 +2660,12 @@
       "id": "world-liberty-financial",
       "symbol": "WLFI",
       "name": "World Liberty Financial",
-      "price": 0.057175,
-      "pct_24h": 5.09136,
-      "pct_7d": -0.9,
+      "price": 0.057009,
+      "pct_24h": 5.00591,
+      "pct_7d": -0.4,
       "support_30d": 0.05526589948255966,
       "resistance_30d": 0.06254770952093733,
-      "as_of": "2026-09-13 02:55:18",
+      "as_of": "2026-09-13 03:15:21",
       "stale": false
     },
     "pax-gold": {
@@ -3293,7 +3293,9 @@
       "stale": false
     }
   },
-  "_strong_buy_state": {},
+  "_strong_buy_state": {
+    "scanner-1h:WLD": true
+  },
   "_pnl_tracker": {
     "open": {
       "1h:WLD": {
@@ -3311,10 +3313,10 @@
         "name": "BNB",
         "tf": "15m",
         "entry": 725.3,
-        "stop": 724.5176666666666,
-        "target1": 726.0823333333333,
-        "target2": 726.8646666666666,
-        "opened_at": "2026-09-13T03:12:15.473596"
+        "stop": 724.5473333333333,
+        "target1": 726.0526666666666,
+        "target2": 726.8053333333332,
+        "opened_at": "2026-09-13T03:17:12.022322"
       },
       "daily:XLM": {
         "coin": "XLM",
@@ -3324,7 +3326,7 @@
         "stop": 0.14152783333333332,
         "target1": 0.16281816666666668,
         "target2": 0.17346333333333336,
-        "opened_at": "2026-09-13T03:12:15.473596"
+        "opened_at": "2026-09-13T03:17:12.022322"
       }
     },
     "resolved": [
@@ -11816,6 +11818,32 @@
         "result": "win",
         "resolved_at": "2026-09-13T03:12:15.473596",
         "exit_price": 0.180299
+      },
+      {
+        "coin": "BNB",
+        "name": "BNB",
+        "tf": "15m",
+        "entry": 725.3,
+        "stop": 724.5176666666666,
+        "target1": 726.0823333333333,
+        "target2": 726.8646666666666,
+        "opened_at": "2026-09-13T03:12:15.473596",
+        "result": "win",
+        "resolved_at": "2026-09-13T03:17:12.022322",
+        "exit_price": 727.55
+      },
+      {
+        "coin": "XLM",
+        "name": "Stellar",
+        "tf": "daily",
+        "entry": 0.152173,
+        "stop": 0.14152783333333332,
+        "target1": 0.16281816666666668,
+        "target2": 0.17346333333333336,
+        "opened_at": "2026-09-13T03:12:15.473596",
+        "result": "win",
+        "resolved_at": "2026-09-13T03:17:12.022322",
+        "exit_price": 0.179885
       }
     ]
   },
@@ -11823,14 +11851,14 @@
     "key": "BTC",
     "name": "Bitcoin",
     "emoji": "\u20bf",
-    "price": 77272,
+    "price": 77281,
     "high_24h": 77479,
     "low_24h": 77055,
-    "pct_24h": 0.0018,
+    "pct_24h": 0.01669,
     "pct_7d": -3.4,
     "pct_30d": 21.7,
-    "sma50": 71168.70168730736,
-    "sma200": 70128.95018206105,
+    "sma50": 71168.7562319869,
+    "sma200": 70128.96381823094,
     "support_30d": 62843.70368466329,
     "resistance_30d": 81264.70153038795,
     "mark_price": 77158.0,
@@ -11845,14 +11873,14 @@
     "key": "ETH",
     "name": "Ethereum",
     "emoji": "\u039e",
-    "price": 2520.01,
+    "price": 2520.62,
     "high_24h": 2543.69,
     "low_24h": 2509.99,
-    "pct_24h": 0.26044,
+    "pct_24h": 0.27648,
     "pct_7d": 0.6,
     "pct_30d": 33.6,
-    "sma50": 2186.77017106993,
-    "sma200": 2057.6163232764115,
+    "sma50": 2186.7761362757524,
+    "sma200": 2057.617814577867,
     "support_30d": 1874.401898191962,
     "resistance_30d": 2525.267261590238,
     "mark_price": 2521.71641085,
