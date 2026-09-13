@@ -12,7 +12,7 @@
     },
     "eth-resistance-break": {
       "triggered": true,
-      "last_triggered_at": "2026-09-13 01:10:22"
+      "last_triggered_at": "2026-09-13 01:15:21"
     },
     "eth-support-break": {
       "triggered": false,
@@ -29,18 +29,18 @@
   },
   "_screener": {
     "binancecoin": {
-      "label": "\ud83d\udfe1 HOLD / NEUTRAL",
-      "status": "neutral",
-      "score": -1,
+      "label": "\ud83d\udd34 CAUTION - REDUCE NEW BUYS",
+      "status": "bearish",
+      "score": -2,
       "rows": [
         [
           "Price vs. recent range",
-          "Sitting in the middle of its 30-day range",
-          0
+          "Near its 30-day high (~$766.41) - less room to run",
+          -1
         ],
         [
           "Crowd mood (Fear & Greed)",
-          "63/100 - crowd is greedy",
+          "61/100 - crowd is greedy",
           -1
         ],
         [
@@ -55,7 +55,7 @@
         ],
         [
           "Stretch from long-term average",
-          "+16.3% above its long-term average - a bit stretched",
+          "+16.5% above its long-term average - a bit stretched",
           -1
         ],
         [
@@ -64,16 +64,16 @@
           0
         ]
       ],
-      "plain": "No real edge either way right now - fine to just wait and watch.",
+      "plain": "Getting risky - I'd hold off on new buys until this cools down.",
       "id": "binancecoin",
       "symbol": "BNB",
       "name": "BNB",
-      "price": 726.29,
-      "pct_24h": 0.17716,
-      "pct_7d": -6.5,
+      "price": 728.61,
+      "pct_24h": 0.04699,
+      "pct_7d": -5.1,
       "support_30d": 602.4629221231862,
       "resistance_30d": 766.4092879330625,
-      "as_of": "2026-09-12 20:55:30",
+      "as_of": "2026-09-13 01:15:21",
       "stale": false
     },
     "ripple": {
@@ -356,12 +356,12 @@
       "id": "dogecoin",
       "symbol": "DOGE",
       "name": "Dogecoin",
-      "price": 0.084813,
-      "pct_24h": 0.69295,
-      "pct_7d": -5.8,
+      "price": 0.08485,
+      "pct_24h": 0.48421,
+      "pct_7d": -5.4,
       "support_30d": 0.06952870548515376,
       "resistance_30d": 0.09337940032634065,
-      "as_of": "2026-09-13 00:55:18",
+      "as_of": "2026-09-13 01:15:21",
       "stale": false
     },
     "zcash": {
@@ -520,7 +520,7 @@
         ],
         [
           "Crowd mood (Fear & Greed)",
-          "63/100 - crowd is greedy",
+          "61/100 - crowd is greedy",
           -1
         ],
         [
@@ -535,7 +535,7 @@
         ],
         [
           "Stretch from long-term average",
-          "+42.1% above its long-term average - very stretched",
+          "+41.7% above its long-term average - very stretched",
           -2
         ],
         [
@@ -548,12 +548,12 @@
       "id": "whitebit",
       "symbol": "WBT",
       "name": "WhiteBIT Coin",
-      "price": 80.29,
-      "pct_24h": -0.16489,
-      "pct_7d": 9.2,
+      "price": 80.28,
+      "pct_24h": 0.05284,
+      "pct_7d": 9.3,
       "support_30d": 54.452558710928955,
       "resistance_30d": 81.2521953230761,
-      "as_of": "2026-09-12 21:40:28",
+      "as_of": "2026-09-13 01:15:21",
       "stale": false
     },
     "leo-token": {
@@ -3311,10 +3311,10 @@
         "name": "BNB",
         "tf": "15m",
         "entry": 724.81,
-        "stop": 723.9449999999999,
-        "target1": 725.675,
-        "target2": 726.54,
-        "opened_at": "2026-09-13T01:12:13.437977"
+        "stop": 723.9686666666666,
+        "target1": 725.6513333333332,
+        "target2": 726.4926666666665,
+        "opened_at": "2026-09-13T01:17:11.488763"
       },
       "daily:XLM": {
         "coin": "XLM",
@@ -3324,7 +3324,7 @@
         "stop": 0.1415441,
         "target1": 0.1628019,
         "target2": 0.1734308,
-        "opened_at": "2026-09-13T01:12:13.437977"
+        "opened_at": "2026-09-13T01:17:11.488763"
       }
     },
     "resolved": [
@@ -11192,6 +11192,32 @@
         "result": "win",
         "resolved_at": "2026-09-13T01:12:13.437977",
         "exit_price": 0.180273
+      },
+      {
+        "coin": "BNB",
+        "name": "BNB",
+        "tf": "15m",
+        "entry": 724.81,
+        "stop": 723.9449999999999,
+        "target1": 725.675,
+        "target2": 726.54,
+        "opened_at": "2026-09-13T01:12:13.437977",
+        "result": "win",
+        "resolved_at": "2026-09-13T01:17:11.488763",
+        "exit_price": 728.59
+      },
+      {
+        "coin": "XLM",
+        "name": "Stellar",
+        "tf": "daily",
+        "entry": 0.152173,
+        "stop": 0.1415441,
+        "target1": 0.1628019,
+        "target2": 0.1734308,
+        "opened_at": "2026-09-13T01:12:13.437977",
+        "result": "win",
+        "resolved_at": "2026-09-13T01:17:11.488763",
+        "exit_price": 0.180057
       }
     ]
   },
@@ -11199,14 +11225,14 @@
     "key": "BTC",
     "name": "Bitcoin",
     "emoji": "\u20bf",
-    "price": 77253,
+    "price": 77263,
     "high_24h": 77479,
     "low_24h": 77055,
-    "pct_24h": -0.08827,
+    "pct_24h": -0.10599,
     "pct_7d": -3.2,
     "pct_30d": 21.8,
-    "sma50": 71168.34457475174,
-    "sma200": 70128.86090392215,
+    "sma50": 71168.62081206645,
+    "sma200": 70128.92996325082,
     "support_30d": 62843.70368466329,
     "resistance_30d": 81264.70153038795,
     "mark_price": 77158.0,
@@ -11221,14 +11247,14 @@
     "key": "ETH",
     "name": "Ethereum",
     "emoji": "\u039e",
-    "price": 2524.01,
+    "price": 2524.68,
     "high_24h": 2543.69,
     "low_24h": 2509.99,
-    "pct_24h": 0.37858,
+    "pct_24h": 0.39322,
     "pct_7d": 1.8,
     "pct_30d": 34.0,
-    "sma50": 2186.8503989062906,
-    "sma200": 2057.6363802355017,
+    "sma50": 2186.8467040597384,
+    "sma200": 2057.635456523864,
     "support_30d": 1874.401898191962,
     "resistance_30d": 2525.267261590238,
     "mark_price": 2521.71641085,
