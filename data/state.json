@@ -12,7 +12,7 @@
     },
     "eth-resistance-break": {
       "triggered": true,
-      "last_triggered_at": "2026-09-13 05:25:21"
+      "last_triggered_at": "2026-09-13 05:30:33"
     },
     "eth-support-break": {
       "triggered": false,
@@ -631,7 +631,7 @@
         ],
         [
           "Stretch from long-term average",
-          "+45.7% above its long-term average - very stretched",
+          "+43.6% above its long-term average - very stretched",
           -2
         ],
         [
@@ -644,12 +644,12 @@
       "id": "monero",
       "symbol": "XMR",
       "name": "Monero",
-      "price": 539.73,
-      "pct_24h": 2.15087,
-      "pct_7d": -2.5,
+      "price": 531.94,
+      "pct_24h": -0.67887,
+      "pct_7d": -5.0,
       "support_30d": 409.8815731954537,
       "resistance_30d": 555.6684591165193,
-      "as_of": "2026-09-13 03:55:17",
+      "as_of": "2026-09-13 05:30:33",
       "stale": false
     },
     "cardano": {
@@ -1447,7 +1447,7 @@
         ],
         [
           "Stretch from long-term average",
-          "-8.8% vs its long-term average - not stretched either way",
+          "-8.9% vs its long-term average - not stretched either way",
           0
         ],
         [
@@ -1460,12 +1460,12 @@
       "id": "crypto-com-chain",
       "symbol": "CRO",
       "name": "Cronos",
-      "price": 0.059591,
-      "pct_24h": 3.90716,
-      "pct_7d": 3.8,
+      "price": 0.059545,
+      "pct_24h": 3.67769,
+      "pct_7d": 4.2,
       "support_30d": 0.04621382085807831,
       "resistance_30d": 0.06091104752771909,
-      "as_of": "2026-09-13 03:00:33",
+      "as_of": "2026-09-13 05:30:33",
       "stale": false
     },
     "ethereum-classic": {
@@ -2503,7 +2503,7 @@
         ],
         [
           "Stretch from long-term average",
-          "-6.5% vs its long-term average - not stretched either way",
+          "-6.3% vs its long-term average - not stretched either way",
           0
         ],
         [
@@ -2516,12 +2516,12 @@
       "id": "quant-network",
       "symbol": "QNT",
       "name": "Quant",
-      "price": 63.96,
-      "pct_24h": -0.36074,
-      "pct_7d": -2.5,
+      "price": 64.15,
+      "pct_24h": 0.13625,
+      "pct_7d": -2.6,
       "support_30d": 55.905981995619285,
       "resistance_30d": 67.13669726469111,
-      "as_of": "2026-09-13 04:45:23",
+      "as_of": "2026-09-13 05:30:33",
       "stale": false
     },
     "tether-gold": {
@@ -3293,10 +3293,7 @@
       "stale": false
     }
   },
-  "_strong_buy_state": {
-    "scanner-15m:BNB": true,
-    "scanner-1h:WLD": true
-  },
+  "_strong_buy_state": {},
   "_pnl_tracker": {
     "open": {
       "1h:WLD": {
@@ -3327,7 +3324,7 @@
         "stop": 0.14151976666666666,
         "target1": 0.16282623333333335,
         "target2": 0.1734794666666667,
-        "opened_at": "2026-09-13T05:26:42.537872"
+        "opened_at": "2026-09-13T05:32:25.322075"
       }
     },
     "resolved": [
@@ -12508,6 +12505,19 @@
         "result": "win",
         "resolved_at": "2026-09-13T05:26:42.537872",
         "exit_price": 0.180587
+      },
+      {
+        "coin": "XLM",
+        "name": "Stellar",
+        "tf": "daily",
+        "entry": 0.152173,
+        "stop": 0.14151976666666666,
+        "target1": 0.16282623333333335,
+        "target2": 0.1734794666666667,
+        "opened_at": "2026-09-13T05:26:42.537872",
+        "result": "win",
+        "resolved_at": "2026-09-13T05:32:25.322075",
+        "exit_price": 0.180587
       }
     ]
   },
@@ -12515,14 +12525,14 @@
     "key": "BTC",
     "name": "Bitcoin",
     "emoji": "\u20bf",
-    "price": 77247,
+    "price": 77256,
     "high_24h": 77479,
     "low_24h": 77055,
-    "pct_24h": 0.0429,
+    "pct_24h": 0.06654,
     "pct_7d": -3.5,
     "pct_30d": 22.0,
-    "sma50": 71168.2053996157,
-    "sma200": 70128.82611013814,
+    "sma50": 71168.38495499392,
+    "sma200": 70128.87099898269,
     "support_30d": 62843.70368466329,
     "resistance_30d": 81264.70153038795,
     "mark_price": 77158.0,
@@ -12537,14 +12547,14 @@
     "key": "ETH",
     "name": "Ethereum",
     "emoji": "\u039e",
-    "price": 2521.6,
+    "price": 2520.73,
     "high_24h": 2543.69,
     "low_24h": 2510.27,
-    "pct_24h": 0.43675,
+    "pct_24h": 0.42555,
     "pct_7d": 0.4,
     "pct_30d": 33.9,
-    "sma50": 2186.802477601578,
-    "sma200": 2057.624399909324,
+    "sma50": 2186.7858285981983,
+    "sma200": 2057.620237658479,
     "support_30d": 1874.401898191962,
     "resistance_30d": 2525.267261590238,
     "mark_price": 2521.71641085,
