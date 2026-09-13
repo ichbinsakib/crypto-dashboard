@@ -12,7 +12,7 @@
     },
     "eth-resistance-break": {
       "triggered": true,
-      "last_triggered_at": "2026-09-13 04:45:23"
+      "last_triggered_at": "2026-09-13 04:50:22"
     },
     "eth-support-break": {
       "triggered": false,
@@ -55,7 +55,7 @@
         ],
         [
           "Stretch from long-term average",
-          "+16.3% above its long-term average - a bit stretched",
+          "+16.2% above its long-term average - a bit stretched",
           -1
         ],
         [
@@ -68,12 +68,12 @@
       "id": "binancecoin",
       "symbol": "BNB",
       "name": "BNB",
-      "price": 726.93,
-      "pct_24h": -0.98636,
+      "price": 726.46,
+      "pct_24h": -1.04533,
       "pct_7d": -4.8,
       "support_30d": 602.4629221231862,
       "resistance_30d": 766.4092879330625,
-      "as_of": "2026-09-13 04:35:17",
+      "as_of": "2026-09-13 04:50:22",
       "stale": false
     },
     "ripple": {
@@ -199,7 +199,7 @@
         ],
         [
           "Stretch from long-term average",
-          "+3.9% vs its long-term average - not stretched either way",
+          "+3.8% vs its long-term average - not stretched either way",
           0
         ],
         [
@@ -212,12 +212,12 @@
       "id": "tron",
       "symbol": "TRX",
       "name": "TRON",
-      "price": 0.33957,
-      "pct_24h": -0.01561,
+      "price": 0.339378,
+      "pct_24h": -0.14564,
       "pct_7d": 1.9,
       "support_30d": 0.32221537516581966,
       "resistance_30d": 0.3447899585776834,
-      "as_of": "2026-09-13 04:15:22",
+      "as_of": "2026-09-13 04:50:22",
       "stale": false
     },
     "figure-heloc": {
@@ -2455,7 +2455,7 @@
         ],
         [
           "Stretch from long-term average",
-          "+37.1% above its long-term average - very stretched",
+          "+35.9% above its long-term average - very stretched",
           -2
         ],
         [
@@ -2468,12 +2468,12 @@
       "id": "near",
       "symbol": "NEAR",
       "name": "NEAR Protocol",
-      "price": 2.36,
-      "pct_24h": -0.48183,
+      "price": 2.34,
+      "pct_24h": -0.03698,
       "pct_7d": 5.4,
       "support_30d": 1.5879597131538,
       "resistance_30d": 2.4848168147865453,
-      "as_of": "2026-09-13 04:30:33",
+      "as_of": "2026-09-13 04:50:22",
       "stale": false
     },
     "quant-network": {
@@ -3313,10 +3313,10 @@
         "name": "BNB",
         "tf": "15m",
         "entry": 725.3,
-        "stop": 724.5493333333333,
-        "target1": 726.0506666666666,
-        "target2": 726.8013333333333,
-        "opened_at": "2026-09-13T04:47:13.821763"
+        "stop": 724.5403333333333,
+        "target1": 726.0596666666667,
+        "target2": 726.8193333333334,
+        "opened_at": "2026-09-13T04:52:12.281406"
       },
       "daily:XLM": {
         "coin": "XLM",
@@ -3326,7 +3326,7 @@
         "stop": 0.1415204,
         "target1": 0.16282560000000001,
         "target2": 0.17347820000000003,
-        "opened_at": "2026-09-13T04:47:13.821763"
+        "opened_at": "2026-09-13T04:52:12.281406"
       }
     },
     "resolved": [
@@ -12325,6 +12325,32 @@
         "result": "win",
         "resolved_at": "2026-09-13T04:47:13.821763",
         "exit_price": 0.179804
+      },
+      {
+        "coin": "BNB",
+        "name": "BNB",
+        "tf": "15m",
+        "entry": 725.3,
+        "stop": 724.5493333333333,
+        "target1": 726.0506666666666,
+        "target2": 726.8013333333333,
+        "opened_at": "2026-09-13T04:47:13.821763",
+        "result": "win",
+        "resolved_at": "2026-09-13T04:52:12.281406",
+        "exit_price": 726.19
+      },
+      {
+        "coin": "XLM",
+        "name": "Stellar",
+        "tf": "daily",
+        "entry": 0.152173,
+        "stop": 0.1415204,
+        "target1": 0.16282560000000001,
+        "target2": 0.17347820000000003,
+        "opened_at": "2026-09-13T04:47:13.821763",
+        "result": "win",
+        "resolved_at": "2026-09-13T04:52:12.281406",
+        "exit_price": 0.179794
       }
     ]
   },
@@ -12332,14 +12358,14 @@
     "key": "BTC",
     "name": "Bitcoin",
     "emoji": "\u20bf",
-    "price": 77199,
+    "price": 77198,
     "high_24h": 77479,
     "low_24h": 77055,
-    "pct_24h": -0.05408,
+    "pct_24h": -0.06185,
     "pct_7d": -3.4,
     "pct_30d": 21.7,
-    "sma50": 71167.2378631057,
-    "sma200": 70128.58422601064,
+    "sma50": 71167.21509886475,
+    "sma200": 70128.57853495039,
     "support_30d": 62843.70368466329,
     "resistance_30d": 81264.70153038795,
     "mark_price": 77158.0,
@@ -12354,14 +12380,14 @@
     "key": "ETH",
     "name": "Ethereum",
     "emoji": "\u039e",
-    "price": 2519.16,
+    "price": 2519.4,
     "high_24h": 2543.69,
     "low_24h": 2509.99,
-    "pct_24h": 0.23431,
+    "pct_24h": 0.25025,
     "pct_7d": 0.7,
     "pct_30d": 33.7,
-    "sma50": 2186.756226939279,
-    "sma200": 2057.612837243749,
+    "sma50": 2186.7575746691027,
+    "sma200": 2057.6131741762047,
     "support_30d": 1874.401898191962,
     "resistance_30d": 2525.267261590238,
     "mark_price": 2521.71641085,
