@@ -55,7 +55,7 @@
         ],
         [
           "Stretch from long-term average",
-          "+15.2% above its long-term average - a bit stretched",
+          "+15.3% above its long-term average - a bit stretched",
           -1
         ],
         [
@@ -68,12 +68,12 @@
       "id": "binancecoin",
       "symbol": "BNB",
       "name": "BNB",
-      "price": 720.5,
-      "pct_24h": -1.47208,
+      "price": 720.85,
+      "pct_24h": -1.35609,
       "pct_7d": -3.4,
       "support_30d": 602.4629221231862,
       "resistance_30d": 766.4092879330625,
-      "as_of": "2026-09-13 17:37:39",
+      "as_of": "2026-09-13 17:40:22",
       "stale": false
     },
     "ripple": {
@@ -461,9 +461,9 @@
       "stale": false
     },
     "chainlink": {
-      "label": "\ud83d\udd34 CAUTION - REDUCE NEW BUYS",
-      "status": "bearish",
-      "score": -2,
+      "label": "\ud83d\udfe1 HOLD / NEUTRAL",
+      "status": "neutral",
+      "score": -1,
       "rows": [
         [
           "Price vs. recent range",
@@ -482,12 +482,12 @@
         ],
         [
           "Recent trend",
-          "Trending down - avoid catching a falling knife",
-          -1
+          "Chopping sideways - no clear trend",
+          0
         ],
         [
           "Stretch from long-term average",
-          "+21.9% above its long-term average - a bit stretched",
+          "+23.4% above its long-term average - a bit stretched",
           -1
         ],
         [
@@ -496,16 +496,16 @@
           0
         ]
       ],
-      "plain": "Getting risky - I'd hold off on new buys until this cools down.",
+      "plain": "No real edge either way right now - fine to just wait and watch.",
       "id": "chainlink",
       "symbol": "LINK",
       "name": "Chainlink",
-      "price": 11.25,
-      "pct_24h": -2.68785,
-      "pct_7d": -8.2,
+      "price": 11.39,
+      "pct_24h": -0.92486,
+      "pct_7d": -7.1,
       "support_30d": 9.38323578770609,
       "resistance_30d": 13.237155745219605,
-      "as_of": "2026-09-13 12:50:24",
+      "as_of": "2026-09-13 17:40:22",
       "stale": false
     },
     "whitebit": {
@@ -1399,7 +1399,7 @@
         ],
         [
           "Stretch from long-term average",
-          "+30.9% above its long-term average - very stretched",
+          "+30.8% above its long-term average - very stretched",
           -2
         ],
         [
@@ -1412,12 +1412,12 @@
       "id": "gatechain-token",
       "symbol": "GT",
       "name": "Gate",
-      "price": 9.21,
-      "pct_24h": -1.89919,
+      "price": 9.2,
+      "pct_24h": -2.08985,
       "pct_7d": 2.3,
       "support_30d": 6.673649191532821,
       "resistance_30d": 9.38216924975626,
-      "as_of": "2026-09-13 17:20:26",
+      "as_of": "2026-09-13 17:40:22",
       "stale": false
     },
     "crypto-com-chain": {
@@ -3307,7 +3307,7 @@
         "stop": 229.43594000000002,
         "target1": 231.79086,
         "target2": 232.96832,
-        "opened_at": "2026-09-13T17:39:34.759033"
+        "opened_at": "2026-09-13T17:42:14.460075"
       },
       "15m:UNI": {
         "coin": "UNI",
@@ -3317,7 +3317,7 @@
         "stop": 6.155613333333333,
         "target1": 6.220386666666666,
         "target2": 6.252773333333333,
-        "opened_at": "2026-09-13T17:39:34.759033"
+        "opened_at": "2026-09-13T17:42:14.460075"
       },
       "1h:WBT": {
         "coin": "WBT",
@@ -3327,7 +3327,7 @@
         "stop": 79.28916666666666,
         "target1": 79.63083333333333,
         "target2": 79.80166666666666,
-        "opened_at": "2026-09-13T17:39:34.759033"
+        "opened_at": "2026-09-13T17:42:14.460075"
       },
       "daily:XLM": {
         "coin": "XLM",
@@ -3337,7 +3337,7 @@
         "stop": 0.14142906666666666,
         "target1": 0.16291693333333335,
         "target2": 0.1736608666666667,
-        "opened_at": "2026-09-13T17:39:34.759033"
+        "opened_at": "2026-09-13T17:42:14.460075"
       }
     },
     "resolved": [
@@ -16002,6 +16002,58 @@
         "result": "win",
         "resolved_at": "2026-09-13T17:39:34.759033",
         "exit_price": 0.179556
+      },
+      {
+        "coin": "TAO",
+        "name": "Bittensor",
+        "tf": "15m",
+        "entry": 230.6134,
+        "stop": 229.43594000000002,
+        "target1": 231.79086,
+        "target2": 232.96832,
+        "opened_at": "2026-09-13T17:39:34.759033",
+        "result": "win",
+        "resolved_at": "2026-09-13T17:42:14.460075",
+        "exit_price": 236.1833
+      },
+      {
+        "coin": "UNI",
+        "name": "Uniswap",
+        "tf": "15m",
+        "entry": 6.188,
+        "stop": 6.155613333333333,
+        "target1": 6.220386666666666,
+        "target2": 6.252773333333333,
+        "opened_at": "2026-09-13T17:39:34.759033",
+        "result": "win",
+        "resolved_at": "2026-09-13T17:42:14.460075",
+        "exit_price": 6.3397
+      },
+      {
+        "coin": "WBT",
+        "name": "WhiteBIT Coin",
+        "tf": "1h",
+        "entry": 79.46,
+        "stop": 79.28916666666666,
+        "target1": 79.63083333333333,
+        "target2": 79.80166666666666,
+        "opened_at": "2026-09-13T17:39:34.759033",
+        "result": "win",
+        "resolved_at": "2026-09-13T17:42:14.460075",
+        "exit_price": 80.09
+      },
+      {
+        "coin": "XLM",
+        "name": "Stellar",
+        "tf": "daily",
+        "entry": 0.152173,
+        "stop": 0.14142906666666666,
+        "target1": 0.16291693333333335,
+        "target2": 0.1736608666666667,
+        "opened_at": "2026-09-13T17:39:34.759033",
+        "result": "win",
+        "resolved_at": "2026-09-13T17:42:14.460075",
+        "exit_price": 0.17944
       }
     ]
   },
@@ -16009,14 +16061,14 @@
     "key": "BTC",
     "name": "Bitcoin",
     "emoji": "\u20bf",
-    "price": 77231,
+    "price": 77247,
     "high_24h": 77318,
     "low_24h": 76516,
-    "pct_24h": -0.02397,
+    "pct_24h": 0.05375,
     "pct_7d": -3.0,
     "pct_30d": 22.8,
-    "sma50": 71167.94143529212,
-    "sma200": 70128.76011905723,
+    "sma50": 71168.29866453049,
+    "sma200": 70128.84942636684,
     "support_30d": 62843.70368466329,
     "resistance_30d": 81264.70153038795,
     "mark_price": 77158.0,
@@ -16031,14 +16083,14 @@
     "key": "ETH",
     "name": "Ethereum",
     "emoji": "\u039e",
-    "price": 2502.6,
+    "price": 2503.54,
     "high_24h": 2527.29,
     "low_24h": 2464.63,
-    "pct_24h": -0.9146,
+    "pct_24h": -0.8056,
     "pct_7d": 1.0,
     "pct_30d": 33.2,
-    "sma50": 2186.4249487596903,
-    "sma200": 2057.5300176988517,
+    "sma50": 2186.4482286295624,
+    "sma200": 2057.53583766632,
     "support_30d": 1874.401898191962,
     "resistance_30d": 2525.267261590238,
     "mark_price": 2521.71641085,
