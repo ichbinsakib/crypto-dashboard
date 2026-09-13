@@ -12,7 +12,7 @@
     },
     "eth-resistance-break": {
       "triggered": true,
-      "last_triggered_at": "2026-09-13 06:20:25"
+      "last_triggered_at": "2026-09-13 06:25:21"
     },
     "eth-support-break": {
       "triggered": false,
@@ -487,7 +487,7 @@
         ],
         [
           "Stretch from long-term average",
-          "+25.2% above its long-term average - a bit stretched",
+          "+24.7% above its long-term average - a bit stretched",
           -1
         ],
         [
@@ -500,12 +500,12 @@
       "id": "chainlink",
       "symbol": "LINK",
       "name": "Chainlink",
-      "price": 11.56,
-      "pct_24h": 0.3736,
-      "pct_7d": -6.0,
+      "price": 11.51,
+      "pct_24h": -0.09036,
+      "pct_7d": -4.9,
       "support_30d": 9.38323578770609,
       "resistance_30d": 13.237155745219605,
-      "as_of": "2026-09-13 05:55:17",
+      "as_of": "2026-09-13 06:25:21",
       "stale": false
     },
     "whitebit": {
@@ -1317,11 +1317,11 @@
       "symbol": "HTX",
       "name": "HTX DAO",
       "price": 1.7e-06,
-      "pct_24h": -0.49125,
+      "pct_24h": -0.51417,
       "pct_7d": 1.0,
       "support_30d": 1.6023985995039954e-06,
       "resistance_30d": 1.7941245244644948e-06,
-      "as_of": "2026-09-13 06:20:25",
+      "as_of": "2026-09-13 06:25:21",
       "stale": false
     },
     "superstate-short-duration-us-government-securities-fund-ustb": {
@@ -1927,7 +1927,7 @@
         ],
         [
           "Stretch from long-term average",
-          "-3.7% vs its long-term average - not stretched either way",
+          "-3.3% vs its long-term average - not stretched either way",
           0
         ],
         [
@@ -1940,12 +1940,12 @@
       "id": "mantle",
       "symbol": "MNT",
       "name": "Mantle",
-      "price": 0.553145,
-      "pct_24h": -4.78481,
+      "price": 0.555202,
+      "pct_24h": -4.60214,
       "pct_7d": -5.5,
       "support_30d": 0.42660592418086046,
       "resistance_30d": 0.6365218632454678,
-      "as_of": "2026-09-13 05:45:22",
+      "as_of": "2026-09-13 06:25:21",
       "stale": false
     },
     "polkadot": {
@@ -3314,7 +3314,7 @@
         "stop": 0.14151356666666667,
         "target1": 0.16283243333333333,
         "target2": 0.17349186666666666,
-        "opened_at": "2026-09-13T06:22:20.774308"
+        "opened_at": "2026-09-13T06:27:19.494189"
       }
     },
     "resolved": [
@@ -12716,6 +12716,19 @@
         "result": "win",
         "resolved_at": "2026-09-13T06:22:20.774308",
         "exit_price": 0.180641
+      },
+      {
+        "coin": "XLM",
+        "name": "Stellar",
+        "tf": "daily",
+        "entry": 0.152173,
+        "stop": 0.14151356666666667,
+        "target1": 0.16283243333333333,
+        "target2": 0.17349186666666666,
+        "opened_at": "2026-09-13T06:22:20.774308",
+        "result": "win",
+        "resolved_at": "2026-09-13T06:27:19.494189",
+        "exit_price": 0.180295
       }
     ]
   },
@@ -12723,14 +12736,14 @@
     "key": "BTC",
     "name": "Bitcoin",
     "emoji": "\u20bf",
-    "price": 77283,
+    "price": 77275,
     "high_24h": 77479,
     "low_24h": 77055,
-    "pct_24h": 0.0819,
+    "pct_24h": 0.07734,
     "pct_7d": -3.2,
     "pct_30d": 22.1,
-    "sma50": 71168.927171973,
-    "sma200": 70129.00655322746,
+    "sma50": 71168.84332912341,
+    "sma200": 70128.98559251506,
     "support_30d": 62843.70368466329,
     "resistance_30d": 81264.70153038795,
     "mark_price": 77158.0,
@@ -12745,14 +12758,14 @@
     "key": "ETH",
     "name": "Ethereum",
     "emoji": "\u039e",
-    "price": 2521.47,
+    "price": 2520.93,
     "high_24h": 2543.69,
     "low_24h": 2514.78,
-    "pct_24h": 0.37357,
+    "pct_24h": 0.38734,
     "pct_7d": 0.7,
     "pct_30d": 34.0,
-    "sma50": 2186.800001710845,
-    "sma200": 2057.6237809366403,
+    "sma50": 2186.7954943729746,
+    "sma200": 2057.622654102173,
     "support_30d": 1874.401898191962,
     "resistance_30d": 2525.267261590238,
     "mark_price": 2521.71641085,
