@@ -631,7 +631,7 @@
         ],
         [
           "Stretch from long-term average",
-          "+44.1% above its long-term average - very stretched",
+          "+43.0% above its long-term average - very stretched",
           -2
         ],
         [
@@ -644,12 +644,12 @@
       "id": "monero",
       "symbol": "XMR",
       "name": "Monero",
-      "price": 533.98,
-      "pct_24h": 0.21781,
-      "pct_7d": 1.2,
+      "price": 529.8,
+      "pct_24h": -0.74205,
+      "pct_7d": 0.5,
       "support_30d": 409.8815731954537,
       "resistance_30d": 555.6684591165193,
-      "as_of": "2026-09-13 18:05:20",
+      "as_of": "2026-09-13 19:55:18",
       "stale": false
     },
     "cardano": {
@@ -1783,7 +1783,7 @@
         ],
         [
           "Stretch from long-term average",
-          "+126.9% above its long-term average - very stretched",
+          "+132.4% above its long-term average - very stretched",
           -2
         ],
         [
@@ -1796,12 +1796,12 @@
       "id": "lighter",
       "symbol": "LIT",
       "name": "Lighter",
-      "price": 4.09,
-      "pct_24h": -5.12192,
-      "pct_7d": -10.1,
+      "price": 4.19,
+      "pct_24h": -1.16657,
+      "pct_7d": -9.2,
       "support_30d": 2.2652470267288507,
       "resistance_30d": 4.827528632102638,
-      "as_of": "2026-09-13 15:30:33",
+      "as_of": "2026-09-13 19:55:18",
       "stale": false
     },
     "ethena": {
@@ -3223,7 +3223,7 @@
         ],
         [
           "Stretch from long-term average",
-          "+2.0% vs its long-term average - not stretched either way",
+          "+1.2% vs its long-term average - not stretched either way",
           0
         ],
         [
@@ -3236,12 +3236,12 @@
       "id": "kaspa",
       "symbol": "KAS",
       "name": "Kaspa",
-      "price": 0.03446786,
-      "pct_24h": -2.39467,
-      "pct_7d": 13.5,
+      "price": 0.03420424,
+      "pct_24h": -1.71558,
+      "pct_7d": 13.3,
       "support_30d": 0.025275049210175406,
       "resistance_30d": 0.03651282069323304,
-      "as_of": "2026-09-13 16:00:35",
+      "as_of": "2026-09-13 19:55:18",
       "stale": false
     },
     "cosmos": {
@@ -3294,7 +3294,8 @@
     }
   },
   "_strong_buy_state": {
-    "scanner-15m:LINK": true
+    "scanner-15m:LINK": true,
+    "scanner-1h:WLD": true
   },
   "_pnl_tracker": {
     "open": {
@@ -3303,20 +3304,30 @@
         "name": "Canton",
         "tf": "15m",
         "entry": 0.0948,
-        "stop": 0.09450566666666667,
-        "target1": 0.09509433333333332,
-        "target2": 0.09538866666666665,
-        "opened_at": "2026-09-13T19:52:25.259715"
+        "stop": 0.09450133333333333,
+        "target1": 0.09509866666666666,
+        "target2": 0.09539733333333333,
+        "opened_at": "2026-09-13T19:57:15.429578"
       },
       "15m:LINK": {
         "coin": "LINK",
         "name": "Chainlink",
         "tf": "15m",
         "entry": 11.18953,
-        "stop": 11.154941666666666,
-        "target1": 11.224118333333333,
-        "target2": 11.258706666666667,
-        "opened_at": "2026-09-13T19:52:25.259715"
+        "stop": 11.154891,
+        "target1": 11.224169,
+        "target2": 11.258808,
+        "opened_at": "2026-09-13T19:57:15.429578"
+      },
+      "1h:WLD": {
+        "coin": "WLD",
+        "name": "Worldcoin",
+        "tf": "1h",
+        "entry": 0.3856,
+        "stop": 0.3821875,
+        "target1": 0.3890125,
+        "target2": 0.39242499999999997,
+        "opened_at": "2026-09-13T19:57:15.429578"
       },
       "daily:XLM": {
         "coin": "XLM",
@@ -3326,7 +3337,7 @@
         "stop": 0.14142906666666666,
         "target1": 0.16291693333333335,
         "target2": 0.1736608666666667,
-        "opened_at": "2026-09-13T19:52:25.259715"
+        "opened_at": "2026-09-13T19:57:15.429578"
       }
     },
     "resolved": [
@@ -17031,6 +17042,45 @@
         "result": "win",
         "resolved_at": "2026-09-13T19:52:25.259715",
         "exit_price": 0.179154
+      },
+      {
+        "coin": "CC",
+        "name": "Canton",
+        "tf": "15m",
+        "entry": 0.0948,
+        "stop": 0.09450566666666667,
+        "target1": 0.09509433333333332,
+        "target2": 0.09538866666666665,
+        "opened_at": "2026-09-13T19:52:25.259715",
+        "result": "win",
+        "resolved_at": "2026-09-13T19:57:15.429578",
+        "exit_price": 0.09559
+      },
+      {
+        "coin": "LINK",
+        "name": "Chainlink",
+        "tf": "15m",
+        "entry": 11.18953,
+        "stop": 11.154941666666666,
+        "target1": 11.224118333333333,
+        "target2": 11.258706666666667,
+        "opened_at": "2026-09-13T19:52:25.259715",
+        "result": "win",
+        "resolved_at": "2026-09-13T19:57:15.429578",
+        "exit_price": 11.407
+      },
+      {
+        "coin": "XLM",
+        "name": "Stellar",
+        "tf": "daily",
+        "entry": 0.152173,
+        "stop": 0.14142906666666666,
+        "target1": 0.16291693333333335,
+        "target2": 0.1736608666666667,
+        "opened_at": "2026-09-13T19:52:25.259715",
+        "result": "win",
+        "resolved_at": "2026-09-13T19:57:15.429578",
+        "exit_price": 0.17936
       }
     ]
   },
@@ -17038,14 +17088,14 @@
     "key": "BTC",
     "name": "Bitcoin",
     "emoji": "\u20bf",
-    "price": 77220,
+    "price": 77225,
     "high_24h": 77374,
     "low_24h": 76516,
-    "pct_24h": 0.15422,
+    "pct_24h": 0.15617,
     "pct_7d": -3.0,
     "pct_30d": 22.8,
-    "sma50": 71167.70818692709,
-    "sma200": 70128.70180696598,
+    "sma50": 71167.59223571703,
+    "sma200": 70128.67281916346,
     "support_30d": 62843.70368466329,
     "resistance_30d": 81264.70153038795,
     "mark_price": 77158.0,
@@ -17060,14 +17110,14 @@
     "key": "ETH",
     "name": "Ethereum",
     "emoji": "\u039e",
-    "price": 2504.69,
+    "price": 2503.71,
     "high_24h": 2527.29,
     "low_24h": 2464.63,
-    "pct_24h": -0.49,
+    "pct_24h": -0.52904,
     "pct_7d": 0.7,
     "pct_30d": 33.7,
-    "sma50": 2186.468865091591,
-    "sma200": 2057.540996781827,
+    "sma50": 2186.4437993404235,
+    "sma200": 2057.534730344035,
     "support_30d": 1874.401898191962,
     "resistance_30d": 2525.267261590238,
     "mark_price": 2521.71641085,
