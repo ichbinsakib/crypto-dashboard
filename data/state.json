@@ -1087,7 +1087,7 @@
     "polygon-ecosystem-token": {
       "label": "\ud83d\udfe1 HOLD / NEUTRAL",
       "status": "neutral",
-      "score": -1,
+      "score": 0,
       "rows": [
         [
           "Price vs. recent range",
@@ -1111,8 +1111,8 @@
         ],
         [
           "Stretch from long-term average",
-          "+10.1% above its long-term average - a bit stretched",
-          -1
+          "+9.9% vs its long-term average - not stretched either way",
+          0
         ],
         [
           "Leverage traders' bias",
@@ -1124,12 +1124,12 @@
       "id": "polygon-ecosystem-token",
       "symbol": "POL",
       "name": "POL (ex-MATIC)",
-      "price": 0.096991,
-      "pct_24h": 0.11384,
+      "price": 0.096887,
+      "pct_24h": -0.03135,
       "pct_7d": 0.4,
       "support_30d": 0.07481366852260064,
       "resistance_30d": 0.12250456198546959,
-      "as_of": "2026-09-13 16:25:54",
+      "as_of": "2026-09-13 16:30:29",
       "stale": false
     },
     "blackrock-usd-institutional-digital-liquidity-fund": {
@@ -2167,7 +2167,7 @@
         ],
         [
           "Stretch from long-term average",
-          "-31.3% below its long-term average - confirmed downtrend",
+          "-31.1% below its long-term average - confirmed downtrend",
           -1
         ],
         [
@@ -2180,12 +2180,12 @@
       "id": "canton-network",
       "symbol": "CC",
       "name": "Canton",
-      "price": 0.095208,
-      "pct_24h": -2.75342,
-      "pct_7d": -13.9,
+      "price": 0.095446,
+      "pct_24h": -2.79291,
+      "pct_7d": -13.2,
       "support_30d": 0.09051839499501885,
       "resistance_30d": 0.12396615653575341,
-      "as_of": "2026-09-13 13:55:17",
+      "as_of": "2026-09-13 16:30:29",
       "stale": false
     },
     "internet-computer": {
@@ -2263,7 +2263,7 @@
         ],
         [
           "Stretch from long-term average",
-          "-2.3% vs its long-term average - not stretched either way",
+          "-2.1% vs its long-term average - not stretched either way",
           0
         ],
         [
@@ -2276,12 +2276,12 @@
       "id": "bittensor",
       "symbol": "TAO",
       "name": "Bittensor",
-      "price": 233.92,
-      "pct_24h": -0.65065,
-      "pct_7d": -3.8,
+      "price": 234.4,
+      "pct_24h": -0.57693,
+      "pct_7d": -4.1,
       "support_30d": 190.67093053611111,
       "resistance_30d": 265.7337487161633,
-      "as_of": "2026-09-13 15:15:22",
+      "as_of": "2026-09-13 16:30:29",
       "stale": false
     },
     "the-open-network": {
@@ -3296,16 +3296,6 @@
   "_strong_buy_state": {},
   "_pnl_tracker": {
     "open": {
-      "15m:PI": {
-        "coin": "PI",
-        "name": "Pi Network",
-        "tf": "15m",
-        "entry": 0.0943,
-        "stop": 0.09362899999999999,
-        "target1": 0.094971,
-        "target2": 0.095642,
-        "opened_at": "2026-09-13T16:27:00.929298"
-      },
       "1h:WBT": {
         "coin": "WBT",
         "name": "WhiteBIT Coin",
@@ -3314,7 +3304,7 @@
         "stop": 79.29166666666666,
         "target1": 79.62833333333333,
         "target2": 79.79666666666667,
-        "opened_at": "2026-09-13T16:27:00.929298"
+        "opened_at": "2026-09-13T16:32:20.150194"
       },
       "daily:XLM": {
         "coin": "XLM",
@@ -3324,7 +3314,7 @@
         "stop": 0.14142906666666666,
         "target1": 0.16291693333333335,
         "target2": 0.1736608666666667,
-        "opened_at": "2026-09-13T16:27:00.929298"
+        "opened_at": "2026-09-13T16:32:20.150194"
       }
     },
     "resolved": [
@@ -15599,6 +15589,45 @@
         "result": "win",
         "resolved_at": "2026-09-13T16:27:00.929298",
         "exit_price": 0.17832
+      },
+      {
+        "coin": "PI",
+        "name": "Pi Network",
+        "tf": "15m",
+        "entry": 0.0943,
+        "stop": 0.09362899999999999,
+        "target1": 0.094971,
+        "target2": 0.095642,
+        "opened_at": "2026-09-13T16:27:00.929298",
+        "result": "win",
+        "resolved_at": "2026-09-13T16:32:20.150194",
+        "exit_price": 0.09773
+      },
+      {
+        "coin": "WBT",
+        "name": "WhiteBIT Coin",
+        "tf": "1h",
+        "entry": 79.46,
+        "stop": 79.29166666666666,
+        "target1": 79.62833333333333,
+        "target2": 79.79666666666667,
+        "opened_at": "2026-09-13T16:27:00.929298",
+        "result": "win",
+        "resolved_at": "2026-09-13T16:32:20.150194",
+        "exit_price": 80.0
+      },
+      {
+        "coin": "XLM",
+        "name": "Stellar",
+        "tf": "daily",
+        "entry": 0.152173,
+        "stop": 0.14142906666666666,
+        "target1": 0.16291693333333335,
+        "target2": 0.1736608666666667,
+        "opened_at": "2026-09-13T16:27:00.929298",
+        "result": "win",
+        "resolved_at": "2026-09-13T16:32:20.150194",
+        "exit_price": 0.178299
       }
     ]
   },
@@ -15606,14 +15635,14 @@
     "key": "BTC",
     "name": "Bitcoin",
     "emoji": "\u20bf",
-    "price": 77229,
+    "price": 77230,
     "high_24h": 77377,
     "low_24h": 76516,
-    "pct_24h": -0.17815,
+    "pct_24h": -0.17548,
     "pct_7d": -3.0,
     "pct_30d": 23.2,
-    "sma50": 71167.88064538981,
-    "sma200": 70128.74492158166,
+    "sma50": 71167.81925731525,
+    "sma200": 70128.72957456303,
     "support_30d": 62843.70368466329,
     "resistance_30d": 81264.70153038795,
     "mark_price": 77158.0,
@@ -15628,14 +15657,14 @@
     "key": "ETH",
     "name": "Ethereum",
     "emoji": "\u039e",
-    "price": 2500.64,
+    "price": 2502.14,
     "high_24h": 2533.42,
     "low_24h": 2464.63,
-    "pct_24h": -1.30962,
+    "pct_24h": -1.18674,
     "pct_7d": 0.5,
     "pct_30d": 33.5,
-    "sma50": 2186.386155824822,
-    "sma200": 2057.5203194651344,
+    "sma50": 2186.4251558039596,
+    "sma200": 2057.530069459919,
     "support_30d": 1874.401898191962,
     "resistance_30d": 2525.267261590238,
     "mark_price": 2521.71641085,
