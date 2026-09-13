@@ -823,7 +823,7 @@
         ],
         [
           "Stretch from long-term average",
-          "-8.1% vs its long-term average - not stretched either way",
+          "-7.4% vs its long-term average - not stretched either way",
           0
         ],
         [
@@ -836,12 +836,12 @@
       "id": "hedera-hashgraph",
       "symbol": "HBAR",
       "name": "Hedera",
-      "price": 0.075637,
-      "pct_24h": 1.11366,
-      "pct_7d": -6.1,
+      "price": 0.076248,
+      "pct_24h": 2.06745,
+      "pct_7d": -5.8,
       "support_30d": 0.06461260477975343,
       "resistance_30d": 0.08182180696524229,
-      "as_of": "2026-09-13 16:25:54",
+      "as_of": "2026-09-13 17:45:22",
       "stale": false
     },
     "pepe": {
@@ -2325,11 +2325,11 @@
       "symbol": "GRAM",
       "name": "Gram (prev. Toncoin)",
       "price": 1.36,
-      "pct_24h": -1.8468,
+      "pct_24h": -1.76623,
       "pct_7d": -4.2,
       "support_30d": 1.3170990455791696,
       "resistance_30d": 1.4926762805297678,
-      "as_of": "2026-09-13 16:00:35",
+      "as_of": "2026-09-13 17:45:22",
       "stale": false
     },
     "sky": {
@@ -2359,7 +2359,7 @@
         ],
         [
           "Stretch from long-term average",
-          "-5.6% vs its long-term average - not stretched either way",
+          "-6.0% vs its long-term average - not stretched either way",
           0
         ],
         [
@@ -2372,12 +2372,12 @@
       "id": "sky",
       "symbol": "SKY",
       "name": "Sky",
-      "price": 0.06301,
-      "pct_24h": 0.23537,
+      "price": 0.0628,
+      "pct_24h": -0.12655,
       "pct_7d": -11.2,
       "support_30d": 0.05081051579814886,
       "resistance_30d": 0.07314868186988309,
-      "as_of": "2026-09-13 17:25:18",
+      "as_of": "2026-09-13 17:45:22",
       "stale": false
     },
     "shiba-inu": {
@@ -3304,20 +3304,20 @@
         "name": "Bittensor",
         "tf": "15m",
         "entry": 230.6134,
-        "stop": 229.43594000000002,
-        "target1": 231.79086,
-        "target2": 232.96832,
-        "opened_at": "2026-09-13T17:42:14.460075"
+        "stop": 229.45118666666667,
+        "target1": 231.77561333333335,
+        "target2": 232.9378266666667,
+        "opened_at": "2026-09-13T17:47:14.970375"
       },
       "15m:UNI": {
         "coin": "UNI",
         "name": "Uniswap",
         "tf": "15m",
         "entry": 6.188,
-        "stop": 6.155613333333333,
-        "target1": 6.220386666666666,
-        "target2": 6.252773333333333,
-        "opened_at": "2026-09-13T17:42:14.460075"
+        "stop": 6.155539999999999,
+        "target1": 6.22046,
+        "target2": 6.2529200000000005,
+        "opened_at": "2026-09-13T17:47:14.970375"
       },
       "1h:WBT": {
         "coin": "WBT",
@@ -3327,7 +3327,7 @@
         "stop": 79.28916666666666,
         "target1": 79.63083333333333,
         "target2": 79.80166666666666,
-        "opened_at": "2026-09-13T17:42:14.460075"
+        "opened_at": "2026-09-13T17:47:14.970375"
       },
       "daily:XLM": {
         "coin": "XLM",
@@ -3337,7 +3337,7 @@
         "stop": 0.14142906666666666,
         "target1": 0.16291693333333335,
         "target2": 0.1736608666666667,
-        "opened_at": "2026-09-13T17:42:14.460075"
+        "opened_at": "2026-09-13T17:47:14.970375"
       }
     },
     "resolved": [
@@ -16054,6 +16054,58 @@
         "result": "win",
         "resolved_at": "2026-09-13T17:42:14.460075",
         "exit_price": 0.17944
+      },
+      {
+        "coin": "TAO",
+        "name": "Bittensor",
+        "tf": "15m",
+        "entry": 230.6134,
+        "stop": 229.43594000000002,
+        "target1": 231.79086,
+        "target2": 232.96832,
+        "opened_at": "2026-09-13T17:42:14.460075",
+        "result": "win",
+        "resolved_at": "2026-09-13T17:47:14.970375",
+        "exit_price": 236.2381
+      },
+      {
+        "coin": "UNI",
+        "name": "Uniswap",
+        "tf": "15m",
+        "entry": 6.188,
+        "stop": 6.155613333333333,
+        "target1": 6.220386666666666,
+        "target2": 6.252773333333333,
+        "opened_at": "2026-09-13T17:42:14.460075",
+        "result": "win",
+        "resolved_at": "2026-09-13T17:47:14.970375",
+        "exit_price": 6.3421
+      },
+      {
+        "coin": "WBT",
+        "name": "WhiteBIT Coin",
+        "tf": "1h",
+        "entry": 79.46,
+        "stop": 79.28916666666666,
+        "target1": 79.63083333333333,
+        "target2": 79.80166666666666,
+        "opened_at": "2026-09-13T17:42:14.460075",
+        "result": "win",
+        "resolved_at": "2026-09-13T17:47:14.970375",
+        "exit_price": 80.09
+      },
+      {
+        "coin": "XLM",
+        "name": "Stellar",
+        "tf": "daily",
+        "entry": 0.152173,
+        "stop": 0.14142906666666666,
+        "target1": 0.16291693333333335,
+        "target2": 0.1736608666666667,
+        "opened_at": "2026-09-13T17:42:14.460075",
+        "result": "win",
+        "resolved_at": "2026-09-13T17:47:14.970375",
+        "exit_price": 0.179499
       }
     ]
   },
@@ -16061,14 +16113,14 @@
     "key": "BTC",
     "name": "Bitcoin",
     "emoji": "\u20bf",
-    "price": 77247,
+    "price": 77251,
     "high_24h": 77318,
     "low_24h": 76516,
-    "pct_24h": 0.05375,
+    "pct_24h": 0.04336,
     "pct_7d": -3.0,
     "pct_30d": 22.8,
-    "sma50": 71168.29866453049,
-    "sma200": 70128.84942636684,
+    "sma50": 71168.26886966535,
+    "sma200": 70128.84197765055,
     "support_30d": 62843.70368466329,
     "resistance_30d": 81264.70153038795,
     "mark_price": 77158.0,
@@ -16083,14 +16135,14 @@
     "key": "ETH",
     "name": "Ethereum",
     "emoji": "\u039e",
-    "price": 2503.54,
+    "price": 2503.74,
     "high_24h": 2527.29,
     "low_24h": 2464.63,
-    "pct_24h": -0.8056,
+    "pct_24h": -0.89506,
     "pct_7d": 1.0,
     "pct_30d": 33.2,
-    "sma50": 2186.4482286295624,
-    "sma200": 2057.53583766632,
+    "sma50": 2186.437610563843,
+    "sma200": 2057.5331831498897,
     "support_30d": 1874.401898191962,
     "resistance_30d": 2525.267261590238,
     "mark_price": 2521.71641085,
