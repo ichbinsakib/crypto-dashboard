@@ -1015,7 +1015,7 @@
         ],
         [
           "Stretch from long-term average",
-          "+9.6% vs its long-term average - not stretched either way",
+          "+8.7% vs its long-term average - not stretched either way",
           0
         ],
         [
@@ -1028,12 +1028,12 @@
       "id": "worldcoin-wld",
       "symbol": "WLD",
       "name": "Worldcoin",
-      "price": 0.392292,
-      "pct_24h": -2.19518,
-      "pct_7d": -4.0,
+      "price": 0.389086,
+      "pct_24h": -3.10307,
+      "pct_7d": -6.1,
       "support_30d": 0.319812298466522,
       "resistance_30d": 0.4772935995106048,
-      "as_of": "2026-09-13 19:20:24",
+      "as_of": "2026-09-13 20:20:28",
       "stale": false
     },
     "bfusd": {
@@ -2839,7 +2839,7 @@
         ],
         [
           "Stretch from long-term average",
-          "+30.0% above its long-term average - a bit stretched",
+          "+29.5% above its long-term average - a bit stretched",
           -1
         ],
         [
@@ -2852,12 +2852,12 @@
       "id": "aave",
       "symbol": "AAVE",
       "name": "Aave",
-      "price": 126.94,
-      "pct_24h": 0.63388,
-      "pct_7d": -5.3,
+      "price": 126.45,
+      "pct_24h": 0.10816,
+      "pct_7d": -5.5,
       "support_30d": 85.94219943917633,
       "resistance_30d": 141.53047916466082,
-      "as_of": "2026-09-13 17:50:24",
+      "as_of": "2026-09-13 20:20:28",
       "stale": false
     },
     "okb": {
@@ -3223,7 +3223,7 @@
         ],
         [
           "Stretch from long-term average",
-          "+1.2% vs its long-term average - not stretched either way",
+          "+1.5% vs its long-term average - not stretched either way",
           0
         ],
         [
@@ -3236,12 +3236,12 @@
       "id": "kaspa",
       "symbol": "KAS",
       "name": "Kaspa",
-      "price": 0.03420424,
-      "pct_24h": -1.71558,
-      "pct_7d": 13.3,
+      "price": 0.03431423,
+      "pct_24h": -1.84421,
+      "pct_7d": 12.5,
       "support_30d": 0.025275049210175406,
       "resistance_30d": 0.03651282069323304,
-      "as_of": "2026-09-13 19:55:18",
+      "as_of": "2026-09-13 20:20:28",
       "stale": false
     },
     "cosmos": {
@@ -3293,40 +3293,38 @@
       "stale": false
     }
   },
-  "_strong_buy_state": {
-    "scanner-1h:WLD": true
-  },
+  "_strong_buy_state": {},
   "_pnl_tracker": {
     "open": {
-      "1h:WLD": {
-        "coin": "WLD",
-        "name": "Worldcoin",
-        "tf": "1h",
-        "entry": 0.3856,
-        "stop": 0.3821875,
-        "target1": 0.3890125,
-        "target2": 0.39242499999999997,
-        "opened_at": "2026-09-13T19:57:15.429578"
-      },
       "15m:CC": {
         "coin": "CC",
         "name": "Canton",
         "tf": "15m",
         "entry": 0.0948,
-        "stop": 0.09450466666666667,
-        "target1": 0.09509533333333332,
-        "target2": 0.09539066666666665,
-        "opened_at": "2026-09-13T20:17:14.692656"
+        "stop": 0.094501,
+        "target1": 0.09509899999999999,
+        "target2": 0.09539799999999998,
+        "opened_at": "2026-09-13T20:22:21.482746"
       },
       "15m:LINK": {
         "coin": "LINK",
         "name": "Chainlink",
         "tf": "15m",
         "entry": 11.18953,
-        "stop": 11.156449666666667,
-        "target1": 11.222610333333332,
-        "target2": 11.255690666666665,
-        "opened_at": "2026-09-13T20:17:14.692656"
+        "stop": 11.155891333333333,
+        "target1": 11.223168666666666,
+        "target2": 11.256807333333333,
+        "opened_at": "2026-09-13T20:22:21.482746"
+      },
+      "1h:WLD": {
+        "coin": "WLD",
+        "name": "Worldcoin",
+        "tf": "1h",
+        "entry": 0.3856,
+        "stop": 0.38221666666666665,
+        "target1": 0.38898333333333335,
+        "target2": 0.3923666666666667,
+        "opened_at": "2026-09-13T20:22:21.482746"
       },
       "daily:XLM": {
         "coin": "XLM",
@@ -3336,7 +3334,7 @@
         "stop": 0.14142906666666666,
         "target1": 0.16291693333333335,
         "target2": 0.1736608666666667,
-        "opened_at": "2026-09-13T20:17:14.692656"
+        "opened_at": "2026-09-13T20:22:21.482746"
       }
     },
     "resolved": [
@@ -17236,6 +17234,58 @@
         "result": "win",
         "resolved_at": "2026-09-13T20:17:14.692656",
         "exit_price": 0.179662
+      },
+      {
+        "coin": "WLD",
+        "name": "Worldcoin",
+        "tf": "1h",
+        "entry": 0.3856,
+        "stop": 0.3821875,
+        "target1": 0.3890125,
+        "target2": 0.39242499999999997,
+        "opened_at": "2026-09-13T19:57:15.429578",
+        "result": "win",
+        "resolved_at": "2026-09-13T20:22:21.482746",
+        "exit_price": 0.3898
+      },
+      {
+        "coin": "CC",
+        "name": "Canton",
+        "tf": "15m",
+        "entry": 0.0948,
+        "stop": 0.09450466666666667,
+        "target1": 0.09509533333333332,
+        "target2": 0.09539066666666665,
+        "opened_at": "2026-09-13T20:17:14.692656",
+        "result": "win",
+        "resolved_at": "2026-09-13T20:22:21.482746",
+        "exit_price": 0.09593
+      },
+      {
+        "coin": "LINK",
+        "name": "Chainlink",
+        "tf": "15m",
+        "entry": 11.18953,
+        "stop": 11.156449666666667,
+        "target1": 11.222610333333332,
+        "target2": 11.255690666666665,
+        "opened_at": "2026-09-13T20:17:14.692656",
+        "result": "win",
+        "resolved_at": "2026-09-13T20:22:21.482746",
+        "exit_price": 11.45224
+      },
+      {
+        "coin": "XLM",
+        "name": "Stellar",
+        "tf": "daily",
+        "entry": 0.152173,
+        "stop": 0.14142906666666666,
+        "target1": 0.16291693333333335,
+        "target2": 0.1736608666666667,
+        "opened_at": "2026-09-13T20:17:14.692656",
+        "result": "win",
+        "resolved_at": "2026-09-13T20:22:21.482746",
+        "exit_price": 0.179958
       }
     ]
   },
@@ -17243,14 +17293,14 @@
     "key": "BTC",
     "name": "Bitcoin",
     "emoji": "\u20bf",
-    "price": 77249,
+    "price": 77270,
     "high_24h": 77374,
     "low_24h": 76516,
-    "pct_24h": 0.10801,
+    "pct_24h": 0.1489,
     "pct_7d": -3.4,
     "pct_30d": 22.9,
-    "sma50": 71168.26805181293,
-    "sma200": 70128.84177318745,
+    "sma50": 71168.6633664859,
+    "sma200": 70128.94060185569,
     "support_30d": 62843.70368466329,
     "resistance_30d": 81264.70153038795,
     "mark_price": 77158.0,
@@ -17265,14 +17315,14 @@
     "key": "ETH",
     "name": "Ethereum",
     "emoji": "\u039e",
-    "price": 2506.17,
+    "price": 2507.01,
     "high_24h": 2527.29,
     "low_24h": 2464.63,
-    "pct_24h": -0.62158,
+    "pct_24h": -0.56881,
     "pct_7d": 0.4,
     "pct_30d": 33.7,
-    "sma50": 2186.4941178813556,
-    "sma200": 2057.547309979268,
+    "sma50": 2186.510493861728,
+    "sma200": 2057.551403974361,
     "support_30d": 1874.401898191962,
     "resistance_30d": 2525.267261590238,
     "mark_price": 2521.71641085,
