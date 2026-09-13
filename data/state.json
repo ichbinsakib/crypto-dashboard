@@ -2071,7 +2071,7 @@
         ],
         [
           "Stretch from long-term average",
-          "-30.1% below its long-term average - confirmed downtrend",
+          "-30.0% below its long-term average - confirmed downtrend",
           -1
         ],
         [
@@ -2084,12 +2084,12 @@
       "id": "pi-network",
       "symbol": "PI",
       "name": "Pi Network",
-      "price": 0.097546,
-      "pct_24h": 2.25039,
-      "pct_7d": 2.7,
+      "price": 0.097683,
+      "pct_24h": 2.16654,
+      "pct_7d": 3.2,
       "support_30d": 0.08559695435343688,
       "resistance_30d": 0.09798925329339339,
-      "as_of": "2026-09-13 15:35:21",
+      "as_of": "2026-09-13 16:40:23",
       "stale": false
     },
     "ondo-finance": {
@@ -2263,7 +2263,7 @@
         ],
         [
           "Stretch from long-term average",
-          "-2.1% vs its long-term average - not stretched either way",
+          "-2.2% vs its long-term average - not stretched either way",
           0
         ],
         [
@@ -2276,12 +2276,12 @@
       "id": "bittensor",
       "symbol": "TAO",
       "name": "Bittensor",
-      "price": 234.4,
-      "pct_24h": -0.57693,
+      "price": 234.08,
+      "pct_24h": -0.52511,
       "pct_7d": -4.1,
       "support_30d": 190.67093053611111,
       "resistance_30d": 265.7337487161633,
-      "as_of": "2026-09-13 16:30:29",
+      "as_of": "2026-09-13 16:40:23",
       "stale": false
     },
     "the-open-network": {
@@ -2455,7 +2455,7 @@
         ],
         [
           "Stretch from long-term average",
-          "+34.2% above its long-term average - very stretched",
+          "+33.0% above its long-term average - very stretched",
           -2
         ],
         [
@@ -2468,12 +2468,12 @@
       "id": "near",
       "symbol": "NEAR",
       "name": "NEAR Protocol",
-      "price": 2.31,
-      "pct_24h": -3.71834,
-      "pct_7d": -6.4,
+      "price": 2.29,
+      "pct_24h": -3.98938,
+      "pct_7d": -4.9,
       "support_30d": 1.5879597131538,
       "resistance_30d": 2.4848168147865453,
-      "as_of": "2026-09-13 15:05:21",
+      "as_of": "2026-09-13 16:40:23",
       "stale": false
     },
     "quant-network": {
@@ -3293,18 +3293,30 @@
       "stale": false
     }
   },
-  "_strong_buy_state": {},
+  "_strong_buy_state": {
+    "scanner-15m:TAO": true
+  },
   "_pnl_tracker": {
     "open": {
+      "15m:TAO": {
+        "coin": "TAO",
+        "name": "Bittensor",
+        "tf": "15m",
+        "entry": 230.6134,
+        "stop": 229.43939666666668,
+        "target1": 231.78740333333334,
+        "target2": 232.96140666666668,
+        "opened_at": "2026-09-13T16:42:19.850735"
+      },
       "1h:WBT": {
         "coin": "WBT",
         "name": "WhiteBIT Coin",
         "tf": "1h",
         "entry": 79.46,
-        "stop": 79.29124999999999,
-        "target1": 79.62875,
-        "target2": 79.7975,
-        "opened_at": "2026-09-13T16:37:15.553883"
+        "stop": 79.29083333333332,
+        "target1": 79.62916666666666,
+        "target2": 79.79833333333333,
+        "opened_at": "2026-09-13T16:42:19.850735"
       },
       "daily:XLM": {
         "coin": "XLM",
@@ -3314,7 +3326,7 @@
         "stop": 0.14142906666666666,
         "target1": 0.16291693333333335,
         "target2": 0.1736608666666667,
-        "opened_at": "2026-09-13T16:37:15.553883"
+        "opened_at": "2026-09-13T16:42:19.850735"
       }
     },
     "resolved": [
@@ -15654,6 +15666,32 @@
         "result": "win",
         "resolved_at": "2026-09-13T16:37:15.553883",
         "exit_price": 0.178379
+      },
+      {
+        "coin": "WBT",
+        "name": "WhiteBIT Coin",
+        "tf": "1h",
+        "entry": 79.46,
+        "stop": 79.29124999999999,
+        "target1": 79.62875,
+        "target2": 79.7975,
+        "opened_at": "2026-09-13T16:37:15.553883",
+        "result": "win",
+        "resolved_at": "2026-09-13T16:42:19.850735",
+        "exit_price": 80.05
+      },
+      {
+        "coin": "XLM",
+        "name": "Stellar",
+        "tf": "daily",
+        "entry": 0.152173,
+        "stop": 0.14142906666666666,
+        "target1": 0.16291693333333335,
+        "target2": 0.1736608666666667,
+        "opened_at": "2026-09-13T16:37:15.553883",
+        "result": "win",
+        "resolved_at": "2026-09-13T16:42:19.850735",
+        "exit_price": 0.178625
       }
     ]
   },
@@ -15661,14 +15699,14 @@
     "key": "BTC",
     "name": "Bitcoin",
     "emoji": "\u20bf",
-    "price": 77227,
+    "price": 77220,
     "high_24h": 77377,
     "low_24h": 76516,
-    "pct_24h": -0.17914,
+    "pct_24h": -0.15149,
     "pct_7d": -3.0,
     "pct_30d": 23.2,
-    "sma50": 71167.79988457107,
-    "sma200": 70128.72473137698,
+    "sma50": 71167.67300596723,
+    "sma200": 70128.693011726,
     "support_30d": 62843.70368466329,
     "resistance_30d": 81264.70153038795,
     "mark_price": 77158.0,
@@ -15683,14 +15721,14 @@
     "key": "ETH",
     "name": "Ethereum",
     "emoji": "\u039e",
-    "price": 2501.51,
+    "price": 2501.53,
     "high_24h": 2533.42,
     "low_24h": 2464.63,
-    "pct_24h": -1.2206,
+    "pct_24h": -1.15665,
     "pct_7d": 0.5,
     "pct_30d": 33.5,
-    "sma50": 2186.403231858206,
-    "sma200": 2057.5245884734804,
+    "sma50": 2186.3986456015396,
+    "sma200": 2057.523441909314,
     "support_30d": 1874.401898191962,
     "resistance_30d": 2525.267261590238,
     "mark_price": 2521.71641085,
