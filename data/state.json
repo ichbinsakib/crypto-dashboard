@@ -343,7 +343,7 @@
         ],
         [
           "Stretch from long-term average",
-          "-4.6% vs its long-term average - not stretched either way",
+          "-4.3% vs its long-term average - not stretched either way",
           0
         ],
         [
@@ -356,12 +356,12 @@
       "id": "dogecoin",
       "symbol": "DOGE",
       "name": "Dogecoin",
-      "price": 0.084149,
-      "pct_24h": -0.60619,
-      "pct_7d": -5.2,
+      "price": 0.084335,
+      "pct_24h": -0.57224,
+      "pct_7d": -5.4,
       "support_30d": 0.06952870548515376,
       "resistance_30d": 0.09337940032634065,
-      "as_of": "2026-09-13 19:44:02",
+      "as_of": "2026-09-13 18:15:23",
       "stale": false
     },
     "zcash": {
@@ -836,12 +836,12 @@
       "id": "hedera-hashgraph",
       "symbol": "HBAR",
       "name": "Hedera",
-      "price": 0.076096,
-      "pct_24h": 2.40055,
+      "price": 0.076072,
+      "pct_24h": 2.36737,
       "pct_7d": -4.8,
       "support_30d": 0.06461260477975343,
       "resistance_30d": 0.08182180696524229,
-      "as_of": "2026-09-13 19:44:02",
+      "as_of": "2026-09-13 19:40:23",
       "stale": false
     },
     "pepe": {
@@ -1495,7 +1495,7 @@
         ],
         [
           "Stretch from long-term average",
-          "-2.4% vs its long-term average - not stretched either way",
+          "-2.9% vs its long-term average - not stretched either way",
           0
         ],
         [
@@ -1508,12 +1508,12 @@
       "id": "ethereum-classic",
       "symbol": "ETC",
       "name": "Ethereum Classic",
-      "price": 7.62,
-      "pct_24h": -0.54335,
+      "price": 7.58,
+      "pct_24h": -0.67539,
       "pct_7d": -1.2,
       "support_30d": 6.079473341192034,
       "resistance_30d": 8.609781284223262,
-      "as_of": "2026-09-13 19:20:24",
+      "as_of": "2026-09-13 19:46:28",
       "stale": false
     },
     "pump-fun": {
@@ -2215,7 +2215,7 @@
         ],
         [
           "Stretch from long-term average",
-          "+12.9% above its long-term average - a bit stretched",
+          "+13.3% above its long-term average - a bit stretched",
           -1
         ],
         [
@@ -2228,12 +2228,12 @@
       "id": "internet-computer",
       "symbol": "ICP",
       "name": "Internet Computer",
-      "price": 2.77,
-      "pct_24h": 1.43546,
-      "pct_7d": 3.8,
+      "price": 2.78,
+      "pct_24h": 1.42077,
+      "pct_7d": 3.0,
       "support_30d": 2.194804279500122,
       "resistance_30d": 2.9869340549074623,
-      "as_of": "2026-09-13 19:44:02",
+      "as_of": "2026-09-13 17:50:24",
       "stale": false
     },
     "bittensor": {
@@ -2359,7 +2359,7 @@
         ],
         [
           "Stretch from long-term average",
-          "-6.0% vs its long-term average - not stretched either way",
+          "-5.4% vs its long-term average - not stretched either way",
           0
         ],
         [
@@ -2372,12 +2372,12 @@
       "id": "sky",
       "symbol": "SKY",
       "name": "Sky",
-      "price": 0.0628,
-      "pct_24h": -0.12655,
-      "pct_7d": -11.2,
+      "price": 0.063149,
+      "pct_24h": 0.66654,
+      "pct_7d": -10.0,
       "support_30d": 0.05081051579814886,
       "resistance_30d": 0.07314868186988309,
-      "as_of": "2026-09-13 17:45:22",
+      "as_of": "2026-09-13 19:46:28",
       "stale": false
     },
     "shiba-inu": {
@@ -2579,7 +2579,7 @@
       "rows": [
         [
           "Price vs. recent range",
-          "Near its 30-day high (~$0.6997) - less room to run",
+          "Near its 30-day high (~$0.7098) - less room to run",
           -1
         ],
         [
@@ -2612,12 +2612,12 @@
       "id": "bitway",
       "symbol": "BTW",
       "name": "Bitway",
-      "price": 0.700379,
-      "pct_24h": 26.06383,
+      "price": 0.709936,
+      "pct_24h": 27.67719,
       "pct_7d": 53.6,
       "support_30d": 0.30285245757334456,
-      "resistance_30d": 0.6996922744590685,
-      "as_of": "2026-09-13 19:15:23",
+      "resistance_30d": 0.7097904550199902,
+      "as_of": "2026-09-13 19:46:28",
       "stale": false
     },
     "world-liberty-financial": {
@@ -3294,9 +3294,7 @@
     }
   },
   "_strong_buy_state": {
-    "scanner-15m:LINK": true,
-    "scanner-1h:HBAR": true,
-    "scanner-1h:ICP": true
+    "scanner-15m:LINK": true
   },
   "_pnl_tracker": {
     "open": {
@@ -3308,37 +3306,17 @@
         "stop": 0.09451033333333334,
         "target1": 0.09508966666666666,
         "target2": 0.09537933333333332,
-        "opened_at": "2026-09-13T19:45:59.223587"
+        "opened_at": "2026-09-13T19:48:26.109812"
       },
       "15m:LINK": {
         "coin": "LINK",
         "name": "Chainlink",
         "tf": "15m",
         "entry": 11.18953,
-        "stop": 11.155197,
-        "target1": 11.223863,
-        "target2": 11.258196,
-        "opened_at": "2026-09-13T19:45:59.223587"
-      },
-      "1h:HBAR": {
-        "coin": "HBAR",
-        "name": "Hedera",
-        "tf": "1h",
-        "entry": 0.07439,
-        "stop": 0.07393125,
-        "target1": 0.07484874999999999,
-        "target2": 0.07530749999999999,
-        "opened_at": "2026-09-13T19:45:59.223587"
-      },
-      "1h:ICP": {
-        "coin": "ICP",
-        "name": "Internet Computer",
-        "tf": "1h",
-        "entry": 2.641,
-        "stop": 2.613375,
-        "target1": 2.668625,
-        "target2": 2.69625,
-        "opened_at": "2026-09-13T19:45:59.223587"
+        "stop": 11.155081333333333,
+        "target1": 11.223978666666666,
+        "target2": 11.258427333333332,
+        "opened_at": "2026-09-13T19:48:26.109812"
       },
       "daily:XLM": {
         "coin": "XLM",
@@ -3348,7 +3326,7 @@
         "stop": 0.14142906666666666,
         "target1": 0.16291693333333335,
         "target2": 0.1736608666666667,
-        "opened_at": "2026-09-13T19:45:59.223587"
+        "opened_at": "2026-09-13T19:48:26.109812"
       }
     },
     "resolved": [
@@ -16986,8 +16964,8 @@
         "target2": 0.09502999999999999,
         "opened_at": "2026-09-13T19:42:21.879993",
         "result": "win",
-        "resolved_at": "2026-09-13T19:45:59.223587",
-        "exit_price": 0.09571
+        "resolved_at": "2026-09-13T19:48:26.109812",
+        "exit_price": 0.09559
       },
       {
         "coin": "LINK",
@@ -16999,8 +16977,8 @@
         "target2": 11.259698666666667,
         "opened_at": "2026-09-13T19:42:21.879993",
         "result": "win",
-        "resolved_at": "2026-09-13T19:45:59.223587",
-        "exit_price": 11.40518
+        "resolved_at": "2026-09-13T19:48:26.109812",
+        "exit_price": 11.40288
       },
       {
         "coin": "XLM",
@@ -17012,8 +16990,8 @@
         "target2": 0.1736608666666667,
         "opened_at": "2026-09-13T19:42:21.879993",
         "result": "win",
-        "resolved_at": "2026-09-13T19:45:59.223587",
-        "exit_price": 0.179008
+        "resolved_at": "2026-09-13T19:48:26.109812",
+        "exit_price": 0.179091
       }
     ]
   },
@@ -17021,14 +16999,14 @@
     "key": "BTC",
     "name": "Bitcoin",
     "emoji": "\u20bf",
-    "price": 77214,
+    "price": 77220,
     "high_24h": 77374,
     "low_24h": 76516,
-    "pct_24h": 0.19276,
+    "pct_24h": 0.2064,
     "pct_7d": -3.0,
     "pct_30d": 22.8,
-    "sma50": 71167.53488086259,
-    "sma200": 70128.65848044986,
+    "sma50": 71167.65622960594,
+    "sma200": 70128.68881763569,
     "support_30d": 62843.70368466329,
     "resistance_30d": 81264.70153038795,
     "mark_price": 77158.0,
@@ -17043,14 +17021,14 @@
     "key": "ETH",
     "name": "Ethereum",
     "emoji": "\u039e",
-    "price": 2504.61,
+    "price": 2504.42,
     "high_24h": 2527.29,
     "low_24h": 2464.63,
-    "pct_24h": -0.42659,
+    "pct_24h": -0.42862,
     "pct_7d": 0.7,
     "pct_30d": 33.7,
-    "sma50": 2186.4592824460674,
-    "sma200": 2057.538601120446,
+    "sma50": 2186.4590779671944,
+    "sma200": 2057.538550000728,
     "support_30d": 1874.401898191962,
     "resistance_30d": 2525.267261590238,
     "mark_price": 2521.71641085,
