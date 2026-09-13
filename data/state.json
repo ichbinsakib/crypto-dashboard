@@ -12,7 +12,7 @@
     },
     "eth-resistance-break": {
       "triggered": true,
-      "last_triggered_at": "2026-09-13 05:55:17"
+      "last_triggered_at": "2026-09-13 06:00:40"
     },
     "eth-support-break": {
       "triggered": false,
@@ -343,7 +343,7 @@
         ],
         [
           "Stretch from long-term average",
-          "-3.8% vs its long-term average - not stretched either way",
+          "-3.7% vs its long-term average - not stretched either way",
           0
         ],
         [
@@ -356,12 +356,12 @@
       "id": "dogecoin",
       "symbol": "DOGE",
       "name": "Dogecoin",
-      "price": 0.084782,
-      "pct_24h": 0.42289,
+      "price": 0.084871,
+      "pct_24h": 0.52976,
       "pct_7d": -7.2,
       "support_30d": 0.06952870548515376,
       "resistance_30d": 0.09337940032634065,
-      "as_of": "2026-09-13 05:45:22",
+      "as_of": "2026-09-13 06:00:40",
       "stale": false
     },
     "zcash": {
@@ -1735,7 +1735,7 @@
         ],
         [
           "Stretch from long-term average",
-          "-15.0% vs its long-term average - not stretched either way",
+          "-14.5% vs its long-term average - not stretched either way",
           0
         ],
         [
@@ -1748,12 +1748,12 @@
       "id": "sui",
       "symbol": "SUI",
       "name": "Sui",
-      "price": 0.722104,
-      "pct_24h": -0.51607,
-      "pct_7d": -9.5,
+      "price": 0.725819,
+      "pct_24h": 0.41277,
+      "pct_7d": -9.8,
       "support_30d": 0.6514311908607086,
       "resistance_30d": 0.8499161763231283,
-      "as_of": "2026-09-13 03:35:18",
+      "as_of": "2026-09-13 06:00:40",
       "stale": false
     },
     "lighter": {
@@ -1879,7 +1879,7 @@
         ],
         [
           "Stretch from long-term average",
-          "-30.6% below its long-term average - confirmed downtrend",
+          "-30.5% below its long-term average - confirmed downtrend",
           -1
         ],
         [
@@ -1892,12 +1892,12 @@
       "id": "bitcoin-cash",
       "symbol": "BCH",
       "name": "Bitcoin Cash",
-      "price": 225.75,
-      "pct_24h": -1.7583,
+      "price": 226.35,
+      "pct_24h": -1.53281,
       "pct_7d": -14.1,
       "support_30d": 203.50169440615565,
       "resistance_30d": 288.10955405353275,
-      "as_of": "2026-09-13 05:05:20",
+      "as_of": "2026-09-13 06:00:40",
       "stale": false
     },
     "mantle": {
@@ -2359,7 +2359,7 @@
         ],
         [
           "Stretch from long-term average",
-          "-5.7% vs its long-term average - not stretched either way",
+          "-5.6% vs its long-term average - not stretched either way",
           0
         ],
         [
@@ -2372,12 +2372,12 @@
       "id": "sky",
       "symbol": "SKY",
       "name": "Sky",
-      "price": 0.062949,
-      "pct_24h": -0.61304,
-      "pct_7d": -11.2,
+      "price": 0.063032,
+      "pct_24h": -0.47096,
+      "pct_7d": -11.7,
       "support_30d": 0.05081051579814886,
       "resistance_30d": 0.07314868186988309,
-      "as_of": "2026-09-13 04:55:18",
+      "as_of": "2026-09-13 06:00:40",
       "stale": false
     },
     "shiba-inu": {
@@ -2695,7 +2695,7 @@
         ],
         [
           "Stretch from long-term average",
-          "-2.8% vs its long-term average - not stretched either way",
+          "-2.7% vs its long-term average - not stretched either way",
           0
         ],
         [
@@ -2708,12 +2708,12 @@
       "id": "pax-gold",
       "symbol": "PAXG",
       "name": "PAX Gold",
-      "price": 4355.19,
-      "pct_24h": 0.02747,
+      "price": 4356.74,
+      "pct_24h": 0.06058,
       "pct_7d": -1.7,
       "support_30d": 4318.141703998686,
       "resistance_30d": 4672.307573354755,
-      "as_of": "2026-09-13 04:30:33",
+      "as_of": "2026-09-13 06:00:40",
       "stale": false
     },
     "morpho": {
@@ -3293,21 +3293,9 @@
       "stale": false
     }
   },
-  "_strong_buy_state": {
-    "scanner-15m:BNB": true
-  },
+  "_strong_buy_state": {},
   "_pnl_tracker": {
     "open": {
-      "15m:BNB": {
-        "coin": "BNB",
-        "name": "BNB",
-        "tf": "15m",
-        "entry": 725.3,
-        "stop": 724.5933333333332,
-        "target1": 726.0066666666667,
-        "target2": 726.7133333333334,
-        "opened_at": "2026-09-13T05:52:12.329865"
-      },
       "1h:WLD": {
         "coin": "WLD",
         "name": "Worldcoin",
@@ -3326,7 +3314,7 @@
         "stop": 0.1415159,
         "target1": 0.1628301,
         "target2": 0.1734872,
-        "opened_at": "2026-09-13T05:56:54.239550"
+        "opened_at": "2026-09-13T06:01:46.872029"
       }
     },
     "resolved": [
@@ -12650,6 +12638,32 @@
         "result": "win",
         "resolved_at": "2026-09-13T05:56:54.239550",
         "exit_price": 0.180858
+      },
+      {
+        "coin": "BNB",
+        "name": "BNB",
+        "tf": "15m",
+        "entry": 725.3,
+        "stop": 724.5933333333332,
+        "target1": 726.0066666666667,
+        "target2": 726.7133333333334,
+        "opened_at": "2026-09-13T05:52:12.329865",
+        "result": "win",
+        "resolved_at": "2026-09-13T06:01:46.872029",
+        "exit_price": 726.01
+      },
+      {
+        "coin": "XLM",
+        "name": "Stellar",
+        "tf": "daily",
+        "entry": 0.152173,
+        "stop": 0.1415159,
+        "target1": 0.1628301,
+        "target2": 0.1734872,
+        "opened_at": "2026-09-13T05:56:54.239550",
+        "result": "win",
+        "resolved_at": "2026-09-13T06:01:46.872029",
+        "exit_price": 0.180844
       }
     ]
   },
@@ -12660,11 +12674,11 @@
     "price": 77302,
     "high_24h": 77479,
     "low_24h": 77055,
-    "pct_24h": 0.07972,
+    "pct_24h": 0.11238,
     "pct_7d": -3.5,
     "pct_30d": 22.0,
-    "sma50": 71169.29666034557,
-    "sma200": 70129.0989253206,
+    "sma50": 71169.32122246969,
+    "sma200": 70129.10506585163,
     "support_30d": 62843.70368466329,
     "resistance_30d": 81264.70153038795,
     "mark_price": 77158.0,
@@ -12679,14 +12693,14 @@
     "key": "ETH",
     "name": "Ethereum",
     "emoji": "\u039e",
-    "price": 2522.62,
+    "price": 2522.45,
     "high_24h": 2543.69,
     "low_24h": 2510.27,
-    "pct_24h": 0.42786,
+    "pct_24h": 0.43413,
     "pct_7d": 0.4,
     "pct_30d": 33.9,
-    "sma50": 2186.822835860768,
-    "sma200": 2057.629489474121,
+    "sma50": 2186.816541294095,
+    "sma200": 2057.627915832453,
     "support_30d": 1874.401898191962,
     "resistance_30d": 2525.267261590238,
     "mark_price": 2521.71641085,
