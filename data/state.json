@@ -68,12 +68,12 @@
       "id": "binancecoin",
       "symbol": "BNB",
       "name": "BNB",
-      "price": 720.85,
-      "pct_24h": -1.35609,
+      "price": 720.83,
+      "pct_24h": -1.31075,
       "pct_7d": -3.4,
       "support_30d": 602.4629221231862,
       "resistance_30d": 766.4092879330625,
-      "as_of": "2026-09-13 17:40:22",
+      "as_of": "2026-09-13 17:50:24",
       "stale": false
     },
     "ripple": {
@@ -2215,7 +2215,7 @@
         ],
         [
           "Stretch from long-term average",
-          "+14.1% above its long-term average - a bit stretched",
+          "+13.3% above its long-term average - a bit stretched",
           -1
         ],
         [
@@ -2228,12 +2228,12 @@
       "id": "internet-computer",
       "symbol": "ICP",
       "name": "Internet Computer",
-      "price": 2.8,
-      "pct_24h": 2.48547,
+      "price": 2.78,
+      "pct_24h": 1.42077,
       "pct_7d": 3.0,
       "support_30d": 2.194804279500122,
       "resistance_30d": 2.9869340549074623,
-      "as_of": "2026-09-13 17:30:29",
+      "as_of": "2026-09-13 17:50:24",
       "stale": false
     },
     "bittensor": {
@@ -2839,7 +2839,7 @@
         ],
         [
           "Stretch from long-term average",
-          "+28.7% above its long-term average - a bit stretched",
+          "+30.0% above its long-term average - a bit stretched",
           -1
         ],
         [
@@ -2852,12 +2852,12 @@
       "id": "aave",
       "symbol": "AAVE",
       "name": "Aave",
-      "price": 125.7,
-      "pct_24h": -0.26373,
-      "pct_7d": -6.2,
+      "price": 126.94,
+      "pct_24h": 0.63388,
+      "pct_7d": -5.3,
       "support_30d": 85.94219943917633,
       "resistance_30d": 141.53047916466082,
-      "as_of": "2026-09-13 16:10:22",
+      "as_of": "2026-09-13 17:50:24",
       "stale": false
     },
     "okb": {
@@ -3304,20 +3304,20 @@
         "name": "Bittensor",
         "tf": "15m",
         "entry": 230.6134,
-        "stop": 229.45118666666667,
-        "target1": 231.77561333333335,
-        "target2": 232.9378266666667,
-        "opened_at": "2026-09-13T17:47:14.970375"
+        "stop": 229.4421166666667,
+        "target1": 231.78468333333333,
+        "target2": 232.95596666666665,
+        "opened_at": "2026-09-13T17:52:16.104585"
       },
       "15m:UNI": {
         "coin": "UNI",
         "name": "Uniswap",
         "tf": "15m",
         "entry": 6.188,
-        "stop": 6.155539999999999,
-        "target1": 6.22046,
-        "target2": 6.2529200000000005,
-        "opened_at": "2026-09-13T17:47:14.970375"
+        "stop": 6.155426666666666,
+        "target1": 6.220573333333333,
+        "target2": 6.253146666666667,
+        "opened_at": "2026-09-13T17:52:16.104585"
       },
       "1h:WBT": {
         "coin": "WBT",
@@ -3327,7 +3327,7 @@
         "stop": 79.28916666666666,
         "target1": 79.63083333333333,
         "target2": 79.80166666666666,
-        "opened_at": "2026-09-13T17:47:14.970375"
+        "opened_at": "2026-09-13T17:52:16.104585"
       },
       "daily:XLM": {
         "coin": "XLM",
@@ -3337,7 +3337,7 @@
         "stop": 0.14142906666666666,
         "target1": 0.16291693333333335,
         "target2": 0.1736608666666667,
-        "opened_at": "2026-09-13T17:47:14.970375"
+        "opened_at": "2026-09-13T17:52:16.104585"
       }
     },
     "resolved": [
@@ -16106,6 +16106,58 @@
         "result": "win",
         "resolved_at": "2026-09-13T17:47:14.970375",
         "exit_price": 0.179499
+      },
+      {
+        "coin": "TAO",
+        "name": "Bittensor",
+        "tf": "15m",
+        "entry": 230.6134,
+        "stop": 229.45118666666667,
+        "target1": 231.77561333333335,
+        "target2": 232.9378266666667,
+        "opened_at": "2026-09-13T17:47:14.970375",
+        "result": "win",
+        "resolved_at": "2026-09-13T17:52:16.104585",
+        "exit_price": 236.3441
+      },
+      {
+        "coin": "UNI",
+        "name": "Uniswap",
+        "tf": "15m",
+        "entry": 6.188,
+        "stop": 6.155539999999999,
+        "target1": 6.22046,
+        "target2": 6.2529200000000005,
+        "opened_at": "2026-09-13T17:47:14.970375",
+        "result": "win",
+        "resolved_at": "2026-09-13T17:52:16.104585",
+        "exit_price": 6.3293
+      },
+      {
+        "coin": "WBT",
+        "name": "WhiteBIT Coin",
+        "tf": "1h",
+        "entry": 79.46,
+        "stop": 79.28916666666666,
+        "target1": 79.63083333333333,
+        "target2": 79.80166666666666,
+        "opened_at": "2026-09-13T17:47:14.970375",
+        "result": "win",
+        "resolved_at": "2026-09-13T17:52:16.104585",
+        "exit_price": 80.18
+      },
+      {
+        "coin": "XLM",
+        "name": "Stellar",
+        "tf": "daily",
+        "entry": 0.152173,
+        "stop": 0.14142906666666666,
+        "target1": 0.16291693333333335,
+        "target2": 0.1736608666666667,
+        "opened_at": "2026-09-13T17:47:14.970375",
+        "result": "win",
+        "resolved_at": "2026-09-13T17:52:16.104585",
+        "exit_price": 0.179672
       }
     ]
   },
@@ -16113,14 +16165,14 @@
     "key": "BTC",
     "name": "Bitcoin",
     "emoji": "\u20bf",
-    "price": 77251,
+    "price": 77275,
     "high_24h": 77318,
     "low_24h": 76516,
-    "pct_24h": 0.04336,
+    "pct_24h": 0.11732,
     "pct_7d": -3.0,
     "pct_30d": 22.8,
-    "sma50": 71168.26886966535,
-    "sma200": 70128.84197765055,
+    "sma50": 71168.76913559691,
+    "sma200": 70128.96704413343,
     "support_30d": 62843.70368466329,
     "resistance_30d": 81264.70153038795,
     "mark_price": 77158.0,
@@ -16135,14 +16187,14 @@
     "key": "ETH",
     "name": "Ethereum",
     "emoji": "\u039e",
-    "price": 2503.74,
+    "price": 2504.52,
     "high_24h": 2527.29,
     "low_24h": 2464.63,
-    "pct_24h": -0.89506,
+    "pct_24h": -0.83043,
     "pct_7d": 1.0,
     "pct_30d": 33.2,
-    "sma50": 2186.437610563843,
-    "sma200": 2057.5331831498897,
+    "sma50": 2186.4573513097134,
+    "sma200": 2057.5381183363575,
     "support_30d": 1874.401898191962,
     "resistance_30d": 2525.267261590238,
     "mark_price": 2521.71641085,
