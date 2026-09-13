@@ -68,12 +68,12 @@
       "id": "binancecoin",
       "symbol": "BNB",
       "name": "BNB",
-      "price": 720.83,
-      "pct_24h": -1.31075,
-      "pct_7d": -3.4,
+      "price": 720.72,
+      "pct_24h": -1.33275,
+      "pct_7d": -3.6,
       "support_30d": 602.4629221231862,
       "resistance_30d": 766.4092879330625,
-      "as_of": "2026-09-13 17:50:24",
+      "as_of": "2026-09-13 18:10:24",
       "stale": false
     },
     "ripple": {
@@ -1735,7 +1735,7 @@
         ],
         [
           "Stretch from long-term average",
-          "-15.9% below its long-term average - confirmed downtrend",
+          "-15.2% below its long-term average - confirmed downtrend",
           -1
         ],
         [
@@ -1748,12 +1748,12 @@
       "id": "sui",
       "symbol": "SUI",
       "name": "Sui",
-      "price": 0.714226,
-      "pct_24h": -2.0313,
-      "pct_7d": -10.0,
+      "price": 0.720279,
+      "pct_24h": -0.31162,
+      "pct_7d": -9.9,
       "support_30d": 0.6514311908607086,
       "resistance_30d": 0.8499161763231283,
-      "as_of": "2026-09-13 16:35:19",
+      "as_of": "2026-09-13 18:10:24",
       "stale": false
     },
     "lighter": {
@@ -2023,7 +2023,7 @@
         ],
         [
           "Stretch from long-term average",
-          "+71.7% above its long-term average - very stretched",
+          "+71.4% above its long-term average - very stretched",
           -2
         ],
         [
@@ -2036,12 +2036,12 @@
       "id": "uniswap",
       "symbol": "UNI",
       "name": "Uniswap",
-      "price": 6.34,
-      "pct_24h": 0.33215,
-      "pct_7d": -9.6,
+      "price": 6.33,
+      "pct_24h": 0.22695,
+      "pct_7d": -12.7,
       "support_30d": 3.2366861257715636,
       "resistance_30d": 7.291165865788254,
-      "as_of": "2026-09-13 17:37:39",
+      "as_of": "2026-09-13 18:10:24",
       "stale": false
     },
     "pi-network": {
@@ -3303,20 +3303,20 @@
         "name": "Bittensor",
         "tf": "15m",
         "entry": 230.6134,
-        "stop": 229.48977000000002,
-        "target1": 231.73703,
-        "target2": 232.86066,
-        "opened_at": "2026-09-13T18:07:13.530970"
+        "stop": 229.48803333333336,
+        "target1": 231.73876666666666,
+        "target2": 232.8641333333333,
+        "opened_at": "2026-09-13T18:12:16.288172"
       },
       "15m:UNI": {
         "coin": "UNI",
         "name": "Uniswap",
         "tf": "15m",
         "entry": 6.188,
-        "stop": 6.15576,
-        "target1": 6.2202399999999995,
-        "target2": 6.252479999999999,
-        "opened_at": "2026-09-13T18:07:13.530970"
+        "stop": 6.155466666666666,
+        "target1": 6.220533333333333,
+        "target2": 6.253066666666666,
+        "opened_at": "2026-09-13T18:12:16.288172"
       },
       "1h:WBT": {
         "coin": "WBT",
@@ -3326,7 +3326,7 @@
         "stop": 79.29083333333332,
         "target1": 79.62916666666666,
         "target2": 79.79833333333333,
-        "opened_at": "2026-09-13T18:07:13.530970"
+        "opened_at": "2026-09-13T18:12:16.288172"
       },
       "daily:XLM": {
         "coin": "XLM",
@@ -3336,7 +3336,7 @@
         "stop": 0.14142906666666666,
         "target1": 0.16291693333333335,
         "target2": 0.1736608666666667,
-        "opened_at": "2026-09-13T18:07:13.530970"
+        "opened_at": "2026-09-13T18:12:16.288172"
       }
     },
     "resolved": [
@@ -16313,6 +16313,58 @@
         "result": "win",
         "resolved_at": "2026-09-13T18:07:13.530970",
         "exit_price": 0.179465
+      },
+      {
+        "coin": "TAO",
+        "name": "Bittensor",
+        "tf": "15m",
+        "entry": 230.6134,
+        "stop": 229.48977000000002,
+        "target1": 231.73703,
+        "target2": 232.86066,
+        "opened_at": "2026-09-13T18:07:13.530970",
+        "result": "win",
+        "resolved_at": "2026-09-13T18:12:16.288172",
+        "exit_price": 236.4017
+      },
+      {
+        "coin": "UNI",
+        "name": "Uniswap",
+        "tf": "15m",
+        "entry": 6.188,
+        "stop": 6.15576,
+        "target1": 6.2202399999999995,
+        "target2": 6.252479999999999,
+        "opened_at": "2026-09-13T18:07:13.530970",
+        "result": "win",
+        "resolved_at": "2026-09-13T18:12:16.288172",
+        "exit_price": 6.3255
+      },
+      {
+        "coin": "WBT",
+        "name": "WhiteBIT Coin",
+        "tf": "1h",
+        "entry": 79.46,
+        "stop": 79.29083333333332,
+        "target1": 79.62916666666666,
+        "target2": 79.79833333333333,
+        "opened_at": "2026-09-13T18:07:13.530970",
+        "result": "win",
+        "resolved_at": "2026-09-13T18:12:16.288172",
+        "exit_price": 80.1
+      },
+      {
+        "coin": "XLM",
+        "name": "Stellar",
+        "tf": "daily",
+        "entry": 0.152173,
+        "stop": 0.14142906666666666,
+        "target1": 0.16291693333333335,
+        "target2": 0.1736608666666667,
+        "opened_at": "2026-09-13T18:07:13.530970",
+        "result": "win",
+        "resolved_at": "2026-09-13T18:12:16.288172",
+        "exit_price": 0.179533
       }
     ]
   },
@@ -16320,14 +16372,14 @@
     "key": "BTC",
     "name": "Bitcoin",
     "emoji": "\u20bf",
-    "price": 77295,
+    "price": 77294,
     "high_24h": 77374,
     "low_24h": 76516,
-    "pct_24h": 0.15398,
+    "pct_24h": 0.12681,
     "pct_7d": -3.0,
     "pct_30d": 22.6,
-    "sma50": 71169.16372978079,
-    "sma200": 70129.0656926794,
+    "sma50": 71169.14359461647,
+    "sma200": 70129.06065888832,
     "support_30d": 62843.70368466329,
     "resistance_30d": 81264.70153038795,
     "mark_price": 77158.0,
@@ -16342,14 +16394,14 @@
     "key": "ETH",
     "name": "Ethereum",
     "emoji": "\u039e",
-    "price": 2504.76,
+    "price": 2504.83,
     "high_24h": 2527.29,
     "low_24h": 2464.63,
-    "pct_24h": -0.75474,
+    "pct_24h": -0.81444,
     "pct_7d": 0.8,
     "pct_30d": 33.0,
-    "sma50": 2186.4658909040622,
-    "sma200": 2057.540253234945,
+    "sma50": 2186.4672810020857,
+    "sma200": 2057.5406007594506,
     "support_30d": 1874.401898191962,
     "resistance_30d": 2525.267261590238,
     "mark_price": 2521.71641085,
