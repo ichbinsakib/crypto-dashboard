@@ -679,7 +679,7 @@
         ],
         [
           "Stretch from long-term average",
-          "-4.6% vs its long-term average - not stretched either way",
+          "-4.8% vs its long-term average - not stretched either way",
           0
         ],
         [
@@ -692,12 +692,12 @@
       "id": "cardano",
       "symbol": "ADA",
       "name": "Cardano",
-      "price": 0.208784,
-      "pct_24h": 0.5993,
-      "pct_7d": -4.7,
+      "price": 0.208371,
+      "pct_24h": 0.21829,
+      "pct_7d": -5.4,
       "support_30d": 0.1741249817054162,
       "resistance_30d": 0.2291047455940254,
-      "as_of": "2026-09-13 17:30:29",
+      "as_of": "2026-09-13 20:40:24",
       "stale": false
     },
     "stellar": {
@@ -1495,7 +1495,7 @@
         ],
         [
           "Stretch from long-term average",
-          "-2.9% vs its long-term average - not stretched either way",
+          "-2.8% vs its long-term average - not stretched either way",
           0
         ],
         [
@@ -1508,12 +1508,12 @@
       "id": "ethereum-classic",
       "symbol": "ETC",
       "name": "Ethereum Classic",
-      "price": 7.58,
-      "pct_24h": -0.67539,
-      "pct_7d": -1.2,
+      "price": 7.59,
+      "pct_24h": -0.64498,
+      "pct_7d": -1.7,
       "support_30d": 6.079473341192034,
       "resistance_30d": 8.609781284223262,
-      "as_of": "2026-09-13 19:46:28",
+      "as_of": "2026-09-13 20:40:24",
       "stale": false
     },
     "pump-fun": {
@@ -1701,11 +1701,11 @@
       "symbol": "BGB",
       "name": "Bitget Token",
       "price": 1.93,
-      "pct_24h": 0.04311,
+      "pct_24h": 0.02419,
       "pct_7d": -4.3,
       "support_30d": 1.6478040912714662,
       "resistance_30d": 2.0284940947674617,
-      "as_of": "2026-09-13 20:30:28",
+      "as_of": "2026-09-13 20:40:24",
       "stale": false
     },
     "sui": {
@@ -3301,20 +3301,20 @@
         "name": "Canton",
         "tf": "15m",
         "entry": 0.0948,
-        "stop": 0.09449733333333334,
-        "target1": 0.09510266666666665,
-        "target2": 0.09540533333333331,
-        "opened_at": "2026-09-13T20:37:16.146826"
+        "stop": 0.094497,
+        "target1": 0.095103,
+        "target2": 0.09540599999999999,
+        "opened_at": "2026-09-13T20:42:17.014607"
       },
       "15m:LINK": {
         "coin": "LINK",
         "name": "Chainlink",
         "tf": "15m",
         "entry": 11.18953,
-        "stop": 11.155714333333332,
-        "target1": 11.223345666666667,
-        "target2": 11.257161333333334,
-        "opened_at": "2026-09-13T20:37:16.146826"
+        "stop": 11.155474333333332,
+        "target1": 11.223585666666667,
+        "target2": 11.257641333333334,
+        "opened_at": "2026-09-13T20:42:17.014607"
       },
       "1h:WLD": {
         "coin": "WLD",
@@ -3324,7 +3324,7 @@
         "stop": 0.38219583333333335,
         "target1": 0.38900416666666665,
         "target2": 0.3924083333333333,
-        "opened_at": "2026-09-13T20:37:16.146826"
+        "opened_at": "2026-09-13T20:42:17.014607"
       },
       "daily:XLM": {
         "coin": "XLM",
@@ -3334,7 +3334,7 @@
         "stop": 0.14142906666666666,
         "target1": 0.16291693333333335,
         "target2": 0.1736608666666667,
-        "opened_at": "2026-09-13T20:37:16.146826"
+        "opened_at": "2026-09-13T20:42:17.014607"
       }
     },
     "resolved": [
@@ -17442,6 +17442,58 @@
         "result": "win",
         "resolved_at": "2026-09-13T20:37:16.146826",
         "exit_price": 0.179951
+      },
+      {
+        "coin": "CC",
+        "name": "Canton",
+        "tf": "15m",
+        "entry": 0.0948,
+        "stop": 0.09449733333333334,
+        "target1": 0.09510266666666665,
+        "target2": 0.09540533333333331,
+        "opened_at": "2026-09-13T20:37:16.146826",
+        "result": "win",
+        "resolved_at": "2026-09-13T20:42:17.014607",
+        "exit_price": 0.09612
+      },
+      {
+        "coin": "LINK",
+        "name": "Chainlink",
+        "tf": "15m",
+        "entry": 11.18953,
+        "stop": 11.155714333333332,
+        "target1": 11.223345666666667,
+        "target2": 11.257161333333334,
+        "opened_at": "2026-09-13T20:37:16.146826",
+        "result": "win",
+        "resolved_at": "2026-09-13T20:42:17.014607",
+        "exit_price": 11.44414
+      },
+      {
+        "coin": "WLD",
+        "name": "Worldcoin",
+        "tf": "1h",
+        "entry": 0.3856,
+        "stop": 0.38219583333333335,
+        "target1": 0.38900416666666665,
+        "target2": 0.3924083333333333,
+        "opened_at": "2026-09-13T20:37:16.146826",
+        "result": "win",
+        "resolved_at": "2026-09-13T20:42:17.014607",
+        "exit_price": 0.3892
+      },
+      {
+        "coin": "XLM",
+        "name": "Stellar",
+        "tf": "daily",
+        "entry": 0.152173,
+        "stop": 0.14142906666666666,
+        "target1": 0.16291693333333335,
+        "target2": 0.1736608666666667,
+        "opened_at": "2026-09-13T20:37:16.146826",
+        "result": "win",
+        "resolved_at": "2026-09-13T20:42:17.014607",
+        "exit_price": 0.179854
       }
     ]
   },
@@ -17449,14 +17501,14 @@
     "key": "BTC",
     "name": "Bitcoin",
     "emoji": "\u20bf",
-    "price": 77323,
+    "price": 77289,
     "high_24h": 77374,
     "low_24h": 76516,
-    "pct_24h": 0.20514,
+    "pct_24h": 0.18022,
     "pct_7d": -3.4,
     "pct_30d": 22.9,
-    "sma50": 71169.71913571323,
-    "sma200": 70129.20454416252,
+    "sma50": 71169.09915256171,
+    "sma200": 70129.04954837463,
     "support_30d": 62843.70368466329,
     "resistance_30d": 81264.70153038795,
     "mark_price": 77158.0,
@@ -17471,14 +17523,14 @@
     "key": "ETH",
     "name": "Ethereum",
     "emoji": "\u039e",
-    "price": 2510.63,
+    "price": 2508.65,
     "high_24h": 2527.29,
     "low_24h": 2464.63,
-    "pct_24h": -0.44527,
+    "pct_24h": -0.48872,
     "pct_7d": 0.4,
     "pct_30d": 33.7,
-    "sma50": 2186.5807387559175,
-    "sma200": 2057.5689651979087,
+    "sma50": 2186.5474219422517,
+    "sma200": 2057.5606359944923,
     "support_30d": 1874.401898191962,
     "resistance_30d": 2525.267261590238,
     "mark_price": 2521.71641085,
