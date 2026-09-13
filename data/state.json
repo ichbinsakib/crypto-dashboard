@@ -836,12 +836,12 @@
       "id": "hedera-hashgraph",
       "symbol": "HBAR",
       "name": "Hedera",
-      "price": 0.076604,
-      "pct_24h": 2.77119,
+      "price": 0.076602,
+      "pct_24h": 2.69198,
       "pct_7d": -5.5,
       "support_30d": 0.06461260477975343,
       "resistance_30d": 0.08182180696524229,
-      "as_of": "2026-09-13 18:15:23",
+      "as_of": "2026-09-13 18:50:29",
       "stale": false
     },
     "pepe": {
@@ -1460,12 +1460,12 @@
       "id": "crypto-com-chain",
       "symbol": "CRO",
       "name": "Cronos",
-      "price": 0.058468,
-      "pct_24h": -0.01474,
+      "price": 0.05847,
+      "pct_24h": -0.04973,
       "pct_7d": 1.7,
       "support_30d": 0.04621382085807831,
       "resistance_30d": 0.06091104752771909,
-      "as_of": "2026-09-13 18:30:31",
+      "as_of": "2026-09-13 18:50:29",
       "stale": false
     },
     "ethereum-classic": {
@@ -2647,7 +2647,7 @@
         ],
         [
           "Stretch from long-term average",
-          "-18.1% below its long-term average - confirmed downtrend",
+          "-18.3% below its long-term average - confirmed downtrend",
           -1
         ],
         [
@@ -2660,12 +2660,12 @@
       "id": "world-liberty-financial",
       "symbol": "WLFI",
       "name": "World Liberty Financial",
-      "price": 0.056998,
-      "pct_24h": -4.43829,
-      "pct_7d": 0.8,
+      "price": 0.056922,
+      "pct_24h": -0.75166,
+      "pct_7d": 0.9,
       "support_30d": 0.05526589948255966,
       "resistance_30d": 0.06254770952093733,
-      "as_of": "2026-09-13 16:35:19",
+      "as_of": "2026-09-13 18:50:29",
       "stale": false
     },
     "pax-gold": {
@@ -3304,7 +3304,7 @@
         "stop": 79.28625,
         "target1": 79.63374999999999,
         "target2": 79.80749999999999,
-        "opened_at": "2026-09-13T18:47:18.348458"
+        "opened_at": "2026-09-13T18:52:25.512373"
       },
       "daily:XLM": {
         "coin": "XLM",
@@ -3314,7 +3314,7 @@
         "stop": 0.14142906666666666,
         "target1": 0.16291693333333335,
         "target2": 0.1736608666666667,
-        "opened_at": "2026-09-13T18:47:18.348458"
+        "opened_at": "2026-09-13T18:52:25.512373"
       }
     },
     "resolved": [
@@ -16564,6 +16564,32 @@
         "result": "win",
         "resolved_at": "2026-09-13T18:47:18.348458",
         "exit_price": 0.179994
+      },
+      {
+        "coin": "WBT",
+        "name": "WhiteBIT Coin",
+        "tf": "1h",
+        "entry": 79.46,
+        "stop": 79.28625,
+        "target1": 79.63374999999999,
+        "target2": 79.80749999999999,
+        "opened_at": "2026-09-13T18:47:18.348458",
+        "result": "win",
+        "resolved_at": "2026-09-13T18:52:25.512373",
+        "exit_price": 80.13
+      },
+      {
+        "coin": "XLM",
+        "name": "Stellar",
+        "tf": "daily",
+        "entry": 0.152173,
+        "stop": 0.14142906666666666,
+        "target1": 0.16291693333333335,
+        "target2": 0.1736608666666667,
+        "opened_at": "2026-09-13T18:47:18.348458",
+        "result": "win",
+        "resolved_at": "2026-09-13T18:52:25.512373",
+        "exit_price": 0.179995
       }
     ]
   },
@@ -16571,14 +16597,14 @@
     "key": "BTC",
     "name": "Bitcoin",
     "emoji": "\u20bf",
-    "price": 77344,
+    "price": 77351,
     "high_24h": 77374,
     "low_24h": 76516,
-    "pct_24h": 0.22049,
+    "pct_24h": 0.23748,
     "pct_7d": -3.0,
     "pct_30d": 22.6,
-    "sma50": 71169.98927454377,
-    "sma200": 70129.27207887014,
+    "sma50": 71170.300680377,
+    "sma200": 70129.34993032846,
     "support_30d": 62843.70368466329,
     "resistance_30d": 81264.70153038795,
     "mark_price": 77158.0,
@@ -16593,14 +16619,14 @@
     "key": "ETH",
     "name": "Ethereum",
     "emoji": "\u039e",
-    "price": 2507.83,
+    "price": 2508.21,
     "high_24h": 2527.29,
     "low_24h": 2464.63,
-    "pct_24h": -0.6425,
+    "pct_24h": -0.60194,
     "pct_7d": 0.8,
     "pct_30d": 33.0,
-    "sma50": 2186.519386483702,
-    "sma200": 2057.5536271298547,
+    "sma50": 2186.534093310803,
+    "sma200": 2057.5573038366297,
     "support_30d": 1874.401898191962,
     "resistance_30d": 2525.267261590238,
     "mark_price": 2521.71641085,
