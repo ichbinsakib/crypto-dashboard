@@ -12,7 +12,7 @@
     },
     "eth-resistance-break": {
       "triggered": true,
-      "last_triggered_at": "2026-09-13 05:41:29"
+      "last_triggered_at": "2026-09-13 05:45:22"
     },
     "eth-support-break": {
       "triggered": false,
@@ -356,12 +356,12 @@
       "id": "dogecoin",
       "symbol": "DOGE",
       "name": "Dogecoin",
-      "price": 0.084777,
-      "pct_24h": 0.48207,
+      "price": 0.084782,
+      "pct_24h": 0.42289,
       "pct_7d": -7.2,
       "support_30d": 0.06952870548515376,
       "resistance_30d": 0.09337940032634065,
-      "as_of": "2026-09-13 05:15:24",
+      "as_of": "2026-09-13 05:45:22",
       "stale": false
     },
     "zcash": {
@@ -847,7 +847,7 @@
     "pepe": {
       "label": "\ud83d\udfe1 HOLD / NEUTRAL",
       "status": "neutral",
-      "score": 1,
+      "score": 0,
       "rows": [
         [
           "Price vs. recent range",
@@ -861,8 +861,8 @@
         ],
         [
           "Market phase (best guess)",
-          "Basing near the bottom - phase where smart money accumulates",
-          2
+          "Established uptrend - phase where price marks up",
+          1
         ],
         [
           "Recent trend",
@@ -871,7 +871,7 @@
         ],
         [
           "Stretch from long-term average",
-          "+4.7% vs its long-term average - not stretched either way",
+          "+5.0% vs its long-term average - not stretched either way",
           0
         ],
         [
@@ -884,12 +884,12 @@
       "id": "pepe",
       "symbol": "PEPE",
       "name": "Pepe",
-      "price": 3.45e-06,
-      "pct_24h": 3.32232,
-      "pct_7d": -5.6,
+      "price": 3.46e-06,
+      "pct_24h": 3.95366,
+      "pct_7d": -6.0,
       "support_30d": 2.5716563906374582e-06,
       "resistance_30d": 4.122123035488615e-06,
-      "as_of": "2026-09-13 04:05:17",
+      "as_of": "2026-09-13 05:45:22",
       "stale": false
     },
     "avalanche-2": {
@@ -1927,7 +1927,7 @@
         ],
         [
           "Stretch from long-term average",
-          "-3.6% vs its long-term average - not stretched either way",
+          "-3.7% vs its long-term average - not stretched either way",
           0
         ],
         [
@@ -1940,12 +1940,12 @@
       "id": "mantle",
       "symbol": "MNT",
       "name": "Mantle",
-      "price": 0.553713,
-      "pct_24h": -4.78028,
+      "price": 0.553145,
+      "pct_24h": -4.78481,
       "pct_7d": -5.5,
       "support_30d": 0.42660592418086046,
       "resistance_30d": 0.6365218632454678,
-      "as_of": "2026-09-13 05:10:26",
+      "as_of": "2026-09-13 05:45:22",
       "stale": false
     },
     "polkadot": {
@@ -3326,7 +3326,7 @@
         "stop": 0.14151976666666666,
         "target1": 0.16282623333333335,
         "target2": 0.1734794666666667,
-        "opened_at": "2026-09-13T05:43:19.531783"
+        "opened_at": "2026-09-13T05:47:12.817940"
       }
     },
     "resolved": [
@@ -12572,6 +12572,19 @@
         "result": "win",
         "resolved_at": "2026-09-13T05:43:19.531783",
         "exit_price": 0.180507
+      },
+      {
+        "coin": "XLM",
+        "name": "Stellar",
+        "tf": "daily",
+        "entry": 0.152173,
+        "stop": 0.14151976666666666,
+        "target1": 0.16282623333333335,
+        "target2": 0.1734794666666667,
+        "opened_at": "2026-09-13T05:43:19.531783",
+        "result": "win",
+        "resolved_at": "2026-09-13T05:47:12.817940",
+        "exit_price": 0.180594
       }
     ]
   },
@@ -12579,14 +12592,14 @@
     "key": "BTC",
     "name": "Bitcoin",
     "emoji": "\u20bf",
-    "price": 77282,
+    "price": 77283,
     "high_24h": 77479,
     "low_24h": 77055,
-    "pct_24h": 0.05184,
+    "pct_24h": 0.06956,
     "pct_7d": -3.5,
     "pct_30d": 22.0,
-    "sma50": 71168.89303208729,
-    "sma200": 70128.99801825604,
+    "sma50": 71168.91738349314,
+    "sma200": 70129.00410610749,
     "support_30d": 62843.70368466329,
     "resistance_30d": 81264.70153038795,
     "mark_price": 77158.0,
@@ -12601,14 +12614,14 @@
     "key": "ETH",
     "name": "Ethereum",
     "emoji": "\u039e",
-    "price": 2522.62,
+    "price": 2522.64,
     "high_24h": 2543.69,
     "low_24h": 2510.27,
-    "pct_24h": 0.4386,
+    "pct_24h": 0.4622,
     "pct_7d": 0.4,
     "pct_30d": 33.9,
-    "sma50": 2186.8231912272013,
-    "sma200": 2057.6295783157293,
+    "sma50": 2186.8231207933363,
+    "sma200": 2057.629560707263,
     "support_30d": 1874.401898191962,
     "resistance_30d": 2525.267261590238,
     "mark_price": 2521.71641085,
