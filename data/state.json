@@ -439,7 +439,7 @@
         ],
         [
           "Stretch from long-term average",
-          "+33.2% above its long-term average - very stretched",
+          "+33.1% above its long-term average - very stretched",
           -2
         ],
         [
@@ -452,12 +452,12 @@
       "id": "rain",
       "symbol": "RAIN",
       "name": "Rain",
-      "price": 0.01549071,
-      "pct_24h": 2.2463,
+      "price": 0.01547099,
+      "pct_24h": 2.01366,
       "pct_7d": -9.4,
       "support_30d": 0.012672537640838212,
       "resistance_30d": 0.018158429442510105,
-      "as_of": "2026-09-13 08:10:22",
+      "as_of": "2026-09-13 08:20:29",
       "stale": false
     },
     "chainlink": {
@@ -1317,11 +1317,11 @@
       "symbol": "HTX",
       "name": "HTX DAO",
       "price": 1.7e-06,
-      "pct_24h": -0.51417,
-      "pct_7d": 1.0,
+      "pct_24h": 0.33365,
+      "pct_7d": 0.9,
       "support_30d": 1.6023985995039954e-06,
       "resistance_30d": 1.7941245244644948e-06,
-      "as_of": "2026-09-13 06:25:21",
+      "as_of": "2026-09-13 08:20:29",
       "stale": false
     },
     "superstate-short-duration-us-government-securities-fund-ustb": {
@@ -1495,7 +1495,7 @@
         ],
         [
           "Stretch from long-term average",
-          "-2.4% vs its long-term average - not stretched either way",
+          "-3.2% vs its long-term average - not stretched either way",
           0
         ],
         [
@@ -1508,12 +1508,12 @@
       "id": "ethereum-classic",
       "symbol": "ETC",
       "name": "Ethereum Classic",
-      "price": 7.62,
-      "pct_24h": -1.10958,
-      "pct_7d": -2.6,
+      "price": 7.56,
+      "pct_24h": -2.25918,
+      "pct_7d": -2.5,
       "support_30d": 6.079473341192034,
       "resistance_30d": 8.609781284223262,
-      "as_of": "2026-09-13 07:10:24",
+      "as_of": "2026-09-13 08:20:29",
       "stale": false
     },
     "pump-fun": {
@@ -3323,10 +3323,10 @@
         "name": "Stellar",
         "tf": "daily",
         "entry": 0.152173,
-        "stop": 0.14148996666666666,
-        "target1": 0.16285603333333334,
-        "target2": 0.17353906666666669,
-        "opened_at": "2026-09-13T08:17:17.350950"
+        "stop": 0.14147446666666666,
+        "target1": 0.16287153333333335,
+        "target2": 0.1735700666666667,
+        "opened_at": "2026-09-13T08:22:20.418185"
       }
     },
     "resolved": [
@@ -13196,6 +13196,19 @@
         "result": "win",
         "resolved_at": "2026-09-13T08:17:17.350950",
         "exit_price": 0.178628
+      },
+      {
+        "coin": "XLM",
+        "name": "Stellar",
+        "tf": "daily",
+        "entry": 0.152173,
+        "stop": 0.14148996666666666,
+        "target1": 0.16285603333333334,
+        "target2": 0.17353906666666669,
+        "opened_at": "2026-09-13T08:17:17.350950",
+        "result": "win",
+        "resolved_at": "2026-09-13T08:22:20.418185",
+        "exit_price": 0.178442
       }
     ]
   },
@@ -13203,14 +13216,14 @@
     "key": "BTC",
     "name": "Bitcoin",
     "emoji": "\u20bf",
-    "price": 77060,
+    "price": 76999,
     "high_24h": 77479,
     "low_24h": 77055,
-    "pct_24h": -0.27321,
+    "pct_24h": -0.37857,
     "pct_7d": -3.4,
     "pct_30d": 22.5,
-    "sma50": 71164.12960501814,
-    "sma200": 70127.80716148874,
+    "sma50": 71163.23908245923,
+    "sma200": 70127.58453084902,
     "support_30d": 62843.70368466329,
     "resistance_30d": 81264.70153038795,
     "mark_price": 77158.0,
@@ -13225,14 +13238,14 @@
     "key": "ETH",
     "name": "Ethereum",
     "emoji": "\u039e",
-    "price": 2514.14,
+    "price": 2510.62,
     "high_24h": 2543.69,
     "low_24h": 2509.99,
-    "pct_24h": -0.43939,
+    "pct_24h": -0.60318,
     "pct_7d": 0.5,
     "pct_30d": 34.5,
-    "sma50": 2186.6450509547,
-    "sma200": 2057.585043247604,
+    "sma50": 2186.598313780167,
+    "sma200": 2057.573358953971,
     "support_30d": 1874.401898191962,
     "resistance_30d": 2525.267261590238,
     "mark_price": 2521.71641085,
