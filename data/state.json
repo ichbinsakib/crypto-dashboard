@@ -2263,7 +2263,7 @@
         ],
         [
           "Stretch from long-term average",
-          "-1.3% vs its long-term average - not stretched either way",
+          "-2.5% vs its long-term average - not stretched either way",
           0
         ],
         [
@@ -2276,12 +2276,12 @@
       "id": "bittensor",
       "symbol": "TAO",
       "name": "Bittensor",
-      "price": 236.19,
-      "pct_24h": 0.27308,
-      "pct_7d": -0.1,
+      "price": 233.32,
+      "pct_24h": -0.8425,
+      "pct_7d": -1.6,
       "support_30d": 190.67093053611111,
       "resistance_30d": 265.7337487161633,
-      "as_of": "2026-09-13 08:15:26",
+      "as_of": "2026-09-13 09:45:26",
       "stale": false
     },
     "the-open-network": {
@@ -2579,7 +2579,7 @@
       "rows": [
         [
           "Price vs. recent range",
-          "Near its 30-day high (~$0.5503) - less room to run",
+          "Near its 30-day high (~$0.5785) - less room to run",
           -1
         ],
         [
@@ -2612,12 +2612,12 @@
       "id": "bitway",
       "symbol": "BTW",
       "name": "Bitway",
-      "price": 0.550139,
-      "pct_24h": 7.45333,
-      "pct_7d": 23.3,
+      "price": 0.577834,
+      "pct_24h": 5.24729,
+      "pct_7d": 22.8,
       "support_30d": 0.30285245757334456,
-      "resistance_30d": 0.5503012009427045,
-      "as_of": "2026-09-13 08:40:25",
+      "resistance_30d": 0.5785170208863477,
+      "as_of": "2026-09-13 09:45:26",
       "stale": false
     },
     "world-liberty-financial": {
@@ -3197,14 +3197,14 @@
       "stale": false
     },
     "kaspa": {
-      "label": "\ud83d\udfe1 HOLD / NEUTRAL",
-      "status": "neutral",
-      "score": 1,
+      "label": "\ud83d\udfe2 LEAN ACCUMULATE",
+      "status": "bullish",
+      "score": 2,
       "rows": [
         [
           "Price vs. recent range",
-          "Near its 30-day high (~$0.0365) - less room to run",
-          -1
+          "Sitting in the middle of its 30-day range",
+          0
         ],
         [
           "Crowd mood (Fear & Greed)",
@@ -3223,7 +3223,7 @@
         ],
         [
           "Stretch from long-term average",
-          "+3.1% vs its long-term average - not stretched either way",
+          "+1.9% vs its long-term average - not stretched either way",
           0
         ],
         [
@@ -3232,16 +3232,16 @@
           0
         ]
       ],
-      "plain": "No real edge either way right now - fine to just wait and watch.",
+      "plain": "Leans toward a decent spot to slowly add (DCA) - not a strong signal, just a lean.",
       "id": "kaspa",
       "symbol": "KAS",
       "name": "Kaspa",
-      "price": 0.0348522,
-      "pct_24h": -1.54061,
-      "pct_7d": 14.2,
+      "price": 0.0344366,
+      "pct_24h": -3.53211,
+      "pct_7d": 13.5,
       "support_30d": 0.025275049210175406,
       "resistance_30d": 0.03651282069323304,
-      "as_of": "2026-09-13 07:30:30",
+      "as_of": "2026-09-13 09:45:26",
       "stale": false
     },
     "cosmos": {
@@ -3314,7 +3314,7 @@
         "stop": 77.03533333333333,
         "target1": 77.50466666666667,
         "target2": 77.73933333333333,
-        "opened_at": "2026-09-13T09:42:23.647172"
+        "opened_at": "2026-09-13T09:47:18.038982"
       },
       "daily:XLM": {
         "coin": "XLM",
@@ -3324,7 +3324,7 @@
         "stop": 0.14142906666666666,
         "target1": 0.16291693333333335,
         "target2": 0.1736608666666667,
-        "opened_at": "2026-09-13T09:42:23.647172"
+        "opened_at": "2026-09-13T09:47:18.038982"
       }
     },
     "resolved": [
@@ -13363,6 +13363,32 @@
         "result": "win",
         "resolved_at": "2026-09-13T09:42:23.647172",
         "exit_price": 0.177943
+      },
+      {
+        "coin": "HYPE",
+        "name": "Hyperliquid",
+        "tf": "15m",
+        "entry": 77.27,
+        "stop": 77.03533333333333,
+        "target1": 77.50466666666667,
+        "target2": 77.73933333333333,
+        "opened_at": "2026-09-13T09:42:23.647172",
+        "result": "win",
+        "resolved_at": "2026-09-13T09:47:18.038982",
+        "exit_price": 77.86
+      },
+      {
+        "coin": "XLM",
+        "name": "Stellar",
+        "tf": "daily",
+        "entry": 0.152173,
+        "stop": 0.14142906666666666,
+        "target1": 0.16291693333333335,
+        "target2": 0.1736608666666667,
+        "opened_at": "2026-09-13T09:42:23.647172",
+        "result": "win",
+        "resolved_at": "2026-09-13T09:47:18.038982",
+        "exit_price": 0.177896
       }
     ]
   },
@@ -13370,14 +13396,14 @@
     "key": "BTC",
     "name": "Bitcoin",
     "emoji": "\u20bf",
-    "price": 76658,
+    "price": 76703,
     "high_24h": 77479,
     "low_24h": 76753,
-    "pct_24h": -0.89381,
+    "pct_24h": -0.7907,
     "pct_7d": -3.8,
     "pct_30d": 22.1,
-    "sma50": 71156.65657124457,
-    "sma200": 70125.93890304536,
+    "sma50": 71157.5552243639,
+    "sma200": 70126.16356632518,
     "support_30d": 62843.70368466329,
     "resistance_30d": 81264.70153038795,
     "mark_price": 77158.0,
@@ -13392,14 +13418,14 @@
     "key": "ETH",
     "name": "Ethereum",
     "emoji": "\u039e",
-    "price": 2477.03,
+    "price": 2479.25,
     "high_24h": 2543.69,
     "low_24h": 2489.19,
-    "pct_24h": -2.2326,
+    "pct_24h": -2.02108,
     "pct_7d": -0.1,
     "pct_30d": 33.2,
-    "sma50": 2185.9637745846007,
-    "sma200": 2057.414724155079,
+    "sma50": 2185.9846116995714,
+    "sma200": 2057.419933433822,
     "support_30d": 1874.401898191962,
     "resistance_30d": 2525.267261590238,
     "mark_price": 2521.71641085,
