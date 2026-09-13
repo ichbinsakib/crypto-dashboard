@@ -597,11 +597,11 @@
       "symbol": "LEO",
       "name": "LEO Token",
       "price": 9.06,
-      "pct_24h": -0.67233,
+      "pct_24h": -0.58393,
       "pct_7d": -2.9,
       "support_30d": 8.948412455130585,
       "resistance_30d": 9.681775974309534,
-      "as_of": "2026-09-13 07:50:25",
+      "as_of": "2026-09-13 09:55:22",
       "stale": false
     },
     "monero": {
@@ -775,7 +775,7 @@
         ],
         [
           "Stretch from long-term average",
-          "-9.5% vs its long-term average - not stretched either way",
+          "-10.3% vs its long-term average - not stretched either way",
           0
         ],
         [
@@ -788,12 +788,12 @@
       "id": "kucoin-shares",
       "symbol": "KCS",
       "name": "KuCoin",
-      "price": 6.91,
-      "pct_24h": 0.39423,
-      "pct_7d": -4.2,
+      "price": 6.85,
+      "pct_24h": -0.87224,
+      "pct_7d": -4.3,
       "support_30d": 6.514591596607885,
       "resistance_30d": 7.8821382735057615,
-      "as_of": "2026-09-13 06:05:21",
+      "as_of": "2026-09-13 09:55:22",
       "stale": false
     },
     "hedera-hashgraph": {
@@ -1375,11 +1375,11 @@
     "gatechain-token": {
       "label": "\ud83d\udd34 CAUTION - REDUCE NEW BUYS",
       "status": "bearish",
-      "score": -3,
+      "score": -2,
       "rows": [
         [
           "Price vs. recent range",
-          "Near its 30-day high (~$9.41) - less room to run",
+          "Near its 30-day high (~$9.38) - less room to run",
           -1
         ],
         [
@@ -1399,8 +1399,8 @@
         ],
         [
           "Stretch from long-term average",
-          "+33.8% above its long-term average - very stretched",
-          -2
+          "+29.8% above its long-term average - a bit stretched",
+          -1
         ],
         [
           "Leverage traders' bias",
@@ -1412,12 +1412,12 @@
       "id": "gatechain-token",
       "symbol": "GT",
       "name": "Gate",
-      "price": 9.41,
-      "pct_24h": -0.11393,
-      "pct_7d": 1.3,
+      "price": 9.13,
+      "pct_24h": -3.52067,
+      "pct_7d": 1.5,
       "support_30d": 6.673649191532821,
-      "resistance_30d": 9.40514533571823,
-      "as_of": "2026-09-13 06:50:23",
+      "resistance_30d": 9.38216924975626,
+      "as_of": "2026-09-13 09:55:22",
       "stale": false
     },
     "crypto-com-chain": {
@@ -2647,7 +2647,7 @@
         ],
         [
           "Stretch from long-term average",
-          "-18.0% below its long-term average - confirmed downtrend",
+          "-17.9% below its long-term average - confirmed downtrend",
           -1
         ],
         [
@@ -2660,12 +2660,12 @@
       "id": "world-liberty-financial",
       "symbol": "WLFI",
       "name": "World Liberty Financial",
-      "price": 0.057109,
-      "pct_24h": 0.36664,
+      "price": 0.057141,
+      "pct_24h": 0.39634,
       "pct_7d": 1.2,
       "support_30d": 0.05526589948255966,
       "resistance_30d": 0.06254770952093733,
-      "as_of": "2026-09-13 09:25:47",
+      "as_of": "2026-09-13 09:55:22",
       "stale": false
     },
     "pax-gold": {
@@ -3311,10 +3311,10 @@
         "name": "Hyperliquid",
         "tf": "15m",
         "entry": 77.27,
-        "stop": 77.03233333333333,
-        "target1": 77.50766666666667,
-        "target2": 77.74533333333333,
-        "opened_at": "2026-09-13T09:52:17.985756"
+        "stop": 77.03066666666666,
+        "target1": 77.50933333333333,
+        "target2": 77.74866666666667,
+        "opened_at": "2026-09-13T09:56:43.459263"
       },
       "daily:XLM": {
         "coin": "XLM",
@@ -3324,7 +3324,7 @@
         "stop": 0.14142906666666666,
         "target1": 0.16291693333333335,
         "target2": 0.1736608666666667,
-        "opened_at": "2026-09-13T09:52:17.985756"
+        "opened_at": "2026-09-13T09:56:43.459263"
       }
     },
     "resolved": [
@@ -13415,6 +13415,32 @@
         "result": "win",
         "resolved_at": "2026-09-13T09:52:17.985756",
         "exit_price": 0.178192
+      },
+      {
+        "coin": "HYPE",
+        "name": "Hyperliquid",
+        "tf": "15m",
+        "entry": 77.27,
+        "stop": 77.03233333333333,
+        "target1": 77.50766666666667,
+        "target2": 77.74533333333333,
+        "opened_at": "2026-09-13T09:52:17.985756",
+        "result": "win",
+        "resolved_at": "2026-09-13T09:56:43.459263",
+        "exit_price": 77.91
+      },
+      {
+        "coin": "XLM",
+        "name": "Stellar",
+        "tf": "daily",
+        "entry": 0.152173,
+        "stop": 0.14142906666666666,
+        "target1": 0.16291693333333335,
+        "target2": 0.1736608666666667,
+        "opened_at": "2026-09-13T09:52:17.985756",
+        "result": "win",
+        "resolved_at": "2026-09-13T09:56:43.459263",
+        "exit_price": 0.178283
       }
     ]
   },
@@ -13422,14 +13448,14 @@
     "key": "BTC",
     "name": "Bitcoin",
     "emoji": "\u20bf",
-    "price": 76720,
+    "price": 76733,
     "high_24h": 77479,
     "low_24h": 76753,
-    "pct_24h": -0.76369,
+    "pct_24h": -0.7471,
     "pct_7d": -3.8,
     "pct_30d": 22.1,
-    "sma50": 71157.94173231827,
-    "sma200": 70126.26019331378,
+    "sma50": 71157.91659064991,
+    "sma200": 70126.25390789668,
     "support_30d": 62843.70368466329,
     "resistance_30d": 81264.70153038795,
     "mark_price": 77158.0,
@@ -13444,14 +13470,14 @@
     "key": "ETH",
     "name": "Ethereum",
     "emoji": "\u039e",
-    "price": 2481.92,
+    "price": 2482.21,
     "high_24h": 2543.69,
     "low_24h": 2489.19,
-    "pct_24h": -1.89211,
+    "pct_24h": -1.84379,
     "pct_7d": -0.1,
     "pct_30d": 33.2,
-    "sma50": 2186.013391917785,
-    "sma200": 2057.4271284883753,
+    "sma50": 2186.0087801904483,
+    "sma200": 2057.4259755565413,
     "support_30d": 1874.401898191962,
     "resistance_30d": 2525.267261590238,
     "mark_price": 2521.71641085,
