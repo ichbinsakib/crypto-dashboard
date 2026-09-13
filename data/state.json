@@ -391,7 +391,7 @@
         ],
         [
           "Stretch from long-term average",
-          "+135.8% above its long-term average - very stretched",
+          "+127.2% above its long-term average - very stretched",
           -2
         ],
         [
@@ -404,12 +404,12 @@
       "id": "zcash",
       "symbol": "ZEC",
       "name": "Zcash",
-      "price": 1134.67,
-      "pct_24h": 0.08777,
-      "pct_7d": 5.8,
+      "price": 1092.86,
+      "pct_24h": -5.18362,
+      "pct_7d": -7.4,
       "support_30d": 486.1425018309512,
       "resistance_30d": 1244.287571383468,
-      "as_of": "2026-09-13 03:30:34",
+      "as_of": "2026-09-13 10:20:22",
       "stale": false
     },
     "rain": {
@@ -452,12 +452,12 @@
       "id": "rain",
       "symbol": "RAIN",
       "name": "Rain",
-      "price": 0.01538864,
-      "pct_24h": 1.7178,
+      "price": 0.01538418,
+      "pct_24h": 1.6658,
       "pct_7d": -9.7,
       "support_30d": 0.012672537640838212,
       "resistance_30d": 0.018158429442510105,
-      "as_of": "2026-09-13 10:15:58",
+      "as_of": "2026-09-13 10:20:22",
       "stale": false
     },
     "chainlink": {
@@ -789,11 +789,11 @@
       "symbol": "KCS",
       "name": "KuCoin",
       "price": 6.85,
-      "pct_24h": -0.87224,
+      "pct_24h": -0.87753,
       "pct_7d": -4.3,
       "support_30d": 6.514591596607885,
       "resistance_30d": 7.8821382735057615,
-      "as_of": "2026-09-13 09:55:22",
+      "as_of": "2026-09-13 10:20:22",
       "stale": false
     },
     "hedera-hashgraph": {
@@ -1591,7 +1591,7 @@
         ],
         [
           "Stretch from long-term average",
-          "+88.6% above its long-term average - very stretched",
+          "+89.1% above its long-term average - very stretched",
           -2
         ],
         [
@@ -1604,12 +1604,12 @@
       "id": "venice-token",
       "symbol": "VVV",
       "name": "Venice Token",
-      "price": 22.9,
-      "pct_24h": -1.11686,
-      "pct_7d": 35.4,
+      "price": 22.96,
+      "pct_24h": -0.67802,
+      "pct_7d": 34.8,
       "support_30d": 11.794592355917386,
       "resistance_30d": 25.88474946901688,
-      "as_of": "2026-09-13 08:40:25",
+      "as_of": "2026-09-13 10:20:22",
       "stale": false
     },
     "litecoin": {
@@ -2071,7 +2071,7 @@
         ],
         [
           "Stretch from long-term average",
-          "-30.6% below its long-term average - confirmed downtrend",
+          "-30.8% below its long-term average - confirmed downtrend",
           -1
         ],
         [
@@ -2084,12 +2084,12 @@
       "id": "pi-network",
       "symbol": "PI",
       "name": "Pi Network",
-      "price": 0.09689,
-      "pct_24h": 2.56344,
-      "pct_7d": 1.3,
+      "price": 0.096581,
+      "pct_24h": 1.67874,
+      "pct_7d": 1.5,
       "support_30d": 0.08559695435343688,
       "resistance_30d": 0.09798925329339339,
-      "as_of": "2026-09-13 08:15:26",
+      "as_of": "2026-09-13 10:20:22",
       "stale": false
     },
     "ondo-finance": {
@@ -3314,7 +3314,7 @@
         "stop": 0.14142906666666666,
         "target1": 0.16291693333333335,
         "target2": 0.1736608666666667,
-        "opened_at": "2026-09-13T10:17:09.951021"
+        "opened_at": "2026-09-13T10:22:04.375111"
       }
     },
     "resolved": [
@@ -13496,6 +13496,19 @@
         "result": "win",
         "resolved_at": "2026-09-13T10:17:09.951021",
         "exit_price": 0.178435
+      },
+      {
+        "coin": "XLM",
+        "name": "Stellar",
+        "tf": "daily",
+        "entry": 0.152173,
+        "stop": 0.14142906666666666,
+        "target1": 0.16291693333333335,
+        "target2": 0.1736608666666667,
+        "opened_at": "2026-09-13T10:17:09.951021",
+        "result": "win",
+        "resolved_at": "2026-09-13T10:22:04.375111",
+        "exit_price": 0.178301
       }
     ]
   },
@@ -13503,14 +13516,14 @@
     "key": "BTC",
     "name": "Bitcoin",
     "emoji": "\u20bf",
-    "price": 76754,
+    "price": 76773,
     "high_24h": 77479,
     "low_24h": 76569,
-    "pct_24h": -0.79334,
+    "pct_24h": -0.77259,
     "pct_7d": -3.9,
     "pct_30d": 22.1,
-    "sma50": 71158.34560330622,
-    "sma200": 70126.36116106076,
+    "sma50": 71158.73601581494,
+    "sma200": 70126.45876418795,
     "support_30d": 62843.70368466329,
     "resistance_30d": 81264.70153038795,
     "mark_price": 77158.0,
@@ -13525,14 +13538,14 @@
     "key": "ETH",
     "name": "Ethereum",
     "emoji": "\u039e",
-    "price": 2482.54,
+    "price": 2483.25,
     "high_24h": 2543.69,
     "low_24h": 2473.1,
-    "pct_24h": -1.99065,
+    "pct_24h": -1.94983,
     "pct_7d": -0.5,
     "pct_30d": 32.4,
-    "sma50": 2186.0271913064335,
-    "sma200": 2057.4305783355376,
+    "sma50": 2186.0354772259066,
+    "sma200": 2057.432649815406,
     "support_30d": 1874.401898191962,
     "resistance_30d": 2525.267261590238,
     "mark_price": 2521.71641085,
