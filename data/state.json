@@ -12,7 +12,7 @@
     },
     "eth-resistance-break": {
       "triggered": true,
-      "last_triggered_at": "2026-09-13 03:40:23"
+      "last_triggered_at": "2026-09-13 03:45:22"
     },
     "eth-support-break": {
       "triggered": false,
@@ -1317,11 +1317,11 @@
       "symbol": "HTX",
       "name": "HTX DAO",
       "price": 1.7e-06,
-      "pct_24h": 0.32273,
+      "pct_24h": 0.63704,
       "pct_7d": 0.8,
       "support_30d": 1.6023985995039954e-06,
       "resistance_30d": 1.7941245244644948e-06,
-      "as_of": "2026-09-13 03:15:21",
+      "as_of": "2026-09-13 03:45:22",
       "stale": false
     },
     "superstate-short-duration-us-government-securities-fund-ustb": {
@@ -2435,8 +2435,8 @@
       "rows": [
         [
           "Price vs. recent range",
-          "Near its 30-day high (~$2.48) - less room to run",
-          -1
+          "Sitting in the middle of its 30-day range",
+          0
         ],
         [
           "Crowd mood (Fear & Greed)",
@@ -2450,12 +2450,12 @@
         ],
         [
           "Recent trend",
-          "Trending up steadily - healthy",
-          1
+          "Chopping sideways - no clear trend",
+          0
         ],
         [
           "Stretch from long-term average",
-          "+37.6% above its long-term average - very stretched",
+          "+36.5% above its long-term average - very stretched",
           -2
         ],
         [
@@ -2468,12 +2468,12 @@
       "id": "near",
       "symbol": "NEAR",
       "name": "NEAR Protocol",
-      "price": 2.37,
-      "pct_24h": 0.68664,
-      "pct_7d": 8.2,
+      "price": 2.35,
+      "pct_24h": -1.26878,
+      "pct_7d": 7.2,
       "support_30d": 1.5879597131538,
       "resistance_30d": 2.4848168147865453,
-      "as_of": "2026-09-13 01:40:23",
+      "as_of": "2026-09-13 03:45:22",
       "stale": false
     },
     "quant-network": {
@@ -2743,7 +2743,7 @@
         ],
         [
           "Stretch from long-term average",
-          "+12.1% above its long-term average - a bit stretched",
+          "+12.6% above its long-term average - a bit stretched",
           -1
         ],
         [
@@ -2756,12 +2756,12 @@
       "id": "morpho",
       "symbol": "MORPHO",
       "name": "Morpho",
-      "price": 2.21,
-      "pct_24h": -4.04327,
-      "pct_7d": -11.2,
+      "price": 2.22,
+      "pct_24h": -2.7148,
+      "pct_7d": -14.0,
       "support_30d": 1.953381765274214,
       "resistance_30d": 2.9026212482639075,
-      "as_of": "2026-09-13 01:50:22",
+      "as_of": "2026-09-13 03:45:22",
       "stale": false
     },
     "memecore": {
@@ -3313,10 +3313,10 @@
         "name": "BNB",
         "tf": "15m",
         "entry": 725.3,
-        "stop": 724.5363333333332,
-        "target1": 726.0636666666667,
-        "target2": 726.8273333333334,
-        "opened_at": "2026-09-13T03:42:14.483674"
+        "stop": 724.5476666666666,
+        "target1": 726.0523333333333,
+        "target2": 726.8046666666667,
+        "opened_at": "2026-09-13T03:47:14.628418"
       },
       "daily:XLM": {
         "coin": "XLM",
@@ -3326,7 +3326,7 @@
         "stop": 0.1415204,
         "target1": 0.16282560000000001,
         "target2": 0.17347820000000003,
-        "opened_at": "2026-09-13T03:42:14.483674"
+        "opened_at": "2026-09-13T03:47:14.628418"
       }
     },
     "resolved": [
@@ -11987,6 +11987,32 @@
         "result": "win",
         "resolved_at": "2026-09-13T03:42:14.483674",
         "exit_price": 0.179753
+      },
+      {
+        "coin": "BNB",
+        "name": "BNB",
+        "tf": "15m",
+        "entry": 725.3,
+        "stop": 724.5363333333332,
+        "target1": 726.0636666666667,
+        "target2": 726.8273333333334,
+        "opened_at": "2026-09-13T03:42:14.483674",
+        "result": "win",
+        "resolved_at": "2026-09-13T03:47:14.628418",
+        "exit_price": 727.18
+      },
+      {
+        "coin": "XLM",
+        "name": "Stellar",
+        "tf": "daily",
+        "entry": 0.152173,
+        "stop": 0.1415204,
+        "target1": 0.16282560000000001,
+        "target2": 0.17347820000000003,
+        "opened_at": "2026-09-13T03:42:14.483674",
+        "result": "win",
+        "resolved_at": "2026-09-13T03:47:14.628418",
+        "exit_price": 0.179687
       }
     ]
   },
@@ -11994,14 +12020,14 @@
     "key": "BTC",
     "name": "Bitcoin",
     "emoji": "\u20bf",
-    "price": 77193,
+    "price": 77197,
     "high_24h": 77479,
     "low_24h": 77055,
-    "pct_24h": -0.06285,
+    "pct_24h": -0.0476,
     "pct_7d": -3.4,
     "pct_30d": 21.7,
-    "sma50": 71167.29168067926,
-    "sma200": 70128.59768040403,
+    "sma50": 71167.25436221031,
+    "sma200": 70128.58835078678,
     "support_30d": 62843.70368466329,
     "resistance_30d": 81264.70153038795,
     "mark_price": 77158.0,
@@ -12016,14 +12042,14 @@
     "key": "ETH",
     "name": "Ethereum",
     "emoji": "\u039e",
-    "price": 2519.6,
+    "price": 2520.72,
     "high_24h": 2543.69,
     "low_24h": 2509.99,
-    "pct_24h": 0.30634,
+    "pct_24h": 0.35289,
     "pct_7d": 0.6,
     "pct_30d": 33.6,
-    "sma50": 2186.7703231436853,
-    "sma200": 2057.6163612948503,
+    "sma50": 2186.786603960441,
+    "sma200": 2057.6204314990396,
     "support_30d": 1874.401898191962,
     "resistance_30d": 2525.267261590238,
     "mark_price": 2521.71641085,
