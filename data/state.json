@@ -1879,7 +1879,7 @@
         ],
         [
           "Stretch from long-term average",
-          "-31.0% below its long-term average - confirmed downtrend",
+          "-30.8% below its long-term average - confirmed downtrend",
           -1
         ],
         [
@@ -1892,12 +1892,12 @@
       "id": "bitcoin-cash",
       "symbol": "BCH",
       "name": "Bitcoin Cash",
-      "price": 224.47,
-      "pct_24h": -2.52332,
-      "pct_7d": -14.2,
+      "price": 225.15,
+      "pct_24h": -2.36585,
+      "pct_7d": -13.1,
       "support_30d": 203.50169440615565,
       "resistance_30d": 288.10955405353275,
-      "as_of": "2026-09-13 13:50:23",
+      "as_of": "2026-09-13 14:20:24",
       "stale": false
     },
     "mantle": {
@@ -2551,7 +2551,7 @@
         ],
         [
           "Stretch from long-term average",
-          "-2.8% vs its long-term average - not stretched either way",
+          "-2.7% vs its long-term average - not stretched either way",
           0
         ],
         [
@@ -2564,12 +2564,12 @@
       "id": "tether-gold",
       "symbol": "XAUT",
       "name": "Tether Gold",
-      "price": 4346.37,
-      "pct_24h": -0.04813,
+      "price": 4346.58,
+      "pct_24h": -0.04753,
       "pct_7d": -1.7,
       "support_30d": 4314.5584711704705,
       "resistance_30d": 4662.510537821146,
-      "as_of": "2026-09-13 14:10:24",
+      "as_of": "2026-09-13 14:20:24",
       "stale": false
     },
     "bitway": {
@@ -2708,12 +2708,12 @@
       "id": "pax-gold",
       "symbol": "PAXG",
       "name": "PAX Gold",
-      "price": 4350.06,
-      "pct_24h": -0.09045,
-      "pct_7d": -1.8,
+      "price": 4350.87,
+      "pct_24h": -0.09485,
+      "pct_7d": -1.7,
       "support_30d": 4318.141703998686,
       "resistance_30d": 4672.307573354755,
-      "as_of": "2026-09-13 13:55:17",
+      "as_of": "2026-09-13 14:20:24",
       "stale": false
     },
     "morpho": {
@@ -3296,16 +3296,6 @@
   "_strong_buy_state": {},
   "_pnl_tracker": {
     "open": {
-      "1h:WBT": {
-        "coin": "WBT",
-        "name": "WhiteBIT Coin",
-        "tf": "1h",
-        "entry": 79.52,
-        "stop": 79.36666666666666,
-        "target1": 79.67333333333333,
-        "target2": 79.82666666666667,
-        "opened_at": "2026-09-13T12:47:20.240006"
-      },
       "15m:JST": {
         "coin": "JST",
         "name": "JUST",
@@ -3314,7 +3304,17 @@
         "stop": 0.11010666666666667,
         "target1": 0.11015333333333334,
         "target2": 0.11017666666666667,
-        "opened_at": "2026-09-13T14:17:15.169257"
+        "opened_at": "2026-09-13T14:22:15.265211"
+      },
+      "1h:WBT": {
+        "coin": "WBT",
+        "name": "WhiteBIT Coin",
+        "tf": "1h",
+        "entry": 79.46,
+        "stop": 79.30624999999999,
+        "target1": 79.61375,
+        "target2": 79.7675,
+        "opened_at": "2026-09-13T14:22:15.265211"
       },
       "daily:XLM": {
         "coin": "XLM",
@@ -3324,7 +3324,7 @@
         "stop": 0.14142906666666666,
         "target1": 0.16291693333333335,
         "target2": 0.1736608666666667,
-        "opened_at": "2026-09-13T14:17:15.169257"
+        "opened_at": "2026-09-13T14:22:15.265211"
       }
     },
     "resolved": [
@@ -14650,6 +14650,45 @@
         "result": "win",
         "resolved_at": "2026-09-13T14:17:15.169257",
         "exit_price": 0.179947
+      },
+      {
+        "coin": "WBT",
+        "name": "WhiteBIT Coin",
+        "tf": "1h",
+        "entry": 79.52,
+        "stop": 79.36666666666666,
+        "target1": 79.67333333333333,
+        "target2": 79.82666666666667,
+        "opened_at": "2026-09-13T12:47:20.240006",
+        "result": "win",
+        "resolved_at": "2026-09-13T14:22:15.265211",
+        "exit_price": 79.79
+      },
+      {
+        "coin": "JST",
+        "name": "JUST",
+        "tf": "15m",
+        "entry": 0.11013,
+        "stop": 0.11010666666666667,
+        "target1": 0.11015333333333334,
+        "target2": 0.11017666666666667,
+        "opened_at": "2026-09-13T14:17:15.169257",
+        "result": "win",
+        "resolved_at": "2026-09-13T14:22:15.265211",
+        "exit_price": 0.11197
+      },
+      {
+        "coin": "XLM",
+        "name": "Stellar",
+        "tf": "daily",
+        "entry": 0.152173,
+        "stop": 0.14142906666666666,
+        "target1": 0.16291693333333335,
+        "target2": 0.1736608666666667,
+        "opened_at": "2026-09-13T14:17:15.169257",
+        "result": "win",
+        "resolved_at": "2026-09-13T14:22:15.265211",
+        "exit_price": 0.179828
       }
     ]
   },
@@ -14657,14 +14696,14 @@
     "key": "BTC",
     "name": "Bitcoin",
     "emoji": "\u20bf",
-    "price": 76955,
+    "price": 77034,
     "high_24h": 77459,
     "low_24h": 76516,
-    "pct_24h": -0.52732,
+    "pct_24h": -0.40901,
     "pct_7d": -3.9,
     "pct_30d": 22.6,
-    "sma50": 71162.14798022319,
-    "sma200": 70127.31175529001,
+    "sma50": 71163.99555325526,
+    "sma200": 70127.77364854803,
     "support_30d": 62843.70368466329,
     "resistance_30d": 81264.70153038795,
     "mark_price": 77158.0,
@@ -14679,14 +14718,14 @@
     "key": "ETH",
     "name": "Ethereum",
     "emoji": "\u039e",
-    "price": 2483.8,
+    "price": 2485.93,
     "high_24h": 2541.26,
     "low_24h": 2464.63,
-    "pct_24h": -2.25309,
+    "pct_24h": -2.14773,
     "pct_7d": -0.9,
     "pct_30d": 32.4,
-    "sma50": 2186.039626725079,
-    "sma200": 2057.433687190199,
+    "sma50": 2186.0883421994477,
+    "sma200": 2057.445866058791,
     "support_30d": 1874.401898191962,
     "resistance_30d": 2525.267261590238,
     "mark_price": 2521.71641085,
