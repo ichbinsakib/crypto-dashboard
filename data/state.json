@@ -1735,7 +1735,7 @@
         ],
         [
           "Stretch from long-term average",
-          "-16.3% below its long-term average - confirmed downtrend",
+          "-16.5% below its long-term average - confirmed downtrend",
           -1
         ],
         [
@@ -1748,12 +1748,12 @@
       "id": "sui",
       "symbol": "SUI",
       "name": "Sui",
-      "price": 0.710627,
-      "pct_24h": -2.22608,
-      "pct_7d": -10.8,
+      "price": 0.709278,
+      "pct_24h": -2.29921,
+      "pct_7d": -11.6,
       "support_30d": 0.6514311908607086,
       "resistance_30d": 0.8499161763231283,
-      "as_of": "2026-09-13 09:25:47",
+      "as_of": "2026-09-13 11:05:19",
       "stale": false
     },
     "lighter": {
@@ -2263,7 +2263,7 @@
         ],
         [
           "Stretch from long-term average",
-          "-2.3% vs its long-term average - not stretched either way",
+          "-3.2% vs its long-term average - not stretched either way",
           0
         ],
         [
@@ -2276,12 +2276,12 @@
       "id": "bittensor",
       "symbol": "TAO",
       "name": "Bittensor",
-      "price": 233.94,
-      "pct_24h": -0.84989,
-      "pct_7d": -0.5,
+      "price": 231.63,
+      "pct_24h": -1.70544,
+      "pct_7d": -2.1,
       "support_30d": 190.67093053611111,
       "resistance_30d": 265.7337487161633,
-      "as_of": "2026-09-13 10:11:04",
+      "as_of": "2026-09-13 11:05:19",
       "stale": false
     },
     "the-open-network": {
@@ -2757,11 +2757,11 @@
       "symbol": "MORPHO",
       "name": "Morpho",
       "price": 2.18,
-      "pct_24h": -5.49815,
-      "pct_7d": -14.2,
+      "pct_24h": -4.99029,
+      "pct_7d": -14.9,
       "support_30d": 1.953381765274214,
       "resistance_30d": 2.9026212482639075,
-      "as_of": "2026-09-13 10:30:29",
+      "as_of": "2026-09-13 11:05:19",
       "stale": false
     },
     "memecore": {
@@ -3316,7 +3316,7 @@
         "stop": 76.791,
         "target1": 77.309,
         "target2": 77.568,
-        "opened_at": "2026-09-13T11:02:23.490215"
+        "opened_at": "2026-09-13T11:07:09.498125"
       },
       "daily:XLM": {
         "coin": "XLM",
@@ -3326,7 +3326,7 @@
         "stop": 0.14142906666666666,
         "target1": 0.16291693333333335,
         "target2": 0.1736608666666667,
-        "opened_at": "2026-09-13T11:02:23.490215"
+        "opened_at": "2026-09-13T11:07:09.498125"
       }
     },
     "resolved": [
@@ -13638,6 +13638,32 @@
         "result": "win",
         "resolved_at": "2026-09-13T11:02:23.490215",
         "exit_price": 0.177533
+      },
+      {
+        "coin": "HYPE",
+        "name": "Hyperliquid",
+        "tf": "15m",
+        "entry": 77.05,
+        "stop": 76.791,
+        "target1": 77.309,
+        "target2": 77.568,
+        "opened_at": "2026-09-13T11:02:23.490215",
+        "result": "win",
+        "resolved_at": "2026-09-13T11:07:09.498125",
+        "exit_price": 77.41
+      },
+      {
+        "coin": "XLM",
+        "name": "Stellar",
+        "tf": "daily",
+        "entry": 0.152173,
+        "stop": 0.14142906666666666,
+        "target1": 0.16291693333333335,
+        "target2": 0.1736608666666667,
+        "opened_at": "2026-09-13T11:02:23.490215",
+        "result": "win",
+        "resolved_at": "2026-09-13T11:07:09.498125",
+        "exit_price": 0.177671
       }
     ]
   },
@@ -13645,14 +13671,14 @@
     "key": "BTC",
     "name": "Bitcoin",
     "emoji": "\u20bf",
-    "price": 76627,
+    "price": 76595,
     "high_24h": 77479,
     "low_24h": 76569,
-    "pct_24h": -0.87457,
-    "pct_7d": -3.9,
-    "pct_30d": 22.1,
-    "sma50": 71156.06015185098,
-    "sma200": 70125.78979819696,
+    "pct_24h": -0.88404,
+    "pct_7d": -4.1,
+    "pct_30d": 22.2,
+    "sma50": 71155.54609866085,
+    "sma200": 70125.66128489943,
     "support_30d": 62843.70368466329,
     "resistance_30d": 81264.70153038795,
     "mark_price": 77158.0,
@@ -13667,14 +13693,14 @@
     "key": "ETH",
     "name": "Ethereum",
     "emoji": "\u039e",
-    "price": 2471.63,
+    "price": 2470.72,
     "high_24h": 2543.69,
-    "low_24h": 2473.1,
-    "pct_24h": -2.37833,
-    "pct_7d": -0.5,
-    "pct_30d": 32.4,
-    "sma50": 2185.8159632751717,
-    "sma200": 2057.377771327722,
+    "low_24h": 2471.33,
+    "pct_24h": -2.34438,
+    "pct_7d": -1.1,
+    "pct_30d": 32.1,
+    "sma50": 2185.824930399334,
+    "sma200": 2057.3800131087623,
     "support_30d": 1874.401898191962,
     "resistance_30d": 2525.267261590238,
     "mark_price": 2521.71641085,
