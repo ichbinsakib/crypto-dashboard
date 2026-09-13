@@ -1111,7 +1111,7 @@
         ],
         [
           "Stretch from long-term average",
-          "+8.0% vs its long-term average - not stretched either way",
+          "+8.1% vs its long-term average - not stretched either way",
           0
         ],
         [
@@ -1124,12 +1124,12 @@
       "id": "polygon-ecosystem-token",
       "symbol": "POL",
       "name": "POL (ex-MATIC)",
-      "price": 0.095181,
-      "pct_24h": -1.23016,
+      "price": 0.095231,
+      "pct_24h": -0.90468,
       "pct_7d": -4.5,
       "support_30d": 0.07481366852260064,
       "resistance_30d": 0.12250456198546959,
-      "as_of": "2026-09-13 09:10:27",
+      "as_of": "2026-09-13 09:25:47",
       "stale": false
     },
     "blackrock-usd-institutional-digital-liquidity-fund": {
@@ -1735,7 +1735,7 @@
         ],
         [
           "Stretch from long-term average",
-          "-15.6% below its long-term average - confirmed downtrend",
+          "-16.3% below its long-term average - confirmed downtrend",
           -1
         ],
         [
@@ -1748,12 +1748,12 @@
       "id": "sui",
       "symbol": "SUI",
       "name": "Sui",
-      "price": 0.717113,
-      "pct_24h": -1.53036,
-      "pct_7d": -9.9,
+      "price": 0.710627,
+      "pct_24h": -2.22608,
+      "pct_7d": -10.8,
       "support_30d": 0.6514311908607086,
       "resistance_30d": 0.8499161763231283,
-      "as_of": "2026-09-13 08:00:37",
+      "as_of": "2026-09-13 09:25:47",
       "stale": false
     },
     "lighter": {
@@ -1831,7 +1831,7 @@
         ],
         [
           "Stretch from long-term average",
-          "+38.3% above its long-term average - very stretched",
+          "+36.3% above its long-term average - very stretched",
           -2
         ],
         [
@@ -1844,12 +1844,12 @@
       "id": "ethena",
       "symbol": "ENA",
       "name": "Ethena",
-      "price": 0.14132,
-      "pct_24h": 0.73117,
-      "pct_7d": -19.1,
+      "price": 0.139288,
+      "pct_24h": -1.67339,
+      "pct_7d": -21.0,
       "support_30d": 0.08231050586125944,
       "resistance_30d": 0.17616469272611565,
-      "as_of": "2026-09-13 06:20:25",
+      "as_of": "2026-09-13 09:25:47",
       "stale": false
     },
     "bitcoin-cash": {
@@ -2647,7 +2647,7 @@
         ],
         [
           "Stretch from long-term average",
-          "-18.2% below its long-term average - confirmed downtrend",
+          "-18.0% below its long-term average - confirmed downtrend",
           -1
         ],
         [
@@ -2660,12 +2660,12 @@
       "id": "world-liberty-financial",
       "symbol": "WLFI",
       "name": "World Liberty Financial",
-      "price": 0.056943,
-      "pct_24h": 1.17471,
-      "pct_7d": 0.3,
+      "price": 0.057109,
+      "pct_24h": 0.36664,
+      "pct_7d": 1.2,
       "support_30d": 0.05526589948255966,
       "resistance_30d": 0.06254770952093733,
-      "as_of": "2026-09-13 07:25:18",
+      "as_of": "2026-09-13 09:25:47",
       "stale": false
     },
     "pax-gold": {
@@ -2863,7 +2863,7 @@
     "okb": {
       "label": "\ud83d\udd34 CAUTION - REDUCE NEW BUYS",
       "status": "bearish",
-      "score": -3,
+      "score": -2,
       "rows": [
         [
           "Price vs. recent range",
@@ -2887,8 +2887,8 @@
         ],
         [
           "Stretch from long-term average",
-          "+30.0% above its long-term average - very stretched",
-          -2
+          "+29.4% above its long-term average - a bit stretched",
+          -1
         ],
         [
           "Leverage traders' bias",
@@ -2900,12 +2900,12 @@
       "id": "okb",
       "symbol": "OKB",
       "name": "OKB",
-      "price": 114.39,
-      "pct_24h": -0.04131,
-      "pct_7d": -0.9,
+      "price": 113.81,
+      "pct_24h": -0.36449,
+      "pct_7d": 0.0,
       "support_30d": 98.99707739944992,
       "resistance_30d": 115.8310797114581,
-      "as_of": "2026-09-13 06:35:17",
+      "as_of": "2026-09-13 09:25:47",
       "stale": false
     },
     "just": {
@@ -3293,9 +3293,7 @@
       "stale": false
     }
   },
-  "_strong_buy_state": {
-    "scanner-15m:HYPE": true
-  },
+  "_strong_buy_state": {},
   "_pnl_tracker": {
     "open": {
       "15m:HYPE": {
@@ -3323,10 +3321,10 @@
         "name": "Stellar",
         "tf": "daily",
         "entry": 0.152173,
-        "stop": 0.1414482,
-        "target1": 0.1628978,
-        "target2": 0.17362260000000002,
-        "opened_at": "2026-09-13T09:12:19.118782"
+        "stop": 0.14144053333333334,
+        "target1": 0.16290546666666667,
+        "target2": 0.17363793333333333,
+        "opened_at": "2026-09-13T09:26:53.924268"
       }
     },
     "resolved": [
@@ -13300,6 +13298,19 @@
         "result": "win",
         "resolved_at": "2026-09-13T09:12:19.118782",
         "exit_price": 0.178139
+      },
+      {
+        "coin": "XLM",
+        "name": "Stellar",
+        "tf": "daily",
+        "entry": 0.152173,
+        "stop": 0.1414482,
+        "target1": 0.1628978,
+        "target2": 0.17362260000000002,
+        "opened_at": "2026-09-13T09:12:19.118782",
+        "result": "win",
+        "resolved_at": "2026-09-13T09:26:53.924268",
+        "exit_price": 0.177742
       }
     ]
   },
@@ -13307,14 +13318,14 @@
     "key": "BTC",
     "name": "Bitcoin",
     "emoji": "\u20bf",
-    "price": 76838,
+    "price": 76754,
     "high_24h": 77479,
     "low_24h": 76753,
-    "pct_24h": -0.64034,
+    "pct_24h": -0.77342,
     "pct_7d": -3.8,
     "pct_30d": 22.1,
-    "sma50": 71159.96967540799,
-    "sma200": 70126.76717908621,
+    "sma50": 71158.3377875316,
+    "sma200": 70126.3592071171,
     "support_30d": 62843.70368466329,
     "resistance_30d": 81264.70153038795,
     "mark_price": 77158.0,
@@ -13329,14 +13340,14 @@
     "key": "ETH",
     "name": "Ethereum",
     "emoji": "\u039e",
-    "price": 2496.1,
+    "price": 2491.86,
     "high_24h": 2543.69,
     "low_24h": 2489.19,
-    "pct_24h": -1.43767,
+    "pct_24h": -1.69735,
     "pct_7d": -0.1,
     "pct_30d": 33.2,
-    "sma50": 2186.283662540549,
-    "sma200": 2057.4946961440664,
+    "sma50": 2186.2075480244166,
+    "sma200": 2057.4756675150334,
     "support_30d": 1874.401898191962,
     "resistance_30d": 2525.267261590238,
     "mark_price": 2521.71641085,
