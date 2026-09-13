@@ -727,7 +727,7 @@
         ],
         [
           "Stretch from long-term average",
-          "+2.4% vs its long-term average - not stretched either way",
+          "+2.6% vs its long-term average - not stretched either way",
           0
         ],
         [
@@ -740,12 +740,12 @@
       "id": "stellar",
       "symbol": "XLM",
       "name": "Stellar",
-      "price": 0.179706,
-      "pct_24h": -0.62351,
+      "price": 0.180006,
+      "pct_24h": -0.32474,
       "pct_7d": -2.8,
       "support_30d": 0.15472912151335613,
       "resistance_30d": 0.20181319711037435,
-      "as_of": "2026-09-13 18:15:23",
+      "as_of": "2026-09-13 18:40:24",
       "stale": false
     },
     "kucoin-shares": {
@@ -1413,11 +1413,11 @@
       "symbol": "GT",
       "name": "Gate",
       "price": 9.2,
-      "pct_24h": -2.08985,
-      "pct_7d": 2.3,
+      "pct_24h": -1.98159,
+      "pct_7d": 1.3,
       "support_30d": 6.673649191532821,
       "resistance_30d": 9.38216924975626,
-      "as_of": "2026-09-13 17:40:22",
+      "as_of": "2026-09-13 18:40:24",
       "stale": false
     },
     "crypto-com-chain": {
@@ -1975,7 +1975,7 @@
         ],
         [
           "Stretch from long-term average",
-          "-7.2% vs its long-term average - not stretched either way",
+          "-6.7% vs its long-term average - not stretched either way",
           0
         ],
         [
@@ -1988,12 +1988,12 @@
       "id": "polkadot",
       "symbol": "DOT",
       "name": "Polkadot",
-      "price": 1.02,
-      "pct_24h": -1.29673,
+      "price": 1.025,
+      "pct_24h": -0.73885,
       "pct_7d": 5.2,
       "support_30d": 0.7510040523927409,
       "resistance_30d": 1.2475304252917225,
-      "as_of": "2026-09-13 18:00:36",
+      "as_of": "2026-09-13 18:40:24",
       "stale": false
     },
     "uniswap": {
@@ -3301,10 +3301,10 @@
         "name": "WhiteBIT Coin",
         "tf": "1h",
         "entry": 79.46,
-        "stop": 79.28958333333333,
-        "target1": 79.63041666666666,
-        "target2": 79.80083333333333,
-        "opened_at": "2026-09-13T18:37:18.160342"
+        "stop": 79.28625,
+        "target1": 79.63374999999999,
+        "target2": 79.80749999999999,
+        "opened_at": "2026-09-13T18:42:21.442215"
       },
       "daily:XLM": {
         "coin": "XLM",
@@ -3314,7 +3314,7 @@
         "stop": 0.14142906666666666,
         "target1": 0.16291693333333335,
         "target2": 0.1736608666666667,
-        "opened_at": "2026-09-13T18:37:18.160342"
+        "opened_at": "2026-09-13T18:42:21.442215"
       }
     },
     "resolved": [
@@ -16512,6 +16512,32 @@
         "result": "win",
         "resolved_at": "2026-09-13T18:37:18.160342",
         "exit_price": 0.180035
+      },
+      {
+        "coin": "WBT",
+        "name": "WhiteBIT Coin",
+        "tf": "1h",
+        "entry": 79.46,
+        "stop": 79.28958333333333,
+        "target1": 79.63041666666666,
+        "target2": 79.80083333333333,
+        "opened_at": "2026-09-13T18:37:18.160342",
+        "result": "win",
+        "resolved_at": "2026-09-13T18:42:21.442215",
+        "exit_price": 80.19
+      },
+      {
+        "coin": "XLM",
+        "name": "Stellar",
+        "tf": "daily",
+        "entry": 0.152173,
+        "stop": 0.14142906666666666,
+        "target1": 0.16291693333333335,
+        "target2": 0.1736608666666667,
+        "opened_at": "2026-09-13T18:37:18.160342",
+        "result": "win",
+        "resolved_at": "2026-09-13T18:42:21.442215",
+        "exit_price": 0.179957
       }
     ]
   },
@@ -16519,14 +16545,14 @@
     "key": "BTC",
     "name": "Bitcoin",
     "emoji": "\u20bf",
-    "price": 77304,
+    "price": 77332,
     "high_24h": 77374,
     "low_24h": 76516,
-    "pct_24h": 0.21348,
+    "pct_24h": 0.23694,
     "pct_7d": -3.0,
     "pct_30d": 22.6,
-    "sma50": 71169.3370939694,
-    "sma200": 70129.10903372656,
+    "sma50": 71170.007948054,
+    "sma200": 70129.27674724771,
     "support_30d": 62843.70368466329,
     "resistance_30d": 81264.70153038795,
     "mark_price": 77158.0,
@@ -16541,14 +16567,14 @@
     "key": "ETH",
     "name": "Ethereum",
     "emoji": "\u039e",
-    "price": 2506.23,
+    "price": 2507.8,
     "high_24h": 2527.29,
     "low_24h": 2464.63,
-    "pct_24h": -0.68183,
+    "pct_24h": -0.67208,
     "pct_7d": 0.8,
     "pct_30d": 33.0,
-    "sma50": 2186.498203398729,
-    "sma200": 2057.548331358611,
+    "sma50": 2186.527636293222,
+    "sma200": 2057.5556895822347,
     "support_30d": 1874.401898191962,
     "resistance_30d": 2525.267261590238,
     "mark_price": 2521.71641085,
