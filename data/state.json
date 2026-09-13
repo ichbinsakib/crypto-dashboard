@@ -199,7 +199,7 @@
         ],
         [
           "Stretch from long-term average",
-          "+3.9% vs its long-term average - not stretched either way",
+          "+4.0% vs its long-term average - not stretched either way",
           0
         ],
         [
@@ -212,12 +212,12 @@
       "id": "tron",
       "symbol": "TRX",
       "name": "TRON",
-      "price": 0.339834,
-      "pct_24h": 0.10278,
-      "pct_7d": 1.9,
+      "price": 0.339965,
+      "pct_24h": 0.13647,
+      "pct_7d": 1.8,
       "support_30d": 0.32221537516581966,
       "resistance_30d": 0.3447899585776834,
-      "as_of": "2026-09-13 07:55:19",
+      "as_of": "2026-09-13 08:05:20",
       "stale": false
     },
     "figure-heloc": {
@@ -2469,11 +2469,11 @@
       "symbol": "NEAR",
       "name": "NEAR Protocol",
       "price": 2.3,
-      "pct_24h": -2.71689,
-      "pct_7d": 4.2,
+      "pct_24h": -2.50379,
+      "pct_7d": 1.7,
       "support_30d": 1.5879597131538,
       "resistance_30d": 2.4848168147865453,
-      "as_of": "2026-09-13 07:55:19",
+      "as_of": "2026-09-13 08:05:20",
       "stale": false
     },
     "quant-network": {
@@ -2911,11 +2911,11 @@
     "just": {
       "label": "\ud83d\udd34 CAUTION - REDUCE NEW BUYS",
       "status": "bearish",
-      "score": -2,
+      "score": -3,
       "rows": [
         [
           "Price vs. recent range",
-          "Near its 30-day high (~$0.1107) - less room to run",
+          "Near its 30-day high (~$0.1110) - less room to run",
           -1
         ],
         [
@@ -2925,8 +2925,8 @@
         ],
         [
           "Market phase (best guess)",
-          "Basing near the bottom - phase where smart money accumulates",
-          2
+          "Established uptrend - phase where price marks up",
+          1
         ],
         [
           "Recent trend",
@@ -2935,7 +2935,7 @@
         ],
         [
           "Stretch from long-term average",
-          "+30.8% above its long-term average - very stretched",
+          "+31.3% above its long-term average - very stretched",
           -2
         ],
         [
@@ -2948,12 +2948,12 @@
       "id": "just",
       "symbol": "JST",
       "name": "JUST",
-      "price": 0.110635,
-      "pct_24h": 2.358,
-      "pct_7d": -0.8,
+      "price": 0.111033,
+      "pct_24h": 2.89167,
+      "pct_7d": 0.1,
       "support_30d": 0.0946830738697126,
-      "resistance_30d": 0.11074855268841714,
-      "as_of": "2026-09-13 07:35:19",
+      "resistance_30d": 0.11103338750737028,
+      "as_of": "2026-09-13 08:05:20",
       "stale": false
     },
     "algorand": {
@@ -3298,16 +3298,6 @@
   },
   "_pnl_tracker": {
     "open": {
-      "1h:WLD": {
-        "coin": "WLD",
-        "name": "Worldcoin",
-        "tf": "1h",
-        "entry": 0.3949,
-        "stop": 0.3919958333333333,
-        "target1": 0.3978041666666666,
-        "target2": 0.4007083333333333,
-        "opened_at": "2026-09-13T05:56:54.239550"
-      },
       "15m:HYPE": {
         "coin": "HYPE",
         "name": "Hyperliquid",
@@ -3318,6 +3308,16 @@
         "target2": 78.86066666666666,
         "opened_at": "2026-09-13T07:52:22.480962"
       },
+      "1h:WLD": {
+        "coin": "WLD",
+        "name": "Worldcoin",
+        "tf": "1h",
+        "entry": 0.3917,
+        "stop": 0.38885,
+        "target1": 0.39455,
+        "target2": 0.39740000000000003,
+        "opened_at": "2026-09-13T08:07:12.174510"
+      },
       "daily:XLM": {
         "coin": "XLM",
         "name": "Stellar",
@@ -3326,7 +3326,7 @@
         "stop": 0.1415009,
         "target1": 0.1628451,
         "target2": 0.17351719999999998,
-        "opened_at": "2026-09-13T08:02:28.108883"
+        "opened_at": "2026-09-13T08:07:12.174510"
       }
     },
     "resolved": [
@@ -13144,6 +13144,32 @@
         "result": "win",
         "resolved_at": "2026-09-13T08:02:28.108883",
         "exit_price": 0.179463
+      },
+      {
+        "coin": "WLD",
+        "name": "Worldcoin",
+        "tf": "1h",
+        "entry": 0.3949,
+        "stop": 0.3919958333333333,
+        "target1": 0.3978041666666666,
+        "target2": 0.4007083333333333,
+        "opened_at": "2026-09-13T05:56:54.239550",
+        "result": "loss",
+        "resolved_at": "2026-09-13T08:07:12.174510",
+        "exit_price": 0.3918
+      },
+      {
+        "coin": "XLM",
+        "name": "Stellar",
+        "tf": "daily",
+        "entry": 0.152173,
+        "stop": 0.1415009,
+        "target1": 0.1628451,
+        "target2": 0.17351719999999998,
+        "opened_at": "2026-09-13T08:02:28.108883",
+        "result": "win",
+        "resolved_at": "2026-09-13T08:07:12.174510",
+        "exit_price": 0.179342
       }
     ]
   },
@@ -13151,14 +13177,14 @@
     "key": "BTC",
     "name": "Bitcoin",
     "emoji": "\u20bf",
-    "price": 77092,
+    "price": 77139,
     "high_24h": 77479,
     "low_24h": 77055,
-    "pct_24h": -0.2194,
-    "pct_7d": -3.6,
-    "pct_30d": 21.6,
-    "sma50": 71165.13057569436,
-    "sma200": 70128.0574041578,
+    "pct_24h": -0.20692,
+    "pct_7d": -3.4,
+    "pct_30d": 22.5,
+    "sma50": 71165.82987057383,
+    "sma200": 70128.23222787766,
     "support_30d": 62843.70368466329,
     "resistance_30d": 81264.70153038795,
     "mark_price": 77158.0,
@@ -13173,14 +13199,14 @@
     "key": "ETH",
     "name": "Ethereum",
     "emoji": "\u039e",
-    "price": 2517.21,
+    "price": 2518.22,
     "high_24h": 2543.69,
     "low_24h": 2509.99,
-    "pct_24h": -0.23694,
-    "pct_7d": -0.1,
-    "pct_30d": 33.3,
-    "sma50": 2186.7176125610304,
-    "sma200": 2057.6031836491866,
+    "pct_24h": -0.20458,
+    "pct_7d": 0.5,
+    "pct_30d": 34.5,
+    "sma50": 2186.7326325197346,
+    "sma200": 2057.606938638863,
     "support_30d": 1874.401898191962,
     "resistance_30d": 2525.267261590238,
     "mark_price": 2521.71641085,
