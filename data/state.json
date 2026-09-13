@@ -1903,7 +1903,7 @@
     "mantle": {
       "label": "\ud83d\udfe1 HOLD / NEUTRAL",
       "status": "neutral",
-      "score": 1,
+      "score": 0,
       "rows": [
         [
           "Price vs. recent range",
@@ -1922,12 +1922,12 @@
         ],
         [
           "Recent trend",
-          "Chopping sideways - no clear trend",
-          0
+          "Trending down - avoid catching a falling knife",
+          -1
         ],
         [
           "Stretch from long-term average",
-          "-3.3% vs its long-term average - not stretched either way",
+          "-3.0% vs its long-term average - not stretched either way",
           0
         ],
         [
@@ -1940,12 +1940,12 @@
       "id": "mantle",
       "symbol": "MNT",
       "name": "Mantle",
-      "price": 0.555202,
-      "pct_24h": -4.60214,
-      "pct_7d": -5.5,
+      "price": 0.557091,
+      "pct_24h": -3.26602,
+      "pct_7d": -8.8,
       "support_30d": 0.42660592418086046,
       "resistance_30d": 0.6365218632454678,
-      "as_of": "2026-09-13 06:25:21",
+      "as_of": "2026-09-13 11:15:21",
       "stale": false
     },
     "polkadot": {
@@ -2023,7 +2023,7 @@
         ],
         [
           "Stretch from long-term average",
-          "+70.6% above its long-term average - very stretched",
+          "+69.3% above its long-term average - very stretched",
           -2
         ],
         [
@@ -2036,12 +2036,12 @@
       "id": "uniswap",
       "symbol": "UNI",
       "name": "Uniswap",
-      "price": 6.3,
-      "pct_24h": -1.12067,
-      "pct_7d": -10.5,
+      "price": 6.25,
+      "pct_24h": -1.71687,
+      "pct_7d": -11.2,
       "support_30d": 3.2366861257715636,
       "resistance_30d": 7.291165865788254,
-      "as_of": "2026-09-13 07:55:19",
+      "as_of": "2026-09-13 11:15:21",
       "stale": false
     },
     "pi-network": {
@@ -3079,7 +3079,7 @@
         ],
         [
           "Stretch from long-term average",
-          "+36.9% above its long-term average - very stretched",
+          "+37.1% above its long-term average - very stretched",
           -2
         ],
         [
@@ -3092,12 +3092,12 @@
       "id": "arbitrum",
       "symbol": "ARB",
       "name": "Arbitrum",
-      "price": 0.137455,
-      "pct_24h": -3.8778,
-      "pct_7d": -29.8,
+      "price": 0.137637,
+      "pct_24h": -3.45385,
+      "pct_7d": -29.2,
       "support_30d": 0.07272258489044682,
       "resistance_30d": 0.18933387703114857,
-      "as_of": "2026-09-13 10:00:40",
+      "as_of": "2026-09-13 11:15:21",
       "stale": false
     },
     "dash": {
@@ -3326,7 +3326,7 @@
         "stop": 0.14142906666666666,
         "target1": 0.16291693333333335,
         "target2": 0.1736608666666667,
-        "opened_at": "2026-09-13T11:12:15.108877"
+        "opened_at": "2026-09-13T11:17:13.040580"
       }
     },
     "resolved": [
@@ -13690,6 +13690,19 @@
         "result": "win",
         "resolved_at": "2026-09-13T11:12:15.108877",
         "exit_price": 0.177517
+      },
+      {
+        "coin": "XLM",
+        "name": "Stellar",
+        "tf": "daily",
+        "entry": 0.152173,
+        "stop": 0.14142906666666666,
+        "target1": 0.16291693333333335,
+        "target2": 0.1736608666666667,
+        "opened_at": "2026-09-13T11:12:15.108877",
+        "result": "win",
+        "resolved_at": "2026-09-13T11:17:13.040580",
+        "exit_price": 0.177474
       }
     ]
   },
@@ -13697,14 +13710,14 @@
     "key": "BTC",
     "name": "Bitcoin",
     "emoji": "\u20bf",
-    "price": 76620,
+    "price": 76535,
     "high_24h": 77479,
     "low_24h": 76569,
-    "pct_24h": -0.87949,
+    "pct_24h": -1.02025,
     "pct_7d": -4.1,
     "pct_30d": 22.2,
-    "sma50": 71155.57937808872,
-    "sma200": 70125.66960475639,
+    "sma50": 71153.67085332083,
+    "sma200": 70125.19247356441,
     "support_30d": 62843.70368466329,
     "resistance_30d": 81264.70153038795,
     "mark_price": 77158.0,
@@ -13719,14 +13732,14 @@
     "key": "ETH",
     "name": "Ethereum",
     "emoji": "\u039e",
-    "price": 2474.75,
+    "price": 2471.06,
     "high_24h": 2543.69,
     "low_24h": 2471.33,
-    "pct_24h": -2.24698,
+    "pct_24h": -2.42592,
     "pct_7d": -1.1,
     "pct_30d": 32.1,
-    "sma50": 2185.8652235018085,
-    "sma200": 2057.3900863843814,
+    "sma50": 2185.78136000013,
+    "sma200": 2057.3691205089617,
     "support_30d": 1874.401898191962,
     "resistance_30d": 2525.267261590238,
     "mark_price": 2521.71641085,
