@@ -775,7 +775,7 @@
         ],
         [
           "Stretch from long-term average",
-          "-10.6% vs its long-term average - not stretched either way",
+          "-10.4% vs its long-term average - not stretched either way",
           0
         ],
         [
@@ -788,12 +788,12 @@
       "id": "kucoin-shares",
       "symbol": "KCS",
       "name": "KuCoin",
-      "price": 6.83,
-      "pct_24h": -0.93207,
-      "pct_7d": -3.7,
+      "price": 6.84,
+      "pct_24h": -0.94395,
+      "pct_7d": -3.9,
       "support_30d": 6.514591596607885,
       "resistance_30d": 7.8821382735057615,
-      "as_of": "2026-09-13 19:35:20",
+      "as_of": "2026-09-13 20:25:19",
       "stale": false
     },
     "hedera-hashgraph": {
@@ -1975,7 +1975,7 @@
         ],
         [
           "Stretch from long-term average",
-          "-7.1% vs its long-term average - not stretched either way",
+          "-7.4% vs its long-term average - not stretched either way",
           0
         ],
         [
@@ -1988,12 +1988,12 @@
       "id": "polkadot",
       "symbol": "DOT",
       "name": "Polkadot",
-      "price": 1.021,
-      "pct_24h": -0.51084,
-      "pct_7d": 6.6,
+      "price": 1.018,
+      "pct_24h": -0.77467,
+      "pct_7d": 5.9,
       "support_30d": 0.7510040523927409,
       "resistance_30d": 1.2475304252917225,
-      "as_of": "2026-09-13 19:30:29",
+      "as_of": "2026-09-13 20:25:19",
       "stale": false
     },
     "uniswap": {
@@ -2180,12 +2180,12 @@
       "id": "canton-network",
       "symbol": "CC",
       "name": "Canton",
-      "price": 0.096103,
-      "pct_24h": -0.80922,
-      "pct_7d": -11.8,
+      "price": 0.096013,
+      "pct_24h": -1.33155,
+      "pct_7d": -13.3,
       "support_30d": 0.09051839499501885,
       "resistance_30d": 0.12396615653575341,
-      "as_of": "2026-09-13 19:10:25",
+      "as_of": "2026-09-13 20:25:19",
       "stale": false
     },
     "internet-computer": {
@@ -3301,20 +3301,20 @@
         "name": "Canton",
         "tf": "15m",
         "entry": 0.0948,
-        "stop": 0.094501,
-        "target1": 0.09509899999999999,
-        "target2": 0.09539799999999998,
-        "opened_at": "2026-09-13T20:22:21.482746"
+        "stop": 0.09449466666666666,
+        "target1": 0.09510533333333333,
+        "target2": 0.09541066666666667,
+        "opened_at": "2026-09-13T20:27:10.649829"
       },
       "15m:LINK": {
         "coin": "LINK",
         "name": "Chainlink",
         "tf": "15m",
         "entry": 11.18953,
-        "stop": 11.155891333333333,
-        "target1": 11.223168666666666,
-        "target2": 11.256807333333333,
-        "opened_at": "2026-09-13T20:22:21.482746"
+        "stop": 11.155523333333333,
+        "target1": 11.223536666666666,
+        "target2": 11.257543333333333,
+        "opened_at": "2026-09-13T20:27:10.649829"
       },
       "1h:WLD": {
         "coin": "WLD",
@@ -3324,7 +3324,7 @@
         "stop": 0.38221666666666665,
         "target1": 0.38898333333333335,
         "target2": 0.3923666666666667,
-        "opened_at": "2026-09-13T20:22:21.482746"
+        "opened_at": "2026-09-13T20:27:10.649829"
       },
       "daily:XLM": {
         "coin": "XLM",
@@ -3334,7 +3334,7 @@
         "stop": 0.14142906666666666,
         "target1": 0.16291693333333335,
         "target2": 0.1736608666666667,
-        "opened_at": "2026-09-13T20:22:21.482746"
+        "opened_at": "2026-09-13T20:27:10.649829"
       }
     },
     "resolved": [
@@ -17286,6 +17286,58 @@
         "result": "win",
         "resolved_at": "2026-09-13T20:22:21.482746",
         "exit_price": 0.179958
+      },
+      {
+        "coin": "CC",
+        "name": "Canton",
+        "tf": "15m",
+        "entry": 0.0948,
+        "stop": 0.094501,
+        "target1": 0.09509899999999999,
+        "target2": 0.09539799999999998,
+        "opened_at": "2026-09-13T20:22:21.482746",
+        "result": "win",
+        "resolved_at": "2026-09-13T20:27:10.649829",
+        "exit_price": 0.09621
+      },
+      {
+        "coin": "LINK",
+        "name": "Chainlink",
+        "tf": "15m",
+        "entry": 11.18953,
+        "stop": 11.155891333333333,
+        "target1": 11.223168666666666,
+        "target2": 11.256807333333333,
+        "opened_at": "2026-09-13T20:22:21.482746",
+        "result": "win",
+        "resolved_at": "2026-09-13T20:27:10.649829",
+        "exit_price": 11.45773
+      },
+      {
+        "coin": "WLD",
+        "name": "Worldcoin",
+        "tf": "1h",
+        "entry": 0.3856,
+        "stop": 0.38221666666666665,
+        "target1": 0.38898333333333335,
+        "target2": 0.3923666666666667,
+        "opened_at": "2026-09-13T20:22:21.482746",
+        "result": "win",
+        "resolved_at": "2026-09-13T20:27:10.649829",
+        "exit_price": 0.3898
+      },
+      {
+        "coin": "XLM",
+        "name": "Stellar",
+        "tf": "daily",
+        "entry": 0.152173,
+        "stop": 0.14142906666666666,
+        "target1": 0.16291693333333335,
+        "target2": 0.1736608666666667,
+        "opened_at": "2026-09-13T20:22:21.482746",
+        "result": "win",
+        "resolved_at": "2026-09-13T20:27:10.649829",
+        "exit_price": 0.17995
       }
     ]
   },
@@ -17293,14 +17345,14 @@
     "key": "BTC",
     "name": "Bitcoin",
     "emoji": "\u20bf",
-    "price": 77270,
+    "price": 77290,
     "high_24h": 77374,
     "low_24h": 76516,
-    "pct_24h": 0.1489,
+    "pct_24h": 0.16554,
     "pct_7d": -3.4,
     "pct_30d": 22.9,
-    "sma50": 71168.6633664859,
-    "sma200": 70128.94060185569,
+    "sma50": 71169.04600652205,
+    "sma200": 70129.03626186472,
     "support_30d": 62843.70368466329,
     "resistance_30d": 81264.70153038795,
     "mark_price": 77158.0,
@@ -17315,14 +17367,14 @@
     "key": "ETH",
     "name": "Ethereum",
     "emoji": "\u039e",
-    "price": 2507.01,
+    "price": 2508.25,
     "high_24h": 2527.29,
     "low_24h": 2464.63,
-    "pct_24h": -0.56881,
+    "pct_24h": -0.55128,
     "pct_7d": 0.4,
     "pct_30d": 33.7,
-    "sma50": 2186.510493861728,
-    "sma200": 2057.551403974361,
+    "sma50": 2186.5342981179892,
+    "sma200": 2057.5573550384265,
     "support_30d": 1874.401898191962,
     "resistance_30d": 2525.267261590238,
     "mark_price": 2521.71641085,
