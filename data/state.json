@@ -548,12 +548,12 @@
       "id": "whitebit",
       "symbol": "WBT",
       "name": "WhiteBIT Coin",
-      "price": 80.11,
-      "pct_24h": -0.37617,
+      "price": 80.13,
+      "pct_24h": -0.19757,
       "pct_7d": 9.2,
       "support_30d": 54.452558710928955,
       "resistance_30d": 81.2521953230761,
-      "as_of": "2026-09-13 17:05:19",
+      "as_of": "2026-09-13 17:30:29",
       "stale": false
     },
     "leo-token": {
@@ -679,7 +679,7 @@
         ],
         [
           "Stretch from long-term average",
-          "-5.5% vs its long-term average - not stretched either way",
+          "-4.6% vs its long-term average - not stretched either way",
           0
         ],
         [
@@ -692,12 +692,12 @@
       "id": "cardano",
       "symbol": "ADA",
       "name": "Cardano",
-      "price": 0.206872,
-      "pct_24h": -0.52984,
-      "pct_7d": -5.4,
+      "price": 0.208784,
+      "pct_24h": 0.5993,
+      "pct_7d": -4.7,
       "support_30d": 0.1741249817054162,
       "resistance_30d": 0.2291047455940254,
-      "as_of": "2026-09-13 16:50:24",
+      "as_of": "2026-09-13 17:30:29",
       "stale": false
     },
     "stellar": {
@@ -2215,7 +2215,7 @@
         ],
         [
           "Stretch from long-term average",
-          "+12.8% above its long-term average - a bit stretched",
+          "+14.1% above its long-term average - a bit stretched",
           -1
         ],
         [
@@ -2228,12 +2228,12 @@
       "id": "internet-computer",
       "symbol": "ICP",
       "name": "Internet Computer",
-      "price": 2.77,
-      "pct_24h": 0.20527,
-      "pct_7d": -1.4,
+      "price": 2.8,
+      "pct_24h": 2.48547,
+      "pct_7d": 3.0,
       "support_30d": 2.194804279500122,
       "resistance_30d": 2.9869340549074623,
-      "as_of": "2026-09-13 15:50:25",
+      "as_of": "2026-09-13 17:30:29",
       "stale": false
     },
     "bittensor": {
@@ -3304,7 +3304,7 @@
         "stop": 79.28916666666666,
         "target1": 79.63083333333333,
         "target2": 79.80166666666666,
-        "opened_at": "2026-09-13T17:27:14.934264"
+        "opened_at": "2026-09-13T17:32:25.969332"
       },
       "daily:XLM": {
         "coin": "XLM",
@@ -3314,7 +3314,7 @@
         "stop": 0.14142906666666666,
         "target1": 0.16291693333333335,
         "target2": 0.1736608666666667,
-        "opened_at": "2026-09-13T17:27:14.934264"
+        "opened_at": "2026-09-13T17:32:25.969332"
       }
     },
     "resolved": [
@@ -15927,6 +15927,32 @@
         "result": "win",
         "resolved_at": "2026-09-13T17:27:14.934264",
         "exit_price": 0.179625
+      },
+      {
+        "coin": "WBT",
+        "name": "WhiteBIT Coin",
+        "tf": "1h",
+        "entry": 79.46,
+        "stop": 79.28916666666666,
+        "target1": 79.63083333333333,
+        "target2": 79.80166666666666,
+        "opened_at": "2026-09-13T17:27:14.934264",
+        "result": "win",
+        "resolved_at": "2026-09-13T17:32:25.969332",
+        "exit_price": 80.11
+      },
+      {
+        "coin": "XLM",
+        "name": "Stellar",
+        "tf": "daily",
+        "entry": 0.152173,
+        "stop": 0.14142906666666666,
+        "target1": 0.16291693333333335,
+        "target2": 0.1736608666666667,
+        "opened_at": "2026-09-13T17:27:14.934264",
+        "result": "win",
+        "resolved_at": "2026-09-13T17:32:25.969332",
+        "exit_price": 0.179578
       }
     ]
   },
@@ -15934,14 +15960,14 @@
     "key": "BTC",
     "name": "Bitcoin",
     "emoji": "\u20bf",
-    "price": 77315,
+    "price": 77297,
     "high_24h": 77318,
     "low_24h": 76516,
-    "pct_24h": 0.04702,
+    "pct_24h": 0.03593,
     "pct_7d": -3.0,
     "pct_30d": 22.8,
-    "sma50": 71169.56289184897,
-    "sma200": 70129.16548319644,
+    "sma50": 71169.11105973326,
+    "sma200": 70129.05252516753,
     "support_30d": 62843.70368466329,
     "resistance_30d": 81264.70153038795,
     "mark_price": 77158.0,
@@ -15956,14 +15982,14 @@
     "key": "ETH",
     "name": "Ethereum",
     "emoji": "\u039e",
-    "price": 2506.38,
+    "price": 2505.42,
     "high_24h": 2527.29,
     "low_24h": 2464.63,
-    "pct_24h": -0.84026,
+    "pct_24h": -0.87163,
     "pct_7d": 1.0,
     "pct_30d": 33.2,
-    "sma50": 2186.5029480839435,
-    "sma200": 2057.549517529915,
+    "sma50": 2186.4750672943987,
+    "sma200": 2057.542547332529,
     "support_30d": 1874.401898191962,
     "resistance_30d": 2525.267261590238,
     "mark_price": 2521.71641085,
