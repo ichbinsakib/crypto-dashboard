@@ -4,7 +4,7 @@
   "_alerts_state": {
     "btc-resistance-break": {
       "triggered": true,
-      "last_triggered_at": "2026-09-14 20:40:23"
+      "last_triggered_at": "2026-09-14 20:45:23"
     },
     "btc-support-break": {
       "triggered": false,
@@ -12,7 +12,7 @@
     },
     "eth-resistance-break": {
       "triggered": true,
-      "last_triggered_at": "2026-09-14 20:40:23"
+      "last_triggered_at": "2026-09-14 20:45:23"
     },
     "eth-support-break": {
       "triggered": false,
@@ -367,12 +367,12 @@
     "zcash": {
       "label": "\ud83d\udd34 DISTRIBUTION ZONE",
       "status": "bearish",
-      "score": -5,
+      "score": -6,
       "rows": [
         [
           "Price vs. recent range",
-          "Sitting in the middle of its 30-day range",
-          0
+          "Near its 30-day high (~$1,244.29) - less room to run",
+          -1
         ],
         [
           "Crowd mood (Fear & Greed)",
@@ -391,7 +391,7 @@
         ],
         [
           "Stretch from long-term average",
-          "+136.6% above its long-term average - very stretched",
+          "+150.9% above its long-term average - very stretched",
           -2
         ],
         [
@@ -404,12 +404,12 @@
       "id": "zcash",
       "symbol": "ZEC",
       "name": "Zcash",
-      "price": 1148.47,
-      "pct_24h": 3.49096,
-      "pct_7d": -1.0,
+      "price": 1218.67,
+      "pct_24h": 10.57971,
+      "pct_7d": 3.0,
       "support_30d": 486.1425018309512,
       "resistance_30d": 1244.287571383468,
-      "as_of": "2026-09-14 18:00:35",
+      "as_of": "2026-09-14 20:45:23",
       "stale": false
     },
     "rain": {
@@ -2431,11 +2431,11 @@
     "near": {
       "label": "\ud83d\udd34 DISTRIBUTION ZONE",
       "status": "bearish",
-      "score": -6,
+      "score": -5,
       "rows": [
         [
           "Price vs. recent range",
-          "Near its 30-day high (~$2.49) - less room to run",
+          "Near its 30-day high (~$2.56) - less room to run",
           -1
         ],
         [
@@ -2450,12 +2450,12 @@
         ],
         [
           "Recent trend",
-          "Chopping sideways - no clear trend",
-          0
+          "Trending up steadily - healthy",
+          1
         ],
         [
           "Stretch from long-term average",
-          "+44.1% above its long-term average - very stretched",
+          "+48.1% above its long-term average - very stretched",
           -2
         ],
         [
@@ -2468,12 +2468,12 @@
       "id": "near",
       "symbol": "NEAR",
       "name": "NEAR Protocol",
-      "price": 2.49,
-      "pct_24h": 6.50341,
-      "pct_7d": 7.6,
+      "price": 2.56,
+      "pct_24h": 8.97167,
+      "pct_7d": 9.7,
       "support_30d": 1.5879597131538,
-      "resistance_30d": 2.486302373869756,
-      "as_of": "2026-09-14 17:10:24",
+      "resistance_30d": 2.5583287987122154,
+      "as_of": "2026-09-14 20:45:23",
       "stale": false
     },
     "quant-network": {
@@ -3053,9 +3053,9 @@
       "stale": false
     },
     "arbitrum": {
-      "label": "\ud83d\udd34 CAUTION - REDUCE NEW BUYS",
+      "label": "\ud83d\udd34 DISTRIBUTION ZONE",
       "status": "bearish",
-      "score": -3,
+      "score": -6,
       "rows": [
         [
           "Price vs. recent range",
@@ -3069,8 +3069,8 @@
         ],
         [
           "Market phase (best guess)",
-          "Established uptrend - phase where price marks up",
-          1
+          "Very extended after a big run - phase where smart money sells",
+          -2
         ],
         [
           "Recent trend",
@@ -3079,7 +3079,7 @@
         ],
         [
           "Stretch from long-term average",
-          "+39.3% above its long-term average - very stretched",
+          "+40.3% above its long-term average - very stretched",
           -2
         ],
         [
@@ -3088,16 +3088,16 @@
           0
         ]
       ],
-      "plain": "Getting risky - I'd hold off on new buys until this cools down.",
+      "plain": "Looks stretched and euphoric - historically the zone where smart money sells, not buys.",
       "id": "arbitrum",
       "symbol": "ARB",
       "name": "Arbitrum",
-      "price": 0.14013,
-      "pct_24h": 1.00142,
-      "pct_7d": -14.8,
+      "price": 0.141145,
+      "pct_24h": 2.30073,
+      "pct_7d": -15.6,
       "support_30d": 0.07348670709752918,
       "resistance_30d": 0.18933387703114857,
-      "as_of": "2026-09-14 18:56:42",
+      "as_of": "2026-09-14 20:45:23",
       "stale": false
     },
     "dash": {
@@ -3342,20 +3342,11 @@
     }
   },
   "_strong_buy_state": {
-    "scanner-15m:CRO": true
+    "scanner-15m:CRO": true,
+    "scanner-1h:PI": true
   },
   "_pnl_tracker": {
     "open": {
-      "15m:CRO": {
-        "coin": "CRO",
-        "name": "Cronos",
-        "tf": "15m",
-        "entry": 0.05834,
-        "stop": 0.058159333333333334,
-        "target1": 0.05852066666666667,
-        "target2": 0.05870133333333334,
-        "opened_at": "2026-09-14T20:42:25.838533"
-      },
       "1h:PI": {
         "coin": "PI",
         "name": "Pi Network",
@@ -3365,6 +3356,16 @@
         "target1": 0.09811416666666667,
         "target2": 0.10017833333333334,
         "opened_at": "2026-09-14T20:42:25.838533"
+      },
+      "15m:CRO": {
+        "coin": "CRO",
+        "name": "Cronos",
+        "tf": "15m",
+        "entry": 0.05834,
+        "stop": 0.058161333333333336,
+        "target1": 0.05851866666666667,
+        "target2": 0.05869733333333334,
+        "opened_at": "2026-09-14T20:47:22.105402"
       }
     },
     "resolved": [
@@ -23491,6 +23492,19 @@
         "result": "win",
         "resolved_at": "2026-09-14T20:42:25.838533",
         "exit_price": 0.09813
+      },
+      {
+        "coin": "CRO",
+        "name": "Cronos",
+        "tf": "15m",
+        "entry": 0.05834,
+        "stop": 0.058159333333333334,
+        "target1": 0.05852066666666667,
+        "target2": 0.05870133333333334,
+        "opened_at": "2026-09-14T20:42:25.838533",
+        "result": "win",
+        "resolved_at": "2026-09-14T20:47:22.105402",
+        "exit_price": 0.05974
       }
     ]
   },
@@ -23498,14 +23512,14 @@
     "key": "BTC",
     "name": "Bitcoin",
     "emoji": "\u20bf",
-    "price": 79373,
+    "price": 79384,
     "high_24h": 79292,
     "low_24h": 76439,
-    "pct_24h": 2.70899,
+    "pct_24h": 2.70555,
     "pct_7d": -0.3,
     "pct_30d": 25.4,
-    "sma50": 71440.55540181098,
-    "sma200": 70186.14852504367,
+    "sma50": 71440.45435973117,
+    "sma200": 70186.12326452372,
     "support_30d": 62843.70368466329,
     "resistance_30d": 81264.70153038795,
     "mark_price": 79163.5,
@@ -23520,16 +23534,16 @@
     "key": "ETH",
     "name": "Ethereum",
     "emoji": "\u039e",
-    "price": 2593.76,
+    "price": 2591.59,
     "high_24h": 2547.92,
     "low_24h": 2467.86,
-    "pct_24h": 3.3955,
+    "pct_24h": 3.229,
     "pct_7d": 1.9,
     "pct_30d": 35.0,
-    "sma50": 2198.733740270757,
-    "sma200": 2060.234200232192,
+    "sma50": 2198.6780633090834,
+    "sma200": 2060.2202809917735,
     "support_30d": 1874.401898191962,
-    "resistance_30d": 2594.3925264594363,
+    "resistance_30d": 2591.608678375759,
     "mark_price": 2567.79454334,
     "index_price": 2567.75069767,
     "funding_rate": 1.96e-05,
