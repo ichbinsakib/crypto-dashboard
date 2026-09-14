@@ -12,7 +12,7 @@
     },
     "eth-resistance-break": {
       "triggered": true,
-      "last_triggered_at": "2026-09-14 08:00:37"
+      "last_triggered_at": "2026-09-14 08:05:20"
     },
     "eth-support-break": {
       "triggered": false,
@@ -117,11 +117,11 @@
       "symbol": "XRP",
       "name": "XRP",
       "price": 1.39,
-      "pct_24h": 2.37795,
+      "pct_24h": 1.95128,
       "pct_7d": -1.3,
       "support_30d": 0.9927072784932938,
       "resistance_30d": 1.52050482788377,
-      "as_of": "2026-09-14 08:00:37",
+      "as_of": "2026-09-14 08:05:20",
       "stale": false
     },
     "solana": {
@@ -1495,7 +1495,7 @@
         ],
         [
           "Stretch from long-term average",
-          "-2.6% vs its long-term average - not stretched either way",
+          "-2.2% vs its long-term average - not stretched either way",
           0
         ],
         [
@@ -1508,12 +1508,12 @@
       "id": "ethereum-classic",
       "symbol": "ETC",
       "name": "Ethereum Classic",
-      "price": 7.6,
-      "pct_24h": -0.30278,
-      "pct_7d": -2.4,
+      "price": 7.63,
+      "pct_24h": 0.53745,
+      "pct_7d": -2.6,
       "support_30d": 6.079473341192034,
       "resistance_30d": 8.609781284223262,
-      "as_of": "2026-09-14 05:25:17",
+      "as_of": "2026-09-14 08:05:20",
       "stale": false
     },
     "pump-fun": {
@@ -2084,12 +2084,12 @@
       "id": "pi-network",
       "symbol": "PI",
       "name": "Pi Network",
-      "price": 0.097501,
-      "pct_24h": 0.49463,
+      "price": 0.097507,
+      "pct_24h": 0.41091,
       "pct_7d": 3.4,
       "support_30d": 0.08559695435343688,
       "resistance_30d": 0.09798925329339339,
-      "as_of": "2026-09-14 08:00:37",
+      "as_of": "2026-09-14 08:05:20",
       "stale": false
     },
     "ondo-finance": {
@@ -3304,7 +3304,7 @@
         "stop": 0.686908,
         "target1": 0.688792,
         "target2": 0.689734,
-        "opened_at": "2026-09-14T08:02:34.234602"
+        "opened_at": "2026-09-14T08:07:17.086656"
       },
       "daily:XLM": {
         "coin": "XLM",
@@ -3314,7 +3314,7 @@
         "stop": 0.1411899,
         "target1": 0.1631561,
         "target2": 0.1741392,
-        "opened_at": "2026-09-14T08:02:34.234602"
+        "opened_at": "2026-09-14T08:07:17.086656"
       }
     },
     "resolved": [
@@ -20841,6 +20841,32 @@
         "result": "win",
         "resolved_at": "2026-09-14T08:02:34.234602",
         "exit_price": 0.184529
+      },
+      {
+        "coin": "ASTER",
+        "name": "Aster",
+        "tf": "15m",
+        "entry": 0.68785,
+        "stop": 0.686908,
+        "target1": 0.688792,
+        "target2": 0.689734,
+        "opened_at": "2026-09-14T08:02:34.234602",
+        "result": "win",
+        "resolved_at": "2026-09-14T08:07:17.086656",
+        "exit_price": 0.69733
+      },
+      {
+        "coin": "XLM",
+        "name": "Stellar",
+        "tf": "daily",
+        "entry": 0.152173,
+        "stop": 0.1411899,
+        "target1": 0.1631561,
+        "target2": 0.1741392,
+        "opened_at": "2026-09-14T08:02:34.234602",
+        "result": "win",
+        "resolved_at": "2026-09-14T08:07:17.086656",
+        "exit_price": 0.184603
       }
     ]
   },
@@ -20848,14 +20874,14 @@
     "key": "BTC",
     "name": "Bitcoin",
     "emoji": "\u20bf",
-    "price": 77823,
-    "high_24h": 77831,
+    "price": 77743,
+    "high_24h": 77854,
     "low_24h": 76439,
-    "pct_24h": 0.95072,
-    "pct_7d": -2.7,
-    "pct_30d": 23.1,
-    "sma50": 71409.67877912027,
-    "sma200": 70178.42936937099,
+    "pct_24h": 0.79726,
+    "pct_7d": -2.3,
+    "pct_30d": 23.5,
+    "sma50": 71407.63460700867,
+    "sma200": 70177.91832634309,
     "support_30d": 62843.70368466329,
     "resistance_30d": 81264.70153038795,
     "mark_price": 77600.0,
@@ -20870,14 +20896,14 @@
     "key": "ETH",
     "name": "Ethereum",
     "emoji": "\u039e",
-    "price": 2520.51,
+    "price": 2518.83,
     "high_24h": 2525.02,
     "low_24h": 2464.63,
-    "pct_24h": 0.1277,
-    "pct_7d": 0.4,
-    "pct_30d": 33.8,
-    "sma50": 2197.2753917628024,
-    "sma200": 2059.8696131052034,
+    "pct_24h": 0.03718,
+    "pct_7d": 1.0,
+    "pct_30d": 34.1,
+    "sma50": 2197.2326486170814,
+    "sma200": 2059.8589273187727,
     "support_30d": 1874.401898191962,
     "resistance_30d": 2525.267261590238,
     "mark_price": 2515.82,
