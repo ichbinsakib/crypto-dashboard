@@ -295,7 +295,7 @@
         ],
         [
           "Stretch from long-term average",
-          "+45.4% above its long-term average - very stretched",
+          "+45.0% above its long-term average - very stretched",
           -2
         ],
         [
@@ -308,12 +308,12 @@
       "id": "hyperliquid",
       "symbol": "HYPE",
       "name": "Hyperliquid",
-      "price": 80.18,
-      "pct_24h": 3.55076,
-      "pct_7d": -8.5,
+      "price": 80.0,
+      "pct_24h": 3.24909,
+      "pct_7d": -8.9,
       "support_30d": 57.1155488189019,
       "resistance_30d": 87.951916819731,
-      "as_of": "2026-09-14 11:40:28",
+      "as_of": "2026-09-14 12:00:40",
       "stale": false
     },
     "dogecoin": {
@@ -2119,7 +2119,7 @@
         ],
         [
           "Stretch from long-term average",
-          "+8.7% vs its long-term average - not stretched either way",
+          "+7.9% vs its long-term average - not stretched either way",
           0
         ],
         [
@@ -2132,12 +2132,12 @@
       "id": "ondo-finance",
       "symbol": "ONDO",
       "name": "Ondo",
-      "price": 0.356134,
-      "pct_24h": 3.53246,
-      "pct_7d": -8.4,
+      "price": 0.353683,
+      "pct_24h": 2.83049,
+      "pct_7d": -8.3,
       "support_30d": 0.32601458799099026,
       "resistance_30d": 0.3969475338902824,
-      "as_of": "2026-09-14 10:15:23",
+      "as_of": "2026-09-14 12:00:40",
       "stale": false
     },
     "canton-network": {
@@ -2839,7 +2839,7 @@
         ],
         [
           "Stretch from long-term average",
-          "+29.5% above its long-term average - a bit stretched",
+          "+29.3% above its long-term average - a bit stretched",
           -1
         ],
         [
@@ -2852,12 +2852,12 @@
       "id": "aave",
       "symbol": "AAVE",
       "name": "Aave",
-      "price": 126.45,
-      "pct_24h": 1.8952,
-      "pct_7d": -4.8,
+      "price": 126.26,
+      "pct_24h": 1.82316,
+      "pct_7d": -6.0,
       "support_30d": 85.94219943917633,
       "resistance_30d": 141.53047916466082,
-      "as_of": "2026-09-14 11:25:18",
+      "as_of": "2026-09-14 12:00:40",
       "stale": false
     },
     "okb": {
@@ -3341,9 +3341,7 @@
       "stale": false
     }
   },
-  "_strong_buy_state": {
-    "scanner-1h:PAXG": true
-  },
+  "_strong_buy_state": {},
   "_pnl_tracker": {
     "open": {
       "15m:JST": {
@@ -3361,10 +3359,10 @@
         "name": "PAX Gold",
         "tf": "1h",
         "entry": 4285.72,
-        "stop": 4274.777916666667,
-        "target1": 4296.662083333334,
-        "target2": 4307.604166666667,
-        "opened_at": "2026-09-14T11:52:21.756453"
+        "stop": 4274.579166666667,
+        "target1": 4296.860833333333,
+        "target2": 4308.001666666666,
+        "opened_at": "2026-09-14T12:02:36.834361"
       }
     },
     "resolved": [
@@ -21710,6 +21708,19 @@
         "result": "win",
         "resolved_at": "2026-09-14T11:52:21.756453",
         "exit_price": 4298.98
+      },
+      {
+        "coin": "PAXG",
+        "name": "PAX Gold",
+        "tf": "1h",
+        "entry": 4285.72,
+        "stop": 4274.777916666667,
+        "target1": 4296.662083333334,
+        "target2": 4307.604166666667,
+        "opened_at": "2026-09-14T11:52:21.756453",
+        "result": "win",
+        "resolved_at": "2026-09-14T12:02:36.834361",
+        "exit_price": 4297.3
       }
     ]
   },
@@ -21717,14 +21728,14 @@
     "key": "BTC",
     "name": "Bitcoin",
     "emoji": "\u20bf",
-    "price": 77717,
+    "price": 77714,
     "high_24h": 78278,
     "low_24h": 76439,
-    "pct_24h": 1.2418,
+    "pct_24h": 1.25816,
     "pct_7d": -1.8,
     "pct_30d": 23.7,
-    "sma50": 71407.07351379347,
-    "sma200": 70177.77805303929,
+    "sma50": 71407.08888554768,
+    "sma200": 70177.78189597785,
     "support_30d": 62843.70368466329,
     "resistance_30d": 81264.70153038795,
     "mark_price": 77600.0,
@@ -21739,14 +21750,14 @@
     "key": "ETH",
     "name": "Ethereum",
     "emoji": "\u039e",
-    "price": 2508.48,
+    "price": 2507.55,
     "high_24h": 2531.64,
     "low_24h": 2464.63,
-    "pct_24h": 1.15633,
+    "pct_24h": 1.10001,
     "pct_7d": 1.1,
     "pct_30d": 33.8,
-    "sma50": 2197.0124023366584,
-    "sma200": 2059.8038657486672,
+    "sma50": 2196.9867084325447,
+    "sma200": 2059.797442272639,
     "support_30d": 1874.401898191962,
     "resistance_30d": 2525.267261590238,
     "mark_price": 2515.82,
