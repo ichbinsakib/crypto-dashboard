@@ -4,7 +4,7 @@
   "_alerts_state": {
     "btc-resistance-break": {
       "triggered": true,
-      "last_triggered_at": "2026-09-14 20:15:21"
+      "last_triggered_at": "2026-09-14 20:20:28"
     },
     "btc-support-break": {
       "triggered": false,
@@ -12,7 +12,7 @@
     },
     "eth-resistance-break": {
       "triggered": true,
-      "last_triggered_at": "2026-09-14 20:15:21"
+      "last_triggered_at": "2026-09-14 20:20:28"
     },
     "eth-support-break": {
       "triggered": false,
@@ -199,7 +199,7 @@
         ],
         [
           "Stretch from long-term average",
-          "+4.0% vs its long-term average - not stretched either way",
+          "+4.1% vs its long-term average - not stretched either way",
           0
         ],
         [
@@ -212,12 +212,12 @@
       "id": "tron",
       "symbol": "TRX",
       "name": "TRON",
-      "price": 0.340347,
-      "pct_24h": -0.22765,
+      "price": 0.340692,
+      "pct_24h": -0.17039,
       "pct_7d": 1.8,
       "support_30d": 0.32221537516581966,
       "resistance_30d": 0.3447899585776834,
-      "as_of": "2026-09-14 20:05:19",
+      "as_of": "2026-09-14 20:20:28",
       "stale": false
     },
     "figure-heloc": {
@@ -1591,7 +1591,7 @@
         ],
         [
           "Stretch from long-term average",
-          "+83.8% above its long-term average - very stretched",
+          "+82.4% above its long-term average - very stretched",
           -2
         ],
         [
@@ -1604,12 +1604,12 @@
       "id": "venice-token",
       "symbol": "VVV",
       "name": "Venice Token",
-      "price": 22.48,
-      "pct_24h": 3.00664,
-      "pct_7d": 29.2,
+      "price": 22.3,
+      "pct_24h": 1.85439,
+      "pct_7d": 25.3,
       "support_30d": 11.794592355917386,
       "resistance_30d": 25.88474946901688,
-      "as_of": "2026-09-14 19:45:21",
+      "as_of": "2026-09-14 20:20:28",
       "stale": false
     },
     "litecoin": {
@@ -1701,11 +1701,11 @@
       "symbol": "BGB",
       "name": "Bitget Token",
       "price": 1.95,
-      "pct_24h": 0.78798,
-      "pct_7d": -2.7,
+      "pct_24h": 1.216,
+      "pct_7d": -3.1,
       "support_30d": 1.6478040912714662,
       "resistance_30d": 2.0284940947674617,
-      "as_of": "2026-09-14 19:15:23",
+      "as_of": "2026-09-14 20:20:28",
       "stale": false
     },
     "sui": {
@@ -3352,7 +3352,7 @@
         "stop": 0.09399083333333333,
         "target1": 0.09810916666666666,
         "target2": 0.10016833333333333,
-        "opened_at": "2026-09-14T20:17:20.713562"
+        "opened_at": "2026-09-14T20:22:36.495389"
       }
     },
     "resolved": [
@@ -23414,6 +23414,19 @@
         "result": "win",
         "resolved_at": "2026-09-14T20:17:20.713562",
         "exit_price": 2.802
+      },
+      {
+        "coin": "PI",
+        "name": "Pi Network",
+        "tf": "1h",
+        "entry": 0.09605,
+        "stop": 0.09399083333333333,
+        "target1": 0.09810916666666666,
+        "target2": 0.10016833333333333,
+        "opened_at": "2026-09-14T20:17:20.713562",
+        "result": "win",
+        "resolved_at": "2026-09-14T20:22:36.495389",
+        "exit_price": 0.09817
       }
     ]
   },
@@ -23421,14 +23434,14 @@
     "key": "BTC",
     "name": "Bitcoin",
     "emoji": "\u20bf",
-    "price": 79127,
+    "price": 79393,
     "high_24h": 79292,
     "low_24h": 76439,
-    "pct_24h": 2.4495,
+    "pct_24h": 2.73426,
     "pct_7d": -0.3,
     "pct_30d": 25.4,
-    "sma50": 71435.798574862,
-    "sma200": 70184.95931830643,
+    "sma50": 71440.62696454,
+    "sma200": 70186.16641572592,
     "support_30d": 62843.70368466329,
     "resistance_30d": 81264.70153038795,
     "mark_price": 79163.5,
@@ -23443,16 +23456,16 @@
     "key": "ETH",
     "name": "Ethereum",
     "emoji": "\u039e",
-    "price": 2560.22,
+    "price": 2587.2,
     "high_24h": 2547.92,
     "low_24h": 2467.86,
-    "pct_24h": 2.27579,
+    "pct_24h": 3.19283,
     "pct_7d": 1.9,
     "pct_30d": 35.0,
-    "sma50": 2198.123331169274,
-    "sma200": 2060.081597956821,
+    "sma50": 2198.537659026356,
+    "sma200": 2060.1851799210913,
     "support_30d": 1874.401898191962,
-    "resistance_30d": 2563.872071385291,
+    "resistance_30d": 2584.5884642393776,
     "mark_price": 2567.79454334,
     "index_price": 2567.75069767,
     "funding_rate": 1.96e-05,
