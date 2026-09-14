@@ -1831,7 +1831,7 @@
         ],
         [
           "Stretch from long-term average",
-          "+37.2% above its long-term average - very stretched",
+          "+36.1% above its long-term average - very stretched",
           -2
         ],
         [
@@ -1844,12 +1844,12 @@
       "id": "ethena",
       "symbol": "ENA",
       "name": "Ethena",
-      "price": 0.140433,
-      "pct_24h": 0.74813,
-      "pct_7d": -17.3,
+      "price": 0.139222,
+      "pct_24h": 0.01247,
+      "pct_7d": -17.5,
       "support_30d": 0.08231050586125944,
       "resistance_30d": 0.17616469272611565,
-      "as_of": "2026-09-14 12:50:29",
+      "as_of": "2026-09-14 13:20:26",
       "stale": false
     },
     "bitcoin-cash": {
@@ -1879,7 +1879,7 @@
         ],
         [
           "Stretch from long-term average",
-          "-31.2% below its long-term average - confirmed downtrend",
+          "-31.4% below its long-term average - confirmed downtrend",
           -1
         ],
         [
@@ -1892,12 +1892,12 @@
       "id": "bitcoin-cash",
       "symbol": "BCH",
       "name": "Bitcoin Cash",
-      "price": 222.95,
-      "pct_24h": -0.26421,
-      "pct_7d": -12.4,
+      "price": 222.55,
+      "pct_24h": -0.50603,
+      "pct_7d": -13.4,
       "support_30d": 203.50169440615565,
       "resistance_30d": 288.10955405353275,
-      "as_of": "2026-09-14 11:55:20",
+      "as_of": "2026-09-14 13:20:26",
       "stale": false
     },
     "mantle": {
@@ -2516,12 +2516,12 @@
       "id": "quant-network",
       "symbol": "QNT",
       "name": "Quant",
-      "price": 64.02,
-      "pct_24h": 0.06949,
-      "pct_7d": -1.9,
+      "price": 64.04,
+      "pct_24h": 0.03822,
+      "pct_7d": -2.8,
       "support_30d": 55.905981995619285,
       "resistance_30d": 67.13669726469111,
-      "as_of": "2026-09-14 12:50:29",
+      "as_of": "2026-09-14 13:20:26",
       "stale": false
     },
     "tether-gold": {
@@ -3353,16 +3353,6 @@
         "target1": 0.0036125666666666665,
         "target2": 0.003634133333333333,
         "opened_at": "2026-09-14T13:02:41.813873"
-      },
-      "1h:PAXG": {
-        "coin": "PAXG",
-        "name": "PAX Gold",
-        "tf": "1h",
-        "entry": 4263.89,
-        "stop": 4251.17625,
-        "target1": 4276.60375,
-        "target2": 4289.3175,
-        "opened_at": "2026-09-14T13:12:22.509875"
       }
     },
     "resolved": [
@@ -21773,6 +21763,19 @@
         "result": "loss",
         "resolved_at": "2026-09-14T13:12:22.509875",
         "exit_price": 4270.99
+      },
+      {
+        "coin": "PAXG",
+        "name": "PAX Gold",
+        "tf": "1h",
+        "entry": 4263.89,
+        "stop": 4251.17625,
+        "target1": 4276.60375,
+        "target2": 4289.3175,
+        "opened_at": "2026-09-14T13:12:22.509875",
+        "result": "win",
+        "resolved_at": "2026-09-14T13:22:23.136797",
+        "exit_price": 4279.51
       }
     ]
   },
@@ -21780,14 +21783,14 @@
     "key": "BTC",
     "name": "Bitcoin",
     "emoji": "\u20bf",
-    "price": 77653,
+    "price": 77792,
     "high_24h": 78278,
     "low_24h": 76439,
-    "pct_24h": 1.22079,
+    "pct_24h": 1.41859,
     "pct_7d": -2.2,
     "pct_30d": 23.3,
-    "sma50": 71406.26424710918,
-    "sma200": 70177.57573636822,
+    "sma50": 71408.52256483547,
+    "sma200": 70178.1403157998,
     "support_30d": 62843.70368466329,
     "resistance_30d": 81264.70153038795,
     "mark_price": 77600.0,
@@ -21802,14 +21805,14 @@
     "key": "ETH",
     "name": "Ethereum",
     "emoji": "\u039e",
-    "price": 2496.82,
+    "price": 2502.23,
     "high_24h": 2531.64,
     "low_24h": 2467.86,
-    "pct_24h": 0.87978,
+    "pct_24h": 1.14953,
     "pct_7d": 0.6,
     "pct_30d": 33.4,
-    "sma50": 2196.8195590464097,
-    "sma200": 2059.755654926105,
+    "sma50": 2196.9073156533773,
+    "sma200": 2059.777594077847,
     "support_30d": 1874.401898191962,
     "resistance_30d": 2525.267261590238,
     "mark_price": 2515.82,
