@@ -4,7 +4,7 @@
   "_alerts_state": {
     "btc-resistance-break": {
       "triggered": true,
-      "last_triggered_at": "2026-09-14 20:25:20"
+      "last_triggered_at": "2026-09-14 20:30:27"
     },
     "btc-support-break": {
       "triggered": false,
@@ -12,7 +12,7 @@
     },
     "eth-resistance-break": {
       "triggered": true,
-      "last_triggered_at": "2026-09-14 20:25:20"
+      "last_triggered_at": "2026-09-14 20:30:27"
     },
     "eth-support-break": {
       "triggered": false,
@@ -2612,12 +2612,12 @@
       "id": "bitway",
       "symbol": "BTW",
       "name": "Bitway",
-      "price": 0.686349,
-      "pct_24h": -1.55279,
-      "pct_7d": 54.1,
+      "price": 0.635901,
+      "pct_24h": -9.72487,
+      "pct_7d": 45.0,
       "support_30d": 0.3581011744091522,
       "resistance_30d": 0.7325241073378514,
-      "as_of": "2026-09-14 18:50:26",
+      "as_of": "2026-09-14 20:30:27",
       "stale": false
     },
     "world-liberty-financial": {
@@ -2675,7 +2675,7 @@
       "rows": [
         [
           "Price vs. recent range",
-          "Near its 30-day low (~$4,307.29) - historically a better entry",
+          "Near its 30-day low (~$4,303.12) - historically a better entry",
           2
         ],
         [
@@ -2695,7 +2695,7 @@
         ],
         [
           "Stretch from long-term average",
-          "-3.7% vs its long-term average - not stretched either way",
+          "-3.8% vs its long-term average - not stretched either way",
           0
         ],
         [
@@ -2708,12 +2708,12 @@
       "id": "pax-gold",
       "symbol": "PAXG",
       "name": "PAX Gold",
-      "price": 4307.34,
-      "pct_24h": -1.07648,
+      "price": 4303.33,
+      "pct_24h": -0.92645,
       "pct_7d": -2.7,
-      "support_30d": 4307.287889339968,
+      "support_30d": 4303.121519950081,
       "resistance_30d": 4672.307573354755,
-      "as_of": "2026-09-14 16:30:34",
+      "as_of": "2026-09-14 20:30:27",
       "stale": false
     },
     "morpho": {
@@ -2743,7 +2743,7 @@
         ],
         [
           "Stretch from long-term average",
-          "+11.5% above its long-term average - a bit stretched",
+          "+12.5% above its long-term average - a bit stretched",
           -1
         ],
         [
@@ -2756,12 +2756,12 @@
       "id": "morpho",
       "symbol": "MORPHO",
       "name": "Morpho",
-      "price": 2.2,
-      "pct_24h": -0.06134,
-      "pct_7d": -10.5,
+      "price": 2.22,
+      "pct_24h": 1.36939,
+      "pct_7d": -10.6,
       "support_30d": 1.994353941994143,
       "resistance_30d": 2.9026212482639075,
-      "as_of": "2026-09-14 17:15:22",
+      "as_of": "2026-09-14 20:30:27",
       "stale": false
     },
     "memecore": {
@@ -3349,10 +3349,10 @@
         "name": "Pi Network",
         "tf": "1h",
         "entry": 0.09605,
-        "stop": 0.09399083333333333,
-        "target1": 0.09810916666666666,
-        "target2": 0.10016833333333333,
-        "opened_at": "2026-09-14T20:27:22.105661"
+        "stop": 0.09398791666666667,
+        "target1": 0.09811208333333332,
+        "target2": 0.10017416666666665,
+        "opened_at": "2026-09-14T20:32:29.759915"
       }
     },
     "resolved": [
@@ -23440,6 +23440,19 @@
         "result": "win",
         "resolved_at": "2026-09-14T20:27:22.105661",
         "exit_price": 0.09817
+      },
+      {
+        "coin": "PI",
+        "name": "Pi Network",
+        "tf": "1h",
+        "entry": 0.09605,
+        "stop": 0.09399083333333333,
+        "target1": 0.09810916666666666,
+        "target2": 0.10016833333333333,
+        "opened_at": "2026-09-14T20:27:22.105661",
+        "result": "win",
+        "resolved_at": "2026-09-14T20:32:29.759915",
+        "exit_price": 0.09824
       }
     ]
   },
@@ -23447,14 +23460,14 @@
     "key": "BTC",
     "name": "Bitcoin",
     "emoji": "\u20bf",
-    "price": 79530,
+    "price": 79384,
     "high_24h": 79292,
     "low_24h": 76439,
-    "pct_24h": 2.82522,
+    "pct_24h": 2.70239,
     "pct_7d": -0.3,
     "pct_30d": 25.4,
-    "sma50": 71442.24359115007,
-    "sma200": 70186.57057237843,
+    "sma50": 71440.21562966882,
+    "sma200": 70186.06358200812,
     "support_30d": 62843.70368466329,
     "resistance_30d": 81264.70153038795,
     "mark_price": 79163.5,
@@ -23469,16 +23482,16 @@
     "key": "ETH",
     "name": "Ethereum",
     "emoji": "\u039e",
-    "price": 2607.56,
+    "price": 2596.47,
     "high_24h": 2547.92,
     "low_24h": 2467.86,
-    "pct_24h": 3.52451,
+    "pct_24h": 3.48117,
     "pct_7d": 1.9,
     "pct_30d": 35.0,
-    "sma50": 2198.781230120889,
-    "sma200": 2060.2460726947247,
+    "sma50": 2198.80750517727,
+    "sma200": 2060.25264145882,
     "support_30d": 1874.401898191962,
-    "resistance_30d": 2596.7670189660344,
+    "resistance_30d": 2598.080771785072,
     "mark_price": 2567.79454334,
     "index_price": 2567.75069767,
     "funding_rate": 1.96e-05,
