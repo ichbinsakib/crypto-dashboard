@@ -4,7 +4,7 @@
   "_alerts_state": {
     "btc-resistance-break": {
       "triggered": true,
-      "last_triggered_at": "2026-09-14 17:50:27"
+      "last_triggered_at": "2026-09-14 17:55:21"
     },
     "btc-support-break": {
       "triggered": false,
@@ -12,7 +12,7 @@
     },
     "eth-resistance-break": {
       "triggered": true,
-      "last_triggered_at": "2026-09-14 17:50:27"
+      "last_triggered_at": "2026-09-14 17:55:21"
     },
     "eth-support-break": {
       "triggered": false,
@@ -1543,7 +1543,7 @@
         ],
         [
           "Stretch from long-term average",
-          "+69.6% above its long-term average - very stretched",
+          "+72.7% above its long-term average - very stretched",
           -2
         ],
         [
@@ -1556,12 +1556,12 @@
       "id": "pump-fun",
       "symbol": "PUMP",
       "name": "Pump.fun",
-      "price": 0.00366676,
-      "pct_24h": 0.67251,
-      "pct_7d": -16.4,
+      "price": 0.00373292,
+      "pct_24h": 2.9116,
+      "pct_7d": -10.3,
       "support_30d": 0.002666433318189806,
       "resistance_30d": 0.0052249885406471875,
-      "as_of": "2026-09-14 16:45:27",
+      "as_of": "2026-09-14 17:55:21",
       "stale": false
     },
     "venice-token": {
@@ -1639,7 +1639,7 @@
         ],
         [
           "Stretch from long-term average",
-          "+6.5% vs its long-term average - not stretched either way",
+          "+7.4% vs its long-term average - not stretched either way",
           0
         ],
         [
@@ -1652,12 +1652,12 @@
       "id": "litecoin",
       "symbol": "LTC",
       "name": "Litecoin",
-      "price": 53.69,
-      "pct_24h": -0.83625,
-      "pct_7d": -6.5,
+      "price": 54.14,
+      "pct_24h": -0.87997,
+      "pct_7d": -2.1,
       "support_30d": 44.10365333727941,
       "resistance_30d": 55.20228907963863,
-      "as_of": "2026-09-14 15:10:38",
+      "as_of": "2026-09-14 17:55:21",
       "stale": false
     },
     "bitget-token": {
@@ -2167,7 +2167,7 @@
         ],
         [
           "Stretch from long-term average",
-          "-29.8% below its long-term average - confirmed downtrend",
+          "-29.9% below its long-term average - confirmed downtrend",
           -1
         ],
         [
@@ -2180,12 +2180,12 @@
       "id": "canton-network",
       "symbol": "CC",
       "name": "Canton",
-      "price": 0.09702,
-      "pct_24h": 1.49241,
-      "pct_7d": -10.9,
+      "price": 0.096934,
+      "pct_24h": 1.25004,
+      "pct_7d": -8.3,
       "support_30d": 0.09051839499501885,
       "resistance_30d": 0.12396615653575341,
-      "as_of": "2026-09-14 16:55:19",
+      "as_of": "2026-09-14 17:55:21",
       "stale": false
     },
     "internet-computer": {
@@ -3352,17 +3352,17 @@
         "stop": 0.061135833333333334,
         "target1": 0.062364166666666665,
         "target2": 0.06297833333333333,
-        "opened_at": "2026-09-14T17:52:31.945588"
+        "opened_at": "2026-09-14T17:57:26.128827"
       },
       "1h:HYPE": {
         "coin": "HYPE",
         "name": "Hyperliquid",
         "tf": "1h",
         "entry": 76.93,
-        "stop": 76.0425,
-        "target1": 77.81750000000001,
-        "target2": 78.70500000000001,
-        "opened_at": "2026-09-14T17:52:31.945588"
+        "stop": 76.03833333333334,
+        "target1": 77.82166666666667,
+        "target2": 78.71333333333334,
+        "opened_at": "2026-09-14T17:57:26.128827"
       }
     },
     "resolved": [
@@ -22839,6 +22839,32 @@
         "result": "win",
         "resolved_at": "2026-09-14T17:52:31.945588",
         "exit_price": 81.13
+      },
+      {
+        "coin": "SKY",
+        "name": "Sky",
+        "tf": "1h",
+        "entry": 0.06175,
+        "stop": 0.061135833333333334,
+        "target1": 0.062364166666666665,
+        "target2": 0.06297833333333333,
+        "opened_at": "2026-09-14T17:52:31.945588",
+        "result": "win",
+        "resolved_at": "2026-09-14T17:57:26.128827",
+        "exit_price": 0.06381
+      },
+      {
+        "coin": "HYPE",
+        "name": "Hyperliquid",
+        "tf": "1h",
+        "entry": 76.93,
+        "stop": 76.0425,
+        "target1": 77.81750000000001,
+        "target2": 78.70500000000001,
+        "opened_at": "2026-09-14T17:52:31.945588",
+        "result": "win",
+        "resolved_at": "2026-09-14T17:57:26.128827",
+        "exit_price": 81.11
       }
     ]
   },
@@ -22846,14 +22872,14 @@
     "key": "BTC",
     "name": "Bitcoin",
     "emoji": "\u20bf",
-    "price": 78859,
+    "price": 78932,
     "high_24h": 78856,
     "low_24h": 76439,
-    "pct_24h": 2.06572,
+    "pct_24h": 2.06294,
     "pct_7d": -0.1,
     "pct_30d": 24.9,
-    "sma50": 71431.29802061272,
-    "sma200": 70183.83417974411,
+    "sma50": 71431.50970391798,
+    "sma200": 70183.88710057041,
     "support_30d": 62843.70368466329,
     "resistance_30d": 81264.70153038795,
     "mark_price": 77600.0,
@@ -22868,16 +22894,16 @@
     "key": "ETH",
     "name": "Ethereum",
     "emoji": "\u039e",
-    "price": 2528.09,
+    "price": 2529.41,
     "high_24h": 2535.25,
     "low_24h": 2467.86,
-    "pct_24h": 0.99144,
+    "pct_24h": 0.99718,
     "pct_7d": 2.4,
     "pct_30d": 34.3,
-    "sma50": 2197.4434170764926,
-    "sma200": 2059.9116194336257,
+    "sma50": 2197.4273682092717,
+    "sma200": 2059.9076072168205,
     "support_30d": 1874.401898191962,
-    "resistance_30d": 2529.876366746208,
+    "resistance_30d": 2529.0739233851523,
     "mark_price": 2515.82,
     "index_price": 2516.73418605,
     "funding_rate": 8.331e-05,
