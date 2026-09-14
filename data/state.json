@@ -823,7 +823,7 @@
         ],
         [
           "Stretch from long-term average",
-          "-7.0% vs its long-term average - not stretched either way",
+          "-7.1% vs its long-term average - not stretched either way",
           0
         ],
         [
@@ -836,12 +836,12 @@
       "id": "hedera-hashgraph",
       "symbol": "HBAR",
       "name": "Hedera",
-      "price": 0.076438,
-      "pct_24h": 1.51964,
+      "price": 0.076379,
+      "pct_24h": 1.35079,
       "pct_7d": -4.7,
       "support_30d": 0.06461260477975343,
       "resistance_30d": 0.08182180696524229,
-      "as_of": "2026-09-14 10:25:21",
+      "as_of": "2026-09-14 10:35:18",
       "stale": false
     },
     "pepe": {
@@ -2263,7 +2263,7 @@
         ],
         [
           "Stretch from long-term average",
-          "-1.5% vs its long-term average - not stretched either way",
+          "-1.4% vs its long-term average - not stretched either way",
           0
         ],
         [
@@ -2276,12 +2276,12 @@
       "id": "bittensor",
       "symbol": "TAO",
       "name": "Bittensor",
-      "price": 236.07,
-      "pct_24h": 1.03809,
+      "price": 236.19,
+      "pct_24h": 0.97485,
       "pct_7d": -11.6,
       "support_30d": 190.67093053611111,
       "resistance_30d": 265.7337487161633,
-      "as_of": "2026-09-14 10:21:01",
+      "as_of": "2026-09-14 10:35:18",
       "stale": false
     },
     "the-open-network": {
@@ -2531,7 +2531,7 @@
       "rows": [
         [
           "Price vs. recent range",
-          "Near its 30-day low (~$4,314.56) - historically a better entry",
+          "Near its 30-day low (~$4,296.17) - historically a better entry",
           2
         ],
         [
@@ -2551,7 +2551,7 @@
         ],
         [
           "Stretch from long-term average",
-          "-3.0% vs its long-term average - not stretched either way",
+          "-3.8% vs its long-term average - not stretched either way",
           0
         ],
         [
@@ -2564,12 +2564,12 @@
       "id": "tether-gold",
       "symbol": "XAUT",
       "name": "Tether Gold",
-      "price": 4329.38,
-      "pct_24h": -0.47302,
-      "pct_7d": -1.6,
-      "support_30d": 4314.5584711704705,
+      "price": 4296.46,
+      "pct_24h": -1.11068,
+      "pct_7d": -2.6,
+      "support_30d": 4296.166403758412,
       "resistance_30d": 4662.510537821146,
-      "as_of": "2026-09-14 05:45:23",
+      "as_of": "2026-09-14 10:35:18",
       "stale": false
     },
     "bitway": {
@@ -3311,10 +3311,10 @@
         "name": "Chainlink",
         "tf": "15m",
         "entry": 11.31173,
-        "stop": 11.27372,
-        "target1": 11.34974,
-        "target2": 11.38775,
-        "opened_at": "2026-09-14T10:32:26.381852"
+        "stop": 11.273700000000002,
+        "target1": 11.34976,
+        "target2": 11.387789999999999,
+        "opened_at": "2026-09-14T10:37:14.598858"
       }
     },
     "resolved": [
@@ -21491,6 +21491,19 @@
         "result": "win",
         "resolved_at": "2026-09-14T10:32:26.381852",
         "exit_price": 11.3844
+      },
+      {
+        "coin": "LINK",
+        "name": "Chainlink",
+        "tf": "15m",
+        "entry": 11.31173,
+        "stop": 11.27372,
+        "target1": 11.34974,
+        "target2": 11.38775,
+        "opened_at": "2026-09-14T10:32:26.381852",
+        "result": "win",
+        "resolved_at": "2026-09-14T10:37:14.598858",
+        "exit_price": 11.38903
       }
     ]
   },
@@ -21498,14 +21511,14 @@
     "key": "BTC",
     "name": "Bitcoin",
     "emoji": "\u20bf",
-    "price": 77930,
+    "price": 77914,
     "high_24h": 78278,
     "low_24h": 76439,
-    "pct_24h": 1.56573,
+    "pct_24h": 1.47594,
     "pct_7d": -1.6,
     "pct_30d": 24.3,
-    "sma50": 71411.3159598407,
-    "sma200": 70178.83866455109,
+    "sma50": 71411.01337356993,
+    "sma200": 70178.76301798341,
     "support_30d": 62843.70368466329,
     "resistance_30d": 81264.70153038795,
     "mark_price": 77600.0,
@@ -21520,14 +21533,14 @@
     "key": "ETH",
     "name": "Ethereum",
     "emoji": "\u039e",
-    "price": 2516.14,
+    "price": 2515.37,
     "high_24h": 2531.64,
     "low_24h": 2464.63,
-    "pct_24h": 1.48088,
+    "pct_24h": 1.32131,
     "pct_7d": 1.4,
     "pct_30d": 34.7,
-    "sma50": 2197.166550045276,
-    "sma200": 2059.8424026758216,
+    "sma50": 2197.1530917583277,
+    "sma200": 2059.8390381040845,
     "support_30d": 1874.401898191962,
     "resistance_30d": 2525.267261590238,
     "mark_price": 2515.82,
