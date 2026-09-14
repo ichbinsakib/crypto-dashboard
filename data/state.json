@@ -40,7 +40,7 @@
         ],
         [
           "Crowd mood (Fear & Greed)",
-          "61/100 - crowd is greedy",
+          "57/100 - crowd is greedy",
           -1
         ],
         [
@@ -55,7 +55,7 @@
         ],
         [
           "Stretch from long-term average",
-          "+15.4% above its long-term average - a bit stretched",
+          "+14.8% above its long-term average - a bit stretched",
           -1
         ],
         [
@@ -68,12 +68,12 @@
       "id": "binancecoin",
       "symbol": "BNB",
       "name": "BNB",
-      "price": 721.76,
-      "pct_24h": -0.69073,
-      "pct_7d": -3.6,
+      "price": 718.53,
+      "pct_24h": -1.39273,
+      "pct_7d": -4.5,
       "support_30d": 602.4629221231862,
       "resistance_30d": 766.4092879330625,
-      "as_of": "2026-09-13 21:10:23",
+      "as_of": "2026-09-14 01:15:21",
       "stale": false
     },
     "ripple": {
@@ -904,7 +904,7 @@
         ],
         [
           "Crowd mood (Fear & Greed)",
-          "61/100 - crowd is greedy",
+          "57/100 - crowd is greedy",
           -1
         ],
         [
@@ -919,7 +919,7 @@
         ],
         [
           "Stretch from long-term average",
-          "-8.9% vs its long-term average - not stretched either way",
+          "-8.6% vs its long-term average - not stretched either way",
           0
         ],
         [
@@ -932,12 +932,12 @@
       "id": "avalanche-2",
       "symbol": "AVAX",
       "name": "Avalanche",
-      "price": 7.31,
-      "pct_24h": -1.24551,
-      "pct_7d": -6.4,
+      "price": 7.32,
+      "pct_24h": -0.91844,
+      "pct_7d": -7.3,
       "support_30d": 6.323978670940332,
       "resistance_30d": 8.074275746115342,
-      "as_of": "2026-09-13 23:45:23",
+      "as_of": "2026-09-14 01:15:21",
       "stale": false
     },
     "aster-2": {
@@ -1768,7 +1768,7 @@
         ],
         [
           "Crowd mood (Fear & Greed)",
-          "61/100 - crowd is greedy",
+          "57/100 - crowd is greedy",
           -1
         ],
         [
@@ -1783,7 +1783,7 @@
         ],
         [
           "Stretch from long-term average",
-          "+133.5% above its long-term average - very stretched",
+          "+130.1% above its long-term average - very stretched",
           -2
         ],
         [
@@ -1796,12 +1796,12 @@
       "id": "lighter",
       "symbol": "LIT",
       "name": "Lighter",
-      "price": 4.21,
-      "pct_24h": -0.39097,
-      "pct_7d": -6.8,
-      "support_30d": 2.2652470267288507,
+      "price": 4.18,
+      "pct_24h": -0.83255,
+      "pct_7d": -7.8,
+      "support_30d": 2.277611067280557,
       "resistance_30d": 4.827528632102638,
-      "as_of": "2026-09-13 22:05:21",
+      "as_of": "2026-09-14 01:15:21",
       "stale": false
     },
     "ethena": {
@@ -3306,16 +3306,6 @@
         "target2": 0.38482500000000003,
         "opened_at": "2026-09-13T23:22:14.350605"
       },
-      "15m:XMR": {
-        "coin": "XMR",
-        "name": "Monero",
-        "tf": "15m",
-        "entry": 512.01,
-        "stop": 509.62066666666664,
-        "target1": 514.3993333333333,
-        "target2": 516.7886666666667,
-        "opened_at": "2026-09-14T01:12:14.287524"
-      },
       "daily:XLM": {
         "coin": "XLM",
         "name": "Stellar",
@@ -3324,7 +3314,7 @@
         "stop": 0.14139986666666668,
         "target1": 0.16294613333333333,
         "target2": 0.17371926666666665,
-        "opened_at": "2026-09-14T01:12:14.287524"
+        "opened_at": "2026-09-14T01:17:11.535022"
       }
     },
     "resolved": [
@@ -18641,6 +18631,32 @@
         "result": "win",
         "resolved_at": "2026-09-14T01:12:14.287524",
         "exit_price": 0.178586
+      },
+      {
+        "coin": "XMR",
+        "name": "Monero",
+        "tf": "15m",
+        "entry": 512.01,
+        "stop": 509.62066666666664,
+        "target1": 514.3993333333333,
+        "target2": 516.7886666666667,
+        "opened_at": "2026-09-14T01:12:14.287524",
+        "result": "win",
+        "resolved_at": "2026-09-14T01:17:11.535022",
+        "exit_price": 515.11
+      },
+      {
+        "coin": "XLM",
+        "name": "Stellar",
+        "tf": "daily",
+        "entry": 0.152173,
+        "stop": 0.14139986666666668,
+        "target1": 0.16294613333333333,
+        "target2": 0.17371926666666665,
+        "opened_at": "2026-09-14T01:12:14.287524",
+        "result": "win",
+        "resolved_at": "2026-09-14T01:17:11.535022",
+        "exit_price": 0.178141
       }
     ]
   },
@@ -18648,14 +18664,14 @@
     "key": "BTC",
     "name": "Bitcoin",
     "emoji": "\u20bf",
-    "price": 76710,
+    "price": 76747,
     "high_24h": 77406,
     "low_24h": 76439,
-    "pct_24h": -0.70489,
+    "pct_24h": -0.66273,
     "pct_7d": -4.4,
     "pct_30d": 21.9,
-    "sma50": 71386.96062480127,
-    "sma200": 70172.74983079125,
+    "sma50": 71388.12507357092,
+    "sma200": 70173.04094298366,
     "support_30d": 62843.70368466329,
     "resistance_30d": 81264.70153038795,
     "mark_price": 77158.0,
@@ -18670,14 +18686,14 @@
     "key": "ETH",
     "name": "Ethereum",
     "emoji": "\u039e",
-    "price": 2480.88,
+    "price": 2481.51,
     "high_24h": 2525.01,
     "low_24h": 2464.63,
-    "pct_24h": -1.71476,
+    "pct_24h": -1.68494,
     "pct_7d": -1.2,
     "pct_30d": 32.1,
-    "sma50": 2196.4640629071596,
-    "sma200": 2059.6667808912925,
+    "sma50": 2196.4835411559725,
+    "sma200": 2059.6716504534957,
     "support_30d": 1874.401898191962,
     "resistance_30d": 2525.267261590238,
     "mark_price": 2521.71641085,
