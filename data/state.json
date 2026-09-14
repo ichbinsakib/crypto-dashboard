@@ -4,7 +4,7 @@
   "_alerts_state": {
     "btc-resistance-break": {
       "triggered": true,
-      "last_triggered_at": "2026-09-14 15:55:20"
+      "last_triggered_at": "2026-09-14 16:00:39"
     },
     "btc-support-break": {
       "triggered": false,
@@ -631,7 +631,7 @@
         ],
         [
           "Stretch from long-term average",
-          "+37.6% above its long-term average - very stretched",
+          "+38.0% above its long-term average - very stretched",
           -2
         ],
         [
@@ -644,12 +644,12 @@
       "id": "monero",
       "symbol": "XMR",
       "name": "Monero",
-      "price": 510.94,
-      "pct_24h": -4.11741,
-      "pct_7d": -4.6,
+      "price": 512.24,
+      "pct_24h": -4.32896,
+      "pct_7d": -4.5,
       "support_30d": 409.8815731954537,
       "resistance_30d": 555.6684591165193,
-      "as_of": "2026-09-14 14:30:37",
+      "as_of": "2026-09-14 16:00:39",
       "stale": false
     },
     "cardano": {
@@ -1735,7 +1735,7 @@
         ],
         [
           "Stretch from long-term average",
-          "-14.4% vs its long-term average - not stretched either way",
+          "-14.5% vs its long-term average - not stretched either way",
           0
         ],
         [
@@ -1748,12 +1748,12 @@
       "id": "sui",
       "symbol": "SUI",
       "name": "Sui",
-      "price": 0.725798,
-      "pct_24h": 1.86009,
-      "pct_7d": -13.4,
+      "price": 0.724665,
+      "pct_24h": 1.83134,
+      "pct_7d": -12.3,
       "support_30d": 0.6514311908607086,
       "resistance_30d": 0.8499161763231283,
-      "as_of": "2026-09-14 15:55:20",
+      "as_of": "2026-09-14 16:00:39",
       "stale": false
     },
     "lighter": {
@@ -2531,7 +2531,7 @@
       "rows": [
         [
           "Price vs. recent range",
-          "Near its 30-day low (~$4,287.17) - historically a better entry",
+          "Near its 30-day low (~$4,292.50) - historically a better entry",
           2
         ],
         [
@@ -2564,12 +2564,12 @@
       "id": "tether-gold",
       "symbol": "XAUT",
       "name": "Tether Gold",
-      "price": 4289.33,
-      "pct_24h": -1.31057,
-      "pct_7d": -2.3,
-      "support_30d": 4287.169942559545,
+      "price": 4292.5,
+      "pct_24h": -1.24134,
+      "pct_7d": -2.7,
+      "support_30d": 4292.504577949296,
       "resistance_30d": 4662.510537821146,
-      "as_of": "2026-09-14 12:45:24",
+      "as_of": "2026-09-14 16:00:39",
       "stale": false
     },
     "bitway": {
@@ -3341,9 +3341,7 @@
       "stale": false
     }
   },
-  "_strong_buy_state": {
-    "scanner-1h:PI": true
-  },
+  "_strong_buy_state": {},
   "_pnl_tracker": {
     "open": {
       "15m:XLM": {
@@ -3351,20 +3349,10 @@
         "name": "Stellar",
         "tf": "15m",
         "entry": 0.183075,
-        "stop": 0.18149413333333334,
-        "target1": 0.18465586666666664,
-        "target2": 0.1862367333333333,
-        "opened_at": "2026-09-14T15:57:17.573391"
-      },
-      "1h:PI": {
-        "coin": "PI",
-        "name": "Pi Network",
-        "tf": "1h",
-        "entry": 0.09605,
-        "stop": 0.09398833333333333,
-        "target1": 0.09811166666666667,
-        "target2": 0.10017333333333334,
-        "opened_at": "2026-09-14T15:57:17.573391"
+        "stop": 0.18145003333333332,
+        "target1": 0.18469996666666666,
+        "target2": 0.18632493333333333,
+        "opened_at": "2026-09-14T16:02:36.323547"
       }
     },
     "resolved": [
@@ -22204,6 +22192,32 @@
         "result": "win",
         "resolved_at": "2026-09-14T15:57:17.573391",
         "exit_price": 0.193065
+      },
+      {
+        "coin": "XLM",
+        "name": "Stellar",
+        "tf": "15m",
+        "entry": 0.183075,
+        "stop": 0.18149413333333334,
+        "target1": 0.18465586666666664,
+        "target2": 0.1862367333333333,
+        "opened_at": "2026-09-14T15:57:17.573391",
+        "result": "win",
+        "resolved_at": "2026-09-14T16:02:36.323547",
+        "exit_price": 0.194009
+      },
+      {
+        "coin": "PI",
+        "name": "Pi Network",
+        "tf": "1h",
+        "entry": 0.09605,
+        "stop": 0.09398833333333333,
+        "target1": 0.09811166666666667,
+        "target2": 0.10017333333333334,
+        "opened_at": "2026-09-14T15:57:17.573391",
+        "result": "win",
+        "resolved_at": "2026-09-14T16:02:36.323547",
+        "exit_price": 0.10286
       }
     ]
   },
@@ -22211,14 +22225,14 @@
     "key": "BTC",
     "name": "Bitcoin",
     "emoji": "\u20bf",
-    "price": 78601,
+    "price": 78558,
     "high_24h": 78630,
     "low_24h": 76439,
-    "pct_24h": 1.92555,
+    "pct_24h": 1.88056,
     "pct_7d": -1.0,
     "pct_30d": 24.7,
-    "sma50": 71425.20486479487,
-    "sma200": 70182.31089078965,
+    "sma50": 71423.81075059887,
+    "sma200": 70181.96236224065,
     "support_30d": 62843.70368466329,
     "resistance_30d": 81264.70153038795,
     "mark_price": 77600.0,
@@ -22233,14 +22247,14 @@
     "key": "ETH",
     "name": "Ethereum",
     "emoji": "\u039e",
-    "price": 2508.34,
+    "price": 2508.48,
     "high_24h": 2531.64,
     "low_24h": 2467.86,
-    "pct_24h": 0.7252,
+    "pct_24h": 0.72819,
     "pct_7d": 0.2,
     "pct_30d": 33.0,
-    "sma50": 2197.015609241829,
-    "sma200": 2059.80466747496,
+    "sma50": 2197.0180508619715,
+    "sma200": 2059.8052778799956,
     "support_30d": 1874.401898191962,
     "resistance_30d": 2525.267261590238,
     "mark_price": 2515.82,
