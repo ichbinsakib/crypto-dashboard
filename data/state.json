@@ -3,8 +3,8 @@
   "_fng_classification": "Greed",
   "_alerts_state": {
     "btc-resistance-break": {
-      "triggered": false,
-      "last_triggered_at": "2026-09-14 23:05:19"
+      "triggered": true,
+      "last_triggered_at": "2026-09-14 23:15:22"
     },
     "btc-support-break": {
       "triggered": false,
@@ -12,7 +12,7 @@
     },
     "eth-resistance-break": {
       "triggered": true,
-      "last_triggered_at": "2026-09-14 23:10:21"
+      "last_triggered_at": "2026-09-14 23:15:22"
     },
     "eth-support-break": {
       "triggered": false,
@@ -487,7 +487,7 @@
         ],
         [
           "Stretch from long-term average",
-          "+26.9% above its long-term average - a bit stretched",
+          "+25.0% above its long-term average - a bit stretched",
           -1
         ],
         [
@@ -500,12 +500,12 @@
       "id": "chainlink",
       "symbol": "LINK",
       "name": "Chainlink",
-      "price": 11.73,
-      "pct_24h": 2.84729,
-      "pct_7d": -9.7,
+      "price": 11.55,
+      "pct_24h": 3.32057,
+      "pct_7d": -9.3,
       "support_30d": 9.38323578770609,
       "resistance_30d": 13.237155745219605,
-      "as_of": "2026-09-14 19:55:18",
+      "as_of": "2026-09-14 23:15:22",
       "stale": false
     },
     "whitebit": {
@@ -1701,11 +1701,11 @@
       "symbol": "BGB",
       "name": "Bitget Token",
       "price": 1.94,
-      "pct_24h": 0.6874,
-      "pct_7d": -3.3,
+      "pct_24h": 0.7894,
+      "pct_7d": -3.0,
       "support_30d": 1.6478040912714662,
       "resistance_30d": 2.0284940947674617,
-      "as_of": "2026-09-14 22:55:17",
+      "as_of": "2026-09-14 23:15:22",
       "stale": false
     },
     "sui": {
@@ -2119,7 +2119,7 @@
         ],
         [
           "Stretch from long-term average",
-          "+9.2% vs its long-term average - not stretched either way",
+          "+8.6% vs its long-term average - not stretched either way",
           0
         ],
         [
@@ -2132,12 +2132,12 @@
       "id": "ondo-finance",
       "symbol": "ONDO",
       "name": "Ondo",
-      "price": 0.357906,
-      "pct_24h": 3.98185,
-      "pct_7d": -7.2,
+      "price": 0.35591,
+      "pct_24h": 3.9146,
+      "pct_7d": -7.1,
       "support_30d": 0.32601458799099026,
       "resistance_30d": 0.3969475338902824,
-      "as_of": "2026-09-14 22:30:26",
+      "as_of": "2026-09-14 23:15:22",
       "stale": false
     },
     "canton-network": {
@@ -3349,10 +3349,10 @@
         "name": "Zcash",
         "tf": "15m",
         "entry": 1132.75,
-        "stop": 1120.299,
-        "target1": 1145.201,
-        "target2": 1157.652,
-        "opened_at": "2026-09-14T23:12:17.661882"
+        "stop": 1120.3086666666666,
+        "target1": 1145.1913333333334,
+        "target2": 1157.6326666666669,
+        "opened_at": "2026-09-14T23:17:19.649886"
       },
       "1h:ETC": {
         "coin": "ETC",
@@ -3362,7 +3362,7 @@
         "stop": 7.3838333333333335,
         "target1": 7.462166666666667,
         "target2": 7.501333333333333,
-        "opened_at": "2026-09-14T23:12:17.661882"
+        "opened_at": "2026-09-14T23:17:19.649886"
       }
     },
     "resolved": [
@@ -24009,6 +24009,32 @@
         "result": "win",
         "resolved_at": "2026-09-14T23:12:17.661882",
         "exit_price": 7.587
+      },
+      {
+        "coin": "ZEC",
+        "name": "Zcash",
+        "tf": "15m",
+        "entry": 1132.75,
+        "stop": 1120.299,
+        "target1": 1145.201,
+        "target2": 1157.652,
+        "opened_at": "2026-09-14T23:12:17.661882",
+        "result": "win",
+        "resolved_at": "2026-09-14T23:17:19.649886",
+        "exit_price": 1169.36
+      },
+      {
+        "coin": "ETC",
+        "name": "Ethereum Classic",
+        "tf": "1h",
+        "entry": 7.423,
+        "stop": 7.3838333333333335,
+        "target1": 7.462166666666667,
+        "target2": 7.501333333333333,
+        "opened_at": "2026-09-14T23:12:17.661882",
+        "result": "win",
+        "resolved_at": "2026-09-14T23:17:19.649886",
+        "exit_price": 7.59
       }
     ]
   },
@@ -24016,14 +24042,14 @@
     "key": "BTC",
     "name": "Bitcoin",
     "emoji": "\u20bf",
-    "price": 78413,
+    "price": 78426,
     "high_24h": 79530,
     "low_24h": 76439,
-    "pct_24h": 2.27038,
+    "pct_24h": 2.25,
     "pct_7d": -0.8,
     "pct_30d": 24.5,
-    "sma50": 71421.02685914632,
-    "sma200": 70181.2663893775,
+    "sma50": 71421.32561032669,
+    "sma200": 70181.3410771726,
     "support_30d": 62843.70368466329,
     "resistance_30d": 81264.70153038795,
     "mark_price": 78726.74180435,
@@ -24038,16 +24064,16 @@
     "key": "ETH",
     "name": "Ethereum",
     "emoji": "\u039e",
-    "price": 2528.08,
+    "price": 2525.66,
     "high_24h": 2607.56,
     "low_24h": 2467.86,
-    "pct_24h": 2.0998,
+    "pct_24h": 2.07096,
     "pct_7d": 1.7,
     "pct_30d": 34.5,
-    "sma50": 2197.407570301801,
-    "sma200": 2059.9026577399527,
+    "sma50": 2197.355480856722,
+    "sma200": 2059.889635378683,
     "support_30d": 1874.401898191962,
-    "resistance_30d": 2528.084028011637,
+    "resistance_30d": 2525.479555757671,
     "mark_price": 2544.79927907,
     "index_price": 2546.0372093,
     "funding_rate": 4.186e-05,
