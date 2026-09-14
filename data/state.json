@@ -12,7 +12,7 @@
     },
     "eth-resistance-break": {
       "triggered": true,
-      "last_triggered_at": "2026-09-14 08:15:24"
+      "last_triggered_at": "2026-09-14 08:20:25"
     },
     "eth-support-break": {
       "triggered": false,
@@ -775,7 +775,7 @@
         ],
         [
           "Stretch from long-term average",
-          "-9.1% vs its long-term average - not stretched either way",
+          "-8.5% vs its long-term average - not stretched either way",
           0
         ],
         [
@@ -788,12 +788,12 @@
       "id": "kucoin-shares",
       "symbol": "KCS",
       "name": "KuCoin",
-      "price": 6.93,
-      "pct_24h": 0.32534,
-      "pct_7d": -2.1,
+      "price": 6.98,
+      "pct_24h": 1.30358,
+      "pct_7d": -1.5,
       "support_30d": 6.514591596607885,
       "resistance_30d": 7.8821382735057615,
-      "as_of": "2026-09-14 06:25:19",
+      "as_of": "2026-09-14 08:20:25",
       "stale": false
     },
     "hedera-hashgraph": {
@@ -2119,7 +2119,7 @@
         ],
         [
           "Stretch from long-term average",
-          "+8.5% vs its long-term average - not stretched either way",
+          "+8.4% vs its long-term average - not stretched either way",
           0
         ],
         [
@@ -2132,12 +2132,12 @@
       "id": "ondo-finance",
       "symbol": "ONDO",
       "name": "Ondo",
-      "price": 0.355519,
-      "pct_24h": 3.02961,
+      "price": 0.35513,
+      "pct_24h": 3.19225,
       "pct_7d": -7.7,
       "support_30d": 0.32601458799099026,
       "resistance_30d": 0.3969475338902824,
-      "as_of": "2026-09-14 07:55:55",
+      "as_of": "2026-09-14 08:20:25",
       "stale": false
     },
     "canton-network": {
@@ -2407,7 +2407,7 @@
         ],
         [
           "Stretch from long-term average",
-          "-1.8% vs its long-term average - not stretched either way",
+          "-2.0% vs its long-term average - not stretched either way",
           0
         ],
         [
@@ -2420,12 +2420,12 @@
       "id": "shiba-inu",
       "symbol": "SHIB",
       "name": "Shiba Inu",
-      "price": 5.25e-06,
-      "pct_24h": 0.11229,
-      "pct_7d": -4.6,
+      "price": 5.24e-06,
+      "pct_24h": 0.3374,
+      "pct_7d": -4.3,
       "support_30d": 4.41190416053175e-06,
       "resistance_30d": 5.903506876405612e-06,
-      "as_of": "2026-09-14 07:50:22",
+      "as_of": "2026-09-14 08:20:25",
       "stale": false
     },
     "near": {
@@ -2675,7 +2675,7 @@
       "rows": [
         [
           "Price vs. recent range",
-          "Near its 30-day low (~$4,318.14) - historically a better entry",
+          "Near its 30-day low (~$4,317.06) - historically a better entry",
           2
         ],
         [
@@ -2695,7 +2695,7 @@
         ],
         [
           "Stretch from long-term average",
-          "-3.4% vs its long-term average - not stretched either way",
+          "-3.5% vs its long-term average - not stretched either way",
           0
         ],
         [
@@ -2708,12 +2708,12 @@
       "id": "pax-gold",
       "symbol": "PAXG",
       "name": "PAX Gold",
-      "price": 4321.59,
-      "pct_24h": -0.75797,
-      "pct_7d": -1.5,
-      "support_30d": 4318.141703998686,
+      "price": 4317.17,
+      "pct_24h": -0.87302,
+      "pct_7d": -1.7,
+      "support_30d": 4317.062120217443,
       "resistance_30d": 4672.307573354755,
-      "as_of": "2026-09-14 07:40:25",
+      "as_of": "2026-09-14 08:20:25",
       "stale": false
     },
     "morpho": {
@@ -3223,7 +3223,7 @@
         ],
         [
           "Stretch from long-term average",
-          "+0.4% vs its long-term average - not stretched either way",
+          "+0.5% vs its long-term average - not stretched either way",
           0
         ],
         [
@@ -3236,12 +3236,12 @@
       "id": "kaspa",
       "symbol": "KAS",
       "name": "Kaspa",
-      "price": 0.03386536,
-      "pct_24h": -3.69193,
-      "pct_7d": 3.3,
+      "price": 0.033888,
+      "pct_24h": -2.09346,
+      "pct_7d": -0.5,
       "support_30d": 0.025275049210175406,
       "resistance_30d": 0.03651282069323304,
-      "as_of": "2026-09-14 06:35:21",
+      "as_of": "2026-09-14 08:20:25",
       "stale": false
     },
     "cosmos": {
@@ -3294,7 +3294,7 @@
     }
   },
   "_strong_buy_state": {
-    "scanner-15m:LTC": true
+    "scanner-1h:PAXG": true
   },
   "_pnl_tracker": {
     "open": {
@@ -3303,10 +3303,20 @@
         "name": "Litecoin",
         "tf": "15m",
         "entry": 53.66,
-        "stop": 53.45333333333333,
-        "target1": 53.86666666666666,
-        "target2": 54.07333333333332,
-        "opened_at": "2026-09-14T08:17:25.868167"
+        "stop": 53.449999999999996,
+        "target1": 53.87,
+        "target2": 54.08,
+        "opened_at": "2026-09-14T08:21:51.686214"
+      },
+      "1h:PAXG": {
+        "coin": "PAXG",
+        "name": "PAX Gold",
+        "tf": "1h",
+        "entry": 4312.66,
+        "stop": 4303.62,
+        "target1": 4321.7,
+        "target2": 4330.74,
+        "opened_at": "2026-09-14T08:21:51.686214"
       },
       "daily:XLM": {
         "coin": "XLM",
@@ -3316,7 +3326,7 @@
         "stop": 0.1411899,
         "target1": 0.1631561,
         "target2": 0.1741392,
-        "opened_at": "2026-09-14T08:17:25.868167"
+        "opened_at": "2026-09-14T08:21:51.686214"
       }
     },
     "resolved": [
@@ -20908,6 +20918,32 @@
         "result": "win",
         "resolved_at": "2026-09-14T08:17:25.868167",
         "exit_price": 0.184322
+      },
+      {
+        "coin": "LTC",
+        "name": "Litecoin",
+        "tf": "15m",
+        "entry": 53.66,
+        "stop": 53.45333333333333,
+        "target1": 53.86666666666666,
+        "target2": 54.07333333333332,
+        "opened_at": "2026-09-14T08:17:25.868167",
+        "result": "win",
+        "resolved_at": "2026-09-14T08:21:51.686214",
+        "exit_price": 53.97
+      },
+      {
+        "coin": "XLM",
+        "name": "Stellar",
+        "tf": "daily",
+        "entry": 0.152173,
+        "stop": 0.1411899,
+        "target1": 0.1631561,
+        "target2": 0.1741392,
+        "opened_at": "2026-09-14T08:17:25.868167",
+        "result": "win",
+        "resolved_at": "2026-09-14T08:21:51.686214",
+        "exit_price": 0.18427
       }
     ]
   },
@@ -20915,14 +20951,14 @@
     "key": "BTC",
     "name": "Bitcoin",
     "emoji": "\u20bf",
-    "price": 77765,
+    "price": 77715,
     "high_24h": 77854,
     "low_24h": 76439,
-    "pct_24h": 0.93229,
+    "pct_24h": 0.92971,
     "pct_7d": -2.3,
     "pct_30d": 23.5,
-    "sma50": 71407.75112229148,
-    "sma200": 70177.9474551638,
+    "sma50": 71407.06051129306,
+    "sma200": 70177.77480241419,
     "support_30d": 62843.70368466329,
     "resistance_30d": 81264.70153038795,
     "mark_price": 77600.0,
@@ -20937,14 +20973,14 @@
     "key": "ETH",
     "name": "Ethereum",
     "emoji": "\u039e",
-    "price": 2522.31,
+    "price": 2520.32,
     "high_24h": 2525.02,
     "low_24h": 2464.63,
-    "pct_24h": 0.31582,
+    "pct_24h": 0.34859,
     "pct_7d": 1.0,
     "pct_30d": 34.1,
-    "sma50": 2197.2920303250353,
-    "sma200": 2059.8737727457615,
+    "sma50": 2197.252381352156,
+    "sma200": 2059.8638605025417,
     "support_30d": 1874.401898191962,
     "resistance_30d": 2525.267261590238,
     "mark_price": 2515.82,
