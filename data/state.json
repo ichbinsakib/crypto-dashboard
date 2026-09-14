@@ -3,8 +3,8 @@
   "_fng_classification": "Greed",
   "_alerts_state": {
     "btc-resistance-break": {
-      "triggered": false,
-      "last_triggered_at": "2026-09-14 14:40:30"
+      "triggered": true,
+      "last_triggered_at": "2026-09-14 14:55:24"
     },
     "btc-support-break": {
       "triggered": false,
@@ -391,7 +391,7 @@
         ],
         [
           "Stretch from long-term average",
-          "+133.3% above its long-term average - very stretched",
+          "+135.2% above its long-term average - very stretched",
           -2
         ],
         [
@@ -404,12 +404,12 @@
       "id": "zcash",
       "symbol": "ZEC",
       "name": "Zcash",
-      "price": 1132.48,
-      "pct_24h": 3.62438,
-      "pct_7d": -6.2,
+      "price": 1141.48,
+      "pct_24h": 4.00951,
+      "pct_7d": -4.6,
       "support_30d": 486.1425018309512,
       "resistance_30d": 1244.287571383468,
-      "as_of": "2026-09-14 12:05:20",
+      "as_of": "2026-09-14 14:55:24",
       "stale": false
     },
     "rain": {
@@ -775,7 +775,7 @@
         ],
         [
           "Stretch from long-term average",
-          "-8.2% vs its long-term average - not stretched either way",
+          "-8.7% vs its long-term average - not stretched either way",
           0
         ],
         [
@@ -788,12 +788,12 @@
       "id": "kucoin-shares",
       "symbol": "KCS",
       "name": "KuCoin",
-      "price": 7.0,
-      "pct_24h": 2.79075,
-      "pct_7d": -1.4,
+      "price": 6.96,
+      "pct_24h": 2.217,
+      "pct_7d": -1.5,
       "support_30d": 6.514591596607885,
       "resistance_30d": 7.8821382735057615,
-      "as_of": "2026-09-14 12:25:18",
+      "as_of": "2026-09-14 14:55:24",
       "stale": false
     },
     "hedera-hashgraph": {
@@ -1783,7 +1783,7 @@
         ],
         [
           "Stretch from long-term average",
-          "+144.3% above its long-term average - very stretched",
+          "+140.5% above its long-term average - very stretched",
           -2
         ],
         [
@@ -1796,12 +1796,12 @@
       "id": "lighter",
       "symbol": "LIT",
       "name": "Lighter",
-      "price": 4.44,
-      "pct_24h": 8.81082,
+      "price": 4.37,
+      "pct_24h": 5.94742,
       "pct_7d": -3.6,
       "support_30d": 2.277611067280557,
       "resistance_30d": 4.827528632102638,
-      "as_of": "2026-09-14 14:25:19",
+      "as_of": "2026-09-14 14:55:24",
       "stale": false
     },
     "ethena": {
@@ -1927,7 +1927,7 @@
         ],
         [
           "Stretch from long-term average",
-          "-1.4% vs its long-term average - not stretched either way",
+          "-1.2% vs its long-term average - not stretched either way",
           0
         ],
         [
@@ -1940,12 +1940,12 @@
       "id": "mantle",
       "symbol": "MNT",
       "name": "Mantle",
-      "price": 0.565928,
-      "pct_24h": -0.34476,
+      "price": 0.567021,
+      "pct_24h": -0.3884,
       "pct_7d": -11.5,
       "support_30d": 0.42660592418086046,
       "resistance_30d": 0.6365218632454678,
-      "as_of": "2026-09-14 14:45:25",
+      "as_of": "2026-09-14 14:55:24",
       "stale": false
     },
     "polkadot": {
@@ -2084,12 +2084,12 @@
       "id": "pi-network",
       "symbol": "PI",
       "name": "Pi Network",
-      "price": 0.097144,
-      "pct_24h": -0.64596,
+      "price": 0.097059,
+      "pct_24h": -0.80065,
       "pct_7d": 2.6,
       "support_30d": 0.08559695435343688,
       "resistance_30d": 0.09798925329339339,
-      "as_of": "2026-09-14 14:50:27",
+      "as_of": "2026-09-14 14:55:24",
       "stale": false
     },
     "ondo-finance": {
@@ -3358,16 +3358,6 @@
         "target2": 0.09928666666666668,
         "opened_at": "2026-09-14T14:02:41.286056"
       },
-      "15m:XLM": {
-        "coin": "XLM",
-        "name": "Stellar",
-        "tf": "15m",
-        "entry": 0.183075,
-        "stop": 0.1816181,
-        "target1": 0.18453189999999997,
-        "target2": 0.18598879999999995,
-        "opened_at": "2026-09-14T14:52:47.631909"
-      },
       "15m:PI": {
         "coin": "PI",
         "name": "Pi Network",
@@ -3377,6 +3367,16 @@
         "target1": 0.09724733333333332,
         "target2": 0.09816466666666665,
         "opened_at": "2026-09-14T14:52:47.631909"
+      },
+      "15m:XLM": {
+        "coin": "XLM",
+        "name": "Stellar",
+        "tf": "15m",
+        "entry": 0.183075,
+        "stop": 0.18161736666666667,
+        "target1": 0.1845326333333333,
+        "target2": 0.18599026666666663,
+        "opened_at": "2026-09-14T14:57:07.077971"
       }
     },
     "resolved": [
@@ -21995,6 +21995,19 @@
         "result": "win",
         "resolved_at": "2026-09-14T14:47:24.852871",
         "exit_price": 0.003617
+      },
+      {
+        "coin": "XLM",
+        "name": "Stellar",
+        "tf": "15m",
+        "entry": 0.183075,
+        "stop": 0.1816181,
+        "target1": 0.18453189999999997,
+        "target2": 0.18598879999999995,
+        "opened_at": "2026-09-14T14:52:47.631909",
+        "result": "win",
+        "resolved_at": "2026-09-14T14:57:07.077971",
+        "exit_price": 0.189554
       }
     ]
   },
@@ -22002,14 +22015,14 @@
     "key": "BTC",
     "name": "Bitcoin",
     "emoji": "\u20bf",
-    "price": 78424,
+    "price": 78446,
     "high_24h": 78399,
     "low_24h": 76439,
-    "pct_24h": 1.60787,
+    "pct_24h": 1.66682,
     "pct_7d": -1.8,
     "pct_30d": 24.0,
-    "sma50": 71421.68104145073,
-    "sma200": 70181.42993495362,
+    "sma50": 71422.00380963903,
+    "sma200": 70181.51062700068,
     "support_30d": 62843.70368466329,
     "resistance_30d": 81264.70153038795,
     "mark_price": 77600.0,
@@ -22024,14 +22037,14 @@
     "key": "ETH",
     "name": "Ethereum",
     "emoji": "\u039e",
-    "price": 2504.48,
+    "price": 2502.55,
     "high_24h": 2531.64,
     "low_24h": 2467.86,
-    "pct_24h": 0.49694,
+    "pct_24h": 0.46086,
     "pct_7d": -0.2,
     "pct_30d": 32.8,
-    "sma50": 2196.93485715323,
-    "sma200": 2059.78447945281,
+    "sma50": 2196.896918044737,
+    "sma200": 2059.7749946756867,
     "support_30d": 1874.401898191962,
     "resistance_30d": 2525.267261590238,
     "mark_price": 2515.82,
