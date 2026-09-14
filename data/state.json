@@ -885,11 +885,11 @@
       "symbol": "PEPE",
       "name": "Pepe",
       "price": 3.45e-06,
-      "pct_24h": 1.30534,
+      "pct_24h": 1.38318,
       "pct_7d": -3.6,
       "support_30d": 2.5716563906374582e-06,
       "resistance_30d": 4.122123035488615e-06,
-      "as_of": "2026-09-14 10:15:23",
+      "as_of": "2026-09-14 11:25:18",
       "stale": false
     },
     "avalanche-2": {
@@ -1447,7 +1447,7 @@
         ],
         [
           "Stretch from long-term average",
-          "-9.4% vs its long-term average - not stretched either way",
+          "-9.5% vs its long-term average - not stretched either way",
           0
         ],
         [
@@ -1460,12 +1460,12 @@
       "id": "crypto-com-chain",
       "symbol": "CRO",
       "name": "Cronos",
-      "price": 0.059044,
-      "pct_24h": 0.84335,
+      "price": 0.059026,
+      "pct_24h": 0.85405,
       "pct_7d": 3.5,
       "support_30d": 0.04621382085807831,
       "resistance_30d": 0.06091104752771909,
-      "as_of": "2026-09-14 11:20:26",
+      "as_of": "2026-09-14 11:25:18",
       "stale": false
     },
     "ethereum-classic": {
@@ -2813,9 +2813,9 @@
       "stale": false
     },
     "aave": {
-      "label": "\ud83d\udd34 CAUTION - REDUCE NEW BUYS",
-      "status": "bearish",
-      "score": -2,
+      "label": "\ud83d\udfe1 HOLD / NEUTRAL",
+      "status": "neutral",
+      "score": -1,
       "rows": [
         [
           "Price vs. recent range",
@@ -2839,8 +2839,8 @@
         ],
         [
           "Stretch from long-term average",
-          "+30.1% above its long-term average - very stretched",
-          -2
+          "+29.5% above its long-term average - a bit stretched",
+          -1
         ],
         [
           "Leverage traders' bias",
@@ -2848,16 +2848,16 @@
           0
         ]
       ],
-      "plain": "Getting risky - I'd hold off on new buys until this cools down.",
+      "plain": "No real edge either way right now - fine to just wait and watch.",
       "id": "aave",
       "symbol": "AAVE",
       "name": "Aave",
-      "price": 127.13,
-      "pct_24h": 2.02477,
-      "pct_7d": -5.0,
+      "price": 126.45,
+      "pct_24h": 1.8952,
+      "pct_7d": -4.8,
       "support_30d": 85.94219943917633,
       "resistance_30d": 141.53047916466082,
-      "as_of": "2026-09-14 10:00:38",
+      "as_of": "2026-09-14 11:25:18",
       "stale": false
     },
     "okb": {
@@ -3359,10 +3359,10 @@
         "name": "PAX Gold",
         "tf": "1h",
         "entry": 4285.72,
-        "stop": 4274.810833333334,
-        "target1": 4296.629166666667,
-        "target2": 4307.538333333333,
-        "opened_at": "2026-09-14T11:22:23.915389"
+        "stop": 4274.79,
+        "target1": 4296.650000000001,
+        "target2": 4307.580000000001,
+        "opened_at": "2026-09-14T11:27:13.768537"
       }
     },
     "resolved": [
@@ -21630,6 +21630,19 @@
         "result": "win",
         "resolved_at": "2026-09-14T11:22:23.915389",
         "exit_price": 4302.14
+      },
+      {
+        "coin": "PAXG",
+        "name": "PAX Gold",
+        "tf": "1h",
+        "entry": 4285.72,
+        "stop": 4274.810833333334,
+        "target1": 4296.629166666667,
+        "target2": 4307.538333333333,
+        "opened_at": "2026-09-14T11:22:23.915389",
+        "result": "win",
+        "resolved_at": "2026-09-14T11:27:13.768537",
+        "exit_price": 4303.82
       }
     ]
   },
@@ -21637,14 +21650,14 @@
     "key": "BTC",
     "name": "Bitcoin",
     "emoji": "\u20bf",
-    "price": 77740,
+    "price": 77812,
     "high_24h": 78278,
     "low_24h": 76439,
-    "pct_24h": 1.5373,
+    "pct_24h": 1.54833,
     "pct_7d": -1.8,
     "pct_30d": 23.7,
-    "sma50": 71407.7634195192,
-    "sma200": 70177.95052947072,
+    "sma50": 71409.06610490095,
+    "sma200": 70178.27620081617,
     "support_30d": 62843.70368466329,
     "resistance_30d": 81264.70153038795,
     "mark_price": 77600.0,
@@ -21659,14 +21672,14 @@
     "key": "ETH",
     "name": "Ethereum",
     "emoji": "\u039e",
-    "price": 2511.23,
+    "price": 2512.63,
     "high_24h": 2531.64,
     "low_24h": 2464.63,
-    "pct_24h": 1.58278,
+    "pct_24h": 1.52151,
     "pct_7d": 1.1,
     "pct_30d": 33.8,
-    "sma50": 2197.0783263727794,
-    "sma200": 2059.8203467576973,
+    "sma50": 2197.0978515358856,
+    "sma200": 2059.825228048474,
     "support_30d": 1874.401898191962,
     "resistance_30d": 2525.267261590238,
     "mark_price": 2515.82,
