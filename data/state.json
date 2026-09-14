@@ -4,7 +4,7 @@
   "_alerts_state": {
     "btc-resistance-break": {
       "triggered": true,
-      "last_triggered_at": "2026-09-14 19:15:23"
+      "last_triggered_at": "2026-09-14 19:20:27"
     },
     "btc-support-break": {
       "triggered": false,
@@ -12,7 +12,7 @@
     },
     "eth-resistance-break": {
       "triggered": true,
-      "last_triggered_at": "2026-09-14 19:15:23"
+      "last_triggered_at": "2026-09-14 19:20:27"
     },
     "eth-support-break": {
       "triggered": false,
@@ -343,7 +343,7 @@
         ],
         [
           "Stretch from long-term average",
-          "-4.1% vs its long-term average - not stretched either way",
+          "-3.6% vs its long-term average - not stretched either way",
           0
         ],
         [
@@ -356,12 +356,12 @@
       "id": "dogecoin",
       "symbol": "DOGE",
       "name": "Dogecoin",
-      "price": 0.084437,
-      "pct_24h": 0.75547,
-      "pct_7d": -7.3,
+      "price": 0.084917,
+      "pct_24h": 0.71238,
+      "pct_7d": -5.6,
       "support_30d": 0.06952870548515376,
       "resistance_30d": 0.09337940032634065,
-      "as_of": "2026-09-14 16:50:27",
+      "as_of": "2026-09-14 19:20:27",
       "stale": false
     },
     "zcash": {
@@ -487,7 +487,7 @@
         ],
         [
           "Stretch from long-term average",
-          "+25.5% above its long-term average - a bit stretched",
+          "+26.7% above its long-term average - a bit stretched",
           -1
         ],
         [
@@ -500,12 +500,12 @@
       "id": "chainlink",
       "symbol": "LINK",
       "name": "Chainlink",
-      "price": 11.6,
-      "pct_24h": 1.85708,
-      "pct_7d": -10.5,
+      "price": 11.71,
+      "pct_24h": 2.3072,
+      "pct_7d": -9.7,
       "support_30d": 9.38323578770609,
       "resistance_30d": 13.237155745219605,
-      "as_of": "2026-09-14 17:50:27",
+      "as_of": "2026-09-14 19:20:27",
       "stale": false
     },
     "whitebit": {
@@ -2023,7 +2023,7 @@
         ],
         [
           "Stretch from long-term average",
-          "+73.1% above its long-term average - very stretched",
+          "+80.6% above its long-term average - very stretched",
           -2
         ],
         [
@@ -2036,12 +2036,12 @@
       "id": "uniswap",
       "symbol": "UNI",
       "name": "Uniswap",
-      "price": 6.41,
-      "pct_24h": 1.30912,
-      "pct_7d": -5.7,
+      "price": 6.69,
+      "pct_24h": 6.53665,
+      "pct_7d": -4.0,
       "support_30d": 3.271747843939598,
       "resistance_30d": 7.291165865788254,
-      "as_of": "2026-09-14 17:45:23",
+      "as_of": "2026-09-14 19:20:27",
       "stale": false
     },
     "pi-network": {
@@ -3342,20 +3342,11 @@
     }
   },
   "_strong_buy_state": {
+    "scanner-15m:ICP": true,
     "scanner-1h:PI": true
   },
   "_pnl_tracker": {
     "open": {
-      "15m:ICP": {
-        "coin": "ICP",
-        "name": "Internet Computer",
-        "tf": "15m",
-        "entry": 2.706,
-        "stop": 2.6956666666666664,
-        "target1": 2.7163333333333335,
-        "target2": 2.726666666666667,
-        "opened_at": "2026-09-14T19:16:41.293703"
-      },
       "1h:PI": {
         "coin": "PI",
         "name": "Pi Network",
@@ -3365,6 +3356,16 @@
         "target1": 0.09810458333333333,
         "target2": 0.10015916666666666,
         "opened_at": "2026-09-14T19:16:41.293703"
+      },
+      "15m:ICP": {
+        "coin": "ICP",
+        "name": "Internet Computer",
+        "tf": "15m",
+        "entry": 2.706,
+        "stop": 2.6955999999999998,
+        "target1": 2.7164,
+        "target2": 2.7268000000000003,
+        "opened_at": "2026-09-14T19:22:25.388299"
       }
     },
     "resolved": [
@@ -23244,6 +23245,19 @@
         "result": "win",
         "resolved_at": "2026-09-14T19:16:41.293703",
         "exit_price": 2.783
+      },
+      {
+        "coin": "ICP",
+        "name": "Internet Computer",
+        "tf": "15m",
+        "entry": 2.706,
+        "stop": 2.6956666666666664,
+        "target1": 2.7163333333333335,
+        "target2": 2.726666666666667,
+        "opened_at": "2026-09-14T19:16:41.293703",
+        "result": "win",
+        "resolved_at": "2026-09-14T19:22:25.388299",
+        "exit_price": 2.783
       }
     ]
   },
@@ -23251,14 +23265,14 @@
     "key": "BTC",
     "name": "Bitcoin",
     "emoji": "\u20bf",
-    "price": 79096,
+    "price": 79126,
     "high_24h": 79292,
     "low_24h": 76439,
-    "pct_24h": 2.36735,
+    "pct_24h": 2.45724,
     "pct_7d": 0.0,
     "pct_30d": 25.7,
-    "sma50": 71434.77177146469,
-    "sma200": 70184.7026174571,
+    "sma50": 71434.9565505592,
+    "sma200": 70184.74881223073,
     "support_30d": 62843.70368466329,
     "resistance_30d": 81264.70153038795,
     "mark_price": 77600.0,
@@ -23273,16 +23287,16 @@
     "key": "ETH",
     "name": "Ethereum",
     "emoji": "\u039e",
-    "price": 2538.72,
+    "price": 2540.48,
     "high_24h": 2543.47,
     "low_24h": 2467.86,
-    "pct_24h": 1.2054,
+    "pct_24h": 1.32673,
     "pct_7d": 1.7,
     "pct_30d": 34.8,
-    "sma50": 2197.6233442178545,
-    "sma200": 2059.956601218966,
+    "sma50": 2197.6596189267752,
+    "sma200": 2059.9656698961962,
     "support_30d": 1874.401898191962,
-    "resistance_30d": 2538.872723814306,
+    "resistance_30d": 2540.6864592603465,
     "mark_price": 2515.82,
     "index_price": 2516.73418605,
     "funding_rate": 8.331e-05,
