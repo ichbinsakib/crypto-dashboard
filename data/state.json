@@ -4,7 +4,7 @@
   "_alerts_state": {
     "btc-resistance-break": {
       "triggered": true,
-      "last_triggered_at": "2026-09-14 19:45:21"
+      "last_triggered_at": "2026-09-14 19:50:27"
     },
     "btc-support-break": {
       "triggered": false,
@@ -12,7 +12,7 @@
     },
     "eth-resistance-break": {
       "triggered": true,
-      "last_triggered_at": "2026-09-14 19:45:21"
+      "last_triggered_at": "2026-09-14 19:50:27"
     },
     "eth-support-break": {
       "triggered": false,
@@ -1495,7 +1495,7 @@
         ],
         [
           "Stretch from long-term average",
-          "-2.7% vs its long-term average - not stretched either way",
+          "-1.8% vs its long-term average - not stretched either way",
           0
         ],
         [
@@ -1508,12 +1508,12 @@
       "id": "ethereum-classic",
       "symbol": "ETC",
       "name": "Ethereum Classic",
-      "price": 7.59,
-      "pct_24h": -0.23839,
-      "pct_7d": -4.2,
+      "price": 7.66,
+      "pct_24h": 1.05369,
+      "pct_7d": -2.3,
       "support_30d": 6.079473341192034,
       "resistance_30d": 8.609781284223262,
-      "as_of": "2026-09-14 15:25:24",
+      "as_of": "2026-09-14 19:50:27",
       "stale": false
     },
     "pump-fun": {
@@ -2071,7 +2071,7 @@
         ],
         [
           "Stretch from long-term average",
-          "-29.7% below its long-term average - confirmed downtrend",
+          "-29.6% below its long-term average - confirmed downtrend",
           -1
         ],
         [
@@ -2084,12 +2084,12 @@
       "id": "pi-network",
       "symbol": "PI",
       "name": "Pi Network",
-      "price": 0.097758,
-      "pct_24h": 0.32644,
+      "price": 0.097881,
+      "pct_24h": 0.5285,
       "pct_7d": 3.7,
       "support_30d": 0.08559695435343688,
       "resistance_30d": 0.09798925329339339,
-      "as_of": "2026-09-14 19:15:23",
+      "as_of": "2026-09-14 19:50:27",
       "stale": false
     },
     "ondo-finance": {
@@ -2325,11 +2325,11 @@
       "symbol": "GRAM",
       "name": "Gram (prev. Toncoin)",
       "price": 1.36,
-      "pct_24h": 0.13901,
-      "pct_7d": -3.3,
+      "pct_24h": -0.06513,
+      "pct_7d": -2.8,
       "support_30d": 1.3170990455791696,
       "resistance_30d": 1.4926762805297678,
-      "as_of": "2026-09-14 18:56:42",
+      "as_of": "2026-09-14 19:50:27",
       "stale": false
     },
     "sky": {
@@ -2839,7 +2839,7 @@
         ],
         [
           "Stretch from long-term average",
-          "+30.2% above its long-term average - very stretched",
+          "+34.1% above its long-term average - very stretched",
           -2
         ],
         [
@@ -2852,12 +2852,12 @@
       "id": "aave",
       "symbol": "AAVE",
       "name": "Aave",
-      "price": 127.16,
-      "pct_24h": -0.10893,
-      "pct_7d": -2.7,
+      "price": 131.04,
+      "pct_24h": 3.84584,
+      "pct_7d": -2.2,
       "support_30d": 85.94219943917633,
       "resistance_30d": 141.53047916466082,
-      "as_of": "2026-09-14 17:20:26",
+      "as_of": "2026-09-14 19:50:27",
       "stale": false
     },
     "okb": {
@@ -2915,7 +2915,7 @@
       "rows": [
         [
           "Price vs. recent range",
-          "Near its 30-day high (~$0.1130) - less room to run",
+          "Near its 30-day high (~$0.1128) - less room to run",
           -1
         ],
         [
@@ -2935,7 +2935,7 @@
         ],
         [
           "Stretch from long-term average",
-          "+33.1% above its long-term average - very stretched",
+          "+32.9% above its long-term average - very stretched",
           -2
         ],
         [
@@ -2948,12 +2948,12 @@
       "id": "just",
       "symbol": "JST",
       "name": "JUST",
-      "price": 0.113019,
-      "pct_24h": 0.12364,
-      "pct_7d": 4.9,
+      "price": 0.112827,
+      "pct_24h": -0.87168,
+      "pct_7d": 4.0,
       "support_30d": 0.0946830738697126,
-      "resistance_30d": 0.11297689666321305,
-      "as_of": "2026-09-14 17:50:27",
+      "resistance_30d": 0.11284744444905327,
+      "as_of": "2026-09-14 19:50:27",
       "stale": false
     },
     "algorand": {
@@ -3361,10 +3361,10 @@
         "name": "Internet Computer",
         "tf": "15m",
         "entry": 2.706,
-        "stop": 2.6957,
-        "target1": 2.7163,
-        "target2": 2.7266,
-        "opened_at": "2026-09-14T19:47:03.043616"
+        "stop": 2.6955,
+        "target1": 2.7165,
+        "target2": 2.727,
+        "opened_at": "2026-09-14T19:51:54.135822"
       }
     },
     "resolved": [
@@ -23335,6 +23335,19 @@
         "result": "win",
         "resolved_at": "2026-09-14T19:47:03.043616",
         "exit_price": 2.78
+      },
+      {
+        "coin": "ICP",
+        "name": "Internet Computer",
+        "tf": "15m",
+        "entry": 2.706,
+        "stop": 2.6957,
+        "target1": 2.7163,
+        "target2": 2.7266,
+        "opened_at": "2026-09-14T19:47:03.043616",
+        "result": "win",
+        "resolved_at": "2026-09-14T19:51:54.135822",
+        "exit_price": 2.778
       }
     ]
   },
@@ -23342,14 +23355,14 @@
     "key": "BTC",
     "name": "Bitcoin",
     "emoji": "\u20bf",
-    "price": 79083,
+    "price": 79099,
     "high_24h": 79292,
     "low_24h": 76439,
-    "pct_24h": 2.38363,
+    "pct_24h": 2.42797,
     "pct_7d": 0.0,
     "pct_30d": 25.7,
-    "sma50": 71433.8742909479,
-    "sma200": 70184.4782473279,
+    "sma50": 71434.75417302405,
+    "sma200": 70184.69821784693,
     "support_30d": 62843.70368466329,
     "resistance_30d": 81264.70153038795,
     "mark_price": 77600.0,
@@ -23364,16 +23377,16 @@
     "key": "ETH",
     "name": "Ethereum",
     "emoji": "\u039e",
-    "price": 2541.6,
+    "price": 2543.95,
     "high_24h": 2543.47,
     "low_24h": 2467.86,
-    "pct_24h": 1.41472,
+    "pct_24h": 1.57591,
     "pct_7d": 1.7,
     "pct_30d": 34.8,
-    "sma50": 2197.6412483637073,
-    "sma200": 2059.9610772554292,
+    "sma50": 2197.737793435138,
+    "sma200": 2059.9852135232873,
     "support_30d": 1874.401898191962,
-    "resistance_30d": 2539.767931106942,
+    "resistance_30d": 2544.5951846784887,
     "mark_price": 2515.82,
     "index_price": 2516.73418605,
     "funding_rate": 8.331e-05,
