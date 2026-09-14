@@ -4,7 +4,7 @@
   "_alerts_state": {
     "btc-resistance-break": {
       "triggered": true,
-      "last_triggered_at": "2026-09-14 18:20:27"
+      "last_triggered_at": "2026-09-14 18:25:19"
     },
     "btc-support-break": {
       "triggered": false,
@@ -12,7 +12,7 @@
     },
     "eth-resistance-break": {
       "triggered": true,
-      "last_triggered_at": "2026-09-14 18:20:27"
+      "last_triggered_at": "2026-09-14 18:25:19"
     },
     "eth-support-break": {
       "triggered": false,
@@ -967,7 +967,7 @@
         ],
         [
           "Stretch from long-term average",
-          "+6.1% vs its long-term average - not stretched either way",
+          "+6.0% vs its long-term average - not stretched either way",
           0
         ],
         [
@@ -980,18 +980,18 @@
       "id": "aster-2",
       "symbol": "ASTER",
       "name": "Aster",
-      "price": 0.702406,
-      "pct_24h": 0.49688,
-      "pct_7d": -8.3,
+      "price": 0.70184,
+      "pct_24h": 0.35161,
+      "pct_7d": -8.9,
       "support_30d": 0.5986101196690307,
       "resistance_30d": 0.7868111056215635,
-      "as_of": "2026-09-14 17:30:32",
+      "as_of": "2026-09-14 18:25:19",
       "stale": false
     },
     "worldcoin-wld": {
-      "label": "\ud83d\udfe1 HOLD / NEUTRAL",
-      "status": "neutral",
-      "score": -1,
+      "label": "\ud83d\udd34 CAUTION - REDUCE NEW BUYS",
+      "status": "bearish",
+      "score": -2,
       "rows": [
         [
           "Price vs. recent range",
@@ -1015,8 +1015,8 @@
         ],
         [
           "Stretch from long-term average",
-          "+7.2% vs its long-term average - not stretched either way",
-          0
+          "+10.2% above its long-term average - a bit stretched",
+          -1
         ],
         [
           "Leverage traders' bias",
@@ -1024,16 +1024,16 @@
           0
         ]
       ],
-      "plain": "No real edge either way right now - fine to just wait and watch.",
+      "plain": "Getting risky - I'd hold off on new buys until this cools down.",
       "id": "worldcoin-wld",
       "symbol": "WLD",
       "name": "Worldcoin",
-      "price": 0.383552,
-      "pct_24h": -2.45313,
-      "pct_7d": -18.3,
+      "price": 0.39435,
+      "pct_24h": -0.08882,
+      "pct_7d": -15.1,
       "support_30d": 0.319812298466522,
       "resistance_30d": 0.4772935995106048,
-      "as_of": "2026-09-14 15:45:22",
+      "as_of": "2026-09-14 18:25:19",
       "stale": false
     },
     "bfusd": {
@@ -2407,7 +2407,7 @@
         ],
         [
           "Stretch from long-term average",
-          "-1.8% vs its long-term average - not stretched either way",
+          "-0.1% vs its long-term average - not stretched either way",
           0
         ],
         [
@@ -2420,12 +2420,12 @@
       "id": "shiba-inu",
       "symbol": "SHIB",
       "name": "Shiba Inu",
-      "price": 5.25e-06,
-      "pct_24h": 0.58187,
-      "pct_7d": -5.6,
+      "price": 5.34e-06,
+      "pct_24h": 1.61214,
+      "pct_7d": -3.0,
       "support_30d": 4.41190416053175e-06,
       "resistance_30d": 5.903506876405612e-06,
-      "as_of": "2026-09-14 14:25:19",
+      "as_of": "2026-09-14 18:25:19",
       "stale": false
     },
     "near": {
@@ -3349,10 +3349,10 @@
         "name": "Ethena",
         "tf": "15m",
         "entry": 0.1381,
-        "stop": 0.13696666666666668,
-        "target1": 0.13923333333333332,
-        "target2": 0.14036666666666664,
-        "opened_at": "2026-09-14T18:22:25.579438"
+        "stop": 0.13694333333333333,
+        "target1": 0.13925666666666667,
+        "target2": 0.14041333333333333,
+        "opened_at": "2026-09-14T18:27:16.685808"
       },
       "1h:SKY": {
         "coin": "SKY",
@@ -3362,17 +3362,17 @@
         "stop": 0.06113833333333333,
         "target1": 0.06236166666666667,
         "target2": 0.06297333333333334,
-        "opened_at": "2026-09-14T18:22:25.579438"
+        "opened_at": "2026-09-14T18:27:16.685808"
       },
       "1h:HYPE": {
         "coin": "HYPE",
         "name": "Hyperliquid",
         "tf": "1h",
         "entry": 76.93,
-        "stop": 76.015,
-        "target1": 77.84500000000001,
-        "target2": 78.76000000000002,
-        "opened_at": "2026-09-14T18:22:25.579438"
+        "stop": 76.01416666666667,
+        "target1": 77.84583333333335,
+        "target2": 78.76166666666668,
+        "opened_at": "2026-09-14T18:27:16.685808"
       }
     },
     "resolved": [
@@ -23031,6 +23031,45 @@
         "result": "win",
         "resolved_at": "2026-09-14T18:22:25.579438",
         "exit_price": 81.69
+      },
+      {
+        "coin": "ENA",
+        "name": "Ethena",
+        "tf": "15m",
+        "entry": 0.1381,
+        "stop": 0.13696666666666668,
+        "target1": 0.13923333333333332,
+        "target2": 0.14036666666666664,
+        "opened_at": "2026-09-14T18:22:25.579438",
+        "result": "win",
+        "resolved_at": "2026-09-14T18:27:16.685808",
+        "exit_price": 0.1444
+      },
+      {
+        "coin": "SKY",
+        "name": "Sky",
+        "tf": "1h",
+        "entry": 0.06175,
+        "stop": 0.06113833333333333,
+        "target1": 0.06236166666666667,
+        "target2": 0.06297333333333334,
+        "opened_at": "2026-09-14T18:22:25.579438",
+        "result": "win",
+        "resolved_at": "2026-09-14T18:27:16.685808",
+        "exit_price": 0.06393
+      },
+      {
+        "coin": "HYPE",
+        "name": "Hyperliquid",
+        "tf": "1h",
+        "entry": 76.93,
+        "stop": 76.015,
+        "target1": 77.84500000000001,
+        "target2": 78.76000000000002,
+        "opened_at": "2026-09-14T18:22:25.579438",
+        "result": "win",
+        "resolved_at": "2026-09-14T18:27:16.685808",
+        "exit_price": 81.76
       }
     ]
   },
@@ -23038,14 +23077,14 @@
     "key": "BTC",
     "name": "Bitcoin",
     "emoji": "\u20bf",
-    "price": 78858,
+    "price": 79130,
     "high_24h": 78988,
     "low_24h": 76439,
-    "pct_24h": 1.95876,
+    "pct_24h": 2.34592,
     "pct_7d": -0.1,
     "pct_30d": 25.2,
-    "sma50": 71429.82916098236,
-    "sma200": 70183.46696483652,
+    "sma50": 71435.72310262229,
+    "sma200": 70184.94045024649,
     "support_30d": 62843.70368466329,
     "resistance_30d": 81264.70153038795,
     "mark_price": 77600.0,
@@ -23060,16 +23099,16 @@
     "key": "ETH",
     "name": "Ethereum",
     "emoji": "\u039e",
-    "price": 2531.21,
+    "price": 2537.03,
     "high_24h": 2535.25,
     "low_24h": 2467.86,
-    "pct_24h": 0.97068,
+    "pct_24h": 1.24193,
     "pct_7d": 2.0,
     "pct_30d": 34.5,
-    "sma50": 2197.4636308776103,
-    "sma200": 2059.916672883905,
+    "sma50": 2197.6088514388516,
+    "sma200": 2059.9529780242156,
     "support_30d": 1874.401898191962,
-    "resistance_30d": 2530.8870568020984,
+    "resistance_30d": 2538.1480848641577,
     "mark_price": 2515.82,
     "index_price": 2516.73418605,
     "funding_rate": 8.331e-05,
