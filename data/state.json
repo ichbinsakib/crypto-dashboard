@@ -4,7 +4,7 @@
   "_alerts_state": {
     "btc-resistance-break": {
       "triggered": true,
-      "last_triggered_at": "2026-09-14 16:40:28"
+      "last_triggered_at": "2026-09-14 16:45:27"
     },
     "btc-support-break": {
       "triggered": false,
@@ -12,7 +12,7 @@
     },
     "eth-resistance-break": {
       "triggered": true,
-      "last_triggered_at": "2026-09-14 16:40:28"
+      "last_triggered_at": "2026-09-14 16:45:27"
     },
     "eth-support-break": {
       "triggered": false,
@@ -727,7 +727,7 @@
         ],
         [
           "Stretch from long-term average",
-          "+10.1% above its long-term average - a bit stretched",
+          "+10.4% above its long-term average - a bit stretched",
           -1
         ],
         [
@@ -740,12 +740,12 @@
       "id": "stellar",
       "symbol": "XLM",
       "name": "Stellar",
-      "price": 0.193433,
-      "pct_24h": 8.46564,
+      "price": 0.193959,
+      "pct_24h": 8.61982,
       "pct_7d": 0.4,
       "support_30d": 0.15472912151335613,
       "resistance_30d": 0.20181319711037435,
-      "as_of": "2026-09-14 16:30:34",
+      "as_of": "2026-09-14 16:45:27",
       "stale": false
     },
     "kucoin-shares": {
@@ -1543,7 +1543,7 @@
         ],
         [
           "Stretch from long-term average",
-          "+67.3% above its long-term average - very stretched",
+          "+69.6% above its long-term average - very stretched",
           -2
         ],
         [
@@ -1556,12 +1556,12 @@
       "id": "pump-fun",
       "symbol": "PUMP",
       "name": "Pump.fun",
-      "price": 0.00361479,
-      "pct_24h": -1.49036,
-      "pct_7d": -17.3,
+      "price": 0.00366676,
+      "pct_24h": 0.67251,
+      "pct_7d": -16.4,
       "support_30d": 0.002666433318189806,
       "resistance_30d": 0.0052249885406471875,
-      "as_of": "2026-09-14 15:10:38",
+      "as_of": "2026-09-14 16:45:27",
       "stale": false
     },
     "venice-token": {
@@ -2839,7 +2839,7 @@
         ],
         [
           "Stretch from long-term average",
-          "+29.9% above its long-term average - a bit stretched",
+          "+29.8% above its long-term average - a bit stretched",
           -1
         ],
         [
@@ -2852,12 +2852,12 @@
       "id": "aave",
       "symbol": "AAVE",
       "name": "Aave",
-      "price": 126.93,
-      "pct_24h": 0.87465,
+      "price": 126.82,
+      "pct_24h": 0.70362,
       "pct_7d": -4.9,
       "support_30d": 85.94219943917633,
       "resistance_30d": 141.53047916466082,
-      "as_of": "2026-09-14 16:25:18",
+      "as_of": "2026-09-14 16:45:27",
       "stale": false
     },
     "okb": {
@@ -3346,16 +3346,6 @@
   },
   "_pnl_tracker": {
     "open": {
-      "15m:XLM": {
-        "coin": "XLM",
-        "name": "Stellar",
-        "tf": "15m",
-        "entry": 0.183075,
-        "stop": 0.18139113333333332,
-        "target1": 0.18475886666666666,
-        "target2": 0.18644273333333333,
-        "opened_at": "2026-09-14T16:42:25.950938"
-      },
       "1h:SKY": {
         "coin": "SKY",
         "name": "Sky",
@@ -3364,17 +3354,17 @@
         "stop": 0.06114208333333333,
         "target1": 0.062357916666666666,
         "target2": 0.06296583333333333,
-        "opened_at": "2026-09-14T16:42:25.950938"
+        "opened_at": "2026-09-14T16:47:25.966148"
       },
       "1h:HYPE": {
         "coin": "HYPE",
         "name": "Hyperliquid",
         "tf": "1h",
         "entry": 76.93,
-        "stop": 76.05666666666667,
-        "target1": 77.80333333333334,
-        "target2": 78.67666666666668,
-        "opened_at": "2026-09-14T16:42:25.950938"
+        "stop": 76.05166666666668,
+        "target1": 77.80833333333334,
+        "target2": 78.68666666666667,
+        "opened_at": "2026-09-14T16:47:25.966148"
       }
     },
     "resolved": [
@@ -22474,6 +22464,45 @@
         "result": "win",
         "resolved_at": "2026-09-14T16:42:25.950938",
         "exit_price": 80.62
+      },
+      {
+        "coin": "XLM",
+        "name": "Stellar",
+        "tf": "15m",
+        "entry": 0.183075,
+        "stop": 0.18139113333333332,
+        "target1": 0.18475886666666666,
+        "target2": 0.18644273333333333,
+        "opened_at": "2026-09-14T16:42:25.950938",
+        "result": "win",
+        "resolved_at": "2026-09-14T16:47:25.966148",
+        "exit_price": 0.194192
+      },
+      {
+        "coin": "SKY",
+        "name": "Sky",
+        "tf": "1h",
+        "entry": 0.06175,
+        "stop": 0.06114208333333333,
+        "target1": 0.062357916666666666,
+        "target2": 0.06296583333333333,
+        "opened_at": "2026-09-14T16:42:25.950938",
+        "result": "win",
+        "resolved_at": "2026-09-14T16:47:25.966148",
+        "exit_price": 0.06421
+      },
+      {
+        "coin": "HYPE",
+        "name": "Hyperliquid",
+        "tf": "1h",
+        "entry": 76.93,
+        "stop": 76.05666666666667,
+        "target1": 77.80333333333334,
+        "target2": 78.67666666666668,
+        "opened_at": "2026-09-14T16:42:25.950938",
+        "result": "win",
+        "resolved_at": "2026-09-14T16:47:25.966148",
+        "exit_price": 80.84
       }
     ]
   },
@@ -22481,14 +22510,14 @@
     "key": "BTC",
     "name": "Bitcoin",
     "emoji": "\u20bf",
-    "price": 78618,
+    "price": 78628,
     "high_24h": 78630,
     "low_24h": 76439,
-    "pct_24h": 1.78695,
+    "pct_24h": 1.74978,
     "pct_7d": -0.8,
     "pct_30d": 24.7,
-    "sma50": 71425.36376456755,
-    "sma200": 70182.35061573281,
+    "sma50": 71425.27113608089,
+    "sma200": 70182.32745861115,
     "support_30d": 62843.70368466329,
     "resistance_30d": 81264.70153038795,
     "mark_price": 77600.0,
@@ -22503,14 +22532,14 @@
     "key": "ETH",
     "name": "Ethereum",
     "emoji": "\u039e",
-    "price": 2521.0,
+    "price": 2521.74,
     "high_24h": 2531.64,
     "low_24h": 2467.86,
-    "pct_24h": 0.76166,
+    "pct_24h": 0.77485,
     "pct_7d": 0.7,
     "pct_30d": 33.3,
-    "sma50": 2197.270534066197,
-    "sma200": 2059.868398681052,
+    "sma50": 2197.2893804651376,
+    "sma200": 2059.873110280787,
     "support_30d": 1874.401898191962,
     "resistance_30d": 2525.267261590238,
     "mark_price": 2515.82,
