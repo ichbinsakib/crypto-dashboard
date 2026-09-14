@@ -4,7 +4,7 @@
   "_alerts_state": {
     "btc-resistance-break": {
       "triggered": true,
-      "last_triggered_at": "2026-09-14 21:25:18"
+      "last_triggered_at": "2026-09-14 21:30:29"
     },
     "btc-support-break": {
       "triggered": false,
@@ -12,7 +12,7 @@
     },
     "eth-resistance-break": {
       "triggered": true,
-      "last_triggered_at": "2026-09-14 21:25:18"
+      "last_triggered_at": "2026-09-14 21:30:29"
     },
     "eth-support-break": {
       "triggered": false,
@@ -775,7 +775,7 @@
         ],
         [
           "Stretch from long-term average",
-          "-8.3% vs its long-term average - not stretched either way",
+          "-8.5% vs its long-term average - not stretched either way",
           0
         ],
         [
@@ -788,12 +788,12 @@
       "id": "kucoin-shares",
       "symbol": "KCS",
       "name": "KuCoin",
-      "price": 6.99,
-      "pct_24h": 2.09728,
+      "price": 6.98,
+      "pct_24h": 2.02539,
       "pct_7d": 0.0,
       "support_30d": 6.514591596607885,
       "resistance_30d": 7.8821382735057615,
-      "as_of": "2026-09-14 21:15:23",
+      "as_of": "2026-09-14 21:30:29",
       "stale": false
     },
     "hedera-hashgraph": {
@@ -1591,7 +1591,7 @@
         ],
         [
           "Stretch from long-term average",
-          "+86.6% above its long-term average - very stretched",
+          "+85.4% above its long-term average - very stretched",
           -2
         ],
         [
@@ -1604,12 +1604,12 @@
       "id": "venice-token",
       "symbol": "VVV",
       "name": "Venice Token",
-      "price": 22.82,
-      "pct_24h": 3.90276,
+      "price": 22.67,
+      "pct_24h": 3.12139,
       "pct_7d": 24.9,
       "support_30d": 11.794592355917386,
       "resistance_30d": 25.88474946901688,
-      "as_of": "2026-09-14 21:00:34",
+      "as_of": "2026-09-14 21:30:29",
       "stale": false
     },
     "litecoin": {
@@ -1735,7 +1735,7 @@
         ],
         [
           "Stretch from long-term average",
-          "-13.1% vs its long-term average - not stretched either way",
+          "-13.2% vs its long-term average - not stretched either way",
           0
         ],
         [
@@ -1748,12 +1748,12 @@
       "id": "sui",
       "symbol": "SUI",
       "name": "Sui",
-      "price": 0.736505,
-      "pct_24h": 2.4876,
-      "pct_7d": -11.0,
+      "price": 0.7359,
+      "pct_24h": 2.28018,
+      "pct_7d": -10.6,
       "support_30d": 0.6514311908607086,
       "resistance_30d": 0.8499161763231283,
-      "as_of": "2026-09-14 20:05:19",
+      "as_of": "2026-09-14 21:30:29",
       "stale": false
     },
     "lighter": {
@@ -3342,20 +3342,10 @@
     }
   },
   "_strong_buy_state": {
-    "scanner-15m:ZEC": true
+    "scanner-1h:PI": true
   },
   "_pnl_tracker": {
     "open": {
-      "15m:ZEC": {
-        "coin": "ZEC",
-        "name": "Zcash",
-        "tf": "15m",
-        "entry": 1132.75,
-        "stop": 1119.7243333333333,
-        "target1": 1145.7756666666667,
-        "target2": 1158.8013333333333,
-        "opened_at": "2026-09-14T21:27:13.777875"
-      },
       "1h:PI": {
         "coin": "PI",
         "name": "Pi Network",
@@ -3365,6 +3355,16 @@
         "target1": 0.09812833333333333,
         "target2": 0.10020666666666667,
         "opened_at": "2026-09-14T21:27:13.777875"
+      },
+      "15m:ZEC": {
+        "coin": "ZEC",
+        "name": "Zcash",
+        "tf": "15m",
+        "entry": 1132.75,
+        "stop": 1120.007,
+        "target1": 1145.493,
+        "target2": 1158.2359999999999,
+        "opened_at": "2026-09-14T21:32:27.290375"
       }
     },
     "resolved": [
@@ -23621,6 +23621,19 @@
         "result": "win",
         "resolved_at": "2026-09-14T21:27:13.777875",
         "exit_price": 0.09896
+      },
+      {
+        "coin": "ZEC",
+        "name": "Zcash",
+        "tf": "15m",
+        "entry": 1132.75,
+        "stop": 1119.7243333333333,
+        "target1": 1145.7756666666667,
+        "target2": 1158.8013333333333,
+        "opened_at": "2026-09-14T21:27:13.777875",
+        "result": "win",
+        "resolved_at": "2026-09-14T21:32:27.290375",
+        "exit_price": 1180.16
       }
     ]
   },
@@ -23628,14 +23641,14 @@
     "key": "BTC",
     "name": "Bitcoin",
     "emoji": "\u20bf",
-    "price": 78966,
+    "price": 78918,
     "high_24h": 79530,
     "low_24h": 76439,
-    "pct_24h": 2.01518,
+    "pct_24h": 1.97243,
     "pct_7d": -0.3,
     "pct_30d": 25.5,
-    "sma50": 71431.92048967135,
-    "sma200": 70183.98979700876,
+    "sma50": 71430.5570716853,
+    "sma200": 70183.64894251224,
     "support_30d": 62843.70368466329,
     "resistance_30d": 81264.70153038795,
     "mark_price": 79163.5,
@@ -23650,16 +23663,16 @@
     "key": "ETH",
     "name": "Ethereum",
     "emoji": "\u039e",
-    "price": 2558.69,
+    "price": 2557.93,
     "high_24h": 2607.56,
     "low_24h": 2467.86,
-    "pct_24h": 1.76796,
+    "pct_24h": 1.79499,
     "pct_7d": 3.0,
     "pct_30d": 36.5,
-    "sma50": 2198.0153674173994,
-    "sma200": 2060.0546070188525,
+    "sma50": 2197.9836024927945,
+    "sma200": 2060.0466657877014,
     "support_30d": 1874.401898191962,
-    "resistance_30d": 2558.4738837915675,
+    "resistance_30d": 2556.885637561312,
     "mark_price": 2567.79454334,
     "index_price": 2567.75069767,
     "funding_rate": 1.96e-05,
