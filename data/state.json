@@ -4,7 +4,7 @@
   "_alerts_state": {
     "btc-resistance-break": {
       "triggered": true,
-      "last_triggered_at": "2026-09-14 16:45:27"
+      "last_triggered_at": "2026-09-14 16:50:27"
     },
     "btc-support-break": {
       "triggered": false,
@@ -12,7 +12,7 @@
     },
     "eth-resistance-break": {
       "triggered": true,
-      "last_triggered_at": "2026-09-14 16:45:27"
+      "last_triggered_at": "2026-09-14 16:50:27"
     },
     "eth-support-break": {
       "triggered": false,
@@ -343,7 +343,7 @@
         ],
         [
           "Stretch from long-term average",
-          "-4.7% vs its long-term average - not stretched either way",
+          "-4.1% vs its long-term average - not stretched either way",
           0
         ],
         [
@@ -356,12 +356,12 @@
       "id": "dogecoin",
       "symbol": "DOGE",
       "name": "Dogecoin",
-      "price": 0.083947,
-      "pct_24h": 0.47001,
+      "price": 0.084437,
+      "pct_24h": 0.75547,
       "pct_7d": -7.3,
       "support_30d": 0.06952870548515376,
       "resistance_30d": 0.09337940032634065,
-      "as_of": "2026-09-14 16:05:18",
+      "as_of": "2026-09-14 16:50:27",
       "stale": false
     },
     "zcash": {
@@ -967,7 +967,7 @@
         ],
         [
           "Stretch from long-term average",
-          "+5.3% vs its long-term average - not stretched either way",
+          "+6.0% vs its long-term average - not stretched either way",
           0
         ],
         [
@@ -980,12 +980,12 @@
       "id": "aster-2",
       "symbol": "ASTER",
       "name": "Aster",
-      "price": 0.69718,
-      "pct_24h": 0.585,
-      "pct_7d": -13.2,
+      "price": 0.702188,
+      "pct_24h": 0.64893,
+      "pct_7d": -11.6,
       "support_30d": 0.5986101196690307,
       "resistance_30d": 0.7868111056215635,
-      "as_of": "2026-09-14 12:40:25",
+      "as_of": "2026-09-14 16:50:27",
       "stale": false
     },
     "worldcoin-wld": {
@@ -2189,9 +2189,9 @@
       "stale": false
     },
     "internet-computer": {
-      "label": "\ud83d\udfe1 HOLD / NEUTRAL",
-      "status": "neutral",
-      "score": -1,
+      "label": "\ud83d\udd34 CAUTION - REDUCE NEW BUYS",
+      "status": "bearish",
+      "score": -2,
       "rows": [
         [
           "Price vs. recent range",
@@ -2210,12 +2210,12 @@
         ],
         [
           "Recent trend",
-          "Chopping sideways - no clear trend",
-          0
+          "Trending down - avoid catching a falling knife",
+          -1
         ],
         [
           "Stretch from long-term average",
-          "+10.8% above its long-term average - a bit stretched",
+          "+12.4% above its long-term average - a bit stretched",
           -1
         ],
         [
@@ -2224,16 +2224,16 @@
           0
         ]
       ],
-      "plain": "No real edge either way right now - fine to just wait and watch.",
+      "plain": "Getting risky - I'd hold off on new buys until this cools down.",
       "id": "internet-computer",
       "symbol": "ICP",
       "name": "Internet Computer",
-      "price": 2.72,
-      "pct_24h": 1.80449,
-      "pct_7d": -6.2,
+      "price": 2.76,
+      "pct_24h": 0.15807,
+      "pct_7d": -8.0,
       "support_30d": 2.194804279500122,
       "resistance_30d": 2.9869340549074623,
-      "as_of": "2026-09-14 13:15:32",
+      "as_of": "2026-09-14 16:50:27",
       "stale": false
     },
     "bittensor": {
@@ -3354,17 +3354,17 @@
         "stop": 0.06114208333333333,
         "target1": 0.062357916666666666,
         "target2": 0.06296583333333333,
-        "opened_at": "2026-09-14T16:47:25.966148"
+        "opened_at": "2026-09-14T16:52:31.344369"
       },
       "1h:HYPE": {
         "coin": "HYPE",
         "name": "Hyperliquid",
         "tf": "1h",
         "entry": 76.93,
-        "stop": 76.05166666666668,
-        "target1": 77.80833333333334,
-        "target2": 78.68666666666667,
-        "opened_at": "2026-09-14T16:47:25.966148"
+        "stop": 76.04833333333335,
+        "target1": 77.81166666666667,
+        "target2": 78.69333333333333,
+        "opened_at": "2026-09-14T16:52:31.344369"
       }
     },
     "resolved": [
@@ -22503,6 +22503,32 @@
         "result": "win",
         "resolved_at": "2026-09-14T16:47:25.966148",
         "exit_price": 80.84
+      },
+      {
+        "coin": "SKY",
+        "name": "Sky",
+        "tf": "1h",
+        "entry": 0.06175,
+        "stop": 0.06114208333333333,
+        "target1": 0.062357916666666666,
+        "target2": 0.06296583333333333,
+        "opened_at": "2026-09-14T16:47:25.966148",
+        "result": "win",
+        "resolved_at": "2026-09-14T16:52:31.344369",
+        "exit_price": 0.06451
+      },
+      {
+        "coin": "HYPE",
+        "name": "Hyperliquid",
+        "tf": "1h",
+        "entry": 76.93,
+        "stop": 76.05166666666668,
+        "target1": 77.80833333333334,
+        "target2": 78.68666666666667,
+        "opened_at": "2026-09-14T16:47:25.966148",
+        "result": "win",
+        "resolved_at": "2026-09-14T16:52:31.344369",
+        "exit_price": 80.85
       }
     ]
   },
@@ -22510,14 +22536,14 @@
     "key": "BTC",
     "name": "Bitcoin",
     "emoji": "\u20bf",
-    "price": 78628,
+    "price": 78758,
     "high_24h": 78630,
     "low_24h": 76439,
-    "pct_24h": 1.74978,
+    "pct_24h": 1.97227,
     "pct_7d": -0.8,
     "pct_30d": 24.7,
-    "sma50": 71425.27113608089,
-    "sma200": 70182.32745861115,
+    "sma50": 71427.92377900111,
+    "sma200": 70182.9906193412,
     "support_30d": 62843.70368466329,
     "resistance_30d": 81264.70153038795,
     "mark_price": 77600.0,
@@ -22532,16 +22558,16 @@
     "key": "ETH",
     "name": "Ethereum",
     "emoji": "\u039e",
-    "price": 2521.74,
+    "price": 2528.33,
     "high_24h": 2531.64,
     "low_24h": 2467.86,
-    "pct_24h": 0.77485,
+    "pct_24h": 1.01937,
     "pct_7d": 0.7,
     "pct_30d": 33.3,
-    "sma50": 2197.2893804651376,
-    "sma200": 2059.873110280787,
+    "sma50": 2197.412472896459,
+    "sma200": 2059.903883388617,
     "support_30d": 1874.401898191962,
-    "resistance_30d": 2525.267261590238,
+    "resistance_30d": 2528.329157744528,
     "mark_price": 2515.82,
     "index_price": 2516.73418605,
     "funding_rate": 8.331e-05,
