@@ -1111,7 +1111,7 @@
         ],
         [
           "Stretch from long-term average",
-          "+8.9% vs its long-term average - not stretched either way",
+          "+9.7% vs its long-term average - not stretched either way",
           0
         ],
         [
@@ -1124,12 +1124,12 @@
       "id": "polygon-ecosystem-token",
       "symbol": "POL",
       "name": "POL (ex-MATIC)",
-      "price": 0.095875,
-      "pct_24h": -0.60677,
-      "pct_7d": -2.0,
+      "price": 0.096574,
+      "pct_24h": 0.09944,
+      "pct_7d": -0.4,
       "support_30d": 0.07481366852260064,
       "resistance_30d": 0.12250456198546959,
-      "as_of": "2026-09-14 00:20:21",
+      "as_of": "2026-09-14 03:00:33",
       "stale": false
     },
     "blackrock-usd-institutional-digital-liquidity-fund": {
@@ -1783,7 +1783,7 @@
         ],
         [
           "Stretch from long-term average",
-          "+142.1% above its long-term average - very stretched",
+          "+144.8% above its long-term average - very stretched",
           -2
         ],
         [
@@ -1796,12 +1796,12 @@
       "id": "lighter",
       "symbol": "LIT",
       "name": "Lighter",
-      "price": 4.4,
-      "pct_24h": 4.04208,
-      "pct_7d": -5.6,
+      "price": 4.45,
+      "pct_24h": 5.25256,
+      "pct_7d": -0.6,
       "support_30d": 2.277611067280557,
       "resistance_30d": 4.827528632102638,
-      "as_of": "2026-09-14 02:30:29",
+      "as_of": "2026-09-14 03:00:33",
       "stale": false
     },
     "ethena": {
@@ -2968,7 +2968,7 @@
         ],
         [
           "Crowd mood (Fear & Greed)",
-          "69/100 - crowd is greedy",
+          "57/100 - crowd is greedy",
           -1
         ],
         [
@@ -2983,7 +2983,7 @@
         ],
         [
           "Stretch from long-term average",
-          "-4.2% vs its long-term average - not stretched either way",
+          "-2.2% vs its long-term average - not stretched either way",
           0
         ],
         [
@@ -2996,12 +2996,12 @@
       "id": "algorand",
       "symbol": "ALGO",
       "name": "Algorand",
-      "price": 0.096031,
-      "pct_24h": -3.51573,
-      "pct_7d": 3.3,
+      "price": 0.09746,
+      "pct_24h": 6.21609,
+      "pct_7d": 2.2,
       "support_30d": 0.07793708137631736,
       "resistance_30d": 0.10076397875501594,
-      "as_of": "2026-09-10 16:30:28",
+      "as_of": "2026-09-14 03:00:33",
       "stale": false
     },
     "eutbl": {
@@ -3296,16 +3296,6 @@
   "_strong_buy_state": {},
   "_pnl_tracker": {
     "open": {
-      "1h:WLD": {
-        "coin": "WLD",
-        "name": "Worldcoin",
-        "tf": "1h",
-        "entry": 0.3753,
-        "stop": 0.3711375,
-        "target1": 0.37946250000000004,
-        "target2": 0.38362500000000005,
-        "opened_at": "2026-09-14T02:57:13.028253"
-      },
       "daily:XLM": {
         "coin": "XLM",
         "name": "Stellar",
@@ -3314,7 +3304,7 @@
         "stop": 0.1413278,
         "target1": 0.1630182,
         "target2": 0.1738634,
-        "opened_at": "2026-09-14T02:57:13.028253"
+        "opened_at": "2026-09-14T03:02:29.089158"
       }
     },
     "resolved": [
@@ -19125,6 +19115,32 @@
         "result": "win",
         "resolved_at": "2026-09-14T02:57:13.028253",
         "exit_price": 0.180885
+      },
+      {
+        "coin": "WLD",
+        "name": "Worldcoin",
+        "tf": "1h",
+        "entry": 0.3753,
+        "stop": 0.3711375,
+        "target1": 0.37946250000000004,
+        "target2": 0.38362500000000005,
+        "opened_at": "2026-09-14T02:57:13.028253",
+        "result": "win",
+        "resolved_at": "2026-09-14T03:02:29.089158",
+        "exit_price": 0.3863
+      },
+      {
+        "coin": "XLM",
+        "name": "Stellar",
+        "tf": "daily",
+        "entry": 0.152173,
+        "stop": 0.1413278,
+        "target1": 0.1630182,
+        "target2": 0.1738634,
+        "opened_at": "2026-09-14T02:57:13.028253",
+        "result": "win",
+        "resolved_at": "2026-09-14T03:02:29.089158",
+        "exit_price": 0.180801
       }
     ]
   },
@@ -19132,14 +19148,14 @@
     "key": "BTC",
     "name": "Bitcoin",
     "emoji": "\u20bf",
-    "price": 77570,
+    "price": 77554,
     "high_24h": 77406,
     "low_24h": 76439,
-    "pct_24h": 0.45602,
+    "pct_24h": 0.36009,
     "pct_7d": -3.8,
     "pct_30d": 22.4,
-    "sma50": 71405.57364978576,
-    "sma200": 70177.40308703737,
+    "sma50": 71403.87353584116,
+    "sma200": 70176.97805855122,
     "support_30d": 62843.70368466329,
     "resistance_30d": 81264.70153038795,
     "mark_price": 77158.0,
@@ -19154,14 +19170,14 @@
     "key": "ETH",
     "name": "Ethereum",
     "emoji": "\u039e",
-    "price": 2509.49,
+    "price": 2510.02,
     "high_24h": 2522.92,
     "low_24h": 2464.63,
-    "pct_24h": -0.45813,
+    "pct_24h": -0.47702,
     "pct_7d": -0.8,
     "pct_30d": 32.5,
-    "sma50": 2197.055666717537,
-    "sma200": 2059.814681843887,
+    "sma50": 2197.0373936204637,
+    "sma200": 2059.8101135696184,
     "support_30d": 1874.401898191962,
     "resistance_30d": 2525.267261590238,
     "mark_price": 2521.71641085,
