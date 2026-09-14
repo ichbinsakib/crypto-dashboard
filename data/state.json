@@ -4,7 +4,7 @@
   "_alerts_state": {
     "btc-resistance-break": {
       "triggered": true,
-      "last_triggered_at": "2026-09-14 16:35:20"
+      "last_triggered_at": "2026-09-14 16:40:28"
     },
     "btc-support-break": {
       "triggered": false,
@@ -12,7 +12,7 @@
     },
     "eth-resistance-break": {
       "triggered": true,
-      "last_triggered_at": "2026-09-14 16:35:20"
+      "last_triggered_at": "2026-09-14 16:40:28"
     },
     "eth-support-break": {
       "triggered": false,
@@ -847,7 +847,7 @@
     "pepe": {
       "label": "\ud83d\udfe1 HOLD / NEUTRAL",
       "status": "neutral",
-      "score": 1,
+      "score": 0,
       "rows": [
         [
           "Price vs. recent range",
@@ -861,8 +861,8 @@
         ],
         [
           "Market phase (best guess)",
-          "Basing near the bottom - phase where smart money accumulates",
-          2
+          "Established uptrend - phase where price marks up",
+          1
         ],
         [
           "Recent trend",
@@ -871,7 +871,7 @@
         ],
         [
           "Stretch from long-term average",
-          "+4.2% vs its long-term average - not stretched either way",
+          "+6.0% vs its long-term average - not stretched either way",
           0
         ],
         [
@@ -884,12 +884,12 @@
       "id": "pepe",
       "symbol": "PEPE",
       "name": "Pepe",
-      "price": 3.43e-06,
-      "pct_24h": 0.1233,
-      "pct_7d": -6.3,
+      "price": 3.49e-06,
+      "pct_24h": 2.24481,
+      "pct_7d": -4.9,
       "support_30d": 2.5716563906374582e-06,
       "resistance_30d": 4.122123035488615e-06,
-      "as_of": "2026-09-14 15:05:26",
+      "as_of": "2026-09-14 16:40:28",
       "stale": false
     },
     "avalanche-2": {
@@ -2612,12 +2612,12 @@
       "id": "bitway",
       "symbol": "BTW",
       "name": "Bitway",
-      "price": 0.717435,
-      "pct_24h": 3.19888,
-      "pct_7d": 55.7,
+      "price": 0.719306,
+      "pct_24h": 4.89059,
+      "pct_7d": 58.1,
       "support_30d": 0.3581011744091522,
       "resistance_30d": 0.7325241073378514,
-      "as_of": "2026-09-14 15:35:23",
+      "as_of": "2026-09-14 16:40:28",
       "stale": false
     },
     "world-liberty-financial": {
@@ -3079,7 +3079,7 @@
         ],
         [
           "Stretch from long-term average",
-          "+35.5% above its long-term average - very stretched",
+          "+34.7% above its long-term average - very stretched",
           -2
         ],
         [
@@ -3092,12 +3092,12 @@
       "id": "arbitrum",
       "symbol": "ARB",
       "name": "Arbitrum",
-      "price": 0.136317,
-      "pct_24h": -2.28155,
+      "price": 0.135496,
+      "pct_24h": -2.69614,
       "pct_7d": -21.0,
       "support_30d": 0.07348670709752918,
       "resistance_30d": 0.18933387703114857,
-      "as_of": "2026-09-14 16:20:26",
+      "as_of": "2026-09-14 16:40:28",
       "stale": false
     },
     "dash": {
@@ -3354,7 +3354,7 @@
         "stop": 0.18139113333333332,
         "target1": 0.18475886666666666,
         "target2": 0.18644273333333333,
-        "opened_at": "2026-09-14T16:37:18.294199"
+        "opened_at": "2026-09-14T16:42:25.950938"
       },
       "1h:SKY": {
         "coin": "SKY",
@@ -3364,7 +3364,7 @@
         "stop": 0.06114208333333333,
         "target1": 0.062357916666666666,
         "target2": 0.06296583333333333,
-        "opened_at": "2026-09-14T16:37:18.294199"
+        "opened_at": "2026-09-14T16:42:25.950938"
       },
       "1h:HYPE": {
         "coin": "HYPE",
@@ -3374,7 +3374,7 @@
         "stop": 76.05666666666667,
         "target1": 77.80333333333334,
         "target2": 78.67666666666668,
-        "opened_at": "2026-09-14T16:37:18.294199"
+        "opened_at": "2026-09-14T16:42:25.950938"
       }
     },
     "resolved": [
@@ -22435,6 +22435,45 @@
         "result": "win",
         "resolved_at": "2026-09-14T16:37:18.294199",
         "exit_price": 80.57
+      },
+      {
+        "coin": "XLM",
+        "name": "Stellar",
+        "tf": "15m",
+        "entry": 0.183075,
+        "stop": 0.18139113333333332,
+        "target1": 0.18475886666666666,
+        "target2": 0.18644273333333333,
+        "opened_at": "2026-09-14T16:37:18.294199",
+        "result": "win",
+        "resolved_at": "2026-09-14T16:42:25.950938",
+        "exit_price": 0.193858
+      },
+      {
+        "coin": "SKY",
+        "name": "Sky",
+        "tf": "1h",
+        "entry": 0.06175,
+        "stop": 0.06114208333333333,
+        "target1": 0.062357916666666666,
+        "target2": 0.06296583333333333,
+        "opened_at": "2026-09-14T16:37:18.294199",
+        "result": "win",
+        "resolved_at": "2026-09-14T16:42:25.950938",
+        "exit_price": 0.064
+      },
+      {
+        "coin": "HYPE",
+        "name": "Hyperliquid",
+        "tf": "1h",
+        "entry": 76.93,
+        "stop": 76.05666666666667,
+        "target1": 77.80333333333334,
+        "target2": 78.67666666666668,
+        "opened_at": "2026-09-14T16:37:18.294199",
+        "result": "win",
+        "resolved_at": "2026-09-14T16:42:25.950938",
+        "exit_price": 80.62
       }
     ]
   },
@@ -22442,14 +22481,14 @@
     "key": "BTC",
     "name": "Bitcoin",
     "emoji": "\u20bf",
-    "price": 78686,
+    "price": 78618,
     "high_24h": 78630,
     "low_24h": 76439,
-    "pct_24h": 1.89108,
+    "pct_24h": 1.78695,
     "pct_7d": -0.8,
     "pct_30d": 24.7,
-    "sma50": 71425.99843822635,
-    "sma200": 70182.50928414751,
+    "sma50": 71425.36376456755,
+    "sma200": 70182.35061573281,
     "support_30d": 62843.70368466329,
     "resistance_30d": 81264.70153038795,
     "mark_price": 77600.0,
@@ -22464,14 +22503,14 @@
     "key": "ETH",
     "name": "Ethereum",
     "emoji": "\u039e",
-    "price": 2524.07,
+    "price": 2521.0,
     "high_24h": 2531.64,
     "low_24h": 2467.86,
-    "pct_24h": 0.90411,
+    "pct_24h": 0.76166,
     "pct_7d": 0.7,
     "pct_30d": 33.3,
-    "sma50": 2197.3295007800225,
-    "sma200": 2059.8831403595086,
+    "sma50": 2197.270534066197,
+    "sma200": 2059.868398681052,
     "support_30d": 1874.401898191962,
     "resistance_30d": 2525.267261590238,
     "mark_price": 2515.82,
