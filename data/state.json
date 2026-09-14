@@ -12,7 +12,7 @@
     },
     "eth-resistance-break": {
       "triggered": true,
-      "last_triggered_at": "2026-09-14 10:00:38"
+      "last_triggered_at": "2026-09-14 10:05:19"
     },
     "eth-support-break": {
       "triggered": false,
@@ -439,7 +439,7 @@
         ],
         [
           "Stretch from long-term average",
-          "+30.3% above its long-term average - very stretched",
+          "+30.2% above its long-term average - very stretched",
           -2
         ],
         [
@@ -452,12 +452,12 @@
       "id": "rain",
       "symbol": "RAIN",
       "name": "Rain",
-      "price": 0.01518083,
-      "pct_24h": -1.40186,
+      "price": 0.01517195,
+      "pct_24h": -1.36471,
       "pct_7d": -8.3,
       "support_30d": 0.01298701863028712,
       "resistance_30d": 0.018158429442510105,
-      "as_of": "2026-09-14 10:00:38",
+      "as_of": "2026-09-14 10:05:19",
       "stale": false
     },
     "chainlink": {
@@ -535,7 +535,7 @@
         ],
         [
           "Stretch from long-term average",
-          "+41.6% above its long-term average - very stretched",
+          "+42.2% above its long-term average - very stretched",
           -2
         ],
         [
@@ -548,12 +548,12 @@
       "id": "whitebit",
       "symbol": "WBT",
       "name": "WhiteBIT Coin",
-      "price": 80.43,
-      "pct_24h": 1.05113,
-      "pct_7d": 10.1,
+      "price": 80.81,
+      "pct_24h": 1.44105,
+      "pct_7d": 10.5,
       "support_30d": 54.452558710928955,
       "resistance_30d": 81.2521953230761,
-      "as_of": "2026-09-14 09:25:20",
+      "as_of": "2026-09-14 10:05:19",
       "stale": false
     },
     "leo-token": {
@@ -2023,7 +2023,7 @@
         ],
         [
           "Stretch from long-term average",
-          "+70.7% above its long-term average - very stretched",
+          "+70.9% above its long-term average - very stretched",
           -2
         ],
         [
@@ -2036,12 +2036,12 @@
       "id": "uniswap",
       "symbol": "UNI",
       "name": "Uniswap",
-      "price": 6.32,
-      "pct_24h": 1.52812,
-      "pct_7d": -11.2,
+      "price": 6.33,
+      "pct_24h": 1.76649,
+      "pct_7d": -10.1,
       "support_30d": 3.271747843939598,
       "resistance_30d": 7.291165865788254,
-      "as_of": "2026-09-14 09:50:24",
+      "as_of": "2026-09-14 10:05:19",
       "stale": false
     },
     "pi-network": {
@@ -3313,10 +3313,10 @@
         "name": "Chainlink",
         "tf": "15m",
         "entry": 11.31173,
-        "stop": 11.272891333333334,
-        "target1": 11.350568666666668,
-        "target2": 11.389407333333335,
-        "opened_at": "2026-09-14T10:02:35.193418"
+        "stop": 11.272032000000001,
+        "target1": 11.351428,
+        "target2": 11.391126,
+        "opened_at": "2026-09-14T10:07:16.018897"
       }
     },
     "resolved": [
@@ -21415,6 +21415,19 @@
         "result": "win",
         "resolved_at": "2026-09-14T10:02:35.193418",
         "exit_price": 11.44733
+      },
+      {
+        "coin": "LINK",
+        "name": "Chainlink",
+        "tf": "15m",
+        "entry": 11.31173,
+        "stop": 11.272891333333334,
+        "target1": 11.350568666666668,
+        "target2": 11.389407333333335,
+        "opened_at": "2026-09-14T10:02:35.193418",
+        "result": "win",
+        "resolved_at": "2026-09-14T10:07:16.018897",
+        "exit_price": 11.42086
       }
     ]
   },
@@ -21422,14 +21435,14 @@
     "key": "BTC",
     "name": "Bitcoin",
     "emoji": "\u20bf",
-    "price": 78200,
-    "high_24h": 77856,
+    "price": 78076,
+    "high_24h": 78278,
     "low_24h": 76439,
-    "pct_24h": 1.89464,
-    "pct_7d": -2.2,
-    "pct_30d": 23.3,
-    "sma50": 71416.06953107768,
-    "sma200": 70180.02705736035,
+    "pct_24h": 1.6672,
+    "pct_7d": -1.6,
+    "pct_30d": 24.3,
+    "sma50": 71413.68442277171,
+    "sma200": 70179.43078028384,
     "support_30d": 62843.70368466329,
     "resistance_30d": 81264.70153038795,
     "mark_price": 77600.0,
@@ -21444,16 +21457,16 @@
     "key": "ETH",
     "name": "Ethereum",
     "emoji": "\u039e",
-    "price": 2527.03,
-    "high_24h": 2526.74,
+    "price": 2523.4,
+    "high_24h": 2531.64,
     "low_24h": 2464.63,
-    "pct_24h": 1.74241,
-    "pct_7d": 1.1,
-    "pct_30d": 34.0,
-    "sma50": 2197.3598962673227,
-    "sma200": 2059.890739231333,
+    "pct_24h": 1.54287,
+    "pct_7d": 1.4,
+    "pct_30d": 34.7,
+    "sma50": 2197.296246745877,
+    "sma200": 2059.874826850972,
     "support_30d": 1874.401898191962,
-    "resistance_30d": 2525.7003262877224,
+    "resistance_30d": 2525.267261590238,
     "mark_price": 2515.82,
     "index_price": 2516.73418605,
     "funding_rate": 8.331e-05,
