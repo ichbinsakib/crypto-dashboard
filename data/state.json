@@ -3,8 +3,8 @@
   "_fng_classification": "Greed",
   "_alerts_state": {
     "btc-resistance-break": {
-      "triggered": false,
-      "last_triggered_at": "2026-09-14 14:20:26"
+      "triggered": true,
+      "last_triggered_at": "2026-09-14 14:35:21"
     },
     "btc-support-break": {
       "triggered": false,
@@ -117,11 +117,11 @@
       "symbol": "XRP",
       "name": "XRP",
       "price": 1.4,
-      "pct_24h": 4.24392,
-      "pct_7d": 0.1,
+      "pct_24h": 4.01537,
+      "pct_7d": -1.2,
       "support_30d": 0.9927072784932938,
       "resistance_30d": 1.52050482788377,
-      "as_of": "2026-09-14 11:45:24",
+      "as_of": "2026-09-14 14:35:21",
       "stale": false
     },
     "solana": {
@@ -1543,7 +1543,7 @@
         ],
         [
           "Stretch from long-term average",
-          "+68.5% above its long-term average - very stretched",
+          "+68.0% above its long-term average - very stretched",
           -2
         ],
         [
@@ -1556,12 +1556,12 @@
       "id": "pump-fun",
       "symbol": "PUMP",
       "name": "Pump.fun",
-      "price": 0.00364241,
-      "pct_24h": -1.5976,
+      "price": 0.00363054,
+      "pct_24h": -1.54351,
       "pct_7d": -19.7,
       "support_30d": 0.002666433318189806,
       "resistance_30d": 0.0052249885406471875,
-      "as_of": "2026-09-14 14:20:26",
+      "as_of": "2026-09-14 14:35:21",
       "stale": false
     },
     "venice-token": {
@@ -2861,9 +2861,9 @@
       "stale": false
     },
     "okb": {
-      "label": "\ud83d\udfe1 HOLD / NEUTRAL",
-      "status": "neutral",
-      "score": -1,
+      "label": "\ud83d\udd34 CAUTION - REDUCE NEW BUYS",
+      "status": "bearish",
+      "score": -2,
       "rows": [
         [
           "Price vs. recent range",
@@ -2877,8 +2877,8 @@
         ],
         [
           "Market phase (best guess)",
-          "Basing near the bottom - phase where smart money accumulates",
-          2
+          "Established uptrend - phase where price marks up",
+          1
         ],
         [
           "Recent trend",
@@ -2887,7 +2887,7 @@
         ],
         [
           "Stretch from long-term average",
-          "+29.1% above its long-term average - a bit stretched",
+          "+29.3% above its long-term average - a bit stretched",
           -1
         ],
         [
@@ -2896,16 +2896,16 @@
           0
         ]
       ],
-      "plain": "No real edge either way right now - fine to just wait and watch.",
+      "plain": "Getting risky - I'd hold off on new buys until this cools down.",
       "id": "okb",
       "symbol": "OKB",
       "name": "OKB",
-      "price": 113.81,
-      "pct_24h": 0.54177,
-      "pct_7d": -0.9,
+      "price": 113.95,
+      "pct_24h": 0.74814,
+      "pct_7d": -2.5,
       "support_30d": 98.99707739944992,
       "resistance_30d": 115.8310797114581,
-      "as_of": "2026-09-14 12:15:29",
+      "as_of": "2026-09-14 14:35:21",
       "stale": false
     },
     "just": {
@@ -3361,10 +3361,10 @@
         "name": "Pump.fun",
         "tf": "15m",
         "entry": 0.00357,
-        "stop": 0.0035449666666666664,
-        "target1": 0.0035950333333333332,
-        "target2": 0.0036200666666666667,
-        "opened_at": "2026-09-14T14:32:42.901410"
+        "stop": 0.0035445666666666666,
+        "target1": 0.003595433333333333,
+        "target2": 0.0036208666666666662,
+        "opened_at": "2026-09-14T14:37:26.884383"
       }
     },
     "resolved": [
@@ -21944,6 +21944,19 @@
         "result": "win",
         "resolved_at": "2026-09-14T14:32:42.901410",
         "exit_price": 0.003634
+      },
+      {
+        "coin": "PUMP",
+        "name": "Pump.fun",
+        "tf": "15m",
+        "entry": 0.00357,
+        "stop": 0.0035449666666666664,
+        "target1": 0.0035950333333333332,
+        "target2": 0.0036200666666666667,
+        "opened_at": "2026-09-14T14:32:42.901410",
+        "result": "win",
+        "resolved_at": "2026-09-14T14:37:26.884383",
+        "exit_price": 0.003622
       }
     ]
   },
@@ -21951,14 +21964,14 @@
     "key": "BTC",
     "name": "Bitcoin",
     "emoji": "\u20bf",
-    "price": 78291,
+    "price": 78589,
     "high_24h": 78399,
     "low_24h": 76439,
-    "pct_24h": 1.65716,
+    "pct_24h": 1.99554,
     "pct_7d": -1.8,
     "pct_30d": 24.0,
-    "sma50": 71420.74136718182,
-    "sma200": 70181.19501638638,
+    "sma50": 71424.8586639054,
+    "sma200": 70182.22434056728,
     "support_30d": 62843.70368466329,
     "resistance_30d": 81264.70153038795,
     "mark_price": 77600.0,
@@ -21973,14 +21986,14 @@
     "key": "ETH",
     "name": "Ethereum",
     "emoji": "\u039e",
-    "price": 2499.82,
+    "price": 2509.41,
     "high_24h": 2531.64,
     "low_24h": 2467.86,
-    "pct_24h": 0.5273,
+    "pct_24h": 0.84471,
     "pct_7d": -0.2,
     "pct_30d": 32.8,
-    "sma50": 2196.9139496073367,
-    "sma200": 2059.779252566337,
+    "sma50": 2197.0417983694574,
+    "sma200": 2059.811214756867,
     "support_30d": 1874.401898191962,
     "resistance_30d": 2525.267261590238,
     "mark_price": 2515.82,
