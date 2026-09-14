@@ -11,8 +11,8 @@
       "last_triggered_at": null
     },
     "eth-resistance-break": {
-      "triggered": false,
-      "last_triggered_at": "2026-09-14 07:30:30"
+      "triggered": true,
+      "last_triggered_at": "2026-09-14 07:40:25"
     },
     "eth-support-break": {
       "triggered": false,
@@ -68,12 +68,12 @@
       "id": "binancecoin",
       "symbol": "BNB",
       "name": "BNB",
-      "price": 723.75,
-      "pct_24h": 0.11078,
+      "price": 724.09,
+      "pct_24h": 0.18548,
       "pct_7d": -3.4,
       "support_30d": 602.4629221231862,
       "resistance_30d": 766.4092879330625,
-      "as_of": "2026-09-14 07:35:19",
+      "as_of": "2026-09-14 07:40:25",
       "stale": false
     },
     "ripple": {
@@ -1783,7 +1783,7 @@
         ],
         [
           "Stretch from long-term average",
-          "+151.3% above its long-term average - very stretched",
+          "+151.9% above its long-term average - very stretched",
           -2
         ],
         [
@@ -1796,12 +1796,12 @@
       "id": "lighter",
       "symbol": "LIT",
       "name": "Lighter",
-      "price": 4.57,
-      "pct_24h": 10.06247,
+      "price": 4.58,
+      "pct_24h": 10.96471,
       "pct_7d": 4.0,
       "support_30d": 2.277611067280557,
       "resistance_30d": 4.827528632102638,
-      "as_of": "2026-09-14 07:20:26",
+      "as_of": "2026-09-14 07:40:25",
       "stale": false
     },
     "ethena": {
@@ -1879,7 +1879,7 @@
         ],
         [
           "Stretch from long-term average",
-          "-31.0% below its long-term average - confirmed downtrend",
+          "-31.5% below its long-term average - confirmed downtrend",
           -1
         ],
         [
@@ -1892,12 +1892,12 @@
       "id": "bitcoin-cash",
       "symbol": "BCH",
       "name": "Bitcoin Cash",
-      "price": 223.6,
-      "pct_24h": -1.07354,
-      "pct_7d": -12.2,
+      "price": 222.0,
+      "pct_24h": -1.37881,
+      "pct_7d": -13.0,
       "support_30d": 203.50169440615565,
       "resistance_30d": 288.10955405353275,
-      "as_of": "2026-09-14 05:10:25",
+      "as_of": "2026-09-14 07:40:25",
       "stale": false
     },
     "mantle": {
@@ -2407,7 +2407,7 @@
         ],
         [
           "Stretch from long-term average",
-          "-1.6% vs its long-term average - not stretched either way",
+          "-2.0% vs its long-term average - not stretched either way",
           0
         ],
         [
@@ -2420,12 +2420,12 @@
       "id": "shiba-inu",
       "symbol": "SHIB",
       "name": "Shiba Inu",
-      "price": 5.26e-06,
-      "pct_24h": 0.22295,
+      "price": 5.24e-06,
+      "pct_24h": 0.05087,
       "pct_7d": -4.6,
       "support_30d": 4.41190416053175e-06,
       "resistance_30d": 5.903506876405612e-06,
-      "as_of": "2026-09-14 07:25:18",
+      "as_of": "2026-09-14 07:40:25",
       "stale": false
     },
     "near": {
@@ -2695,7 +2695,7 @@
         ],
         [
           "Stretch from long-term average",
-          "-3.2% vs its long-term average - not stretched either way",
+          "-3.4% vs its long-term average - not stretched either way",
           0
         ],
         [
@@ -2708,12 +2708,12 @@
       "id": "pax-gold",
       "symbol": "PAXG",
       "name": "PAX Gold",
-      "price": 4331.65,
-      "pct_24h": -0.54763,
-      "pct_7d": -1.6,
+      "price": 4321.59,
+      "pct_24h": -0.75797,
+      "pct_7d": -1.5,
       "support_30d": 4318.141703998686,
       "resistance_30d": 4672.307573354755,
-      "as_of": "2026-09-14 05:30:28",
+      "as_of": "2026-09-14 07:40:25",
       "stale": false
     },
     "morpho": {
@@ -3316,7 +3316,7 @@
         "stop": 0.6806396666666666,
         "target1": 0.6828003333333333,
         "target2": 0.6838806666666667,
-        "opened_at": "2026-09-14T07:37:10.218513"
+        "opened_at": "2026-09-14T07:41:47.011546"
       },
       "daily:XLM": {
         "coin": "XLM",
@@ -3326,7 +3326,7 @@
         "stop": 0.1411899,
         "target1": 0.1631561,
         "target2": 0.1741392,
-        "opened_at": "2026-09-14T07:37:10.218513"
+        "opened_at": "2026-09-14T07:41:47.011546"
       }
     },
     "resolved": [
@@ -20710,6 +20710,32 @@
         "result": "win",
         "resolved_at": "2026-09-14T07:37:10.218513",
         "exit_price": 0.184337
+      },
+      {
+        "coin": "ASTER",
+        "name": "Aster",
+        "tf": "15m",
+        "entry": 0.68172,
+        "stop": 0.6806396666666666,
+        "target1": 0.6828003333333333,
+        "target2": 0.6838806666666667,
+        "opened_at": "2026-09-14T07:37:10.218513",
+        "result": "win",
+        "resolved_at": "2026-09-14T07:41:47.011546",
+        "exit_price": 0.69631
+      },
+      {
+        "coin": "XLM",
+        "name": "Stellar",
+        "tf": "daily",
+        "entry": 0.152173,
+        "stop": 0.1411899,
+        "target1": 0.1631561,
+        "target2": 0.1741392,
+        "opened_at": "2026-09-14T07:37:10.218513",
+        "result": "win",
+        "resolved_at": "2026-09-14T07:41:47.011546",
+        "exit_price": 0.184734
       }
     ]
   },
@@ -20717,14 +20743,14 @@
     "key": "BTC",
     "name": "Bitcoin",
     "emoji": "\u20bf",
-    "price": 77672,
+    "price": 77726,
     "high_24h": 77831,
     "low_24h": 76439,
-    "pct_24h": 0.73055,
+    "pct_24h": 0.81038,
     "pct_7d": -2.7,
     "pct_30d": 23.1,
-    "sma50": 71406.20254359028,
-    "sma200": 70177.5603104885,
+    "sma50": 71407.41372126306,
+    "sma200": 70177.86310490669,
     "support_30d": 62843.70368466329,
     "resistance_30d": 81264.70153038795,
     "mark_price": 77600.0,
@@ -20739,14 +20765,14 @@
     "key": "ETH",
     "name": "Ethereum",
     "emoji": "\u039e",
-    "price": 2518.47,
+    "price": 2519.97,
     "high_24h": 2525.02,
     "low_24h": 2464.63,
-    "pct_24h": 0.14001,
+    "pct_24h": 0.16716,
     "pct_7d": 0.4,
     "pct_30d": 33.8,
-    "sma50": 2197.2153279408553,
-    "sma200": 2059.8545971497165,
+    "sma50": 2197.2505038705235,
+    "sma200": 2059.8633911321335,
     "support_30d": 1874.401898191962,
     "resistance_30d": 2525.267261590238,
     "mark_price": 2515.82,
