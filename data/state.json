@@ -11,7 +11,7 @@
       "last_triggered_at": null
     },
     "eth-resistance-break": {
-      "triggered": true,
+      "triggered": false,
       "last_triggered_at": "2026-09-14 23:35:17"
     },
     "eth-support-break": {
@@ -871,7 +871,7 @@
         ],
         [
           "Stretch from long-term average",
-          "+7.8% vs its long-term average - not stretched either way",
+          "+5.1% vs its long-term average - not stretched either way",
           0
         ],
         [
@@ -884,12 +884,12 @@
       "id": "pepe",
       "symbol": "PEPE",
       "name": "Pepe",
-      "price": 3.55e-06,
-      "pct_24h": 3.6687,
-      "pct_7d": -3.3,
+      "price": 3.46e-06,
+      "pct_24h": 2.57971,
+      "pct_7d": -3.7,
       "support_30d": 2.5716563906374582e-06,
       "resistance_30d": 4.122123035488615e-06,
-      "as_of": "2026-09-14 18:30:32",
+      "as_of": "2026-09-14 23:40:23",
       "stale": false
     },
     "avalanche-2": {
@@ -1701,11 +1701,11 @@
       "symbol": "BGB",
       "name": "Bitget Token",
       "price": 1.94,
-      "pct_24h": 0.7894,
+      "pct_24h": 0.80646,
       "pct_7d": -3.0,
       "support_30d": 1.6478040912714662,
       "resistance_30d": 2.0284940947674617,
-      "as_of": "2026-09-14 23:15:22",
+      "as_of": "2026-09-14 23:40:23",
       "stale": false
     },
     "sui": {
@@ -2612,12 +2612,12 @@
       "id": "bitway",
       "symbol": "BTW",
       "name": "Bitway",
-      "price": 0.602466,
-      "pct_24h": -16.4686,
+      "price": 0.573353,
+      "pct_24h": -21.8835,
       "pct_7d": 34.1,
       "support_30d": 0.3581011744091522,
       "resistance_30d": 0.7325241073378514,
-      "as_of": "2026-09-14 23:00:33",
+      "as_of": "2026-09-14 23:40:23",
       "stale": false
     },
     "world-liberty-financial": {
@@ -3349,20 +3349,20 @@
         "name": "Zcash",
         "tf": "15m",
         "entry": 1134.07,
-        "stop": 1121.566,
-        "target1": 1146.5739999999998,
-        "target2": 1159.0779999999997,
-        "opened_at": "2026-09-14T23:37:14.407573"
+        "stop": 1121.5106666666666,
+        "target1": 1146.6293333333333,
+        "target2": 1159.1886666666667,
+        "opened_at": "2026-09-14T23:42:19.913669"
       },
       "1h:ETC": {
         "coin": "ETC",
         "name": "Ethereum Classic",
         "tf": "1h",
         "entry": 7.423,
-        "stop": 7.383625,
-        "target1": 7.462375,
-        "target2": 7.5017499999999995,
-        "opened_at": "2026-09-14T23:37:14.407573"
+        "stop": 7.3835,
+        "target1": 7.4625,
+        "target2": 7.502000000000001,
+        "opened_at": "2026-09-14T23:42:19.913669"
       }
     },
     "resolved": [
@@ -24139,6 +24139,32 @@
         "result": "win",
         "resolved_at": "2026-09-14T23:37:14.407573",
         "exit_price": 7.59
+      },
+      {
+        "coin": "ZEC",
+        "name": "Zcash",
+        "tf": "15m",
+        "entry": 1134.07,
+        "stop": 1121.566,
+        "target1": 1146.5739999999998,
+        "target2": 1159.0779999999997,
+        "opened_at": "2026-09-14T23:37:14.407573",
+        "result": "win",
+        "resolved_at": "2026-09-14T23:42:19.913669",
+        "exit_price": 1169.7
+      },
+      {
+        "coin": "ETC",
+        "name": "Ethereum Classic",
+        "tf": "1h",
+        "entry": 7.423,
+        "stop": 7.383625,
+        "target1": 7.462375,
+        "target2": 7.5017499999999995,
+        "opened_at": "2026-09-14T23:37:14.407573",
+        "result": "win",
+        "resolved_at": "2026-09-14T23:42:19.913669",
+        "exit_price": 7.584
       }
     ]
   },
@@ -24146,14 +24172,14 @@
     "key": "BTC",
     "name": "Bitcoin",
     "emoji": "\u20bf",
-    "price": 78314,
+    "price": 78266,
     "high_24h": 79530,
     "low_24h": 76439,
-    "pct_24h": 1.94027,
+    "pct_24h": 1.91387,
     "pct_7d": -0.8,
     "pct_30d": 24.5,
-    "sma50": 71418.94389723512,
-    "sma200": 70180.7456488997,
+    "sma50": 71417.9710187972,
+    "sma200": 70180.50242929022,
     "support_30d": 62843.70368466329,
     "resistance_30d": 81264.70153038795,
     "mark_price": 78726.74180435,
@@ -24168,14 +24194,14 @@
     "key": "ETH",
     "name": "Ethereum",
     "emoji": "\u039e",
-    "price": 2521.17,
+    "price": 2516.68,
     "high_24h": 2607.56,
     "low_24h": 2467.86,
-    "pct_24h": 1.71111,
+    "pct_24h": 1.58594,
     "pct_7d": 1.7,
     "pct_30d": 34.5,
-    "sma50": 2197.2611896785543,
-    "sma200": 2059.866062584141,
+    "sma50": 2197.1621082710903,
+    "sma200": 2059.8412922322755,
     "support_30d": 1874.401898191962,
     "resistance_30d": 2525.267261590238,
     "mark_price": 2544.79927907,
