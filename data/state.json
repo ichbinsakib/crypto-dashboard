@@ -4,7 +4,7 @@
   "_alerts_state": {
     "btc-resistance-break": {
       "triggered": true,
-      "last_triggered_at": "2026-09-14 21:40:24"
+      "last_triggered_at": "2026-09-14 21:45:28"
     },
     "btc-support-break": {
       "triggered": false,
@@ -12,7 +12,7 @@
     },
     "eth-resistance-break": {
       "triggered": true,
-      "last_triggered_at": "2026-09-14 21:40:24"
+      "last_triggered_at": "2026-09-14 21:45:28"
     },
     "eth-support-break": {
       "triggered": false,
@@ -260,12 +260,12 @@
       "id": "figure-heloc",
       "symbol": "FIGR_HELOC",
       "name": "Figure Heloc",
-      "price": 1.023,
+      "price": 1.041,
       "pct_24h": null,
-      "pct_7d": 4.3,
+      "pct_7d": 3.6,
       "support_30d": 1.0001790754472548,
       "resistance_30d": 1.0455978355177025,
-      "as_of": "2026-09-14 16:35:20",
+      "as_of": "2026-09-14 21:45:28",
       "stale": false
     },
     "hyperliquid": {
@@ -2023,7 +2023,7 @@
         ],
         [
           "Stretch from long-term average",
-          "+80.6% above its long-term average - very stretched",
+          "+77.6% above its long-term average - very stretched",
           -2
         ],
         [
@@ -2036,12 +2036,12 @@
       "id": "uniswap",
       "symbol": "UNI",
       "name": "Uniswap",
-      "price": 6.69,
-      "pct_24h": 7.21234,
-      "pct_7d": -2.9,
+      "price": 6.58,
+      "pct_24h": 4.99102,
+      "pct_7d": -3.4,
       "support_30d": 3.271747843939598,
       "resistance_30d": 7.291165865788254,
-      "as_of": "2026-09-14 20:10:23",
+      "as_of": "2026-09-14 21:45:28",
       "stale": false
     },
     "pi-network": {
@@ -2435,7 +2435,7 @@
       "rows": [
         [
           "Price vs. recent range",
-          "Near its 30-day high (~$2.56) - less room to run",
+          "Near its 30-day high (~$2.50) - less room to run",
           -1
         ],
         [
@@ -2455,7 +2455,7 @@
         ],
         [
           "Stretch from long-term average",
-          "+48.1% above its long-term average - very stretched",
+          "+44.7% above its long-term average - very stretched",
           -2
         ],
         [
@@ -2468,12 +2468,12 @@
       "id": "near",
       "symbol": "NEAR",
       "name": "NEAR Protocol",
-      "price": 2.56,
-      "pct_24h": 8.97167,
-      "pct_7d": 9.7,
+      "price": 2.5,
+      "pct_24h": 6.48917,
+      "pct_7d": 9.4,
       "support_30d": 1.5879597131538,
-      "resistance_30d": 2.5583287987122154,
-      "as_of": "2026-09-14 20:45:23",
+      "resistance_30d": 2.5000615321636785,
+      "as_of": "2026-09-14 21:45:28",
       "stale": false
     },
     "quant-network": {
@@ -2531,7 +2531,7 @@
       "rows": [
         [
           "Price vs. recent range",
-          "Near its 30-day low (~$4,312.18) - historically a better entry",
+          "Near its 30-day low (~$4,301.63) - historically a better entry",
           2
         ],
         [
@@ -2551,7 +2551,7 @@
         ],
         [
           "Stretch from long-term average",
-          "-3.4% vs its long-term average - not stretched either way",
+          "-3.7% vs its long-term average - not stretched either way",
           0
         ],
         [
@@ -2564,12 +2564,12 @@
       "id": "tether-gold",
       "symbol": "XAUT",
       "name": "Tether Gold",
-      "price": 4311.89,
-      "pct_24h": -0.86215,
-      "pct_7d": -2.2,
-      "support_30d": 4312.182217774686,
+      "price": 4301.59,
+      "pct_24h": -0.97586,
+      "pct_7d": -2.4,
+      "support_30d": 4301.631564833081,
       "resistance_30d": 4662.510537821146,
-      "as_of": "2026-09-14 17:40:25",
+      "as_of": "2026-09-14 21:45:28",
       "stale": false
     },
     "bitway": {
@@ -3361,10 +3361,10 @@
         "name": "Zcash",
         "tf": "15m",
         "entry": 1132.75,
-        "stop": 1119.834,
-        "target1": 1145.666,
-        "target2": 1158.5819999999999,
-        "opened_at": "2026-09-14T21:42:21.518598"
+        "stop": 1120.5076666666666,
+        "target1": 1144.9923333333334,
+        "target2": 1157.2346666666667,
+        "opened_at": "2026-09-14T21:46:55.996108"
       }
     },
     "resolved": [
@@ -23660,6 +23660,19 @@
         "result": "win",
         "resolved_at": "2026-09-14T21:42:21.518598",
         "exit_price": 1177.48
+      },
+      {
+        "coin": "ZEC",
+        "name": "Zcash",
+        "tf": "15m",
+        "entry": 1132.75,
+        "stop": 1119.834,
+        "target1": 1145.666,
+        "target2": 1158.5819999999999,
+        "opened_at": "2026-09-14T21:42:21.518598",
+        "result": "win",
+        "resolved_at": "2026-09-14T21:46:55.996108",
+        "exit_price": 1174.09
       }
     ]
   },
@@ -23667,14 +23680,14 @@
     "key": "BTC",
     "name": "Bitcoin",
     "emoji": "\u20bf",
-    "price": 78796,
+    "price": 78831,
     "high_24h": 79530,
     "low_24h": 76439,
-    "pct_24h": 1.88988,
+    "pct_24h": 1.91071,
     "pct_7d": -0.3,
     "pct_30d": 25.5,
-    "sma50": 71428.90894760727,
-    "sma200": 70183.23691149274,
+    "sma50": 71429.19993743411,
+    "sma200": 70183.30965894945,
     "support_30d": 62843.70368466329,
     "resistance_30d": 81264.70153038795,
     "mark_price": 79163.5,
@@ -23689,16 +23702,16 @@
     "key": "ETH",
     "name": "Ethereum",
     "emoji": "\u039e",
-    "price": 2545.31,
+    "price": 2549.0,
     "high_24h": 2607.56,
     "low_24h": 2467.86,
-    "pct_24h": 1.39233,
+    "pct_24h": 1.49992,
     "pct_7d": 3.0,
     "pct_30d": 36.5,
-    "sma50": 2197.7784145428363,
-    "sma200": 2059.9953688002115,
+    "sma50": 2197.819617129966,
+    "sma200": 2060.005669446994,
     "support_30d": 1874.401898191962,
-    "resistance_30d": 2546.6262400633996,
+    "resistance_30d": 2548.6863694198914,
     "mark_price": 2567.79454334,
     "index_price": 2567.75069767,
     "funding_rate": 1.96e-05,
