@@ -885,11 +885,11 @@
       "symbol": "PEPE",
       "name": "Pepe",
       "price": 3.44e-06,
-      "pct_24h": -0.39965,
+      "pct_24h": -0.15662,
       "pct_7d": -4.8,
       "support_30d": 2.5716563906374582e-06,
       "resistance_30d": 4.122123035488615e-06,
-      "as_of": "2026-09-14 04:05:22",
+      "as_of": "2026-09-14 04:40:21",
       "stale": false
     },
     "avalanche-2": {
@@ -2215,7 +2215,7 @@
         ],
         [
           "Stretch from long-term average",
-          "+14.8% above its long-term average - a bit stretched",
+          "+13.2% above its long-term average - a bit stretched",
           -1
         ],
         [
@@ -2228,12 +2228,12 @@
       "id": "internet-computer",
       "symbol": "ICP",
       "name": "Internet Computer",
-      "price": 2.82,
-      "pct_24h": 2.84002,
-      "pct_7d": 5.0,
+      "price": 2.78,
+      "pct_24h": 2.15466,
+      "pct_7d": 2.6,
       "support_30d": 2.194804279500122,
       "resistance_30d": 2.9869340549074623,
-      "as_of": "2026-09-14 03:10:23",
+      "as_of": "2026-09-14 04:40:21",
       "stale": false
     },
     "bittensor": {
@@ -2421,11 +2421,11 @@
       "symbol": "SHIB",
       "name": "Shiba Inu",
       "price": 5.22e-06,
-      "pct_24h": -1.18011,
-      "pct_7d": -4.7,
+      "pct_24h": -0.67108,
+      "pct_7d": -5.2,
       "support_30d": 4.41190416053175e-06,
       "resistance_30d": 5.903506876405612e-06,
-      "as_of": "2026-09-14 03:15:25",
+      "as_of": "2026-09-14 04:40:21",
       "stale": false
     },
     "near": {
@@ -3304,17 +3304,17 @@
         "stop": 0.1069875,
         "target1": 0.1108125,
         "target2": 0.11272499999999999,
-        "opened_at": "2026-09-14T04:37:14.695057"
+        "opened_at": "2026-09-14T04:42:17.273642"
       },
       "daily:XLM": {
         "coin": "XLM",
         "name": "Stellar",
         "tf": "daily",
         "entry": 0.152173,
-        "stop": 0.14128113333333334,
-        "target1": 0.16306486666666667,
-        "target2": 0.17395673333333334,
-        "opened_at": "2026-09-14T04:37:14.695057"
+        "stop": 0.1412721,
+        "target1": 0.1630739,
+        "target2": 0.17397479999999999,
+        "opened_at": "2026-09-14T04:42:17.273642"
       }
     },
     "resolved": [
@@ -19710,6 +19710,32 @@
         "result": "win",
         "resolved_at": "2026-09-14T04:37:14.695057",
         "exit_price": 0.181995
+      },
+      {
+        "coin": "LIT",
+        "name": "Lighter",
+        "tf": "1h",
+        "entry": 0.1089,
+        "stop": 0.1069875,
+        "target1": 0.1108125,
+        "target2": 0.11272499999999999,
+        "opened_at": "2026-09-14T04:37:14.695057",
+        "result": "win",
+        "resolved_at": "2026-09-14T04:42:17.273642",
+        "exit_price": 0.1146
+      },
+      {
+        "coin": "XLM",
+        "name": "Stellar",
+        "tf": "daily",
+        "entry": 0.152173,
+        "stop": 0.14128113333333334,
+        "target1": 0.16306486666666667,
+        "target2": 0.17395673333333334,
+        "opened_at": "2026-09-14T04:37:14.695057",
+        "result": "win",
+        "resolved_at": "2026-09-14T04:42:17.273642",
+        "exit_price": 0.182673
       }
     ]
   },
@@ -19717,14 +19743,14 @@
     "key": "BTC",
     "name": "Bitcoin",
     "emoji": "\u20bf",
-    "price": 77534,
+    "price": 77565,
     "high_24h": 77811,
     "low_24h": 76439,
-    "pct_24h": 0.45551,
+    "pct_24h": 0.45292,
     "pct_7d": -2.9,
     "pct_30d": 22.9,
-    "sma50": 71403.58123664382,
-    "sma200": 70176.90498375188,
+    "sma50": 71404.0287689036,
+    "sma200": 70177.01686681682,
     "support_30d": 62843.70368466329,
     "resistance_30d": 81264.70153038795,
     "mark_price": 77158.0,
@@ -19739,14 +19765,14 @@
     "key": "ETH",
     "name": "Ethereum",
     "emoji": "\u039e",
-    "price": 2511.56,
+    "price": 2513.79,
     "high_24h": 2522.92,
     "low_24h": 2464.63,
-    "pct_24h": -0.37364,
+    "pct_24h": -0.25428,
     "pct_7d": 0.0,
     "pct_30d": 33.3,
-    "sma50": 2197.079945242374,
-    "sma200": 2059.820751475096,
+    "sma50": 2197.114305338228,
+    "sma200": 2059.8293414990594,
     "support_30d": 1874.401898191962,
     "resistance_30d": 2525.267261590238,
     "mark_price": 2521.71641085,
