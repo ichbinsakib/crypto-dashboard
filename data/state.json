@@ -4,7 +4,7 @@
   "_alerts_state": {
     "btc-resistance-break": {
       "triggered": true,
-      "last_triggered_at": "2026-09-14 18:50:26"
+      "last_triggered_at": "2026-09-14 18:53:37"
     },
     "btc-support-break": {
       "triggered": false,
@@ -12,7 +12,7 @@
     },
     "eth-resistance-break": {
       "triggered": true,
-      "last_triggered_at": "2026-09-14 18:50:26"
+      "last_triggered_at": "2026-09-14 18:53:37"
     },
     "eth-support-break": {
       "triggered": false,
@@ -55,7 +55,7 @@
         ],
         [
           "Stretch from long-term average",
-          "+15.5% above its long-term average - a bit stretched",
+          "+16.2% above its long-term average - a bit stretched",
           -1
         ],
         [
@@ -68,12 +68,12 @@
       "id": "binancecoin",
       "symbol": "BNB",
       "name": "BNB",
-      "price": 722.83,
-      "pct_24h": 0.33594,
-      "pct_7d": -2.9,
+      "price": 727.17,
+      "pct_24h": 0.7912,
+      "pct_7d": -1.8,
       "support_30d": 602.4629221231862,
       "resistance_30d": 766.4092879330625,
-      "as_of": "2026-09-14 16:15:25",
+      "as_of": "2026-09-14 18:53:37",
       "stale": false
     },
     "ripple": {
@@ -1447,7 +1447,7 @@
         ],
         [
           "Stretch from long-term average",
-          "-10.1% vs its long-term average - not stretched either way",
+          "-8.8% vs its long-term average - not stretched either way",
           0
         ],
         [
@@ -1460,12 +1460,12 @@
       "id": "crypto-com-chain",
       "symbol": "CRO",
       "name": "Cronos",
-      "price": 0.058631,
-      "pct_24h": 0.81811,
-      "pct_7d": 2.1,
+      "price": 0.059459,
+      "pct_24h": 1.40264,
+      "pct_7d": 3.7,
       "support_30d": 0.04621382085807831,
       "resistance_30d": 0.06091104752771909,
-      "as_of": "2026-09-14 16:05:18",
+      "as_of": "2026-09-14 18:53:37",
       "stale": false
     },
     "ethereum-classic": {
@@ -2647,7 +2647,7 @@
         ],
         [
           "Stretch from long-term average",
-          "-15.8% below its long-term average - confirmed downtrend",
+          "-16.3% below its long-term average - confirmed downtrend",
           -1
         ],
         [
@@ -2660,12 +2660,12 @@
       "id": "world-liberty-financial",
       "symbol": "WLFI",
       "name": "World Liberty Financial",
-      "price": 0.05841,
-      "pct_24h": 2.59448,
+      "price": 0.058035,
+      "pct_24h": 1.92487,
       "pct_7d": 1.9,
       "support_30d": 0.05526589948255966,
       "resistance_30d": 0.06254770952093733,
-      "as_of": "2026-09-14 18:35:19",
+      "as_of": "2026-09-14 18:53:37",
       "stale": false
     },
     "pax-gold": {
@@ -3352,7 +3352,7 @@
         "stop": 0.06112708333333333,
         "target1": 0.06237291666666667,
         "target2": 0.06299583333333333,
-        "opened_at": "2026-09-14T18:52:28.312075"
+        "opened_at": "2026-09-14T18:55:40.383461"
       }
     },
     "resolved": [
@@ -23167,6 +23167,19 @@
         "result": "win",
         "resolved_at": "2026-09-14T18:52:28.312075",
         "exit_price": 0.06432
+      },
+      {
+        "coin": "SKY",
+        "name": "Sky",
+        "tf": "1h",
+        "entry": 0.06175,
+        "stop": 0.06112708333333333,
+        "target1": 0.06237291666666667,
+        "target2": 0.06299583333333333,
+        "opened_at": "2026-09-14T18:52:28.312075",
+        "result": "win",
+        "resolved_at": "2026-09-14T18:55:40.383461",
+        "exit_price": 0.06432
       }
     ]
   },
@@ -23174,14 +23187,14 @@
     "key": "BTC",
     "name": "Bitcoin",
     "emoji": "\u20bf",
-    "price": 79291,
+    "price": 79207,
     "high_24h": 78988,
     "low_24h": 76439,
-    "pct_24h": 2.51031,
+    "pct_24h": 2.39069,
     "pct_7d": -0.1,
     "pct_30d": 25.2,
-    "sma50": 71437.93515416476,
-    "sma200": 70185.49346313212,
+    "sma50": 71436.52336939369,
+    "sma200": 70185.14051693935,
     "support_30d": 62843.70368466329,
     "resistance_30d": 81264.70153038795,
     "mark_price": 77600.0,
@@ -23196,16 +23209,16 @@
     "key": "ETH",
     "name": "Ethereum",
     "emoji": "\u039e",
-    "price": 2543.47,
+    "price": 2540.45,
     "high_24h": 2535.25,
     "low_24h": 2467.86,
-    "pct_24h": 1.40282,
+    "pct_24h": 1.27405,
     "pct_7d": 2.0,
     "pct_30d": 34.5,
-    "sma50": 2197.715375603845,
-    "sma200": 2059.979609065464,
+    "sma50": 2197.656348315427,
+    "sma200": 2059.964852243359,
     "support_30d": 1874.401898191962,
-    "resistance_30d": 2543.474293113841,
+    "resistance_30d": 2540.522928692934,
     "mark_price": 2515.82,
     "index_price": 2516.73418605,
     "funding_rate": 8.331e-05,
