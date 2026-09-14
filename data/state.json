@@ -3,7 +3,7 @@
   "_fng_classification": "Greed",
   "_alerts_state": {
     "btc-resistance-break": {
-      "triggered": true,
+      "triggered": false,
       "last_triggered_at": "2026-09-14 23:05:19"
     },
     "btc-support-break": {
@@ -12,7 +12,7 @@
     },
     "eth-resistance-break": {
       "triggered": true,
-      "last_triggered_at": "2026-09-14 23:05:19"
+      "last_triggered_at": "2026-09-14 23:10:21"
     },
     "eth-support-break": {
       "triggered": false,
@@ -295,7 +295,7 @@
         ],
         [
           "Stretch from long-term average",
-          "+47.6% above its long-term average - very stretched",
+          "+45.2% above its long-term average - very stretched",
           -2
         ],
         [
@@ -308,12 +308,12 @@
       "id": "hyperliquid",
       "symbol": "HYPE",
       "name": "Hyperliquid",
-      "price": 81.4,
-      "pct_24h": 3.90187,
-      "pct_7d": -3.8,
+      "price": 80.08,
+      "pct_24h": 3.38436,
+      "pct_7d": -6.0,
       "support_30d": 57.1155488189019,
       "resistance_30d": 87.951916819731,
-      "as_of": "2026-09-14 19:15:23",
+      "as_of": "2026-09-14 23:10:21",
       "stale": false
     },
     "dogecoin": {
@@ -775,7 +775,7 @@
         ],
         [
           "Stretch from long-term average",
-          "-9.0% vs its long-term average - not stretched either way",
+          "-9.1% vs its long-term average - not stretched either way",
           0
         ],
         [
@@ -788,12 +788,12 @@
       "id": "kucoin-shares",
       "symbol": "KCS",
       "name": "KuCoin",
-      "price": 6.94,
-      "pct_24h": 1.78666,
-      "pct_7d": -0.9,
+      "price": 6.93,
+      "pct_24h": 1.56887,
+      "pct_7d": -1.2,
       "support_30d": 6.514591596607885,
       "resistance_30d": 7.8821382735057615,
-      "as_of": "2026-09-14 22:45:22",
+      "as_of": "2026-09-14 23:10:21",
       "stale": false
     },
     "hedera-hashgraph": {
@@ -1317,11 +1317,11 @@
       "symbol": "HTX",
       "name": "HTX DAO",
       "price": 1.7e-06,
-      "pct_24h": -0.22928,
-      "pct_7d": 0.9,
+      "pct_24h": 0.09544,
+      "pct_7d": 2.0,
       "support_30d": 1.6023985995039954e-06,
       "resistance_30d": 1.7873095460323824e-06,
-      "as_of": "2026-09-14 16:10:23",
+      "as_of": "2026-09-14 23:10:21",
       "stale": false
     },
     "superstate-short-duration-us-government-securities-fund-ustb": {
@@ -3349,10 +3349,10 @@
         "name": "Zcash",
         "tf": "15m",
         "entry": 1132.75,
-        "stop": 1120.2996666666668,
-        "target1": 1145.2003333333332,
-        "target2": 1157.6506666666664,
-        "opened_at": "2026-09-14T23:07:16.747401"
+        "stop": 1120.299,
+        "target1": 1145.201,
+        "target2": 1157.652,
+        "opened_at": "2026-09-14T23:12:17.661882"
       },
       "1h:ETC": {
         "coin": "ETC",
@@ -3362,7 +3362,7 @@
         "stop": 7.3838333333333335,
         "target1": 7.462166666666667,
         "target2": 7.501333333333333,
-        "opened_at": "2026-09-14T23:07:16.747401"
+        "opened_at": "2026-09-14T23:12:17.661882"
       }
     },
     "resolved": [
@@ -23983,6 +23983,32 @@
         "result": "win",
         "resolved_at": "2026-09-14T23:07:16.747401",
         "exit_price": 7.587
+      },
+      {
+        "coin": "ZEC",
+        "name": "Zcash",
+        "tf": "15m",
+        "entry": 1132.75,
+        "stop": 1120.2996666666668,
+        "target1": 1145.2003333333332,
+        "target2": 1157.6506666666664,
+        "opened_at": "2026-09-14T23:07:16.747401",
+        "result": "win",
+        "resolved_at": "2026-09-14T23:12:17.661882",
+        "exit_price": 1169.21
+      },
+      {
+        "coin": "ETC",
+        "name": "Ethereum Classic",
+        "tf": "1h",
+        "entry": 7.423,
+        "stop": 7.3838333333333335,
+        "target1": 7.462166666666667,
+        "target2": 7.501333333333333,
+        "opened_at": "2026-09-14T23:07:16.747401",
+        "result": "win",
+        "resolved_at": "2026-09-14T23:12:17.661882",
+        "exit_price": 7.587
       }
     ]
   },
@@ -23990,14 +24016,14 @@
     "key": "BTC",
     "name": "Bitcoin",
     "emoji": "\u20bf",
-    "price": 78455,
+    "price": 78413,
     "high_24h": 79530,
     "low_24h": 76439,
-    "pct_24h": 2.2962,
+    "pct_24h": 2.27038,
     "pct_7d": -0.8,
     "pct_30d": 24.5,
-    "sma50": 71421.98115571313,
-    "sma200": 70181.5049635192,
+    "sma50": 71421.02685914632,
+    "sma200": 70181.2663893775,
     "support_30d": 62843.70368466329,
     "resistance_30d": 81264.70153038795,
     "mark_price": 78726.74180435,
@@ -24012,16 +24038,16 @@
     "key": "ETH",
     "name": "Ethereum",
     "emoji": "\u039e",
-    "price": 2528.62,
+    "price": 2528.08,
     "high_24h": 2607.56,
     "low_24h": 2467.86,
-    "pct_24h": 2.11116,
+    "pct_24h": 2.0998,
     "pct_7d": 1.7,
     "pct_30d": 34.5,
-    "sma50": 2197.422501310036,
-    "sma200": 2059.9063904920117,
+    "sma50": 2197.407570301801,
+    "sma200": 2059.9026577399527,
     "support_30d": 1874.401898191962,
-    "resistance_30d": 2528.830578423374,
+    "resistance_30d": 2528.084028011637,
     "mark_price": 2544.79927907,
     "index_price": 2546.0372093,
     "funding_rate": 4.186e-05,
