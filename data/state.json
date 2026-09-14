@@ -4,7 +4,7 @@
   "_alerts_state": {
     "btc-resistance-break": {
       "triggered": true,
-      "last_triggered_at": "2026-09-14 23:00:33"
+      "last_triggered_at": "2026-09-14 23:05:19"
     },
     "btc-support-break": {
       "triggered": false,
@@ -12,7 +12,7 @@
     },
     "eth-resistance-break": {
       "triggered": true,
-      "last_triggered_at": "2026-09-14 23:00:33"
+      "last_triggered_at": "2026-09-14 23:05:19"
     },
     "eth-support-break": {
       "triggered": false,
@@ -55,7 +55,7 @@
         ],
         [
           "Stretch from long-term average",
-          "+15.7% above its long-term average - a bit stretched",
+          "+15.1% above its long-term average - a bit stretched",
           -1
         ],
         [
@@ -68,12 +68,12 @@
       "id": "binancecoin",
       "symbol": "BNB",
       "name": "BNB",
-      "price": 724.21,
-      "pct_24h": 0.90295,
+      "price": 720.4,
+      "pct_24h": 0.53837,
       "pct_7d": -2.2,
       "support_30d": 602.4629221231862,
       "resistance_30d": 766.4092879330625,
-      "as_of": "2026-09-14 22:16:40",
+      "as_of": "2026-09-14 23:05:19",
       "stale": false
     },
     "ripple": {
@@ -967,7 +967,7 @@
         ],
         [
           "Stretch from long-term average",
-          "+6.3% vs its long-term average - not stretched either way",
+          "+6.1% vs its long-term average - not stretched either way",
           0
         ],
         [
@@ -980,12 +980,12 @@
       "id": "aster-2",
       "symbol": "ASTER",
       "name": "Aster",
-      "price": 0.703605,
-      "pct_24h": 2.573,
+      "price": 0.702547,
+      "pct_24h": 2.36347,
       "pct_7d": -8.4,
       "support_30d": 0.5986101196690307,
       "resistance_30d": 0.7868111056215635,
-      "as_of": "2026-09-14 22:55:17",
+      "as_of": "2026-09-14 23:05:19",
       "stale": false
     },
     "worldcoin-wld": {
@@ -2359,7 +2359,7 @@
         ],
         [
           "Stretch from long-term average",
-          "-3.9% vs its long-term average - not stretched either way",
+          "-4.9% vs its long-term average - not stretched either way",
           0
         ],
         [
@@ -2372,12 +2372,12 @@
       "id": "sky",
       "symbol": "SKY",
       "name": "Sky",
-      "price": 0.06414,
-      "pct_24h": 1.67977,
-      "pct_7d": -7.2,
+      "price": 0.063441,
+      "pct_24h": 2.46309,
+      "pct_7d": -7.4,
       "support_30d": 0.05267730579754281,
       "resistance_30d": 0.07314868186988309,
-      "as_of": "2026-09-14 18:35:19",
+      "as_of": "2026-09-14 23:05:19",
       "stale": false
     },
     "shiba-inu": {
@@ -3349,20 +3349,20 @@
         "name": "Zcash",
         "tf": "15m",
         "entry": 1132.75,
-        "stop": 1120.4033333333334,
-        "target1": 1145.0966666666666,
-        "target2": 1157.4433333333332,
-        "opened_at": "2026-09-14T23:02:30.727933"
+        "stop": 1120.2996666666668,
+        "target1": 1145.2003333333332,
+        "target2": 1157.6506666666664,
+        "opened_at": "2026-09-14T23:07:16.747401"
       },
       "1h:ETC": {
         "coin": "ETC",
         "name": "Ethereum Classic",
         "tf": "1h",
         "entry": 7.423,
-        "stop": 7.383958333333333,
-        "target1": 7.462041666666667,
-        "target2": 7.501083333333334,
-        "opened_at": "2026-09-14T23:02:30.727933"
+        "stop": 7.3838333333333335,
+        "target1": 7.462166666666667,
+        "target2": 7.501333333333333,
+        "opened_at": "2026-09-14T23:07:16.747401"
       }
     },
     "resolved": [
@@ -23957,6 +23957,32 @@
         "result": "win",
         "resolved_at": "2026-09-14T23:02:30.727933",
         "exit_price": 0.1171
+      },
+      {
+        "coin": "ZEC",
+        "name": "Zcash",
+        "tf": "15m",
+        "entry": 1132.75,
+        "stop": 1120.4033333333334,
+        "target1": 1145.0966666666666,
+        "target2": 1157.4433333333332,
+        "opened_at": "2026-09-14T23:02:30.727933",
+        "result": "win",
+        "resolved_at": "2026-09-14T23:07:16.747401",
+        "exit_price": 1168.05
+      },
+      {
+        "coin": "ETC",
+        "name": "Ethereum Classic",
+        "tf": "1h",
+        "entry": 7.423,
+        "stop": 7.383958333333333,
+        "target1": 7.462041666666667,
+        "target2": 7.501083333333334,
+        "opened_at": "2026-09-14T23:02:30.727933",
+        "result": "win",
+        "resolved_at": "2026-09-14T23:07:16.747401",
+        "exit_price": 7.587
       }
     ]
   },
@@ -23964,14 +23990,14 @@
     "key": "BTC",
     "name": "Bitcoin",
     "emoji": "\u20bf",
-    "price": 78546,
+    "price": 78455,
     "high_24h": 79530,
     "low_24h": 76439,
-    "pct_24h": 2.42949,
-    "pct_7d": -0.6,
-    "pct_30d": 24.9,
-    "sma50": 71423.65285508186,
-    "sma200": 70181.92288836138,
+    "pct_24h": 2.2962,
+    "pct_7d": -0.8,
+    "pct_30d": 24.5,
+    "sma50": 71421.98115571313,
+    "sma200": 70181.5049635192,
     "support_30d": 62843.70368466329,
     "resistance_30d": 81264.70153038795,
     "mark_price": 78726.74180435,
@@ -23986,16 +24012,16 @@
     "key": "ETH",
     "name": "Ethereum",
     "emoji": "\u039e",
-    "price": 2532.63,
+    "price": 2528.62,
     "high_24h": 2607.56,
     "low_24h": 2467.86,
-    "pct_24h": 2.35457,
-    "pct_7d": 2.1,
-    "pct_30d": 35.4,
-    "sma50": 2197.498429735756,
-    "sma200": 2059.9253725984418,
+    "pct_24h": 2.11116,
+    "pct_7d": 1.7,
+    "pct_30d": 34.5,
+    "sma50": 2197.422501310036,
+    "sma200": 2059.9063904920117,
     "support_30d": 1874.401898191962,
-    "resistance_30d": 2532.626999709387,
+    "resistance_30d": 2528.830578423374,
     "mark_price": 2544.79927907,
     "index_price": 2546.0372093,
     "funding_rate": 4.186e-05,
