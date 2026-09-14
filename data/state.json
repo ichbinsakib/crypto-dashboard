@@ -4,7 +4,7 @@
   "_alerts_state": {
     "btc-resistance-break": {
       "triggered": true,
-      "last_triggered_at": "2026-09-14 21:10:28"
+      "last_triggered_at": "2026-09-14 21:15:23"
     },
     "btc-support-break": {
       "triggered": false,
@@ -12,7 +12,7 @@
     },
     "eth-resistance-break": {
       "triggered": true,
-      "last_triggered_at": "2026-09-14 21:10:28"
+      "last_triggered_at": "2026-09-14 21:15:23"
     },
     "eth-support-break": {
       "triggered": false,
@@ -775,7 +775,7 @@
         ],
         [
           "Stretch from long-term average",
-          "-8.7% vs its long-term average - not stretched either way",
+          "-8.3% vs its long-term average - not stretched either way",
           0
         ],
         [
@@ -788,12 +788,12 @@
       "id": "kucoin-shares",
       "symbol": "KCS",
       "name": "KuCoin",
-      "price": 6.96,
-      "pct_24h": 2.217,
-      "pct_7d": -1.5,
+      "price": 6.99,
+      "pct_24h": 2.09728,
+      "pct_7d": 0.0,
       "support_30d": 6.514591596607885,
       "resistance_30d": 7.8821382735057615,
-      "as_of": "2026-09-14 14:55:24",
+      "as_of": "2026-09-14 21:15:23",
       "stale": false
     },
     "hedera-hashgraph": {
@@ -2503,7 +2503,7 @@
         ],
         [
           "Stretch from long-term average",
-          "-6.5% vs its long-term average - not stretched either way",
+          "-6.4% vs its long-term average - not stretched either way",
           0
         ],
         [
@@ -2516,12 +2516,12 @@
       "id": "quant-network",
       "symbol": "QNT",
       "name": "Quant",
-      "price": 63.99,
-      "pct_24h": -0.57432,
-      "pct_7d": -2.6,
+      "price": 64.03,
+      "pct_24h": -0.47774,
+      "pct_7d": -3.6,
       "support_30d": 55.905981995619285,
       "resistance_30d": 67.13669726469111,
-      "as_of": "2026-09-14 20:05:19",
+      "as_of": "2026-09-14 21:15:23",
       "stale": false
     },
     "tether-gold": {
@@ -2765,14 +2765,14 @@
       "stale": false
     },
     "memecore": {
-      "label": "\ud83d\udfe2 LEAN ACCUMULATE",
-      "status": "bullish",
-      "score": 2,
+      "label": "\ud83d\udfe1 HOLD / NEUTRAL",
+      "status": "neutral",
+      "score": 0,
       "rows": [
         [
           "Price vs. recent range",
-          "Near its 30-day low (~$1.04) - historically a better entry",
-          2
+          "Sitting in the middle of its 30-day range",
+          0
         ],
         [
           "Crowd mood (Fear & Greed)",
@@ -2791,7 +2791,7 @@
         ],
         [
           "Stretch from long-term average",
-          "-47.7% below its long-term average - confirmed downtrend",
+          "-47.4% below its long-term average - confirmed downtrend",
           -1
         ],
         [
@@ -2800,16 +2800,16 @@
           0
         ]
       ],
-      "plain": "Leans toward a decent spot to slowly add (DCA) - not a strong signal, just a lean.",
+      "plain": "No real edge either way right now - fine to just wait and watch.",
       "id": "memecore",
       "symbol": "M",
       "name": "MemeCore",
-      "price": 1.091,
-      "pct_24h": -4.23925,
+      "price": 1.097,
+      "pct_24h": -4.31891,
       "pct_7d": -4.2,
       "support_30d": 1.0402044506518406,
       "resistance_30d": 1.2453913363052769,
-      "as_of": "2026-09-14 20:00:34",
+      "as_of": "2026-09-14 21:15:23",
       "stale": false
     },
     "aave": {
@@ -3342,7 +3342,6 @@
     }
   },
   "_strong_buy_state": {
-    "scanner-15m:CRO": true,
     "scanner-1h:PI": true
   },
   "_pnl_tracker": {
@@ -3356,16 +3355,6 @@
         "target1": 0.09811416666666667,
         "target2": 0.10017833333333334,
         "opened_at": "2026-09-14T20:42:25.838533"
-      },
-      "15m:CRO": {
-        "coin": "CRO",
-        "name": "Cronos",
-        "tf": "15m",
-        "entry": 0.0587,
-        "stop": 0.05852633333333333,
-        "target1": 0.05887366666666667,
-        "target2": 0.05904733333333334,
-        "opened_at": "2026-09-14T21:12:25.492610"
       }
     },
     "resolved": [
@@ -23570,6 +23559,19 @@
         "result": "win",
         "resolved_at": "2026-09-14T21:12:25.492610",
         "exit_price": 0.05974
+      },
+      {
+        "coin": "CRO",
+        "name": "Cronos",
+        "tf": "15m",
+        "entry": 0.0587,
+        "stop": 0.05852633333333333,
+        "target1": 0.05887366666666667,
+        "target2": 0.05904733333333334,
+        "opened_at": "2026-09-14T21:12:25.492610",
+        "result": "win",
+        "resolved_at": "2026-09-14T21:17:19.346922",
+        "exit_price": 0.05974
       }
     ]
   },
@@ -23577,14 +23579,14 @@
     "key": "BTC",
     "name": "Bitcoin",
     "emoji": "\u20bf",
-    "price": 78999,
+    "price": 78916,
     "high_24h": 79530,
     "low_24h": 76439,
-    "pct_24h": 2.18801,
+    "pct_24h": 2.05697,
     "pct_7d": -0.3,
     "pct_30d": 25.5,
-    "sma50": 71432.597429277,
-    "sma200": 70184.15903191018,
+    "sma50": 71431.08262728056,
+    "sma200": 70183.78033141106,
     "support_30d": 62843.70368466329,
     "resistance_30d": 81264.70153038795,
     "mark_price": 79163.5,
@@ -23599,16 +23601,16 @@
     "key": "ETH",
     "name": "Ethereum",
     "emoji": "\u039e",
-    "price": 2560.88,
+    "price": 2555.4,
     "high_24h": 2607.56,
     "low_24h": 2467.86,
-    "pct_24h": 1.90489,
+    "pct_24h": 1.65667,
     "pct_7d": 3.0,
     "pct_30d": 36.5,
-    "sma50": 2198.0561074221387,
-    "sma200": 2060.064792020037,
+    "sma50": 2197.9492042455036,
+    "sma200": 2060.0380662258785,
     "support_30d": 1874.401898191962,
-    "resistance_30d": 2560.510884028523,
+    "resistance_30d": 2555.16572519676,
     "mark_price": 2567.79454334,
     "index_price": 2567.75069767,
     "funding_rate": 1.96e-05,
