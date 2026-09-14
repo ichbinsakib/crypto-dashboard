@@ -4,7 +4,7 @@
   "_alerts_state": {
     "btc-resistance-break": {
       "triggered": true,
-      "last_triggered_at": "2026-09-14 20:00:34"
+      "last_triggered_at": "2026-09-14 20:05:19"
     },
     "btc-support-break": {
       "triggered": false,
@@ -12,7 +12,7 @@
     },
     "eth-resistance-break": {
       "triggered": true,
-      "last_triggered_at": "2026-09-14 20:00:34"
+      "last_triggered_at": "2026-09-14 20:05:19"
     },
     "eth-support-break": {
       "triggered": false,
@@ -212,12 +212,12 @@
       "id": "tron",
       "symbol": "TRX",
       "name": "TRON",
-      "price": 0.340392,
-      "pct_24h": -0.24699,
-      "pct_7d": 2.0,
+      "price": 0.340347,
+      "pct_24h": -0.22765,
+      "pct_7d": 1.8,
       "support_30d": 0.32221537516581966,
       "resistance_30d": 0.3447899585776834,
-      "as_of": "2026-09-14 19:45:21",
+      "as_of": "2026-09-14 20:05:19",
       "stale": false
     },
     "figure-heloc": {
@@ -1735,7 +1735,7 @@
         ],
         [
           "Stretch from long-term average",
-          "-12.7% vs its long-term average - not stretched either way",
+          "-13.1% vs its long-term average - not stretched either way",
           0
         ],
         [
@@ -1748,12 +1748,12 @@
       "id": "sui",
       "symbol": "SUI",
       "name": "Sui",
-      "price": 0.740482,
-      "pct_24h": 2.47217,
-      "pct_7d": -9.8,
+      "price": 0.736505,
+      "pct_24h": 2.4876,
+      "pct_7d": -11.0,
       "support_30d": 0.6514311908607086,
       "resistance_30d": 0.8499161763231283,
-      "as_of": "2026-09-14 18:40:24",
+      "as_of": "2026-09-14 20:05:19",
       "stale": false
     },
     "lighter": {
@@ -2479,12 +2479,12 @@
     "quant-network": {
       "label": "\ud83d\udfe1 HOLD / NEUTRAL",
       "status": "neutral",
-      "score": 1,
+      "score": 0,
       "rows": [
         [
           "Price vs. recent range",
-          "Sitting in the middle of its 30-day range",
-          0
+          "Near its 30-day high (~$67.14) - less room to run",
+          -1
         ],
         [
           "Crowd mood (Fear & Greed)",
@@ -2503,7 +2503,7 @@
         ],
         [
           "Stretch from long-term average",
-          "-6.9% vs its long-term average - not stretched either way",
+          "-6.5% vs its long-term average - not stretched either way",
           0
         ],
         [
@@ -2516,12 +2516,12 @@
       "id": "quant-network",
       "symbol": "QNT",
       "name": "Quant",
-      "price": 63.68,
-      "pct_24h": -2.44555,
-      "pct_7d": -2.1,
+      "price": 63.99,
+      "pct_24h": -0.57432,
+      "pct_7d": -2.6,
       "support_30d": 55.905981995619285,
       "resistance_30d": 67.13669726469111,
-      "as_of": "2026-09-14 18:15:32",
+      "as_of": "2026-09-14 20:05:19",
       "stale": false
     },
     "tether-gold": {
@@ -3364,7 +3364,7 @@
         "stop": 2.6958333333333333,
         "target1": 2.7161666666666666,
         "target2": 2.7263333333333333,
-        "opened_at": "2026-09-14T20:02:47.081337"
+        "opened_at": "2026-09-14T20:07:15.443215"
       }
     },
     "resolved": [
@@ -23374,6 +23374,19 @@
         "result": "win",
         "resolved_at": "2026-09-14T20:02:47.081337",
         "exit_price": 2.78
+      },
+      {
+        "coin": "ICP",
+        "name": "Internet Computer",
+        "tf": "15m",
+        "entry": 2.706,
+        "stop": 2.6958333333333333,
+        "target1": 2.7161666666666666,
+        "target2": 2.7263333333333333,
+        "opened_at": "2026-09-14T20:02:47.081337",
+        "result": "win",
+        "resolved_at": "2026-09-14T20:07:15.443215",
+        "exit_price": 2.78
       }
     ]
   },
@@ -23381,14 +23394,14 @@
     "key": "BTC",
     "name": "Bitcoin",
     "emoji": "\u20bf",
-    "price": 78983,
+    "price": 79002,
     "high_24h": 79292,
     "low_24h": 76439,
-    "pct_24h": 2.2399,
-    "pct_7d": 0.0,
-    "pct_30d": 25.7,
-    "sma50": 71432.4098273097,
-    "sma200": 70184.11213141834,
+    "pct_24h": 2.26649,
+    "pct_7d": -0.3,
+    "pct_30d": 25.4,
+    "sma50": 71432.77554911324,
+    "sma200": 70184.20356186923,
     "support_30d": 62843.70368466329,
     "resistance_30d": 81264.70153038795,
     "mark_price": 77600.0,
@@ -23403,16 +23416,16 @@
     "key": "ETH",
     "name": "Ethereum",
     "emoji": "\u039e",
-    "price": 2539.25,
-    "high_24h": 2543.47,
+    "price": 2542.24,
+    "high_24h": 2547.92,
     "low_24h": 2467.86,
-    "pct_24h": 1.36239,
-    "pct_7d": 1.7,
-    "pct_30d": 34.8,
-    "sma50": 2197.6334926095924,
-    "sma200": 2059.959138316901,
+    "pct_24h": 1.4612,
+    "pct_7d": 1.9,
+    "pct_30d": 35.0,
+    "sma50": 2197.6852481241012,
+    "sma200": 2059.972077195528,
     "support_30d": 1874.401898191962,
-    "resistance_30d": 2539.380143401207,
+    "resistance_30d": 2541.967919126636,
     "mark_price": 2515.82,
     "index_price": 2516.73418605,
     "funding_rate": 8.331e-05,
