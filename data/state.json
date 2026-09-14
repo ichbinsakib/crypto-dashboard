@@ -4,7 +4,7 @@
   "_alerts_state": {
     "btc-resistance-break": {
       "triggered": true,
-      "last_triggered_at": "2026-09-14 20:35:24"
+      "last_triggered_at": "2026-09-14 20:40:23"
     },
     "btc-support-break": {
       "triggered": false,
@@ -12,7 +12,7 @@
     },
     "eth-resistance-break": {
       "triggered": true,
-      "last_triggered_at": "2026-09-14 20:35:24"
+      "last_triggered_at": "2026-09-14 20:40:23"
     },
     "eth-support-break": {
       "triggered": false,
@@ -895,12 +895,12 @@
     "avalanche-2": {
       "label": "\ud83d\udfe1 HOLD / NEUTRAL",
       "status": "neutral",
-      "score": 1,
+      "score": 0,
       "rows": [
         [
           "Price vs. recent range",
-          "Sitting in the middle of its 30-day range",
-          0
+          "Near its 30-day high (~$8.07) - less room to run",
+          -1
         ],
         [
           "Crowd mood (Fear & Greed)",
@@ -919,7 +919,7 @@
         ],
         [
           "Stretch from long-term average",
-          "-4.9% vs its long-term average - not stretched either way",
+          "-3.2% vs its long-term average - not stretched either way",
           0
         ],
         [
@@ -932,12 +932,12 @@
       "id": "avalanche-2",
       "symbol": "AVAX",
       "name": "Avalanche",
-      "price": 7.62,
-      "pct_24h": 2.52955,
-      "pct_7d": -5.6,
+      "price": 7.76,
+      "pct_24h": 4.33416,
+      "pct_7d": -6.1,
       "support_30d": 6.323978670940332,
       "resistance_30d": 8.074275746115342,
-      "as_of": "2026-09-14 18:50:26",
+      "as_of": "2026-09-14 20:40:23",
       "stale": false
     },
     "aster-2": {
@@ -1447,7 +1447,7 @@
         ],
         [
           "Stretch from long-term average",
-          "-9.0% vs its long-term average - not stretched either way",
+          "-8.2% vs its long-term average - not stretched either way",
           0
         ],
         [
@@ -1460,12 +1460,12 @@
       "id": "crypto-com-chain",
       "symbol": "CRO",
       "name": "Cronos",
-      "price": 0.059362,
-      "pct_24h": 1.66119,
-      "pct_7d": 3.6,
+      "price": 0.059831,
+      "pct_24h": 2.49276,
+      "pct_7d": 4.5,
       "support_30d": 0.04621382085807831,
       "resistance_30d": 0.06091104752771909,
-      "as_of": "2026-09-14 19:15:23",
+      "as_of": "2026-09-14 20:40:23",
       "stale": false
     },
     "ethereum-classic": {
@@ -2167,7 +2167,7 @@
         ],
         [
           "Stretch from long-term average",
-          "-29.3% below its long-term average - confirmed downtrend",
+          "-28.0% below its long-term average - confirmed downtrend",
           -1
         ],
         [
@@ -2180,12 +2180,12 @@
       "id": "canton-network",
       "symbol": "CC",
       "name": "Canton",
-      "price": 0.097719,
-      "pct_24h": 1.80098,
-      "pct_7d": -7.8,
+      "price": 0.099558,
+      "pct_24h": 3.45556,
+      "pct_7d": -7.3,
       "support_30d": 0.09051839499501885,
       "resistance_30d": 0.12396615653575341,
-      "as_of": "2026-09-14 19:15:23",
+      "as_of": "2026-09-14 20:40:23",
       "stale": false
     },
     "internet-computer": {
@@ -3341,9 +3341,21 @@
       "stale": false
     }
   },
-  "_strong_buy_state": {},
+  "_strong_buy_state": {
+    "scanner-15m:CRO": true
+  },
   "_pnl_tracker": {
     "open": {
+      "15m:CRO": {
+        "coin": "CRO",
+        "name": "Cronos",
+        "tf": "15m",
+        "entry": 0.05834,
+        "stop": 0.058159333333333334,
+        "target1": 0.05852066666666667,
+        "target2": 0.05870133333333334,
+        "opened_at": "2026-09-14T20:42:25.838533"
+      },
       "1h:PI": {
         "coin": "PI",
         "name": "Pi Network",
@@ -3352,7 +3364,7 @@
         "stop": 0.09398583333333332,
         "target1": 0.09811416666666667,
         "target2": 0.10017833333333334,
-        "opened_at": "2026-09-14T20:37:25.175772"
+        "opened_at": "2026-09-14T20:42:25.838533"
       }
     },
     "resolved": [
@@ -23466,6 +23478,19 @@
         "result": "win",
         "resolved_at": "2026-09-14T20:37:25.175772",
         "exit_price": 0.09829
+      },
+      {
+        "coin": "PI",
+        "name": "Pi Network",
+        "tf": "1h",
+        "entry": 0.09605,
+        "stop": 0.09398583333333332,
+        "target1": 0.09811416666666667,
+        "target2": 0.10017833333333334,
+        "opened_at": "2026-09-14T20:37:25.175772",
+        "result": "win",
+        "resolved_at": "2026-09-14T20:42:25.838533",
+        "exit_price": 0.09813
       }
     ]
   },
@@ -23473,14 +23498,14 @@
     "key": "BTC",
     "name": "Bitcoin",
     "emoji": "\u20bf",
-    "price": 79383,
+    "price": 79373,
     "high_24h": 79292,
     "low_24h": 76439,
-    "pct_24h": 2.66494,
+    "pct_24h": 2.70899,
     "pct_7d": -0.3,
     "pct_30d": 25.4,
-    "sma50": 71440.43014394365,
-    "sma200": 70186.11721057683,
+    "sma50": 71440.55540181098,
+    "sma200": 70186.14852504367,
     "support_30d": 62843.70368466329,
     "resistance_30d": 81264.70153038795,
     "mark_price": 79163.5,
@@ -23495,16 +23520,16 @@
     "key": "ETH",
     "name": "Ethereum",
     "emoji": "\u039e",
-    "price": 2591.17,
+    "price": 2593.76,
     "high_24h": 2547.92,
     "low_24h": 2467.86,
-    "pct_24h": 3.21465,
+    "pct_24h": 3.3955,
     "pct_7d": 1.9,
     "pct_30d": 35.0,
-    "sma50": 2198.6692930773834,
-    "sma200": 2060.2180884338486,
+    "sma50": 2198.733740270757,
+    "sma200": 2060.234200232192,
     "support_30d": 1874.401898191962,
-    "resistance_30d": 2591.170166790738,
+    "resistance_30d": 2594.3925264594363,
     "mark_price": 2567.79454334,
     "index_price": 2567.75069767,
     "funding_rate": 1.96e-05,
