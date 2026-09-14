@@ -727,7 +727,7 @@
         ],
         [
           "Stretch from long-term average",
-          "+8.2% vs its long-term average - not stretched either way",
+          "+8.1% vs its long-term average - not stretched either way",
           0
         ],
         [
@@ -740,12 +740,12 @@
       "id": "stellar",
       "symbol": "XLM",
       "name": "Stellar",
-      "price": 0.190097,
-      "pct_24h": 5.74728,
+      "price": 0.189817,
+      "pct_24h": 5.63571,
       "pct_7d": -2.4,
       "support_30d": 0.15472912151335613,
       "resistance_30d": 0.20181319711037435,
-      "as_of": "2026-09-14 14:45:25",
+      "as_of": "2026-09-14 14:50:27",
       "stale": false
     },
     "kucoin-shares": {
@@ -823,7 +823,7 @@
         ],
         [
           "Stretch from long-term average",
-          "-6.5% vs its long-term average - not stretched either way",
+          "-6.8% vs its long-term average - not stretched either way",
           0
         ],
         [
@@ -836,12 +836,12 @@
       "id": "hedera-hashgraph",
       "symbol": "HBAR",
       "name": "Hedera",
-      "price": 0.076835,
-      "pct_24h": 0.59647,
+      "price": 0.076592,
+      "pct_24h": 0.45056,
       "pct_7d": -7.6,
       "support_30d": 0.06461260477975343,
       "resistance_30d": 0.08182180696524229,
-      "as_of": "2026-09-14 14:15:28",
+      "as_of": "2026-09-14 14:50:27",
       "stale": false
     },
     "pepe": {
@@ -2071,7 +2071,7 @@
         ],
         [
           "Stretch from long-term average",
-          "-30.1% below its long-term average - confirmed downtrend",
+          "-30.2% below its long-term average - confirmed downtrend",
           -1
         ],
         [
@@ -2084,12 +2084,12 @@
       "id": "pi-network",
       "symbol": "PI",
       "name": "Pi Network",
-      "price": 0.097232,
-      "pct_24h": -0.72857,
+      "price": 0.097144,
+      "pct_24h": -0.64596,
       "pct_7d": 2.6,
       "support_30d": 0.08559695435343688,
       "resistance_30d": 0.09798925329339339,
-      "as_of": "2026-09-14 14:10:24",
+      "as_of": "2026-09-14 14:50:27",
       "stale": false
     },
     "ondo-finance": {
@@ -3342,6 +3342,8 @@
     }
   },
   "_strong_buy_state": {
+    "scanner-15m:XLM": true,
+    "scanner-15m:PI": true,
     "scanner-1h:PI": true
   },
   "_pnl_tracker": {
@@ -3355,6 +3357,26 @@
         "target1": 0.09751333333333334,
         "target2": 0.09928666666666668,
         "opened_at": "2026-09-14T14:02:41.286056"
+      },
+      "15m:XLM": {
+        "coin": "XLM",
+        "name": "Stellar",
+        "tf": "15m",
+        "entry": 0.183075,
+        "stop": 0.1816181,
+        "target1": 0.18453189999999997,
+        "target2": 0.18598879999999995,
+        "opened_at": "2026-09-14T14:52:47.631909"
+      },
+      "15m:PI": {
+        "coin": "PI",
+        "name": "Pi Network",
+        "tf": "15m",
+        "entry": 0.09633,
+        "stop": 0.09541266666666667,
+        "target1": 0.09724733333333332,
+        "target2": 0.09816466666666665,
+        "opened_at": "2026-09-14T14:52:47.631909"
       }
     },
     "resolved": [
@@ -21980,14 +22002,14 @@
     "key": "BTC",
     "name": "Bitcoin",
     "emoji": "\u20bf",
-    "price": 78404,
+    "price": 78424,
     "high_24h": 78399,
     "low_24h": 76439,
-    "pct_24h": 1.59695,
+    "pct_24h": 1.60787,
     "pct_7d": -1.8,
     "pct_30d": 24.0,
-    "sma50": 71420.8406978488,
-    "sma200": 70181.21984905313,
+    "sma50": 71421.68104145073,
+    "sma200": 70181.42993495362,
     "support_30d": 62843.70368466329,
     "resistance_30d": 81264.70153038795,
     "mark_price": 77600.0,
@@ -22002,14 +22024,14 @@
     "key": "ETH",
     "name": "Ethereum",
     "emoji": "\u039e",
-    "price": 2499.16,
+    "price": 2504.48,
     "high_24h": 2531.64,
     "low_24h": 2467.86,
-    "pct_24h": 0.28887,
+    "pct_24h": 0.49694,
     "pct_7d": -0.2,
     "pct_30d": 32.8,
-    "sma50": 2196.836029679255,
-    "sma200": 2059.7597725843166,
+    "sma50": 2196.93485715323,
+    "sma200": 2059.78447945281,
     "support_30d": 1874.401898191962,
     "resistance_30d": 2525.267261590238,
     "mark_price": 2515.82,
