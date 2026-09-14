@@ -4,7 +4,7 @@
   "_alerts_state": {
     "btc-resistance-break": {
       "triggered": true,
-      "last_triggered_at": "2026-09-14 19:30:33"
+      "last_triggered_at": "2026-09-14 19:35:19"
     },
     "btc-support-break": {
       "triggered": false,
@@ -12,7 +12,7 @@
     },
     "eth-resistance-break": {
       "triggered": true,
-      "last_triggered_at": "2026-09-14 19:30:33"
+      "last_triggered_at": "2026-09-14 19:35:19"
     },
     "eth-support-break": {
       "triggered": false,
@@ -151,7 +151,7 @@
         ],
         [
           "Stretch from long-term average",
-          "+24.3% above its long-term average - a bit stretched",
+          "+24.2% above its long-term average - a bit stretched",
           -1
         ],
         [
@@ -164,12 +164,12 @@
       "id": "solana",
       "symbol": "SOL",
       "name": "Solana",
-      "price": 103.4,
-      "pct_24h": 2.15827,
+      "price": 103.35,
+      "pct_24h": 2.39807,
       "pct_7d": -0.4,
       "support_30d": 74.5477464048606,
       "resistance_30d": 109.17730597799657,
-      "as_of": "2026-09-14 19:05:20",
+      "as_of": "2026-09-14 19:35:19",
       "stale": false
     },
     "tron": {
@@ -980,12 +980,12 @@
       "id": "aster-2",
       "symbol": "ASTER",
       "name": "Aster",
-      "price": 0.703263,
-      "pct_24h": 0.58089,
+      "price": 0.703397,
+      "pct_24h": 0.80573,
       "pct_7d": -8.9,
       "support_30d": 0.5986101196690307,
       "resistance_30d": 0.7868111056215635,
-      "as_of": "2026-09-14 18:45:24",
+      "as_of": "2026-09-14 19:35:19",
       "stale": false
     },
     "worldcoin-wld": {
@@ -1124,12 +1124,12 @@
       "id": "polygon-ecosystem-token",
       "symbol": "POL",
       "name": "POL (ex-MATIC)",
-      "price": 0.097487,
-      "pct_24h": 0.03606,
-      "pct_7d": 1.5,
+      "price": 0.097448,
+      "pct_24h": 0.29226,
+      "pct_7d": 1.8,
       "support_30d": 0.07481366852260064,
       "resistance_30d": 0.12250456198546959,
-      "as_of": "2026-09-14 18:45:24",
+      "as_of": "2026-09-14 19:35:19",
       "stale": false
     },
     "blackrock-usd-institutional-digital-liquidity-fund": {
@@ -3342,21 +3342,10 @@
     }
   },
   "_strong_buy_state": {
-    "scanner-15m:ICP": true,
-    "scanner-1h:PI": true
+    "scanner-15m:ICP": true
   },
   "_pnl_tracker": {
     "open": {
-      "1h:PI": {
-        "coin": "PI",
-        "name": "Pi Network",
-        "tf": "1h",
-        "entry": 0.09605,
-        "stop": 0.09399541666666666,
-        "target1": 0.09810458333333333,
-        "target2": 0.10015916666666666,
-        "opened_at": "2026-09-14T19:16:41.293703"
-      },
       "15m:ICP": {
         "coin": "ICP",
         "name": "Internet Computer",
@@ -3365,7 +3354,17 @@
         "stop": 2.6957,
         "target1": 2.7163,
         "target2": 2.7266,
-        "opened_at": "2026-09-14T19:32:33.464084"
+        "opened_at": "2026-09-14T19:37:16.853601"
+      },
+      "1h:PI": {
+        "coin": "PI",
+        "name": "Pi Network",
+        "tf": "1h",
+        "entry": 0.09605,
+        "stop": 0.09396791666666666,
+        "target1": 0.09813208333333333,
+        "target2": 0.10021416666666666,
+        "opened_at": "2026-09-14T19:37:16.853601"
       }
     },
     "resolved": [
@@ -23284,6 +23283,32 @@
         "result": "win",
         "resolved_at": "2026-09-14T19:32:33.464084",
         "exit_price": 2.78
+      },
+      {
+        "coin": "PI",
+        "name": "Pi Network",
+        "tf": "1h",
+        "entry": 0.09605,
+        "stop": 0.09399541666666666,
+        "target1": 0.09810458333333333,
+        "target2": 0.10015916666666666,
+        "opened_at": "2026-09-14T19:16:41.293703",
+        "result": "win",
+        "resolved_at": "2026-09-14T19:37:16.853601",
+        "exit_price": 0.0988
+      },
+      {
+        "coin": "ICP",
+        "name": "Internet Computer",
+        "tf": "15m",
+        "entry": 2.706,
+        "stop": 2.6957,
+        "target1": 2.7163,
+        "target2": 2.7266,
+        "opened_at": "2026-09-14T19:32:33.464084",
+        "result": "win",
+        "resolved_at": "2026-09-14T19:37:16.853601",
+        "exit_price": 2.78
       }
     ]
   },
@@ -23291,14 +23316,14 @@
     "key": "BTC",
     "name": "Bitcoin",
     "emoji": "\u20bf",
-    "price": 79161,
+    "price": 79129,
     "high_24h": 79292,
     "low_24h": 76439,
-    "pct_24h": 2.48322,
+    "pct_24h": 2.47342,
     "pct_7d": 0.0,
     "pct_30d": 25.7,
-    "sma50": 71436.50838100299,
-    "sma200": 70185.13676984167,
+    "sma50": 71435.80084217364,
+    "sma200": 70184.95988513433,
     "support_30d": 62843.70368466329,
     "resistance_30d": 81264.70153038795,
     "mark_price": 77600.0,
@@ -23313,16 +23338,16 @@
     "key": "ETH",
     "name": "Ethereum",
     "emoji": "\u039e",
-    "price": 2545.85,
+    "price": 2543.67,
     "high_24h": 2543.47,
     "low_24h": 2467.86,
-    "pct_24h": 1.54844,
+    "pct_24h": 1.59531,
     "pct_7d": 1.7,
     "pct_30d": 34.8,
-    "sma50": 2197.7628070065953,
-    "sma200": 2059.9914669161512,
+    "sma50": 2197.734636977056,
+    "sma200": 2059.9844244087667,
     "support_30d": 1874.401898191962,
-    "resistance_30d": 2545.8458632513402,
+    "resistance_30d": 2544.4373617743877,
     "mark_price": 2515.82,
     "index_price": 2516.73418605,
     "funding_rate": 8.331e-05,
