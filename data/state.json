@@ -3,7 +3,7 @@
   "_fng_classification": "Greed",
   "_alerts_state": {
     "btc-resistance-break": {
-      "triggered": true,
+      "triggered": false,
       "last_triggered_at": "2026-09-14 14:40:30"
     },
     "btc-support-break": {
@@ -727,7 +727,7 @@
         ],
         [
           "Stretch from long-term average",
-          "+8.0% vs its long-term average - not stretched either way",
+          "+8.2% vs its long-term average - not stretched either way",
           0
         ],
         [
@@ -740,12 +740,12 @@
       "id": "stellar",
       "symbol": "XLM",
       "name": "Stellar",
-      "price": 0.189751,
-      "pct_24h": 6.37575,
-      "pct_7d": -0.5,
+      "price": 0.190097,
+      "pct_24h": 5.74728,
+      "pct_7d": -2.4,
       "support_30d": 0.15472912151335613,
       "resistance_30d": 0.20181319711037435,
-      "as_of": "2026-09-14 11:50:25",
+      "as_of": "2026-09-14 14:45:25",
       "stale": false
     },
     "kucoin-shares": {
@@ -1927,7 +1927,7 @@
         ],
         [
           "Stretch from long-term average",
-          "-1.2% vs its long-term average - not stretched either way",
+          "-1.4% vs its long-term average - not stretched either way",
           0
         ],
         [
@@ -1940,12 +1940,12 @@
       "id": "mantle",
       "symbol": "MNT",
       "name": "Mantle",
-      "price": 0.567027,
-      "pct_24h": 0.01026,
+      "price": 0.565928,
+      "pct_24h": -0.34476,
       "pct_7d": -11.5,
       "support_30d": 0.42660592418086046,
       "resistance_30d": 0.6365218632454678,
-      "as_of": "2026-09-14 14:30:37",
+      "as_of": "2026-09-14 14:45:25",
       "stale": false
     },
     "polkadot": {
@@ -3079,7 +3079,7 @@
         ],
         [
           "Stretch from long-term average",
-          "+33.7% above its long-term average - very stretched",
+          "+34.2% above its long-term average - very stretched",
           -2
         ],
         [
@@ -3092,12 +3092,12 @@
       "id": "arbitrum",
       "symbol": "ARB",
       "name": "Arbitrum",
-      "price": 0.13442,
-      "pct_24h": -2.00124,
-      "pct_7d": -18.7,
+      "price": 0.134999,
+      "pct_24h": -3.60384,
+      "pct_7d": -18.2,
       "support_30d": 0.07348670709752918,
       "resistance_30d": 0.18933387703114857,
-      "as_of": "2026-09-14 13:00:40",
+      "as_of": "2026-09-14 14:45:25",
       "stale": false
     },
     "dash": {
@@ -3355,16 +3355,6 @@
         "target1": 0.09751333333333334,
         "target2": 0.09928666666666668,
         "opened_at": "2026-09-14T14:02:41.286056"
-      },
-      "15m:PUMP": {
-        "coin": "PUMP",
-        "name": "Pump.fun",
-        "tf": "15m",
-        "entry": 0.00357,
-        "stop": 0.0035441666666666664,
-        "target1": 0.0035958333333333333,
-        "target2": 0.0036216666666666667,
-        "opened_at": "2026-09-14T14:42:32.783822"
       }
     },
     "resolved": [
@@ -21970,6 +21960,19 @@
         "result": "win",
         "resolved_at": "2026-09-14T14:42:32.783822",
         "exit_price": 0.00361
+      },
+      {
+        "coin": "PUMP",
+        "name": "Pump.fun",
+        "tf": "15m",
+        "entry": 0.00357,
+        "stop": 0.0035441666666666664,
+        "target1": 0.0035958333333333333,
+        "target2": 0.0036216666666666667,
+        "opened_at": "2026-09-14T14:42:32.783822",
+        "result": "win",
+        "resolved_at": "2026-09-14T14:47:24.852871",
+        "exit_price": 0.003617
       }
     ]
   },
@@ -21977,14 +21980,14 @@
     "key": "BTC",
     "name": "Bitcoin",
     "emoji": "\u20bf",
-    "price": 78446,
+    "price": 78404,
     "high_24h": 78399,
     "low_24h": 76439,
-    "pct_24h": 1.56664,
+    "pct_24h": 1.59695,
     "pct_7d": -1.8,
     "pct_30d": 24.0,
-    "sma50": 71421.12091350558,
-    "sma200": 70181.28990296731,
+    "sma50": 71420.8406978488,
+    "sma200": 70181.21984905313,
     "support_30d": 62843.70368466329,
     "resistance_30d": 81264.70153038795,
     "mark_price": 77600.0,
@@ -21999,14 +22002,14 @@
     "key": "ETH",
     "name": "Ethereum",
     "emoji": "\u039e",
-    "price": 2503.45,
+    "price": 2499.16,
     "high_24h": 2531.64,
     "low_24h": 2467.86,
-    "pct_24h": 0.36991,
+    "pct_24h": 0.28887,
     "pct_7d": -0.2,
     "pct_30d": 32.8,
-    "sma50": 2196.888620767247,
-    "sma200": 2059.7729203563144,
+    "sma50": 2196.836029679255,
+    "sma200": 2059.7597725843166,
     "support_30d": 1874.401898191962,
     "resistance_30d": 2525.267261590238,
     "mark_price": 2515.82,
