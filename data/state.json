@@ -3,8 +3,8 @@
   "_fng_classification": "Greed",
   "_alerts_state": {
     "btc-resistance-break": {
-      "triggered": false,
-      "last_triggered_at": "2026-09-11 15:50:30"
+      "triggered": true,
+      "last_triggered_at": "2026-09-14 14:20:26"
     },
     "btc-support-break": {
       "triggered": false,
@@ -1543,7 +1543,7 @@
         ],
         [
           "Stretch from long-term average",
-          "+66.6% above its long-term average - very stretched",
+          "+68.5% above its long-term average - very stretched",
           -2
         ],
         [
@@ -1556,12 +1556,12 @@
       "id": "pump-fun",
       "symbol": "PUMP",
       "name": "Pump.fun",
-      "price": 0.00360005,
-      "pct_24h": -2.89644,
-      "pct_7d": -20.5,
+      "price": 0.00364241,
+      "pct_24h": -1.5976,
+      "pct_7d": -19.7,
       "support_30d": 0.002666433318189806,
       "resistance_30d": 0.0052249885406471875,
-      "as_of": "2026-09-14 13:00:40",
+      "as_of": "2026-09-14 14:20:26",
       "stale": false
     },
     "venice-token": {
@@ -2325,11 +2325,11 @@
       "symbol": "GRAM",
       "name": "Gram (prev. Toncoin)",
       "price": 1.35,
-      "pct_24h": 0.05142,
+      "pct_24h": 0.15033,
       "pct_7d": -4.8,
       "support_30d": 1.3170990455791696,
       "resistance_30d": 1.4926762805297678,
-      "as_of": "2026-09-14 14:00:40",
+      "as_of": "2026-09-14 14:20:26",
       "stale": false
     },
     "sky": {
@@ -2407,7 +2407,7 @@
         ],
         [
           "Stretch from long-term average",
-          "-2.5% vs its long-term average - not stretched either way",
+          "-1.6% vs its long-term average - not stretched either way",
           0
         ],
         [
@@ -2420,12 +2420,12 @@
       "id": "shiba-inu",
       "symbol": "SHIB",
       "name": "Shiba Inu",
-      "price": 5.21e-06,
-      "pct_24h": 0.37062,
-      "pct_7d": -4.0,
+      "price": 5.26e-06,
+      "pct_24h": 0.69794,
+      "pct_7d": -5.6,
       "support_30d": 4.41190416053175e-06,
       "resistance_30d": 5.903506876405612e-06,
-      "as_of": "2026-09-14 09:45:23",
+      "as_of": "2026-09-14 14:20:26",
       "stale": false
     },
     "near": {
@@ -3361,10 +3361,10 @@
         "name": "Pump.fun",
         "tf": "15m",
         "entry": 0.00357,
-        "stop": 0.0035460333333333332,
-        "target1": 0.0035939666666666664,
-        "target2": 0.003617933333333333,
-        "opened_at": "2026-09-14T14:16:41.113111"
+        "stop": 0.0035445999999999997,
+        "target1": 0.0035954,
+        "target2": 0.0036208,
+        "opened_at": "2026-09-14T14:22:27.265932"
       }
     },
     "resolved": [
@@ -21905,6 +21905,19 @@
         "result": "win",
         "resolved_at": "2026-09-14T14:16:41.113111",
         "exit_price": 0.003647
+      },
+      {
+        "coin": "PUMP",
+        "name": "Pump.fun",
+        "tf": "15m",
+        "entry": 0.00357,
+        "stop": 0.0035460333333333332,
+        "target1": 0.0035939666666666664,
+        "target2": 0.003617933333333333,
+        "opened_at": "2026-09-14T14:16:41.113111",
+        "result": "win",
+        "resolved_at": "2026-09-14T14:22:27.265932",
+        "exit_price": 0.003619
       }
     ]
   },
@@ -21912,14 +21925,14 @@
     "key": "BTC",
     "name": "Bitcoin",
     "emoji": "\u20bf",
-    "price": 78379,
+    "price": 78487,
     "high_24h": 78399,
     "low_24h": 76439,
-    "pct_24h": 1.8513,
+    "pct_24h": 1.89112,
     "pct_7d": -1.8,
     "pct_30d": 24.0,
-    "sma50": 71421.00824386839,
-    "sma200": 70181.26173555803,
+    "sma50": 71422.93257099151,
+    "sma200": 70181.7428173388,
     "support_30d": 62843.70368466329,
     "resistance_30d": 81264.70153038795,
     "mark_price": 77600.0,
@@ -21934,14 +21947,14 @@
     "key": "ETH",
     "name": "Ethereum",
     "emoji": "\u039e",
-    "price": 2510.11,
+    "price": 2511.35,
     "high_24h": 2531.64,
     "low_24h": 2467.86,
-    "pct_24h": 1.08199,
+    "pct_24h": 0.98212,
     "pct_7d": -0.2,
     "pct_30d": 32.8,
-    "sma50": 2197.061168994767,
-    "sma200": 2059.8160574131944,
+    "sma50": 2197.094764820405,
+    "sma200": 2059.824456369604,
     "support_30d": 1874.401898191962,
     "resistance_30d": 2525.267261590238,
     "mark_price": 2515.82,
