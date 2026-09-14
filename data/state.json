@@ -4,7 +4,7 @@
   "_alerts_state": {
     "btc-resistance-break": {
       "triggered": true,
-      "last_triggered_at": "2026-09-14 22:20:25"
+      "last_triggered_at": "2026-09-14 22:25:18"
     },
     "btc-support-break": {
       "triggered": false,
@@ -12,7 +12,7 @@
     },
     "eth-resistance-break": {
       "triggered": true,
-      "last_triggered_at": "2026-09-14 22:20:25"
+      "last_triggered_at": "2026-09-14 22:25:18"
     },
     "eth-support-break": {
       "triggered": false,
@@ -597,11 +597,11 @@
       "symbol": "LEO",
       "name": "LEO Token",
       "price": 9.0,
-      "pct_24h": -0.5794,
-      "pct_7d": -2.1,
-      "support_30d": 8.99881047573017,
+      "pct_24h": -0.07526,
+      "pct_7d": -1.8,
+      "support_30d": 8.99676587671874,
       "resistance_30d": 9.681775974309534,
-      "as_of": "2026-09-14 19:30:33",
+      "as_of": "2026-09-14 22:25:18",
       "stale": false
     },
     "monero": {
@@ -1701,11 +1701,11 @@
       "symbol": "BGB",
       "name": "Bitget Token",
       "price": 1.95,
-      "pct_24h": 0.81333,
-      "pct_7d": -3.1,
+      "pct_24h": 1.07915,
+      "pct_7d": -3.3,
       "support_30d": 1.6478040912714662,
       "resistance_30d": 2.0284940947674617,
-      "as_of": "2026-09-14 21:55:20",
+      "as_of": "2026-09-14 22:25:18",
       "stale": false
     },
     "sui": {
@@ -2612,12 +2612,12 @@
       "id": "bitway",
       "symbol": "BTW",
       "name": "Bitway",
-      "price": 0.590289,
-      "pct_24h": -18.03867,
+      "price": 0.588723,
+      "pct_24h": -18.64354,
       "pct_7d": 31.6,
       "support_30d": 0.3581011744091522,
       "resistance_30d": 0.7325241073378514,
-      "as_of": "2026-09-14 22:05:21",
+      "as_of": "2026-09-14 22:25:18",
       "stale": false
     },
     "world-liberty-financial": {
@@ -3359,10 +3359,10 @@
         "name": "Zcash",
         "tf": "15m",
         "entry": 1132.75,
-        "stop": 1120.237,
-        "target1": 1145.263,
-        "target2": 1157.7759999999998,
-        "opened_at": "2026-09-14T22:22:22.686580"
+        "stop": 1120.162,
+        "target1": 1145.338,
+        "target2": 1157.926,
+        "opened_at": "2026-09-14T22:27:15.336818"
       }
     },
     "resolved": [
@@ -23762,6 +23762,19 @@
         "result": "win",
         "resolved_at": "2026-09-14T22:22:22.686580",
         "exit_price": 1176.72
+      },
+      {
+        "coin": "ZEC",
+        "name": "Zcash",
+        "tf": "15m",
+        "entry": 1132.75,
+        "stop": 1120.237,
+        "target1": 1145.263,
+        "target2": 1157.7759999999998,
+        "opened_at": "2026-09-14T22:22:22.686580",
+        "result": "win",
+        "resolved_at": "2026-09-14T22:27:15.336818",
+        "exit_price": 1177.98
       }
     ]
   },
@@ -23769,14 +23782,14 @@
     "key": "BTC",
     "name": "Bitcoin",
     "emoji": "\u20bf",
-    "price": 78731,
+    "price": 78591,
     "high_24h": 79530,
     "low_24h": 76439,
-    "pct_24h": 2.52873,
+    "pct_24h": 2.37301,
     "pct_7d": -0.6,
     "pct_30d": 24.9,
-    "sma50": 71427.38797044329,
-    "sma200": 70182.85666720175,
+    "sma50": 71424.88150076165,
+    "sma200": 70182.23004978133,
     "support_30d": 62843.70368466329,
     "resistance_30d": 81264.70153038795,
     "mark_price": 78726.74180435,
@@ -23791,16 +23804,16 @@
     "key": "ETH",
     "name": "Ethereum",
     "emoji": "\u039e",
-    "price": 2550.17,
+    "price": 2544.69,
     "high_24h": 2607.56,
     "low_24h": 2467.86,
-    "pct_24h": 2.76529,
+    "pct_24h": 2.67205,
     "pct_7d": 2.1,
     "pct_30d": 35.4,
-    "sma50": 2197.855639551187,
-    "sma200": 2060.0146750522995,
+    "sma50": 2197.7491059081176,
+    "sma200": 2059.988041641532,
     "support_30d": 1874.401898191962,
-    "resistance_30d": 2550.48749048094,
+    "resistance_30d": 2545.1608083274514,
     "mark_price": 2544.79927907,
     "index_price": 2546.0372093,
     "funding_rate": 4.186e-05,
