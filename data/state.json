@@ -117,11 +117,11 @@
       "symbol": "XRP",
       "name": "XRP",
       "price": 1.37,
-      "pct_24h": 0.7035,
-      "pct_7d": -2.6,
+      "pct_24h": 0.64669,
+      "pct_7d": -3.0,
       "support_30d": 0.9927072784932938,
       "resistance_30d": 1.52050482788377,
-      "as_of": "2026-09-14 03:50:22",
+      "as_of": "2026-09-14 04:05:22",
       "stale": false
     },
     "solana": {
@@ -727,7 +727,7 @@
         ],
         [
           "Stretch from long-term average",
-          "+3.3% vs its long-term average - not stretched either way",
+          "+3.5% vs its long-term average - not stretched either way",
           0
         ],
         [
@@ -740,12 +740,12 @@
       "id": "stellar",
       "symbol": "XLM",
       "name": "Stellar",
-      "price": 0.181438,
-      "pct_24h": 0.83607,
-      "pct_7d": -3.0,
+      "price": 0.181771,
+      "pct_24h": 1.10852,
+      "pct_7d": -3.5,
       "support_30d": 0.15472912151335613,
       "resistance_30d": 0.20181319711037435,
-      "as_of": "2026-09-14 03:30:28",
+      "as_of": "2026-09-14 04:05:22",
       "stale": false
     },
     "kucoin-shares": {
@@ -885,11 +885,11 @@
       "symbol": "PEPE",
       "name": "Pepe",
       "price": 3.44e-06,
-      "pct_24h": -0.33185,
+      "pct_24h": -0.39965,
       "pct_7d": -4.8,
       "support_30d": 2.5716563906374582e-06,
       "resistance_30d": 4.122123035488615e-06,
-      "as_of": "2026-09-14 04:00:33",
+      "as_of": "2026-09-14 04:05:22",
       "stale": false
     },
     "avalanche-2": {
@@ -991,7 +991,7 @@
     "worldcoin-wld": {
       "label": "\ud83d\udfe1 HOLD / NEUTRAL",
       "status": "neutral",
-      "score": -1,
+      "score": 0,
       "rows": [
         [
           "Price vs. recent range",
@@ -1010,12 +1010,12 @@
         ],
         [
           "Recent trend",
-          "Trending down - avoid catching a falling knife",
-          -1
+          "Chopping sideways - no clear trend",
+          0
         ],
         [
           "Stretch from long-term average",
-          "+8.0% vs its long-term average - not stretched either way",
+          "+7.8% vs its long-term average - not stretched either way",
           0
         ],
         [
@@ -1028,12 +1028,12 @@
       "id": "worldcoin-wld",
       "symbol": "WLD",
       "name": "Worldcoin",
-      "price": 0.386254,
-      "pct_24h": -2.87316,
-      "pct_7d": -8.3,
+      "price": 0.385571,
+      "pct_24h": -2.56507,
+      "pct_7d": -7.7,
       "support_30d": 0.319812298466522,
       "resistance_30d": 0.4772935995106048,
-      "as_of": "2026-09-14 02:45:20",
+      "as_of": "2026-09-14 04:05:22",
       "stale": false
     },
     "bfusd": {
@@ -1519,7 +1519,7 @@
     "pump-fun": {
       "label": "\ud83d\udd34 DISTRIBUTION ZONE",
       "status": "bearish",
-      "score": -6,
+      "score": -5,
       "rows": [
         [
           "Price vs. recent range",
@@ -1538,12 +1538,12 @@
         ],
         [
           "Recent trend",
-          "Trending down - avoid catching a falling knife",
-          -1
+          "Chopping sideways - no clear trend",
+          0
         ],
         [
           "Stretch from long-term average",
-          "+62.4% above its long-term average - very stretched",
+          "+68.4% above its long-term average - very stretched",
           -2
         ],
         [
@@ -1556,12 +1556,12 @@
       "id": "pump-fun",
       "symbol": "PUMP",
       "name": "Pump.fun",
-      "price": 0.00350894,
-      "pct_24h": -7.39052,
-      "pct_7d": -12.2,
+      "price": 0.00363949,
+      "pct_24h": -2.95151,
+      "pct_7d": -7.9,
       "support_30d": 0.002666433318189806,
       "resistance_30d": 0.0052249885406471875,
-      "as_of": "2026-09-14 00:55:18",
+      "as_of": "2026-09-14 04:05:22",
       "stale": false
     },
     "venice-token": {
@@ -3301,10 +3301,10 @@
         "name": "Lighter",
         "tf": "1h",
         "entry": 0.1089,
-        "stop": 0.107025,
-        "target1": 0.110775,
-        "target2": 0.11265,
-        "opened_at": "2026-09-14T04:02:24.168884"
+        "stop": 0.10700833333333333,
+        "target1": 0.11079166666666666,
+        "target2": 0.11268333333333333,
+        "opened_at": "2026-09-14T04:06:49.371200"
       },
       "daily:XLM": {
         "coin": "XLM",
@@ -3314,7 +3314,7 @@
         "stop": 0.14129453333333333,
         "target1": 0.16305146666666667,
         "target2": 0.17392993333333334,
-        "opened_at": "2026-09-14T04:02:24.168884"
+        "opened_at": "2026-09-14T04:06:49.371200"
       }
     },
     "resolved": [
@@ -19528,6 +19528,32 @@
         "result": "win",
         "resolved_at": "2026-09-14T04:02:24.168884",
         "exit_price": 0.181673
+      },
+      {
+        "coin": "LIT",
+        "name": "Lighter",
+        "tf": "1h",
+        "entry": 0.1089,
+        "stop": 0.107025,
+        "target1": 0.110775,
+        "target2": 0.11265,
+        "opened_at": "2026-09-14T04:02:24.168884",
+        "result": "win",
+        "resolved_at": "2026-09-14T04:06:49.371200",
+        "exit_price": 0.1141
+      },
+      {
+        "coin": "XLM",
+        "name": "Stellar",
+        "tf": "daily",
+        "entry": 0.152173,
+        "stop": 0.14129453333333333,
+        "target1": 0.16305146666666667,
+        "target2": 0.17392993333333334,
+        "opened_at": "2026-09-14T04:02:24.168884",
+        "result": "win",
+        "resolved_at": "2026-09-14T04:06:49.371200",
+        "exit_price": 0.182
       }
     ]
   },
@@ -19535,14 +19561,14 @@
     "key": "BTC",
     "name": "Bitcoin",
     "emoji": "\u20bf",
-    "price": 77515,
-    "high_24h": 77640,
+    "price": 77535,
+    "high_24h": 77811,
     "low_24h": 76439,
-    "pct_24h": 0.42599,
-    "pct_7d": -3.0,
-    "pct_30d": 23.1,
-    "sma50": 71402.92820312725,
-    "sma200": 70176.74172537273,
+    "pct_24h": 0.44942,
+    "pct_7d": -2.9,
+    "pct_30d": 22.9,
+    "sma50": 71403.48859952581,
+    "sma200": 70176.88182447238,
     "support_30d": 62843.70368466329,
     "resistance_30d": 81264.70153038795,
     "mark_price": 77158.0,
@@ -19560,11 +19586,11 @@
     "price": 2511.23,
     "high_24h": 2522.92,
     "low_24h": 2464.63,
-    "pct_24h": -0.38417,
-    "pct_7d": 0.2,
+    "pct_24h": -0.34239,
+    "pct_7d": 0.0,
     "pct_30d": 33.3,
-    "sma50": 2197.0522417679617,
-    "sma200": 2059.813825606493,
+    "sma50": 2197.0704777258197,
+    "sma200": 2059.8183845959575,
     "support_30d": 1874.401898191962,
     "resistance_30d": 2525.267261590238,
     "mark_price": 2521.71641085,
