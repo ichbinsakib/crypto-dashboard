@@ -4,7 +4,7 @@
   "_alerts_state": {
     "btc-resistance-break": {
       "triggered": true,
-      "last_triggered_at": "2026-09-14 22:50:24"
+      "last_triggered_at": "2026-09-14 22:55:17"
     },
     "btc-support-break": {
       "triggered": false,
@@ -12,7 +12,7 @@
     },
     "eth-resistance-break": {
       "triggered": true,
-      "last_triggered_at": "2026-09-14 22:50:24"
+      "last_triggered_at": "2026-09-14 22:55:17"
     },
     "eth-support-break": {
       "triggered": false,
@@ -967,7 +967,7 @@
         ],
         [
           "Stretch from long-term average",
-          "+6.0% vs its long-term average - not stretched either way",
+          "+6.3% vs its long-term average - not stretched either way",
           0
         ],
         [
@@ -980,12 +980,12 @@
       "id": "aster-2",
       "symbol": "ASTER",
       "name": "Aster",
-      "price": 0.701953,
-      "pct_24h": 0.51561,
-      "pct_7d": -8.7,
+      "price": 0.703605,
+      "pct_24h": 2.573,
+      "pct_7d": -8.4,
       "support_30d": 0.5986101196690307,
       "resistance_30d": 0.7868111056215635,
-      "as_of": "2026-09-14 21:05:21",
+      "as_of": "2026-09-14 22:55:17",
       "stale": false
     },
     "worldcoin-wld": {
@@ -1687,7 +1687,7 @@
         ],
         [
           "Stretch from long-term average",
-          "+3.1% vs its long-term average - not stretched either way",
+          "+2.5% vs its long-term average - not stretched either way",
           0
         ],
         [
@@ -1700,12 +1700,12 @@
       "id": "bitget-token",
       "symbol": "BGB",
       "name": "Bitget Token",
-      "price": 1.95,
-      "pct_24h": 1.07915,
+      "price": 1.94,
+      "pct_24h": 0.6874,
       "pct_7d": -3.3,
       "support_30d": 1.6478040912714662,
       "resistance_30d": 2.0284940947674617,
-      "as_of": "2026-09-14 22:25:18",
+      "as_of": "2026-09-14 22:55:17",
       "stale": false
     },
     "sui": {
@@ -2675,7 +2675,7 @@
       "rows": [
         [
           "Price vs. recent range",
-          "Near its 30-day low (~$4,303.12) - historically a better entry",
+          "Near its 30-day low (~$4,302.01) - historically a better entry",
           2
         ],
         [
@@ -2695,7 +2695,7 @@
         ],
         [
           "Stretch from long-term average",
-          "-3.8% vs its long-term average - not stretched either way",
+          "-3.9% vs its long-term average - not stretched either way",
           0
         ],
         [
@@ -2708,12 +2708,12 @@
       "id": "pax-gold",
       "symbol": "PAXG",
       "name": "PAX Gold",
-      "price": 4303.33,
-      "pct_24h": -0.92645,
-      "pct_7d": -2.7,
-      "support_30d": 4303.121519950081,
+      "price": 4300.92,
+      "pct_24h": -0.88937,
+      "pct_7d": -2.4,
+      "support_30d": 4302.005456383976,
       "resistance_30d": 4672.307573354755,
-      "as_of": "2026-09-14 20:30:27",
+      "as_of": "2026-09-14 22:55:17",
       "stale": false
     },
     "morpho": {
@@ -3342,8 +3342,7 @@
     }
   },
   "_strong_buy_state": {
-    "scanner-1h:ETC": true,
-    "scanner-1h:LIT": true
+    "scanner-1h:ETC": true
   },
   "_pnl_tracker": {
     "open": {
@@ -3352,10 +3351,10 @@
         "name": "Zcash",
         "tf": "15m",
         "entry": 1132.75,
-        "stop": 1120.3503333333333,
-        "target1": 1145.1496666666667,
-        "target2": 1157.5493333333334,
-        "opened_at": "2026-09-14T22:52:28.415973"
+        "stop": 1120.297,
+        "target1": 1145.203,
+        "target2": 1157.656,
+        "opened_at": "2026-09-14T22:57:16.138035"
       },
       "1h:ETC": {
         "coin": "ETC",
@@ -3365,7 +3364,7 @@
         "stop": 7.36,
         "target1": 7.444,
         "target2": 7.486,
-        "opened_at": "2026-09-14T22:52:28.415973"
+        "opened_at": "2026-09-14T22:57:16.138035"
       },
       "1h:LIT": {
         "coin": "LIT",
@@ -3375,7 +3374,7 @@
         "stop": 0.10699166666666667,
         "target1": 0.11080833333333333,
         "target2": 0.11271666666666666,
-        "opened_at": "2026-09-14T22:52:28.415973"
+        "opened_at": "2026-09-14T22:57:16.138035"
       }
     },
     "resolved": [
@@ -23892,6 +23891,45 @@
         "result": "win",
         "resolved_at": "2026-09-14T22:52:28.415973",
         "exit_price": 0.1156
+      },
+      {
+        "coin": "ZEC",
+        "name": "Zcash",
+        "tf": "15m",
+        "entry": 1132.75,
+        "stop": 1120.3503333333333,
+        "target1": 1145.1496666666667,
+        "target2": 1157.5493333333334,
+        "opened_at": "2026-09-14T22:52:28.415973",
+        "result": "win",
+        "resolved_at": "2026-09-14T22:57:16.138035",
+        "exit_price": 1169.39
+      },
+      {
+        "coin": "ETC",
+        "name": "Ethereum Classic",
+        "tf": "1h",
+        "entry": 7.402,
+        "stop": 7.36,
+        "target1": 7.444,
+        "target2": 7.486,
+        "opened_at": "2026-09-14T22:52:28.415973",
+        "result": "win",
+        "resolved_at": "2026-09-14T22:57:16.138035",
+        "exit_price": 7.589
+      },
+      {
+        "coin": "LIT",
+        "name": "Lighter",
+        "tf": "1h",
+        "entry": 0.1089,
+        "stop": 0.10699166666666667,
+        "target1": 0.11080833333333333,
+        "target2": 0.11271666666666666,
+        "opened_at": "2026-09-14T22:52:28.415973",
+        "result": "win",
+        "resolved_at": "2026-09-14T22:57:16.138035",
+        "exit_price": 0.1171
       }
     ]
   },
@@ -23899,14 +23937,14 @@
     "key": "BTC",
     "name": "Bitcoin",
     "emoji": "\u20bf",
-    "price": 78588,
+    "price": 78560,
     "high_24h": 79530,
     "low_24h": 76439,
-    "pct_24h": 2.43175,
+    "pct_24h": 2.38331,
     "pct_7d": -0.6,
     "pct_30d": 24.9,
-    "sma50": 71424.4493931336,
-    "sma200": 70182.12202287433,
+    "sma50": 71423.96250879896,
+    "sma200": 70182.00030179067,
     "support_30d": 62843.70368466329,
     "resistance_30d": 81264.70153038795,
     "mark_price": 78726.74180435,
@@ -23921,16 +23959,16 @@
     "key": "ETH",
     "name": "Ethereum",
     "emoji": "\u039e",
-    "price": 2535.83,
+    "price": 2533.53,
     "high_24h": 2607.56,
     "low_24h": 2467.86,
-    "pct_24h": 2.37583,
+    "pct_24h": 2.26329,
     "pct_7d": 2.1,
     "pct_30d": 35.4,
-    "sma50": 2197.5614914466873,
-    "sma200": 2059.9411380261745,
+    "sma50": 2197.5165544504034,
+    "sma200": 2059.9299037771034,
     "support_30d": 1874.401898191962,
-    "resistance_30d": 2535.780085255935,
+    "resistance_30d": 2533.533235441747,
     "mark_price": 2544.79927907,
     "index_price": 2546.0372093,
     "funding_rate": 4.186e-05,
