@@ -280,7 +280,7 @@
         ],
         [
           "Crowd mood (Fear & Greed)",
-          "61/100 - crowd is greedy",
+          "57/100 - crowd is greedy",
           -1
         ],
         [
@@ -295,7 +295,7 @@
         ],
         [
           "Stretch from long-term average",
-          "+40.8% above its long-term average - very stretched",
+          "+41.0% above its long-term average - very stretched",
           -2
         ],
         [
@@ -308,12 +308,12 @@
       "id": "hyperliquid",
       "symbol": "HYPE",
       "name": "Hyperliquid",
-      "price": 77.29,
-      "pct_24h": -3.03755,
-      "pct_7d": -11.7,
-      "support_30d": 56.865841481714526,
+      "price": 77.78,
+      "pct_24h": -1.93026,
+      "pct_7d": -11.5,
+      "support_30d": 57.1155488189019,
       "resistance_30d": 87.951916819731,
-      "as_of": "2026-09-13 23:55:17",
+      "as_of": "2026-09-14 01:05:18",
       "stale": false
     },
     "dogecoin": {
@@ -511,7 +511,7 @@
     "whitebit": {
       "label": "\ud83d\udd34 DISTRIBUTION ZONE",
       "status": "bearish",
-      "score": -5,
+      "score": -6,
       "rows": [
         [
           "Price vs. recent range",
@@ -530,8 +530,8 @@
         ],
         [
           "Recent trend",
-          "Trending up steadily - healthy",
-          1
+          "Chopping sideways - no clear trend",
+          0
         ],
         [
           "Stretch from long-term average",
@@ -549,11 +549,11 @@
       "symbol": "WBT",
       "name": "WhiteBIT Coin",
       "price": 79.58,
-      "pct_24h": -0.82328,
-      "pct_7d": 8.0,
+      "pct_24h": -0.85267,
+      "pct_7d": 7.6,
       "support_30d": 54.452558710928955,
       "resistance_30d": 81.2521953230761,
-      "as_of": "2026-09-14 00:45:24",
+      "as_of": "2026-09-14 01:05:18",
       "stale": false
     },
     "leo-token": {
@@ -2263,7 +2263,7 @@
         ],
         [
           "Stretch from long-term average",
-          "-3.0% vs its long-term average - not stretched either way",
+          "-2.9% vs its long-term average - not stretched either way",
           0
         ],
         [
@@ -2276,12 +2276,12 @@
       "id": "bittensor",
       "symbol": "TAO",
       "name": "Bittensor",
-      "price": 232.46,
-      "pct_24h": -0.11187,
-      "pct_7d": -11.3,
+      "price": 232.54,
+      "pct_24h": 0.09252,
+      "pct_7d": -12.4,
       "support_30d": 190.67093053611111,
       "resistance_30d": 265.7337487161633,
-      "as_of": "2026-09-14 00:20:21",
+      "as_of": "2026-09-14 01:05:18",
       "stale": false
     },
     "the-open-network": {
@@ -3293,7 +3293,9 @@
       "stale": false
     }
   },
-  "_strong_buy_state": {},
+  "_strong_buy_state": {
+    "scanner-1h:WLD": true
+  },
   "_pnl_tracker": {
     "open": {
       "1h:WLD": {
@@ -3324,7 +3326,7 @@
         "stop": 0.14140983333333335,
         "target1": 0.16293616666666666,
         "target2": 0.17369933333333332,
-        "opened_at": "2026-09-14T01:03:00.332582"
+        "opened_at": "2026-09-14T01:07:09.027849"
       }
     },
     "resolved": [
@@ -18602,6 +18604,19 @@
         "result": "win",
         "resolved_at": "2026-09-14T01:03:00.332582",
         "exit_price": 0.17845
+      },
+      {
+        "coin": "XLM",
+        "name": "Stellar",
+        "tf": "daily",
+        "entry": 0.152173,
+        "stop": 0.14140983333333335,
+        "target1": 0.16293616666666666,
+        "target2": 0.17369933333333332,
+        "opened_at": "2026-09-14T01:03:00.332582",
+        "result": "win",
+        "resolved_at": "2026-09-14T01:07:09.027849",
+        "exit_price": 0.178146
       }
     ]
   },
@@ -18611,12 +18626,12 @@
     "emoji": "\u20bf",
     "price": 76797,
     "high_24h": 77406,
-    "low_24h": 76516,
-    "pct_24h": -0.6079,
+    "low_24h": 76439,
+    "pct_24h": -0.5888,
     "pct_7d": -4.4,
     "pct_30d": 21.9,
-    "sma50": 71388.55009399196,
-    "sma200": 70173.14719808892,
+    "sma50": 71388.70987084728,
+    "sma200": 70173.18714230275,
     "support_30d": 62843.70368466329,
     "resistance_30d": 81264.70153038795,
     "mark_price": 77158.0,
@@ -18631,14 +18646,14 @@
     "key": "ETH",
     "name": "Ethereum",
     "emoji": "\u039e",
-    "price": 2484.51,
-    "high_24h": 2526.68,
+    "price": 2484.77,
+    "high_24h": 2525.01,
     "low_24h": 2464.63,
-    "pct_24h": -1.6063,
+    "pct_24h": -1.55048,
     "pct_7d": -1.2,
     "pct_30d": 32.1,
-    "sma50": 2196.5360620053098,
-    "sma200": 2059.68478066583,
+    "sma50": 2196.5299724699757,
+    "sma200": 2059.6832582819966,
     "support_30d": 1874.401898191962,
     "resistance_30d": 2525.267261590238,
     "mark_price": 2521.71641085,
