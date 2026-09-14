@@ -12,7 +12,7 @@
     },
     "eth-resistance-break": {
       "triggered": true,
-      "last_triggered_at": "2026-09-14 23:25:19"
+      "last_triggered_at": "2026-09-14 23:30:27"
     },
     "eth-support-break": {
       "triggered": false,
@@ -2263,7 +2263,7 @@
         ],
         [
           "Stretch from long-term average",
-          "-2.2% vs its long-term average - not stretched either way",
+          "-2.6% vs its long-term average - not stretched either way",
           0
         ],
         [
@@ -2276,12 +2276,12 @@
       "id": "bittensor",
       "symbol": "TAO",
       "name": "Bittensor",
-      "price": 234.35,
-      "pct_24h": 0.05287,
-      "pct_7d": -10.1,
+      "price": 233.24,
+      "pct_24h": 0.34147,
+      "pct_7d": -10.4,
       "support_30d": 190.67093053611111,
       "resistance_30d": 265.7337487161633,
-      "as_of": "2026-09-14 22:05:21",
+      "as_of": "2026-09-14 23:30:27",
       "stale": false
     },
     "the-open-network": {
@@ -2435,7 +2435,7 @@
       "rows": [
         [
           "Price vs. recent range",
-          "Near its 30-day high (~$2.50) - less room to run",
+          "Near its 30-day high (~$2.48) - less room to run",
           -1
         ],
         [
@@ -2455,7 +2455,7 @@
         ],
         [
           "Stretch from long-term average",
-          "+44.7% above its long-term average - very stretched",
+          "+43.5% above its long-term average - very stretched",
           -2
         ],
         [
@@ -2468,12 +2468,12 @@
       "id": "near",
       "symbol": "NEAR",
       "name": "NEAR Protocol",
-      "price": 2.5,
-      "pct_24h": 6.48917,
-      "pct_7d": 9.4,
+      "price": 2.48,
+      "pct_24h": 7.58442,
+      "pct_7d": 8.2,
       "support_30d": 1.5879597131538,
-      "resistance_30d": 2.5000615321636785,
-      "as_of": "2026-09-14 21:45:28",
+      "resistance_30d": 2.4848168147865453,
+      "as_of": "2026-09-14 23:30:27",
       "stale": false
     },
     "quant-network": {
@@ -3223,7 +3223,7 @@
         ],
         [
           "Stretch from long-term average",
-          "+3.0% vs its long-term average - not stretched either way",
+          "+3.7% vs its long-term average - not stretched either way",
           0
         ],
         [
@@ -3236,12 +3236,12 @@
       "id": "kaspa",
       "symbol": "KAS",
       "name": "Kaspa",
-      "price": 0.03475899,
-      "pct_24h": 2.3086,
-      "pct_7d": -4.6,
+      "price": 0.03498426,
+      "pct_24h": 5.49827,
+      "pct_7d": -3.5,
       "support_30d": 0.025275049210175406,
       "resistance_30d": 0.03651282069323304,
-      "as_of": "2026-09-14 22:05:21",
+      "as_of": "2026-09-14 23:30:27",
       "stale": false
     },
     "cosmos": {
@@ -3341,30 +3341,28 @@
       "stale": false
     }
   },
-  "_strong_buy_state": {
-    "scanner-1h:ETC": true
-  },
+  "_strong_buy_state": {},
   "_pnl_tracker": {
     "open": {
       "15m:ZEC": {
         "coin": "ZEC",
         "name": "Zcash",
         "tf": "15m",
-        "entry": 1132.75,
-        "stop": 1120.203,
-        "target1": 1145.297,
-        "target2": 1157.844,
-        "opened_at": "2026-09-14T23:27:17.321070"
+        "entry": 1134.07,
+        "stop": 1121.6236666666666,
+        "target1": 1146.5163333333333,
+        "target2": 1158.9626666666666,
+        "opened_at": "2026-09-14T23:32:24.872294"
       },
       "1h:ETC": {
         "coin": "ETC",
         "name": "Ethereum Classic",
         "tf": "1h",
         "entry": 7.423,
-        "stop": 7.383708333333334,
-        "target1": 7.462291666666666,
-        "target2": 7.501583333333333,
-        "opened_at": "2026-09-14T23:27:17.321070"
+        "stop": 7.383625,
+        "target1": 7.462375,
+        "target2": 7.5017499999999995,
+        "opened_at": "2026-09-14T23:32:24.872294"
       }
     },
     "resolved": [
@@ -24089,6 +24087,32 @@
         "result": "win",
         "resolved_at": "2026-09-14T23:27:17.321070",
         "exit_price": 7.593
+      },
+      {
+        "coin": "ZEC",
+        "name": "Zcash",
+        "tf": "15m",
+        "entry": 1132.75,
+        "stop": 1120.203,
+        "target1": 1145.297,
+        "target2": 1157.844,
+        "opened_at": "2026-09-14T23:27:17.321070",
+        "result": "win",
+        "resolved_at": "2026-09-14T23:32:24.872294",
+        "exit_price": 1165.0
+      },
+      {
+        "coin": "ETC",
+        "name": "Ethereum Classic",
+        "tf": "1h",
+        "entry": 7.423,
+        "stop": 7.383708333333334,
+        "target1": 7.462291666666666,
+        "target2": 7.501583333333333,
+        "opened_at": "2026-09-14T23:27:17.321070",
+        "result": "win",
+        "resolved_at": "2026-09-14T23:32:24.872294",
+        "exit_price": 7.59
       }
     ]
   },
@@ -24096,14 +24120,14 @@
     "key": "BTC",
     "name": "Bitcoin",
     "emoji": "\u20bf",
-    "price": 78363,
+    "price": 78398,
     "high_24h": 79530,
     "low_24h": 76439,
-    "pct_24h": 2.19589,
+    "pct_24h": 2.24544,
     "pct_7d": -0.8,
     "pct_30d": 24.5,
-    "sma50": 71420.0190365137,
-    "sma200": 70181.01443371935,
+    "sma50": 71420.94655672471,
+    "sma200": 70181.2463137721,
     "support_30d": 62843.70368466329,
     "resistance_30d": 81264.70153038795,
     "mark_price": 78726.74180435,
@@ -24118,14 +24142,14 @@
     "key": "ETH",
     "name": "Ethereum",
     "emoji": "\u039e",
-    "price": 2524.76,
+    "price": 2523.77,
     "high_24h": 2607.56,
     "low_24h": 2467.86,
-    "pct_24h": 1.97547,
+    "pct_24h": 2.02144,
     "pct_7d": 1.7,
     "pct_30d": 34.5,
-    "sma50": 2197.32575817725,
-    "sma200": 2059.882204708815,
+    "sma50": 2197.332736061563,
+    "sma200": 2059.883949179893,
     "support_30d": 1874.401898191962,
     "resistance_30d": 2525.267261590238,
     "mark_price": 2544.79927907,
