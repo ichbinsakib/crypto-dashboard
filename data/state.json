@@ -12,7 +12,7 @@
     },
     "eth-resistance-break": {
       "triggered": true,
-      "last_triggered_at": "2026-09-14 09:56:21"
+      "last_triggered_at": "2026-09-14 10:00:38"
     },
     "eth-support-break": {
       "triggered": false,
@@ -415,7 +415,7 @@
     "rain": {
       "label": "\ud83d\udd34 CAUTION - REDUCE NEW BUYS",
       "status": "bearish",
-      "score": -2,
+      "score": -3,
       "rows": [
         [
           "Price vs. recent range",
@@ -439,8 +439,8 @@
         ],
         [
           "Stretch from long-term average",
-          "+29.4% above its long-term average - a bit stretched",
-          -1
+          "+30.3% above its long-term average - very stretched",
+          -2
         ],
         [
           "Leverage traders' bias",
@@ -452,12 +452,12 @@
       "id": "rain",
       "symbol": "RAIN",
       "name": "Rain",
-      "price": 0.01508356,
-      "pct_24h": -1.94788,
-      "pct_7d": -8.7,
+      "price": 0.01518083,
+      "pct_24h": -1.40186,
+      "pct_7d": -8.3,
       "support_30d": 0.01298701863028712,
       "resistance_30d": 0.018158429442510105,
-      "as_of": "2026-09-14 09:10:26",
+      "as_of": "2026-09-14 10:00:38",
       "stale": false
     },
     "chainlink": {
@@ -1879,7 +1879,7 @@
         ],
         [
           "Stretch from long-term average",
-          "-31.5% below its long-term average - confirmed downtrend",
+          "-31.1% below its long-term average - confirmed downtrend",
           -1
         ],
         [
@@ -1892,12 +1892,12 @@
       "id": "bitcoin-cash",
       "symbol": "BCH",
       "name": "Bitcoin Cash",
-      "price": 222.0,
-      "pct_24h": -1.37881,
-      "pct_7d": -13.0,
+      "price": 223.52,
+      "pct_24h": 0.19486,
+      "pct_7d": -12.5,
       "support_30d": 203.50169440615565,
       "resistance_30d": 288.10955405353275,
-      "as_of": "2026-09-14 07:40:25",
+      "as_of": "2026-09-14 10:00:38",
       "stale": false
     },
     "mantle": {
@@ -2813,9 +2813,9 @@
       "stale": false
     },
     "aave": {
-      "label": "\ud83d\udfe1 HOLD / NEUTRAL",
-      "status": "neutral",
-      "score": -1,
+      "label": "\ud83d\udd34 CAUTION - REDUCE NEW BUYS",
+      "status": "bearish",
+      "score": -2,
       "rows": [
         [
           "Price vs. recent range",
@@ -2839,8 +2839,8 @@
         ],
         [
           "Stretch from long-term average",
-          "+29.3% above its long-term average - a bit stretched",
-          -1
+          "+30.1% above its long-term average - very stretched",
+          -2
         ],
         [
           "Leverage traders' bias",
@@ -2848,16 +2848,16 @@
           0
         ]
       ],
-      "plain": "No real edge either way right now - fine to just wait and watch.",
+      "plain": "Getting risky - I'd hold off on new buys until this cools down.",
       "id": "aave",
       "symbol": "AAVE",
       "name": "Aave",
-      "price": 126.25,
-      "pct_24h": -0.16235,
-      "pct_7d": -6.1,
+      "price": 127.13,
+      "pct_24h": 2.02477,
+      "pct_7d": -5.0,
       "support_30d": 85.94219943917633,
       "resistance_30d": 141.53047916466082,
-      "as_of": "2026-09-14 08:10:33",
+      "as_of": "2026-09-14 10:00:38",
       "stale": false
     },
     "okb": {
@@ -3313,10 +3313,10 @@
         "name": "Chainlink",
         "tf": "15m",
         "entry": 11.31173,
-        "stop": 11.271310333333334,
-        "target1": 11.352149666666667,
-        "target2": 11.392569333333334,
-        "opened_at": "2026-09-14T09:57:43.461117"
+        "stop": 11.272891333333334,
+        "target1": 11.350568666666668,
+        "target2": 11.389407333333335,
+        "opened_at": "2026-09-14T10:02:35.193418"
       }
     },
     "resolved": [
@@ -21402,6 +21402,19 @@
         "result": "win",
         "resolved_at": "2026-09-14T09:57:43.461117",
         "exit_price": 0.186317
+      },
+      {
+        "coin": "LINK",
+        "name": "Chainlink",
+        "tf": "15m",
+        "entry": 11.31173,
+        "stop": 11.271310333333334,
+        "target1": 11.352149666666667,
+        "target2": 11.392569333333334,
+        "opened_at": "2026-09-14T09:57:43.461117",
+        "result": "win",
+        "resolved_at": "2026-09-14T10:02:35.193418",
+        "exit_price": 11.44733
       }
     ]
   },
@@ -21409,14 +21422,14 @@
     "key": "BTC",
     "name": "Bitcoin",
     "emoji": "\u20bf",
-    "price": 78258,
+    "price": 78200,
     "high_24h": 77856,
     "low_24h": 76439,
-    "pct_24h": 1.97134,
+    "pct_24h": 1.89464,
     "pct_7d": -2.2,
     "pct_30d": 23.3,
-    "sma50": 71418.33106410567,
-    "sma200": 70180.59244061733,
+    "sma50": 71416.06953107768,
+    "sma200": 70180.02705736035,
     "support_30d": 62843.70368466329,
     "resistance_30d": 81264.70153038795,
     "mark_price": 77600.0,
@@ -21431,16 +21444,16 @@
     "key": "ETH",
     "name": "Ethereum",
     "emoji": "\u039e",
-    "price": 2530.1,
+    "price": 2527.03,
     "high_24h": 2526.74,
     "low_24h": 2464.63,
-    "pct_24h": 1.92766,
+    "pct_24h": 1.74241,
     "pct_7d": 1.1,
     "pct_30d": 34.0,
-    "sma50": 2197.465448495478,
-    "sma200": 2059.9171272883723,
+    "sma50": 2197.3598962673227,
+    "sma200": 2059.890739231333,
     "support_30d": 1874.401898191962,
-    "resistance_30d": 2530.977937695473,
+    "resistance_30d": 2525.7003262877224,
     "mark_price": 2515.82,
     "index_price": 2516.73418605,
     "funding_rate": 8.331e-05,
