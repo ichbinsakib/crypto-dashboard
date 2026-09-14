@@ -631,7 +631,7 @@
         ],
         [
           "Stretch from long-term average",
-          "+37.9% above its long-term average - very stretched",
+          "+37.6% above its long-term average - very stretched",
           -2
         ],
         [
@@ -644,12 +644,12 @@
       "id": "monero",
       "symbol": "XMR",
       "name": "Monero",
-      "price": 512.14,
-      "pct_24h": -3.50137,
+      "price": 510.94,
+      "pct_24h": -4.11741,
       "pct_7d": -4.6,
       "support_30d": 409.8815731954537,
       "resistance_30d": 555.6684591165193,
-      "as_of": "2026-09-14 14:00:40",
+      "as_of": "2026-09-14 14:30:37",
       "stale": false
     },
     "cardano": {
@@ -1613,9 +1613,9 @@
       "stale": false
     },
     "litecoin": {
-      "label": "\ud83d\udfe1 HOLD / NEUTRAL",
-      "status": "neutral",
-      "score": -1,
+      "label": "\ud83d\udd34 CAUTION - REDUCE NEW BUYS",
+      "status": "bearish",
+      "score": -2,
       "rows": [
         [
           "Price vs. recent range",
@@ -1634,12 +1634,12 @@
         ],
         [
           "Recent trend",
-          "Chopping sideways - no clear trend",
-          0
+          "Trending down - avoid catching a falling knife",
+          -1
         ],
         [
           "Stretch from long-term average",
-          "+6.7% vs its long-term average - not stretched either way",
+          "+6.6% vs its long-term average - not stretched either way",
           0
         ],
         [
@@ -1648,16 +1648,16 @@
           0
         ]
       ],
-      "plain": "No real edge either way right now - fine to just wait and watch.",
+      "plain": "Getting risky - I'd hold off on new buys until this cools down.",
       "id": "litecoin",
       "symbol": "LTC",
       "name": "Litecoin",
-      "price": 53.77,
-      "pct_24h": 0.30557,
-      "pct_7d": -1.2,
+      "price": 53.74,
+      "pct_24h": -0.95849,
+      "pct_7d": -9.2,
       "support_30d": 44.10365333727941,
       "resistance_30d": 55.20228907963863,
-      "as_of": "2026-09-14 09:25:20",
+      "as_of": "2026-09-14 14:30:37",
       "stale": false
     },
     "bitget-token": {
@@ -1940,12 +1940,12 @@
       "id": "mantle",
       "symbol": "MNT",
       "name": "Mantle",
-      "price": 0.567303,
-      "pct_24h": -0.0763,
+      "price": 0.567027,
+      "pct_24h": 0.01026,
       "pct_7d": -11.5,
       "support_30d": 0.42660592418086046,
       "resistance_30d": 0.6365218632454678,
-      "as_of": "2026-09-14 14:15:28",
+      "as_of": "2026-09-14 14:30:37",
       "stale": false
     },
     "polkadot": {
@@ -3361,10 +3361,10 @@
         "name": "Pump.fun",
         "tf": "15m",
         "entry": 0.00357,
-        "stop": 0.0035445999999999997,
-        "target1": 0.0035954,
-        "target2": 0.0036208,
-        "opened_at": "2026-09-14T14:27:20.286465"
+        "stop": 0.0035449666666666664,
+        "target1": 0.0035950333333333332,
+        "target2": 0.0036200666666666667,
+        "opened_at": "2026-09-14T14:32:42.901410"
       }
     },
     "resolved": [
@@ -21931,6 +21931,19 @@
         "result": "win",
         "resolved_at": "2026-09-14T14:27:20.286465",
         "exit_price": 0.003611
+      },
+      {
+        "coin": "PUMP",
+        "name": "Pump.fun",
+        "tf": "15m",
+        "entry": 0.00357,
+        "stop": 0.0035445999999999997,
+        "target1": 0.0035954,
+        "target2": 0.0036208,
+        "opened_at": "2026-09-14T14:27:20.286465",
+        "result": "win",
+        "resolved_at": "2026-09-14T14:32:42.901410",
+        "exit_price": 0.003634
       }
     ]
   },
@@ -21938,14 +21951,14 @@
     "key": "BTC",
     "name": "Bitcoin",
     "emoji": "\u20bf",
-    "price": 78397,
+    "price": 78291,
     "high_24h": 78399,
     "low_24h": 76439,
-    "pct_24h": 1.75332,
+    "pct_24h": 1.65716,
     "pct_7d": -1.8,
     "pct_30d": 24.0,
-    "sma50": 71420.51253188001,
-    "sma200": 70181.13780756092,
+    "sma50": 71420.74136718182,
+    "sma200": 70181.19501638638,
     "support_30d": 62843.70368466329,
     "resistance_30d": 81264.70153038795,
     "mark_price": 77600.0,
@@ -21960,14 +21973,14 @@
     "key": "ETH",
     "name": "Ethereum",
     "emoji": "\u039e",
-    "price": 2506.96,
+    "price": 2499.82,
     "high_24h": 2531.64,
     "low_24h": 2467.86,
-    "pct_24h": 0.67568,
+    "pct_24h": 0.5273,
     "pct_7d": -0.2,
     "pct_30d": 32.8,
-    "sma50": 2196.97569800445,
-    "sma200": 2059.7946896656154,
+    "sma50": 2196.9139496073367,
+    "sma200": 2059.779252566337,
     "support_30d": 1874.401898191962,
     "resistance_30d": 2525.267261590238,
     "mark_price": 2515.82,
