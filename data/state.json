@@ -4,7 +4,7 @@
   "_alerts_state": {
     "btc-resistance-break": {
       "triggered": true,
-      "last_triggered_at": "2026-09-14 17:15:22"
+      "last_triggered_at": "2026-09-14 17:20:26"
     },
     "btc-support-break": {
       "triggered": false,
@@ -12,7 +12,7 @@
     },
     "eth-resistance-break": {
       "triggered": true,
-      "last_triggered_at": "2026-09-14 17:15:22"
+      "last_triggered_at": "2026-09-14 17:20:26"
     },
     "eth-support-break": {
       "triggered": false,
@@ -1927,7 +1927,7 @@
         ],
         [
           "Stretch from long-term average",
-          "-1.2% vs its long-term average - not stretched either way",
+          "-0.8% vs its long-term average - not stretched either way",
           0
         ],
         [
@@ -1940,12 +1940,12 @@
       "id": "mantle",
       "symbol": "MNT",
       "name": "Mantle",
-      "price": 0.567021,
-      "pct_24h": -0.3884,
-      "pct_7d": -11.5,
+      "price": 0.569679,
+      "pct_24h": 0.2919,
+      "pct_7d": -8.7,
       "support_30d": 0.42660592418086046,
       "resistance_30d": 0.6365218632454678,
-      "as_of": "2026-09-14 14:55:24",
+      "as_of": "2026-09-14 17:20:26",
       "stale": false
     },
     "polkadot": {
@@ -2813,9 +2813,9 @@
       "stale": false
     },
     "aave": {
-      "label": "\ud83d\udfe1 HOLD / NEUTRAL",
-      "status": "neutral",
-      "score": -1,
+      "label": "\ud83d\udd34 CAUTION - REDUCE NEW BUYS",
+      "status": "bearish",
+      "score": -2,
       "rows": [
         [
           "Price vs. recent range",
@@ -2839,8 +2839,8 @@
         ],
         [
           "Stretch from long-term average",
-          "+29.8% above its long-term average - a bit stretched",
-          -1
+          "+30.2% above its long-term average - very stretched",
+          -2
         ],
         [
           "Leverage traders' bias",
@@ -2848,16 +2848,16 @@
           0
         ]
       ],
-      "plain": "No real edge either way right now - fine to just wait and watch.",
+      "plain": "Getting risky - I'd hold off on new buys until this cools down.",
       "id": "aave",
       "symbol": "AAVE",
       "name": "Aave",
-      "price": 126.82,
-      "pct_24h": 0.70362,
-      "pct_7d": -4.9,
+      "price": 127.16,
+      "pct_24h": -0.10893,
+      "pct_7d": -2.7,
       "support_30d": 85.94219943917633,
       "resistance_30d": 141.53047916466082,
-      "as_of": "2026-09-14 16:45:27",
+      "as_of": "2026-09-14 17:20:26",
       "stale": false
     },
     "okb": {
@@ -2915,7 +2915,7 @@
       "rows": [
         [
           "Price vs. recent range",
-          "Near its 30-day high (~$0.1133) - less room to run",
+          "Near its 30-day high (~$0.1129) - less room to run",
           -1
         ],
         [
@@ -2935,7 +2935,7 @@
         ],
         [
           "Stretch from long-term average",
-          "+33.5% above its long-term average - very stretched",
+          "+33.0% above its long-term average - very stretched",
           -2
         ],
         [
@@ -2948,12 +2948,12 @@
       "id": "just",
       "symbol": "JST",
       "name": "JUST",
-      "price": 0.113349,
-      "pct_24h": 1.18033,
-      "pct_7d": 4.4,
+      "price": 0.112942,
+      "pct_24h": 0.2894,
+      "pct_7d": 4.9,
       "support_30d": 0.0946830738697126,
-      "resistance_30d": 0.11334880627759826,
-      "as_of": "2026-09-14 14:00:40",
+      "resistance_30d": 0.1129438545784345,
+      "as_of": "2026-09-14 17:20:26",
       "stale": false
     },
     "algorand": {
@@ -3349,20 +3349,20 @@
         "name": "Sky",
         "tf": "1h",
         "entry": 0.06175,
-        "stop": 0.061149583333333334,
-        "target1": 0.062350416666666665,
-        "target2": 0.06295083333333333,
-        "opened_at": "2026-09-14T17:17:25.140247"
+        "stop": 0.061149166666666664,
+        "target1": 0.062350833333333334,
+        "target2": 0.06295166666666667,
+        "opened_at": "2026-09-14T17:22:29.386192"
       },
       "1h:HYPE": {
         "coin": "HYPE",
         "name": "Hyperliquid",
         "tf": "1h",
         "entry": 76.93,
-        "stop": 76.05958333333334,
-        "target1": 77.80041666666668,
-        "target2": 78.67083333333335,
-        "opened_at": "2026-09-14T17:17:25.140247"
+        "stop": 76.05583333333334,
+        "target1": 77.80416666666667,
+        "target2": 78.67833333333334,
+        "opened_at": "2026-09-14T17:22:29.386192"
       }
     },
     "resolved": [
@@ -22657,6 +22657,32 @@
         "result": "win",
         "resolved_at": "2026-09-14T17:17:25.140247",
         "exit_price": 80.76
+      },
+      {
+        "coin": "SKY",
+        "name": "Sky",
+        "tf": "1h",
+        "entry": 0.06175,
+        "stop": 0.061149583333333334,
+        "target1": 0.062350416666666665,
+        "target2": 0.06295083333333333,
+        "opened_at": "2026-09-14T17:17:25.140247",
+        "result": "win",
+        "resolved_at": "2026-09-14T17:22:29.386192",
+        "exit_price": 0.06403
+      },
+      {
+        "coin": "HYPE",
+        "name": "Hyperliquid",
+        "tf": "1h",
+        "entry": 76.93,
+        "stop": 76.05958333333334,
+        "target1": 77.80041666666668,
+        "target2": 78.67083333333335,
+        "opened_at": "2026-09-14T17:17:25.140247",
+        "result": "win",
+        "resolved_at": "2026-09-14T17:22:29.386192",
+        "exit_price": 80.62
       }
     ]
   },
@@ -22664,14 +22690,14 @@
     "key": "BTC",
     "name": "Bitcoin",
     "emoji": "\u20bf",
-    "price": 78799,
+    "price": 78793,
     "high_24h": 78856,
     "low_24h": 76439,
-    "pct_24h": 1.90418,
+    "pct_24h": 1.88086,
     "pct_7d": -0.1,
     "pct_30d": 24.9,
-    "sma50": 71428.90740578441,
-    "sma200": 70183.23652603703,
+    "sma50": 71429.31579696936,
+    "sma200": 70183.33862383326,
     "support_30d": 62843.70368466329,
     "resistance_30d": 81264.70153038795,
     "mark_price": 77600.0,
@@ -22686,16 +22712,16 @@
     "key": "ETH",
     "name": "Ethereum",
     "emoji": "\u039e",
-    "price": 2529.87,
+    "price": 2529.99,
     "high_24h": 2535.25,
     "low_24h": 2467.86,
-    "pct_24h": 0.89788,
+    "pct_24h": 0.86051,
     "pct_7d": 2.4,
     "pct_30d": 34.3,
-    "sma50": 2197.4613528965333,
-    "sma200": 2059.9161033886357,
+    "sma50": 2197.480238997946,
+    "sma200": 2059.9208249139892,
     "support_30d": 1874.401898191962,
-    "resistance_30d": 2530.773157748243,
+    "resistance_30d": 2531.71746281887,
     "mark_price": 2515.82,
     "index_price": 2516.73418605,
     "funding_rate": 8.331e-05,
