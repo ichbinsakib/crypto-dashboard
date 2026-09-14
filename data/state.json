@@ -3,8 +3,8 @@
   "_fng_classification": "Greed",
   "_alerts_state": {
     "btc-resistance-break": {
-      "triggered": false,
-      "last_triggered_at": "2026-09-14 15:10:38"
+      "triggered": true,
+      "last_triggered_at": "2026-09-14 15:20:29"
     },
     "btc-support-break": {
       "triggered": false,
@@ -319,7 +319,7 @@
     "dogecoin": {
       "label": "\ud83d\udfe1 HOLD / NEUTRAL",
       "status": "neutral",
-      "score": 0,
+      "score": 1,
       "rows": [
         [
           "Price vs. recent range",
@@ -338,12 +338,12 @@
         ],
         [
           "Recent trend",
-          "Trending down - avoid catching a falling knife",
-          -1
+          "Chopping sideways - no clear trend",
+          0
         ],
         [
           "Stretch from long-term average",
-          "-4.7% vs its long-term average - not stretched either way",
+          "-4.8% vs its long-term average - not stretched either way",
           0
         ],
         [
@@ -356,12 +356,12 @@
       "id": "dogecoin",
       "symbol": "DOGE",
       "name": "Dogecoin",
-      "price": 0.083947,
-      "pct_24h": 0.42915,
-      "pct_7d": -8.4,
+      "price": 0.08389,
+      "pct_24h": 0.4988,
+      "pct_7d": -7.8,
       "support_30d": 0.06952870548515376,
       "resistance_30d": 0.09337940032634065,
-      "as_of": "2026-09-14 14:10:24",
+      "as_of": "2026-09-14 15:20:29",
       "stale": false
     },
     "zcash": {
@@ -2675,7 +2675,7 @@
       "rows": [
         [
           "Price vs. recent range",
-          "Near its 30-day low (~$4,286.89) - historically a better entry",
+          "Near its 30-day low (~$4,282.34) - historically a better entry",
           2
         ],
         [
@@ -2695,7 +2695,7 @@
         ],
         [
           "Stretch from long-term average",
-          "-4.2% vs its long-term average - not stretched either way",
+          "-4.3% vs its long-term average - not stretched either way",
           0
         ],
         [
@@ -2708,12 +2708,12 @@
       "id": "pax-gold",
       "symbol": "PAXG",
       "name": "PAX Gold",
-      "price": 4286.71,
-      "pct_24h": -1.44851,
+      "price": 4282.34,
+      "pct_24h": -1.55062,
       "pct_7d": -2.7,
-      "support_30d": 4286.8945066082,
+      "support_30d": 4282.340102551409,
       "resistance_30d": 4672.307573354755,
-      "as_of": "2026-09-14 15:15:29",
+      "as_of": "2026-09-14 15:20:29",
       "stale": false
     },
     "morpho": {
@@ -2887,7 +2887,7 @@
         ],
         [
           "Stretch from long-term average",
-          "+29.3% above its long-term average - a bit stretched",
+          "+29.0% above its long-term average - a bit stretched",
           -1
         ],
         [
@@ -2900,12 +2900,12 @@
       "id": "okb",
       "symbol": "OKB",
       "name": "OKB",
-      "price": 113.95,
-      "pct_24h": 0.74814,
-      "pct_7d": -2.5,
+      "price": 113.72,
+      "pct_24h": 0.89892,
+      "pct_7d": -1.7,
       "support_30d": 98.99707739944992,
       "resistance_30d": 115.8310797114581,
-      "as_of": "2026-09-14 14:35:21",
+      "as_of": "2026-09-14 15:20:29",
       "stale": false
     },
     "just": {
@@ -3372,10 +3372,10 @@
         "name": "Stellar",
         "tf": "15m",
         "entry": 0.183075,
-        "stop": 0.18160483333333333,
-        "target1": 0.18454516666666665,
-        "target2": 0.1860153333333333,
-        "opened_at": "2026-09-14T15:17:29.946607"
+        "stop": 0.18155233333333332,
+        "target1": 0.18459766666666666,
+        "target2": 0.18612033333333333,
+        "opened_at": "2026-09-14T15:22:28.235630"
       }
     },
     "resolved": [
@@ -22072,6 +22072,19 @@
         "result": "win",
         "resolved_at": "2026-09-14T15:17:29.946607",
         "exit_price": 0.190602
+      },
+      {
+        "coin": "XLM",
+        "name": "Stellar",
+        "tf": "15m",
+        "entry": 0.183075,
+        "stop": 0.18160483333333333,
+        "target1": 0.18454516666666665,
+        "target2": 0.1860153333333333,
+        "opened_at": "2026-09-14T15:17:29.946607",
+        "result": "win",
+        "resolved_at": "2026-09-14T15:22:28.235630",
+        "exit_price": 0.192136
       }
     ]
   },
@@ -22079,14 +22092,14 @@
     "key": "BTC",
     "name": "Bitcoin",
     "emoji": "\u20bf",
-    "price": 78382,
+    "price": 78489,
     "high_24h": 78630,
     "low_24h": 76439,
-    "pct_24h": 1.74399,
+    "pct_24h": 1.92598,
     "pct_7d": -1.0,
     "pct_30d": 24.7,
-    "sma50": 71421.29769675528,
-    "sma200": 70181.33409877974,
+    "sma50": 71422.66741581762,
+    "sma200": 70181.67652854533,
     "support_30d": 62843.70368466329,
     "resistance_30d": 81264.70153038795,
     "mark_price": 77600.0,
@@ -22101,14 +22114,14 @@
     "key": "ETH",
     "name": "Ethereum",
     "emoji": "\u039e",
-    "price": 2502.63,
+    "price": 2504.02,
     "high_24h": 2531.64,
     "low_24h": 2467.86,
-    "pct_24h": 0.64387,
+    "pct_24h": 0.77147,
     "pct_7d": 0.2,
     "pct_30d": 33.0,
-    "sma50": 2196.930675850985,
-    "sma200": 2059.7834341272487,
+    "sma50": 2196.931280749219,
+    "sma200": 2059.7835853518072,
     "support_30d": 1874.401898191962,
     "resistance_30d": 2525.267261590238,
     "mark_price": 2515.82,
