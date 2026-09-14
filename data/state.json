@@ -295,7 +295,7 @@
         ],
         [
           "Stretch from long-term average",
-          "+46.0% above its long-term average - very stretched",
+          "+44.8% above its long-term average - very stretched",
           -2
         ],
         [
@@ -308,12 +308,12 @@
       "id": "hyperliquid",
       "symbol": "HYPE",
       "name": "Hyperliquid",
-      "price": 80.52,
-      "pct_24h": 3.78306,
+      "price": 79.85,
+      "pct_24h": 2.93595,
       "pct_7d": -8.9,
       "support_30d": 57.1155488189019,
       "resistance_30d": 87.951916819731,
-      "as_of": "2026-09-14 12:25:18",
+      "as_of": "2026-09-14 12:55:28",
       "stale": false
     },
     "dogecoin": {
@@ -1701,11 +1701,11 @@
       "symbol": "BGB",
       "name": "Bitget Token",
       "price": 1.93,
-      "pct_24h": 0.01769,
-      "pct_7d": -4.9,
+      "pct_24h": 0.45708,
+      "pct_7d": -5.0,
       "support_30d": 1.6478040912714662,
       "resistance_30d": 2.0284940947674617,
-      "as_of": "2026-09-14 09:45:23",
+      "as_of": "2026-09-14 12:55:28",
       "stale": false
     },
     "sui": {
@@ -2263,7 +2263,7 @@
         ],
         [
           "Stretch from long-term average",
-          "-1.4% vs its long-term average - not stretched either way",
+          "-2.5% vs its long-term average - not stretched either way",
           0
         ],
         [
@@ -2276,12 +2276,12 @@
       "id": "bittensor",
       "symbol": "TAO",
       "name": "Bittensor",
-      "price": 236.19,
-      "pct_24h": 0.97485,
-      "pct_7d": -11.6,
+      "price": 233.66,
+      "pct_24h": -0.12078,
+      "pct_7d": -11.7,
       "support_30d": 190.67093053611111,
       "resistance_30d": 265.7337487161633,
-      "as_of": "2026-09-14 10:35:18",
+      "as_of": "2026-09-14 12:55:28",
       "stale": false
     },
     "the-open-network": {
@@ -3346,16 +3346,6 @@
   },
   "_pnl_tracker": {
     "open": {
-      "15m:JST": {
-        "coin": "JST",
-        "name": "JUST",
-        "tf": "15m",
-        "entry": 0.11326,
-        "stop": 0.11324666666666666,
-        "target1": 0.11327333333333334,
-        "target2": 0.11328666666666667,
-        "opened_at": "2026-09-14T10:57:18.812905"
-      },
       "1h:PAXG": {
         "coin": "PAXG",
         "name": "PAX Gold",
@@ -21749,6 +21739,19 @@
         "result": "win",
         "resolved_at": "2026-09-14T12:17:26.608332",
         "exit_price": 4303.26
+      },
+      {
+        "coin": "JST",
+        "name": "JUST",
+        "tf": "15m",
+        "entry": 0.11326,
+        "stop": 0.11324666666666666,
+        "target1": 0.11327333333333334,
+        "target2": 0.11328666666666667,
+        "opened_at": "2026-09-14T10:57:18.812905",
+        "result": "win",
+        "resolved_at": "2026-09-14T12:57:24.566881",
+        "exit_price": 0.11331
       }
     ]
   },
@@ -21756,14 +21759,14 @@
     "key": "BTC",
     "name": "Bitcoin",
     "emoji": "\u20bf",
-    "price": 77788,
+    "price": 77705,
     "high_24h": 78278,
     "low_24h": 76439,
-    "pct_24h": 1.45537,
+    "pct_24h": 1.28914,
     "pct_7d": -2.1,
     "pct_30d": 23.4,
-    "sma50": 71408.53247462044,
-    "sma200": 70178.14279324604,
+    "sma50": 71406.9006112705,
+    "sma200": 70177.73482740855,
     "support_30d": 62843.70368466329,
     "resistance_30d": 81264.70153038795,
     "mark_price": 77600.0,
@@ -21778,14 +21781,14 @@
     "key": "ETH",
     "name": "Ethereum",
     "emoji": "\u039e",
-    "price": 2509.19,
+    "price": 2505.37,
     "high_24h": 2531.64,
     "low_24h": 2464.63,
-    "pct_24h": 1.39688,
+    "pct_24h": 1.17978,
     "pct_7d": 0.7,
     "pct_30d": 33.4,
-    "sma50": 2197.037776624285,
-    "sma200": 2059.810209320574,
+    "sma50": 2196.9632077094716,
+    "sma200": 2059.7915670918705,
     "support_30d": 1874.401898191962,
     "resistance_30d": 2525.267261590238,
     "mark_price": 2515.82,
