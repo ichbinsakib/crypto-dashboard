@@ -4,7 +4,7 @@
   "_alerts_state": {
     "btc-resistance-break": {
       "triggered": true,
-      "last_triggered_at": "2026-09-14 22:05:21"
+      "last_triggered_at": "2026-09-14 22:10:23"
     },
     "btc-support-break": {
       "triggered": false,
@@ -12,7 +12,7 @@
     },
     "eth-resistance-break": {
       "triggered": true,
-      "last_triggered_at": "2026-09-14 22:05:21"
+      "last_triggered_at": "2026-09-14 22:10:23"
     },
     "eth-support-break": {
       "triggered": false,
@@ -265,7 +265,7 @@
       "pct_7d": 3.6,
       "support_30d": 1.0001790754472548,
       "resistance_30d": 1.0455978355177025,
-      "as_of": "2026-09-14 21:45:28",
+      "as_of": "2026-09-14 22:10:23",
       "stale": false
     },
     "hyperliquid": {
@@ -775,7 +775,7 @@
         ],
         [
           "Stretch from long-term average",
-          "-8.7% vs its long-term average - not stretched either way",
+          "-8.9% vs its long-term average - not stretched either way",
           0
         ],
         [
@@ -788,12 +788,12 @@
       "id": "kucoin-shares",
       "symbol": "KCS",
       "name": "KuCoin",
-      "price": 6.96,
-      "pct_24h": 1.58874,
-      "pct_7d": 0.0,
+      "price": 6.95,
+      "pct_24h": 1.55021,
+      "pct_7d": -0.9,
       "support_30d": 6.514591596607885,
       "resistance_30d": 7.8821382735057615,
-      "as_of": "2026-09-14 21:55:20",
+      "as_of": "2026-09-14 22:10:23",
       "stale": false
     },
     "hedera-hashgraph": {
@@ -1783,7 +1783,7 @@
         ],
         [
           "Stretch from long-term average",
-          "+143.2% above its long-term average - very stretched",
+          "+145.9% above its long-term average - very stretched",
           -2
         ],
         [
@@ -1796,12 +1796,12 @@
       "id": "lighter",
       "symbol": "LIT",
       "name": "Lighter",
-      "price": 4.42,
-      "pct_24h": 5.22088,
-      "pct_7d": -0.7,
+      "price": 4.47,
+      "pct_24h": 6.83796,
+      "pct_7d": -6.8,
       "support_30d": 2.277611067280557,
       "resistance_30d": 4.827528632102638,
-      "as_of": "2026-09-14 18:45:24",
+      "as_of": "2026-09-14 22:10:23",
       "stale": false
     },
     "ethena": {
@@ -2071,7 +2071,7 @@
         ],
         [
           "Stretch from long-term average",
-          "-29.7% below its long-term average - confirmed downtrend",
+          "-29.8% below its long-term average - confirmed downtrend",
           -1
         ],
         [
@@ -2084,12 +2084,12 @@
       "id": "pi-network",
       "symbol": "PI",
       "name": "Pi Network",
-      "price": 0.097748,
-      "pct_24h": 0.20898,
+      "price": 0.097686,
+      "pct_24h": 0.50455,
       "pct_7d": 3.7,
       "support_30d": 0.08559695435343688,
       "resistance_30d": 0.09798925329339339,
-      "as_of": "2026-09-14 22:00:38",
+      "as_of": "2026-09-14 22:10:23",
       "stale": false
     },
     "ondo-finance": {
@@ -2983,7 +2983,7 @@
         ],
         [
           "Stretch from long-term average",
-          "-2.9% vs its long-term average - not stretched either way",
+          "-2.8% vs its long-term average - not stretched either way",
           0
         ],
         [
@@ -2996,12 +2996,12 @@
       "id": "algorand",
       "symbol": "ALGO",
       "name": "Algorand",
-      "price": 0.096754,
-      "pct_24h": -1.52297,
+      "price": 0.096862,
+      "pct_24h": 0.19786,
       "pct_7d": 1.3,
       "support_30d": 0.07793708137631736,
       "resistance_30d": 0.10076397875501594,
-      "as_of": "2026-09-14 22:00:38",
+      "as_of": "2026-09-14 22:10:23",
       "stale": false
     },
     "eutbl": {
@@ -3359,10 +3359,10 @@
         "name": "Zcash",
         "tf": "15m",
         "entry": 1132.75,
-        "stop": 1120.5726666666667,
-        "target1": 1144.9273333333333,
-        "target2": 1157.1046666666666,
-        "opened_at": "2026-09-14T22:07:18.484409"
+        "stop": 1120.47,
+        "target1": 1145.03,
+        "target2": 1157.31,
+        "opened_at": "2026-09-14T22:11:35.114705"
       }
     },
     "resolved": [
@@ -23723,6 +23723,19 @@
         "result": "win",
         "resolved_at": "2026-09-14T22:07:18.484409",
         "exit_price": 1180.88
+      },
+      {
+        "coin": "ZEC",
+        "name": "Zcash",
+        "tf": "15m",
+        "entry": 1132.75,
+        "stop": 1120.5726666666667,
+        "target1": 1144.9273333333333,
+        "target2": 1157.1046666666666,
+        "opened_at": "2026-09-14T22:07:18.484409",
+        "result": "win",
+        "resolved_at": "2026-09-14T22:11:35.114705",
+        "exit_price": 1181.21
       }
     ]
   },
@@ -23730,14 +23743,14 @@
     "key": "BTC",
     "name": "Bitcoin",
     "emoji": "\u20bf",
-    "price": 78724,
+    "price": 78752,
     "high_24h": 79530,
     "low_24h": 76439,
-    "pct_24h": 2.11309,
+    "pct_24h": 2.32478,
     "pct_7d": -0.6,
     "pct_30d": 24.9,
-    "sma50": 71427.2516475797,
-    "sma200": 70182.82258648584,
+    "sma50": 71427.12554067175,
+    "sma200": 70182.79105975886,
     "support_30d": 62843.70368466329,
     "resistance_30d": 81264.70153038795,
     "mark_price": 78726.74180435,
@@ -23752,16 +23765,16 @@
     "key": "ETH",
     "name": "Ethereum",
     "emoji": "\u039e",
-    "price": 2543.2,
+    "price": 2550.66,
     "high_24h": 2607.56,
     "low_24h": 2467.86,
-    "pct_24h": 1.78471,
+    "pct_24h": 2.32571,
     "pct_7d": 2.1,
     "pct_30d": 35.4,
-    "sma50": 2197.7338126891796,
-    "sma200": 2059.9842183367973,
+    "sma50": 2197.799519971814,
+    "sma200": 2060.0006451574563,
     "support_30d": 1874.401898191962,
-    "resistance_30d": 2544.396147380557,
+    "resistance_30d": 2547.68151151229,
     "mark_price": 2544.79927907,
     "index_price": 2546.0372093,
     "funding_rate": 4.186e-05,
