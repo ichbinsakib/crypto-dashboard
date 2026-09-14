@@ -4,7 +4,7 @@
   "_alerts_state": {
     "btc-resistance-break": {
       "triggered": true,
-      "last_triggered_at": "2026-09-14 19:10:24"
+      "last_triggered_at": "2026-09-14 19:15:23"
     },
     "btc-support-break": {
       "triggered": false,
@@ -12,7 +12,7 @@
     },
     "eth-resistance-break": {
       "triggered": true,
-      "last_triggered_at": "2026-09-14 19:10:24"
+      "last_triggered_at": "2026-09-14 19:15:23"
     },
     "eth-support-break": {
       "triggered": false,
@@ -295,7 +295,7 @@
         ],
         [
           "Stretch from long-term average",
-          "+48.3% above its long-term average - very stretched",
+          "+47.6% above its long-term average - very stretched",
           -2
         ],
         [
@@ -308,12 +308,12 @@
       "id": "hyperliquid",
       "symbol": "HYPE",
       "name": "Hyperliquid",
-      "price": 81.79,
-      "pct_24h": 4.39239,
+      "price": 81.4,
+      "pct_24h": 3.90187,
       "pct_7d": -3.8,
       "support_30d": 57.1155488189019,
       "resistance_30d": 87.951916819731,
-      "as_of": "2026-09-14 19:00:35",
+      "as_of": "2026-09-14 19:15:23",
       "stale": false
     },
     "dogecoin": {
@@ -1447,7 +1447,7 @@
         ],
         [
           "Stretch from long-term average",
-          "-10.1% vs its long-term average - not stretched either way",
+          "-9.0% vs its long-term average - not stretched either way",
           0
         ],
         [
@@ -1460,12 +1460,12 @@
       "id": "crypto-com-chain",
       "symbol": "CRO",
       "name": "Cronos",
-      "price": 0.058631,
-      "pct_24h": 0.81811,
-      "pct_7d": 2.1,
+      "price": 0.059362,
+      "pct_24h": 1.66119,
+      "pct_7d": 3.6,
       "support_30d": 0.04621382085807831,
       "resistance_30d": 0.06091104752771909,
-      "as_of": "2026-09-14 16:05:18",
+      "as_of": "2026-09-14 19:15:23",
       "stale": false
     },
     "ethereum-classic": {
@@ -1687,7 +1687,7 @@
         ],
         [
           "Stretch from long-term average",
-          "+2.0% vs its long-term average - not stretched either way",
+          "+3.1% vs its long-term average - not stretched either way",
           0
         ],
         [
@@ -1700,12 +1700,12 @@
       "id": "bitget-token",
       "symbol": "BGB",
       "name": "Bitget Token",
-      "price": 1.93,
-      "pct_24h": 0.45708,
-      "pct_7d": -5.0,
+      "price": 1.95,
+      "pct_24h": 0.78798,
+      "pct_7d": -2.7,
       "support_30d": 1.6478040912714662,
       "resistance_30d": 2.0284940947674617,
-      "as_of": "2026-09-14 12:55:28",
+      "as_of": "2026-09-14 19:15:23",
       "stale": false
     },
     "sui": {
@@ -2084,12 +2084,12 @@
       "id": "pi-network",
       "symbol": "PI",
       "name": "Pi Network",
-      "price": 0.097838,
-      "pct_24h": 0.10969,
-      "pct_7d": 4.3,
+      "price": 0.097758,
+      "pct_24h": 0.32644,
+      "pct_7d": 3.7,
       "support_30d": 0.08559695435343688,
       "resistance_30d": 0.09798925329339339,
-      "as_of": "2026-09-14 17:25:18",
+      "as_of": "2026-09-14 19:15:23",
       "stale": false
     },
     "ondo-finance": {
@@ -2180,12 +2180,12 @@
       "id": "canton-network",
       "symbol": "CC",
       "name": "Canton",
-      "price": 0.097663,
-      "pct_24h": 1.60458,
+      "price": 0.097719,
+      "pct_24h": 1.80098,
       "pct_7d": -7.8,
       "support_30d": 0.09051839499501885,
       "resistance_30d": 0.12396615653575341,
-      "as_of": "2026-09-14 19:10:24",
+      "as_of": "2026-09-14 19:15:23",
       "stale": false
     },
     "internet-computer": {
@@ -3342,7 +3342,7 @@
     }
   },
   "_strong_buy_state": {
-    "scanner-15m:ICP": true
+    "scanner-1h:PI": true
   },
   "_pnl_tracker": {
     "open": {
@@ -3351,10 +3351,20 @@
         "name": "Internet Computer",
         "tf": "15m",
         "entry": 2.706,
-        "stop": 2.6955666666666667,
-        "target1": 2.7164333333333333,
-        "target2": 2.7268666666666665,
-        "opened_at": "2026-09-14T19:12:25.952521"
+        "stop": 2.6956666666666664,
+        "target1": 2.7163333333333335,
+        "target2": 2.726666666666667,
+        "opened_at": "2026-09-14T19:16:41.293703"
+      },
+      "1h:PI": {
+        "coin": "PI",
+        "name": "Pi Network",
+        "tf": "1h",
+        "entry": 0.09605,
+        "stop": 0.09399541666666666,
+        "target1": 0.09810458333333333,
+        "target2": 0.10015916666666666,
+        "opened_at": "2026-09-14T19:16:41.293703"
       }
     },
     "resolved": [
@@ -23221,6 +23231,19 @@
         "result": "win",
         "resolved_at": "2026-09-14T19:12:25.952521",
         "exit_price": 2.782
+      },
+      {
+        "coin": "ICP",
+        "name": "Internet Computer",
+        "tf": "15m",
+        "entry": 2.706,
+        "stop": 2.6955666666666667,
+        "target1": 2.7164333333333333,
+        "target2": 2.7268666666666665,
+        "opened_at": "2026-09-14T19:12:25.952521",
+        "result": "win",
+        "resolved_at": "2026-09-14T19:16:41.293703",
+        "exit_price": 2.783
       }
     ]
   },
@@ -23228,14 +23251,14 @@
     "key": "BTC",
     "name": "Bitcoin",
     "emoji": "\u20bf",
-    "price": 79048,
+    "price": 79096,
     "high_24h": 79292,
     "low_24h": 76439,
-    "pct_24h": 2.25687,
+    "pct_24h": 2.36735,
     "pct_7d": 0.0,
     "pct_30d": 25.7,
-    "sma50": 71433.74224464162,
-    "sma200": 70184.44523575132,
+    "sma50": 71434.77177146469,
+    "sma200": 70184.7026174571,
     "support_30d": 62843.70368466329,
     "resistance_30d": 81264.70153038795,
     "mark_price": 77600.0,
@@ -23250,16 +23273,16 @@
     "key": "ETH",
     "name": "Ethereum",
     "emoji": "\u039e",
-    "price": 2536.14,
+    "price": 2538.72,
     "high_24h": 2543.47,
     "low_24h": 2467.86,
-    "pct_24h": 1.06467,
+    "pct_24h": 1.2054,
     "pct_7d": 1.7,
     "pct_30d": 34.8,
-    "sma50": 2197.584822384622,
-    "sma200": 2059.946970760658,
+    "sma50": 2197.6233442178545,
+    "sma200": 2059.956601218966,
     "support_30d": 1874.401898191962,
-    "resistance_30d": 2536.946632152687,
+    "resistance_30d": 2538.872723814306,
     "mark_price": 2515.82,
     "index_price": 2516.73418605,
     "funding_rate": 8.331e-05,
