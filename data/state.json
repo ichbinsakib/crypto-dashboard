@@ -4,7 +4,7 @@
   "_alerts_state": {
     "btc-resistance-break": {
       "triggered": true,
-      "last_triggered_at": "2026-09-14 22:45:22"
+      "last_triggered_at": "2026-09-14 22:50:24"
     },
     "btc-support-break": {
       "triggered": false,
@@ -12,7 +12,7 @@
     },
     "eth-resistance-break": {
       "triggered": true,
-      "last_triggered_at": "2026-09-14 22:45:22"
+      "last_triggered_at": "2026-09-14 22:50:24"
     },
     "eth-support-break": {
       "triggered": false,
@@ -343,7 +343,7 @@
         ],
         [
           "Stretch from long-term average",
-          "-3.3% vs its long-term average - not stretched either way",
+          "-4.5% vs its long-term average - not stretched either way",
           0
         ],
         [
@@ -356,12 +356,12 @@
       "id": "dogecoin",
       "symbol": "DOGE",
       "name": "Dogecoin",
-      "price": 0.085201,
-      "pct_24h": 0.90822,
-      "pct_7d": -5.9,
+      "price": 0.084088,
+      "pct_24h": 2.20295,
+      "pct_7d": -6.8,
       "support_30d": 0.06952870548515376,
       "resistance_30d": 0.09337940032634065,
-      "as_of": "2026-09-14 21:00:34",
+      "as_of": "2026-09-14 22:50:24",
       "stale": false
     },
     "zcash": {
@@ -1735,7 +1735,7 @@
         ],
         [
           "Stretch from long-term average",
-          "-13.2% vs its long-term average - not stretched either way",
+          "-14.5% vs its long-term average - not stretched either way",
           0
         ],
         [
@@ -1748,12 +1748,12 @@
       "id": "sui",
       "symbol": "SUI",
       "name": "Sui",
-      "price": 0.7359,
-      "pct_24h": 2.28018,
-      "pct_7d": -10.6,
+      "price": 0.725051,
+      "pct_24h": 3.48561,
+      "pct_7d": -11.8,
       "support_30d": 0.6514311908607086,
       "resistance_30d": 0.8499161763231283,
-      "as_of": "2026-09-14 21:30:29",
+      "as_of": "2026-09-14 22:50:24",
       "stale": false
     },
     "lighter": {
@@ -2805,11 +2805,11 @@
       "symbol": "M",
       "name": "MemeCore",
       "price": 1.095,
-      "pct_24h": -4.39531,
-      "pct_7d": -4.2,
+      "pct_24h": -4.14238,
+      "pct_7d": -4.1,
       "support_30d": 1.0402044506518406,
       "resistance_30d": 1.2453913363052769,
-      "as_of": "2026-09-14 21:25:18",
+      "as_of": "2026-09-14 22:50:24",
       "stale": false
     },
     "aave": {
@@ -3352,20 +3352,20 @@
         "name": "Zcash",
         "tf": "15m",
         "entry": 1132.75,
-        "stop": 1120.37,
-        "target1": 1145.13,
-        "target2": 1157.5100000000002,
-        "opened_at": "2026-09-14T22:47:24.886491"
+        "stop": 1120.3503333333333,
+        "target1": 1145.1496666666667,
+        "target2": 1157.5493333333334,
+        "opened_at": "2026-09-14T22:52:28.415973"
       },
       "1h:ETC": {
         "coin": "ETC",
         "name": "Ethereum Classic",
         "tf": "1h",
         "entry": 7.402,
-        "stop": 7.360041666666667,
-        "target1": 7.443958333333334,
-        "target2": 7.485916666666667,
-        "opened_at": "2026-09-14T22:47:24.886491"
+        "stop": 7.36,
+        "target1": 7.444,
+        "target2": 7.486,
+        "opened_at": "2026-09-14T22:52:28.415973"
       },
       "1h:LIT": {
         "coin": "LIT",
@@ -3375,7 +3375,7 @@
         "stop": 0.10699166666666667,
         "target1": 0.11080833333333333,
         "target2": 0.11271666666666666,
-        "opened_at": "2026-09-14T22:47:24.886491"
+        "opened_at": "2026-09-14T22:52:28.415973"
       }
     },
     "resolved": [
@@ -23853,6 +23853,45 @@
         "result": "win",
         "resolved_at": "2026-09-14T22:47:24.886491",
         "exit_price": 1170.38
+      },
+      {
+        "coin": "ZEC",
+        "name": "Zcash",
+        "tf": "15m",
+        "entry": 1132.75,
+        "stop": 1120.37,
+        "target1": 1145.13,
+        "target2": 1157.5100000000002,
+        "opened_at": "2026-09-14T22:47:24.886491",
+        "result": "win",
+        "resolved_at": "2026-09-14T22:52:28.415973",
+        "exit_price": 1170.12
+      },
+      {
+        "coin": "ETC",
+        "name": "Ethereum Classic",
+        "tf": "1h",
+        "entry": 7.402,
+        "stop": 7.360041666666667,
+        "target1": 7.443958333333334,
+        "target2": 7.485916666666667,
+        "opened_at": "2026-09-14T22:47:24.886491",
+        "result": "win",
+        "resolved_at": "2026-09-14T22:52:28.415973",
+        "exit_price": 7.584
+      },
+      {
+        "coin": "LIT",
+        "name": "Lighter",
+        "tf": "1h",
+        "entry": 0.1089,
+        "stop": 0.10699166666666667,
+        "target1": 0.11080833333333333,
+        "target2": 0.11271666666666666,
+        "opened_at": "2026-09-14T22:47:24.886491",
+        "result": "win",
+        "resolved_at": "2026-09-14T22:52:28.415973",
+        "exit_price": 0.1156
       }
     ]
   },
@@ -23860,14 +23899,14 @@
     "key": "BTC",
     "name": "Bitcoin",
     "emoji": "\u20bf",
-    "price": 78650,
+    "price": 78588,
     "high_24h": 79530,
     "low_24h": 76439,
-    "pct_24h": 2.51057,
+    "pct_24h": 2.43175,
     "pct_7d": -0.6,
     "pct_30d": 24.9,
-    "sma50": 71425.71897373177,
-    "sma200": 70182.43941802386,
+    "sma50": 71424.4493931336,
+    "sma200": 70182.12202287433,
     "support_30d": 62843.70368466329,
     "resistance_30d": 81264.70153038795,
     "mark_price": 78726.74180435,
@@ -23882,16 +23921,16 @@
     "key": "ETH",
     "name": "Ethereum",
     "emoji": "\u039e",
-    "price": 2539.13,
+    "price": 2535.83,
     "high_24h": 2607.56,
     "low_24h": 2467.86,
-    "pct_24h": 2.61043,
+    "pct_24h": 2.37583,
     "pct_7d": 2.1,
     "pct_30d": 35.4,
-    "sma50": 2197.631351661308,
-    "sma200": 2059.9586030798296,
+    "sma50": 2197.5614914466873,
+    "sma200": 2059.9411380261745,
     "support_30d": 1874.401898191962,
-    "resistance_30d": 2539.2730959869964,
+    "resistance_30d": 2535.780085255935,
     "mark_price": 2544.79927907,
     "index_price": 2546.0372093,
     "funding_rate": 4.186e-05,
