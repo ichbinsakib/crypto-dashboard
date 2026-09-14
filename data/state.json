@@ -1543,7 +1543,7 @@
         ],
         [
           "Stretch from long-term average",
-          "+66.6% above its long-term average - very stretched",
+          "+67.3% above its long-term average - very stretched",
           -2
         ],
         [
@@ -1556,12 +1556,12 @@
       "id": "pump-fun",
       "symbol": "PUMP",
       "name": "Pump.fun",
-      "price": 0.00360005,
-      "pct_24h": -2.89644,
+      "price": 0.00361623,
+      "pct_24h": -2.08733,
       "pct_7d": -20.5,
       "support_30d": 0.002666433318189806,
       "resistance_30d": 0.0052249885406471875,
-      "as_of": "2026-09-14 13:00:40",
+      "as_of": "2026-09-14 13:45:25",
       "stale": false
     },
     "venice-token": {
@@ -1783,7 +1783,7 @@
         ],
         [
           "Stretch from long-term average",
-          "+141.6% above its long-term average - very stretched",
+          "+142.1% above its long-term average - very stretched",
           -2
         ],
         [
@@ -1796,12 +1796,12 @@
       "id": "lighter",
       "symbol": "LIT",
       "name": "Lighter",
-      "price": 4.39,
-      "pct_24h": 7.49705,
+      "price": 4.4,
+      "pct_24h": 8.13488,
       "pct_7d": -1.3,
       "support_30d": 2.277611067280557,
       "resistance_30d": 4.827528632102638,
-      "as_of": "2026-09-14 13:15:32",
+      "as_of": "2026-09-14 13:45:25",
       "stale": false
     },
     "ethena": {
@@ -2167,7 +2167,7 @@
         ],
         [
           "Stretch from long-term average",
-          "-30.6% below its long-term average - confirmed downtrend",
+          "-30.3% below its long-term average - confirmed downtrend",
           -1
         ],
         [
@@ -2180,12 +2180,12 @@
       "id": "canton-network",
       "symbol": "CC",
       "name": "Canton",
-      "price": 0.09589,
-      "pct_24h": 0.96952,
+      "price": 0.09634,
+      "pct_24h": 1.29525,
       "pct_7d": -9.9,
       "support_30d": 0.09051839499501885,
       "resistance_30d": 0.12396615653575341,
-      "as_of": "2026-09-14 13:40:26",
+      "as_of": "2026-09-14 13:45:25",
       "stale": false
     },
     "internet-computer": {
@@ -3341,7 +3341,10 @@
       "stale": false
     }
   },
-  "_strong_buy_state": {},
+  "_strong_buy_state": {
+    "scanner-1h:CC": true,
+    "scanner-1h:LIT": true
+  },
   "_pnl_tracker": {
     "open": {
       "15m:PUMP": {
@@ -3349,10 +3352,30 @@
         "name": "Pump.fun",
         "tf": "15m",
         "entry": 0.00357,
-        "stop": 0.0035470666666666665,
-        "target1": 0.003592933333333333,
-        "target2": 0.0036158666666666664,
-        "opened_at": "2026-09-14T13:42:29.759257"
+        "stop": 0.0035468333333333333,
+        "target1": 0.0035931666666666664,
+        "target2": 0.003616333333333333,
+        "opened_at": "2026-09-14T13:47:27.906038"
+      },
+      "1h:CC": {
+        "coin": "CC",
+        "name": "Canton",
+        "tf": "1h",
+        "entry": 0.09419,
+        "stop": 0.09339333333333333,
+        "target1": 0.09498666666666666,
+        "target2": 0.09578333333333333,
+        "opened_at": "2026-09-14T13:47:27.906038"
+      },
+      "1h:LIT": {
+        "coin": "LIT",
+        "name": "Lighter",
+        "tf": "1h",
+        "entry": 0.1089,
+        "stop": 0.10670833333333334,
+        "target1": 0.11109166666666666,
+        "target2": 0.11328333333333332,
+        "opened_at": "2026-09-14T13:47:27.906038"
       }
     },
     "resolved": [
@@ -21802,6 +21825,19 @@
         "result": "win",
         "resolved_at": "2026-09-14T13:42:29.759257",
         "exit_price": 0.003619
+      },
+      {
+        "coin": "PUMP",
+        "name": "Pump.fun",
+        "tf": "15m",
+        "entry": 0.00357,
+        "stop": 0.0035470666666666665,
+        "target1": 0.003592933333333333,
+        "target2": 0.0036158666666666664,
+        "opened_at": "2026-09-14T13:42:29.759257",
+        "result": "win",
+        "resolved_at": "2026-09-14T13:47:27.906038",
+        "exit_price": 0.00363
       }
     ]
   },
@@ -21809,14 +21845,14 @@
     "key": "BTC",
     "name": "Bitcoin",
     "emoji": "\u20bf",
-    "price": 77974,
+    "price": 78011,
     "high_24h": 78278,
     "low_24h": 76439,
-    "pct_24h": 1.74586,
+    "pct_24h": 1.66105,
     "pct_7d": -2.2,
     "pct_30d": 23.3,
-    "sma50": 71413.93421010922,
-    "sma200": 70179.49322711822,
+    "sma50": 71413.7252850023,
+    "sma200": 70179.4409958415,
     "support_30d": 62843.70368466329,
     "resistance_30d": 81264.70153038795,
     "mark_price": 77600.0,
@@ -21831,14 +21867,14 @@
     "key": "ETH",
     "name": "Ethereum",
     "emoji": "\u039e",
-    "price": 2502.57,
+    "price": 2503.21,
     "high_24h": 2531.64,
     "low_24h": 2467.86,
-    "pct_24h": 1.26194,
+    "pct_24h": 1.14529,
     "pct_7d": 0.6,
     "pct_30d": 33.4,
-    "sma50": 2196.9554513757216,
-    "sma200": 2059.789628008433,
+    "sma50": 2196.9479874056556,
+    "sma200": 2059.7877620159165,
     "support_30d": 1874.401898191962,
     "resistance_30d": 2525.267261590238,
     "mark_price": 2515.82,
