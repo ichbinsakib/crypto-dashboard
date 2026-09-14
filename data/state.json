@@ -597,11 +597,11 @@
       "symbol": "LEO",
       "name": "LEO Token",
       "price": 9.03,
-      "pct_24h": -0.41471,
+      "pct_24h": -0.36244,
       "pct_7d": -2.3,
-      "support_30d": 9.025045417980117,
+      "support_30d": 9.029597919778038,
       "resistance_30d": 9.681775974309534,
-      "as_of": "2026-09-14 04:20:21",
+      "as_of": "2026-09-14 04:30:30",
       "stale": false
     },
     "monero": {
@@ -1639,7 +1639,7 @@
         ],
         [
           "Stretch from long-term average",
-          "+7.5% vs its long-term average - not stretched either way",
+          "+7.4% vs its long-term average - not stretched either way",
           0
         ],
         [
@@ -1652,12 +1652,12 @@
       "id": "litecoin",
       "symbol": "LTC",
       "name": "Litecoin",
-      "price": 54.19,
-      "pct_24h": 1.00484,
+      "price": 54.14,
+      "pct_24h": 0.90788,
       "pct_7d": 0.0,
       "support_30d": 44.10365333727941,
       "resistance_30d": 55.20228907963863,
-      "as_of": "2026-09-14 04:25:21",
+      "as_of": "2026-09-14 04:30:30",
       "stale": false
     },
     "bitget-token": {
@@ -3079,7 +3079,7 @@
         ],
         [
           "Stretch from long-term average",
-          "+37.7% above its long-term average - very stretched",
+          "+37.1% above its long-term average - very stretched",
           -2
         ],
         [
@@ -3092,12 +3092,12 @@
       "id": "arbitrum",
       "symbol": "ARB",
       "name": "Arbitrum",
-      "price": 0.138562,
-      "pct_24h": -2.17037,
+      "price": 0.137886,
+      "pct_24h": -2.74845,
       "pct_7d": -25.2,
       "support_30d": 0.07348670709752918,
       "resistance_30d": 0.18933387703114857,
-      "as_of": "2026-09-14 04:00:33",
+      "as_of": "2026-09-14 04:30:30",
       "stale": false
     },
     "dash": {
@@ -3301,10 +3301,10 @@
         "name": "Lighter",
         "tf": "1h",
         "entry": 0.1089,
-        "stop": 0.107,
-        "target1": 0.1108,
-        "target2": 0.1127,
-        "opened_at": "2026-09-14T04:27:18.688397"
+        "stop": 0.1069875,
+        "target1": 0.1108125,
+        "target2": 0.11272499999999999,
+        "opened_at": "2026-09-14T04:32:26.327765"
       },
       "daily:XLM": {
         "coin": "XLM",
@@ -3314,7 +3314,7 @@
         "stop": 0.14128113333333334,
         "target1": 0.16306486666666667,
         "target2": 0.17395673333333334,
-        "opened_at": "2026-09-14T04:27:18.688397"
+        "opened_at": "2026-09-14T04:32:26.327765"
       }
     },
     "resolved": [
@@ -19658,6 +19658,32 @@
         "result": "win",
         "resolved_at": "2026-09-14T04:27:18.688397",
         "exit_price": 0.181924
+      },
+      {
+        "coin": "LIT",
+        "name": "Lighter",
+        "tf": "1h",
+        "entry": 0.1089,
+        "stop": 0.107,
+        "target1": 0.1108,
+        "target2": 0.1127,
+        "opened_at": "2026-09-14T04:27:18.688397",
+        "result": "win",
+        "resolved_at": "2026-09-14T04:32:26.327765",
+        "exit_price": 0.1146
+      },
+      {
+        "coin": "XLM",
+        "name": "Stellar",
+        "tf": "daily",
+        "entry": 0.152173,
+        "stop": 0.14128113333333334,
+        "target1": 0.16306486666666667,
+        "target2": 0.17395673333333334,
+        "opened_at": "2026-09-14T04:27:18.688397",
+        "result": "win",
+        "resolved_at": "2026-09-14T04:32:26.327765",
+        "exit_price": 0.181804
       }
     ]
   },
@@ -19665,14 +19691,14 @@
     "key": "BTC",
     "name": "Bitcoin",
     "emoji": "\u20bf",
-    "price": 77603,
+    "price": 77625,
     "high_24h": 77811,
     "low_24h": 76439,
-    "pct_24h": 0.50024,
+    "pct_24h": 0.54589,
     "pct_7d": -2.9,
     "pct_30d": 22.9,
-    "sma50": 71404.61899292181,
-    "sma200": 70177.16442282137,
+    "sma50": 71405.52212160375,
+    "sma200": 70177.39020499187,
     "support_30d": 62843.70368466329,
     "resistance_30d": 81264.70153038795,
     "mark_price": 77158.0,
@@ -19687,14 +19713,14 @@
     "key": "ETH",
     "name": "Ethereum",
     "emoji": "\u039e",
-    "price": 2515.66,
+    "price": 2514.39,
     "high_24h": 2522.92,
     "low_24h": 2464.63,
-    "pct_24h": -0.26307,
+    "pct_24h": -0.31521,
     "pct_7d": 0.0,
     "pct_30d": 33.3,
-    "sma50": 2197.1591246169323,
-    "sma200": 2059.840546318736,
+    "sma50": 2197.1443400919384,
+    "sma200": 2059.836850187487,
     "support_30d": 1874.401898191962,
     "resistance_30d": 2525.267261590238,
     "mark_price": 2521.71641085,
