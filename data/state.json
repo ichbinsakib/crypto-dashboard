@@ -631,7 +631,7 @@
         ],
         [
           "Stretch from long-term average",
-          "+38.8% above its long-term average - very stretched",
+          "+37.9% above its long-term average - very stretched",
           -2
         ],
         [
@@ -644,12 +644,12 @@
       "id": "monero",
       "symbol": "XMR",
       "name": "Monero",
-      "price": 515.26,
-      "pct_24h": -4.00867,
-      "pct_7d": -4.4,
+      "price": 512.14,
+      "pct_24h": -3.50137,
+      "pct_7d": -4.6,
       "support_30d": 409.8815731954537,
       "resistance_30d": 555.6684591165193,
-      "as_of": "2026-09-14 09:40:24",
+      "as_of": "2026-09-14 14:00:40",
       "stale": false
     },
     "cardano": {
@@ -2325,11 +2325,11 @@
       "symbol": "GRAM",
       "name": "Gram (prev. Toncoin)",
       "price": 1.35,
-      "pct_24h": -0.1751,
-      "pct_7d": -4.5,
+      "pct_24h": 0.05142,
+      "pct_7d": -4.8,
       "support_30d": 1.3170990455791696,
       "resistance_30d": 1.4926762805297678,
-      "as_of": "2026-09-14 11:10:25",
+      "as_of": "2026-09-14 14:00:40",
       "stale": false
     },
     "sky": {
@@ -2935,7 +2935,7 @@
         ],
         [
           "Stretch from long-term average",
-          "+33.7% above its long-term average - very stretched",
+          "+33.5% above its long-term average - very stretched",
           -2
         ],
         [
@@ -2948,12 +2948,12 @@
       "id": "just",
       "symbol": "JST",
       "name": "JUST",
-      "price": 0.113509,
-      "pct_24h": 1.37728,
-      "pct_7d": 4.9,
+      "price": 0.113349,
+      "pct_24h": 1.18033,
+      "pct_7d": 4.4,
       "support_30d": 0.0946830738697126,
-      "resistance_30d": 0.11333352867903936,
-      "as_of": "2026-09-14 13:55:20",
+      "resistance_30d": 0.11334880627759826,
+      "as_of": "2026-09-14 14:00:40",
       "stale": false
     },
     "algorand": {
@@ -3341,7 +3341,9 @@
       "stale": false
     }
   },
-  "_strong_buy_state": {},
+  "_strong_buy_state": {
+    "scanner-1h:PI": true
+  },
   "_pnl_tracker": {
     "open": {
       "15m:PUMP": {
@@ -3349,10 +3351,20 @@
         "name": "Pump.fun",
         "tf": "15m",
         "entry": 0.00357,
-        "stop": 0.0035458,
-        "target1": 0.0035941999999999997,
-        "target2": 0.0036183999999999995,
-        "opened_at": "2026-09-14T13:57:22.033477"
+        "stop": 0.003546633333333333,
+        "target1": 0.0035933666666666665,
+        "target2": 0.003616733333333333,
+        "opened_at": "2026-09-14T14:02:41.286056"
+      },
+      "1h:PI": {
+        "coin": "PI",
+        "name": "Pi Network",
+        "tf": "1h",
+        "entry": 0.09574,
+        "stop": 0.09396666666666667,
+        "target1": 0.09751333333333334,
+        "target2": 0.09928666666666668,
+        "opened_at": "2026-09-14T14:02:41.286056"
       }
     },
     "resolved": [
@@ -21841,6 +21853,19 @@
         "result": "win",
         "resolved_at": "2026-09-14T13:57:22.033477",
         "exit_price": 0.003632
+      },
+      {
+        "coin": "PUMP",
+        "name": "Pump.fun",
+        "tf": "15m",
+        "entry": 0.00357,
+        "stop": 0.0035458,
+        "target1": 0.0035941999999999997,
+        "target2": 0.0036183999999999995,
+        "opened_at": "2026-09-14T13:57:22.033477",
+        "result": "win",
+        "resolved_at": "2026-09-14T14:02:41.286056",
+        "exit_price": 0.003635
       }
     ]
   },
@@ -21848,14 +21873,14 @@
     "key": "BTC",
     "name": "Bitcoin",
     "emoji": "\u20bf",
-    "price": 78268,
+    "price": 78114,
     "high_24h": 78278,
     "low_24h": 76439,
-    "pct_24h": 1.85662,
+    "pct_24h": 1.66287,
     "pct_7d": -2.2,
     "pct_30d": 23.3,
-    "sma50": 71417.55239960922,
-    "sma200": 70180.39777449323,
+    "sma50": 71415.30972244637,
+    "sma200": 70179.83710520252,
     "support_30d": 62843.70368466329,
     "resistance_30d": 81264.70153038795,
     "mark_price": 77600.0,
@@ -21870,14 +21895,14 @@
     "key": "ETH",
     "name": "Ethereum",
     "emoji": "\u039e",
-    "price": 2506.54,
+    "price": 2499.41,
     "high_24h": 2531.64,
     "low_24h": 2467.86,
-    "pct_24h": 1.13808,
+    "pct_24h": 0.8564,
     "pct_7d": 0.6,
     "pct_30d": 33.4,
-    "sma50": 2196.9656240235254,
-    "sma200": 2059.792171170384,
+    "sma50": 2196.8262706983282,
+    "sma200": 2059.7573328390845,
     "support_30d": 1874.401898191962,
     "resistance_30d": 2525.267261590238,
     "mark_price": 2515.82,
