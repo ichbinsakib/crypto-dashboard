@@ -4,7 +4,7 @@
   "_alerts_state": {
     "btc-resistance-break": {
       "triggered": true,
-      "last_triggered_at": "2026-09-14 21:45:28"
+      "last_triggered_at": "2026-09-14 21:50:27"
     },
     "btc-support-break": {
       "triggered": false,
@@ -12,7 +12,7 @@
     },
     "eth-resistance-break": {
       "triggered": true,
-      "last_triggered_at": "2026-09-14 21:45:28"
+      "last_triggered_at": "2026-09-14 21:50:27"
     },
     "eth-support-break": {
       "triggered": false,
@@ -452,12 +452,12 @@
       "id": "rain",
       "symbol": "RAIN",
       "name": "Rain",
-      "price": 0.01433509,
-      "pct_24h": -6.65235,
-      "pct_7d": -12.2,
+      "price": 0.01433439,
+      "pct_24h": -6.23718,
+      "pct_7d": -12.1,
       "support_30d": 0.01298701863028712,
       "resistance_30d": 0.018158429442510105,
-      "as_of": "2026-09-14 19:25:18",
+      "as_of": "2026-09-14 21:50:27",
       "stale": false
     },
     "chainlink": {
@@ -775,7 +775,7 @@
         ],
         [
           "Stretch from long-term average",
-          "-8.5% vs its long-term average - not stretched either way",
+          "-8.9% vs its long-term average - not stretched either way",
           0
         ],
         [
@@ -788,12 +788,12 @@
       "id": "kucoin-shares",
       "symbol": "KCS",
       "name": "KuCoin",
-      "price": 6.98,
-      "pct_24h": 2.02539,
+      "price": 6.95,
+      "pct_24h": 1.53905,
       "pct_7d": 0.0,
       "support_30d": 6.514591596607885,
       "resistance_30d": 7.8821382735057615,
-      "as_of": "2026-09-14 21:30:29",
+      "as_of": "2026-09-14 21:50:27",
       "stale": false
     },
     "hedera-hashgraph": {
@@ -2516,12 +2516,12 @@
       "id": "quant-network",
       "symbol": "QNT",
       "name": "Quant",
-      "price": 63.94,
-      "pct_24h": 0.31625,
+      "price": 63.97,
+      "pct_24h": 0.24255,
       "pct_7d": -3.6,
       "support_30d": 55.905981995619285,
       "resistance_30d": 67.13669726469111,
-      "as_of": "2026-09-14 21:40:24",
+      "as_of": "2026-09-14 21:50:27",
       "stale": false
     },
     "tether-gold": {
@@ -2983,7 +2983,7 @@
         ],
         [
           "Stretch from long-term average",
-          "-1.8% vs its long-term average - not stretched either way",
+          "-2.7% vs its long-term average - not stretched either way",
           0
         ],
         [
@@ -2996,12 +2996,12 @@
       "id": "algorand",
       "symbol": "ALGO",
       "name": "Algorand",
-      "price": 0.09791,
-      "pct_24h": -1.6143,
-      "pct_7d": 1.8,
+      "price": 0.097017,
+      "pct_24h": -1.55931,
+      "pct_7d": 2.7,
       "support_30d": 0.07793708137631736,
       "resistance_30d": 0.10076397875501594,
-      "as_of": "2026-09-14 20:55:19",
+      "as_of": "2026-09-14 21:50:27",
       "stale": false
     },
     "eutbl": {
@@ -3223,7 +3223,7 @@
         ],
         [
           "Stretch from long-term average",
-          "+3.9% vs its long-term average - not stretched either way",
+          "+3.2% vs its long-term average - not stretched either way",
           0
         ],
         [
@@ -3236,12 +3236,12 @@
       "id": "kaspa",
       "symbol": "KAS",
       "name": "Kaspa",
-      "price": 0.03506015,
-      "pct_24h": 1.8774,
+      "price": 0.03480901,
+      "pct_24h": 1.58168,
       "pct_7d": -2.6,
       "support_30d": 0.025275049210175406,
       "resistance_30d": 0.03651282069323304,
-      "as_of": "2026-09-14 21:00:34",
+      "as_of": "2026-09-14 21:50:27",
       "stale": false
     },
     "cosmos": {
@@ -3361,10 +3361,10 @@
         "name": "Zcash",
         "tf": "15m",
         "entry": 1132.75,
-        "stop": 1120.5076666666666,
-        "target1": 1144.9923333333334,
-        "target2": 1157.2346666666667,
-        "opened_at": "2026-09-14T21:46:55.996108"
+        "stop": 1120.4406666666666,
+        "target1": 1145.0593333333334,
+        "target2": 1157.3686666666667,
+        "opened_at": "2026-09-14T21:51:55.844455"
       }
     },
     "resolved": [
@@ -23673,6 +23673,19 @@
         "result": "win",
         "resolved_at": "2026-09-14T21:46:55.996108",
         "exit_price": 1174.09
+      },
+      {
+        "coin": "ZEC",
+        "name": "Zcash",
+        "tf": "15m",
+        "entry": 1132.75,
+        "stop": 1120.5076666666666,
+        "target1": 1144.9923333333334,
+        "target2": 1157.2346666666667,
+        "opened_at": "2026-09-14T21:46:55.996108",
+        "result": "win",
+        "resolved_at": "2026-09-14T21:51:55.844455",
+        "exit_price": 1172.24
       }
     ]
   },
@@ -23680,14 +23693,14 @@
     "key": "BTC",
     "name": "Bitcoin",
     "emoji": "\u20bf",
-    "price": 78831,
+    "price": 78791,
     "high_24h": 79530,
     "low_24h": 76439,
-    "pct_24h": 1.91071,
+    "pct_24h": 1.88994,
     "pct_7d": -0.3,
     "pct_30d": 25.5,
-    "sma50": 71429.19993743411,
-    "sma200": 70183.30965894945,
+    "sma50": 71428.58328795852,
+    "sma200": 70183.15549658056,
     "support_30d": 62843.70368466329,
     "resistance_30d": 81264.70153038795,
     "mark_price": 79163.5,
@@ -23702,16 +23715,16 @@
     "key": "ETH",
     "name": "Ethereum",
     "emoji": "\u039e",
-    "price": 2549.0,
+    "price": 2546.45,
     "high_24h": 2607.56,
     "low_24h": 2467.86,
-    "pct_24h": 1.49992,
+    "pct_24h": 1.46648,
     "pct_7d": 3.0,
     "pct_30d": 36.5,
-    "sma50": 2197.819617129966,
-    "sma200": 2060.005669446994,
+    "sma50": 2197.788889080482,
+    "sma200": 2059.997987434623,
     "support_30d": 1874.401898191962,
-    "resistance_30d": 2548.6863694198914,
+    "resistance_30d": 2547.1499669456957,
     "mark_price": 2567.79454334,
     "index_price": 2567.75069767,
     "funding_rate": 1.96e-05,
