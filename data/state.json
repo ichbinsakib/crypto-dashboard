@@ -3,7 +3,7 @@
   "_fng_classification": "Greed",
   "_alerts_state": {
     "btc-resistance-break": {
-      "triggered": true,
+      "triggered": false,
       "last_triggered_at": "2026-09-14 23:15:22"
     },
     "btc-support-break": {
@@ -12,7 +12,7 @@
     },
     "eth-resistance-break": {
       "triggered": true,
-      "last_triggered_at": "2026-09-14 23:15:22"
+      "last_triggered_at": "2026-09-14 23:20:23"
     },
     "eth-support-break": {
       "triggered": false,
@@ -1783,7 +1783,7 @@
         ],
         [
           "Stretch from long-term average",
-          "+145.9% above its long-term average - very stretched",
+          "+144.8% above its long-term average - very stretched",
           -2
         ],
         [
@@ -1796,12 +1796,12 @@
       "id": "lighter",
       "symbol": "LIT",
       "name": "Lighter",
-      "price": 4.47,
-      "pct_24h": 6.83796,
-      "pct_7d": -6.8,
+      "price": 4.45,
+      "pct_24h": 7.54263,
+      "pct_7d": -5.5,
       "support_30d": 2.277611067280557,
       "resistance_30d": 4.827528632102638,
-      "as_of": "2026-09-14 22:10:23",
+      "as_of": "2026-09-14 23:20:23",
       "stale": false
     },
     "ethena": {
@@ -2531,7 +2531,7 @@
       "rows": [
         [
           "Price vs. recent range",
-          "Near its 30-day low (~$4,297.32) - historically a better entry",
+          "Near its 30-day low (~$4,291.13) - historically a better entry",
           2
         ],
         [
@@ -2551,7 +2551,7 @@
         ],
         [
           "Stretch from long-term average",
-          "-3.7% vs its long-term average - not stretched either way",
+          "-3.8% vs its long-term average - not stretched either way",
           0
         ],
         [
@@ -2564,12 +2564,12 @@
       "id": "tether-gold",
       "symbol": "XAUT",
       "name": "Tether Gold",
-      "price": 4297.69,
-      "pct_24h": -0.82098,
-      "pct_7d": -2.4,
-      "support_30d": 4297.323689793143,
+      "price": 4293.03,
+      "pct_24h": -0.98962,
+      "pct_7d": -2.6,
+      "support_30d": 4291.133795205656,
       "resistance_30d": 4662.510537821146,
-      "as_of": "2026-09-14 22:30:26",
+      "as_of": "2026-09-14 23:20:23",
       "stale": false
     },
     "bitway": {
@@ -3053,9 +3053,9 @@
       "stale": false
     },
     "arbitrum": {
-      "label": "\ud83d\udd34 DISTRIBUTION ZONE",
+      "label": "\ud83d\udd34 CAUTION - REDUCE NEW BUYS",
       "status": "bearish",
-      "score": -6,
+      "score": -3,
       "rows": [
         [
           "Price vs. recent range",
@@ -3069,8 +3069,8 @@
         ],
         [
           "Market phase (best guess)",
-          "Very extended after a big run - phase where smart money sells",
-          -2
+          "Established uptrend - phase where price marks up",
+          1
         ],
         [
           "Recent trend",
@@ -3079,7 +3079,7 @@
         ],
         [
           "Stretch from long-term average",
-          "+40.3% above its long-term average - very stretched",
+          "+33.2% above its long-term average - very stretched",
           -2
         ],
         [
@@ -3088,16 +3088,16 @@
           0
         ]
       ],
-      "plain": "Looks stretched and euphoric - historically the zone where smart money sells, not buys.",
+      "plain": "Getting risky - I'd hold off on new buys until this cools down.",
       "id": "arbitrum",
       "symbol": "ARB",
       "name": "Arbitrum",
-      "price": 0.141145,
-      "pct_24h": 2.30073,
-      "pct_7d": -15.6,
+      "price": 0.133935,
+      "pct_24h": 0.67801,
+      "pct_7d": -20.9,
       "support_30d": 0.07348670709752918,
       "resistance_30d": 0.18933387703114857,
-      "as_of": "2026-09-14 20:45:23",
+      "as_of": "2026-09-14 23:20:23",
       "stale": false
     },
     "dash": {
@@ -3341,7 +3341,9 @@
       "stale": false
     }
   },
-  "_strong_buy_state": {},
+  "_strong_buy_state": {
+    "scanner-1h:ETC": true
+  },
   "_pnl_tracker": {
     "open": {
       "15m:ZEC": {
@@ -3349,20 +3351,20 @@
         "name": "Zcash",
         "tf": "15m",
         "entry": 1132.75,
-        "stop": 1120.3086666666666,
-        "target1": 1145.1913333333334,
-        "target2": 1157.6326666666669,
-        "opened_at": "2026-09-14T23:17:19.649886"
+        "stop": 1120.2846666666667,
+        "target1": 1145.2153333333333,
+        "target2": 1157.6806666666666,
+        "opened_at": "2026-09-14T23:22:21.271526"
       },
       "1h:ETC": {
         "coin": "ETC",
         "name": "Ethereum Classic",
         "tf": "1h",
         "entry": 7.423,
-        "stop": 7.3838333333333335,
-        "target1": 7.462166666666667,
-        "target2": 7.501333333333333,
-        "opened_at": "2026-09-14T23:17:19.649886"
+        "stop": 7.383708333333334,
+        "target1": 7.462291666666666,
+        "target2": 7.501583333333333,
+        "opened_at": "2026-09-14T23:22:21.271526"
       }
     },
     "resolved": [
@@ -24035,6 +24037,32 @@
         "result": "win",
         "resolved_at": "2026-09-14T23:17:19.649886",
         "exit_price": 7.59
+      },
+      {
+        "coin": "ZEC",
+        "name": "Zcash",
+        "tf": "15m",
+        "entry": 1132.75,
+        "stop": 1120.3086666666666,
+        "target1": 1145.1913333333334,
+        "target2": 1157.6326666666669,
+        "opened_at": "2026-09-14T23:17:19.649886",
+        "result": "win",
+        "resolved_at": "2026-09-14T23:22:21.271526",
+        "exit_price": 1167.47
+      },
+      {
+        "coin": "ETC",
+        "name": "Ethereum Classic",
+        "tf": "1h",
+        "entry": 7.423,
+        "stop": 7.3838333333333335,
+        "target1": 7.462166666666667,
+        "target2": 7.501333333333333,
+        "opened_at": "2026-09-14T23:17:19.649886",
+        "result": "win",
+        "resolved_at": "2026-09-14T23:22:21.271526",
+        "exit_price": 7.593
       }
     ]
   },
@@ -24042,14 +24070,14 @@
     "key": "BTC",
     "name": "Bitcoin",
     "emoji": "\u20bf",
-    "price": 78426,
+    "price": 78406,
     "high_24h": 79530,
     "low_24h": 76439,
-    "pct_24h": 2.25,
+    "pct_24h": 2.31656,
     "pct_7d": -0.8,
     "pct_30d": 24.5,
-    "sma50": 71421.32561032669,
-    "sma200": 70181.3410771726,
+    "sma50": 71420.88681442085,
+    "sma200": 70181.23137819613,
     "support_30d": 62843.70368466329,
     "resistance_30d": 81264.70153038795,
     "mark_price": 78726.74180435,
@@ -24064,16 +24092,16 @@
     "key": "ETH",
     "name": "Ethereum",
     "emoji": "\u039e",
-    "price": 2525.66,
+    "price": 2525.23,
     "high_24h": 2607.56,
     "low_24h": 2467.86,
-    "pct_24h": 2.07096,
+    "pct_24h": 2.16787,
     "pct_7d": 1.7,
     "pct_30d": 34.5,
-    "sma50": 2197.355480856722,
-    "sma200": 2059.889635378683,
+    "sma50": 2197.3503984676963,
+    "sma200": 2059.888364781427,
     "support_30d": 1874.401898191962,
-    "resistance_30d": 2525.479555757671,
+    "resistance_30d": 2525.267261590238,
     "mark_price": 2544.79927907,
     "index_price": 2546.0372093,
     "funding_rate": 4.186e-05,
