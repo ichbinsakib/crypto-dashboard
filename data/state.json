@@ -12,7 +12,7 @@
     },
     "eth-resistance-break": {
       "triggered": true,
-      "last_triggered_at": "2026-09-14 08:05:20"
+      "last_triggered_at": "2026-09-14 08:10:33"
     },
     "eth-support-break": {
       "triggered": false,
@@ -68,12 +68,12 @@
       "id": "binancecoin",
       "symbol": "BNB",
       "name": "BNB",
-      "price": 724.31,
-      "pct_24h": 0.31988,
-      "pct_7d": -3.4,
+      "price": 724.7,
+      "pct_24h": 0.36386,
+      "pct_7d": -2.8,
       "support_30d": 602.4629221231862,
       "resistance_30d": 766.4092879330625,
-      "as_of": "2026-09-14 07:55:55",
+      "as_of": "2026-09-14 08:10:33",
       "stale": false
     },
     "ripple": {
@@ -271,7 +271,7 @@
     "hyperliquid": {
       "label": "\ud83d\udd34 DISTRIBUTION ZONE",
       "status": "bearish",
-      "score": -5,
+      "score": -6,
       "rows": [
         [
           "Price vs. recent range",
@@ -290,12 +290,12 @@
         ],
         [
           "Recent trend",
-          "Chopping sideways - no clear trend",
-          0
+          "Trending down - avoid catching a falling knife",
+          -1
         ],
         [
           "Stretch from long-term average",
-          "+44.2% above its long-term average - very stretched",
+          "+44.6% above its long-term average - very stretched",
           -2
         ],
         [
@@ -308,12 +308,12 @@
       "id": "hyperliquid",
       "symbol": "HYPE",
       "name": "Hyperliquid",
-      "price": 79.51,
-      "pct_24h": 0.64617,
-      "pct_7d": -7.8,
+      "price": 79.77,
+      "pct_24h": 1.57422,
+      "pct_7d": -8.0,
       "support_30d": 57.1155488189019,
       "resistance_30d": 87.951916819731,
-      "as_of": "2026-09-14 06:35:21",
+      "as_of": "2026-09-14 08:10:33",
       "stale": false
     },
     "dogecoin": {
@@ -1015,7 +1015,7 @@
         ],
         [
           "Stretch from long-term average",
-          "+7.2% vs its long-term average - not stretched either way",
+          "+6.9% vs its long-term average - not stretched either way",
           0
         ],
         [
@@ -1028,12 +1028,12 @@
       "id": "worldcoin-wld",
       "symbol": "WLD",
       "name": "Worldcoin",
-      "price": 0.383397,
-      "pct_24h": -2.51209,
-      "pct_7d": -9.4,
+      "price": 0.382533,
+      "pct_24h": -2.31558,
+      "pct_7d": -12.4,
       "support_30d": 0.319812298466522,
       "resistance_30d": 0.4772935995106048,
-      "as_of": "2026-09-14 07:46:13",
+      "as_of": "2026-09-14 08:10:33",
       "stale": false
     },
     "bfusd": {
@@ -2852,12 +2852,12 @@
       "id": "aave",
       "symbol": "AAVE",
       "name": "Aave",
-      "price": 126.3,
-      "pct_24h": -0.27407,
-      "pct_7d": -7.2,
+      "price": 126.25,
+      "pct_24h": -0.16235,
+      "pct_7d": -6.1,
       "support_30d": 85.94219943917633,
       "resistance_30d": 141.53047916466082,
-      "as_of": "2026-09-14 07:25:18",
+      "as_of": "2026-09-14 08:10:33",
       "stale": false
     },
     "okb": {
@@ -2900,12 +2900,12 @@
       "id": "okb",
       "symbol": "OKB",
       "name": "OKB",
-      "price": 114.08,
-      "pct_24h": -0.43352,
-      "pct_7d": 0.6,
+      "price": 114.04,
+      "pct_24h": -0.53118,
+      "pct_7d": 0.7,
       "support_30d": 98.99707739944992,
       "resistance_30d": 115.8310797114581,
-      "as_of": "2026-09-14 07:46:13",
+      "as_of": "2026-09-14 08:10:33",
       "stale": false
     },
     "just": {
@@ -3296,16 +3296,6 @@
   "_strong_buy_state": {},
   "_pnl_tracker": {
     "open": {
-      "15m:ASTER": {
-        "coin": "ASTER",
-        "name": "Aster",
-        "tf": "15m",
-        "entry": 0.68785,
-        "stop": 0.686908,
-        "target1": 0.688792,
-        "target2": 0.689734,
-        "opened_at": "2026-09-14T08:07:17.086656"
-      },
       "daily:XLM": {
         "coin": "XLM",
         "name": "Stellar",
@@ -3314,7 +3304,7 @@
         "stop": 0.1411899,
         "target1": 0.1631561,
         "target2": 0.1741392,
-        "opened_at": "2026-09-14T08:07:17.086656"
+        "opened_at": "2026-09-14T08:12:00.387804"
       }
     },
     "resolved": [
@@ -20867,6 +20857,32 @@
         "result": "win",
         "resolved_at": "2026-09-14T08:07:17.086656",
         "exit_price": 0.184603
+      },
+      {
+        "coin": "ASTER",
+        "name": "Aster",
+        "tf": "15m",
+        "entry": 0.68785,
+        "stop": 0.686908,
+        "target1": 0.688792,
+        "target2": 0.689734,
+        "opened_at": "2026-09-14T08:07:17.086656",
+        "result": "win",
+        "resolved_at": "2026-09-14T08:12:00.387804",
+        "exit_price": 0.69556
+      },
+      {
+        "coin": "XLM",
+        "name": "Stellar",
+        "tf": "daily",
+        "entry": 0.152173,
+        "stop": 0.1411899,
+        "target1": 0.1631561,
+        "target2": 0.1741392,
+        "opened_at": "2026-09-14T08:07:17.086656",
+        "result": "win",
+        "resolved_at": "2026-09-14T08:12:00.387804",
+        "exit_price": 0.184628
       }
     ]
   },
@@ -20874,14 +20890,14 @@
     "key": "BTC",
     "name": "Bitcoin",
     "emoji": "\u20bf",
-    "price": 77743,
+    "price": 77792,
     "high_24h": 77854,
     "low_24h": 76439,
-    "pct_24h": 0.79726,
+    "pct_24h": 0.86702,
     "pct_7d": -2.3,
     "pct_30d": 23.5,
-    "sma50": 71407.63460700867,
-    "sma200": 70177.91832634309,
+    "sma50": 71408.60348868475,
+    "sma200": 70178.16054676211,
     "support_30d": 62843.70368466329,
     "resistance_30d": 81264.70153038795,
     "mark_price": 77600.0,
@@ -20896,14 +20912,14 @@
     "key": "ETH",
     "name": "Ethereum",
     "emoji": "\u039e",
-    "price": 2518.83,
+    "price": 2520.78,
     "high_24h": 2525.02,
     "low_24h": 2464.63,
-    "pct_24h": 0.03718,
+    "pct_24h": 0.13187,
     "pct_7d": 1.0,
     "pct_30d": 34.1,
-    "sma50": 2197.2326486170814,
-    "sma200": 2059.8589273187727,
+    "sma50": 2197.2614614084573,
+    "sma200": 2059.866130516617,
     "support_30d": 1874.401898191962,
     "resistance_30d": 2525.267261590238,
     "mark_price": 2515.82,
