@@ -1124,12 +1124,12 @@
       "id": "polygon-ecosystem-token",
       "symbol": "POL",
       "name": "POL (ex-MATIC)",
-      "price": 0.096574,
-      "pct_24h": 0.09944,
+      "price": 0.096578,
+      "pct_24h": -0.09184,
       "pct_7d": -0.4,
       "support_30d": 0.07481366852260064,
       "resistance_30d": 0.12250456198546959,
-      "as_of": "2026-09-14 03:00:33",
+      "as_of": "2026-09-14 03:05:20",
       "stale": false
     },
     "blackrock-usd-institutional-digital-liquidity-fund": {
@@ -2612,12 +2612,12 @@
       "id": "bitway",
       "symbol": "BTW",
       "name": "Bitway",
-      "price": 0.700468,
-      "pct_24h": 27.46977,
-      "pct_7d": 49.3,
+      "price": 0.702538,
+      "pct_24h": 26.76895,
+      "pct_7d": 56.9,
       "support_30d": 0.3581011744091522,
       "resistance_30d": 0.7325241073378514,
-      "as_of": "2026-09-14 02:45:20",
+      "as_of": "2026-09-14 03:05:20",
       "stale": false
     },
     "world-liberty-financial": {
@@ -2776,7 +2776,7 @@
         ],
         [
           "Crowd mood (Fear & Greed)",
-          "61/100 - crowd is greedy",
+          "57/100 - crowd is greedy",
           -1
         ],
         [
@@ -2791,7 +2791,7 @@
         ],
         [
           "Stretch from long-term average",
-          "-45.4% below its long-term average - confirmed downtrend",
+          "-45.8% below its long-term average - confirmed downtrend",
           -1
         ],
         [
@@ -2804,12 +2804,12 @@
       "id": "memecore",
       "symbol": "M",
       "name": "MemeCore",
-      "price": 1.14,
-      "pct_24h": -3.37901,
-      "pct_7d": 1.1,
+      "price": 1.13,
+      "pct_24h": -4.5546,
+      "pct_7d": 2.1,
       "support_30d": 1.0402044506518406,
       "resistance_30d": 1.2453913363052769,
-      "as_of": "2026-09-13 23:25:53",
+      "as_of": "2026-09-14 03:05:20",
       "stale": false
     },
     "aave": {
@@ -3304,7 +3304,7 @@
         "stop": 0.1413278,
         "target1": 0.1630182,
         "target2": 0.1738634,
-        "opened_at": "2026-09-14T03:02:29.089158"
+        "opened_at": "2026-09-14T03:07:23.223047"
       }
     },
     "resolved": [
@@ -19141,6 +19141,19 @@
         "result": "win",
         "resolved_at": "2026-09-14T03:02:29.089158",
         "exit_price": 0.180801
+      },
+      {
+        "coin": "XLM",
+        "name": "Stellar",
+        "tf": "daily",
+        "entry": 0.152173,
+        "stop": 0.1413278,
+        "target1": 0.1630182,
+        "target2": 0.1738634,
+        "opened_at": "2026-09-14T03:02:29.089158",
+        "result": "win",
+        "resolved_at": "2026-09-14T03:07:23.223047",
+        "exit_price": 0.180861
       }
     ]
   },
@@ -19148,14 +19161,14 @@
     "key": "BTC",
     "name": "Bitcoin",
     "emoji": "\u20bf",
-    "price": 77554,
-    "high_24h": 77406,
+    "price": 77634,
+    "high_24h": 77640,
     "low_24h": 76439,
-    "pct_24h": 0.36009,
-    "pct_7d": -3.8,
-    "pct_30d": 22.4,
-    "sma50": 71403.87353584116,
-    "sma200": 70176.97805855122,
+    "pct_24h": 0.47802,
+    "pct_7d": -3.0,
+    "pct_30d": 23.1,
+    "sma50": 71405.00813206921,
+    "sma200": 70177.26170760822,
     "support_30d": 62843.70368466329,
     "resistance_30d": 81264.70153038795,
     "mark_price": 77158.0,
@@ -19170,14 +19183,14 @@
     "key": "ETH",
     "name": "Ethereum",
     "emoji": "\u039e",
-    "price": 2510.02,
+    "price": 2512.83,
     "high_24h": 2522.92,
     "low_24h": 2464.63,
-    "pct_24h": -0.47702,
-    "pct_7d": -0.8,
-    "pct_30d": 32.5,
-    "sma50": 2197.0373936204637,
-    "sma200": 2059.8101135696184,
+    "pct_24h": -0.2766,
+    "pct_7d": 0.2,
+    "pct_30d": 33.3,
+    "sma50": 2197.100417157775,
+    "sma200": 2059.8258694539463,
     "support_30d": 1874.401898191962,
     "resistance_30d": 2525.267261590238,
     "mark_price": 2521.71641085,
