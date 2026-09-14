@@ -4,7 +4,7 @@
   "_alerts_state": {
     "btc-resistance-break": {
       "triggered": true,
-      "last_triggered_at": "2026-09-14 17:10:24"
+      "last_triggered_at": "2026-09-14 17:15:22"
     },
     "btc-support-break": {
       "triggered": false,
@@ -12,7 +12,7 @@
     },
     "eth-resistance-break": {
       "triggered": true,
-      "last_triggered_at": "2026-09-14 17:10:24"
+      "last_triggered_at": "2026-09-14 17:15:22"
     },
     "eth-support-break": {
       "triggered": false,
@@ -563,7 +563,7 @@
       "rows": [
         [
           "Price vs. recent range",
-          "Near its 30-day low (~$9.00) - historically a better entry",
+          "Near its 30-day low (~$8.99) - historically a better entry",
           2
         ],
         [
@@ -583,7 +583,7 @@
         ],
         [
           "Stretch from long-term average",
-          "-6.7% vs its long-term average - not stretched either way",
+          "-6.8% vs its long-term average - not stretched either way",
           0
         ],
         [
@@ -596,12 +596,12 @@
       "id": "leo-token",
       "symbol": "LEO",
       "name": "LEO Token",
-      "price": 9.0,
-      "pct_24h": -0.63008,
-      "pct_7d": -1.8,
-      "support_30d": 8.995677030378143,
+      "price": 8.99,
+      "pct_24h": -0.68696,
+      "pct_7d": -1.7,
+      "support_30d": 8.99052526472833,
       "resistance_30d": 9.681775974309534,
-      "as_of": "2026-09-14 16:35:20",
+      "as_of": "2026-09-14 17:15:22",
       "stale": false
     },
     "monero": {
@@ -679,7 +679,7 @@
         ],
         [
           "Stretch from long-term average",
-          "-3.5% vs its long-term average - not stretched either way",
+          "-3.2% vs its long-term average - not stretched either way",
           0
         ],
         [
@@ -692,12 +692,12 @@
       "id": "cardano",
       "symbol": "ADA",
       "name": "Cardano",
-      "price": 0.210822,
-      "pct_24h": 1.67654,
+      "price": 0.21136,
+      "pct_24h": 1.60408,
       "pct_7d": -3.0,
       "support_30d": 0.1741249817054162,
       "resistance_30d": 0.2291047455940254,
-      "as_of": "2026-09-14 17:00:35",
+      "as_of": "2026-09-14 17:15:22",
       "stale": false
     },
     "stellar": {
@@ -2743,7 +2743,7 @@
         ],
         [
           "Stretch from long-term average",
-          "+11.0% above its long-term average - a bit stretched",
+          "+11.5% above its long-term average - a bit stretched",
           -1
         ],
         [
@@ -2756,12 +2756,12 @@
       "id": "morpho",
       "symbol": "MORPHO",
       "name": "Morpho",
-      "price": 2.19,
-      "pct_24h": -0.27176,
+      "price": 2.2,
+      "pct_24h": -0.06134,
       "pct_7d": -10.5,
       "support_30d": 1.994353941994143,
       "resistance_30d": 2.9026212482639075,
-      "as_of": "2026-09-14 17:10:24",
+      "as_of": "2026-09-14 17:15:22",
       "stale": false
     },
     "memecore": {
@@ -3349,20 +3349,20 @@
         "name": "Sky",
         "tf": "1h",
         "entry": 0.06175,
-        "stop": 0.06115875,
-        "target1": 0.06234125,
-        "target2": 0.0629325,
-        "opened_at": "2026-09-14T17:12:28.104749"
+        "stop": 0.061149583333333334,
+        "target1": 0.062350416666666665,
+        "target2": 0.06295083333333333,
+        "opened_at": "2026-09-14T17:17:25.140247"
       },
       "1h:HYPE": {
         "coin": "HYPE",
         "name": "Hyperliquid",
         "tf": "1h",
         "entry": 76.93,
-        "stop": 76.06458333333335,
-        "target1": 77.79541666666667,
-        "target2": 78.66083333333333,
-        "opened_at": "2026-09-14T17:12:28.104749"
+        "stop": 76.05958333333334,
+        "target1": 77.80041666666668,
+        "target2": 78.67083333333335,
+        "opened_at": "2026-09-14T17:17:25.140247"
       }
     },
     "resolved": [
@@ -22631,6 +22631,32 @@
         "result": "win",
         "resolved_at": "2026-09-14T17:12:28.104749",
         "exit_price": 80.62
+      },
+      {
+        "coin": "SKY",
+        "name": "Sky",
+        "tf": "1h",
+        "entry": 0.06175,
+        "stop": 0.06115875,
+        "target1": 0.06234125,
+        "target2": 0.0629325,
+        "opened_at": "2026-09-14T17:12:28.104749",
+        "result": "win",
+        "resolved_at": "2026-09-14T17:17:25.140247",
+        "exit_price": 0.06425
+      },
+      {
+        "coin": "HYPE",
+        "name": "Hyperliquid",
+        "tf": "1h",
+        "entry": 76.93,
+        "stop": 76.06458333333335,
+        "target1": 77.79541666666667,
+        "target2": 78.66083333333333,
+        "opened_at": "2026-09-14T17:12:28.104749",
+        "result": "win",
+        "resolved_at": "2026-09-14T17:17:25.140247",
+        "exit_price": 80.76
       }
     ]
   },
@@ -22638,14 +22664,14 @@
     "key": "BTC",
     "name": "Bitcoin",
     "emoji": "\u20bf",
-    "price": 78749,
+    "price": 78799,
     "high_24h": 78856,
     "low_24h": 76439,
-    "pct_24h": 1.86633,
+    "pct_24h": 1.90418,
     "pct_7d": -0.1,
     "pct_30d": 24.9,
-    "sma50": 71427.89858454565,
-    "sma200": 70182.98432072734,
+    "sma50": 71428.90740578441,
+    "sma200": 70183.23652603703,
     "support_30d": 62843.70368466329,
     "resistance_30d": 81264.70153038795,
     "mark_price": 77600.0,
@@ -22660,16 +22686,16 @@
     "key": "ETH",
     "name": "Ethereum",
     "emoji": "\u039e",
-    "price": 2525.49,
+    "price": 2529.87,
     "high_24h": 2535.25,
     "low_24h": 2467.86,
-    "pct_24h": 0.7403,
+    "pct_24h": 0.89788,
     "pct_7d": 2.4,
     "pct_30d": 34.3,
-    "sma50": 2197.35865673785,
-    "sma200": 2059.890429348965,
+    "sma50": 2197.4613528965333,
+    "sma200": 2059.9161033886357,
     "support_30d": 1874.401898191962,
-    "resistance_30d": 2525.638349814099,
+    "resistance_30d": 2530.773157748243,
     "mark_price": 2515.82,
     "index_price": 2516.73418605,
     "funding_rate": 8.331e-05,
