@@ -4,7 +4,7 @@
   "_alerts_state": {
     "btc-resistance-break": {
       "triggered": true,
-      "last_triggered_at": "2026-09-14 18:40:24"
+      "last_triggered_at": "2026-09-14 18:45:24"
     },
     "btc-support-break": {
       "triggered": false,
@@ -12,7 +12,7 @@
     },
     "eth-resistance-break": {
       "triggered": true,
-      "last_triggered_at": "2026-09-14 18:40:24"
+      "last_triggered_at": "2026-09-14 18:45:24"
     },
     "eth-support-break": {
       "triggered": false,
@@ -967,7 +967,7 @@
         ],
         [
           "Stretch from long-term average",
-          "+6.0% vs its long-term average - not stretched either way",
+          "+6.2% vs its long-term average - not stretched either way",
           0
         ],
         [
@@ -980,12 +980,12 @@
       "id": "aster-2",
       "symbol": "ASTER",
       "name": "Aster",
-      "price": 0.70184,
-      "pct_24h": 0.35161,
+      "price": 0.703263,
+      "pct_24h": 0.58089,
       "pct_7d": -8.9,
       "support_30d": 0.5986101196690307,
       "resistance_30d": 0.7868111056215635,
-      "as_of": "2026-09-14 18:25:19",
+      "as_of": "2026-09-14 18:45:24",
       "stale": false
     },
     "worldcoin-wld": {
@@ -1111,7 +1111,7 @@
         ],
         [
           "Stretch from long-term average",
-          "+10.6% above its long-term average - a bit stretched",
+          "+10.7% above its long-term average - a bit stretched",
           -1
         ],
         [
@@ -1124,12 +1124,12 @@
       "id": "polygon-ecosystem-token",
       "symbol": "POL",
       "name": "POL (ex-MATIC)",
-      "price": 0.097408,
-      "pct_24h": 0.06767,
-      "pct_7d": 2.4,
+      "price": 0.097487,
+      "pct_24h": 0.03606,
+      "pct_7d": 1.5,
       "support_30d": 0.07481366852260064,
       "resistance_30d": 0.12250456198546959,
-      "as_of": "2026-09-14 17:25:18",
+      "as_of": "2026-09-14 18:45:24",
       "stale": false
     },
     "blackrock-usd-institutional-digital-liquidity-fund": {
@@ -1399,7 +1399,7 @@
         ],
         [
           "Stretch from long-term average",
-          "+32.0% above its long-term average - very stretched",
+          "+32.2% above its long-term average - very stretched",
           -2
         ],
         [
@@ -1412,12 +1412,12 @@
       "id": "gatechain-token",
       "symbol": "GT",
       "name": "Gate",
-      "price": 9.3,
-      "pct_24h": 1.15363,
-      "pct_7d": 3.1,
+      "price": 9.31,
+      "pct_24h": 1.11841,
+      "pct_7d": 3.0,
       "support_30d": 6.673649191532821,
       "resistance_30d": 9.38216924975626,
-      "as_of": "2026-09-14 15:25:24",
+      "as_of": "2026-09-14 18:45:24",
       "stale": false
     },
     "crypto-com-chain": {
@@ -1783,7 +1783,7 @@
         ],
         [
           "Stretch from long-term average",
-          "+140.5% above its long-term average - very stretched",
+          "+143.2% above its long-term average - very stretched",
           -2
         ],
         [
@@ -1796,12 +1796,12 @@
       "id": "lighter",
       "symbol": "LIT",
       "name": "Lighter",
-      "price": 4.37,
-      "pct_24h": 5.94742,
-      "pct_7d": -3.6,
+      "price": 4.42,
+      "pct_24h": 5.22088,
+      "pct_7d": -0.7,
       "support_30d": 2.277611067280557,
       "resistance_30d": 4.827528632102638,
-      "as_of": "2026-09-14 14:55:24",
+      "as_of": "2026-09-14 18:45:24",
       "stale": false
     },
     "ethena": {
@@ -2215,7 +2215,7 @@
         ],
         [
           "Stretch from long-term average",
-          "+12.4% above its long-term average - a bit stretched",
+          "+13.6% above its long-term average - a bit stretched",
           -1
         ],
         [
@@ -2228,12 +2228,12 @@
       "id": "internet-computer",
       "symbol": "ICP",
       "name": "Internet Computer",
-      "price": 2.76,
-      "pct_24h": -1.58196,
-      "pct_7d": -4.7,
+      "price": 2.79,
+      "pct_24h": -0.06729,
+      "pct_7d": -7.1,
       "support_30d": 2.194804279500122,
       "resistance_30d": 2.9869340549074623,
-      "as_of": "2026-09-14 17:35:22",
+      "as_of": "2026-09-14 18:45:24",
       "stale": false
     },
     "bittensor": {
@@ -3352,7 +3352,7 @@
         "stop": 0.06113375,
         "target1": 0.06236625,
         "target2": 0.0629825,
-        "opened_at": "2026-09-14T18:42:26.245733"
+        "opened_at": "2026-09-14T18:46:42.771219"
       }
     },
     "resolved": [
@@ -23141,6 +23141,19 @@
         "result": "win",
         "resolved_at": "2026-09-14T18:42:26.245733",
         "exit_price": 0.06416
+      },
+      {
+        "coin": "SKY",
+        "name": "Sky",
+        "tf": "1h",
+        "entry": 0.06175,
+        "stop": 0.06113375,
+        "target1": 0.06236625,
+        "target2": 0.0629825,
+        "opened_at": "2026-09-14T18:42:26.245733",
+        "result": "win",
+        "resolved_at": "2026-09-14T18:46:42.771219",
+        "exit_price": 0.06416
       }
     ]
   },
@@ -23148,14 +23161,14 @@
     "key": "BTC",
     "name": "Bitcoin",
     "emoji": "\u20bf",
-    "price": 79113,
+    "price": 79185,
     "high_24h": 78988,
     "low_24h": 76439,
-    "pct_24h": 2.29023,
+    "pct_24h": 2.38042,
     "pct_7d": -0.1,
     "pct_30d": 25.2,
-    "sma50": 71435.08822516358,
-    "sma200": 70184.78173088182,
+    "sma50": 71435.99014338215,
+    "sma200": 70185.00721043647,
     "support_30d": 62843.70368466329,
     "resistance_30d": 81264.70153038795,
     "mark_price": 77600.0,
@@ -23170,16 +23183,16 @@
     "key": "ETH",
     "name": "Ethereum",
     "emoji": "\u039e",
-    "price": 2540.39,
+    "price": 2540.29,
     "high_24h": 2535.25,
     "low_24h": 2467.86,
-    "pct_24h": 1.28121,
+    "pct_24h": 1.29076,
     "pct_7d": 2.0,
     "pct_30d": 34.5,
-    "sma50": 2197.6513218736645,
-    "sma200": 2059.9635956329184,
+    "sma50": 2197.62287361588,
+    "sma200": 2059.956483568473,
     "support_30d": 1874.401898191962,
-    "resistance_30d": 2540.271606604806,
+    "resistance_30d": 2538.84919371559,
     "mark_price": 2515.82,
     "index_price": 2516.73418605,
     "funding_rate": 8.331e-05,
