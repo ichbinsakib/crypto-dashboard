@@ -4,7 +4,7 @@
   "_alerts_state": {
     "btc-resistance-break": {
       "triggered": true,
-      "last_triggered_at": "2026-09-14 18:05:20"
+      "last_triggered_at": "2026-09-14 18:10:23"
     },
     "btc-support-break": {
       "triggered": false,
@@ -12,7 +12,7 @@
     },
     "eth-resistance-break": {
       "triggered": true,
-      "last_triggered_at": "2026-09-14 18:05:20"
+      "last_triggered_at": "2026-09-14 18:10:23"
     },
     "eth-support-break": {
       "triggered": false,
@@ -212,12 +212,12 @@
       "id": "tron",
       "symbol": "TRX",
       "name": "TRON",
-      "price": 0.340671,
-      "pct_24h": -0.12476,
+      "price": 0.340567,
+      "pct_24h": -0.2097,
       "pct_7d": 2.0,
       "support_30d": 0.32221537516581966,
       "resistance_30d": 0.3447899585776834,
-      "as_of": "2026-09-14 18:00:35",
+      "as_of": "2026-09-14 18:10:23",
       "stale": false
     },
     "figure-heloc": {
@@ -1604,12 +1604,12 @@
       "id": "venice-token",
       "symbol": "VVV",
       "name": "Venice Token",
-      "price": 22.32,
-      "pct_24h": 0.49588,
-      "pct_7d": 28.8,
+      "price": 22.31,
+      "pct_24h": 1.2069,
+      "pct_7d": 28.9,
       "support_30d": 11.794592355917386,
       "resistance_30d": 25.88474946901688,
-      "as_of": "2026-09-14 17:40:25",
+      "as_of": "2026-09-14 18:10:23",
       "stale": false
     },
     "litecoin": {
@@ -1805,9 +1805,9 @@
       "stale": false
     },
     "ethena": {
-      "label": "\ud83d\udd34 CAUTION - REDUCE NEW BUYS",
+      "label": "\ud83d\udd34 DISTRIBUTION ZONE",
       "status": "bearish",
-      "score": -3,
+      "score": -6,
       "rows": [
         [
           "Price vs. recent range",
@@ -1821,8 +1821,8 @@
         ],
         [
           "Market phase (best guess)",
-          "Established uptrend - phase where price marks up",
-          1
+          "Very extended after a big run - phase where smart money sells",
+          -2
         ],
         [
           "Recent trend",
@@ -1831,7 +1831,7 @@
         ],
         [
           "Stretch from long-term average",
-          "+38.8% above its long-term average - very stretched",
+          "+40.7% above its long-term average - very stretched",
           -2
         ],
         [
@@ -1840,16 +1840,16 @@
           0
         ]
       ],
-      "plain": "Getting risky - I'd hold off on new buys until this cools down.",
+      "plain": "Looks stretched and euphoric - historically the zone where smart money sells, not buys.",
       "id": "ethena",
       "symbol": "ENA",
       "name": "Ethena",
-      "price": 0.142047,
-      "pct_24h": 0.96384,
-      "pct_7d": -13.3,
+      "price": 0.144017,
+      "pct_24h": 2.54356,
+      "pct_7d": -13.5,
       "support_30d": 0.08231050586125944,
       "resistance_30d": 0.17616469272611565,
-      "as_of": "2026-09-14 17:45:23",
+      "as_of": "2026-09-14 18:10:23",
       "stale": false
     },
     "bitcoin-cash": {
@@ -3341,9 +3341,21 @@
       "stale": false
     }
   },
-  "_strong_buy_state": {},
+  "_strong_buy_state": {
+    "scanner-15m:ENA": true
+  },
   "_pnl_tracker": {
     "open": {
+      "15m:ENA": {
+        "coin": "ENA",
+        "name": "Ethena",
+        "tf": "15m",
+        "entry": 0.1381,
+        "stop": 0.13698333333333335,
+        "target1": 0.13921666666666666,
+        "target2": 0.1403333333333333,
+        "opened_at": "2026-09-14T18:12:25.841702"
+      },
       "1h:SKY": {
         "coin": "SKY",
         "name": "Sky",
@@ -3352,17 +3364,17 @@
         "stop": 0.06113833333333333,
         "target1": 0.06236166666666667,
         "target2": 0.06297333333333334,
-        "opened_at": "2026-09-14T18:07:22.168337"
+        "opened_at": "2026-09-14T18:12:25.841702"
       },
       "1h:HYPE": {
         "coin": "HYPE",
         "name": "Hyperliquid",
         "tf": "1h",
         "entry": 76.93,
-        "stop": 76.02708333333334,
-        "target1": 77.83291666666668,
-        "target2": 78.73583333333335,
-        "opened_at": "2026-09-14T18:07:22.168337"
+        "stop": 76.01541666666667,
+        "target1": 77.84458333333335,
+        "target2": 78.75916666666669,
+        "opened_at": "2026-09-14T18:12:25.841702"
       }
     },
     "resolved": [
@@ -22917,6 +22929,32 @@
         "result": "win",
         "resolved_at": "2026-09-14T18:07:22.168337",
         "exit_price": 81.48
+      },
+      {
+        "coin": "SKY",
+        "name": "Sky",
+        "tf": "1h",
+        "entry": 0.06175,
+        "stop": 0.06113833333333333,
+        "target1": 0.06236166666666667,
+        "target2": 0.06297333333333334,
+        "opened_at": "2026-09-14T18:07:22.168337",
+        "result": "win",
+        "resolved_at": "2026-09-14T18:12:25.841702",
+        "exit_price": 0.06396
+      },
+      {
+        "coin": "HYPE",
+        "name": "Hyperliquid",
+        "tf": "1h",
+        "entry": 76.93,
+        "stop": 76.02708333333334,
+        "target1": 77.83291666666668,
+        "target2": 78.73583333333335,
+        "opened_at": "2026-09-14T18:07:22.168337",
+        "result": "win",
+        "resolved_at": "2026-09-14T18:12:25.841702",
+        "exit_price": 81.42
       }
     ]
   },
@@ -22924,14 +22962,14 @@
     "key": "BTC",
     "name": "Bitcoin",
     "emoji": "\u20bf",
-    "price": 78893,
+    "price": 78938,
     "high_24h": 78988,
     "low_24h": 76439,
-    "pct_24h": 2.06111,
+    "pct_24h": 2.14958,
     "pct_7d": -0.1,
     "pct_30d": 25.2,
-    "sma50": 71430.53898882977,
-    "sma200": 70183.64442179837,
+    "sma50": 71431.89592694787,
+    "sma200": 70183.9836563279,
     "support_30d": 62843.70368466329,
     "resistance_30d": 81264.70153038795,
     "mark_price": 77600.0,
@@ -22946,16 +22984,16 @@
     "key": "ETH",
     "name": "Ethereum",
     "emoji": "\u039e",
-    "price": 2533.38,
+    "price": 2533.64,
     "high_24h": 2535.25,
     "low_24h": 2467.86,
-    "pct_24h": 1.10532,
+    "pct_24h": 1.18439,
     "pct_7d": 2.0,
     "pct_30d": 34.5,
-    "sma50": 2197.4908983513,
-    "sma200": 2059.9234897523274,
+    "sma50": 2197.5324036696707,
+    "sma200": 2059.9338660819203,
     "support_30d": 1874.401898191962,
-    "resistance_30d": 2532.250430486578,
+    "resistance_30d": 2534.3256964051025,
     "mark_price": 2515.82,
     "index_price": 2516.73418605,
     "funding_rate": 8.331e-05,
