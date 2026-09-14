@@ -4,7 +4,7 @@
   "_alerts_state": {
     "btc-resistance-break": {
       "triggered": true,
-      "last_triggered_at": "2026-09-14 19:00:35"
+      "last_triggered_at": "2026-09-14 19:05:20"
     },
     "btc-support-break": {
       "triggered": false,
@@ -12,7 +12,7 @@
     },
     "eth-resistance-break": {
       "triggered": true,
-      "last_triggered_at": "2026-09-14 19:00:35"
+      "last_triggered_at": "2026-09-14 19:05:20"
     },
     "eth-support-break": {
       "triggered": false,
@@ -151,7 +151,7 @@
         ],
         [
           "Stretch from long-term average",
-          "+22.0% above its long-term average - a bit stretched",
+          "+24.3% above its long-term average - a bit stretched",
           -1
         ],
         [
@@ -164,12 +164,12 @@
       "id": "solana",
       "symbol": "SOL",
       "name": "Solana",
-      "price": 101.46,
-      "pct_24h": 0.78576,
-      "pct_7d": -4.2,
+      "price": 103.4,
+      "pct_24h": 2.15827,
+      "pct_7d": -0.4,
       "support_30d": 74.5477464048606,
       "resistance_30d": 109.17730597799657,
-      "as_of": "2026-09-14 14:40:30",
+      "as_of": "2026-09-14 19:05:20",
       "stale": false
     },
     "tron": {
@@ -1015,7 +1015,7 @@
         ],
         [
           "Stretch from long-term average",
-          "+10.2% above its long-term average - a bit stretched",
+          "+10.0% above its long-term average - a bit stretched",
           -1
         ],
         [
@@ -1028,12 +1028,12 @@
       "id": "worldcoin-wld",
       "symbol": "WLD",
       "name": "Worldcoin",
-      "price": 0.394287,
-      "pct_24h": -0.07553,
-      "pct_7d": -15.1,
+      "price": 0.39356,
+      "pct_24h": -0.23671,
+      "pct_7d": -15.2,
       "support_30d": 0.319812298466522,
       "resistance_30d": 0.4772935995106048,
-      "as_of": "2026-09-14 18:35:19",
+      "as_of": "2026-09-14 19:05:20",
       "stale": false
     },
     "bfusd": {
@@ -2647,7 +2647,7 @@
         ],
         [
           "Stretch from long-term average",
-          "-15.8% below its long-term average - confirmed downtrend",
+          "-16.1% below its long-term average - confirmed downtrend",
           -1
         ],
         [
@@ -2660,12 +2660,12 @@
       "id": "world-liberty-financial",
       "symbol": "WLFI",
       "name": "World Liberty Financial",
-      "price": 0.05841,
-      "pct_24h": 2.59448,
-      "pct_7d": 1.9,
+      "price": 0.058152,
+      "pct_24h": 2.1264,
+      "pct_7d": 3.1,
       "support_30d": 0.05526589948255966,
       "resistance_30d": 0.06254770952093733,
-      "as_of": "2026-09-14 18:35:19",
+      "as_of": "2026-09-14 19:05:20",
       "stale": false
     },
     "pax-gold": {
@@ -3351,10 +3351,10 @@
         "name": "Internet Computer",
         "tf": "15m",
         "entry": 2.706,
-        "stop": 2.6957,
-        "target1": 2.7163,
-        "target2": 2.7266,
-        "opened_at": "2026-09-14T19:02:37.876954"
+        "stop": 2.6955666666666667,
+        "target1": 2.7164333333333333,
+        "target2": 2.7268666666666665,
+        "opened_at": "2026-09-14T19:07:22.875005"
       }
     },
     "resolved": [
@@ -23195,6 +23195,19 @@
         "result": "win",
         "resolved_at": "2026-09-14T19:02:37.876954",
         "exit_price": 0.06428
+      },
+      {
+        "coin": "ICP",
+        "name": "Internet Computer",
+        "tf": "15m",
+        "entry": 2.706,
+        "stop": 2.6957,
+        "target1": 2.7163,
+        "target2": 2.7266,
+        "opened_at": "2026-09-14T19:02:37.876954",
+        "result": "win",
+        "resolved_at": "2026-09-14T19:07:22.875005",
+        "exit_price": 2.784
       }
     ]
   },
@@ -23202,14 +23215,14 @@
     "key": "BTC",
     "name": "Bitcoin",
     "emoji": "\u20bf",
-    "price": 79229,
-    "high_24h": 78988,
+    "price": 79127,
+    "high_24h": 79292,
     "low_24h": 76439,
-    "pct_24h": 2.46971,
-    "pct_7d": -0.1,
-    "pct_30d": 25.2,
-    "sma50": 71437.30315995123,
-    "sma200": 70185.33546457873,
+    "pct_24h": 2.31684,
+    "pct_7d": 0.0,
+    "pct_30d": 25.7,
+    "sma50": 71435.06423086514,
+    "sma200": 70184.77573230721,
     "support_30d": 62843.70368466329,
     "resistance_30d": 81264.70153038795,
     "mark_price": 77600.0,
@@ -23224,16 +23237,16 @@
     "key": "ETH",
     "name": "Ethereum",
     "emoji": "\u039e",
-    "price": 2538.68,
-    "high_24h": 2535.25,
+    "price": 2537.1,
+    "high_24h": 2543.47,
     "low_24h": 2467.86,
-    "pct_24h": 1.19666,
-    "pct_7d": 2.0,
-    "pct_30d": 34.5,
-    "sma50": 2197.620071629127,
-    "sma200": 2059.955783071784,
+    "pct_24h": 1.11184,
+    "pct_7d": 1.7,
+    "pct_30d": 34.8,
+    "sma50": 2197.581240525742,
+    "sma200": 2059.946075295938,
     "support_30d": 1874.401898191962,
-    "resistance_30d": 2538.709094377923,
+    "resistance_30d": 2536.7675392086894,
     "mark_price": 2515.82,
     "index_price": 2516.73418605,
     "funding_rate": 8.331e-05,
