@@ -4,7 +4,7 @@
   "_alerts_state": {
     "btc-resistance-break": {
       "triggered": true,
-      "last_triggered_at": "2026-09-14 22:25:18"
+      "last_triggered_at": "2026-09-14 22:30:26"
     },
     "btc-support-break": {
       "triggered": false,
@@ -12,7 +12,7 @@
     },
     "eth-resistance-break": {
       "triggered": true,
-      "last_triggered_at": "2026-09-14 22:25:18"
+      "last_triggered_at": "2026-09-14 22:30:26"
     },
     "eth-support-break": {
       "triggered": false,
@@ -775,7 +775,7 @@
         ],
         [
           "Stretch from long-term average",
-          "-8.6% vs its long-term average - not stretched either way",
+          "-8.9% vs its long-term average - not stretched either way",
           0
         ],
         [
@@ -788,12 +788,12 @@
       "id": "kucoin-shares",
       "symbol": "KCS",
       "name": "KuCoin",
-      "price": 6.97,
-      "pct_24h": 1.91414,
+      "price": 6.95,
+      "pct_24h": 1.7492,
       "pct_7d": -0.9,
       "support_30d": 6.514591596607885,
       "resistance_30d": 7.8821382735057615,
-      "as_of": "2026-09-14 22:16:40",
+      "as_of": "2026-09-14 22:30:26",
       "stale": false
     },
     "hedera-hashgraph": {
@@ -2095,7 +2095,7 @@
     "ondo-finance": {
       "label": "\ud83d\udfe1 HOLD / NEUTRAL",
       "status": "neutral",
-      "score": -1,
+      "score": 0,
       "rows": [
         [
           "Price vs. recent range",
@@ -2114,12 +2114,12 @@
         ],
         [
           "Recent trend",
-          "Trending down - avoid catching a falling knife",
-          -1
+          "Chopping sideways - no clear trend",
+          0
         ],
         [
           "Stretch from long-term average",
-          "+9.9% vs its long-term average - not stretched either way",
+          "+9.2% vs its long-term average - not stretched either way",
           0
         ],
         [
@@ -2132,12 +2132,12 @@
       "id": "ondo-finance",
       "symbol": "ONDO",
       "name": "Ondo",
-      "price": 0.360198,
-      "pct_24h": 2.95073,
-      "pct_7d": -8.1,
+      "price": 0.357906,
+      "pct_24h": 3.98185,
+      "pct_7d": -7.2,
       "support_30d": 0.32601458799099026,
       "resistance_30d": 0.3969475338902824,
-      "as_of": "2026-09-14 18:35:19",
+      "as_of": "2026-09-14 22:30:26",
       "stale": false
     },
     "canton-network": {
@@ -2531,7 +2531,7 @@
       "rows": [
         [
           "Price vs. recent range",
-          "Near its 30-day low (~$4,301.63) - historically a better entry",
+          "Near its 30-day low (~$4,297.32) - historically a better entry",
           2
         ],
         [
@@ -2564,12 +2564,12 @@
       "id": "tether-gold",
       "symbol": "XAUT",
       "name": "Tether Gold",
-      "price": 4301.59,
-      "pct_24h": -0.97586,
+      "price": 4297.69,
+      "pct_24h": -0.82098,
       "pct_7d": -2.4,
-      "support_30d": 4301.631564833081,
+      "support_30d": 4297.323689793143,
       "resistance_30d": 4662.510537821146,
-      "as_of": "2026-09-14 21:45:28",
+      "as_of": "2026-09-14 22:30:26",
       "stale": false
     },
     "bitway": {
@@ -3359,10 +3359,10 @@
         "name": "Zcash",
         "tf": "15m",
         "entry": 1132.75,
-        "stop": 1120.162,
-        "target1": 1145.338,
-        "target2": 1157.926,
-        "opened_at": "2026-09-14T22:27:15.336818"
+        "stop": 1120.2643333333333,
+        "target1": 1145.2356666666667,
+        "target2": 1157.7213333333334,
+        "opened_at": "2026-09-14T22:32:22.787874"
       }
     },
     "resolved": [
@@ -23775,6 +23775,19 @@
         "result": "win",
         "resolved_at": "2026-09-14T22:27:15.336818",
         "exit_price": 1177.98
+      },
+      {
+        "coin": "ZEC",
+        "name": "Zcash",
+        "tf": "15m",
+        "entry": 1132.75,
+        "stop": 1120.162,
+        "target1": 1145.338,
+        "target2": 1157.926,
+        "opened_at": "2026-09-14T22:27:15.336818",
+        "result": "win",
+        "resolved_at": "2026-09-14T22:32:22.787874",
+        "exit_price": 1173.76
       }
     ]
   },
@@ -23782,14 +23795,14 @@
     "key": "BTC",
     "name": "Bitcoin",
     "emoji": "\u20bf",
-    "price": 78591,
+    "price": 78531,
     "high_24h": 79530,
     "low_24h": 76439,
-    "pct_24h": 2.37301,
+    "pct_24h": 2.25813,
     "pct_7d": -0.6,
     "pct_30d": 24.9,
-    "sma50": 71424.88150076165,
-    "sma200": 70182.23004978133,
+    "sma50": 71423.43698827409,
+    "sma200": 70181.86892165945,
     "support_30d": 62843.70368466329,
     "resistance_30d": 81264.70153038795,
     "mark_price": 78726.74180435,
@@ -23804,16 +23817,16 @@
     "key": "ETH",
     "name": "Ethereum",
     "emoji": "\u039e",
-    "price": 2544.69,
+    "price": 2542.44,
     "high_24h": 2607.56,
     "low_24h": 2467.86,
-    "pct_24h": 2.67205,
+    "pct_24h": 2.50932,
     "pct_7d": 2.1,
     "pct_30d": 35.4,
-    "sma50": 2197.7491059081176,
-    "sma200": 2059.988041641532,
+    "sma50": 2197.6943701542273,
+    "sma200": 2059.974357703059,
     "support_30d": 1874.401898191962,
-    "resistance_30d": 2545.1608083274514,
+    "resistance_30d": 2542.4240206329337,
     "mark_price": 2544.79927907,
     "index_price": 2546.0372093,
     "funding_rate": 4.186e-05,
