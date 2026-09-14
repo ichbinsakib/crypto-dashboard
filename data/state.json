@@ -4,7 +4,7 @@
   "_alerts_state": {
     "btc-resistance-break": {
       "triggered": true,
-      "last_triggered_at": "2026-09-14 19:05:20"
+      "last_triggered_at": "2026-09-14 19:10:24"
     },
     "btc-support-break": {
       "triggered": false,
@@ -12,7 +12,7 @@
     },
     "eth-resistance-break": {
       "triggered": true,
-      "last_triggered_at": "2026-09-14 19:05:20"
+      "last_triggered_at": "2026-09-14 19:10:24"
     },
     "eth-support-break": {
       "triggered": false,
@@ -55,7 +55,7 @@
         ],
         [
           "Stretch from long-term average",
-          "+15.5% above its long-term average - a bit stretched",
+          "+16.0% above its long-term average - a bit stretched",
           -1
         ],
         [
@@ -68,23 +68,23 @@
       "id": "binancecoin",
       "symbol": "BNB",
       "name": "BNB",
-      "price": 722.83,
-      "pct_24h": 0.33594,
-      "pct_7d": -2.9,
+      "price": 726.01,
+      "pct_24h": 0.57799,
+      "pct_7d": -1.8,
       "support_30d": 602.4629221231862,
       "resistance_30d": 766.4092879330625,
-      "as_of": "2026-09-14 16:15:25",
+      "as_of": "2026-09-14 19:10:24",
       "stale": false
     },
     "ripple": {
-      "label": "\ud83d\udfe1 HOLD / NEUTRAL",
-      "status": "neutral",
-      "score": 0,
+      "label": "\ud83d\udd34 CAUTION - REDUCE NEW BUYS",
+      "status": "bearish",
+      "score": -2,
       "rows": [
         [
           "Price vs. recent range",
-          "Sitting in the middle of its 30-day range",
-          0
+          "Near its 30-day high (~$1.52) - less room to run",
+          -1
         ],
         [
           "Crowd mood (Fear & Greed)",
@@ -103,8 +103,8 @@
         ],
         [
           "Stretch from long-term average",
-          "+9.9% vs its long-term average - not stretched either way",
-          0
+          "+14.5% above its long-term average - a bit stretched",
+          -1
         ],
         [
           "Leverage traders' bias",
@@ -112,16 +112,16 @@
           0
         ]
       ],
-      "plain": "No real edge either way right now - fine to just wait and watch.",
+      "plain": "Getting risky - I'd hold off on new buys until this cools down.",
       "id": "ripple",
       "symbol": "XRP",
       "name": "XRP",
-      "price": 1.4,
-      "pct_24h": 4.12468,
-      "pct_7d": -0.2,
+      "price": 1.46,
+      "pct_24h": 7.47174,
+      "pct_7d": 5.7,
       "support_30d": 0.9927072784932938,
       "resistance_30d": 1.52050482788377,
-      "as_of": "2026-09-14 15:30:34",
+      "as_of": "2026-09-14 19:10:24",
       "stale": false
     },
     "solana": {
@@ -2143,7 +2143,7 @@
     "canton-network": {
       "label": "\ud83d\udfe1 HOLD / NEUTRAL",
       "status": "neutral",
-      "score": -1,
+      "score": 0,
       "rows": [
         [
           "Price vs. recent range",
@@ -2162,12 +2162,12 @@
         ],
         [
           "Recent trend",
-          "Trending down - avoid catching a falling knife",
-          -1
+          "Chopping sideways - no clear trend",
+          0
         ],
         [
           "Stretch from long-term average",
-          "-29.9% below its long-term average - confirmed downtrend",
+          "-29.3% below its long-term average - confirmed downtrend",
           -1
         ],
         [
@@ -2180,12 +2180,12 @@
       "id": "canton-network",
       "symbol": "CC",
       "name": "Canton",
-      "price": 0.096857,
-      "pct_24h": 1.17123,
-      "pct_7d": -8.2,
+      "price": 0.097663,
+      "pct_24h": 1.60458,
+      "pct_7d": -7.8,
       "support_30d": 0.09051839499501885,
       "resistance_30d": 0.12396615653575341,
-      "as_of": "2026-09-14 18:20:27",
+      "as_of": "2026-09-14 19:10:24",
       "stale": false
     },
     "internet-computer": {
@@ -3354,7 +3354,7 @@
         "stop": 2.6955666666666667,
         "target1": 2.7164333333333333,
         "target2": 2.7268666666666665,
-        "opened_at": "2026-09-14T19:07:22.875005"
+        "opened_at": "2026-09-14T19:12:25.952521"
       }
     },
     "resolved": [
@@ -23208,6 +23208,19 @@
         "result": "win",
         "resolved_at": "2026-09-14T19:07:22.875005",
         "exit_price": 2.784
+      },
+      {
+        "coin": "ICP",
+        "name": "Internet Computer",
+        "tf": "15m",
+        "entry": 2.706,
+        "stop": 2.6955666666666667,
+        "target1": 2.7164333333333333,
+        "target2": 2.7268666666666665,
+        "opened_at": "2026-09-14T19:07:22.875005",
+        "result": "win",
+        "resolved_at": "2026-09-14T19:12:25.952521",
+        "exit_price": 2.782
       }
     ]
   },
@@ -23215,14 +23228,14 @@
     "key": "BTC",
     "name": "Bitcoin",
     "emoji": "\u20bf",
-    "price": 79127,
+    "price": 79048,
     "high_24h": 79292,
     "low_24h": 76439,
-    "pct_24h": 2.31684,
+    "pct_24h": 2.25687,
     "pct_7d": 0.0,
     "pct_30d": 25.7,
-    "sma50": 71435.06423086514,
-    "sma200": 70184.77573230721,
+    "sma50": 71433.74224464162,
+    "sma200": 70184.44523575132,
     "support_30d": 62843.70368466329,
     "resistance_30d": 81264.70153038795,
     "mark_price": 77600.0,
@@ -23237,16 +23250,16 @@
     "key": "ETH",
     "name": "Ethereum",
     "emoji": "\u039e",
-    "price": 2537.1,
+    "price": 2536.14,
     "high_24h": 2543.47,
     "low_24h": 2467.86,
-    "pct_24h": 1.11184,
+    "pct_24h": 1.06467,
     "pct_7d": 1.7,
     "pct_30d": 34.8,
-    "sma50": 2197.581240525742,
-    "sma200": 2059.946075295938,
+    "sma50": 2197.584822384622,
+    "sma200": 2059.946970760658,
     "support_30d": 1874.401898191962,
-    "resistance_30d": 2536.7675392086894,
+    "resistance_30d": 2536.946632152687,
     "mark_price": 2515.82,
     "index_price": 2516.73418605,
     "funding_rate": 8.331e-05,
