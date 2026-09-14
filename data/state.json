@@ -12,7 +12,7 @@
     },
     "eth-resistance-break": {
       "triggered": true,
-      "last_triggered_at": "2026-09-14 08:10:33"
+      "last_triggered_at": "2026-09-14 08:15:24"
     },
     "eth-support-break": {
       "triggered": false,
@@ -703,7 +703,7 @@
     "stellar": {
       "label": "\ud83d\udfe1 HOLD / NEUTRAL",
       "status": "neutral",
-      "score": 1,
+      "score": 0,
       "rows": [
         [
           "Price vs. recent range",
@@ -717,8 +717,8 @@
         ],
         [
           "Market phase (best guess)",
-          "Basing near the bottom - phase where smart money accumulates",
-          2
+          "Established uptrend - phase where price marks up",
+          1
         ],
         [
           "Recent trend",
@@ -727,7 +727,7 @@
         ],
         [
           "Stretch from long-term average",
-          "+4.6% vs its long-term average - not stretched either way",
+          "+5.1% vs its long-term average - not stretched either way",
           0
         ],
         [
@@ -740,12 +740,12 @@
       "id": "stellar",
       "symbol": "XLM",
       "name": "Stellar",
-      "price": 0.18362,
-      "pct_24h": 1.64436,
-      "pct_7d": -4.2,
+      "price": 0.184553,
+      "pct_24h": 3.10839,
+      "pct_7d": -2.7,
       "support_30d": 0.15472912151335613,
       "resistance_30d": 0.20181319711037435,
-      "as_of": "2026-09-14 06:20:25",
+      "as_of": "2026-09-14 08:15:24",
       "stale": false
     },
     "kucoin-shares": {
@@ -1279,12 +1279,12 @@
     "htx-dao": {
       "label": "\ud83d\udfe1 HOLD / NEUTRAL",
       "status": "neutral",
-      "score": 1,
+      "score": 0,
       "rows": [
         [
           "Price vs. recent range",
-          "Sitting in the middle of its 30-day range",
-          0
+          "Near its 30-day high (~$0.000002) - less room to run",
+          -1
         ],
         [
           "Crowd mood (Fear & Greed)",
@@ -1303,7 +1303,7 @@
         ],
         [
           "Stretch from long-term average",
-          "-4.5% vs its long-term average - not stretched either way",
+          "-3.9% vs its long-term average - not stretched either way",
           0
         ],
         [
@@ -1316,12 +1316,12 @@
       "id": "htx-dao",
       "symbol": "HTX",
       "name": "HTX DAO",
-      "price": 1.69e-06,
-      "pct_24h": -0.49192,
-      "pct_7d": 0.5,
+      "price": 1.7e-06,
+      "pct_24h": -0.3045,
+      "pct_7d": 0.6,
       "support_30d": 1.6023985995039954e-06,
       "resistance_30d": 1.7873095460323824e-06,
-      "as_of": "2026-09-14 07:46:13",
+      "as_of": "2026-09-14 08:15:24",
       "stale": false
     },
     "superstate-short-duration-us-government-securities-fund-ustb": {
@@ -1591,7 +1591,7 @@
         ],
         [
           "Stretch from long-term average",
-          "+89.4% above its long-term average - very stretched",
+          "+88.6% above its long-term average - very stretched",
           -2
         ],
         [
@@ -1604,12 +1604,12 @@
       "id": "venice-token",
       "symbol": "VVV",
       "name": "Venice Token",
-      "price": 23.16,
-      "pct_24h": -0.43634,
-      "pct_7d": 28.7,
+      "price": 23.07,
+      "pct_24h": -0.22826,
+      "pct_7d": 34.3,
       "support_30d": 11.794592355917386,
       "resistance_30d": 25.88474946901688,
-      "as_of": "2026-09-14 07:55:55",
+      "as_of": "2026-09-14 08:15:24",
       "stale": false
     },
     "litecoin": {
@@ -3293,9 +3293,21 @@
       "stale": false
     }
   },
-  "_strong_buy_state": {},
+  "_strong_buy_state": {
+    "scanner-15m:LTC": true
+  },
   "_pnl_tracker": {
     "open": {
+      "15m:LTC": {
+        "coin": "LTC",
+        "name": "Litecoin",
+        "tf": "15m",
+        "entry": 53.66,
+        "stop": 53.45333333333333,
+        "target1": 53.86666666666666,
+        "target2": 54.07333333333332,
+        "opened_at": "2026-09-14T08:17:25.868167"
+      },
       "daily:XLM": {
         "coin": "XLM",
         "name": "Stellar",
@@ -3304,7 +3316,7 @@
         "stop": 0.1411899,
         "target1": 0.1631561,
         "target2": 0.1741392,
-        "opened_at": "2026-09-14T08:12:00.387804"
+        "opened_at": "2026-09-14T08:17:25.868167"
       }
     },
     "resolved": [
@@ -20883,6 +20895,19 @@
         "result": "win",
         "resolved_at": "2026-09-14T08:12:00.387804",
         "exit_price": 0.184628
+      },
+      {
+        "coin": "XLM",
+        "name": "Stellar",
+        "tf": "daily",
+        "entry": 0.152173,
+        "stop": 0.1411899,
+        "target1": 0.1631561,
+        "target2": 0.1741392,
+        "opened_at": "2026-09-14T08:12:00.387804",
+        "result": "win",
+        "resolved_at": "2026-09-14T08:17:25.868167",
+        "exit_price": 0.184322
       }
     ]
   },
@@ -20890,14 +20915,14 @@
     "key": "BTC",
     "name": "Bitcoin",
     "emoji": "\u20bf",
-    "price": 77792,
+    "price": 77765,
     "high_24h": 77854,
     "low_24h": 76439,
-    "pct_24h": 0.86702,
+    "pct_24h": 0.93229,
     "pct_7d": -2.3,
     "pct_30d": 23.5,
-    "sma50": 71408.60348868475,
-    "sma200": 70178.16054676211,
+    "sma50": 71407.75112229148,
+    "sma200": 70177.9474551638,
     "support_30d": 62843.70368466329,
     "resistance_30d": 81264.70153038795,
     "mark_price": 77600.0,
@@ -20912,14 +20937,14 @@
     "key": "ETH",
     "name": "Ethereum",
     "emoji": "\u039e",
-    "price": 2520.78,
+    "price": 2522.31,
     "high_24h": 2525.02,
     "low_24h": 2464.63,
-    "pct_24h": 0.13187,
+    "pct_24h": 0.31582,
     "pct_7d": 1.0,
     "pct_30d": 34.1,
-    "sma50": 2197.2614614084573,
-    "sma200": 2059.866130516617,
+    "sma50": 2197.2920303250353,
+    "sma200": 2059.8737727457615,
     "support_30d": 1874.401898191962,
     "resistance_30d": 2525.267261590238,
     "mark_price": 2515.82,
