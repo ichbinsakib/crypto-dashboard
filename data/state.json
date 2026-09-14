@@ -4,7 +4,7 @@
   "_alerts_state": {
     "btc-resistance-break": {
       "triggered": true,
-      "last_triggered_at": "2026-09-14 22:10:23"
+      "last_triggered_at": "2026-09-14 22:14:21"
     },
     "btc-support-break": {
       "triggered": false,
@@ -12,7 +12,7 @@
     },
     "eth-resistance-break": {
       "triggered": true,
-      "last_triggered_at": "2026-09-14 22:10:23"
+      "last_triggered_at": "2026-09-14 22:14:21"
     },
     "eth-support-break": {
       "triggered": false,
@@ -487,7 +487,7 @@
         ],
         [
           "Stretch from long-term average",
-          "+26.9% above its long-term average - a bit stretched",
+          "+26.2% above its long-term average - a bit stretched",
           -1
         ],
         [
@@ -500,22 +500,22 @@
       "id": "chainlink",
       "symbol": "LINK",
       "name": "Chainlink",
-      "price": 11.73,
-      "pct_24h": 2.84729,
-      "pct_7d": -9.7,
+      "price": 11.66,
+      "pct_24h": 3.52429,
+      "pct_7d": -8.9,
       "support_30d": 9.38323578770609,
       "resistance_30d": 13.237155745219605,
-      "as_of": "2026-09-14 19:55:18",
+      "as_of": "2026-09-14 22:14:21",
       "stale": false
     },
     "whitebit": {
       "label": "\ud83d\udd34 DISTRIBUTION ZONE",
       "status": "bearish",
-      "score": -5,
+      "score": -6,
       "rows": [
         [
           "Price vs. recent range",
-          "Near its 30-day high (~$81.84) - less room to run",
+          "Near its 30-day high (~$81.70) - less room to run",
           -1
         ],
         [
@@ -530,12 +530,12 @@
         ],
         [
           "Recent trend",
-          "Trending up steadily - healthy",
-          1
+          "Chopping sideways - no clear trend",
+          0
         ],
         [
           "Stretch from long-term average",
-          "+44.0% above its long-term average - very stretched",
+          "+43.7% above its long-term average - very stretched",
           -2
         ],
         [
@@ -548,12 +548,12 @@
       "id": "whitebit",
       "symbol": "WBT",
       "name": "WhiteBIT Coin",
-      "price": 81.84,
-      "pct_24h": 2.01974,
-      "pct_7d": 12.0,
+      "price": 81.65,
+      "pct_24h": 2.3661,
+      "pct_7d": 6.5,
       "support_30d": 54.452558710928955,
-      "resistance_30d": 81.84305625398233,
-      "as_of": "2026-09-14 18:40:24",
+      "resistance_30d": 81.69559879538878,
+      "as_of": "2026-09-14 22:14:21",
       "stale": false
     },
     "leo-token": {
@@ -2839,7 +2839,7 @@
         ],
         [
           "Stretch from long-term average",
-          "+34.2% above its long-term average - very stretched",
+          "+32.7% above its long-term average - very stretched",
           -2
         ],
         [
@@ -2852,12 +2852,12 @@
       "id": "aave",
       "symbol": "AAVE",
       "name": "Aave",
-      "price": 131.07,
-      "pct_24h": 3.3371,
-      "pct_7d": -0.9,
+      "price": 129.67,
+      "pct_24h": 4.04023,
+      "pct_7d": -2.3,
       "support_30d": 85.94219943917633,
       "resistance_30d": 141.53047916466082,
-      "as_of": "2026-09-14 21:10:28",
+      "as_of": "2026-09-14 22:14:21",
       "stale": false
     },
     "okb": {
@@ -3359,10 +3359,10 @@
         "name": "Zcash",
         "tf": "15m",
         "entry": 1132.75,
-        "stop": 1120.47,
-        "target1": 1145.03,
-        "target2": 1157.31,
-        "opened_at": "2026-09-14T22:11:35.114705"
+        "stop": 1120.5116666666668,
+        "target1": 1144.9883333333332,
+        "target2": 1157.2266666666665,
+        "opened_at": "2026-09-14T22:16:17.094478"
       }
     },
     "resolved": [
@@ -23736,6 +23736,19 @@
         "result": "win",
         "resolved_at": "2026-09-14T22:11:35.114705",
         "exit_price": 1181.21
+      },
+      {
+        "coin": "ZEC",
+        "name": "Zcash",
+        "tf": "15m",
+        "entry": 1132.75,
+        "stop": 1120.47,
+        "target1": 1145.03,
+        "target2": 1157.31,
+        "opened_at": "2026-09-14T22:11:35.114705",
+        "result": "win",
+        "resolved_at": "2026-09-14T22:16:17.094478",
+        "exit_price": 1186.79
       }
     ]
   },
@@ -23743,14 +23756,14 @@
     "key": "BTC",
     "name": "Bitcoin",
     "emoji": "\u20bf",
-    "price": 78752,
+    "price": 78782,
     "high_24h": 79530,
     "low_24h": 76439,
-    "pct_24h": 2.32478,
+    "pct_24h": 2.38965,
     "pct_7d": -0.6,
     "pct_30d": 24.9,
-    "sma50": 71427.12554067175,
-    "sma200": 70182.79105975886,
+    "sma50": 71428.40518127351,
+    "sma200": 70183.11096990929,
     "support_30d": 62843.70368466329,
     "resistance_30d": 81264.70153038795,
     "mark_price": 78726.74180435,
@@ -23765,16 +23778,16 @@
     "key": "ETH",
     "name": "Ethereum",
     "emoji": "\u039e",
-    "price": 2550.66,
+    "price": 2552.39,
     "high_24h": 2607.56,
     "low_24h": 2467.86,
-    "pct_24h": 2.32571,
+    "pct_24h": 2.47901,
     "pct_7d": 2.1,
     "pct_30d": 35.4,
-    "sma50": 2197.799519971814,
-    "sma200": 2060.0006451574563,
+    "sma50": 2197.8922319837006,
+    "sma200": 2060.0238231604276,
     "support_30d": 1874.401898191962,
-    "resistance_30d": 2547.68151151229,
+    "resistance_30d": 2552.317112106601,
     "mark_price": 2544.79927907,
     "index_price": 2546.0372093,
     "funding_rate": 4.186e-05,
