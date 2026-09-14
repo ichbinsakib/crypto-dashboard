@@ -12,7 +12,7 @@
     },
     "eth-resistance-break": {
       "triggered": true,
-      "last_triggered_at": "2026-09-14 06:15:22"
+      "last_triggered_at": "2026-09-14 06:20:25"
     },
     "eth-support-break": {
       "triggered": false,
@@ -727,7 +727,7 @@
         ],
         [
           "Stretch from long-term average",
-          "+4.2% vs its long-term average - not stretched either way",
+          "+4.6% vs its long-term average - not stretched either way",
           0
         ],
         [
@@ -740,12 +740,12 @@
       "id": "stellar",
       "symbol": "XLM",
       "name": "Stellar",
-      "price": 0.182898,
-      "pct_24h": 1.17087,
+      "price": 0.18362,
+      "pct_24h": 1.64436,
       "pct_7d": -4.2,
       "support_30d": 0.15472912151335613,
       "resistance_30d": 0.20181319711037435,
-      "as_of": "2026-09-14 06:00:39",
+      "as_of": "2026-09-14 06:20:25",
       "stale": false
     },
     "kucoin-shares": {
@@ -775,7 +775,7 @@
         ],
         [
           "Stretch from long-term average",
-          "-9.4% vs its long-term average - not stretched either way",
+          "-9.0% vs its long-term average - not stretched either way",
           0
         ],
         [
@@ -788,12 +788,12 @@
       "id": "kucoin-shares",
       "symbol": "KCS",
       "name": "KuCoin",
-      "price": 6.91,
-      "pct_24h": -0.08554,
-      "pct_7d": -2.2,
+      "price": 6.94,
+      "pct_24h": 0.3847,
+      "pct_7d": -2.1,
       "support_30d": 6.514591596607885,
       "resistance_30d": 7.8821382735057615,
-      "as_of": "2026-09-14 05:35:18",
+      "as_of": "2026-09-14 06:20:25",
       "stale": false
     },
     "hedera-hashgraph": {
@@ -2215,7 +2215,7 @@
         ],
         [
           "Stretch from long-term average",
-          "+13.2% above its long-term average - a bit stretched",
+          "+14.0% above its long-term average - a bit stretched",
           -1
         ],
         [
@@ -2228,12 +2228,12 @@
       "id": "internet-computer",
       "symbol": "ICP",
       "name": "Internet Computer",
-      "price": 2.78,
-      "pct_24h": 2.15466,
-      "pct_7d": 2.6,
+      "price": 2.8,
+      "pct_24h": 3.07004,
+      "pct_7d": -1.1,
       "support_30d": 2.194804279500122,
       "resistance_30d": 2.9869340549074623,
-      "as_of": "2026-09-14 04:40:21",
+      "as_of": "2026-09-14 06:20:25",
       "stale": false
     },
     "bittensor": {
@@ -3298,16 +3298,6 @@
   },
   "_pnl_tracker": {
     "open": {
-      "15m:ASTER": {
-        "coin": "ASTER",
-        "name": "Aster",
-        "tf": "15m",
-        "entry": 0.68172,
-        "stop": 0.6804566666666666,
-        "target1": 0.6829833333333334,
-        "target2": 0.6842466666666668,
-        "opened_at": "2026-09-14T06:17:13.193455"
-      },
       "1h:XMR": {
         "coin": "XMR",
         "name": "Monero",
@@ -3318,6 +3308,16 @@
         "target2": 523.9983333333332,
         "opened_at": "2026-09-14T06:17:13.193455"
       },
+      "15m:ASTER": {
+        "coin": "ASTER",
+        "name": "Aster",
+        "tf": "15m",
+        "entry": 0.68172,
+        "stop": 0.6804566666666666,
+        "target1": 0.6829833333333334,
+        "target2": 0.6842466666666668,
+        "opened_at": "2026-09-14T06:22:16.147580"
+      },
       "daily:XLM": {
         "coin": "XLM",
         "name": "Stellar",
@@ -3326,7 +3326,7 @@
         "stop": 0.14122323333333334,
         "target1": 0.16312276666666667,
         "target2": 0.17407253333333333,
-        "opened_at": "2026-09-14T06:17:13.193455"
+        "opened_at": "2026-09-14T06:22:16.147580"
       }
     },
     "resolved": [
@@ -20281,6 +20281,32 @@
         "result": "win",
         "resolved_at": "2026-09-14T06:17:13.193455",
         "exit_price": 0.183614
+      },
+      {
+        "coin": "ASTER",
+        "name": "Aster",
+        "tf": "15m",
+        "entry": 0.68172,
+        "stop": 0.6804566666666666,
+        "target1": 0.6829833333333334,
+        "target2": 0.6842466666666668,
+        "opened_at": "2026-09-14T06:17:13.193455",
+        "result": "win",
+        "resolved_at": "2026-09-14T06:22:16.147580",
+        "exit_price": 0.6977
+      },
+      {
+        "coin": "XLM",
+        "name": "Stellar",
+        "tf": "daily",
+        "entry": 0.152173,
+        "stop": 0.14122323333333334,
+        "target1": 0.16312276666666667,
+        "target2": 0.17407253333333333,
+        "opened_at": "2026-09-14T06:17:13.193455",
+        "result": "win",
+        "resolved_at": "2026-09-14T06:22:16.147580",
+        "exit_price": 0.183506
       }
     ]
   },
@@ -20288,14 +20314,14 @@
     "key": "BTC",
     "name": "Bitcoin",
     "emoji": "\u20bf",
-    "price": 77815,
+    "price": 77716,
     "high_24h": 77811,
     "low_24h": 76439,
-    "pct_24h": 0.65324,
+    "pct_24h": 0.56092,
     "pct_7d": -2.7,
     "pct_30d": 23.0,
-    "sma50": 71408.99695112319,
-    "sma200": 70178.25891237172,
+    "sma50": 71407.08163222694,
+    "sma200": 70177.78008264766,
     "support_30d": 62843.70368466329,
     "resistance_30d": 81264.70153038795,
     "mark_price": 77158.0,
@@ -20310,14 +20336,14 @@
     "key": "ETH",
     "name": "Ethereum",
     "emoji": "\u039e",
-    "price": 2523.77,
+    "price": 2522.35,
     "high_24h": 2519.15,
     "low_24h": 2464.63,
-    "pct_24h": 0.04143,
+    "pct_24h": 0.02419,
     "pct_7d": 0.7,
     "pct_30d": 33.6,
-    "sma50": 2197.28946441345,
-    "sma200": 2059.873131267865,
+    "sma50": 2197.292986983514,
+    "sma200": 2059.874011910381,
     "support_30d": 1874.401898191962,
     "resistance_30d": 2525.267261590238,
     "mark_price": 2521.71641085,
