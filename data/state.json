@@ -4,7 +4,7 @@
   "_alerts_state": {
     "btc-resistance-break": {
       "triggered": true,
-      "last_triggered_at": "2026-09-14 18:00:35"
+      "last_triggered_at": "2026-09-14 18:05:20"
     },
     "btc-support-break": {
       "triggered": false,
@@ -12,7 +12,7 @@
     },
     "eth-resistance-break": {
       "triggered": true,
-      "last_triggered_at": "2026-09-14 18:00:35"
+      "last_triggered_at": "2026-09-14 18:05:20"
     },
     "eth-support-break": {
       "triggered": false,
@@ -871,7 +871,7 @@
         ],
         [
           "Stretch from long-term average",
-          "+6.3% vs its long-term average - not stretched either way",
+          "+6.6% vs its long-term average - not stretched either way",
           0
         ],
         [
@@ -884,12 +884,12 @@
       "id": "pepe",
       "symbol": "PEPE",
       "name": "Pepe",
-      "price": 3.5e-06,
-      "pct_24h": 2.50443,
-      "pct_7d": -1.7,
+      "price": 3.51e-06,
+      "pct_24h": 2.64357,
+      "pct_7d": -3.3,
       "support_30d": 2.5716563906374582e-06,
       "resistance_30d": 4.122123035488615e-06,
-      "as_of": "2026-09-14 17:35:22",
+      "as_of": "2026-09-14 18:05:20",
       "stale": false
     },
     "avalanche-2": {
@@ -2325,11 +2325,11 @@
       "symbol": "GRAM",
       "name": "Gram (prev. Toncoin)",
       "price": 1.36,
-      "pct_24h": 0.09897,
-      "pct_7d": -2.3,
+      "pct_24h": -0.04937,
+      "pct_7d": -3.3,
       "support_30d": 1.3170990455791696,
       "resistance_30d": 1.4926762805297678,
-      "as_of": "2026-09-14 17:10:24",
+      "as_of": "2026-09-14 18:05:20",
       "stale": false
     },
     "sky": {
@@ -2612,12 +2612,12 @@
       "id": "bitway",
       "symbol": "BTW",
       "name": "Bitway",
-      "price": 0.704401,
-      "pct_24h": 2.48534,
-      "pct_7d": 55.9,
+      "price": 0.696191,
+      "pct_24h": -0.73882,
+      "pct_7d": 54.1,
       "support_30d": 0.3581011744091522,
       "resistance_30d": 0.7325241073378514,
-      "as_of": "2026-09-14 17:00:35",
+      "as_of": "2026-09-14 18:05:20",
       "stale": false
     },
     "world-liberty-financial": {
@@ -3349,20 +3349,20 @@
         "name": "Sky",
         "tf": "1h",
         "entry": 0.06175,
-        "stop": 0.06114791666666666,
-        "target1": 0.062352083333333336,
-        "target2": 0.06295416666666667,
-        "opened_at": "2026-09-14T18:02:38.503524"
+        "stop": 0.06113833333333333,
+        "target1": 0.06236166666666667,
+        "target2": 0.06297333333333334,
+        "opened_at": "2026-09-14T18:07:22.168337"
       },
       "1h:HYPE": {
         "coin": "HYPE",
         "name": "Hyperliquid",
         "tf": "1h",
         "entry": 76.93,
-        "stop": 76.03708333333334,
-        "target1": 77.82291666666667,
-        "target2": 78.71583333333334,
-        "opened_at": "2026-09-14T18:02:38.503524"
+        "stop": 76.02708333333334,
+        "target1": 77.83291666666668,
+        "target2": 78.73583333333335,
+        "opened_at": "2026-09-14T18:07:22.168337"
       }
     },
     "resolved": [
@@ -22891,6 +22891,32 @@
         "result": "win",
         "resolved_at": "2026-09-14T18:02:38.503524",
         "exit_price": 81.09
+      },
+      {
+        "coin": "SKY",
+        "name": "Sky",
+        "tf": "1h",
+        "entry": 0.06175,
+        "stop": 0.06114791666666666,
+        "target1": 0.062352083333333336,
+        "target2": 0.06295416666666667,
+        "opened_at": "2026-09-14T18:02:38.503524",
+        "result": "win",
+        "resolved_at": "2026-09-14T18:07:22.168337",
+        "exit_price": 0.06405
+      },
+      {
+        "coin": "HYPE",
+        "name": "Hyperliquid",
+        "tf": "1h",
+        "entry": 76.93,
+        "stop": 76.03708333333334,
+        "target1": 77.82291666666667,
+        "target2": 78.71583333333334,
+        "opened_at": "2026-09-14T18:02:38.503524",
+        "result": "win",
+        "resolved_at": "2026-09-14T18:07:22.168337",
+        "exit_price": 81.48
       }
     ]
   },
@@ -22898,14 +22924,14 @@
     "key": "BTC",
     "name": "Bitcoin",
     "emoji": "\u20bf",
-    "price": 78927,
-    "high_24h": 78856,
+    "price": 78893,
+    "high_24h": 78988,
     "low_24h": 76439,
-    "pct_24h": 2.07042,
+    "pct_24h": 2.06111,
     "pct_7d": -0.1,
-    "pct_30d": 24.9,
-    "sma50": 71431.07466861074,
-    "sma200": 70183.77834174361,
+    "pct_30d": 25.2,
+    "sma50": 71430.53898882977,
+    "sma200": 70183.64442179837,
     "support_30d": 62843.70368466329,
     "resistance_30d": 81264.70153038795,
     "mark_price": 77600.0,
@@ -22920,16 +22946,16 @@
     "key": "ETH",
     "name": "Ethereum",
     "emoji": "\u039e",
-    "price": 2532.34,
+    "price": 2533.38,
     "high_24h": 2535.25,
     "low_24h": 2467.86,
-    "pct_24h": 1.11558,
-    "pct_7d": 2.4,
-    "pct_30d": 34.3,
-    "sma50": 2197.503948293478,
-    "sma200": 2059.926752237872,
+    "pct_24h": 1.10532,
+    "pct_7d": 2.0,
+    "pct_30d": 34.5,
+    "sma50": 2197.4908983513,
+    "sma200": 2059.9234897523274,
     "support_30d": 1874.401898191962,
-    "resistance_30d": 2532.9029275954726,
+    "resistance_30d": 2532.250430486578,
     "mark_price": 2515.82,
     "index_price": 2516.73418605,
     "funding_rate": 8.331e-05,
