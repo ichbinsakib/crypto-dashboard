@@ -4,7 +4,7 @@
   "_alerts_state": {
     "btc-resistance-break": {
       "triggered": true,
-      "last_triggered_at": "2026-09-14 16:25:18"
+      "last_triggered_at": "2026-09-14 16:30:34"
     },
     "btc-support-break": {
       "triggered": false,
@@ -12,7 +12,7 @@
     },
     "eth-resistance-break": {
       "triggered": true,
-      "last_triggered_at": "2026-09-14 16:25:18"
+      "last_triggered_at": "2026-09-14 16:30:34"
     },
     "eth-support-break": {
       "triggered": false,
@@ -727,7 +727,7 @@
         ],
         [
           "Stretch from long-term average",
-          "+10.3% above its long-term average - a bit stretched",
+          "+10.1% above its long-term average - a bit stretched",
           -1
         ],
         [
@@ -740,12 +740,12 @@
       "id": "stellar",
       "symbol": "XLM",
       "name": "Stellar",
-      "price": 0.193714,
-      "pct_24h": 8.57133,
+      "price": 0.193433,
+      "pct_24h": 8.46564,
       "pct_7d": 0.4,
       "support_30d": 0.15472912151335613,
       "resistance_30d": 0.20181319711037435,
-      "as_of": "2026-09-14 16:25:18",
+      "as_of": "2026-09-14 16:30:34",
       "stale": false
     },
     "kucoin-shares": {
@@ -2429,9 +2429,9 @@
       "stale": false
     },
     "near": {
-      "label": "\ud83d\udd34 CAUTION - REDUCE NEW BUYS",
+      "label": "\ud83d\udd34 DISTRIBUTION ZONE",
       "status": "bearish",
-      "score": -3,
+      "score": -6,
       "rows": [
         [
           "Price vs. recent range",
@@ -2445,8 +2445,8 @@
         ],
         [
           "Market phase (best guess)",
-          "Established uptrend - phase where price marks up",
-          1
+          "Very extended after a big run - phase where smart money sells",
+          -2
         ],
         [
           "Recent trend",
@@ -2455,7 +2455,7 @@
         ],
         [
           "Stretch from long-term average",
-          "+38.9% above its long-term average - very stretched",
+          "+40.6% above its long-term average - very stretched",
           -2
         ],
         [
@@ -2464,16 +2464,16 @@
           0
         ]
       ],
-      "plain": "Getting risky - I'd hold off on new buys until this cools down.",
+      "plain": "Looks stretched and euphoric - historically the zone where smart money sells, not buys.",
       "id": "near",
       "symbol": "NEAR",
       "name": "NEAR Protocol",
-      "price": 2.4,
-      "pct_24h": 4.66232,
-      "pct_7d": 0.6,
+      "price": 2.43,
+      "pct_24h": 5.64744,
+      "pct_7d": 1.6,
       "support_30d": 1.5879597131538,
       "resistance_30d": 2.4848168147865453,
-      "as_of": "2026-09-14 15:40:26",
+      "as_of": "2026-09-14 16:30:34",
       "stale": false
     },
     "quant-network": {
@@ -2675,7 +2675,7 @@
       "rows": [
         [
           "Price vs. recent range",
-          "Near its 30-day low (~$4,282.34) - historically a better entry",
+          "Near its 30-day low (~$4,307.29) - historically a better entry",
           2
         ],
         [
@@ -2695,7 +2695,7 @@
         ],
         [
           "Stretch from long-term average",
-          "-4.3% vs its long-term average - not stretched either way",
+          "-3.7% vs its long-term average - not stretched either way",
           0
         ],
         [
@@ -2708,12 +2708,12 @@
       "id": "pax-gold",
       "symbol": "PAXG",
       "name": "PAX Gold",
-      "price": 4282.34,
-      "pct_24h": -1.55062,
+      "price": 4307.34,
+      "pct_24h": -1.07648,
       "pct_7d": -2.7,
-      "support_30d": 4282.340102551409,
+      "support_30d": 4307.287889339968,
       "resistance_30d": 4672.307573354755,
-      "as_of": "2026-09-14 15:20:29",
+      "as_of": "2026-09-14 16:30:34",
       "stale": false
     },
     "morpho": {
@@ -3351,10 +3351,10 @@
         "name": "Stellar",
         "tf": "15m",
         "entry": 0.183075,
-        "stop": 0.1814124,
-        "target1": 0.18473759999999997,
-        "target2": 0.18640019999999996,
-        "opened_at": "2026-09-14T16:27:17.556324"
+        "stop": 0.18140203333333332,
+        "target1": 0.18474796666666665,
+        "target2": 0.18642093333333332,
+        "opened_at": "2026-09-14T16:32:32.619980"
       },
       "1h:SKY": {
         "coin": "SKY",
@@ -3364,7 +3364,7 @@
         "stop": 0.061142916666666665,
         "target1": 0.062357083333333334,
         "target2": 0.06296416666666667,
-        "opened_at": "2026-09-14T16:27:17.556324"
+        "opened_at": "2026-09-14T16:32:32.619980"
       },
       "1h:HYPE": {
         "coin": "HYPE",
@@ -3374,7 +3374,7 @@
         "stop": 76.05666666666667,
         "target1": 77.80333333333334,
         "target2": 78.67666666666668,
-        "opened_at": "2026-09-14T16:27:17.556324"
+        "opened_at": "2026-09-14T16:32:32.619980"
       }
     },
     "resolved": [
@@ -22357,6 +22357,45 @@
         "result": "win",
         "resolved_at": "2026-09-14T16:27:17.556324",
         "exit_price": 80.53
+      },
+      {
+        "coin": "XLM",
+        "name": "Stellar",
+        "tf": "15m",
+        "entry": 0.183075,
+        "stop": 0.1814124,
+        "target1": 0.18473759999999997,
+        "target2": 0.18640019999999996,
+        "opened_at": "2026-09-14T16:27:17.556324",
+        "result": "win",
+        "resolved_at": "2026-09-14T16:32:32.619980",
+        "exit_price": 0.193903
+      },
+      {
+        "coin": "SKY",
+        "name": "Sky",
+        "tf": "1h",
+        "entry": 0.06175,
+        "stop": 0.061142916666666665,
+        "target1": 0.062357083333333334,
+        "target2": 0.06296416666666667,
+        "opened_at": "2026-09-14T16:27:17.556324",
+        "result": "win",
+        "resolved_at": "2026-09-14T16:32:32.619980",
+        "exit_price": 0.06402
+      },
+      {
+        "coin": "HYPE",
+        "name": "Hyperliquid",
+        "tf": "1h",
+        "entry": 76.93,
+        "stop": 76.05666666666667,
+        "target1": 77.80333333333334,
+        "target2": 78.67666666666668,
+        "opened_at": "2026-09-14T16:27:17.556324",
+        "result": "win",
+        "resolved_at": "2026-09-14T16:32:32.619980",
+        "exit_price": 80.58
       }
     ]
   },
@@ -22364,14 +22403,14 @@
     "key": "BTC",
     "name": "Bitcoin",
     "emoji": "\u20bf",
-    "price": 78825,
+    "price": 78642,
     "high_24h": 78630,
     "low_24h": 76439,
-    "pct_24h": 2.07228,
+    "pct_24h": 1.8474,
     "pct_7d": -0.8,
     "pct_30d": 24.7,
-    "sma50": 71429.40321608914,
-    "sma200": 70183.3604786132,
+    "sma50": 71425.73112739569,
+    "sma200": 70182.44245643985,
     "support_30d": 62843.70368466329,
     "resistance_30d": 81264.70153038795,
     "mark_price": 77600.0,
@@ -22386,14 +22425,14 @@
     "key": "ETH",
     "name": "Ethereum",
     "emoji": "\u039e",
-    "price": 2524.17,
+    "price": 2520.19,
     "high_24h": 2531.64,
     "low_24h": 2467.86,
-    "pct_24h": 0.95494,
+    "pct_24h": 0.73713,
     "pct_7d": 0.7,
     "pct_30d": 33.3,
-    "sma50": 2197.3407349700883,
-    "sma200": 2059.8859489070246,
+    "sma50": 2197.2548037475367,
+    "sma200": 2059.864466101387,
     "support_30d": 1874.401898191962,
     "resistance_30d": 2525.267261590238,
     "mark_price": 2515.82,
