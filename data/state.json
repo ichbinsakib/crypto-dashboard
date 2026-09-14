@@ -3,7 +3,7 @@
   "_fng_classification": "Greed",
   "_alerts_state": {
     "btc-resistance-break": {
-      "triggered": true,
+      "triggered": false,
       "last_triggered_at": "2026-09-14 15:35:23"
     },
     "btc-support-break": {
@@ -343,7 +343,7 @@
         ],
         [
           "Stretch from long-term average",
-          "-4.8% vs its long-term average - not stretched either way",
+          "-4.6% vs its long-term average - not stretched either way",
           0
         ],
         [
@@ -356,12 +356,12 @@
       "id": "dogecoin",
       "symbol": "DOGE",
       "name": "Dogecoin",
-      "price": 0.08389,
-      "pct_24h": 0.4988,
+      "price": 0.084038,
+      "pct_24h": 0.65695,
       "pct_7d": -7.8,
       "support_30d": 0.06952870548515376,
       "resistance_30d": 0.09337940032634065,
-      "as_of": "2026-09-14 15:20:29",
+      "as_of": "2026-09-14 15:40:26",
       "stale": false
     },
     "zcash": {
@@ -2071,7 +2071,7 @@
         ],
         [
           "Stretch from long-term average",
-          "-30.2% below its long-term average - confirmed downtrend",
+          "-30.0% below its long-term average - confirmed downtrend",
           -1
         ],
         [
@@ -2084,12 +2084,12 @@
       "id": "pi-network",
       "symbol": "PI",
       "name": "Pi Network",
-      "price": 0.097059,
-      "pct_24h": -0.80065,
-      "pct_7d": 2.6,
+      "price": 0.097326,
+      "pct_24h": -0.06672,
+      "pct_7d": 2.7,
       "support_30d": 0.08559695435343688,
       "resistance_30d": 0.09798925329339339,
-      "as_of": "2026-09-14 14:55:24",
+      "as_of": "2026-09-14 15:40:26",
       "stale": false
     },
     "ondo-finance": {
@@ -2455,7 +2455,7 @@
         ],
         [
           "Stretch from long-term average",
-          "+39.5% above its long-term average - very stretched",
+          "+38.9% above its long-term average - very stretched",
           -2
         ],
         [
@@ -2468,12 +2468,12 @@
       "id": "near",
       "symbol": "NEAR",
       "name": "NEAR Protocol",
-      "price": 2.41,
-      "pct_24h": 4.77465,
-      "pct_7d": 3.1,
+      "price": 2.4,
+      "pct_24h": 4.66232,
+      "pct_7d": 0.6,
       "support_30d": 1.5879597131538,
       "resistance_30d": 2.4848168147865453,
-      "as_of": "2026-09-14 11:30:29",
+      "as_of": "2026-09-14 15:40:26",
       "stale": false
     },
     "quant-network": {
@@ -3360,11 +3360,11 @@
         "coin": "PI",
         "name": "Pi Network",
         "tf": "15m",
-        "entry": 0.09633,
-        "stop": 0.09537433333333334,
-        "target1": 0.09728566666666666,
-        "target2": 0.09824133333333332,
-        "opened_at": "2026-09-14T15:12:09.538276"
+        "entry": 0.09618,
+        "stop": 0.09518333333333334,
+        "target1": 0.09717666666666666,
+        "target2": 0.09817333333333332,
+        "opened_at": "2026-09-14T15:42:24.157778"
       },
       "15m:XLM": {
         "coin": "XLM",
@@ -3374,7 +3374,7 @@
         "stop": 0.18153023333333332,
         "target1": 0.18461976666666666,
         "target2": 0.18616453333333333,
-        "opened_at": "2026-09-14T15:37:22.444630"
+        "opened_at": "2026-09-14T15:42:24.157778"
       }
     },
     "resolved": [
@@ -22123,6 +22123,32 @@
         "result": "win",
         "resolved_at": "2026-09-14T15:37:22.444630",
         "exit_price": 0.191904
+      },
+      {
+        "coin": "PI",
+        "name": "Pi Network",
+        "tf": "15m",
+        "entry": 0.09633,
+        "stop": 0.09537433333333334,
+        "target1": 0.09728566666666666,
+        "target2": 0.09824133333333332,
+        "opened_at": "2026-09-14T15:12:09.538276",
+        "result": "win",
+        "resolved_at": "2026-09-14T15:42:24.157778",
+        "exit_price": 0.09734
+      },
+      {
+        "coin": "XLM",
+        "name": "Stellar",
+        "tf": "15m",
+        "entry": 0.183075,
+        "stop": 0.18153023333333332,
+        "target1": 0.18461976666666666,
+        "target2": 0.18616453333333333,
+        "opened_at": "2026-09-14T15:37:22.444630",
+        "result": "win",
+        "resolved_at": "2026-09-14T15:42:24.157778",
+        "exit_price": 0.192724
       }
     ]
   },
@@ -22130,14 +22156,14 @@
     "key": "BTC",
     "name": "Bitcoin",
     "emoji": "\u20bf",
-    "price": 78430,
+    "price": 78385,
     "high_24h": 78630,
     "low_24h": 76439,
-    "pct_24h": 1.77133,
+    "pct_24h": 1.79798,
     "pct_7d": -1.0,
     "pct_30d": 24.7,
-    "sma50": 71421.70440729824,
-    "sma200": 70181.43577641548,
+    "sma50": 71421.81177123687,
+    "sma200": 70181.46261740015,
     "support_30d": 62843.70368466329,
     "resistance_30d": 81264.70153038795,
     "mark_price": 77600.0,
@@ -22152,14 +22178,14 @@
     "key": "ETH",
     "name": "Ethereum",
     "emoji": "\u039e",
-    "price": 2501.65,
+    "price": 2502.65,
     "high_24h": 2531.64,
     "low_24h": 2467.86,
-    "pct_24h": 0.54051,
+    "pct_24h": 0.65788,
     "pct_7d": 0.2,
     "pct_30d": 33.0,
-    "sma50": 2196.899172945414,
-    "sma200": 2059.775558400856,
+    "sma50": 2196.9326421018554,
+    "sma200": 2059.7839256899665,
     "support_30d": 1874.401898191962,
     "resistance_30d": 2525.267261590238,
     "mark_price": 2515.82,
