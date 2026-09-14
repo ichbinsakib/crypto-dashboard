@@ -4,7 +4,7 @@
   "_alerts_state": {
     "btc-resistance-break": {
       "triggered": true,
-      "last_triggered_at": "2026-09-14 18:30:32"
+      "last_triggered_at": "2026-09-14 18:35:19"
     },
     "btc-support-break": {
       "triggered": false,
@@ -12,7 +12,7 @@
     },
     "eth-resistance-break": {
       "triggered": true,
-      "last_triggered_at": "2026-09-14 18:30:32"
+      "last_triggered_at": "2026-09-14 18:35:19"
     },
     "eth-support-break": {
       "triggered": false,
@@ -823,7 +823,7 @@
         ],
         [
           "Stretch from long-term average",
-          "-5.2% vs its long-term average - not stretched either way",
+          "-4.6% vs its long-term average - not stretched either way",
           0
         ],
         [
@@ -836,12 +836,12 @@
       "id": "hedera-hashgraph",
       "symbol": "HBAR",
       "name": "Hedera",
-      "price": 0.077955,
-      "pct_24h": 1.68748,
+      "price": 0.07842,
+      "pct_24h": 2.44021,
       "pct_7d": -6.0,
       "support_30d": 0.06461260477975343,
       "resistance_30d": 0.08182180696524229,
-      "as_of": "2026-09-14 18:20:27",
+      "as_of": "2026-09-14 18:35:19",
       "stale": false
     },
     "pepe": {
@@ -1028,12 +1028,12 @@
       "id": "worldcoin-wld",
       "symbol": "WLD",
       "name": "Worldcoin",
-      "price": 0.39435,
-      "pct_24h": -0.08882,
+      "price": 0.394287,
+      "pct_24h": -0.07553,
       "pct_7d": -15.1,
       "support_30d": 0.319812298466522,
       "resistance_30d": 0.4772935995106048,
-      "as_of": "2026-09-14 18:25:19",
+      "as_of": "2026-09-14 18:35:19",
       "stale": false
     },
     "bfusd": {
@@ -2119,7 +2119,7 @@
         ],
         [
           "Stretch from long-term average",
-          "+7.6% vs its long-term average - not stretched either way",
+          "+9.9% vs its long-term average - not stretched either way",
           0
         ],
         [
@@ -2132,12 +2132,12 @@
       "id": "ondo-finance",
       "symbol": "ONDO",
       "name": "Ondo",
-      "price": 0.352471,
-      "pct_24h": 2.12743,
-      "pct_7d": -9.4,
+      "price": 0.360198,
+      "pct_24h": 2.95073,
+      "pct_7d": -8.1,
       "support_30d": 0.32601458799099026,
       "resistance_30d": 0.3969475338902824,
-      "as_of": "2026-09-14 15:55:20",
+      "as_of": "2026-09-14 18:35:19",
       "stale": false
     },
     "canton-network": {
@@ -2359,7 +2359,7 @@
         ],
         [
           "Stretch from long-term average",
-          "-4.2% vs its long-term average - not stretched either way",
+          "-3.9% vs its long-term average - not stretched either way",
           0
         ],
         [
@@ -2372,12 +2372,12 @@
       "id": "sky",
       "symbol": "SKY",
       "name": "Sky",
-      "price": 0.063936,
-      "pct_24h": 1.35584,
+      "price": 0.06414,
+      "pct_24h": 1.67977,
       "pct_7d": -7.2,
       "support_30d": 0.05267730579754281,
       "resistance_30d": 0.07314868186988309,
-      "as_of": "2026-09-14 18:20:27",
+      "as_of": "2026-09-14 18:35:19",
       "stale": false
     },
     "shiba-inu": {
@@ -2621,14 +2621,14 @@
       "stale": false
     },
     "world-liberty-financial": {
-      "label": "\ud83d\udfe2 LEAN ACCUMULATE",
-      "status": "bullish",
-      "score": 2,
+      "label": "\ud83d\udfe1 HOLD / NEUTRAL",
+      "status": "neutral",
+      "score": 0,
       "rows": [
         [
           "Price vs. recent range",
-          "Near its 30-day low (~$0.0553) - historically a better entry",
-          2
+          "Sitting in the middle of its 30-day range",
+          0
         ],
         [
           "Crowd mood (Fear & Greed)",
@@ -2647,7 +2647,7 @@
         ],
         [
           "Stretch from long-term average",
-          "-16.9% below its long-term average - confirmed downtrend",
+          "-15.8% below its long-term average - confirmed downtrend",
           -1
         ],
         [
@@ -2656,16 +2656,16 @@
           0
         ]
       ],
-      "plain": "Leans toward a decent spot to slowly add (DCA) - not a strong signal, just a lean.",
+      "plain": "No real edge either way right now - fine to just wait and watch.",
       "id": "world-liberty-financial",
       "symbol": "WLFI",
       "name": "World Liberty Financial",
-      "price": 0.057605,
-      "pct_24h": -0.15954,
+      "price": 0.05841,
+      "pct_24h": 2.59448,
       "pct_7d": 1.9,
       "support_30d": 0.05526589948255966,
       "resistance_30d": 0.06254770952093733,
-      "as_of": "2026-09-14 05:00:34",
+      "as_of": "2026-09-14 18:35:19",
       "stale": false
     },
     "pax-gold": {
@@ -3344,16 +3344,6 @@
   "_strong_buy_state": {},
   "_pnl_tracker": {
     "open": {
-      "15m:ENA": {
-        "coin": "ENA",
-        "name": "Ethena",
-        "tf": "15m",
-        "entry": 0.1381,
-        "stop": 0.13694666666666666,
-        "target1": 0.13925333333333334,
-        "target2": 0.14040666666666668,
-        "opened_at": "2026-09-14T18:32:30.489359"
-      },
       "1h:SKY": {
         "coin": "SKY",
         "name": "Sky",
@@ -3362,17 +3352,7 @@
         "stop": 0.06113375,
         "target1": 0.06236625,
         "target2": 0.0629825,
-        "opened_at": "2026-09-14T18:32:30.489359"
-      },
-      "1h:HYPE": {
-        "coin": "HYPE",
-        "name": "Hyperliquid",
-        "tf": "1h",
-        "entry": 76.93,
-        "stop": 76.01416666666667,
-        "target1": 77.84583333333335,
-        "target2": 78.76166666666668,
-        "opened_at": "2026-09-14T18:32:30.489359"
+        "opened_at": "2026-09-14T18:36:50.133839"
       }
     },
     "resolved": [
@@ -23109,6 +23089,45 @@
         "result": "win",
         "resolved_at": "2026-09-14T18:32:30.489359",
         "exit_price": 81.79
+      },
+      {
+        "coin": "ENA",
+        "name": "Ethena",
+        "tf": "15m",
+        "entry": 0.1381,
+        "stop": 0.13694666666666666,
+        "target1": 0.13925333333333334,
+        "target2": 0.14040666666666668,
+        "opened_at": "2026-09-14T18:32:30.489359",
+        "result": "win",
+        "resolved_at": "2026-09-14T18:36:50.133839",
+        "exit_price": 0.1459
+      },
+      {
+        "coin": "SKY",
+        "name": "Sky",
+        "tf": "1h",
+        "entry": 0.06175,
+        "stop": 0.06113375,
+        "target1": 0.06236625,
+        "target2": 0.0629825,
+        "opened_at": "2026-09-14T18:32:30.489359",
+        "result": "win",
+        "resolved_at": "2026-09-14T18:36:50.133839",
+        "exit_price": 0.06416
+      },
+      {
+        "coin": "HYPE",
+        "name": "Hyperliquid",
+        "tf": "1h",
+        "entry": 76.93,
+        "stop": 76.01416666666667,
+        "target1": 77.84583333333335,
+        "target2": 78.76166666666668,
+        "opened_at": "2026-09-14T18:32:30.489359",
+        "result": "win",
+        "resolved_at": "2026-09-14T18:36:50.133839",
+        "exit_price": 81.94
       }
     ]
   },
@@ -23116,14 +23135,14 @@
     "key": "BTC",
     "name": "Bitcoin",
     "emoji": "\u20bf",
-    "price": 79180,
+    "price": 79124,
     "high_24h": 78988,
     "low_24h": 76439,
-    "pct_24h": 2.42097,
+    "pct_24h": 2.38787,
     "pct_7d": -0.1,
     "pct_30d": 25.2,
-    "sma50": 71436.04216022082,
-    "sma200": 70185.02021464614,
+    "sma50": 71436.58472597651,
+    "sma200": 70185.15585608505,
     "support_30d": 62843.70368466329,
     "resistance_30d": 81264.70153038795,
     "mark_price": 77600.0,
@@ -23138,16 +23157,16 @@
     "key": "ETH",
     "name": "Ethereum",
     "emoji": "\u039e",
-    "price": 2537.63,
+    "price": 2538.61,
     "high_24h": 2535.25,
     "low_24h": 2467.86,
-    "pct_24h": 1.28596,
+    "pct_24h": 1.33082,
     "pct_7d": 2.0,
     "pct_30d": 34.5,
-    "sma50": 2197.612922406703,
-    "sma200": 2059.953995766178,
+    "sma50": 2197.6801057538214,
+    "sma200": 2059.970791602958,
     "support_30d": 1874.401898191962,
-    "resistance_30d": 2538.3516332567406,
+    "resistance_30d": 2541.710800612661,
     "mark_price": 2515.82,
     "index_price": 2516.73418605,
     "funding_rate": 8.331e-05,
