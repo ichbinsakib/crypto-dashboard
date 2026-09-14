@@ -2675,7 +2675,7 @@
       "rows": [
         [
           "Price vs. recent range",
-          "Near its 30-day low (~$4,302.44) - historically a better entry",
+          "Near its 30-day low (~$4,287.00) - historically a better entry",
           2
         ],
         [
@@ -2695,7 +2695,7 @@
         ],
         [
           "Stretch from long-term average",
-          "-3.8% vs its long-term average - not stretched either way",
+          "-4.2% vs its long-term average - not stretched either way",
           0
         ],
         [
@@ -2708,12 +2708,12 @@
       "id": "pax-gold",
       "symbol": "PAXG",
       "name": "PAX Gold",
-      "price": 4302.44,
-      "pct_24h": -1.12817,
-      "pct_7d": -2.2,
-      "support_30d": 4302.437076565297,
+      "price": 4285.57,
+      "pct_24h": -1.48247,
+      "pct_7d": -2.5,
+      "support_30d": 4287.003856409681,
       "resistance_30d": 4672.307573354755,
-      "as_of": "2026-09-14 12:20:27",
+      "as_of": "2026-09-14 13:55:20",
       "stale": false
     },
     "morpho": {
@@ -2915,7 +2915,7 @@
       "rows": [
         [
           "Price vs. recent range",
-          "Near its 30-day high (~$0.1132) - less room to run",
+          "Near its 30-day high (~$0.1133) - less room to run",
           -1
         ],
         [
@@ -2935,7 +2935,7 @@
         ],
         [
           "Stretch from long-term average",
-          "+33.4% above its long-term average - very stretched",
+          "+33.7% above its long-term average - very stretched",
           -2
         ],
         [
@@ -2948,12 +2948,12 @@
       "id": "just",
       "symbol": "JST",
       "name": "JUST",
-      "price": 0.113331,
-      "pct_24h": 1.25978,
-      "pct_7d": 3.6,
+      "price": 0.113509,
+      "pct_24h": 1.37728,
+      "pct_7d": 4.9,
       "support_30d": 0.0946830738697126,
-      "resistance_30d": 0.11323913758798253,
-      "as_of": "2026-09-14 10:55:17",
+      "resistance_30d": 0.11333352867903936,
+      "as_of": "2026-09-14 13:55:20",
       "stale": false
     },
     "algorand": {
@@ -3223,7 +3223,7 @@
         ],
         [
           "Stretch from long-term average",
-          "+0.1% vs its long-term average - not stretched either way",
+          "-0.7% vs its long-term average - not stretched either way",
           0
         ],
         [
@@ -3236,12 +3236,12 @@
       "id": "kaspa",
       "symbol": "KAS",
       "name": "Kaspa",
-      "price": 0.03375519,
-      "pct_24h": -1.29673,
-      "pct_7d": -2.9,
+      "price": 0.03350411,
+      "pct_24h": -2.8269,
+      "pct_7d": -5.2,
       "support_30d": 0.025275049210175406,
       "resistance_30d": 0.03651282069323304,
-      "as_of": "2026-09-14 10:45:25",
+      "as_of": "2026-09-14 13:55:20",
       "stale": false
     },
     "cosmos": {
@@ -3352,7 +3352,7 @@
         "stop": 0.0035458,
         "target1": 0.0035941999999999997,
         "target2": 0.0036183999999999995,
-        "opened_at": "2026-09-14T13:52:30.644251"
+        "opened_at": "2026-09-14T13:57:22.033477"
       }
     },
     "resolved": [
@@ -21828,6 +21828,19 @@
         "result": "win",
         "resolved_at": "2026-09-14T13:52:30.644251",
         "exit_price": 0.003649
+      },
+      {
+        "coin": "PUMP",
+        "name": "Pump.fun",
+        "tf": "15m",
+        "entry": 0.00357,
+        "stop": 0.0035458,
+        "target1": 0.0035941999999999997,
+        "target2": 0.0036183999999999995,
+        "opened_at": "2026-09-14T13:52:30.644251",
+        "result": "win",
+        "resolved_at": "2026-09-14T13:57:22.033477",
+        "exit_price": 0.003632
       }
     ]
   },
@@ -21835,14 +21848,14 @@
     "key": "BTC",
     "name": "Bitcoin",
     "emoji": "\u20bf",
-    "price": 78273,
+    "price": 78268,
     "high_24h": 78278,
     "low_24h": 76439,
-    "pct_24h": 1.91037,
+    "pct_24h": 1.85662,
     "pct_7d": -2.2,
     "pct_30d": 23.3,
-    "sma50": 71418.16221983598,
-    "sma200": 70180.55022954992,
+    "sma50": 71417.55239960922,
+    "sma200": 70180.39777449323,
     "support_30d": 62843.70368466329,
     "resistance_30d": 81264.70153038795,
     "mark_price": 77600.0,
@@ -21857,14 +21870,14 @@
     "key": "ETH",
     "name": "Ethereum",
     "emoji": "\u039e",
-    "price": 2511.19,
+    "price": 2506.54,
     "high_24h": 2531.64,
     "low_24h": 2467.86,
-    "pct_24h": 1.29937,
+    "pct_24h": 1.13808,
     "pct_7d": 0.6,
     "pct_30d": 33.4,
-    "sma50": 2197.1033687325285,
-    "sma200": 2059.8266073476348,
+    "sma50": 2196.9656240235254,
+    "sma200": 2059.792171170384,
     "support_30d": 1874.401898191962,
     "resistance_30d": 2525.267261590238,
     "mark_price": 2515.82,
