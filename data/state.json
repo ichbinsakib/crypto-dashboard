@@ -1,5 +1,5 @@
 {
-  "_fng_value": 61,
+  "_fng_value": 57,
   "_fng_classification": "Greed",
   "_alerts_state": {
     "btc-resistance-break": {
@@ -1087,7 +1087,7 @@
     "polygon-ecosystem-token": {
       "label": "\ud83d\udfe1 HOLD / NEUTRAL",
       "status": "neutral",
-      "score": -1,
+      "score": 0,
       "rows": [
         [
           "Price vs. recent range",
@@ -1096,7 +1096,7 @@
         ],
         [
           "Crowd mood (Fear & Greed)",
-          "61/100 - crowd is greedy",
+          "57/100 - crowd is greedy",
           -1
         ],
         [
@@ -1111,8 +1111,8 @@
         ],
         [
           "Stretch from long-term average",
-          "+10.5% above its long-term average - a bit stretched",
-          -1
+          "+8.8% vs its long-term average - not stretched either way",
+          0
         ],
         [
           "Leverage traders' bias",
@@ -1124,12 +1124,12 @@
       "id": "polygon-ecosystem-token",
       "symbol": "POL",
       "name": "POL (ex-MATIC)",
-      "price": 0.097342,
-      "pct_24h": 0.99073,
-      "pct_7d": 0.1,
+      "price": 0.09585,
+      "pct_24h": -0.72543,
+      "pct_7d": -2.0,
       "support_30d": 0.07481366852260064,
       "resistance_30d": 0.12250456198546959,
-      "as_of": "2026-09-13 20:45:23",
+      "as_of": "2026-09-14 00:00:35",
       "stale": false
     },
     "blackrock-usd-institutional-digital-liquidity-fund": {
@@ -1375,7 +1375,7 @@
     "gatechain-token": {
       "label": "\ud83d\udd34 CAUTION - REDUCE NEW BUYS",
       "status": "bearish",
-      "score": -3,
+      "score": -2,
       "rows": [
         [
           "Price vs. recent range",
@@ -1384,7 +1384,7 @@
         ],
         [
           "Crowd mood (Fear & Greed)",
-          "61/100 - crowd is greedy",
+          "57/100 - crowd is greedy",
           -1
         ],
         [
@@ -1399,8 +1399,8 @@
         ],
         [
           "Stretch from long-term average",
-          "+30.4% above its long-term average - very stretched",
-          -2
+          "+30.0% above its long-term average - a bit stretched",
+          -1
         ],
         [
           "Leverage traders' bias",
@@ -1412,12 +1412,12 @@
       "id": "gatechain-token",
       "symbol": "GT",
       "name": "Gate",
-      "price": 9.17,
-      "pct_24h": -2.16547,
-      "pct_7d": 0.2,
+      "price": 9.14,
+      "pct_24h": -2.37765,
+      "pct_7d": -0.1,
       "support_30d": 6.673649191532821,
       "resistance_30d": 9.38216924975626,
-      "as_of": "2026-09-13 23:25:53",
+      "as_of": "2026-09-14 00:00:35",
       "stale": false
     },
     "crypto-com-chain": {
@@ -1720,7 +1720,7 @@
         ],
         [
           "Crowd mood (Fear & Greed)",
-          "61/100 - crowd is greedy",
+          "57/100 - crowd is greedy",
           -1
         ],
         [
@@ -1735,7 +1735,7 @@
         ],
         [
           "Stretch from long-term average",
-          "-17.6% below its long-term average - confirmed downtrend",
+          "-17.4% below its long-term average - confirmed downtrend",
           -1
         ],
         [
@@ -1748,12 +1748,12 @@
       "id": "sui",
       "symbol": "SUI",
       "name": "Sui",
-      "price": 0.699309,
-      "pct_24h": -3.14626,
-      "pct_7d": -11.8,
+      "price": 0.701643,
+      "pct_24h": -3.21049,
+      "pct_7d": -12.9,
       "support_30d": 0.6514311908607086,
       "resistance_30d": 0.8499161763231283,
-      "as_of": "2026-09-13 22:45:21",
+      "as_of": "2026-09-14 00:00:35",
       "stale": false
     },
     "lighter": {
@@ -3321,10 +3321,10 @@
         "name": "Stellar",
         "tf": "daily",
         "entry": 0.152173,
-        "stop": 0.141397,
-        "target1": 0.162949,
-        "target2": 0.17372500000000002,
-        "opened_at": "2026-09-13T23:57:08.314125"
+        "stop": 0.1414621,
+        "target1": 0.1628839,
+        "target2": 0.1735948,
+        "opened_at": "2026-09-14T00:02:26.583061"
       }
     },
     "resolved": [
@@ -18355,6 +18355,19 @@
         "result": "win",
         "resolved_at": "2026-09-13T23:57:08.314125",
         "exit_price": 0.177047
+      },
+      {
+        "coin": "XLM",
+        "name": "Stellar",
+        "tf": "daily",
+        "entry": 0.152173,
+        "stop": 0.141397,
+        "target1": 0.162949,
+        "target2": 0.17372500000000002,
+        "opened_at": "2026-09-13T23:57:08.314125",
+        "result": "win",
+        "resolved_at": "2026-09-14T00:02:26.583061",
+        "exit_price": 0.177232
       }
     ]
   },
@@ -18362,14 +18375,14 @@
     "key": "BTC",
     "name": "Bitcoin",
     "emoji": "\u20bf",
-    "price": 76788,
+    "price": 76792,
     "high_24h": 77406,
     "low_24h": 76516,
-    "pct_24h": -0.63376,
+    "pct_24h": -0.60896,
     "pct_7d": -4.1,
     "pct_30d": 22.0,
-    "sma50": 71159.01804421295,
-    "sma200": 70126.52927128744,
+    "sma50": 71159.69890204593,
+    "sma200": 70126.69948574569,
     "support_30d": 62843.70368466329,
     "resistance_30d": 81264.70153038795,
     "mark_price": 77158.0,
@@ -18377,21 +18390,21 @@
     "funding_rate": 5.511e-05,
     "oi_change_pct": -0.024973734454054198,
     "oi_now": 103510.921,
-    "fng_value": 61,
+    "fng_value": 57,
     "fng_class": "Greed"
   },
   "ETH": {
     "key": "ETH",
     "name": "Ethereum",
     "emoji": "\u039e",
-    "price": 2475.67,
+    "price": 2475.08,
     "high_24h": 2526.68,
     "low_24h": 2464.63,
-    "pct_24h": -2.0018,
+    "pct_24h": -1.97909,
     "pct_7d": -1.3,
     "pct_30d": 31.9,
-    "sma50": 2185.876563834555,
-    "sma200": 2057.3929214675677,
+    "sma50": 2185.9010837079836,
+    "sma200": 2057.3990514359252,
     "support_30d": 1874.401898191962,
     "resistance_30d": 2525.267261590238,
     "mark_price": 2521.71641085,
@@ -18399,7 +18412,7 @@
     "funding_rate": 4.325e-05,
     "oi_change_pct": -0.8977977435277056,
     "oi_now": 2325218.474,
-    "fng_value": 61,
+    "fng_value": 57,
     "fng_class": "Greed"
   }
 }
