@@ -4,7 +4,7 @@
   "_alerts_state": {
     "btc-resistance-break": {
       "triggered": true,
-      "last_triggered_at": "2026-09-14 18:35:19"
+      "last_triggered_at": "2026-09-14 18:40:24"
     },
     "btc-support-break": {
       "triggered": false,
@@ -12,7 +12,7 @@
     },
     "eth-resistance-break": {
       "triggered": true,
-      "last_triggered_at": "2026-09-14 18:35:19"
+      "last_triggered_at": "2026-09-14 18:40:24"
     },
     "eth-support-break": {
       "triggered": false,
@@ -515,7 +515,7 @@
       "rows": [
         [
           "Price vs. recent range",
-          "Near its 30-day high (~$81.25) - less room to run",
+          "Near its 30-day high (~$81.84) - less room to run",
           -1
         ],
         [
@@ -535,7 +535,7 @@
         ],
         [
           "Stretch from long-term average",
-          "+42.8% above its long-term average - very stretched",
+          "+44.0% above its long-term average - very stretched",
           -2
         ],
         [
@@ -548,12 +548,12 @@
       "id": "whitebit",
       "symbol": "WBT",
       "name": "WhiteBIT Coin",
-      "price": 81.17,
-      "pct_24h": 1.61463,
-      "pct_7d": 10.7,
+      "price": 81.84,
+      "pct_24h": 2.01974,
+      "pct_7d": 12.0,
       "support_30d": 54.452558710928955,
-      "resistance_30d": 81.2521953230761,
-      "as_of": "2026-09-14 15:45:22",
+      "resistance_30d": 81.84305625398233,
+      "as_of": "2026-09-14 18:40:24",
       "stale": false
     },
     "leo-token": {
@@ -1735,7 +1735,7 @@
         ],
         [
           "Stretch from long-term average",
-          "-14.5% vs its long-term average - not stretched either way",
+          "-12.7% vs its long-term average - not stretched either way",
           0
         ],
         [
@@ -1748,12 +1748,12 @@
       "id": "sui",
       "symbol": "SUI",
       "name": "Sui",
-      "price": 0.724665,
-      "pct_24h": 1.83134,
-      "pct_7d": -12.3,
+      "price": 0.740482,
+      "pct_24h": 2.47217,
+      "pct_7d": -9.8,
       "support_30d": 0.6514311908607086,
       "resistance_30d": 0.8499161763231283,
-      "as_of": "2026-09-14 16:00:39",
+      "as_of": "2026-09-14 18:40:24",
       "stale": false
     },
     "lighter": {
@@ -3203,8 +3203,8 @@
       "rows": [
         [
           "Price vs. recent range",
-          "Sitting in the middle of its 30-day range",
-          0
+          "Near its 30-day high (~$0.0365) - less room to run",
+          -1
         ],
         [
           "Crowd mood (Fear & Greed)",
@@ -3218,12 +3218,12 @@
         ],
         [
           "Recent trend",
-          "Trending down - avoid catching a falling knife",
-          -1
+          "Chopping sideways - no clear trend",
+          0
         ],
         [
           "Stretch from long-term average",
-          "-0.8% vs its long-term average - not stretched either way",
+          "+3.2% vs its long-term average - not stretched either way",
           0
         ],
         [
@@ -3236,12 +3236,12 @@
       "id": "kaspa",
       "symbol": "KAS",
       "name": "Kaspa",
-      "price": 0.03346,
-      "pct_24h": -3.00452,
-      "pct_7d": -8.0,
+      "price": 0.03480067,
+      "pct_24h": 0.54517,
+      "pct_7d": -6.3,
       "support_30d": 0.025275049210175406,
       "resistance_30d": 0.03651282069323304,
-      "as_of": "2026-09-14 16:05:18",
+      "as_of": "2026-09-14 18:40:24",
       "stale": false
     },
     "cosmos": {
@@ -3352,7 +3352,7 @@
         "stop": 0.06113375,
         "target1": 0.06236625,
         "target2": 0.0629825,
-        "opened_at": "2026-09-14T18:36:50.133839"
+        "opened_at": "2026-09-14T18:42:26.245733"
       }
     },
     "resolved": [
@@ -23128,6 +23128,19 @@
         "result": "win",
         "resolved_at": "2026-09-14T18:36:50.133839",
         "exit_price": 81.94
+      },
+      {
+        "coin": "SKY",
+        "name": "Sky",
+        "tf": "1h",
+        "entry": 0.06175,
+        "stop": 0.06113375,
+        "target1": 0.06236625,
+        "target2": 0.0629825,
+        "opened_at": "2026-09-14T18:36:50.133839",
+        "result": "win",
+        "resolved_at": "2026-09-14T18:42:26.245733",
+        "exit_price": 0.06416
       }
     ]
   },
@@ -23135,14 +23148,14 @@
     "key": "BTC",
     "name": "Bitcoin",
     "emoji": "\u20bf",
-    "price": 79124,
+    "price": 79113,
     "high_24h": 78988,
     "low_24h": 76439,
-    "pct_24h": 2.38787,
+    "pct_24h": 2.29023,
     "pct_7d": -0.1,
     "pct_30d": 25.2,
-    "sma50": 71436.58472597651,
-    "sma200": 70185.15585608505,
+    "sma50": 71435.08822516358,
+    "sma200": 70184.78173088182,
     "support_30d": 62843.70368466329,
     "resistance_30d": 81264.70153038795,
     "mark_price": 77600.0,
@@ -23157,16 +23170,16 @@
     "key": "ETH",
     "name": "Ethereum",
     "emoji": "\u039e",
-    "price": 2538.61,
+    "price": 2540.39,
     "high_24h": 2535.25,
     "low_24h": 2467.86,
-    "pct_24h": 1.33082,
+    "pct_24h": 1.28121,
     "pct_7d": 2.0,
     "pct_30d": 34.5,
-    "sma50": 2197.6801057538214,
-    "sma200": 2059.970791602958,
+    "sma50": 2197.6513218736645,
+    "sma200": 2059.9635956329184,
     "support_30d": 1874.401898191962,
-    "resistance_30d": 2541.710800612661,
+    "resistance_30d": 2540.271606604806,
     "mark_price": 2515.82,
     "index_price": 2516.73418605,
     "funding_rate": 8.331e-05,
