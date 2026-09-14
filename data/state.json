@@ -12,7 +12,7 @@
     },
     "eth-resistance-break": {
       "triggered": true,
-      "last_triggered_at": "2026-09-14 06:10:21"
+      "last_triggered_at": "2026-09-14 06:15:22"
     },
     "eth-support-break": {
       "triggered": false,
@@ -1447,7 +1447,7 @@
         ],
         [
           "Stretch from long-term average",
-          "-11.0% vs its long-term average - not stretched either way",
+          "-10.9% vs its long-term average - not stretched either way",
           0
         ],
         [
@@ -1460,12 +1460,12 @@
       "id": "crypto-com-chain",
       "symbol": "CRO",
       "name": "Cronos",
-      "price": 0.058025,
-      "pct_24h": -2.81407,
+      "price": 0.058063,
+      "pct_24h": -2.82829,
       "pct_7d": 0.6,
       "support_30d": 0.04621382085807831,
       "resistance_30d": 0.06091104752771909,
-      "as_of": "2026-09-14 06:10:21",
+      "as_of": "2026-09-14 06:15:22",
       "stale": false
     },
     "ethereum-classic": {
@@ -1639,7 +1639,7 @@
         ],
         [
           "Stretch from long-term average",
-          "+7.3% vs its long-term average - not stretched either way",
+          "+7.6% vs its long-term average - not stretched either way",
           0
         ],
         [
@@ -1652,12 +1652,12 @@
       "id": "litecoin",
       "symbol": "LTC",
       "name": "Litecoin",
-      "price": 54.09,
-      "pct_24h": -0.22688,
+      "price": 54.23,
+      "pct_24h": 0.12452,
       "pct_7d": -0.7,
       "support_30d": 44.10365333727941,
       "resistance_30d": 55.20228907963863,
-      "as_of": "2026-09-14 06:05:19",
+      "as_of": "2026-09-14 06:15:22",
       "stale": false
     },
     "bitget-token": {
@@ -2095,7 +2095,7 @@
     "ondo-finance": {
       "label": "\ud83d\udfe1 HOLD / NEUTRAL",
       "status": "neutral",
-      "score": -1,
+      "score": 0,
       "rows": [
         [
           "Price vs. recent range",
@@ -2114,12 +2114,12 @@
         ],
         [
           "Recent trend",
-          "Trending down - avoid catching a falling knife",
-          -1
+          "Chopping sideways - no clear trend",
+          0
         ],
         [
           "Stretch from long-term average",
-          "+6.7% vs its long-term average - not stretched either way",
+          "+8.2% vs its long-term average - not stretched either way",
           0
         ],
         [
@@ -2132,12 +2132,12 @@
       "id": "ondo-finance",
       "symbol": "ONDO",
       "name": "Ondo",
-      "price": 0.349751,
-      "pct_24h": 0.78217,
-      "pct_7d": -8.7,
+      "price": 0.354626,
+      "pct_24h": 2.19176,
+      "pct_7d": -7.8,
       "support_30d": 0.32601458799099026,
       "resistance_30d": 0.3969475338902824,
-      "as_of": "2026-09-14 03:45:23",
+      "as_of": "2026-09-14 06:15:22",
       "stale": false
     },
     "canton-network": {
@@ -3303,10 +3303,10 @@
         "name": "Aster",
         "tf": "15m",
         "entry": 0.68172,
-        "stop": 0.6803883333333333,
-        "target1": 0.6830516666666667,
-        "target2": 0.6843833333333335,
-        "opened_at": "2026-09-14T06:12:13.253239"
+        "stop": 0.6804566666666666,
+        "target1": 0.6829833333333334,
+        "target2": 0.6842466666666668,
+        "opened_at": "2026-09-14T06:17:13.193455"
       },
       "1h:XMR": {
         "coin": "XMR",
@@ -3316,7 +3316,7 @@
         "stop": 505.37083333333334,
         "target1": 517.7891666666667,
         "target2": 523.9983333333332,
-        "opened_at": "2026-09-14T06:12:13.253239"
+        "opened_at": "2026-09-14T06:17:13.193455"
       },
       "daily:XLM": {
         "coin": "XLM",
@@ -3326,7 +3326,7 @@
         "stop": 0.14122323333333334,
         "target1": 0.16312276666666667,
         "target2": 0.17407253333333333,
-        "opened_at": "2026-09-14T06:12:13.253239"
+        "opened_at": "2026-09-14T06:17:13.193455"
       }
     },
     "resolved": [
@@ -20242,6 +20242,45 @@
         "result": "win",
         "resolved_at": "2026-09-14T06:12:13.253239",
         "exit_price": 0.184031
+      },
+      {
+        "coin": "ASTER",
+        "name": "Aster",
+        "tf": "15m",
+        "entry": 0.68172,
+        "stop": 0.6803883333333333,
+        "target1": 0.6830516666666667,
+        "target2": 0.6843833333333335,
+        "opened_at": "2026-09-14T06:12:13.253239",
+        "result": "win",
+        "resolved_at": "2026-09-14T06:17:13.193455",
+        "exit_price": 0.69962
+      },
+      {
+        "coin": "XMR",
+        "name": "Monero",
+        "tf": "1h",
+        "entry": 511.58,
+        "stop": 505.37083333333334,
+        "target1": 517.7891666666667,
+        "target2": 523.9983333333332,
+        "opened_at": "2026-09-14T06:12:13.253239",
+        "result": "win",
+        "resolved_at": "2026-09-14T06:17:13.193455",
+        "exit_price": 519.05
+      },
+      {
+        "coin": "XLM",
+        "name": "Stellar",
+        "tf": "daily",
+        "entry": 0.152173,
+        "stop": 0.14122323333333334,
+        "target1": 0.16312276666666667,
+        "target2": 0.17407253333333333,
+        "opened_at": "2026-09-14T06:12:13.253239",
+        "result": "win",
+        "resolved_at": "2026-09-14T06:17:13.193455",
+        "exit_price": 0.183614
       }
     ]
   },
@@ -20249,14 +20288,14 @@
     "key": "BTC",
     "name": "Bitcoin",
     "emoji": "\u20bf",
-    "price": 77754,
+    "price": 77815,
     "high_24h": 77811,
     "low_24h": 76439,
-    "pct_24h": 0.60554,
+    "pct_24h": 0.65324,
     "pct_7d": -2.7,
     "pct_30d": 23.0,
-    "sma50": 71408.23328595835,
-    "sma200": 70178.06799608051,
+    "sma50": 71408.99695112319,
+    "sma200": 70178.25891237172,
     "support_30d": 62843.70368466329,
     "resistance_30d": 81264.70153038795,
     "mark_price": 77158.0,
@@ -20274,11 +20313,11 @@
     "price": 2523.77,
     "high_24h": 2519.15,
     "low_24h": 2464.63,
-    "pct_24h": 0.10627,
+    "pct_24h": 0.04143,
     "pct_7d": 0.7,
     "pct_30d": 33.6,
-    "sma50": 2197.3360470325897,
-    "sma200": 2059.88477692265,
+    "sma50": 2197.28946441345,
+    "sma200": 2059.873131267865,
     "support_30d": 1874.401898191962,
     "resistance_30d": 2525.267261590238,
     "mark_price": 2521.71641085,
