@@ -4,7 +4,7 @@
   "_alerts_state": {
     "btc-resistance-break": {
       "triggered": true,
-      "last_triggered_at": "2026-09-14 20:10:23"
+      "last_triggered_at": "2026-09-14 20:15:21"
     },
     "btc-support-break": {
       "triggered": false,
@@ -12,7 +12,7 @@
     },
     "eth-resistance-break": {
       "triggered": true,
-      "last_triggered_at": "2026-09-14 20:10:23"
+      "last_triggered_at": "2026-09-14 20:15:21"
     },
     "eth-support-break": {
       "triggered": false,
@@ -989,9 +989,9 @@
       "stale": false
     },
     "worldcoin-wld": {
-      "label": "\ud83d\udfe1 HOLD / NEUTRAL",
-      "status": "neutral",
-      "score": -1,
+      "label": "\ud83d\udd34 CAUTION - REDUCE NEW BUYS",
+      "status": "bearish",
+      "score": -2,
       "rows": [
         [
           "Price vs. recent range",
@@ -1015,8 +1015,8 @@
         ],
         [
           "Stretch from long-term average",
-          "+9.3% vs its long-term average - not stretched either way",
-          0
+          "+10.1% above its long-term average - a bit stretched",
+          -1
         ],
         [
           "Leverage traders' bias",
@@ -1024,16 +1024,16 @@
           0
         ]
       ],
-      "plain": "No real edge either way right now - fine to just wait and watch.",
+      "plain": "Getting risky - I'd hold off on new buys until this cools down.",
       "id": "worldcoin-wld",
       "symbol": "WLD",
       "name": "Worldcoin",
-      "price": 0.391152,
-      "pct_24h": 0.89757,
-      "pct_7d": -15.2,
+      "price": 0.393768,
+      "pct_24h": 1.27888,
+      "pct_7d": -14.3,
       "support_30d": 0.319812298466522,
       "resistance_30d": 0.4772935995106048,
-      "as_of": "2026-09-14 19:55:18",
+      "as_of": "2026-09-14 20:15:21",
       "stale": false
     },
     "bfusd": {
@@ -1975,7 +1975,7 @@
         ],
         [
           "Stretch from long-term average",
-          "-7.2% vs its long-term average - not stretched either way",
+          "-6.5% vs its long-term average - not stretched either way",
           0
         ],
         [
@@ -1988,12 +1988,12 @@
       "id": "polkadot",
       "symbol": "DOT",
       "name": "Polkadot",
-      "price": 1.017,
-      "pct_24h": 0.06772,
-      "pct_7d": -6.9,
+      "price": 1.025,
+      "pct_24h": 0.63136,
+      "pct_7d": -7.0,
       "support_30d": 0.7510040523927409,
       "resistance_30d": 1.2475304252917225,
-      "as_of": "2026-09-14 19:55:18",
+      "as_of": "2026-09-14 20:15:21",
       "stale": false
     },
     "uniswap": {
@@ -3199,12 +3199,12 @@
     "kaspa": {
       "label": "\ud83d\udfe1 HOLD / NEUTRAL",
       "status": "neutral",
-      "score": 1,
+      "score": 0,
       "rows": [
         [
           "Price vs. recent range",
-          "Sitting in the middle of its 30-day range",
-          0
+          "Near its 30-day high (~$0.0365) - less room to run",
+          -1
         ],
         [
           "Crowd mood (Fear & Greed)",
@@ -3223,7 +3223,7 @@
         ],
         [
           "Stretch from long-term average",
-          "+2.4% vs its long-term average - not stretched either way",
+          "+3.3% vs its long-term average - not stretched either way",
           0
         ],
         [
@@ -3236,12 +3236,12 @@
       "id": "kaspa",
       "symbol": "KAS",
       "name": "Kaspa",
-      "price": 0.03453897,
-      "pct_24h": 0.92336,
-      "pct_7d": -3.3,
+      "price": 0.03484952,
+      "pct_24h": 1.73643,
+      "pct_7d": -1.7,
       "support_30d": 0.025275049210175406,
       "resistance_30d": 0.03651282069323304,
-      "as_of": "2026-09-14 19:40:23",
+      "as_of": "2026-09-14 20:15:21",
       "stale": false
     },
     "cosmos": {
@@ -3341,9 +3341,7 @@
       "stale": false
     }
   },
-  "_strong_buy_state": {
-    "scanner-1h:PI": true
-  },
+  "_strong_buy_state": {},
   "_pnl_tracker": {
     "open": {
       "1h:PI": {
@@ -3351,20 +3349,10 @@
         "name": "Pi Network",
         "tf": "1h",
         "entry": 0.09605,
-        "stop": 0.09396791666666666,
-        "target1": 0.09813208333333333,
-        "target2": 0.10021416666666666,
-        "opened_at": "2026-09-14T19:37:16.853601"
-      },
-      "15m:ICP": {
-        "coin": "ICP",
-        "name": "Internet Computer",
-        "tf": "15m",
-        "entry": 2.706,
-        "stop": 2.695733333333333,
-        "target1": 2.716266666666667,
-        "target2": 2.7265333333333337,
-        "opened_at": "2026-09-14T20:12:21.267997"
+        "stop": 0.09399083333333333,
+        "target1": 0.09810916666666666,
+        "target2": 0.10016833333333333,
+        "opened_at": "2026-09-14T20:17:20.713562"
       }
     },
     "resolved": [
@@ -23400,6 +23388,32 @@
         "result": "win",
         "resolved_at": "2026-09-14T20:12:21.267997",
         "exit_price": 2.778
+      },
+      {
+        "coin": "PI",
+        "name": "Pi Network",
+        "tf": "1h",
+        "entry": 0.09605,
+        "stop": 0.09396791666666666,
+        "target1": 0.09813208333333333,
+        "target2": 0.10021416666666666,
+        "opened_at": "2026-09-14T19:37:16.853601",
+        "result": "win",
+        "resolved_at": "2026-09-14T20:17:20.713562",
+        "exit_price": 0.09817
+      },
+      {
+        "coin": "ICP",
+        "name": "Internet Computer",
+        "tf": "15m",
+        "entry": 2.706,
+        "stop": 2.695733333333333,
+        "target1": 2.716266666666667,
+        "target2": 2.7265333333333337,
+        "opened_at": "2026-09-14T20:12:21.267997",
+        "result": "win",
+        "resolved_at": "2026-09-14T20:17:20.713562",
+        "exit_price": 2.802
       }
     ]
   },
@@ -23407,21 +23421,21 @@
     "key": "BTC",
     "name": "Bitcoin",
     "emoji": "\u20bf",
-    "price": 79030,
+    "price": 79127,
     "high_24h": 79292,
     "low_24h": 76439,
-    "pct_24h": 2.30347,
+    "pct_24h": 2.4495,
     "pct_7d": -0.3,
     "pct_30d": 25.4,
-    "sma50": 71433.31719464784,
-    "sma200": 70184.33897325289,
+    "sma50": 71435.798574862,
+    "sma200": 70184.95931830643,
     "support_30d": 62843.70368466329,
     "resistance_30d": 81264.70153038795,
-    "mark_price": 77600.0,
-    "index_price": 77636.42956522,
-    "funding_rate": 0.0001,
-    "oi_change_pct": 2.991385873589584,
-    "oi_now": 106679.528,
+    "mark_price": 79163.5,
+    "index_price": 79198.21282609,
+    "funding_rate": 2.477e-05,
+    "oi_change_pct": -0.2476959493857562,
+    "oi_now": 104656.658,
     "fng_value": 57,
     "fng_class": "Greed"
   },
@@ -23429,21 +23443,21 @@
     "key": "ETH",
     "name": "Ethereum",
     "emoji": "\u039e",
-    "price": 2543.86,
+    "price": 2560.22,
     "high_24h": 2547.92,
     "low_24h": 2467.86,
-    "pct_24h": 1.50028,
+    "pct_24h": 2.27579,
     "pct_7d": 1.9,
     "pct_30d": 35.0,
-    "sma50": 2197.7241531525415,
-    "sma200": 2059.981803452638,
+    "sma50": 2198.123331169274,
+    "sma200": 2060.081597956821,
     "support_30d": 1874.401898191962,
-    "resistance_30d": 2543.9131705486475,
-    "mark_price": 2515.82,
-    "index_price": 2516.73418605,
-    "funding_rate": 8.331e-05,
-    "oi_change_pct": 0.17707278867453846,
-    "oi_now": 2327639.606,
+    "resistance_30d": 2563.872071385291,
+    "mark_price": 2567.79454334,
+    "index_price": 2567.75069767,
+    "funding_rate": 1.96e-05,
+    "oi_change_pct": 0.8288290939253237,
+    "oi_now": 2350205.753,
     "fng_value": 57,
     "fng_class": "Greed"
   }
