@@ -1543,7 +1543,7 @@
         ],
         [
           "Stretch from long-term average",
-          "+67.9% above its long-term average - very stretched",
+          "+68.1% above its long-term average - very stretched",
           -2
         ],
         [
@@ -1556,12 +1556,12 @@
       "id": "pump-fun",
       "symbol": "PUMP",
       "name": "Pump.fun",
-      "price": 0.00362778,
-      "pct_24h": -5.40017,
-      "pct_7d": -9.6,
+      "price": 0.0036328,
+      "pct_24h": -5.23358,
+      "pct_7d": -10.2,
       "support_30d": 0.002666433318189806,
       "resistance_30d": 0.0052249885406471875,
-      "as_of": "2026-09-14 05:50:23",
+      "as_of": "2026-09-14 06:05:19",
       "stale": false
     },
     "venice-token": {
@@ -1639,7 +1639,7 @@
         ],
         [
           "Stretch from long-term average",
-          "+7.4% vs its long-term average - not stretched either way",
+          "+7.3% vs its long-term average - not stretched either way",
           0
         ],
         [
@@ -1652,12 +1652,12 @@
       "id": "litecoin",
       "symbol": "LTC",
       "name": "Litecoin",
-      "price": 54.12,
-      "pct_24h": -0.0777,
-      "pct_7d": 0.3,
+      "price": 54.09,
+      "pct_24h": -0.22688,
+      "pct_7d": -0.7,
       "support_30d": 44.10365333727941,
       "resistance_30d": 55.20228907963863,
-      "as_of": "2026-09-14 05:40:22",
+      "as_of": "2026-09-14 06:05:19",
       "stale": false
     },
     "bitget-token": {
@@ -1927,7 +1927,7 @@
         ],
         [
           "Stretch from long-term average",
-          "-1.9% vs its long-term average - not stretched either way",
+          "-2.0% vs its long-term average - not stretched either way",
           0
         ],
         [
@@ -1940,12 +1940,12 @@
       "id": "mantle",
       "symbol": "MNT",
       "name": "Mantle",
-      "price": 0.56296,
-      "pct_24h": 1.57948,
-      "pct_7d": -11.8,
+      "price": 0.562663,
+      "pct_24h": 1.35537,
+      "pct_7d": -13.2,
       "support_30d": 0.42660592418086046,
       "resistance_30d": 0.6365218632454678,
-      "as_of": "2026-09-14 05:50:23",
+      "as_of": "2026-09-14 06:05:19",
       "stale": false
     },
     "polkadot": {
@@ -3294,40 +3294,39 @@
     }
   },
   "_strong_buy_state": {
-    "scanner-15m:ASTER": true,
-    "scanner-1h:XMR": true
+    "scanner-15m:ASTER": true
   },
   "_pnl_tracker": {
     "open": {
-      "1h:XMR": {
-        "coin": "XMR",
-        "name": "Monero",
-        "tf": "1h",
-        "entry": 511.58,
-        "stop": 505.37125,
-        "target1": 517.7887499999999,
-        "target2": 523.9975,
-        "opened_at": "2026-09-14T05:57:06.995525"
-      },
       "15m:ASTER": {
         "coin": "ASTER",
         "name": "Aster",
         "tf": "15m",
         "entry": 0.68172,
-        "stop": 0.680419,
-        "target1": 0.683021,
-        "target2": 0.684322,
-        "opened_at": "2026-09-14T06:02:30.333460"
+        "stop": 0.680418,
+        "target1": 0.683022,
+        "target2": 0.684324,
+        "opened_at": "2026-09-14T06:07:10.761446"
+      },
+      "1h:XMR": {
+        "coin": "XMR",
+        "name": "Monero",
+        "tf": "1h",
+        "entry": 511.58,
+        "stop": 505.41416666666663,
+        "target1": 517.7458333333334,
+        "target2": 523.9116666666666,
+        "opened_at": "2026-09-14T06:07:10.761446"
       },
       "daily:XLM": {
         "coin": "XLM",
         "name": "Stellar",
         "tf": "daily",
         "entry": 0.152173,
-        "stop": 0.14125936666666666,
-        "target1": 0.16308663333333334,
-        "target2": 0.17400026666666668,
-        "opened_at": "2026-09-14T06:02:30.333460"
+        "stop": 0.14125353333333335,
+        "target1": 0.16309246666666666,
+        "target2": 0.1740119333333333,
+        "opened_at": "2026-09-14T06:07:10.761446"
       }
     },
     "resolved": [
@@ -20165,6 +20164,45 @@
         "result": "win",
         "resolved_at": "2026-09-14T06:02:30.333460",
         "exit_price": 0.183042
+      },
+      {
+        "coin": "XMR",
+        "name": "Monero",
+        "tf": "1h",
+        "entry": 511.58,
+        "stop": 505.37125,
+        "target1": 517.7887499999999,
+        "target2": 523.9975,
+        "opened_at": "2026-09-14T05:57:06.995525",
+        "result": "win",
+        "resolved_at": "2026-09-14T06:07:10.761446",
+        "exit_price": 519.69
+      },
+      {
+        "coin": "ASTER",
+        "name": "Aster",
+        "tf": "15m",
+        "entry": 0.68172,
+        "stop": 0.680419,
+        "target1": 0.683021,
+        "target2": 0.684322,
+        "opened_at": "2026-09-14T06:02:30.333460",
+        "result": "win",
+        "resolved_at": "2026-09-14T06:07:10.761446",
+        "exit_price": 0.6987
+      },
+      {
+        "coin": "XLM",
+        "name": "Stellar",
+        "tf": "daily",
+        "entry": 0.152173,
+        "stop": 0.14125936666666666,
+        "target1": 0.16308663333333334,
+        "target2": 0.17400026666666668,
+        "opened_at": "2026-09-14T06:02:30.333460",
+        "result": "win",
+        "resolved_at": "2026-09-14T06:07:10.761446",
+        "exit_price": 0.183378
       }
     ]
   },
@@ -20172,14 +20210,14 @@
     "key": "BTC",
     "name": "Bitcoin",
     "emoji": "\u20bf",
-    "price": 77543,
+    "price": 77605,
     "high_24h": 77811,
     "low_24h": 76439,
-    "pct_24h": 0.32091,
-    "pct_7d": -2.5,
-    "pct_30d": 23.2,
-    "sma50": 71403.76400809549,
-    "sma200": 70176.9506766148,
+    "pct_24h": 0.41236,
+    "pct_7d": -2.7,
+    "pct_30d": 23.0,
+    "sma50": 71405.14491815967,
+    "sma200": 70177.29590413085,
     "support_30d": 62843.70368466329,
     "resistance_30d": 81264.70153038795,
     "mark_price": 77158.0,
@@ -20194,14 +20232,14 @@
     "key": "ETH",
     "name": "Ethereum",
     "emoji": "\u039e",
-    "price": 2514.2,
-    "high_24h": 2522.05,
+    "price": 2516.81,
+    "high_24h": 2519.15,
     "low_24h": 2464.63,
-    "pct_24h": -0.30487,
-    "pct_7d": 0.6,
+    "pct_24h": -0.19907,
+    "pct_7d": 0.7,
     "pct_30d": 33.6,
-    "sma50": 2197.1366569759653,
-    "sma200": 2059.8349294084937,
+    "sma50": 2197.1828780421606,
+    "sma200": 2059.8464846750426,
     "support_30d": 1874.401898191962,
     "resistance_30d": 2525.267261590238,
     "mark_price": 2521.71641085,
