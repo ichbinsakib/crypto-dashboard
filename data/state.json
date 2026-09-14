@@ -424,7 +424,7 @@
         ],
         [
           "Crowd mood (Fear & Greed)",
-          "61/100 - crowd is greedy",
+          "57/100 - crowd is greedy",
           -1
         ],
         [
@@ -439,7 +439,7 @@
         ],
         [
           "Stretch from long-term average",
-          "+30.4% above its long-term average - very stretched",
+          "+30.2% above its long-term average - very stretched",
           -2
         ],
         [
@@ -452,12 +452,12 @@
       "id": "rain",
       "symbol": "RAIN",
       "name": "Rain",
-      "price": 0.01516479,
-      "pct_24h": -3.73004,
-      "pct_7d": -9.5,
-      "support_30d": 0.012672537640838212,
+      "price": 0.01517713,
+      "pct_24h": -3.57915,
+      "pct_7d": -9.3,
+      "support_30d": 0.01298701863028712,
       "resistance_30d": 0.018158429442510105,
-      "as_of": "2026-09-13 23:45:23",
+      "as_of": "2026-09-14 01:01:09",
       "stale": false
     },
     "chainlink": {
@@ -472,7 +472,7 @@
         ],
         [
           "Crowd mood (Fear & Greed)",
-          "61/100 - crowd is greedy",
+          "57/100 - crowd is greedy",
           -1
         ],
         [
@@ -487,7 +487,7 @@
         ],
         [
           "Stretch from long-term average",
-          "+21.5% above its long-term average - a bit stretched",
+          "+22.0% above its long-term average - a bit stretched",
           -1
         ],
         [
@@ -500,12 +500,12 @@
       "id": "chainlink",
       "symbol": "LINK",
       "name": "Chainlink",
-      "price": 11.22,
-      "pct_24h": -2.46893,
-      "pct_7d": -13.3,
+      "price": 11.27,
+      "pct_24h": -2.04252,
+      "pct_7d": -14.9,
       "support_30d": 9.38323578770609,
       "resistance_30d": 13.237155745219605,
-      "as_of": "2026-09-13 23:50:20",
+      "as_of": "2026-09-14 01:01:09",
       "stale": false
     },
     "whitebit": {
@@ -1663,12 +1663,12 @@
     "bitget-token": {
       "label": "\ud83d\udfe1 HOLD / NEUTRAL",
       "status": "neutral",
-      "score": 1,
+      "score": 0,
       "rows": [
         [
           "Price vs. recent range",
-          "Sitting in the middle of its 30-day range",
-          0
+          "Near its 30-day high (~$2.03) - less room to run",
+          -1
         ],
         [
           "Crowd mood (Fear & Greed)",
@@ -1687,7 +1687,7 @@
         ],
         [
           "Stretch from long-term average",
-          "+1.5% vs its long-term average - not stretched either way",
+          "+2.0% vs its long-term average - not stretched either way",
           0
         ],
         [
@@ -1700,12 +1700,12 @@
       "id": "bitget-token",
       "symbol": "BGB",
       "name": "Bitget Token",
-      "price": 1.92,
-      "pct_24h": -1.14901,
-      "pct_7d": -4.4,
+      "price": 1.93,
+      "pct_24h": -1.0647,
+      "pct_7d": -4.6,
       "support_30d": 1.6478040912714662,
       "resistance_30d": 2.0284940947674617,
-      "as_of": "2026-09-14 00:35:17",
+      "as_of": "2026-09-14 01:01:09",
       "stale": false
     },
     "sui": {
@@ -3311,10 +3311,10 @@
         "name": "Monero",
         "tf": "15m",
         "entry": 512.01,
-        "stop": 509.622,
-        "target1": 514.3979999999999,
-        "target2": 516.786,
-        "opened_at": "2026-09-14T00:57:09.436507"
+        "stop": 509.671,
+        "target1": 514.3489999999999,
+        "target2": 516.688,
+        "opened_at": "2026-09-14T01:03:00.332582"
       },
       "daily:XLM": {
         "coin": "XLM",
@@ -3324,7 +3324,7 @@
         "stop": 0.14140983333333335,
         "target1": 0.16293616666666666,
         "target2": 0.17369933333333332,
-        "opened_at": "2026-09-14T00:57:09.436507"
+        "opened_at": "2026-09-14T01:03:00.332582"
       }
     },
     "resolved": [
@@ -18576,6 +18576,32 @@
         "result": "win",
         "resolved_at": "2026-09-14T00:57:09.436507",
         "exit_price": 0.178515
+      },
+      {
+        "coin": "XMR",
+        "name": "Monero",
+        "tf": "15m",
+        "entry": 512.01,
+        "stop": 509.622,
+        "target1": 514.3979999999999,
+        "target2": 516.786,
+        "opened_at": "2026-09-14T00:57:09.436507",
+        "result": "win",
+        "resolved_at": "2026-09-14T01:03:00.332582",
+        "exit_price": 515.57
+      },
+      {
+        "coin": "XLM",
+        "name": "Stellar",
+        "tf": "daily",
+        "entry": 0.152173,
+        "stop": 0.14140983333333335,
+        "target1": 0.16293616666666666,
+        "target2": 0.17369933333333332,
+        "opened_at": "2026-09-14T00:57:09.436507",
+        "result": "win",
+        "resolved_at": "2026-09-14T01:03:00.332582",
+        "exit_price": 0.17845
       }
     ]
   },
@@ -18583,14 +18609,14 @@
     "key": "BTC",
     "name": "Bitcoin",
     "emoji": "\u20bf",
-    "price": 76750,
+    "price": 76797,
     "high_24h": 77406,
     "low_24h": 76516,
-    "pct_24h": -0.65349,
-    "pct_7d": -4.0,
-    "pct_30d": 22.3,
-    "sma50": 71387.85625288887,
-    "sma200": 70172.97373781314,
+    "pct_24h": -0.6079,
+    "pct_7d": -4.4,
+    "pct_30d": 21.9,
+    "sma50": 71388.55009399196,
+    "sma200": 70173.14719808892,
     "support_30d": 62843.70368466329,
     "resistance_30d": 81264.70153038795,
     "mark_price": 77158.0,
@@ -18605,14 +18631,14 @@
     "key": "ETH",
     "name": "Ethereum",
     "emoji": "\u039e",
-    "price": 2482.99,
+    "price": 2484.51,
     "high_24h": 2526.68,
     "low_24h": 2464.63,
-    "pct_24h": -1.65871,
+    "pct_24h": -1.6063,
     "pct_7d": -1.2,
-    "pct_30d": 31.9,
-    "sma50": 2196.508632138645,
-    "sma200": 2059.677923199164,
+    "pct_30d": 32.1,
+    "sma50": 2196.5360620053098,
+    "sma200": 2059.68478066583,
     "support_30d": 1874.401898191962,
     "resistance_30d": 2525.267261590238,
     "mark_price": 2521.71641085,
