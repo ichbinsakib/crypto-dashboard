@@ -103,7 +103,7 @@
         ],
         [
           "Stretch from long-term average",
-          "+0.5% vs its long-term average - not stretched either way",
+          "+1.2% vs its long-term average - not stretched either way",
           0
         ],
         [
@@ -116,12 +116,12 @@
       "id": "ripple",
       "symbol": "XRP",
       "name": "XRP",
-      "price": 1.28,
-      "pct_24h": -11.19981,
+      "price": 1.29,
+      "pct_24h": -11.0741,
       "pct_7d": -9.2,
       "support_30d": 1.0011429230744608,
       "resistance_30d": 1.52050482788377,
-      "as_of": "2026-09-15 21:40:24",
+      "as_of": "2026-09-15 21:44:33",
       "stale": false
     },
     "solana": {
@@ -885,11 +885,11 @@
       "symbol": "PEPE",
       "name": "Pepe",
       "price": 3.33e-06,
-      "pct_24h": -5.93462,
-      "pct_7d": -6.9,
+      "pct_24h": -5.15654,
+      "pct_7d": -7.9,
       "support_30d": 2.582769748064196e-06,
       "resistance_30d": 4.122123035488615e-06,
-      "as_of": "2026-09-15 20:15:22",
+      "as_of": "2026-09-15 21:44:33",
       "stale": false
     },
     "avalanche-2": {
@@ -1495,7 +1495,7 @@
         ],
         [
           "Stretch from long-term average",
-          "-7.7% vs its long-term average - not stretched either way",
+          "-7.6% vs its long-term average - not stretched either way",
           0
         ],
         [
@@ -1508,12 +1508,12 @@
       "id": "ethereum-classic",
       "symbol": "ETC",
       "name": "Ethereum Classic",
-      "price": 7.19,
-      "pct_24h": -6.11616,
+      "price": 7.2,
+      "pct_24h": -6.06411,
       "pct_7d": -14.6,
       "support_30d": 6.079473341192034,
       "resistance_30d": 8.609781284223262,
-      "as_of": "2026-09-15 21:40:24",
+      "as_of": "2026-09-15 21:44:33",
       "stale": false
     },
     "pump-fun": {
@@ -2407,7 +2407,7 @@
         ],
         [
           "Stretch from long-term average",
-          "-6.7% vs its long-term average - not stretched either way",
+          "-7.5% vs its long-term average - not stretched either way",
           0
         ],
         [
@@ -2420,12 +2420,12 @@
       "id": "shiba-inu",
       "symbol": "SHIB",
       "name": "Shiba Inu",
-      "price": 4.98e-06,
-      "pct_24h": -6.25632,
-      "pct_7d": -7.3,
+      "price": 4.94e-06,
+      "pct_24h": -6.81829,
+      "pct_7d": -7.7,
       "support_30d": 4.41190416053175e-06,
       "resistance_30d": 5.903506876405612e-06,
-      "as_of": "2026-09-15 20:10:23",
+      "as_of": "2026-09-15 21:44:33",
       "stale": false
     },
     "near": {
@@ -2915,7 +2915,7 @@
       "rows": [
         [
           "Price vs. recent range",
-          "Near its 30-day high (~$0.1145) - less room to run",
+          "Near its 30-day high (~$0.1146) - less room to run",
           -1
         ],
         [
@@ -2935,7 +2935,7 @@
         ],
         [
           "Stretch from long-term average",
-          "+34.3% above its long-term average - very stretched",
+          "+34.4% above its long-term average - very stretched",
           -2
         ],
         [
@@ -2948,12 +2948,12 @@
       "id": "just",
       "symbol": "JST",
       "name": "JUST",
-      "price": 0.114479,
-      "pct_24h": 1.43828,
+      "price": 0.114631,
+      "pct_24h": 1.56389,
       "pct_7d": 9.1,
       "support_30d": 0.0946830738697126,
-      "resistance_30d": 0.1144692278702148,
-      "as_of": "2026-09-15 21:20:27",
+      "resistance_30d": 0.11463143029416234,
+      "as_of": "2026-09-15 21:44:33",
       "stale": false
     },
     "algorand": {
@@ -3352,7 +3352,7 @@
         "stop": 1064.81,
         "target1": 1107.5900000000001,
         "target2": 1128.9800000000002,
-        "opened_at": "2026-09-15T21:42:23.846714"
+        "opened_at": "2026-09-15T21:45:48.141415"
       }
     },
     "resolved": [
@@ -27548,6 +27548,19 @@
         "result": "win",
         "resolved_at": "2026-09-15T21:42:23.846714",
         "exit_price": 1117.36
+      },
+      {
+        "coin": "ZEC",
+        "name": "Zcash",
+        "tf": "1h",
+        "entry": 1086.2,
+        "stop": 1064.81,
+        "target1": 1107.5900000000001,
+        "target2": 1128.9800000000002,
+        "opened_at": "2026-09-15T21:42:23.846714",
+        "result": "win",
+        "resolved_at": "2026-09-15T21:45:48.141415",
+        "exit_price": 1119.67
       }
     ]
   },
@@ -27555,14 +27568,14 @@
     "key": "BTC",
     "name": "Bitcoin",
     "emoji": "\u20bf",
-    "price": 75631,
+    "price": 75658,
     "high_24h": 78826,
     "low_24h": 75038,
-    "pct_24h": -4.01939,
+    "pct_24h": -4.02018,
     "pct_7d": -3.2,
     "pct_30d": 20.4,
-    "sma50": 71655.33643883074,
-    "sma200": 70228.8944388194,
+    "sma50": 71655.45623626492,
+    "sma200": 70228.92438817794,
     "support_30d": 64491.345282946255,
     "resistance_30d": 81264.70153038795,
     "mark_price": 76989.5,
@@ -27577,14 +27590,14 @@
     "key": "ETH",
     "name": "Ethereum",
     "emoji": "\u039e",
-    "price": 2399.03,
+    "price": 2399.63,
     "high_24h": 2554.67,
     "low_24h": 2361.16,
-    "pct_24h": -5.79988,
+    "pct_24h": -5.86059,
     "pct_7d": -3.0,
     "pct_30d": 27.7,
-    "sma50": 2207.327846836667,
-    "sma200": 2062.179394214855,
+    "sma50": 2207.3242195193893,
+    "sma200": 2062.178487385536,
     "support_30d": 1912.2734691708965,
     "resistance_30d": 2525.267261590238,
     "mark_price": 2476.25771051,
