@@ -2162,8 +2162,36 @@ if ('serviceWorker' in navigator) {{
     return html, spot_signals_by_coin
 
 
+def _probe_binance_mirror():
+    """TEMPORARY diagnostic -- checks from the actual runner whether Binance's own alternate
+    domains (not the geo-blocked api.binance.com) are reachable. Writes results to
+    data/exchange_probe.json. Remove this function and its call site once verified."""
+    import urllib.request
+    import urllib.error
+    probes = {
+        "binance_vision_spot": "https://data-api.binance.vision/api/v3/klines?symbol=XLMUSDT&interval=15m&limit=2",
+        "binance_fapi": "https://fapi.binance.com/fapi/v1/klines?symbol=XLMUSDT&interval=15m&limit=2",
+    }
+    results = {}
+    for name, url in probes.items():
+        try:
+            req = urllib.request.Request(url, headers={"User-Agent": "Mozilla/5.0"})
+            with urllib.request.urlopen(req, timeout=15) as resp:
+                body = resp.read(300).decode("utf-8", errors="replace")
+                results[name] = {"http_status": resp.status, "body_preview": body}
+        except urllib.error.HTTPError as e:
+            results[name] = {"http_status": e.code, "body_preview": e.read(300).decode("utf-8", errors="replace")}
+        except Exception as e:
+            results[name] = {"error": str(e)}
+    results["_probed_at"] = datetime.datetime.now().isoformat()
+    with open(os.path.join(DATA_DIR, "exchange_probe.json"), "w") as f:
+        json.dump(results, f, indent=2)
+    log(f"Binance mirror probe results: {results}")
+
+
 def main():
     log("--- run start ---")
+    _probe_binance_mirror()
     state = load_state()
     generated_at = datetime.datetime.now().strftime("%Y-%m-%d %H:%M:%S")
 
