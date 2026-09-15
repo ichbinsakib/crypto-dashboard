@@ -631,7 +631,7 @@
         ],
         [
           "Stretch from long-term average",
-          "+34.9% above its long-term average - very stretched",
+          "+34.4% above its long-term average - very stretched",
           -2
         ],
         [
@@ -644,12 +644,12 @@
       "id": "monero",
       "symbol": "XMR",
       "name": "Monero",
-      "price": 502.07,
-      "pct_24h": -2.19583,
-      "pct_7d": 0.4,
+      "price": 500.27,
+      "pct_24h": -2.52593,
+      "pct_7d": 0.3,
       "support_30d": 410.2195440730022,
       "resistance_30d": 555.6684591165193,
-      "as_of": "2026-09-15 19:40:22",
+      "as_of": "2026-09-15 22:05:18",
       "stale": false
     },
     "cardano": {
@@ -2119,7 +2119,7 @@
         ],
         [
           "Stretch from long-term average",
-          "+1.9% vs its long-term average - not stretched either way",
+          "+0.1% vs its long-term average - not stretched either way",
           0
         ],
         [
@@ -2132,12 +2132,12 @@
       "id": "ondo-finance",
       "symbol": "ONDO",
       "name": "Ondo",
-      "price": 0.33418,
-      "pct_24h": -7.18297,
-      "pct_7d": -10.1,
+      "price": 0.328525,
+      "pct_24h": -8.37328,
+      "pct_7d": -12.8,
       "support_30d": 0.32601458799099026,
       "resistance_30d": 0.3969475338902824,
-      "as_of": "2026-09-15 19:50:28",
+      "as_of": "2026-09-15 22:05:18",
       "stale": false
     },
     "canton-network": {
@@ -2915,7 +2915,7 @@
       "rows": [
         [
           "Price vs. recent range",
-          "Near its 30-day high (~$0.1145) - less room to run",
+          "Near its 30-day high (~$0.1150) - less room to run",
           -1
         ],
         [
@@ -2935,7 +2935,7 @@
         ],
         [
           "Stretch from long-term average",
-          "+34.3% above its long-term average - very stretched",
+          "+34.9% above its long-term average - very stretched",
           -2
         ],
         [
@@ -2948,12 +2948,12 @@
       "id": "just",
       "symbol": "JST",
       "name": "JUST",
-      "price": 0.114479,
-      "pct_24h": 1.43828,
-      "pct_7d": 9.1,
+      "price": 0.115062,
+      "pct_24h": 1.98881,
+      "pct_7d": 10.1,
       "support_30d": 0.0946830738697126,
-      "resistance_30d": 0.1144692278702148,
-      "as_of": "2026-09-15 21:20:27",
+      "resistance_30d": 0.11499845834486754,
+      "as_of": "2026-09-15 22:05:18",
       "stale": false
     },
     "algorand": {
@@ -3341,7 +3341,10 @@
       "stale": false
     }
   },
-  "_strong_buy_state": {},
+  "_strong_buy_state": {
+    "scanner-15m:QNT": true,
+    "scanner-1h:JST": true
+  },
   "_pnl_tracker": {
     "open": {
       "15m:QNT": {
@@ -3353,6 +3356,16 @@
         "target1": 61.04266666666666,
         "target2": 61.435333333333325,
         "opened_at": "2026-09-15T21:52:24.029157"
+      },
+      "1h:JST": {
+        "coin": "JST",
+        "name": "JUST",
+        "tf": "1h",
+        "entry": 0.11307,
+        "stop": 0.11241833333333334,
+        "target1": 0.11372166666666667,
+        "target2": 0.11437333333333333,
+        "opened_at": "2026-09-15T22:07:19.970504"
       }
     },
     "resolved": [
@@ -27607,14 +27620,14 @@
     "key": "BTC",
     "name": "Bitcoin",
     "emoji": "\u20bf",
-    "price": 75446,
-    "high_24h": 78826,
+    "price": 75471,
+    "high_24h": 78553,
     "low_24h": 75038,
-    "pct_24h": -4.17994,
-    "pct_7d": -3.2,
-    "pct_30d": 20.4,
-    "sma50": 71651.24954443633,
-    "sma200": 70227.8727152208,
+    "pct_24h": -4.14363,
+    "pct_7d": -3.9,
+    "pct_30d": 19.7,
+    "sma50": 71652.01596803403,
+    "sma200": 70228.06432112023,
     "support_30d": 64491.345282946255,
     "resistance_30d": 81264.70153038795,
     "mark_price": 76989.5,
@@ -27629,14 +27642,14 @@
     "key": "ETH",
     "name": "Ethereum",
     "emoji": "\u039e",
-    "price": 2392.49,
-    "high_24h": 2554.67,
+    "price": 2392.1,
+    "high_24h": 2533.59,
     "low_24h": 2361.16,
-    "pct_24h": -6.03298,
-    "pct_7d": -3.0,
-    "pct_30d": 27.7,
-    "sma50": 2207.186511180666,
-    "sma200": 2062.144060300855,
+    "pct_24h": -6.03335,
+    "pct_7d": -3.7,
+    "pct_30d": 27.2,
+    "sma50": 2207.1967986563973,
+    "sma200": 2062.146632169788,
     "support_30d": 1912.2734691708965,
     "resistance_30d": 2525.267261590238,
     "mark_price": 2476.25771051,
