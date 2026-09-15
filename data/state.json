@@ -269,9 +269,9 @@
       "stale": false
     },
     "hyperliquid": {
-      "label": "\ud83d\udd34 DISTRIBUTION ZONE",
+      "label": "\ud83d\udd34 CAUTION - REDUCE NEW BUYS",
       "status": "bearish",
-      "score": -6,
+      "score": -3,
       "rows": [
         [
           "Price vs. recent range",
@@ -285,8 +285,8 @@
         ],
         [
           "Market phase (best guess)",
-          "Very extended after a big run - phase where smart money sells",
-          -2
+          "Established uptrend - phase where price marks up",
+          1
         ],
         [
           "Recent trend",
@@ -295,7 +295,7 @@
         ],
         [
           "Stretch from long-term average",
-          "+40.5% above its long-term average - very stretched",
+          "+39.9% above its long-term average - very stretched",
           -2
         ],
         [
@@ -304,16 +304,16 @@
           0
         ]
       ],
-      "plain": "Looks stretched and euphoric - historically the zone where smart money sells, not buys.",
+      "plain": "Getting risky - I'd hold off on new buys until this cools down.",
       "id": "hyperliquid",
       "symbol": "HYPE",
       "name": "Hyperliquid",
-      "price": 77.83,
-      "pct_24h": -4.11072,
-      "pct_7d": -8.4,
+      "price": 77.51,
+      "pct_24h": -4.92488,
+      "pct_7d": -8.1,
       "support_30d": 58.515277414221124,
       "resistance_30d": 87.951916819731,
-      "as_of": "2026-09-15 17:55:18",
+      "as_of": "2026-09-15 18:15:24",
       "stale": false
     },
     "dogecoin": {
@@ -1303,7 +1303,7 @@
         ],
         [
           "Stretch from long-term average",
-          "-5.1% vs its long-term average - not stretched either way",
+          "-5.6% vs its long-term average - not stretched either way",
           0
         ],
         [
@@ -1316,12 +1316,12 @@
       "id": "htx-dao",
       "symbol": "HTX",
       "name": "HTX DAO",
-      "price": 1.68e-06,
-      "pct_24h": -1.37135,
+      "price": 1.67e-06,
+      "pct_24h": -2.32309,
       "pct_7d": -0.9,
       "support_30d": 1.6023985995039954e-06,
       "resistance_30d": 1.7873095460323824e-06,
-      "as_of": "2026-09-15 16:35:19",
+      "as_of": "2026-09-15 18:15:24",
       "stale": false
     },
     "superstate-short-duration-us-government-securities-fund-ustb": {
@@ -2503,7 +2503,7 @@
         ],
         [
           "Stretch from long-term average",
-          "-8.6% vs its long-term average - not stretched either way",
+          "-8.4% vs its long-term average - not stretched either way",
           0
         ],
         [
@@ -2516,12 +2516,12 @@
       "id": "quant-network",
       "symbol": "QNT",
       "name": "Quant",
-      "price": 62.5,
-      "pct_24h": -3.2642,
-      "pct_7d": -7.4,
+      "price": 62.66,
+      "pct_24h": -1.56261,
+      "pct_7d": -7.6,
       "support_30d": 55.905981995619285,
       "resistance_30d": 67.13669726469111,
-      "as_of": "2026-09-15 16:05:55",
+      "as_of": "2026-09-15 18:15:24",
       "stale": false
     },
     "tether-gold": {
@@ -2839,7 +2839,7 @@
         ],
         [
           "Stretch from long-term average",
-          "+27.7% above its long-term average - a bit stretched",
+          "+29.3% above its long-term average - a bit stretched",
           -1
         ],
         [
@@ -2852,12 +2852,12 @@
       "id": "aave",
       "symbol": "AAVE",
       "name": "Aave",
-      "price": 124.76,
-      "pct_24h": -1.65289,
-      "pct_7d": -3.0,
+      "price": 126.4,
+      "pct_24h": -0.92415,
+      "pct_7d": -2.8,
       "support_30d": 87.49183970362333,
       "resistance_30d": 141.53047916466082,
-      "as_of": "2026-09-15 16:45:22",
+      "as_of": "2026-09-15 18:15:24",
       "stale": false
     },
     "okb": {
@@ -3079,7 +3079,7 @@
         ],
         [
           "Stretch from long-term average",
-          "+47.8% above its long-term average - very stretched",
+          "+46.1% above its long-term average - very stretched",
           -2
         ],
         [
@@ -3092,12 +3092,12 @@
       "id": "arbitrum",
       "symbol": "ARB",
       "name": "Arbitrum",
-      "price": 0.148975,
-      "pct_24h": 5.93743,
+      "price": 0.147284,
+      "pct_24h": 4.95737,
       "pct_7d": -10.7,
       "support_30d": 0.07509613080433862,
       "resistance_30d": 0.18933387703114857,
-      "as_of": "2026-09-15 18:10:22",
+      "as_of": "2026-09-15 18:15:24",
       "stale": false
     },
     "dash": {
@@ -3349,10 +3349,10 @@
         "name": "Ethena",
         "tf": "15m",
         "entry": 0.1387,
-        "stop": 0.13697333333333334,
-        "target1": 0.14042666666666664,
-        "target2": 0.1421533333333333,
-        "opened_at": "2026-09-15T18:11:39.604385"
+        "stop": 0.13695666666666667,
+        "target1": 0.1404433333333333,
+        "target2": 0.14218666666666663,
+        "opened_at": "2026-09-15T18:16:57.570144"
       }
     },
     "resolved": [
@@ -26534,6 +26534,19 @@
         "result": "win",
         "resolved_at": "2026-09-15T18:11:39.604385",
         "exit_price": 0.144
+      },
+      {
+        "coin": "ENA",
+        "name": "Ethena",
+        "tf": "15m",
+        "entry": 0.1387,
+        "stop": 0.13697333333333334,
+        "target1": 0.14042666666666664,
+        "target2": 0.1421533333333333,
+        "opened_at": "2026-09-15T18:11:39.604385",
+        "result": "win",
+        "resolved_at": "2026-09-15T18:16:57.570144",
+        "exit_price": 0.1434
       }
     ]
   },
@@ -26541,14 +26554,14 @@
     "key": "BTC",
     "name": "Bitcoin",
     "emoji": "\u20bf",
-    "price": 76886,
+    "price": 76830,
     "high_24h": 79530,
     "low_24h": 75595,
-    "pct_24h": -2.67563,
+    "pct_24h": -2.58177,
     "pct_7d": -2.3,
     "pct_30d": 21.7,
-    "sma50": 71679.17028928899,
-    "sma200": 70234.85290143397,
+    "sma50": 71678.80542115284,
+    "sma200": 70234.76168439993,
     "support_30d": 64491.345282946255,
     "resistance_30d": 81264.70153038795,
     "mark_price": 76989.5,
@@ -26563,14 +26576,14 @@
     "key": "ETH",
     "name": "Ethereum",
     "emoji": "\u039e",
-    "price": 2437.79,
+    "price": 2433.87,
     "high_24h": 2607.56,
     "low_24h": 2390.89,
-    "pct_24h": -3.97776,
+    "pct_24h": -3.85626,
     "pct_7d": -2.2,
     "pct_30d": 29.3,
-    "sma50": 2208.018476508021,
-    "sma200": 2062.352051632694,
+    "sma50": 2208.012292755191,
+    "sma200": 2062.3505056944864,
     "support_30d": 1912.2734691708965,
     "resistance_30d": 2525.267261590238,
     "mark_price": 2476.25771051,
