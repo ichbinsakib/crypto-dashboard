@@ -260,12 +260,12 @@
       "id": "figure-heloc",
       "symbol": "FIGR_HELOC",
       "name": "Figure Heloc",
-      "price": 1.046,
-      "pct_24h": 3.44184,
-      "pct_7d": -0.2,
+      "price": 1.039,
+      "pct_24h": -0.34034,
+      "pct_7d": -0.6,
       "support_30d": 1.0001790754472548,
-      "resistance_30d": 1.046333582537471,
-      "as_of": "2026-09-15 18:10:22",
+      "resistance_30d": 1.0455978355177025,
+      "as_of": "2026-09-15 20:25:17",
       "stale": false
     },
     "hyperliquid": {
@@ -2743,7 +2743,7 @@
         ],
         [
           "Stretch from long-term average",
-          "+6.8% vs its long-term average - not stretched either way",
+          "+5.8% vs its long-term average - not stretched either way",
           0
         ],
         [
@@ -2756,12 +2756,12 @@
       "id": "morpho",
       "symbol": "MORPHO",
       "name": "Morpho",
-      "price": 2.11,
-      "pct_24h": -4.18386,
-      "pct_7d": -12.3,
+      "price": 2.09,
+      "pct_24h": -5.63089,
+      "pct_7d": -11.0,
       "support_30d": 2.087582004697308,
       "resistance_30d": 2.9026212482639075,
-      "as_of": "2026-09-15 19:25:18",
+      "as_of": "2026-09-15 20:25:17",
       "stale": false
     },
     "memecore": {
@@ -2915,7 +2915,7 @@
       "rows": [
         [
           "Price vs. recent range",
-          "Near its 30-day high (~$0.1142) - less room to run",
+          "Near its 30-day high (~$0.1137) - less room to run",
           -1
         ],
         [
@@ -2935,7 +2935,7 @@
         ],
         [
           "Stretch from long-term average",
-          "+33.9% above its long-term average - very stretched",
+          "+33.0% above its long-term average - very stretched",
           -2
         ],
         [
@@ -2948,12 +2948,12 @@
       "id": "just",
       "symbol": "JST",
       "name": "JUST",
-      "price": 0.114174,
-      "pct_24h": 1.1955,
-      "pct_7d": 9.1,
+      "price": 0.113413,
+      "pct_24h": 0.67534,
+      "pct_7d": 8.2,
       "support_30d": 0.0946830738697126,
-      "resistance_30d": 0.11416638234989539,
-      "as_of": "2026-09-15 19:10:25",
+      "resistance_30d": 0.11370630930736608,
+      "as_of": "2026-09-15 20:25:17",
       "stale": false
     },
     "algorand": {
@@ -3362,17 +3362,17 @@
         "stop": 702.0116666666667,
         "target1": 712.0683333333333,
         "target2": 717.0966666666666,
-        "opened_at": "2026-09-15T20:22:26.329681"
+        "opened_at": "2026-09-15T20:27:21.856280"
       },
       "1h:ZEC": {
         "coin": "ZEC",
         "name": "Zcash",
         "tf": "1h",
         "entry": 1086.2,
-        "stop": 1064.6870833333335,
-        "target1": 1107.7129166666666,
-        "target2": 1129.2258333333332,
-        "opened_at": "2026-09-15T20:22:26.329681"
+        "stop": 1064.6154166666668,
+        "target1": 1107.7845833333333,
+        "target2": 1129.3691666666666,
+        "opened_at": "2026-09-15T20:27:21.856280"
       }
     },
     "resolved": [
@@ -27243,6 +27243,32 @@
         "result": "win",
         "resolved_at": "2026-09-15T20:22:26.329681",
         "exit_price": 1126.76
+      },
+      {
+        "coin": "BNB",
+        "name": "BNB",
+        "tf": "1h",
+        "entry": 707.04,
+        "stop": 702.0116666666667,
+        "target1": 712.0683333333333,
+        "target2": 717.0966666666666,
+        "opened_at": "2026-09-15T20:22:26.329681",
+        "result": "win",
+        "resolved_at": "2026-09-15T20:27:21.856280",
+        "exit_price": 715.02
+      },
+      {
+        "coin": "ZEC",
+        "name": "Zcash",
+        "tf": "1h",
+        "entry": 1086.2,
+        "stop": 1064.6870833333335,
+        "target1": 1107.7129166666666,
+        "target2": 1129.2258333333332,
+        "opened_at": "2026-09-15T20:22:26.329681",
+        "result": "win",
+        "resolved_at": "2026-09-15T20:27:21.856280",
+        "exit_price": 1120.71
       }
     ]
   },
@@ -27250,14 +27276,14 @@
     "key": "BTC",
     "name": "Bitcoin",
     "emoji": "\u20bf",
-    "price": 75941,
+    "price": 75814,
     "high_24h": 79096,
     "low_24h": 75038,
-    "pct_24h": -4.27005,
+    "pct_24h": -4.56306,
     "pct_7d": -3.0,
     "pct_30d": 20.6,
-    "sma50": 71661.02465834325,
-    "sma200": 70230.31649369752,
+    "sma50": 71658.50881761988,
+    "sma200": 70229.68753351668,
     "support_30d": 64491.345282946255,
     "resistance_30d": 81264.70153038795,
     "mark_price": 76989.5,
@@ -27272,14 +27298,14 @@
     "key": "ETH",
     "name": "Ethereum",
     "emoji": "\u039e",
-    "price": 2404.75,
+    "price": 2400.8,
     "high_24h": 2570.03,
     "low_24h": 2361.16,
-    "pct_24h": -7.03572,
+    "pct_24h": -7.77961,
     "pct_7d": -3.0,
     "pct_30d": 28.1,
-    "sma50": 2207.430187940175,
-    "sma200": 2062.2049794907325,
+    "sma50": 2207.348011753785,
+    "sma200": 2062.184435444135,
     "support_30d": 1912.2734691708965,
     "resistance_30d": 2525.267261590238,
     "mark_price": 2476.25771051,
