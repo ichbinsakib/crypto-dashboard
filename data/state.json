@@ -269,9 +269,9 @@
       "stale": false
     },
     "hyperliquid": {
-      "label": "\ud83d\udd34 DISTRIBUTION ZONE",
+      "label": "\ud83d\udd34 CAUTION - REDUCE NEW BUYS",
       "status": "bearish",
-      "score": -5,
+      "score": -2,
       "rows": [
         [
           "Price vs. recent range",
@@ -285,8 +285,8 @@
         ],
         [
           "Market phase (best guess)",
-          "Very extended after a big run - phase where smart money sells",
-          -2
+          "Established uptrend - phase where price marks up",
+          1
         ],
         [
           "Recent trend",
@@ -295,7 +295,7 @@
         ],
         [
           "Stretch from long-term average",
-          "+43.1% above its long-term average - very stretched",
+          "+39.2% above its long-term average - very stretched",
           -2
         ],
         [
@@ -304,16 +304,16 @@
           0
         ]
       ],
-      "plain": "Looks stretched and euphoric - historically the zone where smart money sells, not buys.",
+      "plain": "Getting risky - I'd hold off on new buys until this cools down.",
       "id": "hyperliquid",
       "symbol": "HYPE",
       "name": "Hyperliquid",
-      "price": 79.31,
-      "pct_24h": -0.74452,
-      "pct_7d": -5.8,
+      "price": 77.13,
+      "pct_24h": -4.1643,
+      "pct_7d": -7.5,
       "support_30d": 58.515277414221124,
       "resistance_30d": 87.951916819731,
-      "as_of": "2026-09-15 11:10:23",
+      "as_of": "2026-09-15 16:35:19",
       "stale": false
     },
     "dogecoin": {
@@ -1317,11 +1317,11 @@
       "symbol": "HTX",
       "name": "HTX DAO",
       "price": 1.68e-06,
-      "pct_24h": -1.08225,
-      "pct_7d": -0.7,
+      "pct_24h": -1.37135,
+      "pct_7d": -0.9,
       "support_30d": 1.6023985995039954e-06,
       "resistance_30d": 1.7873095460323824e-06,
-      "as_of": "2026-09-15 15:15:23",
+      "as_of": "2026-09-15 16:35:19",
       "stale": false
     },
     "superstate-short-duration-us-government-securities-fund-ustb": {
@@ -2911,11 +2911,11 @@
     "just": {
       "label": "\ud83d\udd34 CAUTION - REDUCE NEW BUYS",
       "status": "bearish",
-      "score": -2,
+      "score": -3,
       "rows": [
         [
           "Price vs. recent range",
-          "Near its 30-day high (~$0.1155) - less room to run",
+          "Near its 30-day high (~$0.1157) - less room to run",
           -1
         ],
         [
@@ -2930,12 +2930,12 @@
         ],
         [
           "Recent trend",
-          "Trending up steadily - healthy",
-          1
+          "Chopping sideways - no clear trend",
+          0
         ],
         [
           "Stretch from long-term average",
-          "+35.4% above its long-term average - very stretched",
+          "+35.7% above its long-term average - very stretched",
           -2
         ],
         [
@@ -2948,12 +2948,12 @@
       "id": "just",
       "symbol": "JST",
       "name": "JUST",
-      "price": 0.11549,
-      "pct_24h": 1.90757,
-      "pct_7d": 9.9,
+      "price": 0.115673,
+      "pct_24h": 2.8418,
+      "pct_7d": 4.9,
       "support_30d": 0.0946830738697126,
-      "resistance_30d": 0.11548961307639126,
-      "as_of": "2026-09-15 13:30:31",
+      "resistance_30d": 0.11571020281286139,
+      "as_of": "2026-09-15 16:35:19",
       "stale": false
     },
     "algorand": {
@@ -3349,10 +3349,10 @@
         "name": "Ethena",
         "tf": "15m",
         "entry": 0.1387,
-        "stop": 0.13719333333333333,
-        "target1": 0.14020666666666665,
-        "target2": 0.1417133333333333,
-        "opened_at": "2026-09-15T16:32:32.956487"
+        "stop": 0.13718333333333332,
+        "target1": 0.14021666666666666,
+        "target2": 0.14173333333333332,
+        "opened_at": "2026-09-15T16:37:16.846982"
       },
       "1h:JST": {
         "coin": "JST",
@@ -3362,7 +3362,7 @@
         "stop": 0.11199666666666666,
         "target1": 0.11312333333333333,
         "target2": 0.11368666666666666,
-        "opened_at": "2026-09-15T16:32:32.956487"
+        "opened_at": "2026-09-15T16:37:16.846982"
       }
     },
     "resolved": [
@@ -26037,6 +26037,32 @@
         "result": "win",
         "resolved_at": "2026-09-15T16:32:32.956487",
         "exit_price": 0.11584
+      },
+      {
+        "coin": "ENA",
+        "name": "Ethena",
+        "tf": "15m",
+        "entry": 0.1387,
+        "stop": 0.13719333333333333,
+        "target1": 0.14020666666666665,
+        "target2": 0.1417133333333333,
+        "opened_at": "2026-09-15T16:32:32.956487",
+        "result": "win",
+        "resolved_at": "2026-09-15T16:37:16.846982",
+        "exit_price": 0.1438
+      },
+      {
+        "coin": "JST",
+        "name": "JUST",
+        "tf": "1h",
+        "entry": 0.11256,
+        "stop": 0.11199666666666666,
+        "target1": 0.11312333333333333,
+        "target2": 0.11368666666666666,
+        "opened_at": "2026-09-15T16:32:32.956487",
+        "result": "win",
+        "resolved_at": "2026-09-15T16:37:16.846982",
+        "exit_price": 0.11587
       }
     ]
   },
@@ -26044,14 +26070,14 @@
     "key": "BTC",
     "name": "Bitcoin",
     "emoji": "\u20bf",
-    "price": 76422,
+    "price": 76382,
     "high_24h": 79530,
     "low_24h": 75595,
-    "pct_24h": -2.84576,
+    "pct_24h": -2.90379,
     "pct_7d": -2.6,
     "pct_30d": 21.4,
-    "sma50": 71670.41085796476,
-    "sma200": 70232.66304360291,
+    "sma50": 71669.53872150056,
+    "sma200": 70232.44500948685,
     "support_30d": 64491.345282946255,
     "resistance_30d": 81264.70153038795,
     "mark_price": 76989.5,
@@ -26066,14 +26092,14 @@
     "key": "ETH",
     "name": "Ethereum",
     "emoji": "\u039e",
-    "price": 2422.82,
+    "price": 2420.66,
     "high_24h": 2607.56,
     "low_24h": 2390.89,
-    "pct_24h": -3.91195,
+    "pct_24h": -4.08785,
     "pct_7d": -2.4,
     "pct_30d": 28.9,
-    "sma50": 2207.787410586832,
-    "sma200": 2062.2942851523967,
+    "sma50": 2207.74053653534,
+    "sma200": 2062.282566639524,
     "support_30d": 1912.2734691708965,
     "resistance_30d": 2525.267261590238,
     "mark_price": 2476.25771051,
