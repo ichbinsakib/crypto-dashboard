@@ -1,15 +1,14 @@
 {
   "binance": {
-    "http_status": 451,
-    "body_preview": "{\n  \"code\": 0,\n  \"msg\": \"Service unavailable from a restricted location according to 'b. Eligibility' in https://www.binance.com/en/terms. Please contact customer service if you believe you received this message in error.\"\n}"
+    "error": "<urlopen error [Errno 104] Connection reset by peer>"
   },
   "binance_us": {
     "http_status": 200,
-    "body_preview": "[[1789479900000,\"76423.89000000\",\"76590.53000000\",\"76153.98000000\",\"76590.53000000\",\"0.29729000\",1789480799999,\"22691.54843920\",117,\"0.18367000\",\"14022.57391420\",\"0\"],[1789480800000,\"76626.74000000\",\"76687.21000000\",\"76626.74000000\",\"76674.00000000\",\"0.08216000\",1789481699999,\"6298.81202340\",9,\"0.07"
+    "body_preview": "[[1789479900000,\"76423.89000000\",\"76590.53000000\",\"76153.98000000\",\"76590.53000000\",\"0.29729000\",1789480799999,\"22691.54843920\",117,\"0.18367000\",\"14022.57391420\",\"0\"],[1789480800000,\"76626.74000000\",\"76687.21000000\",\"76348.41000000\",\"76379.20000000\",\"0.27405000\",1789481699999,\"20984.87697460\",73,\"0."
   },
   "bybit": {
     "http_status": 403,
     "body_preview": "{\n    error:The Amazon CloudFront distribution is configured to block access from your country\n}"
   },
-  "_probed_at": "2026-09-15T14:00:36.280938"
+  "_probed_at": "2026-09-15T14:05:25.927688"
 }
