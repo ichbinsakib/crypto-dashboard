@@ -967,7 +967,7 @@
         ],
         [
           "Stretch from long-term average",
-          "+6.2% vs its long-term average - not stretched either way",
+          "+6.5% vs its long-term average - not stretched either way",
           0
         ],
         [
@@ -980,12 +980,12 @@
       "id": "aster-2",
       "symbol": "ASTER",
       "name": "Aster",
-      "price": 0.703332,
-      "pct_24h": 2.17022,
+      "price": 0.704914,
+      "pct_24h": 2.19483,
       "pct_7d": -8.7,
       "support_30d": 0.6010286752462902,
       "resistance_30d": 0.7868111056215635,
-      "as_of": "2026-09-15 00:50:21",
+      "as_of": "2026-09-15 00:55:20",
       "stale": false
     },
     "worldcoin-wld": {
@@ -1399,7 +1399,7 @@
         ],
         [
           "Stretch from long-term average",
-          "+32.3% above its long-term average - very stretched",
+          "+32.1% above its long-term average - very stretched",
           -2
         ],
         [
@@ -1413,11 +1413,11 @@
       "symbol": "GT",
       "name": "Gate",
       "price": 9.32,
-      "pct_24h": 2.10693,
+      "pct_24h": 2.18047,
       "pct_7d": 1.2,
       "support_30d": 6.673649191532821,
       "resistance_30d": 9.38216924975626,
-      "as_of": "2026-09-15 00:00:35",
+      "as_of": "2026-09-15 00:55:20",
       "stale": false
     },
     "crypto-com-chain": {
@@ -2431,7 +2431,7 @@
     "near": {
       "label": "\ud83d\udd34 DISTRIBUTION ZONE",
       "status": "bearish",
-      "score": -5,
+      "score": -6,
       "rows": [
         [
           "Price vs. recent range",
@@ -2440,7 +2440,7 @@
         ],
         [
           "Crowd mood (Fear & Greed)",
-          "57/100 - crowd is greedy",
+          "69/100 - crowd is greedy",
           -1
         ],
         [
@@ -2450,12 +2450,12 @@
         ],
         [
           "Recent trend",
-          "Trending up steadily - healthy",
-          1
+          "Chopping sideways - no clear trend",
+          0
         ],
         [
           "Stretch from long-term average",
-          "+42.9% above its long-term average - very stretched",
+          "+42.4% above its long-term average - very stretched",
           -2
         ],
         [
@@ -2469,11 +2469,11 @@
       "symbol": "NEAR",
       "name": "NEAR Protocol",
       "price": 2.47,
-      "pct_24h": 7.27391,
-      "pct_7d": 8.2,
+      "pct_24h": 7.21737,
+      "pct_7d": 7.7,
       "support_30d": 1.5879597131538,
       "resistance_30d": 2.4848168147865453,
-      "as_of": "2026-09-14 23:50:22",
+      "as_of": "2026-09-15 00:55:20",
       "stale": false
     },
     "quant-network": {
@@ -3349,10 +3349,10 @@
         "name": "Zcash",
         "tf": "15m",
         "entry": 1141.16,
-        "stop": 1129.3020000000001,
-        "target1": 1153.018,
-        "target2": 1164.876,
-        "opened_at": "2026-09-15T00:52:18.254620"
+        "stop": 1129.2856666666667,
+        "target1": 1153.0343333333335,
+        "target2": 1164.908666666667,
+        "opened_at": "2026-09-15T00:57:17.935257"
       },
       "1h:ETC": {
         "coin": "ETC",
@@ -3362,7 +3362,7 @@
         "stop": 7.453916666666666,
         "target1": 7.528083333333333,
         "target2": 7.565166666666666,
-        "opened_at": "2026-09-15T00:52:18.254620"
+        "opened_at": "2026-09-15T00:57:17.935257"
       }
     },
     "resolved": [
@@ -24529,6 +24529,32 @@
         "result": "win",
         "resolved_at": "2026-09-15T00:52:18.254620",
         "exit_price": 7.562
+      },
+      {
+        "coin": "ZEC",
+        "name": "Zcash",
+        "tf": "15m",
+        "entry": 1141.16,
+        "stop": 1129.3020000000001,
+        "target1": 1153.018,
+        "target2": 1164.876,
+        "opened_at": "2026-09-15T00:52:18.254620",
+        "result": "win",
+        "resolved_at": "2026-09-15T00:57:17.935257",
+        "exit_price": 1162.4
+      },
+      {
+        "coin": "ETC",
+        "name": "Ethereum Classic",
+        "tf": "1h",
+        "entry": 7.491,
+        "stop": 7.453916666666666,
+        "target1": 7.528083333333333,
+        "target2": 7.565166666666666,
+        "opened_at": "2026-09-15T00:52:18.254620",
+        "result": "win",
+        "resolved_at": "2026-09-15T00:57:17.935257",
+        "exit_price": 7.562
       }
     ]
   },
@@ -24536,14 +24562,14 @@
     "key": "BTC",
     "name": "Bitcoin",
     "emoji": "\u20bf",
-    "price": 77949,
+    "price": 77974,
     "high_24h": 79530,
     "low_24h": 76647,
-    "pct_24h": 1.49713,
+    "pct_24h": 1.54946,
     "pct_7d": -1.0,
     "pct_30d": 23.9,
-    "sma50": 71701.12231953413,
-    "sma200": 70240.34090899525,
+    "sma50": 71701.8306264335,
+    "sma200": 70240.5179857201,
     "support_30d": 64491.345282946255,
     "resistance_30d": 81264.70153038795,
     "mark_price": 78726.74180435,
@@ -24558,14 +24584,14 @@
     "key": "ETH",
     "name": "Ethereum",
     "emoji": "\u039e",
-    "price": 2513.04,
+    "price": 2515.58,
     "high_24h": 2607.56,
     "low_24h": 2474.63,
-    "pct_24h": 1.1873,
+    "pct_24h": 1.25594,
     "pct_7d": 1.3,
     "pct_30d": 33.5,
-    "sma50": 2209.5897041048097,
-    "sma200": 2062.744858531891,
+    "sma50": 2209.643929034026,
+    "sma200": 2062.758414764195,
     "support_30d": 1912.2734691708965,
     "resistance_30d": 2525.267261590238,
     "mark_price": 2544.79927907,
