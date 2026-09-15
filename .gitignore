@@ -4,3 +4,7 @@ gui_err.txt
 __pycache__/
 *.pyc
 *.bak
+
+# Android TWA build (generated project + signing key -- never commit the keystore)
+android-twa/
+apk_output/
