@@ -1015,7 +1015,7 @@
         ],
         [
           "Stretch from long-term average",
-          "+5.0% vs its long-term average - not stretched either way",
+          "+2.4% vs its long-term average - not stretched either way",
           0
         ],
         [
@@ -1028,12 +1028,12 @@
       "id": "worldcoin-wld",
       "symbol": "WLD",
       "name": "Worldcoin",
-      "price": 0.375417,
-      "pct_24h": -3.56803,
-      "pct_7d": -23.7,
+      "price": 0.366168,
+      "pct_24h": -6.36244,
+      "pct_7d": -22.7,
       "support_30d": 0.319812298466522,
       "resistance_30d": 0.4772935995106048,
-      "as_of": "2026-09-15 17:40:23",
+      "as_of": "2026-09-15 19:35:18",
       "stale": false
     },
     "bfusd": {
@@ -1111,7 +1111,7 @@
         ],
         [
           "Stretch from long-term average",
-          "+9.9% vs its long-term average - not stretched either way",
+          "+7.8% vs its long-term average - not stretched either way",
           0
         ],
         [
@@ -1124,12 +1124,12 @@
       "id": "polygon-ecosystem-token",
       "symbol": "POL",
       "name": "POL (ex-MATIC)",
-      "price": 0.096721,
-      "pct_24h": -0.62403,
-      "pct_7d": -0.7,
+      "price": 0.094879,
+      "pct_24h": -2.54199,
+      "pct_7d": -2.0,
       "support_30d": 0.07996557644772107,
       "resistance_30d": 0.12250456198546959,
-      "as_of": "2026-09-15 18:30:28",
+      "as_of": "2026-09-15 19:35:18",
       "stale": false
     },
     "blackrock-usd-institutional-digital-liquidity-fund": {
@@ -2325,11 +2325,11 @@
       "symbol": "GRAM",
       "name": "Gram (prev. Toncoin)",
       "price": 1.32,
-      "pct_24h": -2.81746,
+      "pct_24h": -2.88185,
       "pct_7d": -6.0,
       "support_30d": 1.3170990455791696,
       "resistance_30d": 1.4926762805297678,
-      "as_of": "2026-09-15 19:20:30",
+      "as_of": "2026-09-15 19:35:18",
       "stale": false
     },
     "sky": {
@@ -3359,10 +3359,10 @@
         "name": "Ethena",
         "tf": "15m",
         "entry": 0.1355,
-        "stop": 0.13334333333333334,
-        "target1": 0.13765666666666668,
-        "target2": 0.13981333333333335,
-        "opened_at": "2026-09-15T19:31:45.550939"
+        "stop": 0.13333,
+        "target1": 0.13767000000000001,
+        "target2": 0.13984000000000002,
+        "opened_at": "2026-09-15T19:37:16.892009"
       },
       "1h:BNB": {
         "coin": "BNB",
@@ -3372,7 +3372,7 @@
         "stop": 701.895,
         "target1": 712.185,
         "target2": 717.3299999999999,
-        "opened_at": "2026-09-15T19:31:45.550939"
+        "opened_at": "2026-09-15T19:37:16.892009"
       },
       "1h:ZEC": {
         "coin": "ZEC",
@@ -3382,7 +3382,7 @@
         "stop": 1064.37875,
         "target1": 1108.02125,
         "target2": 1129.8425,
-        "opened_at": "2026-09-15T19:31:45.550939"
+        "opened_at": "2026-09-15T19:37:16.892009"
       }
     },
     "resolved": [
@@ -26941,6 +26941,45 @@
         "result": "win",
         "resolved_at": "2026-09-15T19:31:45.550939",
         "exit_price": 1139.32
+      },
+      {
+        "coin": "ENA",
+        "name": "Ethena",
+        "tf": "15m",
+        "entry": 0.1355,
+        "stop": 0.13334333333333334,
+        "target1": 0.13765666666666668,
+        "target2": 0.13981333333333335,
+        "opened_at": "2026-09-15T19:31:45.550939",
+        "result": "win",
+        "resolved_at": "2026-09-15T19:37:16.892009",
+        "exit_price": 0.1415
+      },
+      {
+        "coin": "BNB",
+        "name": "BNB",
+        "tf": "1h",
+        "entry": 707.04,
+        "stop": 701.895,
+        "target1": 712.185,
+        "target2": 717.3299999999999,
+        "opened_at": "2026-09-15T19:31:45.550939",
+        "result": "win",
+        "resolved_at": "2026-09-15T19:37:16.892009",
+        "exit_price": 719.49
+      },
+      {
+        "coin": "ZEC",
+        "name": "Zcash",
+        "tf": "1h",
+        "entry": 1086.2,
+        "stop": 1064.37875,
+        "target1": 1108.02125,
+        "target2": 1129.8425,
+        "opened_at": "2026-09-15T19:31:45.550939",
+        "result": "win",
+        "resolved_at": "2026-09-15T19:37:16.892009",
+        "exit_price": 1139.32
       }
     ]
   },
@@ -26948,14 +26987,14 @@
     "key": "BTC",
     "name": "Bitcoin",
     "emoji": "\u20bf",
-    "price": 76016,
+    "price": 75958,
     "high_24h": 79530,
     "low_24h": 75038,
-    "pct_24h": -3.95101,
+    "pct_24h": -4.05697,
     "pct_7d": -3.2,
     "pct_30d": 20.4,
-    "sma50": 71662.3616063692,
-    "sma200": 70230.65073070402,
+    "sma50": 71659.88932876903,
+    "sma200": 70230.03266130397,
     "support_30d": 64491.345282946255,
     "resistance_30d": 81264.70153038795,
     "mark_price": 76989.5,
@@ -26970,14 +27009,14 @@
     "key": "ETH",
     "name": "Ethereum",
     "emoji": "\u039e",
-    "price": 2405.66,
+    "price": 2403.99,
     "high_24h": 2607.56,
     "low_24h": 2361.16,
-    "pct_24h": -5.48493,
+    "pct_24h": -5.54667,
     "pct_7d": -3.5,
     "pct_30d": 27.5,
-    "sma50": 2207.4236239935963,
-    "sma200": 2062.2033385040877,
+    "sma50": 2207.421139724362,
+    "sma200": 2062.202717436779,
     "support_30d": 1912.2734691708965,
     "resistance_30d": 2525.267261590238,
     "mark_price": 2476.25771051,
