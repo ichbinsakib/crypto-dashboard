@@ -136,7 +136,7 @@
         ],
         [
           "Crowd mood (Fear & Greed)",
-          "57/100 - crowd is greedy",
+          "69/100 - crowd is greedy",
           -1
         ],
         [
@@ -151,7 +151,7 @@
         ],
         [
           "Stretch from long-term average",
-          "+24.6% above its long-term average - a bit stretched",
+          "+22.6% above its long-term average - a bit stretched",
           -1
         ],
         [
@@ -164,12 +164,12 @@
       "id": "solana",
       "symbol": "SOL",
       "name": "Solana",
-      "price": 103.65,
-      "pct_24h": 2.25252,
-      "pct_7d": -0.3,
-      "support_30d": 74.5477464048606,
+      "price": 102.13,
+      "pct_24h": 1.45465,
+      "pct_7d": -1.7,
+      "support_30d": 75.9729945474511,
       "resistance_30d": 109.17730597799657,
-      "as_of": "2026-09-14 21:05:21",
+      "as_of": "2026-09-15 02:40:23",
       "stale": false
     },
     "tron": {
@@ -943,7 +943,7 @@
     "aster-2": {
       "label": "\ud83d\udfe1 HOLD / NEUTRAL",
       "status": "neutral",
-      "score": -1,
+      "score": 0,
       "rows": [
         [
           "Price vs. recent range",
@@ -957,8 +957,8 @@
         ],
         [
           "Market phase (best guess)",
-          "Established uptrend - phase where price marks up",
-          1
+          "Basing near the bottom - phase where smart money accumulates",
+          2
         ],
         [
           "Recent trend",
@@ -967,7 +967,7 @@
         ],
         [
           "Stretch from long-term average",
-          "+5.8% vs its long-term average - not stretched either way",
+          "+4.9% vs its long-term average - not stretched either way",
           0
         ],
         [
@@ -980,12 +980,12 @@
       "id": "aster-2",
       "symbol": "ASTER",
       "name": "Aster",
-      "price": 0.700682,
-      "pct_24h": 1.68734,
-      "pct_7d": -8.7,
+      "price": 0.694761,
+      "pct_24h": -0.03562,
+      "pct_7d": -9.7,
       "support_30d": 0.6010286752462902,
       "resistance_30d": 0.7868111056215635,
-      "as_of": "2026-09-15 01:20:23",
+      "as_of": "2026-09-15 02:40:23",
       "stale": false
     },
     "worldcoin-wld": {
@@ -2095,7 +2095,7 @@
     "ondo-finance": {
       "label": "\ud83d\udfe1 HOLD / NEUTRAL",
       "status": "neutral",
-      "score": 0,
+      "score": -1,
       "rows": [
         [
           "Price vs. recent range",
@@ -2114,8 +2114,8 @@
         ],
         [
           "Recent trend",
-          "Chopping sideways - no clear trend",
-          0
+          "Trending down - avoid catching a falling knife",
+          -1
         ],
         [
           "Stretch from long-term average",
@@ -2132,12 +2132,12 @@
       "id": "ondo-finance",
       "symbol": "ONDO",
       "name": "Ondo",
-      "price": 0.353966,
-      "pct_24h": 3.14002,
-      "pct_7d": -7.7,
+      "price": 0.353947,
+      "pct_24h": 1.59687,
+      "pct_7d": -8.7,
       "support_30d": 0.32601458799099026,
       "resistance_30d": 0.3969475338902824,
-      "as_of": "2026-09-15 01:50:21",
+      "as_of": "2026-09-15 02:40:23",
       "stale": false
     },
     "canton-network": {
@@ -3346,16 +3346,6 @@
   },
   "_pnl_tracker": {
     "open": {
-      "1h:ETC": {
-        "coin": "ETC",
-        "name": "Ethereum Classic",
-        "tf": "1h",
-        "entry": 7.543,
-        "stop": 7.508875,
-        "target1": 7.5771250000000006,
-        "target2": 7.611250000000001,
-        "opened_at": "2026-09-15T01:03:05.910932"
-      },
       "15m:BGB": {
         "coin": "BGB",
         "name": "Bitget Token",
@@ -3365,6 +3355,16 @@
         "target1": 1.9418,
         "target2": 1.9425999999999999,
         "opened_at": "2026-09-15T01:27:22.110997"
+      },
+      "1h:ETC": {
+        "coin": "ETC",
+        "name": "Ethereum Classic",
+        "tf": "1h",
+        "entry": 7.499,
+        "stop": 7.466458333333333,
+        "target1": 7.531541666666667,
+        "target2": 7.5640833333333335,
+        "opened_at": "2026-09-15T02:42:19.949427"
       }
     },
     "resolved": [
@@ -24583,6 +24583,19 @@
         "result": "win",
         "resolved_at": "2026-09-15T01:03:05.910932",
         "exit_price": 7.562
+      },
+      {
+        "coin": "ETC",
+        "name": "Ethereum Classic",
+        "tf": "1h",
+        "entry": 7.543,
+        "stop": 7.508875,
+        "target1": 7.5771250000000006,
+        "target2": 7.611250000000001,
+        "opened_at": "2026-09-15T01:03:05.910932",
+        "result": "loss",
+        "resolved_at": "2026-09-15T02:42:19.949427",
+        "exit_price": 7.499
       }
     ]
   },
@@ -24590,14 +24603,14 @@
     "key": "BTC",
     "name": "Bitcoin",
     "emoji": "\u20bf",
-    "price": 77938,
+    "price": 77859,
     "high_24h": 79530,
     "low_24h": 77396,
-    "pct_24h": 0.45207,
+    "pct_24h": 0.53867,
     "pct_7d": -1.7,
     "pct_30d": 23.6,
-    "sma50": 71700.62054140381,
-    "sma200": 70240.21546446267,
+    "sma50": 71699.37028911867,
+    "sma200": 70239.90290139138,
     "support_30d": 64491.345282946255,
     "resistance_30d": 81264.70153038795,
     "mark_price": 78726.74180435,
@@ -24612,14 +24625,14 @@
     "key": "ETH",
     "name": "Ethereum",
     "emoji": "\u039e",
-    "price": 2516.26,
+    "price": 2513.6,
     "high_24h": 2607.56,
     "low_24h": 2489.59,
-    "pct_24h": 0.44141,
+    "pct_24h": 0.50646,
     "pct_7d": 0.8,
     "pct_30d": 33.7,
-    "sma50": 2209.652918081343,
-    "sma200": 2062.7606620260244,
+    "sma50": 2209.60353109704,
+    "sma200": 2062.7483152799487,
     "support_30d": 1912.2734691708965,
     "resistance_30d": 2525.267261590238,
     "mark_price": 2544.79927907,
