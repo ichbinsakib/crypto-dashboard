@@ -439,7 +439,7 @@
         ],
         [
           "Stretch from long-term average",
-          "+21.4% above its long-term average - a bit stretched",
+          "+21.3% above its long-term average - a bit stretched",
           -1
         ],
         [
@@ -452,12 +452,12 @@
       "id": "rain",
       "symbol": "RAIN",
       "name": "Rain",
-      "price": 0.0141704,
-      "pct_24h": -6.76183,
+      "price": 0.01416018,
+      "pct_24h": -6.6711,
       "pct_7d": -13.0,
       "support_30d": 0.01308236474491796,
       "resistance_30d": 0.018158429442510105,
-      "as_of": "2026-09-15 04:15:20",
+      "as_of": "2026-09-15 04:35:17",
       "stale": false
     },
     "chainlink": {
@@ -631,7 +631,7 @@
         ],
         [
           "Stretch from long-term average",
-          "+37.7% above its long-term average - very stretched",
+          "+38.5% above its long-term average - very stretched",
           -2
         ],
         [
@@ -644,12 +644,12 @@
       "id": "monero",
       "symbol": "XMR",
       "name": "Monero",
-      "price": 512.49,
-      "pct_24h": -0.18432,
-      "pct_7d": 0.0,
+      "price": 515.3,
+      "pct_24h": -1.55193,
+      "pct_7d": 0.3,
       "support_30d": 410.2195440730022,
       "resistance_30d": 555.6684591165193,
-      "as_of": "2026-09-15 00:42:49",
+      "as_of": "2026-09-15 04:35:17",
       "stale": false
     },
     "cardano": {
@@ -2791,7 +2791,7 @@
         ],
         [
           "Stretch from long-term average",
-          "-47.4% below its long-term average - confirmed downtrend",
+          "-47.5% below its long-term average - confirmed downtrend",
           -1
         ],
         [
@@ -2804,12 +2804,12 @@
       "id": "memecore",
       "symbol": "M",
       "name": "MemeCore",
-      "price": 1.095,
-      "pct_24h": -5.42669,
+      "price": 1.093,
+      "pct_24h": -5.55582,
       "pct_7d": -5.7,
       "support_30d": 1.0402044506518406,
       "resistance_30d": 1.2453913363052769,
-      "as_of": "2026-09-15 04:20:25",
+      "as_of": "2026-09-15 04:35:17",
       "stale": false
     },
     "aave": {
@@ -3341,7 +3341,9 @@
       "stale": false
     }
   },
-  "_strong_buy_state": {},
+  "_strong_buy_state": {
+    "scanner-1h:ETC": true
+  },
   "_pnl_tracker": {
     "open": {
       "15m:BGB": {
@@ -3358,11 +3360,11 @@
         "coin": "ETC",
         "name": "Ethereum Classic",
         "tf": "1h",
-        "entry": 7.463,
-        "stop": 7.43,
-        "target1": 7.496,
-        "target2": 7.529000000000001,
-        "opened_at": "2026-09-15T03:22:22.554308"
+        "entry": 7.426,
+        "stop": 7.3925,
+        "target1": 7.4595,
+        "target2": 7.493,
+        "opened_at": "2026-09-15T04:37:12.440653"
       }
     },
     "resolved": [
@@ -24607,6 +24609,19 @@
         "result": "loss",
         "resolved_at": "2026-09-15T03:22:22.554308",
         "exit_price": 7.463
+      },
+      {
+        "coin": "ETC",
+        "name": "Ethereum Classic",
+        "tf": "1h",
+        "entry": 7.463,
+        "stop": 7.43,
+        "target1": 7.496,
+        "target2": 7.529000000000001,
+        "opened_at": "2026-09-15T03:22:22.554308",
+        "result": "loss",
+        "resolved_at": "2026-09-15T04:37:12.440653",
+        "exit_price": 7.426
       }
     ]
   },
@@ -24614,14 +24629,14 @@
     "key": "BTC",
     "name": "Bitcoin",
     "emoji": "\u20bf",
-    "price": 77589,
+    "price": 77548,
     "high_24h": 79530,
     "low_24h": 77396,
-    "pct_24h": -0.02551,
+    "pct_24h": -0.01837,
     "pct_7d": -1.6,
     "pct_30d": 23.1,
-    "sma50": 71693.86944495341,
-    "sma200": 70238.52769035006,
+    "sma50": 71693.88839965434,
+    "sma200": 70238.5324290253,
     "support_30d": 64491.345282946255,
     "resistance_30d": 81264.70153038795,
     "mark_price": 78726.74180435,
@@ -24636,14 +24651,14 @@
     "key": "ETH",
     "name": "Ethereum",
     "emoji": "\u039e",
-    "price": 2493.37,
+    "price": 2491.6,
     "high_24h": 2607.56,
     "low_24h": 2489.59,
-    "pct_24h": -0.80358,
+    "pct_24h": -0.83758,
     "pct_7d": 0.6,
     "pct_30d": 32.8,
-    "sma50": 2209.1916516922975,
-    "sma200": 2062.645345428763,
+    "sma50": 2209.190355425334,
+    "sma200": 2062.645021362022,
     "support_30d": 1912.2734691708965,
     "resistance_30d": 2525.267261590238,
     "mark_price": 2544.79927907,
