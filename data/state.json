@@ -871,7 +871,7 @@
         ],
         [
           "Stretch from long-term average",
-          "+1.5% vs its long-term average - not stretched either way",
+          "+1.2% vs its long-term average - not stretched either way",
           0
         ],
         [
@@ -884,12 +884,12 @@
       "id": "pepe",
       "symbol": "PEPE",
       "name": "Pepe",
-      "price": 3.34e-06,
-      "pct_24h": -5.13343,
-      "pct_7d": -7.4,
+      "price": 3.33e-06,
+      "pct_24h": -5.93462,
+      "pct_7d": -6.9,
       "support_30d": 2.582769748064196e-06,
       "resistance_30d": 4.122123035488615e-06,
-      "as_of": "2026-09-15 19:45:22",
+      "as_of": "2026-09-15 20:15:22",
       "stale": false
     },
     "avalanche-2": {
@@ -2983,7 +2983,7 @@
         ],
         [
           "Stretch from long-term average",
-          "-8.7% vs its long-term average - not stretched either way",
+          "-10.0% vs its long-term average - not stretched either way",
           0
         ],
         [
@@ -2996,12 +2996,12 @@
       "id": "algorand",
       "symbol": "ALGO",
       "name": "Algorand",
-      "price": 0.090892,
-      "pct_24h": -7.09514,
-      "pct_7d": -10.4,
+      "price": 0.089551,
+      "pct_24h": -8.38911,
+      "pct_7d": -10.1,
       "support_30d": 0.07793708137631736,
       "resistance_30d": 0.10076397875501594,
-      "as_of": "2026-09-15 19:20:30",
+      "as_of": "2026-09-15 20:15:22",
       "stale": false
     },
     "eutbl": {
@@ -3079,7 +3079,7 @@
         ],
         [
           "Stretch from long-term average",
-          "+46.7% above its long-term average - very stretched",
+          "+45.9% above its long-term average - very stretched",
           -2
         ],
         [
@@ -3092,12 +3092,12 @@
       "id": "arbitrum",
       "symbol": "ARB",
       "name": "Arbitrum",
-      "price": 0.147863,
-      "pct_24h": 4.77467,
-      "pct_7d": -13.3,
+      "price": 0.147035,
+      "pct_24h": 4.55135,
+      "pct_7d": -11.8,
       "support_30d": 0.07509613080433862,
       "resistance_30d": 0.18933387703114857,
-      "as_of": "2026-09-15 19:20:30",
+      "as_of": "2026-09-15 20:15:22",
       "stale": false
     },
     "dash": {
@@ -3359,10 +3359,10 @@
         "name": "BNB",
         "tf": "1h",
         "entry": 707.04,
-        "stop": 702.0841666666666,
-        "target1": 711.9958333333333,
-        "target2": 716.9516666666666,
-        "opened_at": "2026-09-15T20:12:27.809177"
+        "stop": 702.0699999999999,
+        "target1": 712.01,
+        "target2": 716.98,
+        "opened_at": "2026-09-15T20:17:25.316010"
       },
       "1h:ZEC": {
         "coin": "ZEC",
@@ -3372,7 +3372,7 @@
         "stop": 1064.6870833333335,
         "target1": 1107.7129166666666,
         "target2": 1129.2258333333332,
-        "opened_at": "2026-09-15T20:12:27.809177"
+        "opened_at": "2026-09-15T20:17:25.316010"
       }
     },
     "resolved": [
@@ -27178,6 +27178,32 @@
         "result": "win",
         "resolved_at": "2026-09-15T20:12:27.809177",
         "exit_price": 1127.64
+      },
+      {
+        "coin": "BNB",
+        "name": "BNB",
+        "tf": "1h",
+        "entry": 707.04,
+        "stop": 702.0841666666666,
+        "target1": 711.9958333333333,
+        "target2": 716.9516666666666,
+        "opened_at": "2026-09-15T20:12:27.809177",
+        "result": "win",
+        "resolved_at": "2026-09-15T20:17:25.316010",
+        "exit_price": 716.69
+      },
+      {
+        "coin": "ZEC",
+        "name": "Zcash",
+        "tf": "1h",
+        "entry": 1086.2,
+        "stop": 1064.6870833333335,
+        "target1": 1107.7129166666666,
+        "target2": 1129.2258333333332,
+        "opened_at": "2026-09-15T20:12:27.809177",
+        "result": "win",
+        "resolved_at": "2026-09-15T20:17:25.316010",
+        "exit_price": 1130.77
       }
     ]
   },
@@ -27185,14 +27211,14 @@
     "key": "BTC",
     "name": "Bitcoin",
     "emoji": "\u20bf",
-    "price": 75957,
+    "price": 75961,
     "high_24h": 79096,
     "low_24h": 75038,
-    "pct_24h": -3.89807,
+    "pct_24h": -4.0184,
     "pct_7d": -3.0,
     "pct_30d": 20.6,
-    "sma50": 71660.63778545253,
-    "sma200": 70230.21977547485,
+    "sma50": 71661.42703131508,
+    "sma200": 70230.41708694048,
     "support_30d": 64491.345282946255,
     "resistance_30d": 81264.70153038795,
     "mark_price": 76989.5,
@@ -27207,14 +27233,14 @@
     "key": "ETH",
     "name": "Ethereum",
     "emoji": "\u039e",
-    "price": 2407.33,
+    "price": 2407.43,
     "high_24h": 2570.03,
     "low_24h": 2361.16,
-    "pct_24h": -5.35127,
+    "pct_24h": -6.10641,
     "pct_7d": -3.0,
     "pct_30d": 28.1,
-    "sma50": 2207.484567522158,
-    "sma200": 2062.218574386228,
+    "sma50": 2207.4806650086266,
+    "sma200": 2062.2175987578453,
     "support_30d": 1912.2734691708965,
     "resistance_30d": 2525.267261590238,
     "mark_price": 2476.25771051,
