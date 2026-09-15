@@ -1597,7 +1597,7 @@ def render(coins_data, fng_value, fng_classification, generated_at, any_stale,
         resolved_html = f"""
   <div class="cycle-map" style="margin-top:10px;">
     <div class="card-title" style="display:flex; align-items:center; justify-content:space-between; flex-wrap:wrap; gap:8px;">
-      <span>Performance History<span class="info-tip" tabindex="0" data-tip="Every call that has ever resolved stays here permanently -- winning, losing, and expired -- it is never deleted, only added to. Signal Given is when the call first appeared. Buy/Stop/Target are the levels set at that moment; Exit is the price that actually triggered the result, so you can verify a Win genuinely closed at/above Target and a Loss at/below Stop.">&#9432;</span></span>
+      <span>Performance History<span class="info-tip" tabindex="0" data-tip="Every call that has ever resolved stays here permanently -- winning, losing, and expired -- it is never deleted, only added to. Signal Given is when the call first appeared. Buy/Stop/Target are the levels set at that moment; Exit is the Kraken price that actually triggered the result, so you can verify a Win genuinely closed at/above Target and a Loss at/below Stop -- on Kraken. If you're trading on a different exchange (Binance, etc.), its price for the same coin can diverge enough to miss or overshoot these exact levels, especially on lower-liquidity altcoins.">&#9432;</span></span>
       <input type="text" id="pnl-history-search" placeholder="Search by coin..." style="background:#0d1320; border:1px solid var(--border); border-radius:6px; color:var(--text); padding:5px 10px; font-size:12.5px; width:160px;">
     </div>
     <div class="sub" style="margin-bottom:6px;">{showing_note}</div>
@@ -1613,7 +1613,7 @@ def render(coins_data, fng_value, fng_classification, generated_at, any_stale,
     performance_panel = f"""
 <div class="panel panel-performance">
   <div class="cycle-map spot-signal-card" style="margin-bottom:10px;">
-    <div class="card-title">📊 SCANNER PERFORMANCE<span class="info-tip" tabindex="0" data-tip="Tracks confirmed 15m/1h/daily calls (NEAR-TERM DIP ZONE tier only) in batches of up to {PNL_BATCH_SIZE} per timeframe -- a new batch only opens once every position in the current one has resolved (win/loss/expired), so you're never asked to follow more than one batch at a time. Educational transparency, not a trading track record.">&#9432;</span></div>
+    <div class="card-title">📊 SCANNER PERFORMANCE<span class="info-tip" tabindex="0" data-tip="Tracks confirmed 15m/1h/daily calls (NEAR-TERM DIP ZONE tier only) in batches of up to {PNL_BATCH_SIZE} per timeframe -- a new batch only opens once every position in the current one has resolved (win/loss/expired), so you're never asked to follow more than one batch at a time. All prices come from Kraken (Binance's public API is geo-blocked from where this runs) -- Kraken has thinner order books than Binance on many altcoins, so a level shown as hit here can wick through on Kraken without the same move appearing on Binance's chart. Educational transparency, not a trading track record, and not a guarantee the same fill is available on whichever exchange you actually trade on.">&#9432;</span></div>
   </div>
   <div class="top-grid" style="grid-template-columns:1fr 1fr 1fr;">
     {_pnl_stat_card("Daily", pnl_stats.get("daily", {}))}
