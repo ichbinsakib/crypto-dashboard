@@ -260,12 +260,12 @@
       "id": "figure-heloc",
       "symbol": "FIGR_HELOC",
       "name": "Figure Heloc",
-      "price": 1.028,
-      "pct_24h": 1.24538,
-      "pct_7d": 2.3,
+      "price": 1.046,
+      "pct_24h": 3.56705,
+      "pct_7d": 2.2,
       "support_30d": 1.0001790754472548,
-      "resistance_30d": 1.0455978355177025,
-      "as_of": "2026-09-15 13:35:22",
+      "resistance_30d": 1.045681270862082,
+      "as_of": "2026-09-15 17:05:20",
       "stale": false
     },
     "hyperliquid": {
@@ -2359,7 +2359,7 @@
         ],
         [
           "Stretch from long-term average",
-          "-7.8% vs its long-term average - not stretched either way",
+          "-7.0% vs its long-term average - not stretched either way",
           0
         ],
         [
@@ -2372,12 +2372,12 @@
       "id": "sky",
       "symbol": "SKY",
       "name": "Sky",
-      "price": 0.061537,
-      "pct_24h": -4.0792,
-      "pct_7d": -8.9,
+      "price": 0.062076,
+      "pct_24h": -2.91929,
+      "pct_7d": -8.2,
       "support_30d": 0.05395967347909224,
       "resistance_30d": 0.07314868186988309,
-      "as_of": "2026-09-15 15:37:47",
+      "as_of": "2026-09-15 17:05:20",
       "stale": false
     },
     "shiba-inu": {
@@ -2959,7 +2959,7 @@
     "algorand": {
       "label": "\ud83d\udfe1 HOLD / NEUTRAL",
       "status": "neutral",
-      "score": 1,
+      "score": 0,
       "rows": [
         [
           "Price vs. recent range",
@@ -2978,12 +2978,12 @@
         ],
         [
           "Recent trend",
-          "Chopping sideways - no clear trend",
-          0
+          "Trending down - avoid catching a falling knife",
+          -1
         ],
         [
           "Stretch from long-term average",
-          "-5.4% vs its long-term average - not stretched either way",
+          "-7.2% vs its long-term average - not stretched either way",
           0
         ],
         [
@@ -2996,12 +2996,12 @@
       "id": "algorand",
       "symbol": "ALGO",
       "name": "Algorand",
-      "price": 0.094141,
-      "pct_24h": -0.85592,
-      "pct_7d": -3.4,
+      "price": 0.092372,
+      "pct_24h": -4.59513,
+      "pct_7d": -9.9,
       "support_30d": 0.07793708137631736,
       "resistance_30d": 0.10076397875501594,
-      "as_of": "2026-09-15 11:45:23",
+      "as_of": "2026-09-15 17:05:20",
       "stale": false
     },
     "eutbl": {
@@ -3349,20 +3349,20 @@
         "name": "Ethena",
         "tf": "15m",
         "entry": 0.1387,
-        "stop": 0.13718,
-        "target1": 0.14021999999999998,
-        "target2": 0.14173999999999998,
-        "opened_at": "2026-09-15T17:01:59.780783"
+        "stop": 0.13715666666666665,
+        "target1": 0.14024333333333333,
+        "target2": 0.14178666666666667,
+        "opened_at": "2026-09-15T17:07:19.310533"
       },
       "1h:JST": {
         "coin": "JST",
         "name": "JUST",
         "tf": "1h",
         "entry": 0.11256,
-        "stop": 0.1120125,
-        "target1": 0.11310749999999999,
-        "target2": 0.11365499999999998,
-        "opened_at": "2026-09-15T17:01:59.780783"
+        "stop": 0.11201208333333333,
+        "target1": 0.11310791666666666,
+        "target2": 0.11365583333333332,
+        "opened_at": "2026-09-15T17:07:19.310533"
       }
     },
     "resolved": [
@@ -26193,6 +26193,32 @@
         "result": "win",
         "resolved_at": "2026-09-15T17:01:59.780783",
         "exit_price": 0.11582
+      },
+      {
+        "coin": "ENA",
+        "name": "Ethena",
+        "tf": "15m",
+        "entry": 0.1387,
+        "stop": 0.13718,
+        "target1": 0.14021999999999998,
+        "target2": 0.14173999999999998,
+        "opened_at": "2026-09-15T17:01:59.780783",
+        "result": "win",
+        "resolved_at": "2026-09-15T17:07:19.310533",
+        "exit_price": 0.1427
+      },
+      {
+        "coin": "JST",
+        "name": "JUST",
+        "tf": "1h",
+        "entry": 0.11256,
+        "stop": 0.1120125,
+        "target1": 0.11310749999999999,
+        "target2": 0.11365499999999998,
+        "opened_at": "2026-09-15T17:01:59.780783",
+        "result": "win",
+        "resolved_at": "2026-09-15T17:07:19.310533",
+        "exit_price": 0.11582
       }
     ]
   },
@@ -26200,14 +26226,14 @@
     "key": "BTC",
     "name": "Bitcoin",
     "emoji": "\u20bf",
-    "price": 76394,
+    "price": 76372,
     "high_24h": 79530,
     "low_24h": 75595,
-    "pct_24h": -3.01343,
-    "pct_7d": -2.6,
-    "pct_30d": 21.4,
-    "sma50": 71669.99652618011,
-    "sma200": 70232.55946065675,
+    "pct_24h": -3.05167,
+    "pct_7d": -3.1,
+    "pct_30d": 21.1,
+    "sma50": 71668.3327140087,
+    "sma200": 70232.14350761389,
     "support_30d": 64491.345282946255,
     "resistance_30d": 81264.70153038795,
     "mark_price": 76989.5,
@@ -26222,14 +26248,14 @@
     "key": "ETH",
     "name": "Ethereum",
     "emoji": "\u039e",
-    "price": 2422.27,
+    "price": 2422.3,
     "high_24h": 2607.56,
     "low_24h": 2390.89,
-    "pct_24h": -4.21177,
-    "pct_7d": -2.4,
-    "pct_30d": 28.9,
-    "sma50": 2207.779406251002,
-    "sma200": 2062.292284068439,
+    "pct_24h": -4.13456,
+    "pct_7d": -3.0,
+    "pct_30d": 28.7,
+    "sma50": 2207.7292307950174,
+    "sma200": 2062.279740204443,
     "support_30d": 1912.2734691708965,
     "resistance_30d": 2525.267261590238,
     "mark_price": 2476.25771051,
