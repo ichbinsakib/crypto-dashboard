@@ -2647,7 +2647,7 @@
         ],
         [
           "Stretch from long-term average",
-          "-16.4% below its long-term average - confirmed downtrend",
+          "-16.2% below its long-term average - confirmed downtrend",
           -1
         ],
         [
@@ -2660,12 +2660,12 @@
       "id": "world-liberty-financial",
       "symbol": "WLFI",
       "name": "World Liberty Financial",
-      "price": 0.057742,
-      "pct_24h": 1.46622,
+      "price": 0.057864,
+      "pct_24h": 1.59075,
       "pct_7d": 2.7,
       "support_30d": 0.05526589948255966,
       "resistance_30d": 0.06254770952093733,
-      "as_of": "2026-09-15 00:10:20",
+      "as_of": "2026-09-15 00:31:36",
       "stale": false
     },
     "pax-gold": {
@@ -2968,7 +2968,7 @@
         ],
         [
           "Crowd mood (Fear & Greed)",
-          "57/100 - crowd is greedy",
+          "69/100 - crowd is greedy",
           -1
         ],
         [
@@ -2983,7 +2983,7 @@
         ],
         [
           "Stretch from long-term average",
-          "-2.8% vs its long-term average - not stretched either way",
+          "-3.8% vs its long-term average - not stretched either way",
           0
         ],
         [
@@ -2996,12 +2996,12 @@
       "id": "algorand",
       "symbol": "ALGO",
       "name": "Algorand",
-      "price": 0.096862,
-      "pct_24h": 0.19786,
-      "pct_7d": 1.3,
+      "price": 0.095762,
+      "pct_24h": -0.13186,
+      "pct_7d": 0.3,
       "support_30d": 0.07793708137631736,
       "resistance_30d": 0.10076397875501594,
-      "as_of": "2026-09-14 22:10:23",
+      "as_of": "2026-09-15 00:31:36",
       "stale": false
     },
     "eutbl": {
@@ -3208,7 +3208,7 @@
         ],
         [
           "Crowd mood (Fear & Greed)",
-          "57/100 - crowd is greedy",
+          "69/100 - crowd is greedy",
           -1
         ],
         [
@@ -3223,7 +3223,7 @@
         ],
         [
           "Stretch from long-term average",
-          "+3.7% vs its long-term average - not stretched either way",
+          "+3.6% vs its long-term average - not stretched either way",
           0
         ],
         [
@@ -3236,12 +3236,12 @@
       "id": "kaspa",
       "symbol": "KAS",
       "name": "Kaspa",
-      "price": 0.03498426,
-      "pct_24h": 5.49827,
-      "pct_7d": -3.5,
+      "price": 0.03489093,
+      "pct_24h": 4.54677,
+      "pct_7d": -4.0,
       "support_30d": 0.025275049210175406,
       "resistance_30d": 0.03651282069323304,
-      "as_of": "2026-09-14 23:30:27",
+      "as_of": "2026-09-15 00:31:36",
       "stale": false
     },
     "cosmos": {
@@ -3348,11 +3348,11 @@
         "coin": "ZEC",
         "name": "Zcash",
         "tf": "15m",
-        "entry": 1136.34,
-        "stop": 1124.3443333333332,
-        "target1": 1148.3356666666666,
-        "target2": 1160.3313333333333,
-        "opened_at": "2026-09-15T00:27:18.936514"
+        "entry": 1140.97,
+        "stop": 1129.105,
+        "target1": 1152.835,
+        "target2": 1164.7,
+        "opened_at": "2026-09-15T00:33:32.278385"
       },
       "1h:ETC": {
         "coin": "ETC",
@@ -3362,7 +3362,7 @@
         "stop": 7.453916666666666,
         "target1": 7.528083333333333,
         "target2": 7.565166666666666,
-        "opened_at": "2026-09-15T00:27:18.936514"
+        "opened_at": "2026-09-15T00:33:32.278385"
       }
     },
     "resolved": [
@@ -24399,6 +24399,32 @@
         "result": "win",
         "resolved_at": "2026-09-15T00:27:18.936514",
         "exit_price": 7.561
+      },
+      {
+        "coin": "ZEC",
+        "name": "Zcash",
+        "tf": "15m",
+        "entry": 1136.34,
+        "stop": 1124.3443333333332,
+        "target1": 1148.3356666666666,
+        "target2": 1160.3313333333333,
+        "opened_at": "2026-09-15T00:27:18.936514",
+        "result": "win",
+        "resolved_at": "2026-09-15T00:33:32.278385",
+        "exit_price": 1163.36
+      },
+      {
+        "coin": "ETC",
+        "name": "Ethereum Classic",
+        "tf": "1h",
+        "entry": 7.491,
+        "stop": 7.453916666666666,
+        "target1": 7.528083333333333,
+        "target2": 7.565166666666666,
+        "opened_at": "2026-09-15T00:27:18.936514",
+        "result": "win",
+        "resolved_at": "2026-09-15T00:33:32.278385",
+        "exit_price": 7.561
       }
     ]
   },
@@ -24406,14 +24432,14 @@
     "key": "BTC",
     "name": "Bitcoin",
     "emoji": "\u20bf",
-    "price": 78066,
+    "price": 78000,
     "high_24h": 79530,
     "low_24h": 76647,
-    "pct_24h": 1.73544,
+    "pct_24h": 1.9121,
     "pct_7d": -1.0,
     "pct_30d": 23.9,
-    "sma50": 71703.40843977798,
-    "sma200": 70240.91243905622,
+    "sma50": 71702.11208323998,
+    "sma200": 70240.58834992172,
     "support_30d": 64491.345282946255,
     "resistance_30d": 81264.70153038795,
     "mark_price": 78726.74180435,
@@ -24428,14 +24454,14 @@
     "key": "ETH",
     "name": "Ethereum",
     "emoji": "\u039e",
-    "price": 2510.68,
+    "price": 2509.17,
     "high_24h": 2607.56,
     "low_24h": 2474.63,
-    "pct_24h": 1.28952,
+    "pct_24h": 1.49675,
     "pct_7d": 1.3,
     "pct_30d": 33.5,
-    "sma50": 2209.541921828686,
-    "sma200": 2062.73291296286,
+    "sma50": 2209.5232210261083,
+    "sma200": 2062.728237762216,
     "support_30d": 1912.2734691708965,
     "resistance_30d": 2525.267261590238,
     "mark_price": 2544.79927907,
