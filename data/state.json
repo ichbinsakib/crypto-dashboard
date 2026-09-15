@@ -103,7 +103,7 @@
         ],
         [
           "Stretch from long-term average",
-          "+0.5% vs its long-term average - not stretched either way",
+          "+1.2% vs its long-term average - not stretched either way",
           0
         ],
         [
@@ -116,12 +116,12 @@
       "id": "ripple",
       "symbol": "XRP",
       "name": "XRP",
-      "price": 1.28,
-      "pct_24h": -13.5733,
+      "price": 1.29,
+      "pct_24h": -11.72995,
       "pct_7d": -9.2,
       "support_30d": 1.0011429230744608,
       "resistance_30d": 1.52050482788377,
-      "as_of": "2026-09-15 20:45:21",
+      "as_of": "2026-09-15 21:00:33",
       "stale": false
     },
     "solana": {
@@ -1015,7 +1015,7 @@
         ],
         [
           "Stretch from long-term average",
-          "+2.4% vs its long-term average - not stretched either way",
+          "+2.6% vs its long-term average - not stretched either way",
           0
         ],
         [
@@ -1028,12 +1028,12 @@
       "id": "worldcoin-wld",
       "symbol": "WLD",
       "name": "Worldcoin",
-      "price": 0.366168,
-      "pct_24h": -6.36244,
-      "pct_7d": -22.7,
+      "price": 0.366856,
+      "pct_24h": -6.88726,
+      "pct_7d": -20.9,
       "support_30d": 0.319812298466522,
       "resistance_30d": 0.4772935995106048,
-      "as_of": "2026-09-15 19:35:18",
+      "as_of": "2026-09-15 21:00:33",
       "stale": false
     },
     "bfusd": {
@@ -1735,7 +1735,7 @@
         ],
         [
           "Stretch from long-term average",
-          "-17.0% below its long-term average - confirmed downtrend",
+          "-18.7% below its long-term average - confirmed downtrend",
           -1
         ],
         [
@@ -1748,12 +1748,12 @@
       "id": "sui",
       "symbol": "SUI",
       "name": "Sui",
-      "price": 0.703116,
-      "pct_24h": -4.05061,
-      "pct_7d": -15.1,
+      "price": 0.688685,
+      "pct_24h": -7.08997,
+      "pct_7d": -15.2,
       "support_30d": 0.6514311908607086,
       "resistance_30d": 0.8499161763231283,
-      "as_of": "2026-09-15 17:30:30",
+      "as_of": "2026-09-15 21:00:33",
       "stale": false
     },
     "lighter": {
@@ -2325,11 +2325,11 @@
       "symbol": "GRAM",
       "name": "Gram (prev. Toncoin)",
       "price": 1.32,
-      "pct_24h": -2.88185,
-      "pct_7d": -6.0,
+      "pct_24h": -2.77464,
+      "pct_7d": -5.5,
       "support_30d": 1.3170990455791696,
       "resistance_30d": 1.4926762805297678,
-      "as_of": "2026-09-15 19:35:18",
+      "as_of": "2026-09-15 21:00:33",
       "stale": false
     },
     "sky": {
@@ -2531,7 +2531,7 @@
       "rows": [
         [
           "Price vs. recent range",
-          "Near its 30-day low (~$4,288.96) - historically a better entry",
+          "Near its 30-day low (~$4,289.72) - historically a better entry",
           2
         ],
         [
@@ -2564,12 +2564,12 @@
       "id": "tether-gold",
       "symbol": "XAUT",
       "name": "Tether Gold",
-      "price": 4289.02,
-      "pct_24h": -0.22458,
-      "pct_7d": -1.9,
-      "support_30d": 4288.9596605126635,
+      "price": 4290.4,
+      "pct_24h": -0.24906,
+      "pct_7d": -1.6,
+      "support_30d": 4289.718494392626,
       "resistance_30d": 4662.510537821146,
-      "as_of": "2026-09-15 20:50:23",
+      "as_of": "2026-09-15 21:00:33",
       "stale": false
     },
     "bitway": {
@@ -3344,25 +3344,15 @@
   "_strong_buy_state": {},
   "_pnl_tracker": {
     "open": {
-      "1h:BNB": {
-        "coin": "BNB",
-        "name": "BNB",
-        "tf": "1h",
-        "entry": 707.04,
-        "stop": 701.9020833333333,
-        "target1": 712.1779166666666,
-        "target2": 717.3158333333333,
-        "opened_at": "2026-09-15T20:57:20.926871"
-      },
       "1h:ZEC": {
         "coin": "ZEC",
         "name": "Zcash",
         "tf": "1h",
         "entry": 1086.2,
-        "stop": 1064.2491666666667,
-        "target1": 1108.1508333333334,
-        "target2": 1130.1016666666667,
-        "opened_at": "2026-09-15T20:57:20.926871"
+        "stop": 1065.1791666666668,
+        "target1": 1107.2208333333333,
+        "target2": 1128.2416666666666,
+        "opened_at": "2026-09-15T21:02:04.746494"
       }
     },
     "resolved": [
@@ -27428,6 +27418,32 @@
         "result": "win",
         "resolved_at": "2026-09-15T20:57:20.926871",
         "exit_price": 1125.25
+      },
+      {
+        "coin": "BNB",
+        "name": "BNB",
+        "tf": "1h",
+        "entry": 707.04,
+        "stop": 701.9020833333333,
+        "target1": 712.1779166666666,
+        "target2": 717.3158333333333,
+        "opened_at": "2026-09-15T20:57:20.926871",
+        "result": "win",
+        "resolved_at": "2026-09-15T21:02:04.746494",
+        "exit_price": 713.81
+      },
+      {
+        "coin": "ZEC",
+        "name": "Zcash",
+        "tf": "1h",
+        "entry": 1086.2,
+        "stop": 1064.2491666666667,
+        "target1": 1108.1508333333334,
+        "target2": 1130.1016666666667,
+        "opened_at": "2026-09-15T20:57:20.926871",
+        "result": "win",
+        "resolved_at": "2026-09-15T21:02:04.746494",
+        "exit_price": 1117.47
       }
     ]
   },
@@ -27435,14 +27451,14 @@
     "key": "BTC",
     "name": "Bitcoin",
     "emoji": "\u20bf",
-    "price": 75896,
+    "price": 75906,
     "high_24h": 79096,
     "low_24h": 75038,
-    "pct_24h": -4.21277,
+    "pct_24h": -4.04163,
     "pct_7d": -3.0,
     "pct_30d": 20.6,
-    "sma50": 71660.02396997204,
-    "sma200": 70230.06632160473,
+    "sma50": 71660.11552237622,
+    "sma200": 70230.08920970577,
     "support_30d": 64491.345282946255,
     "resistance_30d": 81264.70153038795,
     "mark_price": 76989.5,
@@ -27457,14 +27473,14 @@
     "key": "ETH",
     "name": "Ethereum",
     "emoji": "\u039e",
-    "price": 2406.83,
+    "price": 2406.66,
     "high_24h": 2570.03,
     "low_24h": 2361.16,
-    "pct_24h": -6.64565,
+    "pct_24h": -6.36853,
     "pct_7d": -3.0,
     "pct_30d": 28.1,
-    "sma50": 2207.4667891557106,
-    "sma200": 2062.2141297946164,
+    "sma50": 2207.4517068319487,
+    "sma200": 2062.210359213676,
     "support_30d": 1912.2734691708965,
     "resistance_30d": 2525.267261590238,
     "mark_price": 2476.25771051,
