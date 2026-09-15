@@ -1927,7 +1927,7 @@
         ],
         [
           "Stretch from long-term average",
-          "-2.7% vs its long-term average - not stretched either way",
+          "-2.6% vs its long-term average - not stretched either way",
           0
         ],
         [
@@ -1940,12 +1940,12 @@
       "id": "mantle",
       "symbol": "MNT",
       "name": "Mantle",
-      "price": 0.558242,
-      "pct_24h": -1.62726,
-      "pct_7d": -9.6,
+      "price": 0.558634,
+      "pct_24h": -1.74426,
+      "pct_7d": -10.9,
       "support_30d": 0.42660592418086046,
       "resistance_30d": 0.6365218632454678,
-      "as_of": "2026-09-15 10:20:25",
+      "as_of": "2026-09-15 11:35:21",
       "stale": false
     },
     "polkadot": {
@@ -2325,11 +2325,11 @@
       "symbol": "GRAM",
       "name": "Gram (prev. Toncoin)",
       "price": 1.34,
-      "pct_24h": -0.50347,
-      "pct_7d": -3.5,
+      "pct_24h": -0.80679,
+      "pct_7d": -4.0,
       "support_30d": 1.3170990455791696,
       "resistance_30d": 1.4926762805297678,
-      "as_of": "2026-09-15 09:30:32",
+      "as_of": "2026-09-15 11:35:21",
       "stale": false
     },
     "sky": {
@@ -2407,7 +2407,7 @@
         ],
         [
           "Stretch from long-term average",
-          "-3.4% vs its long-term average - not stretched either way",
+          "-3.7% vs its long-term average - not stretched either way",
           0
         ],
         [
@@ -2420,12 +2420,12 @@
       "id": "shiba-inu",
       "symbol": "SHIB",
       "name": "Shiba Inu",
-      "price": 5.16e-06,
-      "pct_24h": -1.73052,
+      "price": 5.14e-06,
+      "pct_24h": -1.96052,
       "pct_7d": -5.9,
       "support_30d": 4.41190416053175e-06,
       "resistance_30d": 5.903506876405612e-06,
-      "as_of": "2026-09-15 11:25:17",
+      "as_of": "2026-09-15 11:35:21",
       "stale": false
     },
     "near": {
@@ -3342,6 +3342,7 @@
     }
   },
   "_strong_buy_state": {
+    "scanner-15m:SHIB": true,
     "scanner-1h:ZEC": true
   },
   "_pnl_tracker": {
@@ -3355,6 +3356,16 @@
         "target1": 1132.5970833333333,
         "target2": 1152.6141666666667,
         "opened_at": "2026-09-15T11:32:31.533195"
+      },
+      "15m:SHIB": {
+        "coin": "SHIB",
+        "name": "Shiba Inu",
+        "tf": "15m",
+        "entry": 5.131e-06,
+        "stop": 5.1194666666666665e-06,
+        "target1": 5.142533333333333e-06,
+        "target2": 5.154066666666666e-06,
+        "opened_at": "2026-09-15T11:37:25.094805"
       }
     },
     "resolved": [
@@ -24983,14 +24994,14 @@
     "key": "BTC",
     "name": "Bitcoin",
     "emoji": "\u20bf",
-    "price": 76969,
+    "price": 76929,
     "high_24h": 79530,
     "low_24h": 76682,
-    "pct_24h": -1.16012,
+    "pct_24h": -1.0292,
     "pct_7d": -2.2,
     "pct_30d": 22.4,
-    "sma50": 71681.59315675293,
-    "sma200": 70235.45861829995,
+    "sma50": 71680.45208752088,
+    "sma200": 70235.17335099193,
     "support_30d": 64491.345282946255,
     "resistance_30d": 81264.70153038795,
     "mark_price": 76989.5,
@@ -25005,14 +25016,14 @@
     "key": "ETH",
     "name": "Ethereum",
     "emoji": "\u039e",
-    "price": 2479.43,
+    "price": 2476.93,
     "high_24h": 2607.56,
     "low_24h": 2464.96,
-    "pct_24h": -1.3867,
+    "pct_24h": -1.41002,
     "pct_7d": -0.3,
     "pct_30d": 32.2,
-    "sma50": 2208.9205659174795,
-    "sma200": 2062.5775739850583,
+    "sma50": 2208.863994088106,
+    "sma200": 2062.563431027715,
     "support_30d": 1912.2734691708965,
     "resistance_30d": 2525.267261590238,
     "mark_price": 2476.25771051,
