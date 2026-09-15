@@ -478,11 +478,6 @@ def fmt_pct(v, decimals=2, sign=True):
     return f"{s}{v:.{decimals}f}%"
 
 
-def badge(label, status):
-    # status: bullish, bearish, neutral, locked
-    return {"label": label, "status": status}
-
-
 def classify_price_structure(pct_24h, pct_7d):
     if pct_7d is None:
         return "Unknown", "neutral"
@@ -1618,7 +1613,7 @@ def render(coins_data, fng_value, fng_classification, generated_at, any_stale,
     performance_panel = f"""
 <div class="panel panel-performance">
   <div class="cycle-map spot-signal-card" style="margin-bottom:10px;">
-    <div class="card-title">📊 SCANNER PERFORMANCE<span class="info-tip" tabindex="0" data-tip="Tracks confirmed 15m/1h calls (NEAR-TERM DIP ZONE tier only) in batches of up to {PNL_BATCH_SIZE} per timeframe -- a new batch only opens once every position in the current one has resolved (win/loss/expired), so you're never asked to follow more than one batch at a time. Daily models aren't tracked here: they use two scenarios (pullback/breakout) instead of one clear entry, and rotate too slowly to resolve cleanly. Educational transparency, not a trading track record.">&#9432;</span></div>
+    <div class="card-title">📊 SCANNER PERFORMANCE<span class="info-tip" tabindex="0" data-tip="Tracks confirmed 15m/1h/daily calls (NEAR-TERM DIP ZONE tier only) in batches of up to {PNL_BATCH_SIZE} per timeframe -- a new batch only opens once every position in the current one has resolved (win/loss/expired), so you're never asked to follow more than one batch at a time. Educational transparency, not a trading track record.">&#9432;</span></div>
   </div>
   <div class="top-grid" style="grid-template-columns:1fr 1fr 1fr;">
     {_pnl_stat_card("Daily", pnl_stats.get("daily", {}))}
@@ -1822,9 +1817,20 @@ def render(coins_data, fng_value, fng_classification, generated_at, any_stale,
   setInterval(tick, 15000);
   // Cache-busting reload: a plain meta-refresh can be served from browser/CDN cache and
   // silently show stale content. Appending a unique query string forces a real network fetch.
-  setTimeout(function() {{
+  function reload() {{
     location.href = location.pathname + '?t=' + Date.now();
-  }}, {REFRESH_SECONDS * 1000});
+  }}
+  setTimeout(reload, {REFRESH_SECONDS * 1000});
+  // Mobile/installed-app fix: setTimeout/setInterval are frozen while the tab or installed
+  // PWA is backgrounded, so on phones the timer above never fires while the app is closed or
+  // the screen is off -- reopening it just shows whatever was loaded before it was backgrounded.
+  // Reload immediately on foreground if the loaded page is already older than the refresh
+  // interval, so returning to the app always shows current data instead of a stale snapshot.
+  document.addEventListener('visibilitychange', function() {{
+    if (!document.hidden && (Date.now() - generatedAt.getTime()) > {REFRESH_SECONDS * 1000}) {{
+      reload();
+    }}
+  }});
 }})();
 </script>
 <script>
@@ -1865,6 +1871,7 @@ if ('serviceWorker' in navigator) {{
     var highs = klines.map(function(k) {{ return parseFloat(k[2]); }});
     var lows = klines.map(function(k) {{ return parseFloat(k[3]); }});
     var closes = klines.map(function(k) {{ return parseFloat(k[4]); }});
+    var volumes = klines.map(function(k) {{ return parseFloat(k[6]); }});
     var price = closes[closes.length - 1];
 
     var recentHigh = Math.max.apply(null, highs.slice(-lookback));
@@ -1874,6 +1881,9 @@ if ('serviceWorker' in navigator) {{
     for (var i = highs.length - lookback; i < highs.length; i++) {{ atrSum += highs[i] - lows[i]; }}
     var atr = atrSum / lookback;
     if (atr <= 0) return null;
+
+    var rangePct = price ? (recentHigh - recentLow) / price * 100 : 0;
+    if (rangePct < {INTRADAY_CHOPPY_RANGE_PCT}) return null;
 
     var rows = [];
     var total = 0;
@@ -1911,6 +1921,20 @@ if ('serviceWorker' in navigator) {{
       pts = 0; reading = (movePct >= 0 ? '+' : '') + movePct.toFixed(1) + '% over its ' + windowLabel + ' - flat, no clear direction';
     }}
     rows.push(['Direction over this window', reading, pts]);
+    total += pts;
+
+    var avgVolume = volumes.slice(-lookback).reduce(function(a, b) {{ return a + b; }}, 0) / lookback;
+    var recentVols = volumes.slice(-3);
+    var recentVolume = recentVols.reduce(function(a, b) {{ return a + b; }}, 0) / recentVols.length;
+    var volRatio = avgVolume > 0 ? (recentVolume / avgVolume) : 1.0;
+    if (volRatio >= 1.2) {{
+      pts = 1; reading = 'Recent volume ' + volRatio.toFixed(1) + 'x its ' + windowLabel + ' average - real participation behind the move';
+    }} else if (volRatio <= 0.5) {{
+      pts = -1; reading = 'Recent volume just ' + volRatio.toFixed(1) + 'x its ' + windowLabel + ' average - thin, low-conviction trading';
+    }} else {{
+      pts = 0; reading = 'Recent volume near its ' + windowLabel + ' average (' + volRatio.toFixed(1) + 'x) - unremarkable participation';
+    }}
+    rows.push(['Volume confirmation', reading, pts]);
     total += pts;
 
     var label, status, plain;
