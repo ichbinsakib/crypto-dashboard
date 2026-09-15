@@ -1687,7 +1687,7 @@
         ],
         [
           "Stretch from long-term average",
-          "+2.6% vs its long-term average - not stretched either way",
+          "+2.1% vs its long-term average - not stretched either way",
           0
         ],
         [
@@ -1700,12 +1700,12 @@
       "id": "bitget-token",
       "symbol": "BGB",
       "name": "Bitget Token",
-      "price": 1.94,
-      "pct_24h": 0.21403,
+      "price": 1.93,
+      "pct_24h": -0.01387,
       "pct_7d": -2.5,
       "support_30d": 1.6739981877355687,
       "resistance_30d": 2.0284940947674617,
-      "as_of": "2026-09-15 05:30:32",
+      "as_of": "2026-09-15 05:50:22",
       "stale": false
     },
     "sui": {
@@ -1879,7 +1879,7 @@
         ],
         [
           "Stretch from long-term average",
-          "-31.3% below its long-term average - confirmed downtrend",
+          "-31.2% below its long-term average - confirmed downtrend",
           -1
         ],
         [
@@ -1892,12 +1892,12 @@
       "id": "bitcoin-cash",
       "symbol": "BCH",
       "name": "Bitcoin Cash",
-      "price": 221.88,
-      "pct_24h": -1.18236,
-      "pct_7d": -14.9,
+      "price": 222.23,
+      "pct_24h": -0.55527,
+      "pct_7d": -13.9,
       "support_30d": 203.50169440615565,
       "resistance_30d": 288.10955405353275,
-      "as_of": "2026-09-15 03:15:22",
+      "as_of": "2026-09-15 05:50:22",
       "stale": false
     },
     "mantle": {
@@ -2215,7 +2215,7 @@
         ],
         [
           "Stretch from long-term average",
-          "+5.5% vs its long-term average - not stretched either way",
+          "+6.3% vs its long-term average - not stretched either way",
           0
         ],
         [
@@ -2228,12 +2228,12 @@
       "id": "internet-computer",
       "symbol": "ICP",
       "name": "Internet Computer",
-      "price": 2.59,
-      "pct_24h": -6.28102,
+      "price": 2.61,
+      "pct_24h": -5.92667,
       "pct_7d": -13.0,
       "support_30d": 2.194804279500122,
       "resistance_30d": 2.9869340549074623,
-      "as_of": "2026-09-15 05:22:36",
+      "as_of": "2026-09-15 05:50:22",
       "stale": false
     },
     "bittensor": {
@@ -3342,20 +3342,11 @@
     }
   },
   "_strong_buy_state": {
+    "scanner-15m:BGB": true,
     "scanner-1h:ETC": true
   },
   "_pnl_tracker": {
     "open": {
-      "15m:BGB": {
-        "coin": "BGB",
-        "name": "Bitget Token",
-        "tf": "15m",
-        "entry": 1.941,
-        "stop": 1.9402000000000001,
-        "target1": 1.9418,
-        "target2": 1.9425999999999999,
-        "opened_at": "2026-09-15T01:27:22.110997"
-      },
       "1h:ETC": {
         "coin": "ETC",
         "name": "Ethereum Classic",
@@ -3365,6 +3356,16 @@
         "target1": 7.45925,
         "target2": 7.4925,
         "opened_at": "2026-09-15T05:12:19.538066"
+      },
+      "15m:BGB": {
+        "coin": "BGB",
+        "name": "Bitget Token",
+        "tf": "15m",
+        "entry": 1.932,
+        "stop": 1.9314,
+        "target1": 1.9325999999999999,
+        "target2": 1.9331999999999998,
+        "opened_at": "2026-09-15T05:52:20.313969"
       }
     },
     "resolved": [
@@ -24661,6 +24662,19 @@
         "result": "win",
         "resolved_at": "2026-09-15T05:12:19.538066",
         "exit_price": 7.475
+      },
+      {
+        "coin": "BGB",
+        "name": "Bitget Token",
+        "tf": "15m",
+        "entry": 1.941,
+        "stop": 1.9402000000000001,
+        "target1": 1.9418,
+        "target2": 1.9425999999999999,
+        "opened_at": "2026-09-15T01:27:22.110997",
+        "result": "loss",
+        "resolved_at": "2026-09-15T05:52:20.313969",
+        "exit_price": 1.932
       }
     ]
   },
@@ -24668,14 +24682,14 @@
     "key": "BTC",
     "name": "Bitcoin",
     "emoji": "\u20bf",
-    "price": 77467,
+    "price": 77442,
     "high_24h": 79530,
     "low_24h": 77396,
-    "pct_24h": -0.10372,
+    "pct_24h": -0.09081,
     "pct_7d": -1.7,
     "pct_30d": 23.0,
-    "sma50": 71691.52320623145,
-    "sma200": 70237.94113066957,
+    "sma50": 71691.8339444722,
+    "sma200": 70238.01881522976,
     "support_30d": 64491.345282946255,
     "resistance_30d": 81264.70153038795,
     "mark_price": 78726.74180435,
@@ -24690,14 +24704,14 @@
     "key": "ETH",
     "name": "Ethereum",
     "emoji": "\u039e",
-    "price": 2489.48,
+    "price": 2490.08,
     "high_24h": 2607.56,
     "low_24h": 2489.59,
-    "pct_24h": -0.97124,
+    "pct_24h": -0.87375,
     "pct_7d": 0.3,
     "pct_30d": 32.4,
-    "sma50": 2209.112907334785,
-    "sma200": 2062.625659339385,
+    "sma50": 2209.159112951807,
+    "sma200": 2062.6372107436405,
     "support_30d": 1912.2734691708965,
     "resistance_30d": 2525.267261590238,
     "mark_price": 2544.79927907,
