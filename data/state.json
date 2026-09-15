@@ -343,7 +343,7 @@
         ],
         [
           "Stretch from long-term average",
-          "-5.0% vs its long-term average - not stretched either way",
+          "-4.9% vs its long-term average - not stretched either way",
           0
         ],
         [
@@ -356,12 +356,12 @@
       "id": "dogecoin",
       "symbol": "DOGE",
       "name": "Dogecoin",
-      "price": 0.083626,
-      "pct_24h": 1.29127,
+      "price": 0.083708,
+      "pct_24h": 1.57666,
       "pct_7d": -7.2,
       "support_30d": 0.07021051231066483,
       "resistance_30d": 0.09337940032634065,
-      "as_of": "2026-09-15 00:20:22",
+      "as_of": "2026-09-15 00:25:22",
       "stale": false
     },
     "zcash": {
@@ -424,7 +424,7 @@
         ],
         [
           "Crowd mood (Fear & Greed)",
-          "57/100 - crowd is greedy",
+          "69/100 - crowd is greedy",
           -1
         ],
         [
@@ -439,7 +439,7 @@
         ],
         [
           "Stretch from long-term average",
-          "+23.0% above its long-term average - a bit stretched",
+          "+22.2% above its long-term average - a bit stretched",
           -1
         ],
         [
@@ -452,12 +452,12 @@
       "id": "rain",
       "symbol": "RAIN",
       "name": "Rain",
-      "price": 0.01433439,
-      "pct_24h": -6.23718,
-      "pct_7d": -12.1,
-      "support_30d": 0.01298701863028712,
+      "price": 0.01426289,
+      "pct_24h": -5.89475,
+      "pct_7d": -12.3,
+      "support_30d": 0.01308236474491796,
       "resistance_30d": 0.018158429442510105,
-      "as_of": "2026-09-14 21:50:27",
+      "as_of": "2026-09-15 00:25:22",
       "stale": false
     },
     "chainlink": {
@@ -2717,14 +2717,14 @@
       "stale": false
     },
     "morpho": {
-      "label": "\ud83d\udd34 CAUTION - REDUCE NEW BUYS",
-      "status": "bearish",
-      "score": -2,
+      "label": "\ud83d\udfe1 HOLD / NEUTRAL",
+      "status": "neutral",
+      "score": 1,
       "rows": [
         [
           "Price vs. recent range",
-          "Sitting in the middle of its 30-day range",
-          0
+          "Near its 30-day low (~$2.09) - historically a better entry",
+          2
         ],
         [
           "Crowd mood (Fear & Greed)",
@@ -2743,8 +2743,8 @@
         ],
         [
           "Stretch from long-term average",
-          "+10.5% above its long-term average - a bit stretched",
-          -1
+          "+9.9% vs its long-term average - not stretched either way",
+          0
         ],
         [
           "Leverage traders' bias",
@@ -2752,16 +2752,16 @@
           0
         ]
       ],
-      "plain": "Getting risky - I'd hold off on new buys until this cools down.",
+      "plain": "No real edge either way right now - fine to just wait and watch.",
       "id": "morpho",
       "symbol": "MORPHO",
       "name": "Morpho",
-      "price": 2.18,
-      "pct_24h": 0.28139,
+      "price": 2.17,
+      "pct_24h": -0.10066,
       "pct_7d": -10.7,
-      "support_30d": 1.994353941994143,
+      "support_30d": 2.087582004697308,
       "resistance_30d": 2.9026212482639075,
-      "as_of": "2026-09-15 00:05:19",
+      "as_of": "2026-09-15 00:25:22",
       "stale": false
     },
     "memecore": {
@@ -3349,10 +3349,10 @@
         "name": "Zcash",
         "tf": "15m",
         "entry": 1136.34,
-        "stop": 1124.366,
-        "target1": 1148.3139999999999,
-        "target2": 1160.2879999999998,
-        "opened_at": "2026-09-15T00:22:17.755827"
+        "stop": 1124.3443333333332,
+        "target1": 1148.3356666666666,
+        "target2": 1160.3313333333333,
+        "opened_at": "2026-09-15T00:27:18.936514"
       },
       "1h:ETC": {
         "coin": "ETC",
@@ -3362,7 +3362,7 @@
         "stop": 7.453916666666666,
         "target1": 7.528083333333333,
         "target2": 7.565166666666666,
-        "opened_at": "2026-09-15T00:22:17.755827"
+        "opened_at": "2026-09-15T00:27:18.936514"
       }
     },
     "resolved": [
@@ -24373,6 +24373,32 @@
         "result": "win",
         "resolved_at": "2026-09-15T00:22:17.755827",
         "exit_price": 7.565
+      },
+      {
+        "coin": "ZEC",
+        "name": "Zcash",
+        "tf": "15m",
+        "entry": 1136.34,
+        "stop": 1124.366,
+        "target1": 1148.3139999999999,
+        "target2": 1160.2879999999998,
+        "opened_at": "2026-09-15T00:22:17.755827",
+        "result": "win",
+        "resolved_at": "2026-09-15T00:27:18.936514",
+        "exit_price": 1164.29
+      },
+      {
+        "coin": "ETC",
+        "name": "Ethereum Classic",
+        "tf": "1h",
+        "entry": 7.491,
+        "stop": 7.453916666666666,
+        "target1": 7.528083333333333,
+        "target2": 7.565166666666666,
+        "opened_at": "2026-09-15T00:22:17.755827",
+        "result": "win",
+        "resolved_at": "2026-09-15T00:27:18.936514",
+        "exit_price": 7.561
       }
     ]
   },
@@ -24380,14 +24406,14 @@
     "key": "BTC",
     "name": "Bitcoin",
     "emoji": "\u20bf",
-    "price": 78095,
+    "price": 78066,
     "high_24h": 79530,
     "low_24h": 76647,
-    "pct_24h": 1.62443,
+    "pct_24h": 1.73544,
     "pct_7d": -1.0,
     "pct_30d": 23.9,
-    "sma50": 71704.05605100622,
-    "sma200": 70241.07434186328,
+    "sma50": 71703.40843977798,
+    "sma200": 70240.91243905622,
     "support_30d": 64491.345282946255,
     "resistance_30d": 81264.70153038795,
     "mark_price": 78726.74180435,
@@ -24402,14 +24428,14 @@
     "key": "ETH",
     "name": "Ethereum",
     "emoji": "\u039e",
-    "price": 2510.42,
+    "price": 2510.68,
     "high_24h": 2607.56,
     "low_24h": 2474.63,
-    "pct_24h": 1.06482,
+    "pct_24h": 1.28952,
     "pct_7d": 1.3,
     "pct_30d": 33.5,
-    "sma50": 2209.537620762664,
-    "sma200": 2062.7318376963544,
+    "sma50": 2209.541921828686,
+    "sma200": 2062.73291296286,
     "support_30d": 1912.2734691708965,
     "resistance_30d": 2525.267261590238,
     "mark_price": 2544.79927907,
