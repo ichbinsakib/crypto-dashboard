@@ -11,8 +11,8 @@
       "last_triggered_at": null
     },
     "eth-resistance-break": {
-      "triggered": false,
-      "last_triggered_at": "2026-09-14 23:45:22"
+      "triggered": true,
+      "last_triggered_at": "2026-09-15 02:15:26"
     },
     "eth-support-break": {
       "triggered": false,
@@ -775,7 +775,7 @@
         ],
         [
           "Stretch from long-term average",
-          "-9.4% vs its long-term average - not stretched either way",
+          "-9.2% vs its long-term average - not stretched either way",
           0
         ],
         [
@@ -789,11 +789,11 @@
       "symbol": "KCS",
       "name": "KuCoin",
       "price": 6.91,
-      "pct_24h": 1.21647,
+      "pct_24h": 0.42263,
       "pct_7d": -1.4,
       "support_30d": 6.514591596607885,
       "resistance_30d": 7.8821382735057615,
-      "as_of": "2026-09-15 00:00:35",
+      "as_of": "2026-09-15 02:15:26",
       "stale": false
     },
     "hedera-hashgraph": {
@@ -1288,7 +1288,7 @@
         ],
         [
           "Crowd mood (Fear & Greed)",
-          "57/100 - crowd is greedy",
+          "69/100 - crowd is greedy",
           -1
         ],
         [
@@ -1303,7 +1303,7 @@
         ],
         [
           "Stretch from long-term average",
-          "-3.9% vs its long-term average - not stretched either way",
+          "-4.0% vs its long-term average - not stretched either way",
           0
         ],
         [
@@ -1317,11 +1317,11 @@
       "symbol": "HTX",
       "name": "HTX DAO",
       "price": 1.7e-06,
-      "pct_24h": 0.09544,
-      "pct_7d": 2.0,
+      "pct_24h": 0.48566,
+      "pct_7d": 1.8,
       "support_30d": 1.6023985995039954e-06,
       "resistance_30d": 1.7873095460323824e-06,
-      "as_of": "2026-09-14 23:10:21",
+      "as_of": "2026-09-15 02:15:26",
       "stale": false
     },
     "superstate-short-duration-us-government-securities-fund-ustb": {
@@ -1447,7 +1447,7 @@
         ],
         [
           "Stretch from long-term average",
-          "-9.7% vs its long-term average - not stretched either way",
+          "-9.4% vs its long-term average - not stretched either way",
           0
         ],
         [
@@ -1460,12 +1460,12 @@
       "id": "crypto-com-chain",
       "symbol": "CRO",
       "name": "Cronos",
-      "price": 0.058729,
-      "pct_24h": 2.26668,
+      "price": 0.058911,
+      "pct_24h": 1.5566,
       "pct_7d": 3.0,
       "support_30d": 0.04621382085807831,
       "resistance_30d": 0.06091104752771909,
-      "as_of": "2026-09-15 01:01:10",
+      "as_of": "2026-09-15 02:15:26",
       "stale": false
     },
     "ethereum-classic": {
@@ -3341,7 +3341,9 @@
       "stale": false
     }
   },
-  "_strong_buy_state": {},
+  "_strong_buy_state": {
+    "scanner-1h:ETC": true
+  },
   "_pnl_tracker": {
     "open": {
       "1h:ETC": {
@@ -24588,14 +24590,14 @@
     "key": "BTC",
     "name": "Bitcoin",
     "emoji": "\u20bf",
-    "price": 77900,
+    "price": 77997,
     "high_24h": 79530,
     "low_24h": 77396,
-    "pct_24h": 0.93828,
+    "pct_24h": 0.90473,
     "pct_7d": -1.7,
     "pct_30d": 23.6,
-    "sma50": 71699.78215952603,
-    "sma200": 70240.00586899322,
+    "sma50": 71701.94146103453,
+    "sma200": 70240.54569437035,
     "support_30d": 64491.345282946255,
     "resistance_30d": 81264.70153038795,
     "mark_price": 78726.74180435,
@@ -24610,14 +24612,14 @@
     "key": "ETH",
     "name": "Ethereum",
     "emoji": "\u039e",
-    "price": 2515.62,
+    "price": 2519.25,
     "high_24h": 2607.56,
     "low_24h": 2489.59,
-    "pct_24h": 0.7419,
+    "pct_24h": 0.69067,
     "pct_7d": 0.8,
     "pct_30d": 33.7,
-    "sma50": 2209.634619732597,
-    "sma200": 2062.7560874388378,
+    "sma50": 2209.7012812931694,
+    "sma200": 2062.772752828981,
     "support_30d": 1912.2734691708965,
     "resistance_30d": 2525.267261590238,
     "mark_price": 2544.79927907,
