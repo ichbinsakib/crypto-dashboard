@@ -1591,7 +1591,7 @@
         ],
         [
           "Stretch from long-term average",
-          "+82.7% above its long-term average - very stretched",
+          "+83.7% above its long-term average - very stretched",
           -2
         ],
         [
@@ -1604,12 +1604,12 @@
       "id": "venice-token",
       "symbol": "VVV",
       "name": "Venice Token",
-      "price": 22.51,
-      "pct_24h": -2.16702,
+      "price": 22.64,
+      "pct_24h": -0.30877,
       "pct_7d": 21.2,
       "support_30d": 13.26539533029362,
       "resistance_30d": 25.88474946901688,
-      "as_of": "2026-09-15 12:35:20",
+      "as_of": "2026-09-15 12:54:05",
       "stale": false
     },
     "litecoin": {
@@ -1831,7 +1831,7 @@
         ],
         [
           "Stretch from long-term average",
-          "+37.4% above its long-term average - very stretched",
+          "+39.3% above its long-term average - very stretched",
           -2
         ],
         [
@@ -1844,12 +1844,12 @@
       "id": "ethena",
       "symbol": "ENA",
       "name": "Ethena",
-      "price": 0.14088,
-      "pct_24h": -0.1063,
-      "pct_7d": -13.5,
+      "price": 0.142853,
+      "pct_24h": 1.91767,
+      "pct_7d": -13.0,
       "support_30d": 0.08269090736599788,
       "resistance_30d": 0.17616469272611565,
-      "as_of": "2026-09-15 11:55:20",
+      "as_of": "2026-09-15 12:54:05",
       "stale": false
     },
     "bitcoin-cash": {
@@ -1975,7 +1975,7 @@
         ],
         [
           "Stretch from long-term average",
-          "-9.6% vs its long-term average - not stretched either way",
+          "-9.3% vs its long-term average - not stretched either way",
           0
         ],
         [
@@ -1988,12 +1988,12 @@
       "id": "polkadot",
       "symbol": "DOT",
       "name": "Polkadot",
-      "price": 0.987799,
-      "pct_24h": -2.23593,
+      "price": 0.991196,
+      "pct_24h": -1.89472,
       "pct_7d": -8.8,
       "support_30d": 0.7510040523927409,
       "resistance_30d": 1.2475304252917225,
-      "as_of": "2026-09-15 12:50:27",
+      "as_of": "2026-09-15 12:54:05",
       "stale": false
     },
     "uniswap": {
@@ -3341,9 +3341,22 @@
       "stale": false
     }
   },
-  "_strong_buy_state": {},
+  "_strong_buy_state": {
+    "scanner-15m:VVV": true
+  },
   "_pnl_tracker": {
-    "open": {},
+    "open": {
+      "15m:VVV": {
+        "coin": "VVV",
+        "name": "Venice Token",
+        "tf": "15m",
+        "entry": 21.531,
+        "stop": 21.355966666666664,
+        "target1": 21.706033333333334,
+        "target2": 21.88106666666667,
+        "opened_at": "2026-09-15T12:56:12.633096"
+      }
+    },
     "resolved": [
       {
         "coin": "WLD",
@@ -24996,14 +25009,14 @@
     "key": "BTC",
     "name": "Bitcoin",
     "emoji": "\u20bf",
-    "price": 76905,
+    "price": 77010,
     "high_24h": 79530,
     "low_24h": 76682,
-    "pct_24h": -1.11254,
+    "pct_24h": -0.88731,
     "pct_7d": -2.1,
     "pct_30d": 22.2,
-    "sma50": 71680.37589770032,
-    "sma200": 70235.1543035368,
+    "sma50": 71682.43010077173,
+    "sma200": 70235.66785430464,
     "support_30d": 64491.345282946255,
     "resistance_30d": 81264.70153038795,
     "mark_price": 76989.5,
@@ -25018,14 +25031,14 @@
     "key": "ETH",
     "name": "Ethereum",
     "emoji": "\u039e",
-    "price": 2476.11,
+    "price": 2481.53,
     "high_24h": 2607.56,
     "low_24h": 2464.96,
-    "pct_24h": -1.27879,
+    "pct_24h": -0.94756,
     "pct_7d": -0.2,
     "pct_30d": 31.8,
-    "sma50": 2208.8592516280855,
-    "sma200": 2062.5622454127097,
+    "sma50": 2208.9637574956355,
+    "sma200": 2062.5883718795976,
     "support_30d": 1912.2734691708965,
     "resistance_30d": 2525.267261590238,
     "mark_price": 2476.25771051,
