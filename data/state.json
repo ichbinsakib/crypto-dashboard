@@ -2469,11 +2469,11 @@
       "symbol": "NEAR",
       "name": "NEAR Protocol",
       "price": 2.38,
-      "pct_24h": -1.47638,
-      "pct_7d": 4.5,
+      "pct_24h": -2.13066,
+      "pct_7d": 0.4,
       "support_30d": 1.5879597131538,
       "resistance_30d": 2.4848168147865453,
-      "as_of": "2026-09-15 13:48:12",
+      "as_of": "2026-09-15 16:25:20",
       "stale": false
     },
     "quant-network": {
@@ -2717,9 +2717,9 @@
       "stale": false
     },
     "morpho": {
-      "label": "\ud83d\udfe2 LEAN ACCUMULATE",
-      "status": "bullish",
-      "score": 2,
+      "label": "\ud83d\udfe1 HOLD / NEUTRAL",
+      "status": "neutral",
+      "score": 1,
       "rows": [
         [
           "Price vs. recent range",
@@ -2733,8 +2733,8 @@
         ],
         [
           "Market phase (best guess)",
-          "Basing near the bottom - phase where smart money accumulates",
-          2
+          "Established uptrend - phase where price marks up",
+          1
         ],
         [
           "Recent trend",
@@ -2752,16 +2752,16 @@
           0
         ]
       ],
-      "plain": "Leans toward a decent spot to slowly add (DCA) - not a strong signal, just a lean.",
+      "plain": "No real edge either way right now - fine to just wait and watch.",
       "id": "morpho",
       "symbol": "MORPHO",
       "name": "Morpho",
       "price": 2.13,
-      "pct_24h": -2.46177,
-      "pct_7d": -13.0,
+      "pct_24h": -3.2771,
+      "pct_7d": -12.6,
       "support_30d": 2.087582004697308,
       "resistance_30d": 2.9026212482639075,
-      "as_of": "2026-09-15 15:50:25",
+      "as_of": "2026-09-15 16:25:20",
       "stale": false
     },
     "memecore": {
@@ -3079,7 +3079,7 @@
         ],
         [
           "Stretch from long-term average",
-          "+42.6% above its long-term average - very stretched",
+          "+48.4% above its long-term average - very stretched",
           -2
         ],
         [
@@ -3092,12 +3092,12 @@
       "id": "arbitrum",
       "symbol": "ARB",
       "name": "Arbitrum",
-      "price": 0.143699,
-      "pct_24h": 6.78085,
-      "pct_7d": -19.7,
+      "price": 0.149561,
+      "pct_24h": 9.13687,
+      "pct_7d": -10.9,
       "support_30d": 0.07509613080433862,
       "resistance_30d": 0.18933387703114857,
-      "as_of": "2026-09-15 13:15:21",
+      "as_of": "2026-09-15 16:25:20",
       "stale": false
     },
     "dash": {
@@ -3341,7 +3341,9 @@
       "stale": false
     }
   },
-  "_strong_buy_state": {},
+  "_strong_buy_state": {
+    "scanner-15m:ENA": true
+  },
   "_pnl_tracker": {
     "open": {
       "15m:ENA": {
@@ -3349,10 +3351,10 @@
         "name": "Ethena",
         "tf": "15m",
         "entry": 0.1387,
-        "stop": 0.13727999999999999,
-        "target1": 0.14012,
-        "target2": 0.14154,
-        "opened_at": "2026-09-15T16:22:21.428681"
+        "stop": 0.13723333333333332,
+        "target1": 0.14016666666666666,
+        "target2": 0.14163333333333333,
+        "opened_at": "2026-09-15T16:27:15.998664"
       },
       "1h:JST": {
         "coin": "JST",
@@ -3362,7 +3364,7 @@
         "stop": 0.11199666666666666,
         "target1": 0.11312333333333333,
         "target2": 0.11368666666666666,
-        "opened_at": "2026-09-15T16:22:21.428681"
+        "opened_at": "2026-09-15T16:27:15.998664"
       }
     },
     "resolved": [
@@ -25985,6 +25987,32 @@
         "result": "win",
         "resolved_at": "2026-09-15T16:22:21.428681",
         "exit_price": 0.11586
+      },
+      {
+        "coin": "ENA",
+        "name": "Ethena",
+        "tf": "15m",
+        "entry": 0.1387,
+        "stop": 0.13727999999999999,
+        "target1": 0.14012,
+        "target2": 0.14154,
+        "opened_at": "2026-09-15T16:22:21.428681",
+        "result": "win",
+        "resolved_at": "2026-09-15T16:27:15.998664",
+        "exit_price": 0.1438
+      },
+      {
+        "coin": "JST",
+        "name": "JUST",
+        "tf": "1h",
+        "entry": 0.11256,
+        "stop": 0.11199666666666666,
+        "target1": 0.11312333333333333,
+        "target2": 0.11368666666666666,
+        "opened_at": "2026-09-15T16:22:21.428681",
+        "result": "win",
+        "resolved_at": "2026-09-15T16:27:15.998664",
+        "exit_price": 0.11584
       }
     ]
   },
@@ -25992,14 +26020,14 @@
     "key": "BTC",
     "name": "Bitcoin",
     "emoji": "\u20bf",
-    "price": 76360,
+    "price": 76433,
     "high_24h": 79530,
     "low_24h": 75595,
-    "pct_24h": -2.99907,
+    "pct_24h": -3.05405,
     "pct_7d": -2.6,
     "pct_30d": 21.4,
-    "sma50": 71668.91110950372,
-    "sma200": 70232.28810648764,
+    "sma50": 71670.77110352559,
+    "sma200": 70232.75310499311,
     "support_30d": 64491.345282946255,
     "resistance_30d": 81264.70153038795,
     "mark_price": 76989.5,
@@ -26014,14 +26042,14 @@
     "key": "ETH",
     "name": "Ethereum",
     "emoji": "\u039e",
-    "price": 2418.81,
+    "price": 2423.36,
     "high_24h": 2607.56,
     "low_24h": 2390.89,
-    "pct_24h": -4.08679,
+    "pct_24h": -4.16145,
     "pct_7d": -2.4,
     "pct_30d": 28.9,
-    "sma50": 2207.671041204094,
-    "sma200": 2062.265192806712,
+    "sma50": 2207.775314500953,
+    "sma200": 2062.2912611309266,
     "support_30d": 1912.2734691708965,
     "resistance_30d": 2525.267261590238,
     "mark_price": 2476.25771051,
