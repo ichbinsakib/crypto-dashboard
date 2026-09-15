@@ -1447,7 +1447,7 @@
         ],
         [
           "Stretch from long-term average",
-          "-13.1% vs its long-term average - not stretched either way",
+          "-12.6% vs its long-term average - not stretched either way",
           0
         ],
         [
@@ -1460,12 +1460,12 @@
       "id": "crypto-com-chain",
       "symbol": "CRO",
       "name": "Cronos",
-      "price": 0.056523,
-      "pct_24h": -4.78327,
+      "price": 0.056855,
+      "pct_24h": -3.32078,
       "pct_7d": -5.7,
       "support_30d": 0.04621382085807831,
       "resistance_30d": 0.06091104752771909,
-      "as_of": "2026-09-15 15:07:17",
+      "as_of": "2026-09-15 15:55:19",
       "stale": false
     },
     "ethereum-classic": {
@@ -1805,9 +1805,9 @@
       "stale": false
     },
     "ethena": {
-      "label": "\ud83d\udd34 DISTRIBUTION ZONE",
+      "label": "\ud83d\udd34 CAUTION - REDUCE NEW BUYS",
       "status": "bearish",
-      "score": -6,
+      "score": -3,
       "rows": [
         [
           "Price vs. recent range",
@@ -1821,8 +1821,8 @@
         ],
         [
           "Market phase (best guess)",
-          "Very extended after a big run - phase where smart money sells",
-          -2
+          "Established uptrend - phase where price marks up",
+          1
         ],
         [
           "Recent trend",
@@ -1831,7 +1831,7 @@
         ],
         [
           "Stretch from long-term average",
-          "+41.5% above its long-term average - very stretched",
+          "+39.9% above its long-term average - very stretched",
           -2
         ],
         [
@@ -1840,16 +1840,16 @@
           0
         ]
       ],
-      "plain": "Looks stretched and euphoric - historically the zone where smart money sells, not buys.",
+      "plain": "Getting risky - I'd hold off on new buys until this cools down.",
       "id": "ethena",
       "symbol": "ENA",
       "name": "Ethena",
-      "price": 0.145092,
-      "pct_24h": 3.44551,
+      "price": 0.143459,
+      "pct_24h": 0.91539,
       "pct_7d": -11.7,
       "support_30d": 0.08269090736599788,
       "resistance_30d": 0.17616469272611565,
-      "as_of": "2026-09-15 15:30:29",
+      "as_of": "2026-09-15 15:55:19",
       "stale": false
     },
     "bitcoin-cash": {
@@ -2023,7 +2023,7 @@
         ],
         [
           "Stretch from long-term average",
-          "+70.6% above its long-term average - very stretched",
+          "+70.9% above its long-term average - very stretched",
           -2
         ],
         [
@@ -2036,12 +2036,12 @@
       "id": "uniswap",
       "symbol": "UNI",
       "name": "Uniswap",
-      "price": 6.34,
-      "pct_24h": -0.3095,
+      "price": 6.35,
+      "pct_24h": -0.45931,
       "pct_7d": -9.5,
       "support_30d": 3.2846390150092466,
       "resistance_30d": 7.291165865788254,
-      "as_of": "2026-09-15 15:40:25",
+      "as_of": "2026-09-15 15:55:19",
       "stale": false
     },
     "pi-network": {
@@ -3341,9 +3341,21 @@
       "stale": false
     }
   },
-  "_strong_buy_state": {},
+  "_strong_buy_state": {
+    "scanner-15m:ENA": true
+  },
   "_pnl_tracker": {
     "open": {
+      "15m:ENA": {
+        "coin": "ENA",
+        "name": "Ethena",
+        "tf": "15m",
+        "entry": 0.1387,
+        "stop": 0.13731,
+        "target1": 0.14009,
+        "target2": 0.14148,
+        "opened_at": "2026-09-15T15:57:19.355522"
+      },
       "1h:JST": {
         "coin": "JST",
         "name": "JUST",
@@ -3352,7 +3364,7 @@
         "stop": 0.11184416666666666,
         "target1": 0.11303583333333334,
         "target2": 0.11363166666666667,
-        "opened_at": "2026-09-15T15:51:42.026086"
+        "opened_at": "2026-09-15T15:57:19.355522"
       }
     },
     "resolved": [
@@ -25832,6 +25844,19 @@
         "result": "win",
         "resolved_at": "2026-09-15T15:51:42.026086",
         "exit_price": 0.11562
+      },
+      {
+        "coin": "JST",
+        "name": "JUST",
+        "tf": "1h",
+        "entry": 0.11244,
+        "stop": 0.11184416666666666,
+        "target1": 0.11303583333333334,
+        "target2": 0.11363166666666667,
+        "opened_at": "2026-09-15T15:51:42.026086",
+        "result": "win",
+        "resolved_at": "2026-09-15T15:57:19.355522",
+        "exit_price": 0.11548
       }
     ]
   },
@@ -25839,14 +25864,14 @@
     "key": "BTC",
     "name": "Bitcoin",
     "emoji": "\u20bf",
-    "price": 76404,
+    "price": 76517,
     "high_24h": 79530,
     "low_24h": 75595,
-    "pct_24h": -2.62823,
+    "pct_24h": -2.62245,
     "pct_7d": -2.6,
     "pct_30d": 20.5,
-    "sma50": 71670.28725448129,
-    "sma200": 70232.63214273204,
+    "sma50": 71672.86212268015,
+    "sma200": 70233.27585978176,
     "support_30d": 64491.345282946255,
     "resistance_30d": 81264.70153038795,
     "mark_price": 76989.5,
@@ -25861,14 +25886,14 @@
     "key": "ETH",
     "name": "Ethereum",
     "emoji": "\u039e",
-    "price": 2426.32,
+    "price": 2427.55,
     "high_24h": 2607.56,
     "low_24h": 2390.89,
-    "pct_24h": -3.17101,
+    "pct_24h": -3.21808,
     "pct_7d": -2.2,
     "pct_30d": 27.9,
-    "sma50": 2207.8556477644765,
-    "sma200": 2062.3113444468077,
+    "sma50": 2207.8898718734185,
+    "sma200": 2062.319900474043,
     "support_30d": 1912.2734691708965,
     "resistance_30d": 2525.267261590238,
     "mark_price": 2476.25771051,
