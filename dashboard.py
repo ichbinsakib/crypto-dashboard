@@ -2153,8 +2153,39 @@ if ('serviceWorker' in navigator) {{
     return html, spot_signals_by_coin
 
 
+def _probe_exchange_apis():
+    """TEMPORARY diagnostic -- checks from the actual runner whether Binance/Bybit's public
+    klines endpoints are reachable (vs. the HTTP 451 geo-block Binance returns from GitHub
+    Actions IPs, which is why this project uses Kraken). Writes results to
+    data/exchange_probe.json so they can be read back without needing Actions log access.
+    Remove this function and its call site once the exchange-source decision is made."""
+    import urllib.request
+    import urllib.error
+    probes = {
+        "binance": "https://api.binance.com/api/v3/klines?symbol=BTCUSDT&interval=15m&limit=2",
+        "binance_us": "https://api.binance.us/api/v3/klines?symbol=BTCUSDT&interval=15m&limit=2",
+        "bybit": "https://api.bybit.com/v5/market/kline?category=spot&symbol=BTCUSDT&interval=15&limit=2",
+    }
+    results = {}
+    for name, url in probes.items():
+        try:
+            req = urllib.request.Request(url, headers={"User-Agent": "Mozilla/5.0"})
+            with urllib.request.urlopen(req, timeout=15) as resp:
+                body = resp.read(300).decode("utf-8", errors="replace")
+                results[name] = {"http_status": resp.status, "body_preview": body}
+        except urllib.error.HTTPError as e:
+            results[name] = {"http_status": e.code, "body_preview": e.read(300).decode("utf-8", errors="replace")}
+        except Exception as e:
+            results[name] = {"error": str(e)}
+    results["_probed_at"] = datetime.datetime.now().isoformat()
+    with open(os.path.join(DATA_DIR, "exchange_probe.json"), "w") as f:
+        json.dump(results, f, indent=2)
+    log(f"Exchange API probe results: {results}")
+
+
 def main():
     log("--- run start ---")
+    _probe_exchange_apis()
     state = load_state()
     generated_at = datetime.datetime.now().strftime("%Y-%m-%d %H:%M:%S")
 
