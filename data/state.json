@@ -391,7 +391,7 @@
         ],
         [
           "Stretch from long-term average",
-          "+128.9% above its long-term average - very stretched",
+          "+127.8% above its long-term average - very stretched",
           -2
         ],
         [
@@ -404,12 +404,12 @@
       "id": "zcash",
       "symbol": "ZEC",
       "name": "Zcash",
-      "price": 1121.74,
-      "pct_24h": -6.21782,
-      "pct_7d": -3.6,
+      "price": 1116.28,
+      "pct_24h": -5.18125,
+      "pct_7d": -2.1,
       "support_30d": 508.5419923409376,
       "resistance_30d": 1244.287571383468,
-      "as_of": "2026-09-15 19:50:28",
+      "as_of": "2026-09-15 21:35:20",
       "stale": false
     },
     "rain": {
@@ -1652,12 +1652,12 @@
       "id": "litecoin",
       "symbol": "LTC",
       "name": "Litecoin",
-      "price": 51.13,
-      "pct_24h": -4.73898,
+      "price": 51.16,
+      "pct_24h": -4.6964,
       "pct_7d": -5.2,
       "support_30d": 44.34767980799559,
       "resistance_30d": 55.20228907963863,
-      "as_of": "2026-09-15 21:30:28",
+      "as_of": "2026-09-15 21:35:20",
       "stale": false
     },
     "bitget-token": {
@@ -2767,7 +2767,7 @@
     "memecore": {
       "label": "\ud83d\udfe1 HOLD / NEUTRAL",
       "status": "neutral",
-      "score": 0,
+      "score": -1,
       "rows": [
         [
           "Price vs. recent range",
@@ -2786,12 +2786,12 @@
         ],
         [
           "Recent trend",
-          "Chopping sideways - no clear trend",
-          0
+          "Trending down - avoid catching a falling knife",
+          -1
         ],
         [
           "Stretch from long-term average",
-          "-46.7% below its long-term average - confirmed downtrend",
+          "-46.2% below its long-term average - confirmed downtrend",
           -1
         ],
         [
@@ -2804,12 +2804,12 @@
       "id": "memecore",
       "symbol": "M",
       "name": "MemeCore",
-      "price": 1.11,
-      "pct_24h": 1.72663,
-      "pct_7d": -5.5,
+      "price": 1.12,
+      "pct_24h": 2.15442,
+      "pct_7d": -8.5,
       "support_30d": 1.0402044506518406,
       "resistance_30d": 1.2453913363052769,
-      "as_of": "2026-09-15 16:00:52",
+      "as_of": "2026-09-15 21:35:20",
       "stale": false
     },
     "aave": {
@@ -3349,10 +3349,10 @@
         "name": "Zcash",
         "tf": "1h",
         "entry": 1086.2,
-        "stop": 1064.8575,
-        "target1": 1107.5425,
-        "target2": 1128.885,
-        "opened_at": "2026-09-15T21:32:30.055097"
+        "stop": 1064.81,
+        "target1": 1107.5900000000001,
+        "target2": 1128.9800000000002,
+        "opened_at": "2026-09-15T21:37:21.766420"
       }
     },
     "resolved": [
@@ -27522,6 +27522,19 @@
         "result": "win",
         "resolved_at": "2026-09-15T21:32:30.055097",
         "exit_price": 1116.56
+      },
+      {
+        "coin": "ZEC",
+        "name": "Zcash",
+        "tf": "1h",
+        "entry": 1086.2,
+        "stop": 1064.8575,
+        "target1": 1107.5425,
+        "target2": 1128.885,
+        "opened_at": "2026-09-15T21:32:30.055097",
+        "result": "win",
+        "resolved_at": "2026-09-15T21:37:21.766420",
+        "exit_price": 1115.4
       }
     ]
   },
@@ -27529,14 +27542,14 @@
     "key": "BTC",
     "name": "Bitcoin",
     "emoji": "\u20bf",
-    "price": 75661,
+    "price": 75664,
     "high_24h": 78826,
     "low_24h": 75038,
-    "pct_24h": -4.10817,
+    "pct_24h": -4.11955,
     "pct_7d": -3.2,
     "pct_30d": 20.4,
-    "sma50": 71655.7086169261,
-    "sma200": 70228.98748334324,
+    "sma50": 71655.32851641794,
+    "sma200": 70228.8924582162,
     "support_30d": 64491.345282946255,
     "resistance_30d": 81264.70153038795,
     "mark_price": 76989.5,
@@ -27551,14 +27564,14 @@
     "key": "ETH",
     "name": "Ethereum",
     "emoji": "\u039e",
-    "price": 2396.74,
+    "price": 2398.4,
     "high_24h": 2554.67,
     "low_24h": 2361.16,
-    "pct_24h": -6.22717,
+    "pct_24h": -6.11358,
     "pct_7d": -3.0,
     "pct_30d": 27.7,
-    "sma50": 2207.2827848836077,
-    "sma200": 2062.1681287265906,
+    "sma50": 2207.2811626165476,
+    "sma200": 2062.1677231598255,
     "support_30d": 1912.2734691708965,
     "resistance_30d": 2525.267261590238,
     "mark_price": 2476.25771051,
