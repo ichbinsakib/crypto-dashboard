@@ -487,7 +487,7 @@
         ],
         [
           "Stretch from long-term average",
-          "+23.4% above its long-term average - a bit stretched",
+          "+23.0% above its long-term average - a bit stretched",
           -1
         ],
         [
@@ -500,12 +500,12 @@
       "id": "chainlink",
       "symbol": "LINK",
       "name": "Chainlink",
-      "price": 11.41,
-      "pct_24h": -0.02715,
-      "pct_7d": -9.9,
+      "price": 11.38,
+      "pct_24h": -0.19223,
+      "pct_7d": -10.0,
       "support_30d": 9.529138725304293,
       "resistance_30d": 13.237155745219605,
-      "as_of": "2026-09-15 07:20:26",
+      "as_of": "2026-09-15 10:15:20",
       "stale": false
     },
     "whitebit": {
@@ -1735,7 +1735,7 @@
         ],
         [
           "Stretch from long-term average",
-          "-16.4% below its long-term average - confirmed downtrend",
+          "-16.0% below its long-term average - confirmed downtrend",
           -1
         ],
         [
@@ -1748,12 +1748,12 @@
       "id": "sui",
       "symbol": "SUI",
       "name": "Sui",
-      "price": 0.708192,
-      "pct_24h": -2.13923,
-      "pct_7d": -13.4,
+      "price": 0.711036,
+      "pct_24h": -1.93912,
+      "pct_7d": -13.1,
       "support_30d": 0.6514311908607086,
       "resistance_30d": 0.8499161763231283,
-      "as_of": "2026-09-15 09:05:19",
+      "as_of": "2026-09-15 10:15:20",
       "stale": false
     },
     "lighter": {
@@ -1783,7 +1783,7 @@
         ],
         [
           "Stretch from long-term average",
-          "+141.7% above its long-term average - very stretched",
+          "+138.5% above its long-term average - very stretched",
           -2
         ],
         [
@@ -1796,12 +1796,12 @@
       "id": "lighter",
       "symbol": "LIT",
       "name": "Lighter",
-      "price": 4.43,
-      "pct_24h": -4.3327,
-      "pct_7d": -3.8,
+      "price": 4.37,
+      "pct_24h": -4.3493,
+      "pct_7d": -6.8,
       "support_30d": 2.3314708334391883,
       "resistance_30d": 4.827528632102638,
-      "as_of": "2026-09-15 09:00:37",
+      "as_of": "2026-09-15 10:15:20",
       "stale": false
     },
     "ethena": {
@@ -3362,7 +3362,7 @@
         "stop": 7.334083333333334,
         "target1": 7.4119166666666665,
         "target2": 7.450833333333333,
-        "opened_at": "2026-09-15T10:13:26.945557"
+        "opened_at": "2026-09-15T10:17:16.542163"
       }
     },
     "resolved": [
@@ -24854,6 +24854,19 @@
         "result": "win",
         "resolved_at": "2026-09-15T10:13:26.945557",
         "exit_price": 7.432
+      },
+      {
+        "coin": "ETC",
+        "name": "Ethereum Classic",
+        "tf": "1h",
+        "entry": 7.373,
+        "stop": 7.334083333333334,
+        "target1": 7.4119166666666665,
+        "target2": 7.450833333333333,
+        "opened_at": "2026-09-15T10:13:26.945557",
+        "result": "win",
+        "resolved_at": "2026-09-15T10:17:16.542163",
+        "exit_price": 7.432
       }
     ]
   },
@@ -24861,14 +24874,14 @@
     "key": "BTC",
     "name": "Bitcoin",
     "emoji": "\u20bf",
-    "price": 76964,
+    "price": 76998,
     "high_24h": 79530,
     "low_24h": 76682,
-    "pct_24h": -1.37738,
+    "pct_24h": -1.28867,
     "pct_7d": -1.8,
     "pct_30d": 22.1,
-    "sma50": 71681.75997653592,
-    "sma200": 70235.5003232457,
+    "sma50": 71682.18173143557,
+    "sma200": 70235.60576197061,
     "support_30d": 64491.345282946255,
     "resistance_30d": 81264.70153038795,
     "mark_price": 76989.5,
@@ -24883,14 +24896,14 @@
     "key": "ETH",
     "name": "Ethereum",
     "emoji": "\u039e",
-    "price": 2476.26,
+    "price": 2475.86,
     "high_24h": 2607.56,
     "low_24h": 2464.96,
-    "pct_24h": -1.72143,
+    "pct_24h": -1.69486,
     "pct_7d": -0.1,
     "pct_30d": 31.7,
-    "sma50": 2208.857254676185,
-    "sma200": 2062.561746174735,
+    "sma50": 2208.8821850458116,
+    "sma200": 2062.5679787671415,
     "support_30d": 1912.2734691708965,
     "resistance_30d": 2525.267261590238,
     "mark_price": 2476.25771051,
