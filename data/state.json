@@ -871,7 +871,7 @@
         ],
         [
           "Stretch from long-term average",
-          "+2.1% vs its long-term average - not stretched either way",
+          "+1.5% vs its long-term average - not stretched either way",
           0
         ],
         [
@@ -884,12 +884,12 @@
       "id": "pepe",
       "symbol": "PEPE",
       "name": "Pepe",
-      "price": 3.36e-06,
-      "pct_24h": -5.05782,
+      "price": 3.34e-06,
+      "pct_24h": -5.13343,
       "pct_7d": -7.4,
       "support_30d": 2.582769748064196e-06,
       "resistance_30d": 4.122123035488615e-06,
-      "as_of": "2026-09-15 19:15:23",
+      "as_of": "2026-09-15 19:45:22",
       "stale": false
     },
     "avalanche-2": {
@@ -2167,7 +2167,7 @@
         ],
         [
           "Stretch from long-term average",
-          "-33.1% below its long-term average - confirmed downtrend",
+          "-32.9% below its long-term average - confirmed downtrend",
           -1
         ],
         [
@@ -2180,12 +2180,12 @@
       "id": "canton-network",
       "symbol": "CC",
       "name": "Canton",
-      "price": 0.092223,
-      "pct_24h": -5.68572,
+      "price": 0.092444,
+      "pct_24h": -5.35127,
       "pct_7d": -13.8,
       "support_30d": 0.09051839499501885,
       "resistance_30d": 0.12396615653575341,
-      "as_of": "2026-09-15 19:00:37",
+      "as_of": "2026-09-15 19:45:22",
       "stale": false
     },
     "internet-computer": {
@@ -2335,7 +2335,7 @@
     "sky": {
       "label": "\ud83d\udfe1 HOLD / NEUTRAL",
       "status": "neutral",
-      "score": 1,
+      "score": 0,
       "rows": [
         [
           "Price vs. recent range",
@@ -2354,12 +2354,12 @@
         ],
         [
           "Recent trend",
-          "Chopping sideways - no clear trend",
-          0
+          "Trending down - avoid catching a falling knife",
+          -1
         ],
         [
           "Stretch from long-term average",
-          "-6.3% vs its long-term average - not stretched either way",
+          "-7.8% vs its long-term average - not stretched either way",
           0
         ],
         [
@@ -2372,12 +2372,12 @@
       "id": "sky",
       "symbol": "SKY",
       "name": "Sky",
-      "price": 0.062543,
-      "pct_24h": -2.12878,
-      "pct_7d": -7.6,
+      "price": 0.061482,
+      "pct_24h": -4.12144,
+      "pct_7d": -8.8,
       "support_30d": 0.05395967347909224,
       "resistance_30d": 0.07314868186988309,
-      "as_of": "2026-09-15 18:20:25",
+      "as_of": "2026-09-15 19:45:22",
       "stale": false
     },
     "shiba-inu": {
@@ -3354,16 +3354,6 @@
         "target2": 5.1275000000000005e-06,
         "opened_at": "2026-09-15T18:44:08.354895"
       },
-      "15m:ENA": {
-        "coin": "ENA",
-        "name": "Ethena",
-        "tf": "15m",
-        "entry": 0.1355,
-        "stop": 0.13332666666666668,
-        "target1": 0.13767333333333334,
-        "target2": 0.13984666666666667,
-        "opened_at": "2026-09-15T19:42:20.489582"
-      },
       "1h:BNB": {
         "coin": "BNB",
         "name": "BNB",
@@ -3372,17 +3362,17 @@
         "stop": 701.895,
         "target1": 712.185,
         "target2": 717.3299999999999,
-        "opened_at": "2026-09-15T19:42:20.489582"
+        "opened_at": "2026-09-15T19:47:18.470281"
       },
       "1h:ZEC": {
         "coin": "ZEC",
         "name": "Zcash",
         "tf": "1h",
         "entry": 1086.2,
-        "stop": 1064.1783333333333,
-        "target1": 1108.2216666666668,
-        "target2": 1130.2433333333336,
-        "opened_at": "2026-09-15T19:42:20.489582"
+        "stop": 1063.84625,
+        "target1": 1108.55375,
+        "target2": 1130.9075,
+        "opened_at": "2026-09-15T19:47:18.470281"
       }
     },
     "resolved": [
@@ -27019,6 +27009,45 @@
         "result": "win",
         "resolved_at": "2026-09-15T19:42:20.489582",
         "exit_price": 1129.19
+      },
+      {
+        "coin": "ENA",
+        "name": "Ethena",
+        "tf": "15m",
+        "entry": 0.1355,
+        "stop": 0.13332666666666668,
+        "target1": 0.13767333333333334,
+        "target2": 0.13984666666666667,
+        "opened_at": "2026-09-15T19:42:20.489582",
+        "result": "win",
+        "resolved_at": "2026-09-15T19:47:18.470281",
+        "exit_price": 0.14
+      },
+      {
+        "coin": "BNB",
+        "name": "BNB",
+        "tf": "1h",
+        "entry": 707.04,
+        "stop": 701.895,
+        "target1": 712.185,
+        "target2": 717.3299999999999,
+        "opened_at": "2026-09-15T19:42:20.489582",
+        "result": "win",
+        "resolved_at": "2026-09-15T19:47:18.470281",
+        "exit_price": 717.95
+      },
+      {
+        "coin": "ZEC",
+        "name": "Zcash",
+        "tf": "1h",
+        "entry": 1086.2,
+        "stop": 1064.1783333333333,
+        "target1": 1108.2216666666668,
+        "target2": 1130.2433333333336,
+        "opened_at": "2026-09-15T19:42:20.489582",
+        "result": "win",
+        "resolved_at": "2026-09-15T19:47:18.470281",
+        "exit_price": 1123.29
       }
     ]
   },
@@ -27026,14 +27055,14 @@
     "key": "BTC",
     "name": "Bitcoin",
     "emoji": "\u20bf",
-    "price": 75899,
+    "price": 75883,
     "high_24h": 79530,
     "low_24h": 75038,
-    "pct_24h": -3.90221,
+    "pct_24h": -4.07988,
     "pct_7d": -3.2,
     "pct_30d": 20.4,
-    "sma50": 71659.32154637418,
-    "sma200": 70229.89071570527,
+    "sma50": 71659.49602600848,
+    "sma200": 70229.93433561384,
     "support_30d": 64491.345282946255,
     "resistance_30d": 81264.70153038795,
     "mark_price": 76989.5,
@@ -27048,14 +27077,14 @@
     "key": "ETH",
     "name": "Ethereum",
     "emoji": "\u039e",
-    "price": 2404.43,
+    "price": 2403.94,
     "high_24h": 2607.56,
     "low_24h": 2361.16,
-    "pct_24h": -5.24183,
+    "pct_24h": -5.47263,
     "pct_7d": -3.5,
     "pct_30d": 27.5,
-    "sma50": 2207.384274553413,
-    "sma200": 2062.193501144042,
+    "sma50": 2207.398373924608,
+    "sma200": 2062.197025986841,
     "support_30d": 1912.2734691708965,
     "resistance_30d": 2525.267261590238,
     "mark_price": 2476.25771051,
