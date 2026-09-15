@@ -679,7 +679,7 @@
         ],
         [
           "Stretch from long-term average",
-          "-10.2% vs its long-term average - not stretched either way",
+          "-9.9% vs its long-term average - not stretched either way",
           0
         ],
         [
@@ -692,12 +692,12 @@
       "id": "cardano",
       "symbol": "ADA",
       "name": "Cardano",
-      "price": 0.195759,
-      "pct_24h": -8.68561,
+      "price": 0.196376,
+      "pct_24h": -8.14966,
       "pct_7d": -10.7,
       "support_30d": 0.1741249817054162,
       "resistance_30d": 0.2291047455940254,
-      "as_of": "2026-09-15 20:45:21",
+      "as_of": "2026-09-15 20:50:23",
       "stale": false
     },
     "stellar": {
@@ -1639,7 +1639,7 @@
         ],
         [
           "Stretch from long-term average",
-          "+1.8% vs its long-term average - not stretched either way",
+          "+1.9% vs its long-term average - not stretched either way",
           0
         ],
         [
@@ -1652,12 +1652,12 @@
       "id": "litecoin",
       "symbol": "LTC",
       "name": "Litecoin",
-      "price": 51.32,
-      "pct_24h": -5.35219,
+      "price": 51.37,
+      "pct_24h": -4.97355,
       "pct_7d": -4.3,
       "support_30d": 44.34767980799559,
       "resistance_30d": 55.20228907963863,
-      "as_of": "2026-09-15 20:40:25",
+      "as_of": "2026-09-15 20:50:23",
       "stale": false
     },
     "bitget-token": {
@@ -2531,7 +2531,7 @@
       "rows": [
         [
           "Price vs. recent range",
-          "Near its 30-day low (~$4,289.72) - historically a better entry",
+          "Near its 30-day low (~$4,288.96) - historically a better entry",
           2
         ],
         [
@@ -2551,7 +2551,7 @@
         ],
         [
           "Stretch from long-term average",
-          "-3.7% vs its long-term average - not stretched either way",
+          "-3.8% vs its long-term average - not stretched either way",
           0
         ],
         [
@@ -2564,12 +2564,12 @@
       "id": "tether-gold",
       "symbol": "XAUT",
       "name": "Tether Gold",
-      "price": 4293.78,
-      "pct_24h": 0.18521,
+      "price": 4289.02,
+      "pct_24h": -0.22458,
       "pct_7d": -1.9,
-      "support_30d": 4289.718494392626,
+      "support_30d": 4288.9596605126635,
       "resistance_30d": 4662.510537821146,
-      "as_of": "2026-09-15 20:05:17",
+      "as_of": "2026-09-15 20:50:23",
       "stale": false
     },
     "bitway": {
@@ -3344,16 +3344,6 @@
   "_strong_buy_state": {},
   "_pnl_tracker": {
     "open": {
-      "1h:SHIB": {
-        "coin": "SHIB",
-        "name": "Shiba Inu",
-        "tf": "1h",
-        "entry": 4.91e-06,
-        "stop": 4.847083333333333e-06,
-        "target1": 4.972916666666666e-06,
-        "target2": 5.035833333333333e-06,
-        "opened_at": "2026-09-15T20:22:26.329681"
-      },
       "1h:BNB": {
         "coin": "BNB",
         "name": "BNB",
@@ -3362,7 +3352,7 @@
         "stop": 701.9020833333333,
         "target1": 712.1779166666666,
         "target2": 717.3158333333333,
-        "opened_at": "2026-09-15T20:47:23.755262"
+        "opened_at": "2026-09-15T20:52:27.988711"
       },
       "1h:ZEC": {
         "coin": "ZEC",
@@ -3372,7 +3362,7 @@
         "stop": 1064.2491666666667,
         "target1": 1108.1508333333334,
         "target2": 1130.1016666666667,
-        "opened_at": "2026-09-15T20:47:23.755262"
+        "opened_at": "2026-09-15T20:52:27.988711"
       }
     },
     "resolved": [
@@ -27373,6 +27363,45 @@
         "result": "win",
         "resolved_at": "2026-09-15T20:47:23.755262",
         "exit_price": 1125.05
+      },
+      {
+        "coin": "SHIB",
+        "name": "Shiba Inu",
+        "tf": "1h",
+        "entry": 4.91e-06,
+        "stop": 4.847083333333333e-06,
+        "target1": 4.972916666666666e-06,
+        "target2": 5.035833333333333e-06,
+        "opened_at": "2026-09-15T20:22:26.329681",
+        "result": "win",
+        "resolved_at": "2026-09-15T20:52:27.988711",
+        "exit_price": 4.98e-06
+      },
+      {
+        "coin": "BNB",
+        "name": "BNB",
+        "tf": "1h",
+        "entry": 707.04,
+        "stop": 701.9020833333333,
+        "target1": 712.1779166666666,
+        "target2": 717.3158333333333,
+        "opened_at": "2026-09-15T20:47:23.755262",
+        "result": "win",
+        "resolved_at": "2026-09-15T20:52:27.988711",
+        "exit_price": 716.25
+      },
+      {
+        "coin": "ZEC",
+        "name": "Zcash",
+        "tf": "1h",
+        "entry": 1086.2,
+        "stop": 1064.2491666666667,
+        "target1": 1108.1508333333334,
+        "target2": 1130.1016666666667,
+        "opened_at": "2026-09-15T20:47:23.755262",
+        "result": "win",
+        "resolved_at": "2026-09-15T20:52:27.988711",
+        "exit_price": 1122.64
       }
     ]
   },
@@ -27380,14 +27409,14 @@
     "key": "BTC",
     "name": "Bitcoin",
     "emoji": "\u20bf",
-    "price": 75772,
+    "price": 75836,
     "high_24h": 79096,
     "low_24h": 75038,
-    "pct_24h": -4.49717,
+    "pct_24h": -4.3354,
     "pct_7d": -3.0,
     "pct_30d": 20.6,
-    "sma50": 71657.37075980371,
-    "sma200": 70229.40301906265,
+    "sma50": 71659.5058103622,
+    "sma200": 70229.93678170227,
     "support_30d": 64491.345282946255,
     "resistance_30d": 81264.70153038795,
     "mark_price": 76989.5,
@@ -27402,14 +27431,14 @@
     "key": "ETH",
     "name": "Ethereum",
     "emoji": "\u039e",
-    "price": 2402.64,
+    "price": 2405.21,
     "high_24h": 2570.03,
     "low_24h": 2361.16,
-    "pct_24h": -7.15764,
+    "pct_24h": -6.94175,
     "pct_7d": -3.0,
     "pct_30d": 28.1,
-    "sma50": 2207.387513808728,
-    "sma200": 2062.1943109578706,
+    "sma50": 2207.451562118885,
+    "sma200": 2062.2103230354096,
     "support_30d": 1912.2734691708965,
     "resistance_30d": 2525.267261590238,
     "mark_price": 2476.25771051,
