@@ -2023,7 +2023,7 @@
         ],
         [
           "Stretch from long-term average",
-          "+80.0% above its long-term average - very stretched",
+          "+78.4% above its long-term average - very stretched",
           -2
         ],
         [
@@ -2036,12 +2036,12 @@
       "id": "uniswap",
       "symbol": "UNI",
       "name": "Uniswap",
-      "price": 6.69,
-      "pct_24h": 6.03652,
-      "pct_7d": -5.5,
+      "price": 6.63,
+      "pct_24h": 3.6565,
+      "pct_7d": -3.7,
       "support_30d": 3.2846390150092466,
       "resistance_30d": 7.291165865788254,
-      "as_of": "2026-09-15 11:55:20",
+      "as_of": "2026-09-15 13:45:22",
       "stale": false
     },
     "pi-network": {
@@ -2359,7 +2359,7 @@
         ],
         [
           "Stretch from long-term average",
-          "-6.8% vs its long-term average - not stretched either way",
+          "-7.8% vs its long-term average - not stretched either way",
           0
         ],
         [
@@ -2372,12 +2372,12 @@
       "id": "sky",
       "symbol": "SKY",
       "name": "Sky",
-      "price": 0.062193,
-      "pct_24h": -1.15545,
-      "pct_7d": -7.9,
+      "price": 0.061502,
+      "pct_24h": -2.64965,
+      "pct_7d": -7.4,
       "support_30d": 0.05395967347909224,
       "resistance_30d": 0.07314868186988309,
-      "as_of": "2026-09-15 12:00:40",
+      "as_of": "2026-09-15 13:45:22",
       "stale": false
     },
     "shiba-inu": {
@@ -2887,7 +2887,7 @@
         ],
         [
           "Stretch from long-term average",
-          "+27.5% above its long-term average - a bit stretched",
+          "+26.8% above its long-term average - a bit stretched",
           -1
         ],
         [
@@ -2900,12 +2900,12 @@
       "id": "okb",
       "symbol": "OKB",
       "name": "OKB",
-      "price": 112.63,
-      "pct_24h": -1.03795,
-      "pct_7d": -2.7,
+      "price": 111.96,
+      "pct_24h": -1.59838,
+      "pct_7d": -2.2,
       "support_30d": 98.99707739944992,
       "resistance_30d": 115.8310797114581,
-      "as_of": "2026-09-15 12:10:24",
+      "as_of": "2026-09-15 13:45:22",
       "stale": false
     },
     "just": {
@@ -3342,7 +3342,6 @@
     }
   },
   "_strong_buy_state": {
-    "scanner-15m:HBAR": true,
     "scanner-1h:JST": true
   },
   "_pnl_tracker": {
@@ -3352,20 +3351,20 @@
         "name": "Stellar",
         "tf": "15m",
         "entry": 0.190474,
-        "stop": 0.18888863333333333,
-        "target1": 0.19205936666666668,
-        "target2": 0.19364473333333335,
-        "opened_at": "2026-09-15T13:43:30.192461"
+        "stop": 0.18887156666666668,
+        "target1": 0.19207643333333332,
+        "target2": 0.19367886666666664,
+        "opened_at": "2026-09-15T13:47:19.890639"
       },
       "15m:HBAR": {
         "coin": "HBAR",
         "name": "Hedera",
         "tf": "15m",
         "entry": 0.07628,
-        "stop": 0.075903,
-        "target1": 0.076657,
-        "target2": 0.077034,
-        "opened_at": "2026-09-15T13:43:30.192461"
+        "stop": 0.07590633333333334,
+        "target1": 0.07665366666666666,
+        "target2": 0.07702733333333332,
+        "opened_at": "2026-09-15T13:47:19.890639"
       },
       "1h:JST": {
         "coin": "JST",
@@ -3375,7 +3374,7 @@
         "stop": 0.11215208333333333,
         "target1": 0.11282791666666668,
         "target2": 0.11316583333333335,
-        "opened_at": "2026-09-15T13:43:30.192461"
+        "opened_at": "2026-09-15T13:47:19.890639"
       }
     },
     "resolved": [
@@ -25231,6 +25230,45 @@
         "result": "win",
         "resolved_at": "2026-09-15T13:43:30.192461",
         "exit_price": 0.11545
+      },
+      {
+        "coin": "XLM",
+        "name": "Stellar",
+        "tf": "15m",
+        "entry": 0.190474,
+        "stop": 0.18888863333333333,
+        "target1": 0.19205936666666668,
+        "target2": 0.19364473333333335,
+        "opened_at": "2026-09-15T13:43:30.192461",
+        "result": "win",
+        "resolved_at": "2026-09-15T13:47:19.890639",
+        "exit_price": 0.194152
+      },
+      {
+        "coin": "HBAR",
+        "name": "Hedera",
+        "tf": "15m",
+        "entry": 0.07628,
+        "stop": 0.075903,
+        "target1": 0.076657,
+        "target2": 0.077034,
+        "opened_at": "2026-09-15T13:43:30.192461",
+        "result": "win",
+        "resolved_at": "2026-09-15T13:47:19.890639",
+        "exit_price": 0.07818
+      },
+      {
+        "coin": "JST",
+        "name": "JUST",
+        "tf": "1h",
+        "entry": 0.11249,
+        "stop": 0.11215208333333333,
+        "target1": 0.11282791666666668,
+        "target2": 0.11316583333333335,
+        "opened_at": "2026-09-15T13:43:30.192461",
+        "result": "win",
+        "resolved_at": "2026-09-15T13:47:19.890639",
+        "exit_price": 0.11545
       }
     ]
   },
@@ -25238,14 +25276,14 @@
     "key": "BTC",
     "name": "Bitcoin",
     "emoji": "\u20bf",
-    "price": 76416,
+    "price": 76389,
     "high_24h": 79530,
     "low_24h": 76682,
-    "pct_24h": -2.09343,
+    "pct_24h": -2.2061,
     "pct_7d": -1.9,
     "pct_30d": 22.1,
-    "sma50": 71668.38668284664,
-    "sma200": 70232.15699982338,
+    "sma50": 71668.20983592604,
+    "sma200": 70232.11278809323,
     "support_30d": 64491.345282946255,
     "resistance_30d": 81264.70153038795,
     "mark_price": 76989.5,
@@ -25260,14 +25298,14 @@
     "key": "ETH",
     "name": "Ethereum",
     "emoji": "\u039e",
-    "price": 2448.0,
+    "price": 2447.18,
     "high_24h": 2607.56,
     "low_24h": 2464.96,
-    "pct_24h": -2.26681,
+    "pct_24h": -2.42714,
     "pct_7d": 0.2,
     "pct_30d": 31.9,
-    "sma50": 2208.1667659194427,
-    "sma200": 2062.3891239855493,
+    "sma50": 2208.230386702353,
+    "sma200": 2062.405029181277,
     "support_30d": 1912.2734691708965,
     "resistance_30d": 2525.267261590238,
     "mark_price": 2476.25771051,
