@@ -871,7 +871,7 @@
         ],
         [
           "Stretch from long-term average",
-          "+5.4% vs its long-term average - not stretched either way",
+          "+6.1% vs its long-term average - not stretched either way",
           0
         ],
         [
@@ -884,12 +884,12 @@
       "id": "pepe",
       "symbol": "PEPE",
       "name": "Pepe",
-      "price": 3.47e-06,
-      "pct_24h": 1.02568,
-      "pct_7d": -5.0,
+      "price": 3.49e-06,
+      "pct_24h": 1.85141,
+      "pct_7d": -4.0,
       "support_30d": 2.582769748064196e-06,
       "resistance_30d": 4.122123035488615e-06,
-      "as_of": "2026-09-15 12:56:35",
+      "as_of": "2026-09-15 13:15:21",
       "stale": false
     },
     "avalanche-2": {
@@ -2647,7 +2647,7 @@
         ],
         [
           "Stretch from long-term average",
-          "-17.1% below its long-term average - confirmed downtrend",
+          "-16.8% below its long-term average - confirmed downtrend",
           -1
         ],
         [
@@ -2660,12 +2660,12 @@
       "id": "world-liberty-financial",
       "symbol": "WLFI",
       "name": "World Liberty Financial",
-      "price": 0.05727,
-      "pct_24h": 0.33009,
-      "pct_7d": 2.0,
+      "price": 0.057462,
+      "pct_24h": 0.70036,
+      "pct_7d": 2.6,
       "support_30d": 0.05526589948255966,
       "resistance_30d": 0.06254770952093733,
-      "as_of": "2026-09-15 12:45:23",
+      "as_of": "2026-09-15 13:15:21",
       "stale": false
     },
     "pax-gold": {
@@ -3053,9 +3053,9 @@
       "stale": false
     },
     "arbitrum": {
-      "label": "\ud83d\udd34 CAUTION - REDUCE NEW BUYS",
+      "label": "\ud83d\udd34 DISTRIBUTION ZONE",
       "status": "bearish",
-      "score": -3,
+      "score": -6,
       "rows": [
         [
           "Price vs. recent range",
@@ -3069,8 +3069,8 @@
         ],
         [
           "Market phase (best guess)",
-          "Established uptrend - phase where price marks up",
-          1
+          "Very extended after a big run - phase where smart money sells",
+          -2
         ],
         [
           "Recent trend",
@@ -3079,7 +3079,7 @@
         ],
         [
           "Stretch from long-term average",
-          "+35.6% above its long-term average - very stretched",
+          "+42.6% above its long-term average - very stretched",
           -2
         ],
         [
@@ -3088,16 +3088,16 @@
           0
         ]
       ],
-      "plain": "Getting risky - I'd hold off on new buys until this cools down.",
+      "plain": "Looks stretched and euphoric - historically the zone where smart money sells, not buys.",
       "id": "arbitrum",
       "symbol": "ARB",
       "name": "Arbitrum",
-      "price": 0.136599,
-      "pct_24h": 0.70631,
-      "pct_7d": -21.3,
+      "price": 0.143699,
+      "pct_24h": 6.78085,
+      "pct_7d": -19.7,
       "support_30d": 0.07509613080433862,
       "resistance_30d": 0.18933387703114857,
-      "as_of": "2026-09-15 12:05:18",
+      "as_of": "2026-09-15 13:15:21",
       "stale": false
     },
     "dash": {
@@ -3354,7 +3354,7 @@
         "stop": 0.11216166666666667,
         "target1": 0.11281833333333334,
         "target2": 0.11314666666666667,
-        "opened_at": "2026-09-15T13:12:26.635324"
+        "opened_at": "2026-09-15T13:17:22.979242"
       }
     },
     "resolved": [
@@ -25028,6 +25028,19 @@
         "result": "win",
         "resolved_at": "2026-09-15T13:12:26.635324",
         "exit_price": 0.11508
+      },
+      {
+        "coin": "JST",
+        "name": "JUST",
+        "tf": "1h",
+        "entry": 0.11249,
+        "stop": 0.11216166666666667,
+        "target1": 0.11281833333333334,
+        "target2": 0.11314666666666667,
+        "opened_at": "2026-09-15T13:12:26.635324",
+        "result": "win",
+        "resolved_at": "2026-09-15T13:17:22.979242",
+        "exit_price": 0.11508
       }
     ]
   },
@@ -25035,14 +25048,14 @@
     "key": "BTC",
     "name": "Bitcoin",
     "emoji": "\u20bf",
-    "price": 77017,
+    "price": 77023,
     "high_24h": 79530,
     "low_24h": 76682,
-    "pct_24h": -0.63132,
+    "pct_24h": -0.86246,
     "pct_7d": -1.9,
     "pct_30d": 22.1,
-    "sma50": 71682.43125591328,
-    "sma200": 70235.66814309004,
+    "sma50": 71682.65117552356,
+    "sma200": 70235.7231229926,
     "support_30d": 64491.345282946255,
     "resistance_30d": 81264.70153038795,
     "mark_price": 76989.5,
@@ -25057,14 +25070,14 @@
     "key": "ETH",
     "name": "Ethereum",
     "emoji": "\u039e",
-    "price": 2481.25,
+    "price": 2480.16,
     "high_24h": 2607.56,
     "low_24h": 2464.96,
-    "pct_24h": -0.40393,
+    "pct_24h": -0.76399,
     "pct_7d": 0.2,
     "pct_30d": 31.9,
-    "sma50": 2208.9472526644495,
-    "sma200": 2062.584245671801,
+    "sma50": 2208.8878078903217,
+    "sma200": 2062.569384478269,
     "support_30d": 1912.2734691708965,
     "resistance_30d": 2525.267261590238,
     "mark_price": 2476.25771051,
