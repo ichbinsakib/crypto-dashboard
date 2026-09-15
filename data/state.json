@@ -535,7 +535,7 @@
         ],
         [
           "Stretch from long-term average",
-          "+39.7% above its long-term average - very stretched",
+          "+39.5% above its long-term average - very stretched",
           -2
         ],
         [
@@ -548,12 +548,12 @@
       "id": "whitebit",
       "symbol": "WBT",
       "name": "WhiteBIT Coin",
-      "price": 79.62,
-      "pct_24h": -1.375,
+      "price": 79.51,
+      "pct_24h": -1.46956,
       "pct_7d": 1.5,
       "support_30d": 55.64665684656647,
       "resistance_30d": 81.2521953230761,
-      "as_of": "2026-09-15 10:20:25",
+      "as_of": "2026-09-15 10:30:27",
       "stale": false
     },
     "leo-token": {
@@ -1111,7 +1111,7 @@
         ],
         [
           "Stretch from long-term average",
-          "+9.3% vs its long-term average - not stretched either way",
+          "+9.7% vs its long-term average - not stretched either way",
           0
         ],
         [
@@ -1124,12 +1124,12 @@
       "id": "polygon-ecosystem-token",
       "symbol": "POL",
       "name": "POL (ex-MATIC)",
-      "price": 0.096164,
-      "pct_24h": 0.05764,
-      "pct_7d": 1.2,
+      "price": 0.096485,
+      "pct_24h": -0.39815,
+      "pct_7d": 0.9,
       "support_30d": 0.07996557644772107,
       "resistance_30d": 0.12250456198546959,
-      "as_of": "2026-09-15 06:25:18",
+      "as_of": "2026-09-15 10:30:27",
       "stale": false
     },
     "blackrock-usd-institutional-digital-liquidity-fund": {
@@ -1735,7 +1735,7 @@
         ],
         [
           "Stretch from long-term average",
-          "-16.0% below its long-term average - confirmed downtrend",
+          "-16.2% below its long-term average - confirmed downtrend",
           -1
         ],
         [
@@ -1748,12 +1748,12 @@
       "id": "sui",
       "symbol": "SUI",
       "name": "Sui",
-      "price": 0.711036,
-      "pct_24h": -1.93912,
+      "price": 0.709627,
+      "pct_24h": -2.0217,
       "pct_7d": -13.1,
       "support_30d": 0.6514311908607086,
       "resistance_30d": 0.8499161763231283,
-      "as_of": "2026-09-15 10:15:20",
+      "as_of": "2026-09-15 10:30:27",
       "stale": false
     },
     "lighter": {
@@ -3359,10 +3359,10 @@
         "name": "Ethereum Classic",
         "tf": "1h",
         "entry": 7.373,
-        "stop": 7.334083333333334,
-        "target1": 7.4119166666666665,
-        "target2": 7.450833333333333,
-        "opened_at": "2026-09-15T10:22:21.420473"
+        "stop": 7.333875,
+        "target1": 7.4121250000000005,
+        "target2": 7.451250000000001,
+        "opened_at": "2026-09-15T10:32:23.016456"
       }
     },
     "resolved": [
@@ -24880,6 +24880,19 @@
         "result": "win",
         "resolved_at": "2026-09-15T10:22:21.420473",
         "exit_price": 7.432
+      },
+      {
+        "coin": "ETC",
+        "name": "Ethereum Classic",
+        "tf": "1h",
+        "entry": 7.373,
+        "stop": 7.334083333333334,
+        "target1": 7.4119166666666665,
+        "target2": 7.450833333333333,
+        "opened_at": "2026-09-15T10:22:21.420473",
+        "result": "win",
+        "resolved_at": "2026-09-15T10:32:23.016456",
+        "exit_price": 7.424
       }
     ]
   },
@@ -24887,14 +24900,14 @@
     "key": "BTC",
     "name": "Bitcoin",
     "emoji": "\u20bf",
-    "price": 76982,
+    "price": 76888,
     "high_24h": 79530,
     "low_24h": 76682,
-    "pct_24h": -1.27605,
+    "pct_24h": -1.34005,
     "pct_7d": -1.8,
     "pct_30d": 22.1,
-    "sma50": 71681.8160872256,
-    "sma200": 70235.5143509181,
+    "sma50": 71680.56297585591,
+    "sma200": 70235.20107307569,
     "support_30d": 64491.345282946255,
     "resistance_30d": 81264.70153038795,
     "mark_price": 76989.5,
@@ -24909,14 +24922,14 @@
     "key": "ETH",
     "name": "Ethereum",
     "emoji": "\u039e",
-    "price": 2475.85,
+    "price": 2474.16,
     "high_24h": 2607.56,
     "low_24h": 2464.96,
-    "pct_24h": -1.62883,
+    "pct_24h": -1.65747,
     "pct_7d": -0.1,
     "pct_30d": 31.7,
-    "sma50": 2208.849122037873,
-    "sma200": 2062.559713015157,
+    "sma50": 2208.81514735563,
+    "sma200": 2062.551219344596,
     "support_30d": 1912.2734691708965,
     "resistance_30d": 2525.267261590238,
     "mark_price": 2476.25771051,
