@@ -79,7 +79,7 @@
     "ripple": {
       "label": "\ud83d\udfe1 HOLD / NEUTRAL",
       "status": "neutral",
-      "score": 0,
+      "score": 1,
       "rows": [
         [
           "Price vs. recent range",
@@ -93,8 +93,8 @@
         ],
         [
           "Market phase (best guess)",
-          "Established uptrend - phase where price marks up",
-          1
+          "Basing near the bottom - phase where smart money accumulates",
+          2
         ],
         [
           "Recent trend",
@@ -103,7 +103,7 @@
         ],
         [
           "Stretch from long-term average",
-          "+5.2% vs its long-term average - not stretched either way",
+          "+4.4% vs its long-term average - not stretched either way",
           0
         ],
         [
@@ -116,12 +116,12 @@
       "id": "ripple",
       "symbol": "XRP",
       "name": "XRP",
-      "price": 1.34,
-      "pct_24h": -8.37295,
-      "pct_7d": -2.1,
+      "price": 1.33,
+      "pct_24h": -10.03037,
+      "pct_7d": -6.9,
       "support_30d": 1.0011429230744608,
       "resistance_30d": 1.52050482788377,
-      "as_of": "2026-09-15 18:42:52",
+      "as_of": "2026-09-15 19:00:37",
       "stale": false
     },
     "solana": {
@@ -1687,7 +1687,7 @@
         ],
         [
           "Stretch from long-term average",
-          "+1.6% vs its long-term average - not stretched either way",
+          "+1.0% vs its long-term average - not stretched either way",
           0
         ],
         [
@@ -1700,12 +1700,12 @@
       "id": "bitget-token",
       "symbol": "BGB",
       "name": "Bitget Token",
-      "price": 1.92,
-      "pct_24h": -1.53811,
-      "pct_7d": -3.4,
+      "price": 1.91,
+      "pct_24h": -2.51518,
+      "pct_7d": -4.1,
       "support_30d": 1.6739981877355687,
       "resistance_30d": 2.0284940947674617,
-      "as_of": "2026-09-15 17:50:24",
+      "as_of": "2026-09-15 19:00:37",
       "stale": false
     },
     "sui": {
@@ -1783,7 +1783,7 @@
         ],
         [
           "Stretch from long-term average",
-          "+126.6% above its long-term average - very stretched",
+          "+134.2% above its long-term average - very stretched",
           -2
         ],
         [
@@ -1796,12 +1796,12 @@
       "id": "lighter",
       "symbol": "LIT",
       "name": "Lighter",
-      "price": 4.15,
-      "pct_24h": -5.39128,
-      "pct_7d": -12.5,
+      "price": 4.29,
+      "pct_24h": -3.3554,
+      "pct_7d": -10.5,
       "support_30d": 2.3314708334391883,
       "resistance_30d": 4.827528632102638,
-      "as_of": "2026-09-15 16:10:23",
+      "as_of": "2026-09-15 19:00:37",
       "stale": false
     },
     "ethena": {
@@ -2167,7 +2167,7 @@
         ],
         [
           "Stretch from long-term average",
-          "-32.9% below its long-term average - confirmed downtrend",
+          "-33.1% below its long-term average - confirmed downtrend",
           -1
         ],
         [
@@ -2180,12 +2180,12 @@
       "id": "canton-network",
       "symbol": "CC",
       "name": "Canton",
-      "price": 0.092419,
-      "pct_24h": -5.04587,
-      "pct_7d": -13.2,
+      "price": 0.092223,
+      "pct_24h": -5.68572,
+      "pct_7d": -13.8,
       "support_30d": 0.09051839499501885,
       "resistance_30d": 0.12396615653575341,
-      "as_of": "2026-09-15 18:45:23",
+      "as_of": "2026-09-15 19:00:37",
       "stale": false
     },
     "internet-computer": {
@@ -3223,7 +3223,7 @@
         ],
         [
           "Stretch from long-term average",
-          "+0.2% vs its long-term average - not stretched either way",
+          "-2.0% vs its long-term average - not stretched either way",
           0
         ],
         [
@@ -3236,12 +3236,12 @@
       "id": "kaspa",
       "symbol": "KAS",
       "name": "Kaspa",
-      "price": 0.03374466,
-      "pct_24h": -0.42298,
-      "pct_7d": -6.5,
+      "price": 0.03299318,
+      "pct_24h": -5.29559,
+      "pct_7d": -7.8,
       "support_30d": 0.025275049210175406,
       "resistance_30d": 0.03651282069323304,
-      "as_of": "2026-09-15 18:05:55",
+      "as_of": "2026-09-15 19:00:37",
       "stale": false
     },
     "cosmos": {
@@ -3359,30 +3359,30 @@
         "name": "Ethena",
         "tf": "15m",
         "entry": 0.1355,
-        "stop": 0.13340666666666667,
-        "target1": 0.13759333333333335,
-        "target2": 0.13968666666666668,
-        "opened_at": "2026-09-15T18:57:17.100542"
+        "stop": 0.13338333333333335,
+        "target1": 0.13761666666666666,
+        "target2": 0.13973333333333332,
+        "opened_at": "2026-09-15T19:01:50.838786"
       },
       "1h:BNB": {
         "coin": "BNB",
         "name": "BNB",
         "tf": "1h",
         "entry": 707.04,
-        "stop": 702.0179166666667,
-        "target1": 712.0620833333332,
-        "target2": 717.0841666666665,
-        "opened_at": "2026-09-15T18:57:17.100542"
+        "stop": 702.0433333333333,
+        "target1": 712.0366666666666,
+        "target2": 717.0333333333333,
+        "opened_at": "2026-09-15T19:01:50.838786"
       },
       "1h:ZEC": {
         "coin": "ZEC",
         "name": "Zcash",
         "tf": "1h",
         "entry": 1086.2,
-        "stop": 1064.6158333333333,
-        "target1": 1107.7841666666668,
-        "target2": 1129.3683333333336,
-        "opened_at": "2026-09-15T18:57:17.100542"
+        "stop": 1065.0779166666666,
+        "target1": 1107.3220833333335,
+        "target2": 1128.444166666667,
+        "opened_at": "2026-09-15T19:01:50.838786"
       }
     },
     "resolved": [
@@ -26668,6 +26668,45 @@
         "result": "win",
         "resolved_at": "2026-09-15T18:57:17.100542",
         "exit_price": 1132.33
+      },
+      {
+        "coin": "ENA",
+        "name": "Ethena",
+        "tf": "15m",
+        "entry": 0.1355,
+        "stop": 0.13340666666666667,
+        "target1": 0.13759333333333335,
+        "target2": 0.13968666666666668,
+        "opened_at": "2026-09-15T18:57:17.100542",
+        "result": "win",
+        "resolved_at": "2026-09-15T19:01:50.838786",
+        "exit_price": 0.1414
+      },
+      {
+        "coin": "BNB",
+        "name": "BNB",
+        "tf": "1h",
+        "entry": 707.04,
+        "stop": 702.0179166666667,
+        "target1": 712.0620833333332,
+        "target2": 717.0841666666665,
+        "opened_at": "2026-09-15T18:57:17.100542",
+        "result": "win",
+        "resolved_at": "2026-09-15T19:01:50.838786",
+        "exit_price": 718.07
+      },
+      {
+        "coin": "ZEC",
+        "name": "Zcash",
+        "tf": "1h",
+        "entry": 1086.2,
+        "stop": 1064.6158333333333,
+        "target1": 1107.7841666666668,
+        "target2": 1129.3683333333336,
+        "opened_at": "2026-09-15T18:57:17.100542",
+        "result": "win",
+        "resolved_at": "2026-09-15T19:01:50.838786",
+        "exit_price": 1136.73
       }
     ]
   },
@@ -26675,14 +26714,14 @@
     "key": "BTC",
     "name": "Bitcoin",
     "emoji": "\u20bf",
-    "price": 75610,
+    "price": 75910,
     "high_24h": 79530,
     "low_24h": 75595,
-    "pct_24h": -4.50593,
+    "pct_24h": -4.13835,
     "pct_7d": -2.3,
     "pct_30d": 21.7,
-    "sma50": 71654.46919090714,
-    "sma200": 70228.6776268385,
+    "sma50": 71660.97447824912,
+    "sma200": 70230.303948674,
     "support_30d": 64491.345282946255,
     "resistance_30d": 81264.70153038795,
     "mark_price": 76989.5,
@@ -26697,14 +26736,14 @@
     "key": "ETH",
     "name": "Ethereum",
     "emoji": "\u039e",
-    "price": 2392.75,
+    "price": 2399.66,
     "high_24h": 2607.56,
     "low_24h": 2390.89,
-    "pct_24h": -5.713,
+    "pct_24h": -5.45351,
     "pct_7d": -2.2,
     "pct_30d": 29.3,
-    "sma50": 2207.1869880298395,
-    "sma200": 2062.1441795131486,
+    "sma50": 2207.362708506769,
+    "sma200": 2062.188109632381,
     "support_30d": 1912.2734691708965,
     "resistance_30d": 2525.267261590238,
     "mark_price": 2476.25771051,
