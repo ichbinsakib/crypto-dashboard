@@ -342,9 +342,9 @@ def update_pnl_tracker(prev_pnl, signal_results):
     # "win" that reflects nothing about what happened after the call, not real price movement.
     still_open = {}
     for key, pos in prev_open.items():
-        interval = INTRADAY_TIMEFRAMES[pos["tf"]]["kraken_interval"]
+        interval = INTRADAY_TIMEFRAMES[pos["tf"]]["interval"]
         klines, err = safe_fetch(
-            f"pnl price {pos['coin']}", lambda p=pos["coin"], i=interval: fetch_kraken_ohlc(p, i))
+            f"pnl price {pos['coin']}", lambda p=pos["coin"], i=interval: fetch_binanceus_ohlc(p, i))
         time.sleep(INTRADAY_RATE_LIMIT_DELAY)
         if not klines:
             still_open[key] = pos  # couldn't check this cycle; leave open, try again next run
@@ -869,36 +869,39 @@ def build_screener(fng_value, prev_screener_state, generated_at, markets=None):
     return results, new_state
 
 
-KRAKEN_OHLC_URL = "https://api.kraken.com/0/public/OHLC"
+BINANCEUS_KLINES_URL = "https://api.binance.us/api/v3/klines"
 INTRADAY_TIMEFRAMES = {
-    # interval -> (kraken OHLC interval in minutes, candles used for range/ATR)
-    "15m": {"kraken_interval": 15, "lookback": 30, "window_label": "last ~7.5 hours"},
-    "1h": {"kraken_interval": 60, "lookback": 24, "window_label": "last 24 hours"},
-    "daily": {"kraken_interval": 1440, "lookback": 30, "window_label": "last 30 days"},
+    # interval -> (Binance.US kline interval string, candles used for range/ATR)
+    "15m": {"interval": "15m", "lookback": 30, "window_label": "last ~7.5 hours"},
+    "1h": {"interval": "1h", "lookback": 24, "window_label": "last 24 hours"},
+    "daily": {"interval": "1d", "lookback": 30, "window_label": "last 30 days"},
 }
-# Binance's public spot API returns HTTP 451 (geo-blocked) from GitHub Actions' IP ranges --
-# confirmed in production: every single symbol failed, including major pairs that definitely
-# exist (SOLUSDT, LTCUSDT, UNIUSDT...), which only happens when the origin itself is blocked,
-# not the individual pair. Kraken's public API has no such restriction. Its rate limit is
-# tighter than Binance's though, hence the larger delay here.
-INTRADAY_RATE_LIMIT_DELAY = 1.2
+# Binance.com's public spot API returns HTTP 451 (geo-blocked) from GitHub Actions' IP
+# ranges, and Bybit's public API returns HTTP 403 (Amazon CloudFront country block) from the
+# same runners -- both confirmed directly against a live runner. Binance.US has neither
+# restriction and isn't rate-limited nearly as tight as Kraken was, hence the smaller delay.
+INTRADAY_RATE_LIMIT_DELAY = 0.4
 
 
-def fetch_kraken_ohlc(symbol, interval_minutes):
-    """Kraken resolves common aliases itself (BTCUSD and XBTUSD both work, DOGEUSD resolves
-    to its internal XDGUSD, etc.) so a plain {SYMBOL}USD query works without a mapping table.
-    Response OHLC rows are [time, open, high, low, close, vwap, volume, count] -- high/low/close
-    land at the same indices (2/3/4) compute_intraday_signal already expects from Binance."""
-    pair = f"{symbol}USD"
-    url = f"{KRAKEN_OHLC_URL}?pair={pair}&interval={interval_minutes}"
-    data = http_get_json(url)
-    if data.get("error"):
-        raise ValueError(f"Kraken error for {pair}: {data['error']}")
-    result = data.get("result", {})
-    keys = [k for k in result.keys() if k != "last"]
-    if not keys:
-        raise ValueError(f"Kraken returned no OHLC series for {pair}")
-    return result[keys[0]]
+def fetch_binanceus_ohlc(symbol, interval):
+    """Not every coin has a direct USD pair on Binance.US, so USDT is tried as a fallback --
+    an invalid symbol is a 4xx from Binance, which http_get_json turns into an exception, so
+    the second attempt only fires when the first pair genuinely doesn't exist. Response rows
+    are [openTime, open, high, low, close, volume, closeTime, ...] -- high/low/close/volume
+    land at indices 2/3/4/5, which is what compute_intraday_signal expects."""
+    last_err = None
+    for quote in ("USD", "USDT"):
+        pair = f"{symbol}{quote}"
+        url = f"{BINANCEUS_KLINES_URL}?symbol={pair}&interval={interval}&limit=100"
+        try:
+            data = http_get_json(url)
+        except Exception as e:
+            last_err = e
+            continue
+        if isinstance(data, list) and data:
+            return data
+        last_err = ValueError(f"Binance.US returned no OHLC series for {pair}")
+    raise last_err or ValueError(f"No Binance.US OHLC data for {symbol}")
 
 
 def compute_intraday_signal(klines, lookback, window_label):
@@ -918,7 +921,7 @@ def compute_intraday_signal(klines, lookback, window_label):
     highs = [float(k[2]) for k in klines]
     lows = [float(k[3]) for k in klines]
     closes = [float(k[4]) for k in klines]
-    volumes = [float(k[6]) for k in klines]
+    volumes = [float(k[5]) for k in klines]
     price = closes[-1]
 
     recent_high = max(highs[-lookback:])
@@ -1009,11 +1012,12 @@ def compute_intraday_signal(klines, lookback, window_label):
 
 def build_intraday_screener(markets, timeframe_key, target_count=SCREENER_SIZE, max_attempts=45):
     """Runs the lean intraday model over the same coin universe as the daily screener,
-    using Kraken's public OHLC endpoint (Binance's public API is geo-blocked, HTTP 451,
-    from GitHub Actions runner IPs). Coins without a liquid Kraken-quoted USD pair
-    (small-caps, tokenized RWA products like FIGR_HELOC, etc.) are silently skipped
-    rather than shown broken. Shuffled and attempt-capped so it stops once enough
-    coins are found instead of always querying the whole pool."""
+    using Binance.US's public klines endpoint (Binance.com itself is geo-blocked, HTTP 451,
+    and Bybit is blocked too, HTTP 403, both from GitHub Actions runner IPs). Coins without
+    a liquid Binance.US-listed USD/USDT pair (small-caps, tokenized RWA products like
+    FIGR_HELOC, etc.) are silently skipped rather than shown broken. Shuffled and
+    attempt-capped so it stops once enough coins are found instead of always querying the
+    whole pool."""
     cfg = INTRADAY_TIMEFRAMES[timeframe_key]
     shuffled = list(markets or [])
     random.shuffle(shuffled)
@@ -1027,13 +1031,12 @@ def build_intraday_screener(markets, timeframe_key, target_count=SCREENER_SIZE, 
         if not symbol:
             continue
         attempts += 1
-        pair = f"{symbol}USD"
         klines, err = safe_fetch(
-            f"{timeframe_key} klines {pair}",
-            lambda p=symbol: fetch_kraken_ohlc(p, cfg["kraken_interval"]))
+            f"{timeframe_key} klines {symbol}",
+            lambda p=symbol: fetch_binanceus_ohlc(p, cfg["interval"]))
         time.sleep(INTRADAY_RATE_LIMIT_DELAY)
         if not klines:
-            skipped.append(pair)
+            skipped.append(symbol)
             continue
         try:
             sig = compute_intraday_signal(klines, cfg["lookback"], cfg["window_label"])
@@ -1041,9 +1044,9 @@ def build_intraday_screener(markets, timeframe_key, target_count=SCREENER_SIZE, 
                 sig.update({"id": m.get("id"), "symbol": symbol, "name": m.get("name")})
                 results.append(sig)
         except Exception as e:
-            log(f"INTRADAY SIGNAL FAIL [{pair}]: {e}")
+            log(f"INTRADAY SIGNAL FAIL [{symbol}]: {e}")
     if skipped:
-        log(f"Intraday ({timeframe_key}) skipped (no Kraken pair or fetch failed): {skipped}")
+        log(f"Intraday ({timeframe_key}) skipped (no Binance.US pair or fetch failed): {skipped}")
     results.sort(key=lambda r: r["score"], reverse=True)
     return results
 
@@ -1051,11 +1054,11 @@ def build_intraday_screener(markets, timeframe_key, target_count=SCREENER_SIZE, 
 def fetch_single_intraday_signal(symbol, name, timeframe_key):
     """Same fetch+compute as one iteration of build_intraday_screener, for backfilling a
     specific coin (e.g. a P&L position whose rotation slot moved on) rather than sampling
-    from the pool. Returns None if the coin has no liquid Kraken USD pair or the fetch fails."""
+    from the pool. Returns None if the coin has no liquid Binance.US pair or the fetch fails."""
     cfg = INTRADAY_TIMEFRAMES[timeframe_key]
     klines, err = safe_fetch(
-        f"{timeframe_key} backfill klines {symbol}USD",
-        lambda: fetch_kraken_ohlc(symbol, cfg["kraken_interval"]))
+        f"{timeframe_key} backfill klines {symbol}",
+        lambda: fetch_binanceus_ohlc(symbol, cfg["interval"]))
     time.sleep(INTRADAY_RATE_LIMIT_DELAY)
     if not klines:
         return None
@@ -1478,7 +1481,7 @@ def render(coins_data, fng_value, fng_classification, generated_at, any_stale,
         return f"""
     <div class="sub" style="margin-bottom:14px; display:flex; align-items:center;">
       {tf_name} confirmed setups &mdash; batch of up to {PNL_BATCH_SIZE}, refreshes live every minute
-      <span class="info-tip" tabindex="0" data-tip="Only shows confirmed signals (NEAR-TERM DIP ZONE tier, not the weaker LEAN LONG lean) using Kraken's public {window_desc} candles. A batch of up to {PNL_BATCH_SIZE} opens and stays fixed until every one of them resolves (win/loss/expired) -- no new coins get added mid-batch, so this list doesn't change under you while you're following it. Buy/stop/target use each coin's own recent volatility (ATR). Prices and scores refresh live in your browser every minute straight from Kraken.">&#9432;</span>
+      <span class="info-tip" tabindex="0" data-tip="Only shows confirmed signals (NEAR-TERM DIP ZONE tier, not the weaker LEAN LONG lean) using Binance.US's public {window_desc} candles. A batch of up to {PNL_BATCH_SIZE} opens and stays fixed until every one of them resolves (win/loss/expired) -- no new coins get added mid-batch, so this list doesn't change under you while you're following it. Buy/stop/target use each coin's own recent volatility (ATR). Prices and scores refresh live in your browser every minute straight from Binance.US.">&#9432;</span>
     </div>
     <div class="screener-grid">{cards}</div>"""
 
@@ -1490,7 +1493,7 @@ def render(coins_data, fng_value, fng_classification, generated_at, any_stale,
         {
             "id": f"ic-{tf_key}-{r['symbol']}",
             "symbol": r["symbol"],
-            "intervalMinutes": INTRADAY_TIMEFRAMES[tf_key]["kraken_interval"],
+            "interval": INTRADAY_TIMEFRAMES[tf_key]["interval"],
             "lookback": INTRADAY_TIMEFRAMES[tf_key]["lookback"],
             "windowLabel": INTRADAY_TIMEFRAMES[tf_key]["window_label"],
         }
@@ -1597,7 +1600,7 @@ def render(coins_data, fng_value, fng_classification, generated_at, any_stale,
         resolved_html = f"""
   <div class="cycle-map" style="margin-top:10px;">
     <div class="card-title" style="display:flex; align-items:center; justify-content:space-between; flex-wrap:wrap; gap:8px;">
-      <span>Performance History<span class="info-tip" tabindex="0" data-tip="Every call that has ever resolved stays here permanently -- winning, losing, and expired -- it is never deleted, only added to. Signal Given is when the call first appeared. Buy/Stop/Target are the levels set at that moment; Exit is the Kraken price that actually triggered the result, so you can verify a Win genuinely closed at/above Target and a Loss at/below Stop -- on Kraken. If you're trading on a different exchange (Binance, etc.), its price for the same coin can diverge enough to miss or overshoot these exact levels, especially on lower-liquidity altcoins.">&#9432;</span></span>
+      <span>Performance History<span class="info-tip" tabindex="0" data-tip="Every call that has ever resolved stays here permanently -- winning, losing, and expired -- it is never deleted, only added to. Signal Given is when the call first appeared. Buy/Stop/Target are the levels set at that moment; Exit is the Binance.US price that actually triggered the result, so you can verify a Win genuinely closed at/above Target and a Loss at/below Stop -- on Binance.US. Binance.US is a separate order book from Binance.com (regular Binance) and other exchanges, so its price for the same coin can still diverge enough to miss or overshoot these exact levels, especially on lower-liquidity altcoins.">&#9432;</span></span>
       <input type="text" id="pnl-history-search" placeholder="Search by coin..." style="background:#0d1320; border:1px solid var(--border); border-radius:6px; color:var(--text); padding:5px 10px; font-size:12.5px; width:160px;">
     </div>
     <div class="sub" style="margin-bottom:6px;">{showing_note}</div>
@@ -1613,7 +1616,7 @@ def render(coins_data, fng_value, fng_classification, generated_at, any_stale,
     performance_panel = f"""
 <div class="panel panel-performance">
   <div class="cycle-map spot-signal-card" style="margin-bottom:10px;">
-    <div class="card-title">📊 SCANNER PERFORMANCE<span class="info-tip" tabindex="0" data-tip="Tracks confirmed 15m/1h/daily calls (NEAR-TERM DIP ZONE tier only) in batches of up to {PNL_BATCH_SIZE} per timeframe -- a new batch only opens once every position in the current one has resolved (win/loss/expired), so you're never asked to follow more than one batch at a time. All prices come from Kraken (Binance's public API is geo-blocked from where this runs) -- Kraken has thinner order books than Binance on many altcoins, so a level shown as hit here can wick through on Kraken without the same move appearing on Binance's chart. Educational transparency, not a trading track record, and not a guarantee the same fill is available on whichever exchange you actually trade on.">&#9432;</span></div>
+    <div class="card-title">📊 SCANNER PERFORMANCE<span class="info-tip" tabindex="0" data-tip="Tracks confirmed 15m/1h/daily calls (NEAR-TERM DIP ZONE tier only) in batches of up to {PNL_BATCH_SIZE} per timeframe -- a new batch only opens once every position in the current one has resolved (win/loss/expired), so you're never asked to follow more than one batch at a time. All prices come from Binance.US (Binance.com's public API is geo-blocked and Bybit's is country-blocked from where this runs) -- Binance.US is a separate order book from Binance.com, so a level shown as hit here isn't guaranteed to be hit on regular Binance or another exchange. Educational transparency, not a trading track record, and not a guarantee the same fill is available on whichever exchange you actually trade on.">&#9432;</span></div>
   </div>
   <div class="top-grid" style="grid-template-columns:1fr 1fr 1fr;">
     {_pnl_stat_card("Daily", pnl_stats.get("daily", {}))}
@@ -1847,7 +1850,7 @@ if ('serviceWorker' in navigator) {{
 (function() {{
   // The page itself only regenerates every few minutes (GitHub Actions rebuild cycle), so the
   // 15m/1h cards shown at load are already a few minutes stale by the time anyone views them.
-  // This re-fetches each shown coin's candles directly from Kraken in the browser every minute
+  // This re-fetches each shown coin's candles directly from Binance.US in the browser every minute
   // and recomputes the same rule-based score client-side, so these two tabs stay genuinely live
   // between rebuilds instead of only updating once every {DATA_REFRESH_LABEL}.
   var INTRADAY_CARDS = {intraday_live_cards_json};
@@ -1871,7 +1874,7 @@ if ('serviceWorker' in navigator) {{
     var highs = klines.map(function(k) {{ return parseFloat(k[2]); }});
     var lows = klines.map(function(k) {{ return parseFloat(k[3]); }});
     var closes = klines.map(function(k) {{ return parseFloat(k[4]); }});
-    var volumes = klines.map(function(k) {{ return parseFloat(k[6]); }});
+    var volumes = klines.map(function(k) {{ return parseFloat(k[5]); }});
     var price = closes[closes.length - 1];
 
     var recentHigh = Math.max.apply(null, highs.slice(-lookback));
@@ -1959,14 +1962,20 @@ if ('serviceWorker' in navigator) {{
     var el = document.getElementById(cfg.id);
     if (!el) return;
     try {{
-      var url = 'https://api.kraken.com/0/public/OHLC?pair=' + cfg.symbol + 'USD&interval=' + cfg.intervalMinutes;
-      var resp = await fetch(url);
-      var data = await resp.json();
-      if (data.error && data.error.length) throw new Error(data.error.join(','));
-      var result = data.result || {{}};
-      var keys = Object.keys(result).filter(function(k) {{ return k !== 'last'; }});
-      if (!keys.length) throw new Error('no OHLC series returned');
-      var sig = computeIntradaySignal(result[keys[0]], cfg.lookback, cfg.windowLabel);
+      // Not every coin has a direct USD pair on Binance.US -- fall back to USDT, same as the
+      // server-side fetch does.
+      var klines = null;
+      for (var qi = 0; qi < 2; qi++) {{
+        var quote = qi === 0 ? 'USD' : 'USDT';
+        var url = 'https://api.binance.us/api/v3/klines?symbol=' + cfg.symbol + quote +
+          '&interval=' + cfg.interval + '&limit=100';
+        var resp = await fetch(url);
+        if (!resp.ok) continue;
+        var data = await resp.json();
+        if (Array.isArray(data) && data.length) {{ klines = data; break; }}
+      }}
+      if (!klines) throw new Error('no OHLC series returned');
+      var sig = computeIntradaySignal(klines, cfg.lookback, cfg.windowLabel);
       if (!sig) return;
 
       el.className = 'screener-card ' + sig.status;
@@ -1990,7 +1999,7 @@ if ('serviceWorker' in navigator) {{
       var updatedEl = el.querySelector('[data-role=live-updated]');
       if (updatedEl) updatedEl.innerHTML = '&#9679; live &middot; updated ' + new Date().toLocaleTimeString();
     }} catch (e) {{
-      console.warn('Intraday live refresh failed for', cfg.symbol, cfg.intervalMinutes + 'm', e);
+      console.warn('Intraday live refresh failed for', cfg.symbol, cfg.interval, e);
     }}
   }}
 
@@ -2153,39 +2162,8 @@ if ('serviceWorker' in navigator) {{
     return html, spot_signals_by_coin
 
 
-def _probe_exchange_apis():
-    """TEMPORARY diagnostic -- checks from the actual runner whether Binance/Bybit's public
-    klines endpoints are reachable (vs. the HTTP 451 geo-block Binance returns from GitHub
-    Actions IPs, which is why this project uses Kraken). Writes results to
-    data/exchange_probe.json so they can be read back without needing Actions log access.
-    Remove this function and its call site once the exchange-source decision is made."""
-    import urllib.request
-    import urllib.error
-    probes = {
-        "binance": "https://api.binance.com/api/v3/klines?symbol=BTCUSDT&interval=15m&limit=2",
-        "binance_us": "https://api.binance.us/api/v3/klines?symbol=BTCUSDT&interval=15m&limit=2",
-        "bybit": "https://api.bybit.com/v5/market/kline?category=spot&symbol=BTCUSDT&interval=15&limit=2",
-    }
-    results = {}
-    for name, url in probes.items():
-        try:
-            req = urllib.request.Request(url, headers={"User-Agent": "Mozilla/5.0"})
-            with urllib.request.urlopen(req, timeout=15) as resp:
-                body = resp.read(300).decode("utf-8", errors="replace")
-                results[name] = {"http_status": resp.status, "body_preview": body}
-        except urllib.error.HTTPError as e:
-            results[name] = {"http_status": e.code, "body_preview": e.read(300).decode("utf-8", errors="replace")}
-        except Exception as e:
-            results[name] = {"error": str(e)}
-    results["_probed_at"] = datetime.datetime.now().isoformat()
-    with open(os.path.join(DATA_DIR, "exchange_probe.json"), "w") as f:
-        json.dump(results, f, indent=2)
-    log(f"Exchange API probe results: {results}")
-
-
 def main():
     log("--- run start ---")
-    _probe_exchange_apis()
     state = load_state()
     generated_at = datetime.datetime.now().strftime("%Y-%m-%d %H:%M:%S")
 
@@ -2229,7 +2207,7 @@ def main():
     log(f"Screener produced {len(screener_results)} ranked coins "
         f"({sum(1 for r in screener_results if r.get('stale'))} cached/stale)")
 
-    log("Running intraday screeners (15m, 1h) via Kraken OHLC...")
+    log("Running intraday screeners (15m, 1h) via Binance.US OHLC...")
     prev_pnl_state = state.get("_pnl_tracker", {})
     prev_pnl_open = prev_pnl_state.get("open", {})
 
