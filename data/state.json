@@ -3341,9 +3341,7 @@
       "stale": false
     }
   },
-  "_strong_buy_state": {
-    "scanner-1h:ETC": true
-  },
+  "_strong_buy_state": {},
   "_pnl_tracker": {
     "open": {
       "15m:BGB": {
@@ -3361,10 +3359,10 @@
         "name": "Ethereum Classic",
         "tf": "1h",
         "entry": 7.426,
-        "stop": 7.3925,
-        "target1": 7.4595,
-        "target2": 7.493,
-        "opened_at": "2026-09-15T04:37:12.440653"
+        "stop": 7.39275,
+        "target1": 7.45925,
+        "target2": 7.4925,
+        "opened_at": "2026-09-15T05:00:38.301328"
       }
     },
     "resolved": [
@@ -24622,6 +24620,19 @@
         "result": "loss",
         "resolved_at": "2026-09-15T04:37:12.440653",
         "exit_price": 7.426
+      },
+      {
+        "coin": "ETC",
+        "name": "Ethereum Classic",
+        "tf": "1h",
+        "entry": 7.426,
+        "stop": 7.3925,
+        "target1": 7.4595,
+        "target2": 7.493,
+        "opened_at": "2026-09-15T04:37:12.440653",
+        "result": "win",
+        "resolved_at": "2026-09-15T05:00:38.301328",
+        "exit_price": 7.47
       }
     ]
   },
@@ -24629,14 +24640,14 @@
     "key": "BTC",
     "name": "Bitcoin",
     "emoji": "\u20bf",
-    "price": 77561,
+    "price": 77567,
     "high_24h": 79530,
     "low_24h": 77396,
-    "pct_24h": -0.07768,
+    "pct_24h": -0.1037,
     "pct_7d": -1.6,
     "pct_30d": 23.1,
-    "sma50": 71693.40882870572,
-    "sma200": 70238.41253628815,
+    "sma50": 71693.44786026904,
+    "sma200": 70238.42229417898,
     "support_30d": 64491.345282946255,
     "resistance_30d": 81264.70153038795,
     "mark_price": 78726.74180435,
@@ -24651,14 +24662,14 @@
     "key": "ETH",
     "name": "Ethereum",
     "emoji": "\u039e",
-    "price": 2491.84,
+    "price": 2491.51,
     "high_24h": 2607.56,
     "low_24h": 2489.59,
-    "pct_24h": -0.88623,
+    "pct_24h": -0.89307,
     "pct_7d": 0.6,
     "pct_30d": 32.8,
-    "sma50": 2209.1682255298833,
-    "sma200": 2062.6394888881596,
+    "sma50": 2209.1560997672586,
+    "sma200": 2062.6364574475033,
     "support_30d": 1912.2734691708965,
     "resistance_30d": 2525.267261590238,
     "mark_price": 2544.79927907,
