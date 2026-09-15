@@ -775,7 +775,7 @@
         ],
         [
           "Stretch from long-term average",
-          "-9.4% vs its long-term average - not stretched either way",
+          "-8.7% vs its long-term average - not stretched either way",
           0
         ],
         [
@@ -788,12 +788,12 @@
       "id": "kucoin-shares",
       "symbol": "KCS",
       "name": "KuCoin",
-      "price": 6.9,
-      "pct_24h": -1.16045,
-      "pct_7d": -1.3,
+      "price": 6.95,
+      "pct_24h": -0.25647,
+      "pct_7d": -0.6,
       "support_30d": 6.514591596607885,
       "resistance_30d": 7.8821382735057615,
-      "as_of": "2026-09-15 12:50:27",
+      "as_of": "2026-09-15 13:00:35",
       "stale": false
     },
     "hedera-hashgraph": {
@@ -967,7 +967,7 @@
         ],
         [
           "Stretch from long-term average",
-          "+4.1% vs its long-term average - not stretched either way",
+          "+4.6% vs its long-term average - not stretched either way",
           0
         ],
         [
@@ -980,12 +980,12 @@
       "id": "aster-2",
       "symbol": "ASTER",
       "name": "Aster",
-      "price": 0.689397,
-      "pct_24h": -1.57232,
-      "pct_7d": -9.9,
+      "price": 0.69284,
+      "pct_24h": -0.43673,
+      "pct_7d": -8.4,
       "support_30d": 0.6010286752462902,
       "resistance_30d": 0.7868111056215635,
-      "as_of": "2026-09-15 12:25:18",
+      "as_of": "2026-09-15 13:00:35",
       "stale": false
     },
     "worldcoin-wld": {
@@ -2915,7 +2915,7 @@
       "rows": [
         [
           "Price vs. recent range",
-          "Near its 30-day high (~$0.1155) - less room to run",
+          "Near its 30-day high (~$0.1153) - less room to run",
           -1
         ],
         [
@@ -2935,7 +2935,7 @@
         ],
         [
           "Stretch from long-term average",
-          "+35.4% above its long-term average - very stretched",
+          "+35.2% above its long-term average - very stretched",
           -2
         ],
         [
@@ -2948,12 +2948,12 @@
       "id": "just",
       "symbol": "JST",
       "name": "JUST",
-      "price": 0.115486,
-      "pct_24h": 2.07703,
-      "pct_7d": 10.7,
+      "price": 0.115323,
+      "pct_24h": 1.663,
+      "pct_7d": 9.9,
       "support_30d": 0.0946830738697126,
-      "resistance_30d": 0.11551179139871409,
-      "as_of": "2026-09-15 11:30:28",
+      "resistance_30d": 0.11532324492728163,
+      "as_of": "2026-09-15 13:00:35",
       "stale": false
     },
     "algorand": {
@@ -3341,9 +3341,22 @@
       "stale": false
     }
   },
-  "_strong_buy_state": {},
+  "_strong_buy_state": {
+    "scanner-1h:JST": true
+  },
   "_pnl_tracker": {
-    "open": {},
+    "open": {
+      "1h:JST": {
+        "coin": "JST",
+        "name": "JUST",
+        "tf": "1h",
+        "entry": 0.11249,
+        "stop": 0.11216166666666667,
+        "target1": 0.11281833333333334,
+        "target2": 0.11314666666666667,
+        "opened_at": "2026-09-15T13:02:44.483742"
+      }
+    },
     "resolved": [
       {
         "coin": "WLD",
@@ -24996,14 +25009,14 @@
     "key": "BTC",
     "name": "Bitcoin",
     "emoji": "\u20bf",
-    "price": 77087,
+    "price": 76936,
     "high_24h": 79530,
     "low_24h": 76682,
-    "pct_24h": -0.7428,
+    "pct_24h": -0.95672,
     "pct_7d": -2.1,
     "pct_30d": 22.2,
-    "sma50": 71683.95518318778,
-    "sma200": 70236.04912490866,
+    "sma50": 71680.38541832934,
+    "sma200": 70235.15668369405,
     "support_30d": 64491.345282946255,
     "resistance_30d": 81264.70153038795,
     "mark_price": 76989.5,
@@ -25018,14 +25031,14 @@
     "key": "ETH",
     "name": "Ethereum",
     "emoji": "\u039e",
-    "price": 2484.51,
+    "price": 2479.72,
     "high_24h": 2607.56,
     "low_24h": 2464.96,
-    "pct_24h": -0.80201,
+    "pct_24h": -0.99292,
     "pct_7d": -0.2,
     "pct_30d": 31.8,
-    "sma50": 2209.022300075079,
-    "sma200": 2062.603007524458,
+    "sma50": 2208.8932451949136,
+    "sma200": 2062.5707438044174,
     "support_30d": 1912.2734691708965,
     "resistance_30d": 2525.267261590238,
     "mark_price": 2476.25771051,
