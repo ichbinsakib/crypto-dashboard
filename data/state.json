@@ -117,11 +117,11 @@
       "symbol": "XRP",
       "name": "XRP",
       "price": 1.4,
-      "pct_24h": 1.77962,
-      "pct_7d": 1.4,
+      "pct_24h": 0.06957,
+      "pct_7d": 0.9,
       "support_30d": 1.0011429230744608,
       "resistance_30d": 1.52050482788377,
-      "as_of": "2026-09-15 05:22:36",
+      "as_of": "2026-09-15 10:45:21",
       "stale": false
     },
     "solana": {
@@ -679,7 +679,7 @@
         ],
         [
           "Stretch from long-term average",
-          "-5.8% vs its long-term average - not stretched either way",
+          "-5.9% vs its long-term average - not stretched either way",
           0
         ],
         [
@@ -692,12 +692,12 @@
       "id": "cardano",
       "symbol": "ADA",
       "name": "Cardano",
-      "price": 0.20524,
-      "pct_24h": -1.55829,
-      "pct_7d": -5.6,
+      "price": 0.205078,
+      "pct_24h": -2.59352,
+      "pct_7d": -5.7,
       "support_30d": 0.1741249817054162,
       "resistance_30d": 0.2291047455940254,
-      "as_of": "2026-09-15 06:30:30",
+      "as_of": "2026-09-15 10:45:21",
       "stale": false
     },
     "stellar": {
@@ -1375,7 +1375,7 @@
     "gatechain-token": {
       "label": "\ud83d\udd34 CAUTION - REDUCE NEW BUYS",
       "status": "bearish",
-      "score": -3,
+      "score": -2,
       "rows": [
         [
           "Price vs. recent range",
@@ -1399,8 +1399,8 @@
         ],
         [
           "Stretch from long-term average",
-          "+32.7% above its long-term average - very stretched",
-          -2
+          "+30.0% above its long-term average - a bit stretched",
+          -1
         ],
         [
           "Leverage traders' bias",
@@ -1412,12 +1412,12 @@
       "id": "gatechain-token",
       "symbol": "GT",
       "name": "Gate",
-      "price": 9.36,
-      "pct_24h": 2.03516,
-      "pct_7d": -0.5,
+      "price": 9.17,
+      "pct_24h": -0.54103,
+      "pct_7d": 0.6,
       "support_30d": 6.673649191532821,
       "resistance_30d": 9.38216924975626,
-      "as_of": "2026-09-15 03:05:17",
+      "as_of": "2026-09-15 10:45:21",
       "stale": false
     },
     "crypto-com-chain": {
@@ -3362,7 +3362,7 @@
         "stop": 7.333875,
         "target1": 7.4121250000000005,
         "target2": 7.451250000000001,
-        "opened_at": "2026-09-15T10:42:20.405039"
+        "opened_at": "2026-09-15T10:47:18.096738"
       }
     },
     "resolved": [
@@ -24919,6 +24919,19 @@
         "result": "win",
         "resolved_at": "2026-09-15T10:42:20.405039",
         "exit_price": 7.43
+      },
+      {
+        "coin": "ETC",
+        "name": "Ethereum Classic",
+        "tf": "1h",
+        "entry": 7.373,
+        "stop": 7.333875,
+        "target1": 7.4121250000000005,
+        "target2": 7.451250000000001,
+        "opened_at": "2026-09-15T10:42:20.405039",
+        "result": "win",
+        "resolved_at": "2026-09-15T10:47:18.096738",
+        "exit_price": 7.43
       }
     ]
   },
@@ -24926,14 +24939,14 @@
     "key": "BTC",
     "name": "Bitcoin",
     "emoji": "\u20bf",
-    "price": 76919,
+    "price": 76959,
     "high_24h": 79530,
     "low_24h": 76682,
-    "pct_24h": -1.27705,
+    "pct_24h": -1.24351,
     "pct_7d": -1.8,
     "pct_30d": 22.1,
-    "sma50": 71680.90453631541,
-    "sma200": 70235.28646319057,
+    "sma50": 71681.34666375216,
+    "sma200": 70235.39699504976,
     "support_30d": 64491.345282946255,
     "resistance_30d": 81264.70153038795,
     "mark_price": 76989.5,
@@ -24948,14 +24961,14 @@
     "key": "ETH",
     "name": "Ethereum",
     "emoji": "\u039e",
-    "price": 2474.91,
+    "price": 2476.47,
     "high_24h": 2607.56,
     "low_24h": 2464.96,
-    "pct_24h": -1.6056,
+    "pct_24h": -1.57236,
     "pct_7d": -0.1,
     "pct_30d": 31.7,
-    "sma50": 2208.836542102439,
-    "sma200": 2062.5565680312984,
+    "sma50": 2208.8612220842,
+    "sma200": 2062.5627380267383,
     "support_30d": 1912.2734691708965,
     "resistance_30d": 2525.267261590238,
     "mark_price": 2476.25771051,
