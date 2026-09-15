@@ -79,7 +79,7 @@
     "ripple": {
       "label": "\ud83d\udfe1 HOLD / NEUTRAL",
       "status": "neutral",
-      "score": 0,
+      "score": -1,
       "rows": [
         [
           "Price vs. recent range",
@@ -103,8 +103,8 @@
         ],
         [
           "Stretch from long-term average",
-          "+9.8% vs its long-term average - not stretched either way",
-          0
+          "+10.6% above its long-term average - a bit stretched",
+          -1
         ],
         [
           "Leverage traders' bias",
@@ -116,12 +116,12 @@
       "id": "ripple",
       "symbol": "XRP",
       "name": "XRP",
-      "price": 1.4,
-      "pct_24h": 0.15549,
-      "pct_7d": 0.3,
+      "price": 1.41,
+      "pct_24h": 0.70376,
+      "pct_7d": 1.0,
       "support_30d": 1.0011429230744608,
       "resistance_30d": 1.52050482788377,
-      "as_of": "2026-09-15 12:05:18",
+      "as_of": "2026-09-15 14:25:23",
       "stale": false
     },
     "solana": {
@@ -991,7 +991,7 @@
     "worldcoin-wld": {
       "label": "\ud83d\udfe1 HOLD / NEUTRAL",
       "status": "neutral",
-      "score": -1,
+      "score": 0,
       "rows": [
         [
           "Price vs. recent range",
@@ -1005,8 +1005,8 @@
         ],
         [
           "Market phase (best guess)",
-          "Established uptrend - phase where price marks up",
-          1
+          "Basing near the bottom - phase where smart money accumulates",
+          2
         ],
         [
           "Recent trend",
@@ -1015,7 +1015,7 @@
         ],
         [
           "Stretch from long-term average",
-          "+5.1% vs its long-term average - not stretched either way",
+          "+5.0% vs its long-term average - not stretched either way",
           0
         ],
         [
@@ -1028,12 +1028,12 @@
       "id": "worldcoin-wld",
       "symbol": "WLD",
       "name": "Worldcoin",
-      "price": 0.375893,
-      "pct_24h": -1.81055,
-      "pct_7d": -19.5,
+      "price": 0.375493,
+      "pct_24h": -2.13002,
+      "pct_7d": -20.5,
       "support_30d": 0.319812298466522,
       "resistance_30d": 0.4772935995106048,
-      "as_of": "2026-09-15 13:57:20",
+      "as_of": "2026-09-15 14:25:23",
       "stale": false
     },
     "bfusd": {
@@ -2647,7 +2647,7 @@
         ],
         [
           "Stretch from long-term average",
-          "-17.1% below its long-term average - confirmed downtrend",
+          "-17.4% below its long-term average - confirmed downtrend",
           -1
         ],
         [
@@ -2660,12 +2660,12 @@
       "id": "world-liberty-financial",
       "symbol": "WLFI",
       "name": "World Liberty Financial",
-      "price": 0.057245,
-      "pct_24h": -0.04281,
+      "price": 0.05707,
+      "pct_24h": -0.36404,
       "pct_7d": 2.3,
       "support_30d": 0.05526589948255966,
       "resistance_30d": 0.06254770952093733,
-      "as_of": "2026-09-15 14:00:36",
+      "as_of": "2026-09-15 14:25:23",
       "stale": false
     },
     "pax-gold": {
@@ -3352,20 +3352,20 @@
         "name": "Stellar",
         "tf": "15m",
         "entry": 0.190474,
-        "stop": 0.1888593,
-        "target1": 0.1920887,
-        "target2": 0.1937034,
-        "opened_at": "2026-09-15T14:22:23.829825"
+        "stop": 0.18884230000000002,
+        "target1": 0.1921057,
+        "target2": 0.19373739999999998,
+        "opened_at": "2026-09-15T14:27:21.773714"
       },
       "15m:HBAR": {
         "coin": "HBAR",
         "name": "Hedera",
         "tf": "15m",
         "entry": 0.07628,
-        "stop": 0.07586866666666667,
-        "target1": 0.07669133333333333,
-        "target2": 0.07710266666666667,
-        "opened_at": "2026-09-15T14:22:23.829825"
+        "stop": 0.07586633333333334,
+        "target1": 0.07669366666666666,
+        "target2": 0.07710733333333332,
+        "opened_at": "2026-09-15T14:27:21.773714"
       },
       "1h:JST": {
         "coin": "JST",
@@ -3375,7 +3375,7 @@
         "stop": 0.11214208333333334,
         "target1": 0.11283791666666668,
         "target2": 0.11318583333333335,
-        "opened_at": "2026-09-15T14:22:23.829825"
+        "opened_at": "2026-09-15T14:27:21.773714"
       }
     },
     "resolved": [
@@ -25543,6 +25543,45 @@
         "result": "win",
         "resolved_at": "2026-09-15T14:22:23.829825",
         "exit_price": 0.11592
+      },
+      {
+        "coin": "XLM",
+        "name": "Stellar",
+        "tf": "15m",
+        "entry": 0.190474,
+        "stop": 0.1888593,
+        "target1": 0.1920887,
+        "target2": 0.1937034,
+        "opened_at": "2026-09-15T14:22:23.829825",
+        "result": "win",
+        "resolved_at": "2026-09-15T14:27:21.773714",
+        "exit_price": 0.19487
+      },
+      {
+        "coin": "HBAR",
+        "name": "Hedera",
+        "tf": "15m",
+        "entry": 0.07628,
+        "stop": 0.07586866666666667,
+        "target1": 0.07669133333333333,
+        "target2": 0.07710266666666667,
+        "opened_at": "2026-09-15T14:22:23.829825",
+        "result": "win",
+        "resolved_at": "2026-09-15T14:27:21.773714",
+        "exit_price": 0.07823
+      },
+      {
+        "coin": "JST",
+        "name": "JUST",
+        "tf": "1h",
+        "entry": 0.11249,
+        "stop": 0.11214208333333334,
+        "target1": 0.11283791666666668,
+        "target2": 0.11318583333333335,
+        "opened_at": "2026-09-15T14:22:23.829825",
+        "result": "win",
+        "resolved_at": "2026-09-15T14:27:21.773714",
+        "exit_price": 0.11592
       }
     ]
   },
@@ -25550,14 +25589,14 @@
     "key": "BTC",
     "name": "Bitcoin",
     "emoji": "\u20bf",
-    "price": 76298,
+    "price": 76327,
     "high_24h": 79530,
     "low_24h": 76142,
-    "pct_24h": -2.91278,
+    "pct_24h": -2.52607,
     "pct_7d": -2.5,
     "pct_30d": 21.4,
-    "sma50": 71668.34704123145,
-    "sma200": 70232.14708941958,
+    "sma50": 71668.74605278292,
+    "sma200": 70232.24684230745,
     "support_30d": 64491.345282946255,
     "resistance_30d": 81264.70153038795,
     "mark_price": 76989.5,
@@ -25572,14 +25611,14 @@
     "key": "ETH",
     "name": "Ethereum",
     "emoji": "\u039e",
-    "price": 2442.57,
+    "price": 2438.19,
     "high_24h": 2607.56,
     "low_24h": 2440.21,
-    "pct_24h": -2.84438,
+    "pct_24h": -2.5394,
     "pct_7d": -0.9,
     "pct_30d": 30.4,
-    "sma50": 2208.204040811935,
-    "sma200": 2062.3984427086725,
+    "sma50": 2208.1086937201476,
+    "sma200": 2062.3746059357254,
     "support_30d": 1912.2734691708965,
     "resistance_30d": 2525.267261590238,
     "mark_price": 2476.25771051,
