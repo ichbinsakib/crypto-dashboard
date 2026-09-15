@@ -344,7 +344,7 @@ def update_pnl_tracker(prev_pnl, signal_results):
     for key, pos in prev_open.items():
         interval = INTRADAY_TIMEFRAMES[pos["tf"]]["interval"]
         klines, err = safe_fetch(
-            f"pnl price {pos['coin']}", lambda p=pos["coin"], i=interval: fetch_binanceus_ohlc(p, i))
+            f"pnl price {pos['coin']}", lambda p=pos["coin"], i=interval: fetch_binance_ohlc(p, i))
         time.sleep(INTRADAY_RATE_LIMIT_DELAY)
         if not klines:
             still_open[key] = pos  # couldn't check this cycle; leave open, try again next run
@@ -869,30 +869,32 @@ def build_screener(fng_value, prev_screener_state, generated_at, markets=None):
     return results, new_state
 
 
-BINANCEUS_KLINES_URL = "https://api.binance.us/api/v3/klines"
+BINANCE_KLINES_URL = "https://data-api.binance.vision/api/v3/klines"
 INTRADAY_TIMEFRAMES = {
-    # interval -> (Binance.US kline interval string, candles used for range/ATR)
+    # interval -> (Binance kline interval string, candles used for range/ATR)
     "15m": {"interval": "15m", "lookback": 30, "window_label": "last ~7.5 hours"},
     "1h": {"interval": "1h", "lookback": 24, "window_label": "last 24 hours"},
     "daily": {"interval": "1d", "lookback": 30, "window_label": "last 30 days"},
 }
-# Binance.com's public spot API returns HTTP 451 (geo-blocked) from GitHub Actions' IP
-# ranges, and Bybit's public API returns HTTP 403 (Amazon CloudFront country block) from the
-# same runners -- both confirmed directly against a live runner. Binance.US has neither
-# restriction and isn't rate-limited nearly as tight as Kraken was, hence the smaller delay.
+# api.binance.com itself returns HTTP 451 (geo-blocked) from GitHub Actions' IP ranges, and
+# Bybit's public API returns HTTP 403 (Amazon CloudFront country block) from the same
+# runners -- both confirmed directly against a live runner. data-api.binance.vision is
+# Binance's own official public spot-market-data mirror domain -- same order book as
+# binance.com itself, just not subject to the same geo-restriction as the main API domain.
 INTRADAY_RATE_LIMIT_DELAY = 0.4
 
 
-def fetch_binanceus_ohlc(symbol, interval):
-    """Not every coin has a direct USD pair on Binance.US, so USDT is tried as a fallback --
-    an invalid symbol is a 4xx from Binance, which http_get_json turns into an exception, so
-    the second attempt only fires when the first pair genuinely doesn't exist. Response rows
-    are [openTime, open, high, low, close, volume, closeTime, ...] -- high/low/close/volume
-    land at indices 2/3/4/5, which is what compute_intraday_signal expects."""
+def fetch_binance_ohlc(symbol, interval):
+    """Binance.com is almost entirely USDT-quoted (491 trading pairs vs. 7 native-USD ones,
+    checked against exchangeInfo), so USDT is tried first with USD as a fallback -- an
+    invalid symbol is a 4xx from Binance, which http_get_json turns into an exception, so the
+    second attempt only fires when the first pair genuinely doesn't exist. Response rows are
+    [openTime, open, high, low, close, volume, closeTime, ...] -- high/low/close/volume land
+    at indices 2/3/4/5, which is what compute_intraday_signal expects."""
     last_err = None
-    for quote in ("USD", "USDT"):
+    for quote in ("USDT", "USD"):
         pair = f"{symbol}{quote}"
-        url = f"{BINANCEUS_KLINES_URL}?symbol={pair}&interval={interval}&limit=100"
+        url = f"{BINANCE_KLINES_URL}?symbol={pair}&interval={interval}&limit=100"
         try:
             data = http_get_json(url)
         except Exception as e:
@@ -900,8 +902,8 @@ def fetch_binanceus_ohlc(symbol, interval):
             continue
         if isinstance(data, list) and data:
             return data
-        last_err = ValueError(f"Binance.US returned no OHLC series for {pair}")
-    raise last_err or ValueError(f"No Binance.US OHLC data for {symbol}")
+        last_err = ValueError(f"Binance returned no OHLC series for {pair}")
+    raise last_err or ValueError(f"No Binance OHLC data for {symbol}")
 
 
 def compute_intraday_signal(klines, lookback, window_label):
@@ -1012,9 +1014,9 @@ def compute_intraday_signal(klines, lookback, window_label):
 
 def build_intraday_screener(markets, timeframe_key, target_count=SCREENER_SIZE, max_attempts=45):
     """Runs the lean intraday model over the same coin universe as the daily screener,
-    using Binance.US's public klines endpoint (Binance.com itself is geo-blocked, HTTP 451,
+    using Binance's own public klines mirror (api.binance.com itself is geo-blocked, HTTP 451,
     and Bybit is blocked too, HTTP 403, both from GitHub Actions runner IPs). Coins without
-    a liquid Binance.US-listed USD/USDT pair (small-caps, tokenized RWA products like
+    a liquid Binance-listed USDT/USD pair (small-caps, tokenized RWA products like
     FIGR_HELOC, etc.) are silently skipped rather than shown broken. Shuffled and
     attempt-capped so it stops once enough coins are found instead of always querying the
     whole pool."""
@@ -1033,7 +1035,7 @@ def build_intraday_screener(markets, timeframe_key, target_count=SCREENER_SIZE, 
         attempts += 1
         klines, err = safe_fetch(
             f"{timeframe_key} klines {symbol}",
-            lambda p=symbol: fetch_binanceus_ohlc(p, cfg["interval"]))
+            lambda p=symbol: fetch_binance_ohlc(p, cfg["interval"]))
         time.sleep(INTRADAY_RATE_LIMIT_DELAY)
         if not klines:
             skipped.append(symbol)
@@ -1046,7 +1048,7 @@ def build_intraday_screener(markets, timeframe_key, target_count=SCREENER_SIZE, 
         except Exception as e:
             log(f"INTRADAY SIGNAL FAIL [{symbol}]: {e}")
     if skipped:
-        log(f"Intraday ({timeframe_key}) skipped (no Binance.US pair or fetch failed): {skipped}")
+        log(f"Intraday ({timeframe_key}) skipped (no Binance pair or fetch failed): {skipped}")
     results.sort(key=lambda r: r["score"], reverse=True)
     return results
 
@@ -1054,11 +1056,11 @@ def build_intraday_screener(markets, timeframe_key, target_count=SCREENER_SIZE, 
 def fetch_single_intraday_signal(symbol, name, timeframe_key):
     """Same fetch+compute as one iteration of build_intraday_screener, for backfilling a
     specific coin (e.g. a P&L position whose rotation slot moved on) rather than sampling
-    from the pool. Returns None if the coin has no liquid Binance.US pair or the fetch fails."""
+    from the pool. Returns None if the coin has no liquid Binance pair or the fetch fails."""
     cfg = INTRADAY_TIMEFRAMES[timeframe_key]
     klines, err = safe_fetch(
         f"{timeframe_key} backfill klines {symbol}",
-        lambda: fetch_binanceus_ohlc(symbol, cfg["interval"]))
+        lambda: fetch_binance_ohlc(symbol, cfg["interval"]))
     time.sleep(INTRADAY_RATE_LIMIT_DELAY)
     if not klines:
         return None
@@ -1481,7 +1483,7 @@ def render(coins_data, fng_value, fng_classification, generated_at, any_stale,
         return f"""
     <div class="sub" style="margin-bottom:14px; display:flex; align-items:center;">
       {tf_name} confirmed setups &mdash; batch of up to {PNL_BATCH_SIZE}, refreshes live every minute
-      <span class="info-tip" tabindex="0" data-tip="Only shows confirmed signals (NEAR-TERM DIP ZONE tier, not the weaker LEAN LONG lean) using Binance.US's public {window_desc} candles. A batch of up to {PNL_BATCH_SIZE} opens and stays fixed until every one of them resolves (win/loss/expired) -- no new coins get added mid-batch, so this list doesn't change under you while you're following it. Buy/stop/target use each coin's own recent volatility (ATR). Prices and scores refresh live in your browser every minute straight from Binance.US.">&#9432;</span>
+      <span class="info-tip" tabindex="0" data-tip="Only shows confirmed signals (NEAR-TERM DIP ZONE tier, not the weaker LEAN LONG lean) using Binance's public {window_desc} candles -- the same spot order book as binance.com itself. A batch of up to {PNL_BATCH_SIZE} opens and stays fixed until every one of them resolves (win/loss/expired) -- no new coins get added mid-batch, so this list doesn't change under you while you're following it. Buy/stop/target use each coin's own recent volatility (ATR). Prices and scores refresh live in your browser every minute straight from Binance.">&#9432;</span>
     </div>
     <div class="screener-grid">{cards}</div>"""
 
@@ -1600,7 +1602,7 @@ def render(coins_data, fng_value, fng_classification, generated_at, any_stale,
         resolved_html = f"""
   <div class="cycle-map" style="margin-top:10px;">
     <div class="card-title" style="display:flex; align-items:center; justify-content:space-between; flex-wrap:wrap; gap:8px;">
-      <span>Performance History<span class="info-tip" tabindex="0" data-tip="Every call that has ever resolved stays here permanently -- winning, losing, and expired -- it is never deleted, only added to. Signal Given is when the call first appeared. Buy/Stop/Target are the levels set at that moment; Exit is the Binance.US price that actually triggered the result, so you can verify a Win genuinely closed at/above Target and a Loss at/below Stop -- on Binance.US. Binance.US is a separate order book from Binance.com (regular Binance) and other exchanges, so its price for the same coin can still diverge enough to miss or overshoot these exact levels, especially on lower-liquidity altcoins.">&#9432;</span></span>
+      <span>Performance History<span class="info-tip" tabindex="0" data-tip="Every call that has ever resolved stays here permanently -- winning, losing, and expired -- it is never deleted, only added to. Signal Given is when the call first appeared. Buy/Stop/Target are the levels set at that moment; Exit is the Binance price that actually triggered the result, so you can verify a Win genuinely closed at/above Target and a Loss at/below Stop -- on Binance's own spot order book. A different exchange can still show a slightly different wick on thinner-liquidity altcoins, and the entry level is a specific reference price (a recent low), not necessarily the live price the moment a signal first appears.">&#9432;</span></span>
       <input type="text" id="pnl-history-search" placeholder="Search by coin..." style="background:#0d1320; border:1px solid var(--border); border-radius:6px; color:var(--text); padding:5px 10px; font-size:12.5px; width:160px;">
     </div>
     <div class="sub" style="margin-bottom:6px;">{showing_note}</div>
@@ -1616,7 +1618,7 @@ def render(coins_data, fng_value, fng_classification, generated_at, any_stale,
     performance_panel = f"""
 <div class="panel panel-performance">
   <div class="cycle-map spot-signal-card" style="margin-bottom:10px;">
-    <div class="card-title">📊 SCANNER PERFORMANCE<span class="info-tip" tabindex="0" data-tip="Tracks confirmed 15m/1h/daily calls (NEAR-TERM DIP ZONE tier only) in batches of up to {PNL_BATCH_SIZE} per timeframe -- a new batch only opens once every position in the current one has resolved (win/loss/expired), so you're never asked to follow more than one batch at a time. All prices come from Binance.US (Binance.com's public API is geo-blocked and Bybit's is country-blocked from where this runs) -- Binance.US is a separate order book from Binance.com, so a level shown as hit here isn't guaranteed to be hit on regular Binance or another exchange. Educational transparency, not a trading track record, and not a guarantee the same fill is available on whichever exchange you actually trade on.">&#9432;</span></div>
+    <div class="card-title">📊 SCANNER PERFORMANCE<span class="info-tip" tabindex="0" data-tip="Tracks confirmed 15m/1h/daily calls (NEAR-TERM DIP ZONE tier only) in batches of up to {PNL_BATCH_SIZE} per timeframe -- a new batch only opens once every position in the current one has resolved (win/loss/expired), so you're never asked to follow more than one batch at a time. All prices come from Binance's own spot market data (the same order book as binance.com), fetched via Binance's public mirror domain since their main API domain blocks GitHub Actions' IP ranges. Educational transparency, not a trading track record, and not a guarantee of the exact fill you'd get trading it live.">&#9432;</span></div>
   </div>
   <div class="top-grid" style="grid-template-columns:1fr 1fr 1fr;">
     {_pnl_stat_card("Daily", pnl_stats.get("daily", {}))}
@@ -1850,7 +1852,7 @@ if ('serviceWorker' in navigator) {{
 (function() {{
   // The page itself only regenerates every few minutes (GitHub Actions rebuild cycle), so the
   // 15m/1h cards shown at load are already a few minutes stale by the time anyone views them.
-  // This re-fetches each shown coin's candles directly from Binance.US in the browser every minute
+  // This re-fetches each shown coin's candles directly from Binance in the browser every minute
   // and recomputes the same rule-based score client-side, so these two tabs stay genuinely live
   // between rebuilds instead of only updating once every {DATA_REFRESH_LABEL}.
   var INTRADAY_CARDS = {intraday_live_cards_json};
@@ -1962,12 +1964,12 @@ if ('serviceWorker' in navigator) {{
     var el = document.getElementById(cfg.id);
     if (!el) return;
     try {{
-      // Not every coin has a direct USD pair on Binance.US -- fall back to USDT, same as the
-      // server-side fetch does.
+      // Binance.com is almost entirely USDT-quoted -- try that first, USD as a fallback,
+      // same as the server-side fetch does.
       var klines = null;
       for (var qi = 0; qi < 2; qi++) {{
-        var quote = qi === 0 ? 'USD' : 'USDT';
-        var url = 'https://api.binance.us/api/v3/klines?symbol=' + cfg.symbol + quote +
+        var quote = qi === 0 ? 'USDT' : 'USD';
+        var url = 'https://data-api.binance.vision/api/v3/klines?symbol=' + cfg.symbol + quote +
           '&interval=' + cfg.interval + '&limit=100';
         var resp = await fetch(url);
         if (!resp.ok) continue;
@@ -2162,36 +2164,8 @@ if ('serviceWorker' in navigator) {{
     return html, spot_signals_by_coin
 
 
-def _probe_binance_mirror():
-    """TEMPORARY diagnostic -- checks from the actual runner whether Binance's own alternate
-    domains (not the geo-blocked api.binance.com) are reachable. Writes results to
-    data/exchange_probe.json. Remove this function and its call site once verified."""
-    import urllib.request
-    import urllib.error
-    probes = {
-        "binance_vision_spot": "https://data-api.binance.vision/api/v3/klines?symbol=XLMUSDT&interval=15m&limit=2",
-        "binance_fapi": "https://fapi.binance.com/fapi/v1/klines?symbol=XLMUSDT&interval=15m&limit=2",
-    }
-    results = {}
-    for name, url in probes.items():
-        try:
-            req = urllib.request.Request(url, headers={"User-Agent": "Mozilla/5.0"})
-            with urllib.request.urlopen(req, timeout=15) as resp:
-                body = resp.read(300).decode("utf-8", errors="replace")
-                results[name] = {"http_status": resp.status, "body_preview": body}
-        except urllib.error.HTTPError as e:
-            results[name] = {"http_status": e.code, "body_preview": e.read(300).decode("utf-8", errors="replace")}
-        except Exception as e:
-            results[name] = {"error": str(e)}
-    results["_probed_at"] = datetime.datetime.now().isoformat()
-    with open(os.path.join(DATA_DIR, "exchange_probe.json"), "w") as f:
-        json.dump(results, f, indent=2)
-    log(f"Binance mirror probe results: {results}")
-
-
 def main():
     log("--- run start ---")
-    _probe_binance_mirror()
     state = load_state()
     generated_at = datetime.datetime.now().strftime("%Y-%m-%d %H:%M:%S")
 
@@ -2235,7 +2209,7 @@ def main():
     log(f"Screener produced {len(screener_results)} ranked coins "
         f"({sum(1 for r in screener_results if r.get('stale'))} cached/stale)")
 
-    log("Running intraday screeners (15m, 1h) via Binance.US OHLC...")
+    log("Running intraday screeners (15m, 1h) via Binance OHLC...")
     prev_pnl_state = state.get("_pnl_tracker", {})
     prev_pnl_open = prev_pnl_state.get("open", {})
 
