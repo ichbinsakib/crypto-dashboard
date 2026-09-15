@@ -823,7 +823,7 @@
         ],
         [
           "Stretch from long-term average",
-          "-6.1% vs its long-term average - not stretched either way",
+          "-6.4% vs its long-term average - not stretched either way",
           0
         ],
         [
@@ -836,12 +836,12 @@
       "id": "hedera-hashgraph",
       "symbol": "HBAR",
       "name": "Hedera",
-      "price": 0.077043,
-      "pct_24h": 0.5721,
+      "price": 0.076793,
+      "pct_24h": 0.70409,
       "pct_7d": -5.1,
       "support_30d": 0.06595442711491843,
       "resistance_30d": 0.08182180696524229,
-      "as_of": "2026-09-15 06:05:17",
+      "as_of": "2026-09-15 06:35:23",
       "stale": false
     },
     "pepe": {
@@ -2675,7 +2675,7 @@
       "rows": [
         [
           "Price vs. recent range",
-          "Near its 30-day low (~$4,294.30) - historically a better entry",
+          "Near its 30-day low (~$4,289.33) - historically a better entry",
           2
         ],
         [
@@ -2695,7 +2695,7 @@
         ],
         [
           "Stretch from long-term average",
-          "-3.6% vs its long-term average - not stretched either way",
+          "-4.0% vs its long-term average - not stretched either way",
           0
         ],
         [
@@ -2708,12 +2708,12 @@
       "id": "pax-gold",
       "symbol": "PAXG",
       "name": "PAX Gold",
-      "price": 4306.84,
-      "pct_24h": -0.66927,
-      "pct_7d": -2.7,
-      "support_30d": 4294.300916164084,
+      "price": 4289.41,
+      "pct_24h": -1.02186,
+      "pct_7d": -3.2,
+      "support_30d": 4289.331749632312,
       "resistance_30d": 4672.307573354755,
-      "as_of": "2026-09-15 03:55:19",
+      "as_of": "2026-09-15 06:35:23",
       "stale": false
     },
     "morpho": {
@@ -2765,14 +2765,14 @@
       "stale": false
     },
     "memecore": {
-      "label": "\ud83d\udfe2 LEAN ACCUMULATE",
-      "status": "bullish",
-      "score": 2,
+      "label": "\ud83d\udfe1 HOLD / NEUTRAL",
+      "status": "neutral",
+      "score": 0,
       "rows": [
         [
           "Price vs. recent range",
-          "Near its 30-day low (~$1.04) - historically a better entry",
-          2
+          "Sitting in the middle of its 30-day range",
+          0
         ],
         [
           "Crowd mood (Fear & Greed)",
@@ -2791,7 +2791,7 @@
         ],
         [
           "Stretch from long-term average",
-          "-47.7% below its long-term average - confirmed downtrend",
+          "-47.3% below its long-term average - confirmed downtrend",
           -1
         ],
         [
@@ -2800,16 +2800,16 @@
           0
         ]
       ],
-      "plain": "Leans toward a decent spot to slowly add (DCA) - not a strong signal, just a lean.",
+      "plain": "No real edge either way right now - fine to just wait and watch.",
       "id": "memecore",
       "symbol": "M",
       "name": "MemeCore",
-      "price": 1.089,
-      "pct_24h": -5.85251,
-      "pct_7d": -6.6,
+      "price": 1.098,
+      "pct_24h": -4.0081,
+      "pct_7d": -6.9,
       "support_30d": 1.0402044506518406,
       "resistance_30d": 1.2453913363052769,
-      "as_of": "2026-09-15 05:35:18",
+      "as_of": "2026-09-15 06:35:23",
       "stale": false
     },
     "aave": {
@@ -3341,7 +3341,9 @@
       "stale": false
     }
   },
-  "_strong_buy_state": {},
+  "_strong_buy_state": {
+    "scanner-1h:ETC": true
+  },
   "_pnl_tracker": {
     "open": {
       "15m:BGB": {
@@ -24783,14 +24785,14 @@
     "key": "BTC",
     "name": "Bitcoin",
     "emoji": "\u20bf",
-    "price": 77395,
+    "price": 77414,
     "high_24h": 79530,
     "low_24h": 77321,
-    "pct_24h": -0.25762,
+    "pct_24h": -0.04943,
     "pct_7d": -1.3,
     "pct_30d": 23.1,
-    "sma50": 71689.97635648635,
-    "sma200": 70237.55441823331,
+    "sma50": 71690.46539212974,
+    "sma200": 70237.67667714415,
     "support_30d": 64491.345282946255,
     "resistance_30d": 81264.70153038795,
     "mark_price": 78726.74180435,
@@ -24805,14 +24807,14 @@
     "key": "ETH",
     "name": "Ethereum",
     "emoji": "\u039e",
-    "price": 2488.94,
+    "price": 2488.72,
     "high_24h": 2607.56,
     "low_24h": 2480.05,
-    "pct_24h": -1.06947,
+    "pct_24h": -0.92257,
     "pct_7d": 0.7,
     "pct_30d": 32.8,
-    "sma50": 2209.108848230274,
-    "sma200": 2062.6246445632573,
+    "sma50": 2209.1060634201576,
+    "sma200": 2062.6239483607283,
     "support_30d": 1912.2734691708965,
     "resistance_30d": 2525.267261590238,
     "mark_price": 2544.79927907,
