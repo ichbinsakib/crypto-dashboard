@@ -295,7 +295,7 @@
         ],
         [
           "Stretch from long-term average",
-          "+42.5% above its long-term average - very stretched",
+          "+41.9% above its long-term average - very stretched",
           -2
         ],
         [
@@ -308,12 +308,12 @@
       "id": "hyperliquid",
       "symbol": "HYPE",
       "name": "Hyperliquid",
-      "price": 78.95,
-      "pct_24h": -1.00179,
-      "pct_7d": -5.6,
+      "price": 78.64,
+      "pct_24h": -1.42822,
+      "pct_7d": -5.9,
       "support_30d": 58.515277414221124,
       "resistance_30d": 87.951916819731,
-      "as_of": "2026-09-15 05:22:36",
+      "as_of": "2026-09-15 07:55:18",
       "stale": false
     },
     "dogecoin": {
@@ -413,14 +413,14 @@
       "stale": false
     },
     "rain": {
-      "label": "\ud83d\udd34 CAUTION - REDUCE NEW BUYS",
-      "status": "bearish",
-      "score": -2,
+      "label": "\ud83d\udfe1 HOLD / NEUTRAL",
+      "status": "neutral",
+      "score": 0,
       "rows": [
         [
           "Price vs. recent range",
-          "Sitting in the middle of its 30-day range",
-          0
+          "Near its 30-day low (~$0.0131) - historically a better entry",
+          2
         ],
         [
           "Crowd mood (Fear & Greed)",
@@ -439,7 +439,7 @@
         ],
         [
           "Stretch from long-term average",
-          "+20.2% above its long-term average - a bit stretched",
+          "+14.7% above its long-term average - a bit stretched",
           -1
         ],
         [
@@ -448,16 +448,16 @@
           0
         ]
       ],
-      "plain": "Getting risky - I'd hold off on new buys until this cools down.",
+      "plain": "No real edge either way right now - fine to just wait and watch.",
       "id": "rain",
       "symbol": "RAIN",
       "name": "Rain",
-      "price": 0.01402981,
-      "pct_24h": -7.15559,
-      "pct_7d": -13.2,
+      "price": 0.01338924,
+      "pct_24h": -11.37345,
+      "pct_7d": -17.6,
       "support_30d": 0.01308236474491796,
       "resistance_30d": 0.018158429442510105,
-      "as_of": "2026-09-15 05:40:24",
+      "as_of": "2026-09-15 07:55:18",
       "stale": false
     },
     "chainlink": {
@@ -871,7 +871,7 @@
         ],
         [
           "Stretch from long-term average",
-          "+3.3% vs its long-term average - not stretched either way",
+          "+3.6% vs its long-term average - not stretched either way",
           0
         ],
         [
@@ -884,12 +884,12 @@
       "id": "pepe",
       "symbol": "PEPE",
       "name": "Pepe",
-      "price": 3.4e-06,
-      "pct_24h": -1.11305,
-      "pct_7d": -4.9,
+      "price": 3.41e-06,
+      "pct_24h": -0.96984,
+      "pct_7d": -5.6,
       "support_30d": 2.582769748064196e-06,
       "resistance_30d": 4.122123035488615e-06,
-      "as_of": "2026-09-15 06:30:30",
+      "as_of": "2026-09-15 07:55:18",
       "stale": false
     },
     "avalanche-2": {
@@ -3358,11 +3358,11 @@
         "coin": "ETC",
         "name": "Ethereum Classic",
         "tf": "1h",
-        "entry": 7.426,
-        "stop": 7.391333333333334,
-        "target1": 7.460666666666667,
-        "target2": 7.495333333333333,
-        "opened_at": "2026-09-15T06:31:42.510262"
+        "entry": 7.389,
+        "stop": 7.3505,
+        "target1": 7.4275,
+        "target2": 7.466,
+        "opened_at": "2026-09-15T07:57:15.177607"
       }
     },
     "resolved": [
@@ -24776,6 +24776,19 @@
         "result": "win",
         "resolved_at": "2026-09-15T06:31:42.510262",
         "exit_price": 7.473
+      },
+      {
+        "coin": "ETC",
+        "name": "Ethereum Classic",
+        "tf": "1h",
+        "entry": 7.426,
+        "stop": 7.391333333333334,
+        "target1": 7.460666666666667,
+        "target2": 7.495333333333333,
+        "opened_at": "2026-09-15T06:31:42.510262",
+        "result": "loss",
+        "resolved_at": "2026-09-15T07:57:15.177607",
+        "exit_price": 7.389
       }
     ]
   },
@@ -24783,14 +24796,14 @@
     "key": "BTC",
     "name": "Bitcoin",
     "emoji": "\u20bf",
-    "price": 76997,
+    "price": 76912,
     "high_24h": 79530,
     "low_24h": 77191,
-    "pct_24h": -1.04421,
+    "pct_24h": -1.16042,
     "pct_7d": -1.7,
     "pct_30d": 22.6,
-    "sma50": 71682.21784797948,
-    "sma200": 70235.6147911066,
+    "sma50": 71680.72259369738,
+    "sma200": 70235.24097753606,
     "support_30d": 64491.345282946255,
     "resistance_30d": 81264.70153038795,
     "mark_price": 78726.74180435,
@@ -24805,14 +24818,14 @@
     "key": "ETH",
     "name": "Ethereum",
     "emoji": "\u039e",
-    "price": 2478.11,
+    "price": 2472.03,
     "high_24h": 2607.56,
     "low_24h": 2480.05,
-    "pct_24h": -1.7328,
+    "pct_24h": -1.91405,
     "pct_7d": 0.5,
     "pct_30d": 32.3,
-    "sma50": 2208.894152130186,
-    "sma200": 2062.570970538235,
+    "sma50": 2208.796750694537,
+    "sma200": 2062.546620179323,
     "support_30d": 1912.2734691708965,
     "resistance_30d": 2525.267261590238,
     "mark_price": 2544.79927907,
