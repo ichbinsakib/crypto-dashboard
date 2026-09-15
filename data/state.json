@@ -391,7 +391,7 @@
         ],
         [
           "Stretch from long-term average",
-          "+132.2% above its long-term average - very stretched",
+          "+132.7% above its long-term average - very stretched",
           -2
         ],
         [
@@ -404,12 +404,12 @@
       "id": "zcash",
       "symbol": "ZEC",
       "name": "Zcash",
-      "price": 1137.97,
-      "pct_24h": 0.11965,
-      "pct_7d": 2.0,
+      "price": 1140.79,
+      "pct_24h": -0.27867,
+      "pct_7d": 0.9,
       "support_30d": 508.5419923409376,
       "resistance_30d": 1244.287571383468,
-      "as_of": "2026-09-15 09:35:20",
+      "as_of": "2026-09-15 10:00:33",
       "stale": false
     },
     "rain": {
@@ -1975,7 +1975,7 @@
         ],
         [
           "Stretch from long-term average",
-          "-9.8% vs its long-term average - not stretched either way",
+          "-8.8% vs its long-term average - not stretched either way",
           0
         ],
         [
@@ -1988,12 +1988,12 @@
       "id": "polkadot",
       "symbol": "DOT",
       "name": "Polkadot",
-      "price": 0.985861,
-      "pct_24h": -3.26523,
-      "pct_7d": -7.5,
+      "price": 0.996714,
+      "pct_24h": -1.80574,
+      "pct_7d": -6.6,
       "support_30d": 0.7510040523927409,
       "resistance_30d": 1.2475304252917225,
-      "as_of": "2026-09-15 08:55:21",
+      "as_of": "2026-09-15 10:00:33",
       "stale": false
     },
     "uniswap": {
@@ -2983,7 +2983,7 @@
         ],
         [
           "Stretch from long-term average",
-          "-5.3% vs its long-term average - not stretched either way",
+          "-5.2% vs its long-term average - not stretched either way",
           0
         ],
         [
@@ -2996,12 +2996,12 @@
       "id": "algorand",
       "symbol": "ALGO",
       "name": "Algorand",
-      "price": 0.09429,
-      "pct_24h": -1.37407,
-      "pct_7d": -1.8,
+      "price": 0.094331,
+      "pct_24h": -1.51305,
+      "pct_7d": -2.0,
       "support_30d": 0.07793708137631736,
       "resistance_30d": 0.10076397875501594,
-      "as_of": "2026-09-15 09:30:32",
+      "as_of": "2026-09-15 10:00:33",
       "stale": false
     },
     "eutbl": {
@@ -3359,10 +3359,10 @@
         "name": "Ethereum Classic",
         "tf": "1h",
         "entry": 7.373,
-        "stop": 7.3340000000000005,
-        "target1": 7.412,
-        "target2": 7.451,
-        "opened_at": "2026-09-15T09:52:18.035071"
+        "stop": 7.334083333333334,
+        "target1": 7.4119166666666665,
+        "target2": 7.450833333333333,
+        "opened_at": "2026-09-15T10:02:28.848320"
       }
     },
     "resolved": [
@@ -24815,6 +24815,19 @@
         "result": "win",
         "resolved_at": "2026-09-15T09:52:18.035071",
         "exit_price": 7.428
+      },
+      {
+        "coin": "ETC",
+        "name": "Ethereum Classic",
+        "tf": "1h",
+        "entry": 7.373,
+        "stop": 7.3340000000000005,
+        "target1": 7.412,
+        "target2": 7.451,
+        "opened_at": "2026-09-15T09:52:18.035071",
+        "result": "win",
+        "resolved_at": "2026-09-15T10:02:28.848320",
+        "exit_price": 7.432
       }
     ]
   },
@@ -24822,14 +24835,14 @@
     "key": "BTC",
     "name": "Bitcoin",
     "emoji": "\u20bf",
-    "price": 76968,
+    "price": 76984,
     "high_24h": 79530,
     "low_24h": 76682,
-    "pct_24h": -1.20242,
+    "pct_24h": -1.50912,
     "pct_7d": -1.9,
     "pct_30d": 22.1,
-    "sma50": 71681.95637707104,
-    "sma200": 70235.54942337947,
+    "sma50": 71681.62298959303,
+    "sma200": 70235.46607650997,
     "support_30d": 64491.345282946255,
     "resistance_30d": 81264.70153038795,
     "mark_price": 78726.74180435,
@@ -24844,14 +24857,14 @@
     "key": "ETH",
     "name": "Ethereum",
     "emoji": "\u039e",
-    "price": 2475.38,
+    "price": 2475.74,
     "high_24h": 2607.56,
     "low_24h": 2464.96,
-    "pct_24h": -1.84305,
+    "pct_24h": -1.97783,
     "pct_7d": -0.1,
     "pct_30d": 31.7,
-    "sma50": 2208.8529835714926,
-    "sma200": 2062.560678398562,
+    "sma50": 2208.8301146177178,
+    "sma200": 2062.554961160118,
     "support_30d": 1912.2734691708965,
     "resistance_30d": 2525.267261590238,
     "mark_price": 2544.79927907,
