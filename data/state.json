@@ -79,7 +79,7 @@
     "ripple": {
       "label": "\ud83d\udfe1 HOLD / NEUTRAL",
       "status": "neutral",
-      "score": 1,
+      "score": 0,
       "rows": [
         [
           "Price vs. recent range",
@@ -98,12 +98,12 @@
         ],
         [
           "Recent trend",
-          "Chopping sideways - no clear trend",
-          0
+          "Trending down - avoid catching a falling knife",
+          -1
         ],
         [
           "Stretch from long-term average",
-          "+4.4% vs its long-term average - not stretched either way",
+          "+0.5% vs its long-term average - not stretched either way",
           0
         ],
         [
@@ -116,12 +116,12 @@
       "id": "ripple",
       "symbol": "XRP",
       "name": "XRP",
-      "price": 1.33,
-      "pct_24h": -10.03037,
-      "pct_7d": -6.9,
+      "price": 1.28,
+      "pct_24h": -13.5733,
+      "pct_7d": -9.2,
       "support_30d": 1.0011429230744608,
       "resistance_30d": 1.52050482788377,
-      "as_of": "2026-09-15 19:00:37",
+      "as_of": "2026-09-15 20:45:21",
       "stale": false
     },
     "solana": {
@@ -679,7 +679,7 @@
         ],
         [
           "Stretch from long-term average",
-          "-10.5% vs its long-term average - not stretched either way",
+          "-10.2% vs its long-term average - not stretched either way",
           0
         ],
         [
@@ -692,12 +692,12 @@
       "id": "cardano",
       "symbol": "ADA",
       "name": "Cardano",
-      "price": 0.195067,
-      "pct_24h": -9.30998,
+      "price": 0.195759,
+      "pct_24h": -8.68561,
       "pct_7d": -10.7,
       "support_30d": 0.1741249817054162,
       "resistance_30d": 0.2291047455940254,
-      "as_of": "2026-09-15 20:35:20",
+      "as_of": "2026-09-15 20:45:21",
       "stale": false
     },
     "stellar": {
@@ -1879,7 +1879,7 @@
         ],
         [
           "Stretch from long-term average",
-          "-32.5% below its long-term average - confirmed downtrend",
+          "-33.1% below its long-term average - confirmed downtrend",
           -1
         ],
         [
@@ -1892,12 +1892,12 @@
       "id": "bitcoin-cash",
       "symbol": "BCH",
       "name": "Bitcoin Cash",
-      "price": 218.01,
-      "pct_24h": -3.67558,
+      "price": 216.18,
+      "pct_24h": -5.81487,
       "pct_7d": -15.1,
       "support_30d": 203.50169440615565,
       "resistance_30d": 288.10955405353275,
-      "as_of": "2026-09-15 19:10:25",
+      "as_of": "2026-09-15 20:45:21",
       "stale": false
     },
     "mantle": {
@@ -3362,7 +3362,7 @@
         "stop": 701.9020833333333,
         "target1": 712.1779166666666,
         "target2": 717.3158333333333,
-        "opened_at": "2026-09-15T20:42:24.210663"
+        "opened_at": "2026-09-15T20:47:23.755262"
       },
       "1h:ZEC": {
         "coin": "ZEC",
@@ -3372,7 +3372,7 @@
         "stop": 1064.2491666666667,
         "target1": 1108.1508333333334,
         "target2": 1130.1016666666667,
-        "opened_at": "2026-09-15T20:42:24.210663"
+        "opened_at": "2026-09-15T20:47:23.755262"
       }
     },
     "resolved": [
@@ -27347,6 +27347,32 @@
         "result": "win",
         "resolved_at": "2026-09-15T20:42:24.210663",
         "exit_price": 1119.12
+      },
+      {
+        "coin": "BNB",
+        "name": "BNB",
+        "tf": "1h",
+        "entry": 707.04,
+        "stop": 701.9020833333333,
+        "target1": 712.1779166666666,
+        "target2": 717.3158333333333,
+        "opened_at": "2026-09-15T20:42:24.210663",
+        "result": "win",
+        "resolved_at": "2026-09-15T20:47:23.755262",
+        "exit_price": 715.89
+      },
+      {
+        "coin": "ZEC",
+        "name": "Zcash",
+        "tf": "1h",
+        "entry": 1086.2,
+        "stop": 1064.2491666666667,
+        "target1": 1108.1508333333334,
+        "target2": 1130.1016666666667,
+        "opened_at": "2026-09-15T20:42:24.210663",
+        "result": "win",
+        "resolved_at": "2026-09-15T20:47:23.755262",
+        "exit_price": 1125.05
       }
     ]
   },
@@ -27354,14 +27380,14 @@
     "key": "BTC",
     "name": "Bitcoin",
     "emoji": "\u20bf",
-    "price": 75740,
+    "price": 75772,
     "high_24h": 79096,
     "low_24h": 75038,
-    "pct_24h": -4.57081,
+    "pct_24h": -4.49717,
     "pct_7d": -3.0,
     "pct_30d": 20.6,
-    "sma50": 71657.01605013198,
-    "sma200": 70229.31434164471,
+    "sma50": 71657.37075980371,
+    "sma200": 70229.40301906265,
     "support_30d": 64491.345282946255,
     "resistance_30d": 81264.70153038795,
     "mark_price": 76989.5,
@@ -27376,14 +27402,14 @@
     "key": "ETH",
     "name": "Ethereum",
     "emoji": "\u039e",
-    "price": 2402.07,
+    "price": 2402.64,
     "high_24h": 2570.03,
     "low_24h": 2361.16,
-    "pct_24h": -7.35257,
+    "pct_24h": -7.15764,
     "pct_7d": -3.0,
     "pct_30d": 28.1,
-    "sma50": 2207.3707291913993,
-    "sma200": 2062.190114803538,
+    "sma50": 2207.387513808728,
+    "sma200": 2062.1943109578706,
     "support_30d": 1912.2734691708965,
     "resistance_30d": 2525.267261590238,
     "mark_price": 2476.25771051,
