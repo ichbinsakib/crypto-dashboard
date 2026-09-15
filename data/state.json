@@ -847,7 +847,7 @@
     "pepe": {
       "label": "\ud83d\udfe1 HOLD / NEUTRAL",
       "status": "neutral",
-      "score": 0,
+      "score": 1,
       "rows": [
         [
           "Price vs. recent range",
@@ -856,13 +856,13 @@
         ],
         [
           "Crowd mood (Fear & Greed)",
-          "57/100 - crowd is greedy",
+          "69/100 - crowd is greedy",
           -1
         ],
         [
           "Market phase (best guess)",
-          "Established uptrend - phase where price marks up",
-          1
+          "Basing near the bottom - phase where smart money accumulates",
+          2
         ],
         [
           "Recent trend",
@@ -871,7 +871,7 @@
         ],
         [
           "Stretch from long-term average",
-          "+5.1% vs its long-term average - not stretched either way",
+          "+4.8% vs its long-term average - not stretched either way",
           0
         ],
         [
@@ -884,12 +884,12 @@
       "id": "pepe",
       "symbol": "PEPE",
       "name": "Pepe",
-      "price": 3.46e-06,
-      "pct_24h": 2.57971,
-      "pct_7d": -3.7,
-      "support_30d": 2.5716563906374582e-06,
+      "price": 3.45e-06,
+      "pct_24h": 2.65544,
+      "pct_7d": -3.3,
+      "support_30d": 2.582769748064196e-06,
       "resistance_30d": 4.122123035488615e-06,
-      "as_of": "2026-09-14 23:40:23",
+      "as_of": "2026-09-15 00:35:18",
       "stale": false
     },
     "avalanche-2": {
@@ -1831,7 +1831,7 @@
         ],
         [
           "Stretch from long-term average",
-          "+40.6% above its long-term average - very stretched",
+          "+41.0% above its long-term average - very stretched",
           -2
         ],
         [
@@ -1844,12 +1844,12 @@
       "id": "ethena",
       "symbol": "ENA",
       "name": "Ethena",
-      "price": 0.144231,
-      "pct_24h": 5.81376,
+      "price": 0.144583,
+      "pct_24h": 6.02026,
       "pct_7d": -12.4,
       "support_30d": 0.08269090736599788,
       "resistance_30d": 0.17616469272611565,
-      "as_of": "2026-09-15 00:15:21",
+      "as_of": "2026-09-15 00:35:18",
       "stale": false
     },
     "bitcoin-cash": {
@@ -2023,7 +2023,7 @@
         ],
         [
           "Stretch from long-term average",
-          "+76.2% above its long-term average - very stretched",
+          "+78.4% above its long-term average - very stretched",
           -2
         ],
         [
@@ -2036,12 +2036,12 @@
       "id": "uniswap",
       "symbol": "UNI",
       "name": "Uniswap",
-      "price": 6.55,
-      "pct_24h": 6.68004,
+      "price": 6.63,
+      "pct_24h": 7.88192,
       "pct_7d": -4.3,
       "support_30d": 3.2846390150092466,
       "resistance_30d": 7.291165865788254,
-      "as_of": "2026-09-15 00:15:21",
+      "as_of": "2026-09-15 00:35:18",
       "stale": false
     },
     "pi-network": {
@@ -3349,10 +3349,10 @@
         "name": "Zcash",
         "tf": "15m",
         "entry": 1140.97,
-        "stop": 1129.105,
-        "target1": 1152.835,
-        "target2": 1164.7,
-        "opened_at": "2026-09-15T00:33:32.278385"
+        "stop": 1129.017,
+        "target1": 1152.923,
+        "target2": 1164.876,
+        "opened_at": "2026-09-15T00:37:14.466780"
       },
       "1h:ETC": {
         "coin": "ETC",
@@ -3362,7 +3362,7 @@
         "stop": 7.453916666666666,
         "target1": 7.528083333333333,
         "target2": 7.565166666666666,
-        "opened_at": "2026-09-15T00:33:32.278385"
+        "opened_at": "2026-09-15T00:37:14.466780"
       }
     },
     "resolved": [
@@ -24425,6 +24425,32 @@
         "result": "win",
         "resolved_at": "2026-09-15T00:33:32.278385",
         "exit_price": 7.561
+      },
+      {
+        "coin": "ZEC",
+        "name": "Zcash",
+        "tf": "15m",
+        "entry": 1140.97,
+        "stop": 1129.105,
+        "target1": 1152.835,
+        "target2": 1164.7,
+        "opened_at": "2026-09-15T00:33:32.278385",
+        "result": "win",
+        "resolved_at": "2026-09-15T00:37:14.466780",
+        "exit_price": 1165.08
+      },
+      {
+        "coin": "ETC",
+        "name": "Ethereum Classic",
+        "tf": "1h",
+        "entry": 7.491,
+        "stop": 7.453916666666666,
+        "target1": 7.528083333333333,
+        "target2": 7.565166666666666,
+        "opened_at": "2026-09-15T00:33:32.278385",
+        "result": "win",
+        "resolved_at": "2026-09-15T00:37:14.466780",
+        "exit_price": 7.562
       }
     ]
   },
@@ -24432,14 +24458,14 @@
     "key": "BTC",
     "name": "Bitcoin",
     "emoji": "\u20bf",
-    "price": 78000,
+    "price": 78002,
     "high_24h": 79530,
     "low_24h": 76647,
-    "pct_24h": 1.9121,
+    "pct_24h": 1.68939,
     "pct_7d": -1.0,
     "pct_30d": 23.9,
-    "sma50": 71702.11208323998,
-    "sma200": 70240.58834992172,
+    "sma50": 71702.15117941648,
+    "sma200": 70240.59812396584,
     "support_30d": 64491.345282946255,
     "resistance_30d": 81264.70153038795,
     "mark_price": 78726.74180435,
@@ -24454,14 +24480,14 @@
     "key": "ETH",
     "name": "Ethereum",
     "emoji": "\u039e",
-    "price": 2509.17,
+    "price": 2511.11,
     "high_24h": 2607.56,
     "low_24h": 2474.63,
-    "pct_24h": 1.49675,
+    "pct_24h": 1.20733,
     "pct_7d": 1.3,
     "pct_30d": 33.5,
-    "sma50": 2209.5232210261083,
-    "sma200": 2062.728237762216,
+    "sma50": 2209.5524346358998,
+    "sma200": 2062.7355411646636,
     "support_30d": 1912.2734691708965,
     "resistance_30d": 2525.267261590238,
     "mark_price": 2544.79927907,
