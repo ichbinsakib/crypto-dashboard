@@ -548,12 +548,12 @@
       "id": "whitebit",
       "symbol": "WBT",
       "name": "WhiteBIT Coin",
-      "price": 77.88,
-      "pct_24h": -2.56335,
+      "price": 77.9,
+      "pct_24h": -2.6355,
       "pct_7d": -4.3,
       "support_30d": 55.78703512979283,
       "resistance_30d": 81.2521953230761,
-      "as_of": "2026-09-16 05:20:24",
+      "as_of": "2026-09-16 05:25:19",
       "stale": false
     },
     "leo-token": {
@@ -1591,7 +1591,7 @@
         ],
         [
           "Stretch from long-term average",
-          "+74.3% above its long-term average - very stretched",
+          "+75.0% above its long-term average - very stretched",
           -2
         ],
         [
@@ -1604,12 +1604,12 @@
       "id": "venice-token",
       "symbol": "VVV",
       "name": "Venice Token",
-      "price": 21.6,
-      "pct_24h": -2.03383,
-      "pct_7d": -15.4,
+      "price": 21.69,
+      "pct_24h": -1.44207,
+      "pct_7d": -14.7,
       "support_30d": 14.047888779973915,
       "resistance_30d": 25.88474946901688,
-      "as_of": "2026-09-16 04:55:18",
+      "as_of": "2026-09-16 05:25:19",
       "stale": false
     },
     "litecoin": {
@@ -1639,7 +1639,7 @@
         ],
         [
           "Stretch from long-term average",
-          "+0.9% vs its long-term average - not stretched either way",
+          "+1.4% vs its long-term average - not stretched either way",
           0
         ],
         [
@@ -1652,12 +1652,12 @@
       "id": "litecoin",
       "symbol": "LTC",
       "name": "Litecoin",
-      "price": 50.81,
-      "pct_24h": -3.95292,
-      "pct_7d": -6.8,
+      "price": 51.1,
+      "pct_24h": -2.79657,
+      "pct_7d": -4.8,
       "support_30d": 44.34767980799559,
       "resistance_30d": 55.20228907963863,
-      "as_of": "2026-09-16 02:20:22",
+      "as_of": "2026-09-16 05:25:19",
       "stale": false
     },
     "bitget-token": {
@@ -2119,7 +2119,7 @@
         ],
         [
           "Stretch from long-term average",
-          "+0.4% vs its long-term average - not stretched either way",
+          "+0.1% vs its long-term average - not stretched either way",
           0
         ],
         [
@@ -2132,12 +2132,12 @@
       "id": "ondo-finance",
       "symbol": "ONDO",
       "name": "Ondo",
-      "price": 0.329589,
-      "pct_24h": -6.00724,
-      "pct_7d": -12.0,
+      "price": 0.32867,
+      "pct_24h": -6.12686,
+      "pct_7d": -11.2,
       "support_30d": 0.32601458799099026,
       "resistance_30d": 0.3969475338902824,
-      "as_of": "2026-09-16 04:35:19",
+      "as_of": "2026-09-16 05:25:19",
       "stale": false
     },
     "canton-network": {
@@ -2180,12 +2180,12 @@
       "id": "canton-network",
       "symbol": "CC",
       "name": "Canton",
-      "price": 0.091464,
-      "pct_24h": -4.7404,
+      "price": 0.091463,
+      "pct_24h": -4.35893,
       "pct_7d": -15.2,
       "support_30d": 0.09077045047943234,
       "resistance_30d": 0.12396615653575341,
-      "as_of": "2026-09-16 05:05:19",
+      "as_of": "2026-09-16 05:25:19",
       "stale": false
     },
     "internet-computer": {
@@ -3341,9 +3341,7 @@
       "stale": false
     }
   },
-  "_strong_buy_state": {
-    "scanner-15m:MORPHO": true
-  },
+  "_strong_buy_state": {},
   "_pnl_tracker": {
     "open": {
       "15m:MORPHO": {
@@ -3351,10 +3349,10 @@
         "name": "Morpho",
         "tf": "15m",
         "entry": 2.06,
-        "stop": 2.049733333333333,
-        "target1": 2.070266666666667,
-        "target2": 2.080533333333334,
-        "opened_at": "2026-09-16T05:11:58.504003"
+        "stop": 2.05,
+        "target1": 2.0700000000000003,
+        "target2": 2.0800000000000005,
+        "opened_at": "2026-09-16T05:26:47.220561"
       },
       "daily:XLM": {
         "coin": "XLM",
@@ -3364,7 +3362,7 @@
         "stop": 0.14048333333333335,
         "target1": 0.16431666666666667,
         "target2": 0.17623333333333333,
-        "opened_at": "2026-09-16T05:22:18.511447"
+        "opened_at": "2026-09-16T05:26:47.220561"
       }
     },
     "resolved": [
@@ -29263,6 +29261,32 @@
         "result": "win",
         "resolved_at": "2026-09-16T05:22:18.511447",
         "exit_price": 0.1768
+      },
+      {
+        "coin": "MORPHO",
+        "name": "Morpho",
+        "tf": "15m",
+        "entry": 2.06,
+        "stop": 2.049733333333333,
+        "target1": 2.070266666666667,
+        "target2": 2.080533333333334,
+        "opened_at": "2026-09-16T05:11:58.504003",
+        "result": "win",
+        "resolved_at": "2026-09-16T05:26:47.220561",
+        "exit_price": 2.073
+      },
+      {
+        "coin": "XLM",
+        "name": "Stellar",
+        "tf": "daily",
+        "entry": 0.1524,
+        "stop": 0.14048333333333335,
+        "target1": 0.16431666666666667,
+        "target2": 0.17623333333333333,
+        "opened_at": "2026-09-16T05:22:18.511447",
+        "result": "win",
+        "resolved_at": "2026-09-16T05:26:47.220561",
+        "exit_price": 0.1767
       }
     ]
   },
@@ -29270,14 +29294,14 @@
     "key": "BTC",
     "name": "Bitcoin",
     "emoji": "\u20bf",
-    "price": 75798,
+    "price": 75810,
     "high_24h": 77703,
     "low_24h": 75038,
-    "pct_24h": -1.98082,
+    "pct_24h": -2.00744,
     "pct_7d": -3.6,
     "pct_30d": 19.6,
-    "sma50": 71892.30306312228,
-    "sma200": 70272.46043105089,
+    "sma50": 71892.60211135045,
+    "sma200": 70272.53519310792,
     "support_30d": 64686.25782561655,
     "resistance_30d": 81264.70153038795,
     "mark_price": 75592.6,
@@ -29292,14 +29316,14 @@
     "key": "ETH",
     "name": "Ethereum",
     "emoji": "\u039e",
-    "price": 2400.02,
+    "price": 2400.7,
     "high_24h": 2499.43,
     "low_24h": 2361.16,
-    "pct_24h": -3.24841,
+    "pct_24h": -3.35229,
     "pct_7d": -3.4,
     "pct_30d": 26.5,
-    "sma50": 2216.876112273482,
-    "sma200": 2064.335295322696,
+    "sma50": 2216.8847040704613,
+    "sma200": 2064.3374432719406,
     "support_30d": 1916.3998901478055,
     "resistance_30d": 2525.267261590238,
     "mark_price": 2391.78,
