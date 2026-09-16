@@ -151,7 +151,7 @@
         ],
         [
           "Stretch from long-term average",
-          "+16.7% above its long-term average - a bit stretched",
+          "+16.6% above its long-term average - a bit stretched",
           -1
         ],
         [
@@ -164,12 +164,12 @@
       "id": "solana",
       "symbol": "SOL",
       "name": "Solana",
-      "price": 97.22,
-      "pct_24h": -4.24008,
-      "pct_7d": -6.1,
+      "price": 97.14,
+      "pct_24h": -4.15839,
+      "pct_7d": -5.9,
       "support_30d": 77.00190398395006,
       "resistance_30d": 109.17730597799657,
-      "as_of": "2026-09-16 04:05:18",
+      "as_of": "2026-09-16 06:00:39",
       "stale": false
     },
     "tron": {
@@ -1701,11 +1701,11 @@
       "symbol": "BGB",
       "name": "Bitget Token",
       "price": 1.89,
-      "pct_24h": -2.59781,
-      "pct_7d": -5.8,
+      "pct_24h": -1.95234,
+      "pct_7d": -5.7,
       "support_30d": 1.6739981877355687,
       "resistance_30d": 2.0284940947674617,
-      "as_of": "2026-09-16 04:25:20",
+      "as_of": "2026-09-16 06:00:39",
       "stale": false
     },
     "sui": {
@@ -2503,7 +2503,7 @@
         ],
         [
           "Stretch from long-term average",
-          "-11.3% vs its long-term average - not stretched either way",
+          "-12.0% vs its long-term average - not stretched either way",
           0
         ],
         [
@@ -2516,12 +2516,12 @@
       "id": "quant-network",
       "symbol": "QNT",
       "name": "Quant",
-      "price": 60.63,
-      "pct_24h": -6.41184,
-      "pct_7d": -9.9,
+      "price": 60.13,
+      "pct_24h": -6.17428,
+      "pct_7d": -9.2,
       "support_30d": 55.905981995619285,
       "resistance_30d": 67.13669726469111,
-      "as_of": "2026-09-16 04:05:18",
+      "as_of": "2026-09-16 06:00:39",
       "stale": false
     },
     "tether-gold": {
@@ -3341,9 +3341,21 @@
       "stale": false
     }
   },
-  "_strong_buy_state": {},
+  "_strong_buy_state": {
+    "scanner-15m:QNT": true
+  },
   "_pnl_tracker": {
     "open": {
+      "15m:QNT": {
+        "coin": "QNT",
+        "name": "Quant",
+        "tf": "15m",
+        "entry": 60.12,
+        "stop": 59.87533333333333,
+        "target1": 60.364666666666665,
+        "target2": 60.60933333333333,
+        "opened_at": "2026-09-16T06:02:38.506018"
+      },
       "daily:XLM": {
         "coin": "XLM",
         "name": "Stellar",
@@ -3352,7 +3364,7 @@
         "stop": 0.14048333333333335,
         "target1": 0.16431666666666667,
         "target2": 0.17623333333333333,
-        "opened_at": "2026-09-16T05:57:20.863197"
+        "opened_at": "2026-09-16T06:02:38.506018"
       }
     },
     "resolved": [
@@ -29407,6 +29419,19 @@
         "result": "win",
         "resolved_at": "2026-09-16T05:57:20.863197",
         "exit_price": 0.1761
+      },
+      {
+        "coin": "XLM",
+        "name": "Stellar",
+        "tf": "daily",
+        "entry": 0.1524,
+        "stop": 0.14048333333333335,
+        "target1": 0.16431666666666667,
+        "target2": 0.17623333333333333,
+        "opened_at": "2026-09-16T05:57:20.863197",
+        "result": "win",
+        "resolved_at": "2026-09-16T06:02:38.506018",
+        "exit_price": 0.176
       }
     ]
   },
@@ -29414,14 +29439,14 @@
     "key": "BTC",
     "name": "Bitcoin",
     "emoji": "\u20bf",
-    "price": 75874,
+    "price": 75896,
     "high_24h": 77703,
     "low_24h": 75038,
-    "pct_24h": -2.21867,
+    "pct_24h": -2.20994,
     "pct_7d": -3.6,
     "pct_30d": 19.6,
-    "sma50": 71893.41151215187,
-    "sma200": 70272.73754330826,
+    "sma50": 71894.35397613281,
+    "sma200": 70272.97315930351,
     "support_30d": 64686.25782561655,
     "resistance_30d": 81264.70153038795,
     "mark_price": 75592.6,
@@ -29436,14 +29461,14 @@
     "key": "ETH",
     "name": "Ethereum",
     "emoji": "\u039e",
-    "price": 2403.57,
+    "price": 2404.77,
     "high_24h": 2499.43,
     "low_24h": 2361.16,
-    "pct_24h": -3.722,
+    "pct_24h": -3.65643,
     "pct_7d": -3.4,
     "pct_30d": 26.5,
-    "sma50": 2216.9326905296657,
-    "sma200": 2064.349439886742,
+    "sma50": 2216.9725681188283,
+    "sma200": 2064.3594092840326,
     "support_30d": 1916.3998901478055,
     "resistance_30d": 2525.267261590238,
     "mark_price": 2391.78,
