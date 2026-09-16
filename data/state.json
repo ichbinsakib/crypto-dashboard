@@ -511,7 +511,7 @@
     "whitebit": {
       "label": "\ud83d\udd34 CAUTION - REDUCE NEW BUYS",
       "status": "bearish",
-      "score": -3,
+      "score": -2,
       "rows": [
         [
           "Price vs. recent range",
@@ -520,8 +520,8 @@
         ],
         [
           "Crowd mood (Fear & Greed)",
-          "69/100 - crowd is greedy",
-          -1
+          "51/100 - crowd mood is neutral",
+          0
         ],
         [
           "Market phase (best guess)",
@@ -535,7 +535,7 @@
         ],
         [
           "Stretch from long-term average",
-          "+38.0% above its long-term average - very stretched",
+          "+36.5% above its long-term average - very stretched",
           -2
         ],
         [
@@ -548,12 +548,12 @@
       "id": "whitebit",
       "symbol": "WBT",
       "name": "WhiteBIT Coin",
-      "price": 78.64,
-      "pct_24h": -2.89397,
-      "pct_7d": -1.3,
-      "support_30d": 55.64665684656647,
+      "price": 77.95,
+      "pct_24h": -3.41382,
+      "pct_7d": -4.9,
+      "support_30d": 55.78703512979283,
       "resistance_30d": 81.2521953230761,
-      "as_of": "2026-09-15 16:10:23",
+      "as_of": "2026-09-16 02:30:29",
       "stale": false
     },
     "leo-token": {
@@ -1413,11 +1413,11 @@
       "symbol": "GT",
       "name": "Gate",
       "price": 9.07,
-      "pct_24h": -3.03396,
+      "pct_24h": -3.26459,
       "pct_7d": -0.5,
       "support_30d": 6.740499546922291,
       "resistance_30d": 9.38216924975626,
-      "as_of": "2026-09-16 02:15:25",
+      "as_of": "2026-09-16 02:30:29",
       "stale": false
     },
     "crypto-com-chain": {
@@ -2695,7 +2695,7 @@
         ],
         [
           "Stretch from long-term average",
-          "-4.0% vs its long-term average - not stretched either way",
+          "-3.7% vs its long-term average - not stretched either way",
           0
         ],
         [
@@ -2708,12 +2708,12 @@
       "id": "pax-gold",
       "symbol": "PAXG",
       "name": "PAX Gold",
-      "price": 4287.45,
-      "pct_24h": -0.5157,
+      "price": 4299.28,
+      "pct_24h": -0.27834,
       "pct_7d": -1.9,
       "support_30d": 4283.504412696663,
       "resistance_30d": 4672.307573354755,
-      "as_of": "2026-09-16 02:05:18",
+      "as_of": "2026-09-16 02:30:29",
       "stale": false
     },
     "morpho": {
@@ -3352,7 +3352,7 @@
         "stop": 0.14052,
         "target1": 0.16428,
         "target2": 0.17616,
-        "opened_at": "2026-09-16T02:27:21.029917"
+        "opened_at": "2026-09-16T02:32:33.358579"
       }
     },
     "resolved": [
@@ -28497,6 +28497,19 @@
         "result": "win",
         "resolved_at": "2026-09-16T02:27:21.029917",
         "exit_price": 0.1757
+      },
+      {
+        "coin": "XLM",
+        "name": "Stellar",
+        "tf": "daily",
+        "entry": 0.1524,
+        "stop": 0.14052,
+        "target1": 0.16428,
+        "target2": 0.17616,
+        "opened_at": "2026-09-16T02:27:21.029917",
+        "result": "win",
+        "resolved_at": "2026-09-16T02:32:33.358579",
+        "exit_price": 0.1764
       }
     ]
   },
@@ -28504,14 +28517,14 @@
     "key": "BTC",
     "name": "Bitcoin",
     "emoji": "\u20bf",
-    "price": 75782,
+    "price": 75830,
     "high_24h": 77886,
     "low_24h": 75038,
-    "pct_24h": -2.79536,
+    "pct_24h": -2.71034,
     "pct_7d": -4.2,
     "pct_30d": 20.1,
-    "sma50": 71891.80942785903,
-    "sma200": 70272.33702223506,
+    "sma50": 71893.03444620357,
+    "sma200": 70272.6432768212,
     "support_30d": 64686.25782561655,
     "resistance_30d": 81264.70153038795,
     "mark_price": 75592.6,
@@ -28526,14 +28539,14 @@
     "key": "ETH",
     "name": "Ethereum",
     "emoji": "\u039e",
-    "price": 2397.76,
+    "price": 2398.62,
     "high_24h": 2511.64,
     "low_24h": 2361.16,
-    "pct_24h": -4.76296,
+    "pct_24h": -4.68105,
     "pct_7d": -4.2,
     "pct_30d": 27.4,
-    "sma50": 2216.8174180122273,
-    "sma200": 2064.320621757382,
+    "sma50": 2216.8523289972813,
+    "sma200": 2064.329349503646,
     "support_30d": 1916.3998901478055,
     "resistance_30d": 2525.267261590238,
     "mark_price": 2391.78,
