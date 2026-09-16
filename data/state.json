@@ -1111,7 +1111,7 @@
         ],
         [
           "Stretch from long-term average",
-          "+8.4% vs its long-term average - not stretched either way",
+          "+6.3% vs its long-term average - not stretched either way",
           0
         ],
         [
@@ -1124,12 +1124,12 @@
       "id": "polygon-ecosystem-token",
       "symbol": "POL",
       "name": "POL (ex-MATIC)",
-      "price": 0.095244,
-      "pct_24h": -1.447,
-      "pct_7d": -4.2,
+      "price": 0.093389,
+      "pct_24h": -4.2612,
+      "pct_7d": -1.5,
       "support_30d": 0.08117354412588569,
       "resistance_30d": 0.12250456198546959,
-      "as_of": "2026-09-16 10:45:24",
+      "as_of": "2026-09-16 11:30:32",
       "stale": false
     },
     "blackrock-usd-institutional-digital-liquidity-fund": {
@@ -1543,7 +1543,7 @@
         ],
         [
           "Stretch from long-term average",
-          "+66.2% above its long-term average - very stretched",
+          "+67.0% above its long-term average - very stretched",
           -2
         ],
         [
@@ -1556,12 +1556,12 @@
       "id": "pump-fun",
       "symbol": "PUMP",
       "name": "Pump.fun",
-      "price": 0.00361994,
-      "pct_24h": 0.74758,
+      "price": 0.00363822,
+      "pct_24h": 1.65325,
       "pct_7d": -17.7,
       "support_30d": 0.0030001765124458095,
       "resistance_30d": 0.0052249885406471875,
-      "as_of": "2026-09-16 11:20:28",
+      "as_of": "2026-09-16 11:30:32",
       "stale": false
     },
     "venice-token": {
@@ -2767,7 +2767,7 @@
     "memecore": {
       "label": "\ud83d\udfe1 HOLD / NEUTRAL",
       "status": "neutral",
-      "score": 0,
+      "score": 1,
       "rows": [
         [
           "Price vs. recent range",
@@ -2786,8 +2786,8 @@
         ],
         [
           "Recent trend",
-          "Trending down - avoid catching a falling knife",
-          -1
+          "Chopping sideways - no clear trend",
+          0
         ],
         [
           "Stretch from long-term average",
@@ -2804,12 +2804,12 @@
       "id": "memecore",
       "symbol": "M",
       "name": "MemeCore",
-      "price": 1.1,
-      "pct_24h": -1.14454,
-      "pct_7d": -8.0,
+      "price": 1.099,
+      "pct_24h": -0.93297,
+      "pct_7d": -7.8,
       "support_30d": 1.0402044506518406,
       "resistance_30d": 1.2453913363052769,
-      "as_of": "2026-09-16 09:15:25",
+      "as_of": "2026-09-16 11:30:32",
       "stale": false
     },
     "aave": {
@@ -3349,10 +3349,10 @@
         "name": "Ethena",
         "tf": "15m",
         "entry": 0.1385,
-        "stop": 0.13740666666666668,
-        "target1": 0.13959333333333335,
-        "target2": 0.14068666666666668,
-        "opened_at": "2026-09-16T11:27:18.316880"
+        "stop": 0.13741333333333336,
+        "target1": 0.13958666666666666,
+        "target2": 0.14067333333333332,
+        "opened_at": "2026-09-16T11:32:27.828970"
       },
       "daily:XLM": {
         "coin": "XLM",
@@ -3362,7 +3362,7 @@
         "stop": 0.14047,
         "target1": 0.16433,
         "target2": 0.17626,
-        "opened_at": "2026-09-16T11:27:18.316880"
+        "opened_at": "2026-09-16T11:32:27.828970"
       }
     },
     "resolved": [
@@ -30678,6 +30678,32 @@
         "result": "win",
         "resolved_at": "2026-09-16T11:27:18.316880",
         "exit_price": 0.1755
+      },
+      {
+        "coin": "ENA",
+        "name": "Ethena",
+        "tf": "15m",
+        "entry": 0.1385,
+        "stop": 0.13740666666666668,
+        "target1": 0.13959333333333335,
+        "target2": 0.14068666666666668,
+        "opened_at": "2026-09-16T11:27:18.316880",
+        "result": "win",
+        "resolved_at": "2026-09-16T11:32:27.828970",
+        "exit_price": 0.1442
+      },
+      {
+        "coin": "XLM",
+        "name": "Stellar",
+        "tf": "daily",
+        "entry": 0.1524,
+        "stop": 0.14047,
+        "target1": 0.16433,
+        "target2": 0.17626,
+        "opened_at": "2026-09-16T11:27:18.316880",
+        "result": "win",
+        "resolved_at": "2026-09-16T11:32:27.828970",
+        "exit_price": 0.1756
       }
     ]
   },
@@ -30685,14 +30711,14 @@
     "key": "BTC",
     "name": "Bitcoin",
     "emoji": "\u20bf",
-    "price": 75881,
+    "price": 75923,
     "high_24h": 77146,
     "low_24h": 75038,
-    "pct_24h": -1.38873,
+    "pct_24h": -1.3614,
     "pct_7d": -3.9,
     "pct_30d": 19.9,
-    "sma50": 71894.11740922598,
-    "sma200": 70272.9140175768,
+    "sma50": 71894.98856126457,
+    "sma200": 70273.13180558645,
     "support_30d": 64686.25782561655,
     "resistance_30d": 81264.70153038795,
     "mark_price": 75928.5,
@@ -30707,14 +30733,14 @@
     "key": "ETH",
     "name": "Ethereum",
     "emoji": "\u039e",
-    "price": 2403.63,
+    "price": 2405.59,
     "high_24h": 2484.59,
     "low_24h": 2361.16,
-    "pct_24h": -3.0708,
+    "pct_24h": -2.99529,
     "pct_7d": -3.5,
     "pct_30d": 27.0,
-    "sma50": 2216.9447054673965,
-    "sma200": 2064.3524436211746,
+    "sma50": 2216.9875208569056,
+    "sma200": 2064.3631474685517,
     "support_30d": 1916.3998901478055,
     "resistance_30d": 2525.267261590238,
     "mark_price": 2399.32,
