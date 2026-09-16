@@ -439,7 +439,7 @@
         ],
         [
           "Stretch from long-term average",
-          "+13.1% above its long-term average - a bit stretched",
+          "+13.9% above its long-term average - a bit stretched",
           -1
         ],
         [
@@ -452,12 +452,12 @@
       "id": "rain",
       "symbol": "RAIN",
       "name": "Rain",
-      "price": 0.01322652,
-      "pct_24h": -6.5012,
-      "pct_7d": -20.0,
+      "price": 0.01331557,
+      "pct_24h": -5.69672,
+      "pct_7d": -16.5,
       "support_30d": 0.01308236474491796,
       "resistance_30d": 0.018158429442510105,
-      "as_of": "2026-09-16 20:30:30",
+      "as_of": "2026-09-16 21:00:35",
       "stale": false
     },
     "chainlink": {
@@ -1565,9 +1565,9 @@
       "stale": false
     },
     "venice-token": {
-      "label": "\ud83d\udd34 DISTRIBUTION ZONE",
+      "label": "\ud83d\udd34 CAUTION - REDUCE NEW BUYS",
       "status": "bearish",
-      "score": -5,
+      "score": -4,
       "rows": [
         [
           "Price vs. recent range",
@@ -1586,12 +1586,12 @@
         ],
         [
           "Recent trend",
-          "Trending down - avoid catching a falling knife",
-          -1
+          "Chopping sideways - no clear trend",
+          0
         ],
         [
           "Stretch from long-term average",
-          "+78.3% above its long-term average - very stretched",
+          "+87.3% above its long-term average - very stretched",
           -2
         ],
         [
@@ -1600,16 +1600,16 @@
           0
         ]
       ],
-      "plain": "Looks stretched and euphoric - historically the zone where smart money sells, not buys.",
+      "plain": "Getting risky - I'd hold off on new buys until this cools down.",
       "id": "venice-token",
       "symbol": "VVV",
       "name": "Venice Token",
-      "price": 22.11,
-      "pct_24h": -1.60756,
-      "pct_7d": -10.1,
+      "price": 23.23,
+      "pct_24h": 6.9068,
+      "pct_7d": -1.4,
       "support_30d": 14.047888779973915,
       "resistance_30d": 25.88474946901688,
-      "as_of": "2026-09-16 17:55:19",
+      "as_of": "2026-09-16 21:00:35",
       "stale": false
     },
     "litecoin": {
@@ -2503,7 +2503,7 @@
         ],
         [
           "Stretch from long-term average",
-          "-12.4% vs its long-term average - not stretched either way",
+          "-11.5% vs its long-term average - not stretched either way",
           0
         ],
         [
@@ -2516,12 +2516,12 @@
       "id": "quant-network",
       "symbol": "QNT",
       "name": "Quant",
-      "price": 59.86,
-      "pct_24h": -2.2725,
-      "pct_7d": -11.8,
+      "price": 60.5,
+      "pct_24h": -1.69368,
+      "pct_7d": -9.0,
       "support_30d": 55.905981995619285,
       "resistance_30d": 67.13669726469111,
-      "as_of": "2026-09-16 18:50:29",
+      "as_of": "2026-09-16 21:00:35",
       "stale": false
     },
     "tether-gold": {
@@ -3342,7 +3342,6 @@
     }
   },
   "_strong_buy_state": {
-    "scanner-15m:DOT": true,
     "scanner-daily:XLM": true
   },
   "_pnl_tracker": {
@@ -3352,20 +3351,20 @@
         "name": "Polkadot",
         "tf": "15m",
         "entry": 0.965,
-        "stop": 0.9546,
-        "target1": 0.9753999999999999,
-        "target2": 0.9857999999999999,
-        "opened_at": "2026-09-16T20:57:10.291376"
+        "stop": 0.9547,
+        "target1": 0.9753,
+        "target2": 0.9855999999999999,
+        "opened_at": "2026-09-16T21:02:25.733487"
       },
       "1h:MORPHO": {
         "coin": "MORPHO",
         "name": "Morpho",
         "tf": "1h",
         "entry": 2.043,
-        "stop": 2.0183333333333335,
-        "target1": 2.0676666666666668,
-        "target2": 2.0923333333333334,
-        "opened_at": "2026-09-16T20:57:10.291376"
+        "stop": 2.018041666666667,
+        "target1": 2.0679583333333333,
+        "target2": 2.0929166666666665,
+        "opened_at": "2026-09-16T21:02:25.733487"
       },
       "daily:XLM": {
         "coin": "XLM",
@@ -3375,7 +3374,7 @@
         "stop": 0.14022333333333334,
         "target1": 0.16457666666666668,
         "target2": 0.17675333333333335,
-        "opened_at": "2026-09-16T20:57:10.291376"
+        "opened_at": "2026-09-16T21:02:25.733487"
       }
     },
     "resolved": [
@@ -33707,6 +33706,45 @@
         "result": "win",
         "resolved_at": "2026-09-16T20:57:10.291376",
         "exit_price": 0.1834
+      },
+      {
+        "coin": "DOT",
+        "name": "Polkadot",
+        "tf": "15m",
+        "entry": 0.965,
+        "stop": 0.9546,
+        "target1": 0.9753999999999999,
+        "target2": 0.9857999999999999,
+        "opened_at": "2026-09-16T20:57:10.291376",
+        "result": "win",
+        "resolved_at": "2026-09-16T21:02:25.733487",
+        "exit_price": 1.01
+      },
+      {
+        "coin": "MORPHO",
+        "name": "Morpho",
+        "tf": "1h",
+        "entry": 2.043,
+        "stop": 2.0183333333333335,
+        "target1": 2.0676666666666668,
+        "target2": 2.0923333333333334,
+        "opened_at": "2026-09-16T20:57:10.291376",
+        "result": "win",
+        "resolved_at": "2026-09-16T21:02:25.733487",
+        "exit_price": 2.121
+      },
+      {
+        "coin": "XLM",
+        "name": "Stellar",
+        "tf": "daily",
+        "entry": 0.1524,
+        "stop": 0.14022333333333334,
+        "target1": 0.16457666666666668,
+        "target2": 0.17675333333333335,
+        "opened_at": "2026-09-16T20:57:10.291376",
+        "result": "win",
+        "resolved_at": "2026-09-16T21:02:25.733487",
+        "exit_price": 0.1836
       }
     ]
   },
@@ -33714,14 +33752,14 @@
     "key": "BTC",
     "name": "Bitcoin",
     "emoji": "\u20bf",
-    "price": 76052,
+    "price": 76101,
     "high_24h": 76413,
     "low_24h": 75151,
-    "pct_24h": 0.1623,
+    "pct_24h": 0.27606,
     "pct_7d": -3.1,
     "pct_30d": 18.0,
-    "sma50": 71897.07411074931,
-    "sma200": 70273.65319295763,
+    "sma50": 71898.46270543948,
+    "sma200": 70274.00034163018,
     "support_30d": 64686.25782561655,
     "resistance_30d": 81264.70153038795,
     "mark_price": 76162.78831884,
@@ -33736,14 +33774,14 @@
     "key": "ETH",
     "name": "Ethereum",
     "emoji": "\u039e",
-    "price": 2407.27,
+    "price": 2408.18,
     "high_24h": 2424.51,
     "low_24h": 2371.36,
-    "pct_24h": -0.04822,
+    "pct_24h": 0.08753,
     "pct_7d": -3.0,
     "pct_30d": 26.1,
-    "sma50": 2217.0133730372663,
-    "sma200": 2064.369610513642,
+    "sma50": 2217.0532578195516,
+    "sma200": 2064.379581709213,
     "support_30d": 1916.3998901478055,
     "resistance_30d": 2525.267261590238,
     "mark_price": 2410.68017829,
