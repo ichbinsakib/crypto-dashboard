@@ -2051,7 +2051,7 @@
       "rows": [
         [
           "Price vs. recent range",
-          "Near its 30-day low (~$0.0821) - historically a better entry",
+          "Near its 30-day low (~$0.0842) - historically a better entry",
           2
         ],
         [
@@ -2071,7 +2071,7 @@
         ],
         [
           "Stretch from long-term average",
-          "-40.6% below its long-term average - confirmed downtrend",
+          "-39.1% below its long-term average - confirmed downtrend",
           -1
         ],
         [
@@ -2084,12 +2084,12 @@
       "id": "pi-network",
       "symbol": "PI",
       "name": "Pi Network",
-      "price": 0.081974,
-      "pct_24h": -15.32762,
-      "pct_7d": -14.5,
-      "support_30d": 0.08206985591582895,
+      "price": 0.084043,
+      "pct_24h": -12.68229,
+      "pct_7d": -14.4,
+      "support_30d": 0.08421517668643208,
       "resistance_30d": 0.09830733881512746,
-      "as_of": "2026-09-16 08:25:18",
+      "as_of": "2026-09-16 10:00:38",
       "stale": false
     },
     "ondo-finance": {
@@ -2429,14 +2429,14 @@
       "stale": false
     },
     "near": {
-      "label": "\ud83d\udfe1 HOLD / NEUTRAL",
-      "status": "neutral",
-      "score": -1,
+      "label": "\ud83d\udd34 CAUTION - REDUCE NEW BUYS",
+      "status": "bearish",
+      "score": -2,
       "rows": [
         [
           "Price vs. recent range",
-          "Sitting in the middle of its 30-day range",
-          0
+          "Near its 30-day high (~$2.48) - less room to run",
+          -1
         ],
         [
           "Crowd mood (Fear & Greed)",
@@ -2455,7 +2455,7 @@
         ],
         [
           "Stretch from long-term average",
-          "+33.9% above its long-term average - very stretched",
+          "+39.0% above its long-term average - very stretched",
           -2
         ],
         [
@@ -2464,16 +2464,16 @@
           0
         ]
       ],
-      "plain": "No real edge either way right now - fine to just wait and watch.",
+      "plain": "Getting risky - I'd hold off on new buys until this cools down.",
       "id": "near",
       "symbol": "NEAR",
       "name": "NEAR Protocol",
-      "price": 2.33,
-      "pct_24h": -0.22159,
-      "pct_7d": 0.9,
+      "price": 2.42,
+      "pct_24h": 1.02475,
+      "pct_7d": -2.0,
       "support_30d": 1.5879597131538,
       "resistance_30d": 2.4848168147865453,
-      "as_of": "2026-09-16 07:55:19",
+      "as_of": "2026-09-16 10:00:38",
       "stale": false
     },
     "quant-network": {
@@ -2887,7 +2887,7 @@
         ],
         [
           "Stretch from long-term average",
-          "+25.6% above its long-term average - a bit stretched",
+          "+24.8% above its long-term average - a bit stretched",
           -1
         ],
         [
@@ -2900,12 +2900,12 @@
       "id": "okb",
       "symbol": "OKB",
       "name": "OKB",
-      "price": 111.13,
-      "pct_24h": -1.48539,
-      "pct_7d": -3.4,
+      "price": 110.4,
+      "pct_24h": -1.93458,
+      "pct_7d": -4.0,
       "support_30d": 101.2037388311556,
       "resistance_30d": 115.8310797114581,
-      "as_of": "2026-09-16 06:52:50",
+      "as_of": "2026-09-16 10:00:38",
       "stale": false
     },
     "just": {
@@ -3344,16 +3344,6 @@
   "_strong_buy_state": {},
   "_pnl_tracker": {
     "open": {
-      "1h:SKY": {
-        "coin": "SKY",
-        "name": "Sky",
-        "tf": "1h",
-        "entry": 0.0585,
-        "stop": 0.057683750000000006,
-        "target1": 0.05931625,
-        "target2": 0.0601325,
-        "opened_at": "2026-09-16T09:27:14.271017"
-      },
       "daily:XLM": {
         "coin": "XLM",
         "name": "Stellar",
@@ -3362,7 +3352,7 @@
         "stop": 0.14047,
         "target1": 0.16433,
         "target2": 0.17626,
-        "opened_at": "2026-09-16T09:57:14.585533"
+        "opened_at": "2026-09-16T10:02:33.631845"
       }
     },
     "resolved": [
@@ -30236,6 +30226,32 @@
         "result": "win",
         "resolved_at": "2026-09-16T09:57:14.585533",
         "exit_price": 0.1757
+      },
+      {
+        "coin": "SKY",
+        "name": "Sky",
+        "tf": "1h",
+        "entry": 0.0585,
+        "stop": 0.057683750000000006,
+        "target1": 0.05931625,
+        "target2": 0.0601325,
+        "opened_at": "2026-09-16T09:27:14.271017",
+        "result": "win",
+        "resolved_at": "2026-09-16T10:02:33.631845",
+        "exit_price": 0.05932
+      },
+      {
+        "coin": "XLM",
+        "name": "Stellar",
+        "tf": "daily",
+        "entry": 0.1524,
+        "stop": 0.14047,
+        "target1": 0.16433,
+        "target2": 0.17626,
+        "opened_at": "2026-09-16T09:57:14.585533",
+        "result": "win",
+        "resolved_at": "2026-09-16T10:02:33.631845",
+        "exit_price": 0.1758
       }
     ]
   },
@@ -30243,14 +30259,14 @@
     "key": "BTC",
     "name": "Bitcoin",
     "emoji": "\u20bf",
-    "price": 75892,
+    "price": 75929,
     "high_24h": 77163,
     "low_24h": 75038,
-    "pct_24h": -1.4688,
-    "pct_7d": -4.6,
-    "pct_30d": 19.2,
-    "sma50": 71894.16842045498,
-    "sma200": 70272.92677038405,
+    "pct_24h": -1.34786,
+    "pct_7d": -4.7,
+    "pct_30d": 19.9,
+    "sma50": 71894.97785998051,
+    "sma200": 70273.12913026543,
     "support_30d": 64686.25782561655,
     "resistance_30d": 81264.70153038795,
     "mark_price": 75592.6,
@@ -30265,14 +30281,14 @@
     "key": "ETH",
     "name": "Ethereum",
     "emoji": "\u039e",
-    "price": 2402.95,
+    "price": 2404.52,
     "high_24h": 2486.48,
     "low_24h": 2361.16,
-    "pct_24h": -3.07666,
-    "pct_7d": -4.4,
-    "pct_30d": 26.4,
-    "sma50": 2216.931898322019,
-    "sma200": 2064.34924183483,
+    "pct_24h": -2.81246,
+    "pct_7d": -4.5,
+    "pct_30d": 27.0,
+    "sma50": 2216.9625197448813,
+    "sma200": 2064.3568971905456,
     "support_30d": 1916.3998901478055,
     "resistance_30d": 2525.267261590238,
     "mark_price": 2391.78,
