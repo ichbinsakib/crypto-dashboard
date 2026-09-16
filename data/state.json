@@ -117,11 +117,11 @@
       "symbol": "XRP",
       "name": "XRP",
       "price": 1.27,
-      "pct_24h": -8.71418,
-      "pct_7d": -11.1,
+      "pct_24h": -8.6075,
+      "pct_7d": -10.5,
       "support_30d": 1.0011429230744608,
       "resistance_30d": 1.52050482788377,
-      "as_of": "2026-09-16 16:51:27",
+      "as_of": "2026-09-16 17:00:36",
       "stale": false
     },
     "solana": {
@@ -343,7 +343,7 @@
         ],
         [
           "Stretch from long-term average",
-          "-10.2% vs its long-term average - not stretched either way",
+          "-9.9% vs its long-term average - not stretched either way",
           0
         ],
         [
@@ -356,12 +356,12 @@
       "id": "dogecoin",
       "symbol": "DOGE",
       "name": "Dogecoin",
-      "price": 0.079008,
-      "pct_24h": -3.03283,
-      "pct_7d": -12.0,
+      "price": 0.079255,
+      "pct_24h": -2.85245,
+      "pct_7d": -10.9,
       "support_30d": 0.07021051231066483,
       "resistance_30d": 0.09337940032634065,
-      "as_of": "2026-09-16 16:05:23",
+      "as_of": "2026-09-16 17:00:36",
       "stale": false
     },
     "zcash": {
@@ -371,7 +371,7 @@
       "rows": [
         [
           "Price vs. recent range",
-          "Near its 30-day high (~$1,250.36) - less room to run",
+          "Near its 30-day high (~$1,267.42) - less room to run",
           -1
         ],
         [
@@ -391,7 +391,7 @@
         ],
         [
           "Stretch from long-term average",
-          "+153.0% above its long-term average - very stretched",
+          "+155.7% above its long-term average - very stretched",
           -2
         ],
         [
@@ -404,12 +404,12 @@
       "id": "zcash",
       "symbol": "ZEC",
       "name": "Zcash",
-      "price": 1252.73,
-      "pct_24h": 12.2557,
-      "pct_7d": -0.8,
+      "price": 1266.11,
+      "pct_24h": 13.47633,
+      "pct_7d": -0.3,
       "support_30d": 508.5419923409376,
-      "resistance_30d": 1250.3558030730192,
-      "as_of": "2026-09-16 14:40:26",
+      "resistance_30d": 1267.4243707837672,
+      "as_of": "2026-09-16 17:00:36",
       "stale": false
     },
     "rain": {
@@ -583,7 +583,7 @@
         ],
         [
           "Stretch from long-term average",
-          "-8.0% vs its long-term average - not stretched either way",
+          "-8.2% vs its long-term average - not stretched either way",
           0
         ],
         [
@@ -596,12 +596,12 @@
       "id": "leo-token",
       "symbol": "LEO",
       "name": "LEO Token",
-      "price": 8.87,
-      "pct_24h": 1.13335,
+      "price": 8.85,
+      "pct_24h": 0.65719,
       "pct_7d": -3.6,
       "support_30d": 8.831489578582278,
       "resistance_30d": 9.681775974309534,
-      "as_of": "2026-09-16 14:40:26",
+      "as_of": "2026-09-16 17:00:36",
       "stale": false
     },
     "monero": {
@@ -1399,7 +1399,7 @@
         ],
         [
           "Stretch from long-term average",
-          "+27.7% above its long-term average - a bit stretched",
+          "+28.2% above its long-term average - a bit stretched",
           -1
         ],
         [
@@ -1412,12 +1412,12 @@
       "id": "gatechain-token",
       "symbol": "GT",
       "name": "Gate",
-      "price": 9.02,
-      "pct_24h": -1.17852,
-      "pct_7d": -3.1,
+      "price": 9.06,
+      "pct_24h": -0.63393,
+      "pct_7d": -1.8,
       "support_30d": 6.740499546922291,
       "resistance_30d": 9.38216924975626,
-      "as_of": "2026-09-16 15:30:35",
+      "as_of": "2026-09-16 17:00:36",
       "stale": false
     },
     "crypto-com-chain": {
@@ -3341,10 +3341,7 @@
       "stale": false
     }
   },
-  "_strong_buy_state": {
-    "scanner-15m:ENA": true,
-    "scanner-1h:SHIB": true
-  },
+  "_strong_buy_state": {},
   "_pnl_tracker": {
     "open": {
       "1h:SHIB": {
@@ -3375,7 +3372,7 @@
         "stop": 0.14045333333333335,
         "target1": 0.16434666666666667,
         "target2": 0.17629333333333333,
-        "opened_at": "2026-09-16T16:57:08.797662"
+        "opened_at": "2026-09-16T17:01:42.063853"
       }
     },
     "resolved": [
@@ -32407,6 +32404,19 @@
         "result": "win",
         "resolved_at": "2026-09-16T16:57:08.797662",
         "exit_price": 0.1742
+      },
+      {
+        "coin": "XLM",
+        "name": "Stellar",
+        "tf": "daily",
+        "entry": 0.1524,
+        "stop": 0.14045333333333335,
+        "target1": 0.16434666666666667,
+        "target2": 0.17629333333333333,
+        "opened_at": "2026-09-16T16:57:08.797662",
+        "result": "win",
+        "resolved_at": "2026-09-16T17:01:42.063853",
+        "exit_price": 0.1741
       }
     ]
   },
@@ -32414,14 +32424,14 @@
     "key": "BTC",
     "name": "Bitcoin",
     "emoji": "\u20bf",
-    "price": 75744,
+    "price": 75734,
     "high_24h": 77146,
     "low_24h": 75038,
-    "pct_24h": -0.88505,
+    "pct_24h": -0.85593,
     "pct_7d": -4.0,
     "pct_30d": 18.7,
-    "sma50": 71891.22764442464,
-    "sma200": 70272.19157637647,
+    "sma50": 71890.7601423431,
+    "sma200": 70272.07470085607,
     "support_30d": 64686.25782561655,
     "resistance_30d": 81264.70153038795,
     "mark_price": 75928.5,
@@ -32436,14 +32446,14 @@
     "key": "ETH",
     "name": "Ethereum",
     "emoji": "\u039e",
-    "price": 2392.72,
+    "price": 2392.12,
     "high_24h": 2445.14,
     "low_24h": 2361.16,
-    "pct_24h": -1.22879,
+    "pct_24h": -1.25246,
     "pct_7d": -4.2,
     "pct_30d": 25.4,
-    "sma50": 2216.7270592551436,
-    "sma200": 2064.2980320681113,
+    "sma50": 2216.6947743571504,
+    "sma200": 2064.2899608436132,
     "support_30d": 1916.3998901478055,
     "resistance_30d": 2525.267261590238,
     "mark_price": 2399.32,
