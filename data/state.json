@@ -1,6 +1,6 @@
 {
-  "_fng_value": 69,
-  "_fng_classification": "Greed",
+  "_fng_value": 51,
+  "_fng_classification": "Neutral",
   "_alerts_state": {
     "btc-resistance-break": {
       "triggered": false,
@@ -1711,17 +1711,17 @@
     "sui": {
       "label": "\ud83d\udfe1 HOLD / NEUTRAL",
       "status": "neutral",
-      "score": 1,
+      "score": 0,
       "rows": [
         [
           "Price vs. recent range",
-          "Near its 30-day low (~$0.6514) - historically a better entry",
-          2
+          "Sitting in the middle of its 30-day range",
+          0
         ],
         [
           "Crowd mood (Fear & Greed)",
-          "69/100 - crowd is greedy",
-          -1
+          "51/100 - crowd mood is neutral",
+          0
         ],
         [
           "Market phase (best guess)",
@@ -1735,7 +1735,7 @@
         ],
         [
           "Stretch from long-term average",
-          "-19.5% below its long-term average - confirmed downtrend",
+          "-18.9% below its long-term average - confirmed downtrend",
           -1
         ],
         [
@@ -1748,18 +1748,18 @@
       "id": "sui",
       "symbol": "SUI",
       "name": "Sui",
-      "price": 0.681918,
-      "pct_24h": -6.08988,
-      "pct_7d": -16.3,
+      "price": 0.686924,
+      "pct_24h": -4.69452,
+      "pct_7d": -15.6,
       "support_30d": 0.6514311908607086,
       "resistance_30d": 0.8499161763231283,
-      "as_of": "2026-09-15 22:35:21",
+      "as_of": "2026-09-16 00:00:38",
       "stale": false
     },
     "lighter": {
       "label": "\ud83d\udd34 DISTRIBUTION ZONE",
       "status": "bearish",
-      "score": -6,
+      "score": -5,
       "rows": [
         [
           "Price vs. recent range",
@@ -1768,8 +1768,8 @@
         ],
         [
           "Crowd mood (Fear & Greed)",
-          "69/100 - crowd is greedy",
-          -1
+          "51/100 - crowd mood is neutral",
+          0
         ],
         [
           "Market phase (best guess)",
@@ -1783,7 +1783,7 @@
         ],
         [
           "Stretch from long-term average",
-          "+121.8% above its long-term average - very stretched",
+          "+119.6% above its long-term average - very stretched",
           -2
         ],
         [
@@ -1796,12 +1796,12 @@
       "id": "lighter",
       "symbol": "LIT",
       "name": "Lighter",
-      "price": 4.06,
-      "pct_24h": -8.65963,
-      "pct_7d": -14.1,
+      "price": 4.02,
+      "pct_24h": -8.36215,
+      "pct_7d": -17.0,
       "support_30d": 2.3314708334391883,
       "resistance_30d": 4.827528632102638,
-      "as_of": "2026-09-15 23:30:29",
+      "as_of": "2026-09-16 00:00:38",
       "stale": false
     },
     "ethena": {
@@ -1997,9 +1997,9 @@
       "stale": false
     },
     "uniswap": {
-      "label": "\ud83d\udd34 DISTRIBUTION ZONE",
+      "label": "\ud83d\udd34 CAUTION - REDUCE NEW BUYS",
       "status": "bearish",
-      "score": -5,
+      "score": -4,
       "rows": [
         [
           "Price vs. recent range",
@@ -2008,8 +2008,8 @@
         ],
         [
           "Crowd mood (Fear & Greed)",
-          "69/100 - crowd is greedy",
-          -1
+          "51/100 - crowd mood is neutral",
+          0
         ],
         [
           "Market phase (best guess)",
@@ -2023,7 +2023,7 @@
         ],
         [
           "Stretch from long-term average",
-          "+72.0% above its long-term average - very stretched",
+          "+71.4% above its long-term average - very stretched",
           -2
         ],
         [
@@ -2032,16 +2032,16 @@
           0
         ]
       ],
-      "plain": "Looks stretched and euphoric - historically the zone where smart money sells, not buys.",
+      "plain": "Getting risky - I'd hold off on new buys until this cools down.",
       "id": "uniswap",
       "symbol": "UNI",
       "name": "Uniswap",
-      "price": 6.39,
-      "pct_24h": -2.23735,
-      "pct_7d": -5.0,
+      "price": 6.37,
+      "pct_24h": -2.39771,
+      "pct_7d": -6.4,
       "support_30d": 3.2846390150092466,
       "resistance_30d": 7.291165865788254,
-      "as_of": "2026-09-15 23:46:59",
+      "as_of": "2026-09-16 00:00:38",
       "stale": false
     },
     "pi-network": {
@@ -3349,10 +3349,10 @@
         "name": "Stellar",
         "tf": "daily",
         "entry": 0.1524,
-        "stop": 0.1405,
-        "target1": 0.1643,
-        "target2": 0.1762,
-        "opened_at": "2026-09-15T23:57:21.268489"
+        "stop": 0.14059000000000002,
+        "target1": 0.16421,
+        "target2": 0.17601999999999998,
+        "opened_at": "2026-09-16T00:02:39.728598"
       }
     },
     "resolved": [
@@ -27964,6 +27964,19 @@
         "result": "win",
         "resolved_at": "2026-09-15T23:57:21.268489",
         "exit_price": 0.1761
+      },
+      {
+        "coin": "XLM",
+        "name": "Stellar",
+        "tf": "daily",
+        "entry": 0.1524,
+        "stop": 0.1405,
+        "target1": 0.1643,
+        "target2": 0.1762,
+        "opened_at": "2026-09-15T23:57:21.268489",
+        "result": "win",
+        "resolved_at": "2026-09-16T00:02:39.728598",
+        "exit_price": 0.1754
       }
     ]
   },
@@ -27971,14 +27984,14 @@
     "key": "BTC",
     "name": "Bitcoin",
     "emoji": "\u20bf",
-    "price": 75651,
+    "price": 75605,
     "high_24h": 78219,
     "low_24h": 75038,
-    "pct_24h": -3.25087,
+    "pct_24h": -3.27589,
     "pct_7d": -3.6,
     "pct_30d": 20.3,
-    "sma50": 71655.23176840856,
-    "sma200": 70228.86827121385,
+    "sma50": 71654.53452757145,
+    "sma200": 70228.69396100458,
     "support_30d": 64491.345282946255,
     "resistance_30d": 81264.70153038795,
     "mark_price": 76989.5,
@@ -27986,21 +27999,21 @@
     "funding_rate": 7.865e-05,
     "oi_change_pct": -1.2545014508689811,
     "oi_now": 104869.566,
-    "fng_value": 69,
-    "fng_class": "Greed"
+    "fng_value": 51,
+    "fng_class": "Neutral"
   },
   "ETH": {
     "key": "ETH",
     "name": "Ethereum",
     "emoji": "\u039e",
-    "price": 2400.0,
+    "price": 2398.65,
     "high_24h": 2519.25,
     "low_24h": 2361.16,
-    "pct_24h": -4.62757,
+    "pct_24h": -4.5911,
     "pct_7d": -3.4,
     "pct_30d": 27.9,
-    "sma50": 2207.319606346369,
-    "sma200": 2062.1773340922805,
+    "sma50": 2207.3133584019106,
+    "sma200": 2062.1757721061663,
     "support_30d": 1912.2734691708965,
     "resistance_30d": 2525.267261590238,
     "mark_price": 2476.25771051,
@@ -28008,7 +28021,7 @@
     "funding_rate": -8.72e-05,
     "oi_change_pct": -0.00018365389602794752,
     "oi_now": 2347345.837,
-    "fng_value": 69,
-    "fng_class": "Greed"
+    "fng_value": 51,
+    "fng_class": "Neutral"
   }
 }
