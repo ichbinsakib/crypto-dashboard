@@ -269,9 +269,9 @@
       "stale": false
     },
     "hyperliquid": {
-      "label": "\ud83d\udd34 DISTRIBUTION ZONE",
+      "label": "\ud83d\udd34 CAUTION - REDUCE NEW BUYS",
       "status": "bearish",
-      "score": -5,
+      "score": -4,
       "rows": [
         [
           "Price vs. recent range",
@@ -290,12 +290,12 @@
         ],
         [
           "Recent trend",
-          "Trending down - avoid catching a falling knife",
-          -1
+          "Chopping sideways - no clear trend",
+          0
         ],
         [
           "Stretch from long-term average",
-          "+40.6% above its long-term average - very stretched",
+          "+41.3% above its long-term average - very stretched",
           -2
         ],
         [
@@ -304,16 +304,16 @@
           0
         ]
       ],
-      "plain": "Looks stretched and euphoric - historically the zone where smart money sells, not buys.",
+      "plain": "Getting risky - I'd hold off on new buys until this cools down.",
       "id": "hyperliquid",
       "symbol": "HYPE",
       "name": "Hyperliquid",
-      "price": 78.26,
-      "pct_24h": 1.18209,
-      "pct_7d": -10.0,
+      "price": 78.63,
+      "pct_24h": 2.15638,
+      "pct_7d": -7.2,
       "support_30d": 58.515277414221124,
       "resistance_30d": 87.951916819731,
-      "as_of": "2026-09-16 15:20:25",
+      "as_of": "2026-09-16 17:25:19",
       "stale": false
     },
     "dogecoin": {
@@ -439,7 +439,7 @@
         ],
         [
           "Stretch from long-term average",
-          "+12.3% above its long-term average - a bit stretched",
+          "+12.2% above its long-term average - a bit stretched",
           -1
         ],
         [
@@ -452,12 +452,12 @@
       "id": "rain",
       "symbol": "RAIN",
       "name": "Rain",
-      "price": 0.01313337,
-      "pct_24h": -4.67638,
+      "price": 0.01311707,
+      "pct_24h": -5.28176,
       "pct_7d": -19.3,
       "support_30d": 0.01308236474491796,
       "resistance_30d": 0.018158429442510105,
-      "as_of": "2026-09-16 17:15:22",
+      "as_of": "2026-09-16 17:25:19",
       "stale": false
     },
     "chainlink": {
@@ -727,7 +727,7 @@
         ],
         [
           "Stretch from long-term average",
-          "-1.0% vs its long-term average - not stretched either way",
+          "-1.3% vs its long-term average - not stretched either way",
           0
         ],
         [
@@ -740,12 +740,12 @@
       "id": "stellar",
       "symbol": "XLM",
       "name": "Stellar",
-      "price": 0.174106,
-      "pct_24h": -8.04979,
-      "pct_7d": -7.4,
+      "price": 0.173458,
+      "pct_24h": -8.31309,
+      "pct_7d": -5.5,
       "support_30d": 0.15472912151335613,
       "resistance_30d": 0.20181319711037435,
-      "as_of": "2026-09-16 16:40:25",
+      "as_of": "2026-09-16 17:25:19",
       "stale": false
     },
     "kucoin-shares": {
@@ -3372,7 +3372,7 @@
         "stop": 0.14045333333333335,
         "target1": 0.16434666666666667,
         "target2": 0.17629333333333333,
-        "opened_at": "2026-09-16T17:21:50.260482"
+        "opened_at": "2026-09-16T17:27:08.478567"
       }
     },
     "resolved": [
@@ -32469,6 +32469,19 @@
         "result": "win",
         "resolved_at": "2026-09-16T17:21:50.260482",
         "exit_price": 0.1736
+      },
+      {
+        "coin": "XLM",
+        "name": "Stellar",
+        "tf": "daily",
+        "entry": 0.1524,
+        "stop": 0.14045333333333335,
+        "target1": 0.16434666666666667,
+        "target2": 0.17629333333333333,
+        "opened_at": "2026-09-16T17:21:50.260482",
+        "result": "win",
+        "resolved_at": "2026-09-16T17:27:08.478567",
+        "exit_price": 0.1738
       }
     ]
   },
@@ -32476,14 +32489,14 @@
     "key": "BTC",
     "name": "Bitcoin",
     "emoji": "\u20bf",
-    "price": 75693,
+    "price": 75624,
     "high_24h": 76913,
     "low_24h": 75038,
-    "pct_24h": -0.70324,
+    "pct_24h": -0.9028,
     "pct_7d": -3.6,
     "pct_30d": 18.1,
-    "sma50": 71890.6940941042,
-    "sma200": 70272.05818879636,
+    "sma50": 71888.67521747398,
+    "sma200": 70271.5534696388,
     "support_30d": 64686.25782561655,
     "resistance_30d": 81264.70153038795,
     "mark_price": 75928.5,
@@ -32498,14 +32511,14 @@
     "key": "ETH",
     "name": "Ethereum",
     "emoji": "\u039e",
-    "price": 2389.93,
+    "price": 2386.97,
     "high_24h": 2440.66,
     "low_24h": 2361.16,
-    "pct_24h": -1.05639,
+    "pct_24h": -1.28633,
     "pct_7d": -4.0,
     "pct_30d": 25.1,
-    "sma50": 2216.6708464515254,
-    "sma200": 2064.2839788672068,
+    "sma50": 2216.599875090111,
+    "sma200": 2064.266236026853,
     "support_30d": 1916.3998901478055,
     "resistance_30d": 2525.267261590238,
     "mark_price": 2399.32,
