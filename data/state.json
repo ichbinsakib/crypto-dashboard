@@ -103,7 +103,7 @@
         ],
         [
           "Stretch from long-term average",
-          "-0.3% vs its long-term average - not stretched either way",
+          "-1.8% vs its long-term average - not stretched either way",
           0
         ],
         [
@@ -116,12 +116,12 @@
       "id": "ripple",
       "symbol": "XRP",
       "name": "XRP",
-      "price": 1.27,
-      "pct_24h": -8.6075,
+      "price": 1.25,
+      "pct_24h": -10.85465,
       "pct_7d": -10.5,
       "support_30d": 1.0011429230744608,
       "resistance_30d": 1.52050482788377,
-      "as_of": "2026-09-16 17:00:36",
+      "as_of": "2026-09-16 17:50:26",
       "stale": false
     },
     "solana": {
@@ -679,7 +679,7 @@
         ],
         [
           "Stretch from long-term average",
-          "-11.7% vs its long-term average - not stretched either way",
+          "-12.1% vs its long-term average - not stretched either way",
           0
         ],
         [
@@ -692,12 +692,12 @@
       "id": "cardano",
       "symbol": "ADA",
       "name": "Cardano",
-      "price": 0.192043,
-      "pct_24h": -5.52817,
-      "pct_7d": -12.6,
+      "price": 0.191123,
+      "pct_24h": -6.12638,
+      "pct_7d": -10.8,
       "support_30d": 0.1744023593314451,
       "resistance_30d": 0.2291047455940254,
-      "as_of": "2026-09-16 14:35:24",
+      "as_of": "2026-09-16 17:50:26",
       "stale": false
     },
     "stellar": {
@@ -1015,7 +1015,7 @@
         ],
         [
           "Stretch from long-term average",
-          "+0.7% vs its long-term average - not stretched either way",
+          "+0.0% vs its long-term average - not stretched either way",
           0
         ],
         [
@@ -1028,12 +1028,12 @@
       "id": "worldcoin-wld",
       "symbol": "WLD",
       "name": "Worldcoin",
-      "price": 0.360008,
-      "pct_24h": -3.0421,
-      "pct_7d": -19.5,
+      "price": 0.357593,
+      "pct_24h": -4.6027,
+      "pct_7d": -18.0,
       "support_30d": 0.319812298466522,
       "resistance_30d": 0.4772935995106048,
-      "as_of": "2026-09-16 16:25:17",
+      "as_of": "2026-09-16 17:50:26",
       "stale": false
     },
     "bfusd": {
@@ -3369,10 +3369,10 @@
         "name": "Stellar",
         "tf": "daily",
         "entry": 0.1524,
-        "stop": 0.14044,
-        "target1": 0.16436,
-        "target2": 0.17632,
-        "opened_at": "2026-09-16T17:46:58.667526"
+        "stop": 0.14043333333333335,
+        "target1": 0.16436666666666666,
+        "target2": 0.17633333333333331,
+        "opened_at": "2026-09-16T17:52:17.850733"
       }
     },
     "resolved": [
@@ -32534,6 +32534,19 @@
         "result": "win",
         "resolved_at": "2026-09-16T17:46:58.667526",
         "exit_price": 0.1728
+      },
+      {
+        "coin": "XLM",
+        "name": "Stellar",
+        "tf": "daily",
+        "entry": 0.1524,
+        "stop": 0.14044,
+        "target1": 0.16436,
+        "target2": 0.17632,
+        "opened_at": "2026-09-16T17:46:58.667526",
+        "result": "win",
+        "resolved_at": "2026-09-16T17:52:17.850733",
+        "exit_price": 0.1726
       }
     ]
   },
@@ -32541,14 +32554,14 @@
     "key": "BTC",
     "name": "Bitcoin",
     "emoji": "\u20bf",
-    "price": 75360,
+    "price": 75407,
     "high_24h": 76913,
     "low_24h": 75038,
-    "pct_24h": -1.78771,
+    "pct_24h": -2.01369,
     "pct_7d": -3.6,
     "pct_30d": 18.1,
-    "sma50": 71883.53354196438,
-    "sma200": 70270.2680507614,
+    "sma50": 71884.51527460643,
+    "sma200": 70270.51348392191,
     "support_30d": 64686.25782561655,
     "resistance_30d": 81264.70153038795,
     "mark_price": 75928.5,
@@ -32563,14 +32576,14 @@
     "key": "ETH",
     "name": "Ethereum",
     "emoji": "\u039e",
-    "price": 2371.98,
+    "price": 2376.4,
     "high_24h": 2440.66,
     "low_24h": 2361.16,
-    "pct_24h": -2.32156,
+    "pct_24h": -2.58664,
     "pct_7d": -4.0,
     "pct_30d": 25.1,
-    "sma50": 2216.305679517353,
-    "sma200": 2064.1926871336636,
+    "sma50": 2216.396907936614,
+    "sma200": 2064.215494238479,
     "support_30d": 1916.3998901478055,
     "resistance_30d": 2525.267261590238,
     "mark_price": 2399.32,
