@@ -2263,7 +2263,7 @@
         ],
         [
           "Stretch from long-term average",
-          "-9.7% vs its long-term average - not stretched either way",
+          "-9.6% vs its long-term average - not stretched either way",
           0
         ],
         [
@@ -2276,12 +2276,12 @@
       "id": "bittensor",
       "symbol": "TAO",
       "name": "Bittensor",
-      "price": 216.62,
-      "pct_24h": -4.31546,
-      "pct_7d": -17.7,
+      "price": 216.75,
+      "pct_24h": -4.21526,
+      "pct_7d": -15.8,
       "support_30d": 190.67093053611111,
       "resistance_30d": 265.7337487161633,
-      "as_of": "2026-09-16 10:35:18",
+      "as_of": "2026-09-16 11:05:19",
       "stale": false
     },
     "the-open-network": {
@@ -2815,7 +2815,7 @@
     "aave": {
       "label": "\ud83d\udfe1 HOLD / NEUTRAL",
       "status": "neutral",
-      "score": -1,
+      "score": 0,
       "rows": [
         [
           "Price vs. recent range",
@@ -2834,12 +2834,12 @@
         ],
         [
           "Recent trend",
-          "Trending down - avoid catching a falling knife",
-          -1
+          "Chopping sideways - no clear trend",
+          0
         ],
         [
           "Stretch from long-term average",
-          "+21.8% above its long-term average - a bit stretched",
+          "+22.5% above its long-term average - a bit stretched",
           -1
         ],
         [
@@ -2852,12 +2852,12 @@
       "id": "aave",
       "symbol": "AAVE",
       "name": "Aave",
-      "price": 119.07,
-      "pct_24h": -6.23309,
-      "pct_7d": -8.7,
+      "price": 119.72,
+      "pct_24h": -6.11895,
+      "pct_7d": -6.9,
       "support_30d": 87.49183970362333,
       "resistance_30d": 141.53047916466082,
-      "as_of": "2026-09-16 09:25:18",
+      "as_of": "2026-09-16 11:05:19",
       "stale": false
     },
     "okb": {
@@ -2887,7 +2887,7 @@
         ],
         [
           "Stretch from long-term average",
-          "+24.4% above its long-term average - a bit stretched",
+          "+24.6% above its long-term average - a bit stretched",
           -1
         ],
         [
@@ -2900,12 +2900,12 @@
       "id": "okb",
       "symbol": "OKB",
       "name": "OKB",
-      "price": 110.1,
-      "pct_24h": -2.58708,
+      "price": 110.27,
+      "pct_24h": -2.41353,
       "pct_7d": -3.5,
       "support_30d": 101.2037388311556,
       "resistance_30d": 115.8310797114581,
-      "as_of": "2026-09-16 11:00:42",
+      "as_of": "2026-09-16 11:05:19",
       "stale": false
     },
     "just": {
@@ -3349,10 +3349,10 @@
         "name": "Ethena",
         "tf": "15m",
         "entry": 0.1385,
-        "stop": 0.1374166666666667,
-        "target1": 0.13958333333333334,
-        "target2": 0.14066666666666666,
-        "opened_at": "2026-09-16T11:02:39.657949"
+        "stop": 0.13741,
+        "target1": 0.13959000000000002,
+        "target2": 0.14068000000000003,
+        "opened_at": "2026-09-16T11:07:16.310722"
       },
       "daily:XLM": {
         "coin": "XLM",
@@ -3362,7 +3362,7 @@
         "stop": 0.14047,
         "target1": 0.16433,
         "target2": 0.17626,
-        "opened_at": "2026-09-16T11:02:39.657949"
+        "opened_at": "2026-09-16T11:07:16.310722"
       }
     },
     "resolved": [
@@ -30548,6 +30548,32 @@
         "result": "win",
         "resolved_at": "2026-09-16T11:02:39.657949",
         "exit_price": 0.1755
+      },
+      {
+        "coin": "ENA",
+        "name": "Ethena",
+        "tf": "15m",
+        "entry": 0.1385,
+        "stop": 0.1374166666666667,
+        "target1": 0.13958333333333334,
+        "target2": 0.14066666666666666,
+        "opened_at": "2026-09-16T11:02:39.657949",
+        "result": "win",
+        "resolved_at": "2026-09-16T11:07:16.310722",
+        "exit_price": 0.1437
+      },
+      {
+        "coin": "XLM",
+        "name": "Stellar",
+        "tf": "daily",
+        "entry": 0.1524,
+        "stop": 0.14047,
+        "target1": 0.16433,
+        "target2": 0.17626,
+        "opened_at": "2026-09-16T11:02:39.657949",
+        "result": "win",
+        "resolved_at": "2026-09-16T11:07:16.310722",
+        "exit_price": 0.1754
       }
     ]
   },
@@ -30555,14 +30581,14 @@
     "key": "BTC",
     "name": "Bitcoin",
     "emoji": "\u20bf",
-    "price": 75854,
-    "high_24h": 77163,
+    "price": 75912,
+    "high_24h": 77146,
     "low_24h": 75038,
-    "pct_24h": -1.52878,
-    "pct_7d": -4.7,
+    "pct_24h": -1.50109,
+    "pct_7d": -3.9,
     "pct_30d": 19.9,
-    "sma50": 71893.65079374344,
-    "sma200": 70272.79736370617,
+    "sma50": 71894.37782618629,
+    "sma200": 70272.97912181687,
     "support_30d": 64686.25782561655,
     "resistance_30d": 81264.70153038795,
     "mark_price": 75928.5,
@@ -30577,14 +30603,14 @@
     "key": "ETH",
     "name": "Ethereum",
     "emoji": "\u039e",
-    "price": 2401.39,
-    "high_24h": 2486.48,
+    "price": 2406.0,
+    "high_24h": 2484.59,
     "low_24h": 2361.16,
-    "pct_24h": -3.29922,
-    "pct_7d": -4.5,
+    "pct_24h": -3.15178,
+    "pct_7d": -3.5,
     "pct_30d": 27.0,
-    "sma50": 2216.9097751237587,
-    "sma200": 2064.343711035265,
+    "sma50": 2216.9745180563054,
+    "sma200": 2064.359896768402,
     "support_30d": 1916.3998901478055,
     "resistance_30d": 2525.267261590238,
     "mark_price": 2399.32,
