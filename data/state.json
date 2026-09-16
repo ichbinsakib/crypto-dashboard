@@ -413,14 +413,14 @@
       "stale": false
     },
     "rain": {
-      "label": "\ud83d\udfe1 HOLD / NEUTRAL",
-      "status": "neutral",
-      "score": -1,
+      "label": "\ud83d\udfe2 LEAN ACCUMULATE",
+      "status": "bullish",
+      "score": 2,
       "rows": [
         [
           "Price vs. recent range",
-          "Sitting in the middle of its 30-day range",
-          0
+          "Near its 30-day low (~$0.0131) - historically a better entry",
+          2
         ],
         [
           "Crowd mood (Fear & Greed)",
@@ -429,8 +429,8 @@
         ],
         [
           "Market phase (best guess)",
-          "Established uptrend - phase where price marks up",
-          1
+          "Basing near the bottom - phase where smart money accumulates",
+          2
         ],
         [
           "Recent trend",
@@ -439,7 +439,7 @@
         ],
         [
           "Stretch from long-term average",
-          "+17.7% above its long-term average - a bit stretched",
+          "+17.4% above its long-term average - a bit stretched",
           -1
         ],
         [
@@ -448,16 +448,16 @@
           0
         ]
       ],
-      "plain": "No real edge either way right now - fine to just wait and watch.",
+      "plain": "Leans toward a decent spot to slowly add (DCA) - not a strong signal, just a lean.",
       "id": "rain",
       "symbol": "RAIN",
       "name": "Rain",
-      "price": 0.01376465,
-      "pct_24h": 3.13348,
-      "pct_7d": -14.3,
+      "price": 0.01373617,
+      "pct_24h": 3.61875,
+      "pct_7d": -14.6,
       "support_30d": 0.01308236474491796,
       "resistance_30d": 0.018158429442510105,
-      "as_of": "2026-09-16 09:50:23",
+      "as_of": "2026-09-16 10:30:29",
       "stale": false
     },
     "chainlink": {
@@ -2167,7 +2167,7 @@
         ],
         [
           "Stretch from long-term average",
-          "-33.8% below its long-term average - confirmed downtrend",
+          "-33.7% below its long-term average - confirmed downtrend",
           -1
         ],
         [
@@ -2180,12 +2180,12 @@
       "id": "canton-network",
       "symbol": "CC",
       "name": "Canton",
-      "price": 0.091019,
-      "pct_24h": -3.96286,
-      "pct_7d": -15.7,
+      "price": 0.091055,
+      "pct_24h": -4.495,
+      "pct_7d": -15.8,
       "support_30d": 0.09077045047943234,
       "resistance_30d": 0.12396615653575341,
-      "as_of": "2026-09-16 08:00:36",
+      "as_of": "2026-09-16 10:30:29",
       "stale": false
     },
     "internet-computer": {
@@ -2229,11 +2229,11 @@
       "symbol": "ICP",
       "name": "Internet Computer",
       "price": 2.5,
-      "pct_24h": -3.11169,
-      "pct_7d": -13.9,
+      "pct_24h": -2.96536,
+      "pct_7d": -13.2,
       "support_30d": 2.194804279500122,
       "resistance_30d": 2.9869340549074623,
-      "as_of": "2026-09-16 08:00:36",
+      "as_of": "2026-09-16 10:30:29",
       "stale": false
     },
     "bittensor": {
@@ -3341,9 +3341,7 @@
       "stale": false
     }
   },
-  "_strong_buy_state": {
-    "scanner-15m:ENA": true
-  },
+  "_strong_buy_state": {},
   "_pnl_tracker": {
     "open": {
       "15m:ENA": {
@@ -3351,10 +3349,10 @@
         "name": "Ethena",
         "tf": "15m",
         "entry": 0.1385,
-        "stop": 0.13741,
-        "target1": 0.13959000000000002,
-        "target2": 0.14068000000000003,
-        "opened_at": "2026-09-16T10:27:15.304127"
+        "stop": 0.1374466666666667,
+        "target1": 0.13955333333333333,
+        "target2": 0.14060666666666666,
+        "opened_at": "2026-09-16T10:32:25.731025"
       },
       "daily:XLM": {
         "coin": "XLM",
@@ -3364,7 +3362,7 @@
         "stop": 0.14047,
         "target1": 0.16433,
         "target2": 0.17626,
-        "opened_at": "2026-09-16T10:27:15.304127"
+        "opened_at": "2026-09-16T10:32:25.731025"
       }
     },
     "resolved": [
@@ -30368,6 +30366,32 @@
         "result": "win",
         "resolved_at": "2026-09-16T10:27:15.304127",
         "exit_price": 0.1753
+      },
+      {
+        "coin": "ENA",
+        "name": "Ethena",
+        "tf": "15m",
+        "entry": 0.1385,
+        "stop": 0.13741,
+        "target1": 0.13959000000000002,
+        "target2": 0.14068000000000003,
+        "opened_at": "2026-09-16T10:27:15.304127",
+        "result": "win",
+        "resolved_at": "2026-09-16T10:32:25.731025",
+        "exit_price": 0.1435
+      },
+      {
+        "coin": "XLM",
+        "name": "Stellar",
+        "tf": "daily",
+        "entry": 0.1524,
+        "stop": 0.14047,
+        "target1": 0.16433,
+        "target2": 0.17626,
+        "opened_at": "2026-09-16T10:27:15.304127",
+        "result": "win",
+        "resolved_at": "2026-09-16T10:32:25.731025",
+        "exit_price": 0.1752
       }
     ]
   },
@@ -30375,14 +30399,14 @@
     "key": "BTC",
     "name": "Bitcoin",
     "emoji": "\u20bf",
-    "price": 75939,
+    "price": 75909,
     "high_24h": 77163,
     "low_24h": 75038,
-    "pct_24h": -1.39789,
+    "pct_24h": -1.26979,
     "pct_7d": -4.7,
     "pct_30d": 19.9,
-    "sma50": 71894.42133775819,
-    "sma200": 70272.98999970985,
+    "sma50": 71894.49421078613,
+    "sma200": 70273.00821796684,
     "support_30d": 64686.25782561655,
     "resistance_30d": 81264.70153038795,
     "mark_price": 75928.5,
@@ -30397,14 +30421,14 @@
     "key": "ETH",
     "name": "Ethereum",
     "emoji": "\u039e",
-    "price": 2401.5,
+    "price": 2400.35,
     "high_24h": 2486.48,
     "low_24h": 2361.16,
-    "pct_24h": -3.07625,
+    "pct_24h": -2.98364,
     "pct_7d": -4.5,
     "pct_30d": 27.0,
-    "sma50": 2216.8521777422243,
-    "sma200": 2064.3293116898813,
+    "sma50": 2216.8835306956457,
+    "sma200": 2064.337149928237,
     "support_30d": 1916.3998901478055,
     "resistance_30d": 2525.267261590238,
     "mark_price": 2399.32,
