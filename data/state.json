@@ -2023,7 +2023,7 @@
         ],
         [
           "Stretch from long-term average",
-          "+70.6% above its long-term average - very stretched",
+          "+69.0% above its long-term average - very stretched",
           -2
         ],
         [
@@ -2036,12 +2036,12 @@
       "id": "uniswap",
       "symbol": "UNI",
       "name": "Uniswap",
-      "price": 6.36,
-      "pct_24h": -0.75523,
-      "pct_7d": -6.2,
+      "price": 6.3,
+      "pct_24h": -1.31495,
+      "pct_7d": -5.2,
       "support_30d": 3.2920217665657034,
       "resistance_30d": 7.291165865788254,
-      "as_of": "2026-09-16 18:25:19",
+      "as_of": "2026-09-16 19:25:20",
       "stale": false
     },
     "pi-network": {
@@ -2215,7 +2215,7 @@
         ],
         [
           "Stretch from long-term average",
-          "+0.2% vs its long-term average - not stretched either way",
+          "+0.6% vs its long-term average - not stretched either way",
           0
         ],
         [
@@ -2228,12 +2228,12 @@
       "id": "internet-computer",
       "symbol": "ICP",
       "name": "Internet Computer",
-      "price": 2.46,
-      "pct_24h": -2.42713,
-      "pct_7d": -13.4,
+      "price": 2.47,
+      "pct_24h": -0.51075,
+      "pct_7d": -14.1,
       "support_30d": 2.194804279500122,
       "resistance_30d": 2.9869340549074623,
-      "as_of": "2026-09-16 18:40:26",
+      "as_of": "2026-09-16 19:25:20",
       "stale": false
     },
     "bittensor": {
@@ -2791,7 +2791,7 @@
         ],
         [
           "Stretch from long-term average",
-          "-46.2% below its long-term average - confirmed downtrend",
+          "-46.7% below its long-term average - confirmed downtrend",
           -1
         ],
         [
@@ -2804,12 +2804,12 @@
       "id": "memecore",
       "symbol": "M",
       "name": "MemeCore",
-      "price": 1.12,
-      "pct_24h": 0.10568,
+      "price": 1.11,
+      "pct_24h": -0.04176,
       "pct_7d": -5.6,
       "support_30d": 1.0402044506518406,
       "resistance_30d": 1.2453913363052769,
-      "as_of": "2026-09-16 19:20:24",
+      "as_of": "2026-09-16 19:25:20",
       "stale": false
     },
     "aave": {
@@ -3362,10 +3362,10 @@
         "name": "Sui",
         "tf": "15m",
         "entry": 0.678,
-        "stop": 0.6716933333333334,
-        "target1": 0.6843066666666667,
-        "target2": 0.6906133333333334,
-        "opened_at": "2026-09-16T19:22:15.462735"
+        "stop": 0.6715800000000001,
+        "target1": 0.68442,
+        "target2": 0.69084,
+        "opened_at": "2026-09-16T19:27:10.648841"
       },
       "daily:XLM": {
         "coin": "XLM",
@@ -3375,7 +3375,7 @@
         "stop": 0.14033,
         "target1": 0.16447,
         "target2": 0.17654,
-        "opened_at": "2026-09-16T19:22:15.462735"
+        "opened_at": "2026-09-16T19:27:10.648841"
       }
     },
     "resolved": [
@@ -33122,6 +33122,32 @@
         "result": "win",
         "resolved_at": "2026-09-16T19:22:15.462735",
         "exit_price": 0.1802
+      },
+      {
+        "coin": "SUI",
+        "name": "Sui",
+        "tf": "15m",
+        "entry": 0.678,
+        "stop": 0.6716933333333334,
+        "target1": 0.6843066666666667,
+        "target2": 0.6906133333333334,
+        "opened_at": "2026-09-16T19:22:15.462735",
+        "result": "win",
+        "resolved_at": "2026-09-16T19:27:10.648841",
+        "exit_price": 0.6919
+      },
+      {
+        "coin": "XLM",
+        "name": "Stellar",
+        "tf": "daily",
+        "entry": 0.1524,
+        "stop": 0.14033,
+        "target1": 0.16447,
+        "target2": 0.17654,
+        "opened_at": "2026-09-16T19:22:15.462735",
+        "result": "win",
+        "resolved_at": "2026-09-16T19:27:10.648841",
+        "exit_price": 0.1777
       }
     ]
   },
@@ -33129,14 +33155,14 @@
     "key": "BTC",
     "name": "Bitcoin",
     "emoji": "\u20bf",
-    "price": 75752,
+    "price": 75457,
     "high_24h": 76413,
     "low_24h": 75151,
-    "pct_24h": -0.50552,
+    "pct_24h": -0.80388,
     "pct_7d": -4.2,
     "pct_30d": 17.4,
-    "sma50": 71891.40809152028,
-    "sma200": 70272.23668815038,
+    "sma50": 71887.50284085255,
+    "sma200": 70271.26037548344,
     "support_30d": 64686.25782561655,
     "resistance_30d": 81264.70153038795,
     "mark_price": 75928.5,
@@ -33151,14 +33177,14 @@
     "key": "ETH",
     "name": "Ethereum",
     "emoji": "\u039e",
-    "price": 2400.92,
+    "price": 2390.16,
     "high_24h": 2424.51,
     "low_24h": 2371.36,
-    "pct_24h": -0.40932,
+    "pct_24h": -0.74236,
     "pct_7d": -4.1,
     "pct_30d": 25.4,
-    "sma50": 2216.890611221729,
-    "sma200": 2064.3389200597576,
+    "sma50": 2216.7625107329604,
+    "sma200": 2064.3068949375656,
     "support_30d": 1916.3998901478055,
     "resistance_30d": 2525.267261590238,
     "mark_price": 2399.32,
