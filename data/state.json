@@ -893,9 +893,9 @@
       "stale": false
     },
     "avalanche-2": {
-      "label": "\ud83d\udfe1 HOLD / NEUTRAL",
-      "status": "neutral",
-      "score": 1,
+      "label": "\ud83d\udfe2 LEAN ACCUMULATE",
+      "status": "bullish",
+      "score": 2,
       "rows": [
         [
           "Price vs. recent range",
@@ -914,12 +914,12 @@
         ],
         [
           "Recent trend",
-          "Trending down - avoid catching a falling knife",
-          -1
+          "Chopping sideways - no clear trend",
+          0
         ],
         [
           "Stretch from long-term average",
-          "-9.2% vs its long-term average - not stretched either way",
+          "-8.7% vs its long-term average - not stretched either way",
           0
         ],
         [
@@ -928,16 +928,16 @@
           0
         ]
       ],
-      "plain": "No real edge either way right now - fine to just wait and watch.",
+      "plain": "Leans toward a decent spot to slowly add (DCA) - not a strong signal, just a lean.",
       "id": "avalanche-2",
       "symbol": "AVAX",
       "name": "Avalanche",
-      "price": 7.26,
-      "pct_24h": -3.05251,
-      "pct_7d": -8.2,
+      "price": 7.3,
+      "pct_24h": -2.91698,
+      "pct_7d": -7.9,
       "support_30d": 6.3285463532665585,
       "resistance_30d": 8.074275746115342,
-      "as_of": "2026-09-16 11:25:21",
+      "as_of": "2026-09-16 12:20:25",
       "stale": false
     },
     "aster-2": {
@@ -1111,7 +1111,7 @@
         ],
         [
           "Stretch from long-term average",
-          "+7.6% vs its long-term average - not stretched either way",
+          "+7.1% vs its long-term average - not stretched either way",
           0
         ],
         [
@@ -1124,12 +1124,12 @@
       "id": "polygon-ecosystem-token",
       "symbol": "POL",
       "name": "POL (ex-MATIC)",
-      "price": 0.094536,
-      "pct_24h": -3.1089,
+      "price": 0.094135,
+      "pct_24h": -3.51517,
       "pct_7d": -2.5,
       "support_30d": 0.08117354412588569,
       "resistance_30d": 0.12250456198546959,
-      "as_of": "2026-09-16 12:12:43",
+      "as_of": "2026-09-16 12:20:25",
       "stale": false
     },
     "blackrock-usd-institutional-digital-liquidity-fund": {
@@ -1639,7 +1639,7 @@
         ],
         [
           "Stretch from long-term average",
-          "+0.9% vs its long-term average - not stretched either way",
+          "+0.5% vs its long-term average - not stretched either way",
           0
         ],
         [
@@ -1652,12 +1652,12 @@
       "id": "litecoin",
       "symbol": "LTC",
       "name": "Litecoin",
-      "price": 50.83,
-      "pct_24h": -3.27657,
-      "pct_7d": -6.9,
+      "price": 50.64,
+      "pct_24h": -3.40224,
+      "pct_7d": -5.8,
       "support_30d": 44.34767980799559,
       "resistance_30d": 55.20228907963863,
-      "as_of": "2026-09-16 10:15:26",
+      "as_of": "2026-09-16 12:20:25",
       "stale": false
     },
     "bitget-token": {
@@ -3342,7 +3342,8 @@
     }
   },
   "_strong_buy_state": {
-    "scanner-15m:ENA": true
+    "scanner-15m:ENA": true,
+    "scanner-daily:XLM": true
   },
   "_pnl_tracker": {
     "open": {
@@ -3361,10 +3362,10 @@
         "name": "Ethena",
         "tf": "15m",
         "entry": 0.1385,
-        "stop": 0.13739333333333334,
-        "target1": 0.13960666666666668,
-        "target2": 0.14071333333333336,
-        "opened_at": "2026-09-16T12:17:14.288343"
+        "stop": 0.13737666666666667,
+        "target1": 0.13962333333333335,
+        "target2": 0.1407466666666667,
+        "opened_at": "2026-09-16T12:22:16.629386"
       },
       "daily:XLM": {
         "coin": "XLM",
@@ -3374,7 +3375,7 @@
         "stop": 0.14047,
         "target1": 0.16433,
         "target2": 0.17626,
-        "opened_at": "2026-09-16T12:17:14.288343"
+        "opened_at": "2026-09-16T12:22:16.629386"
       }
     },
     "resolved": [
@@ -30950,6 +30951,32 @@
         "result": "win",
         "resolved_at": "2026-09-16T12:17:14.288343",
         "exit_price": 0.1767
+      },
+      {
+        "coin": "ENA",
+        "name": "Ethena",
+        "tf": "15m",
+        "entry": 0.1385,
+        "stop": 0.13739333333333334,
+        "target1": 0.13960666666666668,
+        "target2": 0.14071333333333336,
+        "opened_at": "2026-09-16T12:17:14.288343",
+        "result": "win",
+        "resolved_at": "2026-09-16T12:22:16.629386",
+        "exit_price": 0.1423
+      },
+      {
+        "coin": "XLM",
+        "name": "Stellar",
+        "tf": "daily",
+        "entry": 0.1524,
+        "stop": 0.14047,
+        "target1": 0.16433,
+        "target2": 0.17626,
+        "opened_at": "2026-09-16T12:17:14.288343",
+        "result": "win",
+        "resolved_at": "2026-09-16T12:22:16.629386",
+        "exit_price": 0.177
       }
     ]
   },
@@ -30957,14 +30984,14 @@
     "key": "BTC",
     "name": "Bitcoin",
     "emoji": "\u20bf",
-    "price": 76099,
+    "price": 76055,
     "high_24h": 77146,
     "low_24h": 75038,
-    "pct_24h": -1.04164,
+    "pct_24h": -1.14307,
     "pct_7d": -3.5,
     "pct_30d": 19.8,
-    "sma50": 71898.28084468494,
-    "sma200": 70273.95487644155,
+    "sma50": 71897.47356561317,
+    "sma200": 70273.7530566736,
     "support_30d": 64686.25782561655,
     "resistance_30d": 81264.70153038795,
     "mark_price": 75928.5,
@@ -30979,14 +31006,14 @@
     "key": "ETH",
     "name": "Ethereum",
     "emoji": "\u039e",
-    "price": 2414.02,
+    "price": 2413.06,
     "high_24h": 2484.45,
     "low_24h": 2361.16,
-    "pct_24h": -2.65393,
+    "pct_24h": -2.64372,
     "pct_7d": -2.7,
     "pct_30d": 27.0,
-    "sma50": 2217.145202640204,
-    "sma200": 2064.402567914376,
+    "sma50": 2217.15009114265,
+    "sma200": 2064.403790039988,
     "support_30d": 1916.3998901478055,
     "resistance_30d": 2525.267261590238,
     "mark_price": 2399.32,
