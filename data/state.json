@@ -1317,11 +1317,11 @@
       "symbol": "HTX",
       "name": "HTX DAO",
       "price": 1.66e-06,
-      "pct_24h": -1.98615,
+      "pct_24h": -1.98012,
       "pct_7d": -2.3,
       "support_30d": 1.6023985995039954e-06,
       "resistance_30d": 1.7873095460323824e-06,
-      "as_of": "2026-09-16 09:45:23",
+      "as_of": "2026-09-16 09:55:18",
       "stale": false
     },
     "superstate-short-duration-us-government-securities-fund-ustb": {
@@ -2359,7 +2359,7 @@
         ],
         [
           "Stretch from long-term average",
-          "-8.7% vs its long-term average - not stretched either way",
+          "-11.2% vs its long-term average - not stretched either way",
           0
         ],
         [
@@ -2372,12 +2372,12 @@
       "id": "sky",
       "symbol": "SKY",
       "name": "Sky",
-      "price": 0.060869,
-      "pct_24h": -3.93227,
-      "pct_7d": -10.2,
+      "price": 0.059178,
+      "pct_24h": -5.70716,
+      "pct_7d": -11.3,
       "support_30d": 0.05605452008934767,
       "resistance_30d": 0.07314868186988309,
-      "as_of": "2026-09-16 04:40:23",
+      "as_of": "2026-09-16 09:55:18",
       "stale": false
     },
     "shiba-inu": {
@@ -2564,12 +2564,12 @@
       "id": "tether-gold",
       "symbol": "XAUT",
       "name": "Tether Gold",
-      "price": 4331.6,
-      "pct_24h": 1.40902,
+      "price": 4331.73,
+      "pct_24h": 1.4177,
       "pct_7d": -1.8,
       "support_30d": 4280.025009589792,
       "resistance_30d": 4662.510537821146,
-      "as_of": "2026-09-16 09:40:22",
+      "as_of": "2026-09-16 09:55:18",
       "stale": false
     },
     "bitway": {
@@ -3341,9 +3341,7 @@
       "stale": false
     }
   },
-  "_strong_buy_state": {
-    "scanner-1h:SKY": true
-  },
+  "_strong_buy_state": {},
   "_pnl_tracker": {
     "open": {
       "1h:SKY": {
@@ -3364,7 +3362,7 @@
         "stop": 0.14047,
         "target1": 0.16433,
         "target2": 0.17626,
-        "opened_at": "2026-09-16T09:52:17.088452"
+        "opened_at": "2026-09-16T09:57:14.585533"
       }
     },
     "resolved": [
@@ -30225,6 +30223,19 @@
         "result": "win",
         "resolved_at": "2026-09-16T09:52:17.088452",
         "exit_price": 0.1758
+      },
+      {
+        "coin": "XLM",
+        "name": "Stellar",
+        "tf": "daily",
+        "entry": 0.1524,
+        "stop": 0.14047,
+        "target1": 0.16433,
+        "target2": 0.17626,
+        "opened_at": "2026-09-16T09:52:17.088452",
+        "result": "win",
+        "resolved_at": "2026-09-16T09:57:14.585533",
+        "exit_price": 0.1757
       }
     ]
   },
@@ -30232,14 +30243,14 @@
     "key": "BTC",
     "name": "Bitcoin",
     "emoji": "\u20bf",
-    "price": 75844,
+    "price": 75892,
     "high_24h": 77163,
     "low_24h": 75038,
-    "pct_24h": -1.48959,
+    "pct_24h": -1.4688,
     "pct_7d": -4.6,
     "pct_30d": 19.2,
-    "sma50": 71893.6845718335,
-    "sma200": 70272.80580822869,
+    "sma50": 71894.16842045498,
+    "sma200": 70272.92677038405,
     "support_30d": 64686.25782561655,
     "resistance_30d": 81264.70153038795,
     "mark_price": 75592.6,
@@ -30254,14 +30265,14 @@
     "key": "ETH",
     "name": "Ethereum",
     "emoji": "\u039e",
-    "price": 2400.63,
+    "price": 2402.95,
     "high_24h": 2486.48,
     "low_24h": 2361.16,
-    "pct_24h": -3.04466,
+    "pct_24h": -3.07666,
     "pct_7d": -4.4,
     "pct_30d": 26.4,
-    "sma50": 2216.894451764353,
-    "sma200": 2064.3398801954136,
+    "sma50": 2216.931898322019,
+    "sma200": 2064.34924183483,
     "support_30d": 1916.3998901478055,
     "resistance_30d": 2525.267261590238,
     "mark_price": 2391.78,
