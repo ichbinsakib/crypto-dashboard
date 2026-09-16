@@ -269,9 +269,9 @@
       "stale": false
     },
     "hyperliquid": {
-      "label": "\ud83d\udd34 CAUTION - REDUCE NEW BUYS",
+      "label": "\ud83d\udd34 DISTRIBUTION ZONE",
       "status": "bearish",
-      "score": -2,
+      "score": -5,
       "rows": [
         [
           "Price vs. recent range",
@@ -285,8 +285,8 @@
         ],
         [
           "Market phase (best guess)",
-          "Established uptrend - phase where price marks up",
-          1
+          "Very extended after a big run - phase where smart money sells",
+          -2
         ],
         [
           "Recent trend",
@@ -295,7 +295,7 @@
         ],
         [
           "Stretch from long-term average",
-          "+39.8% above its long-term average - very stretched",
+          "+40.2% above its long-term average - very stretched",
           -2
         ],
         [
@@ -304,16 +304,16 @@
           0
         ]
       ],
-      "plain": "Getting risky - I'd hold off on new buys until this cools down.",
+      "plain": "Looks stretched and euphoric - historically the zone where smart money sells, not buys.",
       "id": "hyperliquid",
       "symbol": "HYPE",
       "name": "Hyperliquid",
-      "price": 77.8,
-      "pct_24h": -1.8161,
-      "pct_7d": -10.2,
+      "price": 78.0,
+      "pct_24h": -1.93133,
+      "pct_7d": -8.8,
       "support_30d": 58.515277414221124,
       "resistance_30d": 87.951916819731,
-      "as_of": "2026-09-16 10:20:23",
+      "as_of": "2026-09-16 13:15:24",
       "stale": false
     },
     "dogecoin": {
@@ -2051,7 +2051,7 @@
       "rows": [
         [
           "Price vs. recent range",
-          "Near its 30-day low (~$0.0836) - historically a better entry",
+          "Near its 30-day low (~$0.0818) - historically a better entry",
           2
         ],
         [
@@ -2071,7 +2071,7 @@
         ],
         [
           "Stretch from long-term average",
-          "-39.5% below its long-term average - confirmed downtrend",
+          "-40.8% below its long-term average - confirmed downtrend",
           -1
         ],
         [
@@ -2084,12 +2084,12 @@
       "id": "pi-network",
       "symbol": "PI",
       "name": "Pi Network",
-      "price": 0.083441,
-      "pct_24h": -12.3239,
-      "pct_7d": -14.2,
-      "support_30d": 0.08355377108413375,
+      "price": 0.081775,
+      "pct_24h": -14.8008,
+      "pct_7d": -14.7,
+      "support_30d": 0.08175540445226297,
       "resistance_30d": 0.09830733881512746,
-      "as_of": "2026-09-16 12:05:21",
+      "as_of": "2026-09-16 13:15:24",
       "stale": false
     },
     "ondo-finance": {
@@ -2099,7 +2099,7 @@
       "rows": [
         [
           "Price vs. recent range",
-          "Near its 30-day low (~$0.3258) - historically a better entry",
+          "Near its 30-day low (~$0.3255) - historically a better entry",
           2
         ],
         [
@@ -2119,7 +2119,7 @@
         ],
         [
           "Stretch from long-term average",
-          "-0.8% vs its long-term average - not stretched either way",
+          "-1.0% vs its long-term average - not stretched either way",
           0
         ],
         [
@@ -2132,12 +2132,12 @@
       "id": "ondo-finance",
       "symbol": "ONDO",
       "name": "Ondo",
-      "price": 0.325788,
-      "pct_24h": -6.42744,
-      "pct_7d": -12.6,
-      "support_30d": 0.3257882867504219,
+      "price": 0.325072,
+      "pct_24h": -7.18317,
+      "pct_7d": -13.6,
+      "support_30d": 0.3255147287776247,
       "resistance_30d": 0.3969475338902824,
-      "as_of": "2026-09-16 12:40:26",
+      "as_of": "2026-09-16 13:15:24",
       "stale": false
     },
     "canton-network": {
@@ -3359,10 +3359,10 @@
         "name": "Ethena",
         "tf": "15m",
         "entry": 0.1385,
-        "stop": 0.13729333333333335,
-        "target1": 0.13970666666666667,
-        "target2": 0.14091333333333333,
-        "opened_at": "2026-09-16T13:12:16.974611"
+        "stop": 0.13731000000000002,
+        "target1": 0.13969,
+        "target2": 0.14088,
+        "opened_at": "2026-09-16T13:17:15.120179"
       },
       "daily:XLM": {
         "coin": "XLM",
@@ -3372,7 +3372,7 @@
         "stop": 0.14047,
         "target1": 0.16433,
         "target2": 0.17626,
-        "opened_at": "2026-09-16T13:12:16.974611"
+        "opened_at": "2026-09-16T13:17:15.120179"
       }
     },
     "resolved": [
@@ -31234,6 +31234,32 @@
         "result": "win",
         "resolved_at": "2026-09-16T13:12:16.974611",
         "exit_price": 0.1739
+      },
+      {
+        "coin": "ENA",
+        "name": "Ethena",
+        "tf": "15m",
+        "entry": 0.1385,
+        "stop": 0.13729333333333335,
+        "target1": 0.13970666666666667,
+        "target2": 0.14091333333333333,
+        "opened_at": "2026-09-16T13:12:16.974611",
+        "result": "win",
+        "resolved_at": "2026-09-16T13:17:15.120179",
+        "exit_price": 0.1438
+      },
+      {
+        "coin": "XLM",
+        "name": "Stellar",
+        "tf": "daily",
+        "entry": 0.1524,
+        "stop": 0.14047,
+        "target1": 0.16433,
+        "target2": 0.17626,
+        "opened_at": "2026-09-16T13:12:16.974611",
+        "result": "win",
+        "resolved_at": "2026-09-16T13:17:15.120179",
+        "exit_price": 0.1749
       }
     ]
   },
@@ -31241,14 +31267,14 @@
     "key": "BTC",
     "name": "Bitcoin",
     "emoji": "\u20bf",
-    "price": 75702,
+    "price": 75715,
     "high_24h": 77146,
     "low_24h": 75038,
-    "pct_24h": -1.69702,
+    "pct_24h": -1.62156,
     "pct_7d": -4.3,
     "pct_30d": 19.4,
-    "sma50": 71890.47049442201,
-    "sma200": 70272.00228887581,
+    "sma50": 71889.56948701736,
+    "sma200": 70271.77703702464,
     "support_30d": 64686.25782561655,
     "resistance_30d": 81264.70153038795,
     "mark_price": 75928.5,
@@ -31263,14 +31289,14 @@
     "key": "ETH",
     "name": "Ethereum",
     "emoji": "\u039e",
-    "price": 2398.62,
+    "price": 2397.99,
     "high_24h": 2454.5,
     "low_24h": 2361.16,
-    "pct_24h": -3.30283,
+    "pct_24h": -3.22375,
     "pct_7d": -3.9,
     "pct_30d": 26.3,
-    "sma50": 2216.850801928805,
-    "sma200": 2064.3289677365265,
+    "sma50": 2216.7991087502446,
+    "sma200": 2064.316044441887,
     "support_30d": 1916.3998901478055,
     "resistance_30d": 2525.267261590238,
     "mark_price": 2399.32,
