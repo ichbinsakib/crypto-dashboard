@@ -775,7 +775,7 @@
         ],
         [
           "Stretch from long-term average",
-          "-10.7% vs its long-term average - not stretched either way",
+          "-10.9% vs its long-term average - not stretched either way",
           0
         ],
         [
@@ -788,12 +788,12 @@
       "id": "kucoin-shares",
       "symbol": "KCS",
       "name": "KuCoin",
-      "price": 6.79,
-      "pct_24h": -1.36419,
+      "price": 6.78,
+      "pct_24h": -1.45463,
       "pct_7d": -3.2,
       "support_30d": 6.601552051904499,
       "resistance_30d": 7.8821382735057615,
-      "as_of": "2026-09-16 14:10:25",
+      "as_of": "2026-09-16 14:15:23",
       "stale": false
     },
     "hedera-hashgraph": {
@@ -1317,11 +1317,11 @@
       "symbol": "HTX",
       "name": "HTX DAO",
       "price": 1.66e-06,
-      "pct_24h": -1.63719,
-      "pct_7d": -2.0,
+      "pct_24h": -1.60785,
+      "pct_7d": -1.6,
       "support_30d": 1.6023985995039954e-06,
       "resistance_30d": 1.7873095460323824e-06,
-      "as_of": "2026-09-16 13:40:26",
+      "as_of": "2026-09-16 14:15:23",
       "stale": false
     },
     "superstate-short-duration-us-government-securities-fund-ustb": {
@@ -2119,7 +2119,7 @@
         ],
         [
           "Stretch from long-term average",
-          "+0.3% vs its long-term average - not stretched either way",
+          "-0.3% vs its long-term average - not stretched either way",
           0
         ],
         [
@@ -2132,12 +2132,12 @@
       "id": "ondo-finance",
       "symbol": "ONDO",
       "name": "Ondo",
-      "price": 0.329491,
-      "pct_24h": -5.2004,
+      "price": 0.32733,
+      "pct_24h": -5.48785,
       "pct_7d": -13.0,
       "support_30d": 0.32601458799099026,
       "resistance_30d": 0.3969475338902824,
-      "as_of": "2026-09-16 14:00:35",
+      "as_of": "2026-09-16 14:15:23",
       "stale": false
     },
     "canton-network": {
@@ -2757,11 +2757,11 @@
       "symbol": "MORPHO",
       "name": "Morpho",
       "price": 2.09,
-      "pct_24h": -2.72652,
-      "pct_7d": -11.2,
+      "pct_24h": -2.05988,
+      "pct_7d": -10.4,
       "support_30d": 2.083646898087014,
       "resistance_30d": 2.9026212482639075,
-      "as_of": "2026-09-16 11:10:24",
+      "as_of": "2026-09-16 14:15:23",
       "stale": false
     },
     "memecore": {
@@ -2815,7 +2815,7 @@
     "aave": {
       "label": "\ud83d\udfe1 HOLD / NEUTRAL",
       "status": "neutral",
-      "score": 0,
+      "score": -1,
       "rows": [
         [
           "Price vs. recent range",
@@ -2834,12 +2834,12 @@
         ],
         [
           "Recent trend",
-          "Chopping sideways - no clear trend",
-          0
+          "Trending down - avoid catching a falling knife",
+          -1
         ],
         [
           "Stretch from long-term average",
-          "+22.5% above its long-term average - a bit stretched",
+          "+19.3% above its long-term average - a bit stretched",
           -1
         ],
         [
@@ -2852,12 +2852,12 @@
       "id": "aave",
       "symbol": "AAVE",
       "name": "Aave",
-      "price": 119.72,
-      "pct_24h": -6.11895,
-      "pct_7d": -6.9,
+      "price": 116.55,
+      "pct_24h": -8.23685,
+      "pct_7d": -9.4,
       "support_30d": 87.49183970362333,
       "resistance_30d": 141.53047916466082,
-      "as_of": "2026-09-16 11:05:19",
+      "as_of": "2026-09-16 14:15:23",
       "stale": false
     },
     "okb": {
@@ -3361,20 +3361,20 @@
         "name": "Ethena",
         "tf": "15m",
         "entry": 0.1385,
-        "stop": 0.13715666666666668,
-        "target1": 0.13984333333333335,
-        "target2": 0.14118666666666668,
-        "opened_at": "2026-09-16T14:12:15.636239"
+        "stop": 0.13715333333333335,
+        "target1": 0.13984666666666667,
+        "target2": 0.14119333333333334,
+        "opened_at": "2026-09-16T14:16:44.361476"
       },
       "daily:XLM": {
         "coin": "XLM",
         "name": "Stellar",
         "tf": "daily",
         "entry": 0.1524,
-        "stop": 0.14047,
-        "target1": 0.16433,
-        "target2": 0.17626,
-        "opened_at": "2026-09-16T14:12:15.636239"
+        "stop": 0.14046666666666668,
+        "target1": 0.16433333333333333,
+        "target2": 0.17626666666666665,
+        "opened_at": "2026-09-16T14:16:44.361476"
       }
     },
     "resolved": [
@@ -31548,6 +31548,32 @@
         "result": "win",
         "resolved_at": "2026-09-16T14:12:15.636239",
         "exit_price": 0.1736
+      },
+      {
+        "coin": "ENA",
+        "name": "Ethena",
+        "tf": "15m",
+        "entry": 0.1385,
+        "stop": 0.13715666666666668,
+        "target1": 0.13984333333333335,
+        "target2": 0.14118666666666668,
+        "opened_at": "2026-09-16T14:12:15.636239",
+        "result": "win",
+        "resolved_at": "2026-09-16T14:16:44.361476",
+        "exit_price": 0.1448
+      },
+      {
+        "coin": "XLM",
+        "name": "Stellar",
+        "tf": "daily",
+        "entry": 0.1524,
+        "stop": 0.14047,
+        "target1": 0.16433,
+        "target2": 0.17626,
+        "opened_at": "2026-09-16T14:12:15.636239",
+        "result": "win",
+        "resolved_at": "2026-09-16T14:16:44.361476",
+        "exit_price": 0.1745
       }
     ]
   },
@@ -31555,14 +31581,14 @@
     "key": "BTC",
     "name": "Bitcoin",
     "emoji": "\u20bf",
-    "price": 75506,
+    "price": 75461,
     "high_24h": 77146,
     "low_24h": 75038,
-    "pct_24h": -1.2009,
+    "pct_24h": -1.23016,
     "pct_7d": -4.9,
     "pct_30d": 19.2,
-    "sma50": 71886.45817732431,
-    "sma200": 70270.99920960139,
+    "sma50": 71885.211268734,
+    "sma200": 70270.68748245381,
     "support_30d": 64686.25782561655,
     "resistance_30d": 81264.70153038795,
     "mark_price": 75928.5,
@@ -31577,14 +31603,14 @@
     "key": "ETH",
     "name": "Ethereum",
     "emoji": "\u039e",
-    "price": 2388.03,
+    "price": 2385.34,
     "high_24h": 2445.14,
     "low_24h": 2361.16,
-    "pct_24h": -2.5534,
+    "pct_24h": -2.56121,
     "pct_7d": -4.6,
     "pct_30d": 26.3,
-    "sma50": 2216.6433552896983,
-    "sma200": 2064.27710607675,
+    "sma50": 2216.5570365900144,
+    "sma200": 2064.255526401829,
     "support_30d": 1916.3998901478055,
     "resistance_30d": 2525.267261590238,
     "mark_price": 2399.32,
