@@ -1317,11 +1317,11 @@
       "symbol": "HTX",
       "name": "HTX DAO",
       "price": 1.66e-06,
-      "pct_24h": -1.86854,
-      "pct_7d": -2.0,
+      "pct_24h": -1.28686,
+      "pct_7d": -1.9,
       "support_30d": 1.6023985995039954e-06,
       "resistance_30d": 1.7873095460323824e-06,
-      "as_of": "2026-09-16 11:20:28",
+      "as_of": "2026-09-16 12:10:24",
       "stale": false
     },
     "superstate-short-duration-us-government-securities-fund-ustb": {
@@ -2263,7 +2263,7 @@
         ],
         [
           "Stretch from long-term average",
-          "-9.5% vs its long-term average - not stretched either way",
+          "-8.9% vs its long-term average - not stretched either way",
           0
         ],
         [
@@ -2276,12 +2276,12 @@
       "id": "bittensor",
       "symbol": "TAO",
       "name": "Bittensor",
-      "price": 217.02,
-      "pct_24h": -3.27447,
-      "pct_7d": -15.8,
+      "price": 218.49,
+      "pct_24h": -2.6185,
+      "pct_7d": -16.0,
       "support_30d": 190.67093053611111,
       "resistance_30d": 265.7337487161633,
-      "as_of": "2026-09-16 11:40:26",
+      "as_of": "2026-09-16 12:10:24",
       "stale": false
     },
     "the-open-network": {
@@ -2805,11 +2805,11 @@
       "symbol": "M",
       "name": "MemeCore",
       "price": 1.1,
-      "pct_24h": -0.52669,
-      "pct_7d": -7.8,
+      "pct_24h": -0.66245,
+      "pct_7d": -7.1,
       "support_30d": 1.0402044506518406,
       "resistance_30d": 1.2453913363052769,
-      "as_of": "2026-09-16 11:35:20",
+      "as_of": "2026-09-16 12:10:24",
       "stale": false
     },
     "aave": {
@@ -3361,10 +3361,10 @@
         "name": "Ethena",
         "tf": "15m",
         "entry": 0.1385,
-        "stop": 0.13739666666666667,
-        "target1": 0.13960333333333336,
-        "target2": 0.1407066666666667,
-        "opened_at": "2026-09-16T12:07:11.796288"
+        "stop": 0.13737000000000002,
+        "target1": 0.13963,
+        "target2": 0.14076,
+        "opened_at": "2026-09-16T12:12:15.503533"
       },
       "daily:XLM": {
         "coin": "XLM",
@@ -3374,7 +3374,7 @@
         "stop": 0.14047,
         "target1": 0.16433,
         "target2": 0.17626,
-        "opened_at": "2026-09-16T12:07:11.796288"
+        "opened_at": "2026-09-16T12:12:15.503533"
       }
     },
     "resolved": [
@@ -30898,6 +30898,32 @@
         "result": "win",
         "resolved_at": "2026-09-16T12:07:11.796288",
         "exit_price": 0.1764
+      },
+      {
+        "coin": "ENA",
+        "name": "Ethena",
+        "tf": "15m",
+        "entry": 0.1385,
+        "stop": 0.13739666666666667,
+        "target1": 0.13960333333333336,
+        "target2": 0.1407066666666667,
+        "opened_at": "2026-09-16T12:07:11.796288",
+        "result": "win",
+        "resolved_at": "2026-09-16T12:12:15.503533",
+        "exit_price": 0.1427
+      },
+      {
+        "coin": "XLM",
+        "name": "Stellar",
+        "tf": "daily",
+        "entry": 0.1524,
+        "stop": 0.14047,
+        "target1": 0.16433,
+        "target2": 0.17626,
+        "opened_at": "2026-09-16T12:07:11.796288",
+        "result": "win",
+        "resolved_at": "2026-09-16T12:12:15.503533",
+        "exit_price": 0.1764
       }
     ]
   },
@@ -30905,21 +30931,21 @@
     "key": "BTC",
     "name": "Bitcoin",
     "emoji": "\u20bf",
-    "price": 76191,
+    "price": 76153,
     "high_24h": 77146,
     "low_24h": 75038,
-    "pct_24h": -0.93435,
+    "pct_24h": -0.88998,
     "pct_7d": -3.5,
     "pct_30d": 19.8,
-    "sma50": 71899.8029480021,
-    "sma200": 70274.33540227084,
+    "sma50": 71899.39279128719,
+    "sma200": 70274.23286309211,
     "support_30d": 64686.25782561655,
     "resistance_30d": 81264.70153038795,
-    "mark_price": 75928.5,
-    "index_price": 75956.55021739,
-    "funding_rate": 2.153e-05,
-    "oi_change_pct": 2.0591169415156996,
-    "oi_now": 107028.953,
+    "mark_price": 76143.0,
+    "index_price": 76190.835,
+    "funding_rate": 4.794e-05,
+    "oi_change_pct": 0.9660403730763857,
+    "oi_now": 106614.115,
     "fng_value": 51,
     "fng_class": "Neutral"
   },
@@ -30927,21 +30953,21 @@
     "key": "ETH",
     "name": "Ethereum",
     "emoji": "\u039e",
-    "price": 2420.27,
+    "price": 2416.24,
     "high_24h": 2484.45,
     "low_24h": 2361.16,
-    "pct_24h": -2.31027,
+    "pct_24h": -2.39821,
     "pct_7d": -2.7,
     "pct_30d": 27.0,
-    "sma50": 2217.2479485700505,
-    "sma200": 2064.428254396838,
+    "sma50": 2217.226250599926,
+    "sma200": 2064.422829904307,
     "support_30d": 1916.3998901478055,
     "resistance_30d": 2525.267261590238,
-    "mark_price": 2399.32,
-    "index_price": 2400.39348837,
-    "funding_rate": -4.824e-05,
-    "oi_change_pct": -0.8982224377702398,
-    "oi_now": 2326261.45,
+    "mark_price": 2416.29,
+    "index_price": 2417.19139535,
+    "funding_rate": -3.908e-05,
+    "oi_change_pct": -0.9991545235263753,
+    "oi_now": 2324245.054,
     "fng_value": 51,
     "fng_class": "Neutral"
   }
