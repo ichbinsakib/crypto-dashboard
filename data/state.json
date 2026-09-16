@@ -212,12 +212,12 @@
       "id": "tron",
       "symbol": "TRX",
       "name": "TRON",
-      "price": 0.335207,
-      "pct_24h": 0.24589,
+      "price": 0.335202,
+      "pct_24h": 0.35849,
       "pct_7d": -1.6,
       "support_30d": 0.32221537516581966,
       "resistance_30d": 0.3447899585776834,
-      "as_of": "2026-09-16 18:00:40",
+      "as_of": "2026-09-16 18:05:20",
       "stale": false
     },
     "figure-heloc": {
@@ -967,7 +967,7 @@
         ],
         [
           "Stretch from long-term average",
-          "+2.9% vs its long-term average - not stretched either way",
+          "+2.7% vs its long-term average - not stretched either way",
           0
         ],
         [
@@ -980,12 +980,12 @@
       "id": "aster-2",
       "symbol": "ASTER",
       "name": "Aster",
-      "price": 0.681313,
-      "pct_24h": -1.29769,
-      "pct_7d": -9.1,
+      "price": 0.679539,
+      "pct_24h": -1.86862,
+      "pct_7d": -8.2,
       "support_30d": 0.6018722187083829,
       "resistance_30d": 0.7868111056215635,
-      "as_of": "2026-09-16 16:25:17",
+      "as_of": "2026-09-16 18:05:20",
       "stale": false
     },
     "worldcoin-wld": {
@@ -2805,11 +2805,11 @@
       "symbol": "M",
       "name": "MemeCore",
       "price": 1.12,
-      "pct_24h": 1.22969,
-      "pct_7d": -4.3,
+      "pct_24h": 0.24964,
+      "pct_7d": -4.1,
       "support_30d": 1.0402044506518406,
       "resistance_30d": 1.2453913363052769,
-      "as_of": "2026-09-16 16:55:18",
+      "as_of": "2026-09-16 18:05:20",
       "stale": false
     },
     "aave": {
@@ -3341,38 +3341,20 @@
       "stale": false
     }
   },
-  "_strong_buy_state": {},
+  "_strong_buy_state": {
+    "scanner-daily:XLM": true
+  },
   "_pnl_tracker": {
     "open": {
-      "1h:SHIB": {
-        "coin": "SHIB",
-        "name": "Shiba Inu",
-        "tf": "1h",
-        "entry": 4.75e-06,
-        "stop": 4.687083333333334e-06,
-        "target1": 4.812916666666667e-06,
-        "target2": 4.875833333333333e-06,
-        "opened_at": "2026-09-16T16:32:27.647356"
-      },
-      "15m:ENA": {
-        "coin": "ENA",
-        "name": "Ethena",
-        "tf": "15m",
-        "entry": 0.1412,
-        "stop": 0.13971333333333333,
-        "target1": 0.14268666666666666,
-        "target2": 0.14417333333333332,
-        "opened_at": "2026-09-16T16:47:12.653962"
-      },
       "daily:XLM": {
         "coin": "XLM",
         "name": "Stellar",
         "tf": "daily",
         "entry": 0.1524,
-        "stop": 0.14043333333333335,
-        "target1": 0.16436666666666666,
-        "target2": 0.17633333333333331,
-        "opened_at": "2026-09-16T18:01:46.691703"
+        "stop": 0.14042000000000002,
+        "target1": 0.16438,
+        "target2": 0.17636,
+        "opened_at": "2026-09-16T18:07:11.135774"
       }
     },
     "resolved": [
@@ -32573,6 +32555,45 @@
         "result": "win",
         "resolved_at": "2026-09-16T18:01:46.691703",
         "exit_price": 0.1735
+      },
+      {
+        "coin": "SHIB",
+        "name": "Shiba Inu",
+        "tf": "1h",
+        "entry": 4.75e-06,
+        "stop": 4.687083333333334e-06,
+        "target1": 4.812916666666667e-06,
+        "target2": 4.875833333333333e-06,
+        "opened_at": "2026-09-16T16:32:27.647356",
+        "result": "win",
+        "resolved_at": "2026-09-16T18:07:11.135774",
+        "exit_price": 4.85e-06
+      },
+      {
+        "coin": "ENA",
+        "name": "Ethena",
+        "tf": "15m",
+        "entry": 0.1412,
+        "stop": 0.13971333333333333,
+        "target1": 0.14268666666666666,
+        "target2": 0.14417333333333332,
+        "opened_at": "2026-09-16T16:47:12.653962",
+        "result": "win",
+        "resolved_at": "2026-09-16T18:07:11.135774",
+        "exit_price": 0.1487
+      },
+      {
+        "coin": "XLM",
+        "name": "Stellar",
+        "tf": "daily",
+        "entry": 0.1524,
+        "stop": 0.14043333333333335,
+        "target1": 0.16436666666666666,
+        "target2": 0.17633333333333331,
+        "opened_at": "2026-09-16T18:01:46.691703",
+        "result": "win",
+        "resolved_at": "2026-09-16T18:07:11.135774",
+        "exit_price": 0.1785
       }
     ]
   },
@@ -32580,14 +32601,14 @@
     "key": "BTC",
     "name": "Bitcoin",
     "emoji": "\u20bf",
-    "price": 75540,
-    "high_24h": 76913,
-    "low_24h": 75038,
-    "pct_24h": -1.7733,
-    "pct_7d": -3.6,
-    "pct_30d": 18.1,
-    "sma50": 71889.58989437138,
-    "sma200": 70271.78213886316,
+    "price": 75467,
+    "high_24h": 76233,
+    "low_24h": 75151,
+    "pct_24h": -1.83648,
+    "pct_7d": -3.8,
+    "pct_30d": 18.3,
+    "sma50": 71889.27788784962,
+    "sma200": 70271.70413723271,
     "support_30d": 64686.25782561655,
     "resistance_30d": 81264.70153038795,
     "mark_price": 75928.5,
@@ -32602,14 +32623,14 @@
     "key": "ETH",
     "name": "Ethereum",
     "emoji": "\u039e",
-    "price": 2380.58,
-    "high_24h": 2440.66,
-    "low_24h": 2361.16,
-    "pct_24h": -2.40128,
-    "pct_7d": -4.0,
-    "pct_30d": 25.1,
-    "sma50": 2216.5812710866526,
-    "sma200": 2064.2615850259886,
+    "price": 2381.34,
+    "high_24h": 2424.51,
+    "low_24h": 2371.36,
+    "pct_24h": -2.39323,
+    "pct_7d": -4.2,
+    "pct_30d": 25.4,
+    "sma50": 2216.698312912244,
+    "sma200": 2064.2908454823864,
     "support_30d": 1916.3998901478055,
     "resistance_30d": 2525.267261590238,
     "mark_price": 2399.32,
