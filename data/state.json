@@ -1447,7 +1447,7 @@
         ],
         [
           "Stretch from long-term average",
-          "-14.0% vs its long-term average - not stretched either way",
+          "-14.7% vs its long-term average - not stretched either way",
           0
         ],
         [
@@ -1460,12 +1460,12 @@
       "id": "crypto-com-chain",
       "symbol": "CRO",
       "name": "Cronos",
-      "price": 0.055792,
-      "pct_24h": -4.3971,
-      "pct_7d": -8.0,
+      "price": 0.055343,
+      "pct_24h": -2.92755,
+      "pct_7d": -8.5,
       "support_30d": 0.04621382085807831,
       "resistance_30d": 0.06091104752771909,
-      "as_of": "2026-09-16 04:45:23",
+      "as_of": "2026-09-16 06:40:24",
       "stale": false
     },
     "ethereum-classic": {
@@ -1639,7 +1639,7 @@
         ],
         [
           "Stretch from long-term average",
-          "+1.4% vs its long-term average - not stretched either way",
+          "+1.2% vs its long-term average - not stretched either way",
           0
         ],
         [
@@ -1652,12 +1652,12 @@
       "id": "litecoin",
       "symbol": "LTC",
       "name": "Litecoin",
-      "price": 51.1,
-      "pct_24h": -2.79657,
-      "pct_7d": -4.8,
+      "price": 50.98,
+      "pct_24h": -3.42898,
+      "pct_7d": -6.1,
       "support_30d": 44.34767980799559,
       "resistance_30d": 55.20228907963863,
-      "as_of": "2026-09-16 05:25:19",
+      "as_of": "2026-09-16 06:40:24",
       "stale": false
     },
     "bitget-token": {
@@ -2051,7 +2051,7 @@
       "rows": [
         [
           "Price vs. recent range",
-          "Near its 30-day low (~$0.0870) - historically a better entry",
+          "Near its 30-day low (~$0.0865) - historically a better entry",
           2
         ],
         [
@@ -2071,7 +2071,7 @@
         ],
         [
           "Stretch from long-term average",
-          "-37.1% below its long-term average - confirmed downtrend",
+          "-37.4% below its long-term average - confirmed downtrend",
           -1
         ],
         [
@@ -2084,12 +2084,12 @@
       "id": "pi-network",
       "symbol": "PI",
       "name": "Pi Network",
-      "price": 0.086828,
-      "pct_24h": -11.25861,
-      "pct_7d": -11.1,
-      "support_30d": 0.08700590402767469,
+      "price": 0.086411,
+      "pct_24h": -11.42625,
+      "pct_7d": -11.0,
+      "support_30d": 0.08654540383537694,
       "resistance_30d": 0.09830733881512746,
-      "as_of": "2026-09-16 05:10:24",
+      "as_of": "2026-09-16 06:40:24",
       "stale": false
     },
     "ondo-finance": {
@@ -3350,11 +3350,11 @@
         "coin": "QNT",
         "name": "Quant",
         "tf": "15m",
-        "entry": 60.12,
-        "stop": 59.87533333333333,
-        "target1": 60.364666666666665,
-        "target2": 60.60933333333333,
-        "opened_at": "2026-09-16T06:02:38.506018"
+        "entry": 59.6,
+        "stop": 59.33866666666667,
+        "target1": 59.861333333333334,
+        "target2": 60.12266666666667,
+        "opened_at": "2026-09-16T06:42:19.366296"
       },
       "daily:XLM": {
         "coin": "XLM",
@@ -3364,7 +3364,7 @@
         "stop": 0.14048333333333335,
         "target1": 0.16431666666666667,
         "target2": 0.17623333333333333,
-        "opened_at": "2026-09-16T06:37:15.112229"
+        "opened_at": "2026-09-16T06:42:19.366296"
       }
     },
     "resolved": [
@@ -29523,6 +29523,32 @@
         "result": "win",
         "resolved_at": "2026-09-16T06:37:15.112229",
         "exit_price": 0.1763
+      },
+      {
+        "coin": "QNT",
+        "name": "Quant",
+        "tf": "15m",
+        "entry": 60.12,
+        "stop": 59.87533333333333,
+        "target1": 60.364666666666665,
+        "target2": 60.60933333333333,
+        "opened_at": "2026-09-16T06:02:38.506018",
+        "result": "loss",
+        "resolved_at": "2026-09-16T06:42:19.366296",
+        "exit_price": 59.78
+      },
+      {
+        "coin": "XLM",
+        "name": "Stellar",
+        "tf": "daily",
+        "entry": 0.1524,
+        "stop": 0.14048333333333335,
+        "target1": 0.16431666666666667,
+        "target2": 0.17623333333333333,
+        "opened_at": "2026-09-16T06:37:15.112229",
+        "result": "win",
+        "resolved_at": "2026-09-16T06:42:19.366296",
+        "exit_price": 0.176
       }
     ]
   },
@@ -29530,14 +29556,14 @@
     "key": "BTC",
     "name": "Bitcoin",
     "emoji": "\u20bf",
-    "price": 75860,
+    "price": 75790,
     "high_24h": 77288,
     "low_24h": 75038,
-    "pct_24h": -2.00634,
+    "pct_24h": -2.04039,
     "pct_7d": -4.1,
     "pct_30d": 19.5,
-    "sma50": 71893.57277042343,
-    "sma200": 70272.77785787616,
+    "sma50": 71892.5226038045,
+    "sma200": 70272.51531622144,
     "support_30d": 64686.25782561655,
     "resistance_30d": 81264.70153038795,
     "mark_price": 75592.6,
@@ -29552,14 +29578,14 @@
     "key": "ETH",
     "name": "Ethereum",
     "emoji": "\u039e",
-    "price": 2398.32,
+    "price": 2393.36,
     "high_24h": 2486.48,
     "low_24h": 2361.16,
-    "pct_24h": -3.61061,
+    "pct_24h": -3.77006,
     "pct_7d": -4.2,
     "pct_30d": 26.5,
-    "sma50": 2216.8371559378984,
-    "sma200": 2064.3255562388,
+    "sma50": 2216.7506066829933,
+    "sma200": 2064.303918925074,
     "support_30d": 1916.3998901478055,
     "resistance_30d": 2525.267261590238,
     "mark_price": 2391.78,
