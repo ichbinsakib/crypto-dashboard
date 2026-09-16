@@ -1783,7 +1783,7 @@
         ],
         [
           "Stretch from long-term average",
-          "+143.2% above its long-term average - very stretched",
+          "+147.5% above its long-term average - very stretched",
           -2
         ],
         [
@@ -1796,12 +1796,12 @@
       "id": "lighter",
       "symbol": "LIT",
       "name": "Lighter",
-      "price": 4.49,
-      "pct_24h": 8.07918,
+      "price": 4.57,
+      "pct_24h": 11.78172,
       "pct_7d": -9.8,
       "support_30d": 2.3603362210728394,
       "resistance_30d": 4.827528632102638,
-      "as_of": "2026-09-16 20:05:21",
+      "as_of": "2026-09-16 20:55:20",
       "stale": false
     },
     "ethena": {
@@ -2023,7 +2023,7 @@
         ],
         [
           "Stretch from long-term average",
-          "+71.4% above its long-term average - very stretched",
+          "+73.0% above its long-term average - very stretched",
           -2
         ],
         [
@@ -2036,12 +2036,12 @@
       "id": "uniswap",
       "symbol": "UNI",
       "name": "Uniswap",
-      "price": 6.39,
-      "pct_24h": 0.66706,
+      "price": 6.45,
+      "pct_24h": 1.9561,
       "pct_7d": -3.7,
       "support_30d": 3.2920217665657034,
       "resistance_30d": 7.291165865788254,
-      "as_of": "2026-09-16 20:30:30",
+      "as_of": "2026-09-16 20:55:20",
       "stale": false
     },
     "pi-network": {
@@ -2335,7 +2335,7 @@
     "sky": {
       "label": "\ud83d\udfe2 LEAN ACCUMULATE",
       "status": "bullish",
-      "score": 3,
+      "score": 2,
       "rows": [
         [
           "Price vs. recent range",
@@ -2359,8 +2359,8 @@
         ],
         [
           "Stretch from long-term average",
-          "-14.2% vs its long-term average - not stretched either way",
-          0
+          "-15.2% below its long-term average - confirmed downtrend",
+          -1
         ],
         [
           "Leverage traders' bias",
@@ -2372,12 +2372,12 @@
       "id": "sky",
       "symbol": "SKY",
       "name": "Sky",
-      "price": 0.057181,
-      "pct_24h": -8.64641,
-      "pct_7d": -10.5,
+      "price": 0.056522,
+      "pct_24h": -8.18441,
+      "pct_7d": -12.0,
       "support_30d": 0.05605452008934767,
       "resistance_30d": 0.07314868186988309,
-      "as_of": "2026-09-16 18:20:26",
+      "as_of": "2026-09-16 20:55:20",
       "stale": false
     },
     "shiba-inu": {
@@ -3352,20 +3352,20 @@
         "name": "Polkadot",
         "tf": "15m",
         "entry": 0.965,
-        "stop": 0.9547,
-        "target1": 0.9753,
-        "target2": 0.9855999999999999,
-        "opened_at": "2026-09-16T20:51:46.861153"
+        "stop": 0.9546,
+        "target1": 0.9753999999999999,
+        "target2": 0.9857999999999999,
+        "opened_at": "2026-09-16T20:57:10.291376"
       },
       "1h:MORPHO": {
         "coin": "MORPHO",
         "name": "Morpho",
         "tf": "1h",
         "entry": 2.043,
-        "stop": 2.0185416666666667,
-        "target1": 2.0674583333333336,
-        "target2": 2.091916666666667,
-        "opened_at": "2026-09-16T20:51:46.861153"
+        "stop": 2.0183333333333335,
+        "target1": 2.0676666666666668,
+        "target2": 2.0923333333333334,
+        "opened_at": "2026-09-16T20:57:10.291376"
       },
       "daily:XLM": {
         "coin": "XLM",
@@ -3375,7 +3375,7 @@
         "stop": 0.14022333333333334,
         "target1": 0.16457666666666668,
         "target2": 0.17675333333333335,
-        "opened_at": "2026-09-16T20:51:46.861153"
+        "opened_at": "2026-09-16T20:57:10.291376"
       }
     },
     "resolved": [
@@ -33668,6 +33668,45 @@
         "result": "win",
         "resolved_at": "2026-09-16T20:51:46.861153",
         "exit_price": 0.1841
+      },
+      {
+        "coin": "DOT",
+        "name": "Polkadot",
+        "tf": "15m",
+        "entry": 0.965,
+        "stop": 0.9547,
+        "target1": 0.9753,
+        "target2": 0.9855999999999999,
+        "opened_at": "2026-09-16T20:51:46.861153",
+        "result": "win",
+        "resolved_at": "2026-09-16T20:57:10.291376",
+        "exit_price": 1.008
+      },
+      {
+        "coin": "MORPHO",
+        "name": "Morpho",
+        "tf": "1h",
+        "entry": 2.043,
+        "stop": 2.0185416666666667,
+        "target1": 2.0674583333333336,
+        "target2": 2.091916666666667,
+        "opened_at": "2026-09-16T20:51:46.861153",
+        "result": "win",
+        "resolved_at": "2026-09-16T20:57:10.291376",
+        "exit_price": 2.082
+      },
+      {
+        "coin": "XLM",
+        "name": "Stellar",
+        "tf": "daily",
+        "entry": 0.1524,
+        "stop": 0.14022333333333334,
+        "target1": 0.16457666666666668,
+        "target2": 0.17675333333333335,
+        "opened_at": "2026-09-16T20:51:46.861153",
+        "result": "win",
+        "resolved_at": "2026-09-16T20:57:10.291376",
+        "exit_price": 0.1834
       }
     ]
   },
@@ -33675,14 +33714,14 @@
     "key": "BTC",
     "name": "Bitcoin",
     "emoji": "\u20bf",
-    "price": 76051,
+    "price": 76052,
     "high_24h": 76413,
     "low_24h": 75151,
-    "pct_24h": 0.17532,
+    "pct_24h": 0.1623,
     "pct_7d": -3.1,
     "pct_30d": 18.0,
-    "sma50": 71898.18369048483,
-    "sma200": 70273.93058789152,
+    "sma50": 71897.07411074931,
+    "sma200": 70273.65319295763,
     "support_30d": 64686.25782561655,
     "resistance_30d": 81264.70153038795,
     "mark_price": 76162.78831884,
@@ -33697,14 +33736,14 @@
     "key": "ETH",
     "name": "Ethereum",
     "emoji": "\u039e",
-    "price": 2406.7,
+    "price": 2407.27,
     "high_24h": 2424.51,
     "low_24h": 2371.36,
-    "pct_24h": -0.02316,
+    "pct_24h": -0.04822,
     "pct_7d": -3.0,
     "pct_30d": 26.1,
-    "sma50": 2217.0437637471423,
-    "sma200": 2064.377208191111,
+    "sma50": 2217.0133730372663,
+    "sma200": 2064.369610513642,
     "support_30d": 1916.3998901478055,
     "resistance_30d": 2525.267261590238,
     "mark_price": 2410.68017829,
