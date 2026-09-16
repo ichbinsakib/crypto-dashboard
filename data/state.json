@@ -1303,7 +1303,7 @@
         ],
         [
           "Stretch from long-term average",
-          "-5.1% vs its long-term average - not stretched either way",
+          "-5.7% vs its long-term average - not stretched either way",
           0
         ],
         [
@@ -1316,12 +1316,12 @@
       "id": "htx-dao",
       "symbol": "HTX",
       "name": "HTX DAO",
-      "price": 1.68e-06,
-      "pct_24h": 1.27676,
-      "pct_7d": -0.9,
+      "price": 1.67e-06,
+      "pct_24h": 1.18394,
+      "pct_7d": -0.6,
       "support_30d": 1.6023985995039954e-06,
       "resistance_30d": 1.7873095460323824e-06,
-      "as_of": "2026-09-16 21:45:23",
+      "as_of": "2026-09-16 22:20:24",
       "stale": false
     },
     "superstate-short-duration-us-government-securities-fund-ustb": {
@@ -1399,7 +1399,7 @@
         ],
         [
           "Stretch from long-term average",
-          "+30.9% above its long-term average - very stretched",
+          "+31.1% above its long-term average - very stretched",
           -2
         ],
         [
@@ -1412,12 +1412,12 @@
       "id": "gatechain-token",
       "symbol": "GT",
       "name": "Gate",
-      "price": 9.25,
-      "pct_24h": 1.42951,
+      "price": 9.26,
+      "pct_24h": 2.21287,
       "pct_7d": 0.5,
       "support_30d": 6.740499546922291,
       "resistance_30d": 9.38216924975626,
-      "as_of": "2026-09-16 21:40:23",
+      "as_of": "2026-09-16 22:20:24",
       "stale": false
     },
     "crypto-com-chain": {
@@ -2141,14 +2141,14 @@
       "stale": false
     },
     "canton-network": {
-      "label": "\ud83d\udfe2 LEAN ACCUMULATE",
-      "status": "bullish",
-      "score": 2,
+      "label": "\ud83d\udfe1 HOLD / NEUTRAL",
+      "status": "neutral",
+      "score": 0,
       "rows": [
         [
           "Price vs. recent range",
-          "Near its 30-day low (~$0.0908) - historically a better entry",
-          2
+          "Sitting in the middle of its 30-day range",
+          0
         ],
         [
           "Crowd mood (Fear & Greed)",
@@ -2167,7 +2167,7 @@
         ],
         [
           "Stretch from long-term average",
-          "-31.4% below its long-term average - confirmed downtrend",
+          "-30.2% below its long-term average - confirmed downtrend",
           -1
         ],
         [
@@ -2176,16 +2176,16 @@
           0
         ]
       ],
-      "plain": "Leans toward a decent spot to slowly add (DCA) - not a strong signal, just a lean.",
+      "plain": "No real edge either way right now - fine to just wait and watch.",
       "id": "canton-network",
       "symbol": "CC",
       "name": "Canton",
-      "price": 0.09434,
-      "pct_24h": 3.18621,
-      "pct_7d": -10.4,
+      "price": 0.095909,
+      "pct_24h": 6.25093,
+      "pct_7d": -8.8,
       "support_30d": 0.09077045047943234,
       "resistance_30d": 0.12396615653575341,
-      "as_of": "2026-09-16 20:15:21",
+      "as_of": "2026-09-16 22:20:24",
       "stale": false
     },
     "internet-computer": {
@@ -3354,7 +3354,7 @@
         "stop": 2.016125,
         "target1": 2.069875,
         "target2": 2.09675,
-        "opened_at": "2026-09-16T22:17:16.648149"
+        "opened_at": "2026-09-16T22:22:19.677550"
       },
       "daily:XLM": {
         "coin": "XLM",
@@ -3364,7 +3364,7 @@
         "stop": 0.14022333333333334,
         "target1": 0.16457666666666668,
         "target2": 0.17675333333333335,
-        "opened_at": "2026-09-16T22:17:16.648149"
+        "opened_at": "2026-09-16T22:22:19.677550"
       }
     },
     "resolved": [
@@ -34138,6 +34138,32 @@
         "result": "win",
         "resolved_at": "2026-09-16T22:17:16.648149",
         "exit_price": 0.18
+      },
+      {
+        "coin": "MORPHO",
+        "name": "Morpho",
+        "tf": "1h",
+        "entry": 2.043,
+        "stop": 2.016125,
+        "target1": 2.069875,
+        "target2": 2.09675,
+        "opened_at": "2026-09-16T22:17:16.648149",
+        "result": "win",
+        "resolved_at": "2026-09-16T22:22:19.677550",
+        "exit_price": 2.08
+      },
+      {
+        "coin": "XLM",
+        "name": "Stellar",
+        "tf": "daily",
+        "entry": 0.1524,
+        "stop": 0.14022333333333334,
+        "target1": 0.16457666666666668,
+        "target2": 0.17675333333333335,
+        "opened_at": "2026-09-16T22:17:16.648149",
+        "result": "win",
+        "resolved_at": "2026-09-16T22:22:19.677550",
+        "exit_price": 0.1796
       }
     ]
   },
@@ -34145,14 +34171,14 @@
     "key": "BTC",
     "name": "Bitcoin",
     "emoji": "\u20bf",
-    "price": 75765,
+    "price": 75810,
     "high_24h": 76413,
     "low_24h": 75161,
-    "pct_24h": 0.59061,
+    "pct_24h": 0.83415,
     "pct_7d": -3.0,
     "pct_30d": 18.0,
-    "sma50": 71892.10588559303,
-    "sma200": 70272.41113666857,
+    "sma50": 71892.54126979708,
+    "sma200": 70272.51998271958,
     "support_30d": 64686.25782561655,
     "resistance_30d": 81264.70153038795,
     "mark_price": 76162.78831884,
@@ -34167,14 +34193,14 @@
     "key": "ETH",
     "name": "Ethereum",
     "emoji": "\u039e",
-    "price": 2393.66,
+    "price": 2397.0,
     "high_24h": 2424.51,
     "low_24h": 2371.36,
-    "pct_24h": 0.32416,
+    "pct_24h": 0.64081,
     "pct_7d": -2.7,
     "pct_30d": 26.2,
-    "sma50": 2216.765444669744,
-    "sma200": 2064.3076284217614,
+    "sma50": 2216.818198945624,
+    "sma200": 2064.3208169907316,
     "support_30d": 1916.3998901478055,
     "resistance_30d": 2525.267261590238,
     "mark_price": 2410.68017829,
