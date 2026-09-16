@@ -343,7 +343,7 @@
         ],
         [
           "Stretch from long-term average",
-          "-8.6% vs its long-term average - not stretched either way",
+          "-8.7% vs its long-term average - not stretched either way",
           0
         ],
         [
@@ -356,12 +356,12 @@
       "id": "dogecoin",
       "symbol": "DOGE",
       "name": "Dogecoin",
-      "price": 0.080354,
-      "pct_24h": -0.47103,
+      "price": 0.080297,
+      "pct_24h": -0.71981,
       "pct_7d": -10.9,
       "support_30d": 0.07021051231066483,
       "resistance_30d": 0.09337940032634065,
-      "as_of": "2026-09-16 19:50:25",
+      "as_of": "2026-09-16 19:55:19",
       "stale": false
     },
     "zcash": {
@@ -419,7 +419,7 @@
       "rows": [
         [
           "Price vs. recent range",
-          "Near its 30-day low (~$0.0127) - historically a better entry",
+          "Near its 30-day low (~$0.0128) - historically a better entry",
           2
         ],
         [
@@ -439,7 +439,7 @@
         ],
         [
           "Stretch from long-term average",
-          "+8.8% vs its long-term average - not stretched either way",
+          "+9.5% vs its long-term average - not stretched either way",
           0
         ],
         [
@@ -452,12 +452,12 @@
       "id": "rain",
       "symbol": "RAIN",
       "name": "Rain",
-      "price": 0.01271959,
-      "pct_24h": -10.50395,
+      "price": 0.01280224,
+      "pct_24h": -9.5885,
       "pct_7d": -21.7,
-      "support_30d": 0.012703675036763113,
+      "support_30d": 0.012829116752825082,
       "resistance_30d": 0.018158429442510105,
-      "as_of": "2026-09-16 19:15:24",
+      "as_of": "2026-09-16 19:55:19",
       "stale": false
     },
     "chainlink": {
@@ -1543,7 +1543,7 @@
         ],
         [
           "Stretch from long-term average",
-          "+66.7% above its long-term average - very stretched",
+          "+68.2% above its long-term average - very stretched",
           -2
         ],
         [
@@ -1556,12 +1556,12 @@
       "id": "pump-fun",
       "symbol": "PUMP",
       "name": "Pump.fun",
-      "price": 0.00363084,
-      "pct_24h": 1.37939,
+      "price": 0.00366572,
+      "pct_24h": 2.22997,
       "pct_7d": -23.6,
       "support_30d": 0.0030001765124458095,
       "resistance_30d": 0.0052249885406471875,
-      "as_of": "2026-09-16 19:00:34",
+      "as_of": "2026-09-16 19:55:19",
       "stale": false
     },
     "venice-token": {
@@ -3351,10 +3351,10 @@
         "name": "Sui",
         "tf": "15m",
         "entry": 0.678,
-        "stop": 0.6714000000000001,
-        "target1": 0.6846,
-        "target2": 0.6911999999999999,
-        "opened_at": "2026-09-16T19:52:15.700674"
+        "stop": 0.6713866666666667,
+        "target1": 0.6846133333333334,
+        "target2": 0.6912266666666668,
+        "opened_at": "2026-09-16T19:57:09.589773"
       },
       "1h:MORPHO": {
         "coin": "MORPHO",
@@ -3364,17 +3364,17 @@
         "stop": 2.0174583333333334,
         "target1": 2.068541666666667,
         "target2": 2.0940833333333337,
-        "opened_at": "2026-09-16T19:52:15.700674"
+        "opened_at": "2026-09-16T19:57:09.589773"
       },
       "daily:XLM": {
         "coin": "XLM",
         "name": "Stellar",
         "tf": "daily",
         "entry": 0.1524,
-        "stop": 0.14031333333333335,
-        "target1": 0.16448666666666667,
-        "target2": 0.17657333333333333,
-        "opened_at": "2026-09-16T19:52:15.700674"
+        "stop": 0.14030666666666666,
+        "target1": 0.16449333333333335,
+        "target2": 0.1765866666666667,
+        "opened_at": "2026-09-16T19:57:09.589773"
       }
     },
     "resolved": [
@@ -33303,6 +33303,45 @@
         "result": "win",
         "resolved_at": "2026-09-16T19:52:15.700674",
         "exit_price": 0.1814
+      },
+      {
+        "coin": "SUI",
+        "name": "Sui",
+        "tf": "15m",
+        "entry": 0.678,
+        "stop": 0.6714000000000001,
+        "target1": 0.6846,
+        "target2": 0.6911999999999999,
+        "opened_at": "2026-09-16T19:52:15.700674",
+        "result": "win",
+        "resolved_at": "2026-09-16T19:57:09.589773",
+        "exit_price": 0.7074
+      },
+      {
+        "coin": "MORPHO",
+        "name": "Morpho",
+        "tf": "1h",
+        "entry": 2.043,
+        "stop": 2.0174583333333334,
+        "target1": 2.068541666666667,
+        "target2": 2.0940833333333337,
+        "opened_at": "2026-09-16T19:52:15.700674",
+        "result": "win",
+        "resolved_at": "2026-09-16T19:57:09.589773",
+        "exit_price": 2.07
+      },
+      {
+        "coin": "XLM",
+        "name": "Stellar",
+        "tf": "daily",
+        "entry": 0.1524,
+        "stop": 0.14031333333333335,
+        "target1": 0.16448666666666667,
+        "target2": 0.17657333333333333,
+        "opened_at": "2026-09-16T19:52:15.700674",
+        "result": "win",
+        "resolved_at": "2026-09-16T19:57:09.589773",
+        "exit_price": 0.1813
       }
     ]
   },
@@ -33310,14 +33349,14 @@
     "key": "BTC",
     "name": "Bitcoin",
     "emoji": "\u20bf",
-    "price": 76007,
+    "price": 75988,
     "high_24h": 76413,
     "low_24h": 75151,
-    "pct_24h": 0.17806,
+    "pct_24h": 0.01822,
     "pct_7d": -4.2,
     "pct_30d": 17.4,
-    "sma50": 71896.348234043,
-    "sma200": 70273.47172378105,
+    "sma50": 71896.32051212611,
+    "sma200": 70273.46479330184,
     "support_30d": 64686.25782561655,
     "resistance_30d": 81264.70153038795,
     "mark_price": 75928.5,
@@ -33332,14 +33371,14 @@
     "key": "ETH",
     "name": "Ethereum",
     "emoji": "\u039e",
-    "price": 2405.9,
+    "price": 2405.25,
     "high_24h": 2424.51,
     "low_24h": 2371.36,
-    "pct_24h": 0.0679,
+    "pct_24h": -0.10089,
     "pct_7d": -4.1,
     "pct_30d": 25.4,
-    "sma50": 2216.990283251513,
-    "sma200": 2064.3638380672037,
+    "sma50": 2216.995803058898,
+    "sma200": 2064.36521801905,
     "support_30d": 1916.3998901478055,
     "resistance_30d": 2525.267261590238,
     "mark_price": 2399.32,
