@@ -261,11 +261,11 @@
       "symbol": "FIGR_HELOC",
       "name": "Figure Heloc",
       "price": 1.003,
-      "pct_24h": -2.43336,
+      "pct_24h": -2.43634,
       "pct_7d": -3.1,
       "support_30d": 1.0001790754472548,
       "resistance_30d": 1.0455978355177025,
-      "as_of": "2026-09-16 03:50:23",
+      "as_of": "2026-09-16 05:10:24",
       "stale": false
     },
     "hyperliquid": {
@@ -1317,11 +1317,11 @@
       "symbol": "HTX",
       "name": "HTX DAO",
       "price": 1.66e-06,
-      "pct_24h": -2.33163,
-      "pct_7d": -2.0,
+      "pct_24h": -2.56485,
+      "pct_7d": -2.3,
       "support_30d": 1.6023985995039954e-06,
       "resistance_30d": 1.7873095460323824e-06,
-      "as_of": "2026-09-16 02:10:25",
+      "as_of": "2026-09-16 05:10:24",
       "stale": false
     },
     "superstate-short-duration-us-government-securities-fund-ustb": {
@@ -1413,11 +1413,11 @@
       "symbol": "GT",
       "name": "Gate",
       "price": 9.09,
-      "pct_24h": -2.64333,
-      "pct_7d": -0.7,
+      "pct_24h": -1.95744,
+      "pct_7d": -0.9,
       "support_30d": 6.740499546922291,
       "resistance_30d": 9.38216924975626,
-      "as_of": "2026-09-16 04:15:23",
+      "as_of": "2026-09-16 05:10:24",
       "stale": false
     },
     "crypto-com-chain": {
@@ -2047,7 +2047,7 @@
     "pi-network": {
       "label": "\ud83d\udfe2 LEAN ACCUMULATE",
       "status": "bullish",
-      "score": 3,
+      "score": 2,
       "rows": [
         [
           "Price vs. recent range",
@@ -2066,12 +2066,12 @@
         ],
         [
           "Recent trend",
-          "Chopping sideways - no clear trend",
-          0
+          "Trending down - avoid catching a falling knife",
+          -1
         ],
         [
           "Stretch from long-term average",
-          "-34.7% below its long-term average - confirmed downtrend",
+          "-37.1% below its long-term average - confirmed downtrend",
           -1
         ],
         [
@@ -2084,12 +2084,12 @@
       "id": "pi-network",
       "symbol": "PI",
       "name": "Pi Network",
-      "price": 0.090105,
-      "pct_24h": -7.86335,
-      "pct_7d": -6.1,
+      "price": 0.086828,
+      "pct_24h": -11.25861,
+      "pct_7d": -11.1,
       "support_30d": 0.08700590402767469,
       "resistance_30d": 0.09830733881512746,
-      "as_of": "2026-09-16 00:55:18",
+      "as_of": "2026-09-16 05:10:24",
       "stale": false
     },
     "ondo-finance": {
@@ -2723,7 +2723,7 @@
       "rows": [
         [
           "Price vs. recent range",
-          "Near its 30-day low (~$2.08) - historically a better entry",
+          "Near its 30-day low (~$2.06) - historically a better entry",
           2
         ],
         [
@@ -2743,7 +2743,7 @@
         ],
         [
           "Stretch from long-term average",
-          "+5.3% vs its long-term average - not stretched either way",
+          "+4.2% vs its long-term average - not stretched either way",
           0
         ],
         [
@@ -2756,12 +2756,12 @@
       "id": "morpho",
       "symbol": "MORPHO",
       "name": "Morpho",
-      "price": 2.08,
-      "pct_24h": -4.10686,
-      "pct_7d": -10.3,
-      "support_30d": 2.080222969648986,
+      "price": 2.06,
+      "pct_24h": -5.04146,
+      "pct_7d": -11.2,
+      "support_30d": 2.062452348359013,
       "resistance_30d": 2.9026212482639075,
-      "as_of": "2026-09-16 03:20:22",
+      "as_of": "2026-09-16 05:10:24",
       "stale": false
     },
     "memecore": {
@@ -3341,9 +3341,21 @@
       "stale": false
     }
   },
-  "_strong_buy_state": {},
+  "_strong_buy_state": {
+    "scanner-15m:MORPHO": true
+  },
   "_pnl_tracker": {
     "open": {
+      "15m:MORPHO": {
+        "coin": "MORPHO",
+        "name": "Morpho",
+        "tf": "15m",
+        "entry": 2.06,
+        "stop": 2.049733333333333,
+        "target1": 2.070266666666667,
+        "target2": 2.080533333333334,
+        "opened_at": "2026-09-16T05:11:58.504003"
+      },
       "daily:XLM": {
         "coin": "XLM",
         "name": "Stellar",
@@ -3352,7 +3364,7 @@
         "stop": 0.14048333333333335,
         "target1": 0.16431666666666667,
         "target2": 0.17623333333333333,
-        "opened_at": "2026-09-16T05:07:22.287407"
+        "opened_at": "2026-09-16T05:11:58.504003"
       }
     },
     "resolved": [
@@ -29212,6 +29224,19 @@
         "result": "win",
         "resolved_at": "2026-09-16T05:07:22.287407",
         "exit_price": 0.1762
+      },
+      {
+        "coin": "XLM",
+        "name": "Stellar",
+        "tf": "daily",
+        "entry": 0.1524,
+        "stop": 0.14048333333333335,
+        "target1": 0.16431666666666667,
+        "target2": 0.17623333333333333,
+        "opened_at": "2026-09-16T05:07:22.287407",
+        "result": "win",
+        "resolved_at": "2026-09-16T05:11:58.504003",
+        "exit_price": 0.1766
       }
     ]
   },
@@ -29219,14 +29244,14 @@
     "key": "BTC",
     "name": "Bitcoin",
     "emoji": "\u20bf",
-    "price": 75742,
+    "price": 75677,
     "high_24h": 77703,
     "low_24h": 75038,
-    "pct_24h": -2.47074,
+    "pct_24h": -2.46964,
     "pct_7d": -3.6,
     "pct_30d": 19.6,
-    "sma50": 71889.75208955565,
-    "sma200": 70271.82268765922,
+    "sma50": 71889.87782459648,
+    "sma200": 70271.85412141943,
     "support_30d": 64686.25782561655,
     "resistance_30d": 81264.70153038795,
     "mark_price": 75592.6,
@@ -29241,14 +29266,14 @@
     "key": "ETH",
     "name": "Ethereum",
     "emoji": "\u039e",
-    "price": 2399.14,
+    "price": 2396.18,
     "high_24h": 2499.43,
     "low_24h": 2361.16,
-    "pct_24h": -3.83308,
+    "pct_24h": -3.77431,
     "pct_7d": -3.4,
     "pct_30d": 26.5,
-    "sma50": 2216.7936619554584,
-    "sma200": 2064.31468274319,
+    "sma50": 2216.80083966479,
+    "sma200": 2064.3164771705233,
     "support_30d": 1916.3998901478055,
     "resistance_30d": 2525.267261590238,
     "mark_price": 2391.78,
