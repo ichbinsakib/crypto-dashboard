@@ -271,7 +271,7 @@
     "hyperliquid": {
       "label": "\ud83d\udd34 CAUTION - REDUCE NEW BUYS",
       "status": "bearish",
-      "score": -3,
+      "score": -2,
       "rows": [
         [
           "Price vs. recent range",
@@ -280,8 +280,8 @@
         ],
         [
           "Crowd mood (Fear & Greed)",
-          "69/100 - crowd is greedy",
-          -1
+          "51/100 - crowd mood is neutral",
+          0
         ],
         [
           "Market phase (best guess)",
@@ -295,7 +295,7 @@
         ],
         [
           "Stretch from long-term average",
-          "+38.8% above its long-term average - very stretched",
+          "+39.0% above its long-term average - very stretched",
           -2
         ],
         [
@@ -308,12 +308,12 @@
       "id": "hyperliquid",
       "symbol": "HYPE",
       "name": "Hyperliquid",
-      "price": 76.89,
-      "pct_24h": -4.68028,
-      "pct_7d": -8.3,
+      "price": 77.31,
+      "pct_24h": -3.84624,
+      "pct_7d": -9.4,
       "support_30d": 58.515277414221124,
       "resistance_30d": 87.951916819731,
-      "as_of": "2026-09-15 21:46:13",
+      "as_of": "2026-09-16 00:35:20",
       "stale": false
     },
     "dogecoin": {
@@ -943,7 +943,7 @@
     "aster-2": {
       "label": "\ud83d\udfe1 HOLD / NEUTRAL",
       "status": "neutral",
-      "score": 0,
+      "score": 1,
       "rows": [
         [
           "Price vs. recent range",
@@ -952,8 +952,8 @@
         ],
         [
           "Crowd mood (Fear & Greed)",
-          "69/100 - crowd is greedy",
-          -1
+          "51/100 - crowd mood is neutral",
+          0
         ],
         [
           "Market phase (best guess)",
@@ -967,7 +967,7 @@
         ],
         [
           "Stretch from long-term average",
-          "+3.3% vs its long-term average - not stretched either way",
+          "+3.2% vs its long-term average - not stretched either way",
           0
         ],
         [
@@ -980,12 +980,12 @@
       "id": "aster-2",
       "symbol": "ASTER",
       "name": "Aster",
-      "price": 0.683753,
-      "pct_24h": -2.77109,
-      "pct_7d": -8.8,
-      "support_30d": 0.6010286752462902,
+      "price": 0.682745,
+      "pct_24h": -3.10262,
+      "pct_7d": -9.6,
+      "support_30d": 0.6018722187083829,
       "resistance_30d": 0.7868111056215635,
-      "as_of": "2026-09-15 23:20:22",
+      "as_of": "2026-09-16 00:35:20",
       "stale": false
     },
     "worldcoin-wld": {
@@ -2407,7 +2407,7 @@
         ],
         [
           "Stretch from long-term average",
-          "-7.2% vs its long-term average - not stretched either way",
+          "-7.4% vs its long-term average - not stretched either way",
           0
         ],
         [
@@ -2420,12 +2420,12 @@
       "id": "shiba-inu",
       "symbol": "SHIB",
       "name": "Shiba Inu",
-      "price": 4.95e-06,
-      "pct_24h": -5.54045,
+      "price": 4.94e-06,
+      "pct_24h": -5.34823,
       "pct_7d": -8.7,
       "support_30d": 4.41190416053175e-06,
       "resistance_30d": 5.903506876405612e-06,
-      "as_of": "2026-09-16 00:10:22",
+      "as_of": "2026-09-16 00:35:20",
       "stale": false
     },
     "near": {
@@ -3341,9 +3341,21 @@
       "stale": false
     }
   },
-  "_strong_buy_state": {},
+  "_strong_buy_state": {
+    "scanner-15m:XAUT": true
+  },
   "_pnl_tracker": {
     "open": {
+      "15m:XAUT": {
+        "coin": "XAUT",
+        "name": "Tether Gold",
+        "tf": "15m",
+        "entry": 4280.96,
+        "stop": 4276.938666666667,
+        "target1": 4284.981333333333,
+        "target2": 4289.002666666666,
+        "opened_at": "2026-09-16T00:37:21.057899"
+      },
       "daily:XLM": {
         "coin": "XLM",
         "name": "Stellar",
@@ -3352,7 +3364,7 @@
         "stop": 0.14056666666666667,
         "target1": 0.16423333333333334,
         "target2": 0.17606666666666668,
-        "opened_at": "2026-09-16T00:32:28.745892"
+        "opened_at": "2026-09-16T00:37:21.057899"
       }
     },
     "resolved": [
@@ -28055,6 +28067,19 @@
         "result": "win",
         "resolved_at": "2026-09-16T00:32:28.745892",
         "exit_price": 0.1765
+      },
+      {
+        "coin": "XLM",
+        "name": "Stellar",
+        "tf": "daily",
+        "entry": 0.1524,
+        "stop": 0.14056666666666667,
+        "target1": 0.16423333333333334,
+        "target2": 0.17606666666666668,
+        "opened_at": "2026-09-16T00:32:28.745892",
+        "result": "win",
+        "resolved_at": "2026-09-16T00:37:21.057899",
+        "exit_price": 0.1765
       }
     ]
   },
@@ -28062,14 +28087,14 @@
     "key": "BTC",
     "name": "Bitcoin",
     "emoji": "\u20bf",
-    "price": 75769,
+    "price": 75809,
     "high_24h": 78038,
     "low_24h": 75038,
-    "pct_24h": -2.84453,
+    "pct_24h": -2.84065,
     "pct_7d": -3.7,
     "pct_30d": 20.3,
-    "sma50": 71891.64019832942,
-    "sma200": 70272.29471485266,
+    "sma50": 71892.37557442558,
+    "sma200": 70272.4785588767,
     "support_30d": 64686.25782561655,
     "resistance_30d": 81264.70153038795,
     "mark_price": 76989.5,
@@ -28084,14 +28109,14 @@
     "key": "ETH",
     "name": "Ethereum",
     "emoji": "\u039e",
-    "price": 2402.21,
+    "price": 2403.53,
     "high_24h": 2519.25,
     "low_24h": 2361.16,
-    "pct_24h": -4.25062,
+    "pct_24h": -4.3655,
     "pct_7d": -3.6,
     "pct_30d": 28.0,
-    "sma50": 2216.926079191609,
-    "sma200": 2064.3477870522274,
+    "sma50": 2216.932630500806,
+    "sma200": 2064.349424879527,
     "support_30d": 1916.3998901478055,
     "resistance_30d": 2525.267261590238,
     "mark_price": 2476.25771051,
