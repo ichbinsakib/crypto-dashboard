@@ -260,12 +260,12 @@
       "id": "figure-heloc",
       "symbol": "FIGR_HELOC",
       "name": "Figure Heloc",
-      "price": 1.004,
-      "pct_24h": -3.17499,
-      "pct_7d": -2.3,
+      "price": 1.006,
+      "pct_24h": 0.11923,
+      "pct_7d": -2.0,
       "support_30d": 1.0001790754472548,
       "resistance_30d": 1.0455978355177025,
-      "as_of": "2026-09-16 20:30:30",
+      "as_of": "2026-09-16 23:05:20",
       "stale": false
     },
     "hyperliquid": {
@@ -2119,7 +2119,7 @@
         ],
         [
           "Stretch from long-term average",
-          "+2.7% vs its long-term average - not stretched either way",
+          "+2.6% vs its long-term average - not stretched either way",
           0
         ],
         [
@@ -2132,12 +2132,12 @@
       "id": "ondo-finance",
       "symbol": "ONDO",
       "name": "Ondo",
-      "price": 0.33728,
-      "pct_24h": 2.98711,
-      "pct_7d": -7.1,
+      "price": 0.336869,
+      "pct_24h": 2.35202,
+      "pct_7d": -6.8,
       "support_30d": 0.32601458799099026,
       "resistance_30d": 0.3969475338902824,
-      "as_of": "2026-09-16 22:30:29",
+      "as_of": "2026-09-16 23:05:20",
       "stale": false
     },
     "canton-network": {
@@ -2915,7 +2915,7 @@
       "rows": [
         [
           "Price vs. recent range",
-          "Near its 30-day high (~$0.1172) - less room to run",
+          "Near its 30-day high (~$0.1168) - less room to run",
           -1
         ],
         [
@@ -2935,7 +2935,7 @@
         ],
         [
           "Stretch from long-term average",
-          "+37.3% above its long-term average - very stretched",
+          "+36.4% above its long-term average - very stretched",
           -2
         ],
         [
@@ -2948,12 +2948,12 @@
       "id": "just",
       "symbol": "JST",
       "name": "JUST",
-      "price": 0.117511,
-      "pct_24h": 1.86271,
+      "price": 0.116806,
+      "pct_24h": 1.19731,
       "pct_7d": 12.8,
       "support_30d": 0.0946830738697126,
-      "resistance_30d": 0.11716567100984501,
-      "as_of": "2026-09-16 22:50:26",
+      "resistance_30d": 0.11683430237919941,
+      "as_of": "2026-09-16 23:05:20",
       "stale": false
     },
     "algorand": {
@@ -3365,7 +3365,7 @@
         "stop": 0.14022333333333334,
         "target1": 0.16457666666666668,
         "target2": 0.17675333333333335,
-        "opened_at": "2026-09-16T23:02:32.437191"
+        "opened_at": "2026-09-16T23:07:16.694072"
       }
     },
     "resolved": [
@@ -34334,6 +34334,19 @@
         "result": "win",
         "resolved_at": "2026-09-16T23:02:32.437191",
         "exit_price": 0.1797
+      },
+      {
+        "coin": "XLM",
+        "name": "Stellar",
+        "tf": "daily",
+        "entry": 0.1524,
+        "stop": 0.14022333333333334,
+        "target1": 0.16457666666666668,
+        "target2": 0.17675333333333335,
+        "opened_at": "2026-09-16T23:02:32.437191",
+        "result": "win",
+        "resolved_at": "2026-09-16T23:07:16.694072",
+        "exit_price": 0.1804
       }
     ]
   },
@@ -34341,14 +34354,14 @@
     "key": "BTC",
     "name": "Bitcoin",
     "emoji": "\u20bf",
-    "price": 75610,
+    "price": 75660,
     "high_24h": 76413,
     "low_24h": 75161,
-    "pct_24h": -0.02577,
-    "pct_7d": -3.0,
-    "pct_30d": 18.0,
-    "sma50": 71888.59738971299,
-    "sma200": 70271.53401269855,
+    "pct_24h": -0.0875,
+    "pct_7d": -3.2,
+    "pct_30d": 17.5,
+    "sma50": 71889.51437769792,
+    "sma200": 70271.7632596948,
     "support_30d": 64686.25782561655,
     "resistance_30d": 81264.70153038795,
     "mark_price": 75655.44813043,
@@ -34363,14 +34376,14 @@
     "key": "ETH",
     "name": "Ethereum",
     "emoji": "\u039e",
-    "price": 2390.22,
+    "price": 2391.71,
     "high_24h": 2424.51,
     "low_24h": 2371.36,
-    "pct_24h": -0.23294,
-    "pct_7d": -2.7,
-    "pct_30d": 26.2,
-    "sma50": 2216.680803090292,
-    "sma200": 2064.2864680268985,
+    "pct_24h": -0.37659,
+    "pct_7d": -2.9,
+    "pct_30d": 25.5,
+    "sma50": 2216.6977230920625,
+    "sma200": 2064.290698027341,
     "support_30d": 1916.3998901478055,
     "resistance_30d": 2525.267261590238,
     "mark_price": 2391.64229457,
