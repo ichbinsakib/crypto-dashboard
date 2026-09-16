@@ -1421,9 +1421,9 @@
       "stale": false
     },
     "crypto-com-chain": {
-      "label": "\ud83d\udfe1 HOLD / NEUTRAL",
-      "status": "neutral",
-      "score": 1,
+      "label": "\ud83d\udfe2 LEAN ACCUMULATE",
+      "status": "bullish",
+      "score": 2,
       "rows": [
         [
           "Price vs. recent range",
@@ -1442,12 +1442,12 @@
         ],
         [
           "Recent trend",
-          "Trending down - avoid catching a falling knife",
-          -1
+          "Chopping sideways - no clear trend",
+          0
         ],
         [
           "Stretch from long-term average",
-          "-14.7% vs its long-term average - not stretched either way",
+          "-14.6% vs its long-term average - not stretched either way",
           0
         ],
         [
@@ -1456,16 +1456,16 @@
           0
         ]
       ],
-      "plain": "No real edge either way right now - fine to just wait and watch.",
+      "plain": "Leans toward a decent spot to slowly add (DCA) - not a strong signal, just a lean.",
       "id": "crypto-com-chain",
       "symbol": "CRO",
       "name": "Cronos",
-      "price": 0.055343,
-      "pct_24h": -2.92755,
-      "pct_7d": -8.5,
+      "price": 0.055428,
+      "pct_24h": -2.75212,
+      "pct_7d": -7.3,
       "support_30d": 0.04621382085807831,
       "resistance_30d": 0.06091104752771909,
-      "as_of": "2026-09-16 06:40:24",
+      "as_of": "2026-09-16 07:10:27",
       "stale": false
     },
     "ethereum-classic": {
@@ -1735,7 +1735,7 @@
         ],
         [
           "Stretch from long-term average",
-          "-18.5% below its long-term average - confirmed downtrend",
+          "-18.1% below its long-term average - confirmed downtrend",
           -1
         ],
         [
@@ -1748,12 +1748,12 @@
       "id": "sui",
       "symbol": "SUI",
       "name": "Sui",
-      "price": 0.689041,
-      "pct_24h": -2.61956,
-      "pct_7d": -15.9,
+      "price": 0.692692,
+      "pct_24h": -2.13638,
+      "pct_7d": -15.1,
       "support_30d": 0.6514311908607086,
       "resistance_30d": 0.8499161763231283,
-      "as_of": "2026-09-16 06:52:50",
+      "as_of": "2026-09-16 07:10:27",
       "stale": false
     },
     "lighter": {
@@ -1797,11 +1797,11 @@
       "symbol": "LIT",
       "name": "Lighter",
       "price": 4.29,
-      "pct_24h": -2.1093,
+      "pct_24h": -2.09831,
       "pct_7d": -17.5,
       "support_30d": 2.3603362210728394,
       "resistance_30d": 4.827528632102638,
-      "as_of": "2026-09-16 07:05:21",
+      "as_of": "2026-09-16 07:10:27",
       "stale": false
     },
     "ethena": {
@@ -3341,9 +3341,7 @@
       "stale": false
     }
   },
-  "_strong_buy_state": {
-    "scanner-daily:XLM": true
-  },
+  "_strong_buy_state": {},
   "_pnl_tracker": {
     "open": {
       "15m:QNT": {
@@ -3351,10 +3349,10 @@
         "name": "Quant",
         "tf": "15m",
         "entry": 59.6,
-        "stop": 59.333666666666666,
-        "target1": 59.86633333333334,
-        "target2": 60.13266666666667,
-        "opened_at": "2026-09-16T07:07:15.483062"
+        "stop": 59.333333333333336,
+        "target1": 59.86666666666667,
+        "target2": 60.13333333333333,
+        "opened_at": "2026-09-16T07:12:22.765800"
       },
       "daily:XLM": {
         "coin": "XLM",
@@ -3364,7 +3362,7 @@
         "stop": 0.14048333333333335,
         "target1": 0.16431666666666667,
         "target2": 0.17623333333333333,
-        "opened_at": "2026-09-16T07:07:15.483062"
+        "opened_at": "2026-09-16T07:12:22.765800"
       }
     },
     "resolved": [
@@ -29679,6 +29677,32 @@
         "result": "win",
         "resolved_at": "2026-09-16T07:07:15.483062",
         "exit_price": 0.1771
+      },
+      {
+        "coin": "QNT",
+        "name": "Quant",
+        "tf": "15m",
+        "entry": 59.6,
+        "stop": 59.333666666666666,
+        "target1": 59.86633333333334,
+        "target2": 60.13266666666667,
+        "opened_at": "2026-09-16T07:07:15.483062",
+        "result": "win",
+        "resolved_at": "2026-09-16T07:12:22.765800",
+        "exit_price": 60.12
+      },
+      {
+        "coin": "XLM",
+        "name": "Stellar",
+        "tf": "daily",
+        "entry": 0.1524,
+        "stop": 0.14048333333333335,
+        "target1": 0.16431666666666667,
+        "target2": 0.17623333333333333,
+        "opened_at": "2026-09-16T07:07:15.483062",
+        "result": "win",
+        "resolved_at": "2026-09-16T07:12:22.765800",
+        "exit_price": 0.1761
       }
     ]
   },
@@ -29686,14 +29710,14 @@
     "key": "BTC",
     "name": "Bitcoin",
     "emoji": "\u20bf",
-    "price": 76000,
+    "price": 75971,
     "high_24h": 77163,
     "low_24h": 75038,
-    "pct_24h": -1.66039,
+    "pct_24h": -1.63603,
     "pct_7d": -3.8,
     "pct_30d": 19.6,
-    "sma50": 71896.38467773407,
-    "sma200": 70273.48083470383,
+    "sma50": 71895.79369689838,
+    "sma200": 70273.3330894949,
     "support_30d": 64686.25782561655,
     "resistance_30d": 81264.70153038795,
     "mark_price": 75592.6,
@@ -29708,14 +29732,14 @@
     "key": "ETH",
     "name": "Ethereum",
     "emoji": "\u039e",
-    "price": 2405.93,
+    "price": 2405.5,
     "high_24h": 2486.48,
     "low_24h": 2361.16,
-    "pct_24h": -3.20116,
+    "pct_24h": -3.09348,
     "pct_7d": -3.9,
     "pct_30d": 26.4,
-    "sma50": 2216.9700503548374,
-    "sma200": 2064.358779843035,
+    "sma50": 2216.9845637617486,
+    "sma200": 2064.3624081947623,
     "support_30d": 1916.3998901478055,
     "resistance_30d": 2525.267261590238,
     "mark_price": 2391.78,
