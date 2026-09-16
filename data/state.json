@@ -261,11 +261,11 @@
       "symbol": "FIGR_HELOC",
       "name": "Figure Heloc",
       "price": 1.003,
-      "pct_24h": -2.43033,
+      "pct_24h": -2.43026,
       "pct_7d": -3.1,
       "support_30d": 1.0001790754472548,
       "resistance_30d": 1.0455978355177025,
-      "as_of": "2026-09-16 05:30:30",
+      "as_of": "2026-09-16 06:10:24",
       "stale": false
     },
     "hyperliquid": {
@@ -823,7 +823,7 @@
         ],
         [
           "Stretch from long-term average",
-          "-9.0% vs its long-term average - not stretched either way",
+          "-9.2% vs its long-term average - not stretched either way",
           0
         ],
         [
@@ -836,12 +836,12 @@
       "id": "hedera-hashgraph",
       "symbol": "HBAR",
       "name": "Hedera",
-      "price": 0.074558,
-      "pct_24h": -3.14314,
-      "pct_7d": -5.1,
+      "price": 0.074393,
+      "pct_24h": -3.41138,
+      "pct_7d": -6.4,
       "support_30d": 0.06730523598165915,
       "resistance_30d": 0.08182180696524229,
-      "as_of": "2026-09-16 05:00:37",
+      "as_of": "2026-09-16 06:10:24",
       "stale": false
     },
     "pepe": {
@@ -2839,7 +2839,7 @@
         ],
         [
           "Stretch from long-term average",
-          "+24.1% above its long-term average - a bit stretched",
+          "+23.7% above its long-term average - a bit stretched",
           -1
         ],
         [
@@ -2852,12 +2852,12 @@
       "id": "aave",
       "symbol": "AAVE",
       "name": "Aave",
-      "price": 121.31,
-      "pct_24h": -4.42885,
-      "pct_7d": -5.5,
+      "price": 120.87,
+      "pct_24h": -5.41721,
+      "pct_7d": -7.1,
       "support_30d": 87.49183970362333,
       "resistance_30d": 141.53047916466082,
-      "as_of": "2026-09-16 05:40:23",
+      "as_of": "2026-09-16 06:10:24",
       "stale": false
     },
     "okb": {
@@ -3364,7 +3364,7 @@
         "stop": 0.14048333333333335,
         "target1": 0.16431666666666667,
         "target2": 0.17623333333333333,
-        "opened_at": "2026-09-16T06:07:14.976568"
+        "opened_at": "2026-09-16T06:12:19.904085"
       }
     },
     "resolved": [
@@ -29445,6 +29445,19 @@
         "result": "win",
         "resolved_at": "2026-09-16T06:07:14.976568",
         "exit_price": 0.1756
+      },
+      {
+        "coin": "XLM",
+        "name": "Stellar",
+        "tf": "daily",
+        "entry": 0.1524,
+        "stop": 0.14048333333333335,
+        "target1": 0.16431666666666667,
+        "target2": 0.17623333333333333,
+        "opened_at": "2026-09-16T06:07:14.976568",
+        "result": "win",
+        "resolved_at": "2026-09-16T06:12:19.904085",
+        "exit_price": 0.1757
       }
     ]
   },
@@ -29452,14 +29465,14 @@
     "key": "BTC",
     "name": "Bitcoin",
     "emoji": "\u20bf",
-    "price": 75957,
+    "price": 75958,
     "high_24h": 77288,
     "low_24h": 75038,
-    "pct_24h": -2.23436,
+    "pct_24h": -2.15767,
     "pct_7d": -4.1,
     "pct_30d": 19.5,
-    "sma50": 71895.57863009766,
-    "sma200": 70273.27932279473,
+    "sma50": 71895.45332871022,
+    "sma200": 70273.24799744786,
     "support_30d": 64686.25782561655,
     "resistance_30d": 81264.70153038795,
     "mark_price": 75592.6,
@@ -29474,14 +29487,14 @@
     "key": "ETH",
     "name": "Ethereum",
     "emoji": "\u039e",
-    "price": 2406.37,
+    "price": 2404.67,
     "high_24h": 2486.48,
     "low_24h": 2361.16,
-    "pct_24h": -3.70257,
+    "pct_24h": -3.72538,
     "pct_7d": -4.2,
     "pct_30d": 26.5,
-    "sma50": 2217.0010996687474,
-    "sma200": 2064.3665421715123,
+    "sma50": 2216.965649770799,
+    "sma200": 2064.357679697025,
     "support_30d": 1916.3998901478055,
     "resistance_30d": 2525.267261590238,
     "mark_price": 2391.78,
