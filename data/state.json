@@ -1735,7 +1735,7 @@
         ],
         [
           "Stretch from long-term average",
-          "-18.2% below its long-term average - confirmed downtrend",
+          "-18.3% below its long-term average - confirmed downtrend",
           -1
         ],
         [
@@ -1748,12 +1748,12 @@
       "id": "sui",
       "symbol": "SUI",
       "name": "Sui",
-      "price": 0.691575,
-      "pct_24h": -2.972,
+      "price": 0.690895,
+      "pct_24h": -2.86883,
       "pct_7d": -15.9,
       "support_30d": 0.6514311908607086,
       "resistance_30d": 0.8499161763231283,
-      "as_of": "2026-09-16 06:05:19",
+      "as_of": "2026-09-16 06:15:24",
       "stale": false
     },
     "lighter": {
@@ -2805,11 +2805,11 @@
       "symbol": "M",
       "name": "MemeCore",
       "price": 1.1,
-      "pct_24h": 0.47736,
+      "pct_24h": 0.38223,
       "pct_7d": -7.0,
       "support_30d": 1.0402044506518406,
       "resistance_30d": 1.2453913363052769,
-      "as_of": "2026-09-16 06:05:19",
+      "as_of": "2026-09-16 06:15:24",
       "stale": false
     },
     "aave": {
@@ -3053,9 +3053,9 @@
       "stale": false
     },
     "arbitrum": {
-      "label": "\ud83d\udd34 CAUTION - REDUCE NEW BUYS",
+      "label": "\ud83d\udd34 DISTRIBUTION ZONE",
       "status": "bearish",
-      "score": -4,
+      "score": -5,
       "rows": [
         [
           "Price vs. recent range",
@@ -3074,12 +3074,12 @@
         ],
         [
           "Recent trend",
-          "Chopping sideways - no clear trend",
-          0
+          "Trending down - avoid catching a falling knife",
+          -1
         ],
         [
           "Stretch from long-term average",
-          "+51.5% above its long-term average - very stretched",
+          "+52.0% above its long-term average - very stretched",
           -2
         ],
         [
@@ -3088,16 +3088,16 @@
           0
         ]
       ],
-      "plain": "Getting risky - I'd hold off on new buys until this cools down.",
+      "plain": "Looks stretched and euphoric - historically the zone where smart money sells, not buys.",
       "id": "arbitrum",
       "symbol": "ARB",
       "name": "Arbitrum",
-      "price": 0.153133,
-      "pct_24h": 15.06081,
-      "pct_7d": -7.0,
+      "price": 0.153629,
+      "pct_24h": 14.76395,
+      "pct_7d": -8.1,
       "support_30d": 0.07521997454971432,
       "resistance_30d": 0.18933387703114857,
-      "as_of": "2026-09-16 05:35:17",
+      "as_of": "2026-09-16 06:15:24",
       "stale": false
     },
     "dash": {
@@ -3364,7 +3364,7 @@
         "stop": 0.14048333333333335,
         "target1": 0.16431666666666667,
         "target2": 0.17623333333333333,
-        "opened_at": "2026-09-16T06:12:19.904085"
+        "opened_at": "2026-09-16T06:17:18.147586"
       }
     },
     "resolved": [
@@ -29458,6 +29458,19 @@
         "result": "win",
         "resolved_at": "2026-09-16T06:12:19.904085",
         "exit_price": 0.1757
+      },
+      {
+        "coin": "XLM",
+        "name": "Stellar",
+        "tf": "daily",
+        "entry": 0.1524,
+        "stop": 0.14048333333333335,
+        "target1": 0.16431666666666667,
+        "target2": 0.17623333333333333,
+        "opened_at": "2026-09-16T06:12:19.904085",
+        "result": "win",
+        "resolved_at": "2026-09-16T06:17:18.147586",
+        "exit_price": 0.1762
       }
     ]
   },
@@ -29465,14 +29478,14 @@
     "key": "BTC",
     "name": "Bitcoin",
     "emoji": "\u20bf",
-    "price": 75958,
+    "price": 75970,
     "high_24h": 77288,
     "low_24h": 75038,
-    "pct_24h": -2.15767,
+    "pct_24h": -2.06134,
     "pct_7d": -4.1,
     "pct_30d": 19.5,
-    "sma50": 71895.45332871022,
-    "sma200": 70273.24799744786,
+    "sma50": 71895.57908817648,
+    "sma200": 70273.27943731443,
     "support_30d": 64686.25782561655,
     "resistance_30d": 81264.70153038795,
     "mark_price": 75592.6,
@@ -29487,14 +29500,14 @@
     "key": "ETH",
     "name": "Ethereum",
     "emoji": "\u039e",
-    "price": 2404.67,
+    "price": 2404.29,
     "high_24h": 2486.48,
     "low_24h": 2361.16,
-    "pct_24h": -3.72538,
+    "pct_24h": -3.6755,
     "pct_7d": -4.2,
     "pct_30d": 26.5,
-    "sma50": 2216.965649770799,
-    "sma200": 2064.357679697025,
+    "sma50": 2216.952036399486,
+    "sma200": 2064.3542763541973,
     "support_30d": 1916.3998901478055,
     "resistance_30d": 2525.267261590238,
     "mark_price": 2391.78,
