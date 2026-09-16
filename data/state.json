@@ -1015,7 +1015,7 @@
         ],
         [
           "Stretch from long-term average",
-          "+2.4% vs its long-term average - not stretched either way",
+          "+3.3% vs its long-term average - not stretched either way",
           0
         ],
         [
@@ -1028,12 +1028,12 @@
       "id": "worldcoin-wld",
       "symbol": "WLD",
       "name": "Worldcoin",
-      "price": 0.365879,
-      "pct_24h": 1.37015,
-      "pct_7d": -13.7,
+      "price": 0.369441,
+      "pct_24h": 1.2979,
+      "pct_7d": -14.0,
       "support_30d": 0.319812298466522,
       "resistance_30d": 0.4772935995106048,
-      "as_of": "2026-09-16 22:45:21",
+      "as_of": "2026-09-16 23:25:18",
       "stale": false
     },
     "bfusd": {
@@ -2023,7 +2023,7 @@
         ],
         [
           "Stretch from long-term average",
-          "+73.3% above its long-term average - very stretched",
+          "+75.1% above its long-term average - very stretched",
           -2
         ],
         [
@@ -2036,12 +2036,12 @@
       "id": "uniswap",
       "symbol": "UNI",
       "name": "Uniswap",
-      "price": 6.46,
-      "pct_24h": 3.77,
-      "pct_7d": 1.0,
+      "price": 6.53,
+      "pct_24h": 1.46753,
+      "pct_7d": 1.9,
       "support_30d": 3.2920217665657034,
       "resistance_30d": 7.291165865788254,
-      "as_of": "2026-09-16 22:00:37",
+      "as_of": "2026-09-16 23:25:18",
       "stale": false
     },
     "pi-network": {
@@ -2503,7 +2503,7 @@
         ],
         [
           "Stretch from long-term average",
-          "-11.5% vs its long-term average - not stretched either way",
+          "-10.5% vs its long-term average - not stretched either way",
           0
         ],
         [
@@ -2516,12 +2516,12 @@
       "id": "quant-network",
       "symbol": "QNT",
       "name": "Quant",
-      "price": 60.5,
-      "pct_24h": -1.69368,
-      "pct_7d": -9.0,
+      "price": 61.18,
+      "pct_24h": -0.3148,
+      "pct_7d": -10.1,
       "support_30d": 55.905981995619285,
       "resistance_30d": 67.13669726469111,
-      "as_of": "2026-09-16 21:00:35",
+      "as_of": "2026-09-16 23:25:18",
       "stale": false
     },
     "tether-gold": {
@@ -3342,10 +3342,21 @@
     }
   },
   "_strong_buy_state": {
+    "scanner-15m:WLD": true,
     "scanner-daily:XLM": true
   },
   "_pnl_tracker": {
     "open": {
+      "15m:WLD": {
+        "coin": "WLD",
+        "name": "Worldcoin",
+        "tf": "15m",
+        "entry": 0.3563,
+        "stop": 0.3522266666666667,
+        "target1": 0.3603733333333333,
+        "target2": 0.36444666666666664,
+        "opened_at": "2026-09-16T23:27:12.717180"
+      },
       "1h:MORPHO": {
         "coin": "MORPHO",
         "name": "Morpho",
@@ -3354,7 +3365,7 @@
         "stop": 2.015791666666667,
         "target1": 2.0702083333333334,
         "target2": 2.0974166666666667,
-        "opened_at": "2026-09-16T23:22:21.096789"
+        "opened_at": "2026-09-16T23:27:12.717180"
       },
       "daily:XLM": {
         "coin": "XLM",
@@ -3364,7 +3375,7 @@
         "stop": 0.14022333333333334,
         "target1": 0.16457666666666668,
         "target2": 0.17675333333333335,
-        "opened_at": "2026-09-16T23:22:21.096789"
+        "opened_at": "2026-09-16T23:27:12.717180"
       }
     },
     "resolved": [
@@ -34424,6 +34435,32 @@
         "result": "win",
         "resolved_at": "2026-09-16T23:22:21.096789",
         "exit_price": 0.1821
+      },
+      {
+        "coin": "MORPHO",
+        "name": "Morpho",
+        "tf": "1h",
+        "entry": 2.043,
+        "stop": 2.015791666666667,
+        "target1": 2.0702083333333334,
+        "target2": 2.0974166666666667,
+        "opened_at": "2026-09-16T23:22:21.096789",
+        "result": "win",
+        "resolved_at": "2026-09-16T23:27:12.717180",
+        "exit_price": 2.088
+      },
+      {
+        "coin": "XLM",
+        "name": "Stellar",
+        "tf": "daily",
+        "entry": 0.1524,
+        "stop": 0.14022333333333334,
+        "target1": 0.16457666666666668,
+        "target2": 0.17675333333333335,
+        "opened_at": "2026-09-16T23:22:21.096789",
+        "result": "win",
+        "resolved_at": "2026-09-16T23:27:12.717180",
+        "exit_price": 0.1833
       }
     ]
   },
@@ -34431,14 +34468,14 @@
     "key": "BTC",
     "name": "Bitcoin",
     "emoji": "\u20bf",
-    "price": 75823,
+    "price": 76072,
     "high_24h": 76413,
     "low_24h": 75161,
-    "pct_24h": 0.02045,
+    "pct_24h": 0.27799,
     "pct_7d": -3.2,
     "pct_30d": 17.5,
-    "sma50": 71894.90522007317,
-    "sma200": 70273.1109702886,
+    "sma50": 71897.53332818969,
+    "sma200": 70273.76799731773,
     "support_30d": 64686.25782561655,
     "resistance_30d": 81264.70153038795,
     "mark_price": 75655.44813043,
@@ -34453,14 +34490,14 @@
     "key": "ETH",
     "name": "Ethereum",
     "emoji": "\u039e",
-    "price": 2399.06,
+    "price": 2412.37,
     "high_24h": 2424.51,
     "low_24h": 2371.36,
-    "pct_24h": -0.32208,
+    "pct_24h": 0.09076,
     "pct_7d": -2.9,
     "pct_30d": 25.5,
-    "sma50": 2216.9439995368825,
-    "sma200": 2064.352267138546,
+    "sma50": 2217.1012527806715,
+    "sma200": 2064.3915804494936,
     "support_30d": 1916.3998901478055,
     "resistance_30d": 2525.267261590238,
     "mark_price": 2391.64229457,
