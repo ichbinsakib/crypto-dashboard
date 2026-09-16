@@ -55,7 +55,7 @@
         ],
         [
           "Stretch from long-term average",
-          "+14.1% above its long-term average - a bit stretched",
+          "+14.8% above its long-term average - a bit stretched",
           -1
         ],
         [
@@ -68,12 +68,12 @@
       "id": "binancecoin",
       "symbol": "BNB",
       "name": "BNB",
-      "price": 715.05,
-      "pct_24h": -0.66564,
-      "pct_7d": -3.6,
+      "price": 719.49,
+      "pct_24h": 0.88132,
+      "pct_7d": -2.3,
       "support_30d": 603.5021332341098,
       "resistance_30d": 766.4092879330625,
-      "as_of": "2026-09-16 19:35:19",
+      "as_of": "2026-09-16 21:45:23",
       "stale": false
     },
     "ripple": {
@@ -1303,7 +1303,7 @@
         ],
         [
           "Stretch from long-term average",
-          "-5.7% vs its long-term average - not stretched either way",
+          "-5.1% vs its long-term average - not stretched either way",
           0
         ],
         [
@@ -1316,12 +1316,12 @@
       "id": "htx-dao",
       "symbol": "HTX",
       "name": "HTX DAO",
-      "price": 1.67e-06,
-      "pct_24h": 0.57921,
-      "pct_7d": -1.7,
+      "price": 1.68e-06,
+      "pct_24h": 1.27676,
+      "pct_7d": -0.9,
       "support_30d": 1.6023985995039954e-06,
       "resistance_30d": 1.7873095460323824e-06,
-      "as_of": "2026-09-16 18:50:29",
+      "as_of": "2026-09-16 21:45:23",
       "stale": false
     },
     "superstate-short-duration-us-government-securities-fund-ustb": {
@@ -2229,11 +2229,11 @@
       "symbol": "ICP",
       "name": "Internet Computer",
       "price": 2.52,
-      "pct_24h": 2.64756,
+      "pct_24h": 2.51321,
       "pct_7d": -10.6,
       "support_30d": 2.194804279500122,
       "resistance_30d": 2.9869340549074623,
-      "as_of": "2026-09-16 21:35:19",
+      "as_of": "2026-09-16 21:45:23",
       "stale": false
     },
     "bittensor": {
@@ -2435,7 +2435,7 @@
       "rows": [
         [
           "Price vs. recent range",
-          "Near its 30-day high (~$2.59) - less room to run",
+          "Near its 30-day high (~$2.55) - less room to run",
           -1
         ],
         [
@@ -2455,7 +2455,7 @@
         ],
         [
           "Stretch from long-term average",
-          "+48.7% above its long-term average - very stretched",
+          "+46.4% above its long-term average - very stretched",
           -2
         ],
         [
@@ -2468,12 +2468,12 @@
       "id": "near",
       "symbol": "NEAR",
       "name": "NEAR Protocol",
-      "price": 2.59,
-      "pct_24h": 11.80592,
+      "price": 2.55,
+      "pct_24h": 10.03958,
       "pct_7d": 2.6,
       "support_30d": 1.5879597131538,
-      "resistance_30d": 2.588396125372933,
-      "as_of": "2026-09-16 21:30:31",
+      "resistance_30d": 2.5527812325038863,
+      "as_of": "2026-09-16 21:45:23",
       "stale": false
     },
     "quant-network": {
@@ -2647,7 +2647,7 @@
         ],
         [
           "Stretch from long-term average",
-          "-17.2% below its long-term average - confirmed downtrend",
+          "-16.8% below its long-term average - confirmed downtrend",
           -1
         ],
         [
@@ -2660,12 +2660,12 @@
       "id": "world-liberty-financial",
       "symbol": "WLFI",
       "name": "World Liberty Financial",
-      "price": 0.056982,
-      "pct_24h": 0.07432,
-      "pct_7d": 2.1,
+      "price": 0.057218,
+      "pct_24h": 0.45758,
+      "pct_7d": 2.4,
       "support_30d": 0.05526589948255966,
       "resistance_30d": 0.06254770952093733,
-      "as_of": "2026-09-16 19:35:19",
+      "as_of": "2026-09-16 21:45:23",
       "stale": false
     },
     "pax-gold": {
@@ -3354,7 +3354,7 @@
         "stop": 2.0160833333333334,
         "target1": 2.069916666666667,
         "target2": 2.0968333333333335,
-        "opened_at": "2026-09-16T21:42:17.534739"
+        "opened_at": "2026-09-16T21:46:48.805731"
       },
       "daily:XLM": {
         "coin": "XLM",
@@ -3364,7 +3364,7 @@
         "stop": 0.14022333333333334,
         "target1": 0.16457666666666668,
         "target2": 0.17675333333333335,
-        "opened_at": "2026-09-16T21:42:17.534739"
+        "opened_at": "2026-09-16T21:46:48.805731"
       }
     },
     "resolved": [
@@ -33956,6 +33956,32 @@
         "result": "win",
         "resolved_at": "2026-09-16T21:42:17.534739",
         "exit_price": 0.1798
+      },
+      {
+        "coin": "MORPHO",
+        "name": "Morpho",
+        "tf": "1h",
+        "entry": 2.043,
+        "stop": 2.0160833333333334,
+        "target1": 2.069916666666667,
+        "target2": 2.0968333333333335,
+        "opened_at": "2026-09-16T21:42:17.534739",
+        "result": "win",
+        "resolved_at": "2026-09-16T21:46:48.805731",
+        "exit_price": 2.091
+      },
+      {
+        "coin": "XLM",
+        "name": "Stellar",
+        "tf": "daily",
+        "entry": 0.1524,
+        "stop": 0.14022333333333334,
+        "target1": 0.16457666666666668,
+        "target2": 0.17675333333333335,
+        "opened_at": "2026-09-16T21:42:17.534739",
+        "result": "win",
+        "resolved_at": "2026-09-16T21:46:48.805731",
+        "exit_price": 0.1804
       }
     ]
   },
@@ -33963,14 +33989,14 @@
     "key": "BTC",
     "name": "Bitcoin",
     "emoji": "\u20bf",
-    "price": 75959,
+    "price": 75913,
     "high_24h": 76413,
     "low_24h": 75151,
-    "pct_24h": 0.44555,
+    "pct_24h": 0.30434,
     "pct_7d": -2.7,
     "pct_30d": 18.5,
-    "sma50": 71896.06872607769,
-    "sma200": 70273.40184678973,
+    "sma50": 71894.64046614729,
+    "sma200": 70273.04478180713,
     "support_30d": 64686.25782561655,
     "resistance_30d": 81264.70153038795,
     "mark_price": 76162.78831884,
@@ -33985,14 +34011,14 @@
     "key": "ETH",
     "name": "Ethereum",
     "emoji": "\u039e",
-    "price": 2401.18,
+    "price": 2400.11,
     "high_24h": 2424.51,
     "low_24h": 2371.36,
-    "pct_24h": 0.08923,
+    "pct_24h": 0.00844,
     "pct_7d": -2.3,
     "pct_30d": 26.4,
-    "sma50": 2216.895811134009,
-    "sma200": 2064.3402200378277,
+    "sma50": 2216.8745546119417,
+    "sma200": 2064.3349059073107,
     "support_30d": 1916.3998901478055,
     "resistance_30d": 2525.267261590238,
     "mark_price": 2410.68017829,
