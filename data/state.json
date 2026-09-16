@@ -789,11 +789,11 @@
       "symbol": "KCS",
       "name": "KuCoin",
       "price": 6.78,
-      "pct_24h": -1.60276,
-      "pct_7d": -3.2,
+      "pct_24h": -1.52061,
+      "pct_7d": -3.5,
       "support_30d": 6.601552051904499,
       "resistance_30d": 7.8821382735057615,
-      "as_of": "2026-09-16 09:25:18",
+      "as_of": "2026-09-16 10:25:18",
       "stale": false
     },
     "hedera-hashgraph": {
@@ -2051,7 +2051,7 @@
       "rows": [
         [
           "Price vs. recent range",
-          "Near its 30-day low (~$0.0842) - historically a better entry",
+          "Near its 30-day low (~$0.0839) - historically a better entry",
           2
         ],
         [
@@ -2071,7 +2071,7 @@
         ],
         [
           "Stretch from long-term average",
-          "-39.1% below its long-term average - confirmed downtrend",
+          "-39.3% below its long-term average - confirmed downtrend",
           -1
         ],
         [
@@ -2084,12 +2084,12 @@
       "id": "pi-network",
       "symbol": "PI",
       "name": "Pi Network",
-      "price": 0.084043,
-      "pct_24h": -12.68229,
+      "price": 0.083802,
+      "pct_24h": -13.2578,
       "pct_7d": -14.4,
-      "support_30d": 0.08421517668643208,
+      "support_30d": 0.08385165884977283,
       "resistance_30d": 0.09830733881512746,
-      "as_of": "2026-09-16 10:00:38",
+      "as_of": "2026-09-16 10:25:18",
       "stale": false
     },
     "ondo-finance": {
@@ -2469,11 +2469,11 @@
       "symbol": "NEAR",
       "name": "NEAR Protocol",
       "price": 2.42,
-      "pct_24h": 1.02475,
+      "pct_24h": 0.82806,
       "pct_7d": -2.0,
       "support_30d": 1.5879597131538,
       "resistance_30d": 2.4848168147865453,
-      "as_of": "2026-09-16 10:00:38",
+      "as_of": "2026-09-16 10:25:18",
       "stale": false
     },
     "quant-network": {
@@ -3341,7 +3341,9 @@
       "stale": false
     }
   },
-  "_strong_buy_state": {},
+  "_strong_buy_state": {
+    "scanner-15m:ENA": true
+  },
   "_pnl_tracker": {
     "open": {
       "15m:ENA": {
@@ -3352,7 +3354,7 @@
         "stop": 0.13741,
         "target1": 0.13959000000000002,
         "target2": 0.14068000000000003,
-        "opened_at": "2026-09-16T10:22:18.583149"
+        "opened_at": "2026-09-16T10:27:15.304127"
       },
       "daily:XLM": {
         "coin": "XLM",
@@ -3362,7 +3364,7 @@
         "stop": 0.14047,
         "target1": 0.16433,
         "target2": 0.17626,
-        "opened_at": "2026-09-16T10:22:18.583149"
+        "opened_at": "2026-09-16T10:27:15.304127"
       }
     },
     "resolved": [
@@ -30340,6 +30342,32 @@
         "result": "win",
         "resolved_at": "2026-09-16T10:22:18.583149",
         "exit_price": 0.1753
+      },
+      {
+        "coin": "ENA",
+        "name": "Ethena",
+        "tf": "15m",
+        "entry": 0.1385,
+        "stop": 0.13741,
+        "target1": 0.13959000000000002,
+        "target2": 0.14068000000000003,
+        "opened_at": "2026-09-16T10:22:18.583149",
+        "result": "win",
+        "resolved_at": "2026-09-16T10:27:15.304127",
+        "exit_price": 0.1434
+      },
+      {
+        "coin": "XLM",
+        "name": "Stellar",
+        "tf": "daily",
+        "entry": 0.1524,
+        "stop": 0.14047,
+        "target1": 0.16433,
+        "target2": 0.17626,
+        "opened_at": "2026-09-16T10:22:18.583149",
+        "result": "win",
+        "resolved_at": "2026-09-16T10:27:15.304127",
+        "exit_price": 0.1753
       }
     ]
   },
@@ -30347,14 +30375,14 @@
     "key": "BTC",
     "name": "Bitcoin",
     "emoji": "\u20bf",
-    "price": 75898,
+    "price": 75939,
     "high_24h": 77163,
     "low_24h": 75038,
-    "pct_24h": -1.38774,
+    "pct_24h": -1.39789,
     "pct_7d": -4.7,
     "pct_30d": 19.9,
-    "sma50": 71894.91988817157,
-    "sma200": 70273.11463731319,
+    "sma50": 71894.42133775819,
+    "sma200": 70272.98999970985,
     "support_30d": 64686.25782561655,
     "resistance_30d": 81264.70153038795,
     "mark_price": 75928.5,
@@ -30369,14 +30397,14 @@
     "key": "ETH",
     "name": "Ethereum",
     "emoji": "\u039e",
-    "price": 2398.61,
+    "price": 2401.5,
     "high_24h": 2486.48,
     "low_24h": 2361.16,
-    "pct_24h": -3.08748,
+    "pct_24h": -3.07625,
     "pct_7d": -4.5,
     "pct_30d": 27.0,
-    "sma50": 2216.88245328248,
-    "sma200": 2064.3368805749456,
+    "sma50": 2216.8521777422243,
+    "sma200": 2064.3293116898813,
     "support_30d": 1916.3998901478055,
     "resistance_30d": 2525.267261590238,
     "mark_price": 2399.32,
