@@ -845,9 +845,9 @@
       "stale": false
     },
     "pepe": {
-      "label": "\ud83d\udfe2 LEAN ACCUMULATE",
-      "status": "bullish",
-      "score": 2,
+      "label": "\ud83d\udfe1 HOLD / NEUTRAL",
+      "status": "neutral",
+      "score": 1,
       "rows": [
         [
           "Price vs. recent range",
@@ -866,8 +866,8 @@
         ],
         [
           "Recent trend",
-          "Chopping sideways - no clear trend",
-          0
+          "Trending down - avoid catching a falling knife",
+          -1
         ],
         [
           "Stretch from long-term average",
@@ -880,16 +880,16 @@
           0
         ]
       ],
-      "plain": "Leans toward a decent spot to slowly add (DCA) - not a strong signal, just a lean.",
+      "plain": "No real edge either way right now - fine to just wait and watch.",
       "id": "pepe",
       "symbol": "PEPE",
       "name": "Pepe",
       "price": 3.37e-06,
-      "pct_24h": -2.15442,
-      "pct_7d": -7.7,
+      "pct_24h": -2.54009,
+      "pct_7d": -9.8,
       "support_30d": 2.582769748064196e-06,
       "resistance_30d": 4.122123035488615e-06,
-      "as_of": "2026-09-16 01:15:22",
+      "as_of": "2026-09-16 02:50:22",
       "stale": false
     },
     "avalanche-2": {
@@ -1951,7 +1951,7 @@
     "polkadot": {
       "label": "\ud83d\udfe1 HOLD / NEUTRAL",
       "status": "neutral",
-      "score": 0,
+      "score": 1,
       "rows": [
         [
           "Price vs. recent range",
@@ -1960,8 +1960,8 @@
         ],
         [
           "Crowd mood (Fear & Greed)",
-          "69/100 - crowd is greedy",
-          -1
+          "51/100 - crowd mood is neutral",
+          0
         ],
         [
           "Market phase (best guess)",
@@ -1975,7 +1975,7 @@
         ],
         [
           "Stretch from long-term average",
-          "-13.6% vs its long-term average - not stretched either way",
+          "-13.0% vs its long-term average - not stretched either way",
           0
         ],
         [
@@ -1988,12 +1988,12 @@
       "id": "polkadot",
       "symbol": "DOT",
       "name": "Polkadot",
-      "price": 0.943908,
-      "pct_24h": -6.47261,
-      "pct_7d": -24.2,
+      "price": 0.947919,
+      "pct_24h": -4.48487,
+      "pct_7d": -22.8,
       "support_30d": 0.7510040523927409,
       "resistance_30d": 1.2475304252917225,
-      "as_of": "2026-09-15 22:00:38",
+      "as_of": "2026-09-16 02:50:22",
       "stale": false
     },
     "uniswap": {
@@ -2983,7 +2983,7 @@
         ],
         [
           "Stretch from long-term average",
-          "-10.7% vs its long-term average - not stretched either way",
+          "-10.4% vs its long-term average - not stretched either way",
           0
         ],
         [
@@ -2996,12 +2996,12 @@
       "id": "algorand",
       "symbol": "ALGO",
       "name": "Algorand",
-      "price": 0.088674,
-      "pct_24h": -7.55859,
+      "price": 0.088992,
+      "pct_24h": -7.35958,
       "pct_7d": -13.5,
       "support_30d": 0.07793708137631736,
       "resistance_30d": 0.10076397875501594,
-      "as_of": "2026-09-16 02:20:22",
+      "as_of": "2026-09-16 02:50:22",
       "stale": false
     },
     "eutbl": {
@@ -3352,7 +3352,7 @@
         "stop": 0.14051,
         "target1": 0.16429000000000002,
         "target2": 0.17618000000000003,
-        "opened_at": "2026-09-16T02:47:22.479846"
+        "opened_at": "2026-09-16T02:52:23.513638"
       }
     },
     "resolved": [
@@ -28549,6 +28549,19 @@
         "result": "win",
         "resolved_at": "2026-09-16T02:47:22.479846",
         "exit_price": 0.1766
+      },
+      {
+        "coin": "XLM",
+        "name": "Stellar",
+        "tf": "daily",
+        "entry": 0.1524,
+        "stop": 0.14051,
+        "target1": 0.16429000000000002,
+        "target2": 0.17618000000000003,
+        "opened_at": "2026-09-16T02:47:22.479846",
+        "result": "win",
+        "resolved_at": "2026-09-16T02:52:23.513638",
+        "exit_price": 0.1763
       }
     ]
   },
@@ -28556,14 +28569,14 @@
     "key": "BTC",
     "name": "Bitcoin",
     "emoji": "\u20bf",
-    "price": 75958,
+    "price": 75905,
     "high_24h": 77886,
     "low_24h": 75038,
-    "pct_24h": -2.45994,
+    "pct_24h": -2.48543,
     "pct_7d": -4.2,
     "pct_30d": 20.1,
-    "sma50": 71895.4714152908,
-    "sma200": 70273.252519093,
+    "sma50": 71894.49081841222,
+    "sma200": 70273.00736987336,
     "support_30d": 64686.25782561655,
     "resistance_30d": 81264.70153038795,
     "mark_price": 75592.6,
@@ -28578,14 +28591,14 @@
     "key": "ETH",
     "name": "Ethereum",
     "emoji": "\u039e",
-    "price": 2405.88,
+    "price": 2404.35,
     "high_24h": 2511.64,
     "low_24h": 2361.16,
-    "pct_24h": -4.24603,
+    "pct_24h": -4.26358,
     "pct_7d": -4.2,
     "pct_30d": 27.4,
-    "sma50": 2216.993754491861,
-    "sma200": 2064.364705877291,
+    "sma50": 2216.95848822702,
+    "sma200": 2064.3558893110803,
     "support_30d": 1916.3998901478055,
     "resistance_30d": 2525.267261590238,
     "mark_price": 2391.78,
