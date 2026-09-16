@@ -1015,7 +1015,7 @@
         ],
         [
           "Stretch from long-term average",
-          "+2.0% vs its long-term average - not stretched either way",
+          "+2.3% vs its long-term average - not stretched either way",
           0
         ],
         [
@@ -1028,12 +1028,12 @@
       "id": "worldcoin-wld",
       "symbol": "WLD",
       "name": "Worldcoin",
-      "price": 0.364785,
-      "pct_24h": -2.32938,
+      "price": 0.365777,
+      "pct_24h": -1.93953,
       "pct_7d": -20.1,
       "support_30d": 0.319812298466522,
       "resistance_30d": 0.4772935995106048,
-      "as_of": "2026-09-16 10:15:26",
+      "as_of": "2026-09-16 10:45:24",
       "stale": false
     },
     "bfusd": {
@@ -1085,9 +1085,9 @@
       "stale": false
     },
     "polygon-ecosystem-token": {
-      "label": "\ud83d\udfe2 LEAN ACCUMULATE",
-      "status": "bullish",
-      "score": 2,
+      "label": "\ud83d\udfe1 HOLD / NEUTRAL",
+      "status": "neutral",
+      "score": 1,
       "rows": [
         [
           "Price vs. recent range",
@@ -1101,8 +1101,8 @@
         ],
         [
           "Market phase (best guess)",
-          "Basing near the bottom - phase where smart money accumulates",
-          2
+          "Established uptrend - phase where price marks up",
+          1
         ],
         [
           "Recent trend",
@@ -1111,7 +1111,7 @@
         ],
         [
           "Stretch from long-term average",
-          "+3.4% vs its long-term average - not stretched either way",
+          "+8.4% vs its long-term average - not stretched either way",
           0
         ],
         [
@@ -1120,16 +1120,16 @@
           0
         ]
       ],
-      "plain": "Leans toward a decent spot to slowly add (DCA) - not a strong signal, just a lean.",
+      "plain": "No real edge either way right now - fine to just wait and watch.",
       "id": "polygon-ecosystem-token",
       "symbol": "POL",
       "name": "POL (ex-MATIC)",
-      "price": 0.090901,
-      "pct_24h": -5.21478,
-      "pct_7d": -5.6,
+      "price": 0.095244,
+      "pct_24h": -1.447,
+      "pct_7d": -4.2,
       "support_30d": 0.08117354412588569,
       "resistance_30d": 0.12250456198546959,
-      "as_of": "2026-09-16 07:25:18",
+      "as_of": "2026-09-16 10:45:24",
       "stale": false
     },
     "blackrock-usd-institutional-digital-liquidity-fund": {
@@ -1735,7 +1735,7 @@
         ],
         [
           "Stretch from long-term average",
-          "-18.5% below its long-term average - confirmed downtrend",
+          "-18.4% below its long-term average - confirmed downtrend",
           -1
         ],
         [
@@ -1748,12 +1748,12 @@
       "id": "sui",
       "symbol": "SUI",
       "name": "Sui",
-      "price": 0.688705,
-      "pct_24h": -3.03291,
-      "pct_7d": -15.1,
+      "price": 0.689912,
+      "pct_24h": -2.87851,
+      "pct_7d": -16.6,
       "support_30d": 0.6514311908607086,
       "resistance_30d": 0.8499161763231283,
-      "as_of": "2026-09-16 07:30:30",
+      "as_of": "2026-09-16 10:45:24",
       "stale": false
     },
     "lighter": {
@@ -3349,10 +3349,10 @@
         "name": "Ethena",
         "tf": "15m",
         "entry": 0.1385,
-        "stop": 0.13742666666666667,
-        "target1": 0.13957333333333335,
-        "target2": 0.1406466666666667,
-        "opened_at": "2026-09-16T10:42:28.779375"
+        "stop": 0.13744333333333333,
+        "target1": 0.1395566666666667,
+        "target2": 0.14061333333333337,
+        "opened_at": "2026-09-16T10:47:19.292661"
       },
       "daily:XLM": {
         "coin": "XLM",
@@ -3362,7 +3362,7 @@
         "stop": 0.14047,
         "target1": 0.16433,
         "target2": 0.17626,
-        "opened_at": "2026-09-16T10:42:28.779375"
+        "opened_at": "2026-09-16T10:47:19.292661"
       }
     },
     "resolved": [
@@ -30444,6 +30444,32 @@
         "result": "win",
         "resolved_at": "2026-09-16T10:42:28.779375",
         "exit_price": 0.1755
+      },
+      {
+        "coin": "ENA",
+        "name": "Ethena",
+        "tf": "15m",
+        "entry": 0.1385,
+        "stop": 0.13742666666666667,
+        "target1": 0.13957333333333335,
+        "target2": 0.1406466666666667,
+        "opened_at": "2026-09-16T10:42:28.779375",
+        "result": "win",
+        "resolved_at": "2026-09-16T10:47:19.292661",
+        "exit_price": 0.1448
+      },
+      {
+        "coin": "XLM",
+        "name": "Stellar",
+        "tf": "daily",
+        "entry": 0.1524,
+        "stop": 0.14047,
+        "target1": 0.16433,
+        "target2": 0.17626,
+        "opened_at": "2026-09-16T10:42:28.779375",
+        "result": "win",
+        "resolved_at": "2026-09-16T10:47:19.292661",
+        "exit_price": 0.1754
       }
     ]
   },
@@ -30451,14 +30477,14 @@
     "key": "BTC",
     "name": "Bitcoin",
     "emoji": "\u20bf",
-    "price": 75922,
+    "price": 75946,
     "high_24h": 77163,
     "low_24h": 75038,
-    "pct_24h": -1.29093,
+    "pct_24h": -1.35461,
     "pct_7d": -4.7,
     "pct_30d": 19.9,
-    "sma50": 71894.87662009118,
-    "sma200": 70273.1038202931,
+    "sma50": 71895.2247277222,
+    "sma200": 70273.19084720085,
     "support_30d": 64686.25782561655,
     "resistance_30d": 81264.70153038795,
     "mark_price": 75928.5,
@@ -30473,14 +30499,14 @@
     "key": "ETH",
     "name": "Ethereum",
     "emoji": "\u039e",
-    "price": 2402.42,
+    "price": 2404.86,
     "high_24h": 2486.48,
     "low_24h": 2361.16,
-    "pct_24h": -2.92762,
+    "pct_24h": -2.92561,
     "pct_7d": -4.5,
     "pct_30d": 27.0,
-    "sma50": 2216.920557665378,
-    "sma200": 2064.34640667067,
+    "sma50": 2216.9681546379916,
+    "sma200": 2064.3583059138236,
     "support_30d": 1916.3998901478055,
     "resistance_30d": 2525.267261590238,
     "mark_price": 2399.32,
