@@ -439,7 +439,7 @@
         ],
         [
           "Stretch from long-term average",
-          "+20.1% above its long-term average - a bit stretched",
+          "+20.0% above its long-term average - a bit stretched",
           -1
         ],
         [
@@ -452,12 +452,12 @@
       "id": "rain",
       "symbol": "RAIN",
       "name": "Rain",
-      "price": 0.01405214,
-      "pct_24h": -1.55423,
-      "pct_7d": -13.8,
+      "price": 0.01404189,
+      "pct_24h": -0.87183,
+      "pct_7d": -12.7,
       "support_30d": 0.01308236474491796,
       "resistance_30d": 0.018158429442510105,
-      "as_of": "2026-09-16 00:45:23",
+      "as_of": "2026-09-16 04:50:23",
       "stale": false
     },
     "chainlink": {
@@ -2429,9 +2429,9 @@
       "stale": false
     },
     "near": {
-      "label": "\ud83d\udd34 CAUTION - REDUCE NEW BUYS",
-      "status": "bearish",
-      "score": -2,
+      "label": "\ud83d\udfe1 HOLD / NEUTRAL",
+      "status": "neutral",
+      "score": -1,
       "rows": [
         [
           "Price vs. recent range",
@@ -2440,8 +2440,8 @@
         ],
         [
           "Crowd mood (Fear & Greed)",
-          "69/100 - crowd is greedy",
-          -1
+          "51/100 - crowd mood is neutral",
+          0
         ],
         [
           "Market phase (best guess)",
@@ -2455,7 +2455,7 @@
         ],
         [
           "Stretch from long-term average",
-          "+33.8% above its long-term average - very stretched",
+          "+35.0% above its long-term average - very stretched",
           -2
         ],
         [
@@ -2464,16 +2464,16 @@
           0
         ]
       ],
-      "plain": "Getting risky - I'd hold off on new buys until this cools down.",
+      "plain": "No real edge either way right now - fine to just wait and watch.",
       "id": "near",
       "symbol": "NEAR",
       "name": "NEAR Protocol",
-      "price": 2.32,
-      "pct_24h": -7.03189,
-      "pct_7d": 0.0,
+      "price": 2.35,
+      "pct_24h": -3.84478,
+      "pct_7d": 2.7,
       "support_30d": 1.5879597131538,
       "resistance_30d": 2.4848168147865453,
-      "as_of": "2026-09-15 22:30:33",
+      "as_of": "2026-09-16 04:50:23",
       "stale": false
     },
     "quant-network": {
@@ -2573,13 +2573,13 @@
       "stale": false
     },
     "bitway": {
-      "label": "\ud83d\udfe1 HOLD / NEUTRAL",
-      "status": "neutral",
-      "score": 0,
+      "label": "\ud83d\udd34 CAUTION - REDUCE NEW BUYS",
+      "status": "bearish",
+      "score": -3,
       "rows": [
         [
           "Price vs. recent range",
-          "Near its 30-day high (~$0.7325) - less room to run",
+          "Near its 30-day high (~$0.7553) - less room to run",
           -1
         ],
         [
@@ -2594,8 +2594,8 @@
         ],
         [
           "Recent trend",
-          "Trending up steadily - healthy",
-          1
+          "Shooting straight up - classic blow-off top risk, don't chase",
+          -2
         ],
         [
           "Stretch from long-term average",
@@ -2608,16 +2608,16 @@
           0
         ]
       ],
-      "plain": "No real edge either way right now - fine to just wait and watch.",
+      "plain": "Getting risky - I'd hold off on new buys until this cools down.",
       "id": "bitway",
       "symbol": "BTW",
       "name": "Bitway",
-      "price": 0.703919,
-      "pct_24h": -0.36109,
+      "price": 0.755338,
+      "pct_24h": 21.49076,
       "pct_7d": 61.5,
       "support_30d": 0.3884816128039819,
-      "resistance_30d": 0.7325241073378514,
-      "as_of": "2026-09-16 04:10:22",
+      "resistance_30d": 0.7553381055476536,
+      "as_of": "2026-09-16 04:50:23",
       "stale": false
     },
     "world-liberty-financial": {
@@ -3351,10 +3351,10 @@
         "name": "Gram (prev. Toncoin)",
         "tf": "15m",
         "entry": 1.307,
-        "stop": 1.3033,
-        "target1": 1.3107,
-        "target2": 1.3144,
-        "opened_at": "2026-09-16T04:47:18.334087"
+        "stop": 1.3032666666666666,
+        "target1": 1.3107333333333333,
+        "target2": 1.3144666666666667,
+        "opened_at": "2026-09-16T04:52:18.411959"
       },
       "daily:XLM": {
         "coin": "XLM",
@@ -3364,7 +3364,7 @@
         "stop": 0.14048333333333335,
         "target1": 0.16431666666666667,
         "target2": 0.17623333333333333,
-        "opened_at": "2026-09-16T04:47:18.334087"
+        "opened_at": "2026-09-16T04:52:18.411959"
       }
     },
     "resolved": [
@@ -29133,6 +29133,32 @@
         "result": "win",
         "resolved_at": "2026-09-16T04:47:18.334087",
         "exit_price": 0.1771
+      },
+      {
+        "coin": "GRAM",
+        "name": "Gram (prev. Toncoin)",
+        "tf": "15m",
+        "entry": 1.307,
+        "stop": 1.3033,
+        "target1": 1.3107,
+        "target2": 1.3144,
+        "opened_at": "2026-09-16T04:47:18.334087",
+        "result": "win",
+        "resolved_at": "2026-09-16T04:52:18.411959",
+        "exit_price": 1.313
+      },
+      {
+        "coin": "XLM",
+        "name": "Stellar",
+        "tf": "daily",
+        "entry": 0.1524,
+        "stop": 0.14048333333333335,
+        "target1": 0.16431666666666667,
+        "target2": 0.17623333333333333,
+        "opened_at": "2026-09-16T04:47:18.334087",
+        "result": "win",
+        "resolved_at": "2026-09-16T04:52:18.411959",
+        "exit_price": 0.1769
       }
     ]
   },
@@ -29140,14 +29166,14 @@
     "key": "BTC",
     "name": "Bitcoin",
     "emoji": "\u20bf",
-    "price": 75920,
+    "price": 75918,
     "high_24h": 77703,
     "low_24h": 75038,
-    "pct_24h": -2.12121,
+    "pct_24h": -2.19879,
     "pct_7d": -3.8,
     "pct_30d": 19.6,
-    "sma50": 71895.79199576116,
-    "sma200": 70273.3326642106,
+    "sma50": 71893.96662845794,
+    "sma200": 70272.8763223848,
     "support_30d": 64686.25782561655,
     "resistance_30d": 81264.70153038795,
     "mark_price": 75592.6,
@@ -29162,14 +29188,14 @@
     "key": "ETH",
     "name": "Ethereum",
     "emoji": "\u039e",
-    "price": 2406.16,
+    "price": 2406.38,
     "high_24h": 2499.43,
     "low_24h": 2361.16,
-    "pct_24h": -3.41648,
+    "pct_24h": -3.51563,
     "pct_7d": -3.7,
     "pct_30d": 26.3,
-    "sma50": 2217.0416166005675,
-    "sma200": 2064.3766714044673,
+    "sma50": 2216.9738477655383,
+    "sma200": 2064.3597291957103,
     "support_30d": 1916.3998901478055,
     "resistance_30d": 2525.267261590238,
     "mark_price": 2391.78,
