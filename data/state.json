@@ -103,7 +103,7 @@
         ],
         [
           "Stretch from long-term average",
-          "+0.5% vs its long-term average - not stretched either way",
+          "+1.3% vs its long-term average - not stretched either way",
           0
         ],
         [
@@ -116,12 +116,12 @@
       "id": "ripple",
       "symbol": "XRP",
       "name": "XRP",
-      "price": 1.28,
-      "pct_24h": -10.484,
-      "pct_7d": -9.2,
+      "price": 1.29,
+      "pct_24h": -9.04566,
+      "pct_7d": -9.1,
       "support_30d": 1.0011429230744608,
       "resistance_30d": 1.52050482788377,
-      "as_of": "2026-09-16 01:50:23",
+      "as_of": "2026-09-16 03:10:22",
       "stale": false
     },
     "solana": {
@@ -221,9 +221,9 @@
       "stale": false
     },
     "figure-heloc": {
-      "label": "\ud83d\udfe1 HOLD / NEUTRAL",
-      "status": "neutral",
-      "score": 1,
+      "label": "\ud83d\udfe2 LEAN ACCUMULATE",
+      "status": "bullish",
+      "score": 2,
       "rows": [
         [
           "Price vs. recent range",
@@ -232,8 +232,8 @@
         ],
         [
           "Crowd mood (Fear & Greed)",
-          "69/100 - crowd is greedy",
-          -1
+          "51/100 - crowd mood is neutral",
+          0
         ],
         [
           "Market phase (best guess)",
@@ -256,16 +256,16 @@
           0
         ]
       ],
-      "plain": "No real edge either way right now - fine to just wait and watch.",
+      "plain": "Leans toward a decent spot to slowly add (DCA) - not a strong signal, just a lean.",
       "id": "figure-heloc",
       "symbol": "FIGR_HELOC",
       "name": "Figure Heloc",
-      "price": 1.037,
-      "pct_24h": -0.44228,
-      "pct_7d": -0.8,
+      "price": 1.003,
+      "pct_24h": -2.431,
+      "pct_7d": -3.1,
       "support_30d": 1.0001790754472548,
       "resistance_30d": 1.0455978355177025,
-      "as_of": "2026-09-15 21:20:27",
+      "as_of": "2026-09-16 03:10:22",
       "stale": false
     },
     "hyperliquid": {
@@ -1927,7 +1927,7 @@
         ],
         [
           "Stretch from long-term average",
-          "-5.2% vs its long-term average - not stretched either way",
+          "-4.9% vs its long-term average - not stretched either way",
           0
         ],
         [
@@ -1940,12 +1940,12 @@
       "id": "mantle",
       "symbol": "MNT",
       "name": "Mantle",
-      "price": 0.543265,
-      "pct_24h": -5.12488,
-      "pct_7d": -14.2,
+      "price": 0.545138,
+      "pct_24h": -5.05906,
+      "pct_7d": -13.5,
       "support_30d": 0.42660592418086046,
       "resistance_30d": 0.6365218632454678,
-      "as_of": "2026-09-16 00:25:16",
+      "as_of": "2026-09-16 03:10:22",
       "stale": false
     },
     "polkadot": {
@@ -3362,7 +3362,7 @@
         "stop": 0.14051,
         "target1": 0.16429000000000002,
         "target2": 0.17618000000000003,
-        "opened_at": "2026-09-16T03:07:13.680035"
+        "opened_at": "2026-09-16T03:12:19.761719"
       }
     },
     "resolved": [
@@ -28624,6 +28624,19 @@
         "result": "win",
         "resolved_at": "2026-09-16T03:07:13.680035",
         "exit_price": 0.1762
+      },
+      {
+        "coin": "XLM",
+        "name": "Stellar",
+        "tf": "daily",
+        "entry": 0.1524,
+        "stop": 0.14051,
+        "target1": 0.16429000000000002,
+        "target2": 0.17618000000000003,
+        "opened_at": "2026-09-16T03:07:13.680035",
+        "result": "win",
+        "resolved_at": "2026-09-16T03:12:19.761719",
+        "exit_price": 0.1767
       }
     ]
   },
@@ -28631,14 +28644,14 @@
     "key": "BTC",
     "name": "Bitcoin",
     "emoji": "\u20bf",
-    "price": 75898,
+    "price": 75851,
     "high_24h": 77715,
     "low_24h": 75038,
-    "pct_24h": -2.43307,
+    "pct_24h": -2.48189,
     "pct_7d": -3.9,
     "pct_30d": 20.2,
-    "sma50": 71894.24461883535,
-    "sma200": 70272.94581997914,
+    "sma50": 71892.64621994043,
+    "sma200": 70272.54622025542,
     "support_30d": 64686.25782561655,
     "resistance_30d": 81264.70153038795,
     "mark_price": 75592.6,
@@ -28653,14 +28666,14 @@
     "key": "ETH",
     "name": "Ethereum",
     "emoji": "\u039e",
-    "price": 2404.55,
+    "price": 2401.55,
     "high_24h": 2499.72,
     "low_24h": 2361.16,
-    "pct_24h": -4.05087,
+    "pct_24h": -4.02353,
     "pct_7d": -3.9,
     "pct_30d": 27.0,
-    "sma50": 2216.957720129711,
-    "sma200": 2064.355697286753,
+    "sma50": 2216.8963725840385,
+    "sma200": 2064.340360400335,
     "support_30d": 1916.3998901478055,
     "resistance_30d": 2525.267261590238,
     "mark_price": 2391.78,
