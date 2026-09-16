@@ -679,7 +679,7 @@
         ],
         [
           "Stretch from long-term average",
-          "-10.3% vs its long-term average - not stretched either way",
+          "-10.2% vs its long-term average - not stretched either way",
           0
         ],
         [
@@ -692,12 +692,12 @@
       "id": "cardano",
       "symbol": "ADA",
       "name": "Cardano",
-      "price": 0.194953,
-      "pct_24h": -4.99781,
+      "price": 0.195236,
+      "pct_24h": -5.00848,
       "pct_7d": -10.6,
       "support_30d": 0.1744023593314451,
       "resistance_30d": 0.2291047455940254,
-      "as_of": "2026-09-16 04:05:18",
+      "as_of": "2026-09-16 04:20:25",
       "stale": false
     },
     "stellar": {
@@ -1927,7 +1927,7 @@
         ],
         [
           "Stretch from long-term average",
-          "-4.9% vs its long-term average - not stretched either way",
+          "-4.8% vs its long-term average - not stretched either way",
           0
         ],
         [
@@ -1940,12 +1940,12 @@
       "id": "mantle",
       "symbol": "MNT",
       "name": "Mantle",
-      "price": 0.545138,
-      "pct_24h": -5.05906,
-      "pct_7d": -13.5,
+      "price": 0.545719,
+      "pct_24h": -4.64922,
+      "pct_7d": -13.7,
       "support_30d": 0.42660592418086046,
       "resistance_30d": 0.6365218632454678,
-      "as_of": "2026-09-16 03:10:22",
+      "as_of": "2026-09-16 04:20:25",
       "stale": false
     },
     "polkadot": {
@@ -3351,20 +3351,20 @@
         "name": "Gram (prev. Toncoin)",
         "tf": "15m",
         "entry": 1.307,
-        "stop": 1.3032333333333332,
-        "target1": 1.3107666666666666,
-        "target2": 1.3145333333333333,
-        "opened_at": "2026-09-16T04:17:19.665560"
+        "stop": 1.3032,
+        "target1": 1.3108,
+        "target2": 1.3146,
+        "opened_at": "2026-09-16T04:22:20.833442"
       },
       "daily:XLM": {
         "coin": "XLM",
         "name": "Stellar",
         "tf": "daily",
         "entry": 0.1524,
-        "stop": 0.14049,
-        "target1": 0.16431,
-        "target2": 0.17622000000000002,
-        "opened_at": "2026-09-16T04:17:19.665560"
+        "stop": 0.14048333333333335,
+        "target1": 0.16431666666666667,
+        "target2": 0.17623333333333333,
+        "opened_at": "2026-09-16T04:22:20.833442"
       }
     },
     "resolved": [
@@ -28977,6 +28977,32 @@
         "result": "win",
         "resolved_at": "2026-09-16T04:17:19.665560",
         "exit_price": 0.1773
+      },
+      {
+        "coin": "GRAM",
+        "name": "Gram (prev. Toncoin)",
+        "tf": "15m",
+        "entry": 1.307,
+        "stop": 1.3032333333333332,
+        "target1": 1.3107666666666666,
+        "target2": 1.3145333333333333,
+        "opened_at": "2026-09-16T04:17:19.665560",
+        "result": "win",
+        "resolved_at": "2026-09-16T04:22:20.833442",
+        "exit_price": 1.315
+      },
+      {
+        "coin": "XLM",
+        "name": "Stellar",
+        "tf": "daily",
+        "entry": 0.1524,
+        "stop": 0.14049,
+        "target1": 0.16431,
+        "target2": 0.17622000000000002,
+        "opened_at": "2026-09-16T04:17:19.665560",
+        "result": "win",
+        "resolved_at": "2026-09-16T04:22:20.833442",
+        "exit_price": 0.1775
       }
     ]
   },
@@ -28984,14 +29010,14 @@
     "key": "BTC",
     "name": "Bitcoin",
     "emoji": "\u20bf",
-    "price": 75828,
+    "price": 75815,
     "high_24h": 77703,
     "low_24h": 75038,
-    "pct_24h": -2.34108,
+    "pct_24h": -2.35491,
     "pct_7d": -3.8,
     "pct_30d": 19.6,
-    "sma50": 71892.7778322302,
-    "sma200": 70272.57912332786,
+    "sma50": 71892.67274538132,
+    "sma200": 70272.55285161565,
     "support_30d": 64686.25782561655,
     "resistance_30d": 81264.70153038795,
     "mark_price": 75592.6,
@@ -29006,14 +29032,14 @@
     "key": "ETH",
     "name": "Ethereum",
     "emoji": "\u039e",
-    "price": 2401.85,
+    "price": 2401.36,
     "high_24h": 2499.43,
     "low_24h": 2361.16,
-    "pct_24h": -3.88782,
+    "pct_24h": -3.90967,
     "pct_7d": -3.7,
     "pct_30d": 26.3,
-    "sma50": 2216.9023635838475,
-    "sma200": 2064.3418581502874,
+    "sma50": 2216.8992192992246,
+    "sma200": 2064.3410720791317,
     "support_30d": 1916.3998901478055,
     "resistance_30d": 2525.267261590238,
     "mark_price": 2391.78,
