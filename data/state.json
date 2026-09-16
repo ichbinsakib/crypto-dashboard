@@ -2215,7 +2215,7 @@
         ],
         [
           "Stretch from long-term average",
-          "+0.6% vs its long-term average - not stretched either way",
+          "+0.2% vs its long-term average - not stretched either way",
           0
         ],
         [
@@ -2228,12 +2228,12 @@
       "id": "internet-computer",
       "symbol": "ICP",
       "name": "Internet Computer",
-      "price": 2.47,
-      "pct_24h": -9.38761,
+      "price": 2.46,
+      "pct_24h": -9.69768,
       "pct_7d": -15.8,
       "support_30d": 2.194804279500122,
       "resistance_30d": 2.9869340549074623,
-      "as_of": "2026-09-16 02:45:21",
+      "as_of": "2026-09-16 02:55:16",
       "stale": false
     },
     "bittensor": {
@@ -2291,7 +2291,7 @@
       "rows": [
         [
           "Price vs. recent range",
-          "Near its 30-day low (~$1.32) - historically a better entry",
+          "Near its 30-day low (~$1.31) - historically a better entry",
           2
         ],
         [
@@ -2311,7 +2311,7 @@
         ],
         [
           "Stretch from long-term average",
-          "-13.5% vs its long-term average - not stretched either way",
+          "-14.2% vs its long-term average - not stretched either way",
           0
         ],
         [
@@ -2324,12 +2324,12 @@
       "id": "the-open-network",
       "symbol": "GRAM",
       "name": "Gram (prev. Toncoin)",
-      "price": 1.32,
-      "pct_24h": -2.51945,
-      "pct_7d": -5.5,
-      "support_30d": 1.3170990455791696,
+      "price": 1.31,
+      "pct_24h": -2.34498,
+      "pct_7d": -6.5,
+      "support_30d": 1.311161169922562,
       "resistance_30d": 1.4926762805297678,
-      "as_of": "2026-09-16 00:45:23",
+      "as_of": "2026-09-16 02:55:16",
       "stale": false
     },
     "sky": {
@@ -3223,7 +3223,7 @@
         ],
         [
           "Stretch from long-term average",
-          "-3.2% vs its long-term average - not stretched either way",
+          "-3.1% vs its long-term average - not stretched either way",
           0
         ],
         [
@@ -3236,12 +3236,12 @@
       "id": "kaspa",
       "symbol": "KAS",
       "name": "Kaspa",
-      "price": 0.03250294,
-      "pct_24h": -7.0984,
+      "price": 0.03254274,
+      "pct_24h": -6.92082,
       "pct_7d": -10.2,
       "support_30d": 0.025275049210175406,
       "resistance_30d": 0.03651282069323304,
-      "as_of": "2026-09-16 02:40:23",
+      "as_of": "2026-09-16 02:55:16",
       "stale": false
     },
     "cosmos": {
@@ -3341,9 +3341,32 @@
       "stale": false
     }
   },
-  "_strong_buy_state": {},
+  "_strong_buy_state": {
+    "scanner-15m:ICP": true,
+    "scanner-15m:GRAM": true
+  },
   "_pnl_tracker": {
     "open": {
+      "15m:ICP": {
+        "coin": "ICP",
+        "name": "Internet Computer",
+        "tf": "15m",
+        "entry": 2.445,
+        "stop": 2.4299999999999997,
+        "target1": 2.46,
+        "target2": 2.475,
+        "opened_at": "2026-09-16T02:57:16.966198"
+      },
+      "15m:GRAM": {
+        "coin": "GRAM",
+        "name": "Gram (prev. Toncoin)",
+        "tf": "15m",
+        "entry": 1.307,
+        "stop": 1.3027,
+        "target1": 1.3113,
+        "target2": 1.3155999999999999,
+        "opened_at": "2026-09-16T02:57:16.966198"
+      },
       "daily:XLM": {
         "coin": "XLM",
         "name": "Stellar",
@@ -3352,7 +3375,7 @@
         "stop": 0.14051,
         "target1": 0.16429000000000002,
         "target2": 0.17618000000000003,
-        "opened_at": "2026-09-16T02:52:23.513638"
+        "opened_at": "2026-09-16T02:57:16.966198"
       }
     },
     "resolved": [
@@ -28562,6 +28585,19 @@
         "result": "win",
         "resolved_at": "2026-09-16T02:52:23.513638",
         "exit_price": 0.1763
+      },
+      {
+        "coin": "XLM",
+        "name": "Stellar",
+        "tf": "daily",
+        "entry": 0.1524,
+        "stop": 0.14051,
+        "target1": 0.16429000000000002,
+        "target2": 0.17618000000000003,
+        "opened_at": "2026-09-16T02:52:23.513638",
+        "result": "win",
+        "resolved_at": "2026-09-16T02:57:16.966198",
+        "exit_price": 0.176
       }
     ]
   },
@@ -28569,14 +28605,14 @@
     "key": "BTC",
     "name": "Bitcoin",
     "emoji": "\u20bf",
-    "price": 75905,
+    "price": 75919,
     "high_24h": 77886,
     "low_24h": 75038,
-    "pct_24h": -2.48543,
+    "pct_24h": -2.47838,
     "pct_7d": -4.2,
     "pct_30d": 20.1,
-    "sma50": 71894.49081841222,
-    "sma200": 70273.00736987336,
+    "sma50": 71894.5174536977,
+    "sma200": 70273.01402869473,
     "support_30d": 64686.25782561655,
     "resistance_30d": 81264.70153038795,
     "mark_price": 75592.6,
@@ -28591,14 +28627,14 @@
     "key": "ETH",
     "name": "Ethereum",
     "emoji": "\u039e",
-    "price": 2404.35,
+    "price": 2404.74,
     "high_24h": 2511.64,
     "low_24h": 2361.16,
-    "pct_24h": -4.26358,
+    "pct_24h": -4.25649,
     "pct_7d": -4.2,
     "pct_30d": 27.4,
-    "sma50": 2216.95848822702,
-    "sma200": 2064.3558893110803,
+    "sma50": 2216.962260755578,
+    "sma200": 2064.35683244322,
     "support_30d": 1916.3998901478055,
     "resistance_30d": 2525.267261590238,
     "mark_price": 2391.78,
