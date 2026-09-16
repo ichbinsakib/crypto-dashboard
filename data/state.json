@@ -2229,11 +2229,11 @@
       "symbol": "ICP",
       "name": "Internet Computer",
       "price": 2.51,
-      "pct_24h": -3.83959,
-      "pct_7d": -12.8,
+      "pct_24h": -3.91847,
+      "pct_7d": -12.0,
       "support_30d": 2.194804279500122,
       "resistance_30d": 2.9869340549074623,
-      "as_of": "2026-09-16 06:30:30",
+      "as_of": "2026-09-16 07:20:29",
       "stale": false
     },
     "bittensor": {
@@ -2291,7 +2291,7 @@
       "rows": [
         [
           "Price vs. recent range",
-          "Near its 30-day low (~$1.31) - historically a better entry",
+          "Near its 30-day low (~$1.32) - historically a better entry",
           2
         ],
         [
@@ -2311,7 +2311,7 @@
         ],
         [
           "Stretch from long-term average",
-          "-14.2% vs its long-term average - not stretched either way",
+          "-13.5% vs its long-term average - not stretched either way",
           0
         ],
         [
@@ -2324,12 +2324,12 @@
       "id": "the-open-network",
       "symbol": "GRAM",
       "name": "Gram (prev. Toncoin)",
-      "price": 1.31,
-      "pct_24h": -2.34498,
-      "pct_7d": -6.5,
-      "support_30d": 1.311161169922562,
+      "price": 1.32,
+      "pct_24h": -1.86588,
+      "pct_7d": -5.4,
+      "support_30d": 1.3158447113316578,
       "resistance_30d": 1.4926762805297678,
-      "as_of": "2026-09-16 02:55:16",
+      "as_of": "2026-09-16 07:20:29",
       "stale": false
     },
     "sky": {
@@ -2516,12 +2516,12 @@
       "id": "quant-network",
       "symbol": "QNT",
       "name": "Quant",
-      "price": 60.13,
-      "pct_24h": -6.17428,
-      "pct_7d": -9.2,
+      "price": 60.14,
+      "pct_24h": -5.58845,
+      "pct_7d": -13.6,
       "support_30d": 55.905981995619285,
       "resistance_30d": 67.13669726469111,
-      "as_of": "2026-09-16 06:00:39",
+      "as_of": "2026-09-16 07:20:29",
       "stale": false
     },
     "tether-gold": {
@@ -3341,9 +3341,21 @@
       "stale": false
     }
   },
-  "_strong_buy_state": {},
+  "_strong_buy_state": {
+    "scanner-15m:TAO": true
+  },
   "_pnl_tracker": {
     "open": {
+      "15m:TAO": {
+        "coin": "TAO",
+        "name": "Bittensor",
+        "tf": "15m",
+        "entry": 215.7,
+        "stop": 214.72333333333333,
+        "target1": 216.67666666666665,
+        "target2": 217.6533333333333,
+        "opened_at": "2026-09-16T07:22:27.349807"
+      },
       "daily:XLM": {
         "coin": "XLM",
         "name": "Stellar",
@@ -3352,7 +3364,7 @@
         "stop": 0.14048333333333335,
         "target1": 0.16431666666666667,
         "target2": 0.17623333333333333,
-        "opened_at": "2026-09-16T07:17:22.117259"
+        "opened_at": "2026-09-16T07:22:27.349807"
       }
     },
     "resolved": [
@@ -29719,6 +29731,19 @@
         "result": "win",
         "resolved_at": "2026-09-16T07:17:22.117259",
         "exit_price": 0.1763
+      },
+      {
+        "coin": "XLM",
+        "name": "Stellar",
+        "tf": "daily",
+        "entry": 0.1524,
+        "stop": 0.14048333333333335,
+        "target1": 0.16431666666666667,
+        "target2": 0.17623333333333333,
+        "opened_at": "2026-09-16T07:17:22.117259",
+        "result": "win",
+        "resolved_at": "2026-09-16T07:22:27.349807",
+        "exit_price": 0.1762
       }
     ]
   },
@@ -29726,14 +29751,14 @@
     "key": "BTC",
     "name": "Bitcoin",
     "emoji": "\u20bf",
-    "price": 75777,
+    "price": 75848,
     "high_24h": 77163,
     "low_24h": 75038,
-    "pct_24h": -1.83514,
+    "pct_24h": -1.8151,
     "pct_7d": -3.8,
     "pct_30d": 19.6,
-    "sma50": 71891.8915408739,
-    "sma200": 70272.35755048878,
+    "sma50": 71893.33904218428,
+    "sma200": 70272.71942581638,
     "support_30d": 64686.25782561655,
     "resistance_30d": 81264.70153038795,
     "mark_price": 75592.6,
@@ -29748,14 +29773,14 @@
     "key": "ETH",
     "name": "Ethereum",
     "emoji": "\u039e",
-    "price": 2398.64,
+    "price": 2400.42,
     "high_24h": 2486.48,
     "low_24h": 2361.16,
-    "pct_24h": -3.299,
+    "pct_24h": -3.28036,
     "pct_7d": -3.9,
     "pct_30d": 26.4,
-    "sma50": 2216.8449697884275,
-    "sma200": 2064.3275097014325,
+    "sma50": 2216.897759423062,
+    "sma200": 2064.340707110091,
     "support_30d": 1916.3998901478055,
     "resistance_30d": 2525.267261590238,
     "mark_price": 2391.78,
