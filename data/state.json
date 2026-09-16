@@ -295,7 +295,7 @@
         ],
         [
           "Stretch from long-term average",
-          "+39.1% above its long-term average - very stretched",
+          "+39.7% above its long-term average - very stretched",
           -2
         ],
         [
@@ -308,12 +308,12 @@
       "id": "hyperliquid",
       "symbol": "HYPE",
       "name": "Hyperliquid",
-      "price": 77.41,
-      "pct_24h": -3.21145,
+      "price": 77.72,
+      "pct_24h": -2.31019,
       "pct_7d": -9.5,
       "support_30d": 58.515277414221124,
       "resistance_30d": 87.951916819731,
-      "as_of": "2026-09-16 03:00:34",
+      "as_of": "2026-09-16 03:30:28",
       "stale": false
     },
     "dogecoin": {
@@ -2407,7 +2407,7 @@
         ],
         [
           "Stretch from long-term average",
-          "-8.1% vs its long-term average - not stretched either way",
+          "-7.6% vs its long-term average - not stretched either way",
           0
         ],
         [
@@ -2420,12 +2420,12 @@
       "id": "shiba-inu",
       "symbol": "SHIB",
       "name": "Shiba Inu",
-      "price": 4.9e-06,
-      "pct_24h": -5.93765,
-      "pct_7d": -10.1,
+      "price": 4.93e-06,
+      "pct_24h": -5.0546,
+      "pct_7d": -9.2,
       "support_30d": 4.41190416053175e-06,
       "resistance_30d": 5.903506876405612e-06,
-      "as_of": "2026-09-16 02:15:25",
+      "as_of": "2026-09-16 03:30:28",
       "stale": false
     },
     "near": {
@@ -2573,9 +2573,9 @@
       "stale": false
     },
     "bitway": {
-      "label": "\ud83d\udd34 CAUTION - REDUCE NEW BUYS",
-      "status": "bearish",
-      "score": -3,
+      "label": "\ud83d\udfe1 HOLD / NEUTRAL",
+      "status": "neutral",
+      "score": 1,
       "rows": [
         [
           "Price vs. recent range",
@@ -2584,8 +2584,8 @@
         ],
         [
           "Crowd mood (Fear & Greed)",
-          "69/100 - crowd is greedy",
-          -1
+          "51/100 - crowd mood is neutral",
+          0
         ],
         [
           "Market phase (best guess)",
@@ -2594,8 +2594,8 @@
         ],
         [
           "Recent trend",
-          "Shooting straight up - classic blow-off top risk, don't chase",
-          -2
+          "Trending up steadily - healthy",
+          1
         ],
         [
           "Stretch from long-term average",
@@ -2608,16 +2608,16 @@
           0
         ]
       ],
-      "plain": "Getting risky - I'd hold off on new buys until this cools down.",
+      "plain": "No real edge either way right now - fine to just wait and watch.",
       "id": "bitway",
       "symbol": "BTW",
       "name": "Bitway",
-      "price": 0.683365,
-      "pct_24h": 23.11965,
-      "pct_7d": 56.8,
-      "support_30d": 0.3581011744091522,
+      "price": 0.685928,
+      "pct_24h": -4.99719,
+      "pct_7d": 58.2,
+      "support_30d": 0.3884816128039819,
       "resistance_30d": 0.7325241073378514,
-      "as_of": "2026-09-15 23:25:17",
+      "as_of": "2026-09-16 03:30:28",
       "stale": false
     },
     "world-liberty-financial": {
@@ -3351,10 +3351,10 @@
         "name": "Gram (prev. Toncoin)",
         "tf": "15m",
         "entry": 1.307,
-        "stop": 1.3028333333333333,
-        "target1": 1.3111666666666666,
-        "target2": 1.3153333333333332,
-        "opened_at": "2026-09-16T03:27:13.587669"
+        "stop": 1.3030333333333333,
+        "target1": 1.3109666666666666,
+        "target2": 1.3149333333333333,
+        "opened_at": "2026-09-16T03:32:25.146028"
       },
       "daily:XLM": {
         "coin": "XLM",
@@ -3364,7 +3364,7 @@
         "stop": 0.14049333333333333,
         "target1": 0.16430666666666668,
         "target2": 0.17621333333333336,
-        "opened_at": "2026-09-16T03:27:13.587669"
+        "opened_at": "2026-09-16T03:32:25.146028"
       }
     },
     "resolved": [
@@ -28717,6 +28717,32 @@
         "result": "win",
         "resolved_at": "2026-09-16T03:27:13.587669",
         "exit_price": 0.177
+      },
+      {
+        "coin": "GRAM",
+        "name": "Gram (prev. Toncoin)",
+        "tf": "15m",
+        "entry": 1.307,
+        "stop": 1.3028333333333333,
+        "target1": 1.3111666666666666,
+        "target2": 1.3153333333333332,
+        "opened_at": "2026-09-16T03:27:13.587669",
+        "result": "win",
+        "resolved_at": "2026-09-16T03:32:25.146028",
+        "exit_price": 1.313
+      },
+      {
+        "coin": "XLM",
+        "name": "Stellar",
+        "tf": "daily",
+        "entry": 0.1524,
+        "stop": 0.14049333333333333,
+        "target1": 0.16430666666666668,
+        "target2": 0.17621333333333336,
+        "opened_at": "2026-09-16T03:27:13.587669",
+        "result": "win",
+        "resolved_at": "2026-09-16T03:32:25.146028",
+        "exit_price": 0.177
       }
     ]
   },
@@ -28724,14 +28750,14 @@
     "key": "BTC",
     "name": "Bitcoin",
     "emoji": "\u20bf",
-    "price": 76016,
+    "price": 75928,
     "high_24h": 77715,
     "low_24h": 75038,
-    "pct_24h": -2.30334,
+    "pct_24h": -2.47489,
     "pct_7d": -3.9,
     "pct_30d": 20.2,
-    "sma50": 71896.69287482172,
-    "sma200": 70273.55788397574,
+    "sma50": 71894.27154008733,
+    "sma200": 70272.95255029213,
     "support_30d": 64686.25782561655,
     "resistance_30d": 81264.70153038795,
     "mark_price": 75592.6,
@@ -28746,14 +28772,14 @@
     "key": "ETH",
     "name": "Ethereum",
     "emoji": "\u039e",
-    "price": 2409.54,
+    "price": 2406.98,
     "high_24h": 2499.72,
     "low_24h": 2361.16,
-    "pct_24h": -3.65707,
+    "pct_24h": -3.8485,
     "pct_7d": -3.9,
     "pct_30d": 27.0,
-    "sma50": 2217.0632339152526,
-    "sma200": 2064.3820757331387,
+    "sma50": 2216.983121155192,
+    "sma200": 2064.3620475431235,
     "support_30d": 1916.3998901478055,
     "resistance_30d": 2525.267261590238,
     "mark_price": 2391.78,
