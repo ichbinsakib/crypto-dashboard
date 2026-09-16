@@ -655,7 +655,7 @@
     "cardano": {
       "label": "\ud83d\udfe1 HOLD / NEUTRAL",
       "status": "neutral",
-      "score": 0,
+      "score": 1,
       "rows": [
         [
           "Price vs. recent range",
@@ -664,8 +664,8 @@
         ],
         [
           "Crowd mood (Fear & Greed)",
-          "69/100 - crowd is greedy",
-          -1
+          "51/100 - crowd mood is neutral",
+          0
         ],
         [
           "Market phase (best guess)",
@@ -679,7 +679,7 @@
         ],
         [
           "Stretch from long-term average",
-          "-10.3% vs its long-term average - not stretched either way",
+          "-10.7% vs its long-term average - not stretched either way",
           0
         ],
         [
@@ -692,12 +692,12 @@
       "id": "cardano",
       "symbol": "ADA",
       "name": "Cardano",
-      "price": 0.195475,
-      "pct_24h": -6.65045,
-      "pct_7d": -10.8,
-      "support_30d": 0.1741249817054162,
+      "price": 0.1941,
+      "pct_24h": -6.81808,
+      "pct_7d": -11.4,
+      "support_30d": 0.1744023593314451,
       "resistance_30d": 0.2291047455940254,
-      "as_of": "2026-09-15 23:05:23",
+      "as_of": "2026-09-16 00:55:18",
       "stale": false
     },
     "stellar": {
@@ -751,17 +751,17 @@
     "kucoin-shares": {
       "label": "\ud83d\udfe2 LEAN ACCUMULATE",
       "status": "bullish",
-      "score": 3,
+      "score": 4,
       "rows": [
         [
           "Price vs. recent range",
-          "Near its 30-day low (~$6.51) - historically a better entry",
+          "Near its 30-day low (~$6.60) - historically a better entry",
           2
         ],
         [
           "Crowd mood (Fear & Greed)",
-          "69/100 - crowd is greedy",
-          -1
+          "51/100 - crowd mood is neutral",
+          0
         ],
         [
           "Market phase (best guess)",
@@ -775,7 +775,7 @@
         ],
         [
           "Stretch from long-term average",
-          "-10.6% vs its long-term average - not stretched either way",
+          "-10.9% vs its long-term average - not stretched either way",
           0
         ],
         [
@@ -788,12 +788,12 @@
       "id": "kucoin-shares",
       "symbol": "KCS",
       "name": "KuCoin",
-      "price": 6.81,
-      "pct_24h": -2.95513,
-      "pct_7d": -2.7,
-      "support_30d": 6.514591596607885,
+      "price": 6.78,
+      "pct_24h": -1.84057,
+      "pct_7d": -3.6,
+      "support_30d": 6.601552051904499,
       "resistance_30d": 7.8821382735057615,
-      "as_of": "2026-09-15 19:55:19",
+      "as_of": "2026-09-16 00:55:18",
       "stale": false
     },
     "hedera-hashgraph": {
@@ -1591,7 +1591,7 @@
         ],
         [
           "Stretch from long-term average",
-          "+74.0% above its long-term average - very stretched",
+          "+72.3% above its long-term average - very stretched",
           -2
         ],
         [
@@ -1604,12 +1604,12 @@
       "id": "venice-token",
       "symbol": "VVV",
       "name": "Venice Token",
-      "price": 21.43,
-      "pct_24h": -6.80295,
+      "price": 21.36,
+      "pct_24h": -6.31125,
       "pct_7d": -14.4,
-      "support_30d": 13.26539533029362,
+      "support_30d": 14.047888779973915,
       "resistance_30d": 25.88474946901688,
-      "as_of": "2026-09-16 00:05:18",
+      "as_of": "2026-09-16 00:55:18",
       "stale": false
     },
     "litecoin": {
@@ -2047,17 +2047,17 @@
     "pi-network": {
       "label": "\ud83d\udfe2 LEAN ACCUMULATE",
       "status": "bullish",
-      "score": 2,
+      "score": 3,
       "rows": [
         [
           "Price vs. recent range",
-          "Near its 30-day low (~$0.0866) - historically a better entry",
+          "Near its 30-day low (~$0.0870) - historically a better entry",
           2
         ],
         [
           "Crowd mood (Fear & Greed)",
-          "69/100 - crowd is greedy",
-          -1
+          "51/100 - crowd mood is neutral",
+          0
         ],
         [
           "Market phase (best guess)",
@@ -2071,7 +2071,7 @@
         ],
         [
           "Stretch from long-term average",
-          "-34.5% below its long-term average - confirmed downtrend",
+          "-34.7% below its long-term average - confirmed downtrend",
           -1
         ],
         [
@@ -2084,12 +2084,12 @@
       "id": "pi-network",
       "symbol": "PI",
       "name": "Pi Network",
-      "price": 0.090764,
-      "pct_24h": -7.84064,
+      "price": 0.090105,
+      "pct_24h": -7.86335,
       "pct_7d": -6.1,
-      "support_30d": 0.08664476257170661,
+      "support_30d": 0.08700590402767469,
       "resistance_30d": 0.09830733881512746,
-      "as_of": "2026-09-15 23:35:18",
+      "as_of": "2026-09-16 00:55:18",
       "stale": false
     },
     "ondo-finance": {
@@ -3364,7 +3364,7 @@
         "stop": 0.14056666666666667,
         "target1": 0.16423333333333334,
         "target2": 0.17606666666666668,
-        "opened_at": "2026-09-16T00:52:18.088522"
+        "opened_at": "2026-09-16T00:57:07.051526"
       }
     },
     "resolved": [
@@ -28132,6 +28132,19 @@
         "result": "win",
         "resolved_at": "2026-09-16T00:52:18.088522",
         "exit_price": 0.1764
+      },
+      {
+        "coin": "XLM",
+        "name": "Stellar",
+        "tf": "daily",
+        "entry": 0.1524,
+        "stop": 0.14056666666666667,
+        "target1": 0.16423333333333334,
+        "target2": 0.17606666666666668,
+        "opened_at": "2026-09-16T00:52:18.088522",
+        "result": "win",
+        "resolved_at": "2026-09-16T00:57:07.051526",
+        "exit_price": 0.1759
       }
     ]
   },
@@ -28139,14 +28152,14 @@
     "key": "BTC",
     "name": "Bitcoin",
     "emoji": "\u20bf",
-    "price": 75735,
+    "price": 75739,
     "high_24h": 78038,
     "low_24h": 75038,
-    "pct_24h": -2.83347,
+    "pct_24h": -2.83717,
     "pct_7d": -3.7,
     "pct_30d": 20.3,
-    "sma50": 71891.83541321587,
-    "sma200": 70272.34351857427,
+    "sma50": 71891.07800639591,
+    "sma200": 70272.1541668693,
     "support_30d": 64686.25782561655,
     "resistance_30d": 81264.70153038795,
     "mark_price": 76989.5,
@@ -28161,14 +28174,14 @@
     "key": "ETH",
     "name": "Ethereum",
     "emoji": "\u039e",
-    "price": 2400.18,
+    "price": 2400.83,
     "high_24h": 2519.25,
     "low_24h": 2361.16,
-    "pct_24h": -4.47058,
+    "pct_24h": -4.51552,
     "pct_7d": -3.6,
     "pct_30d": 28.0,
-    "sma50": 2216.891607791057,
-    "sma200": 2064.33916920209,
+    "sma50": 2216.892081285418,
+    "sma200": 2064.33928757568,
     "support_30d": 1916.3998901478055,
     "resistance_30d": 2525.267261590238,
     "mark_price": 2476.25771051,
