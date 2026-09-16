@@ -967,7 +967,7 @@
         ],
         [
           "Stretch from long-term average",
-          "+2.1% vs its long-term average - not stretched either way",
+          "+2.5% vs its long-term average - not stretched either way",
           0
         ],
         [
@@ -980,12 +980,12 @@
       "id": "aster-2",
       "symbol": "ASTER",
       "name": "Aster",
-      "price": 0.675978,
-      "pct_24h": -1.41562,
-      "pct_7d": -10.5,
+      "price": 0.678222,
+      "pct_24h": -2.32009,
+      "pct_7d": -10.1,
       "support_30d": 0.6018722187083829,
       "resistance_30d": 0.7868111056215635,
-      "as_of": "2026-09-16 11:35:20",
+      "as_of": "2026-09-16 12:55:18",
       "stale": false
     },
     "worldcoin-wld": {
@@ -1543,7 +1543,7 @@
         ],
         [
           "Stretch from long-term average",
-          "+67.0% above its long-term average - very stretched",
+          "+66.2% above its long-term average - very stretched",
           -2
         ],
         [
@@ -1556,12 +1556,12 @@
       "id": "pump-fun",
       "symbol": "PUMP",
       "name": "Pump.fun",
-      "price": 0.00363822,
-      "pct_24h": 1.65325,
-      "pct_7d": -17.7,
+      "price": 0.00362014,
+      "pct_24h": -0.83963,
+      "pct_7d": -17.9,
       "support_30d": 0.0030001765124458095,
       "resistance_30d": 0.0052249885406471875,
-      "as_of": "2026-09-16 11:30:32",
+      "as_of": "2026-09-16 12:55:18",
       "stale": false
     },
     "venice-token": {
@@ -2429,9 +2429,9 @@
       "stale": false
     },
     "near": {
-      "label": "\ud83d\udd34 CAUTION - REDUCE NEW BUYS",
+      "label": "\ud83d\udd34 DISTRIBUTION ZONE",
       "status": "bearish",
-      "score": -2,
+      "score": -5,
       "rows": [
         [
           "Price vs. recent range",
@@ -2445,8 +2445,8 @@
         ],
         [
           "Market phase (best guess)",
-          "Established uptrend - phase where price marks up",
-          1
+          "Very extended after a big run - phase where smart money sells",
+          -2
         ],
         [
           "Recent trend",
@@ -2455,7 +2455,7 @@
         ],
         [
           "Stretch from long-term average",
-          "+39.0% above its long-term average - very stretched",
+          "+42.5% above its long-term average - very stretched",
           -2
         ],
         [
@@ -2464,16 +2464,16 @@
           0
         ]
       ],
-      "plain": "Getting risky - I'd hold off on new buys until this cools down.",
+      "plain": "Looks stretched and euphoric - historically the zone where smart money sells, not buys.",
       "id": "near",
       "symbol": "NEAR",
       "name": "NEAR Protocol",
-      "price": 2.42,
-      "pct_24h": 0.82806,
-      "pct_7d": -2.0,
+      "price": 2.48,
+      "pct_24h": 3.494,
+      "pct_7d": -2.4,
       "support_30d": 1.5879597131538,
       "resistance_30d": 2.4848168147865453,
-      "as_of": "2026-09-16 10:25:18",
+      "as_of": "2026-09-16 12:55:18",
       "stale": false
     },
     "quant-network": {
@@ -3359,10 +3359,10 @@
         "name": "Ethena",
         "tf": "15m",
         "entry": 0.1385,
-        "stop": 0.13733,
-        "target1": 0.13967000000000002,
-        "target2": 0.14084000000000002,
-        "opened_at": "2026-09-16T12:52:17.819617"
+        "stop": 0.13732333333333335,
+        "target1": 0.13967666666666667,
+        "target2": 0.14085333333333333,
+        "opened_at": "2026-09-16T12:57:08.930369"
       },
       "daily:XLM": {
         "coin": "XLM",
@@ -3372,7 +3372,7 @@
         "stop": 0.14047,
         "target1": 0.16433,
         "target2": 0.17626,
-        "opened_at": "2026-09-16T12:52:17.819617"
+        "opened_at": "2026-09-16T12:57:08.930369"
       }
     },
     "resolved": [
@@ -31130,6 +31130,32 @@
         "result": "win",
         "resolved_at": "2026-09-16T12:52:17.819617",
         "exit_price": 0.1753
+      },
+      {
+        "coin": "ENA",
+        "name": "Ethena",
+        "tf": "15m",
+        "entry": 0.1385,
+        "stop": 0.13733,
+        "target1": 0.13967000000000002,
+        "target2": 0.14084000000000002,
+        "opened_at": "2026-09-16T12:52:17.819617",
+        "result": "win",
+        "resolved_at": "2026-09-16T12:57:08.930369",
+        "exit_price": 0.1437
+      },
+      {
+        "coin": "XLM",
+        "name": "Stellar",
+        "tf": "daily",
+        "entry": 0.1524,
+        "stop": 0.14047,
+        "target1": 0.16433,
+        "target2": 0.17626,
+        "opened_at": "2026-09-16T12:52:17.819617",
+        "result": "win",
+        "resolved_at": "2026-09-16T12:57:08.930369",
+        "exit_price": 0.1748
       }
     ]
   },
@@ -31137,14 +31163,14 @@
     "key": "BTC",
     "name": "Bitcoin",
     "emoji": "\u20bf",
-    "price": 75936,
+    "price": 75967,
     "high_24h": 77146,
     "low_24h": 75038,
-    "pct_24h": -1.3364,
+    "pct_24h": -1.46339,
     "pct_7d": -3.5,
     "pct_30d": 19.8,
-    "sma50": 71895.06170089722,
-    "sma200": 70273.15009049462,
+    "sma50": 71895.55944047683,
+    "sma200": 70273.27452538951,
     "support_30d": 64686.25782561655,
     "resistance_30d": 81264.70153038795,
     "mark_price": 75928.5,
@@ -31159,14 +31185,14 @@
     "key": "ETH",
     "name": "Ethereum",
     "emoji": "\u039e",
-    "price": 2406.21,
+    "price": 2407.62,
     "high_24h": 2484.45,
     "low_24h": 2361.16,
-    "pct_24h": -2.95028,
+    "pct_24h": -3.09911,
     "pct_7d": -2.7,
     "pct_30d": 27.0,
-    "sma50": 2216.993444832747,
-    "sma200": 2064.3646284625124,
+    "sma50": 2217.0225102522854,
+    "sma200": 2064.371894817397,
     "support_30d": 1916.3998901478055,
     "resistance_30d": 2525.267261590238,
     "mark_price": 2399.32,
