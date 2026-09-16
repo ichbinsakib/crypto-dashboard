@@ -117,11 +117,11 @@
       "symbol": "XRP",
       "name": "XRP",
       "price": 1.3,
-      "pct_24h": 1.05693,
+      "pct_24h": 1.08644,
       "pct_7d": -8.0,
       "support_30d": 1.0011429230744608,
       "resistance_30d": 1.52050482788377,
-      "as_of": "2026-09-16 23:40:23",
+      "as_of": "2026-09-16 23:50:22",
       "stale": false
     },
     "solana": {
@@ -871,7 +871,7 @@
         ],
         [
           "Stretch from long-term average",
-          "+1.9% vs its long-term average - not stretched either way",
+          "+3.4% vs its long-term average - not stretched either way",
           0
         ],
         [
@@ -884,12 +884,12 @@
       "id": "pepe",
       "symbol": "PEPE",
       "name": "Pepe",
-      "price": 3.35e-06,
-      "pct_24h": -1.09587,
-      "pct_7d": -4.0,
+      "price": 3.4e-06,
+      "pct_24h": 0.27124,
+      "pct_7d": -4.1,
       "support_30d": 2.582769748064196e-06,
       "resistance_30d": 4.122123035488615e-06,
-      "as_of": "2026-09-16 22:55:17",
+      "as_of": "2026-09-16 23:50:22",
       "stale": false
     },
     "avalanche-2": {
@@ -1639,7 +1639,7 @@
         ],
         [
           "Stretch from long-term average",
-          "+1.1% vs its long-term average - not stretched either way",
+          "+2.6% vs its long-term average - not stretched either way",
           0
         ],
         [
@@ -1652,12 +1652,12 @@
       "id": "litecoin",
       "symbol": "LTC",
       "name": "Litecoin",
-      "price": 50.9,
-      "pct_24h": -0.51559,
-      "pct_7d": -4.4,
+      "price": 51.7,
+      "pct_24h": 0.81959,
+      "pct_7d": -4.6,
       "support_30d": 44.34767980799559,
       "resistance_30d": 55.20228907963863,
-      "as_of": "2026-09-16 22:40:26",
+      "as_of": "2026-09-16 23:50:22",
       "stale": false
     },
     "bitget-token": {
@@ -3352,20 +3352,20 @@
         "name": "Worldcoin",
         "tf": "15m",
         "entry": 0.3563,
-        "stop": 0.35222333333333333,
-        "target1": 0.3603766666666667,
-        "target2": 0.36445333333333335,
-        "opened_at": "2026-09-16T23:47:11.629855"
+        "stop": 0.35219333333333336,
+        "target1": 0.36040666666666665,
+        "target2": 0.3645133333333333,
+        "opened_at": "2026-09-16T23:52:12.544614"
       },
       "1h:MORPHO": {
         "coin": "MORPHO",
         "name": "Morpho",
         "tf": "1h",
         "entry": 2.043,
-        "stop": 2.015,
-        "target1": 2.071,
-        "target2": 2.099,
-        "opened_at": "2026-09-16T23:47:11.629855"
+        "stop": 2.014875,
+        "target1": 2.0711250000000003,
+        "target2": 2.0992500000000005,
+        "opened_at": "2026-09-16T23:52:12.544614"
       },
       "daily:XLM": {
         "coin": "XLM",
@@ -3375,7 +3375,7 @@
         "stop": 0.14022333333333334,
         "target1": 0.16457666666666668,
         "target2": 0.17675333333333335,
-        "opened_at": "2026-09-16T23:47:11.629855"
+        "opened_at": "2026-09-16T23:52:12.544614"
       }
     },
     "resolved": [
@@ -34617,6 +34617,45 @@
         "result": "win",
         "resolved_at": "2026-09-16T23:47:11.629855",
         "exit_price": 0.1838
+      },
+      {
+        "coin": "WLD",
+        "name": "Worldcoin",
+        "tf": "15m",
+        "entry": 0.3563,
+        "stop": 0.35222333333333333,
+        "target1": 0.3603766666666667,
+        "target2": 0.36445333333333335,
+        "opened_at": "2026-09-16T23:47:11.629855",
+        "result": "win",
+        "resolved_at": "2026-09-16T23:52:12.544614",
+        "exit_price": 0.373
+      },
+      {
+        "coin": "MORPHO",
+        "name": "Morpho",
+        "tf": "1h",
+        "entry": 2.043,
+        "stop": 2.015,
+        "target1": 2.071,
+        "target2": 2.099,
+        "opened_at": "2026-09-16T23:47:11.629855",
+        "result": "win",
+        "resolved_at": "2026-09-16T23:52:12.544614",
+        "exit_price": 2.107
+      },
+      {
+        "coin": "XLM",
+        "name": "Stellar",
+        "tf": "daily",
+        "entry": 0.1524,
+        "stop": 0.14022333333333334,
+        "target1": 0.16457666666666668,
+        "target2": 0.17675333333333335,
+        "opened_at": "2026-09-16T23:47:11.629855",
+        "result": "win",
+        "resolved_at": "2026-09-16T23:52:12.544614",
+        "exit_price": 0.1837
       }
     ]
   },
@@ -34624,14 +34663,14 @@
     "key": "BTC",
     "name": "Bitcoin",
     "emoji": "\u20bf",
-    "price": 76115,
+    "price": 76167,
     "high_24h": 76413,
     "low_24h": 75161,
-    "pct_24h": 0.6392,
+    "pct_24h": 0.72878,
     "pct_7d": -3.2,
     "pct_30d": 17.5,
-    "sma50": 71898.56289548276,
-    "sma200": 70274.025389141,
+    "sma50": 71899.13715743482,
+    "sma200": 70274.16895462901,
     "support_30d": 64686.25782561655,
     "resistance_30d": 81264.70153038795,
     "mark_price": 75655.44813043,
@@ -34646,14 +34685,14 @@
     "key": "ETH",
     "name": "Ethereum",
     "emoji": "\u039e",
-    "price": 2416.5,
+    "price": 2418.55,
     "high_24h": 2424.51,
     "low_24h": 2371.36,
-    "pct_24h": 0.70414,
+    "pct_24h": 0.82555,
     "pct_7d": -2.9,
     "pct_30d": 25.5,
-    "sma50": 2217.214687612269,
-    "sma200": 2064.4199391573925,
+    "sma50": 2217.2077600924995,
+    "sma200": 2064.4182072774506,
     "support_30d": 1916.3998901478055,
     "resistance_30d": 2525.267261590238,
     "mark_price": 2391.64229457,
