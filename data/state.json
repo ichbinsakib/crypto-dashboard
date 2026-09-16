@@ -317,9 +317,9 @@
       "stale": false
     },
     "dogecoin": {
-      "label": "\ud83d\udfe1 HOLD / NEUTRAL",
-      "status": "neutral",
-      "score": 1,
+      "label": "\ud83d\udfe2 LEAN ACCUMULATE",
+      "status": "bullish",
+      "score": 2,
       "rows": [
         [
           "Price vs. recent range",
@@ -338,12 +338,12 @@
         ],
         [
           "Recent trend",
-          "Trending down - avoid catching a falling knife",
-          -1
+          "Chopping sideways - no clear trend",
+          0
         ],
         [
           "Stretch from long-term average",
-          "-8.5% vs its long-term average - not stretched either way",
+          "-8.3% vs its long-term average - not stretched either way",
           0
         ],
         [
@@ -352,16 +352,16 @@
           0
         ]
       ],
-      "plain": "No real edge either way right now - fine to just wait and watch.",
+      "plain": "Leans toward a decent spot to slowly add (DCA) - not a strong signal, just a lean.",
       "id": "dogecoin",
       "symbol": "DOGE",
       "name": "Dogecoin",
-      "price": 0.080468,
-      "pct_24h": 0.51367,
-      "pct_7d": -9.4,
+      "price": 0.080607,
+      "pct_24h": 0.46264,
+      "pct_7d": -7.4,
       "support_30d": 0.07021051231066483,
       "resistance_30d": 0.09337940032634065,
-      "as_of": "2026-09-16 20:40:25",
+      "as_of": "2026-09-16 21:05:23",
       "stale": false
     },
     "zcash": {
@@ -1927,7 +1927,7 @@
         ],
         [
           "Stretch from long-term average",
-          "-4.6% vs its long-term average - not stretched either way",
+          "-3.9% vs its long-term average - not stretched either way",
           0
         ],
         [
@@ -1940,12 +1940,12 @@
       "id": "mantle",
       "symbol": "MNT",
       "name": "Mantle",
-      "price": 0.547035,
-      "pct_24h": 1.26585,
-      "pct_7d": -12.7,
+      "price": 0.550646,
+      "pct_24h": 1.72801,
+      "pct_7d": -10.5,
       "support_30d": 0.42660592418086046,
       "resistance_30d": 0.6365218632454678,
-      "as_of": "2026-09-16 20:25:17",
+      "as_of": "2026-09-16 21:05:23",
       "stale": false
     },
     "polkadot": {
@@ -2573,13 +2573,13 @@
       "stale": false
     },
     "bitway": {
-      "label": "\ud83d\udd34 CAUTION - REDUCE NEW BUYS",
-      "status": "bearish",
-      "score": -3,
+      "label": "\ud83d\udfe1 HOLD / NEUTRAL",
+      "status": "neutral",
+      "score": 0,
       "rows": [
         [
           "Price vs. recent range",
-          "Near its 30-day high (~$0.7636) - less room to run",
+          "Near its 30-day high (~$0.7325) - less room to run",
           -1
         ],
         [
@@ -2594,8 +2594,8 @@
         ],
         [
           "Recent trend",
-          "Shooting straight up - classic blow-off top risk, don't chase",
-          -2
+          "Trending up steadily - healthy",
+          1
         ],
         [
           "Stretch from long-term average",
@@ -2608,16 +2608,16 @@
           0
         ]
       ],
-      "plain": "Getting risky - I'd hold off on new buys until this cools down.",
+      "plain": "No real edge either way right now - fine to just wait and watch.",
       "id": "bitway",
       "symbol": "BTW",
       "name": "Bitway",
-      "price": 0.76361,
-      "pct_24h": 8.68778,
-      "pct_7d": 69.6,
+      "price": 0.728442,
+      "pct_24h": 4.07942,
+      "pct_7d": 62.4,
       "support_30d": 0.3884816128039819,
-      "resistance_30d": 0.7635723301466503,
-      "as_of": "2026-09-16 16:30:31",
+      "resistance_30d": 0.7325241073378514,
+      "as_of": "2026-09-16 21:05:23",
       "stale": false
     },
     "world-liberty-financial": {
@@ -2805,11 +2805,11 @@
       "symbol": "M",
       "name": "MemeCore",
       "price": 1.12,
-      "pct_24h": 1.33493,
-      "pct_7d": -5.9,
+      "pct_24h": 0.15006,
+      "pct_7d": -6.2,
       "support_30d": 1.0402044506518406,
       "resistance_30d": 1.2453913363052769,
-      "as_of": "2026-09-16 20:35:20",
+      "as_of": "2026-09-16 21:05:23",
       "stale": false
     },
     "aave": {
@@ -2887,7 +2887,7 @@
         ],
         [
           "Stretch from long-term average",
-          "+24.5% above its long-term average - a bit stretched",
+          "+25.1% above its long-term average - a bit stretched",
           -1
         ],
         [
@@ -2900,12 +2900,12 @@
       "id": "okb",
       "symbol": "OKB",
       "name": "OKB",
-      "price": 110.18,
-      "pct_24h": 0.42473,
-      "pct_7d": -3.3,
+      "price": 110.69,
+      "pct_24h": 0.72381,
+      "pct_7d": -1.9,
       "support_30d": 101.2037388311556,
       "resistance_30d": 115.8310797114581,
-      "as_of": "2026-09-16 19:40:23",
+      "as_of": "2026-09-16 21:05:23",
       "stale": false
     },
     "just": {
@@ -3346,25 +3346,15 @@
   },
   "_pnl_tracker": {
     "open": {
-      "15m:DOT": {
-        "coin": "DOT",
-        "name": "Polkadot",
-        "tf": "15m",
-        "entry": 0.965,
-        "stop": 0.9547,
-        "target1": 0.9753,
-        "target2": 0.9855999999999999,
-        "opened_at": "2026-09-16T21:02:25.733487"
-      },
       "1h:MORPHO": {
         "coin": "MORPHO",
         "name": "Morpho",
         "tf": "1h",
         "entry": 2.043,
-        "stop": 2.018041666666667,
-        "target1": 2.0679583333333333,
-        "target2": 2.0929166666666665,
-        "opened_at": "2026-09-16T21:02:25.733487"
+        "stop": 2.0165833333333336,
+        "target1": 2.0694166666666667,
+        "target2": 2.095833333333333,
+        "opened_at": "2026-09-16T21:06:29.486525"
       },
       "daily:XLM": {
         "coin": "XLM",
@@ -3374,7 +3364,7 @@
         "stop": 0.14022333333333334,
         "target1": 0.16457666666666668,
         "target2": 0.17675333333333335,
-        "opened_at": "2026-09-16T21:02:25.733487"
+        "opened_at": "2026-09-16T21:06:29.486525"
       }
     },
     "resolved": [
@@ -33745,6 +33735,45 @@
         "result": "win",
         "resolved_at": "2026-09-16T21:02:25.733487",
         "exit_price": 0.1836
+      },
+      {
+        "coin": "DOT",
+        "name": "Polkadot",
+        "tf": "15m",
+        "entry": 0.965,
+        "stop": 0.9547,
+        "target1": 0.9753,
+        "target2": 0.9855999999999999,
+        "opened_at": "2026-09-16T21:02:25.733487",
+        "result": "win",
+        "resolved_at": "2026-09-16T21:06:29.486525",
+        "exit_price": 1.014
+      },
+      {
+        "coin": "MORPHO",
+        "name": "Morpho",
+        "tf": "1h",
+        "entry": 2.043,
+        "stop": 2.018041666666667,
+        "target1": 2.0679583333333333,
+        "target2": 2.0929166666666665,
+        "opened_at": "2026-09-16T21:02:25.733487",
+        "result": "win",
+        "resolved_at": "2026-09-16T21:06:29.486525",
+        "exit_price": 2.1
+      },
+      {
+        "coin": "XLM",
+        "name": "Stellar",
+        "tf": "daily",
+        "entry": 0.1524,
+        "stop": 0.14022333333333334,
+        "target1": 0.16457666666666668,
+        "target2": 0.17675333333333335,
+        "opened_at": "2026-09-16T21:02:25.733487",
+        "result": "win",
+        "resolved_at": "2026-09-16T21:06:29.486525",
+        "exit_price": 0.1835
       }
     ]
   },
@@ -33752,14 +33781,14 @@
     "key": "BTC",
     "name": "Bitcoin",
     "emoji": "\u20bf",
-    "price": 76101,
+    "price": 76109,
     "high_24h": 76413,
     "low_24h": 75151,
-    "pct_24h": 0.27606,
-    "pct_7d": -3.1,
-    "pct_30d": 18.0,
-    "sma50": 71898.46270543948,
-    "sma200": 70274.00034163018,
+    "pct_24h": 0.45936,
+    "pct_7d": -2.7,
+    "pct_30d": 18.5,
+    "sma50": 71898.56416252707,
+    "sma200": 70274.02570590208,
     "support_30d": 64686.25782561655,
     "resistance_30d": 81264.70153038795,
     "mark_price": 76162.78831884,
@@ -33774,14 +33803,14 @@
     "key": "ETH",
     "name": "Ethereum",
     "emoji": "\u039e",
-    "price": 2408.18,
+    "price": 2408.66,
     "high_24h": 2424.51,
     "low_24h": 2371.36,
-    "pct_24h": 0.08753,
-    "pct_7d": -3.0,
-    "pct_30d": 26.1,
-    "sma50": 2217.0532578195516,
-    "sma200": 2064.379581709213,
+    "pct_24h": 0.33316,
+    "pct_7d": -2.3,
+    "pct_30d": 26.4,
+    "sma50": 2217.0366678313258,
+    "sma200": 2064.375434212157,
     "support_30d": 1916.3998901478055,
     "resistance_30d": 2525.267261590238,
     "mark_price": 2410.68017829,
