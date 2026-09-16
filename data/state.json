@@ -679,7 +679,7 @@
         ],
         [
           "Stretch from long-term average",
-          "-12.1% vs its long-term average - not stretched either way",
+          "-10.6% vs its long-term average - not stretched either way",
           0
         ],
         [
@@ -692,12 +692,12 @@
       "id": "cardano",
       "symbol": "ADA",
       "name": "Cardano",
-      "price": 0.191123,
-      "pct_24h": -6.12638,
-      "pct_7d": -10.8,
+      "price": 0.194374,
+      "pct_24h": -4.08436,
+      "pct_7d": -11.5,
       "support_30d": 0.1744023593314451,
       "resistance_30d": 0.2291047455940254,
-      "as_of": "2026-09-16 17:50:26",
+      "as_of": "2026-09-16 18:15:22",
       "stale": false
     },
     "stellar": {
@@ -1975,7 +1975,7 @@
         ],
         [
           "Stretch from long-term average",
-          "-10.8% vs its long-term average - not stretched either way",
+          "-9.9% vs its long-term average - not stretched either way",
           0
         ],
         [
@@ -1988,12 +1988,12 @@
       "id": "polkadot",
       "symbol": "DOT",
       "name": "Polkadot",
-      "price": 0.971664,
-      "pct_24h": -1.45312,
-      "pct_7d": -13.8,
+      "price": 0.981798,
+      "pct_24h": -0.01656,
+      "pct_7d": -13.3,
       "support_30d": 0.7510040523927409,
       "resistance_30d": 1.2475304252917225,
-      "as_of": "2026-09-16 17:55:19",
+      "as_of": "2026-09-16 18:15:22",
       "stale": false
     },
     "uniswap": {
@@ -2435,7 +2435,7 @@
       "rows": [
         [
           "Price vs. recent range",
-          "Near its 30-day high (~$2.48) - less room to run",
+          "Near its 30-day high (~$2.54) - less room to run",
           -1
         ],
         [
@@ -2455,7 +2455,7 @@
         ],
         [
           "Stretch from long-term average",
-          "+40.7% above its long-term average - very stretched",
+          "+45.9% above its long-term average - very stretched",
           -2
         ],
         [
@@ -2468,12 +2468,12 @@
       "id": "near",
       "symbol": "NEAR",
       "name": "NEAR Protocol",
-      "price": 2.45,
-      "pct_24h": 1.37697,
-      "pct_7d": -4.8,
+      "price": 2.54,
+      "pct_24h": 5.81369,
+      "pct_7d": -4.9,
       "support_30d": 1.5879597131538,
-      "resistance_30d": 2.4848168147865453,
-      "as_of": "2026-09-16 17:40:25",
+      "resistance_30d": 2.5409368943986377,
+      "as_of": "2026-09-16 18:15:22",
       "stale": false
     },
     "quant-network": {
@@ -3343,7 +3343,6 @@
   },
   "_strong_buy_state": {
     "scanner-15m:ENA": true,
-    "scanner-15m:SUI": true,
     "scanner-daily:XLM": true
   },
   "_pnl_tracker": {
@@ -3353,20 +3352,20 @@
         "name": "Ethena",
         "tf": "15m",
         "entry": 0.1409,
-        "stop": 0.13919666666666666,
-        "target1": 0.14260333333333333,
-        "target2": 0.14430666666666667,
-        "opened_at": "2026-09-16T18:12:24.515989"
+        "stop": 0.13921999999999998,
+        "target1": 0.14258,
+        "target2": 0.14426000000000003,
+        "opened_at": "2026-09-16T18:17:19.314090"
       },
       "15m:SUI": {
         "coin": "SUI",
         "name": "Sui",
         "tf": "15m",
         "entry": 0.678,
-        "stop": 0.6730200000000001,
-        "target1": 0.68298,
-        "target2": 0.68796,
-        "opened_at": "2026-09-16T18:12:24.515989"
+        "stop": 0.6729933333333333,
+        "target1": 0.6830066666666668,
+        "target2": 0.6880133333333335,
+        "opened_at": "2026-09-16T18:17:19.314090"
       },
       "daily:XLM": {
         "coin": "XLM",
@@ -3376,7 +3375,7 @@
         "stop": 0.14038,
         "target1": 0.16442,
         "target2": 0.17644,
-        "opened_at": "2026-09-16T18:12:24.515989"
+        "opened_at": "2026-09-16T18:17:19.314090"
       }
     },
     "resolved": [
@@ -32629,6 +32628,45 @@
         "result": "win",
         "resolved_at": "2026-09-16T18:12:24.515989",
         "exit_price": 0.1779
+      },
+      {
+        "coin": "ENA",
+        "name": "Ethena",
+        "tf": "15m",
+        "entry": 0.1409,
+        "stop": 0.13919666666666666,
+        "target1": 0.14260333333333333,
+        "target2": 0.14430666666666667,
+        "opened_at": "2026-09-16T18:12:24.515989",
+        "result": "win",
+        "resolved_at": "2026-09-16T18:17:19.314090",
+        "exit_price": 0.1456
+      },
+      {
+        "coin": "SUI",
+        "name": "Sui",
+        "tf": "15m",
+        "entry": 0.678,
+        "stop": 0.6730200000000001,
+        "target1": 0.68298,
+        "target2": 0.68796,
+        "opened_at": "2026-09-16T18:12:24.515989",
+        "result": "win",
+        "resolved_at": "2026-09-16T18:17:19.314090",
+        "exit_price": 0.6946
+      },
+      {
+        "coin": "XLM",
+        "name": "Stellar",
+        "tf": "daily",
+        "entry": 0.1524,
+        "stop": 0.14038,
+        "target1": 0.16442,
+        "target2": 0.17644,
+        "opened_at": "2026-09-16T18:12:24.515989",
+        "result": "win",
+        "resolved_at": "2026-09-16T18:17:19.314090",
+        "exit_price": 0.1777
       }
     ]
   },
@@ -32636,14 +32674,14 @@
     "key": "BTC",
     "name": "Bitcoin",
     "emoji": "\u20bf",
-    "price": 76307,
+    "price": 75982,
     "high_24h": 76233,
     "low_24h": 75151,
-    "pct_24h": -0.7027,
+    "pct_24h": -1.10971,
     "pct_7d": -3.8,
     "pct_30d": 18.3,
-    "sma50": 71902.51125589389,
-    "sma200": 70275.01247924379,
+    "sma50": 71896.09591581016,
+    "sma200": 70273.40864422284,
     "support_30d": 64686.25782561655,
     "resistance_30d": 81264.70153038795,
     "mark_price": 75928.5,
@@ -32658,14 +32696,14 @@
     "key": "ETH",
     "name": "Ethereum",
     "emoji": "\u039e",
-    "price": 2416.21,
+    "price": 2408.82,
     "high_24h": 2424.51,
     "low_24h": 2371.36,
-    "pct_24h": -0.75649,
+    "pct_24h": -1.06437,
     "pct_7d": -4.2,
     "pct_30d": 25.4,
-    "sma50": 2217.1963806983185,
-    "sma200": 2064.415362428905,
+    "sma50": 2217.0013668362726,
+    "sma200": 2064.3666089633934,
     "support_30d": 1916.3998901478055,
     "resistance_30d": 2525.267261590238,
     "mark_price": 2399.32,
