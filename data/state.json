@@ -679,7 +679,7 @@
         ],
         [
           "Stretch from long-term average",
-          "-11.7% vs its long-term average - not stretched either way",
+          "-11.6% vs its long-term average - not stretched either way",
           0
         ],
         [
@@ -692,12 +692,12 @@
       "id": "cardano",
       "symbol": "ADA",
       "name": "Cardano",
-      "price": 0.192043,
-      "pct_24h": -5.52817,
-      "pct_7d": -12.6,
+      "price": 0.19211,
+      "pct_24h": -4.70489,
+      "pct_7d": -12.2,
       "support_30d": 0.1744023593314451,
       "resistance_30d": 0.2291047455940254,
-      "as_of": "2026-09-16 14:35:24",
+      "as_of": "2026-09-16 16:49:53",
       "stale": false
     },
     "stellar": {
@@ -823,7 +823,7 @@
         ],
         [
           "Stretch from long-term average",
-          "-12.0% vs its long-term average - not stretched either way",
+          "-11.2% vs its long-term average - not stretched either way",
           0
         ],
         [
@@ -836,12 +836,12 @@
       "id": "hedera-hashgraph",
       "symbol": "HBAR",
       "name": "Hedera",
-      "price": 0.072066,
-      "pct_24h": -7.62044,
+      "price": 0.072752,
+      "pct_24h": -6.17941,
       "pct_7d": -7.9,
       "support_30d": 0.06730523598165915,
       "resistance_30d": 0.08182180696524229,
-      "as_of": "2026-09-16 16:00:37",
+      "as_of": "2026-09-16 16:49:53",
       "stale": false
     },
     "pepe": {
@@ -1495,7 +1495,7 @@
         ],
         [
           "Stretch from long-term average",
-          "-7.5% vs its long-term average - not stretched either way",
+          "-8.2% vs its long-term average - not stretched either way",
           0
         ],
         [
@@ -1508,12 +1508,12 @@
       "id": "ethereum-classic",
       "symbol": "ETC",
       "name": "Ethereum Classic",
-      "price": 7.2,
-      "pct_24h": -2.70825,
-      "pct_7d": -13.1,
+      "price": 7.15,
+      "pct_24h": -3.01381,
+      "pct_7d": -14.0,
       "support_30d": 6.079473341192034,
       "resistance_30d": 8.609781284223262,
-      "as_of": "2026-09-16 12:30:29",
+      "as_of": "2026-09-16 16:49:53",
       "stale": false
     },
     "pump-fun": {
@@ -2147,7 +2147,7 @@
       "rows": [
         [
           "Price vs. recent range",
-          "Near its 30-day low (~$0.0905) - historically a better entry",
+          "Near its 30-day low (~$0.0908) - historically a better entry",
           2
         ],
         [
@@ -2167,7 +2167,7 @@
         ],
         [
           "Stretch from long-term average",
-          "-34.1% below its long-term average - confirmed downtrend",
+          "-33.9% below its long-term average - confirmed downtrend",
           -1
         ],
         [
@@ -2180,12 +2180,12 @@
       "id": "canton-network",
       "symbol": "CC",
       "name": "Canton",
-      "price": 0.090544,
-      "pct_24h": -2.78319,
+      "price": 0.090877,
+      "pct_24h": -2.22902,
       "pct_7d": -13.7,
-      "support_30d": 0.09054352308914064,
+      "support_30d": 0.09077045047943234,
       "resistance_30d": 0.12396615653575341,
-      "as_of": "2026-09-16 16:20:25",
+      "as_of": "2026-09-16 16:49:53",
       "stale": false
     },
     "internet-computer": {
@@ -3223,7 +3223,7 @@
         ],
         [
           "Stretch from long-term average",
-          "-5.0% vs its long-term average - not stretched either way",
+          "-4.6% vs its long-term average - not stretched either way",
           0
         ],
         [
@@ -3236,12 +3236,12 @@
       "id": "kaspa",
       "symbol": "KAS",
       "name": "Kaspa",
-      "price": 0.03190205,
-      "pct_24h": -3.17305,
-      "pct_7d": -10.1,
+      "price": 0.03204271,
+      "pct_24h": -5.25807,
+      "pct_7d": -10.8,
       "support_30d": 0.025275049210175406,
       "resistance_30d": 0.03651282069323304,
-      "as_of": "2026-09-16 14:55:21",
+      "as_of": "2026-09-16 16:49:53",
       "stale": false
     },
     "cosmos": {
@@ -3375,7 +3375,7 @@
         "stop": 0.14045333333333335,
         "target1": 0.16434666666666667,
         "target2": 0.17629333333333333,
-        "opened_at": "2026-09-16T16:47:12.653962"
+        "opened_at": "2026-09-16T16:51:00.044181"
       }
     },
     "resolved": [
@@ -32381,6 +32381,19 @@
         "result": "win",
         "resolved_at": "2026-09-16T16:47:12.653962",
         "exit_price": 0.174
+      },
+      {
+        "coin": "XLM",
+        "name": "Stellar",
+        "tf": "daily",
+        "entry": 0.1524,
+        "stop": 0.14045333333333335,
+        "target1": 0.16434666666666667,
+        "target2": 0.17629333333333333,
+        "opened_at": "2026-09-16T16:47:12.653962",
+        "result": "win",
+        "resolved_at": "2026-09-16T16:51:00.044181",
+        "exit_price": 0.174
       }
     ]
   },
@@ -32388,14 +32401,14 @@
     "key": "BTC",
     "name": "Bitcoin",
     "emoji": "\u20bf",
-    "price": 75672,
+    "price": 75742,
     "high_24h": 77146,
     "low_24h": 75038,
-    "pct_24h": -0.83191,
+    "pct_24h": -0.78956,
     "pct_7d": -4.0,
     "pct_30d": 18.7,
-    "sma50": 71889.31189001816,
-    "sma200": 70271.71263777485,
+    "sma50": 71891.21256002839,
+    "sma200": 70272.18780527741,
     "support_30d": 64686.25782561655,
     "resistance_30d": 81264.70153038795,
     "mark_price": 75928.5,
@@ -32410,14 +32423,14 @@
     "key": "ETH",
     "name": "Ethereum",
     "emoji": "\u039e",
-    "price": 2387.67,
+    "price": 2392.18,
     "high_24h": 2445.14,
     "low_24h": 2361.16,
-    "pct_24h": -1.2645,
+    "pct_24h": -1.13676,
     "pct_7d": -4.2,
     "pct_30d": 25.4,
-    "sma50": 2216.6067922395364,
-    "sma200": 2064.2679653142095,
+    "sma50": 2216.7157946085354,
+    "sma200": 2064.2952159064594,
     "support_30d": 1916.3998901478055,
     "resistance_30d": 2525.267261590238,
     "mark_price": 2399.32,
