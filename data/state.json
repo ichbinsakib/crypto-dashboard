@@ -1447,7 +1447,7 @@
         ],
         [
           "Stretch from long-term average",
-          "-12.6% vs its long-term average - not stretched either way",
+          "-11.0% vs its long-term average - not stretched either way",
           0
         ],
         [
@@ -1460,12 +1460,12 @@
       "id": "crypto-com-chain",
       "symbol": "CRO",
       "name": "Cronos",
-      "price": 0.056591,
-      "pct_24h": 1.80468,
-      "pct_7d": -4.3,
+      "price": 0.057635,
+      "pct_24h": 3.98334,
+      "pct_7d": -0.8,
       "support_30d": 0.04878157068377544,
       "resistance_30d": 0.06091104752771909,
-      "as_of": "2026-09-17 01:20:26",
+      "as_of": "2026-09-17 03:10:22",
       "stale": false
     },
     "ethereum-classic": {
@@ -2167,7 +2167,7 @@
         ],
         [
           "Stretch from long-term average",
-          "-28.6% below its long-term average - confirmed downtrend",
+          "-29.2% below its long-term average - confirmed downtrend",
           -1
         ],
         [
@@ -2180,12 +2180,12 @@
       "id": "canton-network",
       "symbol": "CC",
       "name": "Canton",
-      "price": 0.097952,
-      "pct_24h": 7.79364,
-      "pct_7d": -5.3,
+      "price": 0.097113,
+      "pct_24h": 6.48592,
+      "pct_7d": -5.9,
       "support_30d": 0.09077045047943234,
       "resistance_30d": 0.12396615653575341,
-      "as_of": "2026-09-17 02:05:17",
+      "as_of": "2026-09-17 03:10:22",
       "stale": false
     },
     "internet-computer": {
@@ -2339,7 +2339,7 @@
       "rows": [
         [
           "Price vs. recent range",
-          "Near its 30-day low (~$0.0573) - historically a better entry",
+          "Near its 30-day low (~$0.0570) - historically a better entry",
           2
         ],
         [
@@ -2359,7 +2359,7 @@
         ],
         [
           "Stretch from long-term average",
-          "-13.6% vs its long-term average - not stretched either way",
+          "-14.4% vs its long-term average - not stretched either way",
           0
         ],
         [
@@ -2372,12 +2372,12 @@
       "id": "sky",
       "symbol": "SKY",
       "name": "Sky",
-      "price": 0.057581,
-      "pct_24h": -4.65352,
-      "pct_7d": -5.4,
-      "support_30d": 0.057256438766750246,
+      "price": 0.057003,
+      "pct_24h": -6.10978,
+      "pct_7d": -5.3,
+      "support_30d": 0.057002955715505045,
       "resistance_30d": 0.07314868186988309,
-      "as_of": "2026-09-17 02:10:22",
+      "as_of": "2026-09-17 03:10:22",
       "stale": false
     },
     "shiba-inu": {
@@ -3351,10 +3351,10 @@
         "name": "Morpho",
         "tf": "1h",
         "entry": 2.043,
-        "stop": 2.013541666666667,
-        "target1": 2.0724583333333335,
-        "target2": 2.101916666666667,
-        "opened_at": "2026-09-17T03:07:15.055554"
+        "stop": 2.0134583333333333,
+        "target1": 2.072541666666667,
+        "target2": 2.1020833333333337,
+        "opened_at": "2026-09-17T03:12:19.633139"
       },
       "daily:XLM": {
         "coin": "XLM",
@@ -3364,7 +3364,7 @@
         "stop": 0.14168333333333333,
         "target1": 0.16591666666666666,
         "target2": 0.17803333333333332,
-        "opened_at": "2026-09-17T03:07:15.055554"
+        "opened_at": "2026-09-17T03:12:19.633139"
       }
     },
     "resolved": [
@@ -36036,6 +36036,32 @@
         "result": "win",
         "resolved_at": "2026-09-17T03:07:15.055554",
         "exit_price": 0.1834
+      },
+      {
+        "coin": "MORPHO",
+        "name": "Morpho",
+        "tf": "1h",
+        "entry": 2.043,
+        "stop": 2.013541666666667,
+        "target1": 2.0724583333333335,
+        "target2": 2.101916666666667,
+        "opened_at": "2026-09-17T03:07:15.055554",
+        "result": "win",
+        "resolved_at": "2026-09-17T03:12:19.633139",
+        "exit_price": 2.107
+      },
+      {
+        "coin": "XLM",
+        "name": "Stellar",
+        "tf": "daily",
+        "entry": 0.1538,
+        "stop": 0.14168333333333333,
+        "target1": 0.16591666666666666,
+        "target2": 0.17803333333333332,
+        "opened_at": "2026-09-17T03:07:15.055554",
+        "result": "win",
+        "resolved_at": "2026-09-17T03:12:19.633139",
+        "exit_price": 0.1832
       }
     ]
   },
@@ -36043,14 +36069,14 @@
     "key": "BTC",
     "name": "Bitcoin",
     "emoji": "\u20bf",
-    "price": 76358,
+    "price": 76394,
     "high_24h": 76683,
     "low_24h": 75161,
-    "pct_24h": 0.61054,
+    "pct_24h": 0.77846,
     "pct_7d": -2.2,
     "pct_30d": 19.0,
-    "sma50": 72148.13930548314,
-    "sma200": 70326.88037304027,
+    "sma50": 72149.01252477887,
+    "sma200": 70327.09867786421,
     "support_30d": 69291.0104297816,
     "resistance_30d": 81264.70153038795,
     "mark_price": 76418.87868841,
@@ -36065,14 +36091,14 @@
     "key": "ETH",
     "name": "Ethereum",
     "emoji": "\u039e",
-    "price": 2430.08,
+    "price": 2431.89,
     "high_24h": 2440.69,
     "low_24h": 2371.36,
-    "pct_24h": 1.11586,
+    "pct_24h": 1.31308,
     "pct_7d": -1.5,
     "pct_30d": 27.8,
-    "sma50": 2227.6181246415454,
-    "sma200": 2066.8655284808938,
+    "sma50": 2227.6559199392655,
+    "sma200": 2066.874977305324,
     "support_30d": 2251.7346140069594,
     "resistance_30d": 2525.267261590238,
     "mark_price": 2424.33136434,
