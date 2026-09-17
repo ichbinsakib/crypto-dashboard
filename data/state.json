@@ -1831,7 +1831,7 @@
         ],
         [
           "Stretch from long-term average",
-          "+46.6% above its long-term average - very stretched",
+          "+46.0% above its long-term average - very stretched",
           -2
         ],
         [
@@ -1844,12 +1844,12 @@
       "id": "ethena",
       "symbol": "ENA",
       "name": "Ethena",
-      "price": 0.151031,
-      "pct_24h": 5.31368,
+      "price": 0.150384,
+      "pct_24h": 4.29415,
       "pct_7d": 1.3,
       "support_30d": 0.09330779251035991,
       "resistance_30d": 0.17616469272611565,
-      "as_of": "2026-09-17 11:25:20",
+      "as_of": "2026-09-17 11:35:20",
       "stale": false
     },
     "bitcoin-cash": {
@@ -2119,7 +2119,7 @@
         ],
         [
           "Stretch from long-term average",
-          "+6.2% vs its long-term average - not stretched either way",
+          "+5.9% vs its long-term average - not stretched either way",
           0
         ],
         [
@@ -2132,12 +2132,12 @@
       "id": "ondo-finance",
       "symbol": "ONDO",
       "name": "Ondo",
-      "price": 0.349383,
-      "pct_24h": 6.81727,
-      "pct_7d": -0.9,
+      "price": 0.348458,
+      "pct_24h": 6.35618,
+      "pct_7d": -0.8,
       "support_30d": 0.3283157645282996,
       "resistance_30d": 0.3969475338902824,
-      "as_of": "2026-09-17 10:45:23",
+      "as_of": "2026-09-17 11:35:20",
       "stale": false
     },
     "canton-network": {
@@ -2767,7 +2767,7 @@
     "memecore": {
       "label": "\ud83d\udfe1 HOLD / NEUTRAL",
       "status": "neutral",
-      "score": 0,
+      "score": 1,
       "rows": [
         [
           "Price vs. recent range",
@@ -2786,12 +2786,12 @@
         ],
         [
           "Recent trend",
-          "Trending down - avoid catching a falling knife",
-          -1
+          "Chopping sideways - no clear trend",
+          0
         ],
         [
           "Stretch from long-term average",
-          "-46.2% below its long-term average - confirmed downtrend",
+          "-45.7% below its long-term average - confirmed downtrend",
           -1
         ],
         [
@@ -2804,12 +2804,12 @@
       "id": "memecore",
       "symbol": "M",
       "name": "MemeCore",
-      "price": 1.12,
-      "pct_24h": 2.10736,
-      "pct_7d": -8.8,
+      "price": 1.13,
+      "pct_24h": 2.69755,
+      "pct_7d": -6.7,
       "support_30d": 1.0402044506518406,
       "resistance_30d": 1.2453913363052769,
-      "as_of": "2026-09-17 07:30:32",
+      "as_of": "2026-09-17 11:35:20",
       "stale": false
     },
     "aave": {
@@ -3342,6 +3342,7 @@
     }
   },
   "_strong_buy_state": {
+    "scanner-15m:POL": true,
     "scanner-daily:XLM": true
   },
   "_pnl_tracker": {
@@ -3364,17 +3365,17 @@
         "stop": 0.055850666666666667,
         "target1": 0.05660933333333334,
         "target2": 0.056988666666666674,
-        "opened_at": "2026-09-17T11:32:24.568379"
+        "opened_at": "2026-09-17T11:37:11.506200"
       },
       "1h:BCH": {
         "coin": "BCH",
         "name": "Bitcoin Cash",
         "tf": "1h",
         "entry": 214.0,
-        "stop": 211.87083333333334,
-        "target1": 216.12916666666666,
-        "target2": 218.25833333333333,
-        "opened_at": "2026-09-17T11:32:24.568379"
+        "stop": 211.86666666666667,
+        "target1": 216.13333333333333,
+        "target2": 218.26666666666665,
+        "opened_at": "2026-09-17T11:37:11.506200"
       },
       "daily:XLM": {
         "coin": "XLM",
@@ -3384,7 +3385,7 @@
         "stop": 0.14162,
         "target1": 0.16598,
         "target2": 0.17815999999999999,
-        "opened_at": "2026-09-17T11:32:24.568379"
+        "opened_at": "2026-09-17T11:37:11.506200"
       }
     },
     "resolved": [
@@ -38851,6 +38852,45 @@
         "result": "win",
         "resolved_at": "2026-09-17T11:32:24.568379",
         "exit_price": 0.1813
+      },
+      {
+        "coin": "SKY",
+        "name": "Sky",
+        "tf": "15m",
+        "entry": 0.05623,
+        "stop": 0.055850666666666667,
+        "target1": 0.05660933333333334,
+        "target2": 0.056988666666666674,
+        "opened_at": "2026-09-17T11:32:24.568379",
+        "result": "win",
+        "resolved_at": "2026-09-17T11:37:11.506200",
+        "exit_price": 0.0572
+      },
+      {
+        "coin": "BCH",
+        "name": "Bitcoin Cash",
+        "tf": "1h",
+        "entry": 214.0,
+        "stop": 211.87083333333334,
+        "target1": 216.12916666666666,
+        "target2": 218.25833333333333,
+        "opened_at": "2026-09-17T11:32:24.568379",
+        "result": "win",
+        "resolved_at": "2026-09-17T11:37:11.506200",
+        "exit_price": 223.3
+      },
+      {
+        "coin": "XLM",
+        "name": "Stellar",
+        "tf": "daily",
+        "entry": 0.1538,
+        "stop": 0.14162,
+        "target1": 0.16598,
+        "target2": 0.17815999999999999,
+        "opened_at": "2026-09-17T11:32:24.568379",
+        "result": "win",
+        "resolved_at": "2026-09-17T11:37:11.506200",
+        "exit_price": 0.1811
       }
     ]
   },
@@ -38858,14 +38898,14 @@
     "key": "BTC",
     "name": "Bitcoin",
     "emoji": "\u20bf",
-    "price": 76320,
+    "price": 76249,
     "high_24h": 76683,
     "low_24h": 75161,
-    "pct_24h": 0.52312,
+    "pct_24h": 0.36624,
     "pct_7d": -2.1,
     "pct_30d": 19.0,
-    "sma50": 72147.53123547087,
-    "sma200": 70326.72835553721,
+    "sma50": 72146.25385298932,
+    "sma200": 70326.40900991682,
     "support_30d": 69291.0104297816,
     "resistance_30d": 81264.70153038795,
     "mark_price": 76320.1,
@@ -38880,14 +38920,14 @@
     "key": "ETH",
     "name": "Ethereum",
     "emoji": "\u039e",
-    "price": 2434.67,
+    "price": 2431.54,
     "high_24h": 2451.57,
     "low_24h": 2371.36,
-    "pct_24h": 1.20906,
+    "pct_24h": 0.8964,
     "pct_7d": -1.4,
     "pct_30d": 28.4,
-    "sma50": 2227.7103831938416,
-    "sma200": 2066.888593118968,
+    "sma50": 2227.6473190688444,
+    "sma200": 2066.8728270877186,
     "support_30d": 2251.7346140069594,
     "resistance_30d": 2525.267261590238,
     "mark_price": 2432.88565116,
