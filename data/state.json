@@ -845,9 +845,9 @@
       "stale": false
     },
     "pepe": {
-      "label": "\ud83d\udfe2 LEAN ACCUMULATE",
-      "status": "bullish",
-      "score": 2,
+      "label": "\ud83d\udfe1 HOLD / NEUTRAL",
+      "status": "neutral",
+      "score": 1,
       "rows": [
         [
           "Price vs. recent range",
@@ -861,8 +861,8 @@
         ],
         [
           "Market phase (best guess)",
-          "Basing near the bottom - phase where smart money accumulates",
-          2
+          "Established uptrend - phase where price marks up",
+          1
         ],
         [
           "Recent trend",
@@ -871,7 +871,7 @@
         ],
         [
           "Stretch from long-term average",
-          "+4.9% vs its long-term average - not stretched either way",
+          "+5.8% vs its long-term average - not stretched either way",
           0
         ],
         [
@@ -880,16 +880,16 @@
           0
         ]
       ],
-      "plain": "Leans toward a decent spot to slowly add (DCA) - not a strong signal, just a lean.",
+      "plain": "No real edge either way right now - fine to just wait and watch.",
       "id": "pepe",
       "symbol": "PEPE",
       "name": "Pepe",
-      "price": 3.45e-06,
-      "pct_24h": 2.79401,
-      "pct_7d": -0.3,
+      "price": 3.48e-06,
+      "pct_24h": 3.2444,
+      "pct_7d": -0.5,
       "support_30d": 2.874000180425606e-06,
       "resistance_30d": 4.122123035488615e-06,
-      "as_of": "2026-09-17 06:40:23",
+      "as_of": "2026-09-17 07:10:25",
       "stale": false
     },
     "avalanche-2": {
@@ -1111,7 +1111,7 @@
         ],
         [
           "Stretch from long-term average",
-          "+9.2% vs its long-term average - not stretched either way",
+          "+9.5% vs its long-term average - not stretched either way",
           0
         ],
         [
@@ -1124,12 +1124,12 @@
       "id": "polygon-ecosystem-token",
       "symbol": "POL",
       "name": "POL (ex-MATIC)",
-      "price": 0.095955,
-      "pct_24h": 5.30974,
-      "pct_7d": -1.2,
+      "price": 0.096198,
+      "pct_24h": 5.36816,
+      "pct_7d": -1.5,
       "support_30d": 0.08117354412588569,
       "resistance_30d": 0.12250456198546959,
-      "as_of": "2026-09-17 06:45:21",
+      "as_of": "2026-09-17 07:10:25",
       "stale": false
     },
     "blackrock-usd-institutional-digital-liquidity-fund": {
@@ -2325,11 +2325,11 @@
       "symbol": "GRAM",
       "name": "Gram (prev. Toncoin)",
       "price": 1.32,
-      "pct_24h": 0.51866,
-      "pct_7d": -5.0,
+      "pct_24h": 0.41479,
+      "pct_7d": -4.5,
       "support_30d": 1.3154928840377231,
       "resistance_30d": 1.4926762805297678,
-      "as_of": "2026-09-17 06:40:23",
+      "as_of": "2026-09-17 07:10:25",
       "stale": false
     },
     "sky": {
@@ -3351,10 +3351,10 @@
         "name": "Morpho",
         "tf": "1h",
         "entry": 2.043,
-        "stop": 2.011541666666667,
-        "target1": 2.0744583333333333,
-        "target2": 2.1059166666666664,
-        "opened_at": "2026-09-17T07:07:16.344309"
+        "stop": 2.011166666666667,
+        "target1": 2.0748333333333333,
+        "target2": 2.1066666666666665,
+        "opened_at": "2026-09-17T07:12:20.739392"
       },
       "daily:XLM": {
         "coin": "XLM",
@@ -3364,7 +3364,7 @@
         "stop": 0.14164,
         "target1": 0.16596,
         "target2": 0.17812,
-        "opened_at": "2026-09-17T07:07:16.344309"
+        "opened_at": "2026-09-17T07:12:20.739392"
       }
     },
     "resolved": [
@@ -37362,6 +37362,32 @@
         "result": "win",
         "resolved_at": "2026-09-17T07:07:16.344309",
         "exit_price": 0.1833
+      },
+      {
+        "coin": "MORPHO",
+        "name": "Morpho",
+        "tf": "1h",
+        "entry": 2.043,
+        "stop": 2.011541666666667,
+        "target1": 2.0744583333333333,
+        "target2": 2.1059166666666664,
+        "opened_at": "2026-09-17T07:07:16.344309",
+        "result": "win",
+        "resolved_at": "2026-09-17T07:12:20.739392",
+        "exit_price": 2.156
+      },
+      {
+        "coin": "XLM",
+        "name": "Stellar",
+        "tf": "daily",
+        "entry": 0.1538,
+        "stop": 0.14164,
+        "target1": 0.16596,
+        "target2": 0.17812,
+        "opened_at": "2026-09-17T07:07:16.344309",
+        "result": "win",
+        "resolved_at": "2026-09-17T07:12:20.739392",
+        "exit_price": 0.1834
       }
     ]
   },
@@ -37369,14 +37395,14 @@
     "key": "BTC",
     "name": "Bitcoin",
     "emoji": "\u20bf",
-    "price": 76449,
+    "price": 76591,
     "high_24h": 76683,
     "low_24h": 75161,
-    "pct_24h": 0.59083,
+    "pct_24h": 0.80804,
     "pct_7d": -2.7,
     "pct_30d": 19.1,
-    "sma50": 72150.09012533077,
-    "sma200": 70327.36807800218,
+    "sma50": 72152.5362658228,
+    "sma200": 70327.9796131252,
     "support_30d": 69291.0104297816,
     "resistance_30d": 81264.70153038795,
     "mark_price": 76283.54228261,
@@ -37391,14 +37417,14 @@
     "key": "ETH",
     "name": "Ethereum",
     "emoji": "\u039e",
-    "price": 2440.97,
-    "high_24h": 2442.77,
+    "price": 2450.47,
+    "high_24h": 2444.01,
     "low_24h": 2371.36,
-    "pct_24h": 1.4515,
+    "pct_24h": 1.68912,
     "pct_7d": -1.7,
     "pct_30d": 28.8,
-    "sma50": 2227.8357317847094,
-    "sma200": 2066.919930266685,
+    "sma50": 2228.003386878916,
+    "sma200": 2066.9618440402364,
     "support_30d": 2251.7346140069594,
     "resistance_30d": 2525.267261590238,
     "mark_price": 2430.51611628,
