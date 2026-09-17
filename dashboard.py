@@ -71,6 +71,11 @@ INTRADAY_NEAR_LOW_ATR_FRACTION = 0.4  # "near the low" scoring band, as a fracti
                                         # whether price actually moved. Confirmed in production:
                                         # before this fix, 94% of all resolved calls (98% of
                                         # "daily" ones) closed within 6 minutes of opening.
+ROUND_TRIP_FEE_PCT = 0.2  # assumed buy+sell cost, as % of position size -- Binance's standard
+                            # spot taker fee is 0.1% per side (0.2% round trip) with no BNB
+                            # discount or volume-tier reduction applied. Purely a rough estimate
+                            # for showing what a target is actually worth after trading costs;
+                            # real fees vary by exchange, fee tier, and discount.
 
 PNL_EXPIRY_HOURS = {"15m": 6, "1h": 24, "daily": 24 * 7}  # how long an unresolved call stays
                                                            # open before giving up on it
@@ -460,6 +465,20 @@ def fmt_usd_adaptive(v):
     return f"${v:,.6f}"
 
 
+def fmt_net_fee_html(net_pct, example_notional=100):
+    """Renders a target's profit net of ROUND_TRIP_FEE_PCT, plus a concrete dollar example on
+    a stated notional, so the fee drag on thin short-timeframe targets is visible at a glance
+    instead of something a reader has to calculate by hand."""
+    if net_pct is None:
+        return ""
+    example_amount = net_pct / 100 * example_notional
+    css_class = "pos" if net_pct > 0.02 else ("neg" if net_pct < -0.02 else "watch")
+    pct_sign = "+" if net_pct >= 0 else ""
+    amt_sign = "+" if example_amount >= 0 else "-"
+    return (f'<span class="{css_class}">{pct_sign}{net_pct:.2f}% net '
+            f'({amt_sign}${abs(example_amount):.2f} on ${example_notional})</span>')
+
+
 def fmt_duration_hours(hours):
     """Humanizes a duration given in fractional hours, e.g. 0.75 -> "45m", 26.5 -> "1d 2h"."""
     total_minutes = round(hours * 60)
@@ -735,14 +754,22 @@ def compute_trade_levels(c):
     bo_target2 = bo_entry + 2 * bo_risk
     bo_risk_pct = (bo_risk / bo_entry) * 100 if bo_entry else None
 
+    pb_target1_pct = (pb_target1 - pb_entry_low) / pb_entry_low * 100 if pb_entry_low else None
+    pb_target2_pct = (pb_target2 - pb_entry_low) / pb_entry_low * 100 if pb_entry_low else None
+    bo_target1_pct = (bo_target1 - bo_entry) / bo_entry * 100 if bo_entry else None
+    bo_target2_pct = (bo_target2 - bo_entry) / bo_entry * 100 if bo_entry else None
     return {
         "pullback": {
             "entry_low": pb_entry_low, "entry_high": pb_entry_high, "stop": pb_stop,
             "target1": pb_target1, "target2": pb_target2, "risk_pct": pb_risk_pct,
+            "target1_net_pct": pb_target1_pct - ROUND_TRIP_FEE_PCT if pb_target1_pct is not None else None,
+            "target2_net_pct": pb_target2_pct - ROUND_TRIP_FEE_PCT if pb_target2_pct is not None else None,
         },
         "breakout": {
             "entry": bo_entry, "stop": bo_stop,
             "target1": bo_target1, "target2": bo_target2, "risk_pct": bo_risk_pct,
+            "target1_net_pct": bo_target1_pct - ROUND_TRIP_FEE_PCT if bo_target1_pct is not None else None,
+            "target2_net_pct": bo_target2_pct - ROUND_TRIP_FEE_PCT if bo_target2_pct is not None else None,
         },
     }
 
@@ -1036,11 +1063,15 @@ def compute_intraday_signal(klines, lookback, window_label):
         label, status = "🔴 STRETCHED - AVOID CHASING", "bearish"
         plain = "Extended on this timeframe; chasing here has poor risk/reward."
 
+    target1_pct = (target1 - entry) / entry * 100 if entry else None
+    target2_pct = (target2 - entry) / entry * 100 if entry else None
     return {
         "label": label, "status": status, "score": total, "rows": rows, "plain": plain,
         "price": price, "atr": atr,
         "trade": {"entry": entry, "stop": stop, "target1": target1, "target2": target2,
-                  "risk_pct": (risk / entry * 100) if entry else None},
+                  "risk_pct": (risk / entry * 100) if entry else None,
+                  "target1_net_pct": target1_pct - ROUND_TRIP_FEE_PCT if target1_pct is not None else None,
+                  "target2_net_pct": target2_pct - ROUND_TRIP_FEE_PCT if target2_pct is not None else None},
     }
 
 
@@ -1373,6 +1404,7 @@ def render(coins_data, fng_value, fng_classification, generated_at, any_stale,
         <div class="kv"><span>Stop loss</span><span class="neg">{fmt_usd(pb['stop'], 2)} ({pb['risk_pct']:.1f}% below entry)</span></div>
         <div class="kv"><span>Target 1 (resistance)</span><span class="pos">{fmt_usd(pb['target1'], 2)}</span></div>
         <div class="kv"><span>Target 2 (2R)</span><span class="pos">{fmt_usd(pb['target2'], 2)}</span></div>
+        <div class="kv"><span>After ~{ROUND_TRIP_FEE_PCT}% fees</span><span>{fmt_net_fee_html(pb.get('target1_net_pct'))} / {fmt_net_fee_html(pb.get('target2_net_pct'))}</span></div>
       </div>
       <div class="trade-scenario">
         <div class="trade-scenario-title">Scenario B &mdash; confirmed breakout above resistance</div>
@@ -1380,6 +1412,7 @@ def render(coins_data, fng_value, fng_classification, generated_at, any_stale,
         <div class="kv"><span>Stop loss</span><span class="neg">{fmt_usd(bo['stop'], 2)} ({bo['risk_pct']:.1f}% below entry)</span></div>
         <div class="kv"><span>Target 1 (1R)</span><span class="pos">{fmt_usd(bo['target1'], 2)}</span></div>
         <div class="kv"><span>Target 2 (2R)</span><span class="pos">{fmt_usd(bo['target2'], 2)}</span></div>
+        <div class="kv"><span>After ~{ROUND_TRIP_FEE_PCT}% fees</span><span>{fmt_net_fee_html(bo.get('target1_net_pct'))} / {fmt_net_fee_html(bo.get('target2_net_pct'))}</span></div>
       </div>
     </div>
     <div class="sub" style="margin-top:12px;">
@@ -1494,6 +1527,7 @@ def render(coins_data, fng_value, fng_classification, generated_at, any_stale,
         <div class="kv"><span>Buy</span><span data-role="entry">{fmt_usd_adaptive(t['entry'])}</span></div>
         <div class="kv"><span>Stop</span><span class="neg" data-role="stop">{fmt_usd_adaptive(t['stop'])} ({t['risk_pct']:.1f}% below entry)</span></div>
         <div class="kv"><span>Target</span><span class="pos" data-role="target">{fmt_usd_adaptive(t['target1'])} / {fmt_usd_adaptive(t['target2'])}</span></div>
+        <div class="kv"><span>After ~{ROUND_TRIP_FEE_PCT}% fees<span class="info-tip" tabindex="0" data-tip="Estimated round-trip cost (buy + sell) at Binance's standard 0.1%-per-side spot taker fee, with no BNB discount or volume-tier reduction applied. Real fees vary -- this is here so a target's actual profit after trading costs is visible up front instead of something you have to calculate by hand, especially on tight short-timeframe moves where fees can eat most or all of the gain.">&#9432;</span></span><span data-role="target-net">{fmt_net_fee_html(t.get('target1_net_pct'))} / {fmt_net_fee_html(t.get('target2_net_pct'))}</span></div>
       </div>
       <div class="sub" data-role="live-updated" style="margin-top:8px; opacity:0.7;">&#9679; live &middot; updated on load</div>
       <details class="screener-details">
@@ -1994,10 +2028,28 @@ if ('serviceWorker' in navigator) {{
     else if (tier === 'neutral') {{ label = '🟡 NO CLEAR EDGE'; status = 'neutral'; plain = 'Choppy on this timeframe -- no clean setup right now.'; }}
     else {{ label = '🔴 STRETCHED - AVOID CHASING'; status = 'bearish'; plain = 'Extended on this timeframe; chasing here has poor risk/reward.'; }}
 
+    var target1Pct = entry ? (target1 - entry) / entry * 100 : null;
+    var target2Pct = entry ? (target2 - entry) / entry * 100 : null;
     return {{
       label: label, status: status, score: total, rows: rows, plain: plain, price: price,
-      trade: {{entry: entry, stop: stop, target1: target1, target2: target2, riskPct: entry ? (risk / entry * 100) : null}}
+      trade: {{
+        entry: entry, stop: stop, target1: target1, target2: target2,
+        riskPct: entry ? (risk / entry * 100) : null,
+        target1NetPct: target1Pct !== null ? target1Pct - {ROUND_TRIP_FEE_PCT} : null,
+        target2NetPct: target2Pct !== null ? target2Pct - {ROUND_TRIP_FEE_PCT} : null
+      }}
     }};
+  }}
+
+  function netFeeHtml(netPct, exampleNotional) {{
+    exampleNotional = exampleNotional || 100;
+    if (netPct === null || netPct === undefined) return '';
+    var exampleAmount = netPct / 100 * exampleNotional;
+    var cssClass = netPct > 0.02 ? 'pos' : (netPct < -0.02 ? 'neg' : 'watch');
+    var pctSign = netPct >= 0 ? '+' : '';
+    var amtSign = exampleAmount >= 0 ? '+' : '-';
+    return '<span class="' + cssClass + '">' + pctSign + netPct.toFixed(2) + '% net (' +
+      amtSign + '$' + Math.abs(exampleAmount).toFixed(2) + ' on $' + exampleNotional + ')</span>';
   }}
 
   async function refreshIntradayCard(cfg) {{
@@ -2031,6 +2083,10 @@ if ('serviceWorker' in navigator) {{
       set('entry', fmtUsdAdaptive(sig.trade.entry));
       set('stop', fmtUsdAdaptive(sig.trade.stop) + ' (' + sig.trade.riskPct.toFixed(1) + '% below entry)');
       set('target', fmtUsdAdaptive(sig.trade.target1) + ' / ' + fmtUsdAdaptive(sig.trade.target2));
+      var targetNetEl = el.querySelector('[data-role=target-net]');
+      if (targetNetEl) {{
+        targetNetEl.innerHTML = netFeeHtml(sig.trade.target1NetPct) + ' / ' + netFeeHtml(sig.trade.target2NetPct);
+      }}
       var rowsEl = el.querySelector('[data-role=rows]');
       if (rowsEl) {{
         rowsEl.innerHTML = sig.rows.map(function(row) {{
