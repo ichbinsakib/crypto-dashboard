@@ -885,11 +885,11 @@
       "symbol": "PEPE",
       "name": "Pepe",
       "price": 3.45e-06,
-      "pct_24h": 2.41782,
-      "pct_7d": 0.0,
+      "pct_24h": 2.00707,
+      "pct_7d": -0.3,
       "support_30d": 2.874000180425606e-06,
       "resistance_30d": 4.122123035488615e-06,
-      "as_of": "2026-09-17 05:35:19",
+      "as_of": "2026-09-17 06:20:59",
       "stale": false
     },
     "avalanche-2": {
@@ -1783,7 +1783,7 @@
         ],
         [
           "Stretch from long-term average",
-          "+152.8% above its long-term average - very stretched",
+          "+154.9% above its long-term average - very stretched",
           -2
         ],
         [
@@ -1796,12 +1796,12 @@
       "id": "lighter",
       "symbol": "LIT",
       "name": "Lighter",
-      "price": 4.71,
-      "pct_24h": 15.94398,
-      "pct_7d": 4.9,
+      "price": 4.75,
+      "pct_24h": 12.81661,
+      "pct_7d": 1.7,
       "support_30d": 2.602317623727186,
       "resistance_30d": 4.827528632102638,
-      "as_of": "2026-09-17 01:40:23",
+      "as_of": "2026-09-17 06:20:59",
       "stale": false
     },
     "ethena": {
@@ -2695,7 +2695,7 @@
         ],
         [
           "Stretch from long-term average",
-          "-3.6% vs its long-term average - not stretched either way",
+          "-3.4% vs its long-term average - not stretched either way",
           0
         ],
         [
@@ -2708,12 +2708,12 @@
       "id": "pax-gold",
       "symbol": "PAXG",
       "name": "PAX Gold",
-      "price": 4296.89,
-      "pct_24h": -0.72725,
-      "pct_7d": -2.7,
+      "price": 4304.87,
+      "pct_24h": -0.54203,
+      "pct_7d": -2.4,
       "support_30d": 4273.728849040525,
       "resistance_30d": 4672.307573354755,
-      "as_of": "2026-09-17 04:00:35",
+      "as_of": "2026-09-17 06:20:59",
       "stale": false
     },
     "morpho": {
@@ -3354,7 +3354,7 @@
         "stop": 2.011375,
         "target1": 2.074625,
         "target2": 2.10625,
-        "opened_at": "2026-09-17T06:17:16.423380"
+        "opened_at": "2026-09-17T06:22:39.187186"
       },
       "daily:XLM": {
         "coin": "XLM",
@@ -3364,7 +3364,7 @@
         "stop": 0.14164,
         "target1": 0.16596,
         "target2": 0.17812,
-        "opened_at": "2026-09-17T06:17:16.423380"
+        "opened_at": "2026-09-17T06:22:39.187186"
       }
     },
     "resolved": [
@@ -37102,6 +37102,32 @@
         "result": "win",
         "resolved_at": "2026-09-17T06:17:16.423380",
         "exit_price": 0.182
+      },
+      {
+        "coin": "MORPHO",
+        "name": "Morpho",
+        "tf": "1h",
+        "entry": 2.043,
+        "stop": 2.011375,
+        "target1": 2.074625,
+        "target2": 2.10625,
+        "opened_at": "2026-09-17T06:17:16.423380",
+        "result": "win",
+        "resolved_at": "2026-09-17T06:22:39.187186",
+        "exit_price": 2.137
+      },
+      {
+        "coin": "XLM",
+        "name": "Stellar",
+        "tf": "daily",
+        "entry": 0.1538,
+        "stop": 0.14164,
+        "target1": 0.16596,
+        "target2": 0.17812,
+        "opened_at": "2026-09-17T06:17:16.423380",
+        "result": "win",
+        "resolved_at": "2026-09-17T06:22:39.187186",
+        "exit_price": 0.1821
       }
     ]
   },
@@ -37109,14 +37135,14 @@
     "key": "BTC",
     "name": "Bitcoin",
     "emoji": "\u20bf",
-    "price": 76395,
+    "price": 76350,
     "high_24h": 76683,
     "low_24h": 75161,
-    "pct_24h": 0.59799,
+    "pct_24h": 0.51871,
     "pct_7d": -2.7,
     "pct_30d": 18.9,
-    "sma50": 72148.69507267301,
-    "sma200": 70327.01931483774,
+    "sma50": 72147.97791784693,
+    "sma200": 70326.84002613122,
     "support_30d": 69291.0104297816,
     "resistance_30d": 81264.70153038795,
     "mark_price": 76283.54228261,
@@ -37131,14 +37157,14 @@
     "key": "ETH",
     "name": "Ethereum",
     "emoji": "\u039e",
-    "price": 2439.85,
+    "price": 2437.43,
     "high_24h": 2442.77,
     "low_24h": 2371.36,
-    "pct_24h": 1.54729,
+    "pct_24h": 1.42847,
     "pct_7d": -1.7,
     "pct_30d": 28.5,
-    "sma50": 2227.8136209680333,
-    "sma200": 2066.9144025625155,
+    "sma50": 2227.758983702525,
+    "sma200": 2066.9007432461385,
     "support_30d": 2251.7346140069594,
     "resistance_30d": 2525.267261590238,
     "mark_price": 2430.51611628,
