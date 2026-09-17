@@ -295,7 +295,7 @@
         ],
         [
           "Stretch from long-term average",
-          "+47.6% above its long-term average - very stretched",
+          "+47.5% above its long-term average - very stretched",
           -2
         ],
         [
@@ -308,12 +308,12 @@
       "id": "hyperliquid",
       "symbol": "HYPE",
       "name": "Hyperliquid",
-      "price": 82.53,
-      "pct_24h": 5.6274,
-      "pct_7d": 1.9,
+      "price": 82.42,
+      "pct_24h": 4.77079,
+      "pct_7d": 3.1,
       "support_30d": 69.60371847729914,
       "resistance_30d": 87.951916819731,
-      "as_of": "2026-09-17 17:55:18",
+      "as_of": "2026-09-17 18:00:37",
       "stale": false
     },
     "dogecoin": {
@@ -1303,7 +1303,7 @@
         ],
         [
           "Stretch from long-term average",
-          "-5.7% vs its long-term average - not stretched either way",
+          "-6.3% vs its long-term average - not stretched either way",
           0
         ],
         [
@@ -1316,12 +1316,12 @@
       "id": "htx-dao",
       "symbol": "HTX",
       "name": "HTX DAO",
-      "price": 1.67e-06,
-      "pct_24h": 0.04808,
+      "price": 1.66e-06,
+      "pct_24h": 0.35069,
       "pct_7d": -1.4,
       "support_30d": 1.6023985995039954e-06,
       "resistance_30d": 1.7873095460323824e-06,
-      "as_of": "2026-09-17 17:50:26",
+      "as_of": "2026-09-17 18:00:37",
       "stale": false
     },
     "superstate-short-duration-us-government-securities-fund-ustb": {
@@ -1509,11 +1509,11 @@
       "symbol": "ETC",
       "name": "Ethereum Classic",
       "price": 7.39,
-      "pct_24h": 4.00913,
-      "pct_7d": -3.8,
+      "pct_24h": 3.44782,
+      "pct_7d": -4.0,
       "support_30d": 6.533265334993583,
       "resistance_30d": 8.609781284223262,
-      "as_of": "2026-09-17 17:55:18",
+      "as_of": "2026-09-17 18:00:37",
       "stale": false
     },
     "pump-fun": {
@@ -3350,11 +3350,11 @@
         "coin": "GRAM",
         "name": "Gram (prev. Toncoin)",
         "tf": "1h",
-        "entry": 1.286,
-        "stop": 1.2742083333333334,
-        "target1": 1.2977916666666667,
-        "target2": 1.3095833333333333,
-        "opened_at": "2026-09-17T17:57:13.085065"
+        "entry": 1.287,
+        "stop": 1.2764583333333333,
+        "target1": 1.2975416666666666,
+        "target2": 1.3080833333333333,
+        "opened_at": "2026-09-17T18:02:33.156882"
       },
       "daily:XLM": {
         "coin": "XLM",
@@ -3364,7 +3364,7 @@
         "stop": 0.1416,
         "target1": 0.16599999999999998,
         "target2": 0.17819999999999997,
-        "opened_at": "2026-09-17T17:57:13.085065"
+        "opened_at": "2026-09-17T18:02:33.156882"
       }
     },
     "resolved": [
@@ -41860,6 +41860,32 @@
         "result": "win",
         "resolved_at": "2026-09-17T17:57:13.085065",
         "exit_price": 0.1862
+      },
+      {
+        "coin": "GRAM",
+        "name": "Gram (prev. Toncoin)",
+        "tf": "1h",
+        "entry": 1.286,
+        "stop": 1.2742083333333334,
+        "target1": 1.2977916666666667,
+        "target2": 1.3095833333333333,
+        "opened_at": "2026-09-17T17:57:13.085065",
+        "result": "win",
+        "resolved_at": "2026-09-17T18:02:33.156882",
+        "exit_price": 1.34
+      },
+      {
+        "coin": "XLM",
+        "name": "Stellar",
+        "tf": "daily",
+        "entry": 0.1538,
+        "stop": 0.1416,
+        "target1": 0.16599999999999998,
+        "target2": 0.17819999999999997,
+        "opened_at": "2026-09-17T17:57:13.085065",
+        "result": "win",
+        "resolved_at": "2026-09-17T18:02:33.156882",
+        "exit_price": 0.1862
       }
     ]
   },
@@ -41867,14 +41893,14 @@
     "key": "BTC",
     "name": "Bitcoin",
     "emoji": "\u20bf",
-    "price": 76538,
+    "price": 76612,
     "high_24h": 77024,
     "low_24h": 75161,
-    "pct_24h": 1.39031,
+    "pct_24h": 1.21859,
     "pct_7d": -0.7,
     "pct_30d": 18.2,
-    "sma50": 72151.53127545868,
-    "sma200": 70327.72836553416,
+    "sma50": 72153.15090684516,
+    "sma200": 70328.13327338078,
     "support_30d": 69291.0104297816,
     "resistance_30d": 81264.70153038795,
     "mark_price": 76687.93324638,
@@ -41889,14 +41915,14 @@
     "key": "ETH",
     "name": "Ethereum",
     "emoji": "\u039e",
-    "price": 2459.21,
+    "price": 2461.17,
     "high_24h": 2478.98,
     "low_24h": 2378.61,
-    "pct_24h": 3.32921,
+    "pct_24h": 3.08643,
     "pct_7d": 1.1,
     "pct_30d": 28.7,
-    "sma50": 2228.200733966633,
-    "sma200": 2067.011180812166,
+    "sma50": 2228.2361349775533,
+    "sma200": 2067.020031064896,
     "support_30d": 2251.7346140069594,
     "resistance_30d": 2525.267261590238,
     "mark_price": 2464.4,
