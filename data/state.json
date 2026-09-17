@@ -415,11 +415,11 @@
     "rain": {
       "label": "\ud83d\udfe2 LEAN ACCUMULATE",
       "status": "bullish",
-      "score": 3,
+      "score": 2,
       "rows": [
         [
           "Price vs. recent range",
-          "Near its 30-day low (~$0.0128) - historically a better entry",
+          "Near its 30-day low (~$0.0129) - historically a better entry",
           2
         ],
         [
@@ -439,8 +439,8 @@
         ],
         [
           "Stretch from long-term average",
-          "+9.5% vs its long-term average - not stretched either way",
-          0
+          "+13.2% above its long-term average - a bit stretched",
+          -1
         ],
         [
           "Leverage traders' bias",
@@ -452,12 +452,12 @@
       "id": "rain",
       "symbol": "RAIN",
       "name": "Rain",
-      "price": 0.01282609,
-      "pct_24h": -6.78166,
+      "price": 0.01326308,
+      "pct_24h": -3.58167,
       "pct_7d": -22.0,
-      "support_30d": 0.012839688740320822,
+      "support_30d": 0.01289999627106216,
       "resistance_30d": 0.018158429442510105,
-      "as_of": "2026-09-17 10:02:46",
+      "as_of": "2026-09-17 10:10:22",
       "stale": false
     },
     "chainlink": {
@@ -535,7 +535,7 @@
         ],
         [
           "Stretch from long-term average",
-          "+37.5% above its long-term average - very stretched",
+          "+37.2% above its long-term average - very stretched",
           -2
         ],
         [
@@ -548,12 +548,12 @@
       "id": "whitebit",
       "symbol": "WBT",
       "name": "WhiteBIT Coin",
-      "price": 78.76,
-      "pct_24h": 1.08605,
-      "pct_7d": -2.4,
+      "price": 78.57,
+      "pct_24h": 0.697,
+      "pct_7d": -2.5,
       "support_30d": 59.556263717190774,
       "resistance_30d": 81.2521953230761,
-      "as_of": "2026-09-17 09:30:31",
+      "as_of": "2026-09-17 10:10:22",
       "stale": false
     },
     "leo-token": {
@@ -2119,7 +2119,7 @@
         ],
         [
           "Stretch from long-term average",
-          "+6.3% vs its long-term average - not stretched either way",
+          "+6.5% vs its long-term average - not stretched either way",
           0
         ],
         [
@@ -2132,12 +2132,12 @@
       "id": "ondo-finance",
       "symbol": "ONDO",
       "name": "Ondo",
-      "price": 0.349683,
-      "pct_24h": 6.87844,
+      "price": 0.350457,
+      "pct_24h": 7.25019,
       "pct_7d": -0.9,
       "support_30d": 0.3283157645282996,
       "resistance_30d": 0.3969475338902824,
-      "as_of": "2026-09-17 10:05:20",
+      "as_of": "2026-09-17 10:10:22",
       "stale": false
     },
     "canton-network": {
@@ -3356,17 +3356,17 @@
         "stop": 1.4983666666666666,
         "target1": 1.5116333333333332,
         "target2": 1.5182666666666664,
-        "opened_at": "2026-09-17T10:07:10.177100"
+        "opened_at": "2026-09-17T10:12:12.382365"
       },
       "1h:BCH": {
         "coin": "BCH",
         "name": "Bitcoin Cash",
         "tf": "1h",
         "entry": 214.0,
-        "stop": 211.87916666666666,
-        "target1": 216.12083333333334,
-        "target2": 218.24166666666667,
-        "opened_at": "2026-09-17T10:07:10.177100"
+        "stop": 211.87083333333334,
+        "target1": 216.12916666666666,
+        "target2": 218.25833333333333,
+        "opened_at": "2026-09-17T10:12:12.382365"
       },
       "daily:XLM": {
         "coin": "XLM",
@@ -3376,7 +3376,7 @@
         "stop": 0.14162,
         "target1": 0.16598,
         "target2": 0.17815999999999999,
-        "opened_at": "2026-09-17T10:07:10.177100"
+        "opened_at": "2026-09-17T10:12:12.382365"
       }
     },
     "resolved": [
@@ -38258,6 +38258,45 @@
         "result": "win",
         "resolved_at": "2026-09-17T10:07:10.177100",
         "exit_price": 0.1815
+      },
+      {
+        "coin": "ATOM",
+        "name": "Cosmos Hub",
+        "tf": "15m",
+        "entry": 1.505,
+        "stop": 1.4983666666666666,
+        "target1": 1.5116333333333332,
+        "target2": 1.5182666666666664,
+        "opened_at": "2026-09-17T10:07:10.177100",
+        "result": "win",
+        "resolved_at": "2026-09-17T10:12:12.382365",
+        "exit_price": 1.534
+      },
+      {
+        "coin": "BCH",
+        "name": "Bitcoin Cash",
+        "tf": "1h",
+        "entry": 214.0,
+        "stop": 211.87916666666666,
+        "target1": 216.12083333333334,
+        "target2": 218.24166666666667,
+        "opened_at": "2026-09-17T10:07:10.177100",
+        "result": "win",
+        "resolved_at": "2026-09-17T10:12:12.382365",
+        "exit_price": 224.6
+      },
+      {
+        "coin": "XLM",
+        "name": "Stellar",
+        "tf": "daily",
+        "entry": 0.1538,
+        "stop": 0.14162,
+        "target1": 0.16598,
+        "target2": 0.17815999999999999,
+        "opened_at": "2026-09-17T10:07:10.177100",
+        "result": "win",
+        "resolved_at": "2026-09-17T10:12:12.382365",
+        "exit_price": 0.1815
       }
     ]
   },
@@ -38265,14 +38304,14 @@
     "key": "BTC",
     "name": "Bitcoin",
     "emoji": "\u20bf",
-    "price": 76281,
+    "price": 76355,
     "high_24h": 76683,
     "low_24h": 75161,
-    "pct_24h": 0.45381,
+    "pct_24h": 0.52681,
     "pct_7d": -2.1,
     "pct_30d": 19.0,
-    "sma50": 72146.97214021957,
-    "sma200": 70326.58858172438,
+    "sma50": 72148.07164833591,
+    "sma200": 70326.86345875348,
     "support_30d": 69291.0104297816,
     "resistance_30d": 81264.70153038795,
     "mark_price": 76320.1,
@@ -38287,14 +38326,14 @@
     "key": "ETH",
     "name": "Ethereum",
     "emoji": "\u039e",
-    "price": 2430.73,
+    "price": 2434.76,
     "high_24h": 2451.57,
     "low_24h": 2371.36,
-    "pct_24h": 1.22116,
+    "pct_24h": 1.3618,
     "pct_7d": -1.3,
     "pct_30d": 28.4,
-    "sma50": 2227.662836831631,
-    "sma200": 2066.8767065284155,
+    "sma50": 2227.7023792040904,
+    "sma200": 2066.88659212153,
     "support_30d": 2251.7346140069594,
     "resistance_30d": 2525.267261590238,
     "mark_price": 2432.88565116,
