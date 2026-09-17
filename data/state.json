@@ -1701,11 +1701,11 @@
       "symbol": "BGB",
       "name": "Bitget Token",
       "price": 1.9,
-      "pct_24h": 1.14471,
+      "pct_24h": 0.70369,
       "pct_7d": -2.4,
       "support_30d": 1.7546557510755454,
       "resistance_30d": 2.0284940947674617,
-      "as_of": "2026-09-17 05:10:24",
+      "as_of": "2026-09-17 05:55:18",
       "stale": false
     },
     "sui": {
@@ -2805,11 +2805,11 @@
       "symbol": "M",
       "name": "MemeCore",
       "price": 1.11,
-      "pct_24h": 0.30854,
+      "pct_24h": 0.58924,
       "pct_7d": -9.4,
       "support_30d": 1.0402044506518406,
       "resistance_30d": 1.2453913363052769,
-      "as_of": "2026-09-17 05:45:22",
+      "as_of": "2026-09-17 05:55:18",
       "stale": false
     },
     "aave": {
@@ -2968,7 +2968,7 @@
         ],
         [
           "Crowd mood (Fear & Greed)",
-          "51/100 - crowd mood is neutral",
+          "50/100 - crowd mood is neutral",
           0
         ],
         [
@@ -2983,7 +2983,7 @@
         ],
         [
           "Stretch from long-term average",
-          "-11.2% vs its long-term average - not stretched either way",
+          "-9.9% vs its long-term average - not stretched either way",
           0
         ],
         [
@@ -2996,12 +2996,12 @@
       "id": "algorand",
       "symbol": "ALGO",
       "name": "Algorand",
-      "price": 0.088183,
-      "pct_24h": -0.70274,
-      "pct_7d": -12.8,
-      "support_30d": 0.07793708137631736,
+      "price": 0.089347,
+      "pct_24h": 0.48096,
+      "pct_7d": -10.9,
+      "support_30d": 0.08206211285028245,
       "resistance_30d": 0.10076397875501594,
-      "as_of": "2026-09-16 21:30:31",
+      "as_of": "2026-09-17 05:55:18",
       "stale": false
     },
     "eutbl": {
@@ -3342,19 +3342,30 @@
     }
   },
   "_strong_buy_state": {
+    "scanner-15m:ICP": true,
     "scanner-daily:XLM": true
   },
   "_pnl_tracker": {
     "open": {
+      "15m:ICP": {
+        "coin": "ICP",
+        "name": "Internet Computer",
+        "tf": "15m",
+        "entry": 2.51,
+        "stop": 2.4962999999999997,
+        "target1": 2.5237,
+        "target2": 2.5374,
+        "opened_at": "2026-09-17T05:57:15.273613"
+      },
       "1h:MORPHO": {
         "coin": "MORPHO",
         "name": "Morpho",
         "tf": "1h",
         "entry": 2.043,
-        "stop": 2.0118750000000003,
-        "target1": 2.074125,
-        "target2": 2.10525,
-        "opened_at": "2026-09-17T05:52:17.076401"
+        "stop": 2.0117083333333334,
+        "target1": 2.074291666666667,
+        "target2": 2.1055833333333336,
+        "opened_at": "2026-09-17T05:57:15.273613"
       },
       "daily:XLM": {
         "coin": "XLM",
@@ -3364,7 +3375,7 @@
         "stop": 0.14164,
         "target1": 0.16596,
         "target2": 0.17812,
-        "opened_at": "2026-09-17T05:52:17.076401"
+        "opened_at": "2026-09-17T05:57:15.273613"
       }
     },
     "resolved": [
@@ -36920,6 +36931,32 @@
         "result": "win",
         "resolved_at": "2026-09-17T05:52:17.076401",
         "exit_price": 0.1824
+      },
+      {
+        "coin": "MORPHO",
+        "name": "Morpho",
+        "tf": "1h",
+        "entry": 2.043,
+        "stop": 2.0118750000000003,
+        "target1": 2.074125,
+        "target2": 2.10525,
+        "opened_at": "2026-09-17T05:52:17.076401",
+        "result": "win",
+        "resolved_at": "2026-09-17T05:57:15.273613",
+        "exit_price": 2.136
+      },
+      {
+        "coin": "XLM",
+        "name": "Stellar",
+        "tf": "daily",
+        "entry": 0.1538,
+        "stop": 0.14164,
+        "target1": 0.16596,
+        "target2": 0.17812,
+        "opened_at": "2026-09-17T05:52:17.076401",
+        "result": "win",
+        "resolved_at": "2026-09-17T05:57:15.273613",
+        "exit_price": 0.1822
       }
     ]
   },
@@ -36927,14 +36964,14 @@
     "key": "BTC",
     "name": "Bitcoin",
     "emoji": "\u20bf",
-    "price": 76301,
+    "price": 76348,
     "high_24h": 76683,
     "low_24h": 75161,
-    "pct_24h": 0.52913,
+    "pct_24h": 0.64958,
     "pct_7d": -2.3,
     "pct_30d": 19.3,
-    "sma50": 72147.41131115331,
-    "sma200": 70326.69837445782,
+    "sma50": 72147.93576305824,
+    "sma200": 70326.82948743406,
     "support_30d": 69291.0104297816,
     "resistance_30d": 81264.70153038795,
     "mark_price": 76283.54228261,
@@ -36949,14 +36986,14 @@
     "key": "ETH",
     "name": "Ethereum",
     "emoji": "\u039e",
-    "price": 2437.57,
+    "price": 2438.06,
     "high_24h": 2442.7,
     "low_24h": 2371.36,
-    "pct_24h": 1.36894,
+    "pct_24h": 1.48159,
     "pct_7d": -1.3,
     "pct_30d": 29.0,
-    "sma50": 2227.7688701275133,
-    "sma200": 2066.9032148523856,
+    "sma50": 2227.7903198666772,
+    "sma200": 2066.908577287177,
     "support_30d": 2251.7346140069594,
     "resistance_30d": 2525.267261590238,
     "mark_price": 2430.51611628,
