@@ -1639,7 +1639,7 @@
         ],
         [
           "Stretch from long-term average",
-          "+4.5% vs its long-term average - not stretched either way",
+          "+4.9% vs its long-term average - not stretched either way",
           0
         ],
         [
@@ -1652,12 +1652,12 @@
       "id": "litecoin",
       "symbol": "LTC",
       "name": "Litecoin",
-      "price": 52.66,
-      "pct_24h": 4.02078,
+      "price": 52.82,
+      "pct_24h": 3.86603,
       "pct_7d": 0.6,
       "support_30d": 46.76069840950213,
       "resistance_30d": 55.20228907963863,
-      "as_of": "2026-09-17 11:40:26",
+      "as_of": "2026-09-17 11:55:18",
       "stale": false
     },
     "bitget-token": {
@@ -2805,11 +2805,11 @@
       "symbol": "M",
       "name": "MemeCore",
       "price": 1.13,
-      "pct_24h": 2.69755,
+      "pct_24h": 2.42189,
       "pct_7d": -6.7,
       "support_30d": 1.0402044506518406,
       "resistance_30d": 1.2453913363052769,
-      "as_of": "2026-09-17 11:35:20",
+      "as_of": "2026-09-17 11:55:18",
       "stale": false
     },
     "aave": {
@@ -2983,7 +2983,7 @@
         ],
         [
           "Stretch from long-term average",
-          "-9.3% vs its long-term average - not stretched either way",
+          "-9.1% vs its long-term average - not stretched either way",
           0
         ],
         [
@@ -2996,12 +2996,12 @@
       "id": "algorand",
       "symbol": "ALGO",
       "name": "Algorand",
-      "price": 0.09,
-      "pct_24h": 2.28914,
+      "price": 0.090171,
+      "pct_24h": 2.07466,
       "pct_7d": -7.7,
       "support_30d": 0.08206211285028245,
       "resistance_30d": 0.10076397875501594,
-      "as_of": "2026-09-17 11:05:20",
+      "as_of": "2026-09-17 11:55:18",
       "stale": false
     },
     "eutbl": {
@@ -3351,10 +3351,10 @@
         "name": "POL (ex-MATIC)",
         "tf": "15m",
         "entry": 0.09543,
-        "stop": 0.09510166666666667,
-        "target1": 0.09575833333333333,
-        "target2": 0.09608666666666667,
-        "opened_at": "2026-09-17T11:51:46.854364"
+        "stop": 0.09508833333333333,
+        "target1": 0.09577166666666667,
+        "target2": 0.09611333333333334,
+        "opened_at": "2026-09-17T11:57:10.729419"
       },
       "15m:SKY": {
         "coin": "SKY",
@@ -3364,7 +3364,7 @@
         "stop": 0.055835,
         "target1": 0.056625,
         "target2": 0.05702,
-        "opened_at": "2026-09-17T11:51:46.854364"
+        "opened_at": "2026-09-17T11:57:10.729419"
       },
       "1h:BCH": {
         "coin": "BCH",
@@ -3374,7 +3374,7 @@
         "stop": 211.84583333333333,
         "target1": 216.15416666666667,
         "target2": 218.30833333333334,
-        "opened_at": "2026-09-17T11:51:46.854364"
+        "opened_at": "2026-09-17T11:57:10.729419"
       },
       "daily:XLM": {
         "coin": "XLM",
@@ -3384,7 +3384,7 @@
         "stop": 0.14162,
         "target1": 0.16598,
         "target2": 0.17815999999999999,
-        "opened_at": "2026-09-17T11:51:46.854364"
+        "opened_at": "2026-09-17T11:57:10.729419"
       }
     },
     "resolved": [
@@ -39046,6 +39046,58 @@
         "result": "win",
         "resolved_at": "2026-09-17T11:51:46.854364",
         "exit_price": 0.1813
+      },
+      {
+        "coin": "POL",
+        "name": "POL (ex-MATIC)",
+        "tf": "15m",
+        "entry": 0.09543,
+        "stop": 0.09510166666666667,
+        "target1": 0.09575833333333333,
+        "target2": 0.09608666666666667,
+        "opened_at": "2026-09-17T11:51:46.854364",
+        "result": "win",
+        "resolved_at": "2026-09-17T11:57:10.729419",
+        "exit_price": 0.09639
+      },
+      {
+        "coin": "SKY",
+        "name": "Sky",
+        "tf": "15m",
+        "entry": 0.05623,
+        "stop": 0.055835,
+        "target1": 0.056625,
+        "target2": 0.05702,
+        "opened_at": "2026-09-17T11:51:46.854364",
+        "result": "win",
+        "resolved_at": "2026-09-17T11:57:10.729419",
+        "exit_price": 0.05772
+      },
+      {
+        "coin": "BCH",
+        "name": "Bitcoin Cash",
+        "tf": "1h",
+        "entry": 214.0,
+        "stop": 211.84583333333333,
+        "target1": 216.15416666666667,
+        "target2": 218.30833333333334,
+        "opened_at": "2026-09-17T11:51:46.854364",
+        "result": "win",
+        "resolved_at": "2026-09-17T11:57:10.729419",
+        "exit_price": 223.3
+      },
+      {
+        "coin": "XLM",
+        "name": "Stellar",
+        "tf": "daily",
+        "entry": 0.1538,
+        "stop": 0.14162,
+        "target1": 0.16598,
+        "target2": 0.17815999999999999,
+        "opened_at": "2026-09-17T11:51:46.854364",
+        "result": "win",
+        "resolved_at": "2026-09-17T11:57:10.729419",
+        "exit_price": 0.1814
       }
     ]
   },
@@ -39053,14 +39105,14 @@
     "key": "BTC",
     "name": "Bitcoin",
     "emoji": "\u20bf",
-    "price": 76172,
+    "price": 76176,
     "high_24h": 76683,
     "low_24h": 75161,
-    "pct_24h": 0.00328,
+    "pct_24h": -0.00616,
     "pct_7d": -2.1,
     "pct_30d": 19.0,
-    "sma50": 72144.4154989313,
-    "sma200": 70325.94942140231,
+    "sma50": 72144.17308029634,
+    "sma200": 70325.88881674358,
     "support_30d": 69291.0104297816,
     "resistance_30d": 81264.70153038795,
     "mark_price": 76320.1,
@@ -39075,14 +39127,14 @@
     "key": "ETH",
     "name": "Ethereum",
     "emoji": "\u039e",
-    "price": 2428.67,
+    "price": 2429.71,
     "high_24h": 2451.57,
     "low_24h": 2371.36,
-    "pct_24h": 0.31631,
+    "pct_24h": 0.44829,
     "pct_7d": -1.4,
     "pct_30d": 28.4,
-    "sma50": 2227.590056374622,
-    "sma200": 2066.858511414163,
+    "sma50": 2227.6005920417465,
+    "sma200": 2066.861145330944,
     "support_30d": 2251.7346140069594,
     "resistance_30d": 2525.267261590238,
     "mark_price": 2432.88565116,
