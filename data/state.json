@@ -280,7 +280,7 @@
         ],
         [
           "Crowd mood (Fear & Greed)",
-          "51/100 - crowd mood is neutral",
+          "50/100 - crowd mood is neutral",
           0
         ],
         [
@@ -295,7 +295,7 @@
         ],
         [
           "Stretch from long-term average",
-          "+41.3% above its long-term average - very stretched",
+          "+43.7% above its long-term average - very stretched",
           -2
         ],
         [
@@ -308,12 +308,12 @@
       "id": "hyperliquid",
       "symbol": "HYPE",
       "name": "Hyperliquid",
-      "price": 78.63,
-      "pct_24h": 2.15638,
-      "pct_7d": -7.2,
-      "support_30d": 58.515277414221124,
+      "price": 80.33,
+      "pct_24h": 3.19664,
+      "pct_7d": -3.6,
+      "support_30d": 69.60371847729914,
       "resistance_30d": 87.951916819731,
-      "as_of": "2026-09-16 17:25:19",
+      "as_of": "2026-09-17 09:05:19",
       "stale": false
     },
     "dogecoin": {
@@ -1015,7 +1015,7 @@
         ],
         [
           "Stretch from long-term average",
-          "+5.0% vs its long-term average - not stretched either way",
+          "+5.1% vs its long-term average - not stretched either way",
           0
         ],
         [
@@ -1028,12 +1028,12 @@
       "id": "worldcoin-wld",
       "symbol": "WLD",
       "name": "Worldcoin",
-      "price": 0.375505,
-      "pct_24h": 4.33067,
-      "pct_7d": -9.4,
+      "price": 0.375723,
+      "pct_24h": 3.6419,
+      "pct_7d": -8.5,
       "support_30d": 0.3618733933989612,
       "resistance_30d": 0.4772935995106048,
-      "as_of": "2026-09-17 08:10:23",
+      "as_of": "2026-09-17 09:05:19",
       "stale": false
     },
     "bfusd": {
@@ -1591,7 +1591,7 @@
         ],
         [
           "Stretch from long-term average",
-          "+99.9% above its long-term average - very stretched",
+          "+102.1% above its long-term average - very stretched",
           -2
         ],
         [
@@ -1604,12 +1604,12 @@
       "id": "venice-token",
       "symbol": "VVV",
       "name": "Venice Token",
-      "price": 24.99,
-      "pct_24h": 12.84062,
-      "pct_7d": 1.9,
+      "price": 25.27,
+      "pct_24h": 13.62293,
+      "pct_7d": 4.2,
       "support_30d": 14.388113191204708,
       "resistance_30d": 25.88474946901688,
-      "as_of": "2026-09-17 08:30:33",
+      "as_of": "2026-09-17 09:05:19",
       "stale": false
     },
     "litecoin": {
@@ -3351,10 +3351,10 @@
         "name": "JUST",
         "tf": "15m",
         "entry": 0.11678,
-        "stop": 0.11657966666666666,
-        "target1": 0.11698033333333333,
-        "target2": 0.11718066666666666,
-        "opened_at": "2026-09-17T09:02:35.239175"
+        "stop": 0.11657799999999999,
+        "target1": 0.116982,
+        "target2": 0.11718400000000001,
+        "opened_at": "2026-09-17T09:07:17.206002"
       },
       "daily:XLM": {
         "coin": "XLM",
@@ -3364,7 +3364,7 @@
         "stop": 0.14164,
         "target1": 0.16596,
         "target2": 0.17812,
-        "opened_at": "2026-09-17T09:02:35.239175"
+        "opened_at": "2026-09-17T09:07:17.206002"
       }
     },
     "resolved": [
@@ -37908,6 +37908,32 @@
         "result": "win",
         "resolved_at": "2026-09-17T09:02:35.239175",
         "exit_price": 0.1836
+      },
+      {
+        "coin": "JST",
+        "name": "JUST",
+        "tf": "15m",
+        "entry": 0.11678,
+        "stop": 0.11657966666666666,
+        "target1": 0.11698033333333333,
+        "target2": 0.11718066666666666,
+        "opened_at": "2026-09-17T09:02:35.239175",
+        "result": "win",
+        "resolved_at": "2026-09-17T09:07:17.206002",
+        "exit_price": 0.11699
+      },
+      {
+        "coin": "XLM",
+        "name": "Stellar",
+        "tf": "daily",
+        "entry": 0.1538,
+        "stop": 0.14164,
+        "target1": 0.16596,
+        "target2": 0.17812,
+        "opened_at": "2026-09-17T09:02:35.239175",
+        "result": "win",
+        "resolved_at": "2026-09-17T09:07:17.206002",
+        "exit_price": 0.1833
       }
     ]
   },
@@ -37915,14 +37941,14 @@
     "key": "BTC",
     "name": "Bitcoin",
     "emoji": "\u20bf",
-    "price": 76507,
+    "price": 76560,
     "high_24h": 76683,
     "low_24h": 75161,
-    "pct_24h": 1.12586,
-    "pct_7d": -2.6,
-    "pct_30d": 18.8,
-    "sma50": 72151.09113094931,
-    "sma200": 70327.61832940682,
+    "pct_24h": 0.98995,
+    "pct_7d": -2.0,
+    "pct_30d": 19.3,
+    "sma50": 72152.11151353132,
+    "sma200": 70327.87342505233,
     "support_30d": 69291.0104297816,
     "resistance_30d": 81264.70153038795,
     "mark_price": 76548.5,
@@ -37937,14 +37963,14 @@
     "key": "ETH",
     "name": "Ethereum",
     "emoji": "\u039e",
-    "price": 2443.29,
+    "price": 2443.23,
     "high_24h": 2451.57,
     "low_24h": 2371.36,
-    "pct_24h": 1.76479,
-    "pct_7d": -1.5,
-    "pct_30d": 28.4,
-    "sma50": 2227.884673525295,
-    "sma200": 2066.9321657018313,
+    "pct_24h": 1.63295,
+    "pct_7d": -1.2,
+    "pct_30d": 28.8,
+    "sma50": 2227.9095801493504,
+    "sma200": 2066.9383923578453,
     "support_30d": 2251.7346140069594,
     "resistance_30d": 2525.267261590238,
     "mark_price": 2445.52,
