@@ -2503,7 +2503,7 @@
         ],
         [
           "Stretch from long-term average",
-          "-11.3% vs its long-term average - not stretched either way",
+          "-11.1% vs its long-term average - not stretched either way",
           0
         ],
         [
@@ -2516,12 +2516,12 @@
       "id": "quant-network",
       "symbol": "QNT",
       "name": "Quant",
-      "price": 60.61,
-      "pct_24h": 1.04583,
+      "price": 60.73,
+      "pct_24h": 1.72606,
       "pct_7d": -9.5,
       "support_30d": 58.747927237753004,
       "resistance_30d": 67.13669726469111,
-      "as_of": "2026-09-17 06:55:19",
+      "as_of": "2026-09-17 07:55:18",
       "stale": false
     },
     "tether-gold": {
@@ -2575,12 +2575,12 @@
     "bitway": {
       "label": "\ud83d\udd34 CAUTION - REDUCE NEW BUYS",
       "status": "bearish",
-      "score": -4,
+      "score": -3,
       "rows": [
         [
           "Price vs. recent range",
-          "Near its 30-day high (~$0.7492) - less room to run",
-          -1
+          "Sitting in the middle of its 30-day range",
+          0
         ],
         [
           "Crowd mood (Fear & Greed)",
@@ -2599,7 +2599,7 @@
         ],
         [
           "Stretch from long-term average",
-          "+493.2% above its long-term average - very stretched",
+          "+473.0% above its long-term average - very stretched",
           -2
         ],
         [
@@ -2612,12 +2612,12 @@
       "id": "bitway",
       "symbol": "BTW",
       "name": "Bitway",
-      "price": 0.731243,
-      "pct_24h": 4.14633,
-      "pct_7d": 63.3,
+      "price": 0.70549,
+      "pct_24h": -7.07237,
+      "pct_7d": 57.9,
       "support_30d": 0.3884816128039819,
       "resistance_30d": 0.7491686401380382,
-      "as_of": "2026-09-17 04:05:18",
+      "as_of": "2026-09-17 07:55:18",
       "stale": false
     },
     "world-liberty-financial": {
@@ -2935,7 +2935,7 @@
         ],
         [
           "Stretch from long-term average",
-          "+35.8% above its long-term average - very stretched",
+          "+35.9% above its long-term average - very stretched",
           -2
         ],
         [
@@ -2948,12 +2948,12 @@
       "id": "just",
       "symbol": "JST",
       "name": "JUST",
-      "price": 0.116735,
-      "pct_24h": 0.87861,
+      "price": 0.116785,
+      "pct_24h": 0.99445,
       "pct_7d": 11.0,
       "support_30d": 0.0946830738697126,
       "resistance_30d": 0.11679162455397056,
-      "as_of": "2026-09-17 07:50:24",
+      "as_of": "2026-09-17 07:55:18",
       "stale": false
     },
     "algorand": {
@@ -3354,7 +3354,7 @@
         "stop": 0.11645933333333333,
         "target1": 0.11690066666666668,
         "target2": 0.11712133333333336,
-        "opened_at": "2026-09-17T07:52:17.931887"
+        "opened_at": "2026-09-17T07:57:14.119450"
       },
       "daily:XLM": {
         "coin": "XLM",
@@ -3364,7 +3364,7 @@
         "stop": 0.14164,
         "target1": 0.16596,
         "target2": 0.17812,
-        "opened_at": "2026-09-17T07:52:17.931887"
+        "opened_at": "2026-09-17T07:57:14.119450"
       }
     },
     "resolved": [
@@ -37557,6 +37557,32 @@
         "result": "win",
         "resolved_at": "2026-09-17T07:52:17.931887",
         "exit_price": 0.1828
+      },
+      {
+        "coin": "JST",
+        "name": "JUST",
+        "tf": "15m",
+        "entry": 0.11668,
+        "stop": 0.11645933333333333,
+        "target1": 0.11690066666666668,
+        "target2": 0.11712133333333336,
+        "opened_at": "2026-09-17T07:52:17.931887",
+        "result": "win",
+        "resolved_at": "2026-09-17T07:57:14.119450",
+        "exit_price": 0.11697
+      },
+      {
+        "coin": "XLM",
+        "name": "Stellar",
+        "tf": "daily",
+        "entry": 0.1538,
+        "stop": 0.14164,
+        "target1": 0.16596,
+        "target2": 0.17812,
+        "opened_at": "2026-09-17T07:52:17.931887",
+        "result": "win",
+        "resolved_at": "2026-09-17T07:57:14.119450",
+        "exit_price": 0.1826
       }
     ]
   },
@@ -37564,14 +37590,14 @@
     "key": "BTC",
     "name": "Bitcoin",
     "emoji": "\u20bf",
-    "price": 76454,
+    "price": 76417,
     "high_24h": 76683,
     "low_24h": 75161,
-    "pct_24h": 0.81721,
+    "pct_24h": 0.88108,
     "pct_7d": -2.7,
     "pct_30d": 19.1,
-    "sma50": 72150.1004306152,
-    "sma200": 70327.3706543233,
+    "sma50": 72149.3855163846,
+    "sma200": 70327.19192576564,
     "support_30d": 69291.0104297816,
     "resistance_30d": 81264.70153038795,
     "mark_price": 76476.2,
@@ -37586,14 +37612,14 @@
     "key": "ETH",
     "name": "Ethereum",
     "emoji": "\u039e",
-    "price": 2445.73,
+    "price": 2442.74,
     "high_24h": 2444.01,
     "low_24h": 2371.36,
-    "pct_24h": 1.98309,
+    "pct_24h": 1.95294,
     "pct_7d": -1.7,
     "pct_30d": 28.8,
-    "sma50": 2227.9182548277245,
-    "sma200": 2066.940561027439,
+    "sma50": 2227.8734857892546,
+    "sma200": 2066.9293687678214,
     "support_30d": 2251.7346140069594,
     "resistance_30d": 2525.267261590238,
     "mark_price": 2446.53709302,
