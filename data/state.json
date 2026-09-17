@@ -535,7 +535,7 @@
         ],
         [
           "Stretch from long-term average",
-          "+37.5% above its long-term average - very stretched",
+          "+37.7% above its long-term average - very stretched",
           -2
         ],
         [
@@ -548,12 +548,12 @@
       "id": "whitebit",
       "symbol": "WBT",
       "name": "WhiteBIT Coin",
-      "price": 78.72,
-      "pct_24h": 1.23594,
+      "price": 78.84,
+      "pct_24h": 1.5394,
       "pct_7d": -1.0,
       "support_30d": 59.556263717190774,
       "resistance_30d": 81.2521953230761,
-      "as_of": "2026-09-17 15:25:20",
+      "as_of": "2026-09-17 15:35:21",
       "stale": false
     },
     "leo-token": {
@@ -2407,7 +2407,7 @@
         ],
         [
           "Stretch from long-term average",
-          "-5.4% vs its long-term average - not stretched either way",
+          "-4.1% vs its long-term average - not stretched either way",
           0
         ],
         [
@@ -2420,12 +2420,12 @@
       "id": "shiba-inu",
       "symbol": "SHIB",
       "name": "Shiba Inu",
-      "price": 5.04e-06,
-      "pct_24h": 4.8349,
-      "pct_7d": -1.2,
+      "price": 5.11e-06,
+      "pct_24h": 7.07981,
+      "pct_7d": 0.5,
       "support_30d": 4.735600499545677e-06,
       "resistance_30d": 5.903506876405612e-06,
-      "as_of": "2026-09-17 13:40:24",
+      "as_of": "2026-09-17 15:35:21",
       "stale": false
     },
     "near": {
@@ -2623,12 +2623,12 @@
     "world-liberty-financial": {
       "label": "\ud83d\udfe2 LEAN ACCUMULATE",
       "status": "bullish",
-      "score": 2,
+      "score": 3,
       "rows": [
         [
           "Price vs. recent range",
-          "Sitting in the middle of its 30-day range",
-          0
+          "Near its 30-day low (~$0.0553) - historically a better entry",
+          2
         ],
         [
           "Crowd mood (Fear & Greed)",
@@ -2647,8 +2647,8 @@
         ],
         [
           "Stretch from long-term average",
-          "-13.9% vs its long-term average - not stretched either way",
-          0
+          "-16.7% below its long-term average - confirmed downtrend",
+          -1
         ],
         [
           "Leverage traders' bias",
@@ -2660,12 +2660,12 @@
       "id": "world-liberty-financial",
       "symbol": "WLFI",
       "name": "World Liberty Financial",
-      "price": 0.059003,
-      "pct_24h": 3.66116,
-      "pct_7d": 5.4,
+      "price": 0.057126,
+      "pct_24h": 0.22146,
+      "pct_7d": 2.8,
       "support_30d": 0.05526589948255966,
       "resistance_30d": 0.06254770952093733,
-      "as_of": "2026-09-17 11:40:26",
+      "as_of": "2026-09-17 15:35:21",
       "stale": false
     },
     "pax-gold": {
@@ -3351,10 +3351,10 @@
         "name": "POL (ex-MATIC)",
         "tf": "15m",
         "entry": 0.09543,
-        "stop": 0.094904,
-        "target1": 0.095956,
-        "target2": 0.096482,
-        "opened_at": "2026-09-17T15:32:23.294393"
+        "stop": 0.09489133333333333,
+        "target1": 0.09596866666666667,
+        "target2": 0.09650733333333335,
+        "opened_at": "2026-09-17T15:37:10.901653"
       },
       "1h:GRAM": {
         "coin": "GRAM",
@@ -3364,7 +3364,7 @@
         "stop": 1.2744166666666668,
         "target1": 1.2975833333333333,
         "target2": 1.3091666666666666,
-        "opened_at": "2026-09-17T15:32:23.294393"
+        "opened_at": "2026-09-17T15:37:10.901653"
       },
       "daily:XLM": {
         "coin": "XLM",
@@ -3374,7 +3374,7 @@
         "stop": 0.14162,
         "target1": 0.16598,
         "target2": 0.17815999999999999,
-        "opened_at": "2026-09-17T15:32:23.294393"
+        "opened_at": "2026-09-17T15:37:10.901653"
       }
     },
     "resolved": [
@@ -40778,6 +40778,45 @@
         "result": "win",
         "resolved_at": "2026-09-17T15:32:23.294393",
         "exit_price": 0.1851
+      },
+      {
+        "coin": "POL",
+        "name": "POL (ex-MATIC)",
+        "tf": "15m",
+        "entry": 0.09543,
+        "stop": 0.094904,
+        "target1": 0.095956,
+        "target2": 0.096482,
+        "opened_at": "2026-09-17T15:32:23.294393",
+        "result": "win",
+        "resolved_at": "2026-09-17T15:37:10.901653",
+        "exit_price": 0.09822
+      },
+      {
+        "coin": "GRAM",
+        "name": "Gram (prev. Toncoin)",
+        "tf": "1h",
+        "entry": 1.286,
+        "stop": 1.2744166666666668,
+        "target1": 1.2975833333333333,
+        "target2": 1.3091666666666666,
+        "opened_at": "2026-09-17T15:32:23.294393",
+        "result": "win",
+        "resolved_at": "2026-09-17T15:37:10.901653",
+        "exit_price": 1.343
+      },
+      {
+        "coin": "XLM",
+        "name": "Stellar",
+        "tf": "daily",
+        "entry": 0.1538,
+        "stop": 0.14162,
+        "target1": 0.16598,
+        "target2": 0.17815999999999999,
+        "opened_at": "2026-09-17T15:32:23.294393",
+        "result": "win",
+        "resolved_at": "2026-09-17T15:37:10.901653",
+        "exit_price": 0.1858
       }
     ]
   },
@@ -40785,14 +40824,14 @@
     "key": "BTC",
     "name": "Bitcoin",
     "emoji": "\u20bf",
-    "price": 76330,
+    "price": 76433,
     "high_24h": 77024,
     "low_24h": 75161,
-    "pct_24h": 0.93824,
+    "pct_24h": 1.14872,
     "pct_7d": -0.9,
     "pct_30d": 19.2,
-    "sma50": 72147.95148595455,
-    "sma200": 70326.83341815813,
+    "sma50": 72149.64500696212,
+    "sma200": 70327.25679841003,
     "support_30d": 69291.0104297816,
     "resistance_30d": 81264.70153038795,
     "mark_price": 76687.93324638,
@@ -40807,14 +40846,14 @@
     "key": "ETH",
     "name": "Ethereum",
     "emoji": "\u039e",
-    "price": 2450.56,
+    "price": 2455.45,
     "high_24h": 2478.98,
     "low_24h": 2371.36,
-    "pct_24h": 2.70222,
+    "pct_24h": 2.97383,
     "pct_7d": 1.1,
     "pct_30d": 29.8,
-    "sma50": 2228.0529273238285,
-    "sma200": 2066.9742291514644,
+    "sma50": 2228.1200659328415,
+    "sma200": 2066.9910138037176,
     "support_30d": 2251.7346140069594,
     "resistance_30d": 2525.267261590238,
     "mark_price": 2464.4,
