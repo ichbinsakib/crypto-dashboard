@@ -336,6 +336,49 @@ def send_discord_strong_buy_alert(newly_strong):
         log(f"DISCORD STRONG-BUY ALERT FAIL: {e}")
 
 
+NOTIFICATION_FEED_MAX = 50  # events kept in site/notifications.json -- bounds the file size;
+                             # the Android app's background poller only cares about events
+                             # newer than whatever it last saw, so old ones aging out is fine
+
+
+def build_new_notification_events(newly_strong, newly_resolved):
+    """Turns this cycle's newly-detected strong buys and newly-resolved P&L calls into flat
+    notification events for the Android app's background poller to alert on. Each event gets
+    a stable id so re-running this on the same cycle's data (or the app re-fetching the feed)
+    never produces a duplicate notification."""
+    now_iso = datetime.datetime.now().isoformat()
+    events = []
+    for sb in newly_strong:
+        events.append({
+            "id": f"signal:{sb['dedupe_key']}:{now_iso}",
+            "ts": now_iso,
+            "type": "signal",
+            "title": f"\U0001F7E2 New signal: {sb['symbol']} ({sb['timeframe']})",
+            "body": sb["label"],
+        })
+    for r in newly_resolved:
+        result = r["result"]
+        emoji = {"win": "✅", "loss": "\U0001F6D1", "expired": "⏱"}.get(result, "")
+        events.append({
+            "id": f"result:{r['coin']}:{r['tf']}:{r['opened_at']}",
+            "ts": r["resolved_at"],
+            "type": result,
+            "title": f"{emoji} {r['coin']} ({r['tf']}) {result.upper()}",
+            "body": f"Exit {fmt_usd_adaptive(r.get('exit_price'))} vs. entry {fmt_usd_adaptive(r.get('entry'))}",
+        })
+    return events
+
+
+def update_notification_feed(prev_feed, new_events):
+    feed = list(prev_feed or [])
+    existing_ids = {e["id"] for e in feed}
+    for e in new_events:
+        if e["id"] not in existing_ids:
+            feed.append(e)
+    feed.sort(key=lambda e: e["ts"], reverse=True)
+    return feed[:NOTIFICATION_FEED_MAX]
+
+
 def update_pnl_tracker(prev_pnl, signal_results):
     """Tracks whether the scanner's own bullish calls actually played out, across 15m/1h
     (one unambiguous ATR-based entry/stop/target) and daily (the breakout scenario from
@@ -2371,6 +2414,10 @@ def main():
     log(f"P&L tracker: {len(new_pnl_state.get('open', {}))} open, "
         f"{len(new_pnl_state.get('resolved', []))} resolved on record")
 
+    prev_resolved_keys = {(r["coin"], r["tf"], r["opened_at"]) for r in prev_pnl_state.get("resolved", [])}
+    newly_resolved = [r for r in new_pnl_state.get("resolved", [])
+                       if (r["coin"], r["tf"], r["opened_at"]) not in prev_resolved_keys]
+
     html, spot_signals_by_coin = render(coins_data, fng_value, fng_classification, generated_at, any_stale,
                                          alerts_results, screener_results, intraday_results,
                                          pnl_stats, new_pnl_state)
@@ -2385,9 +2432,17 @@ def main():
         log(f"STRONG BUY NEWLY DETECTED: {[sb['dedupe_key'] for sb in newly_strong]}")
         send_discord_strong_buy_alert(newly_strong)
 
+    new_notification_events = build_new_notification_events(newly_strong, newly_resolved)
+    new_notification_feed = update_notification_feed(state.get("_notification_feed", []), new_notification_events)
+    with open(os.path.join(SITE_DIR, "notifications.json"), "w", encoding="utf-8") as f:
+        json.dump({"generated_at": generated_at, "events": new_notification_feed}, f)
+    if new_notification_events:
+        log(f"NOTIFICATION EVENTS: {[e['id'] for e in new_notification_events]}")
+
     new_state = {"_fng_value": fng_value, "_fng_classification": fng_classification,
                  "_alerts_state": new_alerts_state, "_screener": new_screener_state,
-                 "_strong_buy_state": new_strong_state, "_pnl_tracker": new_pnl_state}
+                 "_strong_buy_state": new_strong_state, "_pnl_tracker": new_pnl_state,
+                 "_notification_feed": new_notification_feed}
     for cd in coins_data:
         new_state[cd["key"]] = {k: v for k, v in cd.items() if k != "stale"}
     save_state(new_state)

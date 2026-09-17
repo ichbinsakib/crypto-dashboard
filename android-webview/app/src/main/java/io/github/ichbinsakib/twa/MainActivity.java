@@ -1,6 +1,8 @@
 package io.github.ichbinsakib.twa;
 
+import android.Manifest;
 import android.app.Activity;
+import android.content.pm.PackageManager;
 import android.graphics.Insets;
 import android.net.Uri;
 import android.os.Build;
@@ -11,6 +13,13 @@ import android.webkit.WebSettings;
 import android.webkit.WebView;
 import android.webkit.WebViewClient;
 import android.content.Intent;
+
+import androidx.core.app.ActivityCompat;
+import androidx.work.ExistingPeriodicWorkPolicy;
+import androidx.work.PeriodicWorkRequest;
+import androidx.work.WorkManager;
+
+import java.util.concurrent.TimeUnit;
 
 public class MainActivity extends Activity {
 
@@ -66,6 +75,34 @@ public class MainActivity extends Activity {
         });
 
         webView.loadUrl(getString(R.string.start_url));
+
+        requestNotificationPermissionIfNeeded();
+        scheduleNotificationChecks();
+    }
+
+    /** Android 13+ (API 33) requires runtime permission before any notification can be shown. */
+    private void requestNotificationPermissionIfNeeded() {
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.TIRAMISU) {
+            if (ActivityCompat.checkSelfPermission(this, Manifest.permission.POST_NOTIFICATIONS)
+                    != PackageManager.PERMISSION_GRANTED) {
+                ActivityCompat.requestPermissions(
+                        this, new String[]{Manifest.permission.POST_NOTIFICATIONS}, 1001);
+            }
+        }
+    }
+
+    /**
+     * Schedules the background signal/win/loss check to run every 15 minutes (WorkManager's
+     * platform-enforced minimum for periodic work -- can't be tightened further) even when the
+     * app isn't open. enqueueUniquePeriodicWork with KEEP means re-opening the app never
+     * creates a duplicate schedule; only the first launch after install actually enqueues it.
+     */
+    private void scheduleNotificationChecks() {
+        PeriodicWorkRequest request = new PeriodicWorkRequest.Builder(
+                NotificationWorker.class, 15, TimeUnit.MINUTES)
+                .build();
+        WorkManager.getInstance(this).enqueueUniquePeriodicWork(
+                "kairo_notification_check", ExistingPeriodicWorkPolicy.KEEP, request);
     }
 
     @Override
