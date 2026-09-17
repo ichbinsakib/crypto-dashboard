@@ -151,7 +151,7 @@
         ],
         [
           "Stretch from long-term average",
-          "+20.4% above its long-term average - a bit stretched",
+          "+20.3% above its long-term average - a bit stretched",
           -1
         ],
         [
@@ -164,12 +164,12 @@
       "id": "solana",
       "symbol": "SOL",
       "name": "Solana",
-      "price": 100.45,
-      "pct_24h": 3.37719,
+      "price": 100.4,
+      "pct_24h": 3.23511,
       "pct_7d": -0.2,
       "support_30d": 85.33310287519124,
       "resistance_30d": 109.17730597799657,
-      "as_of": "2026-09-17 13:15:28",
+      "as_of": "2026-09-17 13:55:20",
       "stale": false
     },
     "tron": {
@@ -991,7 +991,7 @@
     "worldcoin-wld": {
       "label": "\ud83d\udfe2 LEAN ACCUMULATE",
       "status": "bullish",
-      "score": 3,
+      "score": 2,
       "rows": [
         [
           "Price vs. recent range",
@@ -1005,8 +1005,8 @@
         ],
         [
           "Market phase (best guess)",
-          "Basing near the bottom - phase where smart money accumulates",
-          2
+          "Established uptrend - phase where price marks up",
+          1
         ],
         [
           "Recent trend",
@@ -1015,7 +1015,7 @@
         ],
         [
           "Stretch from long-term average",
-          "+4.7% vs its long-term average - not stretched either way",
+          "+5.6% vs its long-term average - not stretched either way",
           0
         ],
         [
@@ -1028,12 +1028,12 @@
       "id": "worldcoin-wld",
       "symbol": "WLD",
       "name": "Worldcoin",
-      "price": 0.37428,
-      "pct_24h": 2.8255,
+      "price": 0.377536,
+      "pct_24h": 3.11185,
       "pct_7d": -8.3,
       "support_30d": 0.3618733933989612,
       "resistance_30d": 0.4772935995106048,
-      "as_of": "2026-09-17 13:15:28",
+      "as_of": "2026-09-17 13:55:20",
       "stale": false
     },
     "bfusd": {
@@ -1763,7 +1763,7 @@
       "rows": [
         [
           "Price vs. recent range",
-          "Near its 30-day high (~$4.99) - less room to run",
+          "Near its 30-day high (~$4.90) - less room to run",
           -1
         ],
         [
@@ -1783,7 +1783,7 @@
         ],
         [
           "Stretch from long-term average",
-          "+168.1% above its long-term average - very stretched",
+          "+163.4% above its long-term average - very stretched",
           -2
         ],
         [
@@ -1796,12 +1796,12 @@
       "id": "lighter",
       "symbol": "LIT",
       "name": "Lighter",
-      "price": 5.0,
-      "pct_24h": 18.34797,
+      "price": 4.91,
+      "pct_24h": 15.39487,
       "pct_7d": 11.2,
       "support_30d": 2.602317623727186,
-      "resistance_30d": 4.989959867100044,
-      "as_of": "2026-09-17 13:15:28",
+      "resistance_30d": 4.8958073093318815,
+      "as_of": "2026-09-17 13:55:20",
       "stale": false
     },
     "ethena": {
@@ -3355,7 +3355,7 @@
         "stop": 0.09494866666666667,
         "target1": 0.09591133333333333,
         "target2": 0.09639266666666667,
-        "opened_at": "2026-09-17T13:52:16.193977"
+        "opened_at": "2026-09-17T13:57:10.480453"
       },
       "1h:GRAM": {
         "coin": "GRAM",
@@ -3365,7 +3365,7 @@
         "stop": 1.274875,
         "target1": 1.297125,
         "target2": 1.3082500000000001,
-        "opened_at": "2026-09-17T13:52:16.193977"
+        "opened_at": "2026-09-17T13:57:10.480453"
       },
       "daily:XLM": {
         "coin": "XLM",
@@ -3375,7 +3375,7 @@
         "stop": 0.14162,
         "target1": 0.16598,
         "target2": 0.17815999999999999,
-        "opened_at": "2026-09-17T13:52:16.193977"
+        "opened_at": "2026-09-17T13:57:10.480453"
       }
     },
     "resolved": [
@@ -39960,6 +39960,45 @@
         "result": "win",
         "resolved_at": "2026-09-17T13:52:16.193977",
         "exit_price": 0.1833
+      },
+      {
+        "coin": "POL",
+        "name": "POL (ex-MATIC)",
+        "tf": "15m",
+        "entry": 0.09543,
+        "stop": 0.09494866666666667,
+        "target1": 0.09591133333333333,
+        "target2": 0.09639266666666667,
+        "opened_at": "2026-09-17T13:52:16.193977",
+        "result": "win",
+        "resolved_at": "2026-09-17T13:57:10.480453",
+        "exit_price": 0.09737
+      },
+      {
+        "coin": "GRAM",
+        "name": "Gram (prev. Toncoin)",
+        "tf": "1h",
+        "entry": 1.286,
+        "stop": 1.274875,
+        "target1": 1.297125,
+        "target2": 1.3082500000000001,
+        "opened_at": "2026-09-17T13:52:16.193977",
+        "result": "win",
+        "resolved_at": "2026-09-17T13:57:10.480453",
+        "exit_price": 1.331
+      },
+      {
+        "coin": "XLM",
+        "name": "Stellar",
+        "tf": "daily",
+        "entry": 0.1538,
+        "stop": 0.14162,
+        "target1": 0.16598,
+        "target2": 0.17815999999999999,
+        "opened_at": "2026-09-17T13:52:16.193977",
+        "result": "win",
+        "resolved_at": "2026-09-17T13:57:10.480453",
+        "exit_price": 0.184
       }
     ]
   },
@@ -39967,14 +40006,14 @@
     "key": "BTC",
     "name": "Bitcoin",
     "emoji": "\u20bf",
-    "price": 76234,
+    "price": 76402,
     "high_24h": 77024,
     "low_24h": 75161,
-    "pct_24h": 0.5537,
+    "pct_24h": 0.93619,
     "pct_7d": -1.4,
     "pct_30d": 19.4,
-    "sma50": 72146.11749041924,
-    "sma200": 70326.3749192743,
+    "sma50": 72149.76067534384,
+    "sma200": 70327.28571550545,
     "support_30d": 69291.0104297816,
     "resistance_30d": 81264.70153038795,
     "mark_price": 76320.1,
@@ -39989,14 +40028,14 @@
     "key": "ETH",
     "name": "Ethereum",
     "emoji": "\u039e",
-    "price": 2444.11,
+    "price": 2451.29,
     "high_24h": 2473.53,
     "low_24h": 2371.36,
-    "pct_24h": 1.88376,
+    "pct_24h": 2.34044,
     "pct_7d": 0.0,
     "pct_30d": 29.4,
-    "sma50": 2227.888629355297,
-    "sma200": 2066.9331546593316,
+    "sma50": 2228.0627799303875,
+    "sma200": 2066.9766923031043,
     "support_30d": 2251.7346140069594,
     "resistance_30d": 2525.267261590238,
     "mark_price": 2432.88565116,
