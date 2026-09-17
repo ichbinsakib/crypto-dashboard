@@ -1735,7 +1735,7 @@
         ],
         [
           "Stretch from long-term average",
-          "-14.4% vs its long-term average - not stretched either way",
+          "-13.2% vs its long-term average - not stretched either way",
           0
         ],
         [
@@ -1748,12 +1748,12 @@
       "id": "sui",
       "symbol": "SUI",
       "name": "Sui",
-      "price": 0.72345,
-      "pct_24h": 4.91238,
-      "pct_7d": -4.7,
+      "price": 0.733076,
+      "pct_24h": 6.79296,
+      "pct_7d": -3.3,
       "support_30d": 0.686491801454995,
       "resistance_30d": 0.8499161763231283,
-      "as_of": "2026-09-17 13:45:23",
+      "as_of": "2026-09-17 14:25:19",
       "stale": false
     },
     "lighter": {
@@ -2237,9 +2237,9 @@
       "stale": false
     },
     "bittensor": {
-      "label": "\ud83d\udfe1 HOLD / NEUTRAL",
-      "status": "neutral",
-      "score": 1,
+      "label": "\ud83d\udfe2 LEAN ACCUMULATE",
+      "status": "bullish",
+      "score": 2,
       "rows": [
         [
           "Price vs. recent range",
@@ -2258,12 +2258,12 @@
         ],
         [
           "Recent trend",
-          "Trending down - avoid catching a falling knife",
-          -1
+          "Chopping sideways - no clear trend",
+          0
         ],
         [
           "Stretch from long-term average",
-          "-5.9% vs its long-term average - not stretched either way",
+          "-4.6% vs its long-term average - not stretched either way",
           0
         ],
         [
@@ -2272,16 +2272,16 @@
           0
         ]
       ],
-      "plain": "No real edge either way right now - fine to just wait and watch.",
+      "plain": "Leans toward a decent spot to slowly add (DCA) - not a strong signal, just a lean.",
       "id": "bittensor",
       "symbol": "TAO",
       "name": "Bittensor",
-      "price": 225.89,
-      "pct_24h": 4.35712,
-      "pct_7d": -9.4,
+      "price": 229.1,
+      "pct_24h": 6.46661,
+      "pct_7d": -7.0,
       "support_30d": 205.51703970205338,
       "resistance_30d": 265.7337487161633,
-      "as_of": "2026-09-17 13:35:23",
+      "as_of": "2026-09-17 14:25:19",
       "stale": false
     },
     "the-open-network": {
@@ -2359,7 +2359,7 @@
         ],
         [
           "Stretch from long-term average",
-          "-10.9% vs its long-term average - not stretched either way",
+          "-10.7% vs its long-term average - not stretched either way",
           0
         ],
         [
@@ -2372,12 +2372,12 @@
       "id": "sky",
       "symbol": "SKY",
       "name": "Sky",
-      "price": 0.059388,
-      "pct_24h": 3.35301,
+      "price": 0.059511,
+      "pct_24h": 4.56552,
       "pct_7d": 2.1,
       "support_30d": 0.057256438766750246,
       "resistance_30d": 0.07314868186988309,
-      "as_of": "2026-09-17 14:00:39",
+      "as_of": "2026-09-17 14:25:19",
       "stale": false
     },
     "shiba-inu": {
@@ -3354,17 +3354,17 @@
         "stop": 0.094905,
         "target1": 0.095955,
         "target2": 0.09648,
-        "opened_at": "2026-09-17T14:22:19.837938"
+        "opened_at": "2026-09-17T14:27:09.903486"
       },
       "1h:GRAM": {
         "coin": "GRAM",
         "name": "Gram (prev. Toncoin)",
         "tf": "1h",
         "entry": 1.286,
-        "stop": 1.2747083333333333,
-        "target1": 1.2972916666666667,
-        "target2": 1.3085833333333334,
-        "opened_at": "2026-09-17T14:22:19.837938"
+        "stop": 1.2746666666666666,
+        "target1": 1.2973333333333334,
+        "target2": 1.3086666666666669,
+        "opened_at": "2026-09-17T14:27:09.903486"
       },
       "daily:XLM": {
         "coin": "XLM",
@@ -3374,7 +3374,7 @@
         "stop": 0.14162,
         "target1": 0.16598,
         "target2": 0.17815999999999999,
-        "opened_at": "2026-09-17T14:22:19.837938"
+        "opened_at": "2026-09-17T14:27:09.903486"
       }
     },
     "resolved": [
@@ -40193,6 +40193,45 @@
         "result": "win",
         "resolved_at": "2026-09-17T14:22:19.837938",
         "exit_price": 0.1857
+      },
+      {
+        "coin": "POL",
+        "name": "POL (ex-MATIC)",
+        "tf": "15m",
+        "entry": 0.09543,
+        "stop": 0.094905,
+        "target1": 0.095955,
+        "target2": 0.09648,
+        "opened_at": "2026-09-17T14:22:19.837938",
+        "result": "win",
+        "resolved_at": "2026-09-17T14:27:09.903486",
+        "exit_price": 0.09844
+      },
+      {
+        "coin": "GRAM",
+        "name": "Gram (prev. Toncoin)",
+        "tf": "1h",
+        "entry": 1.286,
+        "stop": 1.2747083333333333,
+        "target1": 1.2972916666666667,
+        "target2": 1.3085833333333334,
+        "opened_at": "2026-09-17T14:22:19.837938",
+        "result": "win",
+        "resolved_at": "2026-09-17T14:27:09.903486",
+        "exit_price": 1.342
+      },
+      {
+        "coin": "XLM",
+        "name": "Stellar",
+        "tf": "daily",
+        "entry": 0.1538,
+        "stop": 0.14162,
+        "target1": 0.16598,
+        "target2": 0.17815999999999999,
+        "opened_at": "2026-09-17T14:22:19.837938",
+        "result": "win",
+        "resolved_at": "2026-09-17T14:27:09.903486",
+        "exit_price": 0.1863
       }
     ]
   },
@@ -40200,14 +40239,14 @@
     "key": "BTC",
     "name": "Bitcoin",
     "emoji": "\u20bf",
-    "price": 76676,
+    "price": 76795,
     "high_24h": 77024,
     "low_24h": 75161,
-    "pct_24h": 1.52181,
+    "pct_24h": 1.60054,
     "pct_7d": -0.4,
     "pct_30d": 19.3,
-    "sma50": 72154.4922894172,
-    "sma200": 70328.4686190238,
+    "sma50": 72156.47063981395,
+    "sma200": 70328.96320662298,
     "support_30d": 69291.0104297816,
     "resistance_30d": 81264.70153038795,
     "mark_price": 76320.1,
@@ -40222,14 +40261,14 @@
     "key": "ETH",
     "name": "Ethereum",
     "emoji": "\u039e",
-    "price": 2467.56,
+    "price": 2472.81,
     "high_24h": 2473.53,
     "low_24h": 2371.36,
-    "pct_24h": 3.33094,
+    "pct_24h": 3.49048,
     "pct_7d": 1.7,
     "pct_30d": 29.5,
-    "sma50": 2228.3757423848674,
-    "sma200": 2067.0549329167247,
+    "sma50": 2228.454369599688,
+    "sma200": 2067.0745897204297,
     "support_30d": 2251.7346140069594,
     "resistance_30d": 2525.267261590238,
     "mark_price": 2432.88565116,
