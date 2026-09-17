@@ -461,14 +461,14 @@
       "stale": false
     },
     "chainlink": {
-      "label": "\ud83d\udfe2 LEAN ACCUMULATE",
-      "status": "bullish",
-      "score": 2,
+      "label": "\ud83d\udfe1 HOLD / NEUTRAL",
+      "status": "neutral",
+      "score": 0,
       "rows": [
         [
           "Price vs. recent range",
-          "Near its 30-day low (~$10.55) - historically a better entry",
-          2
+          "Sitting in the middle of its 30-day range",
+          0
         ],
         [
           "Crowd mood (Fear & Greed)",
@@ -487,7 +487,7 @@
         ],
         [
           "Stretch from long-term average",
-          "+19.4% above its long-term average - a bit stretched",
+          "+20.0% above its long-term average - a bit stretched",
           -1
         ],
         [
@@ -496,16 +496,16 @@
           0
         ]
       ],
-      "plain": "Leans toward a decent spot to slowly add (DCA) - not a strong signal, just a lean.",
+      "plain": "No real edge either way right now - fine to just wait and watch.",
       "id": "chainlink",
       "symbol": "LINK",
       "name": "Chainlink",
-      "price": 11.06,
-      "pct_24h": 1.55573,
-      "pct_7d": -5.5,
+      "price": 11.11,
+      "pct_24h": 1.905,
+      "pct_7d": -5.4,
       "support_30d": 10.547425632883014,
       "resistance_30d": 13.237155745219605,
-      "as_of": "2026-09-17 00:15:23",
+      "as_of": "2026-09-17 05:45:22",
       "stale": false
     },
     "whitebit": {
@@ -2805,11 +2805,11 @@
       "symbol": "M",
       "name": "MemeCore",
       "price": 1.11,
-      "pct_24h": 0.05612,
+      "pct_24h": 0.30854,
       "pct_7d": -9.4,
       "support_30d": 1.0402044506518406,
       "resistance_30d": 1.2453913363052769,
-      "as_of": "2026-09-17 05:25:21",
+      "as_of": "2026-09-17 05:45:22",
       "stale": false
     },
     "aave": {
@@ -3223,7 +3223,7 @@
         ],
         [
           "Stretch from long-term average",
-          "+0.1% vs its long-term average - not stretched either way",
+          "-0.6% vs its long-term average - not stretched either way",
           0
         ],
         [
@@ -3236,12 +3236,12 @@
       "id": "kaspa",
       "symbol": "KAS",
       "name": "Kaspa",
-      "price": 0.03351144,
-      "pct_24h": 3.32548,
-      "pct_7d": -7.7,
+      "price": 0.03330354,
+      "pct_24h": 2.15846,
+      "pct_7d": -6.6,
       "support_30d": 0.026971668863001497,
       "resistance_30d": 0.03651282069323304,
-      "as_of": "2026-09-17 02:00:37",
+      "as_of": "2026-09-17 05:45:22",
       "stale": false
     },
     "cosmos": {
@@ -3354,7 +3354,7 @@
         "stop": 2.0120833333333334,
         "target1": 2.073916666666667,
         "target2": 2.1048333333333336,
-        "opened_at": "2026-09-17T05:42:19.487964"
+        "opened_at": "2026-09-17T05:47:18.837521"
       },
       "daily:XLM": {
         "coin": "XLM",
@@ -3364,7 +3364,7 @@
         "stop": 0.14164,
         "target1": 0.16596,
         "target2": 0.17812,
-        "opened_at": "2026-09-17T05:42:19.487964"
+        "opened_at": "2026-09-17T05:47:18.837521"
       }
     },
     "resolved": [
@@ -36868,6 +36868,32 @@
         "result": "win",
         "resolved_at": "2026-09-17T05:42:19.487964",
         "exit_price": 0.1824
+      },
+      {
+        "coin": "MORPHO",
+        "name": "Morpho",
+        "tf": "1h",
+        "entry": 2.043,
+        "stop": 2.0120833333333334,
+        "target1": 2.073916666666667,
+        "target2": 2.1048333333333336,
+        "opened_at": "2026-09-17T05:42:19.487964",
+        "result": "win",
+        "resolved_at": "2026-09-17T05:47:18.837521",
+        "exit_price": 2.129
+      },
+      {
+        "coin": "XLM",
+        "name": "Stellar",
+        "tf": "daily",
+        "entry": 0.1538,
+        "stop": 0.14164,
+        "target1": 0.16596,
+        "target2": 0.17812,
+        "opened_at": "2026-09-17T05:42:19.487964",
+        "result": "win",
+        "resolved_at": "2026-09-17T05:47:18.837521",
+        "exit_price": 0.1823
       }
     ]
   },
@@ -36875,14 +36901,14 @@
     "key": "BTC",
     "name": "Bitcoin",
     "emoji": "\u20bf",
-    "price": 76339,
+    "price": 76294,
     "high_24h": 76683,
     "low_24h": 75161,
-    "pct_24h": 0.62197,
+    "pct_24h": 0.50063,
     "pct_7d": -2.3,
     "pct_30d": 19.3,
-    "sma50": 72147.78383172795,
-    "sma200": 70326.79150460148,
+    "sma50": 72146.97362813594,
+    "sma200": 70326.58895370347,
     "support_30d": 69291.0104297816,
     "resistance_30d": 81264.70153038795,
     "mark_price": 76283.54228261,
@@ -36897,14 +36923,14 @@
     "key": "ETH",
     "name": "Ethereum",
     "emoji": "\u039e",
-    "price": 2438.34,
+    "price": 2436.54,
     "high_24h": 2442.7,
     "low_24h": 2371.36,
-    "pct_24h": 1.42093,
+    "pct_24h": 1.31601,
     "pct_7d": -1.3,
     "pct_30d": 29.0,
-    "sma50": 2227.7819688965374,
-    "sma200": 2066.906489544642,
+    "sma50": 2227.7475907140856,
+    "sma200": 2066.8978949990287,
     "support_30d": 2251.7346140069594,
     "resistance_30d": 2525.267261590238,
     "mark_price": 2430.51611628,
