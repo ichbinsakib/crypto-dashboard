@@ -55,7 +55,7 @@
         ],
         [
           "Stretch from long-term average",
-          "+15.7% above its long-term average - a bit stretched",
+          "+15.6% above its long-term average - a bit stretched",
           -1
         ],
         [
@@ -68,12 +68,12 @@
       "id": "binancecoin",
       "symbol": "BNB",
       "name": "BNB",
-      "price": 725.48,
-      "pct_24h": 1.68816,
-      "pct_7d": 0.2,
+      "price": 725.01,
+      "pct_24h": 1.73942,
+      "pct_7d": 0.3,
       "support_30d": 627.053410537708,
       "resistance_30d": 766.4092879330625,
-      "as_of": "2026-09-17 05:05:19",
+      "as_of": "2026-09-17 06:50:23",
       "stale": false
     },
     "ripple": {
@@ -2215,7 +2215,7 @@
         ],
         [
           "Stretch from long-term average",
-          "+4.3% vs its long-term average - not stretched either way",
+          "+4.7% vs its long-term average - not stretched either way",
           0
         ],
         [
@@ -2228,12 +2228,12 @@
       "id": "internet-computer",
       "symbol": "ICP",
       "name": "Internet Computer",
-      "price": 2.56,
-      "pct_24h": 1.62792,
-      "pct_7d": -7.4,
+      "price": 2.57,
+      "pct_24h": 1.46255,
+      "pct_7d": -7.2,
       "support_30d": 2.309615242791064,
       "resistance_30d": 2.9869340549074623,
-      "as_of": "2026-09-17 05:32:35",
+      "as_of": "2026-09-17 06:50:23",
       "stale": false
     },
     "bittensor": {
@@ -2429,13 +2429,13 @@
       "stale": false
     },
     "near": {
-      "label": "\ud83d\udd34 CAUTION - REDUCE NEW BUYS",
+      "label": "\ud83d\udd34 DISTRIBUTION ZONE",
       "status": "bearish",
-      "score": -4,
+      "score": -5,
       "rows": [
         [
           "Price vs. recent range",
-          "Near its 30-day high (~$2.65) - less room to run",
+          "Near its 30-day high (~$2.69) - less room to run",
           -1
         ],
         [
@@ -2450,12 +2450,12 @@
         ],
         [
           "Recent trend",
-          "Trending up steadily - healthy",
-          1
+          "Chopping sideways - no clear trend",
+          0
         ],
         [
           "Stretch from long-term average",
-          "+51.5% above its long-term average - very stretched",
+          "+53.8% above its long-term average - very stretched",
           -2
         ],
         [
@@ -2464,16 +2464,16 @@
           0
         ]
       ],
-      "plain": "Getting risky - I'd hold off on new buys until this cools down.",
+      "plain": "Looks stretched and euphoric - historically the zone where smart money sells, not buys.",
       "id": "near",
       "symbol": "NEAR",
       "name": "NEAR Protocol",
-      "price": 2.65,
-      "pct_24h": 12.50047,
-      "pct_7d": 8.5,
+      "price": 2.69,
+      "pct_24h": 15.03624,
+      "pct_7d": 5.4,
       "support_30d": 1.7303834026337377,
-      "resistance_30d": 2.647455821891642,
-      "as_of": "2026-09-17 04:31:05",
+      "resistance_30d": 2.6944198550067573,
+      "as_of": "2026-09-17 06:50:23",
       "stale": false
     },
     "quant-network": {
@@ -3354,7 +3354,7 @@
         "stop": 2.0112916666666667,
         "target1": 2.0747083333333336,
         "target2": 2.106416666666667,
-        "opened_at": "2026-09-17T06:46:46.457895"
+        "opened_at": "2026-09-17T06:52:17.259832"
       },
       "daily:XLM": {
         "coin": "XLM",
@@ -3364,7 +3364,7 @@
         "stop": 0.14164,
         "target1": 0.16596,
         "target2": 0.17812,
-        "opened_at": "2026-09-17T06:46:46.457895"
+        "opened_at": "2026-09-17T06:52:17.259832"
       }
     },
     "resolved": [
@@ -37258,6 +37258,32 @@
         "result": "win",
         "resolved_at": "2026-09-17T06:46:46.457895",
         "exit_price": 0.1828
+      },
+      {
+        "coin": "MORPHO",
+        "name": "Morpho",
+        "tf": "1h",
+        "entry": 2.043,
+        "stop": 2.0112916666666667,
+        "target1": 2.0747083333333336,
+        "target2": 2.106416666666667,
+        "opened_at": "2026-09-17T06:46:46.457895",
+        "result": "win",
+        "resolved_at": "2026-09-17T06:52:17.259832",
+        "exit_price": 2.147
+      },
+      {
+        "coin": "XLM",
+        "name": "Stellar",
+        "tf": "daily",
+        "entry": 0.1538,
+        "stop": 0.14164,
+        "target1": 0.16596,
+        "target2": 0.17812,
+        "opened_at": "2026-09-17T06:46:46.457895",
+        "result": "win",
+        "resolved_at": "2026-09-17T06:52:17.259832",
+        "exit_price": 0.1828
       }
     ]
   },
@@ -37265,14 +37291,14 @@
     "key": "BTC",
     "name": "Bitcoin",
     "emoji": "\u20bf",
-    "price": 76493,
+    "price": 76515,
     "high_24h": 76683,
     "low_24h": 75161,
-    "pct_24h": 0.82187,
+    "pct_24h": 0.76349,
     "pct_7d": -2.7,
     "pct_30d": 18.9,
-    "sma50": 72150.62526679884,
-    "sma200": 70327.50186336921,
+    "sma50": 72151.36361701755,
+    "sma200": 70327.68645092388,
     "support_30d": 69291.0104297816,
     "resistance_30d": 81264.70153038795,
     "mark_price": 76283.54228261,
@@ -37287,14 +37313,14 @@
     "key": "ETH",
     "name": "Ethereum",
     "emoji": "\u039e",
-    "price": 2442.96,
+    "price": 2443.55,
     "high_24h": 2442.77,
     "low_24h": 2371.36,
-    "pct_24h": 1.91356,
+    "pct_24h": 1.87484,
     "pct_7d": -1.7,
     "pct_30d": 28.5,
-    "sma50": 2227.8639888736034,
-    "sma200": 2066.9269945389083,
+    "sma50": 2227.8890107837346,
+    "sma200": 2066.933250016441,
     "support_30d": 2251.7346140069594,
     "resistance_30d": 2525.267261590238,
     "mark_price": 2430.51611628,
