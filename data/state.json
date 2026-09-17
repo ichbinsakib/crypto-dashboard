@@ -151,7 +151,7 @@
         ],
         [
           "Stretch from long-term average",
-          "+18.7% above its long-term average - a bit stretched",
+          "+18.9% above its long-term average - a bit stretched",
           -1
         ],
         [
@@ -164,12 +164,12 @@
       "id": "solana",
       "symbol": "SOL",
       "name": "Solana",
-      "price": 99.04,
-      "pct_24h": 2.50374,
-      "pct_7d": -1.8,
+      "price": 99.18,
+      "pct_24h": 1.97332,
+      "pct_7d": -1.9,
       "support_30d": 85.33310287519124,
       "resistance_30d": 109.17730597799657,
-      "as_of": "2026-09-17 02:10:22",
+      "as_of": "2026-09-17 04:31:05",
       "stale": false
     },
     "tron": {
@@ -1892,12 +1892,12 @@
       "id": "bitcoin-cash",
       "symbol": "BCH",
       "name": "Bitcoin Cash",
-      "price": 220.04,
-      "pct_24h": 1.42635,
-      "pct_7d": -11.6,
+      "price": 219.96,
+      "pct_24h": -0.12473,
+      "pct_7d": -12.4,
       "support_30d": 213.27695312682718,
       "resistance_30d": 288.10955405353275,
-      "as_of": "2026-09-17 02:15:24",
+      "as_of": "2026-09-17 04:31:05",
       "stale": false
     },
     "mantle": {
@@ -2429,13 +2429,13 @@
       "stale": false
     },
     "near": {
-      "label": "\ud83d\udd34 DISTRIBUTION ZONE",
+      "label": "\ud83d\udd34 CAUTION - REDUCE NEW BUYS",
       "status": "bearish",
-      "score": -5,
+      "score": -4,
       "rows": [
         [
           "Price vs. recent range",
-          "Near its 30-day high (~$2.62) - less room to run",
+          "Near its 30-day high (~$2.65) - less room to run",
           -1
         ],
         [
@@ -2450,12 +2450,12 @@
         ],
         [
           "Recent trend",
-          "Chopping sideways - no clear trend",
-          0
+          "Trending up steadily - healthy",
+          1
         ],
         [
           "Stretch from long-term average",
-          "+48.7% above its long-term average - very stretched",
+          "+51.5% above its long-term average - very stretched",
           -2
         ],
         [
@@ -2464,16 +2464,16 @@
           0
         ]
       ],
-      "plain": "Looks stretched and euphoric - historically the zone where smart money sells, not buys.",
+      "plain": "Getting risky - I'd hold off on new buys until this cools down.",
       "id": "near",
       "symbol": "NEAR",
       "name": "NEAR Protocol",
-      "price": 2.6,
-      "pct_24h": 11.90542,
-      "pct_7d": 6.9,
+      "price": 2.65,
+      "pct_24h": 12.50047,
+      "pct_7d": 8.5,
       "support_30d": 1.7303834026337377,
-      "resistance_30d": 2.616014637728269,
-      "as_of": "2026-09-17 02:20:24",
+      "resistance_30d": 2.647455821891642,
+      "as_of": "2026-09-17 04:31:05",
       "stale": false
     },
     "quant-network": {
@@ -3342,7 +3342,6 @@
     }
   },
   "_strong_buy_state": {
-    "scanner-15m:SKY": true,
     "scanner-daily:XLM": true
   },
   "_pnl_tracker": {
@@ -3365,17 +3364,17 @@
         "stop": 2.012166666666667,
         "target1": 2.0738333333333334,
         "target2": 2.1046666666666667,
-        "opened_at": "2026-09-17T04:27:14.843738"
+        "opened_at": "2026-09-17T04:32:56.680158"
       },
       "daily:XLM": {
         "coin": "XLM",
         "name": "Stellar",
         "tf": "daily",
         "entry": 0.1538,
-        "stop": 0.14164333333333332,
-        "target1": 0.16595666666666667,
-        "target2": 0.17811333333333335,
-        "opened_at": "2026-09-17T04:27:14.843738"
+        "stop": 0.14164,
+        "target1": 0.16596,
+        "target2": 0.17812,
+        "opened_at": "2026-09-17T04:32:56.680158"
       }
     },
     "resolved": [
@@ -36463,6 +36462,32 @@
         "result": "win",
         "resolved_at": "2026-09-17T04:27:14.843738",
         "exit_price": 0.1817
+      },
+      {
+        "coin": "MORPHO",
+        "name": "Morpho",
+        "tf": "1h",
+        "entry": 2.043,
+        "stop": 2.012166666666667,
+        "target1": 2.0738333333333334,
+        "target2": 2.1046666666666667,
+        "opened_at": "2026-09-17T04:27:14.843738",
+        "result": "win",
+        "resolved_at": "2026-09-17T04:32:56.680158",
+        "exit_price": 2.106
+      },
+      {
+        "coin": "XLM",
+        "name": "Stellar",
+        "tf": "daily",
+        "entry": 0.1538,
+        "stop": 0.14164333333333332,
+        "target1": 0.16595666666666667,
+        "target2": 0.17811333333333335,
+        "opened_at": "2026-09-17T04:27:14.843738",
+        "result": "win",
+        "resolved_at": "2026-09-17T04:32:56.680158",
+        "exit_price": 0.1816
       }
     ]
   },
@@ -36470,14 +36495,14 @@
     "key": "BTC",
     "name": "Bitcoin",
     "emoji": "\u20bf",
-    "price": 76162,
+    "price": 76151,
     "high_24h": 76683,
     "low_24h": 75161,
-    "pct_24h": 0.31936,
+    "pct_24h": 0.38729,
     "pct_7d": -2.5,
     "pct_30d": 19.3,
-    "sma50": 72144.41470623523,
-    "sma200": 70325.9492232283,
+    "sma50": 72144.14324244934,
+    "sma200": 70325.88135728183,
     "support_30d": 69291.0104297816,
     "resistance_30d": 81264.70153038795,
     "mark_price": 76283.54228261,
@@ -36492,14 +36517,14 @@
     "key": "ETH",
     "name": "Ethereum",
     "emoji": "\u039e",
-    "price": 2425.68,
+    "price": 2424.64,
     "high_24h": 2440.69,
     "low_24h": 2371.36,
-    "pct_24h": 0.8181,
+    "pct_24h": 0.85425,
     "pct_7d": -1.6,
     "pct_30d": 28.7,
-    "sma50": 2227.534687928294,
-    "sma200": 2066.844669302581,
+    "sma50": 2227.5143619327173,
+    "sma200": 2066.8395878036868,
     "support_30d": 2251.7346140069594,
     "resistance_30d": 2525.267261590238,
     "mark_price": 2430.51611628,
