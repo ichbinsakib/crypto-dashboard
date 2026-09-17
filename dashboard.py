@@ -63,6 +63,14 @@ STRONG_INTRADAY_SCORE = 3  # out of a max of 5 (range position, momentum, direct
                             # LONG" tier (>= 1) that was producing noisy, low-confidence calls.
 INTRADAY_CHOPPY_RANGE_PCT = 0.6  # below this, a coin's whole lookback range is too flat/dead
                                   # to trust ATR-based levels against -- rejected outright
+INTRADAY_NEAR_LOW_ATR_FRACTION = 0.4  # "near the low" scoring band, as a fraction of ATR above
+                                        # recent_low -- must stay well under 1.0 (the full ATR
+                                        # used for target1) or a signal can qualify already
+                                        # sitting at/past its own target, resolving as a near-
+                                        # instant "win" on the very next check regardless of
+                                        # whether price actually moved. Confirmed in production:
+                                        # before this fix, 94% of all resolved calls (98% of
+                                        # "daily" ones) closed within 6 minutes of opening.
 
 PNL_EXPIRY_HOURS = {"15m": 6, "1h": 24, "daily": 24 * 7}  # how long an unresolved call stays
                                                            # open before giving up on it
@@ -944,7 +952,7 @@ def compute_intraday_signal(klines, lookback, window_label):
     rows = []
     total = 0
 
-    if price <= recent_low + atr:
+    if price <= recent_low + INTRADAY_NEAR_LOW_ATR_FRACTION * atr:
         pts, reading = 2, f"Near the low of its {window_label} (~{fmt_usd_adaptive(recent_low)})"
     elif price >= recent_high - atr:
         pts, reading = -1, f"Near the high of its {window_label} (~{fmt_usd_adaptive(recent_high)})"
@@ -1894,7 +1902,7 @@ if ('serviceWorker' in navigator) {{
     var total = 0;
     var pts, reading;
 
-    if (price <= recentLow + atr) {{
+    if (price <= recentLow + {INTRADAY_NEAR_LOW_ATR_FRACTION} * atr) {{
       pts = 2; reading = 'Near the low of its ' + windowLabel + ' (~' + fmtUsdAdaptive(recentLow) + ')';
     }} else if (price >= recentHigh - atr) {{
       pts = -1; reading = 'Near the high of its ' + windowLabel + ' (~' + fmtUsdAdaptive(recentHigh) + ')';
