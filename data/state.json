@@ -967,7 +967,7 @@
         ],
         [
           "Stretch from long-term average",
-          "+11.7% above its long-term average - a bit stretched",
+          "+11.8% above its long-term average - a bit stretched",
           -1
         ],
         [
@@ -980,12 +980,12 @@
       "id": "aster-2",
       "symbol": "ASTER",
       "name": "Aster",
-      "price": 0.739543,
-      "pct_24h": 10.52605,
+      "price": 0.739973,
+      "pct_24h": 10.33354,
       "pct_7d": 1.7,
       "support_30d": 0.6250825996257033,
       "resistance_30d": 0.7868111056215635,
-      "as_of": "2026-09-17 08:10:23",
+      "as_of": "2026-09-17 08:55:20",
       "stale": false
     },
     "worldcoin-wld": {
@@ -2429,13 +2429,13 @@
       "stale": false
     },
     "near": {
-      "label": "\ud83d\udd34 DISTRIBUTION ZONE",
+      "label": "\ud83d\udd34 CAUTION - REDUCE NEW BUYS",
       "status": "bearish",
-      "score": -5,
+      "score": -4,
       "rows": [
         [
           "Price vs. recent range",
-          "Near its 30-day high (~$2.74) - less room to run",
+          "Near its 30-day high (~$2.76) - less room to run",
           -1
         ],
         [
@@ -2450,12 +2450,12 @@
         ],
         [
           "Recent trend",
-          "Chopping sideways - no clear trend",
-          0
+          "Trending up steadily - healthy",
+          1
         ],
         [
           "Stretch from long-term average",
-          "+56.6% above its long-term average - very stretched",
+          "+57.2% above its long-term average - very stretched",
           -2
         ],
         [
@@ -2464,16 +2464,16 @@
           0
         ]
       ],
-      "plain": "Looks stretched and euphoric - historically the zone where smart money sells, not buys.",
+      "plain": "Getting risky - I'd hold off on new buys until this cools down.",
       "id": "near",
       "symbol": "NEAR",
       "name": "NEAR Protocol",
-      "price": 2.74,
-      "pct_24h": 17.0287,
-      "pct_7d": 7.9,
+      "price": 2.75,
+      "pct_24h": 17.43505,
+      "pct_7d": 9.1,
       "support_30d": 1.7303834026337377,
-      "resistance_30d": 2.7393840037027304,
-      "as_of": "2026-09-17 07:35:22",
+      "resistance_30d": 2.7590491271977657,
+      "as_of": "2026-09-17 08:55:20",
       "stale": false
     },
     "quant-network": {
@@ -2839,7 +2839,7 @@
         ],
         [
           "Stretch from long-term average",
-          "+24.2% above its long-term average - a bit stretched",
+          "+26.6% above its long-term average - a bit stretched",
           -1
         ],
         [
@@ -2852,12 +2852,12 @@
       "id": "aave",
       "symbol": "AAVE",
       "name": "Aave",
-      "price": 121.43,
-      "pct_24h": 0.40455,
-      "pct_7d": -2.6,
+      "price": 123.72,
+      "pct_24h": 4.49525,
+      "pct_7d": -1.4,
       "support_30d": 95.27985956325321,
       "resistance_30d": 141.53047916466082,
-      "as_of": "2026-09-17 03:30:29",
+      "as_of": "2026-09-17 08:55:20",
       "stale": false
     },
     "okb": {
@@ -3354,7 +3354,7 @@
         "stop": 0.116576,
         "target1": 0.11698399999999999,
         "target2": 0.11718799999999999,
-        "opened_at": "2026-09-17T08:51:55.709353"
+        "opened_at": "2026-09-17T08:57:17.570831"
       },
       "daily:XLM": {
         "coin": "XLM",
@@ -3364,7 +3364,7 @@
         "stop": 0.14164,
         "target1": 0.16596,
         "target2": 0.17812,
-        "opened_at": "2026-09-17T08:51:55.709353"
+        "opened_at": "2026-09-17T08:57:17.570831"
       }
     },
     "resolved": [
@@ -37856,6 +37856,32 @@
         "result": "win",
         "resolved_at": "2026-09-17T08:51:55.709353",
         "exit_price": 0.1835
+      },
+      {
+        "coin": "JST",
+        "name": "JUST",
+        "tf": "15m",
+        "entry": 0.11678,
+        "stop": 0.116576,
+        "target1": 0.11698399999999999,
+        "target2": 0.11718799999999999,
+        "opened_at": "2026-09-17T08:51:55.709353",
+        "result": "win",
+        "resolved_at": "2026-09-17T08:57:17.570831",
+        "exit_price": 0.11701
+      },
+      {
+        "coin": "XLM",
+        "name": "Stellar",
+        "tf": "daily",
+        "entry": 0.1538,
+        "stop": 0.14164,
+        "target1": 0.16596,
+        "target2": 0.17812,
+        "opened_at": "2026-09-17T08:51:55.709353",
+        "result": "win",
+        "resolved_at": "2026-09-17T08:57:17.570831",
+        "exit_price": 0.1837
       }
     ]
   },
@@ -37863,21 +37889,21 @@
     "key": "BTC",
     "name": "Bitcoin",
     "emoji": "\u20bf",
-    "price": 76416,
+    "price": 76458,
     "high_24h": 76683,
     "low_24h": 75161,
-    "pct_24h": 1.2001,
+    "pct_24h": 1.19399,
     "pct_7d": -2.6,
     "pct_30d": 18.8,
-    "sma50": 72149.29401398466,
-    "sma200": 70327.16905016566,
+    "sma50": 72149.97675134346,
+    "sma200": 70327.33973450535,
     "support_30d": 69291.0104297816,
     "resistance_30d": 81264.70153038795,
-    "mark_price": 76476.2,
-    "index_price": 76512.29978261,
-    "funding_rate": 3.667e-05,
-    "oi_change_pct": 0.8696947792516948,
-    "oi_now": 108508.816,
+    "mark_price": 76548.5,
+    "index_price": 76565.72130435,
+    "funding_rate": 3.619e-05,
+    "oi_change_pct": 0.8771711703380073,
+    "oi_now": 108358.776,
     "fng_value": 50,
     "fng_class": "Neutral"
   },
@@ -37885,21 +37911,21 @@
     "key": "ETH",
     "name": "Ethereum",
     "emoji": "\u039e",
-    "price": 2441.07,
+    "price": 2442.29,
     "high_24h": 2451.57,
     "low_24h": 2371.36,
-    "pct_24h": 2.01088,
+    "pct_24h": 1.91851,
     "pct_7d": -1.5,
     "pct_30d": 28.4,
-    "sma50": 2227.8425816816834,
-    "sma200": 2066.9216427409283,
+    "sma50": 2227.8553307884295,
+    "sma200": 2066.924830017615,
     "support_30d": 2251.7346140069594,
     "resistance_30d": 2525.267261590238,
-    "mark_price": 2446.53709302,
-    "index_price": 2447.88395349,
-    "funding_rate": 2.976e-05,
-    "oi_change_pct": -0.7744947217177177,
-    "oi_now": 2316554.676,
+    "mark_price": 2445.52,
+    "index_price": 2446.44302326,
+    "funding_rate": 3.487e-05,
+    "oi_change_pct": -0.7539805304883404,
+    "oi_now": 2315620.534,
     "fng_value": 50,
     "fng_class": "Neutral"
   }
