@@ -439,7 +439,7 @@
         ],
         [
           "Stretch from long-term average",
-          "+11.3% above its long-term average - a bit stretched",
+          "+10.7% above its long-term average - a bit stretched",
           -1
         ],
         [
@@ -452,12 +452,12 @@
       "id": "rain",
       "symbol": "RAIN",
       "name": "Rain",
-      "price": 0.01303518,
-      "pct_24h": 1.24847,
+      "price": 0.01296054,
+      "pct_24h": 2.01873,
       "pct_7d": -18.7,
       "support_30d": 0.01289999627106216,
       "resistance_30d": 0.018158429442510105,
-      "as_of": "2026-09-17 18:20:27",
+      "as_of": "2026-09-17 19:15:22",
       "stale": false
     },
     "chainlink": {
@@ -845,9 +845,9 @@
       "stale": false
     },
     "pepe": {
-      "label": "\ud83d\udfe1 HOLD / NEUTRAL",
-      "status": "neutral",
-      "score": 1,
+      "label": "\ud83d\udfe2 LEAN ACCUMULATE",
+      "status": "bullish",
+      "score": 2,
       "rows": [
         [
           "Price vs. recent range",
@@ -871,8 +871,8 @@
         ],
         [
           "Stretch from long-term average",
-          "+10.3% above its long-term average - a bit stretched",
-          -1
+          "+9.7% vs its long-term average - not stretched either way",
+          0
         ],
         [
           "Leverage traders' bias",
@@ -880,16 +880,16 @@
           0
         ]
       ],
-      "plain": "No real edge either way right now - fine to just wait and watch.",
+      "plain": "Leans toward a decent spot to slowly add (DCA) - not a strong signal, just a lean.",
       "id": "pepe",
       "symbol": "PEPE",
       "name": "Pepe",
-      "price": 3.63e-06,
-      "pct_24h": 8.48277,
-      "pct_7d": 10.9,
+      "price": 3.61e-06,
+      "pct_24h": 7.39023,
+      "pct_7d": 9.4,
       "support_30d": 2.874000180425606e-06,
       "resistance_30d": 4.122123035488615e-06,
-      "as_of": "2026-09-17 18:26:45",
+      "as_of": "2026-09-17 19:15:22",
       "stale": false
     },
     "avalanche-2": {
@@ -1892,12 +1892,12 @@
       "id": "bitcoin-cash",
       "symbol": "BCH",
       "name": "Bitcoin Cash",
-      "price": 231.96,
-      "pct_24h": 6.26052,
+      "price": 231.94,
+      "pct_24h": 6.47258,
       "pct_7d": 2.3,
       "support_30d": 213.27695312682718,
       "resistance_30d": 288.10955405353275,
-      "as_of": "2026-09-17 19:00:59",
+      "as_of": "2026-09-17 19:15:22",
       "stale": false
     },
     "mantle": {
@@ -3341,9 +3341,7 @@
       "stale": false
     }
   },
-  "_strong_buy_state": {
-    "scanner-15m:JST": true
-  },
+  "_strong_buy_state": {},
   "_pnl_tracker": {
     "open": {
       "15m:JST": {
@@ -3363,14 +3361,14 @@
     "key": "BTC",
     "name": "Bitcoin",
     "emoji": "\u20bf",
-    "price": 76555,
+    "price": 76513,
     "high_24h": 77024,
     "low_24h": 75602,
-    "pct_24h": 0.86275,
+    "pct_24h": 0.90217,
     "pct_7d": -1.0,
     "pct_30d": 18.4,
-    "sma50": 72151.88559347785,
-    "sma200": 70327.81694503895,
+    "sma50": 72151.24074984646,
+    "sma200": 70327.6557341311,
     "support_30d": 69291.0104297816,
     "resistance_30d": 81264.70153038795,
     "mark_price": 76687.93324638,
@@ -3385,14 +3383,14 @@
     "key": "ETH",
     "name": "Ethereum",
     "emoji": "\u039e",
-    "price": 2452.64,
+    "price": 2450.3,
     "high_24h": 2478.98,
     "low_24h": 2388.47,
-    "pct_24h": 1.89241,
+    "pct_24h": 1.95578,
     "pct_7d": -0.6,
     "pct_30d": 28.3,
-    "sma50": 2228.062892684556,
-    "sma200": 2066.9767204916466,
+    "sma50": 2228.022687298065,
+    "sma200": 2066.966669145024,
     "support_30d": 2251.7346140069594,
     "resistance_30d": 2525.267261590238,
     "mark_price": 2464.4,
