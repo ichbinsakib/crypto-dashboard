@@ -1399,7 +1399,7 @@
         ],
         [
           "Stretch from long-term average",
-          "+31.0% above its long-term average - very stretched",
+          "+32.0% above its long-term average - very stretched",
           -2
         ],
         [
@@ -1412,12 +1412,12 @@
       "id": "gatechain-token",
       "symbol": "GT",
       "name": "Gate",
-      "price": 9.27,
-      "pct_24h": 2.71763,
-      "pct_7d": 1.7,
+      "price": 9.34,
+      "pct_24h": 2.93846,
+      "pct_7d": 2.2,
       "support_30d": 7.023244912121639,
       "resistance_30d": 9.383170476488772,
-      "as_of": "2026-09-17 08:25:35",
+      "as_of": "2026-09-17 13:00:37",
       "stale": false
     },
     "crypto-com-chain": {
@@ -1949,9 +1949,9 @@
       "stale": false
     },
     "polkadot": {
-      "label": "\ud83d\udfe1 HOLD / NEUTRAL",
-      "status": "neutral",
-      "score": 1,
+      "label": "\ud83d\udfe2 LEAN ACCUMULATE",
+      "status": "bullish",
+      "score": 2,
       "rows": [
         [
           "Price vs. recent range",
@@ -1970,12 +1970,12 @@
         ],
         [
           "Recent trend",
-          "Trending down - avoid catching a falling knife",
-          -1
+          "Chopping sideways - no clear trend",
+          0
         ],
         [
           "Stretch from long-term average",
-          "-6.3% vs its long-term average - not stretched either way",
+          "-5.0% vs its long-term average - not stretched either way",
           0
         ],
         [
@@ -1984,16 +1984,16 @@
           0
         ]
       ],
-      "plain": "No real edge either way right now - fine to just wait and watch.",
+      "plain": "Leans toward a decent spot to slowly add (DCA) - not a strong signal, just a lean.",
       "id": "polkadot",
       "symbol": "DOT",
       "name": "Polkadot",
-      "price": 1.018,
-      "pct_24h": 6.25379,
-      "pct_7d": -8.0,
+      "price": 1.032,
+      "pct_24h": 4.85634,
+      "pct_7d": -6.1,
       "support_30d": 0.7888223252407818,
       "resistance_30d": 1.2475304252917225,
-      "as_of": "2026-09-17 10:02:46",
+      "as_of": "2026-09-17 13:00:37",
       "stale": false
     },
     "uniswap": {
@@ -2167,7 +2167,7 @@
         ],
         [
           "Stretch from long-term average",
-          "-27.6% below its long-term average - confirmed downtrend",
+          "-26.8% below its long-term average - confirmed downtrend",
           -1
         ],
         [
@@ -2180,12 +2180,12 @@
       "id": "canton-network",
       "symbol": "CC",
       "name": "Canton",
-      "price": 0.099239,
-      "pct_24h": 8.71699,
-      "pct_7d": -1.3,
+      "price": 0.100393,
+      "pct_24h": 9.69437,
+      "pct_7d": -1.5,
       "support_30d": 0.09077045047943234,
       "resistance_30d": 0.12396615653575341,
-      "as_of": "2026-09-17 12:10:26",
+      "as_of": "2026-09-17 13:00:37",
       "stale": false
     },
     "internet-computer": {
@@ -3342,7 +3342,6 @@
     }
   },
   "_strong_buy_state": {
-    "scanner-15m:POL": true,
     "scanner-1h:GRAM": true,
     "scanner-daily:XLM": true
   },
@@ -3353,20 +3352,20 @@
         "name": "POL (ex-MATIC)",
         "tf": "15m",
         "entry": 0.09543,
-        "stop": 0.09499366666666667,
-        "target1": 0.09586633333333333,
-        "target2": 0.09630266666666666,
-        "opened_at": "2026-09-17T12:57:10.739684"
+        "stop": 0.09498933333333333,
+        "target1": 0.09587066666666667,
+        "target2": 0.09631133333333335,
+        "opened_at": "2026-09-17T13:02:27.680021"
       },
       "1h:GRAM": {
         "coin": "GRAM",
         "name": "Gram (prev. Toncoin)",
         "tf": "1h",
         "entry": 1.286,
-        "stop": 1.27525,
-        "target1": 1.29675,
-        "target2": 1.3075,
-        "opened_at": "2026-09-17T12:57:10.739684"
+        "stop": 1.2753333333333334,
+        "target1": 1.2966666666666666,
+        "target2": 1.3073333333333332,
+        "opened_at": "2026-09-17T13:02:27.680021"
       },
       "daily:XLM": {
         "coin": "XLM",
@@ -3376,7 +3375,7 @@
         "stop": 0.14162,
         "target1": 0.16598,
         "target2": 0.17815999999999999,
-        "opened_at": "2026-09-17T12:57:10.739684"
+        "opened_at": "2026-09-17T13:02:27.680021"
       }
     },
     "resolved": [
@@ -39571,6 +39570,45 @@
         "result": "win",
         "resolved_at": "2026-09-17T12:57:10.739684",
         "exit_price": 0.1843
+      },
+      {
+        "coin": "POL",
+        "name": "POL (ex-MATIC)",
+        "tf": "15m",
+        "entry": 0.09543,
+        "stop": 0.09499366666666667,
+        "target1": 0.09586633333333333,
+        "target2": 0.09630266666666666,
+        "opened_at": "2026-09-17T12:57:10.739684",
+        "result": "win",
+        "resolved_at": "2026-09-17T13:02:27.680021",
+        "exit_price": 0.09785
+      },
+      {
+        "coin": "GRAM",
+        "name": "Gram (prev. Toncoin)",
+        "tf": "1h",
+        "entry": 1.286,
+        "stop": 1.27525,
+        "target1": 1.29675,
+        "target2": 1.3075,
+        "opened_at": "2026-09-17T12:57:10.739684",
+        "result": "win",
+        "resolved_at": "2026-09-17T13:02:27.680021",
+        "exit_price": 1.336
+      },
+      {
+        "coin": "XLM",
+        "name": "Stellar",
+        "tf": "daily",
+        "entry": 0.1538,
+        "stop": 0.14162,
+        "target1": 0.16598,
+        "target2": 0.17815999999999999,
+        "opened_at": "2026-09-17T12:57:10.739684",
+        "result": "win",
+        "resolved_at": "2026-09-17T13:02:27.680021",
+        "exit_price": 0.1848
       }
     ]
   },
@@ -39578,14 +39616,14 @@
     "key": "BTC",
     "name": "Bitcoin",
     "emoji": "\u20bf",
-    "price": 76752,
+    "price": 76720,
     "high_24h": 76683,
     "low_24h": 75161,
-    "pct_24h": 1.10281,
+    "pct_24h": 1.12122,
     "pct_7d": -2.0,
     "pct_30d": 19.0,
-    "sma50": 72156.0631149698,
-    "sma200": 70328.86132541194,
+    "sma50": 72155.52616833798,
+    "sma200": 70328.72708875399,
     "support_30d": 69291.0104297816,
     "resistance_30d": 81264.70153038795,
     "mark_price": 76320.1,
@@ -39600,14 +39638,14 @@
     "key": "ETH",
     "name": "Ethereum",
     "emoji": "\u039e",
-    "price": 2459.5,
+    "price": 2460.09,
     "high_24h": 2451.57,
     "low_24h": 2371.36,
-    "pct_24h": 2.25606,
+    "pct_24h": 2.38586,
     "pct_7d": -1.1,
     "pct_30d": 28.5,
-    "sma50": 2228.209945761341,
-    "sma200": 2067.0134837608425,
+    "sma50": 2228.2349285932,
+    "sma200": 2067.019729468808,
     "support_30d": 2251.7346140069594,
     "resistance_30d": 2525.267261590238,
     "mark_price": 2432.88565116,
