@@ -919,7 +919,7 @@
         ],
         [
           "Stretch from long-term average",
-          "-5.5% vs its long-term average - not stretched either way",
+          "-5.6% vs its long-term average - not stretched either way",
           0
         ],
         [
@@ -932,12 +932,12 @@
       "id": "avalanche-2",
       "symbol": "AVAX",
       "name": "Avalanche",
-      "price": 7.55,
-      "pct_24h": 3.88866,
-      "pct_7d": -2.1,
+      "price": 7.54,
+      "pct_24h": 3.80761,
+      "pct_7d": -2.6,
       "support_30d": 6.774492921991783,
       "resistance_30d": 8.074275746115342,
-      "as_of": "2026-09-17 09:45:24",
+      "as_of": "2026-09-17 11:05:20",
       "stale": false
     },
     "aster-2": {
@@ -1687,7 +1687,7 @@
         ],
         [
           "Stretch from long-term average",
-          "+1.7% vs its long-term average - not stretched either way",
+          "+1.2% vs its long-term average - not stretched either way",
           0
         ],
         [
@@ -1700,12 +1700,12 @@
       "id": "bitget-token",
       "symbol": "BGB",
       "name": "Bitget Token",
-      "price": 1.92,
-      "pct_24h": 0.71244,
-      "pct_7d": -3.2,
+      "price": 1.91,
+      "pct_24h": 0.02033,
+      "pct_7d": -3.4,
       "support_30d": 1.7546557510755454,
       "resistance_30d": 2.0284940947674617,
-      "as_of": "2026-09-17 09:40:23",
+      "as_of": "2026-09-17 11:05:20",
       "stale": false
     },
     "sui": {
@@ -2996,12 +2996,12 @@
       "id": "algorand",
       "symbol": "ALGO",
       "name": "Algorand",
-      "price": 0.08996,
-      "pct_24h": 2.10367,
+      "price": 0.09,
+      "pct_24h": 2.28914,
       "pct_7d": -7.7,
       "support_30d": 0.08206211285028245,
       "resistance_30d": 0.10076397875501594,
-      "as_of": "2026-09-17 11:00:38",
+      "as_of": "2026-09-17 11:05:20",
       "stale": false
     },
     "eutbl": {
@@ -3361,10 +3361,10 @@
         "name": "Bitcoin Cash",
         "tf": "1h",
         "entry": 214.0,
-        "stop": 211.9125,
-        "target1": 216.0875,
-        "target2": 218.175,
-        "opened_at": "2026-09-17T11:02:27.326145"
+        "stop": 211.89166666666668,
+        "target1": 216.10833333333332,
+        "target2": 218.21666666666664,
+        "opened_at": "2026-09-17T11:07:11.151268"
       },
       "daily:XLM": {
         "coin": "XLM",
@@ -3374,7 +3374,7 @@
         "stop": 0.14162,
         "target1": 0.16598,
         "target2": 0.17815999999999999,
-        "opened_at": "2026-09-17T11:02:27.326145"
+        "opened_at": "2026-09-17T11:07:11.151268"
       }
     },
     "resolved": [
@@ -38646,6 +38646,32 @@
         "result": "win",
         "resolved_at": "2026-09-17T11:02:27.326145",
         "exit_price": 0.1813
+      },
+      {
+        "coin": "BCH",
+        "name": "Bitcoin Cash",
+        "tf": "1h",
+        "entry": 214.0,
+        "stop": 211.9125,
+        "target1": 216.0875,
+        "target2": 218.175,
+        "opened_at": "2026-09-17T11:02:27.326145",
+        "result": "win",
+        "resolved_at": "2026-09-17T11:07:11.151268",
+        "exit_price": 224.1
+      },
+      {
+        "coin": "XLM",
+        "name": "Stellar",
+        "tf": "daily",
+        "entry": 0.1538,
+        "stop": 0.14162,
+        "target1": 0.16598,
+        "target2": 0.17815999999999999,
+        "opened_at": "2026-09-17T11:02:27.326145",
+        "result": "win",
+        "resolved_at": "2026-09-17T11:07:11.151268",
+        "exit_price": 0.1813
       }
     ]
   },
@@ -38653,14 +38679,14 @@
     "key": "BTC",
     "name": "Bitcoin",
     "emoji": "\u20bf",
-    "price": 76312,
+    "price": 76353,
     "high_24h": 76683,
     "low_24h": 75161,
-    "pct_24h": 0.59966,
+    "pct_24h": 0.56171,
     "pct_7d": -2.1,
     "pct_30d": 19.0,
-    "sma50": 72147.39012509999,
-    "sma200": 70326.6930779445,
+    "sma50": 72148.03131244876,
+    "sma200": 70326.85337478168,
     "support_30d": 69291.0104297816,
     "resistance_30d": 81264.70153038795,
     "mark_price": 76320.1,
@@ -38675,14 +38701,14 @@
     "key": "ETH",
     "name": "Ethereum",
     "emoji": "\u039e",
-    "price": 2433.01,
+    "price": 2434.73,
     "high_24h": 2451.57,
     "low_24h": 2371.36,
-    "pct_24h": 1.27158,
-    "pct_7d": -1.3,
+    "pct_24h": 1.17879,
+    "pct_7d": -1.4,
     "pct_30d": 28.4,
-    "sma50": 2227.6795680877494,
-    "sma200": 2066.880889342445,
+    "sma50": 2227.7157991053878,
+    "sma200": 2066.8899470968545,
     "support_30d": 2251.7346140069594,
     "resistance_30d": 2525.267261590238,
     "mark_price": 2432.88565116,
