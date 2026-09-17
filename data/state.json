@@ -151,7 +151,7 @@
         ],
         [
           "Stretch from long-term average",
-          "+20.2% above its long-term average - a bit stretched",
+          "+21.0% above its long-term average - a bit stretched",
           -1
         ],
         [
@@ -164,12 +164,12 @@
       "id": "solana",
       "symbol": "SOL",
       "name": "Solana",
-      "price": 100.25,
-      "pct_24h": 2.50064,
+      "price": 100.98,
+      "pct_24h": 3.58372,
       "pct_7d": -1.1,
       "support_30d": 85.33310287519124,
       "resistance_30d": 109.17730597799657,
-      "as_of": "2026-09-17 12:10:26",
+      "as_of": "2026-09-17 12:35:19",
       "stale": false
     },
     "tron": {
@@ -871,7 +871,7 @@
         ],
         [
           "Stretch from long-term average",
-          "+5.8% vs its long-term average - not stretched either way",
+          "+7.0% vs its long-term average - not stretched either way",
           0
         ],
         [
@@ -884,12 +884,12 @@
       "id": "pepe",
       "symbol": "PEPE",
       "name": "Pepe",
-      "price": 3.48e-06,
-      "pct_24h": 3.75902,
+      "price": 3.52e-06,
+      "pct_24h": 5.14015,
       "pct_7d": 1.7,
       "support_30d": 2.874000180425606e-06,
       "resistance_30d": 4.122123035488615e-06,
-      "as_of": "2026-09-17 12:10:26",
+      "as_of": "2026-09-17 12:35:19",
       "stale": false
     },
     "avalanche-2": {
@@ -2339,7 +2339,7 @@
       "rows": [
         [
           "Price vs. recent range",
-          "Near its 30-day low (~$0.0571) - historically a better entry",
+          "Near its 30-day low (~$0.0573) - historically a better entry",
           2
         ],
         [
@@ -2359,7 +2359,7 @@
         ],
         [
           "Stretch from long-term average",
-          "-14.3% vs its long-term average - not stretched either way",
+          "-11.9% vs its long-term average - not stretched either way",
           0
         ],
         [
@@ -2372,12 +2372,12 @@
       "id": "sky",
       "symbol": "SKY",
       "name": "Sky",
-      "price": 0.05707,
-      "pct_24h": -3.47643,
-      "pct_7d": -5.6,
-      "support_30d": 0.05712658021491884,
+      "price": 0.058659,
+      "pct_24h": 0.40254,
+      "pct_7d": -3.0,
+      "support_30d": 0.057256438766750246,
       "resistance_30d": 0.07314868186988309,
-      "as_of": "2026-09-17 11:30:32",
+      "as_of": "2026-09-17 12:35:19",
       "stale": false
     },
     "shiba-inu": {
@@ -3352,10 +3352,10 @@
         "name": "POL (ex-MATIC)",
         "tf": "15m",
         "entry": 0.09543,
-        "stop": 0.09502000000000001,
-        "target1": 0.09584,
-        "target2": 0.09624999999999999,
-        "opened_at": "2026-09-17T12:32:24.033948"
+        "stop": 0.09501333333333334,
+        "target1": 0.09584666666666666,
+        "target2": 0.09626333333333333,
+        "opened_at": "2026-09-17T12:37:13.347029"
       },
       "daily:XLM": {
         "coin": "XLM",
@@ -3365,7 +3365,7 @@
         "stop": 0.14162,
         "target1": 0.16598,
         "target2": 0.17815999999999999,
-        "opened_at": "2026-09-17T12:32:24.033948"
+        "opened_at": "2026-09-17T12:37:13.347029"
       }
     },
     "resolved": [
@@ -39391,6 +39391,32 @@
         "result": "win",
         "resolved_at": "2026-09-17T12:32:24.033948",
         "exit_price": 0.1842
+      },
+      {
+        "coin": "POL",
+        "name": "POL (ex-MATIC)",
+        "tf": "15m",
+        "entry": 0.09543,
+        "stop": 0.09502000000000001,
+        "target1": 0.09584,
+        "target2": 0.09624999999999999,
+        "opened_at": "2026-09-17T12:32:24.033948",
+        "result": "win",
+        "resolved_at": "2026-09-17T12:37:13.347029",
+        "exit_price": 0.09796
+      },
+      {
+        "coin": "XLM",
+        "name": "Stellar",
+        "tf": "daily",
+        "entry": 0.1538,
+        "stop": 0.14162,
+        "target1": 0.16598,
+        "target2": 0.17815999999999999,
+        "opened_at": "2026-09-17T12:32:24.033948",
+        "result": "win",
+        "resolved_at": "2026-09-17T12:37:13.347029",
+        "exit_price": 0.1845
       }
     ]
   },
@@ -39398,14 +39424,14 @@
     "key": "BTC",
     "name": "Bitcoin",
     "emoji": "\u20bf",
-    "price": 76895,
+    "price": 76856,
     "high_24h": 76683,
     "low_24h": 75161,
-    "pct_24h": 1.3388,
+    "pct_24h": 1.23251,
     "pct_7d": -2.0,
     "pct_30d": 19.0,
-    "sma50": 72158.85269297968,
-    "sma200": 70329.55871991442,
+    "sma50": 72158.16982173407,
+    "sma200": 70329.388002103,
     "support_30d": 69291.0104297816,
     "resistance_30d": 81264.70153038795,
     "mark_price": 76320.1,
@@ -39420,14 +39446,14 @@
     "key": "ETH",
     "name": "Ethereum",
     "emoji": "\u039e",
-    "price": 2466.68,
+    "price": 2464.15,
     "high_24h": 2451.57,
     "low_24h": 2371.36,
-    "pct_24h": 2.56544,
+    "pct_24h": 2.38263,
     "pct_7d": -1.1,
     "pct_30d": 28.5,
-    "sma50": 2228.310582324336,
-    "sma200": 2067.0386429015916,
+    "sma50": 2228.298575398737,
+    "sma200": 2067.035641170192,
     "support_30d": 2251.7346140069594,
     "resistance_30d": 2525.267261590238,
     "mark_price": 2432.88565116,
