@@ -535,7 +535,7 @@
         ],
         [
           "Stretch from long-term average",
-          "+38.3% above its long-term average - very stretched",
+          "+38.1% above its long-term average - very stretched",
           -2
         ],
         [
@@ -548,12 +548,12 @@
       "id": "whitebit",
       "symbol": "WBT",
       "name": "WhiteBIT Coin",
-      "price": 79.19,
-      "pct_24h": 1.50937,
-      "pct_7d": -2.4,
+      "price": 79.07,
+      "pct_24h": 1.8812,
+      "pct_7d": -0.5,
       "support_30d": 59.556263717190774,
       "resistance_30d": 81.2521953230761,
-      "as_of": "2026-09-17 12:45:24",
+      "as_of": "2026-09-17 14:20:29",
       "stale": false
     },
     "leo-token": {
@@ -775,7 +775,7 @@
         ],
         [
           "Stretch from long-term average",
-          "-8.3% vs its long-term average - not stretched either way",
+          "-7.5% vs its long-term average - not stretched either way",
           0
         ],
         [
@@ -788,12 +788,12 @@
       "id": "kucoin-shares",
       "symbol": "KCS",
       "name": "KuCoin",
-      "price": 6.97,
-      "pct_24h": 2.92938,
-      "pct_7d": 1.4,
+      "price": 7.03,
+      "pct_24h": 3.4807,
+      "pct_7d": 2.4,
       "support_30d": 6.792256319407273,
       "resistance_30d": 7.8821382735057615,
-      "as_of": "2026-09-17 13:40:24",
+      "as_of": "2026-09-17 14:20:29",
       "stale": false
     },
     "hedera-hashgraph": {
@@ -2435,7 +2435,7 @@
       "rows": [
         [
           "Price vs. recent range",
-          "Near its 30-day high (~$2.84) - less room to run",
+          "Near its 30-day high (~$2.87) - less room to run",
           -1
         ],
         [
@@ -2455,7 +2455,7 @@
         ],
         [
           "Stretch from long-term average",
-          "+62.3% above its long-term average - very stretched",
+          "+64.0% above its long-term average - very stretched",
           -2
         ],
         [
@@ -2468,12 +2468,12 @@
       "id": "near",
       "symbol": "NEAR",
       "name": "NEAR Protocol",
-      "price": 2.84,
-      "pct_24h": 17.56887,
-      "pct_7d": 13.6,
+      "price": 2.87,
+      "pct_24h": 16.97824,
+      "pct_7d": 19.8,
       "support_30d": 1.7303834026337377,
-      "resistance_30d": 2.8420990870581924,
-      "as_of": "2026-09-17 09:40:23",
+      "resistance_30d": 2.8704711715774054,
+      "as_of": "2026-09-17 14:20:29",
       "stale": false
     },
     "quant-network": {
@@ -3351,20 +3351,20 @@
         "name": "POL (ex-MATIC)",
         "tf": "15m",
         "entry": 0.09543,
-        "stop": 0.09491133333333333,
-        "target1": 0.09594866666666667,
-        "target2": 0.09646733333333334,
-        "opened_at": "2026-09-17T14:17:14.925490"
+        "stop": 0.094905,
+        "target1": 0.095955,
+        "target2": 0.09648,
+        "opened_at": "2026-09-17T14:22:19.837938"
       },
       "1h:GRAM": {
         "coin": "GRAM",
         "name": "Gram (prev. Toncoin)",
         "tf": "1h",
         "entry": 1.286,
-        "stop": 1.2747916666666668,
-        "target1": 1.2972083333333333,
-        "target2": 1.3084166666666666,
-        "opened_at": "2026-09-17T14:17:14.925490"
+        "stop": 1.2747083333333333,
+        "target1": 1.2972916666666667,
+        "target2": 1.3085833333333334,
+        "opened_at": "2026-09-17T14:22:19.837938"
       },
       "daily:XLM": {
         "coin": "XLM",
@@ -3374,7 +3374,7 @@
         "stop": 0.14162,
         "target1": 0.16598,
         "target2": 0.17815999999999999,
-        "opened_at": "2026-09-17T14:17:14.925490"
+        "opened_at": "2026-09-17T14:22:19.837938"
       }
     },
     "resolved": [
@@ -40154,6 +40154,45 @@
         "result": "win",
         "resolved_at": "2026-09-17T14:17:14.925490",
         "exit_price": 0.1852
+      },
+      {
+        "coin": "POL",
+        "name": "POL (ex-MATIC)",
+        "tf": "15m",
+        "entry": 0.09543,
+        "stop": 0.09491133333333333,
+        "target1": 0.09594866666666667,
+        "target2": 0.09646733333333334,
+        "opened_at": "2026-09-17T14:17:14.925490",
+        "result": "win",
+        "resolved_at": "2026-09-17T14:22:19.837938",
+        "exit_price": 0.09856
+      },
+      {
+        "coin": "GRAM",
+        "name": "Gram (prev. Toncoin)",
+        "tf": "1h",
+        "entry": 1.286,
+        "stop": 1.2747916666666668,
+        "target1": 1.2972083333333333,
+        "target2": 1.3084166666666666,
+        "opened_at": "2026-09-17T14:17:14.925490",
+        "result": "win",
+        "resolved_at": "2026-09-17T14:22:19.837938",
+        "exit_price": 1.34
+      },
+      {
+        "coin": "XLM",
+        "name": "Stellar",
+        "tf": "daily",
+        "entry": 0.1538,
+        "stop": 0.14162,
+        "target1": 0.16598,
+        "target2": 0.17815999999999999,
+        "opened_at": "2026-09-17T14:17:14.925490",
+        "result": "win",
+        "resolved_at": "2026-09-17T14:22:19.837938",
+        "exit_price": 0.1857
       }
     ]
   },
@@ -40161,14 +40200,14 @@
     "key": "BTC",
     "name": "Bitcoin",
     "emoji": "\u20bf",
-    "price": 76693,
+    "price": 76676,
     "high_24h": 77024,
     "low_24h": 75161,
-    "pct_24h": 1.53561,
+    "pct_24h": 1.52181,
     "pct_7d": -0.4,
     "pct_30d": 19.3,
-    "sma50": 72156.05825193028,
-    "sma200": 70328.86010965207,
+    "sma50": 72154.4922894172,
+    "sma200": 70328.4686190238,
     "support_30d": 69291.0104297816,
     "resistance_30d": 81264.70153038795,
     "mark_price": 76320.1,
@@ -40183,14 +40222,14 @@
     "key": "ETH",
     "name": "Ethereum",
     "emoji": "\u039e",
-    "price": 2465.94,
+    "price": 2467.56,
     "high_24h": 2473.53,
     "low_24h": 2371.36,
-    "pct_24h": 3.23091,
+    "pct_24h": 3.33094,
     "pct_7d": 1.7,
     "pct_30d": 29.5,
-    "sma50": 2228.3926617321777,
-    "sma200": 2067.0591627535523,
+    "sma50": 2228.3757423848674,
+    "sma200": 2067.0549329167247,
     "support_30d": 2251.7346140069594,
     "resistance_30d": 2525.267261590238,
     "mark_price": 2432.88565116,
