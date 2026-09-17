@@ -31,12 +31,12 @@
     "binancecoin": {
       "label": "\ud83d\udfe1 HOLD / NEUTRAL",
       "status": "neutral",
-      "score": 0,
+      "score": -1,
       "rows": [
         [
           "Price vs. recent range",
-          "Sitting in the middle of its 30-day range",
-          0
+          "Near its 30-day high (~$766.41) - less room to run",
+          -1
         ],
         [
           "Crowd mood (Fear & Greed)",
@@ -55,7 +55,7 @@
         ],
         [
           "Stretch from long-term average",
-          "+15.6% above its long-term average - a bit stretched",
+          "+16.1% above its long-term average - a bit stretched",
           -1
         ],
         [
@@ -68,12 +68,12 @@
       "id": "binancecoin",
       "symbol": "BNB",
       "name": "BNB",
-      "price": 724.84,
-      "pct_24h": 1.97351,
-      "pct_7d": 1.0,
+      "price": 728.23,
+      "pct_24h": 1.64723,
+      "pct_7d": 2.1,
       "support_30d": 627.053410537708,
       "resistance_30d": 766.4092879330625,
-      "as_of": "2026-09-17 10:02:46",
+      "as_of": "2026-09-17 19:10:23",
       "stale": false
     },
     "ripple": {
@@ -2167,7 +2167,7 @@
         ],
         [
           "Stretch from long-term average",
-          "-27.3% below its long-term average - confirmed downtrend",
+          "-27.4% below its long-term average - confirmed downtrend",
           -1
         ],
         [
@@ -2180,12 +2180,12 @@
       "id": "canton-network",
       "symbol": "CC",
       "name": "Canton",
-      "price": 0.09968,
-      "pct_24h": 4.54219,
+      "price": 0.099634,
+      "pct_24h": 4.45537,
       "pct_7d": 1.7,
       "support_30d": 0.09077045047943234,
       "resistance_30d": 0.12396615653575341,
-      "as_of": "2026-09-17 19:05:25",
+      "as_of": "2026-09-17 19:10:23",
       "stale": false
     },
     "internet-computer": {
@@ -2935,7 +2935,7 @@
         ],
         [
           "Stretch from long-term average",
-          "+35.6% above its long-term average - very stretched",
+          "+34.1% above its long-term average - very stretched",
           -2
         ],
         [
@@ -2948,12 +2948,12 @@
       "id": "just",
       "symbol": "JST",
       "name": "JUST",
-      "price": 0.116555,
-      "pct_24h": 0.25835,
-      "pct_7d": 11.9,
+      "price": 0.115246,
+      "pct_24h": -0.67312,
+      "pct_7d": 11.2,
       "support_30d": 0.0946830738697126,
       "resistance_30d": 0.11679162455397056,
-      "as_of": "2026-09-17 15:00:37",
+      "as_of": "2026-09-17 19:10:23",
       "stale": false
     },
     "algorand": {
@@ -3341,23 +3341,36 @@
       "stale": false
     }
   },
-  "_strong_buy_state": {},
+  "_strong_buy_state": {
+    "scanner-15m:JST": true
+  },
   "_pnl_tracker": {
-    "open": {},
+    "open": {
+      "15m:JST": {
+        "coin": "JST",
+        "name": "JUST",
+        "tf": "15m",
+        "entry": 0.11535,
+        "stop": 0.11512866666666666,
+        "target1": 0.11557133333333333,
+        "target2": 0.11579266666666667,
+        "opened_at": "2026-09-17T19:12:31.634098"
+      }
+    },
     "resolved": []
   },
   "BTC": {
     "key": "BTC",
     "name": "Bitcoin",
     "emoji": "\u20bf",
-    "price": 76541,
+    "price": 76555,
     "high_24h": 77024,
     "low_24h": 75602,
-    "pct_24h": 0.82872,
+    "pct_24h": 0.86275,
     "pct_7d": -1.0,
     "pct_30d": 18.4,
-    "sma50": 72151.80081204431,
-    "sma200": 70327.79574968056,
+    "sma50": 72151.88559347785,
+    "sma200": 70327.81694503895,
     "support_30d": 69291.0104297816,
     "resistance_30d": 81264.70153038795,
     "mark_price": 76687.93324638,
@@ -3372,14 +3385,14 @@
     "key": "ETH",
     "name": "Ethereum",
     "emoji": "\u039e",
-    "price": 2452.43,
+    "price": 2452.64,
     "high_24h": 2478.98,
     "low_24h": 2388.47,
-    "pct_24h": 1.82389,
+    "pct_24h": 1.89241,
     "pct_7d": -0.6,
     "pct_30d": 28.3,
-    "sma50": 2228.065164246434,
-    "sma200": 2066.977288382116,
+    "sma50": 2228.062892684556,
+    "sma200": 2066.9767204916466,
     "support_30d": 2251.7346140069594,
     "resistance_30d": 2525.267261590238,
     "mark_price": 2464.4,
