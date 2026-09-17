@@ -2119,7 +2119,7 @@
         ],
         [
           "Stretch from long-term average",
-          "+6.5% vs its long-term average - not stretched either way",
+          "+6.2% vs its long-term average - not stretched either way",
           0
         ],
         [
@@ -2132,12 +2132,12 @@
       "id": "ondo-finance",
       "symbol": "ONDO",
       "name": "Ondo",
-      "price": 0.350457,
-      "pct_24h": 7.25019,
+      "price": 0.349383,
+      "pct_24h": 6.81727,
       "pct_7d": -0.9,
       "support_30d": 0.3283157645282996,
       "resistance_30d": 0.3969475338902824,
-      "as_of": "2026-09-17 10:10:22",
+      "as_of": "2026-09-17 10:45:23",
       "stale": false
     },
     "canton-network": {
@@ -2575,12 +2575,12 @@
     "bitway": {
       "label": "\ud83d\udd34 CAUTION - REDUCE NEW BUYS",
       "status": "bearish",
-      "score": -4,
+      "score": -3,
       "rows": [
         [
           "Price vs. recent range",
-          "Near its 30-day high (~$0.7492) - less room to run",
-          -1
+          "Sitting in the middle of its 30-day range",
+          0
         ],
         [
           "Crowd mood (Fear & Greed)",
@@ -2599,7 +2599,7 @@
         ],
         [
           "Stretch from long-term average",
-          "+478.4% above its long-term average - very stretched",
+          "+469.6% above its long-term average - very stretched",
           -2
         ],
         [
@@ -2612,12 +2612,12 @@
       "id": "bitway",
       "symbol": "BTW",
       "name": "Bitway",
-      "price": 0.712333,
-      "pct_24h": -7.28896,
-      "pct_7d": 53.0,
+      "price": 0.701284,
+      "pct_24h": -9.89339,
+      "pct_7d": 52.7,
       "support_30d": 0.3884816128039819,
       "resistance_30d": 0.7491686401380382,
-      "as_of": "2026-09-17 08:25:35",
+      "as_of": "2026-09-17 10:45:23",
       "stale": false
     },
     "world-liberty-financial": {
@@ -2647,7 +2647,7 @@
         ],
         [
           "Stretch from long-term average",
-          "-14.1% vs its long-term average - not stretched either way",
+          "-13.7% vs its long-term average - not stretched either way",
           0
         ],
         [
@@ -2660,12 +2660,12 @@
       "id": "world-liberty-financial",
       "symbol": "WLFI",
       "name": "World Liberty Financial",
-      "price": 0.058876,
-      "pct_24h": 3.41382,
-      "pct_7d": 5.2,
+      "price": 0.059125,
+      "pct_24h": 3.89549,
+      "pct_7d": 4.9,
       "support_30d": 0.05526589948255966,
       "resistance_30d": 0.06254770952093733,
-      "as_of": "2026-09-17 09:57:57",
+      "as_of": "2026-09-17 10:45:23",
       "stale": false
     },
     "pax-gold": {
@@ -3347,25 +3347,15 @@
   },
   "_pnl_tracker": {
     "open": {
-      "15m:ATOM": {
-        "coin": "ATOM",
-        "name": "Cosmos Hub",
-        "tf": "15m",
-        "entry": 1.513,
-        "stop": 1.5063666666666666,
-        "target1": 1.5196333333333332,
-        "target2": 1.5262666666666664,
-        "opened_at": "2026-09-17T10:42:13.473000"
-      },
       "1h:BCH": {
         "coin": "BCH",
         "name": "Bitcoin Cash",
         "tf": "1h",
         "entry": 214.0,
-        "stop": 211.87083333333334,
-        "target1": 216.12916666666666,
-        "target2": 218.25833333333333,
-        "opened_at": "2026-09-17T10:42:13.473000"
+        "stop": 211.85833333333332,
+        "target1": 216.14166666666668,
+        "target2": 218.28333333333336,
+        "opened_at": "2026-09-17T10:47:13.510692"
       },
       "daily:XLM": {
         "coin": "XLM",
@@ -3375,7 +3365,7 @@
         "stop": 0.14162,
         "target1": 0.16598,
         "target2": 0.17815999999999999,
-        "opened_at": "2026-09-17T10:42:13.473000"
+        "opened_at": "2026-09-17T10:47:13.510692"
       }
     },
     "resolved": [
@@ -38530,6 +38520,45 @@
         "result": "win",
         "resolved_at": "2026-09-17T10:42:13.473000",
         "exit_price": 0.1813
+      },
+      {
+        "coin": "ATOM",
+        "name": "Cosmos Hub",
+        "tf": "15m",
+        "entry": 1.513,
+        "stop": 1.5063666666666666,
+        "target1": 1.5196333333333332,
+        "target2": 1.5262666666666664,
+        "opened_at": "2026-09-17T10:42:13.473000",
+        "result": "win",
+        "resolved_at": "2026-09-17T10:47:13.510692",
+        "exit_price": 1.529
+      },
+      {
+        "coin": "BCH",
+        "name": "Bitcoin Cash",
+        "tf": "1h",
+        "entry": 214.0,
+        "stop": 211.87083333333334,
+        "target1": 216.12916666666666,
+        "target2": 218.25833333333333,
+        "opened_at": "2026-09-17T10:42:13.473000",
+        "result": "win",
+        "resolved_at": "2026-09-17T10:47:13.510692",
+        "exit_price": 224.0
+      },
+      {
+        "coin": "XLM",
+        "name": "Stellar",
+        "tf": "daily",
+        "entry": 0.1538,
+        "stop": 0.14162,
+        "target1": 0.16598,
+        "target2": 0.17815999999999999,
+        "opened_at": "2026-09-17T10:42:13.473000",
+        "result": "win",
+        "resolved_at": "2026-09-17T10:47:13.510692",
+        "exit_price": 0.1813
       }
     ]
   },
@@ -38537,14 +38566,14 @@
     "key": "BTC",
     "name": "Bitcoin",
     "emoji": "\u20bf",
-    "price": 76317,
+    "price": 76300,
     "high_24h": 76683,
     "low_24h": 75161,
-    "pct_24h": 0.52136,
+    "pct_24h": 0.48211,
     "pct_7d": -2.1,
     "pct_30d": 19.0,
-    "sma50": 72147.32181730591,
-    "sma200": 70326.67600099597,
+    "sma50": 72146.96226637562,
+    "sma200": 70326.5861132634,
     "support_30d": 69291.0104297816,
     "resistance_30d": 81264.70153038795,
     "mark_price": 76320.1,
@@ -38559,14 +38588,14 @@
     "key": "ETH",
     "name": "Ethereum",
     "emoji": "\u039e",
-    "price": 2432.69,
+    "price": 2432.11,
     "high_24h": 2451.57,
     "low_24h": 2371.36,
-    "pct_24h": 1.24491,
+    "pct_24h": 1.13781,
     "pct_7d": -1.3,
     "pct_30d": 28.4,
-    "sma50": 2227.6703019514157,
-    "sma200": 2066.8785728083617,
+    "sma50": 2227.661251456943,
+    "sma200": 2066.876310184743,
     "support_30d": 2251.7346140069594,
     "resistance_30d": 2525.267261590238,
     "mark_price": 2432.88565116,
