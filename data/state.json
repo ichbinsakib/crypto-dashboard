@@ -568,7 +568,7 @@
         ],
         [
           "Crowd mood (Fear & Greed)",
-          "51/100 - crowd mood is neutral",
+          "50/100 - crowd mood is neutral",
           0
         ],
         [
@@ -583,7 +583,7 @@
         ],
         [
           "Stretch from long-term average",
-          "-6.8% vs its long-term average - not stretched either way",
+          "-7.2% vs its long-term average - not stretched either way",
           0
         ],
         [
@@ -596,12 +596,12 @@
       "id": "leo-token",
       "symbol": "LEO",
       "name": "LEO Token",
-      "price": 8.99,
-      "pct_24h": 1.78922,
-      "pct_7d": -3.2,
+      "price": 8.95,
+      "pct_24h": 1.32695,
+      "pct_7d": -2.8,
       "support_30d": 8.831489578582278,
       "resistance_30d": 9.681775974309534,
-      "as_of": "2026-09-16 23:20:24",
+      "as_of": "2026-09-17 03:15:26",
       "stale": false
     },
     "monero": {
@@ -871,7 +871,7 @@
         ],
         [
           "Stretch from long-term average",
-          "+4.9% vs its long-term average - not stretched either way",
+          "+4.6% vs its long-term average - not stretched either way",
           0
         ],
         [
@@ -884,12 +884,12 @@
       "id": "pepe",
       "symbol": "PEPE",
       "name": "Pepe",
-      "price": 3.45e-06,
-      "pct_24h": 2.31902,
-      "pct_7d": -0.3,
+      "price": 3.44e-06,
+      "pct_24h": 1.52692,
+      "pct_7d": -0.2,
       "support_30d": 2.874000180425606e-06,
       "resistance_30d": 4.122123035488615e-06,
-      "as_of": "2026-09-17 02:55:18",
+      "as_of": "2026-09-17 03:15:26",
       "stale": false
     },
     "avalanche-2": {
@@ -1517,9 +1517,9 @@
       "stale": false
     },
     "pump-fun": {
-      "label": "\ud83d\udd34 DISTRIBUTION ZONE",
+      "label": "\ud83d\udd34 CAUTION - REDUCE NEW BUYS",
       "status": "bearish",
-      "score": -5,
+      "score": -4,
       "rows": [
         [
           "Price vs. recent range",
@@ -1538,12 +1538,12 @@
         ],
         [
           "Recent trend",
-          "Trending down - avoid catching a falling knife",
-          -1
+          "Chopping sideways - no clear trend",
+          0
         ],
         [
           "Stretch from long-term average",
-          "+68.5% above its long-term average - very stretched",
+          "+74.1% above its long-term average - very stretched",
           -2
         ],
         [
@@ -1552,16 +1552,16 @@
           0
         ]
       ],
-      "plain": "Looks stretched and euphoric - historically the zone where smart money sells, not buys.",
+      "plain": "Getting risky - I'd hold off on new buys until this cools down.",
       "id": "pump-fun",
       "symbol": "PUMP",
       "name": "Pump.fun",
-      "price": 0.00368488,
-      "pct_24h": 4.7309,
-      "pct_7d": -10.3,
+      "price": 0.0038094,
+      "pct_24h": 9.80444,
+      "pct_7d": -5.0,
       "support_30d": 0.0030001765124458095,
       "resistance_30d": 0.0052249885406471875,
-      "as_of": "2026-09-17 01:25:17",
+      "as_of": "2026-09-17 03:15:26",
       "stale": false
     },
     "venice-token": {
@@ -3351,20 +3351,20 @@
         "name": "Morpho",
         "tf": "1h",
         "entry": 2.043,
-        "stop": 2.0134583333333333,
-        "target1": 2.072541666666667,
-        "target2": 2.1020833333333337,
-        "opened_at": "2026-09-17T03:12:19.633139"
+        "stop": 2.0134166666666666,
+        "target1": 2.0725833333333337,
+        "target2": 2.102166666666667,
+        "opened_at": "2026-09-17T03:17:20.568549"
       },
       "daily:XLM": {
         "coin": "XLM",
         "name": "Stellar",
         "tf": "daily",
         "entry": 0.1538,
-        "stop": 0.14168333333333333,
-        "target1": 0.16591666666666666,
-        "target2": 0.17803333333333332,
-        "opened_at": "2026-09-17T03:12:19.633139"
+        "stop": 0.14168,
+        "target1": 0.16591999999999998,
+        "target2": 0.17803999999999998,
+        "opened_at": "2026-09-17T03:17:20.568549"
       }
     },
     "resolved": [
@@ -36062,6 +36062,32 @@
         "result": "win",
         "resolved_at": "2026-09-17T03:12:19.633139",
         "exit_price": 0.1832
+      },
+      {
+        "coin": "MORPHO",
+        "name": "Morpho",
+        "tf": "1h",
+        "entry": 2.043,
+        "stop": 2.0134583333333333,
+        "target1": 2.072541666666667,
+        "target2": 2.1020833333333337,
+        "opened_at": "2026-09-17T03:12:19.633139",
+        "result": "win",
+        "resolved_at": "2026-09-17T03:17:20.568549",
+        "exit_price": 2.108
+      },
+      {
+        "coin": "XLM",
+        "name": "Stellar",
+        "tf": "daily",
+        "entry": 0.1538,
+        "stop": 0.14168333333333333,
+        "target1": 0.16591666666666666,
+        "target2": 0.17803333333333332,
+        "opened_at": "2026-09-17T03:12:19.633139",
+        "result": "win",
+        "resolved_at": "2026-09-17T03:17:20.568549",
+        "exit_price": 0.1827
       }
     ]
   },
@@ -36069,14 +36095,14 @@
     "key": "BTC",
     "name": "Bitcoin",
     "emoji": "\u20bf",
-    "price": 76394,
+    "price": 76370,
     "high_24h": 76683,
     "low_24h": 75161,
-    "pct_24h": 0.77846,
+    "pct_24h": 0.62593,
     "pct_7d": -2.2,
     "pct_30d": 19.0,
-    "sma50": 72149.01252477887,
-    "sma200": 70327.09867786421,
+    "sma50": 72148.38354694922,
+    "sma200": 70326.9414334068,
     "support_30d": 69291.0104297816,
     "resistance_30d": 81264.70153038795,
     "mark_price": 76418.87868841,
@@ -36091,14 +36117,14 @@
     "key": "ETH",
     "name": "Ethereum",
     "emoji": "\u039e",
-    "price": 2431.89,
+    "price": 2431.2,
     "high_24h": 2440.69,
     "low_24h": 2371.36,
-    "pct_24h": 1.31308,
+    "pct_24h": 1.10142,
     "pct_7d": -1.5,
     "pct_30d": 27.8,
-    "sma50": 2227.6559199392655,
-    "sma200": 2066.874977305324,
+    "sma50": 2227.6382187604763,
+    "sma200": 2066.870552010627,
     "support_30d": 2251.7346140069594,
     "resistance_30d": 2525.267261590238,
     "mark_price": 2424.33136434,
