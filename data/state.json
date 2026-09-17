@@ -1576,7 +1576,7 @@
         ],
         [
           "Crowd mood (Fear & Greed)",
-          "51/100 - crowd mood is neutral",
+          "50/100 - crowd mood is neutral",
           0
         ],
         [
@@ -1591,7 +1591,7 @@
         ],
         [
           "Stretch from long-term average",
-          "+84.4% above its long-term average - very stretched",
+          "+89.8% above its long-term average - very stretched",
           -2
         ],
         [
@@ -1604,12 +1604,12 @@
       "id": "venice-token",
       "symbol": "VVV",
       "name": "Venice Token",
-      "price": 22.87,
-      "pct_24h": 7.33347,
-      "pct_7d": -5.8,
-      "support_30d": 14.047888779973915,
+      "price": 23.71,
+      "pct_24h": 10.70801,
+      "pct_7d": 6.2,
+      "support_30d": 14.388113191204708,
       "resistance_30d": 25.88474946901688,
-      "as_of": "2026-09-16 22:35:20",
+      "as_of": "2026-09-17 00:40:22",
       "stale": false
     },
     "litecoin": {
@@ -2291,12 +2291,12 @@
       "rows": [
         [
           "Price vs. recent range",
-          "Near its 30-day low (~$1.30) - historically a better entry",
+          "Near its 30-day low (~$1.32) - historically a better entry",
           2
         ],
         [
           "Crowd mood (Fear & Greed)",
-          "51/100 - crowd mood is neutral",
+          "50/100 - crowd mood is neutral",
           0
         ],
         [
@@ -2311,7 +2311,7 @@
         ],
         [
           "Stretch from long-term average",
-          "-14.8% vs its long-term average - not stretched either way",
+          "-13.5% vs its long-term average - not stretched either way",
           0
         ],
         [
@@ -2324,12 +2324,12 @@
       "id": "the-open-network",
       "symbol": "GRAM",
       "name": "Gram (prev. Toncoin)",
-      "price": 1.3,
-      "pct_24h": -1.13988,
-      "pct_7d": -4.5,
-      "support_30d": 1.3037918451049455,
+      "price": 1.32,
+      "pct_24h": 0.01207,
+      "pct_7d": -3.6,
+      "support_30d": 1.3154928840377231,
       "resistance_30d": 1.4926762805297678,
-      "as_of": "2026-09-16 21:35:19",
+      "as_of": "2026-09-17 00:40:22",
       "stale": false
     },
     "sky": {
@@ -2477,18 +2477,18 @@
       "stale": false
     },
     "quant-network": {
-      "label": "\ud83d\udfe1 HOLD / NEUTRAL",
-      "status": "neutral",
-      "score": 1,
+      "label": "\ud83d\udfe2 LEAN ACCUMULATE",
+      "status": "bullish",
+      "score": 3,
       "rows": [
         [
           "Price vs. recent range",
-          "Sitting in the middle of its 30-day range",
-          0
+          "Near its 30-day low (~$58.75) - historically a better entry",
+          2
         ],
         [
           "Crowd mood (Fear & Greed)",
-          "51/100 - crowd mood is neutral",
+          "50/100 - crowd mood is neutral",
           0
         ],
         [
@@ -2503,7 +2503,7 @@
         ],
         [
           "Stretch from long-term average",
-          "-10.4% vs its long-term average - not stretched either way",
+          "-10.7% vs its long-term average - not stretched either way",
           0
         ],
         [
@@ -2512,16 +2512,16 @@
           0
         ]
       ],
-      "plain": "No real edge either way right now - fine to just wait and watch.",
+      "plain": "Leans toward a decent spot to slowly add (DCA) - not a strong signal, just a lean.",
       "id": "quant-network",
       "symbol": "QNT",
       "name": "Quant",
-      "price": 61.23,
-      "pct_24h": 0.04743,
-      "pct_7d": -10.1,
-      "support_30d": 55.905981995619285,
+      "price": 60.99,
+      "pct_24h": 0.31314,
+      "pct_7d": -8.5,
+      "support_30d": 58.747927237753004,
       "resistance_30d": 67.13669726469111,
-      "as_of": "2026-09-16 23:45:20",
+      "as_of": "2026-09-17 00:40:22",
       "stale": false
     },
     "tether-gold": {
@@ -3352,10 +3352,10 @@
         "name": "Worldcoin",
         "tf": "15m",
         "entry": 0.3563,
-        "stop": 0.35217000000000004,
-        "target1": 0.36043,
-        "target2": 0.36455999999999994,
-        "opened_at": "2026-09-17T00:37:08.240499"
+        "stop": 0.3521533333333334,
+        "target1": 0.36044666666666664,
+        "target2": 0.36459333333333327,
+        "opened_at": "2026-09-17T00:42:12.814356"
       },
       "1h:MORPHO": {
         "coin": "MORPHO",
@@ -3365,7 +3365,7 @@
         "stop": 2.015,
         "target1": 2.071,
         "target2": 2.099,
-        "opened_at": "2026-09-17T00:37:08.240499"
+        "opened_at": "2026-09-17T00:42:12.814356"
       },
       "daily:XLM": {
         "coin": "XLM",
@@ -3375,7 +3375,7 @@
         "stop": 0.14170666666666665,
         "target1": 0.16589333333333334,
         "target2": 0.17798666666666668,
-        "opened_at": "2026-09-17T00:37:08.240499"
+        "opened_at": "2026-09-17T00:42:12.814356"
       }
     },
     "resolved": [
@@ -35007,6 +35007,45 @@
         "result": "win",
         "resolved_at": "2026-09-17T00:37:08.240499",
         "exit_price": 0.1859
+      },
+      {
+        "coin": "WLD",
+        "name": "Worldcoin",
+        "tf": "15m",
+        "entry": 0.3563,
+        "stop": 0.35217000000000004,
+        "target1": 0.36043,
+        "target2": 0.36455999999999994,
+        "opened_at": "2026-09-17T00:37:08.240499",
+        "result": "win",
+        "resolved_at": "2026-09-17T00:42:12.814356",
+        "exit_price": 0.3746
+      },
+      {
+        "coin": "MORPHO",
+        "name": "Morpho",
+        "tf": "1h",
+        "entry": 2.043,
+        "stop": 2.015,
+        "target1": 2.071,
+        "target2": 2.099,
+        "opened_at": "2026-09-17T00:37:08.240499",
+        "result": "win",
+        "resolved_at": "2026-09-17T00:42:12.814356",
+        "exit_price": 2.095
+      },
+      {
+        "coin": "XLM",
+        "name": "Stellar",
+        "tf": "daily",
+        "entry": 0.1538,
+        "stop": 0.14170666666666665,
+        "target1": 0.16589333333333334,
+        "target2": 0.17798666666666668,
+        "opened_at": "2026-09-17T00:37:08.240499",
+        "result": "win",
+        "resolved_at": "2026-09-17T00:42:12.814356",
+        "exit_price": 0.1859
       }
     ]
   },
@@ -35014,14 +35053,14 @@
     "key": "BTC",
     "name": "Bitcoin",
     "emoji": "\u20bf",
-    "price": 76371,
+    "price": 76351,
     "high_24h": 76413,
     "low_24h": 75161,
-    "pct_24h": 0.78429,
+    "pct_24h": 0.69673,
     "pct_7d": -2.3,
     "pct_30d": 18.5,
-    "sma50": 72148.44958801668,
-    "sma200": 70326.95794367367,
+    "sma50": 72149.13645996717,
+    "sma200": 70327.12966166128,
     "support_30d": 69291.0104297816,
     "resistance_30d": 81264.70153038795,
     "mark_price": 76418.87868841,
@@ -35036,14 +35075,14 @@
     "key": "ETH",
     "name": "Ethereum",
     "emoji": "\u039e",
-    "price": 2421.62,
+    "price": 2421.57,
     "high_24h": 2424.51,
     "low_24h": 2371.36,
-    "pct_24h": 0.84592,
+    "pct_24h": 0.77293,
     "pct_7d": -1.4,
     "pct_30d": 27.0,
-    "sma50": 2227.471434265357,
-    "sma200": 2066.8288558868467,
+    "sma50": 2227.4967421546753,
+    "sma200": 2066.8351828591763,
     "support_30d": 2251.7346140069594,
     "resistance_30d": 2525.267261590238,
     "mark_price": 2424.33136434,
