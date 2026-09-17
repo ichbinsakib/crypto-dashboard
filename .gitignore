@@ -5,7 +5,16 @@ __pycache__/
 *.pyc
 *.bak
 
-# Android app builds (generated projects + signing key -- never commit the keystore)
+# android-twa/ was an abandoned approach (TWA -- didn't work in Brave), not worth tracking.
 android-twa/
-android-webview/
+
+# android-webview/ is the real app -- track its source, ignore the keystore/build output.
+android-webview/*.keystore
+android-webview/.keystore_passwords.txt
+android-webview/*.apk
+android-webview/*.apk.idsig
+android-webview/build/
+android-webview/app/build/
+android-webview/.gradle/
+
 apk_output/

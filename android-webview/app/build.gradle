@@ -1,0 +1,31 @@
+plugins {
+    id 'com.android.application'
+}
+
+android {
+    compileSdkVersion 36
+    namespace "io.github.ichbinsakib.twa"
+
+    defaultConfig {
+        applicationId "io.github.ichbinsakib.twa"
+        minSdkVersion 21
+        targetSdkVersion 36
+        versionCode 3
+        versionName "3"
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+        }
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+
+    lintOptions {
+        checkReleaseBuilds false
+    }
+}
