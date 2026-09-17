@@ -377,6 +377,25 @@ def update_pnl_tracker(prev_pnl, signal_results):
         else:
             still_open[key] = pos
 
+    # A coin+timeframe that just lost or expired gets a cooldown before it can be re-signaled,
+    # rather than being immediately eligible again the very next cycle. Without this, a coin
+    # that's simply chopping sideways near its own recent low (not trending, just ranging) can
+    # keep re-triggering the same "near the low, bullish" read over and over, whipsawing
+    # through the same tight range on repeat with nothing recording that it already failed
+    # here. Reuses PNL_EXPIRY_HOURS as the cooldown length too: the same time budget given to
+    # let a position resolve is a reasonable amount of time to require the range to actually
+    # change before trusting a fresh signal on it again. Wins don't trigger a cooldown -- a
+    # confirmed win doesn't mean the coin should be avoided.
+    cooldown_until = {}
+    for r in resolved:
+        if r["result"] not in ("loss", "expired"):
+            continue
+        key = f"{r['tf']}:{r['coin']}"
+        until = (datetime.datetime.fromisoformat(r["resolved_at"])
+                 + datetime.timedelta(hours=PNL_EXPIRY_HOURS.get(r["tf"], 24)))
+        if key not in cooldown_until or until > cooldown_until[key]:
+            cooldown_until[key] = until
+
     # Open new positions for currently-bullish coins not already being tracked. These are
     # left untouched (not resolution-checked) until at least the next run.
     for tf_key, results in signal_results.items():
@@ -385,6 +404,8 @@ def update_pnl_tracker(prev_pnl, signal_results):
                 continue
             key = f"{tf_key}:{r['symbol']}"
             if key in still_open:
+                continue
+            if key in cooldown_until and now < cooldown_until[key]:
                 continue
             t = r["trade"]
             still_open[key] = {
