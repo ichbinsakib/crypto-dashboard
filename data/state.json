@@ -371,7 +371,7 @@
       "rows": [
         [
           "Price vs. recent range",
-          "Near its 30-day high (~$1,360.64) - less room to run",
+          "Near its 30-day high (~$1,371.00) - less room to run",
           -1
         ],
         [
@@ -391,7 +391,7 @@
         ],
         [
           "Stretch from long-term average",
-          "+171.5% above its long-term average - very stretched",
+          "+173.4% above its long-term average - very stretched",
           -2
         ],
         [
@@ -404,12 +404,12 @@
       "id": "zcash",
       "symbol": "ZEC",
       "name": "Zcash",
-      "price": 1360.84,
-      "pct_24h": 14.96483,
-      "pct_7d": 9.5,
+      "price": 1370.91,
+      "pct_24h": 16.27455,
+      "pct_7d": 11.4,
       "support_30d": 564.5716107111141,
-      "resistance_30d": 1360.644456649315,
-      "as_of": "2026-09-17 07:25:19",
+      "resistance_30d": 1370.9992706431171,
+      "as_of": "2026-09-17 08:00:39",
       "stale": false
     },
     "rain": {
@@ -775,7 +775,7 @@
         ],
         [
           "Stretch from long-term average",
-          "-8.2% vs its long-term average - not stretched either way",
+          "-9.2% vs its long-term average - not stretched either way",
           0
         ],
         [
@@ -788,12 +788,12 @@
       "id": "kucoin-shares",
       "symbol": "KCS",
       "name": "KuCoin",
-      "price": 6.98,
-      "pct_24h": 2.71764,
-      "pct_7d": -0.2,
+      "price": 6.9,
+      "pct_24h": 1.30486,
+      "pct_7d": -1.2,
       "support_30d": 6.792256319407273,
       "resistance_30d": 7.8821382735057615,
-      "as_of": "2026-09-17 06:15:26",
+      "as_of": "2026-09-17 08:00:39",
       "stale": false
     },
     "hedera-hashgraph": {
@@ -1927,7 +1927,7 @@
         ],
         [
           "Stretch from long-term average",
-          "-2.6% vs its long-term average - not stretched either way",
+          "-2.5% vs its long-term average - not stretched either way",
           0
         ],
         [
@@ -1940,12 +1940,12 @@
       "id": "mantle",
       "symbol": "MNT",
       "name": "Mantle",
-      "price": 0.557765,
-      "pct_24h": 2.46678,
-      "pct_7d": -6.4,
+      "price": 0.558209,
+      "pct_24h": 2.87928,
+      "pct_7d": -6.7,
       "support_30d": 0.46737376334939396,
       "resistance_30d": 0.6365218632454678,
-      "as_of": "2026-09-17 05:25:21",
+      "as_of": "2026-09-17 08:00:39",
       "stale": false
     },
     "polkadot": {
@@ -3351,10 +3351,10 @@
         "name": "JUST",
         "tf": "15m",
         "entry": 0.11668,
-        "stop": 0.11645933333333333,
-        "target1": 0.11690066666666668,
-        "target2": 0.11712133333333336,
-        "opened_at": "2026-09-17T07:57:14.119450"
+        "stop": 0.11646833333333334,
+        "target1": 0.11689166666666667,
+        "target2": 0.11710333333333334,
+        "opened_at": "2026-09-17T08:02:33.451193"
       },
       "daily:XLM": {
         "coin": "XLM",
@@ -3364,7 +3364,7 @@
         "stop": 0.14164,
         "target1": 0.16596,
         "target2": 0.17812,
-        "opened_at": "2026-09-17T07:57:14.119450"
+        "opened_at": "2026-09-17T08:02:33.451193"
       }
     },
     "resolved": [
@@ -37583,6 +37583,32 @@
         "result": "win",
         "resolved_at": "2026-09-17T07:57:14.119450",
         "exit_price": 0.1826
+      },
+      {
+        "coin": "JST",
+        "name": "JUST",
+        "tf": "15m",
+        "entry": 0.11668,
+        "stop": 0.11645933333333333,
+        "target1": 0.11690066666666668,
+        "target2": 0.11712133333333336,
+        "opened_at": "2026-09-17T07:57:14.119450",
+        "result": "win",
+        "resolved_at": "2026-09-17T08:02:33.451193",
+        "exit_price": 0.117
+      },
+      {
+        "coin": "XLM",
+        "name": "Stellar",
+        "tf": "daily",
+        "entry": 0.1538,
+        "stop": 0.14164,
+        "target1": 0.16596,
+        "target2": 0.17812,
+        "opened_at": "2026-09-17T07:57:14.119450",
+        "result": "win",
+        "resolved_at": "2026-09-17T08:02:33.451193",
+        "exit_price": 0.1827
       }
     ]
   },
@@ -37590,14 +37616,14 @@
     "key": "BTC",
     "name": "Bitcoin",
     "emoji": "\u20bf",
-    "price": 76417,
+    "price": 76369,
     "high_24h": 76683,
     "low_24h": 75161,
-    "pct_24h": 0.88108,
+    "pct_24h": 0.85235,
     "pct_7d": -2.7,
     "pct_30d": 19.1,
-    "sma50": 72149.3855163846,
-    "sma200": 70327.19192576564,
+    "sma50": 72148.23599773571,
+    "sma200": 70326.90454610343,
     "support_30d": 69291.0104297816,
     "resistance_30d": 81264.70153038795,
     "mark_price": 76476.2,
@@ -37612,14 +37638,14 @@
     "key": "ETH",
     "name": "Ethereum",
     "emoji": "\u039e",
-    "price": 2442.74,
+    "price": 2441.2,
     "high_24h": 2444.01,
     "low_24h": 2371.36,
-    "pct_24h": 1.95294,
+    "pct_24h": 1.8947,
     "pct_7d": -1.7,
     "pct_30d": 28.8,
-    "sma50": 2227.8734857892546,
-    "sma200": 2066.9293687678214,
+    "sma50": 2227.8422183617176,
+    "sma200": 2066.921551910937,
     "support_30d": 2251.7346140069594,
     "resistance_30d": 2525.267261590238,
     "mark_price": 2446.53709302,
