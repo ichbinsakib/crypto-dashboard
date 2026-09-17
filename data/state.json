@@ -1639,7 +1639,7 @@
         ],
         [
           "Stretch from long-term average",
-          "+6.0% vs its long-term average - not stretched either way",
+          "+7.0% vs its long-term average - not stretched either way",
           0
         ],
         [
@@ -1652,12 +1652,12 @@
       "id": "litecoin",
       "symbol": "LTC",
       "name": "Litecoin",
-      "price": 53.42,
-      "pct_24h": 5.02784,
+      "price": 53.89,
+      "pct_24h": 5.86509,
       "pct_7d": 2.1,
       "support_30d": 46.76069840950213,
       "resistance_30d": 55.20228907963863,
-      "as_of": "2026-09-17 19:00:59",
+      "as_of": "2026-09-17 19:55:18",
       "stale": false
     },
     "bitget-token": {
@@ -1735,7 +1735,7 @@
         ],
         [
           "Stretch from long-term average",
-          "-13.4% vs its long-term average - not stretched either way",
+          "-13.2% vs its long-term average - not stretched either way",
           0
         ],
         [
@@ -1748,12 +1748,12 @@
       "id": "sui",
       "symbol": "SUI",
       "name": "Sui",
-      "price": 0.731797,
-      "pct_24h": 5.61339,
-      "pct_7d": -1.0,
+      "price": 0.733139,
+      "pct_24h": 3.79537,
+      "pct_7d": -1.5,
       "support_30d": 0.686491801454995,
       "resistance_30d": 0.8499161763231283,
-      "as_of": "2026-09-17 18:55:21",
+      "as_of": "2026-09-17 19:55:18",
       "stale": false
     },
     "lighter": {
@@ -2407,7 +2407,7 @@
         ],
         [
           "Stretch from long-term average",
-          "-3.7% vs its long-term average - not stretched either way",
+          "-3.5% vs its long-term average - not stretched either way",
           0
         ],
         [
@@ -2420,12 +2420,12 @@
       "id": "shiba-inu",
       "symbol": "SHIB",
       "name": "Shiba Inu",
-      "price": 5.13e-06,
-      "pct_24h": 6.08946,
+      "price": 5.14e-06,
+      "pct_24h": 5.86457,
       "pct_7d": 1.3,
       "support_30d": 4.735600499545677e-06,
       "resistance_30d": 5.903506876405612e-06,
-      "as_of": "2026-09-17 19:45:24",
+      "as_of": "2026-09-17 19:55:18",
       "stale": false
     },
     "near": {
@@ -3348,27 +3348,41 @@
         "coin": "JST",
         "name": "JUST",
         "tf": "15m",
+        "entry": 0.11511,
+        "stop": 0.11489633333333334,
+        "target1": 0.11532366666666667,
+        "target2": 0.11553733333333334,
+        "opened_at": "2026-09-17T19:57:17.650620"
+      }
+    },
+    "resolved": [
+      {
+        "coin": "JST",
+        "name": "JUST",
+        "tf": "15m",
         "entry": 0.11535,
         "stop": 0.11512866666666666,
         "target1": 0.11557133333333333,
         "target2": 0.11579266666666667,
-        "opened_at": "2026-09-17T19:12:31.634098"
+        "opened_at": "2026-09-17T19:12:31.634098",
+        "result": "loss",
+        "resolved_at": "2026-09-17T19:57:17.650620",
+        "exit_price": 0.11511
       }
-    },
-    "resolved": []
+    ]
   },
   "BTC": {
     "key": "BTC",
     "name": "Bitcoin",
     "emoji": "\u20bf",
-    "price": 76476,
+    "price": 76580,
     "high_24h": 77024,
     "low_24h": 75602,
-    "pct_24h": 0.58828,
+    "pct_24h": 0.77671,
     "pct_7d": -1.0,
     "pct_30d": 18.4,
-    "sma50": 72150.38330452585,
-    "sma200": 70327.44137280095,
+    "sma50": 72152.58504932579,
+    "sma200": 70327.99180900095,
     "support_30d": 69291.0104297816,
     "resistance_30d": 81264.70153038795,
     "mark_price": 76553.12328336,
@@ -3383,14 +3397,14 @@
     "key": "ETH",
     "name": "Ethereum",
     "emoji": "\u039e",
-    "price": 2445.32,
+    "price": 2450.87,
     "high_24h": 2478.98,
     "low_24h": 2388.47,
-    "pct_24h": 1.59435,
+    "pct_24h": 1.87318,
     "pct_7d": -0.6,
     "pct_30d": 28.3,
-    "sma50": 2227.9199620160052,
-    "sma200": 2066.9409878245087,
+    "sma50": 2228.008383435988,
+    "sma200": 2066.9630931795045,
     "support_30d": 2251.7346140069594,
     "resistance_30d": 2525.267261590238,
     "mark_price": 2450.85990698,
