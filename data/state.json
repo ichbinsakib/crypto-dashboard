@@ -933,11 +933,11 @@
       "symbol": "AVAX",
       "name": "Avalanche",
       "price": 7.61,
-      "pct_24h": 5.04758,
-      "pct_7d": 0.0,
+      "pct_24h": 5.95479,
+      "pct_7d": 0.2,
       "support_30d": 6.774492921991783,
       "resistance_30d": 8.074275746115342,
-      "as_of": "2026-09-17 16:30:30",
+      "as_of": "2026-09-17 17:50:26",
       "stale": false
     },
     "aster-2": {
@@ -1317,11 +1317,11 @@
       "symbol": "HTX",
       "name": "HTX DAO",
       "price": 1.67e-06,
-      "pct_24h": 0.02789,
-      "pct_7d": -1.2,
+      "pct_24h": 0.04808,
+      "pct_7d": -1.4,
       "support_30d": 1.6023985995039954e-06,
       "resistance_30d": 1.7873095460323824e-06,
-      "as_of": "2026-09-17 16:50:25",
+      "as_of": "2026-09-17 17:50:26",
       "stale": false
     },
     "superstate-short-duration-us-government-securities-fund-ustb": {
@@ -1399,7 +1399,7 @@
         ],
         [
           "Stretch from long-term average",
-          "+32.1% above its long-term average - very stretched",
+          "+31.8% above its long-term average - very stretched",
           -2
         ],
         [
@@ -1412,12 +1412,12 @@
       "id": "gatechain-token",
       "symbol": "GT",
       "name": "Gate",
-      "price": 9.35,
-      "pct_24h": 3.29382,
+      "price": 9.33,
+      "pct_24h": 3.02996,
       "pct_7d": 0.8,
       "support_30d": 7.023244912121639,
       "resistance_30d": 9.383170476488772,
-      "as_of": "2026-09-17 17:40:23",
+      "as_of": "2026-09-17 17:50:26",
       "stale": false
     },
     "crypto-com-chain": {
@@ -3354,7 +3354,7 @@
         "stop": 1.2742083333333334,
         "target1": 1.2977916666666667,
         "target2": 1.3095833333333333,
-        "opened_at": "2026-09-17T17:47:18.769367"
+        "opened_at": "2026-09-17T17:52:22.021769"
       },
       "daily:XLM": {
         "coin": "XLM",
@@ -3364,7 +3364,7 @@
         "stop": 0.1416,
         "target1": 0.16599999999999998,
         "target2": 0.17819999999999997,
-        "opened_at": "2026-09-17T17:47:18.769367"
+        "opened_at": "2026-09-17T17:52:22.021769"
       }
     },
     "resolved": [
@@ -41808,6 +41808,32 @@
         "result": "win",
         "resolved_at": "2026-09-17T17:47:18.769367",
         "exit_price": 0.1864
+      },
+      {
+        "coin": "GRAM",
+        "name": "Gram (prev. Toncoin)",
+        "tf": "1h",
+        "entry": 1.286,
+        "stop": 1.2742083333333334,
+        "target1": 1.2977916666666667,
+        "target2": 1.3095833333333333,
+        "opened_at": "2026-09-17T17:47:18.769367",
+        "result": "win",
+        "resolved_at": "2026-09-17T17:52:22.021769",
+        "exit_price": 1.341
+      },
+      {
+        "coin": "XLM",
+        "name": "Stellar",
+        "tf": "daily",
+        "entry": 0.1538,
+        "stop": 0.1416,
+        "target1": 0.16599999999999998,
+        "target2": 0.17819999999999997,
+        "opened_at": "2026-09-17T17:47:18.769367",
+        "result": "win",
+        "resolved_at": "2026-09-17T17:52:22.021769",
+        "exit_price": 0.1864
       }
     ]
   },
@@ -41815,14 +41841,14 @@
     "key": "BTC",
     "name": "Bitcoin",
     "emoji": "\u20bf",
-    "price": 76737,
+    "price": 76578,
     "high_24h": 77024,
     "low_24h": 75161,
-    "pct_24h": 1.77419,
+    "pct_24h": 1.65161,
     "pct_7d": -0.7,
     "pct_30d": 18.2,
-    "sma50": 72155.72282119672,
-    "sma200": 70328.77625196867,
+    "sma50": 72152.27949603726,
+    "sma200": 70327.91542067881,
     "support_30d": 69291.0104297816,
     "resistance_30d": 81264.70153038795,
     "mark_price": 76687.93324638,
@@ -41837,14 +41863,14 @@
     "key": "ETH",
     "name": "Ethereum",
     "emoji": "\u039e",
-    "price": 2467.67,
+    "price": 2462.08,
     "high_24h": 2478.98,
     "low_24h": 2378.61,
-    "pct_24h": 3.95131,
+    "pct_24h": 3.76534,
     "pct_7d": 1.1,
     "pct_30d": 28.7,
-    "sma50": 2228.3726239939538,
-    "sma200": 2067.0541533189958,
+    "sma50": 2228.239021995042,
+    "sma200": 2067.020752819268,
     "support_30d": 2251.7346140069594,
     "resistance_30d": 2525.267261590238,
     "mark_price": 2464.4,
