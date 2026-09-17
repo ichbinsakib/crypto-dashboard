@@ -1,10 +1,12 @@
 package io.github.ichbinsakib.twa;
 
 import android.app.Activity;
+import android.graphics.Insets;
 import android.net.Uri;
 import android.os.Build;
 import android.os.Bundle;
 import android.view.View;
+import android.view.WindowInsets;
 import android.webkit.WebSettings;
 import android.webkit.WebView;
 import android.webkit.WebViewClient;
@@ -20,16 +22,27 @@ public class MainActivity extends Activity {
         super.onCreate(savedInstanceState);
 
         webView = new WebView(this);
+        webView.setBackgroundColor(0xFF0A0E14); // matches the dashboard's dark theme, so the
+                                                  // padded-out system-bar area isn't a flash of
+                                                  // white/transparent before the page paints
         setContentView(webView);
 
-        // Android 15+ (API 35, our compile/targetSdk) forces edge-to-edge by default -- the
-        // WebView draws full-bleed behind the status bar and gesture nav bar with no padding,
-        // which is what made the page look uncropped/misaligned at the top and bottom instead
-        // of properly fitting the screen. Opting back into the classic behavior so the system
-        // insets the content away from both bars automatically, same as before API 35.
-        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.R) {
-            getWindow().setDecorFitsSystemWindows(true);
-        }
+        // Android 15+ (API 35, our compile/targetSdk) enforces edge-to-edge and does NOT let
+        // an app fully opt out via Window.setDecorFitsSystemWindows(true) -- that call alone
+        // isn't reliable there, which is why the status bar was drawing right over the app's
+        // own header. Padding the WebView directly by the real system bar insets works
+        // regardless of that restriction, since it doesn't depend on opting out at all.
+        webView.setOnApplyWindowInsetsListener((v, insets) -> {
+            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.R) {
+                Insets bars = insets.getInsets(WindowInsets.Type.systemBars());
+                v.setPadding(bars.left, bars.top, bars.right, bars.bottom);
+            } else {
+                v.setPadding(
+                        insets.getSystemWindowInsetLeft(), insets.getSystemWindowInsetTop(),
+                        insets.getSystemWindowInsetRight(), insets.getSystemWindowInsetBottom());
+            }
+            return insets;
+        });
 
         WebSettings settings = webView.getSettings();
         settings.setJavaScriptEnabled(true);
