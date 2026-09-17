@@ -993,24 +993,48 @@ def compute_intraday_signal(klines, lookback, window_label):
     rows.append(("Volume confirmation", reading, pts))
     total += pts
 
-    if total >= 3:
-        label, status = "🟢 NEAR-TERM DIP ZONE", "bullish"
-        plain = "Near the bottom of its short-term range with improving momentum."
-    elif total >= 1:
-        label, status = "🟢 LEAN LONG (short-term)", "bullish"
-        plain = "Mildly favorable for a quick, tightly-managed trade -- not a strong signal."
-    elif total >= -1:
-        label, status = "🟡 NO CLEAR EDGE", "neutral"
-        plain = "Choppy on this timeframe -- no clean setup right now."
-    else:
-        label, status = "🔴 STRETCHED - AVOID CHASING", "bearish"
-        plain = "Extended on this timeframe; chasing here has poor risk/reward."
-
     entry = recent_low
     stop = recent_low - atr
     risk = entry - stop
     target1 = entry + risk
     target2 = entry + 2 * risk
+
+    # total is a sum across 4 independent factors, so it can clear the bullish threshold
+    # through momentum/direction/volume alone even when price isn't anywhere near recent_low
+    # -- e.g. a coin already well into an uptrend. In that case target1 (measured from
+    # recent_low) can already sit BELOW current price, and stop can already sit below it too,
+    # meaning the "trade" this call describes was already over before it was ever generated.
+    # Require price to actually still be inside (stop, target1) -- a real, not-yet-resolved
+    # setup -- before calling it bullish at all, regardless of which factors added up to the
+    # score.
+    tradeable = stop < price < target1
+    if total >= 3:
+        tier = "strong"
+    elif total >= 1:
+        tier = "lean"
+    elif total >= -1:
+        tier = "neutral"
+    else:
+        tier = "bearish"
+    if tier in ("strong", "lean") and not tradeable:
+        # The score says bullish, but price is already outside (stop, target1) -- the setup
+        # this score describes already resolved before it could ever be acted on. Downgrade
+        # rather than reject outright: the bearish path is unaffected since it isn't gated on
+        # this trade construct at all.
+        tier = "neutral"
+
+    if tier == "strong":
+        label, status = "🟢 NEAR-TERM DIP ZONE", "bullish"
+        plain = "Near the bottom of its short-term range with improving momentum."
+    elif tier == "lean":
+        label, status = "🟢 LEAN LONG (short-term)", "bullish"
+        plain = "Mildly favorable for a quick, tightly-managed trade -- not a strong signal."
+    elif tier == "neutral":
+        label, status = "🟡 NO CLEAR EDGE", "neutral"
+        plain = "Choppy on this timeframe -- no clean setup right now."
+    else:
+        label, status = "🔴 STRETCHED - AVOID CHASING", "bearish"
+        plain = "Extended on this timeframe; chasing here has poor risk/reward."
 
     return {
         "label": label, "status": status, "score": total, "rows": rows, "plain": plain,
@@ -1950,17 +1974,25 @@ if ('serviceWorker' in navigator) {{
     rows.push(['Volume confirmation', reading, pts]);
     total += pts;
 
-    var label, status, plain;
-    if (total >= 3) {{ label = '🟢 NEAR-TERM DIP ZONE'; status = 'bullish'; plain = 'Near the bottom of its short-term range with improving momentum.'; }}
-    else if (total >= 1) {{ label = '🟢 LEAN LONG (short-term)'; status = 'bullish'; plain = 'Mildly favorable for a quick, tightly-managed trade -- not a strong signal.'; }}
-    else if (total >= -1) {{ label = '🟡 NO CLEAR EDGE'; status = 'neutral'; plain = 'Choppy on this timeframe -- no clean setup right now.'; }}
-    else {{ label = '🔴 STRETCHED - AVOID CHASING'; status = 'bearish'; plain = 'Extended on this timeframe; chasing here has poor risk/reward.'; }}
-
     var entry = recentLow;
     var stop = recentLow - atr;
     var risk = entry - stop;
     var target1 = entry + risk;
     var target2 = entry + 2 * risk;
+
+    var tier;
+    if (total >= 3) {{ tier = 'strong'; }}
+    else if (total >= 1) {{ tier = 'lean'; }}
+    else if (total >= -1) {{ tier = 'neutral'; }}
+    else {{ tier = 'bearish'; }}
+    var tradeable = stop < price && price < target1;
+    if ((tier === 'strong' || tier === 'lean') && !tradeable) {{ tier = 'neutral'; }}
+
+    var label, status, plain;
+    if (tier === 'strong') {{ label = '🟢 NEAR-TERM DIP ZONE'; status = 'bullish'; plain = 'Near the bottom of its short-term range with improving momentum.'; }}
+    else if (tier === 'lean') {{ label = '🟢 LEAN LONG (short-term)'; status = 'bullish'; plain = 'Mildly favorable for a quick, tightly-managed trade -- not a strong signal.'; }}
+    else if (tier === 'neutral') {{ label = '🟡 NO CLEAR EDGE'; status = 'neutral'; plain = 'Choppy on this timeframe -- no clean setup right now.'; }}
+    else {{ label = '🔴 STRETCHED - AVOID CHASING'; status = 'bearish'; plain = 'Extended on this timeframe; chasing here has poor risk/reward.'; }}
 
     return {{
       label: label, status: status, score: total, rows: rows, plain: plain, price: price,
