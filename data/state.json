@@ -2095,16 +2095,16 @@
     "ondo-finance": {
       "label": "\ud83d\udfe2 LEAN ACCUMULATE",
       "status": "bullish",
-      "score": 4,
+      "score": 2,
       "rows": [
         [
           "Price vs. recent range",
-          "Near its 30-day low (~$0.3260) - historically a better entry",
-          2
+          "Sitting in the middle of its 30-day range",
+          0
         ],
         [
           "Crowd mood (Fear & Greed)",
-          "51/100 - crowd mood is neutral",
+          "50/100 - crowd mood is neutral",
           0
         ],
         [
@@ -2119,7 +2119,7 @@
         ],
         [
           "Stretch from long-term average",
-          "+2.6% vs its long-term average - not stretched either way",
+          "+6.5% vs its long-term average - not stretched either way",
           0
         ],
         [
@@ -2132,12 +2132,12 @@
       "id": "ondo-finance",
       "symbol": "ONDO",
       "name": "Ondo",
-      "price": 0.336869,
-      "pct_24h": 2.35202,
-      "pct_7d": -6.8,
-      "support_30d": 0.32601458799099026,
+      "price": 0.350241,
+      "pct_24h": 6.3913,
+      "pct_7d": -2.4,
+      "support_30d": 0.3283157645282996,
       "resistance_30d": 0.3969475338902824,
-      "as_of": "2026-09-16 23:05:20",
+      "as_of": "2026-09-17 00:30:26",
       "stale": false
     },
     "canton-network": {
@@ -2335,16 +2335,16 @@
     "sky": {
       "label": "\ud83d\udfe2 LEAN ACCUMULATE",
       "status": "bullish",
-      "score": 2,
+      "score": 4,
       "rows": [
         [
           "Price vs. recent range",
-          "Near its 30-day low (~$0.0561) - historically a better entry",
+          "Near its 30-day low (~$0.0573) - historically a better entry",
           2
         ],
         [
           "Crowd mood (Fear & Greed)",
-          "51/100 - crowd mood is neutral",
+          "50/100 - crowd mood is neutral",
           0
         ],
         [
@@ -2354,13 +2354,13 @@
         ],
         [
           "Recent trend",
-          "Trending down - avoid catching a falling knife",
-          -1
+          "Chopping sideways - no clear trend",
+          0
         ],
         [
           "Stretch from long-term average",
-          "-15.1% below its long-term average - confirmed downtrend",
-          -1
+          "-13.2% vs its long-term average - not stretched either way",
+          0
         ],
         [
           "Leverage traders' bias",
@@ -2372,12 +2372,12 @@
       "id": "sky",
       "symbol": "SKY",
       "name": "Sky",
-      "price": 0.056577,
-      "pct_24h": -7.76925,
-      "pct_7d": -9.3,
-      "support_30d": 0.05605452008934767,
+      "price": 0.0578,
+      "pct_24h": -5.26832,
+      "pct_7d": -6.0,
+      "support_30d": 0.057256438766750246,
       "resistance_30d": 0.07314868186988309,
-      "as_of": "2026-09-16 21:15:20",
+      "as_of": "2026-09-17 00:30:26",
       "stale": false
     },
     "shiba-inu": {
@@ -2435,7 +2435,7 @@
       "rows": [
         [
           "Price vs. recent range",
-          "Near its 30-day high (~$2.67) - less room to run",
+          "Near its 30-day high (~$2.69) - less room to run",
           -1
         ],
         [
@@ -2455,7 +2455,7 @@
         ],
         [
           "Stretch from long-term average",
-          "+51.5% above its long-term average - very stretched",
+          "+53.2% above its long-term average - very stretched",
           -2
         ],
         [
@@ -2468,12 +2468,12 @@
       "id": "near",
       "symbol": "NEAR",
       "name": "NEAR Protocol",
-      "price": 2.65,
-      "pct_24h": 13.26208,
+      "price": 2.68,
+      "pct_24h": 14.62725,
       "pct_7d": 6.9,
       "support_30d": 1.7303834026337377,
-      "resistance_30d": 2.667373447637029,
-      "as_of": "2026-09-17 00:20:22",
+      "resistance_30d": 2.6887228484973185,
+      "as_of": "2026-09-17 00:30:26",
       "stale": false
     },
     "quant-network": {
@@ -3352,10 +3352,10 @@
         "name": "Worldcoin",
         "tf": "15m",
         "entry": 0.3563,
-        "stop": 0.35219,
-        "target1": 0.36041,
-        "target2": 0.36452,
-        "opened_at": "2026-09-17T00:27:10.116990"
+        "stop": 0.35219333333333336,
+        "target1": 0.36040666666666665,
+        "target2": 0.3645133333333333,
+        "opened_at": "2026-09-17T00:32:17.112924"
       },
       "1h:MORPHO": {
         "coin": "MORPHO",
@@ -3365,7 +3365,7 @@
         "stop": 2.015,
         "target1": 2.071,
         "target2": 2.099,
-        "opened_at": "2026-09-17T00:27:10.116990"
+        "opened_at": "2026-09-17T00:32:17.112924"
       },
       "daily:XLM": {
         "coin": "XLM",
@@ -3375,7 +3375,7 @@
         "stop": 0.14170666666666665,
         "target1": 0.16589333333333334,
         "target2": 0.17798666666666668,
-        "opened_at": "2026-09-17T00:27:10.116990"
+        "opened_at": "2026-09-17T00:32:17.112924"
       }
     },
     "resolved": [
@@ -34929,6 +34929,45 @@
         "result": "win",
         "resolved_at": "2026-09-17T00:27:10.116990",
         "exit_price": 0.1859
+      },
+      {
+        "coin": "WLD",
+        "name": "Worldcoin",
+        "tf": "15m",
+        "entry": 0.3563,
+        "stop": 0.35219,
+        "target1": 0.36041,
+        "target2": 0.36452,
+        "opened_at": "2026-09-17T00:27:10.116990",
+        "result": "win",
+        "resolved_at": "2026-09-17T00:32:17.112924",
+        "exit_price": 0.3736
+      },
+      {
+        "coin": "MORPHO",
+        "name": "Morpho",
+        "tf": "1h",
+        "entry": 2.043,
+        "stop": 2.015,
+        "target1": 2.071,
+        "target2": 2.099,
+        "opened_at": "2026-09-17T00:27:10.116990",
+        "result": "win",
+        "resolved_at": "2026-09-17T00:32:17.112924",
+        "exit_price": 2.099
+      },
+      {
+        "coin": "XLM",
+        "name": "Stellar",
+        "tf": "daily",
+        "entry": 0.1538,
+        "stop": 0.14170666666666665,
+        "target1": 0.16589333333333334,
+        "target2": 0.17798666666666668,
+        "opened_at": "2026-09-17T00:27:10.116990",
+        "result": "win",
+        "resolved_at": "2026-09-17T00:32:17.112924",
+        "exit_price": 0.1864
       }
     ]
   },
@@ -34936,14 +34975,14 @@
     "key": "BTC",
     "name": "Bitcoin",
     "emoji": "\u20bf",
-    "price": 76366,
+    "price": 76363,
     "high_24h": 76413,
     "low_24h": 75161,
-    "pct_24h": 0.78159,
+    "pct_24h": 0.75818,
     "pct_7d": -2.3,
     "pct_30d": 18.5,
-    "sma50": 72148.34347187699,
-    "sma200": 70326.93141463873,
+    "sma50": 72148.10886663433,
+    "sma200": 70326.87276332807,
     "support_30d": 69291.0104297816,
     "resistance_30d": 81264.70153038795,
     "mark_price": 75655.44813043,
@@ -34958,14 +34997,14 @@
     "key": "ETH",
     "name": "Ethereum",
     "emoji": "\u039e",
-    "price": 2422.15,
+    "price": 2421.62,
     "high_24h": 2424.51,
     "low_24h": 2371.36,
-    "pct_24h": 0.78601,
+    "pct_24h": 0.75707,
     "pct_7d": -1.4,
     "pct_30d": 27.0,
-    "sma50": 2227.4646198282503,
-    "sma200": 2066.8271522775703,
+    "sma50": 2227.4345609756856,
+    "sma200": 2066.819637564429,
     "support_30d": 2251.7346140069594,
     "resistance_30d": 2525.267261590238,
     "mark_price": 2391.64229457,
