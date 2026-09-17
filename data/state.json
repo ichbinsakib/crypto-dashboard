@@ -117,11 +117,11 @@
       "symbol": "XRP",
       "name": "XRP",
       "price": 1.29,
-      "pct_24h": 0.4552,
+      "pct_24h": 0.60783,
       "pct_7d": -4.5,
       "support_30d": 1.1051485598996633,
       "resistance_30d": 1.52050482788377,
-      "as_of": "2026-09-17 22:05:19",
+      "as_of": "2026-09-17 22:10:22",
       "stale": false
     },
     "solana": {
@@ -356,12 +356,12 @@
       "id": "dogecoin",
       "symbol": "DOGE",
       "name": "Dogecoin",
-      "price": 0.081394,
-      "pct_24h": 1.09999,
+      "price": 0.081357,
+      "pct_24h": 1.59489,
       "pct_7d": -3.3,
       "support_30d": 0.07499787463343413,
       "resistance_30d": 0.09337940032634065,
-      "as_of": "2026-09-17 22:00:38",
+      "as_of": "2026-09-17 22:10:22",
       "stale": false
     },
     "zcash": {
@@ -3299,7 +3299,7 @@
       "rows": [
         [
           "Price vs. recent range",
-          "Near its 30-day high (~$2.46) - less room to run",
+          "Near its 30-day high (~$2.45) - less room to run",
           -1
         ],
         [
@@ -3319,7 +3319,7 @@
         ],
         [
           "Stretch from long-term average",
-          "+60.8% above its long-term average - very stretched",
+          "+60.1% above its long-term average - very stretched",
           -2
         ],
         [
@@ -3332,16 +3332,18 @@
       "id": "pancakeswap-token",
       "symbol": "CAKE",
       "name": "PancakeSwap",
-      "price": 2.46,
-      "pct_24h": 10.31784,
-      "pct_7d": 16.3,
+      "price": 2.45,
+      "pct_24h": 9.30189,
+      "pct_7d": 16.4,
       "support_30d": 1.6190173076683865,
-      "resistance_30d": 2.4640872386435797,
-      "as_of": "2026-09-17 20:05:20",
+      "resistance_30d": 2.450723968218035,
+      "as_of": "2026-09-17 22:10:22",
       "stale": false
     }
   },
-  "_strong_buy_state": {},
+  "_strong_buy_state": {
+    "scanner-15m:XLM": true
+  },
   "_pnl_tracker": {
     "open": {
       "15m:XLM": {
@@ -3386,6 +3388,13 @@
   },
   "_notification_feed": [
     {
+      "id": "signal:scanner-15m:XLM:2026-09-17T22:12:24.563900",
+      "ts": "2026-09-17T22:12:24.563900",
+      "type": "signal",
+      "title": "\ud83d\udfe2 New signal: XLM (15-Minute)",
+      "body": "\ud83d\udfe2 NEAR-TERM DIP ZONE"
+    },
+    {
       "id": "signal:scanner-15m:XLM:2026-09-17T21:57:51.525341",
       "ts": "2026-09-17T21:57:51.525341",
       "type": "signal",
@@ -3404,14 +3413,14 @@
     "key": "BTC",
     "name": "Bitcoin",
     "emoji": "\u20bf",
-    "price": 76330,
+    "price": 76319,
     "high_24h": 77024,
     "low_24h": 75610,
-    "pct_24h": 0.81689,
+    "pct_24h": 0.96046,
     "pct_7d": -1.1,
     "pct_30d": 18.3,
-    "sma50": 72147.58153994886,
-    "sma200": 70326.7409316567,
+    "sma50": 72147.8375401041,
+    "sma200": 70326.80493169551,
     "support_30d": 69291.0104297816,
     "resistance_30d": 81264.70153038795,
     "mark_price": 76486.85126812,
@@ -3426,14 +3435,14 @@
     "key": "ETH",
     "name": "Ethereum",
     "emoji": "\u039e",
-    "price": 2445.11,
+    "price": 2443.79,
     "high_24h": 2478.98,
     "low_24h": 2389.52,
-    "pct_24h": 2.24377,
+    "pct_24h": 2.36473,
     "pct_7d": -0.6,
     "pct_30d": 28.0,
-    "sma50": 2227.9244379980673,
-    "sma200": 2066.9421068200245,
+    "sma50": 2227.905260511953,
+    "sma200": 2066.937312448496,
     "support_30d": 2251.7346140069594,
     "resistance_30d": 2525.267261590238,
     "mark_price": 2450.15,
