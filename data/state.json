@@ -415,11 +415,11 @@
     "rain": {
       "label": "\ud83d\udfe2 LEAN ACCUMULATE",
       "status": "bullish",
-      "score": 2,
+      "score": 3,
       "rows": [
         [
           "Price vs. recent range",
-          "Near its 30-day low (~$0.0129) - historically a better entry",
+          "Near its 30-day low (~$0.0128) - historically a better entry",
           2
         ],
         [
@@ -439,8 +439,8 @@
         ],
         [
           "Stretch from long-term average",
-          "+10.2% above its long-term average - a bit stretched",
-          -1
+          "+9.4% vs its long-term average - not stretched either way",
+          0
         ],
         [
           "Leverage traders' bias",
@@ -452,12 +452,12 @@
       "id": "rain",
       "symbol": "RAIN",
       "name": "Rain",
-      "price": 0.01290369,
-      "pct_24h": -7.76552,
-      "pct_7d": -21.5,
-      "support_30d": 0.01289999627106216,
+      "price": 0.01281337,
+      "pct_24h": -8.12395,
+      "pct_7d": -21.3,
+      "support_30d": 0.012818367290827153,
       "resistance_30d": 0.018158429442510105,
-      "as_of": "2026-09-17 06:10:24",
+      "as_of": "2026-09-17 07:45:25",
       "stale": false
     },
     "chainlink": {
@@ -943,7 +943,7 @@
     "aster-2": {
       "label": "\ud83d\udfe1 HOLD / NEUTRAL",
       "status": "neutral",
-      "score": 1,
+      "score": 0,
       "rows": [
         [
           "Price vs. recent range",
@@ -967,8 +967,8 @@
         ],
         [
           "Stretch from long-term average",
-          "+9.9% vs its long-term average - not stretched either way",
-          0
+          "+12.1% above its long-term average - a bit stretched",
+          -1
         ],
         [
           "Leverage traders' bias",
@@ -980,12 +980,12 @@
       "id": "aster-2",
       "symbol": "ASTER",
       "name": "Aster",
-      "price": 0.727833,
-      "pct_24h": 7.5225,
-      "pct_7d": 0.5,
+      "price": 0.74213,
+      "pct_24h": 10.67085,
+      "pct_7d": 0.3,
       "support_30d": 0.6250825996257033,
       "resistance_30d": 0.7868111056215635,
-      "as_of": "2026-09-17 05:40:23",
+      "as_of": "2026-09-17 07:45:25",
       "stale": false
     },
     "worldcoin-wld": {
@@ -2119,7 +2119,7 @@
         ],
         [
           "Stretch from long-term average",
-          "+6.4% vs its long-term average - not stretched either way",
+          "+7.0% vs its long-term average - not stretched either way",
           0
         ],
         [
@@ -2132,12 +2132,12 @@
       "id": "ondo-finance",
       "symbol": "ONDO",
       "name": "Ondo",
-      "price": 0.350014,
-      "pct_24h": 6.82332,
-      "pct_7d": -2.6,
+      "price": 0.352135,
+      "pct_24h": 7.83694,
+      "pct_7d": -2.3,
       "support_30d": 0.3283157645282996,
       "resistance_30d": 0.3969475338902824,
-      "as_of": "2026-09-17 05:10:24",
+      "as_of": "2026-09-17 07:45:25",
       "stale": false
     },
     "canton-network": {
@@ -3342,7 +3342,6 @@
     }
   },
   "_strong_buy_state": {
-    "scanner-15m:JST": true,
     "scanner-daily:XLM": true
   },
   "_pnl_tracker": {
@@ -3365,7 +3364,7 @@
         "stop": 0.14164,
         "target1": 0.16596,
         "target2": 0.17812,
-        "opened_at": "2026-09-17T07:42:24.817996"
+        "opened_at": "2026-09-17T07:47:19.756181"
       }
     },
     "resolved": [
@@ -37519,6 +37518,19 @@
         "result": "win",
         "resolved_at": "2026-09-17T07:42:24.817996",
         "exit_price": 0.1829
+      },
+      {
+        "coin": "XLM",
+        "name": "Stellar",
+        "tf": "daily",
+        "entry": 0.1538,
+        "stop": 0.14164,
+        "target1": 0.16596,
+        "target2": 0.17812,
+        "opened_at": "2026-09-17T07:42:24.817996",
+        "result": "win",
+        "resolved_at": "2026-09-17T07:47:19.756181",
+        "exit_price": 0.1828
       }
     ]
   },
@@ -37526,14 +37538,14 @@
     "key": "BTC",
     "name": "Bitcoin",
     "emoji": "\u20bf",
-    "price": 76440,
+    "price": 76451,
     "high_24h": 76683,
     "low_24h": 75161,
-    "pct_24h": 0.8433,
+    "pct_24h": 0.8989,
     "pct_7d": -2.7,
     "pct_30d": 19.1,
-    "sma50": 72149.78282362092,
-    "sma200": 70327.29125257471,
+    "sma50": 72150.01337943049,
+    "sma200": 70327.34889152712,
     "support_30d": 69291.0104297816,
     "resistance_30d": 81264.70153038795,
     "mark_price": 76476.2,
@@ -37548,14 +37560,14 @@
     "key": "ETH",
     "name": "Ethereum",
     "emoji": "\u039e",
-    "price": 2445.75,
+    "price": 2445.82,
     "high_24h": 2444.01,
     "low_24h": 2371.36,
-    "pct_24h": 1.92279,
+    "pct_24h": 2.00242,
     "pct_7d": -1.7,
     "pct_30d": 28.8,
-    "sma50": 2227.935152226268,
-    "sma200": 2066.944785377075,
+    "sma50": 2227.9326125803623,
+    "sma200": 2066.9441504655983,
     "support_30d": 2251.7346140069594,
     "resistance_30d": 2525.267261590238,
     "mark_price": 2446.53709302,
