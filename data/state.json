@@ -40,7 +40,7 @@
         ],
         [
           "Crowd mood (Fear & Greed)",
-          "51/100 - crowd mood is neutral",
+          "50/100 - crowd mood is neutral",
           0
         ],
         [
@@ -55,7 +55,7 @@
         ],
         [
           "Stretch from long-term average",
-          "+14.8% above its long-term average - a bit stretched",
+          "+15.9% above its long-term average - a bit stretched",
           -1
         ],
         [
@@ -68,12 +68,12 @@
       "id": "binancecoin",
       "symbol": "BNB",
       "name": "BNB",
-      "price": 719.49,
-      "pct_24h": 0.88132,
-      "pct_7d": -2.3,
-      "support_30d": 603.5021332341098,
+      "price": 726.88,
+      "pct_24h": 1.65893,
+      "pct_7d": 0.9,
+      "support_30d": 627.053410537708,
       "resistance_30d": 766.4092879330625,
-      "as_of": "2026-09-16 21:45:23",
+      "as_of": "2026-09-17 00:25:19",
       "stale": false
     },
     "ripple": {
@@ -136,7 +136,7 @@
         ],
         [
           "Crowd mood (Fear & Greed)",
-          "51/100 - crowd mood is neutral",
+          "50/100 - crowd mood is neutral",
           0
         ],
         [
@@ -151,7 +151,7 @@
         ],
         [
           "Stretch from long-term average",
-          "+17.4% above its long-term average - a bit stretched",
+          "+18.5% above its long-term average - a bit stretched",
           -1
         ],
         [
@@ -164,12 +164,12 @@
       "id": "solana",
       "symbol": "SOL",
       "name": "Solana",
-      "price": 97.87,
-      "pct_24h": 0.22463,
-      "pct_7d": -5.7,
-      "support_30d": 77.00190398395006,
+      "price": 98.87,
+      "pct_24h": 1.88353,
+      "pct_7d": -2.2,
+      "support_30d": 85.33310287519124,
       "resistance_30d": 109.17730597799657,
-      "as_of": "2026-09-16 19:46:19",
+      "as_of": "2026-09-17 00:25:19",
       "stale": false
     },
     "tron": {
@@ -2573,24 +2573,24 @@
       "stale": false
     },
     "bitway": {
-      "label": "\ud83d\udd34 CAUTION - REDUCE NEW BUYS",
+      "label": "\ud83d\udd34 DISTRIBUTION ZONE",
       "status": "bearish",
-      "score": -3,
+      "score": -7,
       "rows": [
         [
           "Price vs. recent range",
-          "Near its 30-day high (~$0.7443) - less room to run",
+          "Near its 30-day high (~$0.7492) - less room to run",
           -1
         ],
         [
           "Crowd mood (Fear & Greed)",
-          "51/100 - crowd mood is neutral",
+          "50/100 - crowd mood is neutral",
           0
         ],
         [
           "Market phase (best guess)",
-          "Unknown",
-          0
+          "Very extended after a big run - phase where smart money sells",
+          -2
         ],
         [
           "Recent trend",
@@ -2599,8 +2599,8 @@
         ],
         [
           "Stretch from long-term average",
-          "No long-term average data",
-          0
+          "+502.4% above its long-term average - very stretched",
+          -2
         ],
         [
           "Leverage traders' bias",
@@ -2608,16 +2608,16 @@
           0
         ]
       ],
-      "plain": "Getting risky - I'd hold off on new buys until this cools down.",
+      "plain": "Looks stretched and euphoric - historically the zone where smart money sells, not buys.",
       "id": "bitway",
       "symbol": "BTW",
       "name": "Bitway",
-      "price": 0.740204,
-      "pct_24h": 7.1765,
-      "pct_7d": 65.1,
+      "price": 0.742868,
+      "pct_24h": 7.5639,
+      "pct_7d": 66.8,
       "support_30d": 0.3884816128039819,
-      "resistance_30d": 0.7442666227285645,
-      "as_of": "2026-09-16 23:40:23",
+      "resistance_30d": 0.7491686401380382,
+      "as_of": "2026-09-17 00:25:19",
       "stale": false
     },
     "world-liberty-financial": {
@@ -3342,7 +3342,8 @@
     }
   },
   "_strong_buy_state": {
-    "scanner-1h:MORPHO": true
+    "scanner-1h:MORPHO": true,
+    "scanner-daily:XLM": true
   },
   "_pnl_tracker": {
     "open": {
@@ -3354,7 +3355,7 @@
         "stop": 0.35219,
         "target1": 0.36041,
         "target2": 0.36452,
-        "opened_at": "2026-09-17T00:22:12.795703"
+        "opened_at": "2026-09-17T00:27:10.116990"
       },
       "1h:MORPHO": {
         "coin": "MORPHO",
@@ -3364,7 +3365,7 @@
         "stop": 2.015,
         "target1": 2.071,
         "target2": 2.099,
-        "opened_at": "2026-09-17T00:22:12.795703"
+        "opened_at": "2026-09-17T00:27:10.116990"
       },
       "daily:XLM": {
         "coin": "XLM",
@@ -3374,7 +3375,7 @@
         "stop": 0.14170666666666665,
         "target1": 0.16589333333333334,
         "target2": 0.17798666666666668,
-        "opened_at": "2026-09-17T00:22:12.795703"
+        "opened_at": "2026-09-17T00:27:10.116990"
       }
     },
     "resolved": [
@@ -34889,6 +34890,45 @@
         "result": "win",
         "resolved_at": "2026-09-17T00:22:12.795703",
         "exit_price": 0.1868
+      },
+      {
+        "coin": "WLD",
+        "name": "Worldcoin",
+        "tf": "15m",
+        "entry": 0.3563,
+        "stop": 0.35219,
+        "target1": 0.36041,
+        "target2": 0.36452,
+        "opened_at": "2026-09-17T00:22:12.795703",
+        "result": "win",
+        "resolved_at": "2026-09-17T00:27:10.116990",
+        "exit_price": 0.3735
+      },
+      {
+        "coin": "MORPHO",
+        "name": "Morpho",
+        "tf": "1h",
+        "entry": 2.043,
+        "stop": 2.015,
+        "target1": 2.071,
+        "target2": 2.099,
+        "opened_at": "2026-09-17T00:22:12.795703",
+        "result": "win",
+        "resolved_at": "2026-09-17T00:27:10.116990",
+        "exit_price": 2.099
+      },
+      {
+        "coin": "XLM",
+        "name": "Stellar",
+        "tf": "daily",
+        "entry": 0.1538,
+        "stop": 0.14170666666666665,
+        "target1": 0.16589333333333334,
+        "target2": 0.17798666666666668,
+        "opened_at": "2026-09-17T00:22:12.795703",
+        "result": "win",
+        "resolved_at": "2026-09-17T00:27:10.116990",
+        "exit_price": 0.1859
       }
     ]
   },
@@ -34896,14 +34936,14 @@
     "key": "BTC",
     "name": "Bitcoin",
     "emoji": "\u20bf",
-    "price": 76359,
+    "price": 76366,
     "high_24h": 76413,
     "low_24h": 75161,
-    "pct_24h": 0.83388,
+    "pct_24h": 0.78159,
     "pct_7d": -2.3,
     "pct_30d": 18.5,
-    "sma50": 72147.9747807328,
-    "sma200": 70326.8392418527,
+    "sma50": 72148.34347187699,
+    "sma200": 70326.93141463873,
     "support_30d": 69291.0104297816,
     "resistance_30d": 81264.70153038795,
     "mark_price": 75655.44813043,
@@ -34918,14 +34958,14 @@
     "key": "ETH",
     "name": "Ethereum",
     "emoji": "\u039e",
-    "price": 2421.87,
+    "price": 2422.15,
     "high_24h": 2424.51,
     "low_24h": 2371.36,
-    "pct_24h": 0.78109,
+    "pct_24h": 0.78601,
     "pct_7d": -1.4,
     "pct_30d": 27.0,
-    "sma50": 2227.4474208978377,
-    "sma200": 2066.822852544967,
+    "sma50": 2227.4646198282503,
+    "sma200": 2066.8271522775703,
     "support_30d": 2251.7346140069594,
     "resistance_30d": 2525.267261590238,
     "mark_price": 2391.64229457,
