@@ -371,7 +371,7 @@
       "rows": [
         [
           "Price vs. recent range",
-          "Near its 30-day high (~$1,352.79) - less room to run",
+          "Near its 30-day high (~$1,362.85) - less room to run",
           -1
         ],
         [
@@ -391,7 +391,7 @@
         ],
         [
           "Stretch from long-term average",
-          "+170.5% above its long-term average - very stretched",
+          "+172.4% above its long-term average - very stretched",
           -2
         ],
         [
@@ -404,12 +404,12 @@
       "id": "zcash",
       "symbol": "ZEC",
       "name": "Zcash",
-      "price": 1355.82,
-      "pct_24h": 18.57014,
-      "pct_7d": 10.7,
+      "price": 1365.42,
+      "pct_24h": 18.79887,
+      "pct_7d": 9.9,
       "support_30d": 564.5716107111141,
-      "resistance_30d": 1352.786836297946,
-      "as_of": "2026-09-17 04:35:21",
+      "resistance_30d": 1362.8489443274498,
+      "as_of": "2026-09-17 05:00:35",
       "stale": false
     },
     "rain": {
@@ -1949,9 +1949,9 @@
       "stale": false
     },
     "polkadot": {
-      "label": "\ud83d\udfe2 LEAN ACCUMULATE",
-      "status": "bullish",
-      "score": 2,
+      "label": "\ud83d\udfe1 HOLD / NEUTRAL",
+      "status": "neutral",
+      "score": 1,
       "rows": [
         [
           "Price vs. recent range",
@@ -1970,12 +1970,12 @@
         ],
         [
           "Recent trend",
-          "Chopping sideways - no clear trend",
-          0
+          "Trending down - avoid catching a falling knife",
+          -1
         ],
         [
           "Stretch from long-term average",
-          "-6.4% vs its long-term average - not stretched either way",
+          "-6.8% vs its long-term average - not stretched either way",
           0
         ],
         [
@@ -1984,16 +1984,16 @@
           0
         ]
       ],
-      "plain": "Leans toward a decent spot to slowly add (DCA) - not a strong signal, just a lean.",
+      "plain": "No real edge either way right now - fine to just wait and watch.",
       "id": "polkadot",
       "symbol": "DOT",
       "name": "Polkadot",
-      "price": 1.017,
-      "pct_24h": 6.89981,
-      "pct_7d": -7.8,
+      "price": 1.013,
+      "pct_24h": 6.64345,
+      "pct_7d": -8.5,
       "support_30d": 0.7888223252407818,
       "resistance_30d": 1.2475304252917225,
-      "as_of": "2026-09-17 03:45:21",
+      "as_of": "2026-09-17 05:00:35",
       "stale": false
     },
     "uniswap": {
@@ -2023,7 +2023,7 @@
         ],
         [
           "Stretch from long-term average",
-          "+81.6% above its long-term average - very stretched",
+          "+82.2% above its long-term average - very stretched",
           -2
         ],
         [
@@ -2036,12 +2036,12 @@
       "id": "uniswap",
       "symbol": "UNI",
       "name": "Uniswap",
-      "price": 6.8,
-      "pct_24h": 5.86936,
-      "pct_7d": 12.5,
+      "price": 6.82,
+      "pct_24h": 6.58048,
+      "pct_7d": 12.3,
       "support_30d": 3.6331659866190087,
       "resistance_30d": 7.291165865788254,
-      "as_of": "2026-09-17 04:50:23",
+      "as_of": "2026-09-17 05:00:35",
       "stale": false
     },
     "pi-network": {
@@ -3346,25 +3346,15 @@
   },
   "_pnl_tracker": {
     "open": {
-      "15m:SKY": {
-        "coin": "SKY",
-        "name": "Sky",
-        "tf": "15m",
-        "entry": 0.05646,
-        "stop": 0.056059666666666674,
-        "target1": 0.05686033333333333,
-        "target2": 0.05726066666666666,
-        "opened_at": "2026-09-17T04:57:07.703726"
-      },
       "1h:MORPHO": {
         "coin": "MORPHO",
         "name": "Morpho",
         "tf": "1h",
         "entry": 2.043,
-        "stop": 2.0120416666666667,
-        "target1": 2.0739583333333336,
-        "target2": 2.104916666666667,
-        "opened_at": "2026-09-17T04:57:07.703726"
+        "stop": 2.0127083333333333,
+        "target1": 2.073291666666667,
+        "target2": 2.103583333333334,
+        "opened_at": "2026-09-17T05:02:25.957903"
       },
       "daily:XLM": {
         "coin": "XLM",
@@ -3374,7 +3364,7 @@
         "stop": 0.14164,
         "target1": 0.16596,
         "target2": 0.17812,
-        "opened_at": "2026-09-17T04:57:07.703726"
+        "opened_at": "2026-09-17T05:02:25.957903"
       }
     },
     "resolved": [
@@ -36631,6 +36621,45 @@
         "result": "win",
         "resolved_at": "2026-09-17T04:57:07.703726",
         "exit_price": 0.1825
+      },
+      {
+        "coin": "SKY",
+        "name": "Sky",
+        "tf": "15m",
+        "entry": 0.05646,
+        "stop": 0.056059666666666674,
+        "target1": 0.05686033333333333,
+        "target2": 0.05726066666666666,
+        "opened_at": "2026-09-17T04:57:07.703726",
+        "result": "win",
+        "resolved_at": "2026-09-17T05:02:25.957903",
+        "exit_price": 0.05689
+      },
+      {
+        "coin": "MORPHO",
+        "name": "Morpho",
+        "tf": "1h",
+        "entry": 2.043,
+        "stop": 2.0120416666666667,
+        "target1": 2.0739583333333336,
+        "target2": 2.104916666666667,
+        "opened_at": "2026-09-17T04:57:07.703726",
+        "result": "win",
+        "resolved_at": "2026-09-17T05:02:25.957903",
+        "exit_price": 2.13
+      },
+      {
+        "coin": "XLM",
+        "name": "Stellar",
+        "tf": "daily",
+        "entry": 0.1538,
+        "stop": 0.14164,
+        "target1": 0.16596,
+        "target2": 0.17812,
+        "opened_at": "2026-09-17T04:57:07.703726",
+        "result": "win",
+        "resolved_at": "2026-09-17T05:02:25.957903",
+        "exit_price": 0.1826
       }
     ]
   },
@@ -36638,14 +36667,14 @@
     "key": "BTC",
     "name": "Bitcoin",
     "emoji": "\u20bf",
-    "price": 76416,
+    "price": 76444,
     "high_24h": 76683,
     "low_24h": 75161,
-    "pct_24h": 0.84114,
+    "pct_24h": 0.8249,
     "pct_7d": -2.5,
     "pct_30d": 19.3,
-    "sma50": 72149.48894711438,
-    "sma200": 70327.2177834481,
+    "sma50": 72150.12810978162,
+    "sma200": 70327.37757411489,
     "support_30d": 69291.0104297816,
     "resistance_30d": 81264.70153038795,
     "mark_price": 76283.54228261,
@@ -36660,14 +36689,14 @@
     "key": "ETH",
     "name": "Ethereum",
     "emoji": "\u039e",
-    "price": 2436.73,
+    "price": 2439.19,
     "high_24h": 2440.69,
     "low_24h": 2371.36,
-    "pct_24h": 1.43502,
+    "pct_24h": 1.47118,
     "pct_7d": -1.6,
     "pct_30d": 28.7,
-    "sma50": 2227.756189301915,
-    "sma200": 2066.9000446459863,
+    "sma50": 2227.8054328521703,
+    "sma200": 2066.91235553355,
     "support_30d": 2251.7346140069594,
     "resistance_30d": 2525.267261590238,
     "mark_price": 2430.51611628,
