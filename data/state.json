@@ -461,14 +461,14 @@
       "stale": false
     },
     "chainlink": {
-      "label": "\ud83d\udfe1 HOLD / NEUTRAL",
-      "status": "neutral",
-      "score": 0,
+      "label": "\ud83d\udfe2 LEAN ACCUMULATE",
+      "status": "bullish",
+      "score": 2,
       "rows": [
         [
           "Price vs. recent range",
-          "Sitting in the middle of its 30-day range",
-          0
+          "Near its 30-day low (~$10.55) - historically a better entry",
+          2
         ],
         [
           "Crowd mood (Fear & Greed)",
@@ -496,16 +496,16 @@
           0
         ]
       ],
-      "plain": "No real edge either way right now - fine to just wait and watch.",
+      "plain": "Leans toward a decent spot to slowly add (DCA) - not a strong signal, just a lean.",
       "id": "chainlink",
       "symbol": "LINK",
       "name": "Chainlink",
-      "price": 11.05,
-      "pct_24h": 1.5244,
+      "price": 11.06,
+      "pct_24h": 1.55573,
       "pct_7d": -5.5,
-      "support_30d": 9.529138725304293,
+      "support_30d": 10.547425632883014,
       "resistance_30d": 13.237155745219605,
-      "as_of": "2026-09-17 00:00:38",
+      "as_of": "2026-09-17 00:15:23",
       "stale": false
     },
     "whitebit": {
@@ -1949,9 +1949,9 @@
       "stale": false
     },
     "polkadot": {
-      "label": "\ud83d\udfe1 HOLD / NEUTRAL",
-      "status": "neutral",
-      "score": 1,
+      "label": "\ud83d\udfe2 LEAN ACCUMULATE",
+      "status": "bullish",
+      "score": 2,
       "rows": [
         [
           "Price vs. recent range",
@@ -1960,7 +1960,7 @@
         ],
         [
           "Crowd mood (Fear & Greed)",
-          "51/100 - crowd mood is neutral",
+          "50/100 - crowd mood is neutral",
           0
         ],
         [
@@ -1970,12 +1970,12 @@
         ],
         [
           "Recent trend",
-          "Trending down - avoid catching a falling knife",
-          -1
+          "Chopping sideways - no clear trend",
+          0
         ],
         [
           "Stretch from long-term average",
-          "-7.2% vs its long-term average - not stretched either way",
+          "-5.4% vs its long-term average - not stretched either way",
           0
         ],
         [
@@ -1984,16 +1984,16 @@
           0
         ]
       ],
-      "plain": "No real edge either way right now - fine to just wait and watch.",
+      "plain": "Leans toward a decent spot to slowly add (DCA) - not a strong signal, just a lean.",
       "id": "polkadot",
       "symbol": "DOT",
       "name": "Polkadot",
-      "price": 1.011,
-      "pct_24h": 6.6591,
-      "pct_7d": -10.1,
-      "support_30d": 0.7510040523927409,
+      "price": 1.028,
+      "pct_24h": 9.03267,
+      "pct_7d": -7.6,
+      "support_30d": 0.7888223252407818,
       "resistance_30d": 1.2475304252917225,
-      "as_of": "2026-09-16 21:25:23",
+      "as_of": "2026-09-17 00:15:23",
       "stale": false
     },
     "uniswap": {
@@ -2051,12 +2051,12 @@
       "rows": [
         [
           "Price vs. recent range",
-          "Near its 30-day low (~$0.0846) - historically a better entry",
+          "Near its 30-day low (~$0.0842) - historically a better entry",
           2
         ],
         [
           "Crowd mood (Fear & Greed)",
-          "51/100 - crowd mood is neutral",
+          "50/100 - crowd mood is neutral",
           0
         ],
         [
@@ -2071,7 +2071,7 @@
         ],
         [
           "Stretch from long-term average",
-          "-38.7% below its long-term average - confirmed downtrend",
+          "-38.0% below its long-term average - confirmed downtrend",
           -1
         ],
         [
@@ -2084,12 +2084,12 @@
       "id": "pi-network",
       "symbol": "PI",
       "name": "Pi Network",
-      "price": 0.084655,
-      "pct_24h": -5.75429,
-      "pct_7d": -11.4,
-      "support_30d": 0.08461312172639411,
+      "price": 0.085268,
+      "pct_24h": -5.38608,
+      "pct_7d": -9.6,
+      "support_30d": 0.08418346509106106,
       "resistance_30d": 0.09830733881512746,
-      "as_of": "2026-09-16 22:25:35",
+      "as_of": "2026-09-17 00:15:23",
       "stale": false
     },
     "ondo-finance": {
@@ -3341,7 +3341,9 @@
       "stale": false
     }
   },
-  "_strong_buy_state": {},
+  "_strong_buy_state": {
+    "scanner-1h:MORPHO": true
+  },
   "_pnl_tracker": {
     "open": {
       "15m:WLD": {
@@ -3349,10 +3351,10 @@
         "name": "Worldcoin",
         "tf": "15m",
         "entry": 0.3563,
-        "stop": 0.35217333333333334,
-        "target1": 0.3604266666666667,
-        "target2": 0.36455333333333334,
-        "opened_at": "2026-09-17T00:12:12.630354"
+        "stop": 0.35223333333333334,
+        "target1": 0.36036666666666667,
+        "target2": 0.36443333333333333,
+        "opened_at": "2026-09-17T00:17:13.013633"
       },
       "1h:MORPHO": {
         "coin": "MORPHO",
@@ -3362,7 +3364,7 @@
         "stop": 2.015,
         "target1": 2.071,
         "target2": 2.099,
-        "opened_at": "2026-09-17T00:12:12.630354"
+        "opened_at": "2026-09-17T00:17:13.013633"
       },
       "daily:XLM": {
         "coin": "XLM",
@@ -3372,7 +3374,7 @@
         "stop": 0.14173666666666665,
         "target1": 0.16586333333333333,
         "target2": 0.17792666666666668,
-        "opened_at": "2026-09-17T00:12:12.630354"
+        "opened_at": "2026-09-17T00:17:13.013633"
       }
     },
     "resolved": [
@@ -34809,6 +34811,45 @@
         "result": "win",
         "resolved_at": "2026-09-17T00:12:12.630354",
         "exit_price": 0.1852
+      },
+      {
+        "coin": "WLD",
+        "name": "Worldcoin",
+        "tf": "15m",
+        "entry": 0.3563,
+        "stop": 0.35217333333333334,
+        "target1": 0.3604266666666667,
+        "target2": 0.36455333333333334,
+        "opened_at": "2026-09-17T00:12:12.630354",
+        "result": "win",
+        "resolved_at": "2026-09-17T00:17:13.013633",
+        "exit_price": 0.3733
+      },
+      {
+        "coin": "MORPHO",
+        "name": "Morpho",
+        "tf": "1h",
+        "entry": 2.043,
+        "stop": 2.015,
+        "target1": 2.071,
+        "target2": 2.099,
+        "opened_at": "2026-09-17T00:12:12.630354",
+        "result": "win",
+        "resolved_at": "2026-09-17T00:17:13.013633",
+        "exit_price": 2.101
+      },
+      {
+        "coin": "XLM",
+        "name": "Stellar",
+        "tf": "daily",
+        "entry": 0.1538,
+        "stop": 0.14173666666666665,
+        "target1": 0.16586333333333333,
+        "target2": 0.17792666666666668,
+        "opened_at": "2026-09-17T00:12:12.630354",
+        "result": "win",
+        "resolved_at": "2026-09-17T00:17:13.013633",
+        "exit_price": 0.1853
       }
     ]
   },
@@ -34816,14 +34857,14 @@
     "key": "BTC",
     "name": "Bitcoin",
     "emoji": "\u20bf",
-    "price": 76213,
+    "price": 76324,
     "high_24h": 76413,
     "low_24h": 75161,
-    "pct_24h": 0.67439,
+    "pct_24h": 0.85542,
     "pct_7d": -2.3,
     "pct_30d": 18.5,
-    "sma50": 72144.97517123836,
-    "sma200": 70326.08933947908,
+    "sma50": 72147.32889068848,
+    "sma200": 70326.67776934162,
     "support_30d": 69291.0104297816,
     "resistance_30d": 81264.70153038795,
     "mark_price": 75655.44813043,
@@ -34838,14 +34879,14 @@
     "key": "ETH",
     "name": "Ethereum",
     "emoji": "\u039e",
-    "price": 2418.32,
+    "price": 2421.34,
     "high_24h": 2424.51,
     "low_24h": 2371.36,
-    "pct_24h": 0.70196,
+    "pct_24h": 0.86648,
     "pct_7d": -1.4,
     "pct_30d": 27.0,
-    "sma50": 2227.3755391778323,
-    "sma200": 2066.8048821149655,
+    "sma50": 2227.42504176966,
+    "sma200": 2066.8172577629225,
     "support_30d": 2251.7346140069594,
     "resistance_30d": 2525.267261590238,
     "mark_price": 2391.64229457,
