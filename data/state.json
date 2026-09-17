@@ -597,11 +597,11 @@
       "symbol": "LEO",
       "name": "LEO Token",
       "price": 8.93,
-      "pct_24h": 0.42125,
+      "pct_24h": 0.42627,
       "pct_7d": -2.9,
       "support_30d": 8.831489578582278,
       "resistance_30d": 9.681775974309534,
-      "as_of": "2026-09-17 09:15:29",
+      "as_of": "2026-09-17 09:45:24",
       "stale": false
     },
     "monero": {
@@ -919,7 +919,7 @@
         ],
         [
           "Stretch from long-term average",
-          "-5.0% vs its long-term average - not stretched either way",
+          "-5.5% vs its long-term average - not stretched either way",
           0
         ],
         [
@@ -932,12 +932,12 @@
       "id": "avalanche-2",
       "symbol": "AVAX",
       "name": "Avalanche",
-      "price": 7.59,
-      "pct_24h": 4.78439,
+      "price": 7.55,
+      "pct_24h": 3.88866,
       "pct_7d": -2.1,
       "support_30d": 6.774492921991783,
       "resistance_30d": 8.074275746115342,
-      "as_of": "2026-09-17 09:10:27",
+      "as_of": "2026-09-17 09:45:24",
       "stale": false
     },
     "aster-2": {
@@ -967,7 +967,7 @@
         ],
         [
           "Stretch from long-term average",
-          "+10.9% above its long-term average - a bit stretched",
+          "+10.8% above its long-term average - a bit stretched",
           -1
         ],
         [
@@ -980,12 +980,12 @@
       "id": "aster-2",
       "symbol": "ASTER",
       "name": "Aster",
-      "price": 0.734097,
-      "pct_24h": 9.54894,
+      "price": 0.733414,
+      "pct_24h": 9.38784,
       "pct_7d": 3.2,
       "support_30d": 0.6250825996257033,
       "resistance_30d": 0.7868111056215635,
-      "as_of": "2026-09-17 09:30:31",
+      "as_of": "2026-09-17 09:45:24",
       "stale": false
     },
     "worldcoin-wld": {
@@ -3350,11 +3350,11 @@
         "coin": "ATOM",
         "name": "Cosmos Hub",
         "tf": "15m",
-        "entry": 1.502,
-        "stop": 1.4957,
-        "target1": 1.5083,
-        "target2": 1.5146,
-        "opened_at": "2026-09-17T09:42:19.225819"
+        "entry": 1.503,
+        "stop": 1.4968,
+        "target1": 1.5091999999999999,
+        "target2": 1.5153999999999999,
+        "opened_at": "2026-09-17T09:47:19.857823"
       },
       "daily:XLM": {
         "coin": "XLM",
@@ -3364,7 +3364,7 @@
         "stop": 0.14164,
         "target1": 0.16596,
         "target2": 0.17812,
-        "opened_at": "2026-09-17T09:42:19.225819"
+        "opened_at": "2026-09-17T09:47:19.857823"
       }
     },
     "resolved": [
@@ -38103,6 +38103,32 @@
         "result": "win",
         "resolved_at": "2026-09-17T09:42:19.225819",
         "exit_price": 0.1826
+      },
+      {
+        "coin": "ATOM",
+        "name": "Cosmos Hub",
+        "tf": "15m",
+        "entry": 1.502,
+        "stop": 1.4957,
+        "target1": 1.5083,
+        "target2": 1.5146,
+        "opened_at": "2026-09-17T09:42:19.225819",
+        "result": "win",
+        "resolved_at": "2026-09-17T09:47:19.857823",
+        "exit_price": 1.545
+      },
+      {
+        "coin": "XLM",
+        "name": "Stellar",
+        "tf": "daily",
+        "entry": 0.1538,
+        "stop": 0.14164,
+        "target1": 0.16596,
+        "target2": 0.17812,
+        "opened_at": "2026-09-17T09:42:19.225819",
+        "result": "win",
+        "resolved_at": "2026-09-17T09:47:19.857823",
+        "exit_price": 0.1824
       }
     ]
   },
@@ -38110,14 +38136,14 @@
     "key": "BTC",
     "name": "Bitcoin",
     "emoji": "\u20bf",
-    "price": 76659,
+    "price": 76569,
     "high_24h": 76683,
     "low_24h": 75161,
-    "pct_24h": 1.05751,
+    "pct_24h": 0.93889,
     "pct_7d": -2.0,
     "pct_30d": 19.3,
-    "sma50": 72154.56029207319,
-    "sma200": 70328.4856196878,
+    "sma50": 72152.50531378573,
+    "sma200": 70327.97187511592,
     "support_30d": 69291.0104297816,
     "resistance_30d": 81264.70153038795,
     "mark_price": 76548.5,
@@ -38132,14 +38158,14 @@
     "key": "ETH",
     "name": "Ethereum",
     "emoji": "\u039e",
-    "price": 2444.92,
+    "price": 2442.24,
     "high_24h": 2451.57,
     "low_24h": 2371.36,
-    "pct_24h": 1.78635,
+    "pct_24h": 1.69892,
     "pct_7d": -1.2,
     "pct_30d": 28.8,
-    "sma50": 2227.939634721998,
-    "sma200": 2066.9459060010067,
+    "sma50": 2227.8668943101547,
+    "sma200": 2066.9277208980466,
     "support_30d": 2251.7346140069594,
     "resistance_30d": 2525.267261590238,
     "mark_price": 2445.52,
