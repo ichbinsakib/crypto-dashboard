@@ -439,7 +439,7 @@
         ],
         [
           "Stretch from long-term average",
-          "+12.2% above its long-term average - a bit stretched",
+          "+12.0% above its long-term average - a bit stretched",
           -1
         ],
         [
@@ -452,12 +452,12 @@
       "id": "rain",
       "symbol": "RAIN",
       "name": "Rain",
-      "price": 0.01314536,
-      "pct_24h": -3.7109,
-      "pct_7d": -18.1,
+      "price": 0.01311984,
+      "pct_24h": -3.00606,
+      "pct_7d": -18.6,
       "support_30d": 0.01289999627106216,
       "resistance_30d": 0.018158429442510105,
-      "as_of": "2026-09-17 11:50:25",
+      "as_of": "2026-09-17 12:25:18",
       "stale": false
     },
     "chainlink": {
@@ -2599,7 +2599,7 @@
         ],
         [
           "Stretch from long-term average",
-          "+469.6% above its long-term average - very stretched",
+          "+461.1% above its long-term average - very stretched",
           -2
         ],
         [
@@ -2612,12 +2612,12 @@
       "id": "bitway",
       "symbol": "BTW",
       "name": "Bitway",
-      "price": 0.701284,
-      "pct_24h": -9.89339,
-      "pct_7d": 52.7,
+      "price": 0.690565,
+      "pct_24h": -12.00943,
+      "pct_7d": 50.0,
       "support_30d": 0.3884816128039819,
       "resistance_30d": 0.7491686401380382,
-      "as_of": "2026-09-17 10:45:23",
+      "as_of": "2026-09-17 12:25:18",
       "stale": false
     },
     "world-liberty-financial": {
@@ -3271,7 +3271,7 @@
         ],
         [
           "Stretch from long-term average",
-          "-12.4% vs its long-term average - not stretched either way",
+          "-11.8% vs its long-term average - not stretched either way",
           0
         ],
         [
@@ -3284,12 +3284,12 @@
       "id": "cosmos",
       "symbol": "ATOM",
       "name": "Cosmos Hub",
-      "price": 1.53,
-      "pct_24h": 2.33997,
-      "pct_7d": -14.7,
+      "price": 1.54,
+      "pct_24h": 2.8476,
+      "pct_7d": -15.1,
       "support_30d": 1.4543168227507075,
       "resistance_30d": 1.8581525047856993,
-      "as_of": "2026-09-17 10:35:19",
+      "as_of": "2026-09-17 12:25:18",
       "stale": false
     },
     "pancakeswap-token": {
@@ -3351,20 +3351,10 @@
         "name": "POL (ex-MATIC)",
         "tf": "15m",
         "entry": 0.09543,
-        "stop": 0.09503733333333333,
-        "target1": 0.09582266666666667,
-        "target2": 0.09621533333333333,
-        "opened_at": "2026-09-17T12:22:22.396484"
-      },
-      "15m:SKY": {
-        "coin": "SKY",
-        "name": "Sky",
-        "tf": "15m",
-        "entry": 0.05623,
-        "stop": 0.05582733333333333,
-        "target1": 0.05663266666666667,
-        "target2": 0.05703533333333334,
-        "opened_at": "2026-09-17T12:22:22.396484"
+        "stop": 0.09502766666666666,
+        "target1": 0.09583233333333334,
+        "target2": 0.09623466666666668,
+        "opened_at": "2026-09-17T12:27:16.068957"
       },
       "daily:XLM": {
         "coin": "XLM",
@@ -3374,7 +3364,7 @@
         "stop": 0.14162,
         "target1": 0.16598,
         "target2": 0.17815999999999999,
-        "opened_at": "2026-09-17T12:22:22.396484"
+        "opened_at": "2026-09-17T12:27:16.068957"
       }
     },
     "resolved": [
@@ -39335,6 +39325,45 @@
         "result": "win",
         "resolved_at": "2026-09-17T12:22:22.396484",
         "exit_price": 0.1836
+      },
+      {
+        "coin": "POL",
+        "name": "POL (ex-MATIC)",
+        "tf": "15m",
+        "entry": 0.09543,
+        "stop": 0.09503733333333333,
+        "target1": 0.09582266666666667,
+        "target2": 0.09621533333333333,
+        "opened_at": "2026-09-17T12:22:22.396484",
+        "result": "win",
+        "resolved_at": "2026-09-17T12:27:16.068957",
+        "exit_price": 0.0981
+      },
+      {
+        "coin": "SKY",
+        "name": "Sky",
+        "tf": "15m",
+        "entry": 0.05623,
+        "stop": 0.05582733333333333,
+        "target1": 0.05663266666666667,
+        "target2": 0.05703533333333334,
+        "opened_at": "2026-09-17T12:22:22.396484",
+        "result": "win",
+        "resolved_at": "2026-09-17T12:27:16.068957",
+        "exit_price": 0.05887
+      },
+      {
+        "coin": "XLM",
+        "name": "Stellar",
+        "tf": "daily",
+        "entry": 0.1538,
+        "stop": 0.14162,
+        "target1": 0.16598,
+        "target2": 0.17815999999999999,
+        "opened_at": "2026-09-17T12:22:22.396484",
+        "result": "win",
+        "resolved_at": "2026-09-17T12:27:16.068957",
+        "exit_price": 0.1838
       }
     ]
   },
@@ -39342,14 +39371,14 @@
     "key": "BTC",
     "name": "Bitcoin",
     "emoji": "\u20bf",
-    "price": 76848,
+    "price": 76840,
     "high_24h": 76683,
     "low_24h": 75161,
-    "pct_24h": 1.03512,
+    "pct_24h": 1.15135,
     "pct_7d": -2.0,
     "pct_30d": 19.0,
-    "sma50": 72157.96156084834,
-    "sma200": 70329.33593688157,
+    "sma50": 72158.01384093256,
+    "sma200": 70329.34900690263,
     "support_30d": 69291.0104297816,
     "resistance_30d": 81264.70153038795,
     "mark_price": 76320.1,
@@ -39364,14 +39393,14 @@
     "key": "ETH",
     "name": "Ethereum",
     "emoji": "\u039e",
-    "price": 2454.81,
+    "price": 2460.12,
     "high_24h": 2451.57,
     "low_24h": 2371.36,
-    "pct_24h": 1.72677,
+    "pct_24h": 2.13686,
     "pct_7d": -1.1,
     "pct_30d": 28.5,
-    "sma50": 2228.1123905812133,
-    "sma200": 2066.989094965811,
+    "sma50": 2228.205801011804,
+    "sma200": 2067.0124475734588,
     "support_30d": 2251.7346140069594,
     "resistance_30d": 2525.267261590238,
     "mark_price": 2432.88565116,
