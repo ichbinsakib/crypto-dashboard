@@ -583,7 +583,7 @@
         ],
         [
           "Stretch from long-term average",
-          "-7.5% vs its long-term average - not stretched either way",
+          "-7.7% vs its long-term average - not stretched either way",
           0
         ],
         [
@@ -596,12 +596,12 @@
       "id": "leo-token",
       "symbol": "LEO",
       "name": "LEO Token",
-      "price": 8.92,
-      "pct_24h": 0.69931,
+      "price": 8.9,
+      "pct_24h": -0.85673,
       "pct_7d": -3.0,
       "support_30d": 8.831489578582278,
       "resistance_30d": 9.681775974309534,
-      "as_of": "2026-09-17 20:32:52",
+      "as_of": "2026-09-17 23:45:23",
       "stale": false
     },
     "monero": {
@@ -967,7 +967,7 @@
         ],
         [
           "Stretch from long-term average",
-          "+11.8% above its long-term average - a bit stretched",
+          "+12.1% above its long-term average - a bit stretched",
           -1
         ],
         [
@@ -980,12 +980,12 @@
       "id": "aster-2",
       "symbol": "ASTER",
       "name": "Aster",
-      "price": 0.740498,
-      "pct_24h": 6.89986,
-      "pct_7d": 5.6,
+      "price": 0.74214,
+      "pct_24h": 5.72238,
+      "pct_7d": 5.0,
       "support_30d": 0.6250825996257033,
       "resistance_30d": 0.7868111056215635,
-      "as_of": "2026-09-17 22:05:19",
+      "as_of": "2026-09-17 23:45:23",
       "stale": false
     },
     "worldcoin-wld": {
@@ -1927,7 +1927,7 @@
         ],
         [
           "Stretch from long-term average",
-          "-0.7% vs its long-term average - not stretched either way",
+          "-0.8% vs its long-term average - not stretched either way",
           0
         ],
         [
@@ -1940,12 +1940,12 @@
       "id": "mantle",
       "symbol": "MNT",
       "name": "Mantle",
-      "price": 0.568632,
-      "pct_24h": 3.34658,
-      "pct_7d": -0.7,
+      "price": 0.568331,
+      "pct_24h": 2.92584,
+      "pct_7d": -0.6,
       "support_30d": 0.46737376334939396,
       "resistance_30d": 0.6365218632454678,
-      "as_of": "2026-09-17 21:40:24",
+      "as_of": "2026-09-17 23:45:23",
       "stale": false
     },
     "polkadot": {
@@ -3353,16 +3353,6 @@
         "target1": 0.18452000000000002,
         "target2": 0.18544000000000002,
         "opened_at": "2026-09-17T21:57:51.522942"
-      },
-      "1h:XRP": {
-        "coin": "XRP",
-        "name": "XRP",
-        "tf": "1h",
-        "entry": 1.2877,
-        "stop": 1.2773125,
-        "target1": 1.2980875,
-        "target2": 1.308475,
-        "opened_at": "2026-09-17T23:07:16.052023"
       }
     },
     "resolved": [
@@ -3404,10 +3394,30 @@
         "result": "win",
         "resolved_at": "2026-09-17T23:07:16.052023",
         "exit_price": 1.2963
+      },
+      {
+        "coin": "XRP",
+        "name": "XRP",
+        "tf": "1h",
+        "entry": 1.2877,
+        "stop": 1.2773125,
+        "target1": 1.2980875,
+        "target2": 1.308475,
+        "opened_at": "2026-09-17T23:07:16.052023",
+        "result": "win",
+        "resolved_at": "2026-09-17T23:47:19.215645",
+        "exit_price": 1.2985
       }
     ]
   },
   "_notification_feed": [
+    {
+      "id": "result:XRP:1h:2026-09-17T23:07:16.052023",
+      "ts": "2026-09-17T23:47:19.215645",
+      "type": "win",
+      "title": "\u2705 XRP (1h) WIN",
+      "body": "Exit $1.30 vs. entry $1.29"
+    },
     {
       "id": "result:XRP:1h:2026-09-17T22:27:18.366386",
       "ts": "2026-09-17T23:07:16.052023",
@@ -3448,14 +3458,14 @@
     "key": "BTC",
     "name": "Bitcoin",
     "emoji": "\u20bf",
-    "price": 76362,
+    "price": 76377,
     "high_24h": 77024,
     "low_24h": 75972,
-    "pct_24h": 0.41155,
+    "pct_24h": 0.30288,
     "pct_7d": -1.0,
     "pct_30d": 18.2,
-    "sma50": 72148.42872935944,
-    "sma200": 70326.95272900935,
+    "sma50": 72148.50691846837,
+    "sma200": 70326.97227628659,
     "support_30d": 69291.0104297816,
     "resistance_30d": 81264.70153038795,
     "mark_price": 76486.85126812,
@@ -3470,14 +3480,14 @@
     "key": "ETH",
     "name": "Ethereum",
     "emoji": "\u039e",
-    "price": 2445.84,
+    "price": 2445.6,
     "high_24h": 2478.98,
     "low_24h": 2412.84,
-    "pct_24h": 1.34095,
+    "pct_24h": 1.11823,
     "pct_7d": -0.7,
     "pct_30d": 27.8,
-    "sma50": 2227.9406062050225,
-    "sma200": 2066.946148871763,
+    "sma50": 2227.9286071142024,
+    "sma200": 2066.9431490990582,
     "support_30d": 2251.7346140069594,
     "resistance_30d": 2525.267261590238,
     "mark_price": 2450.15,
