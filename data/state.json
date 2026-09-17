@@ -55,7 +55,7 @@
         ],
         [
           "Stretch from long-term average",
-          "+15.5% above its long-term average - a bit stretched",
+          "+15.6% above its long-term average - a bit stretched",
           -1
         ],
         [
@@ -68,12 +68,12 @@
       "id": "binancecoin",
       "symbol": "BNB",
       "name": "BNB",
-      "price": 724.12,
-      "pct_24h": 2.48531,
-      "pct_7d": 0.4,
+      "price": 724.84,
+      "pct_24h": 1.97351,
+      "pct_7d": 1.0,
       "support_30d": 627.053410537708,
       "resistance_30d": 766.4092879330625,
-      "as_of": "2026-09-17 08:15:29",
+      "as_of": "2026-09-17 10:02:46",
       "stale": false
     },
     "ripple": {
@@ -371,7 +371,7 @@
       "rows": [
         [
           "Price vs. recent range",
-          "Near its 30-day high (~$1,385.02) - less room to run",
+          "Near its 30-day high (~$1,351.92) - less room to run",
           -1
         ],
         [
@@ -391,7 +391,7 @@
         ],
         [
           "Stretch from long-term average",
-          "+176.2% above its long-term average - very stretched",
+          "+170.1% above its long-term average - very stretched",
           -2
         ],
         [
@@ -404,12 +404,12 @@
       "id": "zcash",
       "symbol": "ZEC",
       "name": "Zcash",
-      "price": 1385.02,
-      "pct_24h": 17.52931,
-      "pct_7d": 11.4,
+      "price": 1353.91,
+      "pct_24h": 12.13675,
+      "pct_7d": 10.5,
       "support_30d": 564.5716107111141,
-      "resistance_30d": 1385.023080994301,
-      "as_of": "2026-09-17 08:40:24",
+      "resistance_30d": 1351.9175023524103,
+      "as_of": "2026-09-17 10:02:46",
       "stale": false
     },
     "rain": {
@@ -419,7 +419,7 @@
       "rows": [
         [
           "Price vs. recent range",
-          "Near its 30-day low (~$0.0125) - historically a better entry",
+          "Near its 30-day low (~$0.0128) - historically a better entry",
           2
         ],
         [
@@ -439,7 +439,7 @@
         ],
         [
           "Stretch from long-term average",
-          "+6.8% vs its long-term average - not stretched either way",
+          "+9.5% vs its long-term average - not stretched either way",
           0
         ],
         [
@@ -452,12 +452,12 @@
       "id": "rain",
       "symbol": "RAIN",
       "name": "Rain",
-      "price": 0.01250871,
-      "pct_24h": -9.19918,
-      "pct_7d": -25.0,
-      "support_30d": 0.012511001577501115,
+      "price": 0.01282609,
+      "pct_24h": -6.78166,
+      "pct_7d": -22.0,
+      "support_30d": 0.012839688740320822,
       "resistance_30d": 0.018158429442510105,
-      "as_of": "2026-09-17 09:50:23",
+      "as_of": "2026-09-17 10:02:46",
       "stale": false
     },
     "chainlink": {
@@ -1892,12 +1892,12 @@
       "id": "bitcoin-cash",
       "symbol": "BCH",
       "name": "Bitcoin Cash",
-      "price": 225.13,
-      "pct_24h": 3.2445,
-      "pct_7d": -10.1,
+      "price": 224.95,
+      "pct_24h": 2.8284,
+      "pct_7d": -9.1,
       "support_30d": 213.27695312682718,
       "resistance_30d": 288.10955405353275,
-      "as_of": "2026-09-17 09:20:28",
+      "as_of": "2026-09-17 10:02:46",
       "stale": false
     },
     "mantle": {
@@ -1949,9 +1949,9 @@
       "stale": false
     },
     "polkadot": {
-      "label": "\ud83d\udfe2 LEAN ACCUMULATE",
-      "status": "bullish",
-      "score": 2,
+      "label": "\ud83d\udfe1 HOLD / NEUTRAL",
+      "status": "neutral",
+      "score": 1,
       "rows": [
         [
           "Price vs. recent range",
@@ -1970,12 +1970,12 @@
         ],
         [
           "Recent trend",
-          "Chopping sideways - no clear trend",
-          0
+          "Trending down - avoid catching a falling knife",
+          -1
         ],
         [
           "Stretch from long-term average",
-          "-6.7% vs its long-term average - not stretched either way",
+          "-6.3% vs its long-term average - not stretched either way",
           0
         ],
         [
@@ -1984,16 +1984,16 @@
           0
         ]
       ],
-      "plain": "Leans toward a decent spot to slowly add (DCA) - not a strong signal, just a lean.",
+      "plain": "No real edge either way right now - fine to just wait and watch.",
       "id": "polkadot",
       "symbol": "DOT",
       "name": "Polkadot",
-      "price": 1.014,
-      "pct_24h": 7.21247,
-      "pct_7d": -7.9,
+      "price": 1.018,
+      "pct_24h": 6.25379,
+      "pct_7d": -8.0,
       "support_30d": 0.7888223252407818,
       "resistance_30d": 1.2475304252917225,
-      "as_of": "2026-09-17 09:20:28",
+      "as_of": "2026-09-17 10:02:46",
       "stale": false
     },
     "uniswap": {
@@ -3343,6 +3343,7 @@
   },
   "_strong_buy_state": {
     "scanner-15m:ATOM": true,
+    "scanner-1h:BCH": true,
     "scanner-daily:XLM": true
   },
   "_pnl_tracker": {
@@ -3351,21 +3352,31 @@
         "coin": "ATOM",
         "name": "Cosmos Hub",
         "tf": "15m",
-        "entry": 1.503,
-        "stop": 1.4966,
-        "target1": 1.5093999999999999,
-        "target2": 1.5157999999999998,
-        "opened_at": "2026-09-17T09:59:06.729323"
+        "entry": 1.505,
+        "stop": 1.4983666666666666,
+        "target1": 1.5116333333333332,
+        "target2": 1.5182666666666664,
+        "opened_at": "2026-09-17T10:03:59.438946"
+      },
+      "1h:BCH": {
+        "coin": "BCH",
+        "name": "Bitcoin Cash",
+        "tf": "1h",
+        "entry": 214.0,
+        "stop": 211.88333333333333,
+        "target1": 216.11666666666667,
+        "target2": 218.23333333333335,
+        "opened_at": "2026-09-17T10:03:59.438946"
       },
       "daily:XLM": {
         "coin": "XLM",
         "name": "Stellar",
         "tf": "daily",
         "entry": 0.1538,
-        "stop": 0.14163666666666666,
-        "target1": 0.16596333333333332,
-        "target2": 0.17812666666666666,
-        "opened_at": "2026-09-17T09:59:06.729323"
+        "stop": 0.14162,
+        "target1": 0.16598,
+        "target2": 0.17815999999999999,
+        "opened_at": "2026-09-17T10:03:59.438946"
       }
     },
     "resolved": [
@@ -38182,6 +38193,32 @@
         "result": "win",
         "resolved_at": "2026-09-17T09:59:06.729323",
         "exit_price": 0.1816
+      },
+      {
+        "coin": "ATOM",
+        "name": "Cosmos Hub",
+        "tf": "15m",
+        "entry": 1.503,
+        "stop": 1.4966,
+        "target1": 1.5093999999999999,
+        "target2": 1.5157999999999998,
+        "opened_at": "2026-09-17T09:59:06.729323",
+        "result": "win",
+        "resolved_at": "2026-09-17T10:03:59.438946",
+        "exit_price": 1.53
+      },
+      {
+        "coin": "XLM",
+        "name": "Stellar",
+        "tf": "daily",
+        "entry": 0.1538,
+        "stop": 0.14163666666666666,
+        "target1": 0.16596333333333332,
+        "target2": 0.17812666666666666,
+        "opened_at": "2026-09-17T09:59:06.729323",
+        "result": "win",
+        "resolved_at": "2026-09-17T10:03:59.438946",
+        "exit_price": 0.1809
       }
     ]
   },
@@ -38189,21 +38226,21 @@
     "key": "BTC",
     "name": "Bitcoin",
     "emoji": "\u20bf",
-    "price": 76465,
+    "price": 76403,
     "high_24h": 76683,
     "low_24h": 75161,
-    "pct_24h": 0.72898,
-    "pct_7d": -2.0,
-    "pct_30d": 19.3,
-    "sma50": 72150.17895624359,
-    "sma200": 70327.39028573039,
+    "pct_24h": 0.55799,
+    "pct_7d": -2.1,
+    "pct_30d": 19.0,
+    "sma50": 72149.09454408045,
+    "sma200": 70327.1191826896,
     "support_30d": 69291.0104297816,
     "resistance_30d": 81264.70153038795,
-    "mark_price": 76548.5,
-    "index_price": 76565.72130435,
-    "funding_rate": 3.619e-05,
-    "oi_change_pct": 0.8771711703380073,
-    "oi_now": 108358.776,
+    "mark_price": 76320.1,
+    "index_price": 76365.2473913,
+    "funding_rate": 5.34e-05,
+    "oi_change_pct": 1.0158699767903072,
+    "oi_now": 108116.228,
     "fng_value": 50,
     "fng_class": "Neutral"
   },
@@ -38211,21 +38248,21 @@
     "key": "ETH",
     "name": "Ethereum",
     "emoji": "\u039e",
-    "price": 2437.6,
+    "price": 2436.95,
     "high_24h": 2451.57,
     "low_24h": 2371.36,
-    "pct_24h": 1.39355,
-    "pct_7d": -1.2,
-    "pct_30d": 28.8,
-    "sma50": 2227.7698877444386,
-    "sma200": 2066.9034692566174,
+    "pct_24h": 1.38305,
+    "pct_7d": -1.3,
+    "pct_30d": 28.4,
+    "sma50": 2227.7600135331027,
+    "sma200": 2066.901000703783,
     "support_30d": 2251.7346140069594,
     "resistance_30d": 2525.267261590238,
-    "mark_price": 2445.52,
-    "index_price": 2446.44302326,
-    "funding_rate": 3.487e-05,
-    "oi_change_pct": -0.7539805304883404,
-    "oi_now": 2315620.534,
+    "mark_price": 2432.88565116,
+    "index_price": 2434.35930233,
+    "funding_rate": 3.061e-05,
+    "oi_change_pct": -0.5916625579639919,
+    "oi_now": 2312497.832,
     "fng_value": 50,
     "fng_class": "Neutral"
   }
