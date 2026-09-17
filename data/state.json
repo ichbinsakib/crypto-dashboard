@@ -371,7 +371,7 @@
       "rows": [
         [
           "Price vs. recent range",
-          "Near its 30-day high (~$1,362.85) - less room to run",
+          "Near its 30-day high (~$1,362.70) - less room to run",
           -1
         ],
         [
@@ -391,7 +391,7 @@
         ],
         [
           "Stretch from long-term average",
-          "+172.4% above its long-term average - very stretched",
+          "+172.1% above its long-term average - very stretched",
           -2
         ],
         [
@@ -404,12 +404,12 @@
       "id": "zcash",
       "symbol": "ZEC",
       "name": "Zcash",
-      "price": 1365.42,
-      "pct_24h": 18.79887,
-      "pct_7d": 9.9,
+      "price": 1363.96,
+      "pct_24h": 17.52243,
+      "pct_7d": 9.2,
       "support_30d": 564.5716107111141,
-      "resistance_30d": 1362.8489443274498,
-      "as_of": "2026-09-17 05:00:35",
+      "resistance_30d": 1362.7014246852102,
+      "as_of": "2026-09-17 06:05:20",
       "stale": false
     },
     "rain": {
@@ -535,7 +535,7 @@
         ],
         [
           "Stretch from long-term average",
-          "+36.8% above its long-term average - very stretched",
+          "+37.1% above its long-term average - very stretched",
           -2
         ],
         [
@@ -548,12 +548,12 @@
       "id": "whitebit",
       "symbol": "WBT",
       "name": "WhiteBIT Coin",
-      "price": 78.36,
-      "pct_24h": 0.56263,
-      "pct_7d": -2.8,
+      "price": 78.49,
+      "pct_24h": 0.63177,
+      "pct_7d": -3.0,
       "support_30d": 59.556263717190774,
       "resistance_30d": 81.2521953230761,
-      "as_of": "2026-09-17 04:20:25",
+      "as_of": "2026-09-17 06:05:20",
       "stale": false
     },
     "leo-token": {
@@ -1591,7 +1591,7 @@
         ],
         [
           "Stretch from long-term average",
-          "+100.9% above its long-term average - very stretched",
+          "+99.4% above its long-term average - very stretched",
           -2
         ],
         [
@@ -1604,12 +1604,12 @@
       "id": "venice-token",
       "symbol": "VVV",
       "name": "Venice Token",
-      "price": 25.11,
-      "pct_24h": 16.50108,
-      "pct_7d": 5.0,
+      "price": 24.92,
+      "pct_24h": 14.16193,
+      "pct_7d": 2.8,
       "support_30d": 14.388113191204708,
       "resistance_30d": 25.88474946901688,
-      "as_of": "2026-09-17 04:55:17",
+      "as_of": "2026-09-17 06:05:20",
       "stale": false
     },
     "litecoin": {
@@ -3351,20 +3351,20 @@
         "name": "Internet Computer",
         "tf": "15m",
         "entry": 2.521,
-        "stop": 2.508,
-        "target1": 2.534,
-        "target2": 2.5469999999999997,
-        "opened_at": "2026-09-17T06:02:27.498911"
+        "stop": 2.5079333333333333,
+        "target1": 2.5340666666666665,
+        "target2": 2.547133333333333,
+        "opened_at": "2026-09-17T06:07:10.328532"
       },
       "1h:MORPHO": {
         "coin": "MORPHO",
         "name": "Morpho",
         "tf": "1h",
         "entry": 2.043,
-        "stop": 2.0118333333333336,
-        "target1": 2.0741666666666667,
-        "target2": 2.1053333333333333,
-        "opened_at": "2026-09-17T06:02:27.498911"
+        "stop": 2.01175,
+        "target1": 2.07425,
+        "target2": 2.1055,
+        "opened_at": "2026-09-17T06:07:10.328532"
       },
       "daily:XLM": {
         "coin": "XLM",
@@ -3374,7 +3374,7 @@
         "stop": 0.14164,
         "target1": 0.16596,
         "target2": 0.17812,
-        "opened_at": "2026-09-17T06:02:27.498911"
+        "opened_at": "2026-09-17T06:07:10.328532"
       }
     },
     "resolved": [
@@ -36995,6 +36995,45 @@
         "result": "win",
         "resolved_at": "2026-09-17T06:02:27.498911",
         "exit_price": 0.1823
+      },
+      {
+        "coin": "ICP",
+        "name": "Internet Computer",
+        "tf": "15m",
+        "entry": 2.521,
+        "stop": 2.508,
+        "target1": 2.534,
+        "target2": 2.5469999999999997,
+        "opened_at": "2026-09-17T06:02:27.498911",
+        "result": "win",
+        "resolved_at": "2026-09-17T06:07:10.328532",
+        "exit_price": 2.558
+      },
+      {
+        "coin": "MORPHO",
+        "name": "Morpho",
+        "tf": "1h",
+        "entry": 2.043,
+        "stop": 2.0118333333333336,
+        "target1": 2.0741666666666667,
+        "target2": 2.1053333333333333,
+        "opened_at": "2026-09-17T06:02:27.498911",
+        "result": "win",
+        "resolved_at": "2026-09-17T06:07:10.328532",
+        "exit_price": 2.145
+      },
+      {
+        "coin": "XLM",
+        "name": "Stellar",
+        "tf": "daily",
+        "entry": 0.1538,
+        "stop": 0.14164,
+        "target1": 0.16596,
+        "target2": 0.17812,
+        "opened_at": "2026-09-17T06:02:27.498911",
+        "result": "win",
+        "resolved_at": "2026-09-17T06:07:10.328532",
+        "exit_price": 0.1824
       }
     ]
   },
@@ -37002,14 +37041,14 @@
     "key": "BTC",
     "name": "Bitcoin",
     "emoji": "\u20bf",
-    "price": 76281,
+    "price": 76294,
     "high_24h": 76683,
     "low_24h": 75161,
-    "pct_24h": 0.50287,
-    "pct_7d": -2.3,
-    "pct_30d": 19.3,
-    "sma50": 72146.34516601497,
-    "sma200": 70326.43183817323,
+    "pct_24h": 0.45621,
+    "pct_7d": -2.7,
+    "pct_30d": 18.9,
+    "sma50": 72146.60275127571,
+    "sma200": 70326.49623448843,
     "support_30d": 69291.0104297816,
     "resistance_30d": 81264.70153038795,
     "mark_price": 76283.54228261,
@@ -37024,14 +37063,14 @@
     "key": "ETH",
     "name": "Ethereum",
     "emoji": "\u039e",
-    "price": 2435.31,
-    "high_24h": 2442.7,
+    "price": 2436.49,
+    "high_24h": 2442.77,
     "low_24h": 2371.36,
-    "pct_24h": 1.25942,
-    "pct_7d": -1.3,
-    "pct_30d": 29.0,
-    "sma50": 2227.712157920186,
-    "sma200": 2066.889036800554,
+    "pct_24h": 1.28829,
+    "pct_7d": -1.7,
+    "pct_30d": 28.5,
+    "sma50": 2227.726098775026,
+    "sma200": 2066.892522014264,
     "support_30d": 2251.7346140069594,
     "resistance_30d": 2525.267261590238,
     "mark_price": 2430.51611628,
