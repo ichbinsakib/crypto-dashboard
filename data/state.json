@@ -2516,12 +2516,12 @@
       "id": "quant-network",
       "symbol": "QNT",
       "name": "Quant",
-      "price": 61.31,
-      "pct_24h": 3.06521,
-      "pct_7d": -7.8,
+      "price": 61.26,
+      "pct_24h": 2.14666,
+      "pct_7d": -7.3,
       "support_30d": 58.747927237753004,
       "resistance_30d": 67.13669726469111,
-      "as_of": "2026-09-17 10:30:32",
+      "as_of": "2026-09-17 11:45:24",
       "stale": false
     },
     "tether-gold": {
@@ -2551,7 +2551,7 @@
         ],
         [
           "Stretch from long-term average",
-          "-3.2% vs its long-term average - not stretched either way",
+          "-2.9% vs its long-term average - not stretched either way",
           0
         ],
         [
@@ -2564,12 +2564,12 @@
       "id": "tether-gold",
       "symbol": "XAUT",
       "name": "Tether Gold",
-      "price": 4307.42,
-      "pct_24h": -0.72961,
-      "pct_7d": -2.0,
+      "price": 4320.45,
+      "pct_24h": -0.58377,
+      "pct_7d": -1.6,
       "support_30d": 4273.477062736937,
       "resistance_30d": 4662.510537821146,
-      "as_of": "2026-09-17 10:17:45",
+      "as_of": "2026-09-17 11:45:24",
       "stale": false
     },
     "bitway": {
@@ -3223,7 +3223,7 @@
         ],
         [
           "Stretch from long-term average",
-          "+0.5% vs its long-term average - not stretched either way",
+          "+1.7% vs its long-term average - not stretched either way",
           0
         ],
         [
@@ -3236,12 +3236,12 @@
       "id": "kaspa",
       "symbol": "KAS",
       "name": "Kaspa",
-      "price": 0.03364226,
-      "pct_24h": 3.43153,
-      "pct_7d": -9.8,
+      "price": 0.03407003,
+      "pct_24h": 5.45778,
+      "pct_7d": -13.0,
       "support_30d": 0.026971668863001497,
       "resistance_30d": 0.03651282069323304,
-      "as_of": "2026-09-17 07:15:26",
+      "as_of": "2026-09-17 11:45:24",
       "stale": false
     },
     "cosmos": {
@@ -3351,20 +3351,20 @@
         "name": "POL (ex-MATIC)",
         "tf": "15m",
         "entry": 0.09543,
-        "stop": 0.09509933333333334,
-        "target1": 0.09576066666666666,
-        "target2": 0.09609133333333332,
-        "opened_at": "2026-09-17T11:42:17.771657"
+        "stop": 0.095104,
+        "target1": 0.09575600000000001,
+        "target2": 0.09608200000000001,
+        "opened_at": "2026-09-17T11:47:15.428747"
       },
       "15m:SKY": {
         "coin": "SKY",
         "name": "Sky",
         "tf": "15m",
         "entry": 0.05623,
-        "stop": 0.05584133333333333,
-        "target1": 0.05661866666666667,
-        "target2": 0.05700733333333334,
-        "opened_at": "2026-09-17T11:42:17.771657"
+        "stop": 0.055846,
+        "target1": 0.056614000000000005,
+        "target2": 0.05699800000000001,
+        "opened_at": "2026-09-17T11:47:15.428747"
       },
       "1h:BCH": {
         "coin": "BCH",
@@ -3374,7 +3374,7 @@
         "stop": 211.84583333333333,
         "target1": 216.15416666666667,
         "target2": 218.30833333333334,
-        "opened_at": "2026-09-17T11:42:17.771657"
+        "opened_at": "2026-09-17T11:47:15.428747"
       },
       "daily:XLM": {
         "coin": "XLM",
@@ -3384,7 +3384,7 @@
         "stop": 0.14162,
         "target1": 0.16598,
         "target2": 0.17815999999999999,
-        "opened_at": "2026-09-17T11:42:17.771657"
+        "opened_at": "2026-09-17T11:47:15.428747"
       }
     },
     "resolved": [
@@ -38942,6 +38942,58 @@
         "result": "win",
         "resolved_at": "2026-09-17T11:42:17.771657",
         "exit_price": 0.181
+      },
+      {
+        "coin": "POL",
+        "name": "POL (ex-MATIC)",
+        "tf": "15m",
+        "entry": 0.09543,
+        "stop": 0.09509933333333334,
+        "target1": 0.09576066666666666,
+        "target2": 0.09609133333333332,
+        "opened_at": "2026-09-17T11:42:17.771657",
+        "result": "win",
+        "resolved_at": "2026-09-17T11:47:15.428747",
+        "exit_price": 0.09599
+      },
+      {
+        "coin": "SKY",
+        "name": "Sky",
+        "tf": "15m",
+        "entry": 0.05623,
+        "stop": 0.05584133333333333,
+        "target1": 0.05661866666666667,
+        "target2": 0.05700733333333334,
+        "opened_at": "2026-09-17T11:42:17.771657",
+        "result": "win",
+        "resolved_at": "2026-09-17T11:47:15.428747",
+        "exit_price": 0.05756
+      },
+      {
+        "coin": "BCH",
+        "name": "Bitcoin Cash",
+        "tf": "1h",
+        "entry": 214.0,
+        "stop": 211.84583333333333,
+        "target1": 216.15416666666667,
+        "target2": 218.30833333333334,
+        "opened_at": "2026-09-17T11:42:17.771657",
+        "result": "win",
+        "resolved_at": "2026-09-17T11:47:15.428747",
+        "exit_price": 223.1
+      },
+      {
+        "coin": "XLM",
+        "name": "Stellar",
+        "tf": "daily",
+        "entry": 0.1538,
+        "stop": 0.14162,
+        "target1": 0.16598,
+        "target2": 0.17815999999999999,
+        "opened_at": "2026-09-17T11:42:17.771657",
+        "result": "win",
+        "resolved_at": "2026-09-17T11:47:15.428747",
+        "exit_price": 0.1811
       }
     ]
   },
@@ -38949,14 +39001,14 @@
     "key": "BTC",
     "name": "Bitcoin",
     "emoji": "\u20bf",
-    "price": 76184,
+    "price": 76165,
     "high_24h": 76683,
     "low_24h": 75161,
-    "pct_24h": 0.31014,
+    "pct_24h": 0.00698,
     "pct_7d": -2.1,
     "pct_30d": 19.0,
-    "sma50": 72144.66991375526,
-    "sma200": 70326.0130251083,
+    "sma50": 72144.26958482632,
+    "sma200": 70325.91294287606,
     "support_30d": 69291.0104297816,
     "resistance_30d": 81264.70153038795,
     "mark_price": 76320.1,
@@ -38971,14 +39023,14 @@
     "key": "ETH",
     "name": "Ethereum",
     "emoji": "\u039e",
-    "price": 2430.42,
+    "price": 2428.28,
     "high_24h": 2451.57,
     "low_24h": 2371.36,
-    "pct_24h": 0.73011,
+    "pct_24h": 0.22278,
     "pct_7d": -1.4,
     "pct_30d": 28.4,
-    "sma50": 2227.6246201465738,
-    "sma200": 2066.867152357151,
+    "sma50": 2227.5820898761735,
+    "sma200": 2066.856519789551,
     "support_30d": 2251.7346140069594,
     "resistance_30d": 2525.267261590238,
     "mark_price": 2432.88565116,
