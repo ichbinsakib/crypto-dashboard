@@ -535,7 +535,7 @@
         ],
         [
           "Stretch from long-term average",
-          "+37.6% above its long-term average - very stretched",
+          "+37.2% above its long-term average - very stretched",
           -2
         ],
         [
@@ -548,12 +548,12 @@
       "id": "whitebit",
       "symbol": "WBT",
       "name": "WhiteBIT Coin",
-      "price": 78.82,
-      "pct_24h": 0.99354,
-      "pct_7d": -1.3,
+      "price": 78.59,
+      "pct_24h": 1.21569,
+      "pct_7d": -1.5,
       "support_30d": 59.556263717190774,
       "resistance_30d": 81.2521953230761,
-      "as_of": "2026-09-17 21:20:25",
+      "as_of": "2026-09-17 22:25:17",
       "stale": false
     },
     "leo-token": {
@@ -2003,7 +2003,7 @@
       "rows": [
         [
           "Price vs. recent range",
-          "Near its 30-day high (~$7.62) - less room to run",
+          "Near its 30-day high (~$7.56) - less room to run",
           -1
         ],
         [
@@ -2023,7 +2023,7 @@
         ],
         [
           "Stretch from long-term average",
-          "+103.1% above its long-term average - very stretched",
+          "+102.0% above its long-term average - very stretched",
           -2
         ],
         [
@@ -2036,12 +2036,12 @@
       "id": "uniswap",
       "symbol": "UNI",
       "name": "Uniswap",
-      "price": 7.61,
-      "pct_24h": 18.94448,
-      "pct_7d": 25.8,
+      "price": 7.57,
+      "pct_24h": 18.65648,
+      "pct_7d": 26.9,
       "support_30d": 3.6331659866190087,
-      "resistance_30d": 7.624051074318084,
-      "as_of": "2026-09-17 20:05:20",
+      "resistance_30d": 7.56344233723627,
+      "as_of": "2026-09-17 22:25:17",
       "stale": false
     },
     "pi-network": {
@@ -2215,7 +2215,7 @@
         ],
         [
           "Stretch from long-term average",
-          "+6.3% vs its long-term average - not stretched either way",
+          "+5.9% vs its long-term average - not stretched either way",
           0
         ],
         [
@@ -2228,12 +2228,12 @@
       "id": "internet-computer",
       "symbol": "ICP",
       "name": "Internet Computer",
-      "price": 2.61,
-      "pct_24h": 5.06845,
-      "pct_7d": -3.9,
+      "price": 2.6,
+      "pct_24h": 3.49083,
+      "pct_7d": -7.0,
       "support_30d": 2.309615242791064,
       "resistance_30d": 2.9869340549074623,
-      "as_of": "2026-09-17 18:45:23",
+      "as_of": "2026-09-17 22:25:17",
       "stale": false
     },
     "bittensor": {
@@ -3342,7 +3342,8 @@
     }
   },
   "_strong_buy_state": {
-    "scanner-15m:XLM": true
+    "scanner-15m:XLM": true,
+    "scanner-1h:XRP": true
   },
   "_pnl_tracker": {
     "open": {
@@ -3355,6 +3356,16 @@
         "target1": 0.18452000000000002,
         "target2": 0.18544000000000002,
         "opened_at": "2026-09-17T21:57:51.522942"
+      },
+      "1h:XRP": {
+        "coin": "XRP",
+        "name": "XRP",
+        "tf": "1h",
+        "entry": 1.285,
+        "stop": 1.2740166666666666,
+        "target1": 1.2959833333333333,
+        "target2": 1.3069666666666666,
+        "opened_at": "2026-09-17T22:27:18.366386"
       }
     },
     "resolved": [
@@ -3388,6 +3399,13 @@
   },
   "_notification_feed": [
     {
+      "id": "signal:scanner-1h:XRP:2026-09-17T22:27:19.473936",
+      "ts": "2026-09-17T22:27:19.473936",
+      "type": "signal",
+      "title": "\ud83d\udfe2 New signal: XRP (1-Hour)",
+      "body": "\ud83d\udfe2 NEAR-TERM DIP ZONE"
+    },
+    {
       "id": "signal:scanner-15m:XLM:2026-09-17T22:12:24.563900",
       "ts": "2026-09-17T22:12:24.563900",
       "type": "signal",
@@ -3413,14 +3431,14 @@
     "key": "BTC",
     "name": "Bitcoin",
     "emoji": "\u20bf",
-    "price": 76230,
+    "price": 76239,
     "high_24h": 77024,
     "low_24h": 75610,
-    "pct_24h": 0.63269,
+    "pct_24h": 0.80147,
     "pct_7d": -1.1,
     "pct_30d": 18.3,
-    "sma50": 72145.58000097612,
-    "sma200": 70326.24054691353,
+    "sma50": 72145.39590585018,
+    "sma200": 70326.19452313203,
     "support_30d": 69291.0104297816,
     "resistance_30d": 81264.70153038795,
     "mark_price": 76486.85126812,
@@ -3435,14 +3453,14 @@
     "key": "ETH",
     "name": "Ethereum",
     "emoji": "\u039e",
-    "price": 2439.41,
+    "price": 2439.38,
     "high_24h": 2478.98,
     "low_24h": 2389.52,
-    "pct_24h": 1.83658,
+    "pct_24h": 1.98219,
     "pct_7d": -0.6,
     "pct_30d": 28.0,
-    "sma50": 2227.8047983016713,
-    "sma200": 2066.9121968959253,
+    "sma50": 2227.7879135428525,
+    "sma200": 2066.9079757062204,
     "support_30d": 2251.7346140069594,
     "resistance_30d": 2525.267261590238,
     "mark_price": 2450.15,
