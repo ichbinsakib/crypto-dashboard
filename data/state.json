@@ -151,7 +151,7 @@
         ],
         [
           "Stretch from long-term average",
-          "+18.4% above its long-term average - a bit stretched",
+          "+18.7% above its long-term average - a bit stretched",
           -1
         ],
         [
@@ -164,12 +164,12 @@
       "id": "solana",
       "symbol": "SOL",
       "name": "Solana",
-      "price": 98.74,
-      "pct_24h": 1.80674,
-      "pct_7d": -2.2,
+      "price": 99.04,
+      "pct_24h": 2.50374,
+      "pct_7d": -1.8,
       "support_30d": 85.33310287519124,
       "resistance_30d": 109.17730597799657,
-      "as_of": "2026-09-17 00:55:17",
+      "as_of": "2026-09-17 02:10:22",
       "stale": false
     },
     "tron": {
@@ -1831,7 +1831,7 @@
         ],
         [
           "Stretch from long-term average",
-          "+49.4% above its long-term average - very stretched",
+          "+46.7% above its long-term average - very stretched",
           -2
         ],
         [
@@ -1844,12 +1844,12 @@
       "id": "ethena",
       "symbol": "ENA",
       "name": "Ethena",
-      "price": 0.153933,
-      "pct_24h": 10.64873,
-      "pct_7d": -0.4,
+      "price": 0.151115,
+      "pct_24h": 9.47118,
+      "pct_7d": 1.6,
       "support_30d": 0.09330779251035991,
       "resistance_30d": 0.17616469272611565,
-      "as_of": "2026-09-17 01:15:25",
+      "as_of": "2026-09-17 02:10:22",
       "stale": false
     },
     "bitcoin-cash": {
@@ -2359,7 +2359,7 @@
         ],
         [
           "Stretch from long-term average",
-          "-13.2% vs its long-term average - not stretched either way",
+          "-13.6% vs its long-term average - not stretched either way",
           0
         ],
         [
@@ -2372,12 +2372,12 @@
       "id": "sky",
       "symbol": "SKY",
       "name": "Sky",
-      "price": 0.0578,
-      "pct_24h": -5.26832,
-      "pct_7d": -6.0,
+      "price": 0.057581,
+      "pct_24h": -4.65352,
+      "pct_7d": -5.4,
       "support_30d": 0.057256438766750246,
       "resistance_30d": 0.07314868186988309,
-      "as_of": "2026-09-17 00:30:26",
+      "as_of": "2026-09-17 02:10:22",
       "stale": false
     },
     "shiba-inu": {
@@ -3351,30 +3351,30 @@
         "name": "Worldcoin",
         "tf": "15m",
         "entry": 0.3601,
-        "stop": 0.35664666666666667,
-        "target1": 0.3635533333333333,
-        "target2": 0.3670066666666666,
-        "opened_at": "2026-09-17T02:07:08.975688"
+        "stop": 0.35663666666666666,
+        "target1": 0.3635633333333333,
+        "target2": 0.3670266666666666,
+        "opened_at": "2026-09-17T02:12:12.276523"
       },
       "1h:MORPHO": {
         "coin": "MORPHO",
         "name": "Morpho",
         "tf": "1h",
         "entry": 2.043,
-        "stop": 2.014125,
-        "target1": 2.0718750000000004,
-        "target2": 2.1007500000000006,
-        "opened_at": "2026-09-17T02:07:08.975688"
+        "stop": 2.0139583333333335,
+        "target1": 2.072041666666667,
+        "target2": 2.1010833333333334,
+        "opened_at": "2026-09-17T02:12:12.276523"
       },
       "daily:XLM": {
         "coin": "XLM",
         "name": "Stellar",
         "tf": "daily",
         "entry": 0.1538,
-        "stop": 0.14170666666666665,
-        "target1": 0.16589333333333334,
-        "target2": 0.17798666666666668,
-        "opened_at": "2026-09-17T02:07:08.975688"
+        "stop": 0.1417,
+        "target1": 0.1659,
+        "target2": 0.178,
+        "opened_at": "2026-09-17T02:12:12.276523"
       }
     },
     "resolved": [
@@ -35708,6 +35708,45 @@
         "result": "win",
         "resolved_at": "2026-09-17T02:07:08.975688",
         "exit_price": 0.1838
+      },
+      {
+        "coin": "WLD",
+        "name": "Worldcoin",
+        "tf": "15m",
+        "entry": 0.3601,
+        "stop": 0.35664666666666667,
+        "target1": 0.3635533333333333,
+        "target2": 0.3670066666666666,
+        "opened_at": "2026-09-17T02:07:08.975688",
+        "result": "win",
+        "resolved_at": "2026-09-17T02:12:12.276523",
+        "exit_price": 0.3714
+      },
+      {
+        "coin": "MORPHO",
+        "name": "Morpho",
+        "tf": "1h",
+        "entry": 2.043,
+        "stop": 2.014125,
+        "target1": 2.0718750000000004,
+        "target2": 2.1007500000000006,
+        "opened_at": "2026-09-17T02:07:08.975688",
+        "result": "win",
+        "resolved_at": "2026-09-17T02:12:12.276523",
+        "exit_price": 2.115
+      },
+      {
+        "coin": "XLM",
+        "name": "Stellar",
+        "tf": "daily",
+        "entry": 0.1538,
+        "stop": 0.14170666666666665,
+        "target1": 0.16589333333333334,
+        "target2": 0.17798666666666668,
+        "opened_at": "2026-09-17T02:07:08.975688",
+        "result": "win",
+        "resolved_at": "2026-09-17T02:12:12.276523",
+        "exit_price": 0.1836
       }
     ]
   },
@@ -35715,14 +35754,14 @@
     "key": "BTC",
     "name": "Bitcoin",
     "emoji": "\u20bf",
-    "price": 76319,
+    "price": 76188,
     "high_24h": 76683,
     "low_24h": 75161,
-    "pct_24h": 0.99738,
+    "pct_24h": 0.85173,
     "pct_7d": -2.3,
     "pct_30d": 18.7,
-    "sma50": 72147.36566443609,
-    "sma200": 70326.6869627785,
+    "sma50": 72145.13462716229,
+    "sma200": 70326.12920346006,
     "support_30d": 69291.0104297816,
     "resistance_30d": 81264.70153038795,
     "mark_price": 76418.87868841,
@@ -35737,14 +35776,14 @@
     "key": "ETH",
     "name": "Ethereum",
     "emoji": "\u039e",
-    "price": 2426.62,
+    "price": 2422.26,
     "high_24h": 2440.69,
     "low_24h": 2371.36,
-    "pct_24h": 1.41689,
+    "pct_24h": 1.31004,
     "pct_7d": -1.5,
     "pct_30d": 27.2,
-    "sma50": 2227.5221108014102,
-    "sma200": 2066.84152502086,
+    "sma50": 2227.477158629171,
+    "sma200": 2066.8302869778004,
     "support_30d": 2251.7346140069594,
     "resistance_30d": 2525.267261590238,
     "mark_price": 2424.33136434,
