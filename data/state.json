@@ -631,7 +631,7 @@
         ],
         [
           "Stretch from long-term average",
-          "+34.4% above its long-term average - very stretched",
+          "+36.1% above its long-term average - very stretched",
           -2
         ],
         [
@@ -644,12 +644,12 @@
       "id": "monero",
       "symbol": "XMR",
       "name": "Monero",
-      "price": 502.25,
-      "pct_24h": 0.84279,
-      "pct_7d": -0.9,
+      "price": 508.61,
+      "pct_24h": 3.73455,
+      "pct_7d": 1.0,
       "support_30d": 410.2195440730022,
       "resistance_30d": 555.6684591165193,
-      "as_of": "2026-09-17 13:50:25",
+      "as_of": "2026-09-17 15:00:37",
       "stale": false
     },
     "cardano": {
@@ -1495,7 +1495,7 @@
         ],
         [
           "Stretch from long-term average",
-          "-4.4% vs its long-term average - not stretched either way",
+          "-4.8% vs its long-term average - not stretched either way",
           0
         ],
         [
@@ -1508,12 +1508,12 @@
       "id": "ethereum-classic",
       "symbol": "ETC",
       "name": "Ethereum Classic",
-      "price": 7.44,
-      "pct_24h": 4.33696,
-      "pct_7d": -4.4,
+      "price": 7.41,
+      "pct_24h": 4.05421,
+      "pct_7d": -4.3,
       "support_30d": 6.533265334993583,
       "resistance_30d": 8.609781284223262,
-      "as_of": "2026-09-17 14:40:24",
+      "as_of": "2026-09-17 15:00:37",
       "stale": false
     },
     "pump-fun": {
@@ -2935,7 +2935,7 @@
         ],
         [
           "Stretch from long-term average",
-          "+35.8% above its long-term average - very stretched",
+          "+35.6% above its long-term average - very stretched",
           -2
         ],
         [
@@ -2948,12 +2948,12 @@
       "id": "just",
       "symbol": "JST",
       "name": "JUST",
-      "price": 0.1167,
-      "pct_24h": 0.84321,
-      "pct_7d": 11.0,
+      "price": 0.116555,
+      "pct_24h": 0.25835,
+      "pct_7d": 11.9,
       "support_30d": 0.0946830738697126,
       "resistance_30d": 0.11679162455397056,
-      "as_of": "2026-09-17 11:15:23",
+      "as_of": "2026-09-17 15:00:37",
       "stale": false
     },
     "algorand": {
@@ -3351,20 +3351,20 @@
         "name": "POL (ex-MATIC)",
         "tf": "15m",
         "entry": 0.09543,
-        "stop": 0.094904,
-        "target1": 0.095956,
-        "target2": 0.096482,
-        "opened_at": "2026-09-17T14:57:09.642812"
+        "stop": 0.09491,
+        "target1": 0.09595000000000001,
+        "target2": 0.09647000000000001,
+        "opened_at": "2026-09-17T15:02:28.629769"
       },
       "1h:GRAM": {
         "coin": "GRAM",
         "name": "Gram (prev. Toncoin)",
         "tf": "1h",
         "entry": 1.286,
-        "stop": 1.2744166666666668,
-        "target1": 1.2975833333333333,
-        "target2": 1.3091666666666666,
-        "opened_at": "2026-09-17T14:57:09.642812"
+        "stop": 1.2745833333333334,
+        "target1": 1.2974166666666667,
+        "target2": 1.3088333333333333,
+        "opened_at": "2026-09-17T15:02:28.629769"
       },
       "daily:XLM": {
         "coin": "XLM",
@@ -3374,7 +3374,7 @@
         "stop": 0.14162,
         "target1": 0.16598,
         "target2": 0.17815999999999999,
-        "opened_at": "2026-09-17T14:57:09.642812"
+        "opened_at": "2026-09-17T15:02:28.629769"
       }
     },
     "resolved": [
@@ -40466,6 +40466,45 @@
         "result": "win",
         "resolved_at": "2026-09-17T14:57:09.642812",
         "exit_price": 0.1847
+      },
+      {
+        "coin": "POL",
+        "name": "POL (ex-MATIC)",
+        "tf": "15m",
+        "entry": 0.09543,
+        "stop": 0.094904,
+        "target1": 0.095956,
+        "target2": 0.096482,
+        "opened_at": "2026-09-17T14:57:09.642812",
+        "result": "win",
+        "resolved_at": "2026-09-17T15:02:28.629769",
+        "exit_price": 0.09764
+      },
+      {
+        "coin": "GRAM",
+        "name": "Gram (prev. Toncoin)",
+        "tf": "1h",
+        "entry": 1.286,
+        "stop": 1.2744166666666668,
+        "target1": 1.2975833333333333,
+        "target2": 1.3091666666666666,
+        "opened_at": "2026-09-17T14:57:09.642812",
+        "result": "win",
+        "resolved_at": "2026-09-17T15:02:28.629769",
+        "exit_price": 1.343
+      },
+      {
+        "coin": "XLM",
+        "name": "Stellar",
+        "tf": "daily",
+        "entry": 0.1538,
+        "stop": 0.14162,
+        "target1": 0.16598,
+        "target2": 0.17815999999999999,
+        "opened_at": "2026-09-17T14:57:09.642812",
+        "result": "win",
+        "resolved_at": "2026-09-17T15:02:28.629769",
+        "exit_price": 0.1841
       }
     ]
   },
@@ -40473,14 +40512,14 @@
     "key": "BTC",
     "name": "Bitcoin",
     "emoji": "\u20bf",
-    "price": 76571,
+    "price": 76526,
     "high_24h": 77024,
     "low_24h": 75161,
-    "pct_24h": 1.33729,
+    "pct_24h": 1.21602,
     "pct_7d": -0.4,
     "pct_30d": 19.3,
-    "sma50": 72152.40409063893,
-    "sma200": 70327.94656932921,
+    "sma50": 72150.73630548526,
+    "sma200": 70327.52962304081,
     "support_30d": 69291.0104297816,
     "resistance_30d": 81264.70153038795,
     "mark_price": 76687.93324638,
@@ -40495,14 +40534,14 @@
     "key": "ETH",
     "name": "Ethereum",
     "emoji": "\u039e",
-    "price": 2461.96,
+    "price": 2462.55,
     "high_24h": 2473.53,
     "low_24h": 2371.36,
-    "pct_24h": 3.21715,
+    "pct_24h": 3.17874,
     "pct_7d": 1.7,
     "pct_30d": 29.5,
-    "sma50": 2228.2396061718346,
-    "sma200": 2067.0208988634663,
+    "sma50": 2228.2485997382782,
+    "sma200": 2067.023147255077,
     "support_30d": 2251.7346140069594,
     "resistance_30d": 2525.267261590238,
     "mark_price": 2464.4,
