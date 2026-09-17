@@ -679,7 +679,7 @@
         ],
         [
           "Stretch from long-term average",
-          "-8.9% vs its long-term average - not stretched either way",
+          "-8.4% vs its long-term average - not stretched either way",
           0
         ],
         [
@@ -692,12 +692,12 @@
       "id": "cardano",
       "symbol": "ADA",
       "name": "Cardano",
-      "price": 0.197655,
-      "pct_24h": 0.96835,
+      "price": 0.198825,
+      "pct_24h": 2.0705,
       "pct_7d": -7.8,
       "support_30d": 0.18702164440997238,
       "resistance_30d": 0.2291047455940254,
-      "as_of": "2026-09-17 07:00:37",
+      "as_of": "2026-09-17 07:20:42",
       "stale": false
     },
     "stellar": {
@@ -1831,7 +1831,7 @@
         ],
         [
           "Stretch from long-term average",
-          "+47.1% above its long-term average - very stretched",
+          "+48.3% above its long-term average - very stretched",
           -2
         ],
         [
@@ -1844,12 +1844,12 @@
       "id": "ethena",
       "symbol": "ENA",
       "name": "Ethena",
-      "price": 0.15148,
-      "pct_24h": 8.35914,
-      "pct_7d": -0.6,
+      "price": 0.152755,
+      "pct_24h": 8.96432,
+      "pct_7d": -0.1,
       "support_30d": 0.09330779251035991,
       "resistance_30d": 0.17616469272611565,
-      "as_of": "2026-09-17 06:55:19",
+      "as_of": "2026-09-17 07:20:42",
       "stale": false
     },
     "bitcoin-cash": {
@@ -2325,11 +2325,11 @@
       "symbol": "GRAM",
       "name": "Gram (prev. Toncoin)",
       "price": 1.32,
-      "pct_24h": 0.41479,
+      "pct_24h": 0.62711,
       "pct_7d": -4.5,
       "support_30d": 1.3154928840377231,
       "resistance_30d": 1.4926762805297678,
-      "as_of": "2026-09-17 07:10:25",
+      "as_of": "2026-09-17 07:20:42",
       "stale": false
     },
     "sky": {
@@ -3351,10 +3351,10 @@
         "name": "Morpho",
         "tf": "1h",
         "entry": 2.043,
-        "stop": 2.011166666666667,
-        "target1": 2.0748333333333333,
-        "target2": 2.1066666666666665,
-        "opened_at": "2026-09-17T07:17:21.638795"
+        "stop": 2.011041666666667,
+        "target1": 2.0749583333333335,
+        "target2": 2.1069166666666668,
+        "opened_at": "2026-09-17T07:22:38.409267"
       },
       "daily:XLM": {
         "coin": "XLM",
@@ -3364,7 +3364,7 @@
         "stop": 0.14164,
         "target1": 0.16596,
         "target2": 0.17812,
-        "opened_at": "2026-09-17T07:17:21.638795"
+        "opened_at": "2026-09-17T07:22:38.409267"
       }
     },
     "resolved": [
@@ -37414,6 +37414,32 @@
         "result": "win",
         "resolved_at": "2026-09-17T07:17:21.638795",
         "exit_price": 0.1834
+      },
+      {
+        "coin": "MORPHO",
+        "name": "Morpho",
+        "tf": "1h",
+        "entry": 2.043,
+        "stop": 2.011166666666667,
+        "target1": 2.0748333333333333,
+        "target2": 2.1066666666666665,
+        "opened_at": "2026-09-17T07:17:21.638795",
+        "result": "win",
+        "resolved_at": "2026-09-17T07:22:38.409267",
+        "exit_price": 2.156
+      },
+      {
+        "coin": "XLM",
+        "name": "Stellar",
+        "tf": "daily",
+        "entry": 0.1538,
+        "stop": 0.14164,
+        "target1": 0.16596,
+        "target2": 0.17812,
+        "opened_at": "2026-09-17T07:17:21.638795",
+        "result": "win",
+        "resolved_at": "2026-09-17T07:22:38.409267",
+        "exit_price": 0.1834
       }
     ]
   },
@@ -37421,14 +37447,14 @@
     "key": "BTC",
     "name": "Bitcoin",
     "emoji": "\u20bf",
-    "price": 76512,
+    "price": 76557,
     "high_24h": 76683,
     "low_24h": 75161,
-    "pct_24h": 0.98759,
+    "pct_24h": 0.91648,
     "pct_7d": -2.7,
     "pct_30d": 19.1,
-    "sma50": 72151.63097649095,
-    "sma200": 70327.75329079223,
+    "sma50": 72151.71367152626,
+    "sma200": 70327.77396455106,
     "support_30d": 69291.0104297816,
     "resistance_30d": 81264.70153038795,
     "mark_price": 76283.54228261,
@@ -37443,14 +37469,14 @@
     "key": "ETH",
     "name": "Ethereum",
     "emoji": "\u039e",
-    "price": 2447.29,
+    "price": 2449.67,
     "high_24h": 2444.01,
     "low_24h": 2371.36,
-    "pct_24h": 2.07355,
+    "pct_24h": 2.06502,
     "pct_7d": -1.7,
     "pct_30d": 28.8,
-    "sma50": 2228.0006141000413,
-    "sma200": 2066.961150845518,
+    "sma50": 2228.009802281726,
+    "sma200": 2066.9634478909393,
     "support_30d": 2251.7346140069594,
     "resistance_30d": 2525.267261590238,
     "mark_price": 2430.51611628,
