@@ -439,7 +439,7 @@
         ],
         [
           "Stretch from long-term average",
-          "+12.0% above its long-term average - a bit stretched",
+          "+11.8% above its long-term average - a bit stretched",
           -1
         ],
         [
@@ -452,12 +452,12 @@
       "id": "rain",
       "symbol": "RAIN",
       "name": "Rain",
-      "price": 0.01311984,
-      "pct_24h": -3.00606,
+      "price": 0.01309955,
+      "pct_24h": -2.44223,
       "pct_7d": -18.6,
       "support_30d": 0.01289999627106216,
       "resistance_30d": 0.018158429442510105,
-      "as_of": "2026-09-17 12:25:18",
+      "as_of": "2026-09-17 12:50:26",
       "stale": false
     },
     "chainlink": {
@@ -1711,12 +1711,12 @@
     "sui": {
       "label": "\ud83d\udfe2 LEAN ACCUMULATE",
       "status": "bullish",
-      "score": 3,
+      "score": 2,
       "rows": [
         [
           "Price vs. recent range",
-          "Near its 30-day low (~$0.6865) - historically a better entry",
-          2
+          "Sitting in the middle of its 30-day range",
+          0
         ],
         [
           "Crowd mood (Fear & Greed)",
@@ -1735,8 +1735,8 @@
         ],
         [
           "Stretch from long-term average",
-          "-15.2% below its long-term average - confirmed downtrend",
-          -1
+          "-14.4% vs its long-term average - not stretched either way",
+          0
         ],
         [
           "Leverage traders' bias",
@@ -1748,12 +1748,12 @@
       "id": "sui",
       "symbol": "SUI",
       "name": "Sui",
-      "price": 0.715968,
-      "pct_24h": 3.85393,
-      "pct_7d": -5.6,
+      "price": 0.723154,
+      "pct_24h": 4.89919,
+      "pct_7d": -5.1,
       "support_30d": 0.686491801454995,
       "resistance_30d": 0.8499161763231283,
-      "as_of": "2026-09-17 10:35:19",
+      "as_of": "2026-09-17 12:50:26",
       "stale": false
     },
     "lighter": {
@@ -1927,7 +1927,7 @@
         ],
         [
           "Stretch from long-term average",
-          "-1.9% vs its long-term average - not stretched either way",
+          "-1.0% vs its long-term average - not stretched either way",
           0
         ],
         [
@@ -1940,12 +1940,12 @@
       "id": "mantle",
       "symbol": "MNT",
       "name": "Mantle",
-      "price": 0.561928,
-      "pct_24h": 3.40249,
-      "pct_7d": -5.7,
+      "price": 0.567396,
+      "pct_24h": 3.35323,
+      "pct_7d": -5.4,
       "support_30d": 0.46737376334939396,
       "resistance_30d": 0.6365218632454678,
-      "as_of": "2026-09-17 11:30:32",
+      "as_of": "2026-09-17 12:50:26",
       "stale": false
     },
     "polkadot": {
@@ -3356,7 +3356,7 @@
         "stop": 0.09499933333333334,
         "target1": 0.09586066666666666,
         "target2": 0.09629133333333333,
-        "opened_at": "2026-09-17T12:47:14.970345"
+        "opened_at": "2026-09-17T12:52:17.286650"
       },
       "1h:GRAM": {
         "coin": "GRAM",
@@ -3366,7 +3366,7 @@
         "stop": 1.27525,
         "target1": 1.29675,
         "target2": 1.3075,
-        "opened_at": "2026-09-17T12:47:14.970345"
+        "opened_at": "2026-09-17T12:52:17.286650"
       },
       "daily:XLM": {
         "coin": "XLM",
@@ -3376,7 +3376,7 @@
         "stop": 0.14162,
         "target1": 0.16598,
         "target2": 0.17815999999999999,
-        "opened_at": "2026-09-17T12:47:14.970345"
+        "opened_at": "2026-09-17T12:52:17.286650"
       }
     },
     "resolved": [
@@ -39493,6 +39493,45 @@
         "result": "win",
         "resolved_at": "2026-09-17T12:47:14.970345",
         "exit_price": 0.1841
+      },
+      {
+        "coin": "POL",
+        "name": "POL (ex-MATIC)",
+        "tf": "15m",
+        "entry": 0.09543,
+        "stop": 0.09499933333333334,
+        "target1": 0.09586066666666666,
+        "target2": 0.09629133333333333,
+        "opened_at": "2026-09-17T12:47:14.970345",
+        "result": "win",
+        "resolved_at": "2026-09-17T12:52:17.286650",
+        "exit_price": 0.0975
+      },
+      {
+        "coin": "GRAM",
+        "name": "Gram (prev. Toncoin)",
+        "tf": "1h",
+        "entry": 1.286,
+        "stop": 1.27525,
+        "target1": 1.29675,
+        "target2": 1.3075,
+        "opened_at": "2026-09-17T12:47:14.970345",
+        "result": "win",
+        "resolved_at": "2026-09-17T12:52:17.286650",
+        "exit_price": 1.332
+      },
+      {
+        "coin": "XLM",
+        "name": "Stellar",
+        "tf": "daily",
+        "entry": 0.1538,
+        "stop": 0.14162,
+        "target1": 0.16598,
+        "target2": 0.17815999999999999,
+        "opened_at": "2026-09-17T12:47:14.970345",
+        "result": "win",
+        "resolved_at": "2026-09-17T12:52:17.286650",
+        "exit_price": 0.1841
       }
     ]
   },
@@ -39500,14 +39539,14 @@
     "key": "BTC",
     "name": "Bitcoin",
     "emoji": "\u20bf",
-    "price": 76839,
+    "price": 76754,
     "high_24h": 76683,
     "low_24h": 75161,
-    "pct_24h": 1.23406,
+    "pct_24h": 1.03889,
     "pct_7d": -2.0,
     "pct_30d": 19.0,
-    "sma50": 72157.6335975143,
-    "sma200": 70329.25394604806,
+    "sma50": 72156.55421934069,
+    "sma200": 70328.98410150467,
     "support_30d": 69291.0104297816,
     "resistance_30d": 81264.70153038795,
     "mark_price": 76320.1,
@@ -39522,14 +39561,14 @@
     "key": "ETH",
     "name": "Ethereum",
     "emoji": "\u039e",
-    "price": 2462.74,
+    "price": 2458.83,
     "high_24h": 2451.57,
     "low_24h": 2371.36,
-    "pct_24h": 2.39915,
+    "pct_24h": 2.14414,
     "pct_7d": -1.1,
     "pct_30d": 28.5,
-    "sma50": 2228.2678561085386,
-    "sma200": 2067.0279613476423,
+    "sma50": 2228.2185464375366,
+    "sma200": 2067.0156339298915,
     "support_30d": 2251.7346140069594,
     "resistance_30d": 2525.267261590238,
     "mark_price": 2432.88565116,
