@@ -4,7 +4,7 @@
   "_alerts_state": {
     "btc-resistance-break": {
       "triggered": true,
-      "last_triggered_at": "2026-09-18 18:00:37"
+      "last_triggered_at": "2026-09-18 18:05:24"
     },
     "btc-support-break": {
       "triggered": false,
@@ -12,7 +12,7 @@
     },
     "eth-resistance-break": {
       "triggered": true,
-      "last_triggered_at": "2026-09-18 18:00:37"
+      "last_triggered_at": "2026-09-18 18:05:24"
     },
     "eth-support-break": {
       "triggered": false,
@@ -967,7 +967,7 @@
         ],
         [
           "Stretch from long-term average",
-          "+13.7% above its long-term average - a bit stretched",
+          "+13.1% above its long-term average - a bit stretched",
           -1
         ],
         [
@@ -980,12 +980,12 @@
       "id": "aster-2",
       "symbol": "ASTER",
       "name": "Aster",
-      "price": 0.752989,
-      "pct_24h": 0.96124,
-      "pct_7d": 6.3,
+      "price": 0.749285,
+      "pct_24h": 1.15411,
+      "pct_7d": 7.7,
       "support_30d": 0.6487654591390889,
       "resistance_30d": 0.7868111056215635,
-      "as_of": "2026-09-18 15:45:24",
+      "as_of": "2026-09-18 18:05:24",
       "stale": false
     },
     "worldcoin-wld": {
@@ -1567,11 +1567,11 @@
     "venice-token": {
       "label": "\ud83d\udd34 DISTRIBUTION ZONE",
       "status": "bearish",
-      "score": -6,
+      "score": -5,
       "rows": [
         [
           "Price vs. recent range",
-          "Near its 30-day high (~$27.42) - less room to run",
+          "Near its 30-day high (~$27.23) - less room to run",
           -1
         ],
         [
@@ -1586,12 +1586,12 @@
         ],
         [
           "Recent trend",
-          "Chopping sideways - no clear trend",
-          0
+          "Trending up steadily - healthy",
+          1
         ],
         [
           "Stretch from long-term average",
-          "+116.9% above its long-term average - very stretched",
+          "+115.4% above its long-term average - very stretched",
           -2
         ],
         [
@@ -1604,12 +1604,12 @@
       "id": "venice-token",
       "symbol": "VVV",
       "name": "Venice Token",
-      "price": 27.34,
-      "pct_24h": 11.56891,
-      "pct_7d": 2.5,
+      "price": 27.15,
+      "pct_24h": 11.51504,
+      "pct_7d": 10.1,
       "support_30d": 14.548859375849878,
-      "resistance_30d": 27.42308542845849,
-      "as_of": "2026-09-18 16:30:33",
+      "resistance_30d": 27.23273602613888,
+      "as_of": "2026-09-18 18:05:24",
       "stale": false
     },
     "litecoin": {
@@ -1709,9 +1709,9 @@
       "stale": false
     },
     "sui": {
-      "label": "\ud83d\udfe1 HOLD / NEUTRAL",
-      "status": "neutral",
-      "score": 1,
+      "label": "\ud83d\udfe2 LEAN ACCUMULATE",
+      "status": "bullish",
+      "score": 2,
       "rows": [
         [
           "Price vs. recent range",
@@ -1730,12 +1730,12 @@
         ],
         [
           "Recent trend",
-          "Chopping sideways - no clear trend",
-          0
+          "Trending up steadily - healthy",
+          1
         ],
         [
           "Stretch from long-term average",
-          "-4.8% vs its long-term average - not stretched either way",
+          "-5.0% vs its long-term average - not stretched either way",
           0
         ],
         [
@@ -1744,16 +1744,16 @@
           0
         ]
       ],
-      "plain": "No real edge either way right now - fine to just wait and watch.",
+      "plain": "Leans toward a decent spot to slowly add (DCA) - not a strong signal, just a lean.",
       "id": "sui",
       "symbol": "SUI",
       "name": "Sui",
-      "price": 0.803336,
-      "pct_24h": 10.92,
-      "pct_7d": 6.0,
+      "price": 0.802109,
+      "pct_24h": 9.49785,
+      "pct_7d": 8.2,
       "support_30d": 0.686491801454995,
       "resistance_30d": 0.8499161763231283,
-      "as_of": "2026-09-18 15:20:27",
+      "as_of": "2026-09-18 18:05:24",
       "stale": false
     },
     "lighter": {
@@ -3467,14 +3467,14 @@
     "key": "BTC",
     "name": "Bitcoin",
     "emoji": "\u20bf",
-    "price": 80907,
+    "price": 80896,
     "high_24h": 81213,
     "low_24h": 76205,
-    "pct_24h": 5.62389,
-    "pct_7d": 4.1,
-    "pct_30d": 18.0,
-    "sma50": 72472.01268339962,
-    "sma200": 70387.48572155288,
+    "pct_24h": 5.61058,
+    "pct_7d": 3.9,
+    "pct_30d": 18.2,
+    "sma50": 72471.73858132989,
+    "sma200": 70387.41719603544,
     "support_30d": 73020.94563440893,
     "resistance_30d": 81264.70153038795,
     "mark_price": 80993.2,
@@ -3489,16 +3489,16 @@
     "key": "ETH",
     "name": "Ethereum",
     "emoji": "\u039e",
-    "price": 2605.83,
+    "price": 2603.23,
     "high_24h": 2608.29,
     "low_24h": 2435.96,
-    "pct_24h": 5.92347,
-    "pct_7d": 1.4,
-    "pct_30d": 24.5,
-    "sma50": 2241.7438924355565,
-    "sma200": 2069.8408321903544,
+    "pct_24h": 5.87208,
+    "pct_7d": 1.1,
+    "pct_30d": 24.8,
+    "sma50": 2241.6652119989612,
+    "sma200": 2069.821162081206,
     "support_30d": 2326.5282334236576,
-    "resistance_30d": 2607.7947014724446,
+    "resistance_30d": 2603.860679642678,
     "mark_price": 2599.43,
     "index_price": 2599.8744186,
     "funding_rate": 0.0001,
