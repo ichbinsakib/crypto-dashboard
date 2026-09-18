@@ -4,7 +4,7 @@
   "_alerts_state": {
     "btc-resistance-break": {
       "triggered": true,
-      "last_triggered_at": "2026-09-18 14:55:20"
+      "last_triggered_at": "2026-09-18 15:01:12"
     },
     "btc-support-break": {
       "triggered": false,
@@ -12,7 +12,7 @@
     },
     "eth-resistance-break": {
       "triggered": true,
-      "last_triggered_at": "2026-09-18 14:55:20"
+      "last_triggered_at": "2026-09-18 15:01:12"
     },
     "eth-support-break": {
       "triggered": false,
@@ -461,9 +461,9 @@
       "stale": false
     },
     "chainlink": {
-      "label": "\ud83d\udfe1 HOLD / NEUTRAL",
-      "status": "neutral",
-      "score": -1,
+      "label": "\ud83d\udd34 CAUTION - REDUCE NEW BUYS",
+      "status": "bearish",
+      "score": -2,
       "rows": [
         [
           "Price vs. recent range",
@@ -487,8 +487,8 @@
         ],
         [
           "Stretch from long-term average",
-          "+28.7% above its long-term average - a bit stretched",
-          -1
+          "+31.1% above its long-term average - very stretched",
+          -2
         ],
         [
           "Leverage traders' bias",
@@ -496,16 +496,16 @@
           0
         ]
       ],
-      "plain": "No real edge either way right now - fine to just wait and watch.",
+      "plain": "Getting risky - I'd hold off on new buys until this cools down.",
       "id": "chainlink",
       "symbol": "LINK",
       "name": "Chainlink",
-      "price": 11.94,
-      "pct_24h": 7.03209,
-      "pct_7d": 3.6,
+      "price": 12.16,
+      "pct_24h": 8.05917,
+      "pct_7d": 0.7,
       "support_30d": 10.688653798526964,
       "resistance_30d": 13.237155745219605,
-      "as_of": "2026-09-18 13:45:24",
+      "as_of": "2026-09-18 15:01:12",
       "stale": false
     },
     "whitebit": {
@@ -583,7 +583,7 @@
         ],
         [
           "Stretch from long-term average",
-          "-7.7% vs its long-term average - not stretched either way",
+          "-8.0% vs its long-term average - not stretched either way",
           0
         ],
         [
@@ -596,12 +596,12 @@
       "id": "leo-token",
       "symbol": "LEO",
       "name": "LEO Token",
-      "price": 8.9,
-      "pct_24h": -0.22468,
-      "pct_7d": -2.4,
+      "price": 8.87,
+      "pct_24h": -0.56756,
+      "pct_7d": -3.0,
       "support_30d": 8.831489578582278,
       "resistance_30d": 9.681775974309534,
-      "as_of": "2026-09-18 13:15:25",
+      "as_of": "2026-09-18 15:01:12",
       "stale": false
     },
     "monero": {
@@ -1759,11 +1759,11 @@
     "lighter": {
       "label": "\ud83d\udd34 DISTRIBUTION ZONE",
       "status": "bearish",
-      "score": -5,
+      "score": -6,
       "rows": [
         [
           "Price vs. recent range",
-          "Near its 30-day high (~$4.87) - less room to run",
+          "Near its 30-day high (~$4.90) - less room to run",
           -1
         ],
         [
@@ -1778,12 +1778,12 @@
         ],
         [
           "Recent trend",
-          "Trending up steadily - healthy",
-          1
+          "Chopping sideways - no clear trend",
+          0
         ],
         [
           "Stretch from long-term average",
-          "+158.8% above its long-term average - very stretched",
+          "+160.4% above its long-term average - very stretched",
           -2
         ],
         [
@@ -1796,12 +1796,12 @@
       "id": "lighter",
       "symbol": "LIT",
       "name": "Lighter",
-      "price": 4.87,
-      "pct_24h": -2.81601,
-      "pct_7d": 8.7,
+      "price": 4.9,
+      "pct_24h": 1.91479,
+      "pct_7d": 2.7,
       "support_30d": 2.671139842143621,
-      "resistance_30d": 4.868245448544897,
-      "as_of": "2026-09-18 13:10:23",
+      "resistance_30d": 4.900153687302927,
+      "as_of": "2026-09-18 15:01:12",
       "stale": false
     },
     "ethena": {
@@ -3467,14 +3467,14 @@
     "key": "BTC",
     "name": "Bitcoin",
     "emoji": "\u20bf",
-    "price": 80868,
+    "price": 80850,
     "high_24h": 80359,
     "low_24h": 76205,
-    "pct_24h": 5.60942,
-    "pct_7d": 2.6,
-    "pct_30d": 23.4,
-    "sma50": 72470.90726417897,
-    "sma200": 70387.20936674772,
+    "pct_24h": 5.79874,
+    "pct_7d": 2.1,
+    "pct_30d": 24.4,
+    "sma50": 72470.53565468694,
+    "sma200": 70387.1164643747,
     "support_30d": 73020.94563440893,
     "resistance_30d": 81264.70153038795,
     "mark_price": 76486.85126812,
@@ -3489,16 +3489,16 @@
     "key": "ETH",
     "name": "Ethereum",
     "emoji": "\u039e",
-    "price": 2578.42,
+    "price": 2579.77,
     "high_24h": 2568.16,
     "low_24h": 2435.96,
-    "pct_24h": 4.66752,
-    "pct_7d": 1.6,
-    "pct_30d": 31.7,
-    "sma50": 2241.1501266423493,
-    "sma200": 2069.6923907420523,
+    "pct_24h": 4.90673,
+    "pct_7d": -1.8,
+    "pct_30d": 33.5,
+    "sma50": 2241.185578255115,
+    "sma200": 2069.701253645244,
     "support_30d": 2326.5282334236576,
-    "resistance_30d": 2578.10641181209,
+    "resistance_30d": 2579.878992450368,
     "mark_price": 2450.15,
     "index_price": 2451.28046512,
     "funding_rate": 4.838e-05,
