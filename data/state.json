@@ -4,7 +4,7 @@
   "_alerts_state": {
     "btc-resistance-break": {
       "triggered": true,
-      "last_triggered_at": "2026-09-18 15:12:52"
+      "last_triggered_at": "2026-09-18 15:15:22"
     },
     "btc-support-break": {
       "triggered": false,
@@ -12,7 +12,7 @@
     },
     "eth-resistance-break": {
       "triggered": true,
-      "last_triggered_at": "2026-09-18 15:12:52"
+      "last_triggered_at": "2026-09-18 15:15:22"
     },
     "eth-support-break": {
       "triggered": false,
@@ -413,9 +413,9 @@
       "stale": false
     },
     "rain": {
-      "label": "\ud83d\udfe1 HOLD / NEUTRAL",
-      "status": "neutral",
-      "score": 1,
+      "label": "\ud83d\udfe2 LEAN ACCUMULATE",
+      "status": "bullish",
+      "score": 2,
       "rows": [
         [
           "Price vs. recent range",
@@ -439,8 +439,8 @@
         ],
         [
           "Stretch from long-term average",
-          "+10.4% above its long-term average - a bit stretched",
-          -1
+          "+9.0% vs its long-term average - not stretched either way",
+          0
         ],
         [
           "Leverage traders' bias",
@@ -448,16 +448,16 @@
           0
         ]
       ],
-      "plain": "No real edge either way right now - fine to just wait and watch.",
+      "plain": "Leans toward a decent spot to slowly add (DCA) - not a strong signal, just a lean.",
       "id": "rain",
       "symbol": "RAIN",
       "name": "Rain",
-      "price": 0.01295051,
-      "pct_24h": 4.30332,
-      "pct_7d": -17.8,
+      "price": 0.0127897,
+      "pct_24h": -1.35716,
+      "pct_7d": -20.7,
       "support_30d": 0.012759120486428296,
       "resistance_30d": 0.018158429442510105,
-      "as_of": "2026-09-18 09:30:30",
+      "as_of": "2026-09-18 15:15:22",
       "stale": false
     },
     "chainlink": {
@@ -487,7 +487,7 @@
         ],
         [
           "Stretch from long-term average",
-          "+31.1% above its long-term average - very stretched",
+          "+30.4% above its long-term average - very stretched",
           -2
         ],
         [
@@ -500,12 +500,12 @@
       "id": "chainlink",
       "symbol": "LINK",
       "name": "Chainlink",
-      "price": 12.16,
-      "pct_24h": 8.05917,
+      "price": 12.1,
+      "pct_24h": 7.83038,
       "pct_7d": 0.7,
       "support_30d": 10.688653798526964,
       "resistance_30d": 13.237155745219605,
-      "as_of": "2026-09-18 15:01:12",
+      "as_of": "2026-09-18 15:15:22",
       "stale": false
     },
     "whitebit": {
@@ -2647,7 +2647,7 @@
         ],
         [
           "Stretch from long-term average",
-          "-13.7% vs its long-term average - not stretched either way",
+          "-14.3% vs its long-term average - not stretched either way",
           0
         ],
         [
@@ -2660,12 +2660,12 @@
       "id": "world-liberty-financial",
       "symbol": "WLFI",
       "name": "World Liberty Financial",
-      "price": 0.058968,
-      "pct_24h": 2.18526,
-      "pct_7d": 11.2,
+      "price": 0.058561,
+      "pct_24h": 2.13929,
+      "pct_7d": 9.4,
       "support_30d": 0.05526589948255966,
       "resistance_30d": 0.06254770952093733,
-      "as_of": "2026-09-18 14:55:20",
+      "as_of": "2026-09-18 15:15:22",
       "stale": false
     },
     "pax-gold": {
@@ -3467,14 +3467,14 @@
     "key": "BTC",
     "name": "Bitcoin",
     "emoji": "\u20bf",
-    "price": 80585,
+    "price": 80580,
     "high_24h": 80930,
     "low_24h": 76205,
-    "pct_24h": 5.63393,
+    "pct_24h": 5.66616,
     "pct_7d": 2.1,
     "pct_30d": 24.4,
-    "sma50": 72465.19277852216,
-    "sma200": 70385.78074533351,
+    "sma50": 72464.77044131391,
+    "sma200": 70385.67516103145,
     "support_30d": 73020.94563440893,
     "resistance_30d": 81264.70153038795,
     "mark_price": 76486.85126812,
@@ -3489,16 +3489,16 @@
     "key": "ETH",
     "name": "Ethereum",
     "emoji": "\u039e",
-    "price": 2571.91,
+    "price": 2570.63,
     "high_24h": 2583.66,
     "low_24h": 2435.96,
-    "pct_24h": 4.98896,
+    "pct_24h": 4.98451,
     "pct_7d": -1.8,
     "pct_30d": 33.5,
-    "sma50": 2241.026200888184,
-    "sma200": 2069.6614093035114,
+    "sma50": 2240.9684747153424,
+    "sma200": 2069.6469777603006,
     "support_30d": 2326.5282334236576,
-    "resistance_30d": 2571.910124103835,
+    "resistance_30d": 2569.0238154617273,
     "mark_price": 2450.15,
     "index_price": 2451.28046512,
     "funding_rate": 4.838e-05,
