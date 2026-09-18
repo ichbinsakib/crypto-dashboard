@@ -4,7 +4,7 @@
   "_alerts_state": {
     "btc-resistance-break": {
       "triggered": true,
-      "last_triggered_at": "2026-09-18 14:40:24"
+      "last_triggered_at": "2026-09-18 14:45:24"
     },
     "btc-support-break": {
       "triggered": false,
@@ -12,7 +12,7 @@
     },
     "eth-resistance-break": {
       "triggered": true,
-      "last_triggered_at": "2026-09-18 14:40:24"
+      "last_triggered_at": "2026-09-18 14:45:24"
     },
     "eth-support-break": {
       "triggered": false,
@@ -131,7 +131,7 @@
       "rows": [
         [
           "Price vs. recent range",
-          "Near its 30-day high (~$109.18) - less room to run",
+          "Near its 30-day high (~$109.77) - less room to run",
           -1
         ],
         [
@@ -151,7 +151,7 @@
         ],
         [
           "Stretch from long-term average",
-          "+30.4% above its long-term average - very stretched",
+          "+31.4% above its long-term average - very stretched",
           -2
         ],
         [
@@ -164,12 +164,12 @@
       "id": "solana",
       "symbol": "SOL",
       "name": "Solana",
-      "price": 108.91,
-      "pct_24h": 8.63679,
-      "pct_7d": 6.3,
+      "price": 109.82,
+      "pct_24h": 8.5519,
+      "pct_7d": 6.5,
       "support_30d": 87.6519814449933,
-      "resistance_30d": 109.17730597799657,
-      "as_of": "2026-09-18 13:55:19",
+      "resistance_30d": 109.7713569161985,
+      "as_of": "2026-09-18 14:45:24",
       "stale": false
     },
     "tron": {
@@ -509,13 +509,13 @@
       "stale": false
     },
     "whitebit": {
-      "label": "\ud83d\udd34 CAUTION - REDUCE NEW BUYS",
+      "label": "\ud83d\udd34 DISTRIBUTION ZONE",
       "status": "bearish",
-      "score": -3,
+      "score": -6,
       "rows": [
         [
           "Price vs. recent range",
-          "Near its 30-day high (~$81.25) - less room to run",
+          "Near its 30-day high (~$82.89) - less room to run",
           -1
         ],
         [
@@ -525,8 +525,8 @@
         ],
         [
           "Market phase (best guess)",
-          "Established uptrend - phase where price marks up",
-          1
+          "Very extended after a big run - phase where smart money sells",
+          -2
         ],
         [
           "Recent trend",
@@ -535,7 +535,7 @@
         ],
         [
           "Stretch from long-term average",
-          "+39.7% above its long-term average - very stretched",
+          "+44.2% above its long-term average - very stretched",
           -2
         ],
         [
@@ -544,16 +544,16 @@
           0
         ]
       ],
-      "plain": "Getting risky - I'd hold off on new buys until this cools down.",
+      "plain": "Looks stretched and euphoric - historically the zone where smart money sells, not buys.",
       "id": "whitebit",
       "symbol": "WBT",
       "name": "WhiteBIT Coin",
-      "price": 80.24,
-      "pct_24h": 1.40497,
-      "pct_7d": 0.8,
+      "price": 82.84,
+      "pct_24h": 4.86822,
+      "pct_7d": 1.7,
       "support_30d": 60.92766115051199,
-      "resistance_30d": 81.2521953230761,
-      "as_of": "2026-09-18 13:05:23",
+      "resistance_30d": 82.89025694711412,
+      "as_of": "2026-09-18 14:45:24",
       "stale": false
     },
     "leo-token": {
@@ -775,7 +775,7 @@
         ],
         [
           "Stretch from long-term average",
-          "-5.8% vs its long-term average - not stretched either way",
+          "-6.0% vs its long-term average - not stretched either way",
           0
         ],
         [
@@ -788,12 +788,12 @@
       "id": "kucoin-shares",
       "symbol": "KCS",
       "name": "KuCoin",
-      "price": 7.15,
-      "pct_24h": 2.54993,
-      "pct_7d": 3.7,
+      "price": 7.14,
+      "pct_24h": 1.73841,
+      "pct_7d": 1.8,
       "support_30d": 6.792256319407273,
       "resistance_30d": 7.8821382735057615,
-      "as_of": "2026-09-18 11:55:20",
+      "as_of": "2026-09-18 14:45:24",
       "stale": false
     },
     "hedera-hashgraph": {
@@ -3467,14 +3467,14 @@
     "key": "BTC",
     "name": "Bitcoin",
     "emoji": "\u20bf",
-    "price": 80549,
+    "price": 80644,
     "high_24h": 80359,
     "low_24h": 76205,
-    "pct_24h": 4.98536,
+    "pct_24h": 5.30366,
     "pct_7d": 2.6,
     "pct_30d": 23.4,
-    "sma50": 72464.52743188984,
-    "sma200": 70385.61440867544,
+    "sma50": 72465.86262734792,
+    "sma200": 70385.94820753996,
     "support_30d": 73020.94563440893,
     "resistance_30d": 81264.70153038795,
     "mark_price": 76486.85126812,
@@ -3489,16 +3489,16 @@
     "key": "ETH",
     "name": "Ethereum",
     "emoji": "\u039e",
-    "price": 2568.76,
+    "price": 2571.88,
     "high_24h": 2568.16,
     "low_24h": 2435.96,
-    "pct_24h": 3.91419,
+    "pct_24h": 4.3942,
     "pct_7d": 1.6,
     "pct_30d": 31.7,
-    "sma50": 2240.9664561806426,
-    "sma200": 2069.646473126626,
+    "sma50": 2241.0070565222427,
+    "sma200": 2069.656623212026,
     "support_30d": 2326.5282334236576,
-    "resistance_30d": 2568.922888726744,
+    "resistance_30d": 2570.9529058067455,
     "mark_price": 2450.15,
     "index_price": 2451.28046512,
     "funding_rate": 4.838e-05,
