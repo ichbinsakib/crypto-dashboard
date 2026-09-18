@@ -4,7 +4,7 @@
   "_alerts_state": {
     "btc-resistance-break": {
       "triggered": true,
-      "last_triggered_at": "2026-09-18 18:10:24"
+      "last_triggered_at": "2026-09-18 18:15:23"
     },
     "btc-support-break": {
       "triggered": false,
@@ -12,7 +12,7 @@
     },
     "eth-resistance-break": {
       "triggered": true,
-      "last_triggered_at": "2026-09-18 18:10:24"
+      "last_triggered_at": "2026-09-18 18:15:23"
     },
     "eth-support-break": {
       "triggered": false,
@@ -127,11 +127,11 @@
     "solana": {
       "label": "\ud83d\udd34 CAUTION - REDUCE NEW BUYS",
       "status": "bearish",
-      "score": -3,
+      "score": -2,
       "rows": [
         [
           "Price vs. recent range",
-          "Near its 30-day high (~$109.77) - less room to run",
+          "Near its 30-day high (~$112.39) - less room to run",
           -1
         ],
         [
@@ -146,12 +146,12 @@
         ],
         [
           "Recent trend",
-          "Chopping sideways - no clear trend",
-          0
+          "Trending up steadily - healthy",
+          1
         ],
         [
           "Stretch from long-term average",
-          "+31.4% above its long-term average - very stretched",
+          "+34.3% above its long-term average - very stretched",
           -2
         ],
         [
@@ -164,12 +164,12 @@
       "id": "solana",
       "symbol": "SOL",
       "name": "Solana",
-      "price": 109.82,
-      "pct_24h": 8.5519,
-      "pct_7d": 6.5,
+      "price": 112.24,
+      "pct_24h": 10.67471,
+      "pct_7d": 10.0,
       "support_30d": 87.6519814449933,
-      "resistance_30d": 109.7713569161985,
-      "as_of": "2026-09-18 14:45:24",
+      "resistance_30d": 112.39336022614133,
+      "as_of": "2026-09-18 18:15:23",
       "stale": false
     },
     "tron": {
@@ -515,7 +515,7 @@
       "rows": [
         [
           "Price vs. recent range",
-          "Near its 30-day high (~$82.89) - less room to run",
+          "Near its 30-day high (~$82.96) - less room to run",
           -1
         ],
         [
@@ -535,7 +535,7 @@
         ],
         [
           "Stretch from long-term average",
-          "+44.2% above its long-term average - very stretched",
+          "+44.4% above its long-term average - very stretched",
           -2
         ],
         [
@@ -548,12 +548,12 @@
       "id": "whitebit",
       "symbol": "WBT",
       "name": "WhiteBIT Coin",
-      "price": 82.84,
-      "pct_24h": 4.86822,
-      "pct_7d": 1.7,
+      "price": 82.93,
+      "pct_24h": 4.9588,
+      "pct_7d": 2.4,
       "support_30d": 60.92766115051199,
-      "resistance_30d": 82.89025694711412,
-      "as_of": "2026-09-18 14:45:24",
+      "resistance_30d": 82.96024476665866,
+      "as_of": "2026-09-18 18:15:23",
       "stale": false
     },
     "leo-token": {
@@ -1495,7 +1495,7 @@
         ],
         [
           "Stretch from long-term average",
-          "+4.0% vs its long-term average - not stretched either way",
+          "+4.3% vs its long-term average - not stretched either way",
           0
         ],
         [
@@ -1508,12 +1508,12 @@
       "id": "ethereum-classic",
       "symbol": "ETC",
       "name": "Ethereum Classic",
-      "price": 8.09,
-      "pct_24h": 8.88448,
-      "pct_7d": 1.4,
+      "price": 8.11,
+      "pct_24h": 9.86082,
+      "pct_7d": 3.6,
       "support_30d": 6.956276357612042,
       "resistance_30d": 8.609781284223262,
-      "as_of": "2026-09-18 15:50:26",
+      "as_of": "2026-09-18 18:15:23",
       "stale": false
     },
     "pump-fun": {
@@ -3467,14 +3467,14 @@
     "key": "BTC",
     "name": "Bitcoin",
     "emoji": "\u20bf",
-    "price": 80890,
+    "price": 80824,
     "high_24h": 81213,
     "low_24h": 76205,
-    "pct_24h": 5.63036,
+    "pct_24h": 5.43081,
     "pct_7d": 3.9,
     "pct_30d": 18.2,
-    "sma50": 72472.15270624208,
-    "sma200": 70387.52072726349,
+    "sma50": 72469.84042057893,
+    "sma200": 70386.9426558477,
     "support_30d": 73020.94563440893,
     "resistance_30d": 81264.70153038795,
     "mark_price": 80993.2,
@@ -3489,16 +3489,16 @@
     "key": "ETH",
     "name": "Ethereum",
     "emoji": "\u039e",
-    "price": 2605.77,
+    "price": 2602.87,
     "high_24h": 2608.29,
     "low_24h": 2435.96,
-    "pct_24h": 6.03242,
+    "pct_24h": 5.79719,
     "pct_7d": 1.1,
     "pct_30d": 24.8,
-    "sma50": 2241.7059730048886,
-    "sma200": 2069.8313523326874,
+    "sma50": 2241.6458379162937,
+    "sma200": 2069.8163185605385,
     "support_30d": 2326.5282334236576,
-    "resistance_30d": 2605.8987299390596,
+    "resistance_30d": 2602.891975509304,
     "mark_price": 2599.43,
     "index_price": 2599.8744186,
     "funding_rate": 0.0001,
