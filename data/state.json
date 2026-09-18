@@ -4,7 +4,7 @@
   "_alerts_state": {
     "btc-resistance-break": {
       "triggered": true,
-      "last_triggered_at": "2026-09-18 20:30:32"
+      "last_triggered_at": "2026-09-18 20:35:19"
     },
     "btc-support-break": {
       "triggered": false,
@@ -12,7 +12,7 @@
     },
     "eth-resistance-break": {
       "triggered": true,
-      "last_triggered_at": "2026-09-18 20:30:32"
+      "last_triggered_at": "2026-09-18 20:35:19"
     },
     "eth-support-break": {
       "triggered": false,
@@ -79,7 +79,7 @@
     "ripple": {
       "label": "\ud83d\udfe1 HOLD / NEUTRAL",
       "status": "neutral",
-      "score": -1,
+      "score": 0,
       "rows": [
         [
           "Price vs. recent range",
@@ -103,8 +103,8 @@
         ],
         [
           "Stretch from long-term average",
-          "+10.7% above its long-term average - a bit stretched",
-          -1
+          "+9.9% vs its long-term average - not stretched either way",
+          0
         ],
         [
           "Leverage traders' bias",
@@ -116,12 +116,12 @@
       "id": "ripple",
       "symbol": "XRP",
       "name": "XRP",
-      "price": 1.41,
-      "pct_24h": 8.65408,
+      "price": 1.4,
+      "pct_24h": 7.99596,
       "pct_7d": 4.0,
       "support_30d": 1.2681797698816397,
       "resistance_30d": 1.52050482788377,
-      "as_of": "2026-09-18 20:05:20",
+      "as_of": "2026-09-18 20:35:19",
       "stale": false
     },
     "solana": {
@@ -275,7 +275,7 @@
       "rows": [
         [
           "Price vs. recent range",
-          "Near its 30-day high (~$92.18) - less room to run",
+          "Near its 30-day high (~$91.78) - less room to run",
           -1
         ],
         [
@@ -295,7 +295,7 @@
         ],
         [
           "Stretch from long-term average",
-          "+64.1% above its long-term average - very stretched",
+          "+63.6% above its long-term average - very stretched",
           -2
         ],
         [
@@ -308,12 +308,12 @@
       "id": "hyperliquid",
       "symbol": "HYPE",
       "name": "Hyperliquid",
-      "price": 92.26,
-      "pct_24h": 10.32457,
+      "price": 91.94,
+      "pct_24h": 10.35375,
       "pct_7d": 15.6,
       "support_30d": 73.65504241313437,
-      "resistance_30d": 92.17546068118975,
-      "as_of": "2026-09-18 20:15:22",
+      "resistance_30d": 91.77776155279116,
+      "as_of": "2026-09-18 20:35:19",
       "stale": false
     },
     "dogecoin": {
@@ -2852,12 +2852,12 @@
       "id": "aave",
       "symbol": "AAVE",
       "name": "Aave",
-      "price": 139.24,
-      "pct_24h": 7.52714,
+      "price": 139.22,
+      "pct_24h": 7.8421,
       "pct_7d": 12.1,
       "support_30d": 99.18495731628363,
       "resistance_30d": 141.53047916466082,
-      "as_of": "2026-09-18 20:25:20",
+      "as_of": "2026-09-18 20:35:19",
       "stale": false
     },
     "okb": {
@@ -3515,14 +3515,14 @@
     "key": "BTC",
     "name": "Bitcoin",
     "emoji": "\u20bf",
-    "price": 80999,
+    "price": 81006,
     "high_24h": 81304,
     "low_24h": 76205,
-    "pct_24h": 5.62392,
+    "pct_24h": 5.74808,
     "pct_7d": 5.4,
     "pct_30d": 18.7,
-    "sma50": 72473.27164705428,
-    "sma200": 70387.80046246655,
+    "sma50": 72473.55549714663,
+    "sma200": 70387.87142498963,
     "support_30d": 73020.94563440893,
     "resistance_30d": 81264.70153038795,
     "mark_price": 80993.2,
@@ -3537,16 +3537,16 @@
     "key": "ETH",
     "name": "Ethereum",
     "emoji": "\u039e",
-    "price": 2627.74,
+    "price": 2628.32,
     "high_24h": 2643.34,
     "low_24h": 2435.96,
-    "pct_24h": 6.94863,
+    "pct_24h": 7.1192,
     "pct_7d": 4.0,
     "pct_30d": 26.2,
-    "sma50": 2242.1228045852286,
-    "sma200": 2069.9355602277724,
+    "sma50": 2242.151157853872,
+    "sma200": 2069.942648544933,
     "support_30d": 2326.5282334236576,
-    "resistance_30d": 2626.740308956055,
+    "resistance_30d": 2628.1579723882123,
     "mark_price": 2599.43,
     "index_price": 2599.8744186,
     "funding_rate": 0.0001,
