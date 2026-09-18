@@ -4,7 +4,7 @@
   "_alerts_state": {
     "btc-resistance-break": {
       "triggered": true,
-      "last_triggered_at": "2026-09-18 19:30:29"
+      "last_triggered_at": "2026-09-18 19:35:20"
     },
     "btc-support-break": {
       "triggered": false,
@@ -12,7 +12,7 @@
     },
     "eth-resistance-break": {
       "triggered": true,
-      "last_triggered_at": "2026-09-18 19:30:29"
+      "last_triggered_at": "2026-09-18 19:35:20"
     },
     "eth-support-break": {
       "triggered": false,
@@ -799,12 +799,12 @@
     "hedera-hashgraph": {
       "label": "\ud83d\udfe1 HOLD / NEUTRAL",
       "status": "neutral",
-      "score": 1,
+      "score": 0,
       "rows": [
         [
           "Price vs. recent range",
-          "Sitting in the middle of its 30-day range",
-          0
+          "Near its 30-day high (~$0.0818) - less room to run",
+          -1
         ],
         [
           "Crowd mood (Fear & Greed)",
@@ -823,7 +823,7 @@
         ],
         [
           "Stretch from long-term average",
-          "-5.4% vs its long-term average - not stretched either way",
+          "-3.3% vs its long-term average - not stretched either way",
           0
         ],
         [
@@ -836,12 +836,12 @@
       "id": "hedera-hashgraph",
       "symbol": "HBAR",
       "name": "Hedera",
-      "price": 0.077258,
-      "pct_24h": 3.30995,
-      "pct_7d": 4.2,
+      "price": 0.079026,
+      "pct_24h": 5.04956,
+      "pct_7d": 5.0,
       "support_30d": 0.07340619330294981,
       "resistance_30d": 0.08182180696524229,
-      "as_of": "2026-09-18 13:21:14",
+      "as_of": "2026-09-18 19:35:20",
       "stale": false
     },
     "pepe": {
@@ -941,9 +941,9 @@
       "stale": false
     },
     "aster-2": {
-      "label": "\ud83d\udd34 CAUTION - REDUCE NEW BUYS",
-      "status": "bearish",
-      "score": -2,
+      "label": "\ud83d\udfe1 HOLD / NEUTRAL",
+      "status": "neutral",
+      "score": -1,
       "rows": [
         [
           "Price vs. recent range",
@@ -962,12 +962,12 @@
         ],
         [
           "Recent trend",
-          "Chopping sideways - no clear trend",
-          0
+          "Trending up steadily - healthy",
+          1
         ],
         [
           "Stretch from long-term average",
-          "+13.0% above its long-term average - a bit stretched",
+          "+13.8% above its long-term average - a bit stretched",
           -1
         ],
         [
@@ -976,16 +976,16 @@
           0
         ]
       ],
-      "plain": "Getting risky - I'd hold off on new buys until this cools down.",
+      "plain": "No real edge either way right now - fine to just wait and watch.",
       "id": "aster-2",
       "symbol": "ASTER",
       "name": "Aster",
-      "price": 0.748533,
-      "pct_24h": 0.83637,
-      "pct_7d": 7.7,
+      "price": 0.753993,
+      "pct_24h": 1.61004,
+      "pct_7d": 8.0,
       "support_30d": 0.6487654591390889,
       "resistance_30d": 0.7868111056215635,
-      "as_of": "2026-09-18 18:30:28",
+      "as_of": "2026-09-18 19:35:20",
       "stale": false
     },
     "worldcoin-wld": {
@@ -2573,9 +2573,9 @@
       "stale": false
     },
     "bitway": {
-      "label": "\ud83d\udfe1 HOLD / NEUTRAL",
-      "status": "neutral",
-      "score": -1,
+      "label": "\ud83d\udd34 CAUTION - REDUCE NEW BUYS",
+      "status": "bearish",
+      "score": -4,
       "rows": [
         [
           "Price vs. recent range",
@@ -2589,8 +2589,8 @@
         ],
         [
           "Market phase (best guess)",
-          "Established uptrend - phase where price marks up",
-          1
+          "Very extended after a big run - phase where smart money sells",
+          -2
         ],
         [
           "Recent trend",
@@ -2599,7 +2599,7 @@
         ],
         [
           "Stretch from long-term average",
-          "+419.4% above its long-term average - very stretched",
+          "+416.2% above its long-term average - very stretched",
           -2
         ],
         [
@@ -2608,16 +2608,16 @@
           0
         ]
       ],
-      "plain": "No real edge either way right now - fine to just wait and watch.",
+      "plain": "Getting risky - I'd hold off on new buys until this cools down.",
       "id": "bitway",
       "symbol": "BTW",
       "name": "Bitway",
-      "price": 0.656698,
-      "pct_24h": -6.70947,
-      "pct_7d": 30.4,
+      "price": 0.652567,
+      "pct_24h": -7.42332,
+      "pct_7d": 32.6,
       "support_30d": 0.39821683332776975,
       "resistance_30d": 0.7491686401380382,
-      "as_of": "2026-09-18 17:10:29",
+      "as_of": "2026-09-18 19:35:20",
       "stale": false
     },
     "world-liberty-financial": {
@@ -3467,14 +3467,14 @@
     "key": "BTC",
     "name": "Bitcoin",
     "emoji": "\u20bf",
-    "price": 81224,
+    "price": 81160,
     "high_24h": 81213,
     "low_24h": 76205,
-    "pct_24h": 6.10801,
+    "pct_24h": 6.03854,
     "pct_7d": 4.3,
     "pct_30d": 18.6,
-    "sma50": 72477.07973661463,
-    "sma200": 70388.75248485662,
+    "sma50": 72476.74535369562,
+    "sma200": 70388.66888912689,
     "support_30d": 73020.94563440893,
     "resistance_30d": 81264.70153038795,
     "mark_price": 80993.2,
@@ -3489,16 +3489,16 @@
     "key": "ETH",
     "name": "Ethereum",
     "emoji": "\u039e",
-    "price": 2635.76,
+    "price": 2631.96,
     "high_24h": 2622.26,
     "low_24h": 2435.96,
-    "pct_24h": 7.48255,
+    "pct_24h": 7.38661,
     "pct_7d": 1.7,
     "pct_30d": 24.9,
-    "sma50": 2242.303275149204,
-    "sma200": 2069.980677868766,
+    "sma50": 2242.2386499073978,
+    "sma200": 2069.9645215583146,
     "support_30d": 2326.5282334236576,
-    "resistance_30d": 2635.7638371548182,
+    "resistance_30d": 2632.5325750645065,
     "mark_price": 2599.43,
     "index_price": 2599.8744186,
     "funding_rate": 0.0001,
