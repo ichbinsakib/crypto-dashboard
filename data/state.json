@@ -4,7 +4,7 @@
   "_alerts_state": {
     "btc-resistance-break": {
       "triggered": true,
-      "last_triggered_at": "2026-09-18 16:35:20"
+      "last_triggered_at": "2026-09-18 16:40:25"
     },
     "btc-support-break": {
       "triggered": false,
@@ -12,7 +12,7 @@
     },
     "eth-resistance-break": {
       "triggered": true,
-      "last_triggered_at": "2026-09-18 16:35:20"
+      "last_triggered_at": "2026-09-18 16:40:25"
     },
     "eth-support-break": {
       "triggered": false,
@@ -413,9 +413,9 @@
       "stale": false
     },
     "rain": {
-      "label": "\ud83d\udfe2 LEAN ACCUMULATE",
-      "status": "bullish",
-      "score": 2,
+      "label": "\ud83d\udfe1 HOLD / NEUTRAL",
+      "status": "neutral",
+      "score": 1,
       "rows": [
         [
           "Price vs. recent range",
@@ -439,8 +439,8 @@
         ],
         [
           "Stretch from long-term average",
-          "+9.0% vs its long-term average - not stretched either way",
-          0
+          "+12.4% above its long-term average - a bit stretched",
+          -1
         ],
         [
           "Leverage traders' bias",
@@ -448,16 +448,16 @@
           0
         ]
       ],
-      "plain": "Leans toward a decent spot to slowly add (DCA) - not a strong signal, just a lean.",
+      "plain": "No real edge either way right now - fine to just wait and watch.",
       "id": "rain",
       "symbol": "RAIN",
       "name": "Rain",
-      "price": 0.0127897,
-      "pct_24h": -1.35716,
-      "pct_7d": -20.7,
+      "price": 0.01318475,
+      "pct_24h": 2.1607,
+      "pct_7d": -19.1,
       "support_30d": 0.012759120486428296,
       "resistance_30d": 0.018158429442510105,
-      "as_of": "2026-09-18 15:15:22",
+      "as_of": "2026-09-18 16:40:25",
       "stale": false
     },
     "chainlink": {
@@ -789,11 +789,11 @@
       "symbol": "KCS",
       "name": "KuCoin",
       "price": 7.14,
-      "pct_24h": 1.73841,
-      "pct_7d": 1.8,
+      "pct_24h": 1.44745,
+      "pct_7d": -0.2,
       "support_30d": 6.792256319407273,
       "resistance_30d": 7.8821382735057615,
-      "as_of": "2026-09-18 14:45:24",
+      "as_of": "2026-09-18 16:40:25",
       "stale": false
     },
     "hedera-hashgraph": {
@@ -871,7 +871,7 @@
         ],
         [
           "Stretch from long-term average",
-          "+16.1% above its long-term average - a bit stretched",
+          "+16.7% above its long-term average - a bit stretched",
           -1
         ],
         [
@@ -884,12 +884,12 @@
       "id": "pepe",
       "symbol": "PEPE",
       "name": "Pepe",
-      "price": 3.82e-06,
-      "pct_24h": 5.08812,
+      "price": 3.84e-06,
+      "pct_24h": 6.03114,
       "pct_7d": 10.7,
       "support_30d": 3.204519388831639e-06,
       "resistance_30d": 4.122123035488615e-06,
-      "as_of": "2026-09-18 16:25:20",
+      "as_of": "2026-09-18 16:40:25",
       "stale": false
     },
     "avalanche-2": {
@@ -3467,14 +3467,14 @@
     "key": "BTC",
     "name": "Bitcoin",
     "emoji": "\u20bf",
-    "price": 81034,
+    "price": 81059,
     "high_24h": 81055,
     "low_24h": 76205,
-    "pct_24h": 5.8578,
+    "pct_24h": 5.80038,
     "pct_7d": 2.4,
     "pct_30d": 22.5,
-    "sma50": 72476.00380631426,
-    "sma200": 70388.48350228154,
+    "sma50": 72473.55451561199,
+    "sma200": 70387.87117960598,
     "support_30d": 73020.94563440893,
     "resistance_30d": 81264.70153038795,
     "mark_price": 80993.2,
@@ -3489,16 +3489,16 @@
     "key": "ETH",
     "name": "Ethereum",
     "emoji": "\u039e",
-    "price": 2601.34,
+    "price": 2603.45,
     "high_24h": 2592.86,
     "low_24h": 2435.96,
-    "pct_24h": 5.70223,
+    "pct_24h": 5.68305,
     "pct_7d": -0.9,
     "pct_30d": 31.0,
-    "sma50": 2241.711157914418,
-    "sma200": 2069.8326485600696,
+    "sma50": 2241.6056614474423,
+    "sma200": 2069.806274443326,
     "support_30d": 2326.5282334236576,
-    "resistance_30d": 2606.1579754155227,
+    "resistance_30d": 2600.8831520667495,
     "mark_price": 2599.43,
     "index_price": 2599.8744186,
     "funding_rate": 0.0001,
