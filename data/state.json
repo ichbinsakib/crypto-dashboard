@@ -280,8 +280,8 @@
         ],
         [
           "Crowd mood (Fear & Greed)",
-          "50/100 - crowd mood is neutral",
-          0
+          "56/100 - crowd is greedy",
+          -1
         ],
         [
           "Market phase (best guess)",
@@ -290,12 +290,12 @@
         ],
         [
           "Recent trend",
-          "Chopping sideways - no clear trend",
-          0
+          "Trending up steadily - healthy",
+          1
         ],
         [
           "Stretch from long-term average",
-          "+51.4% above its long-term average - very stretched",
+          "+54.3% above its long-term average - very stretched",
           -2
         ],
         [
@@ -308,12 +308,12 @@
       "id": "hyperliquid",
       "symbol": "HYPE",
       "name": "Hyperliquid",
-      "price": 84.67,
-      "pct_24h": 8.08482,
-      "pct_7d": 4.7,
-      "support_30d": 69.60371847729914,
+      "price": 86.68,
+      "pct_24h": 10.15211,
+      "pct_7d": 9.5,
+      "support_30d": 73.65504241313437,
       "resistance_30d": 87.951916819731,
-      "as_of": "2026-09-17 23:30:30",
+      "as_of": "2026-09-18 02:15:22",
       "stale": false
     },
     "dogecoin": {
@@ -1831,7 +1831,7 @@
         ],
         [
           "Stretch from long-term average",
-          "+56.4% above its long-term average - very stretched",
+          "+55.5% above its long-term average - very stretched",
           -2
         ],
         [
@@ -1844,12 +1844,12 @@
       "id": "ethena",
       "symbol": "ENA",
       "name": "Ethena",
-      "price": 0.16149,
-      "pct_24h": 6.19282,
+      "price": 0.160556,
+      "pct_24h": 6.68719,
       "pct_7d": 11.6,
       "support_30d": 0.11681764971753443,
       "resistance_30d": 0.17616469272611565,
-      "as_of": "2026-09-18 02:05:19",
+      "as_of": "2026-09-18 02:15:22",
       "stale": false
     },
     "bitcoin-cash": {
@@ -1949,9 +1949,9 @@
       "stale": false
     },
     "polkadot": {
-      "label": "\ud83d\udfe2 LEAN ACCUMULATE",
-      "status": "bullish",
-      "score": 2,
+      "label": "\ud83d\udfe1 HOLD / NEUTRAL",
+      "status": "neutral",
+      "score": 1,
       "rows": [
         [
           "Price vs. recent range",
@@ -1960,8 +1960,8 @@
         ],
         [
           "Crowd mood (Fear & Greed)",
-          "50/100 - crowd mood is neutral",
-          0
+          "56/100 - crowd is greedy",
+          -1
         ],
         [
           "Market phase (best guess)",
@@ -1975,7 +1975,7 @@
         ],
         [
           "Stretch from long-term average",
-          "-0.7% vs its long-term average - not stretched either way",
+          "+3.2% vs its long-term average - not stretched either way",
           0
         ],
         [
@@ -1984,16 +1984,16 @@
           0
         ]
       ],
-      "plain": "Leans toward a decent spot to slowly add (DCA) - not a strong signal, just a lean.",
+      "plain": "No real edge either way right now - fine to just wait and watch.",
       "id": "polkadot",
       "symbol": "DOT",
       "name": "Polkadot",
-      "price": 1.079,
-      "pct_24h": 5.61859,
-      "pct_7d": -4.0,
-      "support_30d": 0.7888223252407818,
+      "price": 1.12,
+      "pct_24h": 10.4397,
+      "pct_7d": -2.3,
+      "support_30d": 0.8194698348247896,
       "resistance_30d": 1.2475304252917225,
-      "as_of": "2026-09-17 23:55:54",
+      "as_of": "2026-09-18 02:15:22",
       "stale": false
     },
     "uniswap": {
@@ -3467,14 +3467,14 @@
     "key": "BTC",
     "name": "Bitcoin",
     "emoji": "\u20bf",
-    "price": 76623,
+    "price": 76686,
     "high_24h": 77024,
     "low_24h": 75972,
-    "pct_24h": 0.64852,
+    "pct_24h": 0.69836,
     "pct_7d": -0.2,
     "pct_30d": 19.0,
-    "sma50": 72386.19956156965,
-    "sma200": 70366.03244109539,
+    "sma50": 72387.26829842474,
+    "sma200": 70366.29962530916,
     "support_30d": 73020.94563440893,
     "resistance_30d": 81264.70153038795,
     "mark_price": 76486.85126812,
@@ -3489,14 +3489,14 @@
     "key": "ETH",
     "name": "Ethereum",
     "emoji": "\u039e",
-    "price": 2453.32,
+    "price": 2453.95,
     "high_24h": 2478.98,
     "low_24h": 2423.41,
-    "pct_24h": 1.36498,
+    "pct_24h": 1.39824,
     "pct_7d": 0.0,
     "pct_30d": 28.5,
-    "sma50": 2238.657763174011,
-    "sma200": 2069.0692998749682,
+    "sma50": 2238.674282925897,
+    "sma200": 2069.0734298129396,
     "support_30d": 2326.5282334236576,
     "resistance_30d": 2525.267261590238,
     "mark_price": 2450.15,
