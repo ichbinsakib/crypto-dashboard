@@ -29,9 +29,9 @@
   },
   "_screener": {
     "binancecoin": {
-      "label": "\ud83d\udfe1 HOLD / NEUTRAL",
-      "status": "neutral",
-      "score": -1,
+      "label": "\ud83d\udd34 CAUTION - REDUCE NEW BUYS",
+      "status": "bearish",
+      "score": -2,
       "rows": [
         [
           "Price vs. recent range",
@@ -40,8 +40,8 @@
         ],
         [
           "Crowd mood (Fear & Greed)",
-          "50/100 - crowd mood is neutral",
-          0
+          "56/100 - crowd is greedy",
+          -1
         ],
         [
           "Market phase (best guess)",
@@ -55,7 +55,7 @@
         ],
         [
           "Stretch from long-term average",
-          "+17.4% above its long-term average - a bit stretched",
+          "+18.0% above its long-term average - a bit stretched",
           -1
         ],
         [
@@ -64,16 +64,16 @@
           0
         ]
       ],
-      "plain": "No real edge either way right now - fine to just wait and watch.",
+      "plain": "Getting risky - I'd hold off on new buys until this cools down.",
       "id": "binancecoin",
       "symbol": "BNB",
       "name": "BNB",
-      "price": 736.18,
-      "pct_24h": 1.77292,
-      "pct_7d": 2.9,
-      "support_30d": 627.053410537708,
+      "price": 741.05,
+      "pct_24h": 1.96015,
+      "pct_7d": 4.0,
+      "support_30d": 654.5882397830208,
       "resistance_30d": 766.4092879330625,
-      "as_of": "2026-09-17 23:30:30",
+      "as_of": "2026-09-18 01:35:17",
       "stale": false
     },
     "ripple": {
@@ -823,7 +823,7 @@
         ],
         [
           "Stretch from long-term average",
-          "-8.9% vs its long-term average - not stretched either way",
+          "-8.5% vs its long-term average - not stretched either way",
           0
         ],
         [
@@ -836,18 +836,18 @@
       "id": "hedera-hashgraph",
       "symbol": "HBAR",
       "name": "Hedera",
-      "price": 0.074405,
-      "pct_24h": 0.69209,
-      "pct_7d": -0.9,
+      "price": 0.07477,
+      "pct_24h": 1.29411,
+      "pct_7d": 0.2,
       "support_30d": 0.07340619330294981,
       "resistance_30d": 0.08182180696524229,
-      "as_of": "2026-09-18 00:25:19",
+      "as_of": "2026-09-18 01:35:17",
       "stale": false
     },
     "pepe": {
-      "label": "\ud83d\udfe2 LEAN ACCUMULATE",
-      "status": "bullish",
-      "score": 2,
+      "label": "\ud83d\udfe1 HOLD / NEUTRAL",
+      "status": "neutral",
+      "score": 0,
       "rows": [
         [
           "Price vs. recent range",
@@ -856,8 +856,8 @@
         ],
         [
           "Crowd mood (Fear & Greed)",
-          "50/100 - crowd mood is neutral",
-          0
+          "56/100 - crowd is greedy",
+          -1
         ],
         [
           "Market phase (best guess)",
@@ -871,8 +871,8 @@
         ],
         [
           "Stretch from long-term average",
-          "+9.7% vs its long-term average - not stretched either way",
-          0
+          "+10.6% above its long-term average - a bit stretched",
+          -1
         ],
         [
           "Leverage traders' bias",
@@ -880,16 +880,16 @@
           0
         ]
       ],
-      "plain": "Leans toward a decent spot to slowly add (DCA) - not a strong signal, just a lean.",
+      "plain": "No real edge either way right now - fine to just wait and watch.",
       "id": "pepe",
       "symbol": "PEPE",
       "name": "Pepe",
-      "price": 3.61e-06,
-      "pct_24h": 7.39023,
-      "pct_7d": 9.4,
-      "support_30d": 2.874000180425606e-06,
+      "price": 3.64e-06,
+      "pct_24h": 6.16966,
+      "pct_7d": 12.0,
+      "support_30d": 3.204519388831639e-06,
       "resistance_30d": 4.122123035488615e-06,
-      "as_of": "2026-09-17 19:15:22",
+      "as_of": "2026-09-18 01:35:17",
       "stale": false
     },
     "avalanche-2": {
@@ -3458,14 +3458,14 @@
     "key": "BTC",
     "name": "Bitcoin",
     "emoji": "\u20bf",
-    "price": 76517,
+    "price": 76524,
     "high_24h": 77024,
     "low_24h": 75972,
-    "pct_24h": -0.07463,
+    "pct_24h": -0.08524,
     "pct_7d": -0.1,
     "pct_30d": 18.3,
-    "sma50": 72384.00196573656,
-    "sma200": 70365.48304213712,
+    "sma50": 72384.01711338625,
+    "sma200": 70365.48682904954,
     "support_30d": 73020.94563440893,
     "resistance_30d": 81264.70153038795,
     "mark_price": 76486.85126812,
@@ -3480,14 +3480,14 @@
     "key": "ETH",
     "name": "Ethereum",
     "emoji": "\u039e",
-    "price": 2448.42,
+    "price": 2449.55,
     "high_24h": 2478.98,
     "low_24h": 2415.23,
-    "pct_24h": 0.51001,
+    "pct_24h": 0.56753,
     "pct_7d": 0.3,
     "pct_30d": 27.6,
-    "sma50": 2238.557370294547,
-    "sma200": 2069.044201655102,
+    "sma50": 2238.5789235757084,
+    "sma200": 2069.0495899753923,
     "support_30d": 2326.5282334236576,
     "resistance_30d": 2525.267261590238,
     "mark_price": 2450.15,
