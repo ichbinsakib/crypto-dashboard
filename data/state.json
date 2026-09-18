@@ -4,7 +4,7 @@
   "_alerts_state": {
     "btc-resistance-break": {
       "triggered": true,
-      "last_triggered_at": "2026-09-18 21:45:24"
+      "last_triggered_at": "2026-09-18 21:50:26"
     },
     "btc-support-break": {
       "triggered": false,
@@ -12,7 +12,7 @@
     },
     "eth-resistance-break": {
       "triggered": true,
-      "last_triggered_at": "2026-09-18 21:45:24"
+      "last_triggered_at": "2026-09-18 21:50:26"
     },
     "eth-support-break": {
       "triggered": false,
@@ -1663,7 +1663,7 @@
     "bitget-token": {
       "label": "\ud83d\udfe1 HOLD / NEUTRAL",
       "status": "neutral",
-      "score": -1,
+      "score": 0,
       "rows": [
         [
           "Price vs. recent range",
@@ -1677,8 +1677,8 @@
         ],
         [
           "Market phase (best guess)",
-          "Established uptrend - phase where price marks up",
-          1
+          "Basing near the bottom - phase where smart money accumulates",
+          2
         ],
         [
           "Recent trend",
@@ -1687,7 +1687,7 @@
         ],
         [
           "Stretch from long-term average",
-          "+6.5% vs its long-term average - not stretched either way",
+          "+4.4% vs its long-term average - not stretched either way",
           0
         ],
         [
@@ -1700,12 +1700,12 @@
       "id": "bitget-token",
       "symbol": "BGB",
       "name": "Bitget Token",
-      "price": 2.01,
-      "pct_24h": 4.39206,
-      "pct_7d": 3.1,
+      "price": 1.97,
+      "pct_24h": 2.65612,
+      "pct_7d": 2.5,
       "support_30d": 1.7974445737451972,
       "resistance_30d": 2.0284940947674617,
-      "as_of": "2026-09-18 19:50:32",
+      "as_of": "2026-09-18 21:50:26",
       "stale": false
     },
     "sui": {
@@ -2003,7 +2003,7 @@
       "rows": [
         [
           "Price vs. recent range",
-          "Near its 30-day high (~$9.05) - less room to run",
+          "Near its 30-day high (~$8.98) - less room to run",
           -1
         ],
         [
@@ -2023,7 +2023,7 @@
         ],
         [
           "Stretch from long-term average",
-          "+140.1% above its long-term average - very stretched",
+          "+138.0% above its long-term average - very stretched",
           -2
         ],
         [
@@ -2036,12 +2036,12 @@
       "id": "uniswap",
       "symbol": "UNI",
       "name": "Uniswap",
-      "price": 9.06,
-      "pct_24h": 18.79581,
-      "pct_7d": 45.4,
+      "price": 8.98,
+      "pct_24h": 15.987,
+      "pct_7d": 49.0,
       "support_30d": 3.7613743428503605,
-      "resistance_30d": 9.04685739174074,
-      "as_of": "2026-09-18 19:45:42",
+      "resistance_30d": 8.983279240956177,
+      "as_of": "2026-09-18 21:50:26",
       "stale": false
     },
     "pi-network": {
@@ -2071,7 +2071,7 @@
         ],
         [
           "Stretch from long-term average",
-          "-36.8% below its long-term average - confirmed downtrend",
+          "-37.4% below its long-term average - confirmed downtrend",
           -1
         ],
         [
@@ -2084,12 +2084,12 @@
       "id": "pi-network",
       "symbol": "PI",
       "name": "Pi Network",
-      "price": 0.086456,
-      "pct_24h": 6.10584,
+      "price": 0.085708,
+      "pct_24h": 4.89339,
       "pct_7d": -9.0,
       "support_30d": 0.08119601891218854,
       "resistance_30d": 0.09830733881512746,
-      "as_of": "2026-09-18 21:20:25",
+      "as_of": "2026-09-18 21:50:26",
       "stale": false
     },
     "ondo-finance": {
@@ -3515,14 +3515,14 @@
     "key": "BTC",
     "name": "Bitcoin",
     "emoji": "\u20bf",
-    "price": 81227,
+    "price": 81174,
     "high_24h": 81304,
     "low_24h": 76205,
-    "pct_24h": 6.21103,
+    "pct_24h": 6.20098,
     "pct_7d": 4.9,
     "pct_30d": 18.5,
-    "sma50": 72478.10668820886,
-    "sma200": 70389.0092227552,
+    "sma50": 72477.02604224476,
+    "sma200": 70388.73906126416,
     "support_30d": 73020.94563440893,
     "resistance_30d": 81264.70153038795,
     "mark_price": 80993.2,
@@ -3537,16 +3537,16 @@
     "key": "ETH",
     "name": "Ethereum",
     "emoji": "\u039e",
-    "price": 2631.22,
+    "price": 2628.48,
     "high_24h": 2643.34,
     "low_24h": 2435.96,
-    "pct_24h": 7.41461,
+    "pct_24h": 7.32018,
     "pct_7d": 3.6,
     "pct_30d": 25.1,
-    "sma50": 2242.222648898716,
-    "sma200": 2069.9605213061445,
+    "sma50": 2242.155155852706,
+    "sma200": 2069.943648044642,
     "support_30d": 2326.5282334236576,
-    "resistance_30d": 2631.7325246304417,
+    "resistance_30d": 2628.3578723299106,
     "mark_price": 2599.43,
     "index_price": 2599.8744186,
     "funding_rate": 0.0001,
