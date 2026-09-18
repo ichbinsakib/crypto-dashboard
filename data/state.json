@@ -605,9 +605,9 @@
       "stale": false
     },
     "monero": {
-      "label": "\ud83d\udfe1 HOLD / NEUTRAL",
-      "status": "neutral",
-      "score": -1,
+      "label": "\ud83d\udd34 CAUTION - REDUCE NEW BUYS",
+      "status": "bearish",
+      "score": -2,
       "rows": [
         [
           "Price vs. recent range",
@@ -616,8 +616,8 @@
         ],
         [
           "Crowd mood (Fear & Greed)",
-          "50/100 - crowd mood is neutral",
-          0
+          "56/100 - crowd is greedy",
+          -1
         ],
         [
           "Market phase (best guess)",
@@ -631,7 +631,7 @@
         ],
         [
           "Stretch from long-term average",
-          "+37.8% above its long-term average - very stretched",
+          "+37.7% above its long-term average - very stretched",
           -2
         ],
         [
@@ -640,16 +640,16 @@
           0
         ]
       ],
-      "plain": "No real edge either way right now - fine to just wait and watch.",
+      "plain": "Getting risky - I'd hold off on new buys until this cools down.",
       "id": "monero",
       "symbol": "XMR",
       "name": "Monero",
-      "price": 515.15,
-      "pct_24h": 5.29051,
-      "pct_7d": 0.2,
+      "price": 515.98,
+      "pct_24h": 3.05706,
+      "pct_7d": 1.5,
       "support_30d": 410.2195440730022,
       "resistance_30d": 555.6684591165193,
-      "as_of": "2026-09-17 22:45:20",
+      "as_of": "2026-09-18 00:35:17",
       "stale": false
     },
     "cardano": {
@@ -1639,7 +1639,7 @@
         ],
         [
           "Stretch from long-term average",
-          "+7.1% vs its long-term average - not stretched either way",
+          "+7.5% vs its long-term average - not stretched either way",
           0
         ],
         [
@@ -1652,12 +1652,12 @@
       "id": "litecoin",
       "symbol": "LTC",
       "name": "Litecoin",
-      "price": 53.93,
-      "pct_24h": 4.58153,
+      "price": 54.16,
+      "pct_24h": 4.82407,
       "pct_7d": 3.0,
       "support_30d": 47.80158133097468,
       "resistance_30d": 55.20228907963863,
-      "as_of": "2026-09-18 00:30:30",
+      "as_of": "2026-09-18 00:35:17",
       "stale": false
     },
     "bitget-token": {
@@ -2757,11 +2757,11 @@
       "symbol": "MORPHO",
       "name": "Morpho",
       "price": 2.22,
-      "pct_24h": 5.66191,
+      "pct_24h": 5.79802,
       "pct_7d": -1.8,
       "support_30d": 2.083646898087014,
       "resistance_30d": 2.9026212482639075,
-      "as_of": "2026-09-18 00:15:23",
+      "as_of": "2026-09-18 00:35:17",
       "stale": false
     },
     "memecore": {
@@ -3458,14 +3458,14 @@
     "key": "BTC",
     "name": "Bitcoin",
     "emoji": "\u20bf",
-    "price": 76280,
+    "price": 76348,
     "high_24h": 77024,
     "low_24h": 75972,
-    "pct_24h": -0.08755,
+    "pct_24h": -0.08285,
     "pct_7d": -0.5,
     "pct_30d": 18.3,
-    "sma50": 72379.14795472687,
-    "sma200": 70364.26953938468,
+    "sma50": 72380.647433167,
+    "sma200": 70364.64440899473,
     "support_30d": 73020.94563440893,
     "resistance_30d": 81264.70153038795,
     "mark_price": 76486.85126812,
@@ -3480,14 +3480,14 @@
     "key": "ETH",
     "name": "Ethereum",
     "emoji": "\u039e",
-    "price": 2437.49,
+    "price": 2439.74,
     "high_24h": 2478.98,
     "low_24h": 2412.84,
-    "pct_24h": 0.70801,
+    "pct_24h": 0.64918,
     "pct_7d": 0.1,
     "pct_30d": 28.0,
-    "sma50": 2238.337786515397,
-    "sma200": 2068.9893057103145,
+    "sma50": 2238.396210956981,
+    "sma200": 2069.0039118207105,
     "support_30d": 2326.5282334236576,
     "resistance_30d": 2525.267261590238,
     "mark_price": 2450.15,
