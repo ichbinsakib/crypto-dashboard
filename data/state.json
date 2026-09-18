@@ -4,7 +4,7 @@
   "_alerts_state": {
     "btc-resistance-break": {
       "triggered": true,
-      "last_triggered_at": "2026-09-18 16:00:35"
+      "last_triggered_at": "2026-09-18 16:05:22"
     },
     "btc-support-break": {
       "triggered": false,
@@ -12,7 +12,7 @@
     },
     "eth-resistance-break": {
       "triggered": true,
-      "last_triggered_at": "2026-09-18 16:00:35"
+      "last_triggered_at": "2026-09-18 16:05:22"
     },
     "eth-support-break": {
       "triggered": false,
@@ -1447,7 +1447,7 @@
         ],
         [
           "Stretch from long-term average",
-          "-8.5% vs its long-term average - not stretched either way",
+          "-8.6% vs its long-term average - not stretched either way",
           0
         ],
         [
@@ -1460,12 +1460,12 @@
       "id": "crypto-com-chain",
       "symbol": "CRO",
       "name": "Cronos",
-      "price": 0.059139,
-      "pct_24h": 1.88236,
-      "pct_7d": 5.3,
+      "price": 0.059096,
+      "pct_24h": 1.67995,
+      "pct_7d": 3.3,
       "support_30d": 0.053278934459423395,
       "resistance_30d": 0.06091104752771909,
-      "as_of": "2026-09-18 13:00:54",
+      "as_of": "2026-09-18 16:05:22",
       "stale": false
     },
     "ethereum-classic": {
@@ -1855,7 +1855,7 @@
     "bitcoin-cash": {
       "label": "\ud83d\udfe1 HOLD / NEUTRAL",
       "status": "neutral",
-      "score": 1,
+      "score": 0,
       "rows": [
         [
           "Price vs. recent range",
@@ -1874,12 +1874,12 @@
         ],
         [
           "Recent trend",
-          "Trending up steadily - healthy",
-          1
+          "Chopping sideways - no clear trend",
+          0
         ],
         [
           "Stretch from long-term average",
-          "-20.6% below its long-term average - confirmed downtrend",
+          "-21.3% below its long-term average - confirmed downtrend",
           -1
         ],
         [
@@ -1892,12 +1892,12 @@
       "id": "bitcoin-cash",
       "symbol": "BCH",
       "name": "Bitcoin Cash",
-      "price": 254.0,
-      "pct_24h": 8.38327,
-      "pct_7d": 9.8,
+      "price": 251.6,
+      "pct_24h": 8.06074,
+      "pct_7d": 6.9,
       "support_30d": 216.74058261336023,
       "resistance_30d": 288.10955405353275,
-      "as_of": "2026-09-18 14:55:20",
+      "as_of": "2026-09-18 16:05:22",
       "stale": false
     },
     "mantle": {
@@ -2325,11 +2325,11 @@
       "symbol": "GRAM",
       "name": "Gram (prev. Toncoin)",
       "price": 1.37,
-      "pct_24h": 1.98105,
-      "pct_7d": -0.8,
+      "pct_24h": 2.05145,
+      "pct_7d": 0.0,
       "support_30d": 1.3154928840377231,
       "resistance_30d": 1.4926762805297678,
-      "as_of": "2026-09-18 15:50:26",
+      "as_of": "2026-09-18 16:05:22",
       "stale": false
     },
     "sky": {
@@ -3467,14 +3467,14 @@
     "key": "BTC",
     "name": "Bitcoin",
     "emoji": "\u20bf",
-    "price": 80688,
-    "high_24h": 80930,
+    "price": 80680,
+    "high_24h": 81055,
     "low_24h": 76205,
-    "pct_24h": 5.25024,
-    "pct_7d": 2.1,
-    "pct_30d": 24.4,
-    "sma50": 72467.66099345962,
-    "sma200": 70386.39779906788,
+    "pct_24h": 5.23059,
+    "pct_7d": 2.4,
+    "pct_30d": 22.5,
+    "sma50": 72467.8802457794,
+    "sma200": 70386.45261214783,
     "support_30d": 73020.94563440893,
     "resistance_30d": 81264.70153038795,
     "mark_price": 76486.85126812,
@@ -3489,16 +3489,16 @@
     "key": "ETH",
     "name": "Ethereum",
     "emoji": "\u039e",
-    "price": 2581.98,
-    "high_24h": 2583.66,
+    "price": 2581.14,
+    "high_24h": 2592.86,
     "low_24h": 2435.96,
-    "pct_24h": 4.67797,
-    "pct_7d": -1.8,
-    "pct_30d": 33.5,
-    "sma50": 2241.2314737659517,
-    "sma200": 2069.712727522953,
+    "pct_24h": 4.55277,
+    "pct_7d": -0.9,
+    "pct_30d": 31.0,
+    "sma50": 2241.2243282450827,
+    "sma200": 2069.710941142736,
     "support_30d": 2326.5282334236576,
-    "resistance_30d": 2582.173767992197,
+    "resistance_30d": 2581.8164919487485,
     "mark_price": 2450.15,
     "index_price": 2451.28046512,
     "funding_rate": 4.838e-05,
