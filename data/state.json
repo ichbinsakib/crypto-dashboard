@@ -4,7 +4,7 @@
   "_alerts_state": {
     "btc-resistance-break": {
       "triggered": true,
-      "last_triggered_at": "2026-09-18 20:00:35"
+      "last_triggered_at": "2026-09-18 20:05:20"
     },
     "btc-support-break": {
       "triggered": false,
@@ -12,7 +12,7 @@
     },
     "eth-resistance-break": {
       "triggered": true,
-      "last_triggered_at": "2026-09-18 20:00:35"
+      "last_triggered_at": "2026-09-18 20:05:20"
     },
     "eth-support-break": {
       "triggered": false,
@@ -79,7 +79,7 @@
     "ripple": {
       "label": "\ud83d\udfe1 HOLD / NEUTRAL",
       "status": "neutral",
-      "score": 0,
+      "score": -1,
       "rows": [
         [
           "Price vs. recent range",
@@ -103,8 +103,8 @@
         ],
         [
           "Stretch from long-term average",
-          "+8.4% vs its long-term average - not stretched either way",
-          0
+          "+10.7% above its long-term average - a bit stretched",
+          -1
         ],
         [
           "Leverage traders' bias",
@@ -116,12 +116,12 @@
       "id": "ripple",
       "symbol": "XRP",
       "name": "XRP",
-      "price": 1.38,
-      "pct_24h": 5.59465,
-      "pct_7d": 0.4,
+      "price": 1.41,
+      "pct_24h": 8.65408,
+      "pct_7d": 4.0,
       "support_30d": 1.2681797698816397,
       "resistance_30d": 1.52050482788377,
-      "as_of": "2026-09-18 17:15:22",
+      "as_of": "2026-09-18 20:05:20",
       "stale": false
     },
     "solana": {
@@ -583,7 +583,7 @@
         ],
         [
           "Stretch from long-term average",
-          "-8.0% vs its long-term average - not stretched either way",
+          "-7.7% vs its long-term average - not stretched either way",
           0
         ],
         [
@@ -596,12 +596,12 @@
       "id": "leo-token",
       "symbol": "LEO",
       "name": "LEO Token",
-      "price": 8.87,
-      "pct_24h": -0.54525,
-      "pct_7d": -2.6,
+      "price": 8.9,
+      "pct_24h": -0.28111,
+      "pct_7d": -3.0,
       "support_30d": 8.831489578582278,
       "resistance_30d": 9.681775974309534,
-      "as_of": "2026-09-18 17:35:24",
+      "as_of": "2026-09-18 20:05:20",
       "stale": false
     },
     "monero": {
@@ -1619,7 +1619,7 @@
       "rows": [
         [
           "Price vs. recent range",
-          "Near its 30-day high (~$57.03) - less room to run",
+          "Near its 30-day high (~$57.13) - less room to run",
           -1
         ],
         [
@@ -1639,7 +1639,7 @@
         ],
         [
           "Stretch from long-term average",
-          "+13.3% above its long-term average - a bit stretched",
+          "+13.4% above its long-term average - a bit stretched",
           -1
         ],
         [
@@ -1652,12 +1652,12 @@
       "id": "litecoin",
       "symbol": "LTC",
       "name": "Litecoin",
-      "price": 57.11,
-      "pct_24h": 6.53211,
-      "pct_7d": 5.6,
+      "price": 57.13,
+      "pct_24h": 5.9699,
+      "pct_7d": 7.4,
       "support_30d": 47.80158133097468,
-      "resistance_30d": 57.029090635609435,
-      "as_of": "2026-09-18 19:30:29",
+      "resistance_30d": 57.12745570844653,
+      "as_of": "2026-09-18 20:05:20",
       "stale": false
     },
     "bitget-token": {
@@ -3515,14 +3515,14 @@
     "key": "BTC",
     "name": "Bitcoin",
     "emoji": "\u20bf",
-    "price": 81192,
-    "high_24h": 81213,
+    "price": 81103,
+    "high_24h": 81304,
     "low_24h": 76205,
-    "pct_24h": 6.11848,
-    "pct_7d": 4.3,
-    "pct_30d": 18.6,
-    "sma50": 72477.1723272169,
-    "sma200": 70388.7756325072,
+    "pct_24h": 5.96836,
+    "pct_7d": 5.4,
+    "pct_30d": 18.7,
+    "sma50": 72475.63396289348,
+    "sma200": 70388.39104142634,
     "support_30d": 73020.94563440893,
     "resistance_30d": 81264.70153038795,
     "mark_price": 80993.2,
@@ -3537,16 +3537,16 @@
     "key": "ETH",
     "name": "Ethereum",
     "emoji": "\u039e",
-    "price": 2638.69,
-    "high_24h": 2622.26,
+    "price": 2632.16,
+    "high_24h": 2643.34,
     "low_24h": 2435.96,
-    "pct_24h": 7.77657,
-    "pct_7d": 1.7,
-    "pct_30d": 24.9,
-    "sma50": 2242.3467853217794,
-    "sma200": 2069.99155541191,
+    "pct_24h": 7.48179,
+    "pct_7d": 4.0,
+    "pct_30d": 26.2,
+    "sma50": 2242.2366701181363,
+    "sma200": 2069.9640266109996,
     "support_30d": 2326.5282334236576,
-    "resistance_30d": 2637.939345783585,
+    "resistance_30d": 2632.43358560144,
     "mark_price": 2599.43,
     "index_price": 2599.8744186,
     "funding_rate": 0.0001,
