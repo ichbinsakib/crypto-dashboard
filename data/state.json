@@ -4,7 +4,7 @@
   "_alerts_state": {
     "btc-resistance-break": {
       "triggered": true,
-      "last_triggered_at": "2026-09-18 22:45:20"
+      "last_triggered_at": "2026-09-18 22:50:25"
     },
     "btc-support-break": {
       "triggered": false,
@@ -12,7 +12,7 @@
     },
     "eth-resistance-break": {
       "triggered": true,
-      "last_triggered_at": "2026-09-18 22:45:20"
+      "last_triggered_at": "2026-09-18 22:50:25"
     },
     "eth-support-break": {
       "triggered": false,
@@ -1087,7 +1087,7 @@
     "polygon-ecosystem-token": {
       "label": "\ud83d\udfe1 HOLD / NEUTRAL",
       "status": "neutral",
-      "score": -1,
+      "score": 0,
       "rows": [
         [
           "Price vs. recent range",
@@ -1106,12 +1106,12 @@
         ],
         [
           "Recent trend",
-          "Chopping sideways - no clear trend",
-          0
+          "Trending up steadily - healthy",
+          1
         ],
         [
           "Stretch from long-term average",
-          "+15.3% above its long-term average - a bit stretched",
+          "+20.4% above its long-term average - a bit stretched",
           -1
         ],
         [
@@ -1124,12 +1124,12 @@
       "id": "polygon-ecosystem-token",
       "symbol": "POL",
       "name": "POL (ex-MATIC)",
-      "price": 0.101354,
-      "pct_24h": 3.55858,
-      "pct_7d": 4.5,
+      "price": 0.10579,
+      "pct_24h": 7.91832,
+      "pct_7d": 10.3,
       "support_30d": 0.08117354412588569,
       "resistance_30d": 0.12250456198546959,
-      "as_of": "2026-09-18 16:45:23",
+      "as_of": "2026-09-18 22:50:25",
       "stale": false
     },
     "blackrock-usd-institutional-digital-liquidity-fund": {
@@ -2503,7 +2503,7 @@
         ],
         [
           "Stretch from long-term average",
-          "-7.1% vs its long-term average - not stretched either way",
+          "-7.4% vs its long-term average - not stretched either way",
           0
         ],
         [
@@ -2516,12 +2516,12 @@
       "id": "quant-network",
       "symbol": "QNT",
       "name": "Quant",
-      "price": 63.42,
-      "pct_24h": 4.3928,
+      "price": 63.28,
+      "pct_24h": 3.90821,
       "pct_7d": -0.7,
       "support_30d": 60.01906559094017,
       "resistance_30d": 67.13669726469111,
-      "as_of": "2026-09-18 22:10:23",
+      "as_of": "2026-09-18 22:50:25",
       "stale": false
     },
     "tether-gold": {
@@ -2647,7 +2647,7 @@
         ],
         [
           "Stretch from long-term average",
-          "-13.3% vs its long-term average - not stretched either way",
+          "-13.5% vs its long-term average - not stretched either way",
           0
         ],
         [
@@ -2660,12 +2660,12 @@
       "id": "world-liberty-financial",
       "symbol": "WLFI",
       "name": "World Liberty Financial",
-      "price": 0.05919,
-      "pct_24h": 1.81113,
-      "pct_7d": 10.0,
+      "price": 0.059118,
+      "pct_24h": 1.78091,
+      "pct_7d": 8.0,
       "support_30d": 0.05526589948255966,
       "resistance_30d": 0.06254770952093733,
-      "as_of": "2026-09-18 20:45:25",
+      "as_of": "2026-09-18 22:50:25",
       "stale": false
     },
     "pax-gold": {
@@ -3515,14 +3515,14 @@
     "key": "BTC",
     "name": "Bitcoin",
     "emoji": "\u20bf",
-    "price": 81161,
+    "price": 81105,
     "high_24h": 81304,
     "low_24h": 76252,
-    "pct_24h": 6.25963,
+    "pct_24h": 6.20271,
     "pct_7d": 5.0,
     "pct_30d": 17.6,
-    "sma50": 72476.73157433685,
-    "sma200": 70388.66544428718,
+    "sma50": 72475.3893785071,
+    "sma200": 70388.32989532975,
     "support_30d": 73020.94563440893,
     "resistance_30d": 81264.70153038795,
     "mark_price": 81237.88073913,
@@ -3537,16 +3537,16 @@
     "key": "ETH",
     "name": "Ethereum",
     "emoji": "\u039e",
-    "price": 2622.06,
+    "price": 2618.53,
     "high_24h": 2643.34,
     "low_24h": 2435.96,
-    "pct_24h": 7.18481,
+    "pct_24h": 7.10136,
     "pct_7d": 3.8,
     "pct_30d": 18.4,
-    "sma50": 2241.9981561398467,
-    "sma200": 2069.904398116427,
+    "sma50": 2241.9458350197806,
+    "sma200": 2069.8913178364105,
     "support_30d": 2326.5282334236576,
-    "resistance_30d": 2620.5078866869635,
+    "resistance_30d": 2617.8918306836545,
     "mark_price": 2629.34404651,
     "index_price": 2630.38534884,
     "funding_rate": 0.0001,
