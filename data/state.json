@@ -4,7 +4,7 @@
   "_alerts_state": {
     "btc-resistance-break": {
       "triggered": true,
-      "last_triggered_at": "2026-09-18 15:40:24"
+      "last_triggered_at": "2026-09-18 15:45:24"
     },
     "btc-support-break": {
       "triggered": false,
@@ -12,7 +12,7 @@
     },
     "eth-resistance-break": {
       "triggered": true,
-      "last_triggered_at": "2026-09-18 15:40:24"
+      "last_triggered_at": "2026-09-18 15:45:24"
     },
     "eth-support-break": {
       "triggered": false,
@@ -980,12 +980,12 @@
       "id": "aster-2",
       "symbol": "ASTER",
       "name": "Aster",
-      "price": 0.753406,
-      "pct_24h": 1.56765,
-      "pct_7d": 6.8,
+      "price": 0.752989,
+      "pct_24h": 0.96124,
+      "pct_7d": 6.3,
       "support_30d": 0.6487654591390889,
       "resistance_30d": 0.7868111056215635,
-      "as_of": "2026-09-18 14:30:30",
+      "as_of": "2026-09-18 15:45:24",
       "stale": false
     },
     "worldcoin-wld": {
@@ -1663,7 +1663,7 @@
     "bitget-token": {
       "label": "\ud83d\udfe1 HOLD / NEUTRAL",
       "status": "neutral",
-      "score": 0,
+      "score": -1,
       "rows": [
         [
           "Price vs. recent range",
@@ -1677,8 +1677,8 @@
         ],
         [
           "Market phase (best guess)",
-          "Basing near the bottom - phase where smart money accumulates",
-          2
+          "Established uptrend - phase where price marks up",
+          1
         ],
         [
           "Recent trend",
@@ -1687,7 +1687,7 @@
         ],
         [
           "Stretch from long-term average",
-          "+4.4% vs its long-term average - not stretched either way",
+          "+6.0% vs its long-term average - not stretched either way",
           0
         ],
         [
@@ -1700,12 +1700,12 @@
       "id": "bitget-token",
       "symbol": "BGB",
       "name": "Bitget Token",
-      "price": 1.97,
-      "pct_24h": 3.09493,
-      "pct_7d": 1.4,
+      "price": 2.0,
+      "pct_24h": 3.79352,
+      "pct_7d": 0.2,
       "support_30d": 1.7974445737451972,
       "resistance_30d": 2.0284940947674617,
-      "as_of": "2026-09-18 13:10:23",
+      "as_of": "2026-09-18 15:45:24",
       "stale": false
     },
     "sui": {
@@ -3271,7 +3271,7 @@
         ],
         [
           "Stretch from long-term average",
-          "-4.3% vs its long-term average - not stretched either way",
+          "-3.7% vs its long-term average - not stretched either way",
           0
         ],
         [
@@ -3284,12 +3284,12 @@
       "id": "cosmos",
       "symbol": "ATOM",
       "name": "Cosmos Hub",
-      "price": 1.67,
-      "pct_24h": 9.17075,
+      "price": 1.68,
+      "pct_24h": 8.9652,
       "pct_7d": -4.0,
       "support_30d": 1.4543168227507075,
       "resistance_30d": 1.8581525047856993,
-      "as_of": "2026-09-18 15:12:52",
+      "as_of": "2026-09-18 15:45:24",
       "stale": false
     },
     "pancakeswap-token": {
@@ -3467,14 +3467,14 @@
     "key": "BTC",
     "name": "Bitcoin",
     "emoji": "\u20bf",
-    "price": 80781,
+    "price": 80697,
     "high_24h": 80930,
     "low_24h": 76205,
-    "pct_24h": 5.46261,
+    "pct_24h": 5.21345,
     "pct_7d": 2.1,
     "pct_30d": 24.4,
-    "sma50": 72469.13354772374,
-    "sma200": 70386.7659376339,
+    "sma50": 72467.48326836652,
+    "sma200": 70386.3533677946,
     "support_30d": 73020.94563440893,
     "resistance_30d": 81264.70153038795,
     "mark_price": 76486.85126812,
@@ -3489,16 +3489,16 @@
     "key": "ETH",
     "name": "Ethereum",
     "emoji": "\u039e",
-    "price": 2581.81,
+    "price": 2577.41,
     "high_24h": 2583.66,
     "low_24h": 2435.96,
-    "pct_24h": 4.70311,
+    "pct_24h": 4.35694,
     "pct_7d": -1.8,
     "pct_30d": 33.5,
-    "sma50": 2241.24712988763,
-    "sma200": 2069.7166415533725,
+    "sma50": 2241.1429354299407,
+    "sma200": 2069.6905929389504,
     "support_30d": 2326.5282334236576,
-    "resistance_30d": 2582.956574076107,
+    "resistance_30d": 2577.7468511916536,
     "mark_price": 2450.15,
     "index_price": 2451.28046512,
     "funding_rate": 4.838e-05,
