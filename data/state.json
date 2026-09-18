@@ -4,7 +4,7 @@
   "_alerts_state": {
     "btc-resistance-break": {
       "triggered": true,
-      "last_triggered_at": "2026-09-18 23:35:18"
+      "last_triggered_at": "2026-09-18 23:40:23"
     },
     "btc-support-break": {
       "triggered": false,
@@ -12,7 +12,7 @@
     },
     "eth-resistance-break": {
       "triggered": true,
-      "last_triggered_at": "2026-09-18 23:35:18"
+      "last_triggered_at": "2026-09-18 23:40:23"
     },
     "eth-support-break": {
       "triggered": false,
@@ -367,11 +367,11 @@
     "zcash": {
       "label": "\ud83d\udd34 DISTRIBUTION ZONE",
       "status": "bearish",
-      "score": -5,
+      "score": -8,
       "rows": [
         [
           "Price vs. recent range",
-          "Near its 30-day high (~$1,466.59) - less room to run",
+          "Near its 30-day high (~$1,579.83) - less room to run",
           -1
         ],
         [
@@ -386,12 +386,12 @@
         ],
         [
           "Recent trend",
-          "Trending up steadily - healthy",
-          1
+          "Shooting straight up - classic blow-off top risk, don't chase",
+          -2
         ],
         [
           "Stretch from long-term average",
-          "+186.5% above its long-term average - very stretched",
+          "+209.5% above its long-term average - very stretched",
           -2
         ],
         [
@@ -404,12 +404,12 @@
       "id": "zcash",
       "symbol": "ZEC",
       "name": "Zcash",
-      "price": 1455.19,
-      "pct_24h": -0.22859,
-      "pct_7d": 23.6,
+      "price": 1574.11,
+      "pct_24h": 7.05502,
+      "pct_7d": 33.1,
       "support_30d": 568.9731111711939,
-      "resistance_30d": 1466.5883939216646,
-      "as_of": "2026-09-18 19:00:36",
+      "resistance_30d": 1579.8298094558975,
+      "as_of": "2026-09-18 23:40:23",
       "stale": false
     },
     "rain": {
@@ -775,7 +775,7 @@
         ],
         [
           "Stretch from long-term average",
-          "-5.6% vs its long-term average - not stretched either way",
+          "-5.8% vs its long-term average - not stretched either way",
           0
         ],
         [
@@ -788,12 +788,12 @@
       "id": "kucoin-shares",
       "symbol": "KCS",
       "name": "KuCoin",
-      "price": 7.17,
-      "pct_24h": 2.01658,
-      "pct_7d": 2.6,
+      "price": 7.15,
+      "pct_24h": 1.45478,
+      "pct_7d": 3.0,
       "support_30d": 6.792256319407273,
       "resistance_30d": 7.8821382735057615,
-      "as_of": "2026-09-18 22:20:28",
+      "as_of": "2026-09-18 23:40:23",
       "stale": false
     },
     "hedera-hashgraph": {
@@ -3059,7 +3059,7 @@
       "rows": [
         [
           "Price vs. recent range",
-          "Near its 30-day high (~$0.2258) - less room to run",
+          "Near its 30-day high (~$0.2212) - less room to run",
           -1
         ],
         [
@@ -3079,7 +3079,7 @@
         ],
         [
           "Stretch from long-term average",
-          "+121.2% above its long-term average - very stretched",
+          "+117.2% above its long-term average - very stretched",
           -2
         ],
         [
@@ -3092,12 +3092,12 @@
       "id": "arbitrum",
       "symbol": "ARB",
       "name": "Arbitrum",
-      "price": 0.226016,
-      "pct_24h": 26.53949,
-      "pct_7d": 56.7,
+      "price": 0.221943,
+      "pct_24h": 25.67811,
+      "pct_7d": 57.8,
       "support_30d": 0.08420633013432346,
-      "resistance_30d": 0.22584779787693604,
-      "as_of": "2026-09-18 20:50:28",
+      "resistance_30d": 0.22118086206384022,
+      "as_of": "2026-09-18 23:40:23",
       "stale": false
     },
     "dash": {
@@ -3515,14 +3515,14 @@
     "key": "BTC",
     "name": "Bitcoin",
     "emoji": "\u20bf",
-    "price": 80942,
+    "price": 80918,
     "high_24h": 81331,
     "low_24h": 76252,
-    "pct_24h": 5.99381,
+    "pct_24h": 5.95125,
     "pct_7d": 5.2,
     "pct_30d": 16.4,
-    "sma50": 72472.3125083527,
-    "sma200": 70387.56067779115,
+    "sma50": 72471.80734543092,
+    "sma200": 70387.4343870607,
     "support_30d": 73020.94563440893,
     "resistance_30d": 81264.70153038795,
     "mark_price": 81237.88073913,
@@ -3537,16 +3537,16 @@
     "key": "ETH",
     "name": "Ethereum",
     "emoji": "\u039e",
-    "price": 2612.69,
+    "price": 2610.22,
     "high_24h": 2643.34,
     "low_24h": 2435.96,
-    "pct_24h": 6.80799,
+    "pct_24h": 6.72531,
     "pct_7d": 4.3,
     "pct_30d": 14.7,
-    "sma50": 2241.8281037829265,
-    "sma200": 2069.861885027197,
+    "sma50": 2241.800683132759,
+    "sma200": 2069.855029864655,
     "support_30d": 2326.5282334236576,
-    "resistance_30d": 2612.005268840946,
+    "resistance_30d": 2610.6342363325452,
     "mark_price": 2629.34404651,
     "index_price": 2630.38534884,
     "funding_rate": 0.0001,
