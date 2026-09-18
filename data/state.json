@@ -751,7 +751,7 @@
     "kucoin-shares": {
       "label": "\ud83d\udfe2 LEAN ACCUMULATE",
       "status": "bullish",
-      "score": 4,
+      "score": 3,
       "rows": [
         [
           "Price vs. recent range",
@@ -760,8 +760,8 @@
         ],
         [
           "Crowd mood (Fear & Greed)",
-          "50/100 - crowd mood is neutral",
-          0
+          "56/100 - crowd is greedy",
+          -1
         ],
         [
           "Market phase (best guess)",
@@ -789,11 +789,11 @@
       "symbol": "KCS",
       "name": "KuCoin",
       "price": 7.05,
-      "pct_24h": 3.35342,
-      "pct_7d": 2.5,
+      "pct_24h": 3.70198,
+      "pct_7d": 2.6,
       "support_30d": 6.792256319407273,
       "resistance_30d": 7.8821382735057615,
-      "as_of": "2026-09-17 22:00:38",
+      "as_of": "2026-09-18 01:05:20",
       "stale": false
     },
     "hedera-hashgraph": {
@@ -1279,7 +1279,7 @@
     "htx-dao": {
       "label": "\ud83d\udfe2 LEAN ACCUMULATE",
       "status": "bullish",
-      "score": 4,
+      "score": 3,
       "rows": [
         [
           "Price vs. recent range",
@@ -1288,8 +1288,8 @@
         ],
         [
           "Crowd mood (Fear & Greed)",
-          "50/100 - crowd mood is neutral",
-          0
+          "56/100 - crowd is greedy",
+          -1
         ],
         [
           "Market phase (best guess)",
@@ -1303,7 +1303,7 @@
         ],
         [
           "Stretch from long-term average",
-          "-6.3% vs its long-term average - not stretched either way",
+          "-5.7% vs its long-term average - not stretched either way",
           0
         ],
         [
@@ -1316,12 +1316,12 @@
       "id": "htx-dao",
       "symbol": "HTX",
       "name": "HTX DAO",
-      "price": 1.66e-06,
-      "pct_24h": -0.63903,
+      "price": 1.67e-06,
+      "pct_24h": -0.59723,
       "pct_7d": -1.2,
       "support_30d": 1.6023985995039954e-06,
       "resistance_30d": 1.7873095460323824e-06,
-      "as_of": "2026-09-17 23:50:22",
+      "as_of": "2026-09-18 01:05:20",
       "stale": false
     },
     "superstate-short-duration-us-government-securities-fund-ustb": {
@@ -1901,9 +1901,9 @@
       "stale": false
     },
     "mantle": {
-      "label": "\ud83d\udfe2 LEAN ACCUMULATE",
-      "status": "bullish",
-      "score": 2,
+      "label": "\ud83d\udfe1 HOLD / NEUTRAL",
+      "status": "neutral",
+      "score": 1,
       "rows": [
         [
           "Price vs. recent range",
@@ -1912,8 +1912,8 @@
         ],
         [
           "Crowd mood (Fear & Greed)",
-          "50/100 - crowd mood is neutral",
-          0
+          "56/100 - crowd is greedy",
+          -1
         ],
         [
           "Market phase (best guess)",
@@ -1927,7 +1927,7 @@
         ],
         [
           "Stretch from long-term average",
-          "-0.8% vs its long-term average - not stretched either way",
+          "-0.5% vs its long-term average - not stretched either way",
           0
         ],
         [
@@ -1936,16 +1936,16 @@
           0
         ]
       ],
-      "plain": "Leans toward a decent spot to slowly add (DCA) - not a strong signal, just a lean.",
+      "plain": "No real edge either way right now - fine to just wait and watch.",
       "id": "mantle",
       "symbol": "MNT",
       "name": "Mantle",
-      "price": 0.568331,
-      "pct_24h": 2.92584,
-      "pct_7d": -0.6,
-      "support_30d": 0.46737376334939396,
+      "price": 0.569298,
+      "pct_24h": 3.26458,
+      "pct_7d": 0.1,
+      "support_30d": 0.4827910728759477,
       "resistance_30d": 0.6365218632454678,
-      "as_of": "2026-09-17 23:45:23",
+      "as_of": "2026-09-18 01:05:20",
       "stale": false
     },
     "polkadot": {
@@ -3458,14 +3458,14 @@
     "key": "BTC",
     "name": "Bitcoin",
     "emoji": "\u20bf",
-    "price": 76498,
+    "price": 76543,
     "high_24h": 77024,
     "low_24h": 75972,
-    "pct_24h": 0.26118,
-    "pct_7d": -0.5,
+    "pct_24h": 0.47252,
+    "pct_7d": -0.1,
     "pct_30d": 18.3,
-    "sma50": 72383.65223714718,
-    "sma200": 70365.39560998976,
+    "sma50": 72383.87406728606,
+    "sma200": 70365.45106752448,
     "support_30d": 73020.94563440893,
     "resistance_30d": 81264.70153038795,
     "mark_price": 76486.85126812,
@@ -3480,14 +3480,14 @@
     "key": "ETH",
     "name": "Ethereum",
     "emoji": "\u039e",
-    "price": 2445.19,
+    "price": 2446.3,
     "high_24h": 2478.98,
-    "low_24h": 2412.84,
-    "pct_24h": 1.11108,
-    "pct_7d": 0.1,
-    "pct_30d": 28.0,
-    "sma50": 2238.503818839739,
-    "sma200": 2069.0308137914,
+    "low_24h": 2415.23,
+    "pct_24h": 1.36526,
+    "pct_7d": 0.3,
+    "pct_30d": 27.6,
+    "sma50": 2238.502146876823,
+    "sma200": 2069.030395800671,
     "support_30d": 2326.5282334236576,
     "resistance_30d": 2525.267261590238,
     "mark_price": 2450.15,
