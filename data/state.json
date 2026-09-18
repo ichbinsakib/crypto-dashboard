@@ -4,7 +4,7 @@
   "_alerts_state": {
     "btc-resistance-break": {
       "triggered": true,
-      "last_triggered_at": "2026-09-18 17:10:29"
+      "last_triggered_at": "2026-09-18 17:15:22"
     },
     "btc-support-break": {
       "triggered": false,
@@ -12,7 +12,7 @@
     },
     "eth-resistance-break": {
       "triggered": true,
-      "last_triggered_at": "2026-09-18 17:10:29"
+      "last_triggered_at": "2026-09-18 17:15:22"
     },
     "eth-support-break": {
       "triggered": false,
@@ -117,11 +117,11 @@
       "symbol": "XRP",
       "name": "XRP",
       "price": 1.38,
-      "pct_24h": 5.83281,
-      "pct_7d": -0.7,
+      "pct_24h": 5.59465,
+      "pct_7d": 0.4,
       "support_30d": 1.2681797698816397,
       "resistance_30d": 1.52050482788377,
-      "as_of": "2026-09-18 16:10:24",
+      "as_of": "2026-09-18 17:15:22",
       "stale": false
     },
     "solana": {
@@ -1949,9 +1949,9 @@
       "stale": false
     },
     "polkadot": {
-      "label": "\ud83d\udfe1 HOLD / NEUTRAL",
-      "status": "neutral",
-      "score": 0,
+      "label": "\ud83d\udfe2 LEAN ACCUMULATE",
+      "status": "bullish",
+      "score": 2,
       "rows": [
         [
           "Price vs. recent range",
@@ -1965,17 +1965,17 @@
         ],
         [
           "Market phase (best guess)",
-          "Established uptrend - phase where price marks up",
-          1
+          "Basing near the bottom - phase where smart money accumulates",
+          2
         ],
         [
           "Recent trend",
-          "Chopping sideways - no clear trend",
-          0
+          "Trending up steadily - healthy",
+          1
         ],
         [
           "Stretch from long-term average",
-          "+5.1% vs its long-term average - not stretched either way",
+          "+4.1% vs its long-term average - not stretched either way",
           0
         ],
         [
@@ -1984,16 +1984,16 @@
           0
         ]
       ],
-      "plain": "No real edge either way right now - fine to just wait and watch.",
+      "plain": "Leans toward a decent spot to slowly add (DCA) - not a strong signal, just a lean.",
       "id": "polkadot",
       "symbol": "DOT",
       "name": "Polkadot",
-      "price": 1.14,
-      "pct_24h": 6.42109,
-      "pct_7d": 5.9,
+      "price": 1.13,
+      "pct_24h": 5.74595,
+      "pct_7d": 8.1,
       "support_30d": 0.8194698348247896,
       "resistance_30d": 1.2475304252917225,
-      "as_of": "2026-09-18 16:25:20",
+      "as_of": "2026-09-18 17:15:22",
       "stale": false
     },
     "uniswap": {
@@ -2359,7 +2359,7 @@
         ],
         [
           "Stretch from long-term average",
-          "+3.7% vs its long-term average - not stretched either way",
+          "+4.2% vs its long-term average - not stretched either way",
           0
         ],
         [
@@ -2372,12 +2372,12 @@
       "id": "sky",
       "symbol": "SKY",
       "name": "Sky",
-      "price": 0.069083,
-      "pct_24h": 16.18308,
+      "price": 0.069395,
+      "pct_24h": 16.68425,
       "pct_7d": 15.6,
       "support_30d": 0.057256438766750246,
       "resistance_30d": 0.07314868186988309,
-      "as_of": "2026-09-18 17:05:22",
+      "as_of": "2026-09-18 17:15:22",
       "stale": false
     },
     "shiba-inu": {
@@ -3467,14 +3467,14 @@
     "key": "BTC",
     "name": "Bitcoin",
     "emoji": "\u20bf",
-    "price": 80800,
+    "price": 80750,
     "high_24h": 81213,
     "low_24h": 76205,
-    "pct_24h": 5.22422,
+    "pct_24h": 5.22304,
     "pct_7d": 4.1,
     "pct_30d": 18.0,
-    "sma50": 72469.82799609323,
-    "sma200": 70386.93954972627,
+    "sma50": 72468.89051203063,
+    "sma200": 70386.70517871063,
     "support_30d": 73020.94563440893,
     "resistance_30d": 81264.70153038795,
     "mark_price": 80993.2,
@@ -3489,16 +3489,16 @@
     "key": "ETH",
     "name": "Ethereum",
     "emoji": "\u039e",
-    "price": 2590.02,
+    "price": 2589.3,
     "high_24h": 2608.29,
     "low_24h": 2435.96,
-    "pct_24h": 4.86389,
+    "pct_24h": 4.9722,
     "pct_7d": 1.4,
     "pct_30d": 24.5,
-    "sma50": 2241.388985161884,
-    "sma200": 2069.7521053719365,
+    "sma50": 2241.4517195707017,
+    "sma200": 2069.767788974141,
     "support_30d": 2326.5282334236576,
-    "resistance_30d": 2590.0493377888297,
+    "resistance_30d": 2593.1860582297086,
     "mark_price": 2599.43,
     "index_price": 2599.8744186,
     "funding_rate": 0.0001,
