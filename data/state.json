@@ -4,7 +4,7 @@
   "_alerts_state": {
     "btc-resistance-break": {
       "triggered": true,
-      "last_triggered_at": "2026-09-18 19:00:36"
+      "last_triggered_at": "2026-09-18 19:05:21"
     },
     "btc-support-break": {
       "triggered": false,
@@ -12,7 +12,7 @@
     },
     "eth-resistance-break": {
       "triggered": true,
-      "last_triggered_at": "2026-09-18 19:00:36"
+      "last_triggered_at": "2026-09-18 19:05:21"
     },
     "eth-support-break": {
       "triggered": false,
@@ -2003,7 +2003,7 @@
       "rows": [
         [
           "Price vs. recent range",
-          "Near its 30-day high (~$8.81) - less room to run",
+          "Near its 30-day high (~$8.85) - less room to run",
           -1
         ],
         [
@@ -2023,7 +2023,7 @@
         ],
         [
           "Stretch from long-term average",
-          "+133.0% above its long-term average - very stretched",
+          "+134.9% above its long-term average - very stretched",
           -2
         ],
         [
@@ -2036,12 +2036,12 @@
       "id": "uniswap",
       "symbol": "UNI",
       "name": "Uniswap",
-      "price": 8.79,
-      "pct_24h": 15.7817,
-      "pct_7d": 44.6,
+      "price": 8.86,
+      "pct_24h": 17.8165,
+      "pct_7d": 45.4,
       "support_30d": 3.7613743428503605,
-      "resistance_30d": 8.810546425769523,
-      "as_of": "2026-09-18 17:40:25",
+      "resistance_30d": 8.848512318115851,
+      "as_of": "2026-09-18 19:05:21",
       "stale": false
     },
     "pi-network": {
@@ -2099,7 +2099,7 @@
       "rows": [
         [
           "Price vs. recent range",
-          "Near its 30-day high (~$0.3988) - less room to run",
+          "Near its 30-day high (~$0.3972) - less room to run",
           -1
         ],
         [
@@ -2119,7 +2119,7 @@
         ],
         [
           "Stretch from long-term average",
-          "+20.7% above its long-term average - a bit stretched",
+          "+20.4% above its long-term average - a bit stretched",
           -1
         ],
         [
@@ -2132,12 +2132,12 @@
       "id": "ondo-finance",
       "symbol": "ONDO",
       "name": "Ondo",
-      "price": 0.398105,
-      "pct_24h": 7.86224,
-      "pct_7d": 9.4,
+      "price": 0.397038,
+      "pct_24h": 5.49666,
+      "pct_7d": 11.1,
       "support_30d": 0.3283157645282996,
-      "resistance_30d": 0.39882920111255604,
-      "as_of": "2026-09-18 16:30:33",
+      "resistance_30d": 0.3971837311424967,
+      "as_of": "2026-09-18 19:05:21",
       "stale": false
     },
     "canton-network": {
@@ -3197,13 +3197,13 @@
       "stale": false
     },
     "kaspa": {
-      "label": "\ud83d\udfe1 HOLD / NEUTRAL",
-      "status": "neutral",
-      "score": -1,
+      "label": "\ud83d\udd34 CAUTION - REDUCE NEW BUYS",
+      "status": "bearish",
+      "score": -2,
       "rows": [
         [
           "Price vs. recent range",
-          "Near its 30-day high (~$0.0365) - less room to run",
+          "Near its 30-day high (~$0.0369) - less room to run",
           -1
         ],
         [
@@ -3223,8 +3223,8 @@
         ],
         [
           "Stretch from long-term average",
-          "+9.3% vs its long-term average - not stretched either way",
-          0
+          "+10.2% above its long-term average - a bit stretched",
+          -1
         ],
         [
           "Leverage traders' bias",
@@ -3232,16 +3232,16 @@
           0
         ]
       ],
-      "plain": "No real edge either way right now - fine to just wait and watch.",
+      "plain": "Getting risky - I'd hold off on new buys until this cools down.",
       "id": "kaspa",
       "symbol": "KAS",
       "name": "Kaspa",
-      "price": 0.03653141,
-      "pct_24h": 8.00541,
-      "pct_7d": 3.8,
+      "price": 0.03683277,
+      "pct_24h": 10.29991,
+      "pct_7d": 1.7,
       "support_30d": 0.027064601688398235,
-      "resistance_30d": 0.03652960039970242,
-      "as_of": "2026-09-18 17:45:21",
+      "resistance_30d": 0.03688461692498641,
+      "as_of": "2026-09-18 19:05:21",
       "stale": false
     },
     "cosmos": {
@@ -3467,14 +3467,14 @@
     "key": "BTC",
     "name": "Bitcoin",
     "emoji": "\u20bf",
-    "price": 80877,
+    "price": 80902,
     "high_24h": 81213,
     "low_24h": 76205,
-    "pct_24h": 5.68628,
-    "pct_7d": 3.9,
-    "pct_30d": 18.2,
-    "sma50": 72471.13428111703,
-    "sma200": 70387.26612098223,
+    "pct_24h": 5.75323,
+    "pct_7d": 4.3,
+    "pct_30d": 18.6,
+    "sma50": 72471.97109418307,
+    "sma200": 70387.47532424873,
     "support_30d": 73020.94563440893,
     "resistance_30d": 81264.70153038795,
     "mark_price": 80993.2,
@@ -3489,16 +3489,16 @@
     "key": "ETH",
     "name": "Ethereum",
     "emoji": "\u039e",
-    "price": 2610.43,
-    "high_24h": 2608.29,
+    "price": 2613.12,
+    "high_24h": 2622.26,
     "low_24h": 2435.96,
-    "pct_24h": 6.51805,
-    "pct_7d": 1.1,
-    "pct_30d": 24.8,
-    "sma50": 2241.795270000896,
-    "sma200": 2069.8536765816893,
+    "pct_24h": 6.59194,
+    "pct_7d": 1.7,
+    "pct_30d": 24.9,
+    "sma50": 2241.9007322732077,
+    "sma200": 2069.880042149767,
     "support_30d": 2326.5282334236576,
-    "resistance_30d": 2610.363579739415,
+    "resistance_30d": 2615.636693355004,
     "mark_price": 2599.43,
     "index_price": 2599.8744186,
     "funding_rate": 0.0001,
