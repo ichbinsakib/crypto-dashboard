@@ -4,7 +4,7 @@
   "_alerts_state": {
     "btc-resistance-break": {
       "triggered": true,
-      "last_triggered_at": "2026-09-18 23:30:29"
+      "last_triggered_at": "2026-09-18 23:35:18"
     },
     "btc-support-break": {
       "triggered": false,
@@ -12,7 +12,7 @@
     },
     "eth-resistance-break": {
       "triggered": true,
-      "last_triggered_at": "2026-09-18 23:30:29"
+      "last_triggered_at": "2026-09-18 23:35:18"
     },
     "eth-support-break": {
       "triggered": false,
@@ -727,7 +727,7 @@
         ],
         [
           "Stretch from long-term average",
-          "+9.4% vs its long-term average - not stretched either way",
+          "+9.2% vs its long-term average - not stretched either way",
           0
         ],
         [
@@ -740,12 +740,12 @@
       "id": "stellar",
       "symbol": "XLM",
       "name": "Stellar",
-      "price": 0.192654,
-      "pct_24h": 4.83833,
+      "price": 0.192353,
+      "pct_24h": 4.8212,
       "pct_7d": 8.5,
       "support_30d": 0.17464723429819362,
       "resistance_30d": 0.20181319711037435,
-      "as_of": "2026-09-18 23:20:27",
+      "as_of": "2026-09-18 23:35:18",
       "stale": false
     },
     "kucoin-shares": {
@@ -871,7 +871,7 @@
         ],
         [
           "Stretch from long-term average",
-          "+16.4% above its long-term average - a bit stretched",
+          "+15.8% above its long-term average - a bit stretched",
           -1
         ],
         [
@@ -884,12 +884,12 @@
       "id": "pepe",
       "symbol": "PEPE",
       "name": "Pepe",
-      "price": 3.83e-06,
-      "pct_24h": 6.05651,
+      "price": 3.81e-06,
+      "pct_24h": 5.62191,
       "pct_7d": 17.6,
       "support_30d": 3.204519388831639e-06,
       "resistance_30d": 4.122123035488615e-06,
-      "as_of": "2026-09-18 23:25:18",
+      "as_of": "2026-09-18 23:35:18",
       "stale": false
     },
     "avalanche-2": {
@@ -1855,7 +1855,7 @@
     "bitcoin-cash": {
       "label": "\ud83d\udfe1 HOLD / NEUTRAL",
       "status": "neutral",
-      "score": 0,
+      "score": 1,
       "rows": [
         [
           "Price vs. recent range",
@@ -1874,12 +1874,12 @@
         ],
         [
           "Recent trend",
-          "Chopping sideways - no clear trend",
-          0
+          "Trending up steadily - healthy",
+          1
         ],
         [
           "Stretch from long-term average",
-          "-20.9% below its long-term average - confirmed downtrend",
+          "-20.3% below its long-term average - confirmed downtrend",
           -1
         ],
         [
@@ -1892,12 +1892,12 @@
       "id": "bitcoin-cash",
       "symbol": "BCH",
       "name": "Bitcoin Cash",
-      "price": 252.92,
-      "pct_24h": 8.90758,
-      "pct_7d": 7.4,
+      "price": 254.93,
+      "pct_24h": 8.78915,
+      "pct_7d": 15.7,
       "support_30d": 216.74058261336023,
       "resistance_30d": 288.10955405353275,
-      "as_of": "2026-09-18 18:50:25",
+      "as_of": "2026-09-18 23:35:18",
       "stale": false
     },
     "mantle": {
@@ -3515,14 +3515,14 @@
     "key": "BTC",
     "name": "Bitcoin",
     "emoji": "\u20bf",
-    "price": 81018,
+    "price": 80942,
     "high_24h": 81331,
     "low_24h": 76252,
-    "pct_24h": 6.00154,
+    "pct_24h": 5.99381,
     "pct_7d": 5.2,
     "pct_30d": 16.4,
-    "sma50": 72473.9267268312,
-    "sma200": 70387.96423241077,
+    "sma50": 72472.3125083527,
+    "sma200": 70387.56067779115,
     "support_30d": 73020.94563440893,
     "resistance_30d": 81264.70153038795,
     "mark_price": 81237.88073913,
@@ -3537,16 +3537,16 @@
     "key": "ETH",
     "name": "Ethereum",
     "emoji": "\u039e",
-    "price": 2614.42,
+    "price": 2612.69,
     "high_24h": 2643.34,
     "low_24h": 2435.96,
-    "pct_24h": 6.82552,
+    "pct_24h": 6.80799,
     "pct_7d": 4.3,
     "pct_30d": 14.7,
-    "sma50": 2241.8661685840502,
-    "sma200": 2069.8714012274777,
+    "sma50": 2241.8281037829265,
+    "sma200": 2069.861885027197,
     "support_30d": 2326.5282334236576,
-    "resistance_30d": 2613.9085088971137,
+    "resistance_30d": 2612.005268840946,
     "mark_price": 2629.34404651,
     "index_price": 2630.38534884,
     "funding_rate": 0.0001,
