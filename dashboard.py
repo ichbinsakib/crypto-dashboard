@@ -55,12 +55,12 @@ DATA_REFRESH_LABEL = "every ~10 min (GitHub Actions, best-effort)"  # keep in sy
 DASHBOARD_URL = "https://ichbinsakib.github.io/crypto-dashboard/"
 DISCORD_WEBHOOK_URL = os.environ.get("DISCORD_WEBHOOK_URL")  # optional; strong-buy alerts are a no-op without it
 STRONG_DAILY_SCORE = 5   # matches the "ACCUMULATION ZONE" tier, not the weaker "LEAN ACCUMULATE"
-STRONG_INTRADAY_SCORE = 3  # out of a max of 5 (range position, momentum, direction, volume).
-                            # 4/5 was still empty most cycles in practice. 3/5 matches the
-                            # model's own "NEAR-TERM DIP ZONE" tier: requires the strongest
-                            # factor (near the low, worth 2 pts) plus at least one more of the
-                            # other three agreeing -- still meaningfully above the old "LEAN
-                            # LONG" tier (>= 1) that was producing noisy, low-confidence calls.
+STRONG_INTRADAY_SCORE = 4  # out of a max of 6 (range position, momentum, direction, volume,
+                            # broader trend). Raised from 3/5 alongside the 5th (trend) factor
+                            # to keep selectivity meaningful rather than getting easier to
+                            # qualify just because there's an extra point available -- now
+                            # needs the strongest factor (near the low, worth 2 pts) plus at
+                            # least two of the other four agreeing, not just one.
 INTRADAY_CHOPPY_RANGE_PCT = 0.6  # below this, a coin's whole lookback range is too flat/dead
                                   # to trust ATR-based levels against -- rejected outright
 INTRADAY_NEAR_LOW_ATR_FRACTION = 0.4  # "near the low" scoring band, as a fraction of ATR above
@@ -76,6 +76,20 @@ ROUND_TRIP_FEE_PCT = 0.2  # assumed buy+sell cost, as % of position size -- Bina
                             # discount or volume-tier reduction applied. Purely a rough estimate
                             # for showing what a target is actually worth after trading costs;
                             # real fees vary by exchange, fee tier, and discount.
+MIN_NET_PROFIT_PCT = 0.15  # minimum net-of-fee profit target1 must clear for a signal to be
+                            # considered tradeable at all -- added after a live example showed
+                            # target1 could net roughly $0 after ROUND_TRIP_FEE_PCT, making a
+                            # recorded "win" pointless to actually trade. Rejects the setup
+                            # outright rather than just disclosing a thin number.
+INTRADAY_TARGET_ATR_MULTIPLE = 1.5  # target1 = entry + this many ATRs (was 1.0, i.e. a flat
+                                      # 1:1 risk:reward) -- widened so a win is worth meaningfully
+                                      # more than the stop it's risked against, since fees eat a
+                                      # fixed percentage regardless of trade size. Stop stays at
+                                      # 1x ATR; target2 scales proportionally (2x this multiple).
+INTRADAY_TREND_LOOKBACK_MULTIPLE = 2  # the "broader trend" factor looks back this many times
+                                        # the short lookback, to catch a coin that's dip-buy-
+                                        # eligible on the short window but still in a larger
+                                        # downtrend on a wider one ("catching a falling knife").
 
 PNL_EXPIRY_HOURS = {"15m": 6, "1h": 24, "daily": 24 * 7}  # how long an unresolved call stays
                                                            # open before giving up on it
@@ -1009,11 +1023,12 @@ def compute_intraday_signal(klines, lookback, window_label):
     """
     Lean, technicals-only version of the spot signal for short timeframes -- no Fear & Greed
     or cycle-stage factors, since those are daily-sentiment concepts that don't mean much on a
-    15-minute or 1-hour chart. Four independent factors: where price sits in its recent range,
-    momentum vs a short average, direction over the window, and volume confirmation (is the
-    move backed by real participation or just drifting on thin volume). A dead/choppy range
-    (<1.5% high-low spread over the whole lookback) is rejected outright rather than scored,
-    since there's no real setup to measure ATR-based levels against. Trade levels are
+    15-minute or 1-hour chart. Five independent factors: where price sits in its recent range,
+    momentum vs a short average, direction over the window, volume confirmation (is the move
+    backed by real participation or just drifting on thin volume), and a broader trend filter
+    (is the wider-window trend still up, or is this a dip-buy against a larger downtrend). A
+    dead/choppy range (<1.5% high-low spread over the whole lookback) is rejected outright
+    rather than scored, since there's no real setup to measure ATR-based levels against. Trade levels are
     ATR-based (scaled to actual recent volatility) instead of the fixed percentage buffers
     used on the daily model, which matters far more at this timeframe.
     """
@@ -1084,22 +1099,40 @@ def compute_intraday_signal(klines, lookback, window_label):
     rows.append(("Volume confirmation", reading, pts))
     total += pts
 
+    # Broader trend filter: the four factors above are all short-window reads, so a coin can
+    # look like a legitimate dip-buy on this window while still being in a larger downtrend --
+    # a falling knife, not a dip. Compares price to a longer average (2x the short lookback,
+    # clamped to however much history is actually available) as an independent check.
+    trend_window = min(len(closes), lookback * INTRADAY_TREND_LOOKBACK_MULTIPLE)
+    trend_avg = sum(closes[-trend_window:]) / trend_window
+    trend_dist_pct = (price - trend_avg) / trend_avg * 100 if trend_avg else 0
+    if trend_dist_pct > 0:
+        pts, reading = 1, f"{trend_dist_pct:+.1f}% vs its longer-term average - broader trend still up"
+    elif trend_dist_pct < -2:
+        pts, reading = -1, f"{trend_dist_pct:+.1f}% vs its longer-term average - broader downtrend, dip-buying against the grain"
+    else:
+        pts, reading = 0, f"{trend_dist_pct:+.1f}% vs its longer-term average - broader trend flat"
+    rows.append(("Broader trend filter", reading, pts))
+    total += pts
+
     entry = recent_low
     stop = recent_low - atr
     risk = entry - stop
-    target1 = entry + risk
-    target2 = entry + 2 * risk
+    target1 = entry + INTRADAY_TARGET_ATR_MULTIPLE * risk
+    target2 = entry + 2 * INTRADAY_TARGET_ATR_MULTIPLE * risk
+    target1_pct = (target1 - entry) / entry * 100 if entry else None
+    target1_net_pct = target1_pct - ROUND_TRIP_FEE_PCT if target1_pct is not None else None
 
-    # total is a sum across 4 independent factors, so it can clear the bullish threshold
-    # through momentum/direction/volume alone even when price isn't anywhere near recent_low
-    # -- e.g. a coin already well into an uptrend. In that case target1 (measured from
-    # recent_low) can already sit BELOW current price, and stop can already sit below it too,
-    # meaning the "trade" this call describes was already over before it was ever generated.
-    # Require price to actually still be inside (stop, target1) -- a real, not-yet-resolved
-    # setup -- before calling it bullish at all, regardless of which factors added up to the
-    # score.
-    tradeable = stop < price < target1
-    if total >= 3:
+    # total is a sum across 5 independent factors, so it can clear the bullish threshold
+    # through momentum/direction/volume/trend alone even when price isn't anywhere near
+    # recent_low -- e.g. a coin already well into an uptrend. In that case target1 (measured
+    # from recent_low) can already sit BELOW current price, and stop can already sit below it
+    # too, meaning the "trade" this call describes was already over before it was ever
+    # generated. Require price to actually still be inside (stop, target1) -- a real,
+    # not-yet-resolved setup -- AND that target1 clears MIN_NET_PROFIT_PCT after estimated
+    # fees, before calling it bullish at all, regardless of which factors added up to the score.
+    tradeable = (stop < price < target1) and (target1_net_pct is not None and target1_net_pct >= MIN_NET_PROFIT_PCT)
+    if total >= 4:
         tier = "strong"
     elif total >= 1:
         tier = "lean"
@@ -1108,10 +1141,11 @@ def compute_intraday_signal(klines, lookback, window_label):
     else:
         tier = "bearish"
     if tier in ("strong", "lean") and not tradeable:
-        # The score says bullish, but price is already outside (stop, target1) -- the setup
-        # this score describes already resolved before it could ever be acted on. Downgrade
-        # rather than reject outright: the bearish path is unaffected since it isn't gated on
-        # this trade construct at all.
+        # The score says bullish, but either price is already outside (stop, target1) -- the
+        # setup this score describes already resolved before it could ever be acted on -- or
+        # target1 wouldn't actually be worth trading after fees. Downgrade rather than reject
+        # outright: the bearish path is unaffected since it isn't gated on this trade
+        # construct at all.
         tier = "neutral"
 
     if tier == "strong":
@@ -1127,14 +1161,13 @@ def compute_intraday_signal(klines, lookback, window_label):
         label, status = "🔴 STRETCHED - AVOID CHASING", "bearish"
         plain = "Extended on this timeframe; chasing here has poor risk/reward."
 
-    target1_pct = (target1 - entry) / entry * 100 if entry else None
     target2_pct = (target2 - entry) / entry * 100 if entry else None
     return {
         "label": label, "status": status, "score": total, "rows": rows, "plain": plain,
         "price": price, "atr": atr,
         "trade": {"entry": entry, "stop": stop, "target1": target1, "target2": target2,
                   "risk_pct": (risk / entry * 100) if entry else None,
-                  "target1_net_pct": target1_pct - ROUND_TRIP_FEE_PCT if target1_pct is not None else None,
+                  "target1_net_pct": target1_net_pct,
                   "target2_net_pct": target2_pct - ROUND_TRIP_FEE_PCT if target2_pct is not None else None},
     }
 
@@ -1587,7 +1620,7 @@ def render(coins_data, fng_value, fng_classification, generated_at, any_stale,
       </div>
       <div class="screener-plain" data-role="plain">{r.get('plain', '')}</div>
       <div class="screener-trade">
-        <div class="screener-trade-title">🎯 Buy the recent low, ATR-based stop<span class="info-tip" tabindex="0" data-tip="ATR (Average True Range) measures this coin's own recent volatility. The stop is set one ATR below the buy level, and targets are 1x/2x that same distance above it -- so the risk/reward scales to how choppy this specific coin has actually been, instead of a flat percentage that's too tight for volatile coins and too loose for calm ones.">&#9432;</span></div>
+        <div class="screener-trade-title">🎯 Buy the recent low, ATR-based stop<span class="info-tip" tabindex="0" data-tip="ATR (Average True Range) measures this coin's own recent volatility. The stop is set one ATR below the buy level, and targets are {INTRADAY_TARGET_ATR_MULTIPLE}x/{2*INTRADAY_TARGET_ATR_MULTIPLE}x that same distance above it -- a wider reward than risk on purpose, since a flat 1:1 target was often barely worth the round-trip trading fees. A setup only counts as confirmed if price is still between the stop and target1 (hasn't already played out) and target1 clears an estimated minimum profit after fees -- risk/reward otherwise scales to how choppy this specific coin has actually been, instead of a flat percentage that's too tight for volatile coins and too loose for calm ones.">&#9432;</span></div>
         <div class="kv"><span>Buy</span><span data-role="entry">{fmt_usd_adaptive(t['entry'])}</span></div>
         <div class="kv"><span>Stop</span><span class="neg" data-role="stop">{fmt_usd_adaptive(t['stop'])} ({t['risk_pct']:.1f}% below entry)</span></div>
         <div class="kv"><span>Target</span><span class="pos" data-role="target">{fmt_usd_adaptive(t['target1'])} / {fmt_usd_adaptive(t['target2'])}</span></div>
@@ -1652,8 +1685,8 @@ def render(coins_data, fng_value, fng_classification, generated_at, any_stale,
     <table class="signal-table score-legend" style="margin-top:0; margin-bottom:0;">
       <thead><tr><th>Score range</th><th>Label</th><th>What it means</th></tr></thead>
       <tbody>
-        <tr><td>&ge; +3</td><td><span class="badge bullish">🟢 NEAR-TERM DIP ZONE</span></td><td class="watch">Near the low with improving momentum -- the confirmed-signal tier tracked in Performance</td></tr>
-        <tr><td>+1 to +2</td><td><span class="badge bullish">🟢 LEAN LONG</span></td><td class="watch">Mildly favorable, not a strong signal on its own</td></tr>
+        <tr><td>&ge; +4</td><td><span class="badge bullish">🟢 NEAR-TERM DIP ZONE</span></td><td class="watch">Near the low with improving momentum -- the confirmed-signal tier tracked in Performance</td></tr>
+        <tr><td>+1 to +3</td><td><span class="badge bullish">🟢 LEAN LONG</span></td><td class="watch">Mildly favorable, not a strong signal on its own</td></tr>
         <tr><td>-1 to 0</td><td><span class="badge neutral">🟡 NO CLEAR EDGE</span></td><td class="watch">Choppy, no clean setup right now</td></tr>
         <tr><td>&le; -2</td><td><span class="badge bearish">🔴 STRETCHED</span></td><td class="watch">Extended on this timeframe; poor risk/reward to chase</td></tr>
       </tbody>
@@ -2072,18 +2105,34 @@ if ('serviceWorker' in navigator) {{
     rows.push(['Volume confirmation', reading, pts]);
     total += pts;
 
+    var trendWindow = Math.min(closes.length, lookback * {INTRADAY_TREND_LOOKBACK_MULTIPLE});
+    var trendAvg = closes.slice(-trendWindow).reduce(function(a, b) {{ return a + b; }}, 0) / trendWindow;
+    var trendDistPct = trendAvg ? (price - trendAvg) / trendAvg * 100 : 0;
+    var trendSign = trendDistPct >= 0 ? '+' : '';
+    if (trendDistPct > 0) {{
+      pts = 1; reading = trendSign + trendDistPct.toFixed(1) + '% vs its longer-term average - broader trend still up';
+    }} else if (trendDistPct < -2) {{
+      pts = -1; reading = trendSign + trendDistPct.toFixed(1) + '% vs its longer-term average - broader downtrend, dip-buying against the grain';
+    }} else {{
+      pts = 0; reading = trendSign + trendDistPct.toFixed(1) + '% vs its longer-term average - broader trend flat';
+    }}
+    rows.push(['Broader trend filter', reading, pts]);
+    total += pts;
+
     var entry = recentLow;
     var stop = recentLow - atr;
     var risk = entry - stop;
-    var target1 = entry + risk;
-    var target2 = entry + 2 * risk;
+    var target1 = entry + {INTRADAY_TARGET_ATR_MULTIPLE} * risk;
+    var target2 = entry + 2 * {INTRADAY_TARGET_ATR_MULTIPLE} * risk;
+    var target1Pct = entry ? (target1 - entry) / entry * 100 : null;
+    var target1NetPct = target1Pct !== null ? target1Pct - {ROUND_TRIP_FEE_PCT} : null;
 
     var tier;
-    if (total >= 3) {{ tier = 'strong'; }}
+    if (total >= 4) {{ tier = 'strong'; }}
     else if (total >= 1) {{ tier = 'lean'; }}
     else if (total >= -1) {{ tier = 'neutral'; }}
     else {{ tier = 'bearish'; }}
-    var tradeable = stop < price && price < target1;
+    var tradeable = stop < price && price < target1 && target1NetPct !== null && target1NetPct >= {MIN_NET_PROFIT_PCT};
     if ((tier === 'strong' || tier === 'lean') && !tradeable) {{ tier = 'neutral'; }}
 
     var label, status, plain;
@@ -2092,14 +2141,13 @@ if ('serviceWorker' in navigator) {{
     else if (tier === 'neutral') {{ label = '🟡 NO CLEAR EDGE'; status = 'neutral'; plain = 'Choppy on this timeframe -- no clean setup right now.'; }}
     else {{ label = '🔴 STRETCHED - AVOID CHASING'; status = 'bearish'; plain = 'Extended on this timeframe; chasing here has poor risk/reward.'; }}
 
-    var target1Pct = entry ? (target1 - entry) / entry * 100 : null;
     var target2Pct = entry ? (target2 - entry) / entry * 100 : null;
     return {{
       label: label, status: status, score: total, rows: rows, plain: plain, price: price,
       trade: {{
         entry: entry, stop: stop, target1: target1, target2: target2,
         riskPct: entry ? (risk / entry * 100) : null,
-        target1NetPct: target1Pct !== null ? target1Pct - {ROUND_TRIP_FEE_PCT} : null,
+        target1NetPct: target1NetPct,
         target2NetPct: target2Pct !== null ? target2Pct - {ROUND_TRIP_FEE_PCT} : null
       }}
     }};
