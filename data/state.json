@@ -4,7 +4,7 @@
   "_alerts_state": {
     "btc-resistance-break": {
       "triggered": true,
-      "last_triggered_at": "2026-09-18 20:35:19"
+      "last_triggered_at": "2026-09-18 20:40:26"
     },
     "btc-support-break": {
       "triggered": false,
@@ -12,7 +12,7 @@
     },
     "eth-resistance-break": {
       "triggered": true,
-      "last_triggered_at": "2026-09-18 20:35:19"
+      "last_triggered_at": "2026-09-18 20:40:26"
     },
     "eth-support-break": {
       "triggered": false,
@@ -1517,9 +1517,9 @@
       "stale": false
     },
     "pump-fun": {
-      "label": "\ud83d\udd34 CAUTION - REDUCE NEW BUYS",
+      "label": "\ud83d\udd34 DISTRIBUTION ZONE",
       "status": "bearish",
-      "score": -4,
+      "score": -7,
       "rows": [
         [
           "Price vs. recent range",
@@ -1538,12 +1538,12 @@
         ],
         [
           "Recent trend",
-          "Trending up steadily - healthy",
-          1
+          "Shooting straight up - classic blow-off top risk, don't chase",
+          -2
         ],
         [
           "Stretch from long-term average",
-          "+100.0% above its long-term average - very stretched",
+          "+99.4% above its long-term average - very stretched",
           -2
         ],
         [
@@ -1552,16 +1552,16 @@
           0
         ]
       ],
-      "plain": "Getting risky - I'd hold off on new buys until this cools down.",
+      "plain": "Looks stretched and euphoric - historically the zone where smart money sells, not buys.",
       "id": "pump-fun",
       "symbol": "PUMP",
       "name": "Pump.fun",
-      "price": 0.00440289,
-      "pct_24h": 12.29351,
-      "pct_7d": 16.6,
+      "price": 0.00439016,
+      "pct_24h": 11.89636,
+      "pct_7d": 24.1,
       "support_30d": 0.0034754143700465503,
       "resistance_30d": 0.0052249885406471875,
-      "as_of": "2026-09-18 19:40:23",
+      "as_of": "2026-09-18 20:40:26",
       "stale": false
     },
     "venice-token": {
@@ -2167,7 +2167,7 @@
         ],
         [
           "Stretch from long-term average",
-          "-20.5% below its long-term average - confirmed downtrend",
+          "-19.5% below its long-term average - confirmed downtrend",
           -1
         ],
         [
@@ -2180,12 +2180,12 @@
       "id": "canton-network",
       "symbol": "CC",
       "name": "Canton",
-      "price": 0.108902,
-      "pct_24h": 6.88017,
-      "pct_7d": 9.4,
+      "price": 0.110176,
+      "pct_24h": 11.03508,
+      "pct_7d": 12.0,
       "support_30d": 0.09077045047943234,
       "resistance_30d": 0.12396615653575341,
-      "as_of": "2026-09-18 16:30:33",
+      "as_of": "2026-09-18 20:40:26",
       "stale": false
     },
     "internet-computer": {
@@ -2421,11 +2421,11 @@
       "symbol": "SHIB",
       "name": "Shiba Inu",
       "price": 5.48e-06,
-      "pct_24h": 6.87932,
-      "pct_7d": 4.5,
+      "pct_24h": 6.59574,
+      "pct_7d": 6.7,
       "support_30d": 4.9340727446608154e-06,
       "resistance_30d": 5.903506876405612e-06,
-      "as_of": "2026-09-18 19:50:32",
+      "as_of": "2026-09-18 20:40:26",
       "stale": false
     },
     "near": {
@@ -3515,14 +3515,14 @@
     "key": "BTC",
     "name": "Bitcoin",
     "emoji": "\u20bf",
-    "price": 81006,
+    "price": 80980,
     "high_24h": 81304,
     "low_24h": 76205,
-    "pct_24h": 5.74808,
+    "pct_24h": 5.73821,
     "pct_7d": 5.4,
     "pct_30d": 18.7,
-    "sma50": 72473.55549714663,
-    "sma200": 70387.87142498963,
+    "sma50": 72472.69070314987,
+    "sma200": 70387.65522649045,
     "support_30d": 73020.94563440893,
     "resistance_30d": 81264.70153038795,
     "mark_price": 80993.2,
@@ -3537,16 +3537,16 @@
     "key": "ETH",
     "name": "Ethereum",
     "emoji": "\u039e",
-    "price": 2628.32,
+    "price": 2626.06,
     "high_24h": 2643.34,
     "low_24h": 2435.96,
-    "pct_24h": 7.1192,
+    "pct_24h": 7.09593,
     "pct_7d": 4.0,
     "pct_30d": 26.2,
-    "sma50": 2242.151157853872,
-    "sma200": 2069.942648544933,
+    "sma50": 2242.100261359167,
+    "sma200": 2069.929924421257,
     "support_30d": 2326.5282334236576,
-    "resistance_30d": 2628.1579723882123,
+    "resistance_30d": 2625.613147652957,
     "mark_price": 2599.43,
     "index_price": 2599.8744186,
     "funding_rate": 0.0001,
