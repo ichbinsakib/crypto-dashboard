@@ -4,7 +4,7 @@
   "_alerts_state": {
     "btc-resistance-break": {
       "triggered": true,
-      "last_triggered_at": "2026-09-18 17:05:22"
+      "last_triggered_at": "2026-09-18 17:10:29"
     },
     "btc-support-break": {
       "triggered": false,
@@ -12,7 +12,7 @@
     },
     "eth-resistance-break": {
       "triggered": true,
-      "last_triggered_at": "2026-09-18 17:05:22"
+      "last_triggered_at": "2026-09-18 17:10:29"
     },
     "eth-support-break": {
       "triggered": false,
@@ -1903,12 +1903,12 @@
     "mantle": {
       "label": "\ud83d\udfe1 HOLD / NEUTRAL",
       "status": "neutral",
-      "score": 0,
+      "score": -1,
       "rows": [
         [
           "Price vs. recent range",
-          "Sitting in the middle of its 30-day range",
-          0
+          "Near its 30-day high (~$0.6365) - less room to run",
+          -1
         ],
         [
           "Crowd mood (Fear & Greed)",
@@ -1927,7 +1927,7 @@
         ],
         [
           "Stretch from long-term average",
-          "+5.2% vs its long-term average - not stretched either way",
+          "+5.8% vs its long-term average - not stretched either way",
           0
         ],
         [
@@ -1940,12 +1940,12 @@
       "id": "mantle",
       "symbol": "MNT",
       "name": "Mantle",
-      "price": 0.602587,
-      "pct_24h": 5.61786,
-      "pct_7d": -0.4,
+      "price": 0.605907,
+      "pct_24h": 6.34598,
+      "pct_7d": 2.1,
       "support_30d": 0.4827910728759477,
       "resistance_30d": 0.6365218632454678,
-      "as_of": "2026-09-18 16:10:24",
+      "as_of": "2026-09-18 17:10:29",
       "stale": false
     },
     "polkadot": {
@@ -2575,7 +2575,7 @@
     "bitway": {
       "label": "\ud83d\udfe1 HOLD / NEUTRAL",
       "status": "neutral",
-      "score": 0,
+      "score": -1,
       "rows": [
         [
           "Price vs. recent range",
@@ -2589,8 +2589,8 @@
         ],
         [
           "Market phase (best guess)",
-          "Basing near the bottom - phase where smart money accumulates",
-          2
+          "Established uptrend - phase where price marks up",
+          1
         ],
         [
           "Recent trend",
@@ -2599,7 +2599,7 @@
         ],
         [
           "Stretch from long-term average",
-          "+432.9% above its long-term average - very stretched",
+          "+419.4% above its long-term average - very stretched",
           -2
         ],
         [
@@ -2612,12 +2612,12 @@
       "id": "bitway",
       "symbol": "BTW",
       "name": "Bitway",
-      "price": 0.674278,
-      "pct_24h": -5.93266,
-      "pct_7d": 33.3,
+      "price": 0.656698,
+      "pct_24h": -6.70947,
+      "pct_7d": 30.4,
       "support_30d": 0.39821683332776975,
       "resistance_30d": 0.7491686401380382,
-      "as_of": "2026-09-18 15:50:26",
+      "as_of": "2026-09-18 17:10:29",
       "stale": false
     },
     "world-liberty-financial": {
@@ -2805,11 +2805,11 @@
       "symbol": "M",
       "name": "MemeCore",
       "price": 1.33,
-      "pct_24h": 17.88575,
-      "pct_7d": 11.2,
+      "pct_24h": 16.70232,
+      "pct_7d": 13.2,
       "support_30d": 1.0402044506518406,
-      "resistance_30d": 1.3286004146519301,
-      "as_of": "2026-09-18 15:35:19",
+      "resistance_30d": 1.329304697843082,
+      "as_of": "2026-09-18 17:10:29",
       "stale": false
     },
     "aave": {
@@ -3467,14 +3467,14 @@
     "key": "BTC",
     "name": "Bitcoin",
     "emoji": "\u20bf",
-    "price": 80774,
+    "price": 80800,
     "high_24h": 81213,
     "low_24h": 76205,
-    "pct_24h": 5.18123,
+    "pct_24h": 5.22422,
     "pct_7d": 4.1,
     "pct_30d": 18.0,
-    "sma50": 72468.89483082826,
-    "sma200": 70386.70625841003,
+    "sma50": 72469.82799609323,
+    "sma200": 70386.93954972627,
     "support_30d": 73020.94563440893,
     "resistance_30d": 81264.70153038795,
     "mark_price": 80993.2,
@@ -3489,16 +3489,16 @@
     "key": "ETH",
     "name": "Ethereum",
     "emoji": "\u039e",
-    "price": 2590.63,
+    "price": 2590.02,
     "high_24h": 2608.29,
     "low_24h": 2435.96,
-    "pct_24h": 4.77056,
+    "pct_24h": 4.86389,
     "pct_7d": 1.4,
     "pct_30d": 24.5,
-    "sma50": 2241.3888449090746,
-    "sma200": 2069.752070308734,
+    "sma50": 2241.388985161884,
+    "sma200": 2069.7521053719365,
     "support_30d": 2326.5282334236576,
-    "resistance_30d": 2590.0423251483426,
+    "resistance_30d": 2590.0493377888297,
     "mark_price": 2599.43,
     "index_price": 2599.8744186,
     "funding_rate": 0.0001,
