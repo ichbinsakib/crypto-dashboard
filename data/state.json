@@ -4,7 +4,7 @@
   "_alerts_state": {
     "btc-resistance-break": {
       "triggered": true,
-      "last_triggered_at": "2026-09-18 18:20:26"
+      "last_triggered_at": "2026-09-18 18:25:21"
     },
     "btc-support-break": {
       "triggered": false,
@@ -12,7 +12,7 @@
     },
     "eth-resistance-break": {
       "triggered": true,
-      "last_triggered_at": "2026-09-18 18:20:26"
+      "last_triggered_at": "2026-09-18 18:25:21"
     },
     "eth-support-break": {
       "triggered": false,
@@ -679,7 +679,7 @@
         ],
         [
           "Stretch from long-term average",
-          "+1.0% vs its long-term average - not stretched either way",
+          "+2.0% vs its long-term average - not stretched either way",
           0
         ],
         [
@@ -692,12 +692,12 @@
       "id": "cardano",
       "symbol": "ADA",
       "name": "Cardano",
-      "price": 0.218851,
-      "pct_24h": 9.23902,
-      "pct_7d": 3.0,
+      "price": 0.221063,
+      "pct_24h": 9.46348,
+      "pct_7d": 5.2,
       "support_30d": 0.19267185961239683,
       "resistance_30d": 0.2291047455940254,
-      "as_of": "2026-09-18 15:12:52",
+      "as_of": "2026-09-18 18:25:21",
       "stale": false
     },
     "stellar": {
@@ -2573,9 +2573,9 @@
       "stale": false
     },
     "bitway": {
-      "label": "\ud83d\udfe1 HOLD / NEUTRAL",
-      "status": "neutral",
-      "score": -1,
+      "label": "\ud83d\udd34 CAUTION - REDUCE NEW BUYS",
+      "status": "bearish",
+      "score": -4,
       "rows": [
         [
           "Price vs. recent range",
@@ -2589,8 +2589,8 @@
         ],
         [
           "Market phase (best guess)",
-          "Established uptrend - phase where price marks up",
-          1
+          "Very extended after a big run - phase where smart money sells",
+          -2
         ],
         [
           "Recent trend",
@@ -2599,7 +2599,7 @@
         ],
         [
           "Stretch from long-term average",
-          "+419.4% above its long-term average - very stretched",
+          "+416.4% above its long-term average - very stretched",
           -2
         ],
         [
@@ -2608,16 +2608,16 @@
           0
         ]
       ],
-      "plain": "No real edge either way right now - fine to just wait and watch.",
+      "plain": "Getting risky - I'd hold off on new buys until this cools down.",
       "id": "bitway",
       "symbol": "BTW",
       "name": "Bitway",
-      "price": 0.656698,
-      "pct_24h": -6.70947,
-      "pct_7d": 30.4,
+      "price": 0.65273,
+      "pct_24h": -7.72932,
+      "pct_7d": 31.3,
       "support_30d": 0.39821683332776975,
       "resistance_30d": 0.7491686401380382,
-      "as_of": "2026-09-18 17:10:29",
+      "as_of": "2026-09-18 18:25:21",
       "stale": false
     },
     "world-liberty-financial": {
@@ -2771,7 +2771,7 @@
       "rows": [
         [
           "Price vs. recent range",
-          "Near its 30-day high (~$1.33) - less room to run",
+          "Near its 30-day high (~$1.32) - less room to run",
           -1
         ],
         [
@@ -2805,11 +2805,11 @@
       "symbol": "M",
       "name": "MemeCore",
       "price": 1.33,
-      "pct_24h": 15.03452,
-      "pct_7d": 13.2,
+      "pct_24h": 14.55942,
+      "pct_7d": 12.0,
       "support_30d": 1.0402044506518406,
-      "resistance_30d": 1.3330888860314454,
-      "as_of": "2026-09-18 17:20:26",
+      "resistance_30d": 1.3236876335099037,
+      "as_of": "2026-09-18 18:25:21",
       "stale": false
     },
     "aave": {
@@ -3467,14 +3467,14 @@
     "key": "BTC",
     "name": "Bitcoin",
     "emoji": "\u20bf",
-    "price": 80859,
+    "price": 80881,
     "high_24h": 81213,
     "low_24h": 76205,
-    "pct_24h": 5.42373,
+    "pct_24h": 5.47233,
     "pct_7d": 3.9,
     "pct_30d": 18.2,
-    "sma50": 72470.29575559254,
-    "sma200": 70387.0564896011,
+    "sma50": 72471.32141217333,
+    "sma200": 70387.31290374631,
     "support_30d": 73020.94563440893,
     "resistance_30d": 81264.70153038795,
     "mark_price": 80993.2,
@@ -3489,16 +3489,16 @@
     "key": "ETH",
     "name": "Ethereum",
     "emoji": "\u039e",
-    "price": 2605.87,
+    "price": 2607.21,
     "high_24h": 2608.29,
     "low_24h": 2435.96,
-    "pct_24h": 5.92214,
+    "pct_24h": 5.99476,
     "pct_7d": 1.1,
     "pct_30d": 24.8,
-    "sma50": 2241.6957051683817,
-    "sma200": 2069.8287853735605,
+    "sma50": 2241.732752732182,
+    "sma200": 2069.838047264511,
     "support_30d": 2326.5282334236576,
-    "resistance_30d": 2605.3853381136933,
+    "resistance_30d": 2607.237716303708,
     "mark_price": 2599.43,
     "index_price": 2599.8744186,
     "funding_rate": 0.0001,
