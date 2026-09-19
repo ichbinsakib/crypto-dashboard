@@ -169,6 +169,16 @@
       sel('f-range', [['7', '+/- 7 days'], ['30', '+/- 30 days'], ['90', '+/- 90 days'], ['all', 'All stored']], f.range) + '</div>';
   }
 
+  function contextCard(d) {
+    var items = d.context || [];
+    if (!items.length) return '';
+    return '<div class="ev-card"><h3>Market backdrop <small>Reported news and opinions - context only, not signals</small></h3>' + items.map(function (c) {
+      return '<div class="ev-scn"><b>' + (c.kind === 'news' ? 'News' : 'Opinion') + ': ' + esc(c.author) + ' &middot; ' + esc(c.date) + '</b><p>' + esc(c.claim) + '</p>' +
+        (c.points ? '<ul class="ev-evidence">' + c.points.map(function (x) { return '<li>' + esc(x) + '</li>'; }).join('') + '</ul>' : '') +
+        '<small>' + esc(c.how_to_use) + ' Source: ' + esc(c.source) + (c.kind === 'news' ? ' (not verified by this system).' : ' (an opinion, not a fact).') + '</small></div>';
+    }).join('') + '</div>';
+  }
+
   function dashboard(d) {
     var now = Date.now(), dayEnd = new Date(); dayEnd.setHours(23, 59, 59, 999);
     var todayEt = new Date().toLocaleDateString('en-US', { timeZone: 'America/New_York' });
@@ -176,7 +186,7 @@
     var week = d.events.filter(function (e) { var t = new Date(e.release_datetime).getTime(); return t > now && t <= now + 7 * 86400000 && e.status === 'SCHEDULED'; });
     var filtered = d.events.filter(inRange).sort(function (a, b) { return new Date(b.release_datetime) - new Date(a.release_datetime); });
     return freshnessBanner(d) + sourcesRow(d) +
-      '<div class="ev-cards">' + riskCard(d) + fedwatchCard(d) + '</div>' + focusEvent(d) +
+      '<div class="ev-cards">' + riskCard(d) + fedwatchCard(d) + '</div>' + contextCard(d) + focusEvent(d) +
       '<div class="ev-card"><h3>Today (ET)</h3>' + eventTable(today, 'No events today.') + '</div>' +
       '<div class="ev-card"><h3>Next 7 days</h3>' + eventTable(week, 'No scheduled events in the next 7 days.') + '</div>' +
       '<div class="ev-card"><h3>All events</h3>' + filtersBar(d) + '<div id="ev-list">' + eventTable(filtered, 'No events match these filters.') + '</div></div>' +

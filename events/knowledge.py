@@ -41,13 +41,56 @@ VIEWPOINTS = {
 }
 
 
-def viewpoint_for(family):
-    """Attributed opinions relevant to an event family, as short labelled evidence lines."""
+# Dated context. `kind` is "opinion" (one person's view) or "news" (reported by a named outlet, entered by the
+# owner from a screenshot; the system has not verified it). Items expire so old context is never shown as current.
+NEWS = {
+    "reuters_fed_vs_treasury_2026_09_16": {
+        "kind": "news",
+        "author": "Reuters",
+        "source": "Reuters, Sept 16, 2026 (owner-supplied screenshot; no link stored)",
+        "date": "2026-09-16",
+        "valid_days": 30,
+        "families": ["FOMC", "CPI", "PPI", "PCE"],
+        "claim": ("Reuters reports that surging government bond yields are raising credit costs across the US economy and could "
+                  "factor into Fed deliberations, but analysts expect the Fed to resist any explicit call from the Trump "
+                  "administration to bail out the bond market. Treasury Secretary Scott Bessent has taken an unusually "
+                  "activist role in trying to tamp down yields he considers misaligned with the economic outlook."),
+        "points": [
+            "Analysts: the Fed is likely to strongly resist Treasury pressure on bond buying.",
+            "Fed buying bonds to cap yields would conflict with its inflation fight.",
+            "Some argue the Fed may need to give more weight to rising government interest costs.",
+        ],
+        "how_to_use": ("Watch for any Fed language on its balance sheet or bond buying and for the yield reaction. A Fed that holds firm "
+                       "keeps rate-cut hopes tied to inflation data; a shift toward capping yields would be a policy change worth "
+                       "treating as high-volatility."),
+    },
+}
+
+
+def _active(item, now):
+    import datetime as _dt
+    if now is None or "valid_days" not in item:
+        return True
+    return now.date() <= _dt.date.fromisoformat(item["date"]) + _dt.timedelta(days=item["valid_days"])
+
+
+def context_items(now=None, family=None):
+    """Opinions and news still within their validity window (optionally for one event family)."""
     out = []
-    for v in VIEWPOINTS.values():
-        if family in v["families"]:
-            out.append(f"Analyst viewpoint (opinion, not fact; {v['author']}, {v['date']}): {v['claim']} "
-                       f"Use as context only - {v['how_to_use']}")
+    for key, v in list(VIEWPOINTS.items()) + list(NEWS.items()):
+        if _active(v, now) and (family is None or family in v["families"]):
+            out.append(dict(v, id=key, kind=v.get("kind", "opinion")))
+    return out
+
+
+def viewpoint_for(family, now=None):
+    """Labelled evidence lines for an event family from active opinions and news."""
+    out = []
+    for v in context_items(now, family):
+        label = "News" if v["kind"] == "news" else "Analyst viewpoint (opinion, not fact"
+        head = (f"News context (reported by {v['author']}, {v['date']}; not verified by this system): "
+                if v["kind"] == "news" else f"Analyst viewpoint (opinion, not fact; {v['author']}, {v['date']}): ")
+        out.append(f"{head}{v['claim']} Use as context only - {v['how_to_use']}")
     return out
 
 

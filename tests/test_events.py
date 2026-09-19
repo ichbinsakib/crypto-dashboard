@@ -480,3 +480,14 @@ class ViewpointTests(unittest.TestCase):
         self.assertEqual(knowledge.viewpoint_for("JOLTS"), [])
         v = knowledge.VIEWPOINTS["yields_demand_for_us_debt"]
         self.assertTrue(v["source"].startswith("https://x.com/") and v["date"])
+
+
+class NewsContextTests(unittest.TestCase):
+    def test_news_is_labelled_and_expires(self):
+        from events import knowledge
+        lines = knowledge.viewpoint_for("FOMC", utc(2026, 9, 20))
+        self.assertTrue(any("reported by Reuters" in x and "not verified" in x for x in lines))
+        self.assertTrue(any("Crypto Dada" in x for x in lines))
+        late = knowledge.viewpoint_for("FOMC", utc(2026, 11, 20))
+        self.assertFalse(any("Reuters" in x for x in late))          # 30-day validity passed
+        self.assertEqual(knowledge.context_items(utc(2026, 9, 20), "JOLTS"), [])

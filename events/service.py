@@ -10,7 +10,7 @@ import datetime as dt
 import logging
 import re
 
-from . import classify, config, engine, providers, reactions, timeutil
+from . import classify, config, engine, knowledge, providers, reactions, timeutil
 
 log = logging.getLogger("kairo.events")
 UTC = timeutil.UTC
@@ -343,7 +343,7 @@ def build_payload(store, cfg, status, now):
                            "message": None if fedwatch else "No automated FedWatch feed is permitted; an admin can enter a snapshot."}
     return {"generated_at": _iso(now), "events": out_events, "history": history,
             "meetings": [m for m in meetings if timeutil.parse_iso(m["decision_datetime"]) >= lo], "fedwatch": fedwatch,
-            "risk": risk, "sources": sources, "config": {k: cfg[k] for k in ("impact", "thresholds", "notifications")},
+            "risk": risk, "context": knowledge.context_items(now), "sources": sources, "config": {k: cfg[k] for k in ("impact", "thresholds", "notifications")},
             "reaction_assets": config.REACTION_ASSETS}
 
 
