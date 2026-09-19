@@ -19,7 +19,7 @@ PAYLOAD_DAYS_AHEAD = int(os.environ.get("EVENTS_PAYLOAD_DAYS_AHEAD", "75"))
 # How long a source's data is trusted before it is shown as RECENT / STALE (minutes).
 FRESHNESS = {"live_minutes": 30, "recent_minutes": 24 * 60}
 # Minimum refresh spacing per source (minutes) so a 5-minute job never hammers an official site.
-REFRESH_MINUTES = {"bls_schedule": 12 * 60, "fed_calendar": 24 * 60, "bls_actuals": 10, "fedwatch": 60, "reactions": 5}
+REFRESH_MINUTES = {"bls_schedule": 12 * 60, "fed_calendar": 24 * 60, "bls_actuals": 10, "fedwatch": 60, "reactions": 5, "fed_rates": 6 * 60}
 BACKOFF = {"base_minutes": 10, "max_minutes": 6 * 60}
 
 DEFAULTS = {

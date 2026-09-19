@@ -263,8 +263,13 @@ class FakeBLS(providers.BLSProvider):
 
 
 class FakeFed(providers.FederalReserveProvider):
-    def __init__(self, meetings=None, fail=False):
-        self.meetings, self.fail = meetings or [], fail
+    def __init__(self, meetings=None, fail=False, rates=None):
+        self.meetings, self.fail, self.rates = meetings or [], fail, rates
+
+    def fetch_rate_history(self):
+        if self.rates is None:
+            raise providers.ProviderError("no rate data in this test")
+        return self.rates
 
     def fetch_meetings(self, years):
         if self.fail:

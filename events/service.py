@@ -10,7 +10,7 @@ import datetime as dt
 import logging
 import re
 
-from . import classify, config, engine, knowledge, providers, reactions, timeutil
+from . import classify, config, engine, explain, knowledge, providers, reactions, timeutil
 
 log = logging.getLogger("kairo.events")
 UTC = timeutil.UTC
@@ -277,6 +277,71 @@ def refresh_reactions(store, status, cfg, now, prices, rows, force):
 
 # ---------------- public entry points ----------------
 
+def _at_or_before(series, day):
+    """Last value in [(date, value)] with date <= day, or None."""
+    best = None
+    for d, v in series:
+        if d <= day:
+            best = v
+        else:
+            break
+    return best
+
+
+def refresh_fed_rates(store, status, now, fed, force):
+    """Fill each FOMC meeting's rate before/after the decision from the Fed funds target history, and mark decided
+    meetings as RELEASED with a plain decision sentence. Rates lag by about a day, so a fresh decision shows as
+    'not recorded yet' until FRED updates - never guessed."""
+    if not _due(status, "fed_rates", now, force):
+        return
+    try:
+        lo, up = fed.fetch_rate_history()
+    except (providers.ProviderError, AttributeError) as e:
+        log.warning("fed rates failed: %s", e)
+        _record(store, status, "fed_rates", now, False, str(e))
+        return
+    lo_s, up_s = sorted(lo), sorted(up)
+    today = timeutil.utc_to_et(now)[0].date()
+    events = {r["id"]: r for r in store.select("economic_events")}
+    snaps = store.select("fedwatch_snapshots")
+    n = 0
+    for m in store.select("fomc_meetings"):
+        end = dt.date.fromisoformat(str(m["end_date"])[:10])
+        if end < today - dt.timedelta(days=1100):
+            continue
+        row = dict(m)
+        if end >= today:                                   # upcoming (or today, not yet in the data)
+            row.update(prev_rate_lower=lo_s[-1][1], prev_rate_upper=up_s[-1][1], rate_lower=None, rate_upper=None, change_bps=None)
+        else:
+            before_lo, before_up = _at_or_before(lo_s, end - dt.timedelta(days=1)), _at_or_before(up_s, end - dt.timedelta(days=1))
+            have_after = up_s[-1][0] >= end + dt.timedelta(days=1)
+            after_lo = _at_or_before(lo_s, end + dt.timedelta(days=1)) if have_after else None
+            after_up = _at_or_before(up_s, end + dt.timedelta(days=1)) if have_after else None
+            row.update(prev_rate_lower=before_lo, prev_rate_upper=before_up, rate_lower=after_lo, rate_upper=after_up,
+                       change_bps=round((after_up - before_up) * 100) if after_up is not None and before_up is not None else None,
+                       status="DECIDED" if after_up is not None else "SCHEDULED")
+        row["updated_at"] = _iso(now)
+        store.upsert("fomc_meetings", [row], "id")
+        n += 1
+        ev = events.get(m["id"])
+        decision_at = timeutil.parse_iso(m["decision_datetime"])
+        if ev and now - decision_at >= dt.timedelta(hours=1) and ev.get("status") == "SCHEDULED":
+            det = dict(ev.get("details") or {})
+            text = explain.decision_text(row)
+            det.update(decision=text, change_bps=row.get("change_bps"), rate_range=explain._rate_text(row.get("rate_lower"), row.get("rate_upper")),
+                       prev_range=explain._rate_text(row.get("prev_rate_lower"), row.get("prev_rate_upper")))
+            snap = [x for x in snaps if str(x["meeting_date"]) == str(m["end_date"]) and timeutil.parse_iso(x["snapshot_datetime"]) <= decision_at]
+            if snap:
+                last = max(snap, key=lambda x: x["snapshot_datetime"])
+                exp = max((("Cut", last.get("cut_probability") or 0), ("Hold", last.get("hold_probability") or 0), ("Hike", last.get("hike_probability") or 0)), key=lambda t: t[1])
+                det["expected_outcome"] = exp[0]
+                det["expected_probability"] = exp[1]
+            upd = {**ev, "status": "RELEASED", "details": det, "actual": row.get("rate_upper"), "previous": row.get("prev_rate_upper"),
+                   "last_updated": _iso(now), "updated_at": _iso(now)}
+            store.upsert("economic_events", [upd], "id")
+    _record(store, status, "fed_rates", now, True, f"{n} meetings updated")
+
+
 def run(store, now=None, bls=None, fed=None, prices=None, force=False):
     """Refresh everything that is due, then return the section payload for the admin dashboard."""
     now = now or timeutil.now_utc()
@@ -285,6 +350,8 @@ def run(store, now=None, bls=None, fed=None, prices=None, force=False):
     status = {r["source"]: r for r in store.select("provider_status")}
     rows = refresh_calendars(store, status, cfg, now, bls, fed, force)
     refresh_actuals(store, status, cfg, now, bls, rows, force)
+    refresh_fed_rates(store, status, now, fed, force)
+    rows = {r["id"]: r for r in store.select("economic_events")}
     refresh_reactions(store, status, cfg, now, prices, rows, force)
     return build_payload(store, cfg, status, now)
 
@@ -311,6 +378,7 @@ def build_payload(store, cfg, status, now):
                             data_status="LIVE" if age_h <= 24 else "RECENT" if age_h <= 24 * 7 else "STALE")
             if prev and prev.get("cut_probability") is not None and latest.get("cut_probability") is not None:
                 fedwatch["_shift_pp"] = round(latest["cut_probability"] - prev["cut_probability"], 1)
+    lo, hi = now - dt.timedelta(days=config.PAYLOAD_DAYS_BACK), now + dt.timedelta(days=config.PAYLOAD_DAYS_AHEAD)
     out_events = []
     for e in events:
         ev = dict(e)
@@ -320,30 +388,50 @@ def build_payload(store, cfg, status, now):
         ev["assessment"] = engine.assess(ev, now, cfg, fedwatch if ev["family"] in ("FOMC", "CPI", "NFP", "PCE") else None,
                                          next((r for r in by_event.get(ev["id"], []) if r["asset"] == "BTCUSDT"), None))
         ev["reactions"] = by_event.get(ev["id"], [])
+        ev.update(explain.enrich(ev, now, ev["reactions"]))
+        if ev["family"] == "FOMC" and ev["status"] == "RELEASED":
+            ev["result_line"] = det.get("decision") or "The decision is out; the new rate range is recorded about a day later (data unavailable yet)."
+            exp, bp = det.get("expected_outcome"), det.get("change_bps")
+            actual = None if bp is None else ("Hike" if bp > 0 else "Cut" if bp < 0 else "Hold")
+            if exp and actual:
+                ev["interpretation"] = ("The decision matched what markets expected." if exp == actual
+                                        else f"Markets expected a {exp.lower()} ({det.get('expected_probability'):g}% odds) but the Fed chose to {actual.lower()}.")
+            else:
+                ev["interpretation"] = None
         if ev["status"] == "RELEASED":
             ev["what_happened"] = engine.what_happened(ev, ev["reactions"])
         elif timeutil.parse_iso(ev["release_datetime"]) > now and ev["impact_level"] in engine.HIGH_LEVELS:
             hist = {d: engine.family_history(events, react, ev["family"], "BTCUSDT", cfg["weights"]["min_sample"], d)
                     for d in ("ABOVE", "INLINE", "BELOW")}
-            ev["scenarios"] = engine.scenario_cards(ev, hist, cfg)
+            ev["scenario_history"] = engine.scenario_cards(ev, hist, cfg)
         out_events.append(ev)
     risk = engine.event_risk(out_events, now, cfg)
     ms = cfg["weights"]["min_sample"]
     history = {fam: engine.family_history(events, react, fam, config.REACTION_ASSETS[0], ms)
                for fam in {e["family"] for e in events if e["status"] == "RELEASED"}}
-    lo, hi = now - dt.timedelta(days=config.PAYLOAD_DAYS_BACK), now + dt.timedelta(days=config.PAYLOAD_DAYS_AHEAD)
     out_events = [e for e in out_events if lo <= timeutil.parse_iso(e["release_datetime"]) <= hi]
     sources = {}
-    for name in ("bls_schedule", "fed_calendar", "bls_actuals", "reactions"):
+    for name in ("bls_schedule", "fed_calendar", "bls_actuals", "fed_rates", "reactions"):
         st = status.get(name) or {"source": name}
         sources[name] = {"data_status": freshness(st, now), "retrieved_at": st.get("retrieved_at"),
                          "last_attempt": st.get("last_attempt"), "message": st.get("message")}
     sources["fedwatch"] = {"data_status": fedwatch["data_status"] if fedwatch else "UNAVAILABLE",
                            "retrieved_at": fedwatch["snapshot_datetime"] if fedwatch else None,
                            "message": None if fedwatch else "No automated FedWatch feed is permitted; an admin can enter a snapshot."}
-    return {"generated_at": _iso(now), "events": out_events, "history": history,
-            "meetings": [m for m in meetings if timeutil.parse_iso(m["decision_datetime"]) >= lo], "fedwatch": fedwatch,
-            "risk": risk, "context": knowledge.context_items(now), "sources": sources, "config": {k: cfg[k] for k in ("impact", "thresholds", "notifications")},
+    bad = [k for k, v in sources.items() if k != "fedwatch" and v["data_status"] in ("STALE", "ERROR", "UNAVAILABLE")]
+    current_range = None
+    nm = next((m for m in sorted(meetings, key=lambda m: m["decision_datetime"]) if timeutil.parse_iso(m["decision_datetime"]) > now), None)
+    if nm and nm.get("prev_rate_upper") is not None:
+        current_range = (nm.get("prev_rate_lower"), nm["prev_rate_upper"])
+    summ = explain.summary(out_events, now, meetings)
+    fomc = explain.fomc_panel(meetings, {e["id"]: e for e in out_events}, by_event, fedwatch, current_range, now)
+    present = sorted({e["category"] for e in out_events})
+    return {"generated_at": _iso(now), "events": out_events, "history": history, "summary": summ, "fomc": fomc,
+            "glossary": explain.GLOSSARY, "categories": [{"key": k, "label": explain.CATEGORY_LABELS[k]} for k in present],
+            "not_tracked": ["GDP", "Retail sales", "PMI", "Consumer sentiment", "Other central banks (ECB, BOJ, BOE)"],
+            "meetings": [m for m in meetings if timeutil.parse_iso(m["decision_datetime"]) >= lo],
+            "fedwatch": fedwatch, "risk": risk, "context": knowledge.context_items(now), "sources": sources,
+            "data_problems": bad, "config": {k: cfg[k] for k in ("impact", "thresholds", "notifications")},
             "reaction_assets": config.REACTION_ASSETS}
 
 

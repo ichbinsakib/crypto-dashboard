@@ -134,6 +134,8 @@ KB = {
         "interp": {"ABOVE": "Import prices rose faster than expected.", "BELOW": "Import prices rose more slowly than expected.", "INLINE": "As expected."},
     },
 }
+SHORT = {'FOMC': 'The Fed decides whether to raise, cut or hold interest rates.', 'NFP': 'How many jobs the US added last month - a health check on the economy.', 'CPI': 'How fast everyday prices are rising - key to Fed rate expectations.', 'PPI': 'Business-level price changes; a hint of where inflation is heading.', 'PCE': "The Fed's favourite inflation measure.", 'JOLTS': 'How many job openings US employers have.', 'ECI': 'How much employers pay for labor.', 'PRODUCTIVITY': 'How much work output each hour produces.', 'IMPORT_PRICES': 'Price changes of goods the US imports and exports.'}
+
 GENERIC = {
     "title": None,
     "what": "A routine US government data release.",
@@ -217,7 +219,9 @@ def result_lines(event):
     kb = kb_for(fam)
     a, f, p = event.get("actual"), event.get("forecast"), event.get("previous")
     if a is None:
-        return "The result has not been recorded yet.", None
+        if fam in ("CPI", "NFP"):
+            return "The result has not been recorded yet.", None
+        return "The numbers for this release are not collected automatically here; see the official release for the result.", None
     cls, dirn = event.get("surprise_classification"), event.get("surprise_direction")
     if f is None or cls in (None, "PENDING", "NO_FORECAST"):
         return (f"Result: {a:g}" + (f" (previous {p:g})" if p is not None else "") + ". No forecast was recorded for this release, "
@@ -254,7 +258,7 @@ def enrich(event, now, reactions=None):
     t = tier(event.get("impact_level"))
     out = {"tier": t, "category": category_of(fam), "category_label": CATEGORY_LABELS[category_of(fam)],
            "plain_title": plain_title(event), "what": kb["what"], "why": kb["why"], "care": kb["care"],
-           "sensitivity": sensitivity(fam), "watch": kb["watch"], "one_liner": kb["why"].split(". ")[0].rstrip(".") + "."}
+           "sensitivity": sensitivity(fam), "watch": kb["watch"], "one_liner": SHORT.get(fam, "A routine data release; rarely moves markets.")}
     released = event.get("status") == "RELEASED"
     if released:
         line, interp = result_lines(event)
@@ -332,24 +336,38 @@ def _recent(events, now):
         rows.append(e)
     if not rows:
         return None
+    fed = next((e for e in rows if e.get("family") == "FOMC" and (e.get("details") or {}).get("decision")), None)
+    if fed:
+        rows = [e for e in rows if e is not fed]
+        head = f"Fed decision ({_et(fed['release_datetime']).strftime('%b')} {_et(fed['release_datetime']).day}): {fed['details']['decision']}"
+        if not rows:
+            return head
+    else:
+        head = None
     measured = [e for e in rows if e.get("surprise_classification") in ("MODERATE", "LARGE")]
     if not measured:
         names = ", ".join(plain_title(e) for e in rows[:2])
-        return f"Already released this week: {names}. No forecast was on file, so we can't say if they beat or missed expectations."
+        tail = f"Already released this week: {names}. No forecast was on file, so we can't say if they beat or missed expectations."
+        return f"{head} {tail}" if head else tail
     parts = []
     for e in measured[:2]:
         word = {"ABOVE": "higher", "BELOW": "lower"}.get(e.get("surprise_direction"), "different")
         parts.append(f"{plain_title(e)} came in {word} than expected")
-    return "Recent results: " + "; ".join(parts) + "."
+    return (head + " " if head else "") + "Recent results: " + "; ".join(parts) + "."
 
 
 def summary(events, now, meetings=None):
     """The 'Market Event Summary' card: level, one-paragraph headline, what it means, what to watch, one-line takeaway."""
     meter = risk_meter(events, now)
     up = _upcoming(events, now)
-    top = next(((h, e) for h, e in up if e.get("impact_level") == "VERY_HIGH"), None) or \
-        next(((h, e) for h, e in up if e.get("impact_level") == "HIGH"), None)
-    important = [e for h, e in up if e.get("impact_level") in ("VERY_HIGH", "HIGH")]
+    def weight(e):
+        base = e.get("impact_score") or {"VERY_HIGH": 9, "HIGH": 7}.get(e.get("impact_level"), 0)
+        return base + (1 if e.get("family") == "FOMC" else 0)
+    ranked = [(h, e) for h, e in up if e.get("impact_level") in ("VERY_HIGH", "HIGH")]
+    top = max(ranked, key=lambda x: (weight(x[1]), -x[0]), default=None)       # biggest first, earlier wins a tie
+    important = [e for h, e in ranked]
+    today_et = timeutil.utc_to_et(now)[0].date()
+    todays = [e for e in important if _et(e["release_datetime"]).date() == today_et]
     out = {"level": meter["key"], "label": meter["label"], "emoji": meter["emoji"], "why": meter["why"], "drivers": meter["drivers"],
            "scale": meter["scale"], "score": meter["score"]}
     if top:
@@ -361,12 +379,7 @@ def summary(events, now, meetings=None):
             head += f" {len(others)} other important event{'s' if len(others) != 1 else ''} follow{'' if len(others) != 1 else 's'} within the week."
         out["headline"] = head
         out["what_it_means"] = kb["why"]
-        watch = list(kb["watch"])
-        if e["family"] == "FOMC":
-            m = next((m for m in (meetings or []) if m.get("id") == e["id"]), None)
-            if m is not None and not m.get("press_conference", True):
-                watch = [w for w in watch if "press conference" not in w.lower()]
-        out["watch"] = watch[:4]
+        out["watch"] = list(kb["watch"])[:4]
         when = when_words(e["release_datetime"], now)
         if meter["key"] in ("very_high", "high"):
             out["takeaway"] = (f"Expect higher-than-normal volatility around the {plain_title(e)} ({when}). "
@@ -384,6 +397,8 @@ def summary(events, now, meetings=None):
         out["what_it_means"] = "With no big scheduled news, price moves are more likely to come from other things such as headlines, money flows or technical levels."
         out["watch"] = ["Nothing major on the calendar - check back before the next important release."]
         out["takeaway"] = "Event risk is low right now."
+    out["today"] = ("Today: " + "; ".join(f"{plain_title(e)} at {_et(e['release_datetime']).strftime('%I:%M %p').lstrip('0')} ET"
+                                        for e in todays[:3]) + ".") if todays else None
     out["theme"] = _themes(important) if len(important) > 1 else None
     out["recent"] = _recent(events, now)
     out["environment"] = {"low": "quiet", "moderate": "moderately busy", "high": "busy", "very_high": "very busy"}[meter["key"]]
@@ -440,9 +455,9 @@ def fomc_panel(meetings, events_by_id, reactions_by_event, fedwatch, current_ran
         panel["next"] = {
             "id": nxt["id"], "dates": f"{nxt['start_date']} to {nxt['end_date']}", "decision_time": timeutil.fmt_et(d),
             "when": when_words(nxt["decision_datetime"], now), "hours": round(hours_until(nxt["decision_datetime"], now), 1),
-            "press_conference": bool(nxt.get("press_conference", True)),
-            "press_note": ("A press conference by the Fed Chair follows the decision (usually 30 minutes later)." if nxt.get("press_conference", True)
-                           else "No press conference is listed for this meeting."),
+            # The Fed's page only links the press conference after it happens, so an upcoming meeting never proves there is none.
+            "press_conference": True,
+            "press_note": "The Fed Chair normally holds a press conference about 30 minutes after the decision.",
             "projections": bool(nxt.get("has_projections")),
             "projections_note": "New economic projections (the 'dot plot') are published at this meeting." if nxt.get("has_projections") else None,
             "previous_rate": _rate_text(nxt.get("prev_rate_lower") or (current_range[0] if current_range else None),

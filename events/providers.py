@@ -129,6 +129,14 @@ class FederalReserveProvider:
             raise ProviderError("Fed calendar parsed to zero meetings" + (f": {problems[:2]}" if problems else ""))
         return meetings, problems
 
+    def fetch_rate_history(self):
+        """Fed funds target range history from FRED (fredgraph.csv, no key): (lower, upper) as [(date, value)]."""
+        lo = parsers.parse_fredgraph_csv(http_get("https://fred.stlouisfed.org/graph/fredgraph.csv?id=DFEDTARL", timeout=40))
+        up = parsers.parse_fredgraph_csv(http_get("https://fred.stlouisfed.org/graph/fredgraph.csv?id=DFEDTARU", timeout=40))
+        if not lo or not up:
+            raise ProviderError("FRED returned no fed funds target data")
+        return lo, up
+
     def fetch_target_range(self):
         """Current fed funds target range from FRED (fredgraph.csv, no key needed) -> (lower, upper, as_of)."""
         try:

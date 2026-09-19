@@ -171,3 +171,57 @@
   .bd-grid3 { grid-template-columns: 1fr; } .bd-strip { grid-template-columns: repeat(2, minmax(0, 1fr)); }
   .bd-title h2 { font-size: 22px; } .bd-coin { width: 34px; height: 34px; font-size: 22px; } .bd-big { font-size: 32px; }
 }
+
+/* Market Events redesign: summary, timeline, detail levels, glossary */
+.ev-sum { border-width: 2px; }
+.ev-sum.lv-low { border-color: #22a06b; } .ev-sum.lv-moderate { border-color: #d6a400; } .ev-sum.lv-high { border-color: #e07b28; } .ev-sum.lv-very_high { border-color: #dc3545; }
+.ev-sumhead small { display: block; letter-spacing: 1.5px; color: var(--muted); font-size: 11px; font-weight: 700; }
+.ev-level { font-size: 22px; font-weight: 900; margin: 4px 0 8px; }
+.ev-scale { display: flex; gap: 4px; margin-bottom: 6px; }
+.ev-scale span { flex: 1; text-align: center; font-size: 10.5px; font-weight: 700; padding: 5px 2px; border-radius: 6px; background: var(--inset); color: var(--muted); }
+.ev-scale span.on.lv-low { background: #22a06b; color: #fff; } .ev-scale span.on.lv-moderate { background: #d6a400; color: #1a1400; }
+.ev-scale span.on.lv-high { background: #e07b28; color: #fff; } .ev-scale span.on.lv-very_high { background: #dc3545; color: #fff; }
+.ev-headline { font-size: 16px; line-height: 1.5; font-weight: 600; margin: 12px 0 6px; }
+.ev-line { margin: 6px 0; color: var(--text); font-size: 13.5px; line-height: 1.5; }
+.ev-take { margin-top: 10px; padding: 10px 12px; border-radius: 10px; background: var(--inset); border-left: 4px solid var(--accent); font-size: 14px; line-height: 1.5; }
+.ev-ul { margin: 4px 0; padding-left: 18px; line-height: 1.55; font-size: 13.5px; }
+.ev-why { margin-top: 8px; } .ev-why > summary, .ev-fold > summary { cursor: pointer; font-weight: 700; color: var(--accent); padding: 4px 0; }
+.ev-fold { padding: 10px 14px; }
+.ev-fcard { padding: 10px 12px; }
+.ev-filters { display: flex; flex-direction: column; gap: 8px; }
+.ev-chips { display: flex; flex-wrap: wrap; gap: 6px; }
+.ev-chipbtn { border: 1px solid var(--border); background: var(--panel); color: var(--muted); border-radius: 999px; padding: 6px 12px; font-size: 12.5px; font-weight: 700; cursor: pointer; }
+.ev-chipbtn.on { background: var(--accent); color: var(--on-accent); border-color: var(--accent); }
+.ev-chipbtn:disabled { opacity: 0.45; cursor: not-allowed; }
+.ev-day { margin: 16px 0 6px; font-size: 12px; font-weight: 800; letter-spacing: 1.4px; color: var(--muted); border-bottom: 1px solid var(--border); padding-bottom: 4px; }
+.ev-tl { display: flex; align-items: flex-start; gap: 12px; width: 100%; text-align: left; background: transparent; border: 0; border-bottom: 1px solid var(--border); padding: 10px 2px; cursor: pointer; color: var(--text); font: inherit; }
+.ev-tl:hover { background: rgba(127, 127, 127, 0.08); }
+.ev-time { flex: 0 0 68px; font-weight: 800; font-size: 13px; padding-top: 2px; }
+.ev-tlbody { flex: 1; min-width: 0; display: flex; flex-direction: column; gap: 3px; }
+.ev-tltitle b { font-size: 14.5px; } .ev-tltitle em { font-style: normal; color: var(--muted); font-size: 12px; margin-left: 6px; }
+.ev-tlsub { color: var(--muted); font-size: 12.5px; line-height: 1.4; }
+.ev-go { color: var(--muted); font-size: 22px; align-self: center; }
+.ev-tier { display: inline-block; font-size: 11px; font-weight: 800; padding: 2px 8px; border-radius: 999px; background: var(--chip); margin-right: 6px; white-space: nowrap; }
+.ev-tier.t-major { background: rgba(220, 53, 69, 0.16); color: #dc3545; } .ev-tier.t-high { background: rgba(224, 123, 40, 0.18); color: #c2610f; }
+.ev-tier.t-moderate { background: rgba(214, 164, 0, 0.2); color: #8a6a00; }
+.ev-empty { padding: 14px 4px; color: var(--muted); }
+.ev-kvgrid { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 10px; margin: 8px 0; }
+.ev-kvgrid div { background: var(--inset); border-radius: 10px; padding: 8px 10px; } .ev-kvgrid small { display: block; color: var(--muted); font-size: 11px; } .ev-kvgrid b { font-size: 14px; }
+.ev-last { margin-top: 10px; padding-top: 8px; border-top: 1px solid var(--border); } .ev-last p { margin: 4px 0; }
+.ev-dtitle { display: flex; align-items: center; gap: 10px; flex-wrap: wrap; } .ev-dtitle h3 { margin: 0; font-size: 20px; }
+.ev-three { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 14px; margin-top: 8px; } .ev-three p { margin: 4px 0; line-height: 1.5; font-size: 13.5px; }
+.ev-result { font-size: 15px; font-weight: 700; }
+.ev-sens { display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 8px 16px; margin: 6px 0; }
+.ev-sens div { display: flex; align-items: center; gap: 8px; } .ev-sens span { width: 52px; font-size: 12.5px; color: var(--muted); }
+.ev-sens i { flex: 1; height: 8px; border-radius: 4px; background: var(--inset); position: relative; overflow: hidden; }
+.ev-sens i::after { content: ''; position: absolute; inset: 0 auto 0 0; background: var(--accent); border-radius: 4px; width: 8%; }
+.ev-sens i.s1::after { width: 38%; background: #d6a400; } .ev-sens i.s2::after { width: 68%; background: #e07b28; } .ev-sens i.s3::after { width: 100%; background: #dc3545; }
+.ev-sens b { font-size: 12px; white-space: nowrap; }
+.ev-scen { width: 100%; border-collapse: collapse; font-size: 13.5px; margin: 6px 0; }
+.ev-scen th { text-align: left; color: var(--muted); font-weight: 600; padding: 6px 8px; border-bottom: 1px solid var(--border); }
+.ev-scen td { padding: 8px; border-bottom: 1px solid var(--border); vertical-align: top; } .ev-scen td:first-child { width: 34%; font-weight: 700; }
+.gl { border-bottom: 1px dotted var(--accent); cursor: help; position: relative; }
+.gl:hover::after, .gl:focus::after { content: attr(data-tip); position: absolute; left: 0; top: 1.5em; z-index: 40; width: max-content; max-width: 260px; background: var(--tip); color: var(--tip-text); padding: 8px 10px; border-radius: 8px; font-size: 12px; font-weight: 400; line-height: 1.4; box-shadow: var(--shadow-hover); }
+.gl:focus { outline: none; }
+.ev-sources > div { margin: 6px 0; font-size: 13px; }
+@media (max-width: 640px) { .ev-time { flex-basis: 58px; } .ev-level { font-size: 19px; } .ev-scale span { font-size: 9.5px; } }
