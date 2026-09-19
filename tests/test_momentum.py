@@ -114,6 +114,16 @@ class TrackerTests(unittest.TestCase):
         self.assertEqual(resolved, [])
 
 
+class PriceTextTests(unittest.TestCase):
+    def test_tiny_prices_keep_distinguishing_digits(self):
+        self.assertEqual(M.price_text(81704.3), "$81,704")
+        self.assertEqual(M.price_text(2.6499), "$2.65")
+        self.assertEqual(M.price_text(0.0901), "$0.0901")
+        entry, stop, target = 0.0000063, 0.0000062, 0.0000065
+        self.assertEqual(len({M.price_text(entry), M.price_text(stop), M.price_text(target)}), 3)
+        self.assertEqual(M.price_text(None), "n/a")
+
+
 class ScanAndOutputTests(unittest.TestCase):
     def test_scan_skips_and_tolerates_missing_pairs(self):
         good = with_breakout()

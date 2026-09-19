@@ -66,9 +66,22 @@ def compute_momentum_signal(klines, lookback, window_label=""):
 
 # ---------------- scanning, tracking, display ----------------
 import datetime
+import math
 import random
 import time
 from html import escape as _esc
+
+def price_text(v):
+    """Price with enough digits to tell entry, stop and target apart, including sub-cent coins (SHIB, PEPE...)."""
+    if v is None:
+        return "n/a"
+    if v >= 1000:
+        return f"${v:,.0f}"
+    if v >= 1:
+        return f"${v:,.2f}"
+    decimals = min(10, max(4, 2 - math.floor(math.log10(abs(v)))))
+    return f"${v:.{decimals}f}"
+
 
 def _now():
     return datetime.datetime.now(datetime.timezone.utc).replace(tzinfo=None)
@@ -180,7 +193,8 @@ def stats(resolved):
             "avg_net": sum(nets) / len(nets) if nets else None}
 
 
-def notification_events(opened, resolved_rows, fmt_price=lambda v: f"{v:.6g}"):
+def notification_events(opened, resolved_rows, fmt_price=None):
+    fmt_price = fmt_price or price_text
     ev = []
     for p in opened:
         ev.append({"id": f"momentum:{p['tf']}:{p['coin']}:{p['opened_at']}", "ts": p["opened_at"], "type": "signal",
@@ -195,9 +209,10 @@ def notification_events(opened, resolved_rows, fmt_price=lambda v: f"{v:.6g}"):
     return ev
 
 
-def panel_html(tracker, fmt_price=lambda v: f"{v:.6g}", now=None):
+def panel_html(tracker, fmt_price=None, now=None):
     """Card for the top of the Screener tab: open momentum calls plus the tier's own record."""
     now = now or _now()
+    fmt_price = fmt_price or price_text
     tracker = tracker or {}
     rows = []
     for pos in sorted(tracker.get("open", {}).values(), key=lambda p: p["opened_at"], reverse=True):

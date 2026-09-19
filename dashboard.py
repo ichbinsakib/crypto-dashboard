@@ -2747,7 +2747,7 @@ def main():
         log(f"Momentum: {len(new_momentum['open'])} open, {len(momentum_opened)} new, {len(momentum_resolved)} resolved this run")
     except Exception as e:  # noqa: BLE001 - an experimental tier must never break the main job
         log(f"Momentum tier skipped: {type(e).__name__}: {str(e)[:120]}")
-    momentum_html = momentum_mod.panel_html(new_momentum, fmt_usd_adaptive)
+    momentum_html = momentum_mod.panel_html(new_momentum)
 
     prev_resolved_keys = {(r["coin"], r["tf"], r["opened_at"]) for r in prev_pnl_state.get("resolved", [])}
     newly_resolved = [r for r in new_pnl_state.get("resolved", [])
@@ -2806,7 +2806,7 @@ def main():
         send_discord_strong_buy_alert(newly_strong)
 
     new_notification_events = build_new_notification_events(newly_strong, newly_resolved)
-    new_notification_events += momentum_mod.notification_events(momentum_opened, momentum_resolved, fmt_usd_adaptive)
+    new_notification_events += momentum_mod.notification_events(momentum_opened, momentum_resolved)
     new_notification_feed = update_notification_feed(state.get("_notification_feed", []), new_notification_events)
     if new_notification_events:
         log(f"NOTIFICATION EVENTS: {[e['id'] for e in new_notification_events]}")
