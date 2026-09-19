@@ -165,6 +165,8 @@ def build_rows(data):
         a, p = y["US10Y"]["price"] - y["US03MY"]["price"], y["US10Y"]["prev"] - y["US03MY"]["prev"]
         rows.append({"symbol": "US10Y-US03MY", "group": "Rates", "price": a, "change_abs": a - p, "change_pct": None, "unit": "pct",
                      "note": "inverted" if a < 0 else "positive slope"})
+    order = ["Crypto market", "Macro", "Equities", "Rates"]
+    rows.sort(key=lambda r: order.index(r["group"]) if r["group"] in order else len(order))   # stable: keeps the watchlist order inside a group
     return rows
 
 
