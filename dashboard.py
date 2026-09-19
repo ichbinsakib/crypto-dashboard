@@ -1731,7 +1731,7 @@ def render(coins_data, fng_value, fng_classification, generated_at, any_stale,
         follow_key = f"{tf_key}:{r['symbol']}"
         tf_follow_label = {"15m": "15-Minute", "1h": "1-Hour", "daily": "1-Day"}.get(tf_key, tf_key)
         pnl_key = f"{tf_key}:{r['symbol']}"
-        tracking_badge = ('<span class="badge alert-armed" title="This call is on the Performance tab\'s Currently Tracking list, being followed toward a win/loss outcome">📊 Tracking</span>'
+        tracking_badge = ('<span class="badge alert-armed" title="This call is on the Performance section\'s Currently Tracking list, being followed toward a win/loss outcome">📊 Tracking</span>'
                            if pnl_key in pnl_open_keys else '')
         return f"""
     <div class="screener-card {r['status']}" id="{card_id}">
@@ -1878,7 +1878,7 @@ def render(coins_data, fng_value, fng_classification, generated_at, any_stale,
     <div class="sub">In back-tests neither type showed a proven edge after fees (dip signals averaged below zero on a small sample; momentum about break-even), so treat every row as unproven and judge them by their records.</div>
   </details>
   {body}
-  <div class="sub" style="margin-top:8px;">{_esc(mrec)} Dip-buy record: see the Performance tab.</div>
+  <div class="sub" style="margin-top:8px;">{_esc(mrec)} Dip-buy record: see Performance below.</div>
   {misses}
 </div>
 """
@@ -1922,13 +1922,13 @@ def render(coins_data, fng_value, fng_classification, generated_at, any_stale,
   <div class="cycle-map spot-signal-card" style="margin-bottom:10px;">
     <div class="card-title">⭐ MY PICKS</div>
     <div class="sub">
-      Coins you've followed from the Screener tab. These are saved in <strong>this browser only</strong>
+      Coins you've followed from the Scanner tab. These are saved in <strong>this browser only</strong>
       (not synced anywhere) and stay here until you remove them &mdash; a personal way to track whether a
       call played out, not a real portfolio or trade log.
     </div>
   </div>
   <div id="my-picks-list" class="screener-grid">
-    <div class="sub" id="my-picks-empty">No followed picks yet. Go to the Screener tab and tap &#9734; Follow on any coin.</div>
+    <div class="sub" id="my-picks-empty">No followed picks yet. Go to the Scanner tab and tap &#9734; Follow on any coin.</div>
   </div>
 </div>
 """
@@ -2593,7 +2593,7 @@ if ('serviceWorker' in navigator) {{
     var followed = getFollowed();
     var keys = Object.keys(followed);
     if (!keys.length) {{
-      listEl.innerHTML = '<div class="sub" id="my-picks-empty">No followed picks yet. Go to the Screener tab and tap &#9734; Follow on any coin.</div>';
+      listEl.innerHTML = '<div class="sub" id="my-picks-empty">No followed picks yet. Go to the Scanner tab and tap &#9734; Follow on any coin.</div>';
       return;
     }}
     keys.sort(function(a, b) {{ return (followed[b].followedAt || '').localeCompare(followed[a].followedAt || ''); }});
@@ -2672,7 +2672,7 @@ window.kairoInitPnlSearch = function() {{
 </html>
 """
     portions = {
-        "screener": {"title": f'🔍 Screener<span class="info-tip" tabindex="0" data-tip="{screener_info_tip}">&#9432;</span>',
+        "screener": {"title": f'🔍 Scanner<span class="info-tip" tabindex="0" data-tip="{screener_info_tip}">&#9432;</span>',
                      "sort_order": 1, "html": screener_panel,
                      "data": {"intraday_cards": intraday_live_cards}},
         "bigcoins": {"title": "🪙 Big Coins", "sort_order": 2, "html": bigcoins_panel, "data": {}},

@@ -9,7 +9,7 @@
 
   var CFG = window.KAIRO_CONFIG || {};
   var DEV = !CFG.supabaseUrl;                       // no backend configured -> standalone preview, no login
-  var PORTION_LABELS = { screener: 'Screener', bigcoins: 'Big Coins', mypicks: 'My Picks', performance: 'Performance' };
+  var PORTION_LABELS = { screener: 'Scanner', bigcoins: 'Big Coins', mypicks: 'My Picks', performance: 'Performance (shown inside Scanner)' };
   var PORTION_KEYS = ['screener', 'bigcoins', 'mypicks', 'performance'];
   var sb = null;
   var S = { session: null, profile: null, rows: [], generatedAt: null, refreshSeconds: 120, refreshTimer: null, tickTimer: null, loading: false };
@@ -204,6 +204,19 @@
     var secs = rows.filter(function (r) { return r.key !== '_meta'; })
       .sort(function (a, b) { return (a.sort_order || 0) - (b.sort_order || 0); });
     var root = $('tabs-root');
+
+    // Scanner and Performance are one screen: the performance record sits under the scanner tables. Access control is
+    // unchanged - someone who only has one of the two sections just sees that one.
+    var scr = secs.filter(function (r) { return r.key === 'screener'; })[0];
+    var perf = secs.filter(function (r) { return r.key === 'performance'; })[0];
+    if (scr && perf) {
+      var cut = scr.html.lastIndexOf('</div>');
+      var embedded = String(perf.html || '').replace('class="panel panel-performance"', 'class="perf-embed"');
+      scr = Object.assign({}, scr, { html: scr.html.slice(0, cut) + '<div class="perf-head">\uD83D\uDCCA PERFORMANCE <span>how the signals above have actually done</span></div>' + embedded + scr.html.slice(cut) });
+      secs = secs.filter(function (r) { return r.key !== 'performance' && r.key !== 'screener'; });
+      secs.push(scr);
+      secs.sort(function (a, b) { return (a.sort_order || 0) - (b.sort_order || 0); });
+    }
 
     // Keep the reader where they were across a refresh: which top-level tab and nested sub-tab.
     var checked = {};
