@@ -290,7 +290,7 @@ def evaluate_alerts(coins_data, alerts_config, prev_alerts_state, generated_at):
     return results, new_alerts_state, newly_triggered
 
 
-def find_strong_buys(coins_data, spot_signals_by_coin, screener_results, intraday_results):
+def find_strong_buys(coins_data, spot_signals_by_coin, screener_results, intraday_results, cooling=None):
     """Only the TOP bullish tier counts as a "strong buy" -- ACCUMULATION ZONE on the daily
     models, NEAR-TERM DIP ZONE on the 15m/1h models. The weaker LEAN ACCUMULATE/LEAN LONG
     tier (a mild lean, not a strong signal per the model's own wording) is intentionally
@@ -312,6 +312,8 @@ def find_strong_buys(coins_data, spot_signals_by_coin, screener_results, intrada
     for tf_key, results in intraday_results.items():
         tf_name = {"15m": "15-Minute", "1h": "1-Hour", "daily": "1-Day"}.get(tf_key, tf_key)
         for r in results:
+            if f"{tf_key}:{r['symbol']}" in (cooling or {}):
+                continue  # lost/expired recently: no new "signal" (or alert) until the cooldown ends
             if (r.get("score") or 0) >= STRONG_INTRADAY_SCORE:
                 # "scanner-" prefix keeps this distinct from the daily:{symbol} keys above --
                 # "daily" is also a valid tf_key here now (the unified Scanner model), and
@@ -413,6 +415,22 @@ def update_notification_feed(prev_feed, new_events):
     return feed[:NOTIFICATION_FEED_MAX]
 
 
+def cooldown_keys(resolved, now=None):
+    """{"tf:COIN": until} for coin+timeframes that recently lost or expired. Used both to stop the tracker
+    opening a new position and to stop a "New signal" notification for a call that isn't being tracked."""
+    now = now or datetime.datetime.now()
+    cooldown_until = {}
+    for r in resolved:
+        if r["result"] not in ("loss", "expired"):
+            continue
+        key = f"{r['tf']}:{r['coin']}"
+        until = (datetime.datetime.fromisoformat(r["resolved_at"])
+                 + datetime.timedelta(hours=PNL_EXPIRY_HOURS.get(r["tf"], 24)))
+        if until > now and (key not in cooldown_until or until > cooldown_until[key]):
+            cooldown_until[key] = until
+    return cooldown_until
+
+
 def update_pnl_tracker(prev_pnl, signal_results):
     """Tracks whether the scanner's own bullish calls actually played out, across 15m/1h
     (one unambiguous ATR-based entry/stop/target) and daily (the breakout scenario from
@@ -463,15 +481,7 @@ def update_pnl_tracker(prev_pnl, signal_results):
     # let a position resolve is a reasonable amount of time to require the range to actually
     # change before trusting a fresh signal on it again. Wins don't trigger a cooldown -- a
     # confirmed win doesn't mean the coin should be avoided.
-    cooldown_until = {}
-    for r in resolved:
-        if r["result"] not in ("loss", "expired"):
-            continue
-        key = f"{r['tf']}:{r['coin']}"
-        until = (datetime.datetime.fromisoformat(r["resolved_at"])
-                 + datetime.timedelta(hours=PNL_EXPIRY_HOURS.get(r["tf"], 24)))
-        if key not in cooldown_until or until > cooldown_until[key]:
-            cooldown_until[key] = until
+    cooldown_until = cooldown_keys(resolved, now)
 
     # Open new positions for currently-bullish coins not already being tracked. These are
     # left untouched (not resolution-checked) until at least the next run.
@@ -2729,7 +2739,8 @@ def main():
         f.write(html)
     copy_static_assets()
 
-    strong_buys = find_strong_buys(coins_data, spot_signals_by_coin, screener_results, intraday_results)
+    strong_buys = find_strong_buys(coins_data, spot_signals_by_coin, screener_results, intraday_results,
+                                  cooldown_keys(new_pnl_state.get("resolved", [])))
     prev_strong_state = state.get("_strong_buy_state", {})
     newly_strong, new_strong_state = evaluate_strong_buys(strong_buys, prev_strong_state)
     if newly_strong:
