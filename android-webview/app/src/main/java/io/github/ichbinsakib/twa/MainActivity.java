@@ -31,7 +31,7 @@ public class MainActivity extends Activity {
         super.onCreate(savedInstanceState);
 
         webView = new WebView(this);
-        webView.setBackgroundColor(0xFF0A0E14); // matches the dashboard's dark theme, so the
+        webView.setBackgroundColor(0xFFEEF3FB); // matches the dashboard's light theme, so the
                                                   // padded-out system-bar area isn't a flash of
                                                   // white/transparent before the page paints
         setContentView(webView);
