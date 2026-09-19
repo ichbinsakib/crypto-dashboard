@@ -398,3 +398,31 @@ header { padding-top: calc(10px + var(--sat)); padding-left: calc(16px + var(--s
 .perf-embed { margin-top: 6px; }
 .perf-head { margin: 26px 2px 10px; padding-top: 16px; border-top: 2px solid var(--border); font-size: 15px; font-weight: 800; letter-spacing: 1px; }
 .perf-head span { display: block; margin-top: 2px; font-size: 12.5px; font-weight: 500; letter-spacing: 0; color: var(--muted); }
+
+/* Watchlist charts (dark, terminal style) */
+.wl-row { cursor: pointer; }
+.wl-row:hover td { background: rgba(127, 127, 127, 0.07); }
+.wl-row.open td { background: rgba(2, 132, 199, 0.10); }
+.wl-det { text-align: right; }
+.wl-chart-btn { background: var(--inset); color: var(--accent); border: 1px solid var(--border); border-radius: 8px; padding: 5px 10px; font-size: 12px; font-weight: 700; cursor: pointer; white-space: nowrap; }
+.wl-row.open .wl-chart-btn { background: var(--accent); color: var(--on-accent); border-color: var(--accent); }
+.wl-chart-row td { padding: 0 !important; background: transparent !important; border-bottom: 0; }
+.kc-host { padding: 6px 0 12px; }
+.kc { background: #0f1115; border-radius: 12px; overflow: hidden; color: #d1d4dc; border: 1px solid #1e222b; }
+.kc-head { display: flex; flex-wrap: wrap; align-items: baseline; gap: 4px 14px; padding: 10px 12px 2px; }
+.kc-title { font-size: 14px; color: #fff; }
+.kc-ohlc { font-size: 12px; color: #aeb4c0; } .kc-ohlc b { color: #e6e9ef; font-weight: 600; }
+.kc .up { color: #089981; } .kc .down { color: #f23645; }
+.kc-ctl { display: flex; flex-wrap: wrap; gap: 8px 14px; padding: 6px 12px 8px; }
+.kc-ranges, .kc-emas { display: flex; flex-wrap: wrap; gap: 6px; }
+.kc-ctl button { background: #171a21; color: #aeb4c0; border: 1px solid #262b36; border-radius: 6px; padding: 4px 10px; font-size: 12px; font-weight: 700; cursor: pointer; min-height: 30px; }
+.kc-ctl button.on { background: #2a2e39; color: #fff; border-color: #3a4050; }
+.kc-emas button.on { border-color: var(--c); color: var(--c); }
+.kc-plot { width: 100%; touch-action: pan-y; }
+.kc-svg { display: block; }
+.kc-note { padding: 8px 12px 10px; color: #8b92a1; font-size: 11.5px; line-height: 1.5; }
+@media (max-width: 720px) {
+  .wl-table td, .wl-table th { padding: 10px 6px; }
+  .wl-chart-btn { min-height: 40px; padding: 6px 10px; }
+  .kc-ctl button { min-height: 36px; }
+}

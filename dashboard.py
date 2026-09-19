@@ -2075,7 +2075,7 @@ def render(coins_data, fng_value, fng_classification, generated_at, any_stale,
         "anonKey": os.environ.get("KAIRO_SUPABASE_ANON_KEY", ""),
     }).replace("</", "<\\/")
     _h = hashlib.md5()
-    for _name in ("app.js", "app.css", "events.js"):
+    for _name in ("app.js", "app.css", "events.js", "chart.js"):
         try:
             with open(os.path.join(STATIC_DIR, _name), "rb") as _f:
                 _h.update(_f.read())
@@ -2715,6 +2715,7 @@ window.kairoInitPnlSearch = function() {{
   }});
 }};
 </script>
+<script src="chart.js?v={asset_v}"></script>
 <script src="events.js?v={asset_v}"></script>
 <script src="app.js?v={asset_v}"></script>
 </body>
@@ -2724,7 +2725,7 @@ window.kairoInitPnlSearch = function() {{
         "screener": {"title": f'🔍 Scanner<span class="info-tip" tabindex="0" data-tip="{screener_info_tip}">&#9432;</span>',
                      "sort_order": 1, "html": screener_panel,
                      "data": {"intraday_cards": intraday_live_cards}},
-        "bigcoins": {"title": "🪙 Big Coins", "sort_order": 2, "html": bigcoins_panel, "data": {}},
+        "bigcoins": {"title": "🪙 Big Coins", "sort_order": 2, "html": bigcoins_panel, "data": {"charts": (macro or {}).get("charts") or {}}},
         "mypicks": {"title": "⭐ My Picks", "sort_order": 3, "html": mypicks_panel, "data": {}},
         "performance": {"title": "📊 Performance", "sort_order": 4, "html": performance_panel, "data": {}},
         "_meta": {"title": "", "sort_order": 0, "html": banner_html,
@@ -2918,6 +2919,7 @@ def main():
         macro_rows = macro_mod.build_rows(macro_data)
         if macro_rows:
             macro_snapshot = {"rows": macro_rows, "regime": macro_mod.macro_regime(macro_rows), "errors": macro_errors,
+                              "charts": macro_mod.build_charts(macro_data),
                               "fetched_at": datetime.datetime.utcnow().strftime("%Y-%m-%d %H:%M")}
             log(f"Macro: {len(macro_rows)} rows, regime {macro_snapshot['regime']['label']}"
                 + (f", unavailable: {sorted(macro_errors)}" if macro_errors else ""))

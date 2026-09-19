@@ -30,15 +30,22 @@ def _get(url, timeout=15):
 
 
 def fetch_yahoo(symbol):
-    """-> {price, prev, change_abs, change_pct} using the last two daily closes plus the live price."""
-    d = _get(f"https://query1.finance.yahoo.com/v8/finance/chart/{symbol.replace('^', '%5E')}?interval=1d&range=10d")
+    """-> {price, prev, change_abs, change_pct, closes, ohlc}: quote change from the last two daily closes plus the live
+    price, and up to a year of daily candles [ts_ms, open, high, low, close] for the chart."""
+    d = _get(f"https://query1.finance.yahoo.com/v8/finance/chart/{symbol.replace('^', '%5E')}?interval=1d&range=1y")
     r = d["chart"]["result"][0]
     price = r["meta"]["regularMarketPrice"]
-    closes = [c for c in r["indicators"]["quote"][0]["close"] if c is not None]
+    q = r["indicators"]["quote"][0]
+    ohlc = []
+    for t, o, h, l, c in zip(r.get("timestamp") or [], q["open"], q["high"], q["low"], q["close"]):
+        if None in (o, h, l, c):
+            continue
+        ohlc.append([int(t) * 1000, round(o, 6), round(h, 6), round(l, 6), round(c, 6)])
+    closes = [c[4] for c in ohlc]
     # closes[-1] is today's (in-progress) bar when the market is open; the previous session is the one before it.
     prev = closes[-2] if len(closes) >= 2 and abs(closes[-1] - price) / price < 0.02 else closes[-1]
     return {"price": price, "prev": prev, "change_abs": price - prev, "change_pct": (price / prev - 1) * 100 if prev else None,
-            "closes": closes}
+            "closes": closes, "ohlc": ohlc}
 
 
 def fetch_binance(symbol):
@@ -54,6 +61,22 @@ def fetch_coingecko_globals():
     return {"global": g, "markets": markets, "stables": stable}
 
 
+def fetch_fred_line(series_id, keep=72):
+    """Monthly/daily FRED series as [[ts_ms, value], ...] (fredgraph.csv, no key)."""
+    import datetime as _dt
+    import urllib.request as _u
+    raw = _u.urlopen(_u.Request(f"https://fred.stlouisfed.org/graph/fredgraph.csv?id={series_id}", headers=UA), timeout=20).read().decode()
+    out = []
+    for line in raw.strip().splitlines()[1:]:
+        parts = line.split(",")
+        try:
+            d = _dt.datetime.strptime(parts[0], "%Y-%m-%d").replace(tzinfo=_dt.timezone.utc)
+            out.append([int(d.timestamp() * 1000), float(parts[1])])
+        except (ValueError, IndexError):
+            continue
+    return out[-keep:]
+
+
 def fetch_all(unrate=None):
     """Fetch everything; returns (data, errors). A failing source lands in errors and its rows are simply absent."""
     data, errors = {"yahoo": {}, "binance": {}, "crypto": None, "unrate": unrate}, {}
@@ -67,6 +90,10 @@ def fetch_all(unrate=None):
             data["binance"][label] = fetch_binance(sym)
         except Exception as e:  # noqa: BLE001
             errors[label] = type(e).__name__
+    try:
+        data["unrate_line"] = fetch_fred_line("UNRATE")
+    except Exception as e:  # noqa: BLE001
+        data["unrate_line"] = None
     try:
         data["crypto"] = fetch_coingecko_globals()
     except Exception as e:  # noqa: BLE001
@@ -121,6 +148,30 @@ def crypto_totals(cg):
         "TOTAL/BTC": {"price": total / _cap(btc), "change_abs": total / _cap(btc) - total_prev / _prev_cap(btc),
                       "change_pct": ((total / _cap(btc)) / (total_prev / _prev_cap(btc)) - 1) * 100},
     }
+
+
+def build_charts(data):
+    """{SYMBOL: {"kind": "candle"|"line", "d": [...]}} for watchlist rows that have a real history. Symbols with none
+    (crypto totals and dominance have no free daily history) are simply absent - the UI says so instead of drawing anything."""
+    ch = {}
+    for label, y in (data.get("yahoo") or {}).items():
+        if y.get("ohlc") and label not in ("US02Y", "US03MY"):
+            ch[label] = {"kind": "candle", "d": y["ohlc"][-260:]}
+
+    def spread(a, b):
+        ya, yb = (data.get("yahoo") or {}).get(a), (data.get("yahoo") or {}).get(b)
+        if not (ya and yb and ya.get("ohlc") and yb.get("ohlc")):
+            return None
+        bmap = {int(k[0] // 86400000): k[4] for k in yb["ohlc"]}
+        out = [[k[0], round(k[4] - bmap[int(k[0] // 86400000)], 4)] for k in ya["ohlc"] if int(k[0] // 86400000) in bmap]
+        return {"kind": "line", "d": out[-260:]} if len(out) > 20 else None
+    for name, (a, b) in {"US10Y-US02Y": ("US10Y", "US02Y"), "US10Y-US03MY": ("US10Y", "US03MY")}.items():
+        sp = spread(a, b)
+        if sp:
+            ch[name] = sp
+    if data.get("unrate_line"):
+        ch["UNRATE"] = {"kind": "line", "d": data["unrate_line"]}
+    return ch
 
 
 def build_rows(data):
@@ -276,13 +327,14 @@ def watchlist_html(macro):
     for r in macro["rows"]:
         if r["group"] != current:
             current = r["group"]
-            body.append(f'<tr class="wl-group"><td colspan="3">{_esc(current)}</td></tr>')
+            body.append(f'<tr class="wl-group"><td colspan="4">{_esc(current)}</td></tr>')
         chg, txt = _fmt_change(r)
         cls = "watch" if chg is None else ("pos" if chg > 0 else "neg" if chg < 0 else "watch")
         live = f' data-live="{_esc(r["symbol"])}"' if r["symbol"] in BINANCE else ""
+        bsym = f' data-binance="{_esc(BINANCE[r["symbol"]])}"' if r["symbol"] in BINANCE else ""
         note = f'<span class="wl-note">{_esc(r["note"])}</span>' if r.get("note") else ""
-        body.append(f'<tr{live}><td>{_esc(r["symbol"])}{note}</td><td class="wl-price">{_fmt_value(r["price"], r["unit"])}</td>'
-                    f'<td class="wl-chg {cls}">{txt}</td></tr>')
+        body.append(f'<tr{live}{bsym} data-sym="{_esc(r["symbol"])}" class="wl-row"><td>{_esc(r["symbol"])}{note}</td><td class="wl-price">{_fmt_value(r["price"], r["unit"])}</td>'
+                    f'<td class="wl-chg {cls}">{txt}</td><td class="wl-det"><button type="button" class="wl-chart-btn" aria-label="Show chart for {_esc(r["symbol"])}">&#128200; Chart</button></td></tr>')
     curve = ""
     if rg.get("curve") is not None:
         curve = (f'<div class="sub">Yield curve (10Y-2Y): {rg["curve"]:+.2f} pts - '
@@ -297,8 +349,8 @@ def watchlist_html(macro):
     return f"""
 <div class="card wl-card">
   <div class="card-title">CROSS-MARKET WATCHLIST<span class="info-tip" tabindex="0" data-tip="{_esc(tip)}">&#9432;</span></div>
-  <div class="sub">Server snapshot {_esc(macro.get("fetched_at", ""))} UTC &middot; <span id="wl-live-stamp">Binance rows update live</span></div>
-  <table class="signal-table wl-table"><thead><tr><th>Symbol</th><th>Last</th><th>Change</th></tr></thead><tbody>
+  <div class="sub">Tap a row or its Chart button for the price chart. Server snapshot {_esc(macro.get("fetched_at", ""))} UTC &middot; <span id="wl-live-stamp">Binance rows update live</span></div>
+  <table class="signal-table wl-table no-stack"><thead><tr><th>Symbol</th><th>Last</th><th>Change</th><th>Details</th></tr></thead><tbody>
   {"".join(body)}
   </tbody></table>
   {curve}{missing}

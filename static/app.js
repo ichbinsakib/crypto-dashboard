@@ -248,6 +248,7 @@
     if (window.kairoInitPnlSearch) window.kairoInitPnlSearch();
     enhanceTables(root);
     initWatchlist();
+    if (window.kairoInitCharts) window.kairoInitCharts(has.bigcoins ? ((has.bigcoins.data || {}).charts || {}) : {});
     initSignalPrices();
     if (window.kairoInitEvents && has.events) {
       window.kairoInitEvents(has.events, { sb: function () { return sb; }, isAdmin: !!(S.profile && S.profile.is_admin), dev: DEV });
