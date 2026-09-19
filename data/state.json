@@ -4,7 +4,7 @@
   "_alerts_state": {
     "btc-resistance-break": {
       "triggered": true,
-      "last_triggered_at": "2026-09-19 06:20:27"
+      "last_triggered_at": "2026-09-19 06:25:56"
     },
     "btc-support-break": {
       "triggered": false,
@@ -12,7 +12,7 @@
     },
     "eth-resistance-break": {
       "triggered": true,
-      "last_triggered_at": "2026-09-19 06:20:27"
+      "last_triggered_at": "2026-09-19 06:25:56"
     },
     "eth-support-break": {
       "triggered": false,
@@ -461,9 +461,9 @@
       "stale": false
     },
     "chainlink": {
-      "label": "\ud83d\udfe1 HOLD / NEUTRAL",
-      "status": "neutral",
-      "score": -1,
+      "label": "\ud83d\udd34 CAUTION - REDUCE NEW BUYS",
+      "status": "bearish",
+      "score": -2,
       "rows": [
         [
           "Price vs. recent range",
@@ -482,12 +482,12 @@
         ],
         [
           "Recent trend",
-          "Trending up steadily - healthy",
-          1
+          "Chopping sideways - no clear trend",
+          0
         ],
         [
           "Stretch from long-term average",
-          "+33.3% above its long-term average - very stretched",
+          "+32.5% above its long-term average - very stretched",
           -2
         ],
         [
@@ -496,16 +496,16 @@
           0
         ]
       ],
-      "plain": "No real edge either way right now - fine to just wait and watch.",
+      "plain": "Getting risky - I'd hold off on new buys until this cools down.",
       "id": "chainlink",
       "symbol": "LINK",
       "name": "Chainlink",
-      "price": 12.38,
-      "pct_24h": 5.5726,
-      "pct_7d": 8.0,
+      "price": 12.31,
+      "pct_24h": 4.27955,
+      "pct_7d": 7.4,
       "support_30d": 10.88182146485707,
       "resistance_30d": 13.237155745219605,
-      "as_of": "2026-09-19 03:45:21",
+      "as_of": "2026-09-19 06:25:56",
       "stale": false
     },
     "whitebit": {
@@ -607,11 +607,11 @@
     "monero": {
       "label": "\ud83d\udd34 DISTRIBUTION ZONE",
       "status": "bearish",
-      "score": -6,
+      "score": -5,
       "rows": [
         [
           "Price vs. recent range",
-          "Near its 30-day high (~$574.42) - less room to run",
+          "Near its 30-day high (~$570.23) - less room to run",
           -1
         ],
         [
@@ -626,12 +626,12 @@
         ],
         [
           "Recent trend",
-          "Chopping sideways - no clear trend",
-          0
+          "Trending up steadily - healthy",
+          1
         ],
         [
           "Stretch from long-term average",
-          "+52.7% above its long-term average - very stretched",
+          "+51.5% above its long-term average - very stretched",
           -2
         ],
         [
@@ -644,12 +644,12 @@
       "id": "monero",
       "symbol": "XMR",
       "name": "Monero",
-      "price": 574.59,
-      "pct_24h": 9.24527,
-      "pct_7d": 6.2,
+      "price": 570.06,
+      "pct_24h": 7.71018,
+      "pct_7d": 8.0,
       "support_30d": 412.60731006532353,
-      "resistance_30d": 574.4245714115613,
-      "as_of": "2026-09-19 05:50:27",
+      "resistance_30d": 570.2310939474796,
+      "as_of": "2026-09-19 06:25:56",
       "stale": false
     },
     "cardano": {
@@ -1471,12 +1471,12 @@
     "ethereum-classic": {
       "label": "\ud83d\udfe1 HOLD / NEUTRAL",
       "status": "neutral",
-      "score": -1,
+      "score": 1,
       "rows": [
         [
           "Price vs. recent range",
-          "Near its 30-day high (~$8.61) - less room to run",
-          -1
+          "Sitting in the middle of its 30-day range",
+          0
         ],
         [
           "Crowd mood (Fear & Greed)",
@@ -1485,8 +1485,8 @@
         ],
         [
           "Market phase (best guess)",
-          "Established uptrend - phase where price marks up",
-          1
+          "Basing near the bottom - phase where smart money accumulates",
+          2
         ],
         [
           "Recent trend",
@@ -1495,7 +1495,7 @@
         ],
         [
           "Stretch from long-term average",
-          "+5.2% vs its long-term average - not stretched either way",
+          "+4.9% vs its long-term average - not stretched either way",
           0
         ],
         [
@@ -1508,12 +1508,12 @@
       "id": "ethereum-classic",
       "symbol": "ETC",
       "name": "Ethereum Classic",
-      "price": 8.18,
-      "pct_24h": 5.31091,
+      "price": 8.16,
+      "pct_24h": 4.9274,
       "pct_7d": 7.2,
       "support_30d": 7.183531458168674,
       "resistance_30d": 8.609781284223262,
-      "as_of": "2026-09-19 06:10:24",
+      "as_of": "2026-09-19 06:25:56",
       "stale": false
     },
     "pump-fun": {
@@ -2717,14 +2717,14 @@
       "stale": false
     },
     "morpho": {
-      "label": "\ud83d\udd34 CAUTION - REDUCE NEW BUYS",
-      "status": "bearish",
-      "score": -2,
+      "label": "\ud83d\udfe1 HOLD / NEUTRAL",
+      "status": "neutral",
+      "score": -1,
       "rows": [
         [
           "Price vs. recent range",
-          "Near its 30-day high (~$2.90) - less room to run",
-          -1
+          "Sitting in the middle of its 30-day range",
+          0
         ],
         [
           "Crowd mood (Fear & Greed)",
@@ -2743,7 +2743,7 @@
         ],
         [
           "Stretch from long-term average",
-          "+39.5% above its long-term average - very stretched",
+          "+36.5% above its long-term average - very stretched",
           -2
         ],
         [
@@ -2752,16 +2752,16 @@
           0
         ]
       ],
-      "plain": "Getting risky - I'd hold off on new buys until this cools down.",
+      "plain": "No real edge either way right now - fine to just wait and watch.",
       "id": "morpho",
       "symbol": "MORPHO",
       "name": "Morpho",
-      "price": 2.77,
-      "pct_24h": 19.33024,
-      "pct_7d": 18.1,
+      "price": 2.71,
+      "pct_24h": 17.3459,
+      "pct_7d": 19.3,
       "support_30d": 2.083646898087014,
       "resistance_30d": 2.9026212482639075,
-      "as_of": "2026-09-19 04:55:18",
+      "as_of": "2026-09-19 06:25:56",
       "stale": false
     },
     "memecore": {
@@ -2915,7 +2915,7 @@
       "rows": [
         [
           "Price vs. recent range",
-          "Near its 30-day high (~$0.1173) - less room to run",
+          "Near its 30-day high (~$0.1175) - less room to run",
           -1
         ],
         [
@@ -2935,7 +2935,7 @@
         ],
         [
           "Stretch from long-term average",
-          "+35.4% above its long-term average - very stretched",
+          "+35.6% above its long-term average - very stretched",
           -2
         ],
         [
@@ -2948,12 +2948,12 @@
       "id": "just",
       "symbol": "JST",
       "name": "JUST",
-      "price": 0.117255,
-      "pct_24h": 0.67125,
-      "pct_7d": 9.5,
+      "price": 0.11745,
+      "pct_24h": 0.70173,
+      "pct_7d": 8.6,
       "support_30d": 0.0946830738697126,
-      "resistance_30d": 0.1172559513557917,
-      "as_of": "2026-09-19 06:00:39",
+      "resistance_30d": 0.11752380027357767,
+      "as_of": "2026-09-19 06:25:56",
       "stale": false
     },
     "algorand": {
@@ -3515,14 +3515,14 @@
     "key": "BTC",
     "name": "Bitcoin",
     "emoji": "\u20bf",
-    "price": 80981,
+    "price": 80951,
     "high_24h": 81675,
     "low_24h": 77525,
-    "pct_24h": 4.5582,
+    "pct_24h": 4.36342,
     "pct_7d": 4.9,
     "pct_30d": 16.7,
-    "sma50": 72834.22540535776,
-    "sma200": 70450.70201756294,
+    "sma50": 72833.61557235321,
+    "sma200": 70450.54955931181,
     "support_30d": 75590.24471973324,
     "resistance_30d": 81264.70153038795,
     "mark_price": 81098.11601449,
@@ -3537,16 +3537,16 @@
     "key": "ETH",
     "name": "Ethereum",
     "emoji": "\u039e",
-    "price": 2624.79,
+    "price": 2623.05,
     "high_24h": 2643.34,
     "low_24h": 2484.48,
-    "pct_24h": 5.7336,
+    "pct_24h": 5.58057,
     "pct_7d": 4.6,
     "pct_30d": 16.9,
-    "sma50": 2257.1109922533424,
-    "sma200": 2073.07081171256,
+    "sma50": 2257.0545522138027,
+    "sma200": 2073.056701702675,
     "support_30d": 2390.783044679688,
-    "resistance_30d": 2625.1864620705765,
+    "resistance_30d": 2622.364460093581,
     "mark_price": 2621.15,
     "index_price": 2622.52906977,
     "funding_rate": 0.0001,
