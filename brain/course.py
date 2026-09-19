@@ -28,6 +28,12 @@ BACKTEST_NOTES = [
     "(5 bars: -1.2%/-2.8% vs +0.3%/-1.1% baseline) and on 4h test data. The later stages (UTAD/SOW/LPSY) were bearish vs baseline on 4h "
     "but noisy on daily (a 10-day UTAD sample rose in the test half). Overlapping windows make the confidence intervals optimistic. "
     "Included in the BTC/ETH spot score at the owner's request, weight wyckoff.WYCKOFF_WEIGHT, worth 0 to -2 points.",
+    "Scanner accuracy check with Aster DEX / order-flow data (37 coins, 1h, ~40 days, chronological split): funding rates on majors "
+    "barely varied (almost all within the normal band) and the taker-buy ratio showed no consistent effect on near-low entries in either "
+    "half. The 29 dip signals in that window averaged about -0.6% per trade after fees in both halves (small sample, wide error bars), "
+    "so no filter built from this data was shown to improve the scanner. Aster data is shown as context and as a cross-venue price check only.",
+    "Momentum/breakout tier (40 coins, 15m and 1h): about break-even after fees (average within +-0.3% of zero); kept as an experimental, "
+    "separately tracked tier.",
     "Therefore these features are shown as context and checklist items only; they do not gate or score the app's signals. "
     "Revisit with more history (months, not weeks) before changing any signal rule.",
 ]

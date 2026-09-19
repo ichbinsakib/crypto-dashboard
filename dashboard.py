@@ -29,6 +29,7 @@ import supa
 import macro as macro_mod
 import momentum as momentum_mod
 import btc_dashboard as btc_dash
+import aster as aster_mod
 from brain import wyckoff as wyckoff_mod
 
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
@@ -1281,6 +1282,7 @@ attempt-capped so it stops once enough *confirmed* signals are found (a coin tha
             sig = compute_intraday_signal(klines, cfg["lookback"], cfg["window_label"])
             if sig:
                 sig.update({"id": m.get("id"), "symbol": symbol, "name": m.get("name")})
+                sig["aster"] = aster_mod.lookup(symbol, sig.get("price"))
                 results.append(sig)
                 if sig.get("status") == "bullish" and sig.get("score", 0) >= STRONG_INTRADAY_SCORE:
                     confirmed += 1
@@ -1737,6 +1739,7 @@ def render(coins_data, fng_value, fng_classification, generated_at, any_stale,
         <div class="kv"><span>Target</span><span class="pos" data-role="target">{fmt_usd_adaptive(t['target1'])} / {fmt_usd_adaptive(t['target2'])}</span></div>
         <div class="kv"><span>After ~{ROUND_TRIP_FEE_PCT}% fees<span class="info-tip" tabindex="0" data-tip="Estimated round-trip cost (buy + sell) at Binance's standard 0.1%-per-side spot taker fee, with no BNB discount or volume-tier reduction applied. Real fees vary -- this is here so a target's actual profit after trading costs is visible up front instead of something you have to calculate by hand, especially on tight short-timeframe moves where fees can eat most or all of the gain.">&#9432;</span></span><span data-role="target-net">{fmt_net_fee_html(t.get('target1_net_pct'))} / {fmt_net_fee_html(t.get('target2_net_pct'))}</span></div>
       </div>
+      {aster_mod.card_html(r.get("aster"))}
       <div class="sub" data-role="live-updated" style="margin-top:8px; opacity:0.7;">&#9679; live &middot; updated on load</div>
       <details class="screener-details">
         <summary>Why this score? (<span data-role="factor-count">{len(r.get('rows', []))}</span> factors)</summary>
@@ -2676,6 +2679,8 @@ def main():
     log(f"Screener produced {len(screener_results)} ranked coins "
         f"({sum(1 for r in screener_results if r.get('stale'))} cached/stale)")
 
+    aster_data = aster_mod.refresh()
+    log(f"Aster DEX: {len(aster_data)} perpetuals loaded" if aster_data else "Aster DEX: unavailable this run (scanner cards show no derivatives line)")
     log("Running intraday screeners (15m, 1h) via Binance OHLC...")
     prev_pnl_state = state.get("_pnl_tracker", {})
     prev_pnl_open = prev_pnl_state.get("open", {})
