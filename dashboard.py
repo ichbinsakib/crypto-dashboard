@@ -2430,8 +2430,10 @@ def main():
     elif IS_CI:
         # Standalone mode writes every section to a readable file inside the published site.
         # In the hosted build that would publish the dashboard to the public, so fail instead.
-        raise SystemExit("Refusing to publish: KAIRO_SUPABASE_URL / KAIRO_SUPABASE_ANON_KEY / "
-                         "KAIRO_PUBLISHER_EMAIL / KAIRO_PUBLISHER_PASSWORD are not all set as repository secrets.")
+        missing = [k for k in supa.ENV_KEYS if not os.environ.get(k)]
+        raise SystemExit("Refusing to publish: these repository secrets are missing or empty: "
+                         + ", ".join(missing) + ". Add them under Settings > Secrets and variables > "
+                         "Actions (repository secrets, exact names, case-sensitive).")
     else:
         log("No KAIRO_* backend configured -- standalone run (local state file, no login)")
     state = load_state(backend)
