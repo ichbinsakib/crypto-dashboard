@@ -1847,7 +1847,7 @@ def render(coins_data, fng_value, fng_classification, generated_at, any_stale,
   <div class="cycle-map" style="margin-top:10px;">
     <div class="card-title" style="display:flex; align-items:center; justify-content:space-between; flex-wrap:wrap; gap:8px;">
       <span>Performance History<span class="info-tip" tabindex="0" data-tip="Every call that has ever resolved stays here permanently -- winning, losing, and expired -- it is never deleted, only added to. Signal Given is when the call first appeared. Buy/Stop/Target are the levels set at that moment; Exit is the Binance price that actually triggered the result, so you can verify a Win genuinely closed at/above Target and a Loss at/below Stop -- on Binance's own spot order book. A different exchange can still show a slightly different wick on thinner-liquidity altcoins, and the entry level is a specific reference price (a recent low), not necessarily the live price the moment a signal first appears.">&#9432;</span></span>
-      <input type="text" id="pnl-history-search" placeholder="Search by coin..." style="background:#0d1320; border:1px solid var(--border); border-radius:6px; color:var(--text); padding:5px 10px; font-size:12.5px; width:160px;">
+      <input type="text" id="pnl-history-search" placeholder="Search by coin..." style="background:var(--inset); border:1px solid var(--border); border-radius:6px; color:var(--text); padding:5px 10px; font-size:12.5px; width:160px;">
     </div>
     <div class="sub" style="margin-bottom:6px;">{showing_note}</div>
     <table class="signal-table" style="margin-top:0; margin-bottom:0;" id="pnl-history-table">
@@ -1900,15 +1900,47 @@ def render(coins_data, fng_value, fng_classification, generated_at, any_stale,
 <link rel="manifest" href="manifest.webmanifest">
 <link rel="icon" href="favicon-32.png" sizes="32x32" type="image/png">
 <link rel="apple-touch-icon" href="apple-touch-icon.png">
-<meta name="theme-color" content="#0a0e14">
+<meta name="theme-color" content="#eef3fb">
+<script>(function(){{try{{var t=localStorage.getItem("kairo_theme")||"light";document.documentElement.setAttribute("data-theme",t);}}catch(e){{document.documentElement.setAttribute("data-theme","light");}}}})();</script>
 <meta name="mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
 <meta name="apple-mobile-web-app-title" content="Kairo">
 <style>
   :root {{
+    color-scheme: light;
+    --bg: #eef3fb; --panel: rgba(255,255,255,0.86); --border: #d5dfee; --text: #0f172a; --muted: #56617a;
+    --green: #059669; --red: #dc2626; --yellow: #b45309; --gray: #64748b; --accent: #0284c7; --on-accent: #ffffff;
+    --inset: #f1f5fb; --chip: #e3eaf6; --tip: #1e293b; --tip-text: #f8fafc; --shadow: 0 2px 10px rgba(30,64,120,0.08);
+    --shadow-hover: 0 8px 22px rgba(30,64,120,0.16); --overlay: rgba(15,23,42,0.45);
+    --bull-bg: #d9f5e8; --bear-bg: #fde0e0; --neu-bg: #fdf0cc; --locked-bg: #e6ebf3; --armed-bg: #dbeefb;
+    --bull-bd: #6cc9a2; --bear-bd: #ee9a9a; --neu-bd: #e3c165; --lvl-bd: #8bbbd6; --inset-accent: #e2f3fc;
+    --warn-bg: #fff4d6; --warn-bd: #e0b341; --warn-text: #8a5a00; --alert-bg: #fee2e2; --alert-text: #991b1b;
+    --blob1: rgba(56,189,248,0.30); --blob2: rgba(52,211,153,0.24); --blob3: rgba(251,146,160,0.20); --blob4: rgba(251,191,36,0.20);
+  }}
+  :root[data-theme="dark"] {{
+    color-scheme: dark;
     --bg: #0a0e14; --panel: #10151f; --border: #1f2937; --text: #e5e7eb; --muted: #9ca3af;
-    --green: #34d399; --red: #f87171; --yellow: #fbbf24; --gray: #6b7280; --accent: #38bdf8;
+    --green: #34d399; --red: #f87171; --yellow: #fbbf24; --gray: #6b7280; --accent: #38bdf8; --on-accent: #04121c;
+    --inset: #0d1320; --chip: #2a3550; --tip: #1c2230; --tip-text: #e5e7eb; --shadow: none; --shadow-hover: 0 6px 18px rgba(0,0,0,0.45);
+    --overlay: rgba(4,8,14,0.8);
+    --bull-bg: #0f2e20; --bear-bg: #3a1414; --neu-bg: #332b0d; --locked-bg: #1c2230; --armed-bg: #182233;
+    --bull-bd: #1f6a4a; --bear-bd: #7a2e2e; --neu-bd: #5a4d18; --lvl-bd: #2a4a5a; --inset-accent: #0d1c26;
+    --warn-bg: #3f2d0f; --warn-bd: #8a5a00; --warn-text: #fbbf24; --alert-bg: #3a0d0d; --alert-text: #fecaca;
+    --blob1: rgba(56,189,248,0.16); --blob2: rgba(52,211,153,0.13); --blob3: rgba(248,113,113,0.11); --blob4: rgba(251,191,36,0.09);
+  }}
+  @media (prefers-color-scheme: dark) {{
+    :root[data-theme="auto"] {{
+      color-scheme: dark;
+      --bg: #0a0e14; --panel: #10151f; --border: #1f2937; --text: #e5e7eb; --muted: #9ca3af;
+      --green: #34d399; --red: #f87171; --yellow: #fbbf24; --gray: #6b7280; --accent: #38bdf8; --on-accent: #04121c;
+      --inset: #0d1320; --chip: #2a3550; --tip: #1c2230; --tip-text: #e5e7eb; --shadow: none; --shadow-hover: 0 6px 18px rgba(0,0,0,0.45);
+      --overlay: rgba(4,8,14,0.8);
+      --bull-bg: #0f2e20; --bear-bg: #3a1414; --neu-bg: #332b0d; --locked-bg: #1c2230; --armed-bg: #182233;
+      --bull-bd: #1f6a4a; --bear-bd: #7a2e2e; --neu-bd: #5a4d18; --lvl-bd: #2a4a5a; --inset-accent: #0d1c26;
+      --warn-bg: #3f2d0f; --warn-bd: #8a5a00; --warn-text: #fbbf24; --alert-bg: #3a0d0d; --alert-text: #fecaca;
+      --blob1: rgba(56,189,248,0.16); --blob2: rgba(52,211,153,0.13); --blob3: rgba(248,113,113,0.11); --blob4: rgba(251,191,36,0.09);
+    }}
   }}
   * {{ box-sizing: border-box; }}
   html, body {{ max-width:100%; overflow-x:hidden; }}
@@ -1916,10 +1948,10 @@ def render(coins_data, fng_value, fng_classification, generated_at, any_stale,
   body::before {{
     content:''; position:fixed; inset:0; z-index:-1; pointer-events:none;
     background:
-      radial-gradient(circle at 15% 20%, rgba(56,189,248,0.16), transparent 42%),
-      radial-gradient(circle at 85% 15%, rgba(52,211,153,0.13), transparent 45%),
-      radial-gradient(circle at 75% 85%, rgba(248,113,113,0.11), transparent 45%),
-      radial-gradient(circle at 20% 85%, rgba(251,191,36,0.09), transparent 45%),
+      radial-gradient(circle at 15% 20%, var(--blob1), transparent 42%),
+      radial-gradient(circle at 85% 15%, var(--blob2), transparent 45%),
+      radial-gradient(circle at 75% 85%, var(--blob3), transparent 45%),
+      radial-gradient(circle at 20% 85%, var(--blob4), transparent 45%),
       var(--bg);
     background-size: 180% 180%, 180% 180%, 200% 200%, 200% 200%, 100% 100%;
     animation: bgDrift 30s ease-in-out infinite alternate;
@@ -1930,6 +1962,16 @@ def render(coins_data, fng_value, fng_classification, generated_at, any_stale,
     100% {{ background-position: 10% 40%, 90% 10%, 90% 90%, 10% 60%, 0 0; }}
   }}
   @media (prefers-reduced-motion: reduce) {{ body::before {{ animation:none; }} }}
+  .card, table.signal-table {{ box-shadow: var(--shadow); backdrop-filter: blur(8px); -webkit-backdrop-filter: blur(8px); transition: transform .18s ease, box-shadow .18s ease, border-color .18s ease; }}
+  .card:hover {{ transform: translateY(-2px); box-shadow: var(--shadow-hover); }}
+  .panel {{ animation: panelIn .35s ease both; }}
+  @keyframes panelIn {{ from {{ opacity:0; transform: translateY(6px); }} to {{ opacity:1; transform:none; }} }}
+  header {{ background: linear-gradient(90deg, rgba(56,189,248,0.10), rgba(52,211,153,0.10), rgba(251,191,36,0.08)); background-size: 200% 100%; animation: hdrShift 18s ease-in-out infinite alternate; }}
+  @keyframes hdrShift {{ from {{ background-position: 0% 0; }} to {{ background-position: 100% 0; }} }}
+  .tabbar label {{ transition: background .18s ease, color .18s ease, transform .12s ease; }}
+  .tabbar label:hover {{ transform: translateY(-1px); color: var(--accent); }}
+  .big-price {{ transition: color .3s ease; }}
+  @media (prefers-reduced-motion: reduce) {{ .card:hover, .tabbar label:hover {{ transform:none; }} .panel, header {{ animation:none; }} }}
   header {{ padding: 10px 16px; border-bottom: 1px solid var(--border); display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:8px; }}
   header h1 {{ margin:0; font-size: 22px; letter-spacing: 1px; }}
   header .meta {{ color: var(--muted); font-size: 13px; }}
@@ -1942,7 +1984,7 @@ def render(coins_data, fng_value, fng_classification, generated_at, any_stale,
   #tab-performance:checked ~ .tabbar label[for=tab-performance],
   #tab-events:checked ~ .tabbar label[for=tab-events],
   #bc-btc:checked ~ .tabbar label[for=bc-btc],
-  #bc-eth:checked ~ .tabbar label[for=bc-eth] {{ background: var(--accent); color:#04121c; border-color:var(--accent); }}
+  #bc-eth:checked ~ .tabbar label[for=bc-eth] {{ background: var(--accent); color:var(--on-accent); border-color:var(--accent); }}
   .panel {{ display:none; padding: 6px 16px 20px; }}
   #tab-screener:checked ~ .panel-screener {{ display:block; }}
   #tab-bigcoins:checked ~ .panel-bigcoins {{ display:block; }}
@@ -1958,8 +2000,8 @@ def render(coins_data, fng_value, fng_classification, generated_at, any_stale,
   #tf-1d:checked ~ .tf-panel-1d {{ display:block; }}
   #tf-15m:checked ~ .tabbar label[for=tf-15m],
   #tf-1h:checked ~ .tabbar label[for=tf-1h],
-  #tf-1d:checked ~ .tabbar label[for=tf-1d] {{ background: var(--accent); color:#04121c; border-color:var(--accent); }}
-  .stale-note {{ background:#3f2d0f; border:1px solid #8a5a00; color:#fbbf24; padding:8px 12px; border-radius:8px; margin-bottom:16px; font-size:13px; }}
+  #tf-1d:checked ~ .tabbar label[for=tf-1d] {{ background: var(--accent); color:var(--on-accent); border-color:var(--accent); }}
+  .stale-note {{ background:var(--warn-bg); border:1px solid var(--warn-bd); color:var(--warn-text); padding:8px 12px; border-radius:8px; margin-bottom:16px; font-size:13px; }}
   .top-grid {{ display:grid; grid-template-columns: 1.1fr 1.3fr 1fr; gap:10px; margin-bottom: 10px; }}
   .card {{ background: var(--panel); border:1px solid var(--border); border-radius:12px; padding:10px 12px; }}
   .card-title {{ font-size:12px; color:var(--muted); letter-spacing:1px; margin-bottom:6px; font-weight:700; }}
@@ -1982,59 +2024,59 @@ def render(coins_data, fng_value, fng_classification, generated_at, any_stale,
   table.signal-table td.watch {{ color: var(--muted); font-size:12.5px; }}
   table.signal-table tr:last-child td {{ border-bottom:none; }}
   .badge {{ padding:4px 10px; border-radius:20px; font-size:12.5px; font-weight:700; display:inline-block; }}
-  .badge.bullish {{ background:#0f2e20; color: var(--green); }}
-  .badge.bearish {{ background:#3a1414; color: var(--red); }}
-  .badge.neutral {{ background:#332b0d; color: var(--yellow); }}
-  .badge.locked  {{ background:#1c2230; color: var(--gray); }}
-  .badge.alert-armed {{ background:#182233; color: var(--accent); }}
+  .badge.bullish {{ background:var(--bull-bg); color: var(--green); }}
+  .badge.bearish {{ background:var(--bear-bg); color: var(--red); }}
+  .badge.neutral {{ background:var(--neu-bg); color: var(--yellow); }}
+  .badge.locked  {{ background:var(--locked-bg); color: var(--gray); }}
+  .badge.alert-armed {{ background:var(--armed-bg); color: var(--accent); }}
   .badge.alert-triggered {{ background:#4a1010; color:#fff; animation: pulse 1.4s infinite; }}
   @keyframes pulse {{ 0%,100% {{ opacity:1; }} 50% {{ opacity:0.55; }} }}
-  .alert-banner {{ margin: 8px 16px 0; padding: 8px 12px; background:#3a0d0d; border:1px solid #ef4444; border-radius:10px; color:#fecaca; font-weight:700; font-size:13px; animation: pulse 1.6s infinite; white-space:nowrap; overflow-x:auto; -webkit-overflow-scrolling:touch; }}
+  .alert-banner {{ margin: 8px 16px 0; padding: 8px 12px; background:var(--alert-bg); border:1px solid var(--red); border-radius:10px; color:var(--alert-text); font-weight:700; font-size:13px; animation: pulse 1.6s infinite; white-space:nowrap; overflow-x:auto; -webkit-overflow-scrolling:touch; }}
   .alert-banner-item {{ white-space:nowrap; }}
   .info-tip {{ display:inline-flex; align-items:center; justify-content:center; width:15px; height:15px;
     border-radius:50%; background:var(--border); color:var(--muted); font-size:11px; font-weight:700;
     cursor:help; position:relative; margin-left:5px; vertical-align:middle; flex-shrink:0; }}
-  .info-tip:hover, .info-tip:focus {{ background: var(--accent); color:#04121c; outline:none; }}
+  .info-tip:hover, .info-tip:focus {{ background: var(--accent); color:var(--on-accent); outline:none; }}
   .info-tip:hover::after, .info-tip:focus::after {{
     content: attr(data-tip); position:absolute; bottom:130%; left:50%; transform:translateX(-50%);
-    background:#1c2230; color:var(--text); padding:9px 11px; border-radius:8px; font-size:12px;
+    background:var(--tip); color:var(--tip-text); padding:9px 11px; border-radius:8px; font-size:12px;
     font-weight:400; letter-spacing:0; text-transform:none; white-space:normal; width:230px;
-    box-shadow:0 4px 14px rgba(0,0,0,0.45); z-index:60; line-height:1.45; border:1px solid var(--border);
+    box-shadow:var(--shadow-hover); z-index:60; line-height:1.45; border:1px solid var(--border);
   }}
   .info-tip:hover::before, .info-tip:focus::before {{
     content:''; position:absolute; bottom:112%; left:50%; transform:translateX(-50%);
-    border:5px solid transparent; border-top-color:#1c2230; z-index:60;
+    border:5px solid transparent; border-top-color:var(--tip); z-index:60;
   }}
   .cycle-map {{ background: var(--panel); border:1px solid var(--border); border-radius:12px; padding:10px 12px; }}
   .spot-signal-card {{ border-width:2px; }}
-  .spot-signal-card.spot-bullish {{ border-color:#1f6a4a; }}
-  .spot-signal-card.spot-bearish {{ border-color:#7a2e2e; }}
-  .spot-signal-card.spot-neutral {{ border-color:#5a4d18; }}
+  .spot-signal-card.spot-bullish {{ border-color:var(--bull-bd); }}
+  .spot-signal-card.spot-bearish {{ border-color:var(--bear-bd); }}
+  .spot-signal-card.spot-neutral {{ border-color:var(--neu-bd); }}
   .spot-signal-headline {{ display:flex; align-items:baseline; justify-content:space-between; flex-wrap:wrap; gap:8px; margin-top:4px; }}
   .spot-signal-label {{ font-size:22px; font-weight:800; letter-spacing:0.5px; }}
   .spot-signal-label.bullish {{ color: var(--green); }}
   .spot-signal-label.bearish {{ color: var(--red); }}
   .spot-signal-label.neutral {{ color: var(--yellow); }}
   .spot-signal-score {{ font-size:13px; color: var(--muted); font-weight:700; }}
-  .trade-levels-card {{ border-width:2px; border-color:#2a4a5a; }}
+  .trade-levels-card {{ border-width:2px; border-color:var(--lvl-bd); }}
   .trade-scenarios {{ display:grid; grid-template-columns: 1fr 1fr; gap:10px; }}
-  .trade-scenario {{ background:#0d1320; border:1px solid var(--border); border-radius:10px; padding:10px 12px; }}
+  .trade-scenario {{ background:var(--inset); border:1px solid var(--border); border-radius:10px; padding:10px 12px; }}
   .trade-scenario-title {{ font-size:13px; font-weight:800; color: var(--accent); margin-bottom:10px; }}
   @media (max-width: 700px) {{ .trade-scenarios {{ grid-template-columns: 1fr; }} }}
   .screener-grid {{ display:grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap:10px; }}
   .screener-card {{ background: var(--panel); border:2px solid var(--border); border-radius:12px; padding:10px; }}
-  .screener-card.bullish {{ border-color:#1f6a4a; }}
-  .screener-card.bearish {{ border-color:#7a2e2e; }}
-  .screener-card.neutral {{ border-color:#5a4d18; }}
+  .screener-card.bullish {{ border-color:var(--bull-bd); }}
+  .screener-card.bearish {{ border-color:var(--bear-bd); }}
+  .screener-card.neutral {{ border-color:var(--neu-bd); }}
   .screener-card-top {{ display:flex; gap:8px; align-items:flex-start; margin-bottom:6px; }}
   .screener-card-top > div:nth-child(2) {{ flex:1; min-width:0; }}
-  .screener-rank {{ font-size:12px; font-weight:800; color: var(--muted); background:#0d1320; border-radius:6px; padding:3px 8px; white-space:nowrap; }}
+  .screener-rank {{ font-size:12px; font-weight:800; color: var(--muted); background:var(--inset); border-radius:6px; padding:3px 8px; white-space:nowrap; }}
   .follow-btn {{ margin-left:auto; flex-shrink:0; background:transparent; border:1px solid var(--border); color:var(--muted); font-size:11.5px; font-weight:700; padding:5px 10px; border-radius:20px; cursor:pointer; white-space:nowrap; transition:all 0.15s; }}
   .follow-btn:hover {{ border-color: var(--accent); color: var(--accent); }}
-  .follow-btn.following {{ background: var(--accent); border-color: var(--accent); color:#04121c; }}
+  .follow-btn.following {{ background: var(--accent); border-color: var(--accent); color:var(--on-accent); }}
   .screener-name {{ font-size:15px; font-weight:800; }}
   .screener-signal {{ display:flex; justify-content:space-between; align-items:center; margin-bottom:6px; }}
-  .screener-trade {{ background:#0d1320; border:1px solid var(--border); border-radius:8px; padding:10px 12px; }}
+  .screener-trade {{ background:var(--inset); border:1px solid var(--border); border-radius:8px; padding:10px 12px; }}
   .screener-trade-title {{ font-size:12px; font-weight:800; color: var(--accent); margin-bottom:6px; }}
   .screener-trade-grid {{ display:grid; grid-template-columns: 1fr 1fr; gap:10px; margin-bottom:10px; }}
   .screener-plain {{ font-size:12.5px; color: var(--text); line-height:1.4; margin-bottom:6px; }}
@@ -2044,7 +2086,7 @@ def render(coins_data, fng_value, fng_classification, generated_at, any_stale,
   @media (max-width: 480px) {{ .screener-trade-grid {{ grid-template-columns: 1fr; }} }}
   .cyc-row {{ display:flex; align-items:center; gap:6px; margin-top:10px; }}
   .cyc-box {{ flex:1; min-width:0; text-align:center; padding:8px 6px; border-radius:8px; border:1px solid var(--border); color:var(--muted); font-size:13px; font-weight:700; position:relative; }}
-  .cyc-here {{ border-color: var(--accent); color: var(--accent); background:#0d1c26; }}
+  .cyc-here {{ border-color: var(--accent); color: var(--accent); background:var(--inset-accent); }}
   @media (max-width: 480px) {{
     .cyc-row {{ flex-wrap:wrap; }}
     .cyc-box {{ flex:1 1 calc(50% - 6px); font-size:11.5px; padding:10px 6px; }}
@@ -2081,6 +2123,7 @@ def render(coins_data, fng_value, fng_classification, generated_at, any_stale,
   <h1>&#9889; KAIRO LIVE DASHBOARD</h1>
   <div class="meta" id="meta-line"></div>
   <div class="header-actions">
+    <button type="button" id="btn-theme" class="hdr-btn" title="Switch theme">&#9728; Light</button>
     <button type="button" id="btn-admin" class="hdr-btn" hidden>Users</button>
     <button type="button" id="btn-account" class="hdr-btn">Account</button>
     <button type="button" id="btn-signout" class="hdr-btn">Sign out</button>

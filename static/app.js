@@ -18,6 +18,21 @@
   function show(id, on) { var el = $(id); if (el) el.hidden = !on; }
   function esc(s) { var d = document.createElement('div'); d.textContent = s == null ? '' : String(s); return d.innerHTML; }
 
+
+  /* ---------------- theme (light / dark / auto) ---------------- */
+  var THEMES = ['light', 'dark', 'auto'];
+  var THEME_LABEL = { light: '\u2600 Light', dark: '\u263E Dark', auto: '\u25D1 Auto' };
+  var THEME_COLOR = { light: '#eef3fb', dark: '#0a0e14' };
+  function currentTheme() { return document.documentElement.getAttribute('data-theme') || 'light'; }
+  function applyTheme(t) {
+    document.documentElement.setAttribute('data-theme', t);
+    try { localStorage.setItem('kairo_theme', t); } catch (e) { /* storage unavailable */ }
+    var dark = t === 'dark' || (t === 'auto' && window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches);
+    var m = document.querySelector('meta[name=theme-color]'); if (m) m.setAttribute('content', dark ? THEME_COLOR.dark : THEME_COLOR.light);
+    var b = $('btn-theme'); if (b) b.textContent = THEME_LABEL[t];
+  }
+  function cycleTheme() { applyTheme(THEMES[(THEMES.indexOf(currentTheme()) + 1) % THEMES.length]); }
+
   function showOnly(which) {
     ['splash', 'auth-screen', 'noaccess', 'app'].forEach(function (id) { show(id, id === which); });
   }
@@ -303,6 +318,7 @@
     $('noaccess-signout').onclick = doSignOut;
     $('btn-account').onclick = openAccount;
     $('btn-admin').onclick = openAdmin;
+    if ($('btn-theme')) { $('btn-theme').onclick = cycleTheme; applyTheme(currentTheme()); }
     $('overlay').addEventListener('click', function (e) { if (e.target === $('overlay')) closeOverlay(); });
 
     if (DEV) {

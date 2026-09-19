@@ -6,21 +6,21 @@
 .auth-card h1 { margin: 0 0 6px; font-size: 24px; letter-spacing: 1px; }
 .auth-card input, .overlay-card input[type=text], .overlay-card input[type=email], .overlay-card input[type=password] {
   display: block; width: 100%; margin: 0 0 10px; padding: 11px 12px; font-size: 15px;
-  background: #0d1320; border: 1px solid var(--border); border-radius: 8px; color: var(--text);
+  background: var(--inset); border: 1px solid var(--border); border-radius: 8px; color: var(--text);
 }
 .auth-card input:focus, .overlay-card input:focus { outline: none; border-color: var(--accent); }
 .auth-card button, .overlay-card button.primary {
   width: 100%; padding: 11px 12px; font-size: 15px; font-weight: 700; cursor: pointer;
-  background: var(--accent); color: #04121c; border: 0; border-radius: 8px;
+  background: var(--accent); color: var(--on-accent); border: 0; border-radius: 8px;
 }
 .auth-card button:disabled, .overlay-card button:disabled { opacity: 0.6; cursor: default; }
 .auth-error { min-height: 20px; margin-top: 10px; color: var(--red); font-size: 13px; }
 
 .header-actions { display: flex; gap: 6px; margin-left: auto; }
-.hdr-btn { background: transparent; color: var(--muted); border: 1px solid var(--border); border-radius: 20px; padding: 5px 12px; font-size: 12px; font-weight: 700; cursor: pointer; }
+.hdr-btn { background: var(--inset); color: var(--muted); border: 1px solid var(--border); border-radius: 20px; padding: 5px 12px; font-size: 12px; font-weight: 700; cursor: pointer; }
 .hdr-btn:hover { color: var(--accent); border-color: var(--accent); }
 
-.overlay { position: fixed; inset: 0; z-index: 50; background: rgba(4, 8, 14, 0.8); display: flex; align-items: flex-start; justify-content: center; padding: 24px 12px; overflow-y: auto; }
+.overlay { position: fixed; inset: 0; z-index: 50; background: var(--overlay); display: flex; align-items: flex-start; justify-content: center; padding: 24px 12px; overflow-y: auto; }
 .overlay-card { width: 100%; max-width: 760px; background: var(--panel); border: 1px solid var(--border); border-radius: 14px; padding: 20px; }
 .overlay-card h2 { margin: 0 0 4px; font-size: 18px; }
 .overlay-card h3 { margin: 18px 0 8px; font-size: 14px; color: var(--accent); }
@@ -33,9 +33,9 @@
 .overlay-msg.ok { color: var(--green); }
 
 .user-list { display: flex; flex-direction: column; gap: 10px; }
-.user-card { border: 1px solid var(--border); border-radius: 10px; padding: 12px; background: #0d1320; }
+.user-card { border: 1px solid var(--border); border-radius: 10px; padding: 12px; background: var(--inset); }
 .user-card .who { font-weight: 800; font-size: 14px; word-break: break-all; }
-.user-card .tag { display: inline-block; margin-left: 6px; padding: 1px 8px; border-radius: 10px; font-size: 10.5px; font-weight: 800; background: var(--accent); color: #04121c; }
+.user-card .tag { display: inline-block; margin-left: 6px; padding: 1px 8px; border-radius: 10px; font-size: 10.5px; font-weight: 800; background: var(--accent); color: var(--on-accent); }
 .user-card .perms { display: flex; flex-wrap: wrap; gap: 6px 16px; margin: 10px 0; }
 .user-card .perms label { display: flex; align-items: center; gap: 6px; font-size: 13px; cursor: pointer; }
 .user-card .perms input { display: inline-block; width: auto; margin: 0; }
@@ -53,16 +53,16 @@
 .ev-card h3 small { display: block; color: var(--muted); font-weight: 500; font-size: 12px; margin-top: 2px; }
 .ev-card h4 { margin: 10px 0 6px; font-size: 13px; color: var(--accent); }
 .ev-big { font-size: 22px; font-weight: 800; }
-.ev-meter { height: 8px; border-radius: 4px; background: #0d1320; overflow: hidden; margin: 8px 0; }
+.ev-meter { height: 8px; border-radius: 4px; background: var(--inset); overflow: hidden; margin: 8px 0; }
 .ev-meter span { display: block; height: 100%; background: linear-gradient(90deg, var(--green), #e0b341, var(--red)); }
-.ev-warn { background: rgba(224, 179, 65, 0.12); border: 1px solid #e0b341; color: #e0b341; border-radius: 10px; padding: 10px 12px; margin: 10px 0; font-size: 13px; }
+.ev-warn { background: var(--warn-bg); border: 1px solid var(--warn-bd); color: var(--warn-text); border-radius: 10px; padding: 10px 12px; margin: 10px 0; font-size: 13px; }
 .ev-sources { display: flex; flex-wrap: wrap; gap: 6px 14px; margin: 8px 0; font-size: 12px; }
 .ev-src small { color: var(--muted); }
-.ev-badge { display: inline-block; padding: 1px 7px; border-radius: 9px; font-size: 10.5px; font-weight: 800; background: #2a3550; color: var(--text); }
-.ev-badge.st-live, .ev-badge.st-released { background: var(--green); color: #04121c; }
-.ev-badge.st-recent, .ev-badge.st-scheduled { background: var(--accent); color: #04121c; }
+.ev-badge { display: inline-block; padding: 1px 7px; border-radius: 9px; font-size: 10.5px; font-weight: 800; background: var(--chip); color: var(--text); }
+.ev-badge.st-live, .ev-badge.st-released { background: var(--green); color: #fff; }
+.ev-badge.st-recent, .ev-badge.st-scheduled { background: var(--accent); color: var(--on-accent); }
 .ev-badge.st-stale, .ev-badge.st-error, .ev-badge.st-unavailable { background: var(--red); color: #fff; }
-.ev-impact { display: inline-block; padding: 1px 8px; border-radius: 9px; font-size: 10.5px; font-weight: 800; background: #2a3550; }
+.ev-impact { display: inline-block; padding: 1px 8px; border-radius: 9px; font-size: 10.5px; font-weight: 800; background: var(--chip); }
 .ev-impact.im-very_high { background: var(--red); color: #fff; }
 .ev-impact.im-high { background: #e0813c; color: #04121c; }
 .ev-impact.im-medium { background: #e0b341; color: #04121c; }
@@ -73,8 +73,8 @@
 .ev-two { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 14px; }
 .ev-kv { border-collapse: collapse; width: 100%; font-size: 13px; }
 .ev-kv th { text-align: left; color: var(--muted); font-weight: 600; padding: 3px 10px 3px 0; width: 38%; }
-.ev-label { display: inline-block; padding: 3px 10px; border-radius: 8px; font-weight: 800; font-size: 13px; background: #2a3550; }
-.ev-label.lb-bullish_pressure { background: var(--green); color: #04121c; }
+.ev-label { display: inline-block; padding: 3px 10px; border-radius: 8px; font-weight: 800; font-size: 13px; background: var(--chip); }
+.ev-label.lb-bullish_pressure { background: var(--green); color: #fff; }
 .ev-label.lb-bearish_pressure { background: var(--red); color: #fff; }
 .ev-label.lb-high_volatility_uncertainty { background: #e0b341; color: #04121c; }
 .ev-evidence { margin: 6px 0; padding-left: 18px; font-size: 12.5px; color: var(--muted); }
@@ -87,7 +87,7 @@
 .ev-row:hover { background: rgba(255, 255, 255, 0.04); }
 .ev-filters { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 10px; }
 .ev-filters input, .ev-filters select, .ev-form input, .ev-inline input, .ev-th input, .ev-grid select, .ev-grid input {
-  background: #0d1320; border: 1px solid var(--border); border-radius: 8px; color: var(--text); padding: 7px 9px; font-size: 13px; width: auto; margin: 0; }
+  background: var(--inset); border: 1px solid var(--border); border-radius: 8px; color: var(--text); padding: 7px 9px; font-size: 13px; width: auto; margin: 0; }
 .ev-filters input { flex: 1; min-width: 140px; }
 .ev-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 10px; margin: 8px 0; }
 .ev-grid label, .ev-th label { display: flex; flex-direction: column; gap: 3px; font-size: 12px; color: var(--muted); }
@@ -97,7 +97,7 @@
 .ev-inline { display: flex; gap: 8px; margin: 8px 0; }
 .ev-msg { min-height: 16px; font-size: 12.5px; margin-top: 6px; }
 .ev-msg.err { color: var(--red); } .ev-msg.ok { color: var(--green); }
-.ev-scn { border: 1px solid var(--border); border-radius: 10px; padding: 10px; background: #0d1320; font-size: 13px; }
+.ev-scn { border: 1px solid var(--border); border-radius: 10px; padding: 10px; background: var(--inset); font-size: 13px; }
 .ev-scn p { margin: 6px 0; } .ev-scn small { color: var(--muted); }
 .ev-chart { margin: 10px 0; font-size: 12px; }
 .ev-chart svg { width: 100%; max-width: 420px; height: auto; display: block; }

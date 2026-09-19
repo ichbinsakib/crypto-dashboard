@@ -451,3 +451,23 @@ class MigrationTests(unittest.TestCase):
 
 if __name__ == "__main__":
     unittest.main()
+
+
+class KnowledgeTests(unittest.TestCase):
+    def test_bullish_reading_is_capped_and_cautioned(self):
+        from events import knowledge
+        e = {"id": "u", "event_name": "Unemployment", "family": "UNEMPLOYMENT", "impact_level": "HIGH", "status": "RELEASED",
+             "release_datetime": "2026-09-04T12:30:00+00:00", "actual": 4.6, "forecast": 4.3, "surprise": 0.3,
+             "surprise_classification": "LARGE", "surprise_direction": "ABOVE"}
+        a = engine.assess(e, utc(2026, 9, 5), CFG, reaction={"return_30m": 0.9})
+        self.assertEqual(a["label"], "BULLISH_PRESSURE")
+        self.assertEqual(a["confidence"], "MEDIUM")
+        self.assertTrue(any("propping up" in x for x in a["evidence"]))
+        self.assertIn("propping_up", knowledge.CONCEPTS)
+
+    def test_support_check(self):
+        from events import knowledge
+        c = [{"t": i, "high": 101, "low": 100 if i % 5 == 0 else 100.5, "close": 100.7, "volume": 10 if i < 30 else 3} for i in range(60)]
+        r = knowledge.support_check(c)
+        self.assertTrue(r["volume_fading"] and r["low_retests"] >= 3)
+        self.assertIsNone(knowledge.support_check(c[:10]))

@@ -7,7 +7,7 @@ stays LOW and says why.
 """
 import statistics
 
-from . import timeutil
+from . import knowledge, timeutil
 
 HIGH_LEVELS = ("HIGH", "VERY_HIGH")
 HORIZONS = ["5m", "15m", "30m", "1h", "4h", "24h"]
@@ -124,6 +124,11 @@ def assess(event, now, cfg, fedwatch=None, reaction=None):
     if fedwatch and fedwatch.get("_shift_pp") is not None:
         ev.append(f"FedWatch cut probability moved {fedwatch['_shift_pp']:+.1f}pp since the previous snapshot.")
     conf = "HIGH" if points >= 3 else "MEDIUM" if points >= 2 else "LOW"
+    if label == "BULLISH_PRESSURE":
+        # A bounce can be big buyers propping the price up rather than real demand (see knowledge.py).
+        ev.append(knowledge.caution("propping_up"))
+        if conf == "HIGH":
+            conf = "MEDIUM"
     return {"phase": "post", "label": label, "confidence": conf, "evidence": ev, "observed": observed,
             "assessment": ("Potential upside pressure" if sign > 0 else "Potential downside pressure")
             + " on risk assets. This is a reading of the data, not a forecast."}
