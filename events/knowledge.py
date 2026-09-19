@@ -21,6 +21,36 @@ CONCEPTS = {
 }
 
 
+# Attributed opinions. These are NOT facts and never change a signal; the engine may show them as
+# context next to related events, always labelled as one analyst's view with its date and source.
+VIEWPOINTS = {
+    "yields_demand_for_us_debt": {
+        "author": "Crypto Dada (@YTCryptoDada)",
+        "source": "https://x.com/YTCryptoDada/status/2100299248881529267",
+        "date": "2026-09-17",
+        "families": ["FOMC", "CPI", "PPI", "PCE"],
+        "claim": ("Higher US yields are read as weak demand for US debt (buyers stepping away from USD assets) "
+                  "rather than economic strength, competition for capital or geopolitics, which are the reasons "
+                  "cited by the Fed side. Raising rates to attract buyers may not work if nobody is buying, and the "
+                  "central bank buying its own bonds is seen as a sign of that weakness."),
+        "implication": ("The view expects markets to be held up until the US midterm elections, with an outside shock "
+                        "(for example from Japan's or China's central bank/bond selling) being the main way that changes."),
+        "how_to_use": ("Treat as a macro lens for rate-driven events: if yields rise after a hawkish surprise, ask whether it is "
+                       "growth or falling demand for debt. Confirm with data (auction results, yield moves) before acting."),
+    },
+}
+
+
+def viewpoint_for(family):
+    """Attributed opinions relevant to an event family, as short labelled evidence lines."""
+    out = []
+    for v in VIEWPOINTS.values():
+        if family in v["families"]:
+            out.append(f"Analyst viewpoint (opinion, not fact; {v['author']}, {v['date']}): {v['claim']} "
+                       f"Use as context only - {v['how_to_use']}")
+    return out
+
+
 def caution(name="propping_up"):
     c = CONCEPTS[name]
     return f"Caution ({c['title'].lower()}): {c['risk']} A bounce can be temporary support, not organic strength."

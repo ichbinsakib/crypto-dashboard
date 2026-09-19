@@ -471,3 +471,12 @@ class KnowledgeTests(unittest.TestCase):
         r = knowledge.support_check(c)
         self.assertTrue(r["volume_fading"] and r["low_retests"] >= 3)
         self.assertIsNone(knowledge.support_check(c[:10]))
+
+
+class ViewpointTests(unittest.TestCase):
+    def test_viewpoint_is_labelled_opinion_and_scoped(self):
+        from events import knowledge
+        self.assertTrue(any("opinion, not fact" in x for x in knowledge.viewpoint_for("CPI")))
+        self.assertEqual(knowledge.viewpoint_for("JOLTS"), [])
+        v = knowledge.VIEWPOINTS["yields_demand_for_us_debt"]
+        self.assertTrue(v["source"].startswith("https://x.com/") and v["date"])

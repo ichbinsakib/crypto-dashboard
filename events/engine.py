@@ -129,6 +129,7 @@ def assess(event, now, cfg, fedwatch=None, reaction=None):
         ev.append(knowledge.caution("propping_up"))
         if conf == "HIGH":
             conf = "MEDIUM"
+    ev += knowledge.viewpoint_for(fam)
     return {"phase": "post", "label": label, "confidence": conf, "evidence": ev, "observed": observed,
             "assessment": ("Potential upside pressure" if sign > 0 else "Potential downside pressure")
             + " on risk assets. This is a reading of the data, not a forecast."}
