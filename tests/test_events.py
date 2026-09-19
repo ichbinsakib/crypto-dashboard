@@ -491,3 +491,15 @@ class NewsContextTests(unittest.TestCase):
         late = knowledge.viewpoint_for("FOMC", utc(2026, 11, 20))
         self.assertFalse(any("Reuters" in x for x in late))          # 30-day validity passed
         self.assertEqual(knowledge.context_items(utc(2026, 9, 20), "JOLTS"), [])
+
+
+class ChannelPostsTests(unittest.TestCase):
+    def test_posts_stored_with_source_and_expiry(self):
+        from events import knowledge
+        ids = {v["source"].split("/")[-1] for v in knowledge.VIEWPOINTS.values()}
+        self.assertTrue({"2100283427769799117", "2100285353202716765", "1867986836028580053"} <= ids)
+        now_lines = knowledge.viewpoint_for("FOMC", utc(2026, 9, 20))
+        self.assertTrue(any("2Y" in x or "US02Y" in x for x in now_lines))
+        later = knowledge.viewpoint_for("FOMC", utc(2027, 3, 1))
+        self.assertFalse(any("92%" in x for x in later))              # dated call expired
+        self.assertTrue(any("bottomed" in x for x in later))          # long-term thesis has no expiry

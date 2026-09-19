@@ -38,6 +38,44 @@ VIEWPOINTS = {
         "how_to_use": ("Treat as a macro lens for rate-driven events: if yields rise after a hawkish surprise, ask whether it is "
                        "growth or falling demand for debt. Confirm with data (auction results, yield moves) before acting."),
     },
+    "fomc_reaction_checklist": {
+        "author": "Crypto Dada (@YTCryptoDada)",
+        "source": "https://x.com/YTCryptoDada/status/2100283427769799117",
+        "date": "2026-09-16",
+        "valid_days": 60,
+        "families": ["FOMC"],
+        "claim": ("After an FOMC decision, watch two things: (1) the bond market - if US02Y and US10Y yields fall after the decision, "
+                  "the market tends to react bullishly; (2) the decision versus consensus - a decision that is unexpected (for example a "
+                  "pause when a hike was the consensus) would be a surprise and can move markets sharply. He also flagged upcoming "
+                  "cycle dates and Bank of Japan rate hikes as further catalysts."),
+        "implication": "Rate-path surprises and the yield reaction matter more than the decision itself.",
+        "how_to_use": ("After the release, check whether 2Y and 10Y yields rose or fell (Big Coins watchlist) and whether the outcome "
+                       "matched the CME FedWatch probabilities you recorded; a yield drop plus a surprise is the pattern he calls out."),
+    },
+    "fomc_sep_2026_hike_call": {
+        "author": "Crypto Dada (@YTCryptoDada)",
+        "source": "https://x.com/YTCryptoDada/status/2100285353202716765",
+        "date": "2026-09-16",
+        "valid_days": 30,
+        "families": ["FOMC"],
+        "claim": ("Before the Sept 16 FOMC he cited a 92% CME-implied chance of a 25 bp hike (his figure, not verified here), expected the "
+                  "decision to be a hike delivered with a very dovish speech (ample reserves, strong economy and productivity, "
+                  "unemployment unchanged, uncertainty elevated but controlled), and after it posted that the bond market disagreed "
+                  "with the Fed's message (\"tell that to the bond market\")."),
+        "implication": "A hawkish action with a dovish tone is the pattern he expected; the bond market reaction was his test of it.",
+        "how_to_use": "Compare the Fed's action and tone with what yields did next; disagreement between the two is the signal to watch.",
+    },
+    "rate_cuts_and_market_bottoms": {
+        "author": "Crypto Dada (@YTCryptoDada)",
+        "source": "https://x.com/YTCryptoDada/status/1867986836028580053",
+        "date": "2024-12-14",
+        "families": ["FOMC", "CPI", "PCE"],
+        "claim": ("Long-term thesis (pinned post): markets have never bottomed until rate cuts start, a pattern he says holds since the "
+                  "1920s; when he wrote it he called US equities the second most expensive market by the Shiller PE ratio and said the "
+                  "top is closer to the bottom."),
+        "implication": "Big bottoms are expected to follow the start of a cutting cycle, not precede it.",
+        "how_to_use": "A long-horizon lens for cycle context only; it says nothing about the next hours or days.",
+    },
 }
 
 
