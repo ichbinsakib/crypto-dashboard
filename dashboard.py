@@ -7,11 +7,14 @@ Rows that need paid on-chain data (MVRV Z-Score, NUPL, exchange flows, ETF flows
 are explicitly marked unavailable rather than faked.
 
 Run manually:  python dashboard.py
-Hosted:        .github/workflows/deploy.yml runs this on a schedule and publishes
-               site/index.html to GitHub Pages. data/ is committed back each run
-               so state and alerts persist between runs.
+Hosted:        .github/workflows/deploy.yml runs this on a schedule. The public site
+               (GitHub Pages) is only a login shell; the actual dashboard content and the
+               app state live in Supabase behind row-level security (see supa.py), so
+               nothing readable is published or committed. Without the KAIRO_* env vars
+               it runs standalone: state in data/state.json, sections in site/portions.json.
 """
 
+import hashlib
 import json
 import os
 import datetime
@@ -20,6 +23,8 @@ import shutil
 import subprocess
 import time
 import urllib.request
+
+import supa
 
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 SITE_DIR = os.path.join(BASE_DIR, "site")   # build output -> deployed to GitHub Pages, not committed
@@ -179,7 +184,14 @@ def fetch_fng():
     return data.get("data", [])
 
 
-def load_state():
+def load_state(backend=None):
+    if backend:
+        # A failed read must abort the run: carrying on with an empty state would overwrite
+        # the real one (open positions, P&L history) on the next save.
+        remote = backend.get_state()
+        if remote is not None:
+            return remote
+        log("No state in the backend yet -- seeding from the local data/state.json snapshot")
     if os.path.exists(STATE_PATH):
         try:
             with open(STATE_PATH, "r", encoding="utf-8") as f:
@@ -189,7 +201,10 @@ def load_state():
     return {}
 
 
-def save_state(state):
+def save_state(state, backend=None):
+    if backend:
+        backend.put_state(state)  # raises on failure -- a silently lost save would replay positions
+        return
     try:
         with open(STATE_PATH, "w", encoding="utf-8") as f:
             json.dump(state, f, indent=2)
@@ -369,6 +384,7 @@ def build_new_notification_events(newly_strong, newly_resolved):
             "type": "signal",
             "title": f"\U0001F7E2 New signal: {sb['symbol']} ({sb['timeframe']})",
             "body": sb["label"],
+            "portion_key": "screener",
         })
     for r in newly_resolved:
         result = r["result"]
@@ -379,6 +395,7 @@ def build_new_notification_events(newly_strong, newly_resolved):
             "type": result,
             "title": f"{emoji} {r['coin']} ({r['tf']}) {result.upper()}",
             "body": f"Exit {fmt_usd_adaptive(r.get('exit_price'))} vs. entry {fmt_usd_adaptive(r.get('entry'))}",
+            "portion_key": "performance",
         })
     return events
 
@@ -1336,19 +1353,6 @@ def render(coins_data, fng_value, fng_classification, generated_at, any_stale,
         'and a high score means &quot;resembles a historically favorable setup by this simple rule set&quot; '
         '-- nothing more. Education only, not financial advice.'
     )
-    tabs_inputs = (
-        '<input type="radio" name="tabs" id="tab-screener" checked>\n'
-        '<input type="radio" name="tabs" id="tab-bigcoins">\n'
-        '<input type="radio" name="tabs" id="tab-mypicks">\n'
-        '<input type="radio" name="tabs" id="tab-performance">'
-    )
-    tabs_labels = (
-        f'<label for="tab-screener">🔍 Screener<span class="info-tip" tabindex="0" data-tip="{screener_info_tip}">&#9432;</span></label>\n'
-        '<label for="tab-bigcoins">🪙 Big Coins</label>\n'
-        '<label for="tab-mypicks">⭐ My Picks</label>\n'
-        '<label for="tab-performance">📊 Performance</label>'
-    )
-
     panels = {}
     spot_signals_by_coin = {}
     for c in coins_data:
@@ -1699,7 +1703,9 @@ def render(coins_data, fng_value, fng_classification, generated_at, any_stale,
     </table>
   </div>
 </div>
+"""
 
+    mypicks_panel = """
 <div class="panel panel-mypicks">
   <div class="cycle-map spot-signal-card" style="margin-bottom:10px;">
     <div class="card-title">⭐ MY PICKS</div>
@@ -1800,6 +1806,21 @@ def render(coins_data, fng_value, fng_classification, generated_at, any_stale,
 """
 
     fng_top = f"{fng_value} ({fng_classification})" if fng_value is not None else "N/A"
+
+    # Public values only (the anon key is designed to be embedded; RLS is what protects the data).
+    # Empty in a standalone/local run, which puts the shell in no-login dev mode.
+    kairo_config_json = json.dumps({
+        "supabaseUrl": os.environ.get("KAIRO_SUPABASE_URL", ""),
+        "anonKey": os.environ.get("KAIRO_SUPABASE_ANON_KEY", ""),
+    }).replace("</", "<\\/")
+    _h = hashlib.md5()
+    for _name in ("app.js", "app.css"):
+        try:
+            with open(os.path.join(STATIC_DIR, _name), "rb") as _f:
+                _h.update(_f.read())
+        except OSError:
+            pass
+    asset_v = _h.hexdigest()[:10]  # cache-buster so a deploy is picked up immediately
 
     html = f"""<!DOCTYPE html>
 <html lang="en">
@@ -1963,50 +1984,47 @@ def render(coins_data, fng_value, fng_classification, generated_at, any_stale,
   footer {{ padding: 18px 24px; color: var(--muted); font-size: 11.5px; border-top:1px solid var(--border); line-height:1.6; }}
   @media (max-width: 900px) {{ .top-grid {{ grid-template-columns: 1fr; }} }}
 </style>
+<link rel="stylesheet" href="app.css?v={asset_v}">
 </head>
 <body>
+<div id="splash" class="auth-screen"><div class="sub">Loading&hellip;</div></div>
+<div id="auth-screen" class="auth-screen" hidden>
+  <form id="login-form" class="auth-card">
+    <h1>&#9889; KAIRO</h1>
+    <div class="sub" style="margin-bottom:14px;">Private dashboard &mdash; sign in with the account you were given.</div>
+    <input type="email" id="login-email" name="email" autocomplete="username" placeholder="Email" required>
+    <input type="password" id="login-password" name="password" autocomplete="current-password" placeholder="Password" required>
+    <button type="submit" id="login-btn">Sign in</button>
+    <div id="login-error" class="auth-error" role="alert"></div>
+  </form>
+</div>
+<div id="noaccess" class="auth-screen" hidden>
+  <div class="auth-card">
+    <h1>&#9889; KAIRO</h1>
+    <div class="sub" style="margin-bottom:14px;">Signed in as <strong id="noaccess-email"></strong>, but no sections have been assigned to this account yet. Ask the owner to grant you access.</div>
+    <button type="button" id="noaccess-signout">Sign out</button>
+  </div>
+</div>
+<div id="app" hidden>
 <header>
   <h1>&#9889; KAIRO LIVE DASHBOARD</h1>
-  <div class="meta">Fear &amp; Greed: {fng_top}<span class="info-tip" tabindex="0" data-tip="A 0-100 index of overall crypto market sentiment from Alternative.me, based on volatility, volume, social media, and surveys. Low = fear (often washed-out), high = greed (often euphoric). A contrarian gauge, not a timing signal on its own.">&#9432;</span> &nbsp;|&nbsp; <span id="updated-ago">just now</span><span class="info-tip" tabindex="0" data-tip="Generated: {generated_at} UTC. Data regenerated {DATA_REFRESH_LABEL}.">&#9432;</span></div>
+  <div class="meta" id="meta-line"></div>
+  <div class="header-actions">
+    <button type="button" id="btn-admin" class="hdr-btn" hidden>Users</button>
+    <button type="button" id="btn-account" class="hdr-btn">Account</button>
+    <button type="button" id="btn-signout" class="hdr-btn">Sign out</button>
+  </div>
 </header>
-{banner_html}
-{tabs_inputs}
-<div class="tabbar">{tabs_labels}</div>
-{bigcoins_panel}
-{screener_panel}
-{performance_panel}
+<div id="banner"></div>
+<div id="tabs-root"></div>
 <footer>
   Education only, not financial advice. You trade at your own risk.
   <span class="info-tip" tabindex="0" data-tip="Data sources: CoinGecko (price/market), Binance Futures public API (funding rate, open interest, mark/index premium), Alternative.me (Fear &amp; Greed Index). No paid subscriptions used. Rows marked Unavailable (MVRV Z-Score, NUPL, exchange flows, ETF flows) require a paid on-chain data provider not connected here. Cycle Map, Heat Score, and Liquidation Risk are Kairo's own heuristic models, not a third-party analytics service.">&#9432;</span>
 </footer>
-<script>
-(function() {{
-  var generatedAt = new Date("{generated_at_iso}");
-  function tick() {{
-    var mins = Math.max(0, Math.round((Date.now() - generatedAt.getTime()) / 60000));
-    var el = document.getElementById('updated-ago');
-    if (el) el.textContent = mins <= 0 ? 'just now' : ('updated ' + mins + 'm ago');
-  }}
-  tick();
-  setInterval(tick, 15000);
-  // Cache-busting reload: a plain meta-refresh can be served from browser/CDN cache and
-  // silently show stale content. Appending a unique query string forces a real network fetch.
-  function reload() {{
-    location.href = location.pathname + '?t=' + Date.now();
-  }}
-  setTimeout(reload, {REFRESH_SECONDS * 1000});
-  // Mobile/installed-app fix: setTimeout/setInterval are frozen while the tab or installed
-  // PWA is backgrounded, so on phones the timer above never fires while the app is closed or
-  // the screen is off -- reopening it just shows whatever was loaded before it was backgrounded.
-  // Reload immediately on foreground if the loaded page is already older than the refresh
-  // interval, so returning to the app always shows current data instead of a stale snapshot.
-  document.addEventListener('visibilitychange', function() {{
-    if (!document.hidden && (Date.now() - generatedAt.getTime()) > {REFRESH_SECONDS * 1000}) {{
-      reload();
-    }}
-  }});
-}})();
-</script>
+</div>
+<div id="overlay" class="overlay" hidden><div class="overlay-card" id="overlay-card"></div></div>
+<script>window.KAIRO_CONFIG = {kairo_config_json};</script>
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2.45.4/dist/umd/supabase.js" integrity="sha384-0w2KAL2YHP6wKOkUDzkCDGgVvfmHnj02DHeQ6XcHOgTfFsGyonKOpShMH1x6nk9o" crossorigin="anonymous"></script>
 <script>
 if ('serviceWorker' in navigator) {{
   // Registered mainly so the site is installable as a home-screen app (Add to Home
@@ -2024,8 +2042,8 @@ if ('serviceWorker' in navigator) {{
   // This re-fetches each shown coin's candles directly from Binance in the browser every minute
   // and recomputes the same rule-based score client-side, so these two tabs stay genuinely live
   // between rebuilds instead of only updating once every {DATA_REFRESH_LABEL}.
-  var INTRADAY_CARDS = {intraday_live_cards_json};
-  if (!INTRADAY_CARDS.length) return;
+  var INTRADAY_CARDS = [];
+  var refreshTimer = null;
 
   function fmtUsdAdaptive(v) {{
     if (v === null || v === undefined || isNaN(v)) return 'N/A';
@@ -2228,8 +2246,15 @@ if ('serviceWorker' in navigator) {{
     }}
   }}
 
-  refreshAllIntraday();
-  setInterval(refreshAllIntraday, 60000);
+  // Called by the app shell every time the Screener section is (re)drawn, since the cards it
+  // refreshes are replaced whenever fresh content is fetched.
+  window.kairoInitIntraday = function(cards) {{
+    INTRADAY_CARDS = cards || [];
+    if (refreshTimer) {{ clearInterval(refreshTimer); refreshTimer = null; }}
+    if (!INTRADAY_CARDS.length) return;
+    refreshAllIntraday();
+    refreshTimer = setInterval(refreshAllIntraday, 60000);
+  }};
 }})();
 </script>
 <script>
@@ -2348,15 +2373,18 @@ if ('serviceWorker' in navigator) {{
     renderMyPicks();
   }});
 
-  syncFollowButtons();
-  renderMyPicks();
+  // Called by the app shell each time sections are (re)drawn.
+  window.kairoInitFollow = function() {{
+    syncFollowButtons();
+    renderMyPicks();
+  }};
   // Re-sync button state after each live intraday refresh (the refresh only touches price/
   // score/etc spans, never the follow button itself, but this keeps behavior obvious/robust).
   setInterval(syncFollowButtons, 60000);
 }})();
 </script>
 <script>
-(function() {{
+window.kairoInitPnlSearch = function() {{
   var input = document.getElementById('pnl-history-search');
   if (!input) return;
   var table = document.getElementById('pnl-history-table');
@@ -2372,17 +2400,41 @@ if ('serviceWorker' in navigator) {{
     }});
     noMatch.hidden = visible > 0;
   }});
-}})();
+}};
 </script>
+<script src="app.js?v={asset_v}"></script>
 </body>
 </html>
 """
-    return html, spot_signals_by_coin
+    portions = {
+        "screener": {"title": f'🔍 Screener<span class="info-tip" tabindex="0" data-tip="{screener_info_tip}">&#9432;</span>',
+                     "sort_order": 1, "html": screener_panel,
+                     "data": {"intraday_cards": intraday_live_cards}},
+        "bigcoins": {"title": "🪙 Big Coins", "sort_order": 2, "html": bigcoins_panel, "data": {}},
+        "mypicks": {"title": "⭐ My Picks", "sort_order": 3, "html": mypicks_panel, "data": {}},
+        "performance": {"title": "📊 Performance", "sort_order": 4, "html": performance_panel, "data": {}},
+        "_meta": {"title": "", "sort_order": 0, "html": banner_html,
+                  "data": {"generated_at": generated_at, "generated_at_iso": generated_at_iso,
+                           "fng_top": fng_top, "refresh_seconds": REFRESH_SECONDS,
+                           "data_refresh_label": DATA_REFRESH_LABEL}},
+    }
+    return html, portions, spot_signals_by_coin
 
 
 def main():
     log("--- run start ---")
-    state = load_state()
+    backend = supa.Backend.from_env()
+    if backend:
+        backend.sign_in()
+        log("Backend: signed in as the publisher account")
+    elif IS_CI:
+        # Standalone mode writes every section to a readable file inside the published site.
+        # In the hosted build that would publish the dashboard to the public, so fail instead.
+        raise SystemExit("Refusing to publish: KAIRO_SUPABASE_URL / KAIRO_SUPABASE_ANON_KEY / "
+                         "KAIRO_PUBLISHER_EMAIL / KAIRO_PUBLISHER_PASSWORD are not all set as repository secrets.")
+    else:
+        log("No KAIRO_* backend configured -- standalone run (local state file, no login)")
+    state = load_state(backend)
     generated_at = datetime.datetime.now().strftime("%Y-%m-%d %H:%M:%S")
 
     markets, err_m = safe_fetch("coingecko markets", fetch_coingecko_markets)
@@ -2474,7 +2526,7 @@ def main():
     newly_resolved = [r for r in new_pnl_state.get("resolved", [])
                        if (r["coin"], r["tf"], r["opened_at"]) not in prev_resolved_keys]
 
-    html, spot_signals_by_coin = render(coins_data, fng_value, fng_classification, generated_at, any_stale,
+    html, portions, spot_signals_by_coin = render(coins_data, fng_value, fng_classification, generated_at, any_stale,
                                          alerts_results, screener_results, intraday_results,
                                          pnl_stats, new_pnl_state)
     with open(OUTPUT_PATH, "w", encoding="utf-8") as f:
@@ -2490,8 +2542,6 @@ def main():
 
     new_notification_events = build_new_notification_events(newly_strong, newly_resolved)
     new_notification_feed = update_notification_feed(state.get("_notification_feed", []), new_notification_events)
-    with open(os.path.join(SITE_DIR, "notifications.json"), "w", encoding="utf-8") as f:
-        json.dump({"generated_at": generated_at, "events": new_notification_feed}, f)
     if new_notification_events:
         log(f"NOTIFICATION EVENTS: {[e['id'] for e in new_notification_events]}")
 
@@ -2501,7 +2551,23 @@ def main():
                  "_notification_feed": new_notification_feed}
     for cd in coins_data:
         new_state[cd["key"]] = {k: v for k, v in cd.items() if k != "stale"}
-    save_state(new_state)
+    save_state(new_state, backend)
+
+    if backend:
+        # Everything readable goes to Supabase, where row-level security decides who sees which
+        # section. The public site (site/) is only the login shell.
+        backend.publish_portions(portions)
+        backend.publish_notifications([
+            {"id": e["id"], "ts": e["ts"] if e["ts"].endswith("Z") or "+" in e["ts"] else e["ts"] + "Z",
+             "type": e["type"], "title": e["title"], "body": e.get("body", ""),
+             "portion_key": e.get("portion_key") or ("screener" if e["type"] == "signal" else "performance")}
+            for e in new_notification_feed])
+        log(f"Backend: published {len(portions)} sections and {len(new_notification_feed)} notification events")
+    else:
+        # Dev mode only (the shell reads this when it has no login configured). Never produced in
+        # the hosted build, where the backend is always set.
+        with open(os.path.join(SITE_DIR, "portions.json"), "w", encoding="utf-8") as f:
+            json.dump([{"key": k, **v} for k, v in portions.items()], f)
 
     log(f"--- run ok, wrote {OUTPUT_PATH} ---")
 

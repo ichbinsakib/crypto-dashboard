@@ -1,0 +1,43 @@
+/* Login shell, header actions and the admin/account overlays. Reuses the page's own CSS variables. */
+[hidden] { display: none !important; }
+
+.auth-screen { min-height: 100vh; display: flex; align-items: center; justify-content: center; padding: 24px; }
+.auth-card { width: 100%; max-width: 380px; background: var(--panel); border: 1px solid var(--border); border-radius: 14px; padding: 26px 24px; }
+.auth-card h1 { margin: 0 0 6px; font-size: 24px; letter-spacing: 1px; }
+.auth-card input, .overlay-card input[type=text], .overlay-card input[type=email], .overlay-card input[type=password] {
+  display: block; width: 100%; margin: 0 0 10px; padding: 11px 12px; font-size: 15px;
+  background: #0d1320; border: 1px solid var(--border); border-radius: 8px; color: var(--text);
+}
+.auth-card input:focus, .overlay-card input:focus { outline: none; border-color: var(--accent); }
+.auth-card button, .overlay-card button.primary {
+  width: 100%; padding: 11px 12px; font-size: 15px; font-weight: 700; cursor: pointer;
+  background: var(--accent); color: #04121c; border: 0; border-radius: 8px;
+}
+.auth-card button:disabled, .overlay-card button:disabled { opacity: 0.6; cursor: default; }
+.auth-error { min-height: 20px; margin-top: 10px; color: var(--red); font-size: 13px; }
+
+.header-actions { display: flex; gap: 6px; margin-left: auto; }
+.hdr-btn { background: transparent; color: var(--muted); border: 1px solid var(--border); border-radius: 20px; padding: 5px 12px; font-size: 12px; font-weight: 700; cursor: pointer; }
+.hdr-btn:hover { color: var(--accent); border-color: var(--accent); }
+
+.overlay { position: fixed; inset: 0; z-index: 50; background: rgba(4, 8, 14, 0.8); display: flex; align-items: flex-start; justify-content: center; padding: 24px 12px; overflow-y: auto; }
+.overlay-card { width: 100%; max-width: 760px; background: var(--panel); border: 1px solid var(--border); border-radius: 14px; padding: 20px; }
+.overlay-card h2 { margin: 0 0 4px; font-size: 18px; }
+.overlay-card h3 { margin: 18px 0 8px; font-size: 14px; color: var(--accent); }
+.overlay-row { display: flex; gap: 8px; align-items: center; justify-content: space-between; margin-bottom: 12px; }
+.overlay-card button.ghost { background: transparent; color: var(--muted); border: 1px solid var(--border); border-radius: 8px; padding: 7px 12px; font-size: 13px; font-weight: 700; cursor: pointer; }
+.overlay-card button.ghost:hover { color: var(--accent); border-color: var(--accent); }
+.overlay-card button.danger { color: var(--red); border-color: var(--red); }
+.overlay-msg { min-height: 18px; margin: 8px 0; font-size: 13px; color: var(--muted); }
+.overlay-msg.err { color: var(--red); }
+.overlay-msg.ok { color: var(--green); }
+
+.user-list { display: flex; flex-direction: column; gap: 10px; }
+.user-card { border: 1px solid var(--border); border-radius: 10px; padding: 12px; background: #0d1320; }
+.user-card .who { font-weight: 800; font-size: 14px; word-break: break-all; }
+.user-card .tag { display: inline-block; margin-left: 6px; padding: 1px 8px; border-radius: 10px; font-size: 10.5px; font-weight: 800; background: var(--accent); color: #04121c; }
+.user-card .perms { display: flex; flex-wrap: wrap; gap: 6px 16px; margin: 10px 0; }
+.user-card .perms label { display: flex; align-items: center; gap: 6px; font-size: 13px; cursor: pointer; }
+.user-card .perms input { display: inline-block; width: auto; margin: 0; }
+.user-card .actions { display: flex; flex-wrap: wrap; gap: 8px; align-items: center; }
+.user-card .actions input { width: auto; flex: 1; min-width: 150px; margin: 0; padding: 7px 10px; font-size: 13px; }

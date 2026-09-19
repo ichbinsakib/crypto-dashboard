@@ -53,6 +53,9 @@ public class MainActivity extends Activity {
             return insets;
         });
 
+        // The dashboard page passes its per-user notification token here after sign-in.
+        webView.addJavascriptInterface(new KairoBridge(this), "KairoAndroid");
+
         WebSettings settings = webView.getSettings();
         settings.setJavaScriptEnabled(true);
         settings.setDomStorageEnabled(true);

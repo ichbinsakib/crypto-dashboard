@@ -18,21 +18,25 @@ import org.json.JSONObject;
 
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
+import java.io.OutputStream;
 import java.net.HttpURLConnection;
 import java.net.URL;
+import java.nio.charset.StandardCharsets;
+import java.text.SimpleDateFormat;
+import java.util.Date;
+import java.util.Locale;
+import java.util.TimeZone;
 
 /**
- * Runs periodically in the background (scheduled by WorkManager, see MainActivity) even when
- * the app isn't open. Polls the same small events feed dashboard.py already writes to the
- * live site on every cycle, and posts a system notification for anything newer than the last
- * event this device has already seen. WorkManager's minimum periodic interval is 15 minutes --
- * that's a platform floor, not something this code can tighten further.
+ * Runs periodically in the background (scheduled by WorkManager, see MainActivity), even when the
+ * app isn't open. Asks the backend for events newer than the last one this device saw, using the
+ * per-user notification token the signed-in dashboard page handed over (KairoBridge). The backend
+ * only returns events for sections that user was granted, so nobody is notified about anything
+ * they can't open. WorkManager's minimum periodic interval is 15 minutes -- a platform floor.
+ * No token (signed out) means nothing to do.
  */
 public class NotificationWorker extends Worker {
 
-    private static final String FEED_URL = "https://ichbinsakib.github.io/crypto-dashboard/notifications.json";
-    private static final String PREFS = "kairo_notifications";
-    private static final String KEY_LAST_SEEN_TS = "last_seen_ts";
     private static final String CHANNEL_ID = "kairo_signals";
 
     public NotificationWorker(@NonNull Context context, @NonNull WorkerParameters params) {
@@ -43,44 +47,55 @@ public class NotificationWorker extends Worker {
     @Override
     public Result doWork() {
         try {
-            String json = fetch(FEED_URL);
-            JSONObject root = new JSONObject(json);
-            JSONArray events = root.getJSONArray("events");
+            SharedPreferences prefs = getApplicationContext().getSharedPreferences(KairoBridge.PREFS, Context.MODE_PRIVATE);
+            String url = prefs.getString(KairoBridge.KEY_URL, "");
+            String anon = prefs.getString(KairoBridge.KEY_ANON, "");
+            String token = prefs.getString(KairoBridge.KEY_TOKEN, "");
+            if (url.isEmpty() || anon.isEmpty() || token.isEmpty()) return Result.success();
 
-            SharedPreferences prefs = getApplicationContext().getSharedPreferences(PREFS, Context.MODE_PRIVATE);
-            String lastSeenTs = prefs.getString(KEY_LAST_SEEN_TS, "");
-
-            // Events are newest-first; walk oldest-first so notifications post in the order
-            // things actually happened, and track the max ts seen to persist afterward.
-            String newestTs = lastSeenTs;
-            for (int i = events.length() - 1; i >= 0; i--) {
-                JSONObject event = events.getJSONObject(i);
-                String ts = event.getString("ts");
-                if (ts.compareTo(lastSeenTs) <= 0) continue;
-                postNotification(event);
-                if (ts.compareTo(newestTs) > 0) newestTs = ts;
+            String lastSeen = prefs.getString(KairoBridge.KEY_LAST_SEEN, "");
+            if (lastSeen.isEmpty()) {
+                // First check for this sign-in: start from now, don't replay history.
+                SimpleDateFormat iso = new SimpleDateFormat("yyyy-MM-dd'T'HH:mm:ss'Z'", Locale.US);
+                iso.setTimeZone(TimeZone.getTimeZone("UTC"));
+                prefs.edit().putString(KairoBridge.KEY_LAST_SEEN, iso.format(new Date())).apply();
+                return Result.success();
             }
 
-            if (!newestTs.equals(lastSeenTs)) {
-                prefs.edit().putString(KEY_LAST_SEEN_TS, newestTs).apply();
+            JSONArray events = new JSONArray(rpcNotificationsSince(url, anon, token, lastSeen));
+            String newest = lastSeen;
+            for (int i = 0; i < events.length(); i++) {           // server returns oldest-first
+                JSONObject event = events.getJSONObject(i);
+                postNotification(event);
+                newest = event.getString("ts");
+            }
+            if (!newest.equals(lastSeen)) {
+                prefs.edit().putString(KairoBridge.KEY_LAST_SEEN, newest).apply();
             }
             return Result.success();
         } catch (Exception e) {
-            // Best-effort: a failed check (offline, feed briefly unavailable) just tries again
-            // next cycle. WorkManager already handles retry/backoff on Result.retry() but a
-            // transient network blip every 15 minutes isn't worth escalating.
+            // Offline, backend briefly unavailable, or the token was revoked: just try next cycle.
             return Result.success();
         }
     }
 
-    private String fetch(String urlStr) throws Exception {
-        URL url = new URL(urlStr);
+    private String rpcNotificationsSince(String baseUrl, String anonKey, String token, String since) throws Exception {
+        URL url = new URL(baseUrl + "/rest/v1/rpc/notifications_since");
         HttpURLConnection conn = (HttpURLConnection) url.openConnection();
         conn.setConnectTimeout(10000);
         conn.setReadTimeout(10000);
-        conn.setRequestProperty("Cache-Control", "no-cache");
+        conn.setRequestMethod("POST");
+        conn.setDoOutput(true);
+        conn.setRequestProperty("apikey", anonKey);
+        conn.setRequestProperty("Authorization", "Bearer " + anonKey);
+        conn.setRequestProperty("Content-Type", "application/json");
+        JSONObject body = new JSONObject().put("p_token", token).put("p_since", since);
+        try (OutputStream out = conn.getOutputStream()) {
+            out.write(body.toString().getBytes(StandardCharsets.UTF_8));
+        }
+        if (conn.getResponseCode() != 200) throw new Exception("HTTP " + conn.getResponseCode());
         StringBuilder sb = new StringBuilder();
-        try (BufferedReader reader = new BufferedReader(new InputStreamReader(conn.getInputStream()))) {
+        try (BufferedReader reader = new BufferedReader(new InputStreamReader(conn.getInputStream(), StandardCharsets.UTF_8))) {
             String line;
             while ((line = reader.readLine()) != null) sb.append(line);
         } finally {

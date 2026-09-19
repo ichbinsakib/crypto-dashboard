@@ -15,7 +15,7 @@ on:
       - "data/**"
 
 permissions:
-  contents: write
+  contents: read
   pages: write
   id-token: write
 
@@ -36,40 +36,14 @@ jobs:
       - name: Generate dashboard
         env:
           DISCORD_WEBHOOK_URL: ${{ secrets.DISCORD_WEBHOOK_URL }}
+          KAIRO_SUPABASE_URL: ${{ secrets.KAIRO_SUPABASE_URL }}
+          KAIRO_SUPABASE_ANON_KEY: ${{ secrets.KAIRO_SUPABASE_ANON_KEY }}
+          KAIRO_PUBLISHER_EMAIL: ${{ secrets.KAIRO_PUBLISHER_EMAIL }}
+          KAIRO_PUBLISHER_PASSWORD: ${{ secrets.KAIRO_PUBLISHER_PASSWORD }}
+        # State and dashboard content now live in Supabase behind row-level security, so nothing
+        # readable is committed back to this (public) repo or published to Pages -- the published
+        # site is only the login shell. dashboard.py refuses to run here without the credentials.
         run: python dashboard.py
-
-      - name: Persist data/ back to the repo
-        run: |
-          git config user.name "github-actions[bot]"
-          git config user.email "github-actions[bot]@users.noreply.github.com"
-          # data/state.json is a fully-regenerated snapshot every run, not an incrementally
-          # diffable file -- a normal rebase/merge on a concurrent push will hit line-level
-          # conflicts almost every time (every field changes each run). Instead of merging
-          # histories, just re-base our freshly generated output on top of whatever is
-          # latest on origin: `reset` (mixed) moves the branch pointer AND resets the index
-          # to match origin's tree, without touching the working tree, so our just-written
-          # data/ files simply become "the new commit" cleanly. Using --soft here instead
-          # (as an earlier version of this step did) leaves the index stale against origin's
-          # tree; if some other file (e.g. this workflow itself) changed upstream between
-          # jobs, the resulting commit would unintentionally revert it back too -- which
-          # GitHub's default token then refuses to push for workflow files specifically.
-          for i in 1 2 3 4 5; do
-            git fetch origin main
-            git reset origin/main
-            git add data/
-            if git diff --cached --quiet; then
-              echo "No data changes to persist."
-              exit 0
-            fi
-            git commit -m "Update dashboard data"
-            if git push origin HEAD:main; then
-              exit 0
-            fi
-            echo "Push race with a concurrent run, retrying ($i/5)..."
-            sleep $(( (RANDOM % 5) + 2 ))
-          done
-          echo "::error::Could not push after 5 attempts"
-          exit 1
 
       - uses: actions/upload-pages-artifact@v3
         with:
