@@ -1115,23 +1115,29 @@ def compute_intraday_signal(klines, lookback, window_label):
     rows.append(("Broader trend filter", reading, pts))
     total += pts
 
-    entry = recent_low
-    stop = recent_low - atr
+    # Dip-thesis check, anchored to the recent low: total is a sum across 5 independent
+    # factors, so it can clear the bullish threshold through momentum/direction/volume/trend
+    # alone even when price isn't anywhere near recent_low -- e.g. a coin already well into an
+    # uptrend, where a "buy the dip" call no longer makes sense. Require price to still sit
+    # inside the band a recent-low dip-buy would use (one ATR below the low up to the low plus
+    # INTRADAY_TARGET_ATR_MULTIPLE ATRs) before calling it bullish at all.
+    thesis_intact = (recent_low - atr) < price < (recent_low + INTRADAY_TARGET_ATR_MULTIPLE * atr)
+
+    # The levels shown and tracked are measured from the CURRENT price, not from recent_low:
+    # that's where someone following the call actually buys. Anchoring them to recent_low
+    # (a limit level price usually isn't at) made the displayed risk:reward better than what a
+    # market buy really gets, and the Performance tracker assumed a fill price nobody got.
+    entry = price
+    stop = price - atr
     risk = entry - stop
     target1 = entry + INTRADAY_TARGET_ATR_MULTIPLE * risk
     target2 = entry + 2 * INTRADAY_TARGET_ATR_MULTIPLE * risk
     target1_pct = (target1 - entry) / entry * 100 if entry else None
     target1_net_pct = target1_pct - ROUND_TRIP_FEE_PCT if target1_pct is not None else None
 
-    # total is a sum across 5 independent factors, so it can clear the bullish threshold
-    # through momentum/direction/volume/trend alone even when price isn't anywhere near
-    # recent_low -- e.g. a coin already well into an uptrend. In that case target1 (measured
-    # from recent_low) can already sit BELOW current price, and stop can already sit below it
-    # too, meaning the "trade" this call describes was already over before it was ever
-    # generated. Require price to actually still be inside (stop, target1) -- a real,
-    # not-yet-resolved setup -- AND that target1 clears MIN_NET_PROFIT_PCT after estimated
-    # fees, before calling it bullish at all, regardless of which factors added up to the score.
-    tradeable = (stop < price < target1) and (target1_net_pct is not None and target1_net_pct >= MIN_NET_PROFIT_PCT)
+    # Also require that target1 clears MIN_NET_PROFIT_PCT after estimated fees, so a signal
+    # never qualifies with a target that isn't worth the round-trip trading cost.
+    tradeable = thesis_intact and (target1_net_pct is not None and target1_net_pct >= MIN_NET_PROFIT_PCT)
     if total >= 4:
         tier = "strong"
     elif total >= 1:
@@ -1620,7 +1626,7 @@ def render(coins_data, fng_value, fng_classification, generated_at, any_stale,
       </div>
       <div class="screener-plain" data-role="plain">{r.get('plain', '')}</div>
       <div class="screener-trade">
-        <div class="screener-trade-title">🎯 Buy the recent low, ATR-based stop<span class="info-tip" tabindex="0" data-tip="ATR (Average True Range) measures this coin's own recent volatility. The stop is set one ATR below the buy level, and targets are {INTRADAY_TARGET_ATR_MULTIPLE}x/{2*INTRADAY_TARGET_ATR_MULTIPLE}x that same distance above it -- a wider reward than risk on purpose, since a flat 1:1 target was often barely worth the round-trip trading fees. A setup only counts as confirmed if price is still between the stop and target1 (hasn't already played out) and target1 clears an estimated minimum profit after fees -- risk/reward otherwise scales to how choppy this specific coin has actually been, instead of a flat percentage that's too tight for volatile coins and too loose for calm ones.">&#9432;</span></div>
+        <div class="screener-trade-title">🎯 Buy at the current price, ATR-based stop<span class="info-tip" tabindex="0" data-tip="Buy is the price at the moment of the signal -- what you'd actually pay buying at market -- not a lower limit level. ATR (Average True Range) measures this coin's own recent volatility: the stop is one ATR below the buy price, and targets are {INTRADAY_TARGET_ATR_MULTIPLE}x/{2*INTRADAY_TARGET_ATR_MULTIPLE}x that same distance above it -- a wider reward than risk on purpose, since a flat 1:1 target was often barely worth the round-trip trading fees. A setup only counts as confirmed if price is still in a valid dip-buy zone near its recent low and target1 clears an estimated minimum profit after fees.">&#9432;</span></div>
         <div class="kv"><span>Buy</span><span data-role="entry">{fmt_usd_adaptive(t['entry'])}</span></div>
         <div class="kv"><span>Stop</span><span class="neg" data-role="stop">{fmt_usd_adaptive(t['stop'])} ({t['risk_pct']:.1f}% below entry)</span></div>
         <div class="kv"><span>Target</span><span class="pos" data-role="target">{fmt_usd_adaptive(t['target1'])} / {fmt_usd_adaptive(t['target2'])}</span></div>
@@ -2119,8 +2125,10 @@ if ('serviceWorker' in navigator) {{
     rows.push(['Broader trend filter', reading, pts]);
     total += pts;
 
-    var entry = recentLow;
-    var stop = recentLow - atr;
+    var thesisIntact = (recentLow - atr) < price && price < (recentLow + {INTRADAY_TARGET_ATR_MULTIPLE} * atr);
+
+    var entry = price;
+    var stop = price - atr;
     var risk = entry - stop;
     var target1 = entry + {INTRADAY_TARGET_ATR_MULTIPLE} * risk;
     var target2 = entry + 2 * {INTRADAY_TARGET_ATR_MULTIPLE} * risk;
@@ -2132,7 +2140,7 @@ if ('serviceWorker' in navigator) {{
     else if (total >= 1) {{ tier = 'lean'; }}
     else if (total >= -1) {{ tier = 'neutral'; }}
     else {{ tier = 'bearish'; }}
-    var tradeable = stop < price && price < target1 && target1NetPct !== null && target1NetPct >= {MIN_NET_PROFIT_PCT};
+    var tradeable = thesisIntact && target1NetPct !== null && target1NetPct >= {MIN_NET_PROFIT_PCT};
     if ((tier === 'strong' || tier === 'lean') && !tradeable) {{ tier = 'neutral'; }}
 
     var label, status, plain;
