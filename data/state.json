@@ -4,7 +4,7 @@
   "_alerts_state": {
     "btc-resistance-break": {
       "triggered": true,
-      "last_triggered_at": "2026-09-19 00:10:22"
+      "last_triggered_at": "2026-09-19 00:15:22"
     },
     "btc-support-break": {
       "triggered": false,
@@ -12,7 +12,7 @@
     },
     "eth-resistance-break": {
       "triggered": true,
-      "last_triggered_at": "2026-09-19 00:10:22"
+      "last_triggered_at": "2026-09-19 00:15:22"
     },
     "eth-support-break": {
       "triggered": false,
@@ -275,12 +275,12 @@
       "rows": [
         [
           "Price vs. recent range",
-          "Near its 30-day high (~$92.91) - less room to run",
+          "Near its 30-day high (~$92.72) - less room to run",
           -1
         ],
         [
           "Crowd mood (Fear & Greed)",
-          "56/100 - crowd is greedy",
+          "71/100 - crowd is greedy",
           -1
         ],
         [
@@ -295,7 +295,7 @@
         ],
         [
           "Stretch from long-term average",
-          "+65.2% above its long-term average - very stretched",
+          "+64.1% above its long-term average - very stretched",
           -2
         ],
         [
@@ -308,12 +308,12 @@
       "id": "hyperliquid",
       "symbol": "HYPE",
       "name": "Hyperliquid",
-      "price": 92.88,
-      "pct_24h": 9.66267,
-      "pct_7d": 15.8,
-      "support_30d": 73.65504241313437,
-      "resistance_30d": 92.90622421562097,
-      "as_of": "2026-09-18 23:30:29",
+      "price": 92.72,
+      "pct_24h": 8.3638,
+      "pct_7d": 17.0,
+      "support_30d": 75.5007190357601,
+      "resistance_30d": 92.72298152821007,
+      "as_of": "2026-09-19 00:15:22",
       "stale": false
     },
     "dogecoin": {
@@ -1471,7 +1471,7 @@
     "ethereum-classic": {
       "label": "\ud83d\udfe1 HOLD / NEUTRAL",
       "status": "neutral",
-      "score": 1,
+      "score": 0,
       "rows": [
         [
           "Price vs. recent range",
@@ -1480,13 +1480,13 @@
         ],
         [
           "Crowd mood (Fear & Greed)",
-          "56/100 - crowd is greedy",
+          "71/100 - crowd is greedy",
           -1
         ],
         [
           "Market phase (best guess)",
-          "Basing near the bottom - phase where smart money accumulates",
-          2
+          "Established uptrend - phase where price marks up",
+          1
         ],
         [
           "Recent trend",
@@ -1495,7 +1495,7 @@
         ],
         [
           "Stretch from long-term average",
-          "+4.3% vs its long-term average - not stretched either way",
+          "+5.1% vs its long-term average - not stretched either way",
           0
         ],
         [
@@ -1508,12 +1508,12 @@
       "id": "ethereum-classic",
       "symbol": "ETC",
       "name": "Ethereum Classic",
-      "price": 8.11,
-      "pct_24h": 9.86082,
-      "pct_7d": 3.6,
-      "support_30d": 6.956276357612042,
+      "price": 8.17,
+      "pct_24h": 8.99734,
+      "pct_7d": 7.7,
+      "support_30d": 7.183531458168674,
       "resistance_30d": 8.609781284223262,
-      "as_of": "2026-09-18 18:15:23",
+      "as_of": "2026-09-19 00:15:22",
       "stale": false
     },
     "pump-fun": {
@@ -2488,7 +2488,7 @@
         ],
         [
           "Crowd mood (Fear & Greed)",
-          "56/100 - crowd is greedy",
+          "71/100 - crowd is greedy",
           -1
         ],
         [
@@ -2503,7 +2503,7 @@
         ],
         [
           "Stretch from long-term average",
-          "-7.3% vs its long-term average - not stretched either way",
+          "-7.4% vs its long-term average - not stretched either way",
           0
         ],
         [
@@ -2516,12 +2516,12 @@
       "id": "quant-network",
       "symbol": "QNT",
       "name": "Quant",
-      "price": 63.33,
-      "pct_24h": 4.19624,
-      "pct_7d": -0.5,
+      "price": 63.21,
+      "pct_24h": 3.64557,
+      "pct_7d": 0.7,
       "support_30d": 60.01906559094017,
       "resistance_30d": 67.13669726469111,
-      "as_of": "2026-09-18 23:00:35",
+      "as_of": "2026-09-19 00:15:22",
       "stale": false
     },
     "tether-gold": {
@@ -3515,14 +3515,14 @@
     "key": "BTC",
     "name": "Bitcoin",
     "emoji": "\u20bf",
-    "price": 80858,
+    "price": 80891,
     "high_24h": 81331,
     "low_24h": 76473,
-    "pct_24h": 5.89348,
+    "pct_24h": 5.86858,
     "pct_7d": 4.9,
     "pct_30d": 16.9,
-    "sma50": 72831.77239194982,
-    "sma200": 70450.08876421096,
+    "sma50": 72832.53756481684,
+    "sma200": 70450.28005742772,
     "support_30d": 75590.24471973324,
     "resistance_30d": 81264.70153038795,
     "mark_price": 81237.88073913,
@@ -3537,14 +3537,14 @@
     "key": "ETH",
     "name": "Ethereum",
     "emoji": "\u039e",
-    "price": 2608.39,
+    "price": 2608.56,
     "high_24h": 2643.34,
     "low_24h": 2444.61,
-    "pct_24h": 6.72863,
+    "pct_24h": 6.81349,
     "pct_7d": 4.0,
     "pct_30d": 16.1,
-    "sma50": 2256.7749933348723,
-    "sma200": 2072.9868119829425,
+    "sma50": 2256.7793053504424,
+    "sma200": 2072.987889986835,
     "support_30d": 2390.783044679688,
     "resistance_30d": 2611.5555571198493,
     "mark_price": 2629.34404651,
