@@ -4,7 +4,7 @@
   "_alerts_state": {
     "btc-resistance-break": {
       "triggered": true,
-      "last_triggered_at": "2026-09-19 00:20:24"
+      "last_triggered_at": "2026-09-19 00:25:22"
     },
     "btc-support-break": {
       "triggered": false,
@@ -12,7 +12,7 @@
     },
     "eth-resistance-break": {
       "triggered": true,
-      "last_triggered_at": "2026-09-19 00:20:24"
+      "last_triggered_at": "2026-09-19 00:25:22"
     },
     "eth-support-break": {
       "triggered": false,
@@ -1517,9 +1517,9 @@
       "stale": false
     },
     "pump-fun": {
-      "label": "\ud83d\udd34 DISTRIBUTION ZONE",
+      "label": "\ud83d\udd34 CAUTION - REDUCE NEW BUYS",
       "status": "bearish",
-      "score": -7,
+      "score": -4,
       "rows": [
         [
           "Price vs. recent range",
@@ -1528,7 +1528,7 @@
         ],
         [
           "Crowd mood (Fear & Greed)",
-          "56/100 - crowd is greedy",
+          "71/100 - crowd is greedy",
           -1
         ],
         [
@@ -1538,12 +1538,12 @@
         ],
         [
           "Recent trend",
-          "Shooting straight up - classic blow-off top risk, don't chase",
-          -2
+          "Trending up steadily - healthy",
+          1
         ],
         [
           "Stretch from long-term average",
-          "+99.4% above its long-term average - very stretched",
+          "+91.8% above its long-term average - very stretched",
           -2
         ],
         [
@@ -1552,16 +1552,16 @@
           0
         ]
       ],
-      "plain": "Looks stretched and euphoric - historically the zone where smart money sells, not buys.",
+      "plain": "Getting risky - I'd hold off on new buys until this cools down.",
       "id": "pump-fun",
       "symbol": "PUMP",
       "name": "Pump.fun",
-      "price": 0.00439056,
-      "pct_24h": 11.75408,
-      "pct_7d": 24.1,
+      "price": 0.00424399,
+      "pct_24h": 5.48863,
+      "pct_7d": 19.4,
       "support_30d": 0.0034754143700465503,
       "resistance_30d": 0.0052249885406471875,
-      "as_of": "2026-09-18 20:55:18",
+      "as_of": "2026-09-19 00:25:22",
       "stale": false
     },
     "venice-token": {
@@ -1807,7 +1807,7 @@
     "ethena": {
       "label": "\ud83d\udd34 DISTRIBUTION ZONE",
       "status": "bearish",
-      "score": -5,
+      "score": -8,
       "rows": [
         [
           "Price vs. recent range",
@@ -1816,7 +1816,7 @@
         ],
         [
           "Crowd mood (Fear & Greed)",
-          "56/100 - crowd is greedy",
+          "71/100 - crowd is greedy",
           -1
         ],
         [
@@ -1826,12 +1826,12 @@
         ],
         [
           "Recent trend",
-          "Trending up steadily - healthy",
-          1
+          "Shooting straight up - classic blow-off top risk, don't chase",
+          -2
         ],
         [
           "Stretch from long-term average",
-          "+64.8% above its long-term average - very stretched",
+          "+62.8% above its long-term average - very stretched",
           -2
         ],
         [
@@ -1844,12 +1844,12 @@
       "id": "ethena",
       "symbol": "ENA",
       "name": "Ethena",
-      "price": 0.170239,
-      "pct_24h": 10.75228,
-      "pct_7d": 17.9,
-      "support_30d": 0.11681764971753443,
+      "price": 0.16862,
+      "pct_24h": 9.62581,
+      "pct_7d": 21.7,
+      "support_30d": 0.13620072177140474,
       "resistance_30d": 0.17616469272611565,
-      "as_of": "2026-09-18 20:55:18",
+      "as_of": "2026-09-19 00:25:22",
       "stale": false
     },
     "bitcoin-cash": {
@@ -3347,7 +3347,7 @@
       "rows": [
         [
           "Price vs. recent range",
-          "Near its 30-day high (~$0.0468) - less room to run",
+          "Near its 30-day high (~$0.0469) - less room to run",
           -1
         ],
         [
@@ -3367,7 +3367,7 @@
         ],
         [
           "Stretch from long-term average",
-          "+1284.0% above its long-term average - very stretched",
+          "+1290.0% above its long-term average - very stretched",
           -2
         ],
         [
@@ -3380,12 +3380,12 @@
       "id": "akedo",
       "symbol": "AKE",
       "name": "Akedo",
-      "price": 0.04672106,
-      "pct_24h": 118.33566,
+      "price": 0.04693534,
+      "pct_24h": 121.86646,
       "pct_7d": 227.9,
       "support_30d": 0.006845979956266348,
-      "resistance_30d": 0.046776871155548995,
-      "as_of": "2026-09-19 00:10:22",
+      "resistance_30d": 0.046935335024529595,
+      "as_of": "2026-09-19 00:25:22",
       "stale": false
     }
   },
@@ -3515,14 +3515,14 @@
     "key": "BTC",
     "name": "Bitcoin",
     "emoji": "\u20bf",
-    "price": 81020,
+    "price": 81055,
     "high_24h": 81331,
     "low_24h": 76473,
-    "pct_24h": 6.17668,
+    "pct_24h": 6.22702,
     "pct_7d": 4.9,
     "pct_30d": 16.9,
-    "sma50": 72834.57237874852,
-    "sma200": 70450.78876091063,
+    "sma50": 72835.53694772923,
+    "sma200": 70451.02990315581,
     "support_30d": 75590.24471973324,
     "resistance_30d": 81264.70153038795,
     "mark_price": 81237.88073913,
@@ -3537,16 +3537,16 @@
     "key": "ETH",
     "name": "Ethereum",
     "emoji": "\u039e",
-    "price": 2615.52,
+    "price": 2615.13,
     "high_24h": 2643.34,
     "low_24h": 2444.61,
-    "pct_24h": 7.22815,
+    "pct_24h": 7.27281,
     "pct_7d": 4.0,
     "pct_30d": 16.1,
-    "sma50": 2256.90564584833,
-    "sma200": 2073.0194751113067,
+    "sma50": 2256.9108622634185,
+    "sma200": 2073.020779215079,
     "support_30d": 2390.783044679688,
-    "resistance_30d": 2614.9191418199707,
+    "resistance_30d": 2615.1799625743843,
     "mark_price": 2629.34404651,
     "index_price": 2630.38534884,
     "funding_rate": 0.0001,
