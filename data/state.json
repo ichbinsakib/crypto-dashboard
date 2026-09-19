@@ -4,7 +4,7 @@
   "_alerts_state": {
     "btc-resistance-break": {
       "triggered": true,
-      "last_triggered_at": "2026-09-19 01:05:20"
+      "last_triggered_at": "2026-09-19 01:10:24"
     },
     "btc-support-break": {
       "triggered": false,
@@ -12,7 +12,7 @@
     },
     "eth-resistance-break": {
       "triggered": true,
-      "last_triggered_at": "2026-09-19 01:05:20"
+      "last_triggered_at": "2026-09-19 01:10:24"
     },
     "eth-support-break": {
       "triggered": false,
@@ -899,7 +899,7 @@
       "rows": [
         [
           "Price vs. recent range",
-          "Near its 30-day high (~$8.21) - less room to run",
+          "Near its 30-day high (~$8.33) - less room to run",
           -1
         ],
         [
@@ -919,7 +919,7 @@
         ],
         [
           "Stretch from long-term average",
-          "+2.9% vs its long-term average - not stretched either way",
+          "+4.6% vs its long-term average - not stretched either way",
           0
         ],
         [
@@ -932,12 +932,12 @@
       "id": "avalanche-2",
       "symbol": "AVAX",
       "name": "Avalanche",
-      "price": 8.21,
-      "pct_24h": 7.99415,
-      "pct_7d": 10.7,
+      "price": 8.35,
+      "pct_24h": 9.3365,
+      "pct_7d": 11.8,
       "support_30d": 7.110247807837202,
-      "resistance_30d": 8.21008538764836,
-      "as_of": "2026-09-19 00:10:22",
+      "resistance_30d": 8.33000567428803,
+      "as_of": "2026-09-19 01:10:24",
       "stale": false
     },
     "aster-2": {
@@ -1613,18 +1613,18 @@
       "stale": false
     },
     "litecoin": {
-      "label": "\ud83d\udd34 CAUTION - REDUCE NEW BUYS",
-      "status": "bearish",
-      "score": -2,
+      "label": "\ud83d\udfe1 HOLD / NEUTRAL",
+      "status": "neutral",
+      "score": -1,
       "rows": [
         [
           "Price vs. recent range",
-          "Near its 30-day high (~$57.24) - less room to run",
+          "Near its 30-day high (~$58.14) - less room to run",
           -1
         ],
         [
           "Crowd mood (Fear & Greed)",
-          "56/100 - crowd is greedy",
+          "71/100 - crowd is greedy",
           -1
         ],
         [
@@ -1634,12 +1634,12 @@
         ],
         [
           "Recent trend",
-          "Chopping sideways - no clear trend",
-          0
+          "Trending up steadily - healthy",
+          1
         ],
         [
           "Stretch from long-term average",
-          "+13.6% above its long-term average - a bit stretched",
+          "+15.4% above its long-term average - a bit stretched",
           -1
         ],
         [
@@ -1648,16 +1648,16 @@
           0
         ]
       ],
-      "plain": "Getting risky - I'd hold off on new buys until this cools down.",
+      "plain": "No real edge either way right now - fine to just wait and watch.",
       "id": "litecoin",
       "symbol": "LTC",
       "name": "Litecoin",
-      "price": 57.26,
-      "pct_24h": 6.3795,
-      "pct_7d": 7.0,
-      "support_30d": 47.80158133097468,
-      "resistance_30d": 57.2405383334805,
-      "as_of": "2026-09-18 21:25:21",
+      "price": 58.18,
+      "pct_24h": 7.07094,
+      "pct_7d": 9.8,
+      "support_30d": 47.88468407932796,
+      "resistance_30d": 58.1367989799671,
+      "as_of": "2026-09-19 01:10:24",
       "stale": false
     },
     "bitget-token": {
@@ -2435,7 +2435,7 @@
       "rows": [
         [
           "Price vs. recent range",
-          "Near its 30-day high (~$3.76) - less room to run",
+          "Near its 30-day high (~$3.78) - less room to run",
           -1
         ],
         [
@@ -2455,7 +2455,7 @@
         ],
         [
           "Stretch from long-term average",
-          "+110.6% above its long-term average - very stretched",
+          "+112.9% above its long-term average - very stretched",
           -2
         ],
         [
@@ -2468,12 +2468,12 @@
       "id": "near",
       "symbol": "NEAR",
       "name": "NEAR Protocol",
-      "price": 3.74,
-      "pct_24h": 20.63706,
-      "pct_7d": 56.2,
+      "price": 3.78,
+      "pct_24h": 18.87932,
+      "pct_7d": 58.3,
       "support_30d": 1.818123276059755,
-      "resistance_30d": 3.7625126088515235,
-      "as_of": "2026-09-19 00:35:17",
+      "resistance_30d": 3.7806949567084556,
+      "as_of": "2026-09-19 01:10:24",
       "stale": false
     },
     "quant-network": {
@@ -3515,16 +3515,16 @@
     "key": "BTC",
     "name": "Bitcoin",
     "emoji": "\u20bf",
-    "price": 81558,
+    "price": 81472,
     "high_24h": 81675,
     "low_24h": 76591,
-    "pct_24h": 6.59469,
+    "pct_24h": 6.3849,
     "pct_7d": 5.6,
     "pct_30d": 17.6,
-    "sma50": 72846.67408281566,
-    "sma200": 70453.81418692741,
+    "sma50": 72844.05164453002,
+    "sma200": 70453.15857735601,
     "support_30d": 75590.24471973324,
-    "resistance_30d": 81603.14528661004,
+    "resistance_30d": 81472.02337232791,
     "mark_price": 81237.88073913,
     "index_price": 81263.36956522,
     "funding_rate": 7.78e-05,
@@ -3537,16 +3537,16 @@
     "key": "ETH",
     "name": "Ethereum",
     "emoji": "\u039e",
-    "price": 2622.4,
+    "price": 2619.73,
     "high_24h": 2643.34,
     "low_24h": 2451.11,
-    "pct_24h": 7.27284,
+    "pct_24h": 7.04008,
     "pct_7d": 4.3,
     "pct_30d": 16.5,
-    "sma50": 2257.0723527609907,
-    "sma200": 2073.061151839472,
+    "sma50": 2257.001765604456,
+    "sma200": 2073.0435050503384,
     "support_30d": 2390.783044679688,
-    "resistance_30d": 2623.2544874529817,
+    "resistance_30d": 2619.7251296262634,
     "mark_price": 2629.34404651,
     "index_price": 2630.38534884,
     "funding_rate": 0.0001,
