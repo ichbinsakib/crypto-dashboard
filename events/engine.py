@@ -83,6 +83,7 @@ def assess(event, now, cfg, fedwatch=None, reaction=None):
             ev.append(f"FedWatch (as of {fedwatch['snapshot_datetime']}): hold {fedwatch.get('hold_probability')}%, "
                       f"cut {fedwatch.get('cut_probability')}%, hike {fedwatch.get('hike_probability')}%.")
         if level in HIGH_LEVELS and 0 <= h <= 24:
+            ev.append("Course rule (Vol 3): avoid opening new leveraged positions right before major news; volatility clusters around the release.")
             return {"phase": "pre", "label": "HIGH_VOLATILITY_UNCERTAINTY", "confidence": "MEDIUM",
                     "evidence": ev + [f"High-impact release in {h:.1f}h: markets often move sharply around these, in either direction."],
                     "observed": observed,
