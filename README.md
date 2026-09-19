@@ -43,3 +43,14 @@ Writes to `site/index.html`, reading/writing state and alerts in `data/`.
 ## Education only
 
 Not financial advice. The cycle model and heat score are Kairo's own heuristics, not guaranteed signals.
+
+## Market Events (admin only)
+
+An extra **Market Events** tab, visible only to admins (enforced by row-level security in Supabase, not just hidden in the page; it cannot be granted to ordinary users). It is independent of the trading signals and changes none of them.
+
+- **Sources:** BLS release schedule and Federal Reserve FOMC calendar (official pages, identifying User-Agent, refreshed at most every 12-24h), BLS public API for released CPI / jobs numbers, Binance 1-minute candles for BTC/ETH reactions. **CME FedWatch has no permitted automated access, so probabilities are never scraped or estimated** - an admin can type in a snapshot; it is shown with its source and age.
+- **Not invented:** consensus forecasts are not available from official sources, so surprises show `NO_FORECAST` until an admin enters one (audit-logged). Assessments are labelled Bullish/Bearish pressure, Neutral or High volatility with a confidence level and the evidence; they are readings of stored data, never price predictions. Historical statistics are hidden below 5 samples.
+- **Freshness:** every source shows LIVE / RECENT / STALE / UNAVAILABLE / ERROR with its retrieval time; failures back off exponentially and stale data is never shown as current.
+- **Config:** impact rules, surprise thresholds and notification toggles have defaults in `events/config.py` and can be edited by an admin in the tab (stored in `event_config`). Optional env: `FRED_API_KEY`, `BLS_API_KEY`, `EVENTS_USER_AGENT`, `EVENTS_REACTION_ASSETS`.
+- **Code:** `events/` (parsers, providers, classification, engine, reactions, service), `static/events.js` (UI), `migrations/003_market_events.sql`.
+- **Tests:** `python -m unittest discover -s tests -v`

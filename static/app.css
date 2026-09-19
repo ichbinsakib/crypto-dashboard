@@ -41,3 +41,69 @@
 .user-card .perms input { display: inline-block; width: auto; margin: 0; }
 .user-card .actions { display: flex; flex-wrap: wrap; gap: 8px; align-items: center; }
 .user-card .actions input { width: auto; flex: 1; min-width: 150px; margin: 0; padding: 7px 10px; font-size: 13px; }
+
+/* Market Events (admin-only section) */
+.ev-head h2 { margin: 6px 0 2px; font-size: 20px; }
+.ev-head small { font-size: 11px; color: var(--accent); border: 1px solid var(--accent); border-radius: 10px; padding: 1px 8px; margin-left: 6px; vertical-align: middle; }
+.ev-sub { color: var(--muted); font-size: 12.5px; line-height: 1.5; margin: 4px 0; }
+.ev-cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 12px; }
+.ev-card { background: var(--panel); border: 1px solid var(--border); border-radius: 12px; padding: 14px; margin: 12px 0; }
+.ev-cards .ev-card { margin: 0; }
+.ev-card h3 { margin: 0 0 8px; font-size: 15px; }
+.ev-card h3 small { display: block; color: var(--muted); font-weight: 500; font-size: 12px; margin-top: 2px; }
+.ev-card h4 { margin: 10px 0 6px; font-size: 13px; color: var(--accent); }
+.ev-big { font-size: 22px; font-weight: 800; }
+.ev-meter { height: 8px; border-radius: 4px; background: #0d1320; overflow: hidden; margin: 8px 0; }
+.ev-meter span { display: block; height: 100%; background: linear-gradient(90deg, var(--green), #e0b341, var(--red)); }
+.ev-warn { background: rgba(224, 179, 65, 0.12); border: 1px solid #e0b341; color: #e0b341; border-radius: 10px; padding: 10px 12px; margin: 10px 0; font-size: 13px; }
+.ev-sources { display: flex; flex-wrap: wrap; gap: 6px 14px; margin: 8px 0; font-size: 12px; }
+.ev-src small { color: var(--muted); }
+.ev-badge { display: inline-block; padding: 1px 7px; border-radius: 9px; font-size: 10.5px; font-weight: 800; background: #2a3550; color: var(--text); }
+.ev-badge.st-live, .ev-badge.st-released { background: var(--green); color: #04121c; }
+.ev-badge.st-recent, .ev-badge.st-scheduled { background: var(--accent); color: #04121c; }
+.ev-badge.st-stale, .ev-badge.st-error, .ev-badge.st-unavailable { background: var(--red); color: #fff; }
+.ev-impact { display: inline-block; padding: 1px 8px; border-radius: 9px; font-size: 10.5px; font-weight: 800; background: #2a3550; }
+.ev-impact.im-very_high { background: var(--red); color: #fff; }
+.ev-impact.im-high { background: #e0813c; color: #04121c; }
+.ev-impact.im-medium { background: #e0b341; color: #04121c; }
+.ev-fw { display: flex; gap: 18px; margin: 6px 0; }
+.ev-fw div { display: flex; flex-direction: column; }
+.ev-fw b { font-size: 20px; }
+.ev-fw span { color: var(--muted); font-size: 11px; }
+.ev-two { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 14px; }
+.ev-kv { border-collapse: collapse; width: 100%; font-size: 13px; }
+.ev-kv th { text-align: left; color: var(--muted); font-weight: 600; padding: 3px 10px 3px 0; width: 38%; }
+.ev-label { display: inline-block; padding: 3px 10px; border-radius: 8px; font-weight: 800; font-size: 13px; background: #2a3550; }
+.ev-label.lb-bullish_pressure { background: var(--green); color: #04121c; }
+.ev-label.lb-bearish_pressure { background: var(--red); color: #fff; }
+.ev-label.lb-high_volatility_uncertainty { background: #e0b341; color: #04121c; }
+.ev-evidence { margin: 6px 0; padding-left: 18px; font-size: 12.5px; color: var(--muted); }
+.ev-scroll { overflow-x: auto; }
+.ev-table { border-collapse: collapse; width: 100%; font-size: 12.5px; }
+.ev-table th { text-align: left; color: var(--muted); font-weight: 600; padding: 5px 8px; border-bottom: 1px solid var(--border); white-space: nowrap; }
+.ev-table td { padding: 6px 8px; border-bottom: 1px solid var(--border); vertical-align: top; }
+.ev-table td small { display: block; color: var(--muted); font-size: 11px; }
+.ev-row { cursor: pointer; }
+.ev-row:hover { background: rgba(255, 255, 255, 0.04); }
+.ev-filters { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 10px; }
+.ev-filters input, .ev-filters select, .ev-form input, .ev-inline input, .ev-th input, .ev-grid select, .ev-grid input {
+  background: #0d1320; border: 1px solid var(--border); border-radius: 8px; color: var(--text); padding: 7px 9px; font-size: 13px; width: auto; margin: 0; }
+.ev-filters input { flex: 1; min-width: 140px; }
+.ev-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 10px; margin: 8px 0; }
+.ev-grid label, .ev-th label { display: flex; flex-direction: column; gap: 3px; font-size: 12px; color: var(--muted); }
+.ev-form summary { cursor: pointer; color: var(--accent); font-size: 13px; margin-top: 8px; }
+.ev-toggles { display: flex; flex-wrap: wrap; gap: 6px 16px; margin-bottom: 8px; font-size: 13px; }
+.ev-toggles input { display: inline-block; width: auto; }
+.ev-inline { display: flex; gap: 8px; margin: 8px 0; }
+.ev-msg { min-height: 16px; font-size: 12.5px; margin-top: 6px; }
+.ev-msg.err { color: var(--red); } .ev-msg.ok { color: var(--green); }
+.ev-scn { border: 1px solid var(--border); border-radius: 10px; padding: 10px; background: #0d1320; font-size: 13px; }
+.ev-scn p { margin: 6px 0; } .ev-scn small { color: var(--muted); }
+.ev-chart { margin: 10px 0; font-size: 12px; }
+.ev-chart svg { width: 100%; max-width: 420px; height: auto; display: block; }
+.ev-chart svg line { stroke: var(--border); }
+.ev-chart svg text { fill: var(--muted); font-size: 8px; }
+.ev-chart svg rect.up { fill: var(--green); } .ev-chart svg rect.down { fill: var(--red); }
+.ev-actions { margin: 10px 0; }
+#events-root .ghost { background: transparent; color: var(--muted); border: 1px solid var(--border); border-radius: 8px; padding: 7px 12px; font-size: 13px; font-weight: 700; cursor: pointer; margin-top: 8px; }
+#events-root .ghost:hover { color: var(--accent); border-color: var(--accent); }

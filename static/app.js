@@ -98,6 +98,9 @@
     if (window.kairoInitIntraday) window.kairoInitIntraday(has.screener ? (has.screener.data || {}).intraday_cards : []);
     if (window.kairoInitFollow && has.mypicks) window.kairoInitFollow();
     if (window.kairoInitPnlSearch) window.kairoInitPnlSearch();
+    if (window.kairoInitEvents && has.events) {
+      window.kairoInitEvents(has.events, { sb: function () { return sb; }, isAdmin: !!(S.profile && S.profile.is_admin), dev: DEV });
+    }
   }
 
   async function refresh(initial) {

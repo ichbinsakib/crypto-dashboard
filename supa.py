@@ -77,3 +77,14 @@ class Backend:
             return
         self._request("POST", "/rest/v1/notifications?on_conflict=id", events,
                       headers={"Prefer": "resolution=ignore-duplicates,return=minimal"})
+
+    # ---- generic table access (used by the Market Events job) ----
+
+    def select(self, table, query="select=*"):
+        return self._request("GET", f"/rest/v1/{table}?{query}") or []
+
+    def upsert(self, table, rows, on_conflict):
+        if not rows:
+            return
+        self._request("POST", f"/rest/v1/{table}?on_conflict={on_conflict}", rows,
+                      headers={"Prefer": "resolution=merge-duplicates,return=minimal,missing=default"})

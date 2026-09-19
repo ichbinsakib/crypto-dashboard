@@ -1883,7 +1883,7 @@ def render(coins_data, fng_value, fng_classification, generated_at, any_stale,
         "anonKey": os.environ.get("KAIRO_SUPABASE_ANON_KEY", ""),
     }).replace("</", "<\\/")
     _h = hashlib.md5()
-    for _name in ("app.js", "app.css"):
+    for _name in ("app.js", "app.css", "events.js"):
         try:
             with open(os.path.join(STATIC_DIR, _name), "rb") as _f:
                 _h.update(_f.read())
@@ -1940,6 +1940,7 @@ def render(coins_data, fng_value, fng_classification, generated_at, any_stale,
   #tab-bigcoins:checked ~ .tabbar label[for=tab-bigcoins],
   #tab-mypicks:checked ~ .tabbar label[for=tab-mypicks],
   #tab-performance:checked ~ .tabbar label[for=tab-performance],
+  #tab-events:checked ~ .tabbar label[for=tab-events],
   #bc-btc:checked ~ .tabbar label[for=bc-btc],
   #bc-eth:checked ~ .tabbar label[for=bc-eth] {{ background: var(--accent); color:#04121c; border-color:var(--accent); }}
   .panel {{ display:none; padding: 6px 16px 20px; }}
@@ -1947,6 +1948,7 @@ def render(coins_data, fng_value, fng_classification, generated_at, any_stale,
   #tab-bigcoins:checked ~ .panel-bigcoins {{ display:block; }}
   #tab-mypicks:checked ~ .panel-mypicks {{ display:block; }}
   #tab-performance:checked ~ .panel-performance {{ display:block; }}
+  #tab-events:checked ~ .panel-events {{ display:block; }}
   .bigcoin-panel {{ display:none; }}
   #bc-btc:checked ~ .bigcoin-panel-btc {{ display:block; }}
   #bc-eth:checked ~ .bigcoin-panel-eth {{ display:block; }}
@@ -2471,6 +2473,7 @@ window.kairoInitPnlSearch = function() {{
   }});
 }};
 </script>
+<script src="events.js?v={asset_v}"></script>
 <script src="app.js?v={asset_v}"></script>
 </body>
 </html>
@@ -2488,6 +2491,23 @@ window.kairoInitPnlSearch = function() {{
                            "data_refresh_label": DATA_REFRESH_LABEL}},
     }
     return html, portions, spot_signals_by_coin
+
+
+def publish_market_events(backend):
+    """Admin-only Market Events section. Fully isolated: any failure is logged and the trading
+    dashboard above is unaffected (it is already published by this point)."""
+    try:
+        from events import service as ev_service, config as ev_config, timeutil as ev_time
+        payload = ev_service.run(backend)
+        cfg = ev_config.effective({r["key"]: r["value"] for r in backend.select("event_config")})
+        backend.publish_portions({"events": {
+            "title": "\U0001F4C5 Market Events", "sort_order": 5,
+            "html": '<div class="panel panel-events"><div id="events-root"></div></div>', "data": payload}})
+        feed = ev_service.notifications(payload, cfg, ev_time.now_utc(), set())
+        backend.publish_notifications(feed)
+        log(f"Market Events: {len(payload['events'])} events in window, {len(feed)} new notifications")
+    except Exception as e:  # noqa: BLE001 - never let this section take down the main job
+        log(f"Market Events skipped: {type(e).__name__}: {str(e)[:200]}")
 
 
 def main():
@@ -2645,6 +2665,7 @@ def main():
         # Everything readable goes to Supabase, where row-level security decides who sees which
         # section. The public site (site/) is only the login shell.
         backend.publish_portions(portions)
+        publish_market_events(backend)
         backend.publish_notifications([
             {"id": e["id"], "ts": e["ts"] if e["ts"].endswith("Z") or "+" in e["ts"] else e["ts"] + "Z",
              "type": e["type"], "title": e["title"], "body": e.get("body", ""),
