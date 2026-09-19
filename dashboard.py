@@ -23,6 +23,7 @@ import shutil
 import subprocess
 import time
 import urllib.request
+from html import escape as _esc
 
 import supa
 
@@ -895,6 +896,22 @@ def fetch_screener_markets(limit=SCREENER_SIZE):
     return random.sample(candidates, limit)
 
 
+# Last resort for the intraday scanner when CoinGecko is unreachable AND no pool has ever been
+# cached (e.g. a fresh state): liquid Binance coins, symbols only (BTC/ETH have their own panel).
+FALLBACK_INTRADAY_SYMBOLS = (
+    "BNB SOL XRP DOGE ADA TRX AVAX LINK DOT LTC BCH XLM HBAR SUI NEAR UNI AAVE APT ATOM FIL ARB OP "
+    "INJ TIA SEI RUNE ALGO ETC VET ICP FET RENDER PEPE SHIB WLD ENA TON KAS ONDO JUP").split()
+
+
+def fetch_screener_pool():
+    """The whole candidate pool (no sampling). The intraday scanner reads cheap Binance
+    candles, so it can look at far more coins per cycle than the CoinGecko-based daily
+    screener, whose per-coin calls are what the small `limit` above protects. Feeding the
+    intraday scanner the 5-coin sample meant it only ever saw the same 5 random coins per
+    cycle -- most of why so few signals appeared."""
+    return fetch_screener_markets(limit=SCREENER_POOL_SIZE)
+
+
 def _looks_pegged(d):
     """Catches tokenized money-market/treasury funds and stablecoin-likes that keep showing
     up under new names (BUIDL, Janus Henderson's fund, BFUSD, a Superstate treasury fund
@@ -1011,7 +1028,7 @@ INTRADAY_TIMEFRAMES = {
 # runners -- both confirmed directly against a live runner. data-api.binance.vision is
 # Binance's own official public spot-market-data mirror domain -- same order book as
 # binance.com itself, just not subject to the same geo-restriction as the main API domain.
-INTRADAY_RATE_LIMIT_DELAY = 0.4
+INTRADAY_RATE_LIMIT_DELAY = 0.15
 
 
 def fetch_binance_ohlc(symbol, interval):
@@ -1163,12 +1180,20 @@ def compute_intraday_signal(klines, lookback, window_label):
         tier = "neutral"
     else:
         tier = "bearish"
+    blocked_by = None
     if tier in ("strong", "lean") and not tradeable:
-        # The score says bullish, but either price is already outside (stop, target1) -- the
-        # setup this score describes already resolved before it could ever be acted on -- or
-        # target1 wouldn't actually be worth trading after fees. Downgrade rather than reject
-        # outright: the bearish path is unaffected since it isn't gated on this trade
-        # construct at all.
+        # The score says bullish, but either price has left the dip-buy band (the setup this
+        # score describes already played out or broke down) or target1 wouldn't be worth
+        # trading after fees. Downgrade rather than reject outright: the bearish path is
+        # unaffected since it isn't gated on this trade construct at all. The reason is kept so
+        # the Screener can show what's missing for a near-miss coin.
+        if not thesis_intact:
+            blocked_by = ("price already ran past its dip-buy zone"
+                          if price >= recent_low + INTRADAY_TARGET_ATR_MULTIPLE * atr
+                          else "price already broke below its dip-buy zone")
+        else:
+            blocked_by = (f"target only nets {target1_net_pct:.2f}% after fees "
+                          f"(needs {MIN_NET_PROFIT_PCT}%)")
         tier = "neutral"
 
     if tier == "strong":
@@ -1187,7 +1212,7 @@ def compute_intraday_signal(klines, lookback, window_label):
     target2_pct = (target2 - entry) / entry * 100 if entry else None
     return {
         "label": label, "status": status, "score": total, "rows": rows, "plain": plain,
-        "price": price, "atr": atr,
+        "price": price, "atr": atr, "blocked_by": blocked_by,
         "trade": {"entry": entry, "stop": stop, "target1": target1, "target2": target2,
                   "risk_pct": (risk / entry * 100) if entry else None,
                   "target1_net_pct": target1_net_pct,
@@ -1195,22 +1220,24 @@ def compute_intraday_signal(klines, lookback, window_label):
     }
 
 
-def build_intraday_screener(markets, timeframe_key, target_count=SCREENER_SIZE, max_attempts=45):
+def build_intraday_screener(markets, timeframe_key, target_count=SCREENER_SIZE, max_attempts=40):
     """Runs the lean intraday model over the same coin universe as the daily screener,
     using Binance's own public klines mirror (api.binance.com itself is geo-blocked, HTTP 451,
     and Bybit is blocked too, HTTP 403, both from GitHub Actions runner IPs). Coins without
     a liquid Binance-listed USDT/USD pair (small-caps, tokenized RWA products like
     FIGR_HELOC, etc.) are silently skipped rather than shown broken. Shuffled and
-    attempt-capped so it stops once enough coins are found instead of always querying the
-    whole pool."""
+attempt-capped so it stops once enough *confirmed* signals are found (a coin that
+    merely scores but doesn't qualify must not use up the quota, or each cycle would only
+    look at ~8 random coins) instead of always querying the whole pool."""
     cfg = INTRADAY_TIMEFRAMES[timeframe_key]
     shuffled = list(markets or [])
     random.shuffle(shuffled)
     results = []
     skipped = []
     attempts = 0
+    confirmed = 0
     for m in shuffled:
-        if len(results) >= target_count or attempts >= max_attempts:
+        if confirmed >= target_count or attempts >= max_attempts:
             break
         symbol = (m.get("symbol") or "").upper()
         if not symbol:
@@ -1228,12 +1255,37 @@ def build_intraday_screener(markets, timeframe_key, target_count=SCREENER_SIZE, 
             if sig:
                 sig.update({"id": m.get("id"), "symbol": symbol, "name": m.get("name")})
                 results.append(sig)
+                if sig.get("status") == "bullish" and sig.get("score", 0) >= STRONG_INTRADAY_SCORE:
+                    confirmed += 1
         except Exception as e:
             log(f"INTRADAY SIGNAL FAIL [{symbol}]: {e}")
     if skipped:
         log(f"Intraday ({timeframe_key}) skipped (no Binance pair or fetch failed): {skipped}")
     results.sort(key=lambda r: r["score"], reverse=True)
     return results
+
+
+def pick_near_misses(scored, limit=5):
+    """For an empty Screener tab: the coins closest to qualifying, each with what is missing.
+    Shown clearly labelled as NOT signals so the tab is never a blank wall, without weakening
+    the bar. Distance is points short of the confirmed threshold; a coin that has the points
+    but was held back (price already left its dip-buy zone, or the target is too small after
+    fees) counts as one step away, since it needs the price to reset rather than more score."""
+    rows = []
+    for r in scored:
+        if r.get("status") == "bearish" or r.get("score", 0) < 1:
+            continue
+        need = STRONG_INTRADAY_SCORE - r["score"]
+        if r.get("blocked_by"):
+            why, dist = f"has the score, but {r['blocked_by']}", 1
+        elif need > 0:
+            why, dist = f"needs {need} more point{'s' if need != 1 else ''} (has {r['score']} of {STRONG_INTRADAY_SCORE})", need
+        else:
+            continue  # would already be a confirmed signal
+        rows.append({"symbol": r["symbol"], "name": r.get("name") or r["symbol"], "price": r["price"],
+                     "score": r["score"], "why": why, "dist": dist})
+    rows.sort(key=lambda x: (x["dist"], -x["score"]))
+    return rows[:limit]
 
 
 def fetch_single_intraday_signal(symbol, name, timeframe_key):
@@ -1325,7 +1377,7 @@ def build_coin_data(coin, markets, fng_latest, fng_prev, state):
 
 def render(coins_data, fng_value, fng_classification, generated_at, any_stale,
            alerts_results=None, screener_results=None, intraday_results=None,
-           pnl_stats=None, pnl_state=None):
+           pnl_stats=None, pnl_state=None, near_misses=None):
     total_stale = any_stale
     pnl_stats = pnl_stats or {"daily": {}, "weekly": {}, "monthly": {}}
     pnl_state = pnl_state or {}
@@ -1334,6 +1386,7 @@ def render(coins_data, fng_value, fng_classification, generated_at, any_stale,
     alerts_results = alerts_results or []
     screener_results = screener_results or []
     intraday_results = intraday_results or {}
+    near_misses = near_misses or {}
     triggered_now = [a for a in alerts_results if a["triggered"]]
 
     banner_html = ""
@@ -1649,9 +1702,25 @@ def render(coins_data, fng_value, fng_classification, generated_at, any_stale,
     def _intraday_panel_html(tf_key, tf_name, window_desc):
         results = intraday_results.get(tf_key, [])
         if not results:
-            return (f'<div class="stale-note">&#9888; No confirmed {tf_name} setups right now &mdash; '
+            empty = (f'<div class="stale-note">&#9888; No confirmed {tf_name} setups right now &mdash; '
                      'nothing hit the NEAR-TERM DIP ZONE bar this cycle. Quality over quantity: an empty '
                      'tab means no strong signal, not a fetch problem. Checking again next cycle.</div>')
+            misses = near_misses.get(tf_key) or []
+            if not misses:
+                return empty
+            rows_html = "".join(
+                f'<tr><td>{_esc(str(m["name"]))} <span class="watch">({_esc(m["symbol"])})</span></td>'
+                f'<td>{fmt_usd_adaptive(m["price"])}</td><td>{_pts_badge2(m["score"])}</td>'
+                f'<td class="watch">{_esc(m["why"])}</td></tr>' for m in misses)
+            return empty + f"""
+    <div class="cycle-map spot-signal-card" style="margin-top:12px;">
+      <div class="card-title">CLOSEST TO QUALIFYING <span class="watch">&mdash; not signals</span></div>
+      <div class="sub" style="margin-bottom:8px;">These did not pass the bar, so there is no Buy/Stop/Target and nothing is tracked in Performance. Shown so the tab isn't blank and you can see how close the market is.</div>
+      <div style="overflow-x:auto;"><table class="signal-table" style="margin:0;">
+        <thead><tr><th>Coin</th><th>Price</th><th>Score</th><th>What&rsquo;s missing</th></tr></thead>
+        <tbody>{rows_html}</tbody>
+      </table></div>
+    </div>"""
         cards = "".join(_intraday_card(r, i + 1, tf_key) for i, r in enumerate(results))
         return f"""
     <div class="sub" style="margin-bottom:14px; display:flex; align-items:center;">
@@ -2472,7 +2541,21 @@ def main():
         fire_toast_notifications(newly_triggered)
 
     log(f"Running screener over top {SCREENER_SIZE} coins by market cap...")
-    screener_markets, _ = safe_fetch("screener markets", fetch_screener_markets)
+    screener_pool, _ = safe_fetch("screener markets", fetch_screener_pool)
+    screener_markets = (random.sample(screener_pool, min(SCREENER_SIZE, len(screener_pool)))
+                        if screener_pool else None)
+    if screener_pool:
+        pool_cache = [{"id": d.get("id"), "symbol": d.get("symbol"), "name": d.get("name")} for d in screener_pool]
+    else:
+        # CoinGecko rate-limits the bulk call now and then; fall back to the last good pool so
+        # the intraday scanner (which only needs id/symbol/name) keeps scanning meanwhile.
+        pool_cache = state.get("_screener_pool") or []
+        if pool_cache:
+            log(f"Screener pool fetch failed -- scanning the cached pool of {len(pool_cache)} coins")
+            screener_pool = pool_cache
+        else:
+            log("Screener pool fetch failed and nothing is cached -- scanning the built-in fallback pool")
+            screener_pool = [{"id": None, "symbol": sym.lower(), "name": sym} for sym in FALLBACK_INTRADAY_SYMBOLS]
     prev_screener_state = state.get("_screener", {})
     screener_results, new_screener_state = build_screener(
         fng_value, prev_screener_state, generated_at, markets=screener_markets)
@@ -2489,12 +2572,15 @@ def main():
     # While a batch is still in progress, no new candidates are considered at all -- the
     # Scanner shows exactly that batch (via the backfill below) until it's fully done.
     intraday_results = {}
+    near_misses = {}
     for tf_key in INTRADAY_TIMEFRAMES:
         tf_open_count = sum(1 for p in prev_pnl_open.values() if p["tf"] == tf_key)
         if tf_open_count == 0:
-            raw = build_intraday_screener(screener_markets, tf_key, target_count=PNL_BATCH_SIZE)
+            raw = build_intraday_screener(screener_pool or screener_markets, tf_key, target_count=PNL_BATCH_SIZE)
             intraday_results[tf_key] = [r for r in raw if r.get("status") == "bullish"
                                          and r.get("score", 0) >= STRONG_INTRADAY_SCORE]
+            if not intraday_results[tf_key]:
+                near_misses[tf_key] = pick_near_misses(raw)
             log(f"Intraday {tf_key}: previous batch complete, opened new batch of "
                 f"{len(intraday_results[tf_key])} confirmed signal(s)")
         else:
@@ -2530,7 +2616,7 @@ def main():
 
     html, portions, spot_signals_by_coin = render(coins_data, fng_value, fng_classification, generated_at, any_stale,
                                          alerts_results, screener_results, intraday_results,
-                                         pnl_stats, new_pnl_state)
+                                         pnl_stats, new_pnl_state, near_misses)
     with open(OUTPUT_PATH, "w", encoding="utf-8") as f:
         f.write(html)
     copy_static_assets()
@@ -2550,7 +2636,7 @@ def main():
     new_state = {"_fng_value": fng_value, "_fng_classification": fng_classification,
                  "_alerts_state": new_alerts_state, "_screener": new_screener_state,
                  "_strong_buy_state": new_strong_state, "_pnl_tracker": new_pnl_state,
-                 "_notification_feed": new_notification_feed}
+                 "_notification_feed": new_notification_feed, "_screener_pool": pool_cache}
     for cd in coins_data:
         new_state[cd["key"]] = {k: v for k, v in cd.items() if k != "stale"}
     save_state(new_state, backend)
