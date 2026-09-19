@@ -18,6 +18,18 @@ CONCEPTS = {
         "assessment_rule": ("A bullish reading that rests only on a price bounce is capped at MEDIUM confidence "
                             "and carries this caution, because a bounce can be support rather than demand."),
     },
+    "anticipate_dont_chase": {
+        "title": "Anticipate, don't chase (scale in small, wait for capitulation)",
+        "meaning": ("Plan entries in advance around fear zones instead of buying after a move has already run. Put only a small first "
+                    "tranche (10-20%) to work to control FOMO, and keep the rest for the capitulation phase."),
+        "how_it_helps": "Avoids paying up in euphoria and leaves cash for the real washout; you do not need the exact bottom.",
+        "risk": "Waiting can mean missing a V-shaped recovery, and a planned zone can fail; size the first tranche so that is acceptable.",
+        "signs_in_data": [
+            "Price reaches a pre-planned zone on falling volume after a sharp weekly drop (35%+ weeks are normal for Bitcoin).",
+            "Sentiment (Fear & Greed) in the fear range while price is far below its long-term average.",
+        ],
+        "assessment_rule": "Context only: the app shows sentiment and stretch factors already; this concept adds the scale-in discipline.",
+    },
 }
 
 
@@ -75,6 +87,48 @@ VIEWPOINTS = {
                   "top is closer to the bottom."),
         "implication": "Big bottoms are expected to follow the start of a cutting cycle, not precede it.",
         "how_to_use": "A long-horizon lens for cycle context only; it says nothing about the next hours or days.",
+    },
+    "btc_levels_sep_2026": {
+        "author": "Crypto Dada (@YTCryptoDada)",
+        "source": "https://x.com/YTCryptoDada/status/2101284410406703601",
+        "date": "2026-09-19",
+        "valid_days": 14,
+        "families": [],
+        "claim": ("Levels he gave in replies on Sept 19: if BTC holds above about $77.5k a rally is possible, because after a range "
+                  "breakout, when BTC keeps a tight sideways range the other asset classes tend to catch up. A break above about $83k "
+                  "would point toward $90k (TAO and other quality alts would follow), while a break below about $77k means being careful. "
+                  "He also said \"blackout dates\" (discussed in his live stream, dates not stated) are coming the following week and that "
+                  "if the market survives them it is going higher."),
+        "implication": "Key levels he is watching: $77k-77.5k support, $83k breakout, $90k target.",
+        "how_to_use": ("Compare with the live BTC price in the Big Coins watchlist. These are his levels and dates, not verified; the "
+                       "'blackout dates' are unknown to this app, so ask him or check his live before relying on them."),
+    },
+    "policy_drives_money": {
+        "author": "Crypto Dada (@YTCryptoDada)",
+        "source": "https://x.com/YTCryptoDada/status/2101276481091448996",
+        "date": "2026-09-19",
+        "families": ["FOMC", "CPI", "PPI", "PCE"],
+        "claim": ("His one-word answer to what drives markets is policy: easing or tightening. Monetary policy is the Fed's and fiscal "
+                  "policy is the government's, and more money flowing into an asset (for example legal, easy access to crypto) means more "
+                  "participants and more money."),
+        "implication": "Liquidity direction (easing versus tightening) is the master variable in his framework.",
+        "how_to_use": "Read Fed and inflation events through 'is policy easing or tightening' before reading the chart.",
+    },
+    "bitcoin_cycle_article_feb_2026": {
+        "author": "Crypto Dada (@YTCryptoDada)",
+        "source": "https://x.com/YTCryptoDada/status/2019685345399623985",
+        "date": "2026-02-06",
+        "families": [],
+        "claim": ("Article 'Bitcoin cycle: this time is NOT different'. He says he sold over 80% of his spot bags in Aug 2025 near $124k "
+                  "(not the Altcoins, which he says lost most of their value), and had warned of market complacency since Nov 2025. His "
+                  "framework: 'Anticipate, don't chase'. Weekly drops of 35% or more are normal for Bitcoin, and the emotional path after a "
+                  "top is fear, then panic, anger and depression, with capitulation still to come when he wrote it. He suggested only "
+                  "10-20% invested in the $58-62k zone to control FOMO, no DCA without understanding when and how, no shitcoins in this "
+                  "cycle ('assets the white collars decided to pump' did well), and said you don't need the exact bottom (last cycle he "
+                  "called for buying 20-30% at $16,670). He named quantum computing as a long-term threat to the code."),
+        "implication": "Patience: scale in small near fear zones, wait for capitulation, favour large institution-backed assets over small alts.",
+        "how_to_use": ("A cycle lens written in Feb 2026 when BTC was near $60k; BTC has since moved, so treat the price zones as dated "
+                       "and use the framework (small first tranche, wait for capitulation, avoid chasing) rather than the numbers."),
     },
 }
 

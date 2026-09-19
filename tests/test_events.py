@@ -503,3 +503,20 @@ class ChannelPostsTests(unittest.TestCase):
         later = knowledge.viewpoint_for("FOMC", utc(2027, 3, 1))
         self.assertFalse(any("92%" in x for x in later))              # dated call expired
         self.assertTrue(any("bottomed" in x for x in later))          # long-term thesis has no expiry
+
+
+class ChannelDeepReadTests(unittest.TestCase):
+    def test_new_entries_present_and_scoped(self):
+        from events import knowledge
+        ids = {v["source"].split("/")[-1] for v in knowledge.VIEWPOINTS.values()}
+        self.assertTrue({"2101284410406703601", "2101276481091448996", "2019685345399623985"} <= ids)
+        self.assertIn("anticipate_dont_chase", knowledge.CONCEPTS)
+        # level call is dated: shown for 14 days, then gone; long-term article/thesis stay
+        soon = [c["id"] for c in knowledge.context_items(utc(2026, 9, 25))]
+        late = [c["id"] for c in knowledge.context_items(utc(2026, 11, 1))]
+        self.assertIn("btc_levels_sep_2026", soon)
+        self.assertNotIn("btc_levels_sep_2026", late)
+        self.assertIn("bitcoin_cycle_article_feb_2026", late)
+        # BTC-level notes are not attached to Fed-event evidence lines
+        self.assertFalse(any("77.5k" in x for x in knowledge.viewpoint_for("FOMC", utc(2026, 9, 25))))
+        self.assertTrue(any("policy" in x.lower() for x in knowledge.viewpoint_for("CPI", utc(2026, 9, 25))))
