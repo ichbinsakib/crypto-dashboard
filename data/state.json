@@ -4,7 +4,7 @@
   "_alerts_state": {
     "btc-resistance-break": {
       "triggered": true,
-      "last_triggered_at": "2026-09-19 08:40:23"
+      "last_triggered_at": "2026-09-19 08:45:22"
     },
     "btc-support-break": {
       "triggered": false,
@@ -12,7 +12,7 @@
     },
     "eth-resistance-break": {
       "triggered": true,
-      "last_triggered_at": "2026-09-19 08:40:23"
+      "last_triggered_at": "2026-09-19 08:45:22"
     },
     "eth-support-break": {
       "triggered": false,
@@ -151,7 +151,7 @@
         ],
         [
           "Stretch from long-term average",
-          "+33.5% above its long-term average - very stretched",
+          "+34.2% above its long-term average - very stretched",
           -2
         ],
         [
@@ -164,12 +164,12 @@
       "id": "solana",
       "symbol": "SOL",
       "name": "Solana",
-      "price": 111.73,
-      "pct_24h": 6.09015,
+      "price": 112.33,
+      "pct_24h": 6.25527,
       "pct_7d": 9.8,
       "support_30d": 93.69380351149786,
       "resistance_30d": 112.70209381584154,
-      "as_of": "2026-09-19 08:10:24",
+      "as_of": "2026-09-19 08:45:22",
       "stale": false
     },
     "tron": {
@@ -775,7 +775,7 @@
         ],
         [
           "Stretch from long-term average",
-          "-4.2% vs its long-term average - not stretched either way",
+          "-4.3% vs its long-term average - not stretched either way",
           0
         ],
         [
@@ -788,12 +788,12 @@
       "id": "kucoin-shares",
       "symbol": "KCS",
       "name": "KuCoin",
-      "price": 7.27,
-      "pct_24h": 2.74049,
-      "pct_7d": 6.1,
+      "price": 7.26,
+      "pct_24h": 2.23908,
+      "pct_7d": 5.2,
       "support_30d": 6.792256319407273,
       "resistance_30d": 7.8821382735057615,
-      "as_of": "2026-09-19 06:15:24",
+      "as_of": "2026-09-19 08:45:22",
       "stale": false
     },
     "hedera-hashgraph": {
@@ -1879,7 +1879,7 @@
         ],
         [
           "Stretch from long-term average",
-          "-22.9% below its long-term average - confirmed downtrend",
+          "-21.9% below its long-term average - confirmed downtrend",
           -1
         ],
         [
@@ -1892,12 +1892,12 @@
       "id": "bitcoin-cash",
       "symbol": "BCH",
       "name": "Bitcoin Cash",
-      "price": 245.71,
-      "pct_24h": -0.85161,
-      "pct_7d": 7.7,
+      "price": 248.99,
+      "pct_24h": -0.26809,
+      "pct_7d": 6.8,
       "support_30d": 216.74058261336023,
       "resistance_30d": 288.10955405353275,
-      "as_of": "2026-09-19 07:45:22",
+      "as_of": "2026-09-19 08:45:22",
       "stale": false
     },
     "mantle": {
@@ -1999,11 +1999,11 @@
     "uniswap": {
       "label": "\ud83d\udd34 DISTRIBUTION ZONE",
       "status": "bearish",
-      "score": -8,
+      "score": -5,
       "rows": [
         [
           "Price vs. recent range",
-          "Near its 30-day high (~$9.22) - less room to run",
+          "Near its 30-day high (~$9.28) - less room to run",
           -1
         ],
         [
@@ -2018,12 +2018,12 @@
         ],
         [
           "Recent trend",
-          "Shooting straight up - classic blow-off top risk, don't chase",
-          -2
+          "Trending up steadily - healthy",
+          1
         ],
         [
           "Stretch from long-term average",
-          "+142.2% above its long-term average - very stretched",
+          "+144.9% above its long-term average - very stretched",
           -2
         ],
         [
@@ -2036,12 +2036,12 @@
       "id": "uniswap",
       "symbol": "UNI",
       "name": "Uniswap",
-      "price": 9.2,
-      "pct_24h": 6.37716,
-      "pct_7d": 47.2,
+      "price": 9.3,
+      "pct_24h": 4.77013,
+      "pct_7d": 45.7,
       "support_30d": 4.136905170974035,
-      "resistance_30d": 9.217535146212349,
-      "as_of": "2026-09-19 07:10:25",
+      "resistance_30d": 9.280766368036954,
+      "as_of": "2026-09-19 08:45:22",
       "stale": false
     },
     "pi-network": {
@@ -3515,16 +3515,16 @@
     "key": "BTC",
     "name": "Bitcoin",
     "emoji": "\u20bf",
-    "price": 81299,
+    "price": 81308,
     "high_24h": 81675,
     "low_24h": 77934,
-    "pct_24h": 4.42361,
+    "pct_24h": 4.3725,
     "pct_7d": 5.0,
     "pct_30d": 16.2,
-    "sma50": 72840.66531781811,
-    "sma200": 70452.31199567803,
+    "sma50": 72840.7875122354,
+    "sma200": 70452.34254428236,
     "support_30d": 75590.24471973324,
-    "resistance_30d": 81302.70703673284,
+    "resistance_30d": 81308.81675759784,
     "mark_price": 81098.11601449,
     "index_price": 81141.23130435,
     "funding_rate": 7.924e-05,
@@ -3537,16 +3537,16 @@
     "key": "ETH",
     "name": "Ethereum",
     "emoji": "\u039e",
-    "price": 2651.5,
+    "price": 2650.12,
     "high_24h": 2643.34,
     "low_24h": 2495.21,
-    "pct_24h": 6.39312,
+    "pct_24h": 6.23037,
     "pct_7d": 4.3,
     "pct_30d": 16.2,
-    "sma50": 2257.6427506624186,
-    "sma200": 2073.203751314829,
+    "sma50": 2257.609207211784,
+    "sma200": 2073.1953654521703,
     "support_30d": 2390.783044679688,
-    "resistance_30d": 2651.7743825243997,
+    "resistance_30d": 2650.097209992657,
     "mark_price": 2621.15,
     "index_price": 2622.52906977,
     "funding_rate": 0.0001,
