@@ -4,7 +4,7 @@
   "_alerts_state": {
     "btc-resistance-break": {
       "triggered": true,
-      "last_triggered_at": "2026-09-19 08:10:24"
+      "last_triggered_at": "2026-09-19 08:15:26"
     },
     "btc-support-break": {
       "triggered": false,
@@ -12,7 +12,7 @@
     },
     "eth-resistance-break": {
       "triggered": true,
-      "last_triggered_at": "2026-09-19 08:10:24"
+      "last_triggered_at": "2026-09-19 08:15:26"
     },
     "eth-support-break": {
       "triggered": false,
@@ -701,9 +701,9 @@
       "stale": false
     },
     "stellar": {
-      "label": "\ud83d\udd34 CAUTION - REDUCE NEW BUYS",
-      "status": "bearish",
-      "score": -2,
+      "label": "\ud83d\udfe1 HOLD / NEUTRAL",
+      "status": "neutral",
+      "score": -1,
       "rows": [
         [
           "Price vs. recent range",
@@ -727,8 +727,8 @@
         ],
         [
           "Stretch from long-term average",
-          "+10.9% above its long-term average - a bit stretched",
-          -1
+          "+9.3% vs its long-term average - not stretched either way",
+          0
         ],
         [
           "Leverage traders' bias",
@@ -736,16 +736,16 @@
           0
         ]
       ],
-      "plain": "Getting risky - I'd hold off on new buys until this cools down.",
+      "plain": "No real edge either way right now - fine to just wait and watch.",
       "id": "stellar",
       "symbol": "XLM",
       "name": "Stellar",
-      "price": 0.195666,
-      "pct_24h": 4.55448,
-      "pct_7d": 7.3,
+      "price": 0.192792,
+      "pct_24h": 3.16739,
+      "pct_7d": 6.8,
       "support_30d": 0.17464723429819362,
       "resistance_30d": 0.20181319711037435,
-      "as_of": "2026-09-19 05:50:27",
+      "as_of": "2026-09-19 08:15:26",
       "stale": false
     },
     "kucoin-shares": {
@@ -1543,7 +1543,7 @@
         ],
         [
           "Stretch from long-term average",
-          "+86.2% above its long-term average - very stretched",
+          "+87.2% above its long-term average - very stretched",
           -2
         ],
         [
@@ -1556,12 +1556,12 @@
       "id": "pump-fun",
       "symbol": "PUMP",
       "name": "Pump.fun",
-      "price": 0.00411908,
-      "pct_24h": -4.80455,
-      "pct_7d": 16.5,
+      "price": 0.00414127,
+      "pct_24h": -2.70462,
+      "pct_7d": 15.8,
       "support_30d": 0.0034754143700465503,
       "resistance_30d": 0.0052249885406471875,
-      "as_of": "2026-09-19 07:20:26",
+      "as_of": "2026-09-19 08:15:26",
       "stale": false
     },
     "venice-token": {
@@ -2229,11 +2229,11 @@
       "symbol": "ICP",
       "name": "Internet Computer",
       "price": 2.87,
-      "pct_24h": 4.70201,
+      "pct_24h": 4.67314,
       "pct_7d": 2.9,
       "support_30d": 2.338042027285452,
       "resistance_30d": 2.9869340549074623,
-      "as_of": "2026-09-19 08:10:24",
+      "as_of": "2026-09-19 08:15:26",
       "stale": false
     },
     "bittensor": {
@@ -3515,14 +3515,14 @@
     "key": "BTC",
     "name": "Bitcoin",
     "emoji": "\u20bf",
-    "price": 81111,
+    "price": 81198,
     "high_24h": 81675,
     "low_24h": 77934,
-    "pct_24h": 4.50009,
+    "pct_24h": 4.49064,
     "pct_7d": 5.0,
     "pct_30d": 16.2,
-    "sma50": 72837.00309079548,
-    "sma200": 70451.39643892237,
+    "sma50": 72838.74102412426,
+    "sma200": 70451.83092225456,
     "support_30d": 75590.24471973324,
     "resistance_30d": 81264.70153038795,
     "mark_price": 81098.11601449,
@@ -3537,16 +3537,16 @@
     "key": "ETH",
     "name": "Ethereum",
     "emoji": "\u039e",
-    "price": 2627.41,
+    "price": 2632.63,
     "high_24h": 2643.34,
     "low_24h": 2495.21,
-    "pct_24h": 5.76293,
+    "pct_24h": 5.86703,
     "pct_7d": 4.3,
     "pct_30d": 16.2,
-    "sma50": 2257.176940056941,
-    "sma200": 2073.0872986634595,
+    "sma50": 2257.268859180331,
+    "sma200": 2073.1102784443074,
     "support_30d": 2390.783044679688,
-    "resistance_30d": 2628.483852250502,
+    "resistance_30d": 2633.079808420025,
     "mark_price": 2621.15,
     "index_price": 2622.52906977,
     "funding_rate": 0.0001,
