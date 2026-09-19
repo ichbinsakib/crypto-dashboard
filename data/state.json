@@ -4,7 +4,7 @@
   "_alerts_state": {
     "btc-resistance-break": {
       "triggered": true,
-      "last_triggered_at": "2026-09-19 05:57:49"
+      "last_triggered_at": "2026-09-19 06:00:39"
     },
     "btc-support-break": {
       "triggered": false,
@@ -12,7 +12,7 @@
     },
     "eth-resistance-break": {
       "triggered": true,
-      "last_triggered_at": "2026-09-19 05:57:49"
+      "last_triggered_at": "2026-09-19 06:00:39"
     },
     "eth-support-break": {
       "triggered": false,
@@ -895,11 +895,11 @@
     "avalanche-2": {
       "label": "\ud83d\udfe1 HOLD / NEUTRAL",
       "status": "neutral",
-      "score": 1,
+      "score": 0,
       "rows": [
         [
           "Price vs. recent range",
-          "Near its 30-day high (~$8.35) - less room to run",
+          "Near its 30-day high (~$8.47) - less room to run",
           -1
         ],
         [
@@ -909,8 +909,8 @@
         ],
         [
           "Market phase (best guess)",
-          "Basing near the bottom - phase where smart money accumulates",
-          2
+          "Established uptrend - phase where price marks up",
+          1
         ],
         [
           "Recent trend",
@@ -919,7 +919,7 @@
         ],
         [
           "Stretch from long-term average",
-          "+4.8% vs its long-term average - not stretched either way",
+          "+6.0% vs its long-term average - not stretched either way",
           0
         ],
         [
@@ -932,12 +932,12 @@
       "id": "avalanche-2",
       "symbol": "AVAX",
       "name": "Avalanche",
-      "price": 8.36,
-      "pct_24h": 9.26015,
-      "pct_7d": 11.8,
+      "price": 8.46,
+      "pct_24h": 7.52648,
+      "pct_7d": 12.8,
       "support_30d": 7.110247807837202,
-      "resistance_30d": 8.353943148074563,
-      "as_of": "2026-09-19 01:35:16",
+      "resistance_30d": 8.470629351198365,
+      "as_of": "2026-09-19 06:00:39",
       "stale": false
     },
     "aster-2": {
@@ -1687,7 +1687,7 @@
         ],
         [
           "Stretch from long-term average",
-          "+6.0% vs its long-term average - not stretched either way",
+          "+6.6% vs its long-term average - not stretched either way",
           0
         ],
         [
@@ -1700,12 +1700,12 @@
       "id": "bitget-token",
       "symbol": "BGB",
       "name": "Bitget Token",
-      "price": 2.0,
-      "pct_24h": 2.73236,
+      "price": 2.01,
+      "pct_24h": 3.62478,
       "pct_7d": 2.1,
       "support_30d": 1.8788056602315137,
       "resistance_30d": 2.0284940947674617,
-      "as_of": "2026-09-19 05:50:27",
+      "as_of": "2026-09-19 06:00:39",
       "stale": false
     },
     "sui": {
@@ -2915,7 +2915,7 @@
       "rows": [
         [
           "Price vs. recent range",
-          "Near its 30-day high (~$0.1168) - less room to run",
+          "Near its 30-day high (~$0.1173) - less room to run",
           -1
         ],
         [
@@ -2935,7 +2935,7 @@
         ],
         [
           "Stretch from long-term average",
-          "+34.8% above its long-term average - very stretched",
+          "+35.4% above its long-term average - very stretched",
           -2
         ],
         [
@@ -2948,12 +2948,12 @@
       "id": "just",
       "symbol": "JST",
       "name": "JUST",
-      "price": 0.116719,
-      "pct_24h": 0.58646,
+      "price": 0.117255,
+      "pct_24h": 0.67125,
       "pct_7d": 9.5,
       "support_30d": 0.0946830738697126,
-      "resistance_30d": 0.11679162455397056,
-      "as_of": "2026-09-19 05:45:23",
+      "resistance_30d": 0.1172559513557917,
+      "as_of": "2026-09-19 06:00:39",
       "stale": false
     },
     "algorand": {
@@ -3515,14 +3515,14 @@
     "key": "BTC",
     "name": "Bitcoin",
     "emoji": "\u20bf",
-    "price": 81047,
+    "price": 81021,
     "high_24h": 81675,
     "low_24h": 77357,
-    "pct_24h": 4.68813,
+    "pct_24h": 4.63374,
     "pct_7d": 4.8,
     "pct_30d": 17.1,
-    "sma50": 72835.53411295533,
-    "sma200": 70451.02919446233,
+    "sma50": 72834.86678451183,
+    "sma200": 70450.86236235146,
     "support_30d": 75590.24471973324,
     "resistance_30d": 81264.70153038795,
     "mark_price": 81098.11601449,
@@ -3537,16 +3537,16 @@
     "key": "ETH",
     "name": "Ethereum",
     "emoji": "\u039e",
-    "price": 2630.27,
+    "price": 2629.68,
     "high_24h": 2643.34,
     "low_24h": 2478.29,
-    "pct_24h": 6.15517,
+    "pct_24h": 6.10816,
     "pct_7d": 4.2,
     "pct_30d": 16.4,
-    "sma50": 2257.212050099368,
-    "sma200": 2073.096076174066,
+    "sma50": 2257.1817073913808,
+    "sma200": 2073.0884904970694,
     "support_30d": 2390.783044679688,
-    "resistance_30d": 2630.239354371856,
+    "resistance_30d": 2628.7222189724935,
     "mark_price": 2621.15,
     "index_price": 2622.52906977,
     "funding_rate": 0.0001,
