@@ -103,6 +103,51 @@
     pxTimer = setInterval(tick, 30000);
   }
 
+
+  /* ---------------- mobile: header menu + stacked tables ---------------- */
+  function initMobileMenu() {
+    var header = document.querySelector('header');
+    var actions = header && header.querySelector('.header-actions');
+    if (!header || !actions || document.getElementById('btn-menu')) return;
+    var btn = document.createElement('button');
+    btn.type = 'button'; btn.id = 'btn-menu'; btn.className = 'hdr-btn menu-only';
+    btn.setAttribute('aria-label', 'Menu'); btn.setAttribute('aria-expanded', 'false');
+    btn.innerHTML = '&#9776;';
+    header.insertBefore(btn, actions);
+    function close() { actions.classList.remove('open'); btn.setAttribute('aria-expanded', 'false'); }
+    btn.addEventListener('click', function (e) {
+      e.stopPropagation();
+      var open = actions.classList.toggle('open');
+      btn.setAttribute('aria-expanded', open ? 'true' : 'false');
+    });
+    actions.addEventListener('click', close);
+    document.addEventListener('click', function (e) { if (!actions.contains(e.target) && e.target !== btn) close(); });
+  }
+
+  /* Tables with 4+ columns are hard to read on a phone. Give each cell its column name so CSS can turn rows into cards
+     (only applied below 720px by the stylesheet; desktop keeps the normal table). */
+  function enhanceTables(rootEl) {
+    (rootEl || document).querySelectorAll('table').forEach(function (t) {
+      if (t.classList.contains('no-stack') || t.closest('.ev-scroll')) return;
+      var ths = t.querySelectorAll('thead th');
+      if (ths.length < 4) return;
+      var names = Array.prototype.map.call(ths, function (th) { return (th.textContent || '').trim(); });
+      t.querySelectorAll('tbody tr').forEach(function (tr) {
+        var cells = tr.children, i = 0;
+        Array.prototype.forEach.call(cells, function (td) {
+          if (!td.hasAttribute('data-label')) td.setAttribute('data-label', names[i] || '');
+          i += td.colSpan || 1;
+          if (!td.querySelector(':scope > .rt-val') && td.childNodes.length && !td.querySelector('button')) {
+            var w = document.createElement('span'); w.className = 'rt-val';
+            while (td.firstChild) w.appendChild(td.firstChild);
+            td.appendChild(w);
+          }
+        });
+      });
+      t.classList.add('rt');
+    });
+  }
+
   function showOnly(which) {
     ['splash', 'auth-screen', 'noaccess', 'app'].forEach(function (id) { show(id, id === which); });
   }
@@ -138,7 +183,7 @@
       '<span class="info-tip" tabindex="0" data-tip="A 0-100 index of overall crypto market sentiment from Alternative.me, based on volatility, volume, social media, and surveys. Low = fear (often washed-out), high = greed (often euphoric). A contrarian gauge, not a timing signal on its own.">&#9432;</span>' +
       ' &nbsp;|&nbsp; <span id="updated-ago">just now</span>' +
       '<span class="info-tip" tabindex="0" data-tip="Generated: ' + esc(d.generated_at || '') + ' UTC. Data regenerated ' + esc(d.data_refresh_label || 'every few minutes') + '.">&#9432;</span>';
-    $('banner').innerHTML = (meta && meta.html) || '';
+    $('banner').innerHTML = ((meta && meta.html) || '').replace(/&nbsp;&middot;&nbsp; ?/g, '<span class="sep">&nbsp;&middot;&nbsp; </span>');
     tick();
   }
 
@@ -147,6 +192,11 @@
     if (!el || !S.generatedAt) return;
     var mins = Math.max(0, Math.round((Date.now() - S.generatedAt) / 60000));
     el.textContent = mins <= 0 ? 'just now' : ('updated ' + mins + 'm ago');
+  }
+
+  function tabLabel(title) {
+    var m = /^(\S+)\s+([\s\S]*)$/.exec(title || '');
+    return m ? '<span class="tab-ico">' + m[1] + '</span><span class="tab-txt">' + m[2] + '</span>' : title;
   }
 
   function render(rows) {
@@ -165,7 +215,7 @@
       var on = haveChecked ? checked['tab-' + r.key] : i === 0;
       html += '<input type="radio" name="tabs" id="tab-' + r.key + '"' + (on ? ' checked' : '') + '>\n';
     });
-    html += '<div class="tabbar">' + secs.map(function (r) { return '<label for="tab-' + r.key + '">' + r.title + '</label>'; }).join('\n') + '</div>\n';
+    html += '<div class="tabbar">' + secs.map(function (r) { return '<label for="tab-' + r.key + '">' + tabLabel(r.title) + '</label>'; }).join('\n') + '</div>\n';
     secs.forEach(function (r) { html += r.html + '\n'; });
     root.innerHTML = html;
 
@@ -183,6 +233,7 @@
     if (window.kairoInitIntraday) window.kairoInitIntraday(has.screener ? (has.screener.data || {}).intraday_cards : []);
     if (window.kairoInitFollow && has.mypicks) window.kairoInitFollow();
     if (window.kairoInitPnlSearch) window.kairoInitPnlSearch();
+    enhanceTables(root);
     initWatchlist();
     initSignalPrices();
     if (window.kairoInitEvents && has.events) {
@@ -392,6 +443,7 @@
     $('btn-account').onclick = openAccount;
     $('btn-admin').onclick = openAdmin;
     if ($('btn-theme')) { $('btn-theme').onclick = cycleTheme; applyTheme(currentTheme()); }
+    initMobileMenu();
     $('overlay').addEventListener('click', function (e) { if (e.target === $('overlay')) closeOverlay(); });
 
     if (DEV) {

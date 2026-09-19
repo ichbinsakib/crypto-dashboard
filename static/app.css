@@ -242,3 +242,154 @@
 .why-chip { display: inline-block; font-size: 10.5px; font-weight: 700; padding: 2px 7px; border-radius: 6px; margin: 2px 3px 2px 0; background: var(--chip); color: var(--muted); }
 .why-chip.why-good { background: rgba(5, 150, 105, 0.16); color: var(--green); } .why-chip.why-bad { background: rgba(220, 38, 38, 0.14); color: var(--red); }
 .dip-table { min-width: 1100px; }
+
+/* ==========================================================================================================
+   Mobile + safe-area layer. Everything under the media query only affects phones (<= 720px wide); the safe-area
+   variables are 0 on desktops and tablets, so those layouts are unchanged.
+   ========================================================================================================== */
+:root {
+  --sat: env(safe-area-inset-top, 0px); --sab: env(safe-area-inset-bottom, 0px);
+  --sal: env(safe-area-inset-left, 0px); --sar: env(safe-area-inset-right, 0px);
+  --navh: 62px;
+}
+html { -webkit-text-size-adjust: 100%; text-size-adjust: 100%; }
+img, svg, video { max-width: 100%; }
+header { padding-top: calc(10px + var(--sat)); padding-left: calc(16px + var(--sal)); padding-right: calc(16px + var(--sar)); }
+.auth-screen { padding-top: calc(24px + var(--sat)); padding-bottom: calc(24px + var(--sab)); }
+.overlay { padding-top: calc(24px + var(--sat)); padding-bottom: calc(24px + var(--sab)); }
+.menu-only { display: none; }
+.tab-ico { margin-right: 6px; }
+
+@media (max-width: 720px) {
+  body { font-size: 15px; }
+  #app { padding-left: var(--sal); padding-right: var(--sar); }
+
+  /* ---- header: brand + status on one block, actions tucked into a menu ---- */
+  header { display: grid; grid-template-columns: 1fr auto; align-items: center; gap: 2px 10px; padding-top: calc(12px + var(--sat)); padding-bottom: 10px;
+    padding-left: calc(14px + var(--sal)); padding-right: calc(14px + var(--sar)); position: relative; }
+  header h1 { font-size: 18px; letter-spacing: 0.5px; margin: 0; grid-column: 1; grid-row: 1; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+  header .meta { grid-column: 1; grid-row: 2; font-size: 12px; line-height: 1.4; }
+  .menu-only { display: inline-flex; align-items: center; justify-content: center; grid-column: 2; grid-row: 1 / span 2; min-width: 44px; min-height: 44px; font-size: 20px; padding: 0; }
+  .header-actions { display: none; position: absolute; right: calc(10px + var(--sar)); top: calc(56px + var(--sat)); z-index: 60; margin: 0; padding: 8px; flex-direction: column; gap: 6px;
+    background: var(--panel); border: 1px solid var(--border); border-radius: 14px; box-shadow: var(--shadow-hover); min-width: 190px; backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px); }
+  .header-actions.open { display: flex; }
+  .header-actions .hdr-btn { width: 100%; min-height: 46px; justify-content: flex-start; text-align: left; font-size: 14px; border-radius: 10px; padding: 0 14px; }
+
+  /* ---- top alert banner: fully visible, wraps, one alert per line ---- */
+  #banner .alert-banner { margin: 8px 12px 0; padding: 10px 12px; overflow: visible; white-space: normal; font-size: 12.5px; line-height: 1.45; border-radius: 12px; }
+  #banner .alert-banner-item { display: block; margin: 2px 0; white-space: normal; overflow-wrap: anywhere; }
+  #banner .alert-banner .sep { display: none; }
+
+  /* ---- main navigation becomes a bottom bar (thumb reach), respecting the home indicator ---- */
+  #tabs-root { padding-bottom: calc(var(--navh) + var(--sab) + 16px); }
+  #tabs-root > .tabbar { position: fixed; left: 0; right: 0; bottom: 0; z-index: 40; display: grid; grid-auto-flow: column; grid-auto-columns: 1fr; gap: 2px;
+    padding: 6px calc(6px + var(--sar)) calc(6px + var(--sab)) calc(6px + var(--sal)); overflow: visible; margin: 0;
+    background: var(--panel); border-top: 1px solid var(--border); box-shadow: 0 -6px 18px rgba(30, 64, 120, 0.12); backdrop-filter: blur(14px); -webkit-backdrop-filter: blur(14px); }
+  #tabs-root > .tabbar label { display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 2px; min-height: 50px; padding: 5px 2px; border: 0; border-radius: 12px;
+    font-size: 10.5px; line-height: 1.15; text-align: center; white-space: normal; overflow-wrap: anywhere; }
+  #tabs-root > .tabbar label .tab-ico { margin: 0; font-size: 19px; line-height: 1; }
+  #tabs-root > .tabbar label .tab-txt { display: block; }
+  #tabs-root > .tabbar label .info-tip { display: none; }
+
+  /* ---- panels and cards: breathing room, no squeezing ---- */
+  .panel { padding: 8px 12px 20px; }
+  .card, .ev-card { padding: 14px; border-radius: 14px; }
+  .card-title { font-size: 12px; line-height: 1.4; }
+  .sub { font-size: 13px; line-height: 1.5; }
+  .top-grid, .bd-grid3, .ev-cards, .ev-three, .ev-two { grid-template-columns: 1fr; gap: 12px; }
+  .screener-grid { grid-template-columns: 1fr; }
+  .kv { font-size: 14px; padding: 7px 0; }
+
+  /* ---- sub-tabs (Big Coins tabs etc.): one swipeable row of touch-sized chips ---- */
+  .panel .tabbar { display: flex; flex-wrap: nowrap; overflow-x: auto; gap: 8px; padding: 4px 0 12px; margin: 0 -12px; padding-left: 12px; padding-right: 12px;
+    scroll-snap-type: x proximity; -webkit-overflow-scrolling: touch; scrollbar-width: none; }
+  .panel .tabbar::-webkit-scrollbar { display: none; }
+  .panel .tabbar label { flex: 0 0 auto; scroll-snap-align: start; min-height: 42px; display: inline-flex; align-items: center; padding: 8px 14px; font-size: 13.5px; white-space: nowrap; }
+
+  /* ---- touch-friendly controls ---- */
+  button, .hdr-btn, .follow-btn, .ghost, .ev-chipbtn, summary { min-height: 40px; }
+  .follow-btn { padding: 8px 14px; font-size: 13px; }
+  .ev-chips { flex-wrap: nowrap; overflow-x: auto; padding-bottom: 4px; -webkit-overflow-scrolling: touch; scrollbar-width: none; }
+  .ev-chips::-webkit-scrollbar { display: none; }
+  .ev-chipbtn { flex: 0 0 auto; min-height: 40px; }
+  input, select, textarea { font-size: 16px; }                       /* stops iOS zooming into fields */
+  .overlay { padding-left: 10px; padding-right: 10px; }
+  .overlay-card { padding: 16px; border-radius: 14px; }
+  .auth-card { padding: 22px 18px; }
+
+  /* ---- data tables become compact cards: two label-over-value columns (JS adds .rt, data-labels and .rt-val) ---- */
+  .wl-scroll, .bd-scroll { overflow: visible; }
+  table.rt { display: block; border: 0; min-width: 0 !important; width: 100%; background: transparent; }
+  table.rt thead { display: none; }
+  table.rt tbody { display: block; }
+  table.rt tr { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 10px 14px; margin: 0 0 12px; padding: 12px; border: 1px solid var(--border); border-radius: 14px; background: var(--inset); }
+  table.rt td { display: block; min-width: 0; padding: 0; border: 0; text-align: left; white-space: normal; font-size: 14px; overflow-wrap: break-word; word-break: normal; }
+  table.rt td::before { content: attr(data-label); display: block; margin-bottom: 2px; color: var(--muted); font-weight: 600; font-size: 11px; letter-spacing: 0.3px; text-transform: uppercase; }
+  table.rt td[data-label=""]::before, table.rt td:not([data-label])::before { display: none; }
+  table.rt td:first-child { grid-column: 1 / -1; font-size: 15.5px; padding-bottom: 8px; border-bottom: 1px solid var(--border); }
+  table.rt td:first-child::before { display: none; }
+  table.rt td.why-cell, table.rt td:last-child:has(button) { grid-column: 1 / -1; }
+  table.rt td:last-child button { width: 100%; min-height: 44px; }
+  table.rt td .wl-note { display: block; margin: 2px 0 0; }
+  table.rt td:first-child .wl-note { display: inline; margin-left: 6px; }
+  table.rt td.why-cell { min-width: 0; max-width: none; }
+  table.rt td .badge { white-space: normal; }
+  table.rt tr.wl-group { display: block; background: transparent; border: 0; padding: 4px 0; margin: 0; }
+  table.rt tr.wl-group td { display: block; }
+  table.rt td[colspan] { grid-column: 1 / -1; }
+  table.rt td[colspan]::before { display: none; }
+  .signal-table { border-radius: 12px; }
+
+  /* ---- BTC live dashboard ---- */
+  .bd { padding: 10px; border-radius: 12px; }
+  .bd-title { flex-direction: row; gap: 8px; } .bd-title h2 { font-size: 20px; } .bd-coin { width: 32px; height: 32px; font-size: 20px; }
+  .bd-date { font-size: 11.5px; margin: 6px 0 10px; }
+  .bd-big { font-size: 30px; } .bd-card { padding: 12px; }
+  .bd .rt tr { background: rgba(5, 20, 12, 0.85); border-color: #14532d; }
+  .bd .rt td { color: #d1fae5; } .bd .rt td::before { color: #9ca3af; }
+  .bd .rt td:first-child { border-color: #14532d; }
+  .bd-tiles { grid-template-columns: repeat(2, 1fr); } .bd-strip { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 10px; }
+  .bd-strip b { font-size: 16px; } .bd-kv { font-size: 13px; }
+
+  /* ---- Market Events ---- */
+  .ev-head h2 { font-size: 19px; }
+  .ev-level { font-size: 18px; } .ev-headline { font-size: 15px; }
+  .ev-time { flex-basis: 56px; font-size: 12.5px; } .ev-tltitle b { font-size: 14px; }
+  .ev-kvgrid { grid-template-columns: repeat(2, 1fr); }
+  .ev-sens { grid-template-columns: 1fr; }
+  .ev-scen td:first-child { width: 40%; }
+
+  /* ---- misc clutter reducers ---- */
+  .info-tip { min-width: 20px; min-height: 20px; }
+  .cycle-map { overflow-x: auto; }
+  .screener-card { padding: 14px; }
+  .screener-card-top { gap: 10px; flex-wrap: wrap; }
+  #pnl-history-search { width: 100% !important; min-height: 40px; margin-top: 6px; }
+}
+
+@media (max-width: 360px) {
+  header h1 { font-size: 16px; }
+  #tabs-root > .tabbar label { font-size: 9.5px; }
+  #tabs-root > .tabbar label .tab-ico { font-size: 17px; }
+  .bd-big { font-size: 26px; } .bd-title h2 { font-size: 17px; }
+  .bd-strip { grid-template-columns: 1fr; } .bd-tiles { grid-template-columns: 1fr; }
+  .panel { padding-left: 10px; padding-right: 10px; }
+}
+
+@media (max-width: 720px) {
+  /* narrow tables (up to 4 columns) simply wrap their text instead of scrolling sideways */
+  table.signal-table:not(.rt) { display: table; width: 100%; white-space: normal; overflow: visible; table-layout: auto; }
+  table.signal-table:not(.rt) th, table.signal-table:not(.rt) td { white-space: normal; overflow-wrap: break-word; padding: 9px 8px; vertical-align: top; }
+  table.signal-table:not(.rt) td:last-child { text-align: right; }
+  /* info tooltips: a readable bar above the bottom nav instead of a 230px bubble that runs off the edge */
+  .info-tip:hover::after, .info-tip:focus::after { position: fixed; left: 12px; right: 12px; bottom: calc(var(--navh) + var(--sab) + 12px); top: auto; width: auto; transform: none; font-size: 13px; padding: 12px 14px; }
+  .info-tip:hover::before, .info-tip:focus::before { display: none; }
+  .gl:hover::after, .gl:focus::after { position: fixed; left: 12px; right: 12px; top: auto; bottom: calc(var(--navh) + var(--sab) + 12px); width: auto; max-width: none; }
+  .screener-name, .screener-plain { overflow-wrap: break-word; }
+}
+
+.fold { margin: 4px 0 8px; } .fold > summary { cursor: pointer; color: var(--accent); font-weight: 700; padding: 4px 0; min-height: 32px; }
+@media (max-width: 720px) {
+  .panel .tabbar { padding-left: 12px !important; padding-right: 12px !important; }
+  .fold > summary { min-height: 40px; display: flex; align-items: center; }
+}

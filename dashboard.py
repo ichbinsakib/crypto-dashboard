@@ -1872,8 +1872,11 @@ def render(coins_data, fng_value, fng_classification, generated_at, any_stale,
         return f"""
 <div class="card wl-card" style="margin-bottom:12px;">
   <div class="card-title">&#127919; &#128640; SIGNAL SCANNER &middot; CONFIRMED SIGNALS<span class="info-tip" tabindex="0" data-tip="{_esc(tip)}">&#9432;</span></div>
-  <div class="sub"><b>&#127919; Dip buy</b> = near the low of its range, bouncing. <b>&#128640; Momentum</b> = just broke to a new high with trend and volume (experimental). Confirmed now: {n_dip} dip buy{'s' if n_dip != 1 else ''}, {n_mom} momentum.</div>
-  <div class="sub">In back-tests neither type showed a proven edge after fees (dip signals averaged below zero on a small sample; momentum about break-even), so treat every row as unproven and judge them by their records.</div>
+  <div class="sub">Confirmed now: <b>{n_dip}</b> &#127919; dip buy{'s' if n_dip != 1 else ''}, <b>{n_mom}</b> &#128640; momentum.</div>
+  <details class="fold"><summary>How to read this</summary>
+    <div class="sub"><b>&#127919; Dip buy</b> = near the low of its range, bouncing. <b>&#128640; Momentum</b> = just broke to a new high with trend and volume (experimental).</div>
+    <div class="sub">In back-tests neither type showed a proven edge after fees (dip signals averaged below zero on a small sample; momentum about break-even), so treat every row as unproven and judge them by their records.</div>
+  </details>
   {body}
   <div class="sub" style="margin-top:8px;">{_esc(mrec)} Dip-buy record: see the Performance tab.</div>
   {misses}
@@ -2044,7 +2047,7 @@ def render(coins_data, fng_value, fng_classification, generated_at, any_stale,
 <script>(function(){{try{{var t=localStorage.getItem("kairo_theme")||"light";document.documentElement.setAttribute("data-theme",t);}}catch(e){{document.documentElement.setAttribute("data-theme","light");}}}})();</script>
 <meta name="mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-capable" content="yes">
-<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-status-bar-style" content="default">
 <meta name="apple-mobile-web-app-title" content="Kairo">
 <style>
   :root {{
