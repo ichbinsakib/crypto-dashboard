@@ -7,6 +7,8 @@ import android.graphics.Insets;
 import android.net.Uri;
 import android.os.Build;
 import android.os.Bundle;
+import android.provider.Settings;
+import android.view.ViewTreeObserver;
 import android.view.View;
 import android.view.WindowInsets;
 import android.webkit.WebSettings;
@@ -53,6 +55,16 @@ public class MainActivity extends Activity {
             return insets;
         });
 
+        // Some phones (notably MIUI/HyperOS builds) never deliver the insets above, which left the status bar drawn over the
+        // header. So after every layout, also measure where the page really sits: if it touches the top (or bottom) edge of
+        // the screen without padding, pad it by the system bar size the OS itself reports.
+        webView.getViewTreeObserver().addOnGlobalLayoutListener(new ViewTreeObserver.OnGlobalLayoutListener() {
+            @Override
+            public void onGlobalLayout() {
+                ensureClearOfSystemBars();
+            }
+        });
+
         // The dashboard page passes its per-user notification token here after sign-in.
         webView.addJavascriptInterface(new KairoBridge(this), "KairoAndroid");
 
@@ -81,6 +93,39 @@ public class MainActivity extends Activity {
 
         requestNotificationPermissionIfNeeded();
         scheduleNotificationChecks();
+    }
+
+    private int systemDimenPx(String name) {
+        int id = getResources().getIdentifier(name, "dimen", "android");
+        return id > 0 ? getResources().getDimensionPixelSize(id) : 0;
+    }
+
+    /**
+     * Safety net for devices where the window-insets callback above never runs. Pads the WebView only when it is flush with the
+     * screen edge and not already padded, so devices that deliver insets normally are untouched.
+     */
+    private void ensureClearOfSystemBars() {
+        if (webView == null || webView.getHeight() == 0) return;
+        int[] loc = new int[2];
+        webView.getLocationOnScreen(loc);
+        int padTop = webView.getPaddingTop();
+        int padBottom = webView.getPaddingBottom();
+        int wantTop = padTop;
+        int wantBottom = padBottom;
+
+        int statusBar = systemDimenPx("status_bar_height");
+        if (loc[1] <= 1 && padTop < statusBar) {
+            wantTop = statusBar;                       // the page starts under the status bar: push it below
+        }
+        int decorHeight = getWindow().getDecorView().getHeight();
+        if (decorHeight > 0 && loc[1] + webView.getHeight() >= decorHeight - 1 && padBottom == 0 && wantTop != padTop) {
+            // Insets are missing entirely on this device, so the bottom is unpadded too: use the bar size for the navigation mode.
+            int mode = Settings.Secure.getInt(getContentResolver(), "navigation_mode", 0);   // 0 = 3-button, 1 = 2-button, 2 = gesture
+            wantBottom = mode == 2 ? systemDimenPx("navigation_bar_gesture_height") : systemDimenPx("navigation_bar_height");
+        }
+        if (wantTop != padTop || wantBottom != padBottom) {
+            webView.setPadding(webView.getPaddingLeft(), wantTop, webView.getPaddingRight(), wantBottom);
+        }
     }
 
     /** Android 13+ (API 33) requires runtime permission before any notification can be shown. */
