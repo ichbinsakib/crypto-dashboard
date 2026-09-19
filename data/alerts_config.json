@@ -47,6 +47,38 @@
       "price": 3000.0,
       "label": "ETH above $3,000",
       "enabled": true
+    },
+    {
+      "id": "btc-cd-below-77500",
+      "coin": "BTC",
+      "condition": "below",
+      "price": 77500.0,
+      "label": "BTC below $77.5k (Crypto Dada: rally case weakens)",
+      "enabled": true
+    },
+    {
+      "id": "btc-cd-below-77000",
+      "coin": "BTC",
+      "condition": "below",
+      "price": 77000.0,
+      "label": "BTC below $77k (Crypto Dada: be careful)",
+      "enabled": true
+    },
+    {
+      "id": "btc-cd-above-83000",
+      "coin": "BTC",
+      "condition": "above",
+      "price": 83000.0,
+      "label": "BTC above $83k (Crypto Dada: breakout, $90k in view)",
+      "enabled": true
+    },
+    {
+      "id": "btc-cd-above-90000",
+      "coin": "BTC",
+      "condition": "above",
+      "price": 90000.0,
+      "label": "BTC above $90k (Crypto Dada: target zone)",
+      "enabled": true
     }
   ]
 }
