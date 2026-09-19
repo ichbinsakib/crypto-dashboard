@@ -17,7 +17,7 @@ STOP_ATR = 1.0
 MAX_CHASE_ATR = 1.0        # entry must be within this many ATR of the breakout level, or it is chasing
 VOLUME_MULTIPLE = 1.3      # recent volume vs the prior 20 candles
 FEE_PCT = 0.2              # round-trip, same as the dip model
-MIN_NET_PCT = 0.15         # target must clear fees by this much (matches MIN_NET_PROFIT_PCT)
+MIN_NET_PCT = float(__import__("os").environ.get("MIN_NET_PROFIT_PCT", "3.0"))   # target 1 must earn at least this much AFTER fees (same rule as the dip scanner)
 
 
 def compute_momentum_signal(klines, lookback, window_label=""):

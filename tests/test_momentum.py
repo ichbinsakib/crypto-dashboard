@@ -10,6 +10,17 @@ import momentum as M  # noqa: E402
 STEP = 900_000  # 15m in ms
 
 
+def setUpModule():
+    # the synthetic candles have small ranges; the production rule (3% net) is tested separately below
+    global _SAVED
+    _SAVED = M.MIN_NET_PCT
+    M.MIN_NET_PCT = 0.15
+
+
+def tearDownModule():
+    M.MIN_NET_PCT = _SAVED
+
+
 def bars(n=96, start=100.0, slope=0.3, vol=100, t0=0):
     out, p = [], start
     for i in range(n):
@@ -48,6 +59,15 @@ class SignalTests(unittest.TestCase):
         self.assertIn("fresh", M.compute_momentum_signal(chase, 30)["failed"])
         down = [[i * STEP, 200 - i * 0.3, 200.5 - i * 0.3, 199 - i * 0.3, 199.7 - i * 0.3, 100] for i in range(100)]
         self.assertIn("trend", M.compute_momentum_signal(down, 30)["failed"])
+
+    def test_three_percent_rule(self):
+        M.MIN_NET_PCT = 3.0
+        try:
+            s = M.compute_momentum_signal(with_breakout(), 30)
+            self.assertEqual(s["status"], "none")                               # ~1.7% net is not enough
+            self.assertIn("fee_ok", s["failed"])
+        finally:
+            M.MIN_NET_PCT = 0.15
 
     def test_not_enough_data(self):
         self.assertIsNone(M.compute_momentum_signal(bars(20), 30))

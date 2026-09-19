@@ -89,7 +89,8 @@ ROUND_TRIP_FEE_PCT = 0.2  # assumed buy+sell cost, as % of position size -- Bina
                             # discount or volume-tier reduction applied. Purely a rough estimate
                             # for showing what a target is actually worth after trading costs;
                             # real fees vary by exchange, fee tier, and discount.
-MIN_NET_PROFIT_PCT = 0.15  # minimum net-of-fee profit target1 must clear for a signal to be
+MIN_NET_PROFIT_PCT = float(os.environ.get("MIN_NET_PROFIT_PCT", "3.0"))  # owner rule: target 1 must earn at least this much AFTER fees.
+#   Was 0.15; 3.0 means only setups with a real move ahead are shown. Minimum net-of-fee profit target1 must clear for a signal to be
                             # considered tradeable at all -- added after a live example showed
                             # target1 could net roughly $0 after ROUND_TRIP_FEE_PCT, making a
                             # recorded "win" pointless to actually trade. Rejects the setup
@@ -1878,7 +1879,7 @@ def render(coins_data, fng_value, fng_classification, generated_at, any_stale,
             mrec = f'Momentum record, last {momentum_mod.RETENTION_DAYS} days: {ms["wins"]} won, {ms["losses"]} lost, {ms["expired"]} expired ({wr}); average {an} per call after fees.'
         else:
             mrec = f'Momentum record: no finished calls yet (kept for {momentum_mod.RETENTION_DAYS} days).'
-        tip = (f"Both setup types use Binance's public candles and the same ATR risk geometry: buy at the signal price, stop one ATR below, targets {INTRADAY_TARGET_ATR_MULTIPLE}x and {2 * INTRADAY_TARGET_ATR_MULTIPLE}x that distance above, and target 1 must clear about {ROUND_TRIP_FEE_PCT}% round-trip fees. "
+        tip = (f"Both setup types use Binance's public candles and the same ATR risk geometry: buy at the signal price, stop one ATR below, targets {INTRADAY_TARGET_ATR_MULTIPLE}x and {2 * INTRADAY_TARGET_ATR_MULTIPLE}x that distance above, and target 1 must earn at least {MIN_NET_PROFIT_PCT:g}% profit AFTER about {ROUND_TRIP_FEE_PCT}% round-trip fees (so both setup types only appear when a move of roughly {MIN_NET_PROFIT_PCT + ROUND_TRIP_FEE_PCT:.1f}% is on the table). "
                "DIP BUY: price is near the low of its recent range with improving momentum; each factor's points are shown in the 'Why it qualified' chips (hover for the reading). "
                "MOMENTUM: price has just closed above its recent high with the trend up, volume above normal, not yet stretched, not parabolic and no topping pattern. "
                f"Dip calls come in fixed batches of up to {PNL_BATCH_SIZE} per timeframe and are tracked in Performance; momentum calls are tracked separately (record below).")
