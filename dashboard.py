@@ -27,6 +27,7 @@ from html import escape as _esc
 
 import supa
 import macro as macro_mod
+from brain import wyckoff as wyckoff_mod
 
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 SITE_DIR = os.path.join(BASE_DIR, "site")   # build output -> deployed to GitHub Pages, not committed
@@ -704,7 +705,7 @@ def heat_score(pct_30d, dist_from_sma200_pct, funding_pct, fng_value):
     return round(sum(parts) / len(parts), 1)
 
 
-def compute_spot_signal(c, price_struct_label, stage, fng_value, funding_pct, macro_regime=None):
+def compute_spot_signal(c, price_struct_label, stage, fng_value, funding_pct, macro_regime=None, wyckoff=None):
     """
     Educational, rule-based spot (no-leverage) reading: does the current mix of
     conditions historically resemble an accumulation zone, a distribution zone,
@@ -804,6 +805,12 @@ def compute_spot_signal(c, price_struct_label, stage, fng_value, funding_pct, ma
         rows.append(("Macro backdrop (cross-market)", reading, pts))
         total += pts
 
+    # 8. Wyckoff distribution schematic (climax -> range -> upthrust -> sign of weakness -> markdown)
+    if wyckoff is not None:
+        pts, reading = wyckoff_mod.spot_factor(wyckoff, WYCKOFF_WEIGHT)
+        rows.append(("Wyckoff structure (distribution)", reading, pts))
+        total += pts
+
     if total >= 5:
         label, status = "🟢 ACCUMULATION ZONE", "bullish"
         plain = "Strong historical buy-the-dip setup: fear is high and price is cheap relative to its range."
@@ -823,6 +830,7 @@ def compute_spot_signal(c, price_struct_label, stage, fng_value, funding_pct, ma
     return {"label": label, "status": status, "score": total, "rows": rows, "plain": plain}
 
 
+WYCKOFF_WEIGHT = float(os.environ.get("WYCKOFF_WEIGHT", "1"))  # 0 = show only, 1 = as scored
 STOP_BUFFER_PCT = 0.08  # how far below support the pullback stop sits
 BREAKOUT_ENTRY_PCT = 0.01  # how far above resistance confirms a breakout entry
 BREAKOUT_STOP_PCT = 0.04  # how far below the breakout entry the stop sits
@@ -1384,7 +1392,7 @@ def build_coin_data(coin, markets, fng_latest, fng_prev, state):
 
 def render(coins_data, fng_value, fng_classification, generated_at, any_stale,
            alerts_results=None, screener_results=None, intraday_results=None,
-           pnl_stats=None, pnl_state=None, near_misses=None, macro=None):
+           pnl_stats=None, pnl_state=None, near_misses=None, macro=None, wyckoff_by_coin=None):
     total_stale = any_stale
     pnl_stats = pnl_stats or {"daily": {}, "weekly": {}, "monthly": {}}
     pnl_state = pnl_state or {}
@@ -1431,7 +1439,8 @@ def render(coins_data, fng_value, fng_classification, generated_at, any_stale,
         stage = cycle_stage(c.get("price"), c.get("sma50"), c.get("sma200"), c.get("pct_30d"))
         score = heat_score(c.get("pct_30d"), dist_sma200_pct, funding_pct, fng_value)
         spot_signal = compute_spot_signal(c, price_struct_label, stage, fng_value, funding_pct,
-                                          macro["regime"] if macro else None)
+                                          macro["regime"] if macro else None,
+                                          (wyckoff_by_coin or {}).get(c["key"]))
         spot_signals_by_coin[c["key"]] = spot_signal
 
         stages = ["Accumulation", "Markup", "Distribution", "Markdown"]
@@ -2686,6 +2695,14 @@ def main():
     newly_resolved = [r for r in new_pnl_state.get("resolved", [])
                        if (r["coin"], r["tf"], r["opened_at"]) not in prev_resolved_keys]
 
+    wyckoff_by_coin = {}
+    for _c in coins_data:
+        try:
+            wyckoff_by_coin[_c["key"]] = wyckoff_mod.detect_distribution(fetch_binance_ohlc(_c["key"], "1d"))
+            _w = wyckoff_by_coin[_c["key"]]
+            log(f"Wyckoff {_c['key']}: {_w['stage']} ({_w['confidence']})")
+        except Exception as e:  # noqa: BLE001 - a missing candle series must not affect the rest
+            log(f"Wyckoff {_c['key']} skipped: {type(e).__name__}")
     macro_snapshot = None
     try:
         unrate = None
@@ -2707,7 +2724,7 @@ def main():
 
     html, portions, spot_signals_by_coin = render(coins_data, fng_value, fng_classification, generated_at, any_stale,
                                          alerts_results, screener_results, intraday_results,
-                                         pnl_stats, new_pnl_state, near_misses, macro_snapshot)
+                                         pnl_stats, new_pnl_state, near_misses, macro_snapshot, wyckoff_by_coin)
     with open(OUTPUT_PATH, "w", encoding="utf-8") as f:
         f.write(html)
     copy_static_assets()

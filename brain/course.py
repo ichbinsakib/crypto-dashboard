@@ -23,6 +23,11 @@ BACKTEST_NOTES = [
     "Cross-market backdrop (dollar, 10Y yield, Nasdaq daily moves vs BTC next-day and 3-day returns, 3 years of data, "
     "chronological split): risk-on and risk-off days were not distinguishable from all days, and the direction flipped between "
     "the train and test halves. It is included in the BTC/ETH spot score at the owner's request (macro.MACRO_WEIGHT) but unproven.",
+    "Wyckoff distribution detector (brain/wyckoff.py; 40 coins; daily 2.7y and 4h ~5.5 months; chronological split): price inside a "
+    "post-climax distribution range was followed by weaker returns than the average bar in both the train and test halves on daily "
+    "(5 bars: -1.2%/-2.8% vs +0.3%/-1.1% baseline) and on 4h test data. The later stages (UTAD/SOW/LPSY) were bearish vs baseline on 4h "
+    "but noisy on daily (a 10-day UTAD sample rose in the test half). Overlapping windows make the confidence intervals optimistic. "
+    "Included in the BTC/ETH spot score at the owner's request, weight wyckoff.WYCKOFF_WEIGHT, worth 0 to -2 points.",
     "Therefore these features are shown as context and checklist items only; they do not gate or score the app's signals. "
     "Revisit with more history (months, not weeks) before changing any signal rule.",
 ]

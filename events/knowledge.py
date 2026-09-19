@@ -30,6 +30,22 @@ CONCEPTS = {
         ],
         "assessment_rule": "Context only: the app shows sentiment and stretch factors already; this concept adds the scale-in discipline.",
     },
+    "wyckoff_distribution": {
+        "title": "Wyckoff distribution schematic",
+        "meaning": ("A topping structure after an advance. Phase A: preliminary supply, a buying climax (heavy volume, wide spread), an "
+                    "automatic reaction that sets the range floor, and a weaker secondary test. Phase B: a sideways range while large holders "
+                    "sell into strength. Phase C: an upthrust after distribution (UTAD), a poke above the highs that closes back inside. "
+                    "Phase D: a sign of weakness through the floor on volume, then a last point of supply (a weak rally that fails under the "
+                    "broken support). Phase E: markdown."),
+        "how_it_helps": "Explains why a strong-looking breakout above a range can be a trap, and where support gives way.",
+        "risk": "The stages are subjective and overlap in time; a range can also resolve upward (re-accumulation), so a Wyckoff read is a lean, not a call.",
+        "signs_in_data": [
+            "A high-volume climax after a long advance, then a sharp drop and a range holding below the high.",
+            "A break above the range high that closes back inside, followed by a close below the range floor on volume.",
+        ],
+        "assessment_rule": ("brain/wyckoff.py detects it; on 40 coins a post-climax range preceded weaker-than-average returns on daily "
+                            "and 4h data in both halves of history, so it scores 0 to -2 in the BTC/ETH spot signal."),
+    },
 }
 
 
