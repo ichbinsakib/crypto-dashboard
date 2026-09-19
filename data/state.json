@@ -4,7 +4,7 @@
   "_alerts_state": {
     "btc-resistance-break": {
       "triggered": true,
-      "last_triggered_at": "2026-09-19 03:55:18"
+      "last_triggered_at": "2026-09-19 04:00:34"
     },
     "btc-support-break": {
       "triggered": false,
@@ -12,7 +12,7 @@
     },
     "eth-resistance-break": {
       "triggered": true,
-      "last_triggered_at": "2026-09-19 03:55:18"
+      "last_triggered_at": "2026-09-19 04:00:34"
     },
     "eth-support-break": {
       "triggered": false,
@@ -1567,11 +1567,11 @@
     "venice-token": {
       "label": "\ud83d\udd34 DISTRIBUTION ZONE",
       "status": "bearish",
-      "score": -8,
+      "score": -5,
       "rows": [
         [
           "Price vs. recent range",
-          "Near its 30-day high (~$28.48) - less room to run",
+          "Near its 30-day high (~$28.00) - less room to run",
           -1
         ],
         [
@@ -1586,12 +1586,12 @@
         ],
         [
           "Recent trend",
-          "Shooting straight up - classic blow-off top risk, don't chase",
-          -2
+          "Trending up steadily - healthy",
+          1
         ],
         [
           "Stretch from long-term average",
-          "+123.9% above its long-term average - very stretched",
+          "+120.2% above its long-term average - very stretched",
           -2
         ],
         [
@@ -1604,12 +1604,12 @@
       "id": "venice-token",
       "symbol": "VVV",
       "name": "Venice Token",
-      "price": 28.48,
-      "pct_24h": 13.04753,
-      "pct_7d": 23.8,
+      "price": 28.0,
+      "pct_24h": 10.64755,
+      "pct_7d": 19.0,
       "support_30d": 15.97030714949106,
-      "resistance_30d": 28.477433573617432,
-      "as_of": "2026-09-19 03:05:19",
+      "resistance_30d": 27.996372268074243,
+      "as_of": "2026-09-19 04:00:34",
       "stale": false
     },
     "litecoin": {
@@ -2167,7 +2167,7 @@
         ],
         [
           "Stretch from long-term average",
-          "-18.1% below its long-term average - confirmed downtrend",
+          "-17.6% below its long-term average - confirmed downtrend",
           -1
         ],
         [
@@ -2180,12 +2180,12 @@
       "id": "canton-network",
       "symbol": "CC",
       "name": "Canton",
-      "price": 0.112012,
-      "pct_24h": 9.01248,
-      "pct_7d": 14.7,
+      "price": 0.11264,
+      "pct_24h": 4.3026,
+      "pct_7d": 13.8,
       "support_30d": 0.09077045047943234,
       "resistance_30d": 0.12396615653575341,
-      "as_of": "2026-09-19 01:00:36",
+      "as_of": "2026-09-19 04:00:34",
       "stale": false
     },
     "internet-computer": {
@@ -3197,13 +3197,13 @@
       "stale": false
     },
     "kaspa": {
-      "label": "\ud83d\udfe1 HOLD / NEUTRAL",
-      "status": "neutral",
-      "score": -1,
+      "label": "\ud83d\udd34 CAUTION - REDUCE NEW BUYS",
+      "status": "bearish",
+      "score": -2,
       "rows": [
         [
           "Price vs. recent range",
-          "Near its 30-day high (~$0.0389) - less room to run",
+          "Near its 30-day high (~$0.0388) - less room to run",
           -1
         ],
         [
@@ -3218,12 +3218,12 @@
         ],
         [
           "Recent trend",
-          "Trending up steadily - healthy",
-          1
+          "Chopping sideways - no clear trend",
+          0
         ],
         [
           "Stretch from long-term average",
-          "+16.8% above its long-term average - a bit stretched",
+          "+16.5% above its long-term average - a bit stretched",
           -1
         ],
         [
@@ -3232,16 +3232,16 @@
           0
         ]
       ],
-      "plain": "No real edge either way right now - fine to just wait and watch.",
+      "plain": "Getting risky - I'd hold off on new buys until this cools down.",
       "id": "kaspa",
       "symbol": "KAS",
       "name": "Kaspa",
-      "price": 0.03893854,
-      "pct_24h": 13.40788,
-      "pct_7d": 8.1,
+      "price": 0.03884123,
+      "pct_24h": 12.66508,
+      "pct_7d": 5.8,
       "support_30d": 0.027064601688398235,
-      "resistance_30d": 0.03891155526401629,
-      "as_of": "2026-09-19 03:40:23",
+      "resistance_30d": 0.038843485655430054,
+      "as_of": "2026-09-19 04:00:34",
       "stale": false
     },
     "cosmos": {
@@ -3515,14 +3515,14 @@
     "key": "BTC",
     "name": "Bitcoin",
     "emoji": "\u20bf",
-    "price": 81146,
+    "price": 81128,
     "high_24h": 81675,
     "low_24h": 77156,
-    "pct_24h": 4.90998,
+    "pct_24h": 4.94225,
     "pct_7d": 5.2,
     "pct_30d": 16.6,
-    "sma50": 72837.55730380042,
-    "sma200": 70451.5349921736,
+    "sma50": 72837.06416796522,
+    "sma200": 70451.4117082148,
     "support_30d": 75590.24471973324,
     "resistance_30d": 81264.70153038795,
     "mark_price": 81139.95374813,
@@ -3537,16 +3537,16 @@
     "key": "ETH",
     "name": "Ethereum",
     "emoji": "\u039e",
-    "price": 2620.17,
+    "price": 2619.77,
     "high_24h": 2643.34,
     "low_24h": 2467.97,
-    "pct_24h": 5.75378,
+    "pct_24h": 5.80587,
     "pct_7d": 4.3,
     "pct_30d": 15.7,
-    "sma50": 2257.014521721486,
-    "sma200": 2073.046694079596,
+    "sma50": 2257.0038923333364,
+    "sma200": 2073.0440367325587,
     "support_30d": 2390.783044679688,
-    "resistance_30d": 2620.3629354777477,
+    "resistance_30d": 2619.831466070284,
     "mark_price": 2622.08386929,
     "index_price": 2622.63465116,
     "funding_rate": 0.0001,
