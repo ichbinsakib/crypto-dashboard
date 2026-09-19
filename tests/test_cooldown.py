@@ -29,5 +29,18 @@ class CooldownTests(unittest.TestCase):
         self.assertEqual(len(d.find_strong_buys([], {}, [], res)), 2)
 
 
+class OncePerCallTests(unittest.TestCase):
+    def test_flicker_of_a_tracked_call_does_not_alert_again(self):
+        new = [{"dedupe_key": "scanner-1h:WLFI", "symbol": "WLFI"}, {"dedupe_key": "scanner-15m:LTC", "symbol": "LTC"},
+               {"dedupe_key": "daily:BTC", "symbol": "BTC"}]
+        kept = d.drop_already_tracked(new, {"1h:WLFI"})
+        self.assertEqual([k["dedupe_key"] for k in kept], ["scanner-15m:LTC", "daily:BTC"])
+
+    def test_first_alert_for_a_call_still_goes_out(self):
+        new = [{"dedupe_key": "scanner-1h:WLFI", "symbol": "WLFI"}]
+        self.assertEqual(d.drop_already_tracked(new, set()), new)                    # not tracked before this run -> alert
+        self.assertEqual(d.drop_already_tracked(new, {"15m:WLFI"}), new)            # a different timeframe is a different call
+
+
 if __name__ == "__main__":
     unittest.main()

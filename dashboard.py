@@ -331,6 +331,19 @@ def find_strong_buys(coins_data, spot_signals_by_coin, screener_results, intrada
     return found
 
 
+def drop_already_tracked(newly_strong, tracked_keys):
+    """A 'New signal' alert is for a call that just opened. If the same coin+timeframe is already being tracked in Performance
+    (opened in an earlier run and still unresolved), the score merely flickered out of the strong tier and back, so it is not a
+    new signal and must not alert again. tracked_keys are the tracker's keys, e.g. '1h:WLFI'."""
+    out = []
+    for sb in newly_strong:
+        key = sb["dedupe_key"]
+        if key.startswith("scanner-") and key[len("scanner-"):] in tracked_keys:
+            continue
+        out.append(sb)
+    return out
+
+
 def evaluate_strong_buys(strong_buys, prev_strong_state):
     """Level-triggered like evaluate_alerts: only the moment a coin CROSSES INTO the strong
     tier counts as newly-alertable, not every cycle it happens to still be there -- otherwise
@@ -2896,6 +2909,11 @@ def main():
                                   cooldown_keys(new_pnl_state.get("resolved", [])))
     prev_strong_state = state.get("_strong_buy_state", {})
     newly_strong, new_strong_state = evaluate_strong_buys(strong_buys, prev_strong_state)
+    suppressed = [sb['dedupe_key'] for sb in newly_strong]
+    newly_strong = drop_already_tracked(newly_strong, set(prev_pnl_open.keys()))
+    suppressed = [k for k in suppressed if k not in {sb['dedupe_key'] for sb in newly_strong}]
+    if suppressed:
+        log(f"Signal alert suppressed (call already tracked): {suppressed}")
     if newly_strong:
         log(f"STRONG BUY NEWLY DETECTED: {[sb['dedupe_key'] for sb in newly_strong]}")
         send_discord_strong_buy_alert(newly_strong)
