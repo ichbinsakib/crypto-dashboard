@@ -4,7 +4,7 @@
   "_alerts_state": {
     "btc-resistance-break": {
       "triggered": true,
-      "last_triggered_at": "2026-09-19 05:15:21"
+      "last_triggered_at": "2026-09-19 05:20:22"
     },
     "btc-support-break": {
       "triggered": false,
@@ -12,7 +12,7 @@
     },
     "eth-resistance-break": {
       "triggered": true,
-      "last_triggered_at": "2026-09-19 05:15:21"
+      "last_triggered_at": "2026-09-19 05:20:22"
     },
     "eth-support-break": {
       "triggered": false,
@@ -275,7 +275,7 @@
       "rows": [
         [
           "Price vs. recent range",
-          "Near its 30-day high (~$94.36) - less room to run",
+          "Near its 30-day high (~$92.54) - less room to run",
           -1
         ],
         [
@@ -295,7 +295,7 @@
         ],
         [
           "Stretch from long-term average",
-          "+66.9% above its long-term average - very stretched",
+          "+63.6% above its long-term average - very stretched",
           -2
         ],
         [
@@ -308,12 +308,12 @@
       "id": "hyperliquid",
       "symbol": "HYPE",
       "name": "Hyperliquid",
-      "price": 94.32,
-      "pct_24h": 9.26126,
-      "pct_7d": 19.7,
+      "price": 92.43,
+      "pct_24h": 5.5477,
+      "pct_7d": 17.2,
       "support_30d": 75.5007190357601,
-      "resistance_30d": 94.35769006132388,
-      "as_of": "2026-09-19 03:10:22",
+      "resistance_30d": 92.53945314183504,
+      "as_of": "2026-09-19 05:20:22",
       "stale": false
     },
     "dogecoin": {
@@ -701,9 +701,9 @@
       "stale": false
     },
     "stellar": {
-      "label": "\ud83d\udfe1 HOLD / NEUTRAL",
-      "status": "neutral",
-      "score": -1,
+      "label": "\ud83d\udd34 CAUTION - REDUCE NEW BUYS",
+      "status": "bearish",
+      "score": -2,
       "rows": [
         [
           "Price vs. recent range",
@@ -722,8 +722,8 @@
         ],
         [
           "Recent trend",
-          "Trending up steadily - healthy",
-          1
+          "Chopping sideways - no clear trend",
+          0
         ],
         [
           "Stretch from long-term average",
@@ -736,16 +736,16 @@
           0
         ]
       ],
-      "plain": "No real edge either way right now - fine to just wait and watch.",
+      "plain": "Getting risky - I'd hold off on new buys until this cools down.",
       "id": "stellar",
       "symbol": "XLM",
       "name": "Stellar",
-      "price": 0.194762,
-      "pct_24h": 2.99526,
-      "pct_7d": 8.2,
+      "price": 0.194824,
+      "pct_24h": 3.63751,
+      "pct_7d": 7.3,
       "support_30d": 0.17464723429819362,
       "resistance_30d": 0.20181319711037435,
-      "as_of": "2026-09-19 03:50:24",
+      "as_of": "2026-09-19 05:20:22",
       "stale": false
     },
     "kucoin-shares": {
@@ -1701,11 +1701,11 @@
       "symbol": "BGB",
       "name": "Bitget Token",
       "price": 1.98,
-      "pct_24h": 1.98682,
-      "pct_7d": 2.2,
+      "pct_24h": 1.88406,
+      "pct_7d": 2.1,
       "support_30d": 1.8788056602315137,
       "resistance_30d": 2.0284940947674617,
-      "as_of": "2026-09-19 03:40:23",
+      "as_of": "2026-09-19 05:20:22",
       "stale": false
     },
     "sui": {
@@ -3515,14 +3515,14 @@
     "key": "BTC",
     "name": "Bitcoin",
     "emoji": "\u20bf",
-    "price": 81047,
+    "price": 81033,
     "high_24h": 81675,
     "low_24h": 77357,
-    "pct_24h": 4.59319,
+    "pct_24h": 4.60861,
     "pct_7d": 4.8,
     "pct_30d": 17.1,
-    "sma50": 72835.76325740304,
-    "sma200": 70451.08648057426,
+    "sma50": 72835.14875564782,
+    "sma200": 70450.93285513547,
     "support_30d": 75590.24471973324,
     "resistance_30d": 81264.70153038795,
     "mark_price": 81098.11601449,
@@ -3537,16 +3537,16 @@
     "key": "ETH",
     "name": "Ethereum",
     "emoji": "\u039e",
-    "price": 2624.79,
+    "price": 2625.72,
     "high_24h": 2643.34,
     "low_24h": 2478.29,
-    "pct_24h": 5.58434,
+    "pct_24h": 5.65197,
     "pct_7d": 4.2,
     "pct_30d": 16.4,
-    "sma50": 2257.1063423456667,
-    "sma200": 2073.069649235641,
+    "sma50": 2257.1127307127917,
+    "sma200": 2073.071246327422,
     "support_30d": 2390.783044679688,
-    "resistance_30d": 2624.9539666867986,
+    "resistance_30d": 2625.2733850430336,
     "mark_price": 2621.15,
     "index_price": 2622.52906977,
     "funding_rate": 0.0001,
