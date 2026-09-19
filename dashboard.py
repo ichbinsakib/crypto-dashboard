@@ -1891,7 +1891,7 @@ def render(coins_data, fng_value, fng_classification, generated_at, any_stale,
     <div class="sub">In back-tests neither type showed a proven edge after fees (dip signals averaged below zero on a small sample; momentum about break-even), so treat every row as unproven and judge them by their records.</div>
   </details>
   {body}
-  <div class="sub" style="margin-top:8px;">{_esc(mrec)} Dip-buy record: see Performance below.</div>
+  <div class="sub" style="margin-top:8px;">{_esc(mrec)} Full records: see Performance below.</div>
   {misses}
 </div>
 """
@@ -1946,40 +1946,74 @@ def render(coins_data, fng_value, fng_classification, generated_at, any_stale,
 </div>
 """
 
-    def _pnl_stat_card(period_label, stats):
+    _mom_state = momentum_state or {}
+    _dip_resolved = [{**r, "kind": "dip"} for r in pnl_state.get("resolved", [])]
+    _mom_resolved = [{**r, "kind": "mom"} for r in _mom_state.get("resolved", [])]
+    _all_resolved = _dip_resolved + _mom_resolved
+    stats_all = compute_pnl_stats(_all_resolved)
+    stats_dip = compute_pnl_stats(_dip_resolved)
+    stats_mom = compute_pnl_stats(_mom_resolved)
+    _open_all = ([{**v, "kind": "dip"} for v in pnl_state.get("open", {}).values()]
+                 + [{**v, "kind": "mom"} for v in _mom_state.get("open", {}).values()])
+
+    def _avg_net_30d(rows):
+        cutoff = datetime.datetime.now() - datetime.timedelta(days=30)
+        nets = [(r["exit_price"] - r["entry"]) / r["entry"] * 100 - ROUND_TRIP_FEE_PCT for r in rows
+                if r.get("exit_price") and r.get("entry") and datetime.datetime.fromisoformat(r["resolved_at"]) >= cutoff]
+        return (sum(nets) / len(nets)) if nets else None
+
+    def _pnl_stat_card(period_label, stats, dip=None, mom=None):
         wr = stats.get("win_rate")
         wr_display = f"{wr:.0f}%" if wr is not None else "N/A"
         wr_class = "pos" if (wr is not None and wr >= 50) else ("neg" if wr is not None else "")
         expired = stats.get("expired", 0)
         expired_bit = f" &middot; {expired} expired" if expired else ""
+        split = ""
+        if dip is not None and mom is not None:
+            split = (f'<div class="sub" style="margin-top:4px;">&#127919; Dip {dip.get("wins", 0)}W&middot;{dip.get("losses", 0)}L '
+                     f'&nbsp; &#128640; Momentum {mom.get("wins", 0)}W&middot;{mom.get("losses", 0)}L</div>')
         return f"""
     <div class="card">
       <div class="card-title">{period_label}</div>
       <div class="{wr_class}" style="font-size:28px; font-weight:800;">{wr_display}</div>
       <div class="sub">{stats.get('wins', 0)}W &middot; {stats.get('losses', 0)}L{expired_bit}</div>
+      {split}
     </div>"""
 
-    pnl_open = pnl_state.get("open", {})
+    def _type_row(kind_label, rows_stats, rows):
+        m = rows_stats.get("monthly", {})
+        wr = m.get("win_rate")
+        an = _avg_net_30d(rows)
+        an_txt = "n/a" if an is None else f'<span class="{"pos" if an > 0 else "neg"}">{an:+.2f}%</span>'
+        return (f'<tr><td>{kind_label}</td><td>{m.get("wins", 0) + m.get("losses", 0) + m.get("expired", 0)}</td><td>{m.get("wins", 0)}</td>'
+                f'<td>{m.get("losses", 0)}</td><td>{m.get("expired", 0)}</td><td>{f"{wr:.0f}%" if wr is not None else "N/A"}</td><td>{an_txt}</td></tr>')
+
+    type_table = ('<div class="cycle-map" style="margin-top:10px;"><div class="card-title">BY SIGNAL TYPE &mdash; last 30 days</div>'
+                  '<table class="signal-table" style="margin:6px 0 0;"><thead><tr><th>Type</th><th>Resolved</th><th>Won</th><th>Lost</th><th>Expired</th><th>Win rate</th><th>Avg result / call after fees</th></tr></thead><tbody>'
+                  + _type_row("&#127919; Dip buy", stats_dip, _dip_resolved) + _type_row("&#128640; Momentum (experimental)", stats_mom, _mom_resolved)
+                  + '</tbody></table></div>')
+
+    pnl_open = _open_all
     if pnl_open:
         open_rows = "".join(
-            f'<tr><td>{p["name"]} ({p["coin"]})</td><td class="watch">{ {"15m": "15-Minute", "1h": "1-Hour", "daily": "Daily"}.get(p["tf"], p["tf"]) }</td>'
+            f'<tr><td>{p["name"]} ({p["coin"]})</td><td>{TYPE_TAG[p["kind"]]}</td><td class="watch">{ {"15m": "15-Minute", "1h": "1-Hour", "daily": "Daily"}.get(p["tf"], p["tf"]) }</td>'
             f'<td class="watch">{fmt_time_ago(p["opened_at"])}</td>'
             f'<td>{fmt_usd_adaptive(p["entry"])}</td><td class="neg">{fmt_usd_adaptive(p["stop"])}</td>'
             f'<td class="pos">{fmt_usd_adaptive(p["target1"])}</td></tr>'
-            for p in pnl_open.values()
+            for p in sorted(pnl_open, key=lambda x: x["opened_at"], reverse=True)
         )
         open_positions_html = f"""
   <div class="cycle-map" style="margin-top:10px;">
-    <div class="card-title">Currently Tracking ({len(pnl_open)})<span class="info-tip" tabindex="0" data-tip="Every bullish call gets tracked here from the moment it appears until it resolves, even after the Scanner's rotating pool moves on to other coins -- so this list is usually bigger than, and different from, whatever 5 coins the Scanner happens to be showing right now. A coin with a 📊 Tracking badge on its Scanner card is one of the overlapping ones.">&#9432;</span></div>
+    <div class="card-title">Currently Tracking ({len(pnl_open)})<span class="info-tip" tabindex="0" data-tip="Every confirmed signal, dip buy or momentum, is tracked here from the moment it appears until it hits its target (win), its stop (loss) or runs out of time (expired).">&#9432;</span></div>
     <table class="signal-table" style="margin-top:6px; margin-bottom:0;">
-      <thead><tr><th>Coin</th><th>Timeframe</th><th>Signal Given</th><th>Entry</th><th>Stop</th><th>Target</th></tr></thead>
+      <thead><tr><th>Coin</th><th>Type</th><th>Timeframe</th><th>Signal Given</th><th>Entry</th><th>Stop</th><th>Target</th></tr></thead>
       <tbody>{open_rows}</tbody>
     </table>
   </div>"""
     else:
         open_positions_html = '<div class="sub" style="margin-top:10px;">No calls currently being tracked.</div>'
 
-    pnl_resolved_all = sorted(pnl_state.get("resolved", []), key=lambda r: r["resolved_at"], reverse=True)
+    pnl_resolved_all = sorted(_all_resolved, key=lambda r: r["resolved_at"], reverse=True)
     PNL_HISTORY_DISPLAY_CAP = 100
     pnl_resolved = pnl_resolved_all[:PNL_HISTORY_DISPLAY_CAP]
     if pnl_resolved:
@@ -1987,7 +2021,7 @@ def render(coins_data, fng_value, fng_classification, generated_at, any_stale,
                          "loss": '<span class="badge bearish">LOSS</span>',
                          "expired": '<span class="badge neutral">EXPIRED</span>'}
         resolved_rows = "".join(
-            f'<tr data-coin="{r["coin"].lower()}"><td>{r["name"]} ({r["coin"]})</td><td class="watch">{ {"15m": "15-Minute", "1h": "1-Hour", "daily": "Daily"}.get(r["tf"], r["tf"]) }</td>'
+            f'<tr data-coin="{r["coin"].lower()}"><td>{r["name"]} ({r["coin"]})</td><td>{TYPE_TAG[r["kind"]]}</td><td class="watch">{ {"15m": "15-Minute", "1h": "1-Hour", "daily": "Daily"}.get(r["tf"], r["tf"]) }</td>'
             f'<td class="watch">{fmt_time_ago(r["opened_at"])}</td>'
             f'<td>{fmt_usd_adaptive(r["entry"])}</td>'
             f'<td class="neg">{fmt_usd_adaptive(r["stop"])}</td>'
@@ -2007,7 +2041,7 @@ def render(coins_data, fng_value, fng_classification, generated_at, any_stale,
     </div>
     <div class="sub" style="margin-bottom:6px;">{showing_note}</div>
     <table class="signal-table" style="margin-top:0; margin-bottom:0;" id="pnl-history-table">
-      <thead><tr><th>Coin</th><th>Timeframe</th><th>Signal Given</th><th>Buy</th><th>Stop</th><th>Target</th><th>Exit</th><th>Result</th><th>Time to Resolve</th></tr></thead>
+      <thead><tr><th>Coin</th><th>Type</th><th>Timeframe</th><th>Signal Given</th><th>Buy</th><th>Stop</th><th>Target</th><th>Exit</th><th>Result</th><th>Time to Resolve</th></tr></thead>
       <tbody>{resolved_rows}</tbody>
     </table>
     <div class="sub" id="pnl-history-no-match" hidden style="margin-top:10px;">No resolved calls match that search.</div>
@@ -2018,13 +2052,14 @@ def render(coins_data, fng_value, fng_classification, generated_at, any_stale,
     performance_panel = f"""
 <div class="panel panel-performance">
   <div class="cycle-map spot-signal-card" style="margin-bottom:10px;">
-    <div class="card-title">📊 SCANNER PERFORMANCE<span class="info-tip" tabindex="0" data-tip="Tracks confirmed 15m/1h/daily calls (NEAR-TERM DIP ZONE tier only) in batches of up to {PNL_BATCH_SIZE} per timeframe -- a new batch only opens once every position in the current one has resolved (win/loss/expired), so you're never asked to follow more than one batch at a time. All prices come from Binance's own spot market data (the same order book as binance.com), fetched via Binance's public mirror domain since their main API domain blocks GitHub Actions' IP ranges. Educational transparency, not a trading track record, and not a guarantee of the exact fill you'd get trading it live.">&#9432;</span></div>
+    <div class="card-title">📊 SIGNAL PERFORMANCE &mdash; all signals<span class="info-tip" tabindex="0" data-tip="Tracks every confirmed signal: dip buys (NEAR-TERM DIP ZONE tier) in batches of up to {PNL_BATCH_SIZE} per timeframe -- a new batch only opens once every position in the current one has resolved (win/loss/expired) -- and experimental momentum breakouts (up to 5 open per timeframe, own cooldown). All prices come from Binance's own spot market data (the same order book as binance.com), fetched via Binance's public mirror domain since their main API domain blocks GitHub Actions' IP ranges. Educational transparency, not a trading track record, and not a guarantee of the exact fill you'd get trading it live.">&#9432;</span></div>
   </div>
   <div class="top-grid" style="grid-template-columns:1fr 1fr 1fr;">
-    {_pnl_stat_card("Daily", pnl_stats.get("daily", {}))}
-    {_pnl_stat_card("Weekly", pnl_stats.get("weekly", {}))}
-    {_pnl_stat_card("Monthly", pnl_stats.get("monthly", {}))}
+    {_pnl_stat_card("Daily", stats_all["daily"], stats_dip["daily"], stats_mom["daily"])}
+    {_pnl_stat_card("Weekly", stats_all["weekly"], stats_dip["weekly"], stats_mom["weekly"])}
+    {_pnl_stat_card("Monthly", stats_all["monthly"], stats_dip["monthly"], stats_mom["monthly"])}
   </div>
+  {type_table}
   {open_positions_html}
   {resolved_html}
 </div>

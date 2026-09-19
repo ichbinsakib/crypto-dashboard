@@ -90,7 +90,7 @@ def _now():
 EXPIRY_HOURS = {"15m": 6, "1h": 24}       # how long a call may run before it counts as expired (also the loss cooldown)
 MAX_OPEN_PER_TF = 5
 MAX_ATTEMPTS = 40
-RETENTION_DAYS = 30
+RETENTION_DAYS = 120   # same reach as the dip tracker so Performance can show both over the same windows
 
 
 def scan(pool, tf_key, fetch_ohlc, skip_symbols=(), max_new=MAX_OPEN_PER_TF, attempts=MAX_ATTEMPTS, sleep=0.15):
