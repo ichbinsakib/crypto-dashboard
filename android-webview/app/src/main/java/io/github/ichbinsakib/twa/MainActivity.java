@@ -38,32 +38,10 @@ public class MainActivity extends Activity {
                                                   // white/transparent before the page paints
         setContentView(webView);
 
-        // Android 15+ (API 35, our compile/targetSdk) enforces edge-to-edge and does NOT let
-        // an app fully opt out via Window.setDecorFitsSystemWindows(true) -- that call alone
-        // isn't reliable there, which is why the status bar was drawing right over the app's
-        // own header. Padding the WebView directly by the real system bar insets works
-        // regardless of that restriction, since it doesn't depend on opting out at all.
-        webView.setOnApplyWindowInsetsListener((v, insets) -> {
-            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.R) {
-                Insets bars = insets.getInsets(WindowInsets.Type.systemBars());
-                v.setPadding(bars.left, bars.top, bars.right, bars.bottom);
-            } else {
-                v.setPadding(
-                        insets.getSystemWindowInsetLeft(), insets.getSystemWindowInsetTop(),
-                        insets.getSystemWindowInsetRight(), insets.getSystemWindowInsetBottom());
-            }
-            return insets;
-        });
-
-        // Some phones (notably MIUI/HyperOS builds) never deliver the insets above, which left the status bar drawn over the
-        // header. So after every layout, also measure where the page really sits: if it touches the top (or bottom) edge of
-        // the screen without padding, pad it by the system bar size the OS itself reports.
-        webView.getViewTreeObserver().addOnGlobalLayoutListener(new ViewTreeObserver.OnGlobalLayoutListener() {
-            @Override
-            public void onGlobalLayout() {
-                ensureClearOfSystemBars();
-            }
-        });
+        // The page is laid out by the system BELOW the status bar and ABOVE the navigation bar. This app targets Android 14
+        // (API 34) on purpose: Android 15+ only forces apps to draw edge-to-edge when they target API 35 or newer, and on some
+        // phones (Xiaomi HyperOS in particular) the window-inset callbacks that edge-to-edge relies on never fire, which left
+        // the status bar drawn on top of the header. Without that enforcement no inset handling is needed at all.
 
         // The dashboard page passes its per-user notification token here after sign-in.
         webView.addJavascriptInterface(new KairoBridge(this), "KairoAndroid");
@@ -93,39 +71,6 @@ public class MainActivity extends Activity {
 
         requestNotificationPermissionIfNeeded();
         scheduleNotificationChecks();
-    }
-
-    private int systemDimenPx(String name) {
-        int id = getResources().getIdentifier(name, "dimen", "android");
-        return id > 0 ? getResources().getDimensionPixelSize(id) : 0;
-    }
-
-    /**
-     * Safety net for devices where the window-insets callback above never runs. Pads the WebView only when it is flush with the
-     * screen edge and not already padded, so devices that deliver insets normally are untouched.
-     */
-    private void ensureClearOfSystemBars() {
-        if (webView == null || webView.getHeight() == 0) return;
-        int[] loc = new int[2];
-        webView.getLocationOnScreen(loc);
-        int padTop = webView.getPaddingTop();
-        int padBottom = webView.getPaddingBottom();
-        int wantTop = padTop;
-        int wantBottom = padBottom;
-
-        int statusBar = systemDimenPx("status_bar_height");
-        if (loc[1] <= 1 && padTop < statusBar) {
-            wantTop = statusBar;                       // the page starts under the status bar: push it below
-        }
-        int decorHeight = getWindow().getDecorView().getHeight();
-        if (decorHeight > 0 && loc[1] + webView.getHeight() >= decorHeight - 1 && padBottom == 0 && wantTop != padTop) {
-            // Insets are missing entirely on this device, so the bottom is unpadded too: use the bar size for the navigation mode.
-            int mode = Settings.Secure.getInt(getContentResolver(), "navigation_mode", 0);   // 0 = 3-button, 1 = 2-button, 2 = gesture
-            wantBottom = mode == 2 ? systemDimenPx("navigation_bar_gesture_height") : systemDimenPx("navigation_bar_height");
-        }
-        if (wantTop != padTop || wantBottom != padBottom) {
-            webView.setPadding(webView.getPaddingLeft(), wantTop, webView.getPaddingRight(), wantBottom);
-        }
     }
 
     /** Android 13+ (API 33) requires runtime permission before any notification can be shown. */

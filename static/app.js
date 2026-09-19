@@ -349,6 +349,7 @@
     openOverlay(
       '<div class="overlay-row"><h2>Account</h2><button type="button" class="ghost" id="ov-close">Close</button></div>' +
       '<div class="sub">Signed in as <strong>' + esc(S.profile && S.profile.email) + '</strong></div>' +
+      (window.KairoAndroid && window.KairoAndroid.getVersion ? '<div class="sub">Android app version: <strong>' + esc(window.KairoAndroid.getVersion()) + '</strong></div>' : '') +
       '<h3>Change password</h3>' +
       '<input type="password" id="pw-new" placeholder="New password (min 10 characters)" autocomplete="new-password">' +
       '<input type="password" id="pw-new2" placeholder="Repeat new password" autocomplete="new-password">' +

@@ -39,6 +39,15 @@ public class KairoBridge {
     }
 
     @JavascriptInterface
+    public String getVersion() {
+        try {
+            return context.getPackageManager().getPackageInfo(context.getPackageName(), 0).versionName;
+        } catch (Exception e) {
+            return "unknown";
+        }
+    }
+
+    @JavascriptInterface
     public void clearNotifyConfig() {
         context.getSharedPreferences(PREFS, Context.MODE_PRIVATE).edit().clear().apply();
     }
