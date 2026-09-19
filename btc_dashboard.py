@@ -163,6 +163,21 @@ def gauge(score):
 
 # ---------------- content ----------------
 
+def structure(c, label, status):
+    """Price-structure label for this dashboard: the app's 7-day rule alone called a coin sitting at its 30-day high above both
+    long averages 'Range / Consolidation'. Use the moving-average stack too so it agrees with the market read."""
+    if "Parabolic" in (label or ""):
+        return label, status
+    p, s50, s200 = c.get("price"), c.get("sma50"), c.get("sma200")
+    if p and s50 and s200:
+        if p > s50 > s200:
+            return "Uptrend (above the 50- and 200-day averages)", "bullish"
+        if p < s50 < s200:
+            return "Downtrend (below the 50- and 200-day averages)", "bearish"
+        return "Range / Consolidation (mixed averages)", "neutral"
+    return label, status
+
+
 def cycle_score(spot_score):
     """1-10, higher = closer to the accumulation end. Derived from the app's own spot model (range about -9..+9)."""
     return max(1, min(10, round(5.5 + (spot_score or 0) / 2)))
@@ -260,6 +275,17 @@ def alert_state(x):
     return "green"
 
 
+def _deriv(x, which, reading, status):
+    """Derivatives reading with its exchange source, or an honest 'unavailable' when only a stale copy exists."""
+    c = x["c"]
+    stale = c.get("stale") or []
+    key = "funding rate / futures premium" if which in ("funding", "premium") else "open interest"
+    if key in stale:
+        return "Data unavailable (live feed blocked; last known value is stale)", "na"
+    src = c.get("derivs_source") if which in ("funding", "premium") else c.get("oi_source")
+    return (f"{reading} [{src}]" if src and reading != "N/A" else reading), status
+
+
 def signal_rows(x):
     oc = x.get("onchain") or {}
     nl, ns = nupl_read(oc.get("nupl"))
@@ -267,17 +293,21 @@ def signal_rows(x):
     fl, fs = flow_read(oc.get("net_flow"))
     if oc.get("preliminary") and oc.get("net_flow") is not None:
         fl += " (preliminary)"
+    fund = _deriv(x, "funding", x["funding"][0], x["funding"][1])
+    oi = _deriv(x, "oi", x["oi"][0], x["oi"][1])
+    prem = _deriv(x, "premium", x["premium"][0], x["premium"][1])
+    liq = ("Data unavailable (needs funding and open interest)", "na") if "na" in (fund[1], oi[1]) else (x["liq"][0], x["liq"][1])
     rows = [
         ("Price Structure", "Blow-off move / vertical trend", "Parabolic breakout", x["price_struct"][0], x["price_struct"][1]),
         ("ETF Flows", "Sustained spot demand", "Large outflows", "Data unavailable (no free ETF-flow feed)", "na"),
-        ("Funding Rates", "Overheated longs", "Strong positive spike", x["funding"][0], x["funding"][1]),
-        ("Open Interest (OI)", "Leverage buildup", "OI exploding higher", x["oi"][0], x["oi"][1]),
-        ("Futures Premium", "Excessive bullish basis", "Premium sharply elevated", x["premium"][0], x["premium"][1]),
+        ("Funding Rates", "Overheated longs", "Strong positive spike", fund[0], fund[1]),
+        ("Open Interest (OI)", "Leverage buildup", "OI exploding higher", oi[0], oi[1]),
+        ("Futures Premium", "Excessive bullish basis", "Premium sharply elevated", prem[0], prem[1]),
         ("MVRV Z-Score", "Valuation overheating", "High top-zone valuation", zl, zs),
         ("NUPL", "Euphoria", "Euphoric zone", nl, ns),
         ("Retail Mania (Fear & Greed)", "Euphoric crowd behavior", "FOMO mania everywhere", x["fng"][0], x["fng"][1]),
         ("Exchange Inflows / Outflows", "Coins moving to / from exchanges", "Heavy inflows / balance rise", fl, fs),
-        ("Liquidation Risk", "Crowded leverage", "One-sided crowded setup", x["liq"][0], x["liq"][1]),
+        ("Liquidation Risk", "Crowded leverage", "One-sided crowded setup", liq[0], liq[1]),
     ]
     out = []
     for i, (name, watch, warn, read, st) in enumerate(rows, 1):
@@ -290,6 +320,7 @@ def signal_rows(x):
 def build(x):
     """x: {c, stage, spot, price_struct, funding, oi, premium, fng, liq, wyckoff, macro, hourly, onchain, generated}."""
     c = x["c"]
+    x = dict(x, price_struct=structure(c, *x["price_struct"]))
     score = cycle_score((x.get("spot") or {}).get("score"))
     title, sub = headline(x["stage"], x["price_struct"][0], x.get("wyckoff"))
     oc = x.get("onchain") or {}

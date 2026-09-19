@@ -234,3 +234,11 @@
 .dip-table td .wl-note { display: block; }
 .dip-table .follow-btn { white-space: nowrap; }
 .px-live { font-variant-numeric: tabular-nums; }
+
+/* merged signal scanner */
+.type-tag { display: inline-block; font-size: 11px; font-weight: 800; padding: 3px 9px; border-radius: 999px; white-space: nowrap; }
+.type-tag.dip { background: rgba(2, 132, 199, 0.14); color: #0369a1; } .type-tag.mom { background: rgba(217, 119, 6, 0.16); color: #b45309; }
+.why-cell { white-space: normal !important; min-width: 210px; max-width: 300px; }
+.why-chip { display: inline-block; font-size: 10.5px; font-weight: 700; padding: 2px 7px; border-radius: 6px; margin: 2px 3px 2px 0; background: var(--chip); color: var(--muted); }
+.why-chip.why-good { background: rgba(5, 150, 105, 0.16); color: var(--green); } .why-chip.why-bad { background: rgba(220, 38, 38, 0.14); color: var(--red); }
+.dip-table { min-width: 1100px; }

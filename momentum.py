@@ -175,7 +175,8 @@ def update_tracker(prev, new_signals, fetch_ohlc, now=None, sleep=0.15):
             continue
         t = s["trade"]
         pos = {"coin": s["symbol"], "name": s.get("name") or s["symbol"], "tf": s["tf"], "entry": t["entry"], "stop": t["stop"],
-               "target1": t["target1"], "target2": t["target2"], "net1": t["target1NetPct"], "opened_at": now.isoformat()}
+               "target1": t["target1"], "target2": t["target2"], "net1": t["target1NetPct"], "opened_at": now.isoformat(),
+               "net2": t.get("target2NetPct"), "risk_pct": t.get("riskPct"), "why": [k for k, ok in (s.get("checks") or {}).items() if ok]}
         still_open[key] = pos
         newly_opened.append(pos)
     cutoff = now - datetime.timedelta(days=RETENTION_DAYS)

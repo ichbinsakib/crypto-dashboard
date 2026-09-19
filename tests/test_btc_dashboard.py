@@ -62,6 +62,29 @@ class DashboardTests(unittest.TestCase):
         self.assertEqual(B.alert_state(hot), "red")
         self.assertEqual(B.alert_state(ctx(funding=("0.05% - overheated longs", "bearish"))), "yellow")
 
+    def test_structure_uses_the_average_stack(self):
+        c = {"price": 81800, "sma50": 72800, "sma200": 70400}
+        self.assertEqual(B.structure(c, "Range / Consolidation", "neutral")[1], "bullish")
+        self.assertIn("Uptrend", B.structure(c, "Range / Consolidation", "neutral")[0])
+        down = {"price": 60000, "sma50": 65000, "sma200": 70000}
+        self.assertEqual(B.structure(down, "Range / Consolidation", "neutral")[1], "bearish")
+        self.assertEqual(B.structure({"price": 70000, "sma50": 72000, "sma200": 65000}, "x", "neutral")[1], "neutral")
+        self.assertEqual(B.structure(c, "Parabolic (blow-off risk)", "bearish")[0], "Parabolic (blow-off risk)")
+        self.assertEqual(B.structure({}, "Unknown", "neutral"), ("Unknown", "neutral"))
+
+    def test_stale_derivatives_are_not_shown_as_live(self):
+        c = dict(ctx()["c"], stale=["funding rate / futures premium", "open interest"])
+        html = B.signal_rows(ctx(c=c))
+        self.assertIn("last known value is stale", html)
+        self.assertIn("needs funding and open interest", html)
+        self.assertNotIn("0.0066% - healthy/neutral", html)
+
+    def test_source_is_named(self):
+        c = dict(ctx()["c"], derivs_source="Aster", oi_source="OKX (approx.)", stale=[])
+        html = B.signal_rows(ctx(c=c))
+        self.assertIn("[Aster]", html)
+        self.assertIn("[OKX (approx.)]", html)
+
     def test_html_escaping(self):
         html = B.build(ctx(price_struct=("<script>x</script>", "neutral")))
         self.assertNotIn("<script>x", html)
