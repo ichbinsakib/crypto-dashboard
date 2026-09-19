@@ -225,3 +225,12 @@
 .gl:focus { outline: none; }
 .ev-sources > div { margin: 6px 0; font-size: 13px; }
 @media (max-width: 640px) { .ev-time { flex-basis: 58px; } .ev-level { font-size: 19px; } .ev-scale span { font-size: 9.5px; } }
+
+/* Dip scanner table (same look as the momentum card) */
+.wl-scroll { overflow-x: auto; }
+.dip-table { min-width: 1080px; }
+.dip-table th, .dip-table td { white-space: nowrap; padding: 8px 9px; vertical-align: middle; }
+.dip-table td .badge { display: inline-block; }
+.dip-table td .wl-note { display: block; }
+.dip-table .follow-btn { white-space: nowrap; }
+.px-live { font-variant-numeric: tabular-nums; }

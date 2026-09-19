@@ -91,3 +91,16 @@ def card_html(a):
     warn = f' <b class="neg">Caution: {esc(", ".join(a["flags"]))}.</b>' if a.get("flags") else ""
     return (f'<div class="sub" style="margin-top:6px;">Aster perpetual: {esc(" \u00B7 ".join(bits))}.{warn}'
             f' <span class="wl-note">context only, does not change the score</span></div>')
+
+
+def cell_html(a):
+    """Compact table cell: funding and basis, with a warning marker when a caution flag is set."""
+    if not a:
+        return '<span class="watch">n/a</span>'
+    from html import escape as esc
+    txt = f"{a['funding_pct']:+.3f}%"
+    if a.get("basis_bps") is not None:
+        txt += f" &middot; {a['basis_bps']:+.0f}bp"
+    if a.get("flags"):
+        return f'<span class="neg" title="{esc(", ".join(a["flags"]))}">{txt} &#9888;</span>'
+    return f'<span title="Aster perpetual funding rate and futures basis">{txt}</span>'

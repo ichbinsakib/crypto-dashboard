@@ -1750,39 +1750,79 @@ def render(coins_data, fng_value, fng_classification, generated_at, any_stale,
       </details>
     </div>"""
 
-    def _intraday_panel_html(tf_key, tf_name, window_desc):
-        results = intraday_results.get(tf_key, [])
-        if not results:
-            empty = (f'<div class="stale-note">&#9888; No confirmed {tf_name} setups right now &mdash; '
-                     'nothing hit the NEAR-TERM DIP ZONE bar this cycle. Quality over quantity: an empty '
-                     'tab means no strong signal, not a fetch problem. Checking again next cycle.</div>')
-            misses = near_misses.get(tf_key) or []
-            if not misses:
-                return empty
-            rows_html = "".join(
-                f'<tr><td>{_esc(str(m["name"]))} <span class="watch">({_esc(m["symbol"])})</span></td>'
-                f'<td>{fmt_usd_adaptive(m["price"])}</td><td>{_pts_badge2(m["score"])}</td>'
-                f'<td class="watch">{_esc(m["why"])}</td></tr>' for m in misses)
-            return empty + f"""
-    <div class="cycle-map spot-signal-card" style="margin-top:12px;">
-      <div class="card-title">CLOSEST TO QUALIFYING <span class="watch">&mdash; not signals</span></div>
-      <div class="sub" style="margin-bottom:8px;">These did not pass the bar, so there is no Buy/Stop/Target and nothing is tracked in Performance. Shown so the tab isn't blank and you can see how close the market is.</div>
-      <div style="overflow-x:auto;"><table class="signal-table" style="margin:0;">
-        <thead><tr><th>Coin</th><th>Price</th><th>Score</th><th>What&rsquo;s missing</th></tr></thead>
-        <tbody>{rows_html}</tbody>
-      </table></div>
-    </div>"""
-        cards = "".join(_intraday_card(r, i + 1, tf_key) for i, r in enumerate(results))
-        return f"""
-    <div class="sub" style="margin-bottom:14px; display:flex; align-items:center;">
-      {tf_name} confirmed setups &mdash; batch of up to {PNL_BATCH_SIZE}, refreshes live every minute
-      <span class="info-tip" tabindex="0" data-tip="Only shows confirmed signals (NEAR-TERM DIP ZONE tier, not the weaker LEAN LONG lean) using Binance's public {window_desc} candles -- the same spot order book as binance.com itself. A batch of up to {PNL_BATCH_SIZE} opens and stays fixed until every one of them resolves (win/loss/expired) -- no new coins get added mid-batch, so this list doesn't change under you while you're following it. Buy/stop/target use each coin's own recent volatility (ATR). Prices and scores refresh live in your browser every minute straight from Binance.">&#9432;</span>
-    </div>
-    <div class="screener-grid">{cards}</div>"""
+    TF_LABEL = {"15m": "15 Min", "1h": "1 Hour", "daily": "1 Day"}
+    TF_ORDER = ["15m", "1h", "daily"]
+    FACTOR_COLS = [("Price vs. recent range", "Range"), ("Momentum vs. short-term average", "Momentum"),
+                   ("Direction over this window", "Direction"), ("Volume confirmation", "Volume"),
+                   ("Broader trend filter", "Trend")]
 
-    intraday_15m_html = _intraday_panel_html("15m", "15-Minute", "15-minute")
-    intraday_1h_html = _intraday_panel_html("1h", "1-Hour", "1-hour")
-    intraday_daily_html = _intraday_panel_html("daily", "1-Day", "30-day")
+    def _factor_cells(r):
+        by_name = {name: (reading, pts) for name, reading, pts in r.get("rows", [])}
+        cells = ""
+        for full, _short in FACTOR_COLS:
+            reading, pts = by_name.get(full, ("", 0))
+            cells += f'<td title="{_esc(reading)}">{_pts_badge2(pts)}</td>'
+        return cells
+
+    def _dip_row(r, tf_key):
+        t = r["trade"]
+        follow_key = f"{tf_key}:{r['symbol']}"
+        tf_follow_label = {"15m": "15-Minute", "1h": "1-Hour", "daily": "1-Day"}.get(tf_key, tf_key)
+        tracking = ('<span class="wl-note">&#128202; tracking in Performance</span>' if follow_key in pnl_open_keys else "")
+        target_txt = (f"{fmt_usd_adaptive(t['target1'])}<span class=\"wl-note\">{fmt_net_fee_html(t.get('target1_net_pct'))}</span>")
+        return (
+            f'<tr data-follow="1" data-name="{_esc(str(r["name"]))} ({_esc(r["symbol"])})" data-status="{r["status"]}" '
+            f'data-label="{_esc(r["label"])}" data-price="{fmt_usd_adaptive(r["price"])}" data-plain="{_esc(r.get("plain", ""))}" '
+            f'data-entry="{fmt_usd_adaptive(t["entry"])}" data-stop="{fmt_usd_adaptive(t["stop"])}" '
+            f'data-target="{fmt_usd_adaptive(t["target1"])} / {fmt_usd_adaptive(t["target2"])}">'
+            f'<td><b>{_esc(str(r["name"]))}</b><span class="wl-note">{_esc(r["symbol"])}</span>{tracking}</td>'
+            f'<td><b>{TF_LABEL.get(tf_key, tf_key)}</b></td>'
+            f'<td><span class="badge {r["status"]}">{_esc(r["label"])}</span><span class="wl-note">score {r["score"]:+d}</span></td>'
+            f'<td data-px="{_esc(r["symbol"])}">{fmt_usd_adaptive(r["price"])}</td>'
+            f'<td>{fmt_usd_adaptive(t["entry"])}</td>'
+            f'<td class="neg">{fmt_usd_adaptive(t["stop"])}<span class="wl-note">{t["risk_pct"]:.1f}% below</span></td>'
+            f'<td class="pos">{target_txt}</td>'
+            f'<td class="pos">{fmt_usd_adaptive(t["target2"])}<span class="wl-note">{fmt_net_fee_html(t.get("target2_net_pct"))}</span></td>'
+            f'{_factor_cells(r)}'
+            f'<td>{aster_mod.cell_html(r.get("aster"))}</td>'
+            f'<td><button class="follow-btn" data-key="{follow_key}" data-tf="{tf_follow_label}" title="Follow this pick: saves it to My Picks until you remove it">&#9734; Follow</button></td></tr>')
+
+    def _dip_scanner_html():
+        confirmed = [(tf, r) for tf in TF_ORDER for r in sorted(intraday_results.get(tf, []), key=lambda x: -x["score"])]
+        counts = " &middot; ".join(f'{TF_LABEL[tf]}: {len(intraday_results.get(tf, []))}' for tf in TF_ORDER)
+        head = ("<tr><th>Coin</th><th>Timeframe</th><th>Signal</th><th>Price now</th><th>Entry</th><th>Stop</th><th>Target 1</th><th>Target 2</th>"
+                + "".join(f"<th>{short}</th>" for _f, short in FACTOR_COLS) + "<th>Aster funding</th><th></th></tr>")
+        if confirmed:
+            body = f'<div class="wl-scroll"><table class="signal-table dip-table"><thead>{head}</thead><tbody>' + "".join(_dip_row(r, tf) for tf, r in confirmed) + "</tbody></table></div>"
+        else:
+            body = ('<div class="sub">&#9888; No confirmed dip setups on any timeframe right now &mdash; nothing hit the NEAR-TERM DIP ZONE bar this cycle. '
+                    'Quality over quantity: an empty table means no strong signal, not a fetch problem. Checking again next cycle.</div>')
+        miss_rows = []
+        for tf in TF_ORDER:
+            if intraday_results.get(tf):
+                continue
+            for m in near_misses.get(tf) or []:
+                miss_rows.append(f'<tr><td>{_esc(str(m["name"]))} <span class="watch">({_esc(m["symbol"])})</span></td><td><b>{TF_LABEL[tf]}</b></td>'
+                                 f'<td>{fmt_usd_adaptive(m["price"])}</td><td>{_pts_badge2(m["score"])}</td><td class="watch">{_esc(m["why"])}</td></tr>')
+        misses = ""
+        if miss_rows:
+            misses = (f'<div class="card-title" style="margin-top:14px;">CLOSEST TO QUALIFYING <span class="watch">&mdash; not signals</span></div>'
+                      '<div class="sub" style="margin-bottom:6px;">These did not pass the bar, so there is no Buy/Stop/Target and nothing is tracked in Performance. Shown so you can see how close the market is.</div>'
+                      '<div class="wl-scroll"><table class="signal-table" style="margin:0;"><thead><tr><th>Coin</th><th>Timeframe</th><th>Price</th><th>Score</th><th>What&rsquo;s missing</th></tr></thead>'
+                      f'<tbody>{"".join(miss_rows)}</tbody></table></div>')
+        tip = (f"Confirmed dip-buy setups from Binance's public candles on 15-minute, 1-hour and 1-day windows, all using the same rules: price near the low of its recent range, momentum, direction, volume and the broader trend (each factor's points are shown in its own column; hover a cell for the reading). "
+               f"Buy is the price at the moment of the signal. The stop is one ATR below it and targets are {INTRADAY_TARGET_ATR_MULTIPLE}x and {2 * INTRADAY_TARGET_ATR_MULTIPLE}x that distance above, so targets are sized to each coin's own volatility. A setup only counts if price is still in its dip-buy zone and target 1 clears about {ROUND_TRIP_FEE_PCT}% round-trip fees. "
+               f"A batch of up to {PNL_BATCH_SIZE} per timeframe stays fixed until every call resolves, and every call is tracked in Performance.")
+        return f"""
+<div class="card wl-card" style="margin-bottom:12px;">
+  <div class="card-title">&#127919; DIP SCANNER &middot; CONFIRMED SIGNALS<span class="info-tip" tabindex="0" data-tip="{_esc(tip)}">&#9432;</span></div>
+  <div class="sub">Buy-the-dip setups across all timeframes. Confirmed now &mdash; {counts}. In back-tests these signals averaged below zero after fees (small sample), so treat every row as unproven and judge the scanner by the Performance record.</div>
+  {body}
+  {misses}
+</div>
+"""
+
+    dip_scanner_html = _dip_scanner_html()
 
     intraday_live_cards = [
         {
@@ -1796,21 +1836,12 @@ def render(coins_data, fng_value, fng_classification, generated_at, any_stale,
         for r in intraday_results.get(tf_key, [])
     ]
     intraday_live_cards_json = json.dumps(intraday_live_cards)
+    intraday_live_cards = []  # table rows are static; their prices refresh through the app shell's poller
 
     screener_panel = f"""
 <div class="panel panel-screener">
   {momentum_html}
-  <input type="radio" name="tf" id="tf-15m" checked>
-  <input type="radio" name="tf" id="tf-1h">
-  <input type="radio" name="tf" id="tf-1d">
-  <div class="tabbar" style="padding-left:0;">
-    <label for="tf-15m">⏱ 15 Min</label>
-    <label for="tf-1h">🕐 1 Hour</label>
-    <label for="tf-1d">📅 1 Day</label>
-  </div>
-  <div class="tf-panel tf-panel-15m">{intraday_15m_html}</div>
-  <div class="tf-panel tf-panel-1h">{intraday_1h_html}</div>
-  <div class="tf-panel tf-panel-1d">{intraday_daily_html}</div>
+  {dip_scanner_html}
 
   <div class="cycle-map spot-signal-card" style="margin-top:10px;">
     <table class="signal-table score-legend" style="margin-top:0; margin-bottom:0;">
@@ -2460,6 +2491,11 @@ if ('serviceWorker' in navigator) {{
     return cls || '';
   }}
   function buildPayload(cardEl, key, tfLabel) {{
+    if (cardEl && cardEl.tagName === 'TR') {{
+      var d = cardEl.dataset;
+      return {{ key: key, tf: tfLabel, name: d.name || key, status: d.status || '', label: d.label || '', price: d.price || '', plain: d.plain || '',
+               entry: d.entry || null, stop: d.stop || null, target: d.target || null, followedAt: new Date().toISOString() }};
+    }}
     return {{
       key: key,
       tf: tfLabel,
@@ -2533,7 +2569,7 @@ if ('serviceWorker' in navigator) {{
     if (followed[key]) {{
       delete followed[key];
     }} else {{
-      var cardEl = btn.closest('.screener-card');
+      var cardEl = btn.closest('.screener-card') || btn.closest('tr[data-follow]');
       followed[key] = buildPayload(cardEl, key, btn.dataset.tf || '');
     }}
     saveFollowed(followed);

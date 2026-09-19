@@ -38,6 +38,7 @@
   var wlTimer = null;
   function initWatchlist() {
     if (wlTimer) { clearInterval(wlTimer); wlTimer = null; }
+    if (pxTimer) { clearInterval(pxTimer); pxTimer = null; }
     if (!document.querySelector('tr[data-live]')) return;
     async function tick() {
       var rows = document.querySelectorAll('tr[data-live]');
@@ -63,6 +64,43 @@
     }
     tick();
     wlTimer = setInterval(tick, 20000);
+  }
+
+
+  /* ---------------- live prices for the dip-scanner rows ---------------- */
+  var pxTimer = null;
+  function initSignalPrices() {
+    if (pxTimer) { clearInterval(pxTimer); pxTimer = null; }
+    if (!document.querySelector('td[data-px]')) return;
+    async function one(sym) {
+      for (var q of ['USDT', 'USD']) {
+        try {
+          var r = await fetch('https://data-api.binance.vision/api/v3/ticker/price?symbol=' + encodeURIComponent(sym + q));
+          if (!r.ok) continue;
+          var j = await r.json(); var p = parseFloat(j.price);
+          if (p > 0) return p;
+        } catch (e) { /* try next quote */ }
+      }
+      return null;
+    }
+    function fmt(p) {
+      if (p >= 1000) return '$' + p.toLocaleString('en-US', { maximumFractionDigits: 0 });
+      if (p >= 1) return '$' + p.toFixed(2);
+      var dec = Math.min(10, Math.max(4, 2 - Math.floor(Math.log10(p))));
+      return '$' + p.toFixed(dec);
+    }
+    async function tick() {
+      var cells = document.querySelectorAll('td[data-px]');
+      if (!cells.length) { clearInterval(pxTimer); pxTimer = null; return; }
+      var syms = {}; cells.forEach(function (c) { syms[c.getAttribute('data-px')] = 1; });
+      for (var s of Object.keys(syms)) {
+        var p = await one(s);
+        if (p == null) continue;
+        document.querySelectorAll('td[data-px="' + s + '"]').forEach(function (c) { c.textContent = fmt(p); c.classList.add('px-live'); });
+      }
+    }
+    tick();
+    pxTimer = setInterval(tick, 30000);
   }
 
   function showOnly(which) {
@@ -146,6 +184,7 @@
     if (window.kairoInitFollow && has.mypicks) window.kairoInitFollow();
     if (window.kairoInitPnlSearch) window.kairoInitPnlSearch();
     initWatchlist();
+    initSignalPrices();
     if (window.kairoInitEvents && has.events) {
       window.kairoInitEvents(has.events, { sb: function () { return sb; }, isAdmin: !!(S.profile && S.profile.is_admin), dev: DEV });
     }
