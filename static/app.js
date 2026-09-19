@@ -148,6 +148,27 @@
     });
   }
 
+
+  /* ---------------- scanner rows: local time + expandable readout ---------------- */
+  function localizeTimes(rootEl) {
+    (rootEl || document).querySelectorAll('time.loc-time').forEach(function (t) {
+      var d = new Date(t.getAttribute('datetime'));
+      if (isNaN(d)) return;
+      t.textContent = d.toLocaleString([], { month: 'short', day: 'numeric', hour: '2-digit', minute: '2-digit', hour12: false });
+      t.title = d.toISOString().replace('T', ' ').slice(0, 16) + ' UTC';
+    });
+  }
+  document.addEventListener('click', function (e) {
+    var btn = e.target.closest && e.target.closest('.sig-detail-btn');
+    if (!btn) return;
+    var row = btn.closest('tr'), det = row && row.nextElementSibling;
+    if (!det || !det.classList.contains('sig-detail')) return;
+    var open = det.hidden;
+    det.hidden = !open;
+    btn.setAttribute('aria-expanded', open ? 'true' : 'false');
+    btn.innerHTML = open ? 'Hide &#9652;' : 'Details &#9662;';
+  });
+
   function showOnly(which) {
     ['splash', 'auth-screen', 'noaccess', 'app'].forEach(function (id) { show(id, id === which); });
   }
@@ -247,6 +268,7 @@
     if (window.kairoInitFollow && has.mypicks) window.kairoInitFollow();
     if (window.kairoInitPnlSearch) window.kairoInitPnlSearch();
     enhanceTables(root);
+    localizeTimes(root);
     initWatchlist();
     if (window.kairoInitCharts) window.kairoInitCharts(has.bigcoins ? ((has.bigcoins.data || {}).charts || {}) : {});
     initSignalPrices();

@@ -426,3 +426,12 @@ header { padding-top: calc(10px + var(--sat)); padding-left: calc(16px + var(--s
   .wl-chart-btn { min-height: 40px; padding: 6px 10px; }
   .kc-ctl button { min-height: 36px; }
 }
+
+/* scanner readout under each signal */
+.sig-detail td { padding: 10px 12px !important; background: var(--inset); }
+.sig-metrics { display: grid; grid-template-columns: repeat(auto-fit, minmax(230px, 1fr)); gap: 2px 28px; font-family: ui-monospace, "SF Mono", Menlo, Consolas, monospace; font-size: 12.5px; }
+.sig-metrics > div { display: flex; justify-content: space-between; gap: 12px; padding: 4px 0; border-bottom: 1px dotted var(--border); }
+.sig-metrics span { color: var(--muted); } .sig-metrics b { font-weight: 600; text-align: right; }
+.sig-detail-btn { background: var(--inset); color: var(--accent); border: 1px solid var(--border); border-radius: 8px; padding: 6px 10px; font-size: 12px; font-weight: 700; cursor: pointer; white-space: nowrap; }
+.dip-table { min-width: 1300px; }
+@media (max-width: 720px) { .dip-table { min-width: 0; } .sig-detail-btn { width: 100%; min-height: 40px; } .sig-metrics { grid-template-columns: 1fr; } table.rt tr.sig-detail { display: block; } table.rt tr.sig-detail[hidden] { display: none; } }

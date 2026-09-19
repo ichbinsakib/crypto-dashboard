@@ -30,6 +30,7 @@ import supa
 import macro as macro_mod
 import momentum as momentum_mod
 import derivatives as deriv_mod
+import metrics as metrics_mod
 import btc_dashboard as btc_dash
 import aster as aster_mod
 from brain import wyckoff as wyckoff_mod
@@ -1437,7 +1438,7 @@ def build_coin_data(coin, markets, fng_latest, fng_prev, state):
 
 def render(coins_data, fng_value, fng_classification, generated_at, any_stale,
            alerts_results=None, screener_results=None, intraday_results=None,
-           pnl_stats=None, pnl_state=None, near_misses=None, macro=None, wyckoff_by_coin=None, momentum_state=None, btc_extra=None):
+           pnl_stats=None, pnl_state=None, near_misses=None, macro=None, wyckoff_by_coin=None, momentum_state=None, btc_extra=None, signal_metrics=None):
     total_stale = any_stale
     pnl_stats = pnl_stats or {"daily": {}, "weekly": {}, "monthly": {}}
     pnl_state = pnl_state or {}
@@ -1798,62 +1799,103 @@ def render(coins_data, fng_value, fng_classification, generated_at, any_stale,
 
     TYPE_TAG = {"dip": '<span class="type-tag dip">&#127919; Dip buy</span>', "mom": '<span class="type-tag mom">&#128640; Momentum</span>'}
 
+    NCOLS = 13
+
+    def _time_cell(ts_iso):
+        """UTC text as a fallback; the page rewrites it in the viewer's own time zone."""
+        try:
+            d = datetime.datetime.fromisoformat(ts_iso)
+            txt = d.strftime("%b %d %H:%M") + " UTC"
+        except (TypeError, ValueError):
+            return "<td>n/a</td>"
+        return f'<td><time class="loc-time" datetime="{_esc(ts_iso)}Z">{txt}</time></td>'
+
+    def _detail_html(key, kind, tf_key, symbol, label_text, score_text, ts_iso, price):
+        m = (signal_metrics or {}).get(key)
+        if not m:
+            return ""
+        try:
+            time_text = datetime.datetime.fromisoformat(ts_iso).strftime("%Y-%m-%d %H:%M UTC")
+        except (TypeError, ValueError):
+            time_text = "n/a"
+        items = "".join(f'<div><span>{_esc(k)}</span><b>{_esc(v)}</b></div>'
+                        for k, v in metrics_mod.display_rows(m, label_text, score_text, TF_LABEL.get(tf_key, tf_key), time_text, fmt_usd_adaptive(price)))
+        defs = ("VR = recent volume vs its window average (1.0x normal). LDR = order-book bid value / ask value within 1% of price. "
+                "Absorption = spot VR / (1 + price move in ATRs): big volume that did not move price. Deltas = taker-buy minus taker-sell value over the last 3 candles. "
+                "OI change is the 24h change in futures open interest (OKX). n/a = no data for this coin.")
+        return (f'<tr class="sig-detail" hidden><td colspan="{NCOLS}"><div class="sig-metrics">{items}</div><div class="sub" style="margin-top:6px;">{_esc(defs)}</div></td></tr>')
+
     def _scan_row(kind, tf_key, name, symbol, label_html, price, t_entry, t_stop, t_t1, t_t2, risk_pct, net1, net2, why_html, note_html,
-                  aster_cell, follow_key, follow_tf, status, plain, data_label):
+                  ts_iso, detail_key, follow_key, follow_tf, status, plain, data_label, label_text, score_text):
+        detail = _detail_html(detail_key, kind, tf_key, symbol, label_text, score_text, ts_iso, price)
+        det_btn = ('<button type="button" class="sig-detail-btn" aria-expanded="false">Details &#9662;</button>' if detail
+                   else '<span class="watch">n/a</span>')
         return (
             f'<tr data-follow="1" data-name="{_esc(name)} ({_esc(symbol)})" data-status="{status}" data-label="{_esc(data_label)}" '
             f'data-price="{fmt_usd_adaptive(price)}" data-plain="{_esc(plain)}" data-entry="{fmt_usd_adaptive(t_entry)}" '
             f'data-stop="{fmt_usd_adaptive(t_stop)}" data-target="{fmt_usd_adaptive(t_t1)} / {fmt_usd_adaptive(t_t2)}">'
             f'<td><b>{_esc(name)}</b><span class="wl-note">{_esc(symbol)}</span>{note_html}</td>'
-            f'<td>{TYPE_TAG[kind]}</td><td><b>{TF_LABEL.get(tf_key, tf_key)}</b></td><td>{label_html}</td>'
+            f'<td>{TYPE_TAG[kind]}</td><td><b>{TF_LABEL.get(tf_key, tf_key)}</b></td>{_time_cell(ts_iso)}<td>{label_html}</td>'
             f'<td data-px="{_esc(symbol)}">{fmt_usd_adaptive(price)}</td><td>{fmt_usd_adaptive(t_entry)}</td>'
             f'<td class="neg">{fmt_usd_adaptive(t_stop)}<span class="wl-note">{risk_pct:.1f}% below</span></td>'
             f'<td class="pos">{fmt_usd_adaptive(t_t1)}<span class="wl-note">{fmt_net_fee_html(net1)}</span></td>'
             f'<td class="pos">{fmt_usd_adaptive(t_t2)}<span class="wl-note">{fmt_net_fee_html(net2)}</span></td>'
-            f'<td class="why-cell">{why_html}</td><td>{aster_cell}</td>'
-            f'<td><button class="follow-btn" data-key="{follow_key}" data-tf="{follow_tf}" title="Follow this pick: saves it to My Picks until you remove it">&#9734; Follow</button></td></tr>')
+            f'<td class="why-cell">{why_html}</td><td>{det_btn}</td>'
+            f'<td><button class="follow-btn" data-key="{follow_key}" data-tf="{follow_tf}" title="Follow this pick: saves it to My Picks until you remove it">&#9734; Follow</button></td></tr>'
+            + detail)
 
     def _dip_row(r, tf_key):
         t = r["trade"]
         follow_key = f"{tf_key}:{r['symbol']}"
         tf_follow_label = {"15m": "15-Minute", "1h": "1-Hour", "daily": "1-Day"}.get(tf_key, tf_key)
+        tracked = pnl_state.get("open", {}).get(follow_key)
         tracking = ('<span class="wl-note">&#128202; tracking in Performance</span>' if follow_key in pnl_open_keys else "")
+        ts_iso = (tracked or {}).get("opened_at") or datetime.datetime.now().isoformat()
         by_name = {name: (reading, pts) for name, reading, pts in r.get("rows", [])}
         why = _chips([(short, by_name.get(full, ("", 0))[1], by_name.get(full, ("", 0))[0]) for full, short in FACTOR_COLS])
-        label = f'<span class="badge {r["status"]}">{_esc(r["label"])}</span><span class="wl-note">score {r["score"]:+d}</span>'
+        score_text = f"{metrics_mod.score_100(r['score'])}/100 ({r['score']:+d})"
+        label = f'<span class="badge {r["status"]}">{_esc(r["label"])}</span><span class="wl-note">score {score_text}</span>'
         return _scan_row("dip", tf_key, str(r["name"]), r["symbol"], label, r["price"], t["entry"], t["stop"], t["target1"], t["target2"],
-                         t["risk_pct"], t.get("target1_net_pct"), t.get("target2_net_pct"), why, tracking, aster_mod.cell_html(r.get("aster")),
-                         follow_key, tf_follow_label, r["status"], r.get("plain", ""), r["label"])
+                         t["risk_pct"], t.get("target1_net_pct"), t.get("target2_net_pct"), why, tracking, ts_iso, follow_key, follow_key,
+                         tf_follow_label, r["status"], r.get("plain", ""), r["label"], r["label"], score_text)
 
     MOM_WHY = [("Breakout", "Closed above the previous high"), ("Fresh", "Just broke out, not yet run away"), ("Trend", "Price above rising 20/50 averages"),
                ("Volume", "Volume above 1.3x normal"), ("Not parabolic", "Not an overextended vertical move"), ("No distribution", "No Wyckoff topping pattern")]
 
     def _mom_row(pos):
-        mins = max(0, int((momentum_mod._now() - datetime.datetime.fromisoformat(pos["opened_at"])).total_seconds() / 60))
         follow_key = f"mom-{pos['tf']}:{pos['coin']}"
         tf_label = {"15m": "15-Minute", "1h": "1-Hour"}.get(pos["tf"], pos["tf"])
         entry = pos["entry"]
         risk = pos.get("risk_pct") or ((entry - pos["stop"]) / entry * 100 if entry else 0)
         why = _chips([(n, None, tip) for n, tip in MOM_WHY])
-        label = '<span class="badge bullish">&#128640; BREAKOUT</span><span class="wl-note">experimental</span>'
-        note = f'<span class="wl-note">opened {mins}m ago</span>'
+        n_checks = len(pos.get("why") or []) or 7
+        score_text = f"{n_checks}/7 checks"
+        label = f'<span class="badge bullish">&#128640; BREAKOUT</span><span class="wl-note">{score_text} &middot; experimental</span>'
         return _scan_row("mom", pos["tf"], str(pos.get("name") or pos["coin"]), pos["coin"], label, entry, entry, pos["stop"], pos["target1"], pos["target2"],
-                         risk, pos.get("net1"), pos.get("net2"), why, note, aster_mod.cell_html(aster_mod.lookup(pos["coin"], entry)),
-                         follow_key, f"{tf_label} momentum", "bullish", "Momentum breakout: closed above its recent high with trend and volume behind it.", "\U0001F680 MOMENTUM BREAKOUT")
+                         risk, pos.get("net1"), pos.get("net2"), why, "", pos["opened_at"], follow_key, follow_key, f"{tf_label} momentum", "bullish",
+                         "Momentum breakout: closed above its recent high with trend and volume behind it.", "\U0001F680 MOMENTUM BREAKOUT",
+                         "MOMENTUM BREAKOUT", score_text)
 
     def _scanner_html():
         mom = momentum_state or {}
         rows = []
+        hidden_old = 0
         for tf in TF_ORDER:
             for r in sorted(intraday_results.get(tf, []), key=lambda x: -x["score"]):
+                if (r["trade"].get("target1_net_pct") or 0) < MIN_NET_PROFIT_PCT:
+                    hidden_old += 1                    # opened before the minimum-profit rule; still tracked in Performance
+                    continue
                 rows.append((TF_ORDER.index(tf), 0, -r["score"], _dip_row(r, tf)))
         for pos in mom.get("open", {}).values():
+            if (pos.get("net1") or 0) < MIN_NET_PROFIT_PCT:
+                hidden_old += 1
+                continue
             rows.append((TF_ORDER.index(pos["tf"]) if pos["tf"] in TF_ORDER else 9, 1, 0, _mom_row(pos)))
         rows.sort(key=lambda x: x[:3])
-        n_dip = sum(len(v) for v in intraday_results.values())
-        n_mom = len(mom.get("open", {}))
-        head = ("<tr><th>Coin</th><th>Type</th><th>Timeframe</th><th>Signal</th><th>Price now</th><th>Entry</th><th>Stop</th><th>Target 1</th>"
-                "<th>Target 2</th><th>Why it qualified</th><th>Aster funding</th><th></th></tr>")
+        n_dip = sum(1 for _r in rows if _r[1] == 0)
+        n_mom = sum(1 for _r in rows if _r[1] == 1)
+        head = ("<tr><th>Coin</th><th>Type</th><th>Timeframe</th><th>Time</th><th>Signal</th><th>Price now</th><th>Entry</th><th>Stop</th><th>Target 1</th>"
+                "<th>Target 2</th><th>Why it qualified</th><th>Details</th><th></th></tr>")
         if rows:
             body = f'<div class="wl-scroll"><table class="signal-table dip-table"><thead>{head}</thead><tbody>' + "".join(x[3] for x in rows) + "</tbody></table></div>"
         else:
@@ -1892,6 +1934,7 @@ def render(coins_data, fng_value, fng_classification, generated_at, any_stale,
     <div class="sub">In back-tests neither type showed a proven edge after fees (dip signals averaged below zero on a small sample; momentum about break-even), so treat every row as unproven and judge them by their records.</div>
   </details>
   {body}
+  {('<div class="sub" style="margin-top:8px;">' + str(hidden_old) + ' earlier call' + ('s' if hidden_old != 1 else '') + ' opened before the ' + f'{MIN_NET_PROFIT_PCT:g}' + '% minimum-profit rule ' + ('are' if hidden_old != 1 else 'is') + ' hidden here and still tracked in Performance.</div>') if hidden_old else ''}
   <div class="sub" style="margin-top:8px;">{_esc(mrec)} Full records: see Performance below.</div>
   {misses}
 </div>
@@ -2936,9 +2979,29 @@ def main():
     except Exception as e:  # noqa: BLE001
         log(f"BTC dashboard extras skipped: {type(e).__name__}")
 
+    signal_metrics = {}
+    try:
+        macro_label = (macro_snapshot or {}).get("regime", {}).get("label") if macro_snapshot else None
+        todo = []
+        for _tf, _rs in intraday_results.items():
+            for _r in _rs:
+                if (_r["trade"].get("target1_net_pct") or 0) >= MIN_NET_PROFIT_PCT:
+                    todo.append((f"{_tf}:{_r['symbol']}", _r["symbol"], INTRADAY_TIMEFRAMES[_tf]["interval"], INTRADAY_TIMEFRAMES[_tf]["lookback"], _r["price"]))
+        for _p in new_momentum.get("open", {}).values():
+            if (_p.get("net1") or 0) >= MIN_NET_PROFIT_PCT:
+                _cfg = momentum_mod.MOMENTUM_TIMEFRAMES[_p["tf"]]
+                todo.append((f"mom-{_p['tf']}:{_p['coin']}", _p["coin"], _cfg["interval"], _cfg["lookback"], _p["entry"]))
+        for _key, _sym, _iv, _lb, _px in todo:
+            _kl, _err = safe_fetch(f"{_sym} {_iv} candles for readout", lambda s=_sym, i=_iv: fetch_binance_ohlc(s, i))
+            if _kl:
+                signal_metrics[_key] = metrics_mod.gather(_sym, _iv, _lb, _px, _kl, macro_label, aster_mod, deriv_mod)
+        log(f"Signal readouts: {len(signal_metrics)} of {len(todo)} rows")
+    except Exception as e:  # noqa: BLE001 - the readout is extra; the scanner must publish regardless
+        log(f"Signal readouts skipped: {type(e).__name__}: {str(e)[:100]}")
+
     html, portions, spot_signals_by_coin = render(coins_data, fng_value, fng_classification, generated_at, any_stale,
                                          alerts_results, screener_results, intraday_results,
-                                         pnl_stats, new_pnl_state, near_misses, macro_snapshot, wyckoff_by_coin, new_momentum, btc_extra)
+                                         pnl_stats, new_pnl_state, near_misses, macro_snapshot, wyckoff_by_coin, new_momentum, btc_extra, signal_metrics)
     with open(OUTPUT_PATH, "w", encoding="utf-8") as f:
         f.write(html)
     copy_static_assets()

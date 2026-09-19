@@ -104,3 +104,10 @@ def cell_html(a):
     if a.get("flags"):
         return f'<span class="neg" title="{esc(", ".join(a["flags"]))}">{txt} &#9888;</span>'
     return f'<span title="Aster perpetual funding rate and futures basis">{txt}</span>'
+
+
+def klines(symbol, interval, limit=100):
+    """Perpetual candles in Binance kline layout (Aster's API is Binance-compatible), or raise. None if no such perpetual."""
+    if (symbol or "").upper() not in SNAPSHOT:
+        return None
+    return _get(f"/klines?symbol={symbol.upper()}USDT&interval={interval}&limit={limit}")
