@@ -27,6 +27,7 @@ from html import escape as _esc
 
 import supa
 import macro as macro_mod
+import momentum as momentum_mod
 from brain import wyckoff as wyckoff_mod
 
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
@@ -1402,7 +1403,7 @@ def build_coin_data(coin, markets, fng_latest, fng_prev, state):
 
 def render(coins_data, fng_value, fng_classification, generated_at, any_stale,
            alerts_results=None, screener_results=None, intraday_results=None,
-           pnl_stats=None, pnl_state=None, near_misses=None, macro=None, wyckoff_by_coin=None):
+           pnl_stats=None, pnl_state=None, near_misses=None, macro=None, wyckoff_by_coin=None, momentum_html=""):
     total_stale = any_stale
     pnl_stats = pnl_stats or {"daily": {}, "weekly": {}, "monthly": {}}
     pnl_state = pnl_state or {}
@@ -1776,6 +1777,7 @@ def render(coins_data, fng_value, fng_classification, generated_at, any_stale,
 
     screener_panel = f"""
 <div class="panel panel-screener">
+  {momentum_html}
   <input type="radio" name="tf" id="tf-15m" checked>
   <input type="radio" name="tf" id="tf-1h">
   <input type="radio" name="tf" id="tf-1d">
@@ -2701,6 +2703,26 @@ def main():
     log(f"P&L tracker: {len(new_pnl_state.get('open', {}))} open, "
         f"{len(new_pnl_state.get('resolved', []))} resolved on record")
 
+    # Experimental momentum/breakout tier: separate scan, tracker, cooldown and record; the dip scanner above is untouched.
+    prev_momentum = state.get("_momentum_tracker", {})
+    new_momentum, momentum_opened, momentum_resolved = prev_momentum, [], []
+    try:
+        pool_for_momentum = screener_pool or screener_markets
+        held = {f"{p['tf']}:{p['coin']}" for p in prev_momentum.get("open", {}).values()}
+        cooling_now = momentum_mod.cooling(prev_momentum.get("resolved", []))
+        signals = []
+        for mtf in momentum_mod.MOMENTUM_TIMEFRAMES:
+            open_here = sum(1 for k in held if k.startswith(mtf + ":"))
+            if open_here < momentum_mod.MAX_OPEN_PER_TF:
+                skip = {k.split(":", 1)[1] for k in (held | cooling_now) if k.startswith(mtf + ":")}
+                signals += momentum_mod.scan(pool_for_momentum, mtf, fetch_binance_ohlc, skip_symbols=skip,
+                                             max_new=momentum_mod.MAX_OPEN_PER_TF - open_here)
+        new_momentum, momentum_opened, momentum_resolved = momentum_mod.update_tracker(prev_momentum, signals, fetch_binance_ohlc)
+        log(f"Momentum: {len(new_momentum['open'])} open, {len(momentum_opened)} new, {len(momentum_resolved)} resolved this run")
+    except Exception as e:  # noqa: BLE001 - an experimental tier must never break the main job
+        log(f"Momentum tier skipped: {type(e).__name__}: {str(e)[:120]}")
+    momentum_html = momentum_mod.panel_html(new_momentum, fmt_usd_adaptive)
+
     prev_resolved_keys = {(r["coin"], r["tf"], r["opened_at"]) for r in prev_pnl_state.get("resolved", [])}
     newly_resolved = [r for r in new_pnl_state.get("resolved", [])
                        if (r["coin"], r["tf"], r["opened_at"]) not in prev_resolved_keys]
@@ -2734,7 +2756,7 @@ def main():
 
     html, portions, spot_signals_by_coin = render(coins_data, fng_value, fng_classification, generated_at, any_stale,
                                          alerts_results, screener_results, intraday_results,
-                                         pnl_stats, new_pnl_state, near_misses, macro_snapshot, wyckoff_by_coin)
+                                         pnl_stats, new_pnl_state, near_misses, macro_snapshot, wyckoff_by_coin, momentum_html)
     with open(OUTPUT_PATH, "w", encoding="utf-8") as f:
         f.write(html)
     copy_static_assets()
@@ -2748,13 +2770,14 @@ def main():
         send_discord_strong_buy_alert(newly_strong)
 
     new_notification_events = build_new_notification_events(newly_strong, newly_resolved)
+    new_notification_events += momentum_mod.notification_events(momentum_opened, momentum_resolved, fmt_usd_adaptive)
     new_notification_feed = update_notification_feed(state.get("_notification_feed", []), new_notification_events)
     if new_notification_events:
         log(f"NOTIFICATION EVENTS: {[e['id'] for e in new_notification_events]}")
 
     new_state = {"_fng_value": fng_value, "_fng_classification": fng_classification,
                  "_alerts_state": new_alerts_state, "_screener": new_screener_state,
-                 "_strong_buy_state": new_strong_state, "_pnl_tracker": new_pnl_state,
+                 "_strong_buy_state": new_strong_state, "_pnl_tracker": new_pnl_state, "_momentum_tracker": new_momentum,
                  "_notification_feed": new_notification_feed, "_screener_pool": pool_cache}
     for cd in coins_data:
         new_state[cd["key"]] = {k: v for k, v in cd.items() if k != "stale"}
