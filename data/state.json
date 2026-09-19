@@ -4,7 +4,7 @@
   "_alerts_state": {
     "btc-resistance-break": {
       "triggered": true,
-      "last_triggered_at": "2026-09-19 09:20:24"
+      "last_triggered_at": "2026-09-19 09:25:18"
     },
     "btc-support-break": {
       "triggered": false,
@@ -12,7 +12,7 @@
     },
     "eth-resistance-break": {
       "triggered": true,
-      "last_triggered_at": "2026-09-19 09:20:24"
+      "last_triggered_at": "2026-09-19 09:25:18"
     },
     "eth-support-break": {
       "triggered": false,
@@ -895,11 +895,11 @@
     "avalanche-2": {
       "label": "\ud83d\udfe1 HOLD / NEUTRAL",
       "status": "neutral",
-      "score": 0,
+      "score": -1,
       "rows": [
         [
           "Price vs. recent range",
-          "Near its 30-day high (~$8.47) - less room to run",
+          "Near its 30-day high (~$9.01) - less room to run",
           -1
         ],
         [
@@ -919,8 +919,8 @@
         ],
         [
           "Stretch from long-term average",
-          "+6.0% vs its long-term average - not stretched either way",
-          0
+          "+12.5% above its long-term average - a bit stretched",
+          -1
         ],
         [
           "Leverage traders' bias",
@@ -932,12 +932,12 @@
       "id": "avalanche-2",
       "symbol": "AVAX",
       "name": "Avalanche",
-      "price": 8.46,
-      "pct_24h": 7.52648,
-      "pct_7d": 12.8,
+      "price": 8.98,
+      "pct_24h": 13.20807,
+      "pct_7d": 17.8,
       "support_30d": 7.110247807837202,
-      "resistance_30d": 8.470629351198365,
-      "as_of": "2026-09-19 06:00:39",
+      "resistance_30d": 9.007883892603028,
+      "as_of": "2026-09-19 09:25:18",
       "stale": false
     },
     "aster-2": {
@@ -3203,7 +3203,7 @@
       "rows": [
         [
           "Price vs. recent range",
-          "Near its 30-day high (~$0.0381) - less room to run",
+          "Near its 30-day high (~$0.0384) - less room to run",
           -1
         ],
         [
@@ -3223,7 +3223,7 @@
         ],
         [
           "Stretch from long-term average",
-          "+14.9% above its long-term average - a bit stretched",
+          "+15.1% above its long-term average - a bit stretched",
           -1
         ],
         [
@@ -3236,12 +3236,12 @@
       "id": "kaspa",
       "symbol": "KAS",
       "name": "Kaspa",
-      "price": 0.0382904,
-      "pct_24h": 6.77894,
+      "price": 0.03836869,
+      "pct_24h": 6.62232,
       "pct_7d": 8.0,
       "support_30d": 0.027064601688398235,
-      "resistance_30d": 0.03813242521654623,
-      "as_of": "2026-09-19 09:10:24",
+      "resistance_30d": 0.03836868923260427,
+      "as_of": "2026-09-19 09:25:18",
       "stale": false
     },
     "cosmos": {
@@ -3515,16 +3515,16 @@
     "key": "BTC",
     "name": "Bitcoin",
     "emoji": "\u20bf",
-    "price": 81380,
+    "price": 81426,
     "high_24h": 81675,
     "low_24h": 77934,
-    "pct_24h": 3.9776,
+    "pct_24h": 4.08538,
     "pct_7d": 5.2,
     "pct_30d": 16.5,
-    "sma50": 72842.29768953474,
-    "sma200": 70452.72008860718,
+    "sma50": 72843.14691147779,
+    "sma200": 70452.93239409295,
     "support_30d": 75590.24471973324,
-    "resistance_30d": 81384.32562256399,
+    "resistance_30d": 81426.78671971678,
     "mark_price": 81098.11601449,
     "index_price": 81141.23130435,
     "funding_rate": 7.924e-05,
@@ -3537,16 +3537,16 @@
     "key": "ETH",
     "name": "Ethereum",
     "emoji": "\u039e",
-    "price": 2648.13,
+    "price": 2650.05,
     "high_24h": 2652.79,
     "low_24h": 2495.21,
-    "pct_24h": 5.19495,
+    "pct_24h": 5.45493,
     "pct_7d": 4.8,
     "pct_30d": 17.5,
-    "sma50": 2257.5814377357656,
-    "sma200": 2073.1884230831656,
+    "sma50": 2257.628568625967,
+    "sma200": 2073.200205805716,
     "support_30d": 2390.783044679688,
-    "resistance_30d": 2648.7087361917365,
+    "resistance_30d": 2651.0652807018123,
     "mark_price": 2621.15,
     "index_price": 2622.52906977,
     "funding_rate": 0.0001,
