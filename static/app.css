@@ -114,3 +114,60 @@
 .wl-table td:nth-child(2), .wl-table th:nth-child(2), .wl-table td:nth-child(3), .wl-table th:nth-child(3) { text-align: right; font-variant-numeric: tabular-nums; }
 .wl-group td { font-size: 11px; letter-spacing: 1px; color: var(--muted); text-transform: uppercase; background: var(--inset); font-weight: 700; }
 .wl-note { display: block; font-size: 10.5px; color: var(--muted); }
+
+/* BITCOIN LIVE DASHBOARD: self-contained dark "terminal" panel, identical in light and dark app themes */
+.bd { background: #050a07; color: #d1fae5; border-radius: 14px; padding: 14px; font-size: 13px; margin-bottom: 14px;
+  background-image: linear-gradient(rgba(34,197,94,0.05) 1px, transparent 1px), linear-gradient(90deg, rgba(34,197,94,0.05) 1px, transparent 1px); background-size: 26px 26px; }
+.bd * { box-sizing: border-box; }
+.bd-title { display: flex; align-items: center; justify-content: center; gap: 12px; margin-top: 4px; }
+.bd-coin { width: 44px; height: 44px; border-radius: 50%; background: #f7931a; color: #fff; font-size: 28px; font-weight: 800; display: flex; align-items: center; justify-content: center; }
+.bd-title h2 { margin: 0; font-size: 34px; letter-spacing: 1px; color: #fff; }
+.bd-title h2 em { color: #ef4444; font-style: normal; } .bd-title h2 strong { color: #3b82f6; }
+.bd-date { text-align: center; color: #d1d5db; margin: 8px 0 14px; font-size: 12.5px; }
+.bd-grid3 { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 12px; margin-bottom: 12px; }
+.bd-card { border: 1px solid #16a34a; border-radius: 12px; padding: 12px 14px; background: rgba(5, 15, 9, 0.85); min-width: 0; }
+.bd-card h3 { margin: 0 0 10px; font-size: 11.5px; letter-spacing: 1.5px; color: #4ade80; text-align: center; }
+.bd-gold { border-color: #ca8a04; } .bd-goldh { color: #eab308 !important; }
+.bd-wide { margin-bottom: 12px; }
+.bd-price { font-size: 14px; } .bd-price b { color: #4ade80; font-size: 22px; }
+.bd-sub { color: #9ca3af; font-size: 12px; line-height: 1.5; }
+.bd-spark { width: 100%; height: auto; margin: 6px 0; border: 1px solid #14532d; border-radius: 6px; background: rgba(0,0,0,0.3); }
+.bd-grid { stroke: #14532d; stroke-width: 0.6; } .bd-axis { fill: #9ca3af; font-size: 8px; } .bd-tick { fill: #d1d5db; font-size: 11px; }
+.bd-kv { display: flex; justify-content: space-between; gap: 8px; padding: 7px 0; border-top: 1px solid #14532d; }
+.bd-kv span { color: #d1d5db; } .bd-kv b { font-size: 14px; }
+.bd-simple { border-top: 1px solid #14532d; padding-top: 8px; color: #d1d5db; } .bd-simple b { color: #eab308; }
+.bd-big { font-size: 40px; line-height: 1.02; font-weight: 900; color: #eab308; text-align: center; margin: 6px 0 8px; text-transform: uppercase; }
+.bd-subhead { font-weight: 700; color: #e5e7eb; margin-bottom: 8px; letter-spacing: 0.5px; }
+.bd-para { color: #d1d5db; line-height: 1.6; margin: 0; }
+.bd-gauge { width: 100%; height: auto; max-width: 320px; display: block; margin: 0 auto; }
+.bd-score { text-align: center; margin-top: -30px; font-size: 14px; color: #9ca3af; } .bd-score b { font-size: 34px; color: #eab308; }
+.bd-stages { text-align: center; font-size: 11px; margin: 10px 0; }
+.bd-stagebox { display: flex; justify-content: space-between; align-items: center; gap: 10px; }
+.bd-g { color: #4ade80; } .bd-y { color: #eab308; } .bd-o { color: #fb923c; } .bd-r { color: #f87171; } .bd-n { color: #9ca3af; }
+.bd-chip { display: inline-block; padding: 3px 9px; border-radius: 6px; font-size: 10.5px; font-weight: 800; border: 1px solid; white-space: nowrap; }
+.bd-up { color: #4ade80; border-color: #16a34a; background: rgba(22,163,74,0.15); } .bd-down { color: #f87171; border-color: #dc2626; background: rgba(220,38,38,0.15); }
+.bd-mid { color: #eab308; border-color: #ca8a04; background: rgba(202,138,4,0.15); } .bd-na { color: #9ca3af; border-color: #4b5563; background: rgba(75,85,99,0.2); }
+.bd-scroll { overflow-x: auto; }
+.bd-table { width: 100%; border-collapse: collapse; font-size: 12px; min-width: 640px; }
+.bd-table th { text-align: left; color: #d1d5db; font-weight: 600; padding: 7px 8px; border-bottom: 1px solid #16a34a; }
+.bd-table td { padding: 8px; border-bottom: 1px solid #14532d; vertical-align: middle; }
+.bd-dim { color: #9ca3af; }
+.bd-tiles { display: grid; grid-template-columns: repeat(3, 1fr); gap: 8px; }
+.bd-tile { border: 1px solid #16a34a; border-radius: 8px; padding: 8px; text-align: center; }
+.bd-tile small { display: block; color: #d1d5db; font-size: 10px; letter-spacing: 1px; } .bd-tile b { display: block; font-size: 15px; margin: 4px 0; word-break: break-word; }
+.bd-tile em { font-style: normal; color: #9ca3af; font-size: 10.5px; }
+.bd-rule { padding: 6px 8px; margin: 5px 0; border-radius: 6px; color: #d1d5db; font-size: 12px; border: 1px solid transparent; }
+.bd-rule.bd-on { border-color: #eab308; background: rgba(234,179,8,0.08); } .bd-rule em { color: #eab308; font-style: normal; font-weight: 700; }
+.bd-cycrow { display: flex; align-items: center; justify-content: center; gap: 4px; flex-wrap: wrap; }
+.bd-cyc { border: 1px solid #ca8a04; border-radius: 10px; padding: 10px 6px; min-width: 70px; text-align: center; color: #d1d5db; font-size: 11px; }
+.bd-cyc b { display: block; margin-top: 6px; color: #4ade80; font-size: 9.5px; } .bd-cyc.bd-here { border-color: #4ade80; background: rgba(74,222,128,0.12); color: #fff; }
+.bd-cycrow i { color: #ca8a04; font-style: normal; }
+.bd-take { margin: 0; padding-left: 18px; color: #d1d5db; line-height: 1.6; } .bd-take li { margin-bottom: 8px; }
+.bd-strip { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 12px; border-top: 1px solid #14532d; padding-top: 12px; margin-top: 4px; }
+.bd-strip div { text-align: center; } .bd-strip small { display: block; color: #9ca3af; font-size: 10px; letter-spacing: 1px; } .bd-strip b { font-size: 18px; }
+.bd-foot { margin-top: 12px; color: #6b7280; font-size: 11px; text-align: center; }
+.bd-more { margin: 10px 0; } .bd-more > summary { cursor: pointer; color: var(--accent); font-weight: 700; padding: 8px 2px; }
+@media (max-width: 860px) {
+  .bd-grid3 { grid-template-columns: 1fr; } .bd-strip { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .bd-title h2 { font-size: 22px; } .bd-coin { width: 34px; height: 34px; font-size: 22px; } .bd-big { font-size: 32px; }
+}

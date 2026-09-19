@@ -28,6 +28,7 @@ from html import escape as _esc
 import supa
 import macro as macro_mod
 import momentum as momentum_mod
+import btc_dashboard as btc_dash
 from brain import wyckoff as wyckoff_mod
 
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
@@ -1403,7 +1404,7 @@ def build_coin_data(coin, markets, fng_latest, fng_prev, state):
 
 def render(coins_data, fng_value, fng_classification, generated_at, any_stale,
            alerts_results=None, screener_results=None, intraday_results=None,
-           pnl_stats=None, pnl_state=None, near_misses=None, macro=None, wyckoff_by_coin=None, momentum_html=""):
+           pnl_stats=None, pnl_state=None, near_misses=None, macro=None, wyckoff_by_coin=None, momentum_html="", btc_extra=None):
     total_stale = any_stale
     pnl_stats = pnl_stats or {"daily": {}, "weekly": {}, "monthly": {}}
     pnl_state = pnl_state or {}
@@ -1434,6 +1435,7 @@ def render(coins_data, fng_value, fng_classification, generated_at, any_stale,
     )
     panels = {}
     spot_signals_by_coin = {}
+    btc_dash_html = ""
     for c in coins_data:
         price_struct_label, price_struct_status = classify_price_structure(c.get("pct_24h"), c.get("pct_7d"))
         funding_pct = (c.get("funding_rate") or 0) * 100 if c.get("funding_rate") is not None else None
@@ -1453,6 +1455,13 @@ def render(coins_data, fng_value, fng_classification, generated_at, any_stale,
                                           macro["regime"] if macro else None,
                                           (wyckoff_by_coin or {}).get(c["key"]))
         spot_signals_by_coin[c["key"]] = spot_signal
+        if c["key"] == "BTC":
+            btc_dash_html = btc_dash.build({
+                "c": c, "stage": stage, "spot": spot_signal, "price_struct": (price_struct_label, price_struct_status),
+                "funding": (funding_label, funding_status), "oi": (oi_label, oi_status), "premium": (premium_label, premium_status),
+                "fng": (fng_label, fng_status), "liq": (liq_label, liq_status), "wyckoff": (wyckoff_by_coin or {}).get("BTC"),
+                "macro": macro["regime"] if macro else None, "hourly": (btc_extra or {}).get("hourly") or [],
+                "onchain": (btc_extra or {}).get("onchain"), "generated": generated_at})
 
         stages = ["Accumulation", "Markup", "Distribution", "Markdown"]
         cycle_html = "".join(
@@ -1658,21 +1667,31 @@ def render(coins_data, fng_value, fng_classification, generated_at, any_stale,
 """
         panels[c["key"].lower()] = panel
 
-    bigcoin_inputs = "\n".join(
-        f'<input type="radio" name="bigcoin" id="bc-{c["key"].lower()}"{" checked" if i == 0 else ""}>'
-        for i, c in enumerate(coins_data)
-    )
-    bigcoin_labels = "\n".join(
-        f'<label for="bc-{c["key"].lower()}">{c["emoji"]} {c["key"]}</label>' for c in coins_data
-    )
+    # Big Coins now has three tabs: the BTC live dashboard, ETH, and the cross-market watchlist.
+    btc_panel = panels.get("btc", "")
+    if btc_panel:
+        head = '<div class="bigcoin-panel bigcoin-panel-btc">'
+        i = btc_panel.index(head) + len(head)
+        j = btc_panel.rindex("</div>")
+        btc_panel = (btc_panel[:i] + btc_dash_html + '<details class="bd-more"><summary>BTC model signal, trade levels and alerts</summary>'
+                     + btc_panel[i:j] + '</details></div>')
+    eth_panel = panels.get("eth", "")
+    other_panels = "".join(v for k, v in panels.items() if k not in ("btc", "eth"))
+    watch_panel = '<div class="bigcoin-panel bigcoin-panel-watch">' + macro_mod.watchlist_html(macro) + '</div>'
     bigcoins_panel = f"""
 <div class="panel panel-bigcoins">
-  {macro_mod.watchlist_html(macro)}
-  {bigcoin_inputs}
+  <input type="radio" name="bigcoin" id="bc-btc" checked>
+  <input type="radio" name="bigcoin" id="bc-eth">
+  <input type="radio" name="bigcoin" id="bc-watch">
   <div class="tabbar" style="padding-left:0;">
-    {bigcoin_labels}
+    <label for="bc-btc">&#8383; BTC LIVE DASHBOARD</label>
+    <label for="bc-eth">&#926; ETH</label>
+    <label for="bc-watch">&#127760; CROSS MARKET WATCHLIST</label>
   </div>
-  {"".join(panels[c["key"].lower()] for c in coins_data)}
+  {btc_panel}
+  {eth_panel}
+  {other_panels}
+  {watch_panel}
 </div>
 """
 
@@ -2014,6 +2033,7 @@ def render(coins_data, fng_value, fng_classification, generated_at, any_stale,
   #tab-performance:checked ~ .tabbar label[for=tab-performance],
   #tab-events:checked ~ .tabbar label[for=tab-events],
   #bc-btc:checked ~ .tabbar label[for=bc-btc],
+  #bc-watch:checked ~ .tabbar label[for=bc-watch],
   #bc-eth:checked ~ .tabbar label[for=bc-eth] {{ background: var(--accent); color:var(--on-accent); border-color:var(--accent); }}
   .panel {{ display:none; padding: 6px 16px 20px; }}
   #tab-screener:checked ~ .panel-screener {{ display:block; }}
@@ -2024,6 +2044,7 @@ def render(coins_data, fng_value, fng_classification, generated_at, any_stale,
   .bigcoin-panel {{ display:none; }}
   #bc-btc:checked ~ .bigcoin-panel-btc {{ display:block; }}
   #bc-eth:checked ~ .bigcoin-panel-eth {{ display:block; }}
+  #bc-watch:checked ~ .bigcoin-panel-watch {{ display:block; }}
   .tf-panel {{ display:none; }}
   #tf-15m:checked ~ .tf-panel-15m {{ display:block; }}
   #tf-1h:checked ~ .tf-panel-1h {{ display:block; }}
@@ -2754,9 +2775,19 @@ def main():
     except Exception as e:  # noqa: BLE001 - cross-market data must never break the main job
         log(f"Macro data skipped: {type(e).__name__}: {str(e)[:120]}")
 
+    btc_extra = {"hourly": [], "onchain": None}
+    try:
+        hourly, _err = safe_fetch("BTC 1h candles", lambda: fetch_binance_ohlc("BTC", "1h"))
+        btc_extra["hourly"] = hourly or []
+        btc_extra["onchain"] = btc_dash.fetch_onchain(state.get("_onchain"))
+        log(f"BTC dashboard: on-chain as of {btc_extra['onchain'].get('as_of')}"
+            + (f" (partial: {btc_extra['onchain']['error']})" if btc_extra["onchain"].get("error") else ""))
+    except Exception as e:  # noqa: BLE001
+        log(f"BTC dashboard extras skipped: {type(e).__name__}")
+
     html, portions, spot_signals_by_coin = render(coins_data, fng_value, fng_classification, generated_at, any_stale,
                                          alerts_results, screener_results, intraday_results,
-                                         pnl_stats, new_pnl_state, near_misses, macro_snapshot, wyckoff_by_coin, momentum_html)
+                                         pnl_stats, new_pnl_state, near_misses, macro_snapshot, wyckoff_by_coin, momentum_html, btc_extra)
     with open(OUTPUT_PATH, "w", encoding="utf-8") as f:
         f.write(html)
     copy_static_assets()
@@ -2778,6 +2809,7 @@ def main():
     new_state = {"_fng_value": fng_value, "_fng_classification": fng_classification,
                  "_alerts_state": new_alerts_state, "_screener": new_screener_state,
                  "_strong_buy_state": new_strong_state, "_pnl_tracker": new_pnl_state, "_momentum_tracker": new_momentum,
+                 "_onchain": {k: (btc_extra.get("onchain") or {}).get(k) for k in ("mcap_std", "std_at")},
                  "_notification_feed": new_notification_feed, "_screener_pool": pool_cache}
     for cd in coins_data:
         new_state[cd["key"]] = {k: v for k, v in cd.items() if k != "stale"}
