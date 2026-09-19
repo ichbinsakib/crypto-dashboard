@@ -107,3 +107,10 @@
 .ev-actions { margin: 10px 0; }
 #events-root .ghost { background: transparent; color: var(--muted); border: 1px solid var(--border); border-radius: 8px; padding: 7px 12px; font-size: 13px; font-weight: 700; cursor: pointer; margin-top: 8px; }
 #events-root .ghost:hover { color: var(--accent); border-color: var(--accent); }
+
+/* Cross-market watchlist (Big Coins) */
+.wl-card { margin-bottom: 16px; }
+.wl-table td, .wl-table th { padding: 6px 10px; }
+.wl-table td:nth-child(2), .wl-table th:nth-child(2), .wl-table td:nth-child(3), .wl-table th:nth-child(3) { text-align: right; font-variant-numeric: tabular-nums; }
+.wl-group td { font-size: 11px; letter-spacing: 1px; color: var(--muted); text-transform: uppercase; background: var(--inset); font-weight: 700; }
+.wl-note { display: block; font-size: 10.5px; color: var(--muted); }

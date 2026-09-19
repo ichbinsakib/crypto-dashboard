@@ -33,6 +33,38 @@
   }
   function cycleTheme() { applyTheme(THEMES[(THEMES.indexOf(currentTheme()) + 1) % THEMES.length]); }
 
+
+  /* ---------------- live watchlist (Binance rows refresh in the browser) ---------------- */
+  var wlTimer = null;
+  function initWatchlist() {
+    if (wlTimer) { clearInterval(wlTimer); wlTimer = null; }
+    if (!document.querySelector('tr[data-live]')) return;
+    async function tick() {
+      var rows = document.querySelectorAll('tr[data-live]');
+      if (!rows.length) { clearInterval(wlTimer); wlTimer = null; return; }
+      var syms = Array.prototype.map.call(rows, function (r) { return r.getAttribute('data-live'); });
+      var stamp = document.getElementById('wl-live-stamp');
+      try {
+        var res = await fetch('https://data-api.binance.vision/api/v3/ticker/24hr?symbols=' + encodeURIComponent(JSON.stringify(syms)));
+        if (!res.ok) throw new Error('bad status');
+        var list = await res.json();
+        list.forEach(function (t) {
+          var row = document.querySelector('tr[data-live="' + t.symbol + '"]'); if (!row) return;
+          var p = parseFloat(t.lastPrice), c = parseFloat(t.priceChangePercent);
+          row.querySelector('.wl-price').textContent = t.symbol.slice(-3) === 'BTC' ? p.toFixed(8).replace(/0+$/, '') : p.toLocaleString('en-US', { minimumFractionDigits: p >= 1 ? 2 : 4, maximumFractionDigits: p >= 1 ? 2 : 4 });
+          var cell = row.querySelector('.wl-chg');
+          cell.textContent = (c >= 0 ? '+' : '') + c.toFixed(2) + '%';
+          cell.className = 'wl-chg ' + (c > 0 ? 'pos' : c < 0 ? 'neg' : 'watch');
+        });
+        if (stamp) stamp.textContent = 'Binance rows live - ' + new Date().toLocaleTimeString();
+      } catch (e) {
+        if (stamp) stamp.textContent = 'live update unavailable - showing the latest snapshot';
+      }
+    }
+    tick();
+    wlTimer = setInterval(tick, 20000);
+  }
+
   function showOnly(which) {
     ['splash', 'auth-screen', 'noaccess', 'app'].forEach(function (id) { show(id, id === which); });
   }
@@ -113,6 +145,7 @@
     if (window.kairoInitIntraday) window.kairoInitIntraday(has.screener ? (has.screener.data || {}).intraday_cards : []);
     if (window.kairoInitFollow && has.mypicks) window.kairoInitFollow();
     if (window.kairoInitPnlSearch) window.kairoInitPnlSearch();
+    initWatchlist();
     if (window.kairoInitEvents && has.events) {
       window.kairoInitEvents(has.events, { sb: function () { return sb; }, isAdmin: !!(S.profile && S.profile.is_admin), dev: DEV });
     }
@@ -148,6 +181,7 @@
     if (S.tickTimer) clearInterval(S.tickTimer);
     if (S.refreshTimer) clearInterval(S.refreshTimer);
     S.tickTimer = S.refreshTimer = null;
+    if (wlTimer) { clearInterval(wlTimer); wlTimer = null; }
   }
   // Timers freeze while a phone app is backgrounded; refresh the moment it comes back if stale.
   document.addEventListener('visibilitychange', function () {

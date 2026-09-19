@@ -26,6 +26,7 @@ import urllib.request
 from html import escape as _esc
 
 import supa
+import macro as macro_mod
 
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 SITE_DIR = os.path.join(BASE_DIR, "site")   # build output -> deployed to GitHub Pages, not committed
@@ -703,7 +704,7 @@ def heat_score(pct_30d, dist_from_sma200_pct, funding_pct, fng_value):
     return round(sum(parts) / len(parts), 1)
 
 
-def compute_spot_signal(c, price_struct_label, stage, fng_value, funding_pct):
+def compute_spot_signal(c, price_struct_label, stage, fng_value, funding_pct, macro_regime=None):
     """
     Educational, rule-based spot (no-leverage) reading: does the current mix of
     conditions historically resemble an accumulation zone, a distribution zone,
@@ -796,6 +797,12 @@ def compute_spot_signal(c, price_struct_label, stage, fng_value, funding_pct):
         pts, reading = 0, "Leveraged traders roughly balanced"
     rows.append(("Leverage traders' bias", reading, pts))
     total += pts
+
+    # 7. Cross-market backdrop (dollar, yields, stocks, stablecoin share, total crypto flows)
+    if macro_regime is not None:
+        pts, reading = macro_mod.spot_factor(macro_regime)
+        rows.append(("Macro backdrop (cross-market)", reading, pts))
+        total += pts
 
     if total >= 5:
         label, status = "🟢 ACCUMULATION ZONE", "bullish"
@@ -1377,7 +1384,7 @@ def build_coin_data(coin, markets, fng_latest, fng_prev, state):
 
 def render(coins_data, fng_value, fng_classification, generated_at, any_stale,
            alerts_results=None, screener_results=None, intraday_results=None,
-           pnl_stats=None, pnl_state=None, near_misses=None):
+           pnl_stats=None, pnl_state=None, near_misses=None, macro=None):
     total_stale = any_stale
     pnl_stats = pnl_stats or {"daily": {}, "weekly": {}, "monthly": {}}
     pnl_state = pnl_state or {}
@@ -1423,7 +1430,8 @@ def render(coins_data, fng_value, fng_classification, generated_at, any_stale,
 
         stage = cycle_stage(c.get("price"), c.get("sma50"), c.get("sma200"), c.get("pct_30d"))
         score = heat_score(c.get("pct_30d"), dist_sma200_pct, funding_pct, fng_value)
-        spot_signal = compute_spot_signal(c, price_struct_label, stage, fng_value, funding_pct)
+        spot_signal = compute_spot_signal(c, price_struct_label, stage, fng_value, funding_pct,
+                                          macro["regime"] if macro else None)
         spot_signals_by_coin[c["key"]] = spot_signal
 
         stages = ["Accumulation", "Markup", "Distribution", "Markdown"]
@@ -1639,6 +1647,7 @@ def render(coins_data, fng_value, fng_classification, generated_at, any_stale,
     )
     bigcoins_panel = f"""
 <div class="panel panel-bigcoins">
+  {macro_mod.watchlist_html(macro)}
   {bigcoin_inputs}
   <div class="tabbar" style="padding-left:0;">
     {bigcoin_labels}
@@ -2677,9 +2686,28 @@ def main():
     newly_resolved = [r for r in new_pnl_state.get("resolved", [])
                        if (r["coin"], r["tf"], r["opened_at"]) not in prev_resolved_keys]
 
+    macro_snapshot = None
+    try:
+        unrate = None
+        if backend:
+            try:
+                ue = backend.select("economic_events", "select=details,release_datetime&family=eq.NFP&status=eq.RELEASED&order=release_datetime.desc&limit=1")
+                unrate = (ue[0].get("details") or {}).get("unemployment_rate") if ue else None
+            except Exception as e:  # noqa: BLE001
+                log(f"UNRATE lookup skipped: {type(e).__name__}")
+        macro_data, macro_errors = macro_mod.fetch_all(unrate)
+        macro_rows = macro_mod.build_rows(macro_data)
+        if macro_rows:
+            macro_snapshot = {"rows": macro_rows, "regime": macro_mod.macro_regime(macro_rows), "errors": macro_errors,
+                              "fetched_at": datetime.datetime.utcnow().strftime("%Y-%m-%d %H:%M")}
+            log(f"Macro: {len(macro_rows)} rows, regime {macro_snapshot['regime']['label']}"
+                + (f", unavailable: {sorted(macro_errors)}" if macro_errors else ""))
+    except Exception as e:  # noqa: BLE001 - cross-market data must never break the main job
+        log(f"Macro data skipped: {type(e).__name__}: {str(e)[:120]}")
+
     html, portions, spot_signals_by_coin = render(coins_data, fng_value, fng_classification, generated_at, any_stale,
                                          alerts_results, screener_results, intraday_results,
-                                         pnl_stats, new_pnl_state, near_misses)
+                                         pnl_stats, new_pnl_state, near_misses, macro_snapshot)
     with open(OUTPUT_PATH, "w", encoding="utf-8") as f:
         f.write(html)
     copy_static_assets()
