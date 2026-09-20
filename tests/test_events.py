@@ -525,3 +525,20 @@ class ChannelDeepReadTests(unittest.TestCase):
         # BTC-level notes are not attached to Fed-event evidence lines
         self.assertFalse(any("77.5k" in x for x in knowledge.viewpoint_for("FOMC", utc(2026, 9, 25))))
         self.assertTrue(any("policy" in x.lower() for x in knowledge.viewpoint_for("CPI", utc(2026, 9, 25))))
+
+
+class StepIsolationTests(unittest.TestCase):
+    def test_one_failing_refresh_step_does_not_stop_the_section_publishing(self):
+        from events import service as svc
+        store = svc.MemoryStore()
+        real = svc.refresh_calendars
+
+        def boom(*a, **k):
+            raise RuntimeError("POST /rest/v1/economic_events -> HTTP 400: All object keys must match")
+        svc.refresh_calendars = boom
+        try:
+            payload = svc.run(store, now=dt.datetime(2026, 9, 20, 12, 0, tzinfo=dt.timezone.utc), bls=FakeBLS(), fed=FakeFed(), prices=FakePrices())
+        finally:
+            svc.refresh_calendars = real
+        self.assertIn("events", payload)                                            # still produced a payload
+        self.assertEqual(store.tables["provider_status"][0]["consecutive_failures"], 1)   # ...and the failure is visible

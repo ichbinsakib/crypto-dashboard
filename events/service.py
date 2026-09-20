@@ -348,11 +348,26 @@ def run(store, now=None, bls=None, fed=None, prices=None, force=False):
     bls, fed, prices = bls or providers.BLSProvider(), fed or providers.FederalReserveProvider(), prices or providers.BinanceMirrorPrices()
     cfg = config.effective({r["key"]: r["value"] for r in store.select("event_config")})
     status = {r["source"]: r for r in store.select("provider_status")}
-    rows = refresh_calendars(store, status, cfg, now, bls, fed, force)
-    refresh_actuals(store, status, cfg, now, bls, rows, force)
-    refresh_fed_rates(store, status, now, fed, force)
+    # Each step is isolated: one broken source (or one bad database write) must never freeze the whole section. A failed
+    # step is recorded against its source (so the page shows it as ERROR/STALE) and the others still run and publish.
+    def step(source, fn, *args):
+        try:
+            return fn(*args)
+        except Exception as e:  # noqa: BLE001
+            log.warning("%s refresh failed: %s: %s", source, type(e).__name__, str(e)[:200])
+            try:
+                _record(store, status, source, now, False, f"{type(e).__name__}: {str(e)[:200]}")
+            except Exception:  # noqa: BLE001 - the database itself may be the problem
+                pass
+            return None
+
+    rows = step("bls_schedule", refresh_calendars, store, status, cfg, now, bls, fed, force)
+    if rows is None:
+        rows = {r["id"]: r for r in store.select("economic_events")}
+    step("bls_actuals", refresh_actuals, store, status, cfg, now, bls, rows, force)
+    step("fed_rates", refresh_fed_rates, store, status, now, fed, force)
     rows = {r["id"]: r for r in store.select("economic_events")}
-    refresh_reactions(store, status, cfg, now, prices, rows, force)
+    step("reactions", refresh_reactions, store, status, cfg, now, prices, rows, force)
     return build_payload(store, cfg, status, now)
 
 

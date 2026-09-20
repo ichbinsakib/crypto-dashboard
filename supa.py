@@ -86,5 +86,12 @@ class Backend:
     def upsert(self, table, rows, on_conflict):
         if not rows:
             return
-        self._request("POST", f"/rest/v1/{table}?on_conflict={on_conflict}", rows,
-                      headers={"Prefer": "resolution=merge-duplicates,return=minimal,missing=default"})
+        # PostgREST rejects a bulk body whose objects have different keys ("All object keys must match"), and the events
+        # job legitimately sends rows with different optional fields. Send one request per identical key set, so no
+        # column is ever written as NULL just to make the shapes match.
+        groups = {}
+        for r in rows:
+            groups.setdefault(tuple(sorted(r)), []).append(r)
+        for batch in groups.values():
+            self._request("POST", f"/rest/v1/{table}?on_conflict={on_conflict}", batch,
+                          headers={"Prefer": "resolution=merge-duplicates,return=minimal,missing=default"})
