@@ -9,7 +9,7 @@
 
   var CFG = window.KAIRO_CONFIG || {};
   var DEV = !CFG.supabaseUrl;                       // no backend configured -> standalone preview, no login
-  var PORTION_LABELS = { screener: 'Scanner', bigcoins: 'Big Coins', mypicks: 'My Picks', performance: 'Performance (shown inside Scanner)' };
+  var PORTION_LABELS = { screener: 'Signals', bigcoins: 'Market', mypicks: 'My Picks', performance: 'Performance (shown inside Signals)' };
   var PORTION_KEYS = ['screener', 'bigcoins', 'mypicks', 'performance'];
   var sb = null;
   var S = { session: null, profile: null, rows: [], generatedAt: null, refreshSeconds: 120, refreshTimer: null, tickTimer: null, loading: false };
@@ -148,6 +148,26 @@
     });
   }
 
+
+  /* ---------------- overview cards open the matching tab ---------------- */
+  function goTo(a) {
+    var t = document.getElementById('tab-' + a.getAttribute('data-goto'));
+    if (!t) return;                                   // the reader has no access to that section
+    t.checked = true;
+    var sub = a.getAttribute('data-sub'), sr = sub && document.getElementById(sub);
+    if (sr) sr.checked = true;
+    var root = document.getElementById('tabs-root');
+    if (root && root.scrollIntoView) root.scrollIntoView({ block: 'start' });
+  }
+  document.addEventListener('click', function (e) {
+    var a = e.target.closest && e.target.closest('[data-goto]');
+    if (a) { e.preventDefault(); goTo(a); }
+  });
+  document.addEventListener('keydown', function (e) {
+    if (e.key !== 'Enter' && e.key !== ' ') return;
+    var a = e.target.closest && e.target.closest('[data-goto]');
+    if (a) { e.preventDefault(); goTo(a); }
+  });
 
   /* ---------------- scanner rows: local time + expandable readout ---------------- */
   function localizeTimes(rootEl) {

@@ -16,6 +16,7 @@ Hosted:        .github/workflows/deploy.yml runs this on a schedule. The public 
 
 import hashlib
 import json
+import re
 import math
 import os
 import datetime
@@ -32,6 +33,7 @@ import momentum as momentum_mod
 import derivatives as deriv_mod
 import metrics as metrics_mod
 import market_status as market_status_mod
+import plain as plain_mod
 import btc_dashboard as btc_dash
 import aster as aster_mod
 from brain import wyckoff as wyckoff_mod
@@ -1454,16 +1456,54 @@ def render(coins_data, fng_value, fng_classification, generated_at, any_stale,
     near_misses = near_misses or {}
     triggered_now = [a for a in alerts_results if a["triggered"]]
 
+    def _alert_view(al):
+        """(coin, headline, note) in plain words for one triggered alert."""
+        low = (al["label"] or "").lower()
+        above = al["condition"] == "above"
+        if "30-day resistance" in low:
+            return al["coin"], "Breakout", "Above its 30-day ceiling"
+        if "30-day support" in low:
+            return al["coin"], "Breakdown", "Below its 30-day floor"
+        m = re.search(r"\(([^)]*)\)", al["label"] or "")
+        return al["coin"], f'{"Above" if above else "Below"} {fmt_usd(al["target"], 0)}', (m.group(1) if m else "")
+
     banner_html = ""
-    if triggered_now:
-        items = "".join(
-            f'<span class="alert-banner-item">{"&nbsp;&middot;&nbsp; " if i > 0 else ""}🚨 {a["coin"]} {a["condition"]} '
-            f'{fmt_usd(a["target"], 0)} &mdash; {a["label"]} (now {fmt_usd(a["current_price"], 2)})</span>'
-            for i, a in enumerate(triggered_now)
-        )
-        banner_html = f'<div class="alert-banner">{items}</div>'
-    if market_status:   # one plain-language line about the overall market, directly under the alerts
-        banner_html += market_status_mod.line_html(market_status, _esc)
+    if market_status:   # 1) one short status card comes first
+        banner_html += market_status_mod.card_html(market_status, _esc)
+    if triggered_now:   # 2) then any triggered alerts, grouped
+        lis = ""
+        for al in triggered_now:
+            coin_, head_, note_ = _alert_view(al)
+            lis += (f'<li><span class="al-coin">{_esc(coin_)}</span><span class="al-what"><b>{_esc(head_)}</b>'
+                    f'{f"<span class=al-note>{_esc(note_)}</span>" if note_ else ""}</span>'
+                    f'<span class="al-price">{fmt_usd(al["current_price"], 0)}</span></li>')
+        banner_html += f'<div class="alert-box"><div class="alert-box-title">&#128293; MARKET ALERTS</div><ul class="alert-list">{lis}</ul></div>'
+
+    def _watch_card(c_):
+        cs = market_status_mod.coin_status(c_, (wyckoff_by_coin or {}).get(c_["key"]))
+        pr = c_.get("price")
+        ch = c_.get("pct_24h")
+        price_txt = fmt_usd(pr, 0 if (pr or 0) >= 1000 else 2) if pr is not None else "n/a"
+        chg = (f'<span class="{"pos" if ch >= 0 else "neg"}">{ch:+.1f}%</span>') if ch is not None else ""
+        sub_id = "bc-" + c_["key"].lower()
+        return (f'<a class="watch-card ms-{cs["css"]}" role="button" tabindex="0" data-goto="bigcoins" data-sub="{sub_id}">'
+                f'<span class="wc-name">{_esc(c_.get("emoji", ""))} {_esc(c_["key"])}</span>'
+                f'<span class="wc-price">{price_txt} {chg}</span>'
+                f'<span class="wc-status">{cs["emoji"]} {_esc(cs["word"])}</span>'
+                f'<span class="wc-note">{_esc(cs["note"])}</span>'
+                f'<span class="wc-action wc-{cs["action"].lower()}">{cs["action"]}</span></a>')
+
+    n_signals = (sum(1 for p_ in (momentum_state or {}).get("open", {}).values()
+                     if p_.get("kind") == "trend" or (p_.get("net1") or 0) >= MIN_NET_PROFIT_PCT)
+                 + sum(1 for rs_ in intraday_results.values() for r_ in rs_ if (r_["trade"].get("target1_net_pct") or 0) >= MIN_NET_PROFIT_PCT))
+    sig_card = (f'<a class="watch-card {"ms-bullish" if n_signals else "ms-none"}" role="button" tabindex="0" data-goto="screener">'
+                f'<span class="wc-name">&#127919; SIGNALS</span>'
+                f'<span class="wc-price">{n_signals if n_signals else "None"}</span>'
+                f'<span class="wc-status">{"Active now" if n_signals else "Nothing to act on"}</span>'
+                f'<span class="wc-note">{"Open the Signals tab" if n_signals else "Strong setups only"}</span></a>')
+    if coins_data:
+        banner_html += ('<div class="watch-strip"><div class="watch-title">WHAT TO WATCH</div><div class="watch-grid">'
+                        + "".join(_watch_card(c_) for c_ in coins_data) + sig_card + '</div></div>')
     screener_info_tip = (
         f'Scans the top {SCREENER_SIZE} coins by market cap (excluding stablecoins and BTC/ETH wrappers). '
         'Pick a timeframe below -- 15 Min, 1 Hour, and 1 Day all use the exact same rule-based model '
@@ -1707,15 +1747,40 @@ def render(coins_data, fng_value, fng_classification, generated_at, any_stale,
 """
         panels[c["key"].lower()] = panel
 
+    def _simple_coin_card(c_):
+        cs = market_status_mod.coin_status(c_, (wyckoff_by_coin or {}).get(c_["key"]))
+        pr, ch = c_.get("price"), c_.get("pct_24h")
+        price_txt = fmt_usd(pr, 0 if (pr or 0) >= 1000 else 2) if pr is not None else "Data unavailable"
+        chg = (f'<span class="{"pos" if ch >= 0 else "neg"}">{ch:+.1f}%</span>') if ch is not None else ""
+        lo_, hi_ = c_.get("support_30d"), c_.get("resistance_30d")
+        rng = (f'<div class="cs-range">30-day range: {fmt_usd(lo_, 0)} &ndash; {fmt_usd(hi_, 0)}</div>' if lo_ and hi_ else "")
+        return (f'<div class="coin-simple ms-{cs["css"]}"><div class="cs-top"><span class="cs-name">{_esc(c_.get("emoji", ""))} {_esc(c_["name"])}</span>'
+                f'<span class="wc-action wc-{cs["action"].lower()}">{cs["action"]}</span></div>'
+                f'<div class="cs-price">{price_txt} {chg}</div>'
+                f'<div class="cs-status">{cs["emoji"]} {_esc(cs["word"])}</div><div class="cs-note">{_esc(cs["note"])}</div>{rng}</div>')
+
+    def _with_simple_view(panel_html, c_, lead_html=""):
+        key = c_["key"].lower()
+        head = f'<div class="bigcoin-panel bigcoin-panel-{key}">'
+        i_ = panel_html.index(head) + len(head)
+        j_ = panel_html.rindex("</div>")
+        return (panel_html[:i_] + _simple_coin_card(c_) + '<details class="fold coin-details"><summary>Details</summary>'
+                + lead_html + panel_html[i_:j_] + '</details></div>')
+
     # Big Coins now has three tabs: the BTC live dashboard, ETH, and the cross-market watchlist.
     btc_panel = panels.get("btc", "")
     if btc_panel:
         head = '<div class="bigcoin-panel bigcoin-panel-btc">'
         i = btc_panel.index(head) + len(head)
         j = btc_panel.rindex("</div>")
-        btc_panel = (btc_panel[:i] + btc_dash_html + '<details class="bd-more"><summary>BTC model signal, trade levels and alerts</summary>'
-                     + btc_panel[i:j] + '</details></div>')
+        _btc = next((c_ for c_ in coins_data if c_["key"] == "BTC"), None)
+        btc_panel = (btc_panel[:i] + _simple_coin_card(_btc) + '<details class="fold coin-details"><summary>Details</summary>' + btc_dash_html
+                     + '<details class="bd-more"><summary>Model signal, trade levels and alerts</summary>'
+                     + btc_panel[i:j] + '</details></details></div>') if _btc else btc_panel
     eth_panel = panels.get("eth", "")
+    _eth = next((c_ for c_ in coins_data if c_["key"] == "ETH"), None)
+    if eth_panel and _eth:
+        eth_panel = _with_simple_view(eth_panel, _eth)
     other_panels = "".join(v for k, v in panels.items() if k not in ("btc", "eth"))
     watch_panel = '<div class="bigcoin-panel bigcoin-panel-watch">' + macro_mod.watchlist_html(macro) + '</div>'
     bigcoins_panel = f"""
@@ -1724,9 +1789,9 @@ def render(coins_data, fng_value, fng_classification, generated_at, any_stale,
   <input type="radio" name="bigcoin" id="bc-eth">
   <input type="radio" name="bigcoin" id="bc-watch">
   <div class="tabbar" style="padding-left:0;">
-    <label for="bc-btc">&#8383; BTC LIVE DASHBOARD</label>
-    <label for="bc-eth">&#926; ETH</label>
-    <label for="bc-watch">&#127760; CROSS MARKET WATCHLIST</label>
+    <label for="bc-btc">&#8383; Bitcoin</label>
+    <label for="bc-eth">&#926; Ethereum</label>
+    <label for="bc-watch">&#127760; Other markets</label>
   </div>
   {btc_panel}
   {eth_panel}
@@ -1927,8 +1992,7 @@ def render(coins_data, fng_value, fng_classification, generated_at, any_stale,
         if rows:
             body = f'<div class="wl-scroll"><table class="signal-table dip-table"><thead>{head}</thead><tbody>' + "".join(x[3] for x in rows) + "</tbody></table></div>"
         else:
-            body = ('<div class="sub">&#9888; No confirmed setups right now &mdash; no coin has just broken out with trend and volume. '
-                    'Quality over quantity: an empty table means no strong signal, not a fetch problem. Checking again next cycle.</div>')
+            body = ('<div class="empty-note">No signals right now.<span> That is normal: KAIRO only shows strong setups.</span></div>')
         miss_rows = []
         for tf in TF_ORDER:
             if intraday_results.get(tf):
@@ -1955,11 +2019,11 @@ def render(coins_data, fng_value, fng_classification, generated_at, any_stale,
                f"Dip calls come in fixed batches of up to {PNL_BATCH_SIZE} per timeframe and are tracked in Performance; momentum calls are tracked separately (record below).")
         return f"""
 <div class="card wl-card" style="margin-bottom:12px;">
-  <div class="card-title">&#127919; &#128640; SIGNAL SCANNER &middot; CONFIRMED SIGNALS<span class="info-tip" tabindex="0" data-tip="{_esc(tip)}">&#9432;</span></div>
-  <div class="sub">Confirmed now: <b>{n_mom}</b> breakout signal{'s' if n_mom != 1 else ''}{(', plus <b>' + str(n_dip) + '</b> older dip call' + ('s' if n_dip != 1 else '') + ' still being tracked') if n_dip else ''}. New dip-buy signals are switched off.</div>
+  <div class="card-title">&#127919; SIGNALS<span class="info-tip" tabindex="0" data-tip="{_esc(tip)}">&#9432;</span></div>
+  <div class="sub">{('<b>' + str(n_mom + n_dip) + '</b> active signal' + ('s' if n_mom + n_dip != 1 else '')) if (n_mom + n_dip) else ''}</div>
   <details class="fold"><summary>How to read this</summary>
-    <div class="sub"><b>&#128640; Momentum</b> (15m/1h) scanning is switched off; only calls opened earlier are still shown until they finish. <b>&#128200; Trend</b> (4h) = closed above its 55-candle high while above the 200-candle average; exit by a trailing stop (4 ATR), no fixed target. Expect roughly 1 win in 3, with winners larger than losers.</div>
-    <div class="sub"><b>Dip buys were retired:</b> tested on 2 years of data they had not been tuned on, they averaged about &minus;3.7% per trade. Momentum was about break-even and the 4h trend rule only marginally positive (about +0.3% to +0.6% per trade), so treat every row as unproven and judge them by their records.</div>
+    <div class="sub"><b>&#128200; Trend</b> = a 4-hour candle closed above its recent high while the long-term trend is up. It exits with a trailing stop (no fixed target). Older 15m/1h momentum calls stay listed until they finish.</div>
+    <div class="sub">Dip-buy signals were switched off: tested on new data they lost money. Every row here is unproven, so judge it by its record.</div>
   </details>
   {body}
   {('<div class="sub" style="margin-top:8px;">' + str(hidden_old) + ' earlier call' + ('s' if hidden_old != 1 else '') + ' opened before the ' + f'{MIN_NET_PROFIT_PCT:g}' + '% minimum-profit rule ' + ('are' if hidden_old != 1 else 'is') + ' hidden here and still tracked in Performance.</div>') if hidden_old else ''}
@@ -1988,6 +2052,7 @@ def render(coins_data, fng_value, fng_classification, generated_at, any_stale,
 <div class="panel panel-screener">
   {scanner_html}
 
+  <details class="fold" style="margin-top:10px;"><summary>What the score labels mean</summary>
   <div class="cycle-map spot-signal-card" style="margin-top:10px;">
     <table class="signal-table score-legend" style="margin-top:0; margin-bottom:0;">
       <thead><tr><th>Score range</th><th>Label</th><th>What it means</th></tr></thead>
@@ -1999,6 +2064,7 @@ def render(coins_data, fng_value, fng_classification, generated_at, any_stale,
       </tbody>
     </table>
   </div>
+  </details>
 </div>
 """
 
@@ -2007,7 +2073,7 @@ def render(coins_data, fng_value, fng_classification, generated_at, any_stale,
   <div class="cycle-map spot-signal-card" style="margin-bottom:10px;">
     <div class="card-title">⭐ MY PICKS</div>
     <div class="sub">
-      Coins you've followed from the Scanner tab. These are saved in <strong>this browser only</strong>
+      Coins you've followed from the Signals tab. These are saved in <strong>this browser only</strong>
       (not synced anywhere) and stay here until you remove them &mdash; a personal way to track whether a
       call played out, not a real portfolio or trade log.
     </div>
@@ -2210,14 +2276,7 @@ def render(coins_data, fng_value, fng_classification, generated_at, any_stale,
   body {{ margin:0; background: var(--bg); color: var(--text); font-family: 'Segoe UI', Arial, sans-serif; position:relative; }}
   body::before {{
     content:''; position:fixed; inset:0; z-index:-1; pointer-events:none;
-    background:
-      radial-gradient(circle at 15% 20%, var(--blob1), transparent 42%),
-      radial-gradient(circle at 85% 15%, var(--blob2), transparent 45%),
-      radial-gradient(circle at 75% 85%, var(--blob3), transparent 45%),
-      radial-gradient(circle at 20% 85%, var(--blob4), transparent 45%),
-      var(--bg);
-    background-size: 180% 180%, 180% 180%, 200% 200%, 200% 200%, 100% 100%;
-    animation: bgDrift 30s ease-in-out infinite alternate;
+    background: var(--bg);
   }}
   @keyframes bgDrift {{
     0%   {{ background-position: 0% 0%, 100% 0%, 100% 100%, 0% 100%, 0 0; }}
@@ -2229,7 +2288,7 @@ def render(coins_data, fng_value, fng_classification, generated_at, any_stale,
   .card:hover {{ transform: translateY(-2px); box-shadow: var(--shadow-hover); }}
   .panel {{ animation: panelIn .35s ease both; }}
   @keyframes panelIn {{ from {{ opacity:0; transform: translateY(6px); }} to {{ opacity:1; transform:none; }} }}
-  header {{ background: linear-gradient(90deg, rgba(56,189,248,0.10), rgba(52,211,153,0.10), rgba(251,191,36,0.08)); background-size: 200% 100%; animation: hdrShift 18s ease-in-out infinite alternate; }}
+  header {{ background: var(--panel); }}
   @keyframes hdrShift {{ from {{ background-position: 0% 0; }} to {{ background-position: 100% 0; }} }}
   .tabbar label {{ transition: background .18s ease, color .18s ease, transform .12s ease; }}
   .tabbar label:hover {{ transform: translateY(-1px); color: var(--accent); }}
@@ -2296,9 +2355,9 @@ def render(coins_data, fng_value, fng_classification, generated_at, any_stale,
   .badge.neutral {{ background:var(--neu-bg); color: var(--yellow); }}
   .badge.locked  {{ background:var(--locked-bg); color: var(--gray); }}
   .badge.alert-armed {{ background:var(--armed-bg); color: var(--accent); }}
-  .badge.alert-triggered {{ background:#4a1010; color:#fff; animation: pulse 1.4s infinite; }}
+  .badge.alert-triggered {{ background:#4a1010; color:#fff; }}
   @keyframes pulse {{ 0%,100% {{ opacity:1; }} 50% {{ opacity:0.55; }} }}
-  .alert-banner {{ margin: 8px 16px 0; padding: 8px 12px; background:var(--alert-bg); border:1px solid var(--red); border-radius:10px; color:var(--alert-text); font-weight:700; font-size:13px; animation: pulse 1.6s infinite; white-space:nowrap; overflow-x:auto; -webkit-overflow-scrolling:touch; }}
+  .alert-banner {{ margin: 8px 16px 0; padding: 8px 12px; background:var(--alert-bg); border:1px solid var(--red); border-radius:10px; color:var(--alert-text); font-weight:700; font-size:13px; white-space:nowrap; overflow-x:auto; -webkit-overflow-scrolling:touch; }}
   .alert-banner-item {{ white-space:nowrap; }}
   .info-tip {{ display:inline-flex; align-items:center; justify-content:center; width:15px; height:15px;
     border-radius:50%; background:var(--border); color:var(--muted); font-size:11px; font-weight:700;
@@ -2387,7 +2446,7 @@ def render(coins_data, fng_value, fng_classification, generated_at, any_stale,
 </div>
 <div id="app" hidden>
 <header>
-  <h1>&#9889; KAIRO LIVE DASHBOARD</h1>
+  <h1>&#9889; KAIRO</h1>
   <div class="meta" id="meta-line"></div>
   <div class="header-actions">
     <button type="button" id="btn-theme" class="hdr-btn" title="Switch theme">&#9728; Light</button>
@@ -2796,12 +2855,12 @@ window.kairoInitPnlSearch = function() {{
 </html>
 """
     portions = {
-        "screener": {"title": f'🔍 Scanner<span class="info-tip" tabindex="0" data-tip="{screener_info_tip}">&#9432;</span>',
-                     "sort_order": 1, "html": screener_panel,
+        "screener": {"title": f'🎯 Signals<span class="info-tip" tabindex="0" data-tip="{screener_info_tip}">&#9432;</span>',
+                     "sort_order": 1, "html": plain_mod.simplify(screener_panel),
                      "data": {"intraday_cards": intraday_live_cards}},
-        "bigcoins": {"title": "🪙 Big Coins", "sort_order": 2, "html": bigcoins_panel, "data": {"charts": (macro or {}).get("charts") or {}}},
-        "mypicks": {"title": "⭐ My Picks", "sort_order": 3, "html": mypicks_panel, "data": {}},
-        "performance": {"title": "📊 Performance", "sort_order": 4, "html": performance_panel, "data": {}},
+        "bigcoins": {"title": "🪙 Market", "sort_order": 2, "html": plain_mod.simplify(bigcoins_panel), "data": {"charts": (macro or {}).get("charts") or {}}},
+        "mypicks": {"title": "⭐ My Picks", "sort_order": 3, "html": plain_mod.simplify(mypicks_panel), "data": {}},
+        "performance": {"title": "📊 Performance", "sort_order": 4, "html": plain_mod.simplify(performance_panel), "data": {}},
         "_meta": {"title": "", "sort_order": 0, "html": banner_html,
                   "data": {"generated_at": generated_at, "generated_at_iso": generated_at_iso,
                            "fng_top": fng_top, "refresh_seconds": REFRESH_SECONDS,

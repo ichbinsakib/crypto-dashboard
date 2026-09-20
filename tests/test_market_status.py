@@ -69,9 +69,11 @@ class StatusTests(unittest.TestCase):
     def test_html_is_one_line_with_reasons_in_tip(self):
         r = self.st(coin("BTC"), coin("ETH"))
         h = MS.line_html(r, lambda s: s.replace("&", "&amp;").replace('"', "&quot;"))
-        self.assertIn('class="market-status ms-bullish"', h)
+        self.assertIn('class="ms-card ms-bullish"', h)
         self.assertIn("data-tip=", h)
-        self.assertEqual(h.count("MARKET STATUS"), 1)
+        self.assertIn("MARKET: BULLISH", h)
+        self.assertIn("Buyers are stronger.", h)
+        self.assertNotIn(chr(10), h)
 
 
 class EntryVerdictTests(unittest.TestCase):
@@ -106,6 +108,30 @@ class EntryVerdictTests(unittest.TestCase):
         for r in (self.st(coin("BTC"), coin("ETH")), self.st(coin("BTC"), coin("ETH", price=80, p7=-5, p30=-10))):
             self.assertIn(r["entry"], ("GOOD", "WAIT", "BAD"))
             self.assertNotIn(chr(10), r["line"])
+
+
+class DisplayTests(unittest.TestCase):
+    def test_short_text_is_short_and_plain(self):
+        for r in (MS.assess([coin("BTC"), coin("ETH")], {"BTC": klines(), "ETH": klines()}, {}, None),
+                  MS.assess([], {}, {}, None)):
+            self.assertLessEqual(len(r["short"].split()), 9)
+            self.assertLessEqual(len(r["entry_short"].split()), 8)
+            self.assertIn(r["entry_word"], ("Good time to buy", "Better to wait", "Bad time to buy"))
+
+    def test_states_are_shown_with_the_agreed_headline_words(self):
+        wy = {"BTC": {"stage": "utad", "confidence": "MEDIUM"}}
+        r = MS.assess([coin("BTC", price=125, res=130, p24=-0.5), coin("ETH")], {"BTC": klines(), "ETH": klines()}, wy, None)
+        self.assertEqual((r["state"], r["title"]), ("DISTRIBUTION", "SELLING PRESSURE"))
+        self.assertEqual(MS.DISPLAY["SCALPING CONDITIONS"][0], "SIDEWAYS")             # no extra states on the main screen
+
+    def test_coin_status_words(self):
+        self.assertEqual(MS.coin_status(coin("BTC"))["word"], "BULLISH")
+        self.assertEqual(MS.coin_status(coin("BTC", price=130, res=130, p24=2.0))["word"], "BREAKOUT")
+        self.assertEqual(MS.coin_status(coin("BTC", price=80, p7=-4, p30=-10))["word"], "BEARISH")
+        self.assertEqual(MS.coin_status({"key": "X", "price": None})["action"], "Wait")
+        wy = {"stage": "sow", "confidence": "HIGH"}
+        self.assertEqual(MS.coin_status(coin("BTC", price=125, res=130, p24=-0.5), wy)["word"], "SELLING PRESSURE")
+        self.assertEqual(MS.coin_status(coin("BTC", price=125, res=130, p24=-0.5), wy)["action"], "Avoid")
 
 
 if __name__ == "__main__":
