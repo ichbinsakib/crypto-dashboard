@@ -93,7 +93,7 @@ ROUND_TRIP_FEE_PCT = 0.2  # assumed buy+sell cost, as % of position size -- Bina
 # Dip-buy signals are retired: on data they were not tuned on they averaged about -3.7% per trade (backtest/run.py).
 # Calls already open still show and resolve; nothing new is opened unless DIP_SIGNALS=1.
 DIP_SIGNALS_ENABLED = os.environ.get("DIP_SIGNALS", "0") == "1"
-MIN_NET_PROFIT_PCT = float(os.environ.get("MIN_NET_PROFIT_PCT", "3.0"))  # owner rule: target 1 must earn at least this much AFTER fees.
+MIN_NET_PROFIT_PCT = float(os.environ.get("MIN_NET_PROFIT_PCT", "1.5"))  # owner rule: target 1 must earn at least this much AFTER fees.
 #   Was 0.15; 3.0 means only setups with a real move ahead are shown. Minimum net-of-fee profit target1 must clear for a signal to be
                             # considered tradeable at all -- added after a live example showed
                             # target1 could net roughly $0 after ROUND_TRIP_FEE_PCT, making a
@@ -1877,7 +1877,7 @@ def render(coins_data, fng_value, fng_classification, generated_at, any_stale,
     MOM_WHY = [("Breakout", "Closed above the previous high"), ("Fresh", "Just broke out, not yet run away"), ("Trend", "Price above rising 20/50 averages"),
                ("Volume", "Volume above 1.3x normal"), ("Not parabolic", "Not an overextended vertical move"), ("No distribution", "No Wyckoff topping pattern")]
 
-    TREND_WHY = [("Breakout", "Closed a 4h candle above the prior 80-candle high"), ("Above 200 avg", "Price above its 200-candle average"),
+    TREND_WHY = [("Breakout", "Closed a 4h candle above the prior 55-candle high"), ("Above 200 avg", "Price above its 200-candle average"),
                  ("Fresh", "The breakout candle closed within the last hour")]
 
     def _mom_row(pos):
@@ -1886,7 +1886,7 @@ def render(coins_data, fng_value, fng_classification, generated_at, any_stale,
             label = '<span class="badge bullish">&#128200; TREND BREAKOUT</span><span class="wl-note">3/3 checks &middot; experimental</span>'
             return _scan_row("trend", pos["tf"], str(pos.get("name") or pos["coin"]), pos["coin"], label, pos["entry"], pos["entry"], pos["stop"], None, None,
                              pos.get("risk_pct") or 0, None, None, _chips([(n, None, tip) for n, tip in TREND_WHY]), "", pos["opened_at"], follow_key, follow_key,
-                             "4-Hour trend", "bullish", "Slow trend breakout: a 4h candle closed above its 80-candle high while above the 200-candle average; exit by trailing stop.",
+                             "4-Hour trend", "bullish", "Slow trend breakout: a 4h candle closed above its 55-candle high while above the 200-candle average; exit by trailing stop.",
                              "TREND BREAKOUT", "TREND BREAKOUT", "3/3 checks")
         follow_key = f"mom-{pos['tf']}:{pos['coin']}"
         tf_label = {"15m": "15-Minute", "1h": "1-Hour"}.get(pos["tf"], pos["tf"])
@@ -1955,7 +1955,7 @@ def render(coins_data, fng_value, fng_classification, generated_at, any_stale,
   <div class="card-title">&#127919; &#128640; SIGNAL SCANNER &middot; CONFIRMED SIGNALS<span class="info-tip" tabindex="0" data-tip="{_esc(tip)}">&#9432;</span></div>
   <div class="sub">Confirmed now: <b>{n_mom}</b> breakout signal{'s' if n_mom != 1 else ''}{(', plus <b>' + str(n_dip) + '</b> older dip call' + ('s' if n_dip != 1 else '') + ' still being tracked') if n_dip else ''}. New dip-buy signals are switched off.</div>
   <details class="fold"><summary>How to read this</summary>
-    <div class="sub"><b>&#128640; Momentum</b> (15m/1h) = just broke to a new high with trend and volume, fixed stop and 3%+ target. <b>&#128200; Trend</b> (4h) = closed above its 80-candle high while above the 200-candle average; exit by a trailing stop (4 ATR), no fixed target. Expect roughly 1 win in 3, with winners larger than losers.</div>
+    <div class="sub"><b>&#128640; Momentum</b> (15m/1h) = just broke to a new high with trend and volume, fixed stop and a target worth at least 1.5% after fees. <b>&#128200; Trend</b> (4h) = closed above its 55-candle high while above the 200-candle average; exit by a trailing stop (4 ATR), no fixed target. Expect roughly 1 win in 3, with winners larger than losers.</div>
     <div class="sub"><b>Dip buys were retired:</b> tested on 2 years of data they had not been tuned on, they averaged about &minus;3.7% per trade. Momentum was about break-even and the 4h trend rule only marginally positive (about +0.3% to +0.6% per trade), so treat every row as unproven and judge them by their records.</div>
   </details>
   {body}

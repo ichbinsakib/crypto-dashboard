@@ -11,7 +11,7 @@ MOMENTUM_TIMEFRAMES = {
     "15m": {"interval": "15m", "lookback": 30, "window_label": "last ~7.5 hours"},
     "1h": {"interval": "1h", "lookback": 24, "window_label": "last 24 hours"},
     # slow trend-following breakout: the only rule that stayed (barely) positive out-of-sample in backtest/run.py
-    "4h": {"interval": "4h", "lookback": 80, "limit": 320, "window_label": "last ~13 days", "kind": "trend"},
+    "4h": {"interval": "4h", "lookback": 55, "limit": 320, "window_label": "last ~9 days", "kind": "trend"},
 }
 TREND_STOP_ATR = 4.0       # chandelier trailing stop: highest high since entry minus 4 ATR (no fixed target)
 TREND_EMA = 200            # only take breakouts above the 200-candle average
@@ -22,7 +22,7 @@ STOP_ATR = 1.0
 MAX_CHASE_ATR = 1.0        # entry must be within this many ATR of the breakout level, or it is chasing
 VOLUME_MULTIPLE = 1.3      # recent volume vs the prior 20 candles
 FEE_PCT = 0.2              # round-trip, same as the dip model
-MIN_NET_PCT = float(__import__("os").environ.get("MIN_NET_PROFIT_PCT", "3.0"))   # target 1 must earn at least this much AFTER fees (same rule as the dip scanner)
+MIN_NET_PCT = float(__import__("os").environ.get("MIN_NET_PROFIT_PCT", "1.5"))   # target 1 must earn at least this much AFTER fees (same rule as the dip scanner)
 
 
 def compute_momentum_signal(klines, lookback, window_label=""):
