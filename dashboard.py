@@ -2863,20 +2863,6 @@ window.kairoInitPnlSearch = function() {{
     return html, portions, spot_signals_by_coin
 
 
-def publish_scalping(backend):
-    """Admin-only SCALPING section (row-level security allows only admins to read the 'scalping' row). Isolated like Market Events:
-    any failure is logged and nothing else is affected."""
-    try:
-        from scalping import service as sc_service
-        payload = sc_service.build_payload(aster_mod, deriv_mod)
-        backend.publish_portions({"scalping": {
-            "title": "⚡ Scalping", "sort_order": 6,
-            "html": '<div class="panel panel-scalping"><div id="scalping-root"></div></div>', "data": payload}})
-        log(f"Scalping: published context for {len(payload['coins'])} coins")
-    except Exception as e:  # noqa: BLE001
-        log(f"Scalping skipped: {type(e).__name__}: {str(e)[:200]}")
-
-
 def publish_market_events(backend):
     """Admin-only Market Events section. Fully isolated: any failure is logged and the trading
     dashboard above is unaffected (it is already published by this point)."""
@@ -3152,7 +3138,6 @@ def main():
         # section. The public site (site/) is only the login shell.
         backend.publish_portions(portions)
         publish_market_events(backend)
-        publish_scalping(backend)
         backend.publish_notifications([
             {"id": e["id"], "ts": e["ts"] if e["ts"].endswith("Z") or "+" in e["ts"] else e["ts"] + "Z",
              "type": e["type"], "title": e["title"], "body": e.get("body", ""),

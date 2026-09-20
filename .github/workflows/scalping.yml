@@ -1,0 +1,33 @@
+name: Kairo Scalping engine
+
+# Runs on its own so signal tracking never waits on the (much slower) dashboard build. GitHub schedules are best effort and can
+# start a few minutes late: signal outcomes are replayed from candle history, so a late run loses no information, only latency.
+# Explicit minutes rather than */5, as in deploy.yml.
+on:
+  schedule:
+    - cron: "1,6,11,16,21,26,31,36,41,46,51,56 * * * *"
+  workflow_dispatch: {}
+
+permissions:
+  contents: read
+
+concurrency:
+  group: "scalping"
+  cancel-in-progress: false
+
+jobs:
+  scalp:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.x"
+      - name: Run the scalping engine
+        env:
+          KAIRO_SUPABASE_URL: ${{ secrets.KAIRO_SUPABASE_URL }}
+          KAIRO_SUPABASE_ANON_KEY: ${{ secrets.KAIRO_SUPABASE_ANON_KEY }}
+          KAIRO_PUBLISHER_EMAIL: ${{ secrets.KAIRO_PUBLISHER_EMAIL }}
+          KAIRO_PUBLISHER_PASSWORD: ${{ secrets.KAIRO_PUBLISHER_PASSWORD }}
+        run: python scalping_job.py

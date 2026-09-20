@@ -293,7 +293,7 @@
     if (window.kairoInitCharts) window.kairoInitCharts(has.bigcoins ? ((has.bigcoins.data || {}).charts || {}) : {});
     initSignalPrices();
     // Admin-only: the server only returns this row to admins, so for everyone else `has.scalping` is simply undefined.
-    if (window.kairoInitScalping && has.scalping) window.kairoInitScalping(has.scalping);
+    if (window.kairoInitScalping && has.scalping) window.kairoInitScalping(has.scalping, { sb: function () { return sb; }, isAdmin: !!(S.profile && S.profile.is_admin) || DEV, dev: DEV });
     if (window.kairoInitEvents && has.events) {
       window.kairoInitEvents(has.events, { sb: function () { return sb; }, isAdmin: !!(S.profile && S.profile.is_admin), dev: DEV });
     }
