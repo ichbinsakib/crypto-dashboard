@@ -98,6 +98,16 @@ class ScalpingJsTests(unittest.TestCase):
         self.assertEqual(node("S.dataStatus('LIVE', 2, false, false)"), "DISCONNECTED")
         self.assertEqual(node("S.dataStatus('DISCONNECTED', 2, true, true)"), "DISCONNECTED")
 
+    def test_session_vwap(self):
+        k = "const T=Date.UTC(2026,8,20,0,0,0); const k=[[T,1,11,9,10,100],[T+300000,1,21,19,20,300],[T+600000,1,31,29,30,100]];"
+        # typical prices 10, 20, 30 weighted 100, 300, 100 -> (1000+6000+3000)/500 = 20
+        self.assertAlmostEqual(node("S.sessionVwap(k)", k), 20.0)
+        self.assertIsNone(node("S.sessionVwap(k.slice(0,2))", k))            # too little of the day yet: n/a, not a guess
+        self.assertIsNone(node("S.sessionVwap([])"))
+        # candles from before UTC midnight are not part of today's VWAP
+        old = "const T=Date.UTC(2026,8,20,0,0,0); const k=[[T-300000,1,101,99,100,1000],[T,1,11,9,10,100],[T+300000,1,11,9,10,100],[T+600000,1,11,9,10,100]];"
+        self.assertAlmostEqual(node("S.sessionVwap(k)", old), 10.0)
+
     def test_price_formatting_and_result_labels(self):
         self.assertEqual(node("S.fmtPrice(185.2049)"), "185.20")
         self.assertEqual(node("S.fmtPrice(25.2)"), "25.200")

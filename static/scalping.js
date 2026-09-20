@@ -103,11 +103,20 @@
     return { STOP_LOSS: 'SL', EXPIRED: 'EXPIRED', INVALIDATED: 'INVALID', CLOSED: 'CLOSED', TP2_HIT: 'TP2', TP1_HIT: 'TP1' }[r.state] || r.state;
   }
 
-  var api = { fmtPrice: fmtPrice, applyFilters: applyFilters, perfStats: perfStats, openPnl: openPnl, tradeStatus: tradeStatus, dataStatus: dataStatus, sortRows: sortRows, resultLabel: resultLabel };
+  /* volume-weighted average price for the current UTC day (VWAP); null until the day has enough candles */
+  function sessionVwap(kl) {
+    if (!kl || !kl.length) return null;
+    var d = new Date(+kl[kl.length - 1][0]), m = Date.UTC(d.getUTCFullYear(), d.getUTCMonth(), d.getUTCDate());
+    var pv = 0, v = 0, n = 0;
+    kl.forEach(function (k) { if (+k[0] >= m) { var vol = +k[5]; pv += (+k[2] + +k[3] + +k[4]) / 3 * vol; v += vol; n += 1; } });
+    return n >= 3 && v > 0 ? pv / v : null;
+  }
+
+  var api = { sessionVwap: sessionVwap, fmtPrice: fmtPrice, applyFilters: applyFilters, perfStats: perfStats, openPnl: openPnl, tradeStatus: tradeStatus, dataStatus: dataStatus, sortRows: sortRows, resultLabel: resultLabel };
   if (typeof module !== 'undefined' && module.exports) { module.exports = api; return; }
 
   /* ---------------- UI ---------------- */
-  var ST = { data: null, ctx: null, prices: {}, priceTs: 0, everOk: false, fails: 0, filters: {}, sort: { col: 'exit', dir: -1 }, showN: 12, msg: '', draft: null, dirty: false, open: {}, timer: null, tick: null, busy: false, lastStatus: null };
+  var ST = { data: null, ctx: null, prices: {}, priceTs: 0, everOk: false, fails: 0, filters: {}, sort: { col: 'exit', dir: -1 }, showN: 12, msg: '', draft: null, dirty: false, open: {}, timer: null, tick: null, busy: false, lastStatus: null, iv: '5m', kl: {}, klBusy: false, n: 0 };
   function esc(s) { var d = document.createElement('div'); d.textContent = s == null ? '' : String(s); return d.innerHTML; }
   function root() { return document.getElementById('scalping-root'); }
   function pct(v, d) { return v == null || isNaN(v) ? 'n/a' : (v >= 0 ? '+' : '') + v.toFixed(d == null ? 2 : d) + '%'; }
@@ -175,9 +184,9 @@
         '<div class="sc2-card-h"><b>' + esc(r.coin) + ' ' + esc(r.direction) + '</b><span class="badge ' + (r.actual_entry != null ? 'bullish' : 'neutral') + '" data-st="' + esc(r.id) + '">' + esc(s) + '</span></div>' +
         '<div class="sc2-now"><span>Current</span><b data-px="' + esc(r.coin) + '">' + fmtPrice(px) + '</b>' +
         (r.actual_entry != null ? '<span>P&amp;L</span><b class="' + cls(pnl) + '" data-pnl="' + esc(r.id) + '">' + pct(pnl) + '</b>' : '') + '</div>' +
-        levelsGrid(r, px) +
+        chartWrap(r.coin, r.id) + levelsGrid(r, px) +
         '<div class="sc2-sub">Setup Score ' + (r.setup_score != null ? r.setup_score.toFixed(1) : 'n/a') + ' / 10 · ' + esc(r.setup_type) + ' · ' +
-        (r.actual_entry != null ? 'in trade ' + esc(mins((Date.now() - Date.parse(r.entry_time)) / 60000)) : 'created ' + esc(hhmm(r.created_at)) + ' · expires ' + esc(hhmm(r.expires_at))) + '</div>' +
+        (r.actual_entry != null ? 'in trade ' + esc(mins(Math.max(0, (Date.now() - Date.parse(r.entry_time)) / 60000))) : 'created ' + esc(hhmm(r.created_at)) + ' · expires ' + esc(hhmm(r.expires_at))) + '</div>' +
         (ST.ctx && ST.ctx.isAdmin && !r.manual_close_requested ? '<button type="button" class="sc2-btn" data-close="' + esc(r.id) + '">Close manually</button>' : '') +
         '<details class="fold"' + (ST.open['t' + r.id] ? ' open' : '') + ' data-key="t' + esc(r.id) + '"><summary>Timeline</summary><ul class="sc2-tl">' +
         (r.timeline || []).map(function (t) { return '<li><span>' + esc(hhmm(t.ts)) + '</span>' + esc(t.note) + '</li>'; }).join('') + '</ul></details></div>';
@@ -201,6 +210,7 @@
         '<span>Regime <b>' + esc(c.regime || 'n/a') + '</b></span></div>' +
         '<div class="sc2-state"><span class="badge ' + (STATE_CLASS[c.state] || 'locked') + '">' + esc(c.state) + '</span>' +
         (c.score != null && c.checks.length ? '<span class="sc2-score">Setup Score ' + c.score.toFixed(1) + ' / 10</span>' : '') + '</div>';
+      h += chartWrap(c.symbol, c.signal_id);
       if (open) {
         h += '<div class="sc2-sub">Active scalp above ↑</div>';
       } else if (rec) {
@@ -294,9 +304,63 @@
       'Nothing here is proven to be profitable: the Performance section is how you find out.</div></details>';
   }
 
-  function draw() {
+  /* ---------------- chart: candles + VWAP (+ entry zone, stop, targets when the coin has a signal) ---------------- */
+  function chartWrap(sym, sigId) { return '<div class="sc2-chartwrap" data-chart="' + esc(sym) + '" data-sig="' + esc(sigId || '') + '"><div class="sc2-loading">Loading chart\u2026</div></div>'; }
+
+  function chartSvg(kl, vw, lv) {
+    var rows = kl.slice(-72), w = 640, h = 190, pad = 6, hi = -Infinity, lo = Infinity;
+    rows.forEach(function (k) { hi = Math.max(hi, +k[2]); lo = Math.min(lo, +k[3]); });
+    var marks = [];
+    if (vw != null) marks.push(vw);
+    if (lv) [lv.entry_low, lv.entry_high, lv.stop, lv.tp1, lv.tp2].forEach(function (v) { if (v != null && v > lo * 0.9 && v < hi * 1.1) marks.push(v); });
+    marks.forEach(function (v) { hi = Math.max(hi, v); lo = Math.min(lo, v); });
+    var span = (hi - lo) || 1, cw = (w - pad * 2) / rows.length;
+    function y(v) { return pad + (hi - v) / span * (h - pad * 2); }
+    var out = '<svg class="sc-chart" viewBox="0 0 ' + w + ' ' + h + '" preserveAspectRatio="none" role="img" aria-label="Recent candles with VWAP">';
+    if (lv && lv.entry_low != null) out += '<rect x="0" width="' + w + '" y="' + y(lv.entry_high).toFixed(1) + '" height="' + Math.max(2, y(lv.entry_low) - y(lv.entry_high)).toFixed(1) + '" class="sc2-zone"/>';
+    rows.forEach(function (k, i) {
+      var o = +k[1], c = +k[4], x = pad + i * cw + cw / 2, up = c >= o;
+      out += '<line x1="' + x.toFixed(1) + '" x2="' + x.toFixed(1) + '" y1="' + y(+k[2]).toFixed(1) + '" y2="' + y(+k[3]).toFixed(1) + '" class="' + (up ? 'sc-up' : 'sc-dn') + '"/>' +
+        '<rect x="' + (x - cw * 0.35).toFixed(1) + '" y="' + y(Math.max(o, c)).toFixed(1) + '" width="' + (cw * 0.7).toFixed(1) + '" height="' + Math.max(1, Math.abs(y(o) - y(c))).toFixed(1) + '" class="' + (up ? 'sc-up-f' : 'sc-dn-f') + '"/>';
+    });
+    function line(v, c, label) { return v == null ? '' : '<line x1="0" x2="' + w + '" y1="' + y(v).toFixed(1) + '" y2="' + y(v).toFixed(1) + '" class="' + c + '"/><text x="' + (w - 4) + '" y="' + (y(v) - 3).toFixed(1) + '" text-anchor="end" class="sc-lbl">' + label + '</text>'; }
+    out += line(vw, 'sc-vwap', 'VWAP');
+    if (lv) out += line(lv.stop, 'sc-s', 'Stop') + line(lv.tp1, 'sc-t', 'TP1') + line(lv.tp2, 'sc-t', 'TP2');
+    return out + '</svg>';
+  }
+
+  function paintCharts() {
     var el = root(); if (!el || !ST.data) return;
-    el.innerHTML = header() + answer() + activeBlock() + coinCards() + perfBlock() + recentBlock() + settingsBlock() + howBlock() +
+    el.querySelectorAll('.sc2-chartwrap').forEach(function (n) {
+      var sym = n.getAttribute('data-chart'), kl = ST.kl[sym]; if (!kl) return;
+      var id = n.getAttribute('data-sig'), lv = null;
+      if (id) lv = ST.data.active.concat(ST.data.recent).filter(function (r) { return r.id === id; })[0] || null;
+      var vw = sessionVwap(kl), px = livePrice(sym, +kl[kl.length - 1][4]);
+      n.innerHTML = chartSvg(kl, vw, lv) + '<div class="sc2-chartfacts"><span>' + esc(ST.iv) + ' candles</span>' +
+        (vw != null ? '<span>VWAP <b>' + fmtPrice(vw) + '</b></span><span class="' + (px >= vw ? 'pos' : 'neg') + '">' + (px >= vw ? 'Above' : 'Below') + ' VWAP</span>' : '<span>VWAP n/a (too little of today yet)</span>') + '</div>';
+    });
+  }
+
+  function loadCharts() {
+    if (!ST.data || ST.klBusy) return;
+    ST.klBusy = true;
+    var iv = ST.iv;
+    Promise.all(ST.data.coin_list.map(function (c) {
+      return fetch('https://data-api.binance.vision/api/v3/klines?symbol=' + c.symbol + 'USDT&interval=' + iv + '&limit=300')
+        .then(function (r) { if (!r.ok) throw new Error('bad'); return r.json(); }).then(function (rows) { return [c.symbol, rows]; }).catch(function () { return [c.symbol, null]; });
+    })).then(function (res) {
+      if (iv === ST.iv) res.forEach(function (x) { if (x[1]) ST.kl[x[0]] = x[1]; });
+    }).then(function () { ST.klBusy = false; paintCharts(); });
+  }
+
+  function ivBar() {
+    return '<div class="sc2-ivs"><span>Chart</span>' + ['1m', '5m', '15m'].map(function (v) { return '<button type="button" class="sc2-iv' + (ST.iv === v ? ' on' : '') + '" data-iv="' + v + '">' + v + '</button>'; }).join('') + '</div>';
+  }
+
+  function draw() { drawBase(); paintCharts(); }
+  function drawBase() {
+    var el = root(); if (!el || !ST.data) return;
+    el.innerHTML = header() + answer() + ivBar() + activeBlock() + coinCards() + perfBlock() + recentBlock() + settingsBlock() + howBlock() +
       (ST.msg ? '<div class="sc2-msg">' + esc(ST.msg) + '</div>' : '') + '<div class="sub sc2-foot">Analysis, not advice. Long-only unless shorts are switched on in Settings. Prices refresh every 5 seconds; signals update about every 5 minutes.</div>';
   }
 
@@ -330,6 +394,7 @@
     var on = document.getElementById('tab-scalping');
     if (document.hidden || (on && !on.checked)) return;
     loadPrices();
+    ST.n += 1; if (ST.n % 3 === 0) loadCharts();
   }
 
   /* ---------------- events ---------------- */
@@ -352,7 +417,8 @@
     el.addEventListener('click', function (e) {
       var t = e.target, b = t.closest && t.closest('button, th');
       if (!b) return;
-      if (b.hasAttribute('data-sort')) { var c = b.getAttribute('data-sort'); ST.sort = { col: c, dir: ST.sort.col === c ? -ST.sort.dir : -1 }; draw(); }
+      if (b.hasAttribute('data-iv')) { ST.iv = b.getAttribute('data-iv'); ST.kl = {}; draw(); loadCharts(); }
+      else if (b.hasAttribute('data-sort')) { var c = b.getAttribute('data-sort'); ST.sort = { col: c, dir: ST.sort.col === c ? -ST.sort.dir : -1 }; draw(); }
       else if (b.hasAttribute('data-more')) { ST.showN += 25; draw(); }
       else if (b.hasAttribute('data-clear')) { ST.filters = {}; draw(); }
       else if (b.hasAttribute('data-close')) {
@@ -393,6 +459,7 @@
     bind(el);
     draw();
     loadPrices();
+    loadCharts();
     if (ST.timer) clearInterval(ST.timer);
     ST.timer = setInterval(tick, 5000);
   };
