@@ -1811,7 +1811,7 @@ def render(coins_data, fng_value, fng_classification, generated_at, any_stale,
 
     def _target_cells(t1, t2, n1, n2):
         if t1 is None:
-            return '<td class="pos" colspan="2">Trailing stop<span class="wl-note">exit when price falls 4 ATR below its high since entry; no fixed target</span></td>'
+            return f'<td class="pos" colspan="2">Trailing stop<span class="wl-note">exit when price falls 4 ATR below its high since entry; no fixed target</span><span class="wl-note"><b>Expected duration: about {momentum_mod.TREND_HOLD_HOURS["median"]} hours (~{momentum_mod.TREND_HOLD_HOURS["median"] / 24:.0f} days)</b>; most trades last {momentum_mod.TREND_HOLD_HOURS["p25"]}&ndash;{momentum_mod.TREND_HOLD_HOURS["p75"]} h. Losers exit after ~{momentum_mod.TREND_HOLD_HOURS["loser_median"]} h, winners run ~{momentum_mod.TREND_HOLD_HOURS["winner_median"]} h.</span></td>'
         return (f'<td class="pos">{fmt_usd_adaptive(t1)}<span class="wl-note">{fmt_net_fee_html(n1)}</span></td>'
                 f'<td class="pos">{fmt_usd_adaptive(t2)}<span class="wl-note">{fmt_net_fee_html(n2)}</span></td>')
 
@@ -1955,7 +1955,7 @@ def render(coins_data, fng_value, fng_classification, generated_at, any_stale,
   <div class="card-title">&#127919; &#128640; SIGNAL SCANNER &middot; CONFIRMED SIGNALS<span class="info-tip" tabindex="0" data-tip="{_esc(tip)}">&#9432;</span></div>
   <div class="sub">Confirmed now: <b>{n_mom}</b> breakout signal{'s' if n_mom != 1 else ''}{(', plus <b>' + str(n_dip) + '</b> older dip call' + ('s' if n_dip != 1 else '') + ' still being tracked') if n_dip else ''}. New dip-buy signals are switched off.</div>
   <details class="fold"><summary>How to read this</summary>
-    <div class="sub"><b>&#128640; Momentum</b> (15m/1h) = just broke to a new high with trend and volume, fixed stop and a target worth at least 1.5% after fees. <b>&#128200; Trend</b> (4h) = closed above its 55-candle high while above the 200-candle average; exit by a trailing stop (4 ATR), no fixed target. Expect roughly 1 win in 3, with winners larger than losers.</div>
+    <div class="sub"><b>&#128640; Momentum</b> (15m/1h) scanning is switched off; only calls opened earlier are still shown until they finish. <b>&#128200; Trend</b> (4h) = closed above its 55-candle high while above the 200-candle average; exit by a trailing stop (4 ATR), no fixed target. Expect roughly 1 win in 3, with winners larger than losers.</div>
     <div class="sub"><b>Dip buys were retired:</b> tested on 2 years of data they had not been tuned on, they averaged about &minus;3.7% per trade. Momentum was about break-even and the 4h trend rule only marginally positive (about +0.3% to +0.6% per trade), so treat every row as unproven and judge them by their records.</div>
   </details>
   {body}
@@ -2954,7 +2954,9 @@ def main():
         held = {f"{p['tf']}:{p['coin']}" for p in prev_momentum.get("open", {}).values()}
         cooling_now = momentum_mod.cooling(prev_momentum.get("resolved", []))
         signals = []
-        for mtf in momentum_mod.MOMENTUM_TIMEFRAMES:
+        for mtf, _mcfg in momentum_mod.MOMENTUM_TIMEFRAMES.items():
+            if not _mcfg.get("scan", True):
+                continue
             open_here = sum(1 for k in held if k.startswith(mtf + ":"))
             if open_here < momentum_mod.MAX_OPEN_PER_TF:
                 skip = {k.split(":", 1)[1] for k in (held | cooling_now) if k.startswith(mtf + ":")}

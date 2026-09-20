@@ -8,11 +8,13 @@ from brain import patterns as P
 from brain import wyckoff as W
 
 MOMENTUM_TIMEFRAMES = {
-    "15m": {"interval": "15m", "lookback": 30, "window_label": "last ~7.5 hours"},
-    "1h": {"interval": "1h", "lookback": 24, "window_label": "last 24 hours"},
+    "15m": {"interval": "15m", "lookback": 30, "window_label": "last ~7.5 hours", "scan": False},   # retired: kept only so open calls can finish
+    "1h": {"interval": "1h", "lookback": 24, "window_label": "last 24 hours", "scan": False},
     # slow trend-following breakout: the only rule that stayed (barely) positive out-of-sample in backtest/run.py
     "4h": {"interval": "4h", "lookback": 55, "limit": 320, "window_label": "last ~9 days", "kind": "trend"},
 }
+# how long the 4h trend rule held trades in the 2-year backtest (782 trades, backtest/hold.py), in hours
+TREND_HOLD_HOURS = {"p25": 56, "median": 92, "p75": 148, "loser_median": 64, "winner_median": 156}
 TREND_STOP_ATR = 4.0       # chandelier trailing stop: highest high since entry minus 4 ATR (no fixed target)
 TREND_EMA = 200            # only take breakouts above the 200-candle average
 TREND_MAX_AGE_MIN = 60     # enter only shortly after the breakout candle closed (the backtest entered at the next open)
