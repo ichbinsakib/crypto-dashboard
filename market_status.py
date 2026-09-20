@@ -85,10 +85,15 @@ def _coin(c, klines):
             "above200": (price > c["sma200"]) if price and c.get("sma200") else None}
 
 
-def _fmt(state, text, why):
+ENTRY = {"GOOD": "\u2705 GOOD TIME", "WAIT": "\U0001F7E1 WAIT", "BAD": "\u26D4 BAD TIME"}
+
+
+def _fmt(state, text, why, entry=("WAIT", "no clear edge, so waiting costs nothing.")):
+    """entry = (GOOD|WAIT|BAD, one short reason). This is about buying (long-only, spot), not shorting."""
     emoji, css = STATES[state]
-    return {"state": state, "emoji": emoji, "css": css, "text": text, "why": why,
-            "line": f"{emoji} MARKET STATUS: {state} — {text}"}
+    rating, reason = entry
+    return {"state": state, "emoji": emoji, "css": css, "text": text, "why": why, "entry": rating, "entry_text": reason,
+            "line": f"{emoji} MARKET STATUS: {state} \u2014 {text} Entry: {ENTRY[rating]} \u2014 {reason}"}
 
 
 def assess(coins_data, klines_by_coin=None, wyckoff_by_coin=None, total_change_24h=None):
@@ -99,7 +104,8 @@ def assess(coins_data, klines_by_coin=None, wyckoff_by_coin=None, total_change_2
     btc = _coin(by_key.get("BTC"), klines_by_coin.get("BTC"))
     eth = _coin(by_key.get("ETH"), klines_by_coin.get("ETH"))
     if btc["trend"] == "unknown":
-        return _fmt("NO CLEAR SIGNAL", "Not enough Bitcoin data right now to read the market.", ["Bitcoin price history is unavailable"])
+        return _fmt("NO CLEAR SIGNAL", "Not enough Bitcoin data right now to read the market.", ["Bitcoin price history is unavailable"],
+                    ("WAIT", "without a reading, do not enter on this app's say-so."))
 
     def pct(v):
         return "n/a" if v is None else f"{v:+.1f}%"
@@ -123,44 +129,59 @@ def assess(coins_data, klines_by_coin=None, wyckoff_by_coin=None, total_change_2
     if wild:
         n, c = wild[0]
         return _fmt("HIGH VOLATILITY", f"{n} is swinging about {c['range_ratio']:.1f}× more than a normal day, so signals are less reliable; "
-                    "trade smaller or wait for it to calm down.", why + [f"{n} 24h range {c['range_24h']:.1f}% vs normal {c['normal_range']:.1f}%"])
+                    "trade smaller or wait for it to calm down.", why + [f"{n} 24h range {c['range_24h']:.1f}% vs normal {c['normal_range']:.1f}%"],
+                    ("BAD", "prices jump around, so a bad fill or a stop-out is more likely; wait for calmer moves."))
 
     # 2. still near the highs, but the topping-pattern detector says big sellers are unloading
     w = wyckoff_by_coin.get("BTC") or {}
     if btc["near_high"] and w.get("stage") in ("utad", "sow", "lpsy") and w.get("confidence") != "LOW":
         return _fmt("DISTRIBUTION", "Price is still high, but large holders look like they are selling into it (a topping pattern); "
-                    "the rise may be running out of steam.", why + [f"Bitcoin chart pattern: {w.get('stage')} ({w.get('confidence')})"])
+                    "the rise may be running out of steam.", why + [f"Bitcoin chart pattern: {w.get('stage')} ({w.get('confidence')})"],
+                    ("BAD", "buying near a top is the classic mistake; avoid new buys here."))
 
     # 3. a new 30-day high on a green day
     for n, c in (("Bitcoin", btc), ("Ethereum", eth)):
         if c["at_high"] and (c["pct_24h"] or 0) > 0:
             vol = " with above-normal trading volume" if (c["vol_ratio"] or 0) >= 1.2 else ""
             return _fmt("BREAKOUT", f"{n} just pushed to a new 30-day high{vol}: buyers broke through the recent ceiling. "
-                        "Breakouts can fail, so wait to see it hold." + others_note(True), why + [f"{n} is at its 30-day high"])
+                        "Breakouts can fail." + others_note(True), why + [f"{n} is at its 30-day high"],
+                        ("WAIT", "chasing a fresh high often gets reversed; a better entry is after it holds above the old ceiling or dips back to it."))
+
+    res_btc = (by_key.get("BTC") or {}).get("resistance_30d")
 
     # 4/5. clear direction
     if btc["trend"] == "up" and eth["trend"] != "down":
+        entry = ("GOOD", "the trend is up, so buying small dips has the odds on its side; still use a stop.")
+        if btc["price"] and res_btc and btc["price"] >= 0.97 * res_btc:
+            entry = ("WAIT", "the trend is up but price is right at its 30-day high; a small dip is a safer place to buy.")
+        elif total_change_24h is not None and total_change_24h <= WEAK_MARKET_24H:
+            entry = ("WAIT", "the trend is up but the wider market is falling today; wait for it to steady.")
         return _fmt("BULLISH TREND", "Buyers are stronger: Bitcoin is above its 50- and 200-day average prices and rising over the past week and month."
-                    + others_note(True), why)
+                    + others_note(True), why, entry)
     if btc["trend"] == "down" and eth["trend"] != "up":
-        return _fmt("BEARISH TREND", "Sellers are stronger: Bitcoin is below its long-term average prices and falling, so buying dips is riskier."
-                    + others_note(False), why)
+        return _fmt("BEARISH TREND", "Sellers are stronger: Bitcoin is below its long-term average prices and falling."
+                    + others_note(False), why, ("BAD", "catching a falling market usually loses money; wait until it stops making new lows."))
 
     # 6/7. no clear trend
     if btc["trend"] in ("up", "down") and eth["trend"] in ("up", "down") and btc["trend"] != eth["trend"]:
-        return _fmt("NO CLEAR SIGNAL", "Bitcoin and Ethereum are pointing in opposite directions, so there is nothing reliable to read right now.", why)
+        return _fmt("NO CLEAR SIGNAL", "Bitcoin and Ethereum are pointing in opposite directions, so there is nothing reliable to read right now.", why,
+                    ("WAIT", "with no agreement there is no edge; wait for both to point the same way."))
     flat = abs(btc["pct_7d"] or 0) <= SIDEWAYS_7D and abs(btc["pct_30d"] or 0) <= SIDEWAYS_30D
     active = (btc["range_ratio"] or 0) >= ACTIVE_RATIO or (btc["vol_ratio"] or 0) >= ACTIVE_RATIO
     if flat and active:
         return _fmt("SCALPING CONDITIONS", "Short-term moves are active but there is no larger trend: only quick, small trades make sense, "
-                    "and trading fees eat much of them.", why)
+                    "and trading fees eat much of them.", why,
+                    ("WAIT", "not a good time for a normal buy-and-hold entry; only quick, small trades, and fees take a big share."))
     if flat:
-        return _fmt("SIDEWAYS", "Buyers and sellers are balanced: price is drifting in a range with no clear direction yet.", why)
-    return _fmt("NO CLEAR SIGNAL", "Signs are mixed (some up, some down), so there is no dominant direction to read.", why)
+        return _fmt("SIDEWAYS", "Buyers and sellers are balanced: price is drifting in a range with no clear direction yet.", why,
+                    ("WAIT", "no edge in the middle of a range; better to wait for a breakout, or buy only near the bottom of the range."))
+    return _fmt("NO CLEAR SIGNAL", "Signs are mixed (some up, some down), so there is no dominant direction to read.", why,
+                    ("WAIT", "wait for a clearer direction."))
 
 
 def line_html(status, esc):
     """Compact one-line HTML; the reasons sit behind the (i) tip so the line itself stays one sentence."""
-    tip = "How this was decided: " + "; ".join(status["why"]) + ". Simple rules on Bitcoin/Ethereum trend, volatility, volume and 30-day highs; educational, not advice."
+    tip = ("How this was decided: " + "; ".join(status["why"]) + ". Simple rules on Bitcoin/Ethereum trend, volatility, volume and 30-day highs. "
+           "The entry verdict is about buying (not shorting) and is a rule of thumb, not a prediction or advice: none of it is proven to make money.")
     return (f'<div class="market-status ms-{status["css"]}"><span class="ms-text">{esc(status["line"])}</span>'
             f'<span class="info-tip" tabindex="0" data-tip="{esc(tip)}">&#9432;</span></div>')

@@ -74,5 +74,39 @@ class StatusTests(unittest.TestCase):
         self.assertEqual(h.count("MARKET STATUS"), 1)
 
 
+class EntryVerdictTests(unittest.TestCase):
+    def st(self, btc, eth, **kw):
+        return MS.assess([btc, eth], {"BTC": klines(), "ETH": klines()}, kw.get("wy", {}), kw.get("total"))
+
+    def test_bullish_mid_range_is_a_good_time(self):
+        r = self.st(coin("BTC", price=100, res=130), coin("ETH"))
+        self.assertEqual((r["state"], r["entry"]), ("BULLISH TREND", "GOOD"))
+        self.assertIn("Entry: ✅ GOOD TIME", r["line"])
+
+    def test_bullish_but_right_under_the_high_says_wait_for_a_dip(self):
+        r = self.st(coin("BTC", price=127, res=130, p24=-0.3), coin("ETH"))          # 97% of the high, red day: not a breakout
+        self.assertEqual((r["state"], r["entry"]), ("BULLISH TREND", "WAIT"))
+
+    def test_bullish_with_a_falling_wider_market_waits(self):
+        self.assertEqual(self.st(coin("BTC"), coin("ETH"), total=-3.0)["entry"], "WAIT")
+
+    def test_breakout_is_not_a_chase_entry(self):
+        self.assertEqual(self.st(coin("BTC", price=130, res=130, p24=2.0), coin("ETH"))["entry"], "WAIT")
+
+    def test_bearish_distribution_and_volatile_are_bad_times(self):
+        self.assertEqual(self.st(coin("BTC", price=80, p7=-4, p30=-10), coin("ETH", price=80, p7=-5, p30=-12))["entry"], "BAD")
+        wy = {"BTC": {"stage": "utad", "confidence": "MEDIUM"}}
+        self.assertEqual(self.st(coin("BTC", price=125, res=130, p24=-0.5), coin("ETH"), wy=wy)["entry"], "BAD")
+        self.assertEqual(self.st(coin("BTC", price=100, hi=106, lo=98), coin("ETH"))["entry"], "BAD")
+
+    def test_no_data_never_says_good(self):
+        self.assertEqual(MS.assess([], {}, {}, None)["entry"], "WAIT")
+
+    def test_every_state_has_an_entry_verdict_and_line_stays_one_line(self):
+        for r in (self.st(coin("BTC"), coin("ETH")), self.st(coin("BTC"), coin("ETH", price=80, p7=-5, p30=-10))):
+            self.assertIn(r["entry"], ("GOOD", "WAIT", "BAD"))
+            self.assertNotIn(chr(10), r["line"])
+
+
 if __name__ == "__main__":
     unittest.main()
