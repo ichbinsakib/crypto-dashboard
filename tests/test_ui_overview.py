@@ -58,6 +58,16 @@ class OverviewTests(unittest.TestCase):
         self.assertEqual(h.count("coin-details"), 2)
         self.assertIn("Bitcoin", h)
 
+    def test_signals_legend_explains_what_the_table_actually_shows(self):
+        import re
+        h = self.p["screener"]["html"]
+        text = " ".join(re.findall(r">([^<>]+)<", h[h.index("What the labels mean"):]))
+        for needle in ("TREND BREAKOUT", "MOMENTUM BREAKOUT", "Trailing stop", "Expected duration", "Why it qualified", "Details", "Follow",
+                       "Above 200 avg", "Fresh"):
+            self.assertIn(needle, text, needle)
+        self.assertIn("92 hours", text)                                   # the same figure the table rows show
+        self.assertNotIn("What the score labels mean", h)
+
     def test_tab_names(self):
         self.assertIn("Signals", self.p["screener"]["title"])
         self.assertEqual(self.p["bigcoins"]["title"], "\U0001FA99 Market")

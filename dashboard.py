@@ -2042,23 +2042,37 @@ def render(coins_data, fng_value, fng_classification, generated_at, any_stale,
     intraday_live_cards_json = json.dumps(intraday_live_cards)
     intraday_live_cards = []  # table rows are static; their prices refresh through the app shell's poller
 
+    _th = momentum_mod.TREND_HOLD_HOURS
+    _chips_trend = ", ".join(_esc(n) for n, _t in TREND_WHY)
+    _chips_mom = ", ".join(_esc(n) for n, _t in MOM_WHY)
+    legend_html = (
+        '<details class="fold" style="margin-top:10px;"><summary>What the labels mean</summary>'
+        '<div class="cycle-map spot-signal-card" style="margin-top:10px;">'
+        '<table class="signal-table score-legend no-stack" style="margin-top:0; margin-bottom:0;">'
+        '<thead><tr><th>What you see</th><th>What it means</th></tr></thead><tbody>'
+        '<tr><td><span class="badge bullish">&#128200; TREND BREAKOUT</span><div class="wl-note">3/3 checks</div></td>'
+        '<td class="watch">A 4-hour candle closed above its recent high (the last 55 candles, about 9 days) while the price is above its 200-candle average, '
+        'and it happened within the last hour. All three checks must pass: ' + _chips_trend + '.</td></tr>'
+        '<tr><td><span class="badge bullish">&#128640; MOMENTUM BREAKOUT</span><div class="wl-note">N/7 checks</div></td>'
+        '<td class="watch">Older 15-minute and 1-hour calls (new ones are switched off). Price broke its recent high with trend and volume behind it: ' + _chips_mom + '. '
+        'These have a fixed stop and two fixed targets.</td></tr>'
+        '<tr><td><b>Type / Timeframe / Time</b></td><td class="watch">Which kind of signal, the chart it was found on, and when it opened (in your local time).</td></tr>'
+        '<tr><td><b>Price now / Entry</b></td><td class="watch">Price now updates live. Entry is the price when the signal opened.</td></tr>'
+        '<tr><td><b>Stop</b></td><td class="watch">The exit if the trade goes wrong. For Trend calls it starts 4 ATR below entry (ATR = the coin&rsquo;s typical move per candle) and then rises with the price.</td></tr>'
+        '<tr><td><b>Trailing stop</b></td><td class="watch">Trend calls have no fixed target. The stop follows the highest price since entry, and you exit when the price falls 4 ATR below it, so winners can keep running.</td></tr>'
+        f'<tr><td><b>Expected duration</b></td><td class="watch">From the 2-year back-test of this rule: about {_th["median"]} hours (~{_th["median"] / 24:.0f} days), most trades {_th["p25"]}&ndash;{_th["p75"]} hours. '
+        f'Losing trades usually end after ~{_th["loser_median"]} h, winners run ~{_th["winner_median"]} h. A history, not a promise.</td></tr>'
+        '<tr><td><b>Why it qualified</b></td><td class="watch">The checks that passed. Hover or tap a chip for its meaning.</td></tr>'
+        '<tr><td><b>Details</b></td><td class="watch">Opens a readout for the coin: price change, volume, order-book balance, funding, typical move size and more. &ldquo;n/a&rdquo; means no data for that coin.</td></tr>'
+        '<tr><td><b>Follow</b></td><td class="watch">Saves the coin to My Picks in this browser.</td></tr>'
+        '<tr><td><b>Older dip-buy labels</b></td><td class="watch">Dip-buy signals are switched off. Calls opened earlier may still show NEAR-TERM DIP ZONE, LEAN LONG, NO CLEAR EDGE or STRETCHED until they finish.</td></tr>'
+        '</tbody></table></div></details>')
+
     screener_panel = f"""
 <div class="panel panel-screener">
   {scanner_html}
 
-  <details class="fold" style="margin-top:10px;"><summary>What the score labels mean</summary>
-  <div class="cycle-map spot-signal-card" style="margin-top:10px;">
-    <table class="signal-table score-legend" style="margin-top:0; margin-bottom:0;">
-      <thead><tr><th>Score range</th><th>Label</th><th>What it means</th></tr></thead>
-      <tbody>
-        <tr><td>&ge; +4</td><td><span class="badge bullish">🟢 NEAR-TERM DIP ZONE</span></td><td class="watch">Near the low with improving momentum -- the confirmed-signal tier tracked in Performance</td></tr>
-        <tr><td>+1 to +3</td><td><span class="badge bullish">🟢 LEAN LONG</span></td><td class="watch">Mildly favorable, not a strong signal on its own</td></tr>
-        <tr><td>-1 to 0</td><td><span class="badge neutral">🟡 NO CLEAR EDGE</span></td><td class="watch">Choppy, no clean setup right now</td></tr>
-        <tr><td>&le; -2</td><td><span class="badge bearish">🔴 STRETCHED</span></td><td class="watch">Extended on this timeframe; poor risk/reward to chase</td></tr>
-      </tbody>
-    </table>
-  </div>
-  </details>
+  {legend_html}
 </div>
 """
 
