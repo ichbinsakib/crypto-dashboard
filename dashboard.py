@@ -90,6 +90,9 @@ ROUND_TRIP_FEE_PCT = 0.2  # assumed buy+sell cost, as % of position size -- Bina
                             # discount or volume-tier reduction applied. Purely a rough estimate
                             # for showing what a target is actually worth after trading costs;
                             # real fees vary by exchange, fee tier, and discount.
+# Dip-buy signals are retired: on data they were not tuned on they averaged about -3.7% per trade (backtest/run.py).
+# Calls already open still show and resolve; nothing new is opened unless DIP_SIGNALS=1.
+DIP_SIGNALS_ENABLED = os.environ.get("DIP_SIGNALS", "0") == "1"
 MIN_NET_PROFIT_PCT = float(os.environ.get("MIN_NET_PROFIT_PCT", "3.0"))  # owner rule: target 1 must earn at least this much AFTER fees.
 #   Was 0.15; 3.0 means only setups with a real move ahead are shown. Minimum net-of-fee profit target1 must clear for a signal to be
                             # considered tradeable at all -- added after a live example showed
@@ -1076,7 +1079,7 @@ INTRADAY_TIMEFRAMES = {
 INTRADAY_RATE_LIMIT_DELAY = 0.15
 
 
-def fetch_binance_ohlc(symbol, interval):
+def fetch_binance_ohlc(symbol, interval, limit=100):
     """Binance.com is almost entirely USDT-quoted (491 trading pairs vs. 7 native-USD ones,
     checked against exchangeInfo), so USDT is tried first with USD as a fallback -- an
     invalid symbol is a 4xx from Binance, which http_get_json turns into an exception, so the
@@ -1086,7 +1089,7 @@ def fetch_binance_ohlc(symbol, interval):
     last_err = None
     for quote in ("USDT", "USD"):
         pair = f"{symbol}{quote}"
-        url = f"{BINANCE_KLINES_URL}?symbol={pair}&interval={interval}&limit=100"
+        url = f"{BINANCE_KLINES_URL}?symbol={pair}&interval={interval}&limit={limit}"
         try:
             data = http_get_json(url)
         except Exception as e:
@@ -1782,8 +1785,8 @@ def render(coins_data, fng_value, fng_classification, generated_at, any_stale,
       </details>
     </div>"""
 
-    TF_LABEL = {"15m": "15 Min", "1h": "1 Hour", "daily": "1 Day"}
-    TF_ORDER = ["15m", "1h", "daily"]
+    TF_LABEL = {"15m": "15 Min", "1h": "1 Hour", "4h": "4 Hour", "daily": "1 Day"}
+    TF_ORDER = ["15m", "1h", "4h", "daily"]
     FACTOR_COLS = [("Price vs. recent range", "Range"), ("Momentum vs. short-term average", "Momentum"),
                    ("Direction over this window", "Direction"), ("Volume confirmation", "Volume"),
                    ("Broader trend filter", "Trend")]
@@ -1797,7 +1800,20 @@ def render(coins_data, fng_value, fng_classification, generated_at, any_stale,
             out += f'<span class="why-chip {cls}" title="{_esc(tip)}">{_esc(txt)}</span>'
         return out
 
-    TYPE_TAG = {"dip": '<span class="type-tag dip">&#127919; Dip buy</span>', "mom": '<span class="type-tag mom">&#128640; Momentum</span>'}
+    TYPE_TAG = {"dip": '<span class="type-tag dip">&#127919; Dip buy</span>', "mom": '<span class="type-tag mom">&#128640; Momentum</span>',
+               "trend": '<span class="type-tag mom">&#128200; Trend</span>'}
+
+    def _tgt(v):
+        return "trailing" if v is None else fmt_usd_adaptive(v)
+
+    def _target_attr(t1, t2):
+        return "trailing stop, no fixed target" if t1 is None else f"{fmt_usd_adaptive(t1)} / {fmt_usd_adaptive(t2)}"
+
+    def _target_cells(t1, t2, n1, n2):
+        if t1 is None:
+            return '<td class="pos" colspan="2">Trailing stop<span class="wl-note">exit when price falls 4 ATR below its high since entry; no fixed target</span></td>'
+        return (f'<td class="pos">{fmt_usd_adaptive(t1)}<span class="wl-note">{fmt_net_fee_html(n1)}</span></td>'
+                f'<td class="pos">{fmt_usd_adaptive(t2)}<span class="wl-note">{fmt_net_fee_html(n2)}</span></td>')
 
     NCOLS = 13
 
@@ -1833,13 +1849,12 @@ def render(coins_data, fng_value, fng_classification, generated_at, any_stale,
         return (
             f'<tr data-follow="1" data-name="{_esc(name)} ({_esc(symbol)})" data-status="{status}" data-label="{_esc(data_label)}" '
             f'data-price="{fmt_usd_adaptive(price)}" data-plain="{_esc(plain)}" data-entry="{fmt_usd_adaptive(t_entry)}" '
-            f'data-stop="{fmt_usd_adaptive(t_stop)}" data-target="{fmt_usd_adaptive(t_t1)} / {fmt_usd_adaptive(t_t2)}">'
+            f'data-stop="{fmt_usd_adaptive(t_stop)}" data-target="{_target_attr(t_t1, t_t2)}">'
             f'<td><b>{_esc(name)}</b><span class="wl-note">{_esc(symbol)}</span>{note_html}</td>'
             f'<td>{TYPE_TAG[kind]}</td><td><b>{TF_LABEL.get(tf_key, tf_key)}</b></td>{_time_cell(ts_iso)}<td>{label_html}</td>'
             f'<td data-px="{_esc(symbol)}">{fmt_usd_adaptive(price)}</td><td>{fmt_usd_adaptive(t_entry)}</td>'
             f'<td class="neg">{fmt_usd_adaptive(t_stop)}<span class="wl-note">{risk_pct:.1f}% below</span></td>'
-            f'<td class="pos">{fmt_usd_adaptive(t_t1)}<span class="wl-note">{fmt_net_fee_html(net1)}</span></td>'
-            f'<td class="pos">{fmt_usd_adaptive(t_t2)}<span class="wl-note">{fmt_net_fee_html(net2)}</span></td>'
+            f'{_target_cells(t_t1, t_t2, net1, net2)}'
             f'<td class="why-cell">{why_html}</td><td>{det_btn}</td>'
             f'<td><button class="follow-btn" data-key="{follow_key}" data-tf="{follow_tf}" title="Follow this pick: saves it to My Picks until you remove it">&#9734; Follow</button></td></tr>'
             + detail)
@@ -1862,7 +1877,17 @@ def render(coins_data, fng_value, fng_classification, generated_at, any_stale,
     MOM_WHY = [("Breakout", "Closed above the previous high"), ("Fresh", "Just broke out, not yet run away"), ("Trend", "Price above rising 20/50 averages"),
                ("Volume", "Volume above 1.3x normal"), ("Not parabolic", "Not an overextended vertical move"), ("No distribution", "No Wyckoff topping pattern")]
 
+    TREND_WHY = [("Breakout", "Closed a 4h candle above the prior 80-candle high"), ("Above 200 avg", "Price above its 200-candle average"),
+                 ("Fresh", "The breakout candle closed within the last hour")]
+
     def _mom_row(pos):
+        if pos.get("kind") == "trend":
+            follow_key = f"mom-{pos['tf']}:{pos['coin']}"
+            label = '<span class="badge bullish">&#128200; TREND BREAKOUT</span><span class="wl-note">3/3 checks &middot; experimental</span>'
+            return _scan_row("trend", pos["tf"], str(pos.get("name") or pos["coin"]), pos["coin"], label, pos["entry"], pos["entry"], pos["stop"], None, None,
+                             pos.get("risk_pct") or 0, None, None, _chips([(n, None, tip) for n, tip in TREND_WHY]), "", pos["opened_at"], follow_key, follow_key,
+                             "4-Hour trend", "bullish", "Slow trend breakout: a 4h candle closed above its 80-candle high while above the 200-candle average; exit by trailing stop.",
+                             "TREND BREAKOUT", "TREND BREAKOUT", "3/3 checks")
         follow_key = f"mom-{pos['tf']}:{pos['coin']}"
         tf_label = {"15m": "15-Minute", "1h": "1-Hour"}.get(pos["tf"], pos["tf"])
         entry = pos["entry"]
@@ -1887,7 +1912,7 @@ def render(coins_data, fng_value, fng_classification, generated_at, any_stale,
                     continue
                 rows.append((TF_ORDER.index(tf), 0, -r["score"], _dip_row(r, tf)))
         for pos in mom.get("open", {}).values():
-            if (pos.get("net1") or 0) < MIN_NET_PROFIT_PCT:
+            if pos.get("kind") != "trend" and (pos.get("net1") or 0) < MIN_NET_PROFIT_PCT:
                 hidden_old += 1
                 continue
             rows.append((TF_ORDER.index(pos["tf"]) if pos["tf"] in TF_ORDER else 9, 1, 0, _mom_row(pos)))
@@ -1899,7 +1924,7 @@ def render(coins_data, fng_value, fng_classification, generated_at, any_stale,
         if rows:
             body = f'<div class="wl-scroll"><table class="signal-table dip-table"><thead>{head}</thead><tbody>' + "".join(x[3] for x in rows) + "</tbody></table></div>"
         else:
-            body = ('<div class="sub">&#9888; No confirmed setups right now &mdash; no coin is in a valid dip-buy zone and none has just broken out with trend and volume. '
+            body = ('<div class="sub">&#9888; No confirmed setups right now &mdash; no coin has just broken out with trend and volume. '
                     'Quality over quantity: an empty table means no strong signal, not a fetch problem. Checking again next cycle.</div>')
         miss_rows = []
         for tf in TF_ORDER:
@@ -1928,10 +1953,10 @@ def render(coins_data, fng_value, fng_classification, generated_at, any_stale,
         return f"""
 <div class="card wl-card" style="margin-bottom:12px;">
   <div class="card-title">&#127919; &#128640; SIGNAL SCANNER &middot; CONFIRMED SIGNALS<span class="info-tip" tabindex="0" data-tip="{_esc(tip)}">&#9432;</span></div>
-  <div class="sub">Confirmed now: <b>{n_dip}</b> &#127919; dip buy{'s' if n_dip != 1 else ''}, <b>{n_mom}</b> &#128640; momentum.</div>
+  <div class="sub">Confirmed now: <b>{n_mom}</b> breakout signal{'s' if n_mom != 1 else ''}{(', plus <b>' + str(n_dip) + '</b> older dip call' + ('s' if n_dip != 1 else '') + ' still being tracked') if n_dip else ''}. New dip-buy signals are switched off.</div>
   <details class="fold"><summary>How to read this</summary>
-    <div class="sub"><b>&#127919; Dip buy</b> = near the low of its range, bouncing. <b>&#128640; Momentum</b> = just broke to a new high with trend and volume (experimental).</div>
-    <div class="sub">In back-tests neither type showed a proven edge after fees (dip signals averaged below zero on a small sample; momentum about break-even), so treat every row as unproven and judge them by their records.</div>
+    <div class="sub"><b>&#128640; Momentum</b> (15m/1h) = just broke to a new high with trend and volume, fixed stop and 3%+ target. <b>&#128200; Trend</b> (4h) = closed above its 80-candle high while above the 200-candle average; exit by a trailing stop (4 ATR), no fixed target. Expect roughly 1 win in 3, with winners larger than losers.</div>
+    <div class="sub"><b>Dip buys were retired:</b> tested on 2 years of data they had not been tuned on, they averaged about &minus;3.7% per trade. Momentum was about break-even and the 4h trend rule only marginally positive (about +0.3% to +0.6% per trade), so treat every row as unproven and judge them by their records.</div>
   </details>
   {body}
   {('<div class="sub" style="margin-top:8px;">' + str(hidden_old) + ' earlier call' + ('s' if hidden_old != 1 else '') + ' opened before the ' + f'{MIN_NET_PROFIT_PCT:g}' + '% minimum-profit rule ' + ('are' if hidden_old != 1 else 'is') + ' hidden here and still tracked in Performance.</div>') if hidden_old else ''}
@@ -1992,13 +2017,13 @@ def render(coins_data, fng_value, fng_classification, generated_at, any_stale,
 
     _mom_state = momentum_state or {}
     _dip_resolved = [{**r, "kind": "dip"} for r in pnl_state.get("resolved", [])]
-    _mom_resolved = [{**r, "kind": "mom"} for r in _mom_state.get("resolved", [])]
+    _mom_resolved = [{**r, "kind": "trend" if r.get("tf") == "4h" else "mom"} for r in _mom_state.get("resolved", [])]
     _all_resolved = _dip_resolved + _mom_resolved
     stats_all = compute_pnl_stats(_all_resolved)
     stats_dip = compute_pnl_stats(_dip_resolved)
     stats_mom = compute_pnl_stats(_mom_resolved)
     _open_all = ([{**v, "kind": "dip"} for v in pnl_state.get("open", {}).values()]
-                 + [{**v, "kind": "mom"} for v in _mom_state.get("open", {}).values()])
+                 + [{**v, "kind": "trend" if v.get("tf") == "4h" else "mom"} for v in _mom_state.get("open", {}).values()])
 
     def _avg_net_30d(rows):
         cutoff = datetime.datetime.now() - datetime.timedelta(days=30)
@@ -2040,10 +2065,10 @@ def render(coins_data, fng_value, fng_classification, generated_at, any_stale,
     pnl_open = _open_all
     if pnl_open:
         open_rows = "".join(
-            f'<tr><td>{p["name"]} ({p["coin"]})</td><td>{TYPE_TAG[p["kind"]]}</td><td class="watch">{ {"15m": "15-Minute", "1h": "1-Hour", "daily": "Daily"}.get(p["tf"], p["tf"]) }</td>'
+            f'<tr><td>{p["name"]} ({p["coin"]})</td><td>{TYPE_TAG[p["kind"]]}</td><td class="watch">{ {"15m": "15-Minute", "1h": "1-Hour", "4h": "4-Hour", "daily": "Daily"}.get(p["tf"], p["tf"]) }</td>'
             f'<td class="watch">{fmt_time_ago(p["opened_at"])}</td>'
             f'<td>{fmt_usd_adaptive(p["entry"])}</td><td class="neg">{fmt_usd_adaptive(p["stop"])}</td>'
-            f'<td class="pos">{fmt_usd_adaptive(p["target1"])}</td></tr>'
+            f'<td class="pos">{_tgt(p["target1"])}</td></tr>'
             for p in sorted(pnl_open, key=lambda x: x["opened_at"], reverse=True)
         )
         open_positions_html = f"""
@@ -2065,11 +2090,11 @@ def render(coins_data, fng_value, fng_classification, generated_at, any_stale,
                          "loss": '<span class="badge bearish">LOSS</span>',
                          "expired": '<span class="badge neutral">EXPIRED</span>'}
         resolved_rows = "".join(
-            f'<tr data-coin="{r["coin"].lower()}"><td>{r["name"]} ({r["coin"]})</td><td>{TYPE_TAG[r["kind"]]}</td><td class="watch">{ {"15m": "15-Minute", "1h": "1-Hour", "daily": "Daily"}.get(r["tf"], r["tf"]) }</td>'
+            f'<tr data-coin="{r["coin"].lower()}"><td>{r["name"]} ({r["coin"]})</td><td>{TYPE_TAG[r["kind"]]}</td><td class="watch">{ {"15m": "15-Minute", "1h": "1-Hour", "4h": "4-Hour", "daily": "Daily"}.get(r["tf"], r["tf"]) }</td>'
             f'<td class="watch">{fmt_time_ago(r["opened_at"])}</td>'
             f'<td>{fmt_usd_adaptive(r["entry"])}</td>'
             f'<td class="neg">{fmt_usd_adaptive(r["stop"])}</td>'
-            f'<td class="pos">{fmt_usd_adaptive(r["target1"])}</td>'
+            f'<td class="pos">{_tgt(r["target1"])}</td>'
             f'<td class="{"pos" if r["result"] == "win" else ("neg" if r["result"] == "loss" else "")}">{fmt_usd_adaptive(r.get("exit_price"))}</td>'
             f'<td>{result_badge.get(r["result"], r["result"])}</td>'
             f'<td class="watch">{fmt_duration_hours((datetime.datetime.fromisoformat(r["resolved_at"]) - datetime.datetime.fromisoformat(r["opened_at"])).total_seconds() / 3600)}</td></tr>'
@@ -2883,7 +2908,7 @@ def main():
     near_misses = {}
     for tf_key in INTRADAY_TIMEFRAMES:
         tf_open_count = sum(1 for p in prev_pnl_open.values() if p["tf"] == tf_key)
-        if tf_open_count == 0:
+        if tf_open_count == 0 and DIP_SIGNALS_ENABLED:
             raw = build_intraday_screener(screener_pool or screener_markets, tf_key, target_count=PNL_BATCH_SIZE)
             intraday_results[tf_key] = [r for r in raw if r.get("status") == "bullish"
                                          and r.get("score", 0) >= STRONG_INTRADAY_SCORE]
@@ -2891,6 +2916,9 @@ def main():
                 near_misses[tf_key] = pick_near_misses(raw)
             log(f"Intraday {tf_key}: previous batch complete, opened new batch of "
                 f"{len(intraday_results[tf_key])} confirmed signal(s)")
+        elif tf_open_count == 0:
+            intraday_results[tf_key] = []
+            log(f"Intraday {tf_key}: dip signals retired, not scanning")
         else:
             intraday_results[tf_key] = []
             log(f"Intraday {tf_key}: batch in progress ({tf_open_count} still open), "
@@ -2988,7 +3016,7 @@ def main():
                 if (_r["trade"].get("target1_net_pct") or 0) >= MIN_NET_PROFIT_PCT:
                     todo.append((f"{_tf}:{_r['symbol']}", _r["symbol"], INTRADAY_TIMEFRAMES[_tf]["interval"], INTRADAY_TIMEFRAMES[_tf]["lookback"], _r["price"]))
         for _p in new_momentum.get("open", {}).values():
-            if (_p.get("net1") or 0) >= MIN_NET_PROFIT_PCT:
+            if _p.get("kind") == "trend" or (_p.get("net1") or 0) >= MIN_NET_PROFIT_PCT:
                 _cfg = momentum_mod.MOMENTUM_TIMEFRAMES[_p["tf"]]
                 todo.append((f"mom-{_p['tf']}:{_p['coin']}", _p["coin"], _cfg["interval"], _cfg["lookback"], _p["entry"]))
         for _key, _sym, _iv, _lb, _px in todo:
