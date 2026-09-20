@@ -31,16 +31,18 @@ class OverviewTests(unittest.TestCase):
     def setUpClass(cls):
         cls.p = build()
 
-    def test_status_card_comes_before_the_grouped_alerts_then_watch_cards(self):
+    def test_one_narrow_band_with_status_then_alerts_then_watch(self):
         h = self.p["_meta"]["html"]
-        self.assertLess(h.index("ms-card"), h.index("alert-box"))
-        self.assertLess(h.index("alert-box"), h.index("watch-strip"))
-        self.assertEqual(h.count("alert-box-title"), 1)                 # one box, not a wall of banners
+        self.assertEqual(h.count('class="ov-band"'), 1)                   # one band, not three stacked sections
+        self.assertLess(h.index("ov-status"), h.index("ov-alerts"))
+        self.assertLess(h.index("ov-alerts"), h.index("ov-watch"))
+        self.assertEqual(h.count('class="ov-row'), 3)
+        self.assertNotIn("alert-box", h)
 
     def test_alerts_use_short_plain_wording(self):
         h = self.p["_meta"]["html"]
         self.assertIn("Breakout", h)
-        self.assertIn("Above its 30-day ceiling", h)
+        self.assertIn("Above its 30-day ceiling", h)                       # kept as the chip's hover/long-press text
         self.assertIn("Above $83,000", h)
         self.assertNotIn("resistance", h.lower())
 

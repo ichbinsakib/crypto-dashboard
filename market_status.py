@@ -232,6 +232,19 @@ def card_html(status, esc):
             f'<span class="ms-e-why">\u00B7 {esc(status["entry_short"])}</span></div></div>')
 
 
+def row_html(status, esc):
+    """The status as one compact row (headline, short sentence, entry verdict) for the merged overview band."""
+    tip = ("How this was decided: " + "; ".join(status["why"]) + ". Entry: " + status["entry_text"] +
+           " Simple rules on Bitcoin/Ethereum trend, volatility, volume and 30-day highs. The entry verdict is about buying "
+           "(not shorting) and is a rule of thumb, not a prediction or advice: none of it is proven to make money.")
+    return (f'<div class="ov-row ov-status ms-{status["css"]}" role="status">'
+            f'<span class="ms-title">{status["emoji"]} MARKET: {esc(status["title"])}</span>'
+            f'<span class="info-tip" tabindex="0" data-tip="{esc(tip)}">&#9432;</span>'
+            f'<span class="ov-sub">{esc(status["short"])}</span>'
+            f'<span class="ov-entry ms-e-{status["entry"].lower()}">Buying now: <b>{ENTRY[status["entry"]].split(" ", 1)[0]} {esc(status["entry_word"])}</b>'
+            f' <span class="ms-e-why">· {esc(status["entry_short"])}</span></span></div>')
+
+
 def line_html(status, esc):
     """Kept for compatibility: the card is the one place the status is drawn now."""
     return card_html(status, esc)

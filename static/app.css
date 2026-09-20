@@ -547,3 +547,32 @@ body:has(#tab-screener:checked) .watch-strip { display: block; }
   .top-grid[style*="1fr 1fr 1fr"] { grid-template-columns: repeat(3, minmax(0, 1fr)) !important; gap: 6px !important; }
   .top-grid[style*="1fr 1fr 1fr"] .card { min-width: 0; padding: 8px; overflow-wrap: anywhere; }
 }
+
+
+/* ===== One narrow overview band (replaces the three stacked sections) ===== */
+.ov-band { margin: 8px 16px 0; background: var(--panel); border: 1px solid var(--border); border-radius: 12px; padding: 2px 12px; }
+.ov-row { display: flex; flex-wrap: wrap; align-items: center; gap: 4px 10px; padding: 7px 0; font-size: 13px; }
+.ov-row + .ov-row { border-top: 1px dotted var(--border); }
+.ov-label { font-size: 11px; font-weight: 800; letter-spacing: 0.6px; color: var(--muted); min-width: 52px; }
+.ov-status .ms-title { font-size: 15px; font-weight: 800; }
+.ov-sub { color: var(--text); }
+.ov-entry { color: var(--muted); } .ov-entry b { color: var(--text); }
+.ov-entry.ms-e-good b { color: var(--green); } .ov-entry.ms-e-bad b { color: var(--red); } .ov-entry.ms-e-wait b { color: var(--yellow); }
+.ov-status .info-tip { margin: 0 6px 0 0; }
+.ov-chip { display: inline-flex; align-items: center; gap: 5px; padding: 3px 10px; border: 1px solid var(--border); border-left: 3px solid var(--st, var(--gray)); border-radius: 16px;
+  background: var(--inset); color: var(--text); font-size: 12.5px; font-weight: 600; text-decoration: none; white-space: nowrap; }
+a.ov-chip { cursor: pointer; } a.ov-chip:hover, a.ov-chip:focus-visible { border-color: var(--accent); outline: none; }
+.ov-chip .wc-action { position: static; font-size: 10.5px; padding: 1px 7px; }
+.ov-alert { background: var(--alert-bg); border-color: var(--bear-bd); border-left-color: var(--red); color: var(--alert-text); }
+.ov-price { font-variant-numeric: tabular-nums; }
+.watch-strip { display: none !important; }
+@media (max-width: 720px) {
+  .ov-band { margin: 8px 12px 0; padding: 2px 10px; }
+  .ov-row { font-size: 12.5px; padding: 6px 0; gap: 4px 6px; }
+  .ov-label { min-width: 0; width: 100%; font-size: 10.5px; }
+  .ov-watch { display: grid; grid-template-columns: 1fr 1fr; gap: 5px 6px; }
+  .ov-watch .ov-label { grid-column: 1 / -1; }
+  .ov-watch .ov-chip { white-space: normal; flex-wrap: wrap; min-width: 0; padding: 3px 8px; }
+  .ov-watch .ov-chip .wc-action { display: none; }
+  .ov-watch .ov-chip:last-child { grid-column: 1 / -1; }
+}

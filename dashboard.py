@@ -1467,43 +1467,37 @@ def render(coins_data, fng_value, fng_classification, generated_at, any_stale,
         m = re.search(r"\(([^)]*)\)", al["label"] or "")
         return al["coin"], f'{"Above" if above else "Below"} {fmt_usd(al["target"], 0)}', (m.group(1) if m else "")
 
-    banner_html = ""
-    if market_status:   # 1) one short status card comes first
-        banner_html += market_status_mod.card_html(market_status, _esc)
-    if triggered_now:   # 2) then any triggered alerts, grouped
-        lis = ""
-        for al in triggered_now:
-            coin_, head_, note_ = _alert_view(al)
-            lis += (f'<li><span class="al-coin">{_esc(coin_)}</span><span class="al-what"><b>{_esc(head_)}</b>'
-                    f'{f"<span class=al-note>{_esc(note_)}</span>" if note_ else ""}</span>'
-                    f'<span class="al-price">{fmt_usd(al["current_price"], 0)}</span></li>')
-        banner_html += f'<div class="alert-box"><div class="alert-box-title">&#128293; MARKET ALERTS</div><ul class="alert-list">{lis}</ul></div>'
-
-    def _watch_card(c_):
+    def _watch_chip(c_):
         cs = market_status_mod.coin_status(c_, (wyckoff_by_coin or {}).get(c_["key"]))
-        pr = c_.get("price")
-        ch = c_.get("pct_24h")
+        pr, ch = c_.get("price"), c_.get("pct_24h")
         price_txt = fmt_usd(pr, 0 if (pr or 0) >= 1000 else 2) if pr is not None else "n/a"
-        chg = (f'<span class="{"pos" if ch >= 0 else "neg"}">{ch:+.1f}%</span>') if ch is not None else ""
-        sub_id = "bc-" + c_["key"].lower()
-        return (f'<a class="watch-card ms-{cs["css"]}" role="button" tabindex="0" data-goto="bigcoins" data-sub="{sub_id}">'
-                f'<span class="wc-name">{_esc(c_.get("emoji", ""))} {_esc(c_["key"])}</span>'
-                f'<span class="wc-price">{price_txt} {chg}</span>'
-                f'<span class="wc-status">{cs["emoji"]} {_esc(cs["word"])}</span>'
-                f'<span class="wc-note">{_esc(cs["note"])}</span>'
-                f'<span class="wc-action wc-{cs["action"].lower()}">{cs["action"]}</span></a>')
+        chg = (f' <span class="{"pos" if ch >= 0 else "neg"}">{ch:+.1f}%</span>') if ch is not None else ""
+        return (f'<a class="ov-chip ms-{cs["css"]}" role="button" tabindex="0" data-goto="bigcoins" data-sub="bc-{c_["key"].lower()}" '
+                f'title="{_esc(cs["note"])}"><b>{_esc(c_["key"])}</b> {price_txt}{chg} {cs["emoji"]} {_esc(cs["word"].title())}'
+                f' <span class="wc-action wc-{cs["action"].lower()}">{cs["action"]}</span></a>')
 
     n_signals = (sum(1 for p_ in (momentum_state or {}).get("open", {}).values()
                      if p_.get("kind") == "trend" or (p_.get("net1") or 0) >= MIN_NET_PROFIT_PCT)
                  + sum(1 for rs_ in intraday_results.values() for r_ in rs_ if (r_["trade"].get("target1_net_pct") or 0) >= MIN_NET_PROFIT_PCT))
-    sig_card = (f'<a class="watch-card {"ms-bullish" if n_signals else "ms-none"}" role="button" tabindex="0" data-goto="screener">'
-                f'<span class="wc-name">&#127919; SIGNALS</span>'
-                f'<span class="wc-price">{n_signals if n_signals else "None"}</span>'
-                f'<span class="wc-status">{"Active now" if n_signals else "Nothing to act on"}</span>'
-                f'<span class="wc-note">{"Open the Signals tab" if n_signals else "Strong setups only"}</span></a>')
+    sig_chip = (f'<a class="ov-chip {"ms-bullish" if n_signals else "ms-none"}" role="button" tabindex="0" data-goto="screener" '
+                f'title="{"Open the Signals tab" if n_signals else "KAIRO only shows strong setups"}">&#127919; <b>Signals</b> '
+                f'{str(n_signals) + " active" if n_signals else "None"}</a>')
+
+    # One compact band instead of three stacked sections: status row, alerts row, watch row. Every chip opens its tab.
+    band = ""
+    if market_status:
+        band += market_status_mod.row_html(market_status, _esc)
+    if triggered_now:
+        chips = ""
+        for al in triggered_now:
+            coin_, head_, note_ = _alert_view(al)
+            chips += (f'<span class="ov-chip ov-alert" title="{_esc(note_)}"><b>{_esc(coin_)}</b> {_esc(head_)} '
+                      f'<span class="ov-price">{fmt_usd(al["current_price"], 0)}</span></span>')
+        band += f'<div class="ov-row ov-alerts"><span class="ov-label">&#128293; ALERTS</span>{chips}</div>'
     if coins_data:
-        banner_html += ('<div class="watch-strip"><div class="watch-title">WHAT TO WATCH</div><div class="watch-grid">'
-                        + "".join(_watch_card(c_) for c_ in coins_data) + sig_card + '</div></div>')
+        band += ('<div class="ov-row ov-watch"><span class="ov-label">WATCH</span>'
+                 + "".join(_watch_chip(c_) for c_ in coins_data) + sig_chip + '</div>')
+    banner_html = f'<div class="ov-band">{band}</div>' if band else ""
     screener_info_tip = (
         f'Scans the top {SCREENER_SIZE} coins by market cap (excluding stablecoins and BTC/ETH wrappers). '
         'Pick a timeframe below -- 15 Min, 1 Hour, and 1 Day all use the exact same rule-based model '

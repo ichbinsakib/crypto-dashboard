@@ -110,6 +110,16 @@ class EntryVerdictTests(unittest.TestCase):
             self.assertNotIn(chr(10), r["line"])
 
 
+class RowTests(unittest.TestCase):
+    def test_row_is_compact_and_has_the_entry_verdict(self):
+        r = MS.assess([coin("BTC"), coin("ETH")], {"BTC": klines(), "ETH": klines()}, {}, None)
+        h = MS.row_html(r, lambda s: s)
+        self.assertIn('class="ov-row ov-status ms-bullish"', h)
+        self.assertIn("MARKET: BULLISH", h)
+        self.assertIn("Buying now:", h)
+        self.assertNotIn(chr(10), h)
+
+
 class DisplayTests(unittest.TestCase):
     def test_short_text_is_short_and_plain(self):
         for r in (MS.assess([coin("BTC"), coin("ETH")], {"BTC": klines(), "ETH": klines()}, {}, None),
