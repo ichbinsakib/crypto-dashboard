@@ -31,6 +31,7 @@ import macro as macro_mod
 import momentum as momentum_mod
 import derivatives as deriv_mod
 import metrics as metrics_mod
+import market_status as market_status_mod
 import btc_dashboard as btc_dash
 import aster as aster_mod
 from brain import wyckoff as wyckoff_mod
@@ -1441,7 +1442,7 @@ def build_coin_data(coin, markets, fng_latest, fng_prev, state):
 
 def render(coins_data, fng_value, fng_classification, generated_at, any_stale,
            alerts_results=None, screener_results=None, intraday_results=None,
-           pnl_stats=None, pnl_state=None, near_misses=None, macro=None, wyckoff_by_coin=None, momentum_state=None, btc_extra=None, signal_metrics=None):
+           pnl_stats=None, pnl_state=None, near_misses=None, macro=None, wyckoff_by_coin=None, momentum_state=None, btc_extra=None, signal_metrics=None, market_status=None):
     total_stale = any_stale
     pnl_stats = pnl_stats or {"daily": {}, "weekly": {}, "monthly": {}}
     pnl_state = pnl_state or {}
@@ -1461,6 +1462,8 @@ def render(coins_data, fng_value, fng_classification, generated_at, any_stale,
             for i, a in enumerate(triggered_now)
         )
         banner_html = f'<div class="alert-banner">{items}</div>'
+    if market_status:   # one plain-language line about the overall market, directly under the alerts
+        banner_html += market_status_mod.line_html(market_status, _esc)
     screener_info_tip = (
         f'Scans the top {SCREENER_SIZE} coins by market cap (excluding stablecoins and BTC/ETH wrappers). '
         'Pick a timeframe below -- 15 Min, 1 Hour, and 1 Day all use the exact same rule-based model '
@@ -2989,9 +2992,11 @@ def main():
                        if (r["coin"], r["tf"], r["opened_at"]) not in prev_resolved_keys]
 
     wyckoff_by_coin = {}
+    klines_by_coin = {}
     for _c in coins_data:
         try:
-            wyckoff_by_coin[_c["key"]] = wyckoff_mod.detect_distribution(fetch_binance_ohlc(_c["key"], "1d"))
+            klines_by_coin[_c["key"]] = fetch_binance_ohlc(_c["key"], "1d")
+            wyckoff_by_coin[_c["key"]] = wyckoff_mod.detect_distribution(klines_by_coin[_c["key"]])
             _w = wyckoff_by_coin[_c["key"]]
             log(f"Wyckoff {_c['key']}: {_w['stage']} ({_w['confidence']})")
         except Exception as e:  # noqa: BLE001 - a missing candle series must not affect the rest
@@ -3026,6 +3031,14 @@ def main():
     except Exception as e:  # noqa: BLE001
         log(f"BTC dashboard extras skipped: {type(e).__name__}")
 
+    market_status_data = None
+    try:
+        _total = next((r.get("change_pct") for r in ((macro_snapshot or {}).get("rows") or []) if r.get("symbol") == "TOTAL"), None)
+        market_status_data = market_status_mod.assess(coins_data, klines_by_coin, wyckoff_by_coin, _total)
+        log(f"Market status: {market_status_data['line']}")
+    except Exception as e:  # noqa: BLE001 - the status line is extra; the dashboard must publish regardless
+        log(f"Market status skipped: {type(e).__name__}: {str(e)[:100]}")
+
     signal_metrics = {}
     try:
         macro_label = (macro_snapshot or {}).get("regime", {}).get("label") if macro_snapshot else None
@@ -3048,7 +3061,7 @@ def main():
 
     html, portions, spot_signals_by_coin = render(coins_data, fng_value, fng_classification, generated_at, any_stale,
                                          alerts_results, screener_results, intraday_results,
-                                         pnl_stats, new_pnl_state, near_misses, macro_snapshot, wyckoff_by_coin, new_momentum, btc_extra, signal_metrics)
+                                         pnl_stats, new_pnl_state, near_misses, macro_snapshot, wyckoff_by_coin, new_momentum, btc_extra, signal_metrics, market_status_data)
     with open(OUTPUT_PATH, "w", encoding="utf-8") as f:
         f.write(html)
     copy_static_assets()

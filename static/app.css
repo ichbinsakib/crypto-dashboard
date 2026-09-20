@@ -463,3 +463,13 @@ header { padding-top: calc(10px + var(--sat)); padding-left: calc(16px + var(--s
 .sc-facts span { color: var(--muted); } .sc-facts b { text-align: right; }
 .sc-foot { margin-top: 12px; }
 @media (max-width: 720px) { .sc-checks li { grid-template-columns: 22px 1fr; } .sc-checks li .sc-txt { grid-column: 2; } .sc-price { font-size: 26px; } }
+
+/* one-line market status under the alerts */
+.market-status { margin: 8px 16px 0; padding: 8px 12px; background: var(--panel); border: 1px solid var(--border); border-left: 4px solid var(--gray); border-radius: 10px;
+  font-size: 13px; line-height: 1.45; font-weight: 600; color: var(--text); display: flex; align-items: flex-start; gap: 8px; }
+.market-status .ms-text { flex: 1 1 auto; overflow-wrap: anywhere; }
+.market-status .info-tip { flex: 0 0 auto; margin-top: 2px; }
+.ms-bullish { border-left-color: var(--green); } .ms-bearish { border-left-color: var(--red); } .ms-breakout { border-left-color: #2563eb; }
+.ms-distribution { border-left-color: #7c3aed; } .ms-volatile { border-left-color: var(--yellow); } .ms-scalping { border-left-color: #ea580c; }
+.ms-sideways { border-left-color: #ca8a04; } .ms-none { border-left-color: var(--gray); }
+@media (max-width: 720px) { #banner .market-status { margin: 8px 12px 0; font-size: 12.5px; } }
