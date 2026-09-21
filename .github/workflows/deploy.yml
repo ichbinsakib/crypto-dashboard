@@ -33,6 +33,20 @@ jobs:
         with:
           python-version: "3.x"
 
+      # The scalping engine runs FIRST and on its own step: GitHub starts a workflow's own schedule only every couple of hours,
+      # but this workflow fires every ~5 minutes, so it is the reliable trigger. continue-on-error keeps a scalping problem from
+      # ever failing the dashboard build (and the reverse). Overlapping runs with scalping.yml are safe: signal and alert ids are
+      # deterministic and outcomes are replayed from candle history.
+      - name: Scalping engine
+        continue-on-error: true
+        timeout-minutes: 4
+        env:
+          KAIRO_SUPABASE_URL: ${{ secrets.KAIRO_SUPABASE_URL }}
+          KAIRO_SUPABASE_ANON_KEY: ${{ secrets.KAIRO_SUPABASE_ANON_KEY }}
+          KAIRO_PUBLISHER_EMAIL: ${{ secrets.KAIRO_PUBLISHER_EMAIL }}
+          KAIRO_PUBLISHER_PASSWORD: ${{ secrets.KAIRO_PUBLISHER_PASSWORD }}
+        run: python scalping_job.py
+
       - name: Generate dashboard
         env:
           DISCORD_WEBHOOK_URL: ${{ secrets.DISCORD_WEBHOOK_URL }}
