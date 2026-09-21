@@ -120,6 +120,37 @@
       '<details class="ev-why"><summary>Why is the risk ' + esc(s.label.toLowerCase()) + '?</summary><p>' + esc(s.why) + '</p>' +
       (drivers ? '<ul class="ev-ul">' + drivers + '</ul>' : '') + '</details></div>';
   }
+  /* ---------- 0. why the market moved ---------- */
+  function pctChip(v, label) {
+    if (v == null) return '';
+    return '<span class="mv-chip ' + (v > 0 ? 'up' : v < 0 ? 'down' : '') + '"><small>' + esc(label) + '</small><b>' + (v > 0 ? '+' : '') + v.toFixed(1) + '%</b></span>';
+  }
+  function mvItem(f) {
+    return '<li><span class="mv-str s-' + esc(f.strength.toLowerCase()) + '">' + esc(f.strength.charAt(0) + f.strength.slice(1).toLowerCase()) + '</span> <b>' + esc(f.title) + '</b>' +
+      '<div class="ev-sub">' + esc(f.text) + '</div><div class="mv-evd">' + esc(f.evidence) + '</div></li>';
+  }
+  function moversCard(d) {
+    var m = d.movers; if (!m) return '';
+    var up = m.direction === 'UP', down = m.direction === 'DOWN';
+    var forList = up ? m.up : down ? m.down : m.up, againstList = up ? m.down : down ? m.up : m.down;
+    var forHead = up ? 'Why it went up' : down ? 'Why it went down' : 'Pushing up', againstHead = up ? 'What held it back' : down ? 'What cushioned the fall' : 'Pushing down';
+    var hist = (m.history || []).slice().reverse().slice(0, 14).map(function (r) {
+      function c(v) { return v == null ? '<td>n/a</td>' : '<td class="' + (v > 0 ? 'pos' : v < 0 ? 'neg' : '') + '">' + (v > 0 ? '+' : '') + v.toFixed(1) + '%</td>'; }
+      return '<tr><td>' + esc(dayLabel(r.date)) + '</td>' + c(r.btc_pct) + c(r.eth_pct) + c(r.total_pct) + '<td>' + esc((r.main || []).join('; ') || (r.direction === 'FLAT' ? 'Quiet day' : 'No clear driver in the data')) + '</td></tr>';
+    }).join('');
+    return '<div class="ev-card ev-mv mv-' + esc(m.direction.toLowerCase()) + '"><small>WHY THE MARKET MOVED &middot; LAST 24 HOURS</small>' +
+      '<div class="mv-top"><span class="mv-dir">' + esc(m.emoji) + ' ' + esc(m.direction) + '</span><div class="mv-chips">' + pctChip(m.btc_pct, 'Bitcoin') + pctChip(m.eth_pct, 'Ethereum') + pctChip(m.total_pct, 'Whole market') + '</div></div>' +
+      '<p class="ev-headline">' + esc(m.headline) + '</p>' + (m.with ? '<p class="ev-line">' + esc(m.with) + '</p>' : '') +
+      '<p class="ev-line"><b>' + esc(m.summary) + '</b></p>' +
+      '<div class="ev-two"><div><h4>' + esc(forHead) + '</h4>' + (forList.length ? '<ul class="mv-list">' + forList.map(mvItem).join('') + '</ul>' : '<div class="ev-sub">Nothing in the data the app tracks points this way.</div>') + '</div>' +
+      '<div><h4>' + esc(againstHead) + '</h4>' + (againstList.length ? '<ul class="mv-list">' + againstList.map(mvItem).join('') + '</ul>' : '<div class="ev-sub">Nothing found.</div>') + '</div></div>' +
+      ((m.notes || []).length ? '<ul class="ev-ul mv-notes">' + m.notes.map(function (n) { return '<li>' + esc(n) + '</li>'; }).join('') + '</ul>' : '') +
+      '<div class="ev-take"><b>Please note:</b> ' + esc(m.disclaimer) + '</div>' +
+      '<details class="ev-why"><summary>What the app cannot see</summary><ul class="ev-ul">' + (m.cant_see || []).map(function (x) { return '<li>' + esc(x) + '</li>'; }).join('') + '</ul></details>' +
+      (hist ? '<details class="ev-why"><summary>Recent days (log)</summary><div class="ev-scroll"><table class="signal-table no-stack mv-log"><thead><tr><th>Day</th><th>Bitcoin</th><th>Ethereum</th><th>Whole market</th><th>Main signals</th></tr></thead><tbody>' + hist + '</tbody></table></div></details>' : '') +
+      '</div>';
+  }
+
   function problemLine(d) {
     var p = d.data_problems || [];
     var age = (Date.now() - new Date(d.generated_at).getTime()) / 60000;
@@ -322,7 +353,7 @@
     var d = ST.data, keepY = window.scrollY;
     var body;
     if (ST.view === 'detail') body = detail(d, byId(ST.eventId));
-    else body = problemLine(d) + summaryCard(d) + fomcCard(d) + '<div class="ev-card ev-fcard">' + filtersBar(d) + '</div>' + timeline(d) + contextCard(d) + sourcesCard(d) + settingsCard(d);
+    else body = problemLine(d) + moversCard(d) + summaryCard(d) + fomcCard(d) + '<div class="ev-card ev-fcard">' + filtersBar(d) + '</div>' + timeline(d) + contextCard(d) + sourcesCard(d) + settingsCard(d);
     el.innerHTML = '<div class="ev-head"><h2>Market Events <small>Admin only</small></h2><div class="ev-sub">Updated ' + esc(ago(d.generated_at)) + ' · times in US Eastern · hover a dotted term for its meaning</div></div>' + body;
     bind(el, d);
     if (ST.view === 'main') window.scrollTo(0, keepY);

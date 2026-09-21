@@ -2877,13 +2877,43 @@ window.kairoInitPnlSearch = function() {{
     return html, portions, spot_signals_by_coin
 
 
-def publish_market_events(backend):
+def build_mover_inputs(coins_data, macro_snapshot, fng_value, fng_classification, klines_by_coin):
+    """Everything 'why did the market move' needs, gathered from data this run already fetched (no new sources)."""
+    by = {c["key"]: c for c in (coins_data or [])}
+
+    def coin(key):
+        c = by.get(key) or {}
+        price, res, sup = c.get("price"), c.get("resistance_30d"), c.get("support_30d")
+        return {"pct_24h": c.get("pct_24h"), "pct_7d": c.get("pct_7d"), "oi_change_pct": c.get("oi_change_pct"), "funding_rate": c.get("funding_rate"),
+                "at_30d_high": bool(price and res and price >= 0.99 * res), "at_30d_low": bool(price and sup and price <= 1.01 * sup)}
+    macro = {r["symbol"]: {"change_pct": r.get("change_pct"), "change_abs": r.get("change_abs")} for r in ((macro_snapshot or {}).get("rows") or [])}
+    kl = (klines_by_coin or {}).get("BTC")
+    typical = None
+    if kl:
+        from events import movers as _mv
+        typical = _mv.typical_move_pct([float(k[4]) for k in kl])
+    return {"btc": coin("BTC"), "eth": coin("ETH"), "macro": macro, "typical_move_pct": typical,
+            "fng": {"value": fng_value, "label": fng_classification}}
+
+
+def publish_market_events(backend, mover_inputs=None):
     """Admin-only Market Events section. Fully isolated: any failure is logged and the trading
     dashboard above is unaffected (it is already published by this point)."""
     try:
         from events import service as ev_service, config as ev_config, timeutil as ev_time
         payload = ev_service.run(backend)
         cfg = ev_config.effective({r["key"]: r["value"] for r in backend.select("event_config")})
+        try:                                                        # "Why the market moved": optional, never blocks the events page
+            from events import movers as ev_movers
+            moved = ev_movers.explain(mover_inputs, payload.get("events"), ev_time.now_utc()) if mover_inputs else None
+            if moved:
+                hist = ev_movers.update_history(backend.get_state("_market_moves") or [], moved, ev_time.now_utc())
+                backend.put_state(hist, "_market_moves")
+                moved["history"] = hist
+                payload["movers"] = moved
+                log(f"Market mover: {moved['headline']}")
+        except Exception as e:  # noqa: BLE001
+            log(f"Market mover skipped: {type(e).__name__}: {str(e)[:160]}")
         backend.publish_portions({"events": {
             "title": "\U0001F4C5 Market Events", "sort_order": 5,
             "html": '<div class="panel panel-events"><div id="events-root"></div></div>', "data": payload}})
@@ -3151,7 +3181,12 @@ def main():
         # Everything readable goes to Supabase, where row-level security decides who sees which
         # section. The public site (site/) is only the login shell.
         backend.publish_portions(portions)
-        publish_market_events(backend)
+        try:
+            _movers_in = build_mover_inputs(coins_data, macro_snapshot, fng_value, fng_classification, klines_by_coin)
+        except Exception as e:  # noqa: BLE001
+            _movers_in = None
+            log(f"Market mover inputs skipped: {type(e).__name__}: {str(e)[:120]}")
+        publish_market_events(backend, _movers_in)
         backend.publish_notifications([
             {"id": e["id"], "ts": e["ts"] if e["ts"].endswith("Z") or "+" in e["ts"] else e["ts"] + "Z",
              "type": e["type"], "title": e["title"], "body": e.get("body", ""),

@@ -768,3 +768,21 @@ a.ov-chip { cursor: pointer; } a.ov-chip:hover, a.ov-chip:focus-visible { border
   table.rt td.act { display: flex; text-align: left; }
   table.rt td.act .sig-detail-btn, table.rt td.act .follow-btn { margin: 0; flex: 1 1 0; }
 }
+
+/* Market Events: why the market moved */
+.ev-mv { border-left: 4px solid var(--gray); }
+.ev-mv.mv-up { border-left-color: var(--green); } .ev-mv.mv-down { border-left-color: var(--red); } .ev-mv.mv-flat { border-left-color: #ca8a04; }
+.mv-top { display: flex; flex-wrap: wrap; align-items: center; gap: 8px 14px; margin: 6px 0 4px; }
+.mv-dir { font-size: 20px; font-weight: 800; letter-spacing: 0.3px; }
+.mv-chips { display: flex; flex-wrap: wrap; gap: 6px; }
+.mv-chip { display: inline-flex; align-items: baseline; gap: 6px; padding: 4px 10px; border-radius: 999px; background: var(--inset); border: 1px solid var(--border); }
+.mv-chip small { color: var(--muted); font-size: 11.5px; } .mv-chip b { font-size: 14px; }
+.mv-chip.up b { color: var(--green); } .mv-chip.down b { color: var(--red); }
+.mv-list { list-style: none; margin: 4px 0 0; padding: 0; }
+.mv-list li { padding: 8px 0; border-bottom: 1px dotted var(--border); }
+.mv-list li:last-child { border-bottom: 0; }
+.mv-str { display: inline-block; font-size: 10.5px; font-weight: 800; padding: 2px 7px; border-radius: 6px; margin-right: 4px; vertical-align: 1px; }
+.mv-str.s-strong { background: rgba(5, 150, 105, 0.18); color: var(--green); } .mv-str.s-some { background: rgba(217, 119, 6, 0.16); color: #b45309; } .mv-str.s-weak { background: var(--chip); color: var(--muted); }
+.mv-evd { margin-top: 3px; font-size: 12px; font-weight: 700; color: var(--muted); }
+.mv-notes { margin: 8px 0 4px; }
+.mv-log td, .mv-log th { padding: 6px 10px; font-size: 12.5px; white-space: normal; }
