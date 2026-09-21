@@ -655,3 +655,5 @@ a.ov-chip { cursor: pointer; } a.ov-chip:hover, a.ov-chip:focus-visible { border
 .sc2-iv { background: var(--inset); color: var(--muted); border: 1px solid var(--border); border-radius: 10px; padding: 7px 12px; min-height: 36px; font-weight: 700; cursor: pointer; }
 .sc2-iv.on { background: var(--accent); color: var(--on-accent); border-color: var(--accent); }
 @media (max-width: 720px) { .sc2-chartwrap .sc-chart { height: 150px; } }
+
+.sc2-lv small { font-size: 11px; font-weight: 600; color: var(--muted); }

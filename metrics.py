@@ -12,7 +12,7 @@ open interest). Anything a coin has no data for shows as unavailable - never est
                  (above 1 = more resting buy liquidity, below 1 = more resting sell liquidity)
   Absorption     Spot VR / (1 + |price move of the last 3 candles| / ATR%): heavy volume that failed to move price scores high
   Spot / Futures delta   taker-buy value minus taker-sell value over the last 3 candles (USD): who is hitting the book
-  ATR            average true range over the scan window, absolute and as % of price"""
+  Typical candle move   the average size of a candle over the scan window, as % of price and in price"""
 import json
 import urllib.request
 
@@ -144,4 +144,4 @@ def display_rows(m, signal_label, score_text, tf_label, time_text, price_text):
         ("Funding", _num(m["funding_pct"], "{:+.4f}%")), ("LDR", _num(m["ldr"], "{:.2f}")),
         ("Absorption", _num(m["absorption"], "{:.2f}")), ("Spot Delta", _usd_compact(m["spot_delta"])),
         ("Futures Delta", _usd_compact(m["fut_delta"])),
-        ("ATR", "n/a" if m["atr"] is None else f"{m['atr']:.6g}" + (f" ({m['atr_pct']:.2f}%)" if m["atr_pct"] is not None else ""))]
+        ("Typical candle move", "n/a" if m["atr"] is None else (f"{m['atr_pct']:.2f}%" if m["atr_pct"] is not None else "n/a") + f" ({m['atr']:.6g})")]

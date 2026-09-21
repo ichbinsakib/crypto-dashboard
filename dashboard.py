@@ -1871,9 +1871,11 @@ def render(coins_data, fng_value, fng_classification, generated_at, any_stale,
     def _target_attr(t1, t2):
         return "trailing stop, no fixed target" if t1 is None else f"{fmt_usd_adaptive(t1)} / {fmt_usd_adaptive(t2)}"
 
-    def _target_cells(t1, t2, n1, n2):
+    def _target_cells(t1, t2, n1, n2, risk_pct=None):
         if t1 is None:
-            return f'<td class="pos" colspan="2">Trailing stop<span class="wl-note">exit when price falls 4 ATR below its high since entry; no fixed target</span><span class="wl-note"><b>Expected duration: about {momentum_mod.TREND_HOLD_HOURS["median"]} hours (~{momentum_mod.TREND_HOLD_HOURS["median"] / 24:.0f} days)</b>; most trades last {momentum_mod.TREND_HOLD_HOURS["p25"]}&ndash;{momentum_mod.TREND_HOLD_HOURS["p75"]} h. Losers exit after ~{momentum_mod.TREND_HOLD_HOURS["loser_median"]} h, winners run ~{momentum_mod.TREND_HOLD_HOURS["winner_median"]} h.</span></td>'
+            _tr = f"{risk_pct:.1f}%" if risk_pct else "n/a"
+            _warn = " (above Binance&rsquo;s 20% limit, so use a fixed stop instead)" if risk_pct and risk_pct > 20 else ""
+            return f'<td class="pos" colspan="2">Trailing stop <b>{_tr}</b><span class="wl-note">Exit when price falls {_tr} below its highest point since entry; no fixed target. On Binance: Trailing Stop order, trailing delta {_tr}{_warn}.</span><span class="wl-note"><b>Expected duration: about {momentum_mod.TREND_HOLD_HOURS["median"]} hours (~{momentum_mod.TREND_HOLD_HOURS["median"] / 24:.0f} days)</b>; most trades last {momentum_mod.TREND_HOLD_HOURS["p25"]}&ndash;{momentum_mod.TREND_HOLD_HOURS["p75"]} h. Losers exit after ~{momentum_mod.TREND_HOLD_HOURS["loser_median"]} h, winners run ~{momentum_mod.TREND_HOLD_HOURS["winner_median"]} h.</span></td>'
         return (f'<td class="pos">{fmt_usd_adaptive(t1)}<span class="wl-note">{fmt_net_fee_html(n1)}</span></td>'
                 f'<td class="pos">{fmt_usd_adaptive(t2)}<span class="wl-note">{fmt_net_fee_html(n2)}</span></td>')
 
@@ -1899,7 +1901,7 @@ def render(coins_data, fng_value, fng_classification, generated_at, any_stale,
         items = "".join(f'<div><span>{_esc(k)}</span><b>{_esc(v)}</b></div>'
                         for k, v in metrics_mod.display_rows(m, label_text, score_text, TF_LABEL.get(tf_key, tf_key), time_text, fmt_usd_adaptive(price)))
         defs = ("VR = recent volume vs its window average (1.0x normal). LDR = order-book bid value / ask value within 1% of price. "
-                "Absorption = spot VR / (1 + price move in ATRs): big volume that did not move price. Deltas = taker-buy minus taker-sell value over the last 3 candles. "
+                "Absorption = spot VR divided by how far price moved compared with a typical candle: big volume that did not move price. Deltas = taker-buy minus taker-sell value over the last 3 candles. "
                 "OI change is the 24h change in futures open interest (OKX). n/a = no data for this coin.")
         return (f'<tr class="sig-detail" hidden><td colspan="{NCOLS}"><div class="sig-metrics">{items}</div><div class="sub" style="margin-top:6px;">{_esc(defs)}</div></td></tr>')
 
@@ -1916,7 +1918,7 @@ def render(coins_data, fng_value, fng_classification, generated_at, any_stale,
             f'<td>{TYPE_TAG[kind]}</td><td><b>{TF_LABEL.get(tf_key, tf_key)}</b></td>{_time_cell(ts_iso)}<td>{label_html}</td>'
             f'<td data-px="{_esc(symbol)}">{fmt_usd_adaptive(price)}</td><td>{fmt_usd_adaptive(t_entry)}</td>'
             f'<td class="neg">{fmt_usd_adaptive(t_stop)}<span class="wl-note">{risk_pct:.1f}% below</span></td>'
-            f'{_target_cells(t_t1, t_t2, net1, net2)}'
+            f'{_target_cells(t_t1, t_t2, net1, net2, risk_pct)}'
             f'<td class="why-cell">{why_html}</td><td>{det_btn}</td>'
             f'<td><button class="follow-btn" data-key="{follow_key}" data-tf="{follow_tf}" title="Follow this pick: saves it to My Picks until you remove it">&#9734; Follow</button></td></tr>'
             + detail)
@@ -2007,7 +2009,7 @@ def render(coins_data, fng_value, fng_classification, generated_at, any_stale,
             mrec = f'Momentum record, last {momentum_mod.RETENTION_DAYS} days: {ms["wins"]} won, {ms["losses"]} lost, {ms["expired"]} expired ({wr}); average {an} per call after fees.'
         else:
             mrec = f'Momentum record: no finished calls yet (kept for {momentum_mod.RETENTION_DAYS} days).'
-        tip = (f"Both setup types use Binance's public candles and the same ATR risk geometry: buy at the signal price, stop one ATR below, targets {INTRADAY_TARGET_ATR_MULTIPLE}x and {2 * INTRADAY_TARGET_ATR_MULTIPLE}x that distance above, and target 1 must earn at least {MIN_NET_PROFIT_PCT:g}% profit AFTER about {ROUND_TRIP_FEE_PCT}% round-trip fees (so both setup types only appear when a move of roughly {MIN_NET_PROFIT_PCT + ROUND_TRIP_FEE_PCT:.1f}% is on the table). "
+        tip = (f"Both setup types use Binance's public candles. Stops and targets come from each coin's typical candle size and are shown as prices and percentages you can enter as Binance orders: the stop sits one typical move below the signal price and the targets are {INTRADAY_TARGET_ATR_MULTIPLE}x and {2 * INTRADAY_TARGET_ATR_MULTIPLE}x that distance above, and target 1 must earn at least {MIN_NET_PROFIT_PCT:g}% profit AFTER about {ROUND_TRIP_FEE_PCT}% round-trip fees (so both setup types only appear when a move of roughly {MIN_NET_PROFIT_PCT + ROUND_TRIP_FEE_PCT:.1f}% is on the table). "
                "DIP BUY: price is near the low of its recent range with improving momentum; each factor's points are shown in the 'Why it qualified' chips (hover for the reading). "
                "MOMENTUM: price has just closed above its recent high with the trend up, volume above normal, not yet stretched, not parabolic and no topping pattern. "
                f"Dip calls come in fixed batches of up to {PNL_BATCH_SIZE} per timeframe and are tracked in Performance; momentum calls are tracked separately (record below).")
@@ -2058,8 +2060,8 @@ def render(coins_data, fng_value, fng_classification, generated_at, any_stale,
         'These have a fixed stop and two fixed targets.</td></tr>'
         '<tr><td><b>Type / Timeframe / Time</b></td><td class="watch">Which kind of signal, the chart it was found on, and when it opened (in your local time).</td></tr>'
         '<tr><td><b>Price now / Entry</b></td><td class="watch">Price now updates live. Entry is the price when the signal opened.</td></tr>'
-        '<tr><td><b>Stop</b></td><td class="watch">The exit if the trade goes wrong. For Trend calls it starts 4 ATR below entry (ATR = the coin&rsquo;s typical move per candle) and then rises with the price.</td></tr>'
-        '<tr><td><b>Trailing stop</b></td><td class="watch">Trend calls have no fixed target. The stop follows the highest price since entry, and you exit when the price falls 4 ATR below it, so winners can keep running.</td></tr>'
+        '<tr><td><b>Stop</b></td><td class="watch">The exit if the trade goes wrong. For Trend calls it starts well below the entry (the percentage is shown in the table) and then rises with the price.</td></tr>'
+        '<tr><td><b>Trailing stop</b></td><td class="watch">Trend calls have no fixed target. The stop follows the highest price since entry, and you exit when the price falls by the shown percentage below it, so winners can keep running. On Binance this is a Trailing Stop order: enter that percentage as the trailing delta (Binance allows 0.1% to 20%).</td></tr>'
         f'<tr><td><b>Expected duration</b></td><td class="watch">From the 2-year back-test of this rule: about {_th["median"]} hours (~{_th["median"] / 24:.0f} days), most trades {_th["p25"]}&ndash;{_th["p75"]} hours. '
         f'Losing trades usually end after ~{_th["loser_median"]} h, winners run ~{_th["winner_median"]} h. A history, not a promise.</td></tr>'
         '<tr><td><b>Why it qualified</b></td><td class="watch">The checks that passed. Hover or tap a chip for its meaning.</td></tr>'

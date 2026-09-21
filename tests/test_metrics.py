@@ -46,7 +46,7 @@ class MetricsTest(unittest.TestCase):
         self.assertEqual(rows["Symbol"], "BTCUSDT")
         self.assertEqual(rows["Timeframe"], "15 Min")
         self.assertIn("Time", rows)
-        self.assertIn("%", rows["ATR"])
+        self.assertIn("%", rows["Typical candle move"])
 
 
 if __name__ == "__main__":

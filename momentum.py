@@ -274,7 +274,7 @@ def notification_events(opened, resolved_rows, fmt_price=None):
     for p in opened:
         ev.append({"id": f"momentum:{p['tf']}:{p['coin']}:{p['opened_at']}", "ts": p["opened_at"], "type": "signal",
                    "title": f"\U0001F680 Momentum signal (experimental): {p['coin']} ({p['tf']})",
-                   "body": (f"4h trend breakout entry {fmt_price(p['entry'])}, trailing stop starts {fmt_price(p['stop'])} (no fixed target)" if p.get("kind") == "trend"
+                   "body": (f"4h trend breakout entry {fmt_price(p['entry'])}, trailing stop {p.get('risk_pct') or 0:.1f}% below the high (starts {fmt_price(p['stop'])}), no fixed target" if p.get("kind") == "trend"
                             else f"Breakout entry {fmt_price(p['entry'])}, stop {fmt_price(p['stop'])}, target {fmt_price(p['target1'])}"),
                    "portion_key": "screener"})
     for r in resolved_rows:

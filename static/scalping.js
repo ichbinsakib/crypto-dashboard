@@ -164,12 +164,17 @@
     return '<div class="sc2-answer sc2-a-no">NO VALID SCALP SETUP<span>' + (m.restricted ? 'The market is too rough right now.' : 'KAIRO shows a signal only when every required check passes.') + '</span></div>';
   }
 
+  /* distance from entry as a signed % (what you would type into a Binance order), e.g. stop -0.62%, target +0.94% */
+  function away(r, v) {
+    var b = r.actual_entry != null ? r.actual_entry : (r.entry_low + r.entry_high) / 2;
+    return v == null || !b ? '' : ' <small>' + pct((v - b) / b * 100) + '</small>';
+  }
   function levelsGrid(r, price) {
     var wait = r.actual_entry == null;
     return '<div class="sc2-lv">' +
       '<div><span>' + (wait ? 'Entry zone' : 'Entry') + '</span><b>' + (wait ? fmtPrice(r.entry_low) + ' – ' + fmtPrice(r.entry_high) : fmtPrice(r.actual_entry)) + '</b></div>' +
-      '<div><span>Stop loss</span><b class="neg">' + fmtPrice(r.stop) + '</b></div>' +
-      '<div><span>TP1</span><b class="pos">' + fmtPrice(r.tp1) + '</b></div><div><span>TP2</span><b class="pos">' + fmtPrice(r.tp2) + '</b></div>' +
+      '<div><span>Stop loss</span><b class="neg">' + fmtPrice(r.stop) + away(r, r.stop) + '</b></div>' +
+      '<div><span>TP1</span><b class="pos">' + fmtPrice(r.tp1) + away(r, r.tp1) + '</b></div><div><span>TP2</span><b class="pos">' + fmtPrice(r.tp2) + away(r, r.tp2) + '</b></div>' +
       '<div><span>Risk / Reward</span><b>1 : ' + (r.rr != null ? r.rr.toFixed(1) : 'n/a') + '</b></div>' + '</div>';
   }
 
@@ -286,10 +291,10 @@
       '<div class="sc2-g"><b>Signal quality</b>' + field('min_score', 'Min setup score (of 10)', cfg, lim, 0.5) + field('min_rr', 'Min risk / reward', cfg, lim, 0.1) + field('alert_min_score', 'Alert only if score at least', cfg, lim, 0.5) + '</div>' +
       '<div class="sc2-g"><b>Timing and spam control</b>' + field('signal_expiry_min', 'Setup expires after (min)', cfg, lim, 5) + field('trade_max_min', 'Trade time limit (min)', cfg, lim, 15) + field('cooldown_min', 'Cooldown after a signal (min)', cfg, lim, 5) +
       field('sl_cooldown_min', 'Cooldown after a stop-loss (min)', cfg, lim, 5) + field('max_simultaneous', 'Max simultaneous scalps', cfg, lim, 1) + '</div>' +
-      '<div class="sc2-g"><b>Risk</b>' + field('fee_pct', 'Round-trip fees (%)', cfg, lim, 0.01) + field('stop_atr_min', 'Stop distance min (x ATR)', cfg, lim, 0.1) + field('stop_atr_max', 'Stop distance max (x ATR)', cfg, lim, 0.1) +
-      field('tp1_atr', 'Target 1 (x ATR)', cfg, lim, 0.1) + field('tp2_atr', 'Target 2 (x ATR)', cfg, lim, 0.1) + field('partial_tp1_pct', 'Close at target 1 (%)', cfg, lim, 5) + chk('allow_short', 'Allow SHORT setups (off = long only)', cfg.allow_short) + '</div>' +
+      '<div class="sc2-g"><b>Risk</b>' + field('fee_pct', 'Round-trip fees (%)', cfg, lim, 0.01) + field('stop_atr_min', 'Smallest stop (x typical candle move)', cfg, lim, 0.1) + field('stop_atr_max', 'Largest stop (x typical candle move)', cfg, lim, 0.1) +
+      field('tp1_atr', 'Target 1 (x typical candle move)', cfg, lim, 0.1) + field('tp2_atr', 'Target 2 (x typical candle move)', cfg, lim, 0.1) + field('partial_tp1_pct', 'Close at target 1 (%)', cfg, lim, 5) + chk('allow_short', 'Allow SHORT setups (off = long only)', cfg.allow_short) + '</div>' +
       '<div class="sc2-g"><b>Restrict new scalps when the market is</b>' + d.regimes.map(function (r) { return '<label class="sc2-c"><input type="checkbox" data-reg="' + r + '"' + (cfg.restricted_regimes.indexOf(r) >= 0 ? ' checked' : '') + '> ' + esc(r) + '</label>'; }).join('') +
-      field('high_vol_ratio', 'HIGH VOLATILITY at ATR ratio', cfg, lim, 0.1) + field('vol_min', 'Min volume vs normal', cfg, lim, 0.1) + '</div>' +
+      field('high_vol_ratio', 'HIGH VOLATILITY when candles are this many times bigger than usual', cfg, lim, 0.1) + field('vol_min', 'Min volume vs normal', cfg, lim, 0.1) + '</div>' +
       '<div class="sc2-g"><b>Alerts</b>' + Object.keys(cfg.alerts).map(function (k) { return '<label class="sc2-c"><input type="checkbox" data-alert="' + k + '"' + (cfg.alerts[k] ? ' checked' : '') + '> ' + esc({ setup: 'New setup', entry: 'Entry triggered', tp1: 'TP1 hit', tp2: 'TP2 hit', stop: 'Stop loss', invalidated: 'Setup invalid', regime: 'Regime change', expired: 'Setup expired' }[k] || k) + '</label>'; }).join('') + '</div>' +
       '</div><div class="sc2-actions"><button type="button" class="sc2-btn sc2-primary" data-save="1">Save settings</button><button type="button" class="sc2-btn" data-reset="1">Reset to defaults</button></div>' +
       '<div class="sub">Changes apply on the next engine run (within about 5 minutes). They never change signals that already exist.</div></details>';
@@ -300,7 +305,7 @@
     return '<details class="fold sc2-how" data-key="how"' + (ST.open.how ? ' open' : '') + '><summary>How signals are decided</summary>' +
       '<div class="sub">The engine checks 7 things on the 15-minute trend and the 5-minute entry: <b>Trend</b> (2 pts), <b>Momentum</b> (1.5), <b>Volume</b> (1.5), <b>Structure</b> (1.5), <b>Volatility</b> / fees (1), <b>Entry trigger</b> (1.5) and <b>Risk / Reward</b> (1). ' +
       'The total is the <b>Setup Score</b> out of 10. It is a rule score, not a probability. A setup needs Trend, Entry trigger, Volatility and Risk/Reward to pass <i>and</i> a score at or above the minimum. ' +
-      'Stops sit beyond market structure (bounded by ATR); targets are ATR-based, with half the position closed at TP1 and the stop moved to breakeven. If a candle touches both stop and target, the stop is assumed first. ' +
+      'Stops sit just beyond market structure and are kept within a sensible distance; targets come from the coin\u2019s typical candle move. Every level is shown as a price and a % from entry so you can enter it as a Binance order. Half the position is closed at TP1 and the stop moved to breakeven. If a candle touches both stop and target, the stop is assumed first. ' +
       'Nothing here is proven to be profitable: the Performance section is how you find out.</div></details>';
   }
 

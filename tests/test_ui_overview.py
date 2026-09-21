@@ -68,6 +68,32 @@ class OverviewTests(unittest.TestCase):
         self.assertIn("92 hours", text)                                   # the same figure the table rows show
         self.assertNotIn("What the score labels mean", h)
 
+    def test_no_atr_jargon_on_screen_and_trailing_stop_is_a_binance_percentage(self):
+        import re
+        h = self.p["screener"]["html"]
+        self.assertNotRegex(h, r"ATRs?")                                # not in the text, the legend or any tooltip
+        self.assertNotRegex(self.p["bigcoins"]["html"], r"ATRs?")
+        with open(os.path.join(os.path.dirname(__file__), "..", "static", "scalping.js"), encoding="utf-8") as f:
+            js = f.read()
+        js = re.sub(r"/\*.*?\*/", "", js, flags=re.S)
+        js = re.sub(r"(?m)^\s*//.*$", "", js)
+        self.assertNotRegex(js, r"ATR")                                 # the scalping page never shows the word either
+
+    def test_trend_row_shows_the_trailing_stop_as_a_binance_percentage(self):
+        import re
+        coins = [coin("BTC", "Bitcoin", 80000.0, 80500.0, 70000.0), coin("ETH", "Ethereum", 2500.0, 2510.0, 2000.0)]
+        mom = {"open": {"4h:ALGO": {"tf": "4h", "kind": "trend", "coin": "ALGO", "name": "Algorand", "entry": 0.1126, "stop": 0.0936, "stop0": 0.0936, "target1": None,
+                                    "target2": None, "risk_pct": 16.9, "net1": None, "net2": None, "opened_at": "2026-09-20T22:03:00", "why": []},
+                         "4h:AVAX": {"tf": "4h", "kind": "trend", "coin": "AVAX", "name": "Avalanche", "entry": 11.28, "stop": 8.73, "stop0": 8.73, "target1": None,
+                                     "target2": None, "risk_pct": 22.6, "net1": None, "net2": None, "opened_at": "2026-09-20T22:07:00", "why": []}}, "resolved": []}
+        _h, portions, _ = D.render(coins, 50, "Neutral", "2026-09-20 02:00:00", False, momentum_state=mom)
+        h = portions["screener"]["html"]
+        visible = re.sub(r"\s+", " ", " ".join(re.findall(r">([^<>]+)<", h)))
+        self.assertIn("Trailing stop 16.9%", visible)
+        self.assertIn("On Binance: Trailing Stop order, trailing delta 16.9%", visible)
+        self.assertIn("above Binance&rsquo;s 20% limit", visible)                 # AVAX at 22.6% cannot be a native trailing stop
+        self.assertNotRegex(h, r"ATRs?")
+
     def test_tab_names(self):
         self.assertIn("Signals", self.p["screener"]["title"])
         self.assertEqual(self.p["bigcoins"]["title"], "\U0001FA99 Market")

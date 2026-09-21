@@ -304,7 +304,7 @@ def _evaluate_side(name, s, hc, xc, price, atr, atrs, up_stack, dn_stack, cfg):
         if risk < cfg["stop_atr_min"] * atr:
             stop, risk = price - s * cfg["stop_atr_min"] * atr, cfg["stop_atr_min"] * atr
         if risk > cfg["stop_atr_max"] * atr:
-            risk_note = f"stop would sit {risk / atr:.1f} ATR away (max {cfg['stop_atr_max']:g})"
+            risk_note = f"stop would sit {risk / price * 100:.1f}% away (max {cfg['stop_atr_max'] * atr / price * 100:.1f}%)"
         else:
             frac = cfg["partial_tp1_pct"] / 100
             gain = frac * abs(tp1 - price) + (1 - frac) * abs(tp2 - price)
