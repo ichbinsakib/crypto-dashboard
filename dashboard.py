@@ -2215,7 +2215,7 @@ def render(coins_data, fng_value, fng_classification, generated_at, any_stale,
         "anonKey": os.environ.get("KAIRO_SUPABASE_ANON_KEY", ""),
     }).replace("</", "<\\/")
     _h = hashlib.md5()
-    for _name in ("app.js", "app.css", "events.js", "chart.js", "scalping.js"):
+    for _name in ("app.js", "app.css", "events.js", "chart.js", "drawtools.js", "scalping.js"):
         try:
             with open(os.path.join(STATIC_DIR, _name), "rb") as _f:
                 _h.update(_f.read())
@@ -2850,6 +2850,7 @@ window.kairoInitPnlSearch = function() {{
   }});
 }};
 </script>
+<script src="drawtools.js?v={asset_v}"></script>
 <script src="chart.js?v={asset_v}"></script>
 <script src="events.js?v={asset_v}"></script>
 <script src="scalping.js?v={asset_v}"></script>

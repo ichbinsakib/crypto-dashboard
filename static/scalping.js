@@ -334,15 +334,39 @@
     return out + '</svg>';
   }
 
+  var IV_MS = { '1m': 60000, '5m': 300000, '15m': 900000 };
+  function chartSpec(sym, kl, lv, vw) {
+    var o = [];
+    if (vw != null) o.push({ kind: 'hline', p: vw, label: 'VWAP', color: '#2962ff' });
+    if (lv) {
+      if (lv.actual_entry != null) o.push({ kind: 'hline', p: lv.actual_entry, label: 'Entry', color: '#9aa0ad', dash: '2 3' });
+      else o.push({ kind: 'zone', p1: lv.entry_low, p2: lv.entry_high, color: '#2962ff' });
+      o.push({ kind: 'hline', p: lv.stop, label: 'Stop', color: '#f23645' }, { kind: 'hline', p: lv.tp1, label: 'TP1', color: '#089981' }, { kind: 'hline', p: lv.tp2, label: 'TP2', color: '#089981' });
+    }
+    return { kind: 'candle', intraday: true, window: 90, height: 230, ivLabel: ST.iv, barMs: IV_MS[ST.iv], key: 'scalp:' + sym, title: sym + ' / TetherUS \u00B7 ' + ST.iv + ' \u00B7 Binance',
+             d: kl.slice(-300).map(function (k) { return [+k[0], +k[1], +k[2], +k[3], +k[4]]; }), overlays: o };
+  }
+
   function paintCharts() {
     var el = root(); if (!el || !ST.data) return;
     el.querySelectorAll('.sc2-chartwrap').forEach(function (n) {
       var sym = n.getAttribute('data-chart'), kl = ST.kl[sym]; if (!kl) return;
+      if (n.querySelector('[data-busy="1"]')) return;                      // the admin is mid-drawing: do not redraw under their hand
       var id = n.getAttribute('data-sig'), lv = null;
       if (id) lv = ST.data.active.concat(ST.data.recent).filter(function (r) { return r.id === id; })[0] || null;
       var vw = sessionVwap(kl), px = livePrice(sym, +kl[kl.length - 1][4]);
-      n.innerHTML = chartSvg(kl, vw, lv) + '<div class="sc2-chartfacts"><span>' + esc(ST.iv) + ' candles</span>' +
-        (vw != null ? '<span>VWAP <b>' + fmtPrice(vw) + '</b></span><span class="' + (px >= vw ? 'pos' : 'neg') + '">' + (px >= vw ? 'Above' : 'Below') + ' VWAP</span>' : '<span>VWAP n/a (too little of today yet)</span>') + '</div>';
+      var facts = '<span>' + esc(ST.iv) + ' candles</span>' +
+        (vw != null ? '<span>VWAP <b>' + fmtPrice(vw) + '</b></span><span class="' + (px >= vw ? 'pos' : 'neg') + '">' + (px >= vw ? 'Above' : 'Below') + ' VWAP</span>' : '<span>VWAP n/a (too little of today yet)</span>');
+      if (window.KairoChart && window.KairoChart.mount) {
+        var box = n.querySelector('.sc2-kc');
+        if (!box) { n.innerHTML = '<div class="sc2-kc"></div><div class="sc2-chartfacts"></div>'; box = n.querySelector('.sc2-kc'); }
+        var spec = chartSpec(sym, kl, lv, vw), stateKey = 'sc:' + sym + (id ? ':a' : ':c');
+        spec.onExpand = function () { window.KairoChart.expand(chartSpec(sym, ST.kl[sym] || kl, lv, sessionVwap(ST.kl[sym] || kl)), stateKey); };
+        window.KairoChart.mount(box, spec, stateKey);
+        n.querySelector('.sc2-chartfacts').innerHTML = facts;
+      } else {                                                              // the chart engine did not load: fall back to the simple picture
+        n.innerHTML = chartSvg(kl, vw, lv) + '<div class="sc2-chartfacts">' + facts + '</div>';
+      }
     });
   }
 

@@ -88,27 +88,50 @@
     return Promise.reject(new Error('none'));
   }
 
+  /* which candles are on screen: a zoom box, the last N bars of an intraday chart, or the chosen daily range */
+  function visible(all, spec, st) {
+    var i0, i1 = all.length - 1;
+    if (st.zoom) {
+      i0 = 0;
+      for (var a = 0; a < all.length; a++) { if (all[a][0] >= st.zoom.t0) { i0 = a; break; } }
+      for (var k = all.length - 1; k >= 0; k--) { if (all[k][0] <= st.zoom.t1) { i1 = k; break; } }
+      if (i1 - i0 < 4) i0 = Math.max(0, i1 - 4);
+      return [i0, i1];
+    }
+    var n = spec.intraday ? (spec.window || 120) : ({ '3M': 65, '6M': 130, '1Y': 260 }[st.range] || all.length);
+    return [Math.max(0, all.length - n), i1];
+  }
+  function timeLabel(ms) {
+    return new Date(ms).toLocaleString([], { month: 'short', day: 'numeric', hour: '2-digit', minute: '2-digit', hour12: false });
+  }
+
   function draw(host, spec, st) {
     var plotBox = host.querySelector('.kc-plot');
     plotBox.innerHTML = '';
     var candle = spec.kind === 'candle';
     var all = spec.d;
-    var data = sliceRange(all, st.range);
+    var vis = visible(all, spec, st), i0 = vis[0], i1 = vis[1];
+    var data = all.slice(i0, i1 + 1);
     var n = data.length;
     if (n < 2) { plotBox.innerHTML = '<div class="kc-note">Not enough history to draw a chart.</div>'; return; }
-    var W = Math.max(300, plotBox.clientWidth || 320), H = W < 520 ? 300 : 380;
+    var W = Math.max(300, plotBox.clientWidth || 320), H = spec.height || (W < 520 ? 300 : 380);
     var ml = 6, mr = 66, mt = 10, mb = 26, pw = W - ml - mr, ph = H - mt - mb, step = pw / n;
 
     var closes = all.map(function (r) { return candle ? r[4] : r[1]; });
     var emaLines = [];
     if (candle) {
       [20, 50, 100, 200].forEach(function (p) {
-        if (st.emas[p]) emaLines.push({ p: p, v: ema(closes, p).slice(-n) });
+        if (st.emas[p]) emaLines.push({ p: p, v: ema(closes, p).slice(i0, i1 + 1) });
       });
     }
     var lo = Infinity, hi = -Infinity;
     data.forEach(function (r) { if (candle) { lo = Math.min(lo, r[3]); hi = Math.max(hi, r[2]); } else { lo = Math.min(lo, r[1]); hi = Math.max(hi, r[1]); } });
+    var lo0 = lo, hi0 = hi;
     emaLines.forEach(function (l) { l.v.forEach(function (v) { if (v != null) { lo = Math.min(lo, v); hi = Math.max(hi, v); } }); });
+    var overlays = spec.overlays || [];
+    overlays.forEach(function (o) {                               // levels near the price stretch the axis; far-away ones are ignored
+      [o.p, o.p1, o.p2].forEach(function (v) { if (v != null && isFinite(v) && v > lo0 * 0.85 && v < hi0 * 1.15) { lo = Math.min(lo, v); hi = Math.max(hi, v); } });
+    });
     var pad = (hi - lo) * 0.06 || Math.abs(hi) * 0.02 || 1; lo -= pad; hi += pad;
     var dec = decimalsFor(hi - lo);
     function X(i) { return ml + step * (i + 0.5); }
@@ -120,17 +143,33 @@
       svg.appendChild(el('line', { x1: ml, x2: ml + pw, y1: Y(t), y2: Y(t), stroke: COL.grid, 'stroke-width': 1 }));
       svg.appendChild(el('text', { x: W - mr + 8, y: Y(t) + 4, fill: COL.text, 'font-size': 11 }, fmt(t, dec)));
     });
-    var lastLabelX = -100;
-    data.forEach(function (r, i) {
-      var d = new Date(r[0]), m = d.getUTCMonth();
-      var prev = i > 0 ? new Date(data[i - 1][0]).getUTCMonth() : -1;
-      if (m !== prev && X(i) - lastLabelX > 44) {
-        lastLabelX = X(i);
-        svg.appendChild(el('line', { x1: X(i), x2: X(i), y1: mt, y2: mt + ph, stroke: COL.grid, 'stroke-width': 1 }));
-        svg.appendChild(el('text', { x: X(i), y: H - 8, fill: COL.text, 'font-size': 11, 'text-anchor': 'middle' }, m === 0 ? String(d.getUTCFullYear()) : MONTHS[m]));
-      }
-    });
+    if (spec.intraday) {
+      var per = Math.max(1, Math.ceil(84 / step)), lastDay = null;
+      data.forEach(function (r, i) {
+        if (i % per) return;
+        var d = new Date(r[0]), day = d.toDateString();
+        var txt = day !== lastDay ? d.toLocaleDateString([], { month: 'short', day: 'numeric' }) : d.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit', hour12: false });
+        lastDay = day;
+        svg.appendChild(line0(X(i), mt, X(i), mt + ph));
+        svg.appendChild(el('text', { x: X(i), y: H - 8, fill: COL.text, 'font-size': 11, 'text-anchor': 'middle' }, txt));
+      });
+    } else {
+      var lastLabelX = -100;
+      data.forEach(function (r, i) {
+        var d = new Date(r[0]), m = d.getUTCMonth();
+        var prev = i > 0 ? new Date(data[i - 1][0]).getUTCMonth() : -1;
+        if (m !== prev && X(i) - lastLabelX > 44) {
+          lastLabelX = X(i);
+          svg.appendChild(el('line', { x1: X(i), x2: X(i), y1: mt, y2: mt + ph, stroke: COL.grid, 'stroke-width': 1 }));
+          svg.appendChild(el('text', { x: X(i), y: H - 8, fill: COL.text, 'font-size': 11, 'text-anchor': 'middle' }, m === 0 ? String(d.getUTCFullYear()) : MONTHS[m]));
+        }
+      });
+    }
+    function line0(x1, y1, x2, y2) { return el('line', { x1: x1, x2: x2, y1: y1, y2: y2, stroke: COL.grid, 'stroke-width': 1 }); }
 
+    overlays.forEach(function (o) {                              // shaded zones sit behind the candles
+      if (o.kind === 'zone' && o.p1 != null && o.p2 != null) svg.appendChild(el('rect', { x: ml, y: Math.min(Y(o.p1), Y(o.p2)), width: pw, height: Math.max(2, Math.abs(Y(o.p1) - Y(o.p2))), fill: o.color || '#2962ff', 'fill-opacity': 0.16 }));
+    });
     if (candle) {
       var bw = Math.max(1, step * 0.66);
       data.forEach(function (r, i) {
@@ -149,6 +188,11 @@
       l.v.forEach(function (v, i) { if (v != null) seg.push(X(i).toFixed(1) + ',' + Y(v).toFixed(1)); });
       if (seg.length > 1) svg.appendChild(el('polyline', { points: seg.join(' '), fill: 'none', stroke: EMA_COL[l.p], 'stroke-width': 1.4 }));
     });
+    overlays.forEach(function (o) {                              // level lines (VWAP, stop, targets) sit on top of the candles
+      if (o.kind !== 'hline' || o.p == null || !isFinite(o.p) || o.p < lo || o.p > hi) return;
+      svg.appendChild(el('line', { x1: ml, x2: ml + pw, y1: Y(o.p), y2: Y(o.p), stroke: o.color || '#2962ff', 'stroke-width': 1.2, 'stroke-dasharray': o.dash || '5 4' }));
+      if (o.label) svg.appendChild(el('text', { x: ml + pw - 4, y: Y(o.p) - 3, fill: o.color || '#2962ff', 'font-size': 10.5, 'text-anchor': 'end' }, o.label));
+    });
 
     var last = data[n - 1], lastC = candle ? last[4] : last[1], prevC = n > 1 ? (candle ? data[n - 2][4] : data[n - 2][1]) : lastC;
     var lastUp = lastC >= prevC;
@@ -156,12 +200,13 @@
     svg.appendChild(el('rect', { x: W - mr + 2, y: Y(lastC) - 9, width: mr - 4, height: 18, rx: 3, fill: lastUp ? COL.up : COL.down }));
     svg.appendChild(el('text', { x: W - mr + 6, y: Y(lastC) + 4, fill: '#fff', 'font-size': 11, 'font-weight': 700 }, fmt(lastC, dec)));
 
+    var dw = spec.intraday ? 124 : 96;
     var cross = el('g', { style: 'display:none', 'pointer-events': 'none' });
     var vl = el('line', { y1: mt, y2: mt + ph, stroke: COL.cross, 'stroke-dasharray': '3 3' });
     var hl = el('line', { x1: ml, x2: ml + pw, stroke: COL.cross, 'stroke-dasharray': '3 3' });
     var pr = el('rect', { x: W - mr + 2, width: mr - 4, height: 18, rx: 3, fill: '#2a2e39' });
     var pt = el('text', { x: W - mr + 6, fill: '#fff', 'font-size': 11 });
-    var dr = el('rect', { y: H - mb + 2, height: 18, rx: 3, fill: '#2a2e39', width: 96 });
+    var dr = el('rect', { y: H - mb + 2, height: 18, rx: 3, fill: '#2a2e39', width: dw });
     var dt = el('text', { y: H - mb + 15, fill: '#fff', 'font-size': 11, 'text-anchor': 'middle' });
     [vl, hl, pr, pt, dr, dt].forEach(function (x) { cross.appendChild(x); });
     svg.appendChild(cross);
@@ -189,33 +234,68 @@
       vl.setAttribute('x1', X(i)); vl.setAttribute('x2', X(i)); hl.setAttribute('y1', y); hl.setAttribute('y2', y);
       var v = hi - (y - mt) / ph * (hi - lo);
       pr.setAttribute('y', y - 9); pt.setAttribute('y', y + 4); pt.textContent = fmt(v, dec);
-      dr.setAttribute('x', Math.max(ml, Math.min(ml + pw - 96, X(i) - 48))); dt.setAttribute('x', Math.max(ml, Math.min(ml + pw - 96, X(i) - 48)) + 48);
-      dt.textContent = dateLabel(data[i][0]);
+      var bx = Math.max(ml, Math.min(ml + pw - dw, X(i) - dw / 2));
+      dr.setAttribute('x', bx); dt.setAttribute('x', bx + dw / 2);
+      dt.textContent = spec.intraday ? timeLabel(data[i][0]) : dateLabel(data[i][0]);
       readout(i);
     }
     svg.addEventListener('pointermove', move);
     svg.addEventListener('pointerdown', move);
     svg.addEventListener('pointerleave', function () { cross.style.display = 'none'; readout(n - 1); });
     plotBox.appendChild(svg);
+
+    if (root.KairoDraw) {                                // the TradingView-style editor: toolbar actions and the drawing layer
+      var bar = n > 1 ? (data[n - 1][0] - data[0][0]) / (n - 1) : 86400000;
+      st.editor = root.KairoDraw.attach({
+        host: host, svg: svg, tools: host.querySelector('.kc-tools'), W: W, H: H, ml: ml, mt: mt, pw: pw, ph: ph, step: step, data: data, X: X, Y: Y,
+        pOfY: function (y) { return hi - (y - mt) / ph * (hi - lo); }, dec: dec, fmt: fmt, barMs: spec.barMs || bar, key: spec.key || st.sym, st: st.dt,
+        zoomTo: function (t0, t1) { st.zoom = { t0: t0, t1: t1 }; mount(host, spec, st.sym); }
+      });
+    }
   }
 
   function mount(host, spec, sym) {
-    var st = STATE[sym] || (STATE[sym] = { range: '1Y', emas: { 20: false, 50: false, 100: true, 200: false } });
-    var candle = spec.kind === 'candle';
+    var st = STATE[sym] || (STATE[sym] = { range: '1Y', emas: { 20: false, 50: false, 100: true, 200: false }, dt: {} });
+    st.sym = sym;
+    var candle = spec.kind === 'candle', intraday = !!spec.intraday, editor = !!root.KairoDraw;
+    var narrow = (host.clientWidth || 0) < 560;
+    var emo = editor ? '<div class="kd-emoji" hidden>' + root.KairoDraw.EMOJIS.map(function (e) { return '<button type="button" data-emoji="' + e + '">' + e + '</button>'; }).join('') + '</div>' : '';
+    var selbox = editor ? '<div class="kd-sel" hidden><span class="kd-name"></span>' + root.KairoDraw.COLORS.map(function (c) { return '<button type="button" class="kd-c" data-color="' + c + '" style="background:' + c + '" aria-label="Colour ' + c + '"></button>'; }).join('') +
+      '<button type="button" class="kd-del" data-del="1">Delete</button></div>' : '';
     host.innerHTML = '<div class="kc"><div class="kc-head"><b class="kc-title">' + esc(spec.title || TITLES[sym] || sym) + '</b><span class="kc-ohlc"></span></div>' +
-      '<div class="kc-ctl"><div class="kc-ranges">' + ['3M', '6M', '1Y', 'MAX'].map(function (r) { return '<button type="button" data-r="' + r + '" class="' + (r === st.range ? 'on' : '') + '">' + r + '</button>'; }).join('') + '</div>' +
+      '<div class="kc-ctl">' + (intraday ? '' : '<div class="kc-ranges">' + ['3M', '6M', '1Y', 'MAX'].map(function (r) { return '<button type="button" data-r="' + r + '" class="' + (r === st.range && !st.zoom ? 'on' : '') + '">' + r + '</button>'; }).join('') + '</div>') +
       (candle ? '<div class="kc-emas">' + [20, 50, 100, 200].map(function (p) {
         return '<button type="button" data-e="' + p + '" class="' + (st.emas[p] ? 'on' : '') + '" style="--c:' + EMA_COL[p] + '">EMA ' + p + '</button>';
-      }).join('') + '</div>' : '') + '</div><div class="kc-plot"></div>' +
-      '<div class="kc-note">Daily ' + (candle ? 'candles' : 'values') + ' · move over the chart for exact values. Chart data may be delayed; not a trading recommendation.</div></div>';
+      }).join('') + '</div>' : '') + (st.zoom ? '<button type="button" class="kc-zr">Reset zoom</button>' : '') +
+      (spec.onExpand ? '<button type="button" class="kc-full-btn" title="Open this chart full screen">\u2922 Full screen</button>' : '') + '</div>' +
+      '<div class="kc-body' + (narrow ? ' kc-narrow' : '') + '">' + (editor ? '<div class="kc-tools">' + root.KairoDraw.toolbarHtml() + '</div>' : '') + '<div class="kc-plot"></div>' + selbox + emo + '</div>' +
+      '<div class="kc-note">' + (intraday ? (spec.ivLabel || 'Intraday') : 'Daily') + ' ' + (candle ? 'candles' : 'values') + ' \u00B7 move over the chart for exact values' + (editor ? ' \u00B7 drawings are saved in this browser' : '') + '. Chart data may be delayed; not a trading recommendation.</div></div>';
     draw(host, spec, st);
     host.querySelectorAll('.kc-ranges button').forEach(function (b) {
-      b.addEventListener('click', function () { st.range = b.getAttribute('data-r'); mount(host, spec, sym); });
+      b.addEventListener('click', function () { st.range = b.getAttribute('data-r'); st.zoom = null; mount(host, spec, sym); });
     });
     host.querySelectorAll('.kc-emas button').forEach(function (b) {
       b.addEventListener('click', function () { var p = +b.getAttribute('data-e'); st.emas[p] = !st.emas[p]; mount(host, spec, sym); });
     });
+    var zr = host.querySelector('.kc-zr'); if (zr) zr.addEventListener('click', function () { st.zoom = null; mount(host, spec, sym); });
+    var fb = host.querySelector('.kc-full-btn'); if (fb) fb.addEventListener('click', function () { spec.onExpand(); });
   }
+
+  /* a full-screen copy of a chart (same drawings) for comfortable editing */
+  function expand(spec, key) {
+    var ov = document.createElement('div'); ov.className = 'kc-full';
+    ov.innerHTML = '<div class="kc-full-in"><button type="button" class="kc-full-x" aria-label="Close">\u2715 Close</button><div class="kc-full-host"></div></div>';
+    document.body.appendChild(ov);
+    var full = Object.assign({}, spec, { onExpand: null, window: Math.max(spec.window || 120, 200), height: Math.max(380, Math.round(window.innerHeight * 0.66)) });
+    var fk = key + ':full';
+    mount(ov.querySelector('.kc-full-host'), full, fk);
+    function close() { document.removeEventListener('keydown', esc2); if (ov.parentNode) ov.parentNode.removeChild(ov); }
+    function esc2(e) { if (e.key === 'Escape' && !ov.querySelector('[data-busy="1"]')) close(); }
+    ov.querySelector('.kc-full-x').addEventListener('click', close);
+    document.addEventListener('keydown', esc2);
+  }
+  api.mount = function (host, spec, key) { return mount(host, spec, key); };
+  api.expand = expand;
 
   function closeAll() {
     document.querySelectorAll('.wl-chart-row').forEach(function (r) { r.parentNode.removeChild(r); });
