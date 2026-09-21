@@ -1875,14 +1875,13 @@ def render(coins_data, fng_value, fng_classification, generated_at, any_stale,
     def _target_cells(t1, t2, n1, n2, risk_pct=None):
         if t1 is None:
             _tr = f"{risk_pct:.1f}%" if risk_pct else "n/a"
-            _warn = " (over the 20% max: use a fixed stop)" if risk_pct and risk_pct > 20 else ""
+            _warn = " &middot; &#9888; over 20%: use a fixed stop" if risk_pct and risk_pct > 20 else ""
             _hold = momentum_mod.TREND_HOLD_HOURS
             _tip = (f"Exit when price falls {_tr} below its highest point since entry; no fixed target. On Binance: Trailing Stop order, trailing delta {_tr}. "
                     f"Back-test: typical hold about {_hold['median']} hours (~{_hold['median'] / 24:.0f} days), most trades {_hold['p25']}-{_hold['p75']} h; "
                     f"losers end after ~{_hold['loser_median']} h, winners run ~{_hold['winner_median']} h.")
             return (f'<td class="pos tgt-cell" colspan="2" title="{_esc(_tip)}"><b>Trailing stop {_tr}</b>'
-                    f'<span class="wl-note">On Binance: trailing delta {_tr}{_warn}</span>'
-                    f'<span class="wl-note">Typical hold ~{_hold["median"] / 24:.0f} days ({_hold["median"]} h)</span></td>')
+                    f'<span class="wl-note">On Binance: trailing delta {_tr} &middot; typical hold ~{_hold["median"] / 24:.0f} days{_warn}</span></td>')
         return (f'<td class="pos">{fmt_usd_adaptive(t1)}<span class="wl-note">{fmt_net_fee_html(n1)}</span></td>'
                 f'<td class="pos">{fmt_usd_adaptive(t2)}<span class="wl-note">{fmt_net_fee_html(n2)}</span></td>')
 
@@ -1912,6 +1911,10 @@ def render(coins_data, fng_value, fng_classification, generated_at, any_stale,
                 "OI change is the 24h change in futures open interest (OKX). n/a = no data for this coin.")
         return (f'<tr class="sig-detail" hidden><td colspan="{NCOLS}"><div class="sig-metrics">{items}</div><div class="sub" style="margin-top:6px;">{_esc(defs)}</div></td></tr>')
 
+    def _checks_title(why_html):
+        names = re.findall(r'<span class="why-chip[^"]*"[^>]*>([^<]+)</span>', why_html or "")
+        return ("Checks passed: " + ", ".join(names)) if names else ""
+
     def _scan_row(kind, tf_key, name, symbol, label_html, price, t_entry, t_stop, t_t1, t_t2, risk_pct, net1, net2, why_html, note_html,
                   ts_iso, detail_key, follow_key, follow_tf, status, plain, data_label, label_text, score_text):
         detail = _detail_html(detail_key, kind, tf_key, symbol, label_text, score_text, ts_iso, price)
@@ -1922,7 +1925,7 @@ def render(coins_data, fng_value, fng_classification, generated_at, any_stale,
             f'data-price="{fmt_usd_adaptive(price)}" data-plain="{_esc(plain)}" data-entry="{fmt_usd_adaptive(t_entry)}" '
             f'data-stop="{fmt_usd_adaptive(t_stop)}" data-target="{_target_attr(t_t1, t_t2)}">'
             f'<td><b>{_esc(name)}</b><span class="wl-note">{_esc(symbol)}</span>{note_html}</td>'
-            f'<td class="sig-cell">{label_html}<span class="sig-tf">{TYPE_TAG[kind]} <b>{TF_LABEL.get(tf_key, tf_key)}</b></span>{why_html}</td>'
+            f'<td class="sig-cell" title="{_esc(_checks_title(why_html))}">{label_html}</td>'
             f'{_time_cell(ts_iso)}'
             f'<td data-px="{_esc(symbol)}">{fmt_usd_adaptive(price)}</td><td>{fmt_usd_adaptive(t_entry)}</td>'
             f'<td class="neg">{fmt_usd_adaptive(t_stop)}<span class="wl-note">{risk_pct:.1f}% below</span></td>'
@@ -1940,7 +1943,7 @@ def render(coins_data, fng_value, fng_classification, generated_at, any_stale,
         by_name = {name: (reading, pts) for name, reading, pts in r.get("rows", [])}
         why = _chips([(short, by_name.get(full, ("", 0))[1], by_name.get(full, ("", 0))[0]) for full, short in FACTOR_COLS])
         score_text = f"{metrics_mod.score_100(r['score'])}/100 ({r['score']:+d})"
-        label = f'<span class="badge {r["status"]}">{_esc(r["label"])}</span><span class="wl-note">score {score_text}</span>'
+        label = f'<span class="badge {r["status"]}">{_esc(r["label"])}</span><span class="wl-note">Dip buy &middot; {TF_LABEL.get(tf_key, tf_key)} &middot; score {score_text}</span>'
         return _scan_row("dip", tf_key, str(r["name"]), r["symbol"], label, r["price"], t["entry"], t["stop"], t["target1"], t["target2"],
                          t["risk_pct"], t.get("target1_net_pct"), t.get("target2_net_pct"), why, tracking, ts_iso, follow_key, follow_key,
                          tf_follow_label, r["status"], r.get("plain", ""), r["label"], r["label"], score_text)
@@ -1954,7 +1957,7 @@ def render(coins_data, fng_value, fng_classification, generated_at, any_stale,
     def _mom_row(pos):
         if pos.get("kind") == "trend":
             follow_key = f"mom-{pos['tf']}:{pos['coin']}"
-            label = '<span class="badge bullish">&#128200; TREND BREAKOUT</span><span class="wl-note">3/3 checks &middot; experimental</span>'
+            label = '<span class="badge bullish">&#128200; TREND BREAKOUT</span><span class="wl-note">4 Hour &middot; 3/3 checks &middot; experimental</span>'
             return _scan_row("trend", pos["tf"], str(pos.get("name") or pos["coin"]), pos["coin"], label, pos["entry"], pos["entry"], pos["stop"], None, None,
                              pos.get("risk_pct") or 0, None, None, _chips([(n, None, tip) for n, tip in TREND_WHY]), "", pos["opened_at"], follow_key, follow_key,
                              "4-Hour trend", "bullish", "Slow trend breakout: a 4h candle closed above its 55-candle high while above the 200-candle average; exit by trailing stop.",
@@ -1966,7 +1969,7 @@ def render(coins_data, fng_value, fng_classification, generated_at, any_stale,
         why = _chips([(n, None, tip) for n, tip in MOM_WHY])
         n_checks = len(pos.get("why") or []) or 7
         score_text = f"{n_checks}/7 checks"
-        label = f'<span class="badge bullish">&#128640; BREAKOUT</span><span class="wl-note">{score_text} &middot; experimental</span>'
+        label = f'<span class="badge bullish">&#128640; BREAKOUT</span><span class="wl-note">Momentum &middot; {TF_LABEL.get(pos["tf"], pos["tf"])} &middot; {score_text} &middot; experimental</span>'
         return _scan_row("mom", pos["tf"], str(pos.get("name") or pos["coin"]), pos["coin"], label, entry, entry, pos["stop"], pos["target1"], pos["target2"],
                          risk, pos.get("net1"), pos.get("net2"), why, "", pos["opened_at"], follow_key, follow_key, f"{tf_label} momentum", "bullish",
                          "Momentum breakout: closed above its recent high with trend and volume behind it.", "\U0001F680 MOMENTUM BREAKOUT",
@@ -1997,7 +2000,7 @@ def render(coins_data, fng_value, fng_classification, generated_at, any_stale,
         head = ("<tr><th>Coin</th><th>Signal</th><th>Time</th><th>Price now</th><th>Entry</th><th>Stop</th>"
                 + ("<th>Target 1</th><th>Target 2</th>" if has_fixed else '<th colspan="2">Exit plan</th>') + "<th></th></tr>")
         if rows:
-            body = f'<div class="wl-scroll"><table class="signal-table dip-table"><thead>{head}</thead><tbody>' + "".join(x[3] for x in rows) + "</tbody></table></div>"
+            body = f'<div class="wl-scroll"><table class="signal-table dip-table{"" if has_fixed else " trend-only"}"><thead>{head}</thead><tbody>' + "".join(x[3] for x in rows) + "</tbody></table></div>"
         else:
             body = ('<div class="empty-note">No signals right now.<span> That is normal: a Trend breakout is a rare event, and KAIRO shows nothing weaker.</span></div>')
         miss_rows = []

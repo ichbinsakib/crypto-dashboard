@@ -744,3 +744,27 @@ a.ov-chip { cursor: pointer; } a.ov-chip:hover, a.ov-chip:focus-visible { border
 @media (pointer: coarse) { .kd-b, .kc-narrow .kd-b { width: 40px; height: 40px; } .kd-emoji { grid-template-columns: repeat(4, 44px); } .kd-emoji button { width: 44px; height: 44px; } }
 
 .coin-chart { margin: 0 0 12px; min-height: 40px; }
+
+/* Signals table, tightened: two-line rows, no stretched gaps, buttons side by side */
+.dip-table th, .dip-table td { padding: 6px 10px; }
+.dip-table td { line-height: 1.3; }
+.dip-table td.sig-cell { min-width: 0; max-width: none; white-space: normal; }
+.dip-table td.sig-cell .badge { margin-bottom: 1px; }
+.dip-table td .wl-note { margin-top: 1px; }
+.dip-table td.tgt-cell { min-width: 0; max-width: none; }
+.dip-table td.act { display: table-cell; white-space: nowrap; min-width: 0; text-align: right; }
+.dip-table td.act .sig-detail-btn, .dip-table td.act .follow-btn { display: inline-block; width: auto; margin: 0 0 0 6px; padding: 5px 11px; }
+.dip-table td.act .sig-detail-btn:first-child { margin-left: 0; }
+@media (min-width: 1251px) {
+  .dip-table.trend-only { table-layout: fixed; width: 100%; max-width: 1330px; }
+  .dip-table.trend-only th:nth-child(1) { width: 140px; }
+  .dip-table.trend-only th:nth-child(2) { width: 215px; }
+  .dip-table.trend-only th:nth-child(3) { width: 106px; }
+  .dip-table.trend-only th:nth-child(4), .dip-table.trend-only th:nth-child(5) { width: 88px; }
+  .dip-table.trend-only th:nth-child(6) { width: 100px; }
+  .dip-table.trend-only th:nth-child(8) { width: 168px; }
+}
+@media (max-width: 720px) {
+  table.rt td.act { display: flex; text-align: left; }
+  table.rt td.act .sig-detail-btn, table.rt td.act .follow-btn { margin: 0; flex: 1 1 0; }
+}
