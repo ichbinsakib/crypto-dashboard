@@ -58,15 +58,29 @@ class OverviewTests(unittest.TestCase):
         self.assertEqual(h.count("coin-details"), 2)
         self.assertIn("Bitcoin", h)
 
-    def test_signals_legend_explains_what_the_table_actually_shows(self):
+    def test_signals_page_says_which_signal_types_are_on_and_which_were_switched_off(self):
         import re
         h = self.p["screener"]["html"]
-        text = " ".join(re.findall(r">([^<>]+)<", h[h.index("What the labels mean"):]))
-        for needle in ("TREND BREAKOUT", "MOMENTUM BREAKOUT", "Trailing stop", "Expected duration", "Why it qualified", "Details", "Follow",
-                       "Above 200 avg", "Fresh"):
-            self.assertIn(needle, text, needle)
-        self.assertIn("92 hours", text)                                   # the same figure the table rows show
+        text = re.sub(r"\s+", " ", " ".join(re.findall(r">([^<>]+)<", h)))
+        self.assertIn("Only one signal type is running now", text)
+        self.assertIn("Trend breakout", text)
+        self.assertIn("Dip-buy signals and the 15-minute / 1-hour momentum signals were switched off", text)
+        self.assertIn("stays listed until it finishes", text)
+
+    def test_signals_has_one_short_plain_guide_not_a_glossary(self):
+        import re
+        h = self.p["screener"]["html"]
+        self.assertEqual(h.count("How to read a signal"), 1)
+        self.assertNotIn("What the labels mean", h)                       # the old two-column glossary is gone
         self.assertNotIn("What the score labels mean", h)
+        self.assertNotIn("MOMENTUM BREAKOUT", h[h.index("How to read a signal"):h.index("How to read a signal") + 2500])
+        guide = h[h.index("How to read a signal"):]
+        guide = guide[:guide.index("</details>")]
+        self.assertEqual(guide.count("<li>"), 5)                           # five short points
+        text = " ".join(re.findall(r">([^<>]+)<", guide))
+        for needle in ("TREND BREAKOUT", "Entry", "Stop", "trailing", "Trailing Stop", "no target price", "Follow"):
+            self.assertIn(needle, text, needle)
+        self.assertLess(len(text.split()), 230)                           # short enough to read in one go
 
     def test_no_atr_jargon_on_screen_and_trailing_stop_is_a_binance_percentage(self):
         import re
@@ -90,8 +104,9 @@ class OverviewTests(unittest.TestCase):
         h = portions["screener"]["html"]
         visible = re.sub(r"\s+", " ", " ".join(re.findall(r">([^<>]+)<", h)))
         self.assertIn("Trailing stop 16.9%", visible)
-        self.assertIn("On Binance: Trailing Stop order, trailing delta 16.9%", visible)
-        self.assertIn("above Binance&rsquo;s 20% limit", visible)                 # AVAX at 22.6% cannot be a native trailing stop
+        self.assertIn("On Binance: trailing delta 16.9%", visible)
+        self.assertIn("over the 20% max: use a fixed stop", visible)             # AVAX at 22.6% cannot be a native trailing stop
+        self.assertIn("Typical hold ~4 days", visible)
         self.assertNotRegex(h, r"ATRs?")
 
     def test_tab_names(self):

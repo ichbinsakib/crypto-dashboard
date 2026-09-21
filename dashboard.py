@@ -1874,12 +1874,18 @@ def render(coins_data, fng_value, fng_classification, generated_at, any_stale,
     def _target_cells(t1, t2, n1, n2, risk_pct=None):
         if t1 is None:
             _tr = f"{risk_pct:.1f}%" if risk_pct else "n/a"
-            _warn = " (above Binance&rsquo;s 20% limit, so use a fixed stop instead)" if risk_pct and risk_pct > 20 else ""
-            return f'<td class="pos" colspan="2">Trailing stop <b>{_tr}</b><span class="wl-note">Exit when price falls {_tr} below its highest point since entry; no fixed target. On Binance: Trailing Stop order, trailing delta {_tr}{_warn}.</span><span class="wl-note"><b>Expected duration: about {momentum_mod.TREND_HOLD_HOURS["median"]} hours (~{momentum_mod.TREND_HOLD_HOURS["median"] / 24:.0f} days)</b>; most trades last {momentum_mod.TREND_HOLD_HOURS["p25"]}&ndash;{momentum_mod.TREND_HOLD_HOURS["p75"]} h. Losers exit after ~{momentum_mod.TREND_HOLD_HOURS["loser_median"]} h, winners run ~{momentum_mod.TREND_HOLD_HOURS["winner_median"]} h.</span></td>'
+            _warn = " (over the 20% max: use a fixed stop)" if risk_pct and risk_pct > 20 else ""
+            _hold = momentum_mod.TREND_HOLD_HOURS
+            _tip = (f"Exit when price falls {_tr} below its highest point since entry; no fixed target. On Binance: Trailing Stop order, trailing delta {_tr}. "
+                    f"Back-test: typical hold about {_hold['median']} hours (~{_hold['median'] / 24:.0f} days), most trades {_hold['p25']}-{_hold['p75']} h; "
+                    f"losers end after ~{_hold['loser_median']} h, winners run ~{_hold['winner_median']} h.")
+            return (f'<td class="pos tgt-cell" colspan="2" title="{_esc(_tip)}"><b>Trailing stop {_tr}</b>'
+                    f'<span class="wl-note">On Binance: trailing delta {_tr}{_warn}</span>'
+                    f'<span class="wl-note">Typical hold ~{_hold["median"] / 24:.0f} days ({_hold["median"]} h)</span></td>')
         return (f'<td class="pos">{fmt_usd_adaptive(t1)}<span class="wl-note">{fmt_net_fee_html(n1)}</span></td>'
                 f'<td class="pos">{fmt_usd_adaptive(t2)}<span class="wl-note">{fmt_net_fee_html(n2)}</span></td>')
 
-    NCOLS = 13
+    NCOLS = 9
 
     def _time_cell(ts_iso):
         """UTC text as a fallback; the page rewrites it in the viewer's own time zone."""
@@ -1915,12 +1921,12 @@ def render(coins_data, fng_value, fng_classification, generated_at, any_stale,
             f'data-price="{fmt_usd_adaptive(price)}" data-plain="{_esc(plain)}" data-entry="{fmt_usd_adaptive(t_entry)}" '
             f'data-stop="{fmt_usd_adaptive(t_stop)}" data-target="{_target_attr(t_t1, t_t2)}">'
             f'<td><b>{_esc(name)}</b><span class="wl-note">{_esc(symbol)}</span>{note_html}</td>'
-            f'<td>{TYPE_TAG[kind]}</td><td><b>{TF_LABEL.get(tf_key, tf_key)}</b></td>{_time_cell(ts_iso)}<td>{label_html}</td>'
+            f'<td class="sig-cell">{label_html}<span class="sig-tf">{TYPE_TAG[kind]} <b>{TF_LABEL.get(tf_key, tf_key)}</b></span>{why_html}</td>'
+            f'{_time_cell(ts_iso)}'
             f'<td data-px="{_esc(symbol)}">{fmt_usd_adaptive(price)}</td><td>{fmt_usd_adaptive(t_entry)}</td>'
             f'<td class="neg">{fmt_usd_adaptive(t_stop)}<span class="wl-note">{risk_pct:.1f}% below</span></td>'
             f'{_target_cells(t_t1, t_t2, net1, net2, risk_pct)}'
-            f'<td class="why-cell">{why_html}</td><td>{det_btn}</td>'
-            f'<td><button class="follow-btn" data-key="{follow_key}" data-tf="{follow_tf}" title="Follow this pick: saves it to My Picks until you remove it">&#9734; Follow</button></td></tr>'
+            f'<td class="act">{det_btn}<button class="follow-btn" data-key="{follow_key}" data-tf="{follow_tf}" title="Follow this pick: saves it to My Picks until you remove it">&#9734; Follow</button></td></tr>'
             + detail)
 
     def _dip_row(r, tf_key):
@@ -1969,26 +1975,30 @@ def render(coins_data, fng_value, fng_classification, generated_at, any_stale,
         mom = momentum_state or {}
         rows = []
         hidden_old = 0
+        has_fixed = False                       # any row with fixed Target 1 / Target 2 (dip and momentum calls)
         for tf in TF_ORDER:
             for r in sorted(intraday_results.get(tf, []), key=lambda x: -x["score"]):
                 if (r["trade"].get("target1_net_pct") or 0) < MIN_NET_PROFIT_PCT:
                     hidden_old += 1                    # opened before the minimum-profit rule; still tracked in Performance
                     continue
                 rows.append((TF_ORDER.index(tf), 0, -r["score"], _dip_row(r, tf)))
+                has_fixed = True
         for pos in mom.get("open", {}).values():
             if pos.get("kind") != "trend" and (pos.get("net1") or 0) < MIN_NET_PROFIT_PCT:
                 hidden_old += 1
                 continue
             rows.append((TF_ORDER.index(pos["tf"]) if pos["tf"] in TF_ORDER else 9, 1, 0, _mom_row(pos)))
+            if pos.get("kind") != "trend":
+                has_fixed = True
         rows.sort(key=lambda x: x[:3])
         n_dip = sum(1 for _r in rows if _r[1] == 0)
         n_mom = sum(1 for _r in rows if _r[1] == 1)
-        head = ("<tr><th>Coin</th><th>Type</th><th>Timeframe</th><th>Time</th><th>Signal</th><th>Price now</th><th>Entry</th><th>Stop</th><th>Target 1</th>"
-                "<th>Target 2</th><th>Why it qualified</th><th>Details</th><th></th></tr>")
+        head = ("<tr><th>Coin</th><th>Signal</th><th>Time</th><th>Price now</th><th>Entry</th><th>Stop</th>"
+                + ("<th>Target 1</th><th>Target 2</th>" if has_fixed else '<th colspan="2">Exit plan</th>') + "<th></th></tr>")
         if rows:
             body = f'<div class="wl-scroll"><table class="signal-table dip-table"><thead>{head}</thead><tbody>' + "".join(x[3] for x in rows) + "</tbody></table></div>"
         else:
-            body = ('<div class="empty-note">No signals right now.<span> That is normal: KAIRO only shows strong setups.</span></div>')
+            body = ('<div class="empty-note">No signals right now.<span> That is normal: a Trend breakout is a rare event, and KAIRO shows nothing weaker.</span></div>')
         miss_rows = []
         for tf in TF_ORDER:
             if intraday_results.get(tf):
@@ -2009,6 +2019,7 @@ def render(coins_data, fng_value, fng_classification, generated_at, any_stale,
             mrec = f'Momentum record, last {momentum_mod.RETENTION_DAYS} days: {ms["wins"]} won, {ms["losses"]} lost, {ms["expired"]} expired ({wr}); average {an} per call after fees.'
         else:
             mrec = f'Momentum record: no finished calls yet (kept for {momentum_mod.RETENTION_DAYS} days).'
+        _hold_days = f"{momentum_mod.TREND_HOLD_HOURS['median'] / 24:.0f}"
         tip = (f"Both setup types use Binance's public candles. Stops and targets come from each coin's typical candle size and are shown as prices and percentages you can enter as Binance orders: the stop sits one typical move below the signal price and the targets are {INTRADAY_TARGET_ATR_MULTIPLE}x and {2 * INTRADAY_TARGET_ATR_MULTIPLE}x that distance above, and target 1 must earn at least {MIN_NET_PROFIT_PCT:g}% profit AFTER about {ROUND_TRIP_FEE_PCT}% round-trip fees (so both setup types only appear when a move of roughly {MIN_NET_PROFIT_PCT + ROUND_TRIP_FEE_PCT:.1f}% is on the table). "
                "DIP BUY: price is near the low of its recent range with improving momentum; each factor's points are shown in the 'Why it qualified' chips (hover for the reading). "
                "MOMENTUM: price has just closed above its recent high with the trend up, volume above normal, not yet stretched, not parabolic and no topping pattern. "
@@ -2017,9 +2028,18 @@ def render(coins_data, fng_value, fng_classification, generated_at, any_stale,
 <div class="card wl-card" style="margin-bottom:12px;">
   <div class="card-title">&#127919; SIGNALS<span class="info-tip" tabindex="0" data-tip="{_esc(tip)}">&#9432;</span></div>
   <div class="sub">{('<b>' + str(n_mom + n_dip) + '</b> active signal' + ('s' if n_mom + n_dip != 1 else '')) if (n_mom + n_dip) else ''}</div>
-  <details class="fold"><summary>How to read this</summary>
-    <div class="sub"><b>&#128200; Trend</b> = a 4-hour candle closed above its recent high while the long-term trend is up. It exits with a trailing stop (no fixed target). Older 15m/1h momentum calls stay listed until they finish.</div>
-    <div class="sub">Dip-buy signals were switched off: tested on new data they lost money. Every row here is unproven, so judge it by its record.</div>
+  <div class="sig-notice"><b>Only one signal type is running now: &#128200; Trend breakout</b> (4-hour chart).
+    <b>Dip-buy</b> signals and the 15-minute / 1-hour <b>momentum</b> signals were switched off because back-tests showed they lost money.
+    Any older call of those types stays listed until it finishes, then disappears from this list (it stays in Performance).</div>
+  <details class="fold sig-guide"><summary>How to read a signal</summary>
+    <ol class="guide">
+      <li><b>&#128200; TREND BREAKOUT</b> means the price had been climbing and has just pushed to a new high. It happened within the last hour.</li>
+      <li><b>Entry</b> is the price when the signal appeared. <b>Price now</b> is where it is right now.</li>
+      <li><b>Stop</b> is your exit if it goes wrong. It is a <i>trailing</i> stop: it follows the price up and stays the shown % below the highest price. On Binance, place a <b>Trailing Stop</b> order and enter that % as the trailing delta (Binance allows 0.1% to 20%).</li>
+      <li>There is <b>no target price</b>. You leave when the trailing stop is hit. In the back-test, trades lasted about {_hold_days} days. That is history, not a promise.</li>
+      <li><b>Details</b> shows extra numbers (optional). <b>&#9734; Follow</b> saves the coin to My Picks.</li>
+    </ol>
+    <div class="sub">These signals are not proven to make money. Use small amounts, and judge them by their record in Performance.</div>
   </details>
   {body}
   {('<div class="sub" style="margin-top:8px;">' + str(hidden_old) + ' earlier call' + ('s' if hidden_old != 1 else '') + ' opened before the ' + f'{MIN_NET_PROFIT_PCT:g}' + '% minimum-profit rule ' + ('are' if hidden_old != 1 else 'is') + ' hidden here and still tracked in Performance.</div>') if hidden_old else ''}
@@ -2044,37 +2064,10 @@ def render(coins_data, fng_value, fng_classification, generated_at, any_stale,
     intraday_live_cards_json = json.dumps(intraday_live_cards)
     intraday_live_cards = []  # table rows are static; their prices refresh through the app shell's poller
 
-    _th = momentum_mod.TREND_HOLD_HOURS
-    _chips_trend = ", ".join(_esc(n) for n, _t in TREND_WHY)
-    _chips_mom = ", ".join(_esc(n) for n, _t in MOM_WHY)
-    legend_html = (
-        '<details class="fold" style="margin-top:10px;"><summary>What the labels mean</summary>'
-        '<div class="cycle-map spot-signal-card" style="margin-top:10px;">'
-        '<table class="signal-table score-legend no-stack" style="margin-top:0; margin-bottom:0;">'
-        '<thead><tr><th>What you see</th><th>What it means</th></tr></thead><tbody>'
-        '<tr><td><span class="badge bullish">&#128200; TREND BREAKOUT</span><div class="wl-note">3/3 checks</div></td>'
-        '<td class="watch">A 4-hour candle closed above its recent high (the last 55 candles, about 9 days) while the price is above its 200-candle average, '
-        'and it happened within the last hour. All three checks must pass: ' + _chips_trend + '.</td></tr>'
-        '<tr><td><span class="badge bullish">&#128640; MOMENTUM BREAKOUT</span><div class="wl-note">N/7 checks</div></td>'
-        '<td class="watch">Older 15-minute and 1-hour calls (new ones are switched off). Price broke its recent high with trend and volume behind it: ' + _chips_mom + '. '
-        'These have a fixed stop and two fixed targets.</td></tr>'
-        '<tr><td><b>Type / Timeframe / Time</b></td><td class="watch">Which kind of signal, the chart it was found on, and when it opened (in your local time).</td></tr>'
-        '<tr><td><b>Price now / Entry</b></td><td class="watch">Price now updates live. Entry is the price when the signal opened.</td></tr>'
-        '<tr><td><b>Stop</b></td><td class="watch">The exit if the trade goes wrong. For Trend calls it starts well below the entry (the percentage is shown in the table) and then rises with the price.</td></tr>'
-        '<tr><td><b>Trailing stop</b></td><td class="watch">Trend calls have no fixed target. The stop follows the highest price since entry, and you exit when the price falls by the shown percentage below it, so winners can keep running. On Binance this is a Trailing Stop order: enter that percentage as the trailing delta (Binance allows 0.1% to 20%).</td></tr>'
-        f'<tr><td><b>Expected duration</b></td><td class="watch">From the 2-year back-test of this rule: about {_th["median"]} hours (~{_th["median"] / 24:.0f} days), most trades {_th["p25"]}&ndash;{_th["p75"]} hours. '
-        f'Losing trades usually end after ~{_th["loser_median"]} h, winners run ~{_th["winner_median"]} h. A history, not a promise.</td></tr>'
-        '<tr><td><b>Why it qualified</b></td><td class="watch">The checks that passed. Hover or tap a chip for its meaning.</td></tr>'
-        '<tr><td><b>Details</b></td><td class="watch">Opens a readout for the coin: price change, volume, order-book balance, funding, typical move size and more. &ldquo;n/a&rdquo; means no data for that coin.</td></tr>'
-        '<tr><td><b>Follow</b></td><td class="watch">Saves the coin to My Picks in this browser.</td></tr>'
-        '<tr><td><b>Older dip-buy labels</b></td><td class="watch">Dip-buy signals are switched off. Calls opened earlier may still show NEAR-TERM DIP ZONE, LEAN LONG, NO CLEAR EDGE or STRETCHED until they finish.</td></tr>'
-        '</tbody></table></div></details>')
-
     screener_panel = f"""
 <div class="panel panel-screener">
   {scanner_html}
 
-  {legend_html}
 </div>
 """
 

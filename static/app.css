@@ -675,3 +675,35 @@ a.ov-chip { cursor: pointer; } a.ov-chip:hover, a.ov-chip:focus-visible { border
 }
 .wl-row.open td { background: var(--inset-accent); }
 .wl-row { cursor: pointer; }
+
+/* Signals table: compact enough to fit one screen without a sideways scroll bar */
+.dip-table { min-width: 0 !important; width: 100%; }
+.dip-table th, .dip-table td { padding: 8px 8px; }
+.dip-table td.sig-cell { white-space: normal; min-width: 170px; max-width: 250px; }
+.dip-table td.sig-cell .badge { margin-bottom: 2px; }
+.dip-table .sig-tf { display: block; margin: 3px 0 2px; font-size: 12px; }
+.dip-table td.sig-cell .why-chip { margin: 2px 3px 0 0; }
+.dip-table td.tgt-cell { white-space: normal; min-width: 190px; max-width: 290px; }
+.dip-table td.act { white-space: normal; min-width: 88px; }
+.dip-table td.act .sig-detail-btn, .dip-table td.act .follow-btn { display: block; width: 100%; margin: 0 0 5px; padding: 5px 8px; }
+.dip-table td.act > :last-child { margin-bottom: 0; }
+@media (max-width: 720px) {
+  table.rt td.sig-cell, table.rt td.tgt-cell, table.rt td.act { grid-column: 1 / -1; max-width: none; min-width: 0; }
+  table.rt td.act { display: flex; gap: 8px; } table.rt td.act .sig-detail-btn, table.rt td.act .follow-btn { margin: 0; flex: 1 1 0; }
+}
+
+/* short numbered guide under "How to read a signal" */
+.guide { margin: 8px 0 6px; padding-left: 20px; font-size: 13.5px; line-height: 1.5; }
+.guide li { margin: 5px 0; }
+
+.sig-notice { margin: 8px 0; padding: 9px 12px; border-radius: 10px; background: var(--inset-accent); border: 1px solid var(--lvl-bd); font-size: 13px; line-height: 1.5; }
+
+/* watchlist: Details column on the left with a drag handle; rows can be dragged up and down */
+.wl-det { text-align: left; }
+.wl-det-in { display: inline-flex; align-items: center; gap: 4px; white-space: nowrap; }
+.wl-drag { cursor: grab; touch-action: none; user-select: none; -webkit-user-select: none; padding: 6px 6px; margin-left: -4px; color: var(--muted); font-size: 16px; line-height: 1; letter-spacing: -3px; border-radius: 6px; }
+.wl-drag:hover, .wl-drag:focus-visible { color: var(--accent); background: var(--inset); outline: none; }
+.wl-drag:active { cursor: grabbing; }
+.wl-row.dragging td { background: var(--inset-accent) !important; box-shadow: 0 2px 8px rgba(0, 0, 0, 0.18); }
+.wl-reset { background: none; border: 0; color: var(--accent); font-weight: 700; font-size: 12px; cursor: pointer; padding: 2px 4px; }
+@media (max-width: 720px) { .wl-drag { padding: 10px 10px; font-size: 18px; } }

@@ -377,8 +377,11 @@ def watchlist_html(macro):
         live = f' data-live="{_esc(r["symbol"])}"' if r["symbol"] in BINANCE else ""
         bsym = f' data-binance="{_esc(BINANCE[r["symbol"]])}"' if r["symbol"] in BINANCE else ""
         note = f'<span class="wl-note">{_esc(r["note"])}</span>' if r.get("note") else ""
-        body.append(f'<tr{live}{bsym} data-sym="{_esc(r["symbol"])}" class="wl-row"><td>{_esc(r["symbol"])}{note}</td><td class="wl-price">{_fmt_value(r["price"], r["unit"])}</td>'
-                    f'<td class="wl-chg {cls}">{txt}</td><td class="wl-det"><button type="button" class="wl-chart-btn" aria-label="Show chart for {_esc(r["symbol"])}">&#128200; Chart</button></td></tr>')
+        body.append(f'<tr{live}{bsym} data-sym="{_esc(r["symbol"])}" class="wl-row"><td class="wl-det"><span class="wl-det-in">'
+                    f'<span class="wl-drag" tabindex="0" role="button" title="Drag to reorder (or focus and press the up/down arrow keys)" aria-label="Reorder {_esc(r["symbol"])}">&#8942;&#8942;</span>'
+                    f'<button type="button" class="wl-chart-btn" aria-label="Show chart for {_esc(r["symbol"])}">&#128200; Chart</button></span></td>'
+                    f'<td>{_esc(r["symbol"])}{note}</td><td class="wl-price">{_fmt_value(r["price"], r["unit"])}</td>'
+                    f'<td class="wl-chg {cls}">{txt}</td></tr>')
     curve = ""
     if rg.get("curve") is not None:
         curve = (f'<div class="sub">Yield curve (10Y-2Y): {rg["curve"]:+.2f} pts - '
@@ -393,10 +396,10 @@ def watchlist_html(macro):
     return f"""
 <div class="card wl-card">
   <div class="card-title">CROSS-MARKET WATCHLIST<span class="info-tip" tabindex="0" data-tip="{_esc(tip)}">&#9432;</span></div>
-  <div class="sub">Select a row to see its chart. Server snapshot {_esc(macro.get("fetched_at", ""))} UTC &middot; <span id="wl-live-stamp">Binance rows update live</span></div>
+  <div class="sub">Select a row to see its chart. Drag the &#8942;&#8942; handle to reorder the list. Server snapshot {_esc(macro.get("fetched_at", ""))} UTC &middot; <span id="wl-live-stamp">Binance rows update live</span> <button type="button" class="wl-reset" hidden>Reset order</button></div>
   <div class="wl-split">
     <div class="wl-list">
-      <table class="signal-table wl-table no-stack"><thead><tr><th>Symbol</th><th>Last</th><th>Change</th><th>Details</th></tr></thead><tbody>
+      <table class="signal-table wl-table no-stack"><thead><tr><th>Details</th><th>Symbol</th><th>Last</th><th>Change</th></tr></thead><tbody>
       {"".join(body)}
       </tbody></table>
     </div>

@@ -63,6 +63,18 @@ class TotalsTests(unittest.TestCase):
         self.assertNotIn("<b>x", html)
         self.assertIn("unavailable", macro.watchlist_html(None))
 
+    def test_watchlist_has_details_column_first_and_a_drag_handle_per_row(self):
+        import re
+        data = {"yahoo": {"DXY": {"price": 100, "prev": 99, "change_abs": 1, "change_pct": 1.0}}, "binance": {}, "crypto": None, "unrate": 4.1}
+        rows = macro.build_rows(data)
+        html = macro.watchlist_html({"rows": rows, "regime": macro.macro_regime(rows), "errors": {}, "fetched_at": "t"})
+        self.assertRegex(html, r"<thead><tr><th>Details</th><th>Symbol</th><th>Last</th><th>Change</th></tr></thead>")
+        row = re.search(r'<tr[^>]*data-sym="DXY"[^>]*>(.*?)</tr>', html, re.S).group(1)
+        self.assertLess(row.index("wl-drag"), row.index("wl-chart-btn"))          # handle, then Chart button, both before the symbol
+        self.assertLess(row.index("wl-chart-btn"), row.index(">DXY<"))
+        self.assertEqual(html.count('class="wl-drag"'), len(rows))
+        self.assertIn("wl-reset", html)
+
 
 class TopCapTests(unittest.TestCase):
     def fake_get(self, missing=None, short=False):
