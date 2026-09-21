@@ -10,7 +10,11 @@ import os
 import urllib.error
 import urllib.request
 import datetime
+import socket
+import time
 
+RETRIES = 4                       # attempts per request
+BACKOFF_SECONDS = (2, 5, 12)      # waits between attempts
 ENV_KEYS = ("KAIRO_SUPABASE_URL", "KAIRO_SUPABASE_ANON_KEY", "KAIRO_PUBLISHER_EMAIL", "KAIRO_PUBLISHER_PASSWORD")
 
 
@@ -34,15 +38,26 @@ class Backend:
         if headers:
             h.update(headers)
         data = json.dumps(body).encode("utf-8") if body is not None else None
-        req = urllib.request.Request(self.url + path, data=data, method=method, headers=h)
-        try:
-            with urllib.request.urlopen(req, timeout=timeout) as resp:
-                raw = resp.read()
-                return json.loads(raw) if raw else None
-        except urllib.error.HTTPError as e:
-            # Server-side detail only -- never echo request headers/body, which carry credentials.
-            detail = e.read().decode("utf-8", "replace")[:300]
-            raise RuntimeError(f"{method} {path.split('?')[0]} -> HTTP {e.code}: {detail}") from None
+        # Temporary trouble (network error, timeout, HTTP 429/5xx) is retried a few times: every call here is safe to repeat
+        # (reads, token requests, and upserts that merge on a key). Anything else, e.g. a 4xx from a bad request, fails at once.
+        last = None
+        for attempt in range(RETRIES):
+            if attempt:
+                time.sleep(BACKOFF_SECONDS[attempt - 1])
+            req = urllib.request.Request(self.url + path, data=data, method=method, headers=h)
+            try:
+                with urllib.request.urlopen(req, timeout=timeout) as resp:
+                    raw = resp.read()
+                    return json.loads(raw) if raw else None
+            except urllib.error.HTTPError as e:
+                # Server-side detail only -- never echo request headers/body, which carry credentials.
+                detail = e.read().decode("utf-8", "replace")[:300]
+                last = RuntimeError(f"{method} {path.split('?')[0]} -> HTTP {e.code}: {detail}")
+                if e.code != 429 and e.code < 500:
+                    raise last from None
+            except (urllib.error.URLError, socket.timeout, TimeoutError, ConnectionError, OSError) as e:
+                last = RuntimeError(f"{method} {path.split('?')[0]} -> {type(e).__name__} (temporary network problem)")
+        raise last from None
 
     def sign_in(self):
         r = self._request("POST", "/auth/v1/token?grant_type=password",

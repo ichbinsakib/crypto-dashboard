@@ -657,3 +657,10 @@ a.ov-chip { cursor: pointer; } a.ov-chip:hover, a.ov-chip:focus-visible { border
 @media (max-width: 720px) { .sc2-chartwrap .sc-chart { height: 150px; } }
 
 .sc2-lv small { font-size: 11px; font-weight: 600; color: var(--muted); }
+
+/* SCALPING: use the width of the screen; four coins in one row on desktop, two on tablets, one on phones */
+.panel-scalping { max-width: 1680px; }
+.sc2-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+@media (min-width: 1100px) { .sc2-grid { grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 12px; } }
+@media (min-width: 1100px) { .sc2-grid .sc2-coin .sc-chart { height: 150px; } }
+@media (max-width: 720px) { .sc2-grid { grid-template-columns: 1fr; } }

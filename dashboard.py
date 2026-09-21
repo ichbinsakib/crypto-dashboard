@@ -3169,5 +3169,23 @@ def main():
     log(f"--- run ok, wrote {OUTPUT_PATH} ---")
 
 
+def _record_crash():
+    """If the job dies with an unexpected error, save the traceback (no secrets: it is only Python's own traceback) to the
+    database so it can be read without GitHub's log access. Best effort; never raises."""
+    try:
+        import traceback
+        b = supa.Backend.from_env()
+        if b:
+            b.sign_in()
+            b.put_state({"at": datetime.datetime.now(datetime.timezone.utc).isoformat(), "job": "dashboard",
+                         "traceback": traceback.format_exc()[-3500:]}, "_last_error")
+    except Exception:  # noqa: BLE001
+        pass
+
+
 if __name__ == "__main__":
-    main()
+    try:
+        main()
+    except Exception:
+        _record_crash()
+        raise
