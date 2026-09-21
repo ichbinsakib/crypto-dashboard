@@ -202,7 +202,7 @@
   function mount(host, spec, sym) {
     var st = STATE[sym] || (STATE[sym] = { range: '1Y', emas: { 20: false, 50: false, 100: true, 200: false } });
     var candle = spec.kind === 'candle';
-    host.innerHTML = '<div class="kc"><div class="kc-head"><b class="kc-title">' + esc(TITLES[sym] || sym) + '</b><span class="kc-ohlc"></span></div>' +
+    host.innerHTML = '<div class="kc"><div class="kc-head"><b class="kc-title">' + esc(spec.title || TITLES[sym] || sym) + '</b><span class="kc-ohlc"></span></div>' +
       '<div class="kc-ctl"><div class="kc-ranges">' + ['3M', '6M', '1Y', 'MAX'].map(function (r) { return '<button type="button" data-r="' + r + '" class="' + (r === st.range ? 'on' : '') + '">' + r + '</button>'; }).join('') + '</div>' +
       (candle ? '<div class="kc-emas">' + [20, 50, 100, 200].map(function (p) {
         return '<button type="button" data-e="' + p + '" class="' + (st.emas[p] ? 'on' : '') + '" style="--c:' + EMA_COL[p] + '">EMA ' + p + '</button>';
@@ -222,15 +222,27 @@
     document.querySelectorAll('.wl-row.open').forEach(function (r) { r.classList.remove('open'); });
   }
 
+  /* On a wide screen the chart lives in a pane beside the list (like a trading terminal); on a narrow one it opens under the row. */
+  function paneHost() {
+    var pane = document.getElementById('wl-pane');
+    return pane && pane.offsetParent !== null && pane.offsetWidth > 240 ? pane : null;
+  }
+
   function openFor(row) {
     var sym = row.getAttribute('data-sym');
     closeAll();
     OPEN = sym; row.classList.add('open');
-    var tr = document.createElement('tr'); tr.className = 'wl-chart-row';
-    var td = document.createElement('td'); td.colSpan = 4;
-    var host = document.createElement('div'); host.className = 'kc-host';
+    var pane = paneHost(), host;
+    if (pane) {
+      host = pane;
+      host.classList.add('kc-host');
+    } else {
+      var tr = document.createElement('tr'); tr.className = 'wl-chart-row';
+      var td = document.createElement('td'); td.colSpan = 4;
+      host = document.createElement('div'); host.className = 'kc-host';
+      td.appendChild(host); tr.appendChild(td); row.parentNode.insertBefore(tr, row.nextSibling);
+    }
     host.innerHTML = '<div class="kc-note">Loading chart…</div>';
-    td.appendChild(host); tr.appendChild(td); row.parentNode.insertBefore(tr, row.nextSibling);
     getSeries(row).then(function (spec) { if (OPEN === sym && host.isConnected) mount(host, spec, sym); }).catch(function (e) {
       host.innerHTML = '<div class="kc-note">' + (e && e.message === 'none'
         ? 'No chart for ' + esc(sym) + ': there is no free historical data feed for this one, and nothing is drawn from estimates.'
@@ -243,7 +255,7 @@
     document.querySelectorAll('.wl-table tr.wl-row').forEach(function (row) {
       row.addEventListener('click', function (ev) {
         if (ev.target.closest('.kc-host')) return;
-        if (row.classList.contains('open')) { closeAll(); OPEN = null; return; }
+        if (row.classList.contains('open') && !paneHost()) { closeAll(); OPEN = null; return; }     // inline mode toggles; the pane always shows a selection
         openFor(row);
       });
     });
@@ -251,7 +263,21 @@
       var row = document.querySelector('.wl-table tr.wl-row[data-sym="' + OPEN.replace(/"/g, '') + '"]');
       if (row) openFor(row); else OPEN = null;
     }
+    ensureSelection();
   };
+
+  /* With the pane visible there is always a chart: TOTAL (or the first row) is selected by default. */
+  function ensureSelection() {
+    if (!paneHost() || OPEN) return;
+    var row = document.querySelector('.wl-table tr.wl-row[data-sym="TOTAL"]') || document.querySelector('.wl-table tr.wl-row');
+    if (row) openFor(row);
+  }
+  if (typeof document !== 'undefined') {
+    // the watchlist sits in a hidden tab until it is chosen: pick the default chart when it becomes visible
+    document.addEventListener('change', function (e) {
+      if (e.target && e.target.type === 'radio') setTimeout(ensureSelection, 60);
+    });
+  }
   var rt; window.addEventListener('resize', function () {
     clearTimeout(rt);
     rt = setTimeout(function () {

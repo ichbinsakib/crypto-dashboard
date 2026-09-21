@@ -29,6 +29,38 @@ def _get(url, timeout=15):
         return json.loads(r.read())
 
 
+# The eight largest coins that CoinMetrics' free community API publishes daily market caps for (BNB, SOL and TRX are not offered).
+# Their sum is NOT the whole crypto market: it is drawn as its own, clearly labelled series (see build_charts).
+CM_CAP_ASSETS = ("btc", "eth", "usdt", "usdc", "xrp", "doge", "ada", "link")
+CM_URL = "https://community-api.coinmetrics.io/v4/timeseries/asset-metrics"
+
+
+def fetch_top_caps(days=400, get=None, sleep=None):
+    """-> [[ms, total_usd], ...] daily sum of CM_CAP_ASSETS' market caps, keeping only days where ALL of them have a value,
+    so the line never jumps because one coin is missing. Raises if any coin cannot be fetched (nothing is guessed)."""
+    import datetime as _dt
+    import time as _t
+    get = get or _get
+    sleep = _t.sleep if sleep is None else sleep
+    start = (_dt.date.today() - _dt.timedelta(days=days)).isoformat()
+    by_day = {}
+    for a in CM_CAP_ASSETS:
+        rows = get(f"{CM_URL}?assets={a}&metrics=CapMrktCurUSD&frequency=1d&start_time={start}&page_size=1000", 30)["data"]
+        for r in rows:
+            v = r.get("CapMrktCurUSD")
+            if v:
+                by_day.setdefault(r["time"][:10], {})[a] = float(v)
+        sleep(0.7)                                                   # the free API allows only a handful of requests per few seconds
+    out = []
+    for day in sorted(by_day):
+        if len(by_day[day]) == len(CM_CAP_ASSETS):
+            ms = int(_dt.datetime.strptime(day, "%Y-%m-%d").replace(tzinfo=_dt.timezone.utc).timestamp() * 1000)
+            out.append([ms, sum(by_day[day].values())])
+    if len(out) < 30:
+        raise ValueError("not enough market-cap history")
+    return out
+
+
 def fetch_yahoo(symbol):
     """-> {price, prev, change_abs, change_pct, closes, ohlc}: quote change from the last two daily closes plus the live
     price, and up to a year of daily candles [ts_ms, open, high, low, close] for the chart."""
@@ -98,6 +130,10 @@ def fetch_all(unrate=None):
         data["crypto"] = fetch_coingecko_globals()
     except Exception as e:  # noqa: BLE001
         errors["coingecko"] = type(e).__name__
+    try:
+        data["top_caps"] = fetch_top_caps()
+    except Exception:  # noqa: BLE001 - optional chart: without it the TOTAL row simply has no chart
+        data["top_caps"] = None
     return data, errors
 
 
@@ -152,7 +188,7 @@ def crypto_totals(cg):
 
 def build_charts(data):
     """{SYMBOL: {"kind": "candle"|"line", "d": [...]}} for watchlist rows that have a real history. Symbols with none
-    (crypto totals and dominance have no free daily history) are simply absent - the UI says so instead of drawing anything."""
+    (dominance and TOTAL3 have no free daily history; TOTAL is a labelled top-8 proxy) are simply absent - the UI says so instead of drawing anything."""
     ch = {}
     for label, y in (data.get("yahoo") or {}).items():
         if y.get("ohlc") and label not in ("US02Y", "US03MY"):
@@ -171,6 +207,14 @@ def build_charts(data):
             ch[name] = sp
     if data.get("unrate_line"):
         ch["UNRATE"] = {"kind": "line", "d": data["unrate_line"]}
+    caps = data.get("top_caps")
+    if caps and data.get("crypto"):
+        # Not the full TOTAL (no free source has that history): the 8 biggest coins with free data, labelled with how much of
+        # today's TOTAL they cover, in trillions of dollars so the axis stays readable.
+        total_now = (crypto_totals(data["crypto"]).get("TOTAL") or {}).get("price")
+        cover = f" (about {caps[-1][1] / total_now * 100:.0f}% of today's TOTAL)" if total_now else ""
+        ch["TOTAL"] = {"kind": "line", "d": [[t, round(v / 1e12, 4)] for t, v in caps[-260:]],
+                       "title": f"Crypto market cap: the 8 largest coins with free data, trillion USD{cover}"}
     return ch
 
 
@@ -349,10 +393,15 @@ def watchlist_html(macro):
     return f"""
 <div class="card wl-card">
   <div class="card-title">CROSS-MARKET WATCHLIST<span class="info-tip" tabindex="0" data-tip="{_esc(tip)}">&#9432;</span></div>
-  <div class="sub">Tap a row or its Chart button for the price chart. Server snapshot {_esc(macro.get("fetched_at", ""))} UTC &middot; <span id="wl-live-stamp">Binance rows update live</span></div>
-  <table class="signal-table wl-table no-stack"><thead><tr><th>Symbol</th><th>Last</th><th>Change</th><th>Details</th></tr></thead><tbody>
-  {"".join(body)}
-  </tbody></table>
+  <div class="sub">Select a row to see its chart. Server snapshot {_esc(macro.get("fetched_at", ""))} UTC &middot; <span id="wl-live-stamp">Binance rows update live</span></div>
+  <div class="wl-split">
+    <div class="wl-list">
+      <table class="signal-table wl-table no-stack"><thead><tr><th>Symbol</th><th>Last</th><th>Change</th><th>Details</th></tr></thead><tbody>
+      {"".join(body)}
+      </tbody></table>
+    </div>
+    <div class="wl-pane" id="wl-pane"><div class="kc-note">Select a row to see its chart here.</div></div>
+  </div>
   {curve}{missing}
   <div class="card-title" style="margin-top:14px;">MACRO BACKDROP: <span class="{tone}">{_esc(rg["label"])}</span> (score {rg["score"]:+d} from {rg["n"]} factors)</div>
   <div class="sub">This feeds one row of the BTC/ETH spot signals (worth -2 to +2 points). Simple rules of thumb - a rising dollar and yields, falling stocks or rising stablecoin share are risk-off for crypto - not a validated edge.</div>

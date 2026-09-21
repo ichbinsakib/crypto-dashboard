@@ -64,5 +64,43 @@ class TotalsTests(unittest.TestCase):
         self.assertIn("unavailable", macro.watchlist_html(None))
 
 
+class TopCapTests(unittest.TestCase):
+    def fake_get(self, missing=None, short=False):
+        def get(url, timeout=15):
+            asset = url.split("assets=")[1].split("&")[0]
+            if asset == missing:
+                raise RuntimeError("403")
+            n = 10 if short else 60
+            return {"data": [{"asset": asset, "time": f"2026-{(i // 28) + 6:02d}-{(i % 28) + 1:02d}T00:00:00.000000000Z", "CapMrktCurUSD": str(1e12 * (1 + i / 100))}
+                             for i in range(n)]}
+        return get
+
+    def test_sums_all_assets_per_day(self):
+        out = macro.fetch_top_caps(get=self.fake_get(), sleep=lambda s: None)
+        self.assertEqual(len(out), 60)
+        self.assertAlmostEqual(out[0][1], 1e12 * len(macro.CM_CAP_ASSETS))
+        self.assertTrue(all(out[i][0] < out[i + 1][0] for i in range(len(out) - 1)))
+
+    def test_one_missing_coin_means_no_series_not_a_partial_sum(self):
+        with self.assertRaises(RuntimeError):
+            macro.fetch_top_caps(get=self.fake_get(missing="xrp"), sleep=lambda s: None)
+
+    def test_too_little_history_is_rejected(self):
+        with self.assertRaises(ValueError):
+            macro.fetch_top_caps(get=self.fake_get(short=True), sleep=lambda s: None)
+
+    def test_total_chart_is_labelled_as_a_proxy_and_scaled_to_trillions(self):
+        cg = TotalsTests().cg()                                               # TOTAL = 2000 in this fixture's units
+        caps = [[i * 86400000, 1600.0 + i] for i in range(40)]                 # last value 1639 -> ~82% of 2000
+        ch = macro.build_charts({"yahoo": {}, "top_caps": caps, "crypto": cg})
+        t = ch["TOTAL"]
+        self.assertEqual(t["kind"], "line")
+        self.assertIn("8 largest coins", t["title"])
+        self.assertIn("% of today's TOTAL", t["title"])
+        self.assertIn("82% of today's TOTAL", t["title"])
+        self.assertAlmostEqual(t["d"][-1][1], round(caps[-1][1] / 1e12, 4))
+        self.assertNotIn("TOTAL", macro.build_charts({"yahoo": {}, "top_caps": None, "crypto": cg}))     # no data -> no chart at all
+
+
 if __name__ == "__main__":
     unittest.main()
