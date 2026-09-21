@@ -1751,7 +1751,8 @@ def render(coins_data, fng_value, fng_classification, generated_at, any_stale,
         return (f'<div class="coin-simple ms-{cs["css"]}"><div class="cs-top"><span class="cs-name">{_esc(c_.get("emoji", ""))} {_esc(c_["name"])}</span>'
                 f'<span class="wc-action wc-{cs["action"].lower()}">{cs["action"]}</span></div>'
                 f'<div class="cs-price">{price_txt} {chg}</div>'
-                f'<div class="cs-status">{cs["emoji"]} {_esc(cs["word"])}</div><div class="cs-note">{_esc(cs["note"])}</div>{rng}</div>')
+                f'<div class="cs-status">{cs["emoji"]} {_esc(cs["word"])}</div><div class="cs-note">{_esc(cs["note"])}</div>{rng}</div>'
+                f'<div class="coin-chart" data-binance="{_esc(c_["key"])}USDT"></div>')
 
     def _with_simple_view(panel_html, c_, lead_html=""):
         key = c_["key"].lower()

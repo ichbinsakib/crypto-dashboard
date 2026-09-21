@@ -109,6 +109,12 @@ class OverviewTests(unittest.TestCase):
         self.assertIn("Typical hold ~4 days", visible)
         self.assertNotRegex(h, r"ATRs?")
 
+    def test_bitcoin_and_ethereum_tabs_get_an_interactive_chart_host(self):
+        h = self.p["bigcoins"]["html"]
+        self.assertIn('class="coin-chart" data-binance="BTCUSDT"', h)
+        self.assertIn('class="coin-chart" data-binance="ETHUSDT"', h)
+        self.assertEqual(h.count('class="coin-chart"'), 2)
+
     def test_tab_names(self):
         self.assertIn("Signals", self.p["screener"]["title"])
         self.assertEqual(self.p["bigcoins"]["title"], "\U0001FA99 Market")

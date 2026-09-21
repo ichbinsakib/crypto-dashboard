@@ -742,3 +742,5 @@ a.ov-chip { cursor: pointer; } a.ov-chip:hover, a.ov-chip:focus-visible { border
 .sc2-kc { min-height: 60px; }
 .sc2-chartwrap .kc-note { font-size: 11px; }
 @media (pointer: coarse) { .kd-b, .kc-narrow .kd-b { width: 40px; height: 40px; } .kd-emoji { grid-template-columns: repeat(4, 44px); } .kd-emoji button { width: 44px; height: 44px; } }
+
+.coin-chart { margin: 0 0 12px; min-height: 40px; }

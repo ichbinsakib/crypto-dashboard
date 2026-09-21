@@ -409,10 +409,28 @@
       if (row) openFor(row); else OPEN = null;
     }
     ensureSelection();
+    mountCoinCharts();
   };
+
+  /* Bitcoin / Ethereum tabs: a full interactive chart under the summary card, drawn once its tab is on screen. */
+  function mountCoinCharts() {
+    document.querySelectorAll('.coin-chart').forEach(function (h) {
+      if (h.getAttribute('data-done') === '1' || h.offsetParent === null || h.clientWidth < 240) return;
+      h.setAttribute('data-done', '1');
+      var sym = h.getAttribute('data-binance');
+      h.innerHTML = '<div class="kc-note">Loading chart\u2026</div>';
+      fetchBinance(sym).then(function (spec) {
+        if (!h.isConnected) return;
+        spec.key = sym;                                     // same key as the watchlist chart, so drawings are shared
+        spec.title = TITLES[sym] || sym;
+        mount(h, spec, 'coin:' + sym);
+      }).catch(function () { h.innerHTML = '<div class="kc-note">Could not load the chart right now.</div>'; h.setAttribute('data-done', '0'); });
+    });
+  }
 
   /* With the pane visible there is always a chart: TOTAL (or the first row) is selected by default. */
   function ensureSelection() {
+    mountCoinCharts();
     if (!paneHost() || OPEN) return;
     var row = document.querySelector('.wl-table tr.wl-row[data-sym="TOTAL"]') || document.querySelector('.wl-table tr.wl-row');
     if (row) openFor(row);

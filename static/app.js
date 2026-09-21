@@ -301,6 +301,7 @@
 
   async function refresh(initial) {
     if (S.loading) return;
+    if (!initial && document.querySelector('[data-busy="1"]')) return;      // mid-drawing: skip this refresh, the next one will catch up
     S.loading = true;
     try {
       var rows = await fetchRows();
