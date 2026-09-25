@@ -143,11 +143,29 @@ class LifecycleTests(unittest.TestCase):
         self.assertLess(r["r_multiple"], 0)
         self.assertGreater(r["mae_pct"], 1.0)
 
-    def test_target_one_then_breakeven_is_a_small_win_not_a_loss(self):
+    def test_after_target_one_the_stop_trails_and_locks_in_more_than_flat_breakeven(self):
+        # TP1 (101.5) is wicked to 101.6 on bar 2, so peak=101.6; with the default post_tp1_trail_atr=0.8 and atr=1.0,
+        # the trail floor is 101.6-0.8=100.8 -- above pure breakeven (100.1), not pinned to it.
         r = run5(signal(), [(100.1, 100.3, 99.9, 100.1), (100.1, 101.6, 100.0, 101.2), (101.2, 101.3, 100.0, 100.3)])
-        self.assertEqual((r["state"], r["exit_reason"]), ("TP1_HIT", "tp1_then_breakeven"))
-        self.assertAlmostEqual(r["exit_price"], 100.1)
+        self.assertEqual((r["state"], r["exit_reason"]), ("TP1_HIT", "tp1_then_trail"))
+        self.assertAlmostEqual(r["exit_price"], 100.8)
+        self.assertGreater(r["exit_price"], r["actual_entry"])
         self.assertGreater(r["pnl_pct"], 0)
+
+    def test_trail_never_goes_below_breakeven_even_with_an_aggressive_trail_setting(self):
+        cfg = C.effective({"post_tp1_trail_atr": 5.0})            # wider than tp1_atr: the candidate trail would sit below entry
+        r = run5(signal(), [(100.1, 100.3, 99.9, 100.1), (100.1, 101.6, 101.5, 101.6), (101.6, 101.7, 100.0, 100.3)], cfg=cfg)
+        self.assertEqual((r["state"], r["exit_reason"]), ("TP1_HIT", "tp1_then_breakeven"))
+        self.assertAlmostEqual(r["exit_price"], 100.1)             # floored at breakeven, never worse
+        self.assertGreater(r["pnl_pct"], 0)
+
+    def test_trailing_lets_a_trade_survive_a_pullback_that_would_have_stopped_it_out_under_flat_breakeven(self):
+        # Old behaviour: any dip back to entry (100.1) after TP1 closed the trade at flat breakeven. Bar 3 dips to 100.5,
+        # which is BELOW old flat breakeven's neighbour but ABOVE the new trail (100.8 is not breached... use 100.9 to
+        # stay clearly above the trail floor of 100.8), then bar 4 pushes on to target 2.
+        r = run5(signal(), [(100.1, 100.3, 99.9, 100.1), (100.1, 101.6, 100.0, 101.2), (101.2, 101.3, 100.9, 101.0), (101.0, 103.2, 100.95, 103.0)])
+        self.assertEqual((r["state"], r["exit_reason"]), ("TP2_HIT", "tp2"))
+        self.assertGreater(r["pnl_pct"], 1.0)
 
     def test_same_candle_touching_stop_and_target_counts_as_the_stop(self):
         r = run5(signal(), [(100.1, 101.8, 98.5, 101.0)])
@@ -241,6 +259,53 @@ class AntiSpamTests(unittest.TestCase):
     def test_cooldowns_are_configurable(self):
         cfg = C.effective({"cooldown_min": 0, "sl_cooldown_min": 0, "min_level_change_atr": 0})
         self.assertIsNone(L.blocked("SOL", "LONG", 100.0, 1.0, [self.finished("STOP_LOSS", 1)], self.NOW, cfg))
+
+    def test_a_losing_streak_trips_the_longer_circuit_breaker_cooldown(self):
+        # Two stop-losses in a row (default loss_streak_limit): the short sl_cooldown_min (90) has elapsed, but the
+        # longer loss_streak_cooldown_min (240) has not -- the coin should still be blocked, and say why.
+        rows = [signal(id="a", coin="ONDO", state="STOP_LOSS", exit_time=S._iso(self.NOW - dt.timedelta(minutes=200)), actual_entry=1.0, direction="LONG"),
+                signal(id="b", coin="ONDO", state="STOP_LOSS", exit_time=S._iso(self.NOW - dt.timedelta(minutes=100)), actual_entry=1.0, direction="LONG")]
+        reason = L.blocked("ONDO", "LONG", 5.0, 1.0, rows, self.NOW, CFG)
+        self.assertIn("losses in a row", reason)
+        self.assertIsNone(L.blocked("LINK", "LONG", 5.0, 1.0, rows, self.NOW, CFG))     # a different coin is unaffected
+
+    def test_the_circuit_breaker_releases_once_its_own_longer_cooldown_elapses(self):
+        rows = [signal(id="a", coin="ONDO", state="STOP_LOSS", exit_time=S._iso(self.NOW - dt.timedelta(minutes=300)), actual_entry=1.0, direction="LONG"),
+                signal(id="b", coin="ONDO", state="STOP_LOSS", exit_time=S._iso(self.NOW - dt.timedelta(minutes=250)), actual_entry=1.0, direction="LONG")]
+        self.assertIsNone(L.blocked("ONDO", "LONG", 5.0, 1.0, rows, self.NOW, CFG))
+
+    def test_a_win_resets_the_losing_streak(self):
+        rows = [signal(id="a", coin="ONDO", state="STOP_LOSS", exit_time=S._iso(self.NOW - dt.timedelta(minutes=300)), actual_entry=1.0, direction="LONG"),
+                signal(id="b", coin="ONDO", state="TP2_HIT", exit_time=S._iso(self.NOW - dt.timedelta(minutes=100)), actual_entry=1.0, direction="LONG")]
+        # only one loss since the last win: the ordinary (shorter) cooldown applies, not the circuit breaker
+        self.assertIsNone(L.blocked("ONDO", "LONG", 5.0, 1.0, rows, self.NOW, CFG))
+
+    def test_the_circuit_breaker_cooldown_escalates_with_further_consecutive_losses(self):
+        # 3 losses in a row (one more than the default limit of 2) doubles the wait to 480 min: at 300 min since the
+        # last one, it's still blocked. With only 2 losses the base wait is 240 min, so the same 300-min gap clears it --
+        # this contrast is the point: naturally-spaced losses (hours apart) shouldn't be able to just wait out one flat pause.
+        rows3 = [signal(id=f"r{i}", coin="ONDO", state="STOP_LOSS", exit_time=S._iso(self.NOW - dt.timedelta(minutes=m)), actual_entry=1.0, direction="LONG")
+                 for i, m in enumerate([500, 400, 300])]
+        self.assertIsNotNone(L.blocked("ONDO", "LONG", 5.0, 1.0, rows3, self.NOW, CFG))
+        rows2 = [signal(id=f"s{i}", coin="ONDO", state="STOP_LOSS", exit_time=S._iso(self.NOW - dt.timedelta(minutes=m)), actual_entry=1.0, direction="LONG")
+                 for i, m in enumerate([500, 300])]
+        self.assertIsNone(L.blocked("ONDO", "LONG", 5.0, 1.0, rows2, self.NOW, CFG))
+
+    def test_the_escalation_is_capped_so_a_very_long_streak_does_not_pause_forever(self):
+        # 5 losses and 8 losses in a row should both be capped at the same 4x wait (960 min): a coin that has been
+        # losing for a very long time isn't punished with an ever-growing pause beyond the cap.
+        def streak_rows(n, since_min):
+            return [signal(id=f"c{n}-{i}", coin="ONDO", state="STOP_LOSS", exit_time=S._iso(self.NOW - dt.timedelta(minutes=since_min + i * 100)),
+                           actual_entry=1.0, direction="LONG") for i in range(n)]
+        for n in (5, 8):
+            self.assertIsNotNone(L.blocked("ONDO", "LONG", 5.0, 1.0, streak_rows(n, 959), self.NOW, CFG))    # just inside the capped 960-min wait
+            self.assertIsNone(L.blocked("ONDO", "LONG", 5.0, 1.0, streak_rows(n, 961), self.NOW, CFG))       # just past it
+
+    def test_loss_streak_settings_are_configurable(self):
+        cfg = C.effective({"loss_streak_limit": 3})
+        rows = [signal(id="a", coin="ONDO", state="STOP_LOSS", exit_time=S._iso(self.NOW - dt.timedelta(minutes=200)), actual_entry=1.0, direction="LONG"),
+                signal(id="b", coin="ONDO", state="STOP_LOSS", exit_time=S._iso(self.NOW - dt.timedelta(minutes=100)), actual_entry=1.0, direction="LONG")]
+        self.assertIsNone(L.blocked("ONDO", "LONG", 5.0, 1.0, rows, self.NOW, cfg))     # only 2 losses, limit raised to 3
 
 
 class FakeMarket:

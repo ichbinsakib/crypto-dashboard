@@ -83,7 +83,7 @@ def _alerts_for(prev, new, cfg):
     if new.get("entry_time") and not prev.get("entry_time"):
         add("entry", "scalp_entry", f"▶ {coin} {side.upper()} entered", f"Filled near {fmt_price(new['actual_entry'])}. Stop {fmt_price(new['stop'])}.", new["entry_time"])
     if new.get("tp1_time") and not prev.get("tp1_time"):
-        add("tp1", "scalp_tp1", f"✅ {coin} target 1 hit", f"{fmt_price(new['tp1'])} reached. Stop moved to breakeven.", new["tp1_time"])
+        add("tp1", "scalp_tp1", f"✅ {coin} target 1 hit", f"{fmt_price(new['tp1'])} reached. Stop moved to breakeven and now trails the price.", new["tp1_time"])
     if new.get("exit_time") and not prev.get("exit_time"):
         pnl = new.get("pnl_pct")
         p = "" if pnl is None else f" ({pnl:+.2f}%)"
