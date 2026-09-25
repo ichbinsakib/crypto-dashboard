@@ -786,3 +786,10 @@ a.ov-chip { cursor: pointer; } a.ov-chip:hover, a.ov-chip:focus-visible { border
 .mv-evd { margin-top: 3px; font-size: 12px; font-weight: 700; color: var(--muted); }
 .mv-notes { margin: 8px 0 4px; }
 .mv-log td, .mv-log th { padding: 6px 10px; font-size: 12.5px; white-space: normal; }
+
+.mv-heads { list-style: none; margin: 6px 0 0; padding: 0; }
+.mv-heads li { padding: 7px 0; border-bottom: 1px dotted var(--border); }
+.mv-heads li:last-child { border-bottom: 0; }
+.mv-heads a { color: var(--text); font-weight: 600; text-decoration: none; }
+.mv-heads a:hover { color: var(--accent); text-decoration: underline; }
+.mv-heads .ev-sub { margin-top: 1px; }

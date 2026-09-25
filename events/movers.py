@@ -20,10 +20,11 @@ REACTION_PCT = 0.3           # Bitcoin's move within an hour of a release that c
 HIGH_LEVELS = ("HIGH", "VERY_HIGH")
 STRENGTH = {3: "STRONG", 2: "SOME", 1: "WEAK"}
 
-CANT_SEE = ["News headlines, tweets and rumours",
-            "Exchange-traded fund (ETF) money flows",
+CANT_SEE = ["Exchange-traded fund (ETF) money flows",
             "Forced selling and buying by leveraged traders (liquidations)",
-            "Big wallets moving coins"]
+            "Big wallets moving coins (\u201cwhale\u201d transfers)",
+            "Social-media sentiment (tweets, Reddit, Telegram chatter)"]
+CANT_SEE_WHY = "These need a paid data provider that isn't connected here; the app never guesses them from other numbers."
 DISCLAIMER = ("These are signals that lined up with the move, not proven causes. The app only sees prices and a handful of market "
               "gauges. Treat it as a starting point, and check the news before acting.")
 
@@ -221,7 +222,7 @@ def explain(inputs, events, now=None):
         summary = "The main things that lined up with the move: " + "; ".join(f"({i}) {f['title']}" for i, f in enumerate(lead, 1)) + "."
     else:
         summary = "None of the signals the app tracks clearly explain this move: it may be news-driven or come from big traders."
-    return {"as_of": now.astimezone(dt.timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ"), "window": "last 24 hours",
+    return {"as_of": now.astimezone(dt.timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ"), "window": "last 24 hours", "cant_see_why": CANT_SEE_WHY,
             "direction": "UP" if direction > 0 else "DOWN" if direction < 0 else "FLAT", "emoji": "\U0001F7E2" if direction > 0 else "\U0001F534" if direction < 0 else "\U0001F7E1",
             "btc_pct": round(b, 2), "eth_pct": None if e is None else round(e, 2), "total_pct": None if total is None else round(total, 2),
             "typical_pct": None if not inputs.get("typical_move_pct") else round(float(inputs["typical_move_pct"]), 2), "multiple": mult, "size_label": label,

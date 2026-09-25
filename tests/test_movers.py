@@ -81,6 +81,7 @@ class DriverTests(unittest.TestCase):
         self.assertEqual(m["up"], [])
         self.assertIn("None of the signals", m["summary"])
         self.assertTrue(m["cant_see"])
+        self.assertIn("paid data provider", m["cant_see_why"])
         self.assertIn("not proven causes", m["disclaimer"])
 
     def test_missing_data_leaves_factors_out_and_missing_price_returns_nothing(self):

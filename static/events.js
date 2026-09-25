@@ -146,7 +146,9 @@
       '<div><h4>' + esc(againstHead) + '</h4>' + (againstList.length ? '<ul class="mv-list">' + againstList.map(mvItem).join('') + '</ul>' : '<div class="ev-sub">Nothing found.</div>') + '</div></div>' +
       ((m.notes || []).length ? '<ul class="ev-ul mv-notes">' + m.notes.map(function (n) { return '<li>' + esc(n) + '</li>'; }).join('') + '</ul>' : '') +
       '<div class="ev-take"><b>Please note:</b> ' + esc(m.disclaimer) + '</div>' +
-      '<details class="ev-why"><summary>What the app cannot see</summary><ul class="ev-ul">' + (m.cant_see || []).map(function (x) { return '<li>' + esc(x) + '</li>'; }).join('') + '</ul></details>' +
+      (m.headlines && m.headlines.length ? '<details class="ev-why" open><summary>Recent headlines <small>(shown as-is, not analyzed)</small></summary><ul class="mv-heads">' +
+        m.headlines.map(function (h) { return '<li><a href="' + esc(h.link) + '" target="_blank" rel="noopener">' + esc(h.title) + '</a><span class="ev-sub">' + esc(h.source) + ' &middot; ' + (h.age_min < 60 ? h.age_min + ' min ago' : Math.round(h.age_min / 60) + ' h ago') + '</span></li>'; }).join('') + '</ul></details>' : '') +
+      '<details class="ev-why"><summary>What the app still cannot see</summary><div class="ev-sub">' + esc(m.cant_see_why || '') + '</div><ul class="ev-ul">' + (m.cant_see || []).map(function (x) { return '<li>' + esc(x) + '</li>'; }).join('') + '</ul></details>' +
       (hist ? '<details class="ev-why"><summary>Recent days (log)</summary><div class="ev-scroll"><table class="signal-table no-stack mv-log"><thead><tr><th>Day</th><th>Bitcoin</th><th>Ethereum</th><th>Whole market</th><th>Main signals</th></tr></thead><tbody>' + hist + '</tbody></table></div></details>' : '') +
       '</div>';
   }

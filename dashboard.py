@@ -2910,6 +2910,12 @@ def publish_market_events(backend, mover_inputs=None):
                 hist = ev_movers.update_history(backend.get_state("_market_moves") or [], moved, ev_time.now_utc())
                 backend.put_state(hist, "_market_moves")
                 moved["history"] = hist
+                try:
+                    from events import headlines as ev_headlines
+                    moved["headlines"] = ev_headlines.fetch_all(ev_time.now_utc())
+                except Exception as e:  # noqa: BLE001 - headlines are a bonus, never block the rest of the page
+                    moved["headlines"] = []
+                    log(f"Headlines skipped: {type(e).__name__}: {str(e)[:120]}")
                 payload["movers"] = moved
                 log(f"Market mover: {moved['headline']}")
         except Exception as e:  # noqa: BLE001
