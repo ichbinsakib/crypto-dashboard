@@ -170,12 +170,21 @@
   });
 
   /* ---------------- scanner rows: local time + expandable readout ---------------- */
+  function timeAgo(ms) {
+    var m = Math.round((Date.now() - ms) / 60000);
+    if (m < 1) return 'just now';
+    if (m < 90) return m + ' min ago';
+    if (m < 2880) return Math.round(m / 60) + ' h ago';
+    return Math.round(m / 1440) + ' d ago';
+  }
   function localizeTimes(rootEl) {
     (rootEl || document).querySelectorAll('time.loc-time').forEach(function (t) {
       var d = new Date(t.getAttribute('datetime'));
       if (isNaN(d)) return;
       t.textContent = d.toLocaleString([], { month: 'short', day: 'numeric', hour: '2-digit', minute: '2-digit', hour12: false });
       t.title = d.toISOString().replace('T', ' ').slice(0, 16) + ' UTC';
+      var age = t.parentElement && t.parentElement.querySelector('.loc-age');
+      if (age) age.textContent = timeAgo(d.getTime());
     });
   }
   document.addEventListener('click', function (e) {

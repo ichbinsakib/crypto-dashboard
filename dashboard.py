@@ -1888,13 +1888,14 @@ def render(coins_data, fng_value, fng_classification, generated_at, any_stale,
     NCOLS = 9
 
     def _time_cell(ts_iso):
-        """UTC text as a fallback; the page rewrites it in the viewer's own time zone."""
+        """UTC text as a fallback; the page rewrites it in the viewer's own time zone and adds a "how long ago" line."""
         try:
             d = datetime.datetime.fromisoformat(ts_iso)
             txt = d.strftime("%b %d %H:%M") + " UTC"
         except (TypeError, ValueError):
             return "<td>n/a</td>"
-        return f'<td><time class="loc-time" datetime="{_esc(ts_iso)}Z">{txt}</time></td>'
+        return (f'<td><time class="loc-time" datetime="{_esc(ts_iso)}Z">{txt}</time>'
+                f'<span class="wl-note loc-age"></span></td>')
 
     def _detail_html(key, kind, tf_key, symbol, label_text, score_text, ts_iso, price):
         m = (signal_metrics or {}).get(key)

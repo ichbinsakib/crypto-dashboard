@@ -122,7 +122,15 @@ class OverviewTests(unittest.TestCase):
         self.assertIn("4 Hour &middot; 3/3 checks", row)                      # the timeframe rides on the badge's small line
         self.assertIn("Checks passed:", row)                                  # ...and the checks are still there, in the tooltip
         self.assertIn('class="signal-table dip-table trend-only"', h)
-        self.assertLessEqual(row.count("wl-note"), 4)
+        self.assertLessEqual(row.count("wl-note"), 5)
+
+    def test_signal_time_shows_a_how_long_ago_placeholder_for_the_page_to_fill_in(self):
+        coins = [coin("BTC", "Bitcoin", 80000.0, 80500.0, 70000.0), coin("ETH", "Ethereum", 2500.0, 2510.0, 2000.0)]
+        mom = {"open": {"4h:ALGO": {"tf": "4h", "kind": "trend", "coin": "ALGO", "name": "Algorand", "entry": 0.1126, "stop": 0.0955, "stop0": 0.0955, "target1": None,
+                                    "target2": None, "risk_pct": 16.9, "net1": None, "net2": None, "opened_at": "2026-09-20T22:03:00", "why": []}}, "resolved": []}
+        _h, portions, _ = D.render(coins, 50, "Neutral", "2026-09-21 02:00:00", False, momentum_state=mom)
+        h = portions["screener"]["html"]
+        self.assertIn('<time class="loc-time" datetime="2026-09-20T22:03:00Z">Sep 20 22:03 UTC</time><span class="wl-note loc-age"></span>', h)
 
     def test_bitcoin_and_ethereum_tabs_get_an_interactive_chart_host(self):
         h = self.p["bigcoins"]["html"]
