@@ -1,4 +1,5 @@
-"""Big Movers radar: pure sort/filter of a CoinGecko-style pool, no network, no signal claims."""
+"""Big Movers radar: pure sort/filter of a Binance ticker list or a CoinGecko-style pool, no
+network, no signal claims."""
 import os
 import sys
 import unittest
@@ -12,6 +13,10 @@ def coin(symbol, pct24, pct1h=1.0, pct7d=10.0, price=1.0):
             "price_change_percentage_1h_in_currency": pct1h,
             "price_change_percentage_24h_in_currency": pct24,
             "price_change_percentage_7d_in_currency": pct7d}
+
+
+def ticker(symbol, pct24, price=1.0, quote_volume=10_000_000):
+    return {"symbol": symbol, "lastPrice": str(price), "priceChangePercent": str(pct24), "quoteVolume": str(quote_volume)}
 
 
 class TopMoversTests(unittest.TestCase):
@@ -59,6 +64,62 @@ class TopMoversTests(unittest.TestCase):
         out = R.top_movers(pool)
         self.assertEqual(out["gainers"][0]["symbol"], "QNT")
         self.assertEqual(out["gainers"][0]["pct_24h"], 54.1)
+
+
+class TopMoversBinanceTests(unittest.TestCase):
+    def test_only_usdt_pairs_are_considered(self):
+        tickers = [ticker("QNTUSDT", 54.0), ticker("QNTBTC", 90.0), ticker("QNTETH", 90.0)]
+        out = R.top_movers_binance(tickers)
+        self.assertEqual([r["symbol"] for r in out["gainers"]], ["QNT"])
+
+    def test_stablecoins_and_fiat_pairs_are_excluded(self):
+        tickers = [ticker("QNTUSDT", 5.0), ticker("USDCUSDT", 0.01), ticker("EURUSDT", 0.2), ticker("BUSDUSDT", 0.0)]
+        out = R.top_movers_binance(tickers)
+        self.assertEqual([r["symbol"] for r in out["gainers"]], ["QNT"])
+
+    def test_leveraged_tokens_are_excluded(self):
+        tickers = [ticker("QNTUSDT", 5.0), ticker("BTCUPUSDT", 40.0), ticker("BTCDOWNUSDT", -40.0), ticker("ETHBULLUSDT", 30.0)]
+        out = R.top_movers_binance(tickers)
+        self.assertEqual([r["symbol"] for r in out["gainers"]], ["QNT"])
+
+    def test_illiquid_pairs_below_the_volume_floor_are_excluded(self):
+        tickers = [ticker("QNTUSDT", 5.0, quote_volume=10_000_000), ticker("DUSTUSDT", 900.0, quote_volume=1000)]
+        out = R.top_movers_binance(tickers)
+        self.assertEqual([r["symbol"] for r in out["gainers"]], ["QNT"])
+
+    def test_gainers_and_losers_sort_correctly(self):
+        tickers = [ticker("AAAUSDT", 5.0), ticker("BBBUSDT", 54.0), ticker("CCCUSDT", -22.0)]
+        out = R.top_movers_binance(tickers, top_n=2)
+        self.assertEqual([r["symbol"] for r in out["gainers"]], ["BBB", "AAA"])
+        self.assertEqual([r["symbol"] for r in out["losers"]], ["CCC"])
+
+    def test_pct_1h_and_pct_7d_are_not_available_from_binance(self):
+        out = R.top_movers_binance([ticker("QNTUSDT", 54.0)])
+        self.assertIsNone(out["gainers"][0]["pct_1h"])
+        self.assertIsNone(out["gainers"][0]["pct_7d"])
+
+    def test_empty_or_missing_ticker_list_is_tolerated(self):
+        self.assertEqual(R.top_movers_binance([]), R.top_movers_binance(None))
+        self.assertEqual(R.top_movers_binance(None)["gainers"], [])
+
+
+class BuildReportTests(unittest.TestCase):
+    def test_binance_is_used_when_it_has_data(self):
+        report = R.build_report(binance_tickers=[ticker("QNTUSDT", 54.0)], coingecko_pool=[coin("ltc", 1.0)])
+        self.assertEqual([r["symbol"] for r in report["gainers"]], ["QNT"])
+
+    def test_falls_back_to_coingecko_when_binance_is_unavailable(self):
+        report = R.build_report(binance_tickers=None, coingecko_pool=[coin("ltc", 5.0)])
+        self.assertEqual([r["symbol"] for r in report["gainers"]], ["LTC"])
+
+    def test_falls_back_to_coingecko_when_binance_yields_no_rows(self):
+        report = R.build_report(binance_tickers=[ticker("USDCUSDT", 0.01)], coingecko_pool=[coin("ltc", 5.0)])
+        self.assertEqual([r["symbol"] for r in report["gainers"]], ["LTC"])
+
+    def test_both_unavailable_gives_an_empty_report_not_an_error(self):
+        report = R.build_report(binance_tickers=None, coingecko_pool=None)
+        self.assertEqual(report["gainers"], [])
+        self.assertEqual(report["losers"], [])
 
 
 if __name__ == "__main__":

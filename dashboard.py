@@ -1111,6 +1111,13 @@ def fetch_binance_ticker24hr(pair):
     return http_get_json(f"{BINANCE_TICKER_URL}?symbol={pair}")
 
 
+def fetch_binance_all_tickers():
+    """No `symbol` param -> Binance returns 24hr stats for every pair in one call (feeds the Big
+    Movers radar in events/movers_radar.py: far more coverage than CoinGecko's top-~80 pool, and
+    not subject to CoinGecko's free-tier rate limits)."""
+    return http_get_json(BINANCE_TICKER_URL)
+
+
 def compute_intraday_signal(klines, lookback, window_label):
     """
     Lean, technicals-only version of the spot signal for short timeframes -- no Fear & Greed
@@ -2934,7 +2941,7 @@ def build_mover_inputs(coins_data, macro_snapshot, fng_value, fng_classification
             "fng": {"value": fng_value, "label": fng_classification}}
 
 
-def publish_market_events(backend, mover_inputs=None, screener_pool=None):
+def publish_market_events(backend, mover_inputs=None, screener_pool=None, binance_tickers=None):
     """Admin-only Market Events section. Fully isolated: any failure is logged and the trading
     dashboard above is unaffected (it is already published by this point)."""
     try:
@@ -2943,7 +2950,7 @@ def publish_market_events(backend, mover_inputs=None, screener_pool=None):
         cfg = ev_config.effective({r["key"]: r["value"] for r in backend.select("event_config")})
         try:                                                        # "Big Movers" radar: optional, never blocks the events page
             from events import movers_radar as ev_radar
-            payload["big_movers"] = ev_radar.top_movers(screener_pool)
+            payload["big_movers"] = ev_radar.build_report(binance_tickers, screener_pool)
         except Exception as e:  # noqa: BLE001
             payload["big_movers"] = {"gainers": [], "losers": [], "disclaimer": ""}
             log(f"Big movers skipped: {type(e).__name__}: {str(e)[:120]}")
@@ -3234,7 +3241,8 @@ def main():
         except Exception as e:  # noqa: BLE001
             _movers_in = None
             log(f"Market mover inputs skipped: {type(e).__name__}: {str(e)[:120]}")
-        publish_market_events(backend, _movers_in, screener_pool)
+        all_tickers, _err = safe_fetch("binance all tickers", fetch_binance_all_tickers)
+        publish_market_events(backend, _movers_in, screener_pool, all_tickers)
         backend.publish_notifications([
             {"id": e["id"], "ts": e["ts"] if e["ts"].endswith("Z") or "+" in e["ts"] else e["ts"] + "Z",
              "type": e["type"], "title": e["title"], "body": e.get("body", ""),
