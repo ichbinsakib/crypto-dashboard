@@ -756,7 +756,7 @@ a.ov-chip { cursor: pointer; } a.ov-chip:hover, a.ov-chip:focus-visible { border
 .dip-table td.act .sig-detail-btn, .dip-table td.act .follow-btn { display: inline-block; width: auto; margin: 0 0 0 6px; padding: 5px 11px; }
 .dip-table td.act .sig-detail-btn:first-child { margin-left: 0; }
 @media (min-width: 1251px) {
-  .dip-table.trend-only { table-layout: fixed; width: 100%; max-width: 1330px; }
+  .dip-table.trend-only { table-layout: fixed; width: 100%; }
   .dip-table.trend-only th:nth-child(1) { width: 140px; }
   .dip-table.trend-only th:nth-child(2) { width: 215px; }
   .dip-table.trend-only th:nth-child(3) { width: 106px; }
