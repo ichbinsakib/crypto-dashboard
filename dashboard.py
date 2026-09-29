@@ -1068,6 +1068,7 @@ def build_screener(fng_value, prev_screener_state, generated_at, markets=None):
 
 
 BINANCE_KLINES_URL = "https://data-api.binance.vision/api/v3/klines"
+BINANCE_TICKER_URL = "https://data-api.binance.vision/api/v3/ticker/24hr"
 INTRADAY_TIMEFRAMES = {
     # interval -> (Binance kline interval string, candles used for range/ATR)
     "15m": {"interval": "15m", "lookback": 30, "window_label": "last ~7.5 hours"},
@@ -1102,6 +1103,12 @@ def fetch_binance_ohlc(symbol, interval, limit=100):
             return data
         last_err = ValueError(f"Binance returned no OHLC series for {pair}")
     raise last_err or ValueError(f"No Binance OHLC data for {symbol}")
+
+
+def fetch_binance_ticker24hr(pair):
+    """`pair` is already a full trading pair (e.g. BTCUSDT, from coin["symbol"]), unlike
+    fetch_binance_ohlc which appends the quote currency itself for a wider, unknown coin pool."""
+    return http_get_json(f"{BINANCE_TICKER_URL}?symbol={pair}")
 
 
 def compute_intraday_signal(klines, lookback, window_label):
@@ -1393,35 +1400,56 @@ def build_coin_data(coin, markets, fng_latest, fng_prev, state):
         out["funding_rate"] = prev.get("funding_rate")
         out["stale"].append("funding rate / futures premium")
 
+    # Binance is the primary source for price and daily stats: no rate limit like CoinGecko's
+    # free tier has shown under load, and data-api.binance.vision is confirmed reachable from
+    # GitHub Actions runners (see the comment above BINANCE_KLINES_URL). CoinGecko is kept as a
+    # fallback for whichever piece Binance itself fails to provide on a given run.
+    tick, err = safe_fetch(f"{key} 24hr ticker", lambda: fetch_binance_ticker24hr(symbol))
+    daily, err = safe_fetch(f"{key} daily klines", lambda: fetch_binance_ohlc(key, "1d", limit=210))
     m = markets.get(cg_id) if markets else None
-    if m:
-        price = m.get("current_price")
-        high_24h = m.get("high_24h")
-        low_24h = m.get("low_24h")
-        pct_24h = m.get("price_change_percentage_24h_in_currency")
-        pct_7d = m.get("price_change_percentage_7d_in_currency")
-        pct_30d = m.get("price_change_percentage_30d_in_currency")
-        out.update(price=price, high_24h=high_24h, low_24h=low_24h,
-                    pct_24h=pct_24h, pct_7d=pct_7d, pct_30d=pct_30d)
+
+    if tick:
+        out.update(price=float(tick["lastPrice"]), high_24h=float(tick["highPrice"]),
+                    low_24h=float(tick["lowPrice"]), pct_24h=float(tick["priceChangePercent"]))
+    elif m:
+        out.update(price=m.get("current_price"), high_24h=m.get("high_24h"), low_24h=m.get("low_24h"),
+                    pct_24h=m.get("price_change_percentage_24h_in_currency"))
     elif prem and out["index_price"]:
-        # CoinGecko is down/rate-limited this run: use this run's own live futures index price
-        # (already fetched above, near-identical to spot) instead of a stale cached price, so the
-        # headline number stays current even though the 24h range and % change cannot be refreshed.
-        out.update(price=out["index_price"], high_24h=prev.get("high_24h"), low_24h=prev.get("low_24h"),
-                    pct_24h=prev.get("pct_24h"), pct_7d=prev.get("pct_7d"), pct_30d=prev.get("pct_30d"))
+        # Both live price sources are down/rate-limited this run: use this run's own live futures
+        # index price (already fetched above, near-identical to spot) instead of a stale cached
+        # price, so the headline number stays current even though the 24h range cannot be refreshed.
+        out.update(price=out["index_price"], high_24h=prev.get("high_24h"), low_24h=prev.get("low_24h"), pct_24h=prev.get("pct_24h"))
         out["stale"].append("24h range / % change")
     else:
-        out.update(price=prev.get("price"), high_24h=prev.get("high_24h"), low_24h=prev.get("low_24h"),
-                    pct_24h=prev.get("pct_24h"), pct_7d=prev.get("pct_7d"), pct_30d=prev.get("pct_30d"))
+        out.update(price=prev.get("price"), high_24h=prev.get("high_24h"), low_24h=prev.get("low_24h"), pct_24h=prev.get("pct_24h"))
         out["stale"].append("price")
 
-    chart, err = safe_fetch(f"{key} market_chart", lambda: fetch_market_chart(cg_id))
-    if chart:
-        out["sma50"] = sma(chart, 50)
-        out["sma200"] = sma(chart, 200)
-        out["support_30d"] = min(chart[-30:]) if len(chart) >= 30 else None
-        out["resistance_30d"] = max(chart[-30:]) if len(chart) >= 30 else None
+    closes = [float(k[4]) for k in daily] if daily and len(daily) >= 31 else None
+    if closes:
+        out["pct_7d"] = (closes[-1] / closes[-8] - 1) * 100
+        out["pct_30d"] = (closes[-1] / closes[-31] - 1) * 100
+        out["sma50"] = sma(closes, 50)
+        out["sma200"] = sma(closes, 200)
+        out["support_30d"] = min(closes[-30:])
+        out["resistance_30d"] = max(closes[-30:])
+    elif m:
+        out["pct_7d"] = m.get("price_change_percentage_7d_in_currency")
+        out["pct_30d"] = m.get("price_change_percentage_30d_in_currency")
+        chart, err = safe_fetch(f"{key} market_chart", lambda: fetch_market_chart(cg_id))
+        if chart:
+            out["sma50"] = sma(chart, 50)
+            out["sma200"] = sma(chart, 200)
+            out["support_30d"] = min(chart[-30:]) if len(chart) >= 30 else None
+            out["resistance_30d"] = max(chart[-30:]) if len(chart) >= 30 else None
+        else:
+            out["sma50"] = prev.get("sma50")
+            out["sma200"] = prev.get("sma200")
+            out["support_30d"] = prev.get("support_30d")
+            out["resistance_30d"] = prev.get("resistance_30d")
+            out["stale"].append("moving averages / range")
     else:
+        out["pct_7d"] = prev.get("pct_7d")
+        out["pct_30d"] = prev.get("pct_30d")
         out["sma50"] = prev.get("sma50")
         out["sma200"] = prev.get("sma200")
         out["support_30d"] = prev.get("support_30d")
