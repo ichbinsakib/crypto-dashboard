@@ -1371,34 +1371,8 @@ def build_coin_data(coin, markets, fng_latest, fng_prev, state):
     prev = state.get(key, {})
     out = {"key": key, "name": coin["name"], "emoji": coin["emoji"], "stale": []}
 
-    m = markets.get(cg_id) if markets else None
-    if m:
-        price = m.get("current_price")
-        high_24h = m.get("high_24h")
-        low_24h = m.get("low_24h")
-        pct_24h = m.get("price_change_percentage_24h_in_currency")
-        pct_7d = m.get("price_change_percentage_7d_in_currency")
-        pct_30d = m.get("price_change_percentage_30d_in_currency")
-        out.update(price=price, high_24h=high_24h, low_24h=low_24h,
-                    pct_24h=pct_24h, pct_7d=pct_7d, pct_30d=pct_30d)
-    else:
-        out.update(price=prev.get("price"), high_24h=prev.get("high_24h"), low_24h=prev.get("low_24h"),
-                    pct_24h=prev.get("pct_24h"), pct_7d=prev.get("pct_7d"), pct_30d=prev.get("pct_30d"))
-        out["stale"].append("price")
-
-    chart, err = safe_fetch(f"{key} market_chart", lambda: fetch_market_chart(cg_id))
-    if chart:
-        out["sma50"] = sma(chart, 50)
-        out["sma200"] = sma(chart, 200)
-        out["support_30d"] = min(chart[-30:]) if len(chart) >= 30 else None
-        out["resistance_30d"] = max(chart[-30:]) if len(chart) >= 30 else None
-    else:
-        out["sma50"] = prev.get("sma50")
-        out["sma200"] = prev.get("sma200")
-        out["support_30d"] = prev.get("support_30d")
-        out["resistance_30d"] = prev.get("resistance_30d")
-        out["stale"].append("moving averages / range")
-
+    # Fetched before the price block below so a failed CoinGecko call can fall back to this run's
+    # own live futures price instead of a possibly-hours-old cached spot price (see below).
     prem, err = safe_fetch(f"{key} premiumIndex", lambda: fetch_binance_premium(symbol))
     out["derivs_source"] = "Binance" if prem else None
     if not prem:
@@ -1418,6 +1392,41 @@ def build_coin_data(coin, markets, fng_latest, fng_prev, state):
         out["index_price"] = prev.get("index_price")
         out["funding_rate"] = prev.get("funding_rate")
         out["stale"].append("funding rate / futures premium")
+
+    m = markets.get(cg_id) if markets else None
+    if m:
+        price = m.get("current_price")
+        high_24h = m.get("high_24h")
+        low_24h = m.get("low_24h")
+        pct_24h = m.get("price_change_percentage_24h_in_currency")
+        pct_7d = m.get("price_change_percentage_7d_in_currency")
+        pct_30d = m.get("price_change_percentage_30d_in_currency")
+        out.update(price=price, high_24h=high_24h, low_24h=low_24h,
+                    pct_24h=pct_24h, pct_7d=pct_7d, pct_30d=pct_30d)
+    elif prem and out["index_price"]:
+        # CoinGecko is down/rate-limited this run: use this run's own live futures index price
+        # (already fetched above, near-identical to spot) instead of a stale cached price, so the
+        # headline number stays current even though the 24h range and % change cannot be refreshed.
+        out.update(price=out["index_price"], high_24h=prev.get("high_24h"), low_24h=prev.get("low_24h"),
+                    pct_24h=prev.get("pct_24h"), pct_7d=prev.get("pct_7d"), pct_30d=prev.get("pct_30d"))
+        out["stale"].append("24h range / % change")
+    else:
+        out.update(price=prev.get("price"), high_24h=prev.get("high_24h"), low_24h=prev.get("low_24h"),
+                    pct_24h=prev.get("pct_24h"), pct_7d=prev.get("pct_7d"), pct_30d=prev.get("pct_30d"))
+        out["stale"].append("price")
+
+    chart, err = safe_fetch(f"{key} market_chart", lambda: fetch_market_chart(cg_id))
+    if chart:
+        out["sma50"] = sma(chart, 50)
+        out["sma200"] = sma(chart, 200)
+        out["support_30d"] = min(chart[-30:]) if len(chart) >= 30 else None
+        out["resistance_30d"] = max(chart[-30:]) if len(chart) >= 30 else None
+    else:
+        out["sma50"] = prev.get("sma50")
+        out["sma200"] = prev.get("sma200")
+        out["support_30d"] = prev.get("support_30d")
+        out["resistance_30d"] = prev.get("resistance_30d")
+        out["stale"].append("moving averages / range")
 
     oi_hist, err = safe_fetch(f"{key} oi_hist", lambda: fetch_binance_oi_hist(symbol))
     out["oi_source"] = None
