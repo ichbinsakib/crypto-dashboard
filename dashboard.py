@@ -1489,7 +1489,6 @@ def build_coin_data(coin, markets, fng_latest, fng_prev, state):
 def render(coins_data, fng_value, fng_classification, generated_at, any_stale,
            alerts_results=None, screener_results=None, intraday_results=None,
            pnl_stats=None, pnl_state=None, near_misses=None, macro=None, wyckoff_by_coin=None, momentum_state=None, btc_extra=None, signal_metrics=None, market_status=None):
-    total_stale = any_stale
     pnl_stats = pnl_stats or {"daily": {}, "weekly": {}, "monthly": {}}
     pnl_state = pnl_state or {}
     pnl_open_keys = set(pnl_state.get("open", {}).keys())
@@ -1542,6 +1541,12 @@ def render(coins_data, fng_value, fng_classification, generated_at, any_stale,
         band += ('<div class="ov-row ov-watch"><span class="ov-label">WATCH</span>'
                  + "".join(_watch_chip(c_) for c_ in coins_data) + sig_chip + '</div>')
     banner_html = f'<div class="ov-band">{band}</div>' if band else ""
+    if any_stale:
+        # A global, always-visible notice (not buried inside a coin's collapsed Details panel) that
+        # a live fetch fell back to a cached value somewhere this run -- see build_coin_data's "stale"
+        # tags for exactly which figures. Self-clears the next time every source answers cleanly.
+        banner_html += ('<div class="stale-note" role="button" tabindex="0" data-goto="bigcoins">&#9888; Some live data fell back to a cached '
+                         'value this run &mdash; open the Market tab and expand a coin\'s Details for exactly which figures.</div>')
     screener_info_tip = (
         f'Scans the top {SCREENER_SIZE} coins by market cap (excluding stablecoins and BTC/ETH wrappers). '
         'Pick a timeframe below -- 15 Min, 1 Hour, and 1 Day all use the exact same rule-based model '

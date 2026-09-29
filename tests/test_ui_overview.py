@@ -31,6 +31,17 @@ class OverviewTests(unittest.TestCase):
     def setUpClass(cls):
         cls.p = build()
 
+    def test_stale_data_gets_a_global_visible_notice_not_buried_in_details(self):
+        coins = [coin("BTC", "Bitcoin", 80000.0, 80500.0, 70000.0), coin("ETH", "Ethereum", 2500.0, 2510.0, 2000.0)]
+        status = MS.assess(coins, {}, {}, None)
+        _html, portions, _ = D.render(coins, 50, "Neutral", "2026-09-20 02:00:00", True, market_status=status)
+        h = portions["_meta"]["html"]
+        self.assertIn('class="stale-note"', h)
+        self.assertIn('data-goto="bigcoins"', h)
+
+    def test_no_stale_notice_when_everything_is_fresh(self):
+        self.assertNotIn("stale-note", self.p["_meta"]["html"])
+
     def test_one_narrow_band_with_status_then_alerts_then_watch(self):
         h = self.p["_meta"]["html"]
         self.assertEqual(h.count('class="ov-band"'), 1)                   # one band, not three stacked sections

@@ -56,6 +56,7 @@
 .ev-meter { height: 8px; border-radius: 4px; background: var(--inset); overflow: hidden; margin: 8px 0; }
 .ev-meter span { display: block; height: 100%; background: linear-gradient(90deg, var(--green), #e0b341, var(--red)); }
 .ev-warn { background: var(--warn-bg); border: 1px solid var(--warn-bd); color: var(--warn-text); border-radius: 10px; padding: 10px 12px; margin: 10px 0; font-size: 13px; }
+.stale-note { background: var(--warn-bg); border: 1px solid var(--warn-bd); color: var(--warn-text); border-radius: 8px; padding: 8px 12px; margin-bottom: 16px; font-size: 13px; cursor: pointer; }
 .ev-sources { display: flex; flex-wrap: wrap; gap: 6px 14px; margin: 8px 0; font-size: 12px; }
 .ev-src small { color: var(--muted); }
 .ev-badge { display: inline-block; padding: 1px 7px; border-radius: 9px; font-size: 10.5px; font-weight: 800; background: var(--chip); color: var(--text); }
