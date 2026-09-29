@@ -11,7 +11,7 @@ already-extended one) -- see the disclaimer below. Pure functions: no network.
 """
 
 TOP_N = 10
-MIN_QUOTE_VOLUME_USDT = 3_000_000    # 24h USDT volume floor: filters out illiquid/thinly-traded noise
+MIN_QUOTE_VOLUME_USDT = 10_000_000   # 24h USDT volume floor: filters out illiquid/thinly-traded noise
 LEVERAGED_SUFFIXES = ("UP", "DOWN", "BULL", "BEAR")
 NON_CRYPTO_BASES = {                 # stablecoins and fiat currencies traded against USDT on Binance
     "USDC", "BUSD", "TUSD", "DAI", "FDUSD", "USDP", "PYUSD", "USDE", "GUSD", "USTC", "UST", "EUR", "EURI",
