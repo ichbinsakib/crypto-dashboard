@@ -53,17 +53,42 @@ def top_movers(pool, top_n=TOP_N):
     return _from_rows(rows, top_n)
 
 
-def _binance_row(t, min_quote_volume):
+def _binance_base(t):
+    """The bare coin symbol (e.g. "QNT") for a Binance ticker row, or None if it's not a plain USDT
+    spot pair on a real crypto asset (excludes stablecoins/fiat and leveraged tokens)."""
     sym = str(t.get("symbol") or "")
     if not sym.endswith("USDT"):
         return None
     base = sym[:-4]
     if not base or base in NON_CRYPTO_BASES or base.endswith(LEVERAGED_SUFFIXES):
         return None
+    return base
+
+
+def _binance_row(t, min_quote_volume):
+    base = _binance_base(t)
+    if base is None:
+        return None
     pct24, price, qv = _f(t.get("priceChangePercent")), _f(t.get("lastPrice")), _f(t.get("quoteVolume"))
     if pct24 is None or price is None or (qv or 0) < min_quote_volume:
         return None
     return {"symbol": base, "name": base, "price": price, "pct_1h": None, "pct_24h": round(pct24, 1), "pct_7d": None}
+
+
+def liquid_pool(tickers, limit):
+    """A fresh candidate pool of the `limit` highest-24h-volume real USDT pairs, shaped like the
+    CoinGecko screener pool's minimal id/symbol/name cache (id is always None -- nothing here needs
+    a CoinGecko id). Used as a fallback when CoinGecko's own pool fetch fails, so the coin rotation
+    stays fresh instead of freezing on a possibly-days-old cached list. Never raises: an empty or
+    missing ticker list just means an empty pool."""
+    rows = []
+    for t in tickers or []:
+        base = _binance_base(t)
+        qv = _f(t.get("quoteVolume"))
+        if base is not None and qv is not None:
+            rows.append((qv, base))
+    rows.sort(key=lambda r: -r[0])
+    return [{"id": None, "symbol": base.lower(), "name": base} for _, base in rows[:limit]]
 
 
 def top_movers_binance(tickers, top_n=TOP_N, min_quote_volume=MIN_QUOTE_VOLUME_USDT):

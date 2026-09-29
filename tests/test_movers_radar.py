@@ -103,6 +103,29 @@ class TopMoversBinanceTests(unittest.TestCase):
         self.assertEqual(R.top_movers_binance(None)["gainers"], [])
 
 
+class LiquidPoolTests(unittest.TestCase):
+    def test_sorted_by_volume_descending_and_shaped_like_the_coingecko_pool_cache(self):
+        tickers = [ticker("AAAUSDT", 1.0, quote_volume=5_000_000), ticker("BBBUSDT", 1.0, quote_volume=50_000_000),
+                   ticker("CCCUSDT", 1.0, quote_volume=20_000_000)]
+        pool = R.liquid_pool(tickers, limit=10)
+        self.assertEqual([p["symbol"] for p in pool], ["bbb", "ccc", "aaa"])
+        self.assertEqual(pool[0], {"id": None, "symbol": "bbb", "name": "BBB"})
+
+    def test_stablecoins_fiat_and_leveraged_tokens_are_excluded(self):
+        tickers = [ticker("AAAUSDT", 1.0), ticker("USDCUSDT", 1.0), ticker("EURUSDT", 1.0), ticker("BTCUPUSDT", 1.0)]
+        pool = R.liquid_pool(tickers, limit=10)
+        self.assertEqual([p["symbol"] for p in pool], ["aaa"])
+
+    def test_result_is_capped_at_limit(self):
+        tickers = [ticker(f"C{i}USDT", 1.0, quote_volume=float(i)) for i in range(20)]
+        pool = R.liquid_pool(tickers, limit=5)
+        self.assertEqual(len(pool), 5)
+
+    def test_empty_or_missing_tickers_gives_an_empty_pool(self):
+        self.assertEqual(R.liquid_pool([], 10), [])
+        self.assertEqual(R.liquid_pool(None, 10), [])
+
+
 class BuildReportTests(unittest.TestCase):
     def test_binance_is_used_when_it_has_data(self):
         report = R.build_report(binance_tickers=[ticker("QNTUSDT", 54.0)], coingecko_pool=[coin("ltc", 1.0)])

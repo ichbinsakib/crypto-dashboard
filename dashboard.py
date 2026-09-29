@@ -3047,14 +3047,25 @@ def main():
         fire_toast_notifications(newly_triggered)
 
     log(f"Running screener over top {SCREENER_SIZE} coins by market cap...")
+    all_tickers, _err = safe_fetch("binance all tickers", fetch_binance_all_tickers)
     screener_pool, _ = safe_fetch("screener markets", fetch_screener_pool)
     screener_markets = (random.sample(screener_pool, min(SCREENER_SIZE, len(screener_pool)))
                         if screener_pool else None)
     if screener_pool:
         pool_cache = [{"id": d.get("id"), "symbol": d.get("symbol"), "name": d.get("name")} for d in screener_pool]
+    elif all_tickers:
+        # CoinGecko rate-limits the bulk call now and then (or, as seen once this session, goes down
+        # for hours at a stretch); rebuild a fresh pool from Binance's own 24h-volume ranking instead
+        # of falling straight to a possibly-days-stale cache, so new coins can still rotate into the
+        # scan during an outage. True market-cap ranking isn't available from Binance, but volume is
+        # a reasonable proxy for "a real, liquid coin worth scanning," which is all this pool needs.
+        from events import movers_radar as ev_radar
+        pool_cache = ev_radar.liquid_pool(all_tickers, SCREENER_POOL_SIZE)
+        screener_pool = pool_cache
+        log(f"Screener pool fetch failed -- using a fresh Binance-volume pool of {len(pool_cache)} coins")
     else:
-        # CoinGecko rate-limits the bulk call now and then; fall back to the last good pool so
-        # the intraday scanner (which only needs id/symbol/name) keeps scanning meanwhile.
+        # Both live sources are down; fall back to the last good pool so the intraday scanner (which
+        # only needs id/symbol/name) keeps scanning meanwhile.
         pool_cache = state.get("_screener_pool") or []
         if pool_cache:
             log(f"Screener pool fetch failed -- scanning the cached pool of {len(pool_cache)} coins")
@@ -3256,7 +3267,6 @@ def main():
         except Exception as e:  # noqa: BLE001
             _movers_in = None
             log(f"Market mover inputs skipped: {type(e).__name__}: {str(e)[:120]}")
-        all_tickers, _err = safe_fetch("binance all tickers", fetch_binance_all_tickers)
         publish_market_events(backend, _movers_in, screener_pool, all_tickers)
         backend.publish_notifications([
             {"id": e["id"], "ts": e["ts"] if e["ts"].endswith("Z") or "+" in e["ts"] else e["ts"] + "Z",
