@@ -228,7 +228,7 @@
         h += '<details class="fold" data-key="c' + esc(c.symbol) + '"' + (ST.open['c' + c.symbol] ? ' open' : '') + '><summary>Why?</summary><ul class="sc2-checks">' +
           c.checks.map(function (k) {
             return '<li class="sc2-' + esc(k.state) + '"><span class="sc2-mark">' + (k.state === 'pass' ? '✓' : k.state === 'fail' ? '✕' : '?') + '</span><b>' + esc(k.label) + '</b><span>' + esc(k.text) + '</span></li>';
-          }).join('') + '</ul><div class="sub">Setup Score is a rule score out of 10, not a probability. Trend, Entry trigger, Volatility (fees) and Risk/Reward must all pass.</div></details>';
+          }).join('') + '</ul><div class="sub">Setup Score is a rule score out of 10, not a probability. Trend, Momentum, Volume, Entry trigger, Volatility (fees) and Risk/Reward must all pass.</div></details>';
       }
       h += '</div>';
     });

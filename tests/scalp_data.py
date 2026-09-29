@@ -28,12 +28,15 @@ def breakout_scenario():
     """(15m rows, 5m rows): a steady 15m uptrend and a 5m series whose last CLOSED candle breaks its 20-candle high on heavy volume."""
     h = wave(200, 100, 0.15, 0.6, 5)
     x = wave(300, 100, 0.08, 0.7, 7)
+    base = x[-25]                          # a real climb into the breakout (not the sine wave's drift alone),
+    for j in range(-24, -2):               # so momentum (RSI band + MACD histogram) confirms alongside it -- a
+        k = j + 25                         # gentle slope plus a wiggle keeps RSI inside its 50-75 band instead
+        x[j] = base * (1 + 0.0015 * k + 0.015 * math.sin(k / 2.3))  # of pegging near 100 on a clean ramp
     x[-2] = max(x[-22:-2]) * 1.0035
     x[-1] = x[-2] * 1.0002
     vols = [100.0] * 300
-    for i in (-4, -3, -2):
-        vols[i] = 260.0
-    return series(h, iv=900_000, seed=1), series(x, vols, seed=1)
+    vols[-3], vols[-2] = 132.0, 130.0       # busier than normal (volume passes) but short of the top tier,
+    return series(h, iv=900_000, seed=1), series(x, vols, seed=1)  # leaving headroom below a perfect 10.0 score
 
 
 def downtrend_scenario():

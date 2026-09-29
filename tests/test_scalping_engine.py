@@ -75,6 +75,15 @@ class AnalysisTests(unittest.TestCase):
         self.assertNotEqual(ev["status"], "SETUP")
         self.assertEqual({c["key"]: c["state"] for c in ev["checks"]}["volatility"], "fail")
 
+    def test_weak_momentum_or_volume_blocks_the_setup_even_with_a_high_score(self):
+        # backtest/scalp_run.py (90 days of real history) found momentum and volume are the only two
+        # of the seven checks that actually vary among published setups, and both correlate cleanly
+        # with outcome -- so both are hard requirements now, not just optional score contributors.
+        h, x = D.breakout_scenario()
+        flat_vol = A.evaluate("SOL", h, [row[:5] + [100.0] + row[6:] for row in x], CFG)
+        self.assertEqual({c["key"]: c["state"] for c in flat_vol["checks"]}["volume"], "fail")
+        self.assertNotEqual(flat_vol["status"], "SETUP")
+
     def test_missing_or_short_data_never_produces_a_setup(self):
         h, x = D.breakout_scenario()
         self.assertEqual(A.evaluate("SOL", h[:30], x, CFG)["status"], "NO_SETUP")
