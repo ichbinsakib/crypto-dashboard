@@ -2897,13 +2897,19 @@ def build_mover_inputs(coins_data, macro_snapshot, fng_value, fng_classification
             "fng": {"value": fng_value, "label": fng_classification}}
 
 
-def publish_market_events(backend, mover_inputs=None):
+def publish_market_events(backend, mover_inputs=None, screener_pool=None):
     """Admin-only Market Events section. Fully isolated: any failure is logged and the trading
     dashboard above is unaffected (it is already published by this point)."""
     try:
         from events import service as ev_service, config as ev_config, timeutil as ev_time
         payload = ev_service.run(backend)
         cfg = ev_config.effective({r["key"]: r["value"] for r in backend.select("event_config")})
+        try:                                                        # "Big Movers" radar: optional, never blocks the events page
+            from events import movers_radar as ev_radar
+            payload["big_movers"] = ev_radar.top_movers(screener_pool)
+        except Exception as e:  # noqa: BLE001
+            payload["big_movers"] = {"gainers": [], "losers": [], "disclaimer": ""}
+            log(f"Big movers skipped: {type(e).__name__}: {str(e)[:120]}")
         try:                                                        # "Why the market moved": optional, never blocks the events page
             from events import movers as ev_movers
             moved = ev_movers.explain(mover_inputs, payload.get("events"), ev_time.now_utc()) if mover_inputs else None
@@ -3193,7 +3199,7 @@ def main():
         except Exception as e:  # noqa: BLE001
             _movers_in = None
             log(f"Market mover inputs skipped: {type(e).__name__}: {str(e)[:120]}")
-        publish_market_events(backend, _movers_in)
+        publish_market_events(backend, _movers_in, screener_pool)
         backend.publish_notifications([
             {"id": e["id"], "ts": e["ts"] if e["ts"].endswith("Z") or "+" in e["ts"] else e["ts"] + "Z",
              "type": e["type"], "title": e["title"], "body": e.get("body", ""),

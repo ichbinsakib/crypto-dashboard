@@ -153,6 +153,21 @@
       '</div>';
   }
 
+  /* ---------- -1. big movers radar (admin-only, raw price action) ---------- */
+  function moverRow(r, isGain) {
+    return '<li><span class="mv-r-name"><b>' + esc(r.symbol) + '</b><span class="ev-sub">' + esc(r.name) + '</span></span>' +
+      '<span class="mv-chip ' + (isGain ? 'up' : 'down') + '"><b>' + (r.pct_24h > 0 ? '+' : '') + r.pct_24h.toFixed(1) + '%</b></span>' +
+      (r.pct_1h != null ? '<span class="ev-sub">1h ' + (r.pct_1h > 0 ? '+' : '') + r.pct_1h.toFixed(1) + '%</span>' : '') +
+      (r.price != null ? '<span class="ev-sub">$' + (r.price < 1 ? r.price.toFixed(4) : r.price.toLocaleString()) + '</span>' : '') + '</li>';
+  }
+  function radarCard(d) {
+    var m = d.big_movers; if (!m || (!m.gainers.length && !m.losers.length)) return '';
+    return '<div class="ev-card ev-radar"><small>BIG MOVERS &middot; ADMIN RADAR</small><h3>🚀 Biggest movers right now</h3>' +
+      '<div class="ev-two"><div><h4>Top gainers (24h)</h4>' + (m.gainers.length ? '<ul class="mv-radar-list">' + m.gainers.map(function (r) { return moverRow(r, true); }).join('') + '</ul>' : '<div class="ev-sub">None found.</div>') + '</div>' +
+      '<div><h4>Top losers (24h)</h4>' + (m.losers.length ? '<ul class="mv-radar-list">' + m.losers.map(function (r) { return moverRow(r, false); }).join('') + '</ul>' : '<div class="ev-sub">None found.</div>') + '</div></div>' +
+      '<div class="ev-take"><b>Please note:</b> ' + esc(m.disclaimer) + '</div></div>';
+  }
+
   function problemLine(d) {
     var p = d.data_problems || [];
     var age = (Date.now() - new Date(d.generated_at).getTime()) / 60000;
@@ -355,7 +370,7 @@
     var d = ST.data, keepY = window.scrollY;
     var body;
     if (ST.view === 'detail') body = detail(d, byId(ST.eventId));
-    else body = problemLine(d) + moversCard(d) + summaryCard(d) + fomcCard(d) + '<div class="ev-card ev-fcard">' + filtersBar(d) + '</div>' + timeline(d) + contextCard(d) + sourcesCard(d) + settingsCard(d);
+    else body = problemLine(d) + radarCard(d) + moversCard(d) + summaryCard(d) + fomcCard(d) + '<div class="ev-card ev-fcard">' + filtersBar(d) + '</div>' + timeline(d) + contextCard(d) + sourcesCard(d) + settingsCard(d);
     el.innerHTML = '<div class="ev-head"><h2>Market Events <small>Admin only</small></h2><div class="ev-sub">Updated ' + esc(ago(d.generated_at)) + ' · times in US Eastern · hover a dotted term for its meaning</div></div>' + body;
     bind(el, d);
     if (ST.view === 'main') window.scrollTo(0, keepY);
