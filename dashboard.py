@@ -3070,9 +3070,7 @@ def main():
         held = {f"{p['tf']}:{p['coin']}" for p in prev_momentum.get("open", {}).values()}
         cooling_now = momentum_mod.cooling(prev_momentum.get("resolved", []))
         signals = []
-        for mtf, _mcfg in momentum_mod.MOMENTUM_TIMEFRAMES.items():
-            if not _mcfg.get("scan", True):
-                continue
+        for mtf in momentum_mod.MOMENTUM_TIMEFRAMES:
             open_here = sum(1 for k in held if k.startswith(mtf + ":"))
             if open_here < momentum_mod.MAX_OPEN_PER_TF:
                 skip = {k.split(":", 1)[1] for k in (held | cooling_now) if k.startswith(mtf + ":")}

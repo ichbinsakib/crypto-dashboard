@@ -1,6 +1,7 @@
 import datetime
 import os
 import sys
+import time
 import unittest
 
 sys.path.insert(0, os.path.join(os.path.dirname(__file__), ".."))
@@ -80,6 +81,79 @@ class TrendTrackerTest(unittest.TestCase):
         self.assertIn("4h:AAA", M.cooling(res, now))
         res[0]["resolved_at"] = (now - datetime.timedelta(hours=60)).isoformat()
         self.assertNotIn("4h:AAA", M.cooling(res, now))
+
+    def test_a_call_that_never_hits_the_stop_expires_after_1600h(self):
+        now = datetime.datetime(2026, 9, 20, 12, 0)
+        closes = [100 + i * 0.01 for i in range(10)]           # drifts up a little, never touches the trailing stop
+        k = self._klines(now, closes)
+        opened_long_ago = self._open(now, entry=100.0)
+        opened_long_ago["open"]["4h:AAA"]["opened_at"] = (now - datetime.timedelta(hours=1601)).isoformat()
+        st, opened, done = M.update_tracker(opened_long_ago, [], lambda s, i, l=None: k, now=now, sleep=0)
+        self.assertEqual([r["result"] for r in done], ["expired"])
+        self.assertEqual(st["open"], {})
+
+    def test_fetch_failure_leaves_the_position_open_for_a_retry(self):
+        now = datetime.datetime(2026, 9, 20, 12, 0)
+
+        def boom(sym, interval, limit=None):
+            raise RuntimeError("down")
+        st, opened, done = M.update_tracker(self._open(now), [], boom, now=now, sleep=0)
+        self.assertEqual(len(st["open"]), 1)
+        self.assertEqual(done, [])
+
+    def test_a_fresh_signal_is_not_reopened_while_already_open(self):
+        now = datetime.datetime(2026, 9, 20, 12, 0)
+        sig = {"symbol": "AAA", "name": "Aaa", "tf": "4h", "kind": "trend", "atr": 1.0,
+               "trade": {"entry": 100.0, "stop": 96.0, "target1": None, "target2": None, "target1NetPct": None}, "checks": {}}
+        st, opened, done = M.update_tracker(self._open(now), [sig], lambda s, i, l=None: self._klines(now, [100.0] * 5), now=now, sleep=0)
+        self.assertEqual(opened, [])
+        self.assertEqual(len(st["open"]), 1)
+
+
+class ScanTrendTest(unittest.TestCase):
+    def test_scan_skips_symbols_with_no_liquid_pair_and_tags_the_timeframe(self):
+        closes = uptrend_then_break()
+        t0 = int(time.time() * 1000) - (len(closes) - 1) * H4    # forming candle timestamped "now" so the freshness check passes
+        k = rows(closes, t0=t0)
+
+        def fetch(sym, interval, limit=None):
+            if sym == "NOPE":
+                raise ValueError("no pair")
+            return k
+        pool = [{"symbol": "AAA", "name": "A"}, {"symbol": "nope", "name": "N"}, {"symbol": "SKIP", "name": "S"}]
+        found = M.scan(pool, "4h", fetch, skip_symbols={"SKIP"}, sleep=0)
+        self.assertEqual([f["symbol"] for f in found], ["AAA"])
+        self.assertEqual(found[0]["tf"], "4h")
+
+
+class PriceTextTests(unittest.TestCase):
+    def test_tiny_prices_keep_distinguishing_digits(self):
+        self.assertEqual(M.price_text(81704.3), "$81,704")
+        self.assertEqual(M.price_text(2.6499), "$2.65")
+        self.assertEqual(M.price_text(0.0901), "$0.0901")
+        entry, stop, target = 0.0000063, 0.0000062, 0.0000065
+        self.assertEqual(len({M.price_text(entry), M.price_text(stop), M.price_text(target)}), 3)
+        self.assertEqual(M.price_text(None), "n/a")
+
+
+class StatsAndNotificationsTest(unittest.TestCase):
+    def test_stats_summarizes_wins_losses_and_average_net(self):
+        rows_ = [{"result": "win", "entry": 100, "exit_price": 101.5, "coin": "A", "tf": "4h", "opened_at": "o1", "resolved_at": "r1"},
+                 {"result": "loss", "entry": 100, "exit_price": 99.0, "coin": "B", "tf": "4h", "opened_at": "o2", "resolved_at": "r2"}]
+        s = M.stats(rows_)
+        self.assertEqual((s["wins"], s["losses"], s["win_rate"]), (1, 1, 50.0))
+        self.assertAlmostEqual(s["avg_net"], ((1.5 - 0.2) + (-1.0 - 0.2)) / 2)
+
+    def test_notification_events_describe_the_trailing_stop_not_a_fixed_target(self):
+        pos = {"coin": "A", "tf": "4h", "entry": 100, "stop": 96, "risk_pct": 4.0, "opened_at": "2026-09-19T13:00:00", "kind": "trend"}
+        rows_ = [{"result": "win", "entry": 100, "exit_price": 101.5, "coin": "A", "tf": "4h", "opened_at": "o1", "resolved_at": "r1"}]
+        ev = M.notification_events([pos], rows_)
+        self.assertEqual(ev[0]["type"], "signal")
+        self.assertIn("trailing stop", ev[0]["body"])
+        self.assertIn("no fixed target", ev[0]["body"])
+        self.assertEqual(ev[0]["portion_key"], "screener")
+        self.assertEqual({e["type"] for e in ev[1:]}, {"win"})
+        self.assertEqual(len({e["id"] for e in ev}), 2)
 
 
 if __name__ == "__main__":
