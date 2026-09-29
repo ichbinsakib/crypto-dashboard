@@ -2136,38 +2136,48 @@ def render(coins_data, fng_value, fng_classification, generated_at, any_stale,
 </div>
 """
 
+    # Dip-buy and the retired 15m/1h momentum rule are both switched off for good (see the Signals
+    # page's own notice) and their history is dropped here rather than kept as dead weight -- only
+    # the live 4h Trend Breakout engine's own record is shown.
     _mom_state = momentum_state or {}
-    _dip_resolved = [{**r, "kind": "dip"} for r in pnl_state.get("resolved", [])]
-    _mom_resolved = [{**r, "kind": "trend" if r.get("tf") == "4h" else "mom"} for r in _mom_state.get("resolved", [])]
-    _all_resolved = _dip_resolved + _mom_resolved
+    _all_resolved = [{**r, "kind": "trend"} for r in _mom_state.get("resolved", []) if r.get("tf") == "4h"]
     stats_all = compute_pnl_stats(_all_resolved)
-    stats_dip = compute_pnl_stats(_dip_resolved)
-    stats_mom = compute_pnl_stats(_mom_resolved)
-    _open_all = ([{**v, "kind": "dip"} for v in pnl_state.get("open", {}).values()]
-                 + [{**v, "kind": "trend" if v.get("tf") == "4h" else "mom"} for v in _mom_state.get("open", {}).values()])
+    _open_all = [{**v, "kind": "trend"} for v in _mom_state.get("open", {}).values() if v.get("tf") == "4h"]
+
+    def _period_nets(rows, days):
+        cutoff = datetime.datetime.now() - datetime.timedelta(days=days)
+        return [(r["exit_price"] - r["entry"]) / r["entry"] * 100 - ROUND_TRIP_FEE_PCT for r in rows
+                if r.get("exit_price") and r.get("entry") and datetime.datetime.fromisoformat(r["resolved_at"]) >= cutoff]
 
     def _avg_net_30d(rows):
-        cutoff = datetime.datetime.now() - datetime.timedelta(days=30)
-        nets = [(r["exit_price"] - r["entry"]) / r["entry"] * 100 - ROUND_TRIP_FEE_PCT for r in rows
-                if r.get("exit_price") and r.get("entry") and datetime.datetime.fromisoformat(r["resolved_at"]) >= cutoff]
+        nets = _period_nets(rows, 30)
         return (sum(nets) / len(nets)) if nets else None
 
-    def _pnl_stat_card(period_label, stats, dip=None, mom=None):
+    HYPOTHETICAL_INVESTMENT = 50.0
+
+    def _pnl_stat_card(period_label, stats, rows, days):
         wr = stats.get("win_rate")
         wr_display = f"{wr:.0f}%" if wr is not None else "N/A"
         wr_class = "pos" if (wr is not None and wr >= 50) else ("neg" if wr is not None else "")
         expired = stats.get("expired", 0)
         expired_bit = f" &middot; {expired} expired" if expired else ""
-        split = ""
-        if dip is not None and mom is not None:
-            split = (f'<div class="sub" style="margin-top:4px;">&#127919; Dip {dip.get("wins", 0)}W&middot;{dip.get("losses", 0)}L '
-                     f'&nbsp; &#128640; Momentum {mom.get("wins", 0)}W&middot;{mom.get("losses", 0)}L</div>')
+        # Cumulative return: each resolved trade's own net % after fees, simply added together --
+        # not compounded through a single running balance, since this engine can hold several
+        # positions open at once and a sequential $50-at-a-time model would misrepresent that.
+        nets = _period_nets(rows, days)
+        ret_pct = sum(nets)
+        dollar_pl = HYPOTHETICAL_INVESTMENT * ret_pct / 100
+        final_value = HYPOTHETICAL_INVESTMENT + dollar_pl
+        ret_class = "pos" if ret_pct > 0 else ("neg" if ret_pct < 0 else "")
+        money_bit = (f'<div class="sub {ret_class}" style="margin-top:6px; font-weight:700;">Return: {ret_pct:+.2f}%</div>'
+                     f'<div class="sub">${HYPOTHETICAL_INVESTMENT:.0f} &rarr; ${final_value:.2f} '
+                     f'(<span class="{ret_class}">{dollar_pl:+.2f}</span>)</div>') if nets else ''
         return f"""
     <div class="card">
       <div class="card-title">{period_label}</div>
       <div class="{wr_class}" style="font-size:28px; font-weight:800;">{wr_display}</div>
       <div class="sub">{stats.get('wins', 0)}W &middot; {stats.get('losses', 0)}L{expired_bit}</div>
-      {split}
+      {money_bit}
     </div>"""
 
     def _type_row(kind_label, rows_stats, rows):
@@ -2180,7 +2190,7 @@ def render(coins_data, fng_value, fng_classification, generated_at, any_stale,
 
     type_table = ('<div class="cycle-map" style="margin-top:10px;"><div class="card-title">BY SIGNAL TYPE &mdash; last 30 days</div>'
                   '<table class="signal-table" style="margin:6px 0 0;"><thead><tr><th>Type</th><th>Resolved</th><th>Won</th><th>Lost</th><th>Expired</th><th>Win rate</th><th>Avg result / call after fees</th></tr></thead><tbody>'
-                  + _type_row("&#127919; Dip buy", stats_dip, _dip_resolved) + _type_row("&#128640; Momentum (experimental)", stats_mom, _mom_resolved)
+                  + _type_row("&#128200; Trend Breakout", stats_all, _all_resolved)
                   + '</tbody></table></div>')
 
     pnl_open = _open_all
@@ -2194,7 +2204,7 @@ def render(coins_data, fng_value, fng_classification, generated_at, any_stale,
         )
         open_positions_html = f"""
   <div class="cycle-map" style="margin-top:10px;">
-    <div class="card-title">Currently Tracking ({len(pnl_open)})<span class="info-tip" tabindex="0" data-tip="Every confirmed signal, dip buy or momentum, is tracked here from the moment it appears until it hits its target (win), its stop (loss) or runs out of time (expired).">&#9432;</span></div>
+    <div class="card-title">Currently Tracking ({len(pnl_open)})<span class="info-tip" tabindex="0" data-tip="Every confirmed Trend Breakout call is tracked here from the moment it appears until its trailing stop is hit (win or loss) or it runs out of time (expired).">&#9432;</span></div>
     <table class="signal-table" style="margin-top:6px; margin-bottom:0;">
       <thead><tr><th>Coin</th><th>Type</th><th>Timeframe</th><th>Signal Given</th><th>Entry</th><th>Stop</th><th>Target</th></tr></thead>
       <tbody>{open_rows}</tbody>
@@ -2242,12 +2252,12 @@ def render(coins_data, fng_value, fng_classification, generated_at, any_stale,
     performance_panel = f"""
 <div class="panel panel-performance">
   <div class="cycle-map spot-signal-card" style="margin-bottom:10px;">
-    <div class="card-title">📊 SIGNAL PERFORMANCE &mdash; all signals<span class="info-tip" tabindex="0" data-tip="Tracks every confirmed signal: dip buys (NEAR-TERM DIP ZONE tier) in batches of up to {PNL_BATCH_SIZE} per timeframe -- a new batch only opens once every position in the current one has resolved (win/loss/expired) -- and experimental momentum breakouts (up to 5 open per timeframe, own cooldown). All prices come from Binance's own spot market data (the same order book as binance.com), fetched via Binance's public mirror domain since their main API domain blocks GitHub Actions' IP ranges. Educational transparency, not a trading track record, and not a guarantee of the exact fill you'd get trading it live.">&#9432;</span></div>
+    <div class="card-title">📊 SIGNAL PERFORMANCE &mdash; Trend Breakout<span class="info-tip" tabindex="0" data-tip="Tracks every confirmed 4-hour Trend Breakout call (up to 5 open at a time, own cooldown after a loss). Dip-buy signals and the retired 15-minute / 1-hour momentum rule are switched off for good and no longer shown here. Return is each resolved call's own net % after fees, simply added together (not compounded through one running balance, since several calls can be open at once); the ${HYPOTHETICAL_INVESTMENT:.0f} figure is a hypothetical, equal-sized bet on every call, purely to make the % tangible -- not a real account. All prices come from Binance's own spot market data (the same order book as binance.com), fetched via Binance's public mirror domain since their main API domain blocks GitHub Actions' IP ranges. Educational transparency, not a trading track record, and not a guarantee of the exact fill you'd get trading it live.">&#9432;</span></div>
   </div>
   <div class="top-grid" style="grid-template-columns:1fr 1fr 1fr;">
-    {_pnl_stat_card("Daily", stats_all["daily"], stats_dip["daily"], stats_mom["daily"])}
-    {_pnl_stat_card("Weekly", stats_all["weekly"], stats_dip["weekly"], stats_mom["weekly"])}
-    {_pnl_stat_card("Monthly", stats_all["monthly"], stats_dip["monthly"], stats_mom["monthly"])}
+    {_pnl_stat_card("Daily", stats_all["daily"], _all_resolved, 1)}
+    {_pnl_stat_card("Weekly", stats_all["weekly"], _all_resolved, 7)}
+    {_pnl_stat_card("Monthly", stats_all["monthly"], _all_resolved, 30)}
   </div>
   {type_table}
   {open_positions_html}
