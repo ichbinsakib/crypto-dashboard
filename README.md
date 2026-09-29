@@ -42,14 +42,18 @@ A local run without Supabase credentials configured falls back to writing `site/
 
 ## Editing alerts
 
-Edit `data/alerts_config.json` directly (GitHub's web editor works fine) — each entry:
+With a Supabase backend configured (the deployed app), alerts live in the `price_alerts` table, not a file — an
+admin signs in and clicks **Alerts** in the header to add, edit, enable/disable or delete one; changes apply on the
+next scheduled run (`migrations/006_price_alerts.sql`, `admin_upsert_price_alert` / `admin_delete_price_alert`).
+
+Running `dashboard.py` standalone (no `KAIRO_*` credentials) instead reads/writes `data/alerts_config.json` — each entry:
 
 ```json
 {"id": "unique-id", "coin": "BTC", "condition": "above", "price": 85000, "label": "BTC above $85,000", "enabled": true}
 ```
 
-Push the change (or edit via GitHub's UI, which commits for you) and it takes effect on the next scheduled run, or
-trigger **Actions → Update Kairo Dashboard → Run workflow** for an immediate refresh.
+Edit it directly (GitHub's web editor works fine) and trigger **Actions → Update Kairo Dashboard → Run workflow**,
+or wait for the next scheduled run.
 
 If you have this repo cloned locally, `python add_alert.py` opens a small desktop GUI for the same thing.
 

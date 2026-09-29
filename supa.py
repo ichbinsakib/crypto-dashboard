@@ -93,6 +93,15 @@ class Backend:
         self._request("POST", "/rest/v1/notifications?on_conflict=id", events,
                       headers={"Prefer": "resolution=ignore-duplicates,return=minimal"})
 
+    def seed_price_alerts(self, rows):
+        """One-time bulk insert for a first run with no alerts configured yet (RLS only allows the
+        publisher to INSERT price_alerts, never update/delete -- every later change goes through the
+        admin_upsert_price_alert / admin_delete_price_alert functions instead)."""
+        if not rows:
+            return
+        self._request("POST", "/rest/v1/price_alerts?on_conflict=id", rows,
+                      headers={"Prefer": "resolution=ignore-duplicates,return=minimal"})
+
     # ---- generic table access (used by the Market Events job) ----
 
     def select(self, table, query="select=*"):

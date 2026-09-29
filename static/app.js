@@ -388,6 +388,7 @@
     } catch (e) { /* storage unavailable */ }
     S.profile = await loadProfile();
     show('btn-admin', !!S.profile.is_admin);
+    show('btn-alerts', !!S.profile.is_admin);
     if (window.KairoAndroid) {
       sb.rpc('get_notify_token').then(function (r) { if (!r.error) bridgeToAndroid(r.data); });
     }
@@ -504,6 +505,84 @@
     };
   }
 
+  /* ---------------- price alerts (admin) ---------------- */
+
+  var ALERT_COINS = ['BTC', 'ETH'];
+
+  async function openAlerts() {
+    openOverlay('<div class="overlay-row"><h2>Price alerts</h2><button type="button" class="ghost" id="ov-close">Close</button></div>' +
+      '<div class="sub">Shown to everyone on the Overview once triggered. Only BTC and ETH have a page to alert on.</div>' +
+      '<div class="overlay-msg" id="ov-msg">Loading&hellip;</div><div id="ov-body"></div>');
+    $('ov-close').onclick = closeOverlay;
+    await renderAlertsBody();
+  }
+
+  function alertRowHtml(a) {
+    return '<div class="user-card" data-alert-row="' + esc(a.id) + '">' +
+      '<div class="who">' + esc(a.label) + '<span class="tag">' + esc(a.coin) + '</span></div>' +
+      '<div class="sub">' + esc(a.coin) + ' ' + esc(a.condition) + ' ' + esc(String(a.price)) + (a.enabled ? '' : ' &middot; disabled') + '</div>' +
+      '<div class="actions">' +
+      '<label><input type="checkbox" data-alert-enable="' + esc(a.id) + '"' + (a.enabled ? ' checked' : '') + '> Enabled</label>' +
+      '<button type="button" class="ghost" data-alert-edit="' + esc(a.id) + '">Edit</button>' +
+      '<button type="button" class="ghost danger" data-alert-del="' + esc(a.id) + '">Delete</button>' +
+      '</div></div>';
+  }
+
+  function alertFormHtml(a) {
+    a = a || { id: '', coin: 'BTC', condition: 'above', price: '', label: '', enabled: true };
+    return '<input type="hidden" id="al-id" value="' + esc(a.id) + '">' +
+      '<label>Coin<select id="al-coin">' + ALERT_COINS.map(function (c) { return '<option' + (c === a.coin ? ' selected' : '') + '>' + c + '</option>'; }).join('') + '</select></label>' +
+      '<label>Condition<select id="al-cond"><option value="above"' + (a.condition === 'above' ? ' selected' : '') + '>Price rises above</option>' +
+      '<option value="below"' + (a.condition === 'below' ? ' selected' : '') + '>Price falls below</option></select></label>' +
+      '<input type="number" id="al-price" step="any" placeholder="Price" value="' + esc(a.price) + '">' +
+      '<input type="text" id="al-label" placeholder="Label shown on the alert" value="' + esc(a.label) + '">' +
+      '<button type="button" class="primary" id="al-save">' + (a.id ? 'Save changes' : 'Add alert') + '</button>' +
+      (a.id ? '<button type="button" class="ghost" id="al-cancel">Cancel</button>' : '');
+  }
+
+  async function renderAlertsBody(editing) {
+    var r = await sb.from('price_alerts').select('*').order('coin').order('price');
+    if (r.error) return setMsg(r.error.message, 'err');
+    setMsg('');
+    var rows = r.data || [];
+    var editRow = editing && rows.filter(function (a) { return a.id === editing; })[0];
+    $('ov-body').innerHTML = '<div class="user-list">' + rows.map(alertRowHtml).join('') + '</div>' +
+      (rows.length ? '' : '<div class="sub">No alerts yet.</div>') +
+      '<h3>' + (editRow ? 'Edit alert' : 'Add an alert') + '</h3>' + alertFormHtml(editRow);
+
+    $('ov-body').querySelectorAll('[data-alert-enable]').forEach(function (cb) {
+      cb.onchange = async function () {
+        var a = rows.filter(function (x) { return x.id === cb.dataset.alertEnable; })[0];
+        cb.disabled = true;
+        var res = await sb.rpc('admin_upsert_price_alert', { p_id: a.id, p_coin: a.coin, p_condition: a.condition, p_price: a.price, p_label: a.label, p_enabled: cb.checked });
+        if (res.error) { cb.checked = !cb.checked; setMsg(res.error.message, 'err'); } else { setMsg('Saved.', 'ok'); }
+        cb.disabled = false;
+      };
+    });
+    $('ov-body').querySelectorAll('[data-alert-edit]').forEach(function (btn) {
+      btn.onclick = function () { renderAlertsBody(btn.dataset.alertEdit); };
+    });
+    $('ov-body').querySelectorAll('[data-alert-del]').forEach(function (btn) {
+      btn.onclick = async function () {
+        if (btn.dataset.armed !== '1') { btn.dataset.armed = '1'; btn.textContent = 'Really delete?'; return; }
+        var res = await sb.rpc('admin_delete_price_alert', { p_id: btn.dataset.alertDel });
+        if (res.error) return setMsg(res.error.message, 'err');
+        await renderAlertsBody(); setMsg('Alert deleted.', 'ok');
+      };
+    });
+    var cancel = $('al-cancel'); if (cancel) cancel.onclick = function () { renderAlertsBody(); };
+    $('al-save').onclick = async function () {
+      var id = $('al-id').value.trim() || ($('al-coin').value.toLowerCase() + '-' + Date.now());
+      var price = parseFloat($('al-price').value);
+      var label = $('al-label').value.trim();
+      if (!label) return setMsg('Give the alert a label.', 'err');
+      if (!(price > 0)) return setMsg('Enter a valid price.', 'err');
+      var res = await sb.rpc('admin_upsert_price_alert', { p_id: id, p_coin: $('al-coin').value, p_condition: $('al-cond').value, p_price: price, p_label: label, p_enabled: true });
+      if (res.error) return setMsg(res.error.message, 'err');
+      await renderAlertsBody(); setMsg('Saved. Shown after the next refresh.', 'ok');
+    };
+  }
+
   /* ---------------- boot ---------------- */
 
   async function boot() {
@@ -511,6 +590,7 @@
     $('noaccess-signout').onclick = doSignOut;
     $('btn-account').onclick = openAccount;
     $('btn-admin').onclick = openAdmin;
+    $('btn-alerts').onclick = openAlerts;
     if ($('btn-theme')) { $('btn-theme').onclick = cycleTheme; applyTheme(currentTheme()); }
     initMobileMenu();
     $('overlay').addEventListener('click', function (e) { if (e.target === $('overlay')) closeOverlay(); });

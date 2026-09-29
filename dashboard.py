@@ -230,7 +230,20 @@ def save_state(state, backend=None):
         log(f"STATE SAVE FAIL: {e}")
 
 
-def load_alerts_config():
+def load_alerts_config(backend=None):
+    """With a backend, alerts live in Supabase's price_alerts table (admin-editable in the app);
+    without one (local/standalone runs), they come from data/alerts_config.json. Returns None to
+    mean "nothing configured yet -- seed defaults", same contract for either source."""
+    if backend:
+        try:
+            rows = backend.select("price_alerts")
+        except Exception as e:
+            log(f"ALERTS CONFIG LOAD FAIL (Supabase): {e}")
+            return {"alerts": []}
+        if not rows:
+            return None
+        return {"alerts": [{"id": r["id"], "coin": r["coin"], "condition": r["condition"],
+                            "price": r["price"], "label": r["label"], "enabled": r["enabled"]} for r in rows]}
     if not os.path.exists(ALERTS_CONFIG_PATH):
         return None
     try:
@@ -241,7 +254,16 @@ def load_alerts_config():
         return {"alerts": []}
 
 
-def save_alerts_config(config):
+def save_alerts_config(config, backend=None):
+    """Only ever called once, to seed first-run defaults -- see load_alerts_config's docstring."""
+    if backend:
+        try:
+            rows = [{"id": a["id"], "coin": a["coin"], "condition": a["condition"], "price": a["price"],
+                     "label": a.get("label", a["id"]), "enabled": a.get("enabled", True)} for a in config.get("alerts", [])]
+            backend.seed_price_alerts(rows)
+        except Exception as e:
+            log(f"ALERTS CONFIG SAVE FAIL (Supabase): {e}")
+        return
     try:
         with open(ALERTS_CONFIG_PATH, "w", encoding="utf-8") as f:
             json.dump(config, f, indent=2)
@@ -2351,6 +2373,7 @@ def render(coins_data, fng_value, fng_classification, generated_at, any_stale,
   <div class="header-actions">
     <button type="button" id="btn-theme" class="hdr-btn" title="Switch theme">&#9728; Light</button>
     <button type="button" id="btn-admin" class="hdr-btn" hidden>Users</button>
+    <button type="button" id="btn-alerts" class="hdr-btn" hidden>Alerts</button>
     <button type="button" id="btn-account" class="hdr-btn">Account</button>
     <button type="button" id="btn-signout" class="hdr-btn">Sign out</button>
   </div>
@@ -2866,11 +2889,11 @@ def main():
             any_stale = True
         coins_data.append(cd)
 
-    alerts_config = load_alerts_config()
+    alerts_config = load_alerts_config(backend)
     if alerts_config is None:
         alerts_config = seed_default_alerts(coins_data)
-        save_alerts_config(alerts_config)
-        log("Seeded default alerts_config.json from initial 30d support/resistance levels")
+        save_alerts_config(alerts_config, backend)
+        log(f"Seeded default alerts from initial 30d support/resistance levels ({'Supabase' if backend else 'alerts_config.json'})")
 
     prev_alerts_state = state.get("_alerts_state", {})
     alerts_results, new_alerts_state, newly_triggered = evaluate_alerts(
