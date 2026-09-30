@@ -187,6 +187,7 @@
       var since = r.actual_entry != null ? r.entry_time : r.created_at;
       h += '<div class="sc2-card sc2-active sc2-s-' + (r.direction === 'LONG' ? 'long' : 'short') + '" data-id="' + esc(r.id) + '">' +
         '<div class="sc2-card-h"><b>' + esc(r.coin) + ' ' + esc(r.direction) + '</b><span class="badge ' + (r.actual_entry != null ? 'bullish' : 'neutral') + '" data-st="' + esc(r.id) + '">' + esc(s) + '</span></div>' +
+        (r.direction === 'SHORT' ? '<div class="sub" style="color:var(--red);">Unvalidated: SHORT setups backtested net negative over 90 days (LONG is the proven side).</div>' : '') +
         '<div class="sc2-now"><span>Current</span><b data-px="' + esc(r.coin) + '">' + fmtPrice(px) + '</b>' +
         (r.actual_entry != null ? '<span>P&amp;L</span><b class="' + cls(pnl) + '" data-pnl="' + esc(r.id) + '">' + pct(pnl) + '</b>' : '') + '</div>' +
         chartWrap(r.coin, r.id) + levelsGrid(r, px) +
@@ -294,7 +295,8 @@
       field('loss_streak_limit', 'Losing streak that pauses a coin (in a row)', cfg, lim, 1) + field('loss_streak_cooldown_min', 'Pause after that streak (min, doubles each extra loss up to 4x)', cfg, lim, 15) + '</div>' +
       '<div class="sc2-g"><b>Risk</b>' + field('fee_pct', 'Round-trip fees (%)', cfg, lim, 0.01) + field('stop_atr_min', 'Smallest stop (x typical candle move)', cfg, lim, 0.1) + field('stop_atr_max', 'Largest stop (x typical candle move)', cfg, lim, 0.1) +
       field('tp1_atr', 'Target 1 (x typical candle move)', cfg, lim, 0.1) + field('tp2_atr', 'Target 2 (x typical candle move)', cfg, lim, 0.1) + field('partial_tp1_pct', 'Close at target 1 (%)', cfg, lim, 5) +
-      field('post_tp1_trail_atr', 'Trail stop after TP1 (x typical candle move)', cfg, lim, 0.1) + chk('allow_short', 'Allow SHORT setups (off = long only)', cfg.allow_short) + '</div>' +
+      field('post_tp1_trail_atr', 'Trail stop after TP1 (x typical candle move)', cfg, lim, 0.1) + chk('allow_short', 'Allow SHORT setups (off = long only)', cfg.allow_short) +
+      '<div class="sub" style="margin-top:4px;">A 90-day backtest of the SHORT rule (mirrored sign-flip of the same 7 checks) came back net negative in both an earlier and a more recent half of that history (avg -0.33%/-0.12% per trade) -- unlike LONG, which was close to flat-to-positive in both halves. Enabled here because it was asked for, not because the backtest recommends it; every SHORT card is labelled as unvalidated.</div></div>' +
       '<div class="sc2-g"><b>Restrict new scalps when the market is</b>' + d.regimes.map(function (r) { return '<label class="sc2-c"><input type="checkbox" data-reg="' + r + '"' + (cfg.restricted_regimes.indexOf(r) >= 0 ? ' checked' : '') + '> ' + esc(r) + '</label>'; }).join('') +
       field('high_vol_ratio', 'HIGH VOLATILITY when candles are this many times bigger than usual', cfg, lim, 0.1) + field('vol_min', 'Min volume vs normal', cfg, lim, 0.1) + '</div>' +
       '<div class="sc2-g"><b>Alerts</b>' + Object.keys(cfg.alerts).map(function (k) { return '<label class="sc2-c"><input type="checkbox" data-alert="' + k + '"' + (cfg.alerts[k] ? ' checked' : '') + '> ' + esc({ setup: 'New setup', entry: 'Entry triggered', tp1: 'TP1 hit', tp2: 'TP2 hit', stop: 'Stop loss', invalidated: 'Setup invalid', regime: 'Regime change', expired: 'Setup expired' }[k] || k) + '</label>'; }).join('') + '</div>' +
