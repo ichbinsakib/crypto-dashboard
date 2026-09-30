@@ -602,14 +602,17 @@
     var q = await sb.from('trend_settings').select('value').eq('key', 'config').maybeSingle();
     if (q.error) return setMsg(q.error.message, 'err');
     setMsg('');
-    var pinned = (q.data && q.data.value && q.data.value.pinned_coins) || [];
+    var v = (q.data && q.data.value) || {};
+    var pinned = v.pinned_coins || [];
     $('ov-body').innerHTML =
       '<textarea id="wl-coins" rows="3" placeholder="e.g. QNT, MOVR, INJ" style="width:100%; resize:vertical;">' + esc(pinned.join(', ')) + '</textarea>' +
       '<div class="sub" style="margin-top:6px;">Comma-separated symbols, as they trade on Binance against USDT (no need to add USDT yourself).</div>' +
+      '<label style="display:flex; align-items:center; gap:8px; margin-top:14px;"><input type="checkbox" id="wl-short"' + (v.allow_short ? ' checked' : '') + '> Also scan for SHORT (downside) breakouts</label>' +
+      '<div class="sub" style="margin-top:4px;">A mirrored sign-flip of the LONG rule, backtested against 2 years of real history: LONG holds up out-of-sample, SHORT does not (net -757% over the full period, an unstable/overfit result, not a real edge). Every SHORT signal is labelled as unvalidated on the Signals page — this switch is here because it was asked for, not because the backtest recommends it.</div>' +
       '<button type="button" class="primary" id="wl-save" style="margin-top:10px;">Save watchlist</button>';
     $('wl-save').onclick = async function () {
       var coins = $('wl-coins').value.split(',').map(function (s) { return s.trim().toUpperCase(); }).filter(Boolean);
-      var res = await sb.rpc('admin_set_trend_config', { p_value: { pinned_coins: coins } });
+      var res = await sb.rpc('admin_set_trend_config', { p_value: { pinned_coins: coins, allow_short: $('wl-short').checked } });
       if (res.error) return setMsg(res.error.message, 'err');
       setMsg('Saved. Takes effect on the next scheduled run.', 'ok');
     };

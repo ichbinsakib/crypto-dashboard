@@ -1867,13 +1867,16 @@ def render(coins_data, fng_value, fng_classification, generated_at, any_stale,
             word = "LONG" if is_long else "SHORT"
             sentiment = "bullish" if is_long else "bearish"
             follow_key = f"mom-{pos['tf']}:{pos['coin']}"
-            label = (f'<span class="badge {sentiment}">&#128200; TREND BREAKOUT {word}</span>'
-                     f'<span class="wl-note">4 Hour &middot; 3/3 checks &middot; experimental</span>')
+            wl_note = "4 Hour &middot; 3/3 checks &middot; experimental" if is_long else "4 Hour &middot; 3/3 checks &middot; UNVALIDATED, backtested net negative"
+            label = f'<span class="badge {sentiment}">&#128200; TREND BREAKOUT {word}</span><span class="wl-note">{wl_note}</span>'
+            tip_suffix = "" if is_long else (" A mirrored sign-flip of the long rule; backtested against 2 years of real history it lost money "
+                                             "overall (net -757%) and showed an unstable train/test split, not a real edge. Enabled by admin request, "
+                                             "not because the backtest supports it -- treat any SHORT call here with real skepticism.")
             return _scan_row("trend", pos["tf"], str(pos.get("name") or pos["coin"]), pos["coin"], label, pos["entry"], pos["entry"], pos["stop"], None, None,
                              pos.get("risk_pct") or 0, None, None, _chips([(n, None, tip) for n, tip in _trend_why(is_long)]), "", pos["opened_at"], follow_key, follow_key,
                              "4-Hour trend", sentiment,
                              f"Slow trend breakout ({word.lower()}): a 4h candle closed {'above' if is_long else 'below'} its 55-candle "
-                             f"{'high' if is_long else 'low'} while {'above' if is_long else 'below'} the 200-candle average; exit by trailing stop.",
+                             f"{'high' if is_long else 'low'} while {'above' if is_long else 'below'} the 200-candle average; exit by trailing stop.{tip_suffix}",
                              f"TREND BREAKOUT {word}", f"TREND BREAKOUT {word}", "3/3 checks")
         follow_key = f"mom-{pos['tf']}:{pos['coin']}"
         tf_label = {"15m": "15-Minute", "1h": "1-Hour"}.get(pos["tf"], pos["tf"])
@@ -3005,11 +3008,19 @@ def main():
         try:
             trend_rows = backend.select("trend_settings")
             trend_cfg_row = next((r for r in trend_rows if r["key"] == "config"), None)
-            pinned_coins = ((trend_cfg_row or {}).get("value") or {}).get("pinned_coins") or []
-        except Exception as e:  # noqa: BLE001 - an empty pinned list is a safe fallback
+            trend_cfg_value = (trend_cfg_row or {}).get("value") or {}
+            pinned_coins = trend_cfg_value.get("pinned_coins") or []
+            allow_short_trend = bool(trend_cfg_value.get("allow_short"))
+        except Exception as e:  # noqa: BLE001 - an empty pinned list / long-only is a safe fallback
             log(f"Trend settings load skipped: {type(e).__name__}: {str(e)[:100]}")
+            allow_short_trend = False
+    else:
+        allow_short_trend = False
 
     # Experimental momentum/breakout tier: separate scan, tracker, cooldown and record; the dip scanner above is untouched.
+    # SHORT is admin-opt-in (allow_short_trend): a straight sign-flip of the LONG rule backtested net
+    # negative over 2 years (backtest/short_run.py) -- LONG is validated, SHORT is not, and every
+    # SHORT signal is labelled as such in the UI rather than presented with the same confidence.
     prev_momentum = state.get("_momentum_tracker", {})
     new_momentum, momentum_opened, momentum_resolved = prev_momentum, [], []
     try:
@@ -3022,7 +3033,8 @@ def main():
             if open_here < momentum_mod.MAX_OPEN_PER_TF:
                 skip = {k.split(":", 1)[1] for k in (held | cooling_now) if k.startswith(mtf + ":")}
                 signals += momentum_mod.scan(pool_for_momentum, mtf, fetch_binance_ohlc, skip_symbols=skip,
-                                             max_new=momentum_mod.MAX_OPEN_PER_TF - open_here, pinned=pinned_coins)
+                                             max_new=momentum_mod.MAX_OPEN_PER_TF - open_here, pinned=pinned_coins,
+                                             allow_short=allow_short_trend)
         new_momentum, momentum_opened, momentum_resolved = momentum_mod.update_tracker(prev_momentum, signals, fetch_binance_ohlc)
         log(f"Momentum: {len(new_momentum['open'])} open, {len(momentum_opened)} new, {len(momentum_resolved)} resolved this run")
     except Exception as e:  # noqa: BLE001 - an experimental tier must never break the main job

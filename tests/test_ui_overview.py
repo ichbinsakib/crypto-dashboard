@@ -120,6 +120,17 @@ class OverviewTests(unittest.TestCase):
         self.assertIn("typical hold ~4 days", visible)
         self.assertNotRegex(h, r"ATRs?")
 
+    def test_a_short_trend_row_is_labelled_as_unvalidated(self):
+        coins = [coin("BTC", "Bitcoin", 80000.0, 80500.0, 70000.0), coin("ETH", "Ethereum", 2500.0, 2510.0, 2000.0)]
+        mom = {"open": {"4h:ALGO": {"tf": "4h", "kind": "trend", "direction": "SHORT", "coin": "ALGO", "name": "Algorand",
+                                    "entry": 0.1126, "stop": 0.1300, "stop0": 0.1300, "target1": None, "target2": None,
+                                    "risk_pct": 15.0, "net1": None, "net2": None, "opened_at": "2026-09-20T22:03:00", "why": []}}, "resolved": []}
+        _h, portions, _ = D.render(coins, 50, "Neutral", "2026-09-20 02:00:00", False, momentum_state=mom)
+        h = portions["screener"]["html"]
+        self.assertIn("TREND BREAKOUT SHORT", h)
+        self.assertIn("UNVALIDATED, backtested net negative", h)
+        self.assertIn('badge bearish', h)
+
     def test_signal_rows_are_compact_two_line_rows(self):
         import re
         coins = [coin("BTC", "Bitcoin", 80000.0, 80500.0, 70000.0), coin("ETH", "Ethereum", 2500.0, 2510.0, 2000.0)]
