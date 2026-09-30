@@ -98,12 +98,46 @@ MAX_ATTEMPTS = 40
 RETENTION_DAYS = 120   # same reach as the dip tracker so Performance can show both over the same windows
 
 
-def scan(pool, tf_key, fetch_ohlc, skip_symbols=(), max_new=MAX_OPEN_PER_TF, attempts=MAX_ATTEMPTS, sleep=0.15):
-    """Look through a shuffled slice of the coin pool and return coins that currently qualify."""
+def scan(pool, tf_key, fetch_ohlc, skip_symbols=(), max_new=MAX_OPEN_PER_TF, attempts=MAX_ATTEMPTS, sleep=0.15, pinned=()):
+    """Look through the coin pool and return coins that currently qualify. `pinned` symbols are
+    always checked first, outside the random draw and its `attempts` budget -- and regardless of
+    whether they're even in `pool` this run -- so a coin an admin cares about can't be missed just
+    because the random rotation never landed on it. Real breakouts on QNT and MOVR were each
+    confirmed after the fact to have passed every check; neither was ever scanned."""
     cfg = MOMENTUM_TIMEFRAMES[tf_key]
-    cands = [m for m in (pool or []) if (m.get("symbol") or "").upper() not in skip_symbols]
+    skip = {str(s).upper() for s in skip_symbols}
+    pool = pool or []
+    name_by_symbol = {}
+    for m in pool:
+        sym = (m.get("symbol") or "").upper()
+        if sym and sym not in name_by_symbol:
+            name_by_symbol[sym] = m.get("name") or sym
+
+    def _check(sym, name):
+        try:
+            klines = fetch_ohlc(sym, cfg["interval"], cfg["limit"]) if cfg.get("limit") else fetch_ohlc(sym, cfg["interval"])
+        except Exception:                                    # no liquid Binance pair: skip quietly
+            return None
+        finally:
+            time.sleep(sleep)
+        sig = compute_trend_signal(klines, cfg["lookback"], cfg["window_label"])
+        if sig and sig["status"] == "momentum":
+            sig.update(symbol=sym, name=name, tf=tf_key)
+            return sig
+        return None
+
+    found, checked = [], set()
+    for sym in (str(s).upper() for s in pinned if s):
+        if len(found) >= max_new or sym in skip or sym in checked:
+            continue
+        checked.add(sym)
+        sig = _check(sym, name_by_symbol.get(sym, sym))
+        if sig:
+            found.append(sig)
+
+    cands = [m for m in pool if (m.get("symbol") or "").upper() not in skip and (m.get("symbol") or "").upper() not in checked]
     random.shuffle(cands)
-    found, tried = [], 0
+    tried = 0
     for m in cands:
         if len(found) >= max_new or tried >= attempts:
             break
@@ -111,15 +145,8 @@ def scan(pool, tf_key, fetch_ohlc, skip_symbols=(), max_new=MAX_OPEN_PER_TF, att
         if not sym:
             continue
         tried += 1
-        try:
-            klines = fetch_ohlc(sym, cfg["interval"], cfg["limit"]) if cfg.get("limit") else fetch_ohlc(sym, cfg["interval"])
-        except Exception:                                    # no liquid Binance pair: skip quietly
-            continue
-        finally:
-            time.sleep(sleep)
-        sig = compute_trend_signal(klines, cfg["lookback"], cfg["window_label"])
-        if sig and sig["status"] == "momentum":
-            sig.update(symbol=sym, name=m.get("name") or sym, tf=tf_key)
+        sig = _check(sym, m.get("name") or sym)
+        if sig:
             found.append(sig)
     return found
 

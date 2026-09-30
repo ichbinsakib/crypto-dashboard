@@ -125,6 +125,43 @@ class ScanTrendTest(unittest.TestCase):
         self.assertEqual([f["symbol"] for f in found], ["AAA"])
         self.assertEqual(found[0]["tf"], "4h")
 
+    def test_a_pinned_coin_is_checked_even_when_not_in_the_pool_at_all(self):
+        # QNT and MOVR each had a real, rule-qualifying breakout that was never scanned because
+        # neither was in the pool that run -- a pinned coin must be checked regardless of the pool.
+        closes = uptrend_then_break()
+        t0 = int(time.time() * 1000) - (len(closes) - 1) * H4
+        k = rows(closes, t0=t0)
+        found = M.scan([], "4h", lambda sym, interval, limit=None: k, sleep=0, pinned=["MOVR"])
+        self.assertEqual([f["symbol"] for f in found], ["MOVR"])
+
+    def test_a_pinned_coin_still_respects_skip_symbols(self):
+        closes = uptrend_then_break()
+        t0 = int(time.time() * 1000) - (len(closes) - 1) * H4
+        k = rows(closes, t0=t0)
+        found = M.scan([], "4h", lambda sym, interval, limit=None: k, skip_symbols={"MOVR"}, sleep=0, pinned=["MOVR"])
+        self.assertEqual(found, [])
+
+    def test_pinned_coins_are_not_double_checked_by_the_random_draw(self):
+        closes = uptrend_then_break()
+        t0 = int(time.time() * 1000) - (len(closes) - 1) * H4
+        k = rows(closes, t0=t0)
+        calls = []
+
+        def fetch(sym, interval, limit=None):
+            calls.append(sym)
+            return k
+        pool = [{"symbol": "MOVR", "name": "Moonriver"}]
+        found = M.scan(pool, "4h", fetch, sleep=0, pinned=["MOVR"], max_new=5, attempts=40)
+        self.assertEqual(calls, ["MOVR"])          # checked once, via the pinned path, not again by the pool scan
+        self.assertEqual(found[0]["name"], "Moonriver")   # name still resolved from the pool entry
+
+    def test_pinned_coins_do_not_exceed_max_new(self):
+        closes = uptrend_then_break()
+        t0 = int(time.time() * 1000) - (len(closes) - 1) * H4
+        k = rows(closes, t0=t0)
+        found = M.scan([], "4h", lambda sym, interval, limit=None: k, sleep=0, pinned=["AAA", "BBB", "CCC"], max_new=2)
+        self.assertEqual(len(found), 2)
+
 
 class PriceTextTests(unittest.TestCase):
     def test_tiny_prices_keep_distinguishing_digits(self):

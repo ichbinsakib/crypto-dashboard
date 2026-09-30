@@ -2374,6 +2374,7 @@ def render(coins_data, fng_value, fng_classification, generated_at, any_stale,
     <button type="button" id="btn-theme" class="hdr-btn" title="Switch theme">&#9728; Light</button>
     <button type="button" id="btn-admin" class="hdr-btn" hidden>Users</button>
     <button type="button" id="btn-alerts" class="hdr-btn" hidden>Alerts</button>
+    <button type="button" id="btn-watchlist" class="hdr-btn" hidden>Watchlist</button>
     <button type="button" id="btn-account" class="hdr-btn">Account</button>
     <button type="button" id="btn-signout" class="hdr-btn">Sign out</button>
   </div>
@@ -2988,6 +2989,18 @@ def main():
     log(f"P&L tracker: {len(new_pnl_state.get('open', {}))} open, "
         f"{len(new_pnl_state.get('resolved', []))} resolved on record")
 
+    # Pinned watchlist: coins an admin wants checked every run regardless of the pool's random
+    # rotation. Real breakouts on QNT and MOVR both satisfied every rule but were never scanned
+    # because neither coin's random draw landed that run -- this is the fix for that gap.
+    pinned_coins = []
+    if backend:
+        try:
+            trend_rows = backend.select("trend_settings")
+            trend_cfg_row = next((r for r in trend_rows if r["key"] == "config"), None)
+            pinned_coins = ((trend_cfg_row or {}).get("value") or {}).get("pinned_coins") or []
+        except Exception as e:  # noqa: BLE001 - an empty pinned list is a safe fallback
+            log(f"Trend settings load skipped: {type(e).__name__}: {str(e)[:100]}")
+
     # Experimental momentum/breakout tier: separate scan, tracker, cooldown and record; the dip scanner above is untouched.
     prev_momentum = state.get("_momentum_tracker", {})
     new_momentum, momentum_opened, momentum_resolved = prev_momentum, [], []
@@ -3001,7 +3014,7 @@ def main():
             if open_here < momentum_mod.MAX_OPEN_PER_TF:
                 skip = {k.split(":", 1)[1] for k in (held | cooling_now) if k.startswith(mtf + ":")}
                 signals += momentum_mod.scan(pool_for_momentum, mtf, fetch_binance_ohlc, skip_symbols=skip,
-                                             max_new=momentum_mod.MAX_OPEN_PER_TF - open_here)
+                                             max_new=momentum_mod.MAX_OPEN_PER_TF - open_here, pinned=pinned_coins)
         new_momentum, momentum_opened, momentum_resolved = momentum_mod.update_tracker(prev_momentum, signals, fetch_binance_ohlc)
         log(f"Momentum: {len(new_momentum['open'])} open, {len(momentum_opened)} new, {len(momentum_resolved)} resolved this run")
     except Exception as e:  # noqa: BLE001 - an experimental tier must never break the main job

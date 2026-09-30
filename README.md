@@ -16,7 +16,9 @@ admin-only regardless of what's granted.
 - **Signals tab — Trend Breakout:** the one live signal-generation engine (`momentum.py`). Scans a rotating pool of
   top-market-cap coins for a 4-hour breakout above a 200-candle average, rides it with a trailing stop (no fixed
   target). Dip-buy signals and an earlier 15-minute/1-hour momentum rule were both retired for losing money in
-  back-tests; their code and history are gone, not just switched off.
+  back-tests; their code and history are gone, not just switched off. An admin can pin specific coins in the
+  **Watchlist** panel so they're checked every run regardless of the pool's random rotation — added after two real,
+  rule-qualifying breakouts (QNT, MOVR) were confirmed missed purely because neither was ever scanned.
 - **Performance tab:** the Trend Breakout engine's own win/loss record (daily/weekly/monthly), plus a Return % and
   a hypothetical "$50 bet on every call" figure to make the percentage concrete. Educational transparency, not a
   real account — see the info tooltip for the exact math (simple addition of each trade's own net %, not compounding).

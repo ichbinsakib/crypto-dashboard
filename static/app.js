@@ -389,6 +389,7 @@
     S.profile = await loadProfile();
     show('btn-admin', !!S.profile.is_admin);
     show('btn-alerts', !!S.profile.is_admin);
+    show('btn-watchlist', !!S.profile.is_admin);
     if (window.KairoAndroid) {
       sb.rpc('get_notify_token').then(function (r) { if (!r.error) bridgeToAndroid(r.data); });
     }
@@ -583,6 +584,37 @@
     };
   }
 
+  /* ---------------- trend-breakout pinned watchlist (admin) ---------------- */
+
+  async function openWatchlist() {
+    openOverlay('<div class="overlay-row"><h2>Trend Breakout watchlist</h2><button type="button" class="ghost" id="ov-close">Close</button></div>' +
+      '<div class="sub">These coins are checked for a Trend Breakout setup every single run, regardless of the ' +
+      'random pool rotation that otherwise decides which coins get scanned. Use this for a coin you specifically ' +
+      'want the engine watching (QNT and MOVR both had real qualifying breakouts missed purely because neither ' +
+      'was ever scanned) -- a long list here means fewer of the pool’s random slots, so keep it to coins you ' +
+      'actually care about.</div>' +
+      '<div class="overlay-msg" id="ov-msg">Loading&hellip;</div><div id="ov-body"></div>');
+    $('ov-close').onclick = closeOverlay;
+    await renderWatchlistBody();
+  }
+
+  async function renderWatchlistBody() {
+    var q = await sb.from('trend_settings').select('value').eq('key', 'config').maybeSingle();
+    if (q.error) return setMsg(q.error.message, 'err');
+    setMsg('');
+    var pinned = (q.data && q.data.value && q.data.value.pinned_coins) || [];
+    $('ov-body').innerHTML =
+      '<textarea id="wl-coins" rows="3" placeholder="e.g. QNT, MOVR, INJ" style="width:100%; resize:vertical;">' + esc(pinned.join(', ')) + '</textarea>' +
+      '<div class="sub" style="margin-top:6px;">Comma-separated symbols, as they trade on Binance against USDT (no need to add USDT yourself).</div>' +
+      '<button type="button" class="primary" id="wl-save" style="margin-top:10px;">Save watchlist</button>';
+    $('wl-save').onclick = async function () {
+      var coins = $('wl-coins').value.split(',').map(function (s) { return s.trim().toUpperCase(); }).filter(Boolean);
+      var res = await sb.rpc('admin_set_trend_config', { p_value: { pinned_coins: coins } });
+      if (res.error) return setMsg(res.error.message, 'err');
+      setMsg('Saved. Takes effect on the next scheduled run.', 'ok');
+    };
+  }
+
   /* ---------------- boot ---------------- */
 
   async function boot() {
@@ -591,6 +623,7 @@
     $('btn-account').onclick = openAccount;
     $('btn-admin').onclick = openAdmin;
     $('btn-alerts').onclick = openAlerts;
+    $('btn-watchlist').onclick = openWatchlist;
     if ($('btn-theme')) { $('btn-theme').onclick = cycleTheme; applyTheme(currentTheme()); }
     initMobileMenu();
     $('overlay').addEventListener('click', function (e) { if (e.target === $('overlay')) closeOverlay(); });
