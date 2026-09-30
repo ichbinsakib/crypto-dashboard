@@ -149,16 +149,21 @@
   }
 
 
-  /* ---------------- overview cards open the matching tab ---------------- */
-  function goTo(a) {
-    var t = document.getElementById('tab-' + a.getAttribute('data-goto'));
-    if (!t) return;                                   // the reader has no access to that section
+  /* ---------------- overview cards (and notification taps) open the matching tab ---------------- */
+  // "performance" has no tab of its own -- render() embeds it inside "screener" -- so a
+  // notification stamped with that portion_key (win/loss/expiry results) needs to land there instead.
+  var PORTION_ALIAS = { performance: 'screener' };
+  function goToPortion(portion, sub) {
+    var t = document.getElementById('tab-' + (PORTION_ALIAS[portion] || portion));
+    if (!t) return false;                             // the reader has no access to that section
     t.checked = true;
-    var sub = a.getAttribute('data-sub'), sr = sub && document.getElementById(sub);
+    var sr = sub && document.getElementById(sub);
     if (sr) sr.checked = true;
     var root = document.getElementById('tabs-root');
     if (root && root.scrollIntoView) root.scrollIntoView({ block: 'start' });
+    return true;
   }
+  function goTo(a) { goToPortion(a.getAttribute('data-goto'), a.getAttribute('data-sub')); }
   document.addEventListener('click', function (e) {
     var a = e.target.closest && e.target.closest('[data-goto]');
     if (a) { e.preventDefault(); goTo(a); }
@@ -168,6 +173,17 @@
     var a = e.target.closest && e.target.closest('[data-goto]');
     if (a) { e.preventDefault(); goTo(a); }
   });
+  // The Android app opens a tapped notification's target by loading this same page with
+  // #goto=<portion_key> (portion_key is exactly the same tab key notification_events already
+  // stamps on every event server-side). Applied once, right after the first render, and then
+  // cleared so a later manual refresh of the page doesn't jump the reader away from where they are.
+  window.kairoGoto = goToPortion;
+  function applyPendingDeepLink() {
+    var m = /(?:^|[#&])goto=([^&]+)/.exec(location.hash);
+    if (!m) return;
+    history.replaceState(null, '', location.pathname + location.search);
+    goToPortion(decodeURIComponent(m[1]));
+  }
 
   /* ---------------- scanner rows: local time + expandable readout ---------------- */
   function timeAgo(ms) {
@@ -319,6 +335,7 @@
       if (!secs.length) { showNoAccess(); return; }
       if (initial) showOnly('app');
       render(rows);
+      if (initial) applyPendingDeepLink();
     } catch (e) {
       if (initial) {
         showLogin('Could not load the dashboard. Check your connection and try again.');

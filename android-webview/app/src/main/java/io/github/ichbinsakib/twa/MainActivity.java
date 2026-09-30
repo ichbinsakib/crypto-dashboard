@@ -26,7 +26,11 @@ import java.util.concurrent.TimeUnit;
 public class MainActivity extends Activity {
 
     private static final String HOST = "ichbinsakib.github.io";
+    /** Set by NotificationWorker on the Intent it opens when a notification is tapped -- the same
+     * portion_key the dashboard already stamps on every notification event server-side. */
+    public static final String EXTRA_GOTO_PORTION = "goto_portion";
     private WebView webView;
+    private boolean pageLoaded = false;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -65,12 +69,46 @@ public class MainActivity extends Activity {
                 startActivity(new Intent(Intent.ACTION_VIEW, uri));
                 return true;
             }
+
+            @Override
+            public void onPageFinished(WebView view, String url) {
+                pageLoaded = true;
+            }
         });
 
-        webView.loadUrl(getString(R.string.start_url));
+        webView.loadUrl(urlFor(getIntent()));
 
         requestNotificationPermissionIfNeeded();
         scheduleNotificationChecks();
+    }
+
+    /** start_url, with #goto=<portion> appended if this intent came from tapping a notification
+     * (see NotificationWorker) -- the page itself reads that hash once it finishes rendering and
+     * navigates to the matching tab (app.js: applyPendingDeepLink). */
+    private String urlFor(Intent intent) {
+        String base = getString(R.string.start_url);
+        String portion = intent != null ? intent.getStringExtra(EXTRA_GOTO_PORTION) : null;
+        return (portion == null || portion.isEmpty()) ? base : base + "#goto=" + Uri.encode(portion);
+    }
+
+    /**
+     * singleTask launch mode means a notification tapped while the app is already running (even in
+     * the background) arrives here instead of a fresh onCreate. If the page already finished
+     * loading, jump straight there via JS; otherwise it's still mid-load and app.js's own
+     * applyPendingDeepLink (fed by the URL hash) will handle it once rendering finishes.
+     */
+    @Override
+    protected void onNewIntent(Intent intent) {
+        super.onNewIntent(intent);
+        setIntent(intent);
+        String portion = intent.getStringExtra(EXTRA_GOTO_PORTION);
+        if (portion == null || portion.isEmpty()) return;
+        if (pageLoaded) {
+            String js = "window.kairoGoto && window.kairoGoto('" + portion.replace("'", "") + "')";
+            webView.evaluateJavascript(js, null);
+        } else {
+            webView.loadUrl(urlFor(intent));
+        }
     }
 
     /** Android 13+ (API 33) requires runtime permission before any notification can be shown. */

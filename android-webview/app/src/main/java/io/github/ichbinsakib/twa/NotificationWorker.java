@@ -111,9 +111,11 @@ public class NotificationWorker extends Worker {
         String title = event.optString("title", "Kairo");
         String body = event.optString("body", "");
         String id = event.optString("id", String.valueOf(System.currentTimeMillis()));
+        String portionKey = event.optString("portion_key", "");
 
         Intent openApp = new Intent(context, MainActivity.class);
         openApp.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TOP);
+        openApp.putExtra(MainActivity.EXTRA_GOTO_PORTION, portionKey);
         PendingIntent pendingIntent = PendingIntent.getActivity(
                 context, id.hashCode(), openApp,
                 PendingIntent.FLAG_UPDATE_CURRENT | PendingIntent.FLAG_IMMUTABLE);
