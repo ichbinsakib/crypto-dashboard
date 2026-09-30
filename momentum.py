@@ -42,31 +42,37 @@ def _ema_last(vals, n):
     return e
 
 
-def compute_trend_signal(klines, lookback, window_label="", now_ms=None):
-    """4h breakout above the prior `lookback`-candle high while above the 200-candle average. The last row is the
-    still-forming candle: the signal uses the last CLOSED candle and only fires within TREND_MAX_AGE_MIN of its close."""
+def compute_trend_signal(klines, lookback, window_label="", now_ms=None, direction="LONG"):
+    """4h breakout beyond the prior `lookback`-candle high/low while on the right side of the
+    200-candle average -- above it for LONG, below it for SHORT (every rule mirrors exactly, sign-
+    flipped). The last row is the still-forming candle: the signal uses the last CLOSED candle and
+    only fires within TREND_MAX_AGE_MIN of its close."""
     if not klines or len(klines) < TREND_EMA + 30:
         return None
+    s = 1 if direction == "LONG" else -1
     now_ms = now_ms if now_ms is not None else time.time() * 1000
     closed, forming = klines[:-1], klines[-1]
     age_min = (now_ms - float(forming[0])) / 60000
-    h = [float(k[2]) for k in closed]
+    extreme = [float(k[2] if s > 0 else k[3]) for k in closed]   # highs for LONG, lows for SHORT
     c = [float(k[4]) for k in closed]
     atr = _atr_series(closed)[-1]
     price = float(forming[4])
     if not atr or price <= 0:
         return None
-    level = max(h[-lookback - 1:-1])
-    checks = {"breakout": c[-1] > level, "above_ema200": c[-1] > _ema_last(c, TREND_EMA), "fresh": 0 <= age_min <= TREND_MAX_AGE_MIN}
+    level = (max if s > 0 else min)(extreme[-lookback - 1:-1])
+    checks = {"breakout": (c[-1] - level) * s > 0, "above_ema200": (c[-1] - _ema_last(c, TREND_EMA)) * s > 0,
+              "fresh": 0 <= age_min <= TREND_MAX_AGE_MIN}
     failed = [k for k, ok in checks.items() if not ok]
     out = {"status": "momentum" if not failed else "none", "checks": checks, "failed": failed, "price": price, "breakout_level": level,
-           "atr": atr, "window_label": window_label, "score": len(checks) - len(failed), "kind": "trend",
-           "label": "TREND BREAKOUT (experimental)" if not failed else "No trend setup"}
+           "atr": atr, "window_label": window_label, "score": len(checks) - len(failed), "kind": "trend", "direction": direction,
+           "label": f"TREND BREAKOUT {direction} (experimental)" if not failed else "No trend setup"}
     if not failed:
-        stop = price - TREND_STOP_ATR * atr
-        out["trade"] = {"entry": price, "stop": stop, "target1": None, "target2": None, "riskPct": (price - stop) / price * 100,
+        stop = price - s * TREND_STOP_ATR * atr
+        out["trade"] = {"entry": price, "stop": stop, "target1": None, "target2": None, "riskPct": abs(price - stop) / price * 100,
                         "target1NetPct": None, "target2NetPct": None}
-        out["reasons"] = [f"Closed above the prior {lookback}-candle (4h) high {level:.6g}", "Above the 200-candle average"]
+        word = "high" if s > 0 else "low"
+        out["reasons"] = [f"Closed {'above' if s > 0 else 'below'} the prior {lookback}-candle (4h) {word} {level:.6g}",
+                          f"{'Above' if s > 0 else 'Below'} the 200-candle average"]
     return out
 
 
@@ -98,12 +104,15 @@ MAX_ATTEMPTS = 40
 RETENTION_DAYS = 120   # same reach as the dip tracker so Performance can show both over the same windows
 
 
-def scan(pool, tf_key, fetch_ohlc, skip_symbols=(), max_new=MAX_OPEN_PER_TF, attempts=MAX_ATTEMPTS, sleep=0.15, pinned=()):
+def scan(pool, tf_key, fetch_ohlc, skip_symbols=(), max_new=MAX_OPEN_PER_TF, attempts=MAX_ATTEMPTS, sleep=0.15, pinned=(), allow_short=False):
     """Look through the coin pool and return coins that currently qualify. `pinned` symbols are
     always checked first, outside the random draw and its `attempts` budget -- and regardless of
     whether they're even in `pool` this run -- so a coin an admin cares about can't be missed just
     because the random rotation never landed on it. Real breakouts on QNT and MOVR were each
-    confirmed after the fact to have passed every check; neither was ever scanned."""
+    confirmed after the fact to have passed every check; neither was ever scanned.
+
+    `allow_short` also checks each candidate for a downside breakout (mirrors the long rule exactly,
+    sign-flipped) when it doesn't qualify long -- off by default until validated against history."""
     cfg = MOMENTUM_TIMEFRAMES[tf_key]
     skip = {str(s).upper() for s in skip_symbols}
     pool = pool or []
@@ -120,10 +129,11 @@ def scan(pool, tf_key, fetch_ohlc, skip_symbols=(), max_new=MAX_OPEN_PER_TF, att
             return None
         finally:
             time.sleep(sleep)
-        sig = compute_trend_signal(klines, cfg["lookback"], cfg["window_label"])
-        if sig and sig["status"] == "momentum":
-            sig.update(symbol=sym, name=name, tf=tf_key)
-            return sig
+        for direction in (("LONG", "SHORT") if allow_short else ("LONG",)):
+            sig = compute_trend_signal(klines, cfg["lookback"], cfg["window_label"], direction=direction)
+            if sig and sig["status"] == "momentum":
+                sig.update(symbol=sym, name=name, tf=tf_key)
+                return sig
         return None
 
     found, checked = [], set()
@@ -182,18 +192,22 @@ def update_tracker(prev, new_signals, fetch_ohlc, now=None, sleep=0.15):
         opened = datetime.datetime.fromisoformat(pos["opened_at"])
         opened_ms = opened.replace(tzinfo=datetime.timezone.utc).timestamp() * 1000
         result, exit_p = None, None
-        # the trailing stop is re-walked from the initial stop every run (it only ratchets up), so an earlier low can't fake a stop-out
+        sgn = 1 if pos.get("direction", "LONG") == "LONG" else -1
+        # the trailing stop is re-walked from the initial stop every run (it only ratchets toward
+        # profit, never back), so an earlier adverse wick can't fake a stop-out
         atrs = _atr_series(klines)
-        stop, hh = pos.get("stop0", pos["stop"]), pos["entry"]
+        stop, best = pos.get("stop0", pos["stop"]), pos["entry"]
         for k, a in zip(klines, atrs):
             if float(k[0]) + 1 < opened_ms:
                 continue
-            if float(k[3]) <= stop:
-                exit_p = min(stop, float(k[1]))
-                result = "win" if (exit_p / pos["entry"] - 1) * 100 - FEE_PCT > 0 else "loss"
+            o, hi, lo = float(k[1]), float(k[2]), float(k[3])
+            adv_x, fav_x = (lo, hi) if sgn > 0 else (hi, lo)   # worst / best price of the candle for this direction
+            if (adv_x - stop) * sgn <= 0:
+                exit_p = stop if (o - stop) * sgn > 0 else o
+                result = "win" if (exit_p / pos["entry"] - 1) * 100 * sgn - FEE_PCT > 0 else "loss"
                 break
-            hh = max(hh, float(k[2]))
-            stop = max(stop, hh - TREND_STOP_ATR * a)
+            best = max(best, fav_x) if sgn > 0 else min(best, fav_x)
+            stop = max(stop, best - sgn * TREND_STOP_ATR * a) if sgn > 0 else min(stop, best - sgn * TREND_STOP_ATR * a)
         pos = {**pos, "stop": stop}
         if result is None and (now - opened).total_seconds() / 3600 >= TREND_EXPIRY_HOURS:
             result, exit_p = "expired", float(klines[-1][4])
@@ -210,9 +224,10 @@ def update_tracker(prev, new_signals, fetch_ohlc, now=None, sleep=0.15):
         if key in still_open or key in cool:
             continue
         t = s["trade"]
-        pos = {"coin": s["symbol"], "name": s.get("name") or s["symbol"], "tf": s["tf"], "entry": t["entry"], "stop": t["stop"],
-               "target1": t["target1"], "target2": t["target2"], "net1": t["target1NetPct"], "opened_at": now.isoformat(),
-               "net2": t.get("target2NetPct"), "risk_pct": t.get("riskPct"), "why": [k for k, ok in (s.get("checks") or {}).items() if ok]}
+        pos = {"coin": s["symbol"], "name": s.get("name") or s["symbol"], "tf": s["tf"], "direction": s.get("direction", "LONG"),
+               "entry": t["entry"], "stop": t["stop"], "target1": t["target1"], "target2": t["target2"], "net1": t["target1NetPct"],
+               "opened_at": now.isoformat(), "net2": t.get("target2NetPct"), "risk_pct": t.get("riskPct"),
+               "why": [k for k, ok in (s.get("checks") or {}).items() if ok]}
         if s.get("kind") == "trend":
             pos.update(kind="trend", atr=s.get("atr"), stop0=t["stop"])
         still_open[key] = pos
@@ -226,7 +241,7 @@ def stats(resolved):
     wins = sum(1 for r in resolved if r["result"] == "win")
     losses = sum(1 for r in resolved if r["result"] == "loss")
     expired = sum(1 for r in resolved if r["result"] == "expired")
-    nets = [(r["exit_price"] - r["entry"]) / r["entry"] * 100 - FEE_PCT for r in resolved]
+    nets = [(r["exit_price"] - r["entry"]) / r["entry"] * 100 * (1 if r.get("direction", "LONG") == "LONG" else -1) - FEE_PCT for r in resolved]
     return {"wins": wins, "losses": losses, "expired": expired, "n": len(resolved),
             "win_rate": wins / (wins + losses) * 100 if wins + losses else None,
             "avg_net": sum(nets) / len(nets) if nets else None}

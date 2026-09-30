@@ -1856,17 +1856,25 @@ def render(coins_data, fng_value, fng_classification, generated_at, any_stale,
     MOM_WHY = [("Breakout", "Closed above the previous high"), ("Fresh", "Just broke out, not yet run away"), ("Trend", "Price above rising 20/50 averages"),
                ("Volume", "Volume above 1.3x normal"), ("Not parabolic", "Not an overextended vertical move"), ("No distribution", "No Wyckoff topping pattern")]
 
-    TREND_WHY = [("Breakout", "Closed a 4h candle above the prior 55-candle high"), ("Above 200 avg", "Price above its 200-candle average"),
-                 ("Fresh", "The breakout candle closed within the last hour")]
+    def _trend_why(is_long):
+        return [("Breakout", f"Closed a 4h candle {'above' if is_long else 'below'} the prior 55-candle {'high' if is_long else 'low'}"),
+                ("Above 200 avg" if is_long else "Below 200 avg", f"Price {'above' if is_long else 'below'} its 200-candle average"),
+                ("Fresh", "The breakout candle closed within the last hour")]
 
     def _mom_row(pos):
         if pos.get("kind") == "trend":
+            is_long = pos.get("direction", "LONG") == "LONG"
+            word = "LONG" if is_long else "SHORT"
+            sentiment = "bullish" if is_long else "bearish"
             follow_key = f"mom-{pos['tf']}:{pos['coin']}"
-            label = '<span class="badge bullish">&#128200; TREND BREAKOUT</span><span class="wl-note">4 Hour &middot; 3/3 checks &middot; experimental</span>'
+            label = (f'<span class="badge {sentiment}">&#128200; TREND BREAKOUT {word}</span>'
+                     f'<span class="wl-note">4 Hour &middot; 3/3 checks &middot; experimental</span>')
             return _scan_row("trend", pos["tf"], str(pos.get("name") or pos["coin"]), pos["coin"], label, pos["entry"], pos["entry"], pos["stop"], None, None,
-                             pos.get("risk_pct") or 0, None, None, _chips([(n, None, tip) for n, tip in TREND_WHY]), "", pos["opened_at"], follow_key, follow_key,
-                             "4-Hour trend", "bullish", "Slow trend breakout: a 4h candle closed above its 55-candle high while above the 200-candle average; exit by trailing stop.",
-                             "TREND BREAKOUT", "TREND BREAKOUT", "3/3 checks")
+                             pos.get("risk_pct") or 0, None, None, _chips([(n, None, tip) for n, tip in _trend_why(is_long)]), "", pos["opened_at"], follow_key, follow_key,
+                             "4-Hour trend", sentiment,
+                             f"Slow trend breakout ({word.lower()}): a 4h candle closed {'above' if is_long else 'below'} its 55-candle "
+                             f"{'high' if is_long else 'low'} while {'above' if is_long else 'below'} the 200-candle average; exit by trailing stop.",
+                             f"TREND BREAKOUT {word}", f"TREND BREAKOUT {word}", "3/3 checks")
         follow_key = f"mom-{pos['tf']}:{pos['coin']}"
         tf_label = {"15m": "15-Minute", "1h": "1-Hour"}.get(pos["tf"], pos["tf"])
         entry = pos["entry"]
@@ -2006,8 +2014,8 @@ def render(coins_data, fng_value, fng_classification, generated_at, any_stale,
 
     def _period_nets(rows, days):
         cutoff = datetime.datetime.now() - datetime.timedelta(days=days)
-        return [(r["exit_price"] - r["entry"]) / r["entry"] * 100 - ROUND_TRIP_FEE_PCT for r in rows
-                if r.get("exit_price") and r.get("entry") and datetime.datetime.fromisoformat(r["resolved_at"]) >= cutoff]
+        return [(r["exit_price"] - r["entry"]) / r["entry"] * 100 * (1 if r.get("direction", "LONG") == "LONG" else -1) - ROUND_TRIP_FEE_PCT
+                for r in rows if r.get("exit_price") and r.get("entry") and datetime.datetime.fromisoformat(r["resolved_at"]) >= cutoff]
 
     def _avg_net_30d(rows):
         nets = _period_nets(rows, 30)
