@@ -19,6 +19,7 @@ TREND_STOP_ATR = 4.0       # chandelier trailing stop: highest high since entry 
 TREND_EMA = 200            # only take breakouts above the 200-candle average
 TREND_MAX_AGE_MIN = 60     # enter only shortly after the breakout candle closed (the backtest entered at the next open)
 FEE_PCT = 0.2              # round-trip, same as the dip model
+TREND_MAX_RISK_PCT = 30    # skip entries whose initial stop would sit further than this from entry (an ATR still inflated by a pump, e.g. MOVR's 48% stop)
 TREND_COOL_HOURS = 48      # no re-signal on the same coin for this long after a loss
 TREND_EXPIRY_HOURS = 1600  # how long a call may run before it counts as expired (also the loss cooldown)
 
@@ -62,6 +63,7 @@ def compute_trend_signal(klines, lookback, window_label="", now_ms=None, directi
     level = (max if s > 0 else min)(extreme[-lookback - 1:-1])
     checks = {"breakout": (c[-1] - level) * s > 0, "above_ema200": (c[-1] - _ema_last(c, TREND_EMA)) * s > 0,
               "fresh": 0 <= age_min <= TREND_MAX_AGE_MIN}
+    checks["stop_not_too_wide"] = TREND_STOP_ATR * atr / price * 100 <= TREND_MAX_RISK_PCT
     failed = [k for k, ok in checks.items() if not ok]
     out = {"status": "momentum" if not failed else "none", "checks": checks, "failed": failed, "price": price, "breakout_level": level,
            "atr": atr, "window_label": window_label, "score": len(checks) - len(failed), "kind": "trend", "direction": direction,

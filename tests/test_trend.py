@@ -53,6 +53,16 @@ class TrendSignalTest(unittest.TestCase):
     def test_too_little_data(self):
         self.assertIsNone(M.compute_trend_signal(rows([1.0] * 50), 80))
 
+    def test_an_entry_whose_stop_would_sit_over_30_percent_away_is_skipped(self):
+        # MOVR opened with a 48% stop because its ATR was still inflated from a pump and lost 37%
+        # -- wide spreads inflate ATR, so a very volatile series must not qualify even on a clean breakout
+        k = rows(uptrend_then_break(), spread=0.20)
+        s = M.compute_trend_signal(k, 80, "", now_ms=k[-1][0] + 10 * 60000)
+        self.assertEqual(s["status"], "none")
+        self.assertIn("stop_not_too_wide", s["failed"])
+        calm = M.compute_trend_signal(rows(uptrend_then_break()), 80, "", now_ms=rows(uptrend_then_break())[-1][0] + 10 * 60000)
+        self.assertEqual(calm["status"], "momentum")
+
     def test_short_fires_on_a_downside_breakout_below_a_falling_200_average(self):
         k = rows(downtrend_then_break())
         now = k[-1][0] + 10 * 60000
