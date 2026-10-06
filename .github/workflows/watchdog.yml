@@ -1,0 +1,46 @@
+name: Kairo Workflow Watchdog
+
+# A deploy run once sat "queued" for ~29 hours because GitHub never assigned it a runner. The
+# deploy workflow allows one run at a time (concurrency group "pages"), so that one stuck run made
+# every newer run wait behind it and get cancelled -- the dashboard silently stopped updating.
+# Job timeouts can't help a run that never starts, so this separate workflow (its own concurrency
+# group, so it can't be blocked by the thing it watches) cancels any deploy run that has been
+# queued or running far longer than a normal run (~5 min), letting the next scheduled run go through.
+
+on:
+  schedule:
+    - cron: "7,22,37,52 * * * *"
+  workflow_dispatch: {}
+
+permissions:
+  actions: write
+  contents: read
+
+concurrency:
+  group: kairo-watchdog
+  cancel-in-progress: false
+
+jobs:
+  unstick:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    env:
+      GH_TOKEN: ${{ github.token }}
+      REPO: ${{ github.repository }}
+      MAX_AGE_SECONDS: "1500"
+    steps:
+      - name: Cancel deploy runs stuck longer than 25 minutes
+        run: |
+          now=$(date +%s)
+          for status in queued in_progress waiting pending; do
+            gh api "repos/$REPO/actions/workflows/deploy.yml/runs?status=$status&per_page=50" \
+              --jq '.workflow_runs[] | "\(.id) \(.created_at)"' | while read -r id created; do
+              age=$(( now - $(date -d "$created" +%s) ))
+              if [ "$age" -gt "$MAX_AGE_SECONDS" ]; then
+                echo "Run $id ($status) is $age s old -- cancelling"
+                gh api -X POST "repos/$REPO/actions/runs/$id/cancel" \
+                  || gh api -X POST "repos/$REPO/actions/runs/$id/force-cancel" \
+                  || echo "could not cancel $id"
+              fi
+            done
+          done
