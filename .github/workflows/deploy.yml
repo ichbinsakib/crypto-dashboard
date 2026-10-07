@@ -19,9 +19,13 @@ permissions:
   pages: write
   id-token: write
 
+# A newer run replaces one that is still queued/running. With false (GitHub's Pages template default),
+# a single run that never gets a runner blocked every later run behind it for 29 hours and the
+# dashboard silently stopped updating -- twice. A run takes ~3.5 min and the cron fires every 5,
+# so healthy runs almost never overlap; when they do, the newer one simply redoes the work.
 concurrency:
   group: "pages"
-  cancel-in-progress: false
+  cancel-in-progress: true
 
 jobs:
   build:
