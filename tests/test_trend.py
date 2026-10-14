@@ -186,6 +186,23 @@ class ScanTrendTest(unittest.TestCase):
         self.assertEqual([f["symbol"] for f in found], ["AAA"])
         self.assertEqual(found[0]["tf"], "4h")
 
+    def test_long_entries_can_be_paused_while_shorts_still_run(self):
+        up, down = uptrend_then_break(), downtrend_then_break()
+        for closes, direction in ((up, "LONG"), (down, "SHORT")):
+            t0 = int(time.time() * 1000) - (len(closes) - 1) * H4
+            k = rows(closes, t0=t0)
+            fetch = lambda sym, interval, limit=None, k=k: k
+            pool = [{"symbol": "AAA", "name": "A"}]
+            paused = M.scan(pool, "4h", fetch, sleep=0, allow_short=True, allow_long=False)
+            self.assertEqual([f["direction"] for f in paused], [] if direction == "LONG" else ["SHORT"])
+            self.assertEqual([f["direction"] for f in M.scan(pool, "4h", fetch, sleep=0, allow_short=True)], [direction])
+
+    def test_market_regime_up_follows_btcs_own_ema200(self):
+        self.assertTrue(M.market_regime_up(rows([100 + i * 0.5 for i in range(300)])))
+        self.assertFalse(M.market_regime_up(rows([300 - i * 0.5 for i in range(300)])))
+        self.assertIsNone(M.market_regime_up(rows([1.0] * 50)))
+        self.assertIsNone(M.market_regime_up(None))
+
     def test_short_is_ignored_unless_allow_short_is_set(self):
         closes = downtrend_then_break()
         t0 = int(time.time() * 1000) - (len(closes) - 1) * H4

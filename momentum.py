@@ -43,6 +43,16 @@ def _ema_last(vals, n):
     return e
 
 
+def market_regime_up(btc_klines):
+    """True/False: is Bitcoin's last closed 4h candle above its own 200-candle EMA; None if too little data.
+    LONG breakouts took part in a -2.74%/trade loss bucket when BTC was below it (backtest/regime_run.py,
+    2 years, held in both train and test halves), so LONGs are only taken while BTC is above it."""
+    if not btc_klines or len(btc_klines) < TREND_EMA + 31:
+        return None
+    closes = [float(k[4]) for k in btc_klines[:-1]]
+    return closes[-1] > _ema_last(closes, TREND_EMA)
+
+
 def compute_trend_signal(klines, lookback, window_label="", now_ms=None, direction="LONG"):
     """4h breakout beyond the prior `lookback`-candle high/low while on the right side of the
     200-candle average -- above it for LONG, below it for SHORT (every rule mirrors exactly, sign-
@@ -106,7 +116,7 @@ MAX_ATTEMPTS = 40
 RETENTION_DAYS = 120   # same reach as the dip tracker so Performance can show both over the same windows
 
 
-def scan(pool, tf_key, fetch_ohlc, skip_symbols=(), max_new=MAX_OPEN_PER_TF, attempts=MAX_ATTEMPTS, sleep=0.15, pinned=(), allow_short=False):
+def scan(pool, tf_key, fetch_ohlc, skip_symbols=(), max_new=MAX_OPEN_PER_TF, attempts=MAX_ATTEMPTS, sleep=0.15, pinned=(), allow_short=False, allow_long=True):
     """Look through the coin pool and return coins that currently qualify. `pinned` symbols are
     always checked first, outside the random draw and its `attempts` budget -- and regardless of
     whether they're even in `pool` this run -- so a coin an admin cares about can't be missed just
@@ -131,7 +141,7 @@ def scan(pool, tf_key, fetch_ohlc, skip_symbols=(), max_new=MAX_OPEN_PER_TF, att
             return None
         finally:
             time.sleep(sleep)
-        for direction in (("LONG", "SHORT") if allow_short else ("LONG",)):
+        for direction in (("LONG",) if allow_long else ()) + (("SHORT",) if allow_short else ()):
             sig = compute_trend_signal(klines, cfg["lookback"], cfg["window_label"], direction=direction)
             if sig and sig["status"] == "momentum":
                 sig.update(symbol=sym, name=name, tf=tf_key)

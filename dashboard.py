@@ -3011,11 +3011,14 @@ def main():
             trend_cfg_value = (trend_cfg_row or {}).get("value") or {}
             pinned_coins = trend_cfg_value.get("pinned_coins") or []
             allow_short_trend = bool(trend_cfg_value.get("allow_short"))
+            notify_trend_signals = trend_cfg_value.get("notify_signals", True) is not False
         except Exception as e:  # noqa: BLE001 - an empty pinned list / long-only is a safe fallback
             log(f"Trend settings load skipped: {type(e).__name__}: {str(e)[:100]}")
             allow_short_trend = False
+            notify_trend_signals = True
     else:
         allow_short_trend = False
+        notify_trend_signals = True
 
     # Experimental momentum/breakout tier: separate scan, tracker, cooldown and record; the dip scanner above is untouched.
     # SHORT is admin-opt-in (allow_short_trend): a straight sign-flip of the LONG rule backtested net
@@ -3028,13 +3031,18 @@ def main():
         held = {f"{p['tf']}:{p['coin']}" for p in prev_momentum.get("open", {}).values()}
         cooling_now = momentum_mod.cooling(prev_momentum.get("resolved", []))
         signals = []
+        # LONG breakouts only while Bitcoin is above its own 200-candle EMA (None = can't tell: stay permissive)
+        btc_cfg = momentum_mod.MOMENTUM_TIMEFRAMES["4h"]
+        btc_up = momentum_mod.market_regime_up(safe_fetch("BTC 4h regime", lambda: fetch_binance_ohlc("BTC", "4h", btc_cfg["limit"]))[0])
+        allow_long_trend = btc_up is not False
+        log(f"Trend regime: BTC {'above' if btc_up else 'below' if btc_up is False else 'unknown vs'} its 4h EMA200 -> LONG entries {'on' if allow_long_trend else 'paused'}")
         for mtf in momentum_mod.MOMENTUM_TIMEFRAMES:
             open_here = sum(1 for k in held if k.startswith(mtf + ":"))
             if open_here < momentum_mod.MAX_OPEN_PER_TF:
                 skip = {k.split(":", 1)[1] for k in (held | cooling_now) if k.startswith(mtf + ":")}
                 signals += momentum_mod.scan(pool_for_momentum, mtf, fetch_binance_ohlc, skip_symbols=skip,
                                              max_new=momentum_mod.MAX_OPEN_PER_TF - open_here, pinned=pinned_coins,
-                                             allow_short=allow_short_trend)
+                                             allow_short=allow_short_trend, allow_long=allow_long_trend)
         new_momentum, momentum_opened, momentum_resolved = momentum_mod.update_tracker(prev_momentum, signals, fetch_binance_ohlc)
         log(f"Momentum: {len(new_momentum['open'])} open, {len(momentum_opened)} new, {len(momentum_resolved)} resolved this run")
     except Exception as e:  # noqa: BLE001 - an experimental tier must never break the main job
@@ -3133,7 +3141,8 @@ def main():
         send_discord_strong_buy_alert(newly_strong)
 
     new_notification_events = build_new_notification_events(newly_strong, newly_resolved)
-    new_notification_events += momentum_mod.notification_events(momentum_opened, momentum_resolved)
+    if notify_trend_signals:   # admin switch (trend_settings.notify_signals): off = signals still tracked and shown, but no push
+        new_notification_events += momentum_mod.notification_events(momentum_opened, momentum_resolved)
     new_notification_feed = update_notification_feed(state.get("_notification_feed", []), new_notification_events)
     if new_notification_events:
         log(f"NOTIFICATION EVENTS: {[e['id'] for e in new_notification_events]}")
