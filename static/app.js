@@ -629,7 +629,7 @@
       '<button type="button" class="primary" id="wl-save" style="margin-top:10px;">Save watchlist</button>';
     $('wl-save').onclick = async function () {
       var coins = $('wl-coins').value.split(',').map(function (s) { return s.trim().toUpperCase(); }).filter(Boolean);
-      var res = await sb.rpc('admin_set_trend_config', { p_value: { pinned_coins: coins, allow_short: $('wl-short').checked } });
+      var res = await sb.rpc('admin_set_trend_config', { p_value: Object.assign({}, v, { pinned_coins: coins, allow_short: $('wl-short').checked }) });
       if (res.error) return setMsg(res.error.message, 'err');
       setMsg('Saved. Takes effect on the next scheduled run.', 'ok');
     };
