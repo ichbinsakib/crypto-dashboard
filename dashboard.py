@@ -36,6 +36,7 @@ import plain as plain_mod
 import btc_dashboard as btc_dash
 import aster as aster_mod
 from brain import wyckoff as wyckoff_mod
+import scorecard as scorecard_mod
 from formatting import fmt_usd, fmt_usd_adaptive, fmt_net_fee_html, fmt_duration_hours, fmt_time_ago, fmt_pct, badge_html, ps_safe
 from classify import (classify_price_structure, classify_funding, classify_oi, classify_premium,
                        classify_fng, classify_liquidation_risk, cycle_stage, heat_score)
@@ -2120,6 +2121,7 @@ def render(coins_data, fng_value, fng_classification, generated_at, any_stale,
     else:
         resolved_html = ""
 
+    scorecard_html = scorecard_mod.scorecard_html(scorecard_mod.scorecard(_all_resolved, ROUND_TRIP_FEE_PCT), "Trend Breakout", _esc)
     performance_panel = f"""
 <div class="panel panel-performance">
   <div class="cycle-map spot-signal-card" style="margin-bottom:10px;">
@@ -2130,6 +2132,7 @@ def render(coins_data, fng_value, fng_classification, generated_at, any_stale,
     {_pnl_stat_card("Weekly", stats_all["weekly"], _all_resolved, 7)}
     {_pnl_stat_card("Monthly", stats_all["monthly"], _all_resolved, 30)}
   </div>
+  {scorecard_html}
   {type_table}
   {open_positions_html}
   {resolved_html}
