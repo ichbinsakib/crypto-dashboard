@@ -18,7 +18,6 @@ import org.json.JSONObject;
 
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
-import java.io.OutputStream;
 import java.net.HttpURLConnection;
 import java.net.URL;
 import java.nio.charset.StandardCharsets;
@@ -29,15 +28,13 @@ import java.util.TimeZone;
 
 /**
  * Runs periodically in the background (scheduled by WorkManager, see MainActivity), even when the
- * app isn't open. Asks the backend for events newer than the last one this device saw, using the
- * per-user notification token the signed-in dashboard page handed over (KairoBridge). The backend
- * only returns events for sections that user was granted, so nobody is notified about anything
- * they can't open. WorkManager's minimum periodic interval is 15 minutes -- a platform floor.
- * No token (signed out) means nothing to do.
+ * app isn't open. Reads the site's public notifications.json and notifies about events newer than the last one this
+ * device saw (no account or token: the database is gone). WorkManager's minimum periodic interval is 15 minutes -- a platform floor.
  */
 public class NotificationWorker extends Worker {
 
     private static final String CHANNEL_ID = "kairo_signals";
+    private static final String FEED_URL = "https://ichbinsakib.github.io/crypto-dashboard/notifications.json";
 
     public NotificationWorker(@NonNull Context context, @NonNull WorkerParameters params) {
         super(context, params);
@@ -48,11 +45,6 @@ public class NotificationWorker extends Worker {
     public Result doWork() {
         try {
             SharedPreferences prefs = getApplicationContext().getSharedPreferences(KairoBridge.PREFS, Context.MODE_PRIVATE);
-            String url = prefs.getString(KairoBridge.KEY_URL, "");
-            String anon = prefs.getString(KairoBridge.KEY_ANON, "");
-            String token = prefs.getString(KairoBridge.KEY_TOKEN, "");
-            if (url.isEmpty() || anon.isEmpty() || token.isEmpty()) return Result.success();
-
             String lastSeen = prefs.getString(KairoBridge.KEY_LAST_SEEN, "");
             if (lastSeen.isEmpty()) {
                 // First check for this sign-in: start from now, don't replay history.
@@ -62,12 +54,15 @@ public class NotificationWorker extends Worker {
                 return Result.success();
             }
 
-            JSONArray events = new JSONArray(rpcNotificationsSince(url, anon, token, lastSeen));
+            // The feed is a public static file (newest first); notify about everything newer than the last one seen, oldest first.
+            JSONArray feed = new JSONArray(fetchFeed());
             String newest = lastSeen;
-            for (int i = 0; i < events.length(); i++) {           // server returns oldest-first
-                JSONObject event = events.getJSONObject(i);
+            for (int i = feed.length() - 1; i >= 0; i--) {
+                JSONObject event = feed.getJSONObject(i);
+                String ts = event.getString("ts");
+                if (ts.compareTo(lastSeen) <= 0) continue;
                 postNotification(event);
-                newest = event.getString("ts");
+                if (ts.compareTo(newest) > 0) newest = ts;
             }
             if (!newest.equals(lastSeen)) {
                 prefs.edit().putString(KairoBridge.KEY_LAST_SEEN, newest).apply();
@@ -79,20 +74,11 @@ public class NotificationWorker extends Worker {
         }
     }
 
-    private String rpcNotificationsSince(String baseUrl, String anonKey, String token, String since) throws Exception {
-        URL url = new URL(baseUrl + "/rest/v1/rpc/notifications_since");
+    private String fetchFeed() throws Exception {
+        URL url = new URL(FEED_URL + "?t=" + System.currentTimeMillis());
         HttpURLConnection conn = (HttpURLConnection) url.openConnection();
         conn.setConnectTimeout(10000);
         conn.setReadTimeout(10000);
-        conn.setRequestMethod("POST");
-        conn.setDoOutput(true);
-        conn.setRequestProperty("apikey", anonKey);
-        conn.setRequestProperty("Authorization", "Bearer " + anonKey);
-        conn.setRequestProperty("Content-Type", "application/json");
-        JSONObject body = new JSONObject().put("p_token", token).put("p_since", since);
-        try (OutputStream out = conn.getOutputStream()) {
-            out.write(body.toString().getBytes(StandardCharsets.UTF_8));
-        }
         if (conn.getResponseCode() != 200) throw new Exception("HTTP " + conn.getResponseCode());
         StringBuilder sb = new StringBuilder();
         try (BufferedReader reader = new BufferedReader(new InputStreamReader(conn.getInputStream(), StandardCharsets.UTF_8))) {
