@@ -1,4 +1,5 @@
-"""The scalping engine must ride on the reliable dashboard trigger, first, and without being able to fail the build."""
+"""The scalping engine must ride on the reliable dashboard trigger, first, and without being able to fail the build.
+State lives on the `data` branch: restored before the engines run, saved after, and no database secrets are involved."""
 import os
 import unittest
 
@@ -17,13 +18,17 @@ class WorkflowTests(unittest.TestCase):
         self.assertLess(t.index("python scalping_job.py"), t.index("python dashboard.py"))
         block = t[t.index("- name: Scalping engine"):t.index("- name: Generate dashboard")]
         self.assertIn("continue-on-error: true", block)
-        for secret in ("KAIRO_SUPABASE_URL", "KAIRO_SUPABASE_ANON_KEY", "KAIRO_PUBLISHER_EMAIL", "KAIRO_PUBLISHER_PASSWORD"):
-            self.assertIn(secret, block)
 
-    def test_scalping_has_its_own_workflow_too(self):
-        t = text("scalping.yml")
-        self.assertIn("python scalping_job.py", t)
-        self.assertIn("workflow_dispatch", t)
+    def test_state_is_restored_before_and_saved_after_the_engines_and_no_database_secret_is_used(self):
+        t = text("deploy.yml")
+        self.assertLess(t.index("- name: Restore data"), t.index("python scalping_job.py"))
+        self.assertLess(t.index("python dashboard.py"), t.index("- name: Save data"))
+        self.assertLess(t.index("- name: Save data"), t.index("upload-pages-artifact"))
+        self.assertNotIn("SUPABASE", t)
+        self.assertIn("contents: write", t)
+
+    def test_there_is_only_one_writer_of_the_store(self):
+        self.assertFalse(os.path.exists(os.path.join(ROOT, "scalping.yml")))   # a second workflow would race on the data branch
 
 
 if __name__ == "__main__":

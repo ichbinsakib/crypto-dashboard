@@ -223,7 +223,7 @@
   async function fetchRows() {
     if (DEV) {
       var r = await fetch('portions.json?t=' + Date.now(), { cache: 'no-store' });
-      if (!r.ok) throw new Error('portions.json not found (run dashboard.py locally first)');
+      if (!r.ok) throw new Error('portions.json not found (the dashboard has not published yet)');
       return r.json();
     }
     var res = await sb.from('portions').select('key,title,sort_order,html,data,updated_at');
@@ -318,7 +318,7 @@
     if (window.kairoInitCharts) window.kairoInitCharts(has.bigcoins ? ((has.bigcoins.data || {}).charts || {}) : {});
     initSignalPrices();
     // Admin-only: the server only returns this row to admins, so for everyone else `has.scalping` is simply undefined.
-    if (window.kairoInitScalping && has.scalping) window.kairoInitScalping(has.scalping, { sb: function () { return sb; }, isAdmin: !!(S.profile && S.profile.is_admin) || DEV, dev: DEV });
+    if (window.kairoInitScalping && has.scalping) window.kairoInitScalping(has.scalping, { sb: function () { return sb; }, isAdmin: !!(S.profile && S.profile.is_admin), dev: DEV });
     if (window.kairoInitEvents && has.events) {
       window.kairoInitEvents(has.events, { sb: function () { return sb; }, isAdmin: !!(S.profile && S.profile.is_admin), dev: DEV });
     }

@@ -15,7 +15,7 @@ on:
       - "data/**"
 
 permissions:
-  contents: read
+  contents: write      # pushes the `data` branch (engine state); nothing else is written back
   pages: write
   id-token: write
 
@@ -38,6 +38,17 @@ jobs:
         with:
           python-version: "3.x"
 
+      # All state lives in plain files on the `data` branch (a single commit, force-pushed each run so history never grows).
+      # There is no database: nothing to pause, expire or close. Settings you edit by hand are config/*.json on main.
+      - name: Restore data
+        run: |
+          if git fetch --depth=1 origin data; then
+            git checkout FETCH_HEAD -- store
+            echo "Restored store/ from the data branch"
+          else
+            echo "No data branch yet -- starting with an empty store/"
+          fi
+
       # The scalping engine runs FIRST and on its own step: GitHub starts a workflow's own schedule only every couple of hours,
       # but this workflow fires every ~5 minutes, so it is the reliable trigger. continue-on-error keeps a scalping problem from
       # ever failing the dashboard build (and the reverse). Overlapping runs with scalping.yml are safe: signal and alert ids are
@@ -45,24 +56,23 @@ jobs:
       - name: Scalping engine
         continue-on-error: true
         timeout-minutes: 4
-        env:
-          KAIRO_SUPABASE_URL: ${{ secrets.KAIRO_SUPABASE_URL }}
-          KAIRO_SUPABASE_ANON_KEY: ${{ secrets.KAIRO_SUPABASE_ANON_KEY }}
-          KAIRO_PUBLISHER_EMAIL: ${{ secrets.KAIRO_PUBLISHER_EMAIL }}
-          KAIRO_PUBLISHER_PASSWORD: ${{ secrets.KAIRO_PUBLISHER_PASSWORD }}
         run: python scalping_job.py
 
       - name: Generate dashboard
         env:
           DISCORD_WEBHOOK_URL: ${{ secrets.DISCORD_WEBHOOK_URL }}
-          KAIRO_SUPABASE_URL: ${{ secrets.KAIRO_SUPABASE_URL }}
-          KAIRO_SUPABASE_ANON_KEY: ${{ secrets.KAIRO_SUPABASE_ANON_KEY }}
-          KAIRO_PUBLISHER_EMAIL: ${{ secrets.KAIRO_PUBLISHER_EMAIL }}
-          KAIRO_PUBLISHER_PASSWORD: ${{ secrets.KAIRO_PUBLISHER_PASSWORD }}
-        # State and dashboard content now live in Supabase behind row-level security, so nothing
-        # readable is committed back to this (public) repo or published to Pages -- the published
-        # site is only the login shell. dashboard.py refuses to run here without the credentials.
+        # No Supabase secrets are passed any more: dashboard.py falls back to the file store (store/, config/).
         run: python dashboard.py
+
+      - name: Save data
+        run: |
+          git config user.name "kairo-bot"
+          git config user.email "kairo-bot@users.noreply.github.com"
+          git checkout -q --orphan data-new
+          git rm -rfq --cached .
+          git add -f store
+          git commit -qm "Kairo data $(date -u +%Y-%m-%dT%H:%MZ)"
+          git push -q --force origin data-new:data
 
       - uses: actions/upload-pages-artifact@v3
         with:

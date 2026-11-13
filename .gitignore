@@ -23,3 +23,6 @@ apk_output/
 .kairo.env
 backtest/data/
 backtest/scalp_data/
+
+# Engine state lives on the `data` branch (see deploy.yml), never on main
+store/

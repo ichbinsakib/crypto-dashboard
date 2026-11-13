@@ -12,6 +12,7 @@ import sys
 import time
 import urllib.request
 
+import filestore
 import supa
 from scalping import service
 
@@ -47,15 +48,9 @@ def section(payload):
 
 def main():
     dry = "--dry" in sys.argv
-    backend = None if dry else supa.Backend.from_env()
-    if backend is None and not dry:
-        if IS_CI:
-            log("FATAL: KAIRO_* secrets are missing; refusing to run")
-            return 1
-        log("No Supabase credentials: running in --dry mode")
-        dry = True
+    backend = None if dry else (supa.Backend.from_env() or filestore.FileBackend.from_env())
     if backend:
-        backend.sign_in()
+        backend.sign_in()   # a no-op for the file store
     store = backend if backend else service.MemoryStore()
     runtime = None
     try:

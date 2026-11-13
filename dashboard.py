@@ -26,6 +26,7 @@ import time
 import urllib.request
 from html import escape as _esc
 
+import filestore
 import supa
 import macro as macro_mod
 import momentum as momentum_mod
@@ -2869,19 +2870,15 @@ def publish_market_events(backend, mover_inputs=None, screener_pool=None, binanc
 
 def main():
     log("--- run start ---")
+    # Data lives in plain JSON files (store/, persisted on the `data` branch by the workflow) -- no database to pause or close.
+    # Supabase is still used if its secrets are present, which makes a rollback a matter of re-adding them.
     backend = supa.Backend.from_env()
     if backend:
         backend.sign_in()
-        log("Backend: signed in as the publisher account")
-    elif IS_CI:
-        # Standalone mode writes every section to a readable file inside the published site.
-        # In the hosted build that would publish the dashboard to the public, so fail instead.
-        missing = [k for k in supa.ENV_KEYS if not os.environ.get(k)]
-        raise SystemExit("Refusing to publish: these repository secrets are missing or empty: "
-                         + ", ".join(missing) + ". Add them under Settings > Secrets and variables > "
-                         "Actions (repository secrets, exact names, case-sensitive).")
+        log("Backend: signed in as the publisher account (Supabase)")
     else:
-        log("No KAIRO_* backend configured -- standalone run (local state file, no login)")
+        backend = filestore.FileBackend.from_env()
+        log("Backend: file store (store/ and config/)")
     state = load_state(backend)
     generated_at = datetime.datetime.now().strftime("%Y-%m-%d %H:%M:%S")
 
@@ -3192,6 +3189,9 @@ def _record_crash():
         b = supa.Backend.from_env()
         if b:
             b.sign_in()
+        else:
+            b = filestore.FileBackend.from_env()
+        if b:
             b.put_state({"at": datetime.datetime.now(datetime.timezone.utc).isoformat(), "job": "dashboard",
                          "traceback": traceback.format_exc()[-3500:]}, "_last_error")
     except Exception:  # noqa: BLE001
