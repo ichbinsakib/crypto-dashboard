@@ -44,3 +44,18 @@ jobs:
               fi
             done
           done
+
+      # The opposite failure: nothing is stuck, nothing is running, GitHub simply stopped firing the deploy schedule (the dashboard
+      # sat 90 minutes stale). The watchdog has its own schedule and the chained runs in deploy.yml are a third, so any one of the
+      # three surviving is enough. If no deploy run has been created for STALE_AFTER_SECONDS, start one.
+      - name: Start a deploy run if none has started recently
+        env:
+          STALE_AFTER_SECONDS: "900"
+        run: |
+          latest=$(gh api "repos/$REPO/actions/workflows/deploy.yml/runs?per_page=1" --jq '.workflow_runs[0].created_at // empty')
+          now=$(date +%s)
+          if [ -z "$latest" ]; then age=999999; else age=$(( now - $(date -d "$latest" +%s) )); fi
+          echo "Newest deploy run was created $age s ago"
+          if [ "$age" -gt "$STALE_AFTER_SECONDS" ]; then
+            gh workflow run deploy.yml --repo "$REPO" --ref "${{ github.event.repository.default_branch }}" && echo "Started a deploy run"
+          fi

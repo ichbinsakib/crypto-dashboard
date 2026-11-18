@@ -17,6 +17,9 @@ import os
 
 HERE = os.path.dirname(os.path.abspath(__file__))
 NOTIFICATION_KEEP = 300          # newest N notifications kept in the feed
+# Tables that only ever grow: rows older than N days (by the given timestamp column) are dropped on write, so the store
+# (and the `data` branch / Pages files built from it) stays a bounded size instead of growing forever.
+TABLE_RETENTION = {"scalp_signals": ("created_at", 180), "event_market_reactions": ("computed_at", 180)}
 CONFIG_TABLES = ("trend_settings", "scalp_settings", "price_alerts", "event_config")
 
 
@@ -26,6 +29,16 @@ def _read(path, default):
             return json.load(f)
     except FileNotFoundError:
         return default
+
+
+def _prune(table, rows, now=None):
+    rule = TABLE_RETENTION.get(table)
+    if not rule:
+        return rows
+    col, days = rule
+    cutoff = ((now or datetime.datetime.now(datetime.timezone.utc)) - datetime.timedelta(days=days)).isoformat()
+    # ISO-8601 UTC strings sort in time order; a row with no timestamp is kept rather than guessed at
+    return [r for r in rows if not r.get(col) or str(r[col]) >= cutoff]
 
 
 def _write(path, value):
@@ -101,6 +114,7 @@ class FileBackend:
                     break
             else:
                 cur.append(dict(row))
+        cur = _prune(table, cur)
         _write(path, cur)
 
     def seed_price_alerts(self, rows):

@@ -22,6 +22,14 @@ class FileStoreTests(unittest.TestCase):
         self.assertEqual(self.b.get_state(), {"a": 1})
         self.assertEqual(self.b.get_state("_x"), [1, 2])
 
+    def test_growing_tables_drop_rows_past_their_retention_and_other_tables_are_untouched(self):
+        old = (filestore.datetime.datetime.now(filestore.datetime.timezone.utc) - filestore.datetime.timedelta(days=400)).isoformat()
+        new = filestore.datetime.datetime.now(filestore.datetime.timezone.utc).isoformat()
+        self.b.upsert("scalp_signals", [{"id": "old", "created_at": old}, {"id": "new", "created_at": new}, {"id": "nots"}], "id")
+        self.assertEqual(sorted(r["id"] for r in self.b.select("scalp_signals")), ["new", "nots"])
+        self.b.upsert("other", [{"id": "old", "created_at": old}], "id")
+        self.assertEqual(len(self.b.select("other")), 1)
+
     def test_upsert_merges_on_key_and_select_filters_orders_limits(self):
         self.b.upsert("t", [{"id": "a", "n": 1, "k": "X"}, {"id": "b", "n": 2, "k": "Y"}], "id")
         self.b.upsert("t", [{"id": "a", "n": 9}, {"id": "c", "n": 3, "k": "X"}], "id")

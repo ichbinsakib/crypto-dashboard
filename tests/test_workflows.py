@@ -30,6 +30,19 @@ class WorkflowTests(unittest.TestCase):
     def test_there_is_only_one_writer_of_the_store(self):
         self.assertFalse(os.path.exists(os.path.join(ROOT, "scalping.yml")))   # a second workflow would race on the data branch
 
+    def test_each_run_queues_its_successor_because_the_cron_alone_is_unreliable(self):
+        t = text("deploy.yml")
+        self.assertIn("actions: write", t)
+        block = t[t.index("  next:"):]
+        self.assertIn("gh workflow run deploy.yml", block)
+        self.assertIn("!cancelled()", block)
+        self.assertIn("cron:", t)   # kept as the restart if the chain breaks
+
+    def test_watchdog_also_starts_a_run_when_the_schedule_has_gone_quiet(self):
+        t = text("watchdog.yml")
+        self.assertIn("gh workflow run deploy.yml", t)
+        self.assertIn("actions: write", t)
+
 
 if __name__ == "__main__":
     unittest.main()

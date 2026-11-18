@@ -16,6 +16,7 @@ on:
 
 permissions:
   contents: write      # pushes the `data` branch (engine state); nothing else is written back
+  actions: write       # lets the `next` job queue the following run (see below)
   pages: write
   id-token: write
 
@@ -77,6 +78,7 @@ jobs:
       - uses: actions/upload-pages-artifact@v3
         with:
           path: site
+          retention-days: 1     # a new site artifact is built every few minutes; keep none beyond a day
 
   deploy:
     needs: build
@@ -88,3 +90,21 @@ jobs:
     steps:
       - id: deployment
         uses: actions/deploy-pages@v4
+
+  # GitHub's `schedule` trigger is best-effort and routinely skips or delays runs by an hour or more, which left the
+  # dashboard stale and paused the scalping engine. A workflow_dispatch fired with the workflow's own GITHUB_TOKEN IS
+  # allowed to start a new run (unlike push/schedule events), so each run queues its successor a few minutes after it
+  # finishes. The cron above stays as a restart if the chain ever breaks (e.g. a cancelled run); the concurrency group
+  # keeps a cron run and a chained run from doing the work twice, and the watchdog cancels anything stuck.
+  next:
+    needs: [build, deploy]
+    if: ${{ !cancelled() }}
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    env:
+      GH_TOKEN: ${{ github.token }}
+    steps:
+      - name: Queue the next run in ~4 minutes
+        run: |
+          sleep 240
+          gh workflow run deploy.yml --repo "${{ github.repository }}" --ref "${{ github.ref_name }}"

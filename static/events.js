@@ -7,7 +7,7 @@
 (function () {
   'use strict';
 
-  var ST = { data: null, ctx: null, view: 'main', eventId: null, mode: 'upcoming', when: 'all', level: 'important', cat: '', limit: 25 };
+  var ST = { data: null, ctx: null, view: 'main', eventId: null, mode: 'upcoming', when: 'all', level: 'important', cat: '', limit: 25, modal: null };
   var ET = 'America/New_York';
   var CAT_NOTE = 'No data source is connected for this yet.';
 
@@ -366,16 +366,120 @@
       '<div class="ev-sub">Changes apply from the next refresh (a few minutes).</div></details>';
   }
 
+
+  /* ---------- ONE-SCREEN DASHBOARD (main view) ----------
+   * Everything that matters is visible at once; the long explanations, headlines, sources and settings sit one click away in a
+   * pop-up (ST.modal) instead of making the page scroll. On a phone it simply stacks. */
+  function signed(v, dp) { return v == null ? 'n/a' : (v > 0 ? '+' : '') + v.toFixed(dp == null ? 1 : dp) + '%'; }
+  function cls(v) { return v > 0 ? 'up' : v < 0 ? 'down' : ''; }
+
+  function dTop(d) {
+    var s = d.summary, m = d.movers, mk = '';
+    if (m) {
+      mk = '<div class="evd-mkt"><div class="evd-dir mv-' + esc(m.direction.toLowerCase()) + '">' + esc(m.emoji) + ' ' + esc(m.direction) + ' <small>24h &middot; ' + esc(m.size_label || '') + '</small></div><div class="evd-chips">' +
+        [['BTC', m.btc_pct], ['ETH', m.eth_pct], ['Market', m.total_pct]].map(function (x) { return '<span class="evd-chip ' + cls(x[1]) + '"><small>' + x[0] + '</small><b>' + signed(x[1]) + '</b></span>'; }).join('') + '</div></div>';
+    }
+    return '<div class="evd-top"><div class="evd-risk lv-' + esc(s.level) + '"><small>EVENT RISK</small><b>' + esc(s.emoji) + ' ' + esc(s.label) + '</b>' + scale(s) + '</div>' +
+      '<div class="evd-headwrap"><div class="evd-h1">' + gl(s.headline) + '</div><div class="evd-h2"><b>Takeaway:</b> ' + gl(s.takeaway) + ' <a href="#" data-modal="risk">Why?</a></div></div>' + mk + '</div>';
+  }
+
+  function dMoved(d) {
+    var m = d.movers;
+    if (!m) return '<section class="evd-p"><h3>Why the market moved</h3><div class="ev-sub">No data yet.</div></section>';
+    var up = m.direction === 'UP', down = m.direction === 'DOWN';
+    var forList = up ? m.up : down ? m.down : m.up, againstList = up ? m.down : down ? m.up : m.down;
+    var forHead = up ? 'Why it went up' : down ? 'Why it went down' : 'Pushing up', againstHead = up ? 'Held it back' : down ? 'Cushioned the fall' : 'Pushing down';
+    function li(f) {
+      return '<li title="' + esc(f.text + ' ' + f.evidence) + '"><span class="mv-str s-' + esc(f.strength.toLowerCase()) + '">' + esc(f.strength.charAt(0) + f.strength.slice(1).toLowerCase()) + '</span> ' + esc(f.title) + '</li>';
+    }
+    function grp(head, list) {
+      return '<h4>' + esc(head) + '</h4>' + (list.length ? '<ul class="evd-ul">' + list.slice(0, 4).map(li).join('') + '</ul>' : '<div class="ev-sub">Nothing found in the data.</div>');
+    }
+    return '<section class="evd-p"><h3>Why the market moved <a href="#" class="evd-more" data-modal="movers">full story &rsaquo;</a></h3>' +
+      '<div class="evd-scroll"><p class="evd-line">' + esc(m.summary) + '</p>' + grp(forHead, forList) + grp(againstHead, againstList) + '</div></section>';
+  }
+
+  function dRow(e, past) {
+    var sub = past ? (e.result_line || '') : (e.one_liner || '');
+    var day = dayLabel(etKey(e.release_datetime)).replace(/ \u00b7 .*/, '');
+    return '<button type="button" class="evd-row" data-open="' + esc(e.id) + '" title="' + esc(sub) + '"><span class="evd-when">' + esc(past ? day : day + ' ' + etTime(e.release_datetime)) + '</span>' +
+      '<span class="evd-ttl">' + esc(e.tier.emoji) + ' <b>' + esc(e.plain_title) + '</b></span><span class="evd-sub1">' + esc(sub) + '</span></button>';
+  }
+  function dEvents(d) {
+    var all = d.events || [];
+    var ok = function (e) { return ST.level === 'all' || isImportant(e); };
+    var up = all.filter(function (e) { return e.status !== 'RELEASED' && etKey(e.release_datetime) >= todayKey() && ok(e); })
+      .sort(function (a, b) { return new Date(a.release_datetime) - new Date(b.release_datetime); }).slice(0, 8);
+    var done = all.filter(function (e) { return e.status === 'RELEASED' && ok(e); })
+      .sort(function (a, b) { return new Date(b.release_datetime) - new Date(a.release_datetime); }).slice(0, 6);
+    var chipsHtml = chips('level', [{ v: 'important', l: 'Important' }, { v: 'all', l: 'Everything' }], ST.level);
+    return '<section class="evd-p evd-events"><h3>Events <small>US Eastern</small>' + chipsHtml + '</h3><div class="evd-scroll">' +
+      '<h4>Coming up</h4>' + (up.length ? up.map(function (e) { return dRow(e, false); }).join('') : '<div class="ev-sub">Nothing ' + (ST.level === 'all' ? '' : 'important ') + 'scheduled.</div>') +
+      '<h4>Just released</h4>' + (done.length ? done.map(function (e) { return dRow(e, true); }).join('') : '<div class="ev-sub">Nothing released yet.</div>') + '</div></section>';
+  }
+
+  function dSide(d) {
+    var f = d.fomc, h = '<section class="evd-p"><h3>Fed &amp; big movers</h3><div class="evd-scroll">';
+    if (f && f.next) {
+      var n = f.next;
+      h += '<div class="evd-fomc"><div class="evd-kv"><span>Next FOMC</span><b>' + esc(n.when) + '</b></div><div class="evd-kv"><span>Current rate</span><b>' + esc(n.previous_rate) + '</b></div>' +
+        '<div class="evd-kv"><span>Expected</span><b>' + (n.expected ? esc(n.expected.outcome) + ' (' + esc(n.expected.probability) + '%)' : 'Data unavailable') + '</b></div>' +
+        (f.last ? '<div class="evd-kv"><span>Last decision</span><b>' + esc(f.last.decision) + '</b></div>' : '') + '<a href="#" data-modal="fomc">Fed details &rsaquo;</a></div>';
+    }
+    var m = d.big_movers;
+    if (m && (m.gainers.length || m.losers.length)) {
+      var col = function (list, g) {
+        return list.slice(0, 5).map(function (r) { return '<li><b>' + esc(r.symbol) + '</b><span class="evd-chip ' + (g ? 'up' : 'down') + '"><b>' + signed(r.pct_24h) + '</b></span></li>'; }).join('');
+      };
+      h += '<h4>Top gainers / losers (24h)</h4><div class="evd-two"><ul class="evd-mv">' + col(m.gainers, true) + '</ul><ul class="evd-mv">' + col(m.losers, false) + '</ul></div>';
+    }
+    var w = (d.summary.watch || []).slice(0, 3);
+    if (w.length) h += '<h4>What to watch</h4><ul class="evd-ul">' + w.map(function (x) { return '<li>' + gl(x) + '</li>'; }).join('') + '</ul>';
+    return h + '</div></section>';
+  }
+
+  function dFoot() {
+    var btn = function (k, l) { return '<button type="button" class="ghost" data-modal="' + k + '">' + l + '</button>'; };
+    return '<div class="evd-foot">' + btn('heads', 'Headlines') + btn('context', 'Analyst context') + btn('sources', 'Data sources') + (ST.ctx.isAdmin ? btn('settings', 'Settings') : '') +
+      '<span class="evd-note">Event risk = how much volatility to expect, not which way prices will go. Education only, not financial advice.</span></div>';
+  }
+
+  function openFold(h) { return h.replace('<details class="ev-card ev-fold">', '<details class="ev-card ev-fold" open>'); }
+  function modalBody(d) {
+    var m = d.movers;
+    switch (ST.modal) {
+      case 'risk': return summaryCard(d);
+      case 'movers': return moversCard(d) + radarCard(d);
+      case 'fomc': return fomcCard(d);
+      case 'heads': return (m && m.headlines && m.headlines.length) ? '<div class="ev-card"><h3>Recent headlines <small>shown as-is, not analyzed</small></h3><ul class="mv-heads">' + m.headlines.map(function (h) {
+        return '<li><a href="' + esc(h.link) + '" target="_blank" rel="noopener">' + esc(h.title) + '</a><span class="ev-sub">' + esc(h.source) + ' &middot; ' + (h.age_min < 60 ? h.age_min + ' min ago' : Math.round(h.age_min / 60) + ' h ago') + '</span></li>'; }).join('') + '</ul></div>' : '<div class="ev-card">No headlines right now.</div>';
+      case 'context': return openFold(contextCard(d)) || '<div class="ev-card">No analyst context stored.</div>';
+      case 'sources': return openFold(sourcesCard(d));
+      case 'settings': return openFold(settingsCard(d));
+    }
+    return '';
+  }
+  function modalHtml(d) {
+    if (!ST.modal) return '';
+    return '<div class="evd-modal" id="evd-modal"><div class="evd-mcard"><button type="button" class="ghost evd-x" id="evd-close">&times; Close</button>' + modalBody(d) + '</div></div>';
+  }
+  function fit() {
+    var g = document.querySelector('.evd-grid'); if (!g) return;
+    if (window.innerWidth < 1000) { g.style.height = ''; return; }
+    var top = g.getBoundingClientRect().top, foot = document.querySelector('.evd-foot');
+    g.style.height = Math.max(260, window.innerHeight - top - (foot ? foot.offsetHeight + 22 : 12)) + 'px';
+  }
+
   /* ---------- draw + wiring ---------- */
   function draw() {
     var el = root(); if (!el || !ST.data) return;
     var d = ST.data, keepY = window.scrollY;
     var body;
     if (ST.view === 'detail') body = detail(d, byId(ST.eventId));
-    else body = problemLine(d) + radarCard(d) + moversCard(d) + summaryCard(d) + fomcCard(d) + '<div class="ev-card ev-fcard">' + filtersBar(d) + '</div>' + timeline(d) + contextCard(d) + sourcesCard(d) + settingsCard(d);
-    el.innerHTML = '<div class="ev-head"><h2>Market Events <small>Admin only</small></h2><div class="ev-sub">Updated ' + esc(ago(d.generated_at)) + ' · times in US Eastern · hover a dotted term for its meaning</div></div>' + body;
+    else body = problemLine(d) + dTop(d) + '<div class="evd-grid">' + dMoved(d) + dEvents(d) + dSide(d) + '</div>' + dFoot();
+    el.innerHTML = '<div class="ev-head evd-head"><h2>Market Events <small>Admin only</small></h2><span class="ev-sub">Updated ' + esc(ago(d.generated_at)) + ' &middot; hover a dotted term for its meaning</span></div>' + body + (ST.view === 'main' ? modalHtml(d) : '');
     bind(el, d);
-    if (ST.view === 'main') window.scrollTo(0, keepY);
+    if (ST.view === 'main') { fit(); window.scrollTo(0, keepY); }
   }
 
   function rpc(name, args, msgId, okText) {
@@ -389,8 +493,14 @@
 
   function bind(el, d) {
     el.querySelectorAll('[data-open]').forEach(function (n) {
-      n.addEventListener('click', function (ev) { ev.preventDefault(); ST.view = 'detail'; ST.eventId = n.getAttribute('data-open'); draw(); window.scrollTo(0, 0); });
+      n.addEventListener('click', function (ev) { ev.preventDefault(); ST.view = 'detail'; ST.modal = null; ST.eventId = n.getAttribute('data-open'); draw(); window.scrollTo(0, 0); });
     });
+    el.querySelectorAll('[data-modal]').forEach(function (n) {
+      n.addEventListener('click', function (ev) { ev.preventDefault(); ST.modal = n.getAttribute('data-modal'); draw(); });
+    });
+    var mc = document.getElementById('evd-close'), mo = document.getElementById('evd-modal');
+    if (mc) mc.onclick = function () { ST.modal = null; draw(); };
+    if (mo) mo.addEventListener('click', function (ev) { if (ev.target === mo) { ST.modal = null; draw(); } });
     var back = document.getElementById('ev-back'); if (back) back.onclick = function () { ST.view = 'main'; draw(); };
     el.querySelectorAll('.ev-chipbtn').forEach(function (b) {
       b.addEventListener('click', function () {
@@ -435,6 +545,8 @@
       };
     }
   }
+
+  window.addEventListener('resize', fit);
 
   window.kairoInitEvents = function (section, ctx) {
     var d = (section && section.data) || null;
