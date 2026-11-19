@@ -23,7 +23,9 @@ class WorkflowTests(unittest.TestCase):
         t = text("deploy.yml")
         self.assertLess(t.index("- name: Restore data"), t.index("python scalping_job.py"))
         self.assertLess(t.index("python dashboard.py"), t.index("- name: Save data"))
-        self.assertLess(t.index("- name: Save data"), t.index("upload-pages-artifact"))
+        self.assertLess(t.index("- name: Save data"), t.index("- name: Publish site (private)"))
+        self.assertNotIn("upload-pages-artifact", t)   # public repo: artifacts are downloadable, so deploy from the build job
+        self.assertIn("openssl enc", t)                 # engine state is encrypted before it is pushed to the public data branch
         self.assertNotIn("SUPABASE", t)
         self.assertIn("contents: write", t)
 

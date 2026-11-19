@@ -17,8 +17,6 @@ on:
 permissions:
   contents: write      # pushes the `data` branch (engine state); nothing else is written back
   actions: write       # lets the `next` job queue the following run (see below)
-  pages: write
-  id-token: write
 
 # A newer run replaces one that is still queued/running. With false (GitHub's Pages template default),
 # a single run that never gets a runner blocked every later run behind it for 29 hours and the
@@ -42,10 +40,19 @@ jobs:
       # All state lives in plain files on the `data` branch (a single commit, force-pushed each run so history never grows).
       # There is no database: nothing to pause, expire or close. Settings you edit by hand are config/*.json on main.
       - name: Restore data
+        env:
+          STORE_KEY: ${{ secrets.STORE_KEY }}
         run: |
+          test -n "$STORE_KEY" || { echo "::error::Secret STORE_KEY is not set"; exit 1; }
           if git fetch --depth=1 origin data; then
-            git checkout FETCH_HEAD -- store
-            echo "Restored store/ from the data branch"
+            if git cat-file -e FETCH_HEAD:store.enc 2>/dev/null; then
+              git show FETCH_HEAD:store.enc > /tmp/store.enc
+              openssl enc -d -aes-256-cbc -pbkdf2 -pass env:STORE_KEY -in /tmp/store.enc | tar xz
+              echo "Restored store/ from the encrypted data bundle"
+            else
+              git checkout FETCH_HEAD -- store
+              echo "Restored store/ from the old plain data branch (one-time migration)"
+            fi
           else
             echo "No data branch yet -- starting with an empty store/"
           fi
@@ -65,42 +72,32 @@ jobs:
         # No Supabase secrets are passed any more: dashboard.py falls back to the file store (store/, config/).
         run: python dashboard.py
 
-      - name: Save data
+      # The repo is public, so the engine state is encrypted before it goes on the `data` branch: anyone can see the
+      # file, nobody can read it without STORE_KEY. The branch is still a single force-pushed commit.
+      - name: Save data (encrypted)
+        env:
+          STORE_KEY: ${{ secrets.STORE_KEY }}
         run: |
+          tar cz store | openssl enc -aes-256-cbc -pbkdf2 -salt -pass env:STORE_KEY -out /tmp/store.enc
           git config user.name "kairo-bot"
           git config user.email "kairo-bot@users.noreply.github.com"
           git checkout -q --orphan data-new
           git rm -rfq --cached .
-          git add -f store
+          cp /tmp/store.enc store.enc
+          git add -f store.enc
           git commit -qm "Kairo data $(date -u +%Y-%m-%dT%H:%MZ)"
           git push -q --force origin data-new:data
 
-      - uses: actions/upload-pages-artifact@v3
-        with:
-          path: site
-          retention-days: 1     # a new site artifact is built every few minutes; keep none beyond a day
-
-  deploy:
-    needs: build
-    runs-on: ubuntu-latest
-    timeout-minutes: 10
-    environment:
-      name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
-    steps:
-      - id: deployment
-        uses: actions/deploy-pages@v4
-        with:
-          # Every run is on the same commit until someone pushes, and the default build version is the commit SHA, which Pages can
-          # treat as "already deployed". A version unique to this run makes every deploy a real one.
-          pages_build_version: ${{ github.run_id }}-${{ github.run_attempt }}
-
-      - name: Check the live site really updated
+      # The site goes to Cloudflare Pages, which sits behind Cloudflare Access (only your email can open it).
+      # It is deployed from this same job on purpose: a workflow artifact on a public repo can be downloaded by others.
+      - name: Publish site (private)
+        env:
+          CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
         run: |
-          sleep 45
-          want=$(date -u -d '-20 minutes' +%s)
-          live=$(curl -s "${{ steps.deployment.outputs.page_url }}portions.json?cb=$RANDOM" | python3 -c "import sys,json,datetime;print(int(datetime.datetime.fromisoformat(json.load(sys.stdin)[0]['updated_at'].replace('Z','+00:00')).timestamp()))" || echo 0)
-          if [ "$live" -lt "$want" ]; then echo "::warning::Deployed, but the live site still serves data older than 20 minutes"; else echo "Live site is fresh"; fi
+          proj="${{ vars.CF_PAGES_PROJECT || 'kairo-dashboard' }}"
+          npx --yes wrangler@3 pages project create "$proj" --production-branch=main >/dev/null 2>&1 || true   # first run only; harmless if it exists
+          npx --yes wrangler@3 pages deploy site --project-name="$proj" --branch=main --commit-dirty=true
 
   # GitHub's `schedule` trigger is best-effort and routinely skips or delays runs by an hour or more, which left the
   # dashboard stale and paused the scalping engine. A workflow_dispatch fired with the workflow's own GITHUB_TOKEN IS
@@ -108,7 +105,7 @@ jobs:
   # finishes. The cron above stays as a restart if the chain ever breaks (e.g. a cancelled run); the concurrency group
   # keeps a cron run and a chained run from doing the work twice, and the watchdog cancels anything stuck.
   next:
-    needs: [build, deploy]
+    needs: build
     if: ${{ !cancelled() }}
     runs-on: ubuntu-latest
     timeout-minutes: 10
