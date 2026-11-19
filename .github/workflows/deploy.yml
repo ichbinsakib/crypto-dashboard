@@ -90,6 +90,21 @@ jobs:
 
       # The site goes to Cloudflare Pages, which sits behind Cloudflare Access (only your email can open it).
       # It is deployed from this same job on purpose: a workflow artifact on a public repo can be downloaded by others.
+      # Prints only whether the Cloudflare credentials are accepted -- never the values.
+      - name: Check Cloudflare credentials
+        continue-on-error: true
+        env:
+          CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+        run: |
+          echo "token length: ${#CLOUDFLARE_API_TOKEN} (starts cfut_/cfat_: $(echo "$CLOUDFLARE_API_TOKEN" | cut -c1-5 | grep -cE '^cf(ut|at)_'))"
+          echo "account id length: ${#CLOUDFLARE_ACCOUNT_ID}"
+          echo "whitespace in token: $(printf %s "$CLOUDFLARE_API_TOKEN" | grep -c '[[:space:]]')"
+          for url in "user/tokens/verify" "accounts/$CLOUDFLARE_ACCOUNT_ID/tokens/verify" "accounts/$CLOUDFLARE_ACCOUNT_ID/pages/projects"; do
+            code=$(curl -s -o /tmp/cf.json -w "%{http_code}" -H "Authorization: Bearer $CLOUDFLARE_API_TOKEN" "https://api.cloudflare.com/client/v4/$url")
+            echo "$(echo "$url" | sed 's#accounts/[0-9a-f]*#accounts/<id>#') -> HTTP $code $(python3 -c "import json;d=json.load(open('/tmp/cf.json'));print(d.get('success'),[e.get('message') for e in d.get('errors',[])],(d.get('result') or {}).get('status') if isinstance(d.get('result'),dict) else '')")"
+          done
+
       - name: Publish site (private)
         env:
           CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
