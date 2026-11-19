@@ -90,6 +90,17 @@ jobs:
     steps:
       - id: deployment
         uses: actions/deploy-pages@v4
+        with:
+          # Every run is on the same commit until someone pushes, and the default build version is the commit SHA, which Pages can
+          # treat as "already deployed". A version unique to this run makes every deploy a real one.
+          pages_build_version: ${{ github.run_id }}-${{ github.run_attempt }}
+
+      - name: Check the live site really updated
+        run: |
+          sleep 45
+          want=$(date -u -d '-20 minutes' +%s)
+          live=$(curl -s "${{ steps.deployment.outputs.page_url }}portions.json?cb=$RANDOM" | python3 -c "import sys,json,datetime;print(int(datetime.datetime.fromisoformat(json.load(sys.stdin)[0]['updated_at'].replace('Z','+00:00')).timestamp()))" || echo 0)
+          if [ "$live" -lt "$want" ]; then echo "::warning::Deployed, but the live site still serves data older than 20 minutes"; else echo "Live site is fresh"; fi
 
   # GitHub's `schedule` trigger is best-effort and routinely skips or delays runs by an hour or more, which left the
   # dashboard stale and paused the scalping engine. A workflow_dispatch fired with the workflow's own GITHUB_TOKEN IS
