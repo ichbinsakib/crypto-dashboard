@@ -248,7 +248,8 @@
       'Fear &amp; Greed: ' + esc(d.fng_top || 'N/A') +
       '<span class="info-tip" tabindex="0" data-tip="A 0-100 index of overall crypto market sentiment from Alternative.me, based on volatility, volume, social media, and surveys. Low = fear (often washed-out), high = greed (often euphoric). A contrarian gauge, not a timing signal on its own.">&#9432;</span>' +
       ' &nbsp;|&nbsp; <span id="updated-ago">just now</span>' +
-      '<span class="info-tip" tabindex="0" data-tip="Generated: ' + esc(d.generated_at || '') + ' UTC. Data regenerated ' + esc(d.data_refresh_label || 'every few minutes') + '.">&#9432;</span>';
+      '<span class="info-tip" tabindex="0" data-tip="Generated: ' + esc(d.generated_at || '') + ' UTC. Data regenerated ' + esc(d.data_refresh_label || 'every few minutes') + '.">&#9432;</span>' +
+      ' <button type="button" id="refresh-btn" class="refresh-btn" title="Load the newest data now">&#8635; Refresh</button>';
     $('banner').innerHTML = ((meta && meta.html) || '').replace(/&nbsp;&middot;&nbsp; ?/g, '<span class="sep">&nbsp;&middot;&nbsp; </span>');
     tick();
   }
@@ -323,6 +324,18 @@
       window.kairoInitEvents(has.events, { sb: function () { return sb; }, isAdmin: !!(S.profile && S.profile.is_admin), dev: DEV });
     }
   }
+
+  async function manualRefresh() {
+    var btn = $('refresh-btn'); if (!btn || btn.disabled) return;
+    var before = S.generatedAt;
+    btn.disabled = true; btn.textContent = '↻ Refreshing…';
+    S.loading = false;
+    await refresh(false);
+    btn = $('refresh-btn'); if (!btn) return;
+    btn.textContent = (S.generatedAt && S.generatedAt === before) ? '✓ Already the latest' : '✓ Updated';
+    setTimeout(function () { var b = $('refresh-btn'); if (b) { b.disabled = false; b.innerHTML = '&#8635; Refresh'; } }, 2500);
+  }
+  document.addEventListener('click', function (e) { if (e.target.closest && e.target.closest('#refresh-btn')) manualRefresh(); });
 
   async function refresh(initial) {
     if (S.loading) return;
