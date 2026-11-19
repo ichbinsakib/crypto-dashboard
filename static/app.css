@@ -567,6 +567,17 @@ a.ov-chip { cursor: pointer; } a.ov-chip:hover, a.ov-chip:focus-visible { border
 .ov-alert { background: var(--alert-bg); border-color: var(--bear-bd); border-left-color: var(--red); color: var(--alert-text); }
 .ov-price { font-variant-numeric: tabular-nums; }
 .watch-strip { display: none !important; }
+/* Desktop: status, alerts and watch all on ONE line (shrinks the wording on narrower screens instead of wrapping) */
+@media (min-width: 721px) {
+  .ov-band { display: flex; flex-wrap: nowrap; align-items: center; gap: 0 14px; padding: 4px 12px; overflow-x: auto; scrollbar-width: none; }
+  .ov-band::-webkit-scrollbar { display: none; }
+  .ov-row { flex-wrap: nowrap; flex: 0 0 auto; padding: 2px 0; white-space: nowrap; }
+  .ov-row + .ov-row { border-top: 0; border-left: 1px solid var(--border); padding-left: 14px; }
+  .ov-label { min-width: 0; }
+  .ov-band .stale-note { display: none; }
+}
+@media (min-width: 721px) and (max-width: 1700px) { .ov-sub, .ov-entry .ms-e-why { display: none; } }
+@media (min-width: 721px) and (max-width: 1300px) { .ov-chip .wc-action { display: none; } .ov-entry { font-size: 12px; } }
 @media (max-width: 720px) {
   .ov-band { margin: 8px 12px 0; padding: 2px 10px; }
   .ov-row { font-size: 12.5px; padding: 6px 0; gap: 4px 6px; }
