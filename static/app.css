@@ -975,3 +975,77 @@ footer { max-width: 1100px; margin: 24px auto 0; padding: 18px 20px calc(28px + 
   #tab-events:checked ~ .tabbar label[for=tab-events], #tab-scalping:checked ~ .tabbar label[for=tab-scalping] { background: var(--inset-accent); color: var(--accent); border: 0; }
   footer { padding-bottom: calc(var(--navh) + var(--sab) + 24px); }
 }
+
+/* ---- Paper trading tab ---- */
+.pp { max-width: 980px; }
+.pp-note { margin: 0 0 14px; line-height: 1.55; color: var(--text); }
+.pp-small, .pp-axis { color: var(--muted); font-size: 13px; }
+.pp-chip { display: inline-block; margin: 0 0 14px; padding: 7px 12px; border-radius: 999px; font-weight: 600; font-size: 13.5px; border: 1px solid var(--border); }
+.pp-on { color: var(--green); border-color: currentColor; }
+.pp-off { color: var(--muted); }
+.pp-cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 12px; margin: 0 0 8px; }
+.pp-card { border: 1px solid var(--border); border-radius: 12px; padding: 14px 16px; background: var(--panel); }
+.pp-name { font-weight: 700; display: flex; align-items: center; gap: 8px; }
+.pp-name i, .pp-legend i { display: inline-block; width: 10px; height: 10px; border-radius: 50%; }
+.pp-sub { color: var(--muted); font-size: 12.5px; margin: 2px 0 10px; }
+.pp-val { font-size: 26px; font-weight: 800; letter-spacing: -.01em; }
+.pp-ret { font-weight: 600; margin: 2px 0 10px; }
+.pp-up { color: var(--green); } .pp-down { color: var(--red); }
+.pp-row { display: flex; justify-content: space-between; gap: 10px; font-size: 13.5px; padding: 4px 0; border-top: 1px solid var(--border); }
+.pp-row span { color: var(--muted); } .pp-row b { text-align: right; font-weight: 600; }
+.pp-h { margin: 22px 0 8px; font-size: 15px; }
+.pp-legend { display: flex; flex-wrap: wrap; gap: 14px; font-size: 13px; margin-bottom: 6px; }
+.pp-legend span { display: inline-flex; align-items: center; gap: 6px; }
+.pp-chart { width: 100%; height: auto; border: 1px solid var(--border); border-radius: 10px; background: transparent; }
+.pp-table { width: 100%; border-collapse: collapse; font-size: 14px; }
+.pp-table th, .pp-table td { text-align: left; padding: 7px 8px; border-bottom: 1px solid var(--border); }
+.pp-table .pp-n { text-align: right; }
+.pp-empty { color: var(--muted); }
+
+/* ==========================================================================================================
+   ONE-SCREEN LAYOUT (desktop / laptop). The header, status strip and tabs stay fixed and the open tab fills the
+   rest of the window, laid out as side-by-side modules so everything is visible at a glance. If a module has more
+   than fits (a long list), only that module scrolls, never the whole page. Phones and short windows keep the
+   normal top-to-bottom layout (a phone cannot show this much at once), so nothing is ever cut off.
+   ========================================================================================================== */
+@media (min-width: 1000px) and (min-height: 600px) {
+  html, body { height: 100%; overflow: hidden; }
+  #app { height: 100vh; height: 100dvh; display: flex; flex-direction: column; }
+  #app > header, #app > #banner, #app > footer { flex: 0 0 auto; }
+  #app > header { position: relative; }
+  #app > footer { margin: 0; max-width: none; padding: 6px 20px; border-top: 1px solid var(--border); background: var(--panel); font-size: 11px; line-height: 1.4; text-align: center; }
+  #tabs-root { flex: 1 1 auto; min-height: 0; display: flex; flex-direction: column; }
+  #tabs-root > .tabbar { position: relative; top: 0; flex: 0 0 auto; margin-bottom: 0; }
+  #tabs-root > .panel { flex: 1 1 auto; min-height: 0; overflow: auto; max-width: none; width: 100%; margin: 0; padding: 12px 20px 14px; }
+  #tabs-root > .panel .tab-lede { margin: 0 0 10px; }
+
+  /* Signals: the signal list on the left, the performance record on the right */
+  #tab-screener:checked ~ .panel-screener { display: grid; grid-template-columns: minmax(0, 2.3fr) minmax(330px, 1fr); grid-template-rows: auto minmax(0, 1fr); gap: 0 14px; overflow: hidden; }
+  .panel-screener > .tab-lede { grid-column: 1 / -1; }
+  .panel-screener > .card, .panel-screener > .perf-embed { min-height: 0; overflow: auto; margin: 0; }
+  .panel-screener > .card { padding-bottom: 6px; }
+  .panel-screener > .perf-head { display: none; }
+  .panel-screener > .perf-embed { padding-right: 2px; }
+  .panel-screener .perf-embed .cycle-map, .panel-screener .perf-embed .top-grid { margin-bottom: 10px; }
+  .panel-screener .perf-embed .top-grid .card { padding: 10px 12px; }
+  .panel-screener .perf-embed .big-price { font-size: 24px; }
+  .panel-screener .signal-table { margin-bottom: 8px; }
+  .panel-screener .dip-table.trend-only { table-layout: auto; }
+  .panel-screener .dip-table.trend-only th { width: auto !important; }
+  .panel-screener .dip-table th, .panel-screener .dip-table td { padding: 9px 10px; }
+  .panel-screener .dip-table td.tgt-cell { min-width: 150px; }
+  .panel-screener .dip-table td.act { min-width: 92px; width: 98px; }
+  .panel-screener .dip-table td.act .sig-detail-btn, .panel-screener .dip-table td.act .follow-btn { display: block; width: 100%; margin: 0 0 4px; padding: 4px 8px; min-height: 30px; }
+  .panel-screener .dip-table td.sig-cell { min-width: 200px; }
+  .panel-screener .dip-table td.sig-cell .badge { white-space: nowrap; font-size: 11.5px; padding: 3px 9px; }
+  .panel-screener .sig-notice { font-size: 12px; padding: 7px 10px; margin: 6px 0; }
+  #tabs-root > .panel .tab-lede { max-width: none; }
+
+  /* Market Events already is a one-screen board: let it use the full height */
+  #tab-events:checked ~ .panel-events { overflow: hidden; display: flex; flex-direction: column; }
+  .panel-events #events-root { flex: 1 1 auto; min-height: 0; display: flex; flex-direction: column; }
+  .panel-events .evd-grid { flex: 1 1 auto; min-height: 0; }
+}
+@media (min-width: 1000px) and (min-height: 600px) and (max-width: 1399px) {
+  #tab-screener:checked ~ .panel-screener { grid-template-columns: minmax(0, 2fr) minmax(300px, 1fr); }
+}

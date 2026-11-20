@@ -12,6 +12,7 @@ the previous daily close, every traded dollar pays 0.15% (fee + slippage). Same 
 Safe to run every few minutes: it only trades once per UTC day and never throws (a failed fetch just skips the pass).
 """
 import datetime
+import html as _html
 import json
 import os
 import statistics
@@ -141,6 +142,75 @@ def summary(state, last_prices):
             "portfolios": out}
 
 
+# ---------------------------------------------------------------------------------------------------------------- display
+NAMES = {"momentum": ("Momentum picks", "Top-5 strongest liquid coins, rebalanced every Monday"),
+         "btc_regime": ("BTC when healthy", "All BTC while it is above its 100-day average, else cash"),
+         "btc_hold": ("BTC buy & hold", "Bought once, never sold (the do-nothing yardstick)")}
+COLORS = {"momentum": "#f59e0b", "btc_regime": "#3b82f6", "btc_hold": "#94a3b8"}
+
+
+def _usd(x):
+    return "${:,.0f}".format(x)
+
+
+def _pct(x):
+    return "{:+.1f}%".format(x)
+
+
+def _chart(state):
+    series = {k: state["portfolios"][k]["equity"] for k in NAMES}
+    n = max((len(v) for v in series.values()), default=0)
+    if n < 2:
+        return '<p class="pp-empty">The chart appears after the second day of paper trading.</p>'
+    allv = [e[1] for v in series.values() for e in v]
+    lo, hi = min(allv), max(allv)
+    span = (hi - lo) or 1.0
+    W, H = 640, 180
+    lines = []
+    for k, v in series.items():
+        pts = " ".join("%.1f,%.1f" % (i / (max(len(v) - 1, 1)) * W, H - (e[1] - lo) / span * (H - 12) - 6) for i, e in enumerate(v))
+        lines.append('<polyline fill="none" stroke="%s" stroke-width="2.2" points="%s"/>' % (COLORS[k], pts))
+    legend = "".join('<span><i style="background:%s"></i>%s</span>' % (COLORS[k], _html.escape(NAMES[k][0])) for k in NAMES)
+    return ('<div class="pp-legend">%s</div><svg class="pp-chart" viewBox="0 0 %d %d" role="img" aria-label="Paper portfolio value over time">%s</svg>'
+            '<p class="pp-axis">%s to %s &middot; low %s &middot; high %s</p>'
+            % (legend, W, H, "".join(lines), _html.escape(str(series["momentum"][0][0])), _html.escape(str(series["momentum"][-1][0])), _usd(lo), _usd(hi)))
+
+
+def render_section(state, last_prices):
+    """The 'Paper trading' tab: pre-rendered HTML (no JavaScript needed) + the raw summary as data."""
+    sm = summary(state, last_prices)
+    on = sm["regime_on"]
+    status = ('<span class="pp-chip pp-on">BTC is above its 100-day average &mdash; the strategies are allowed to hold coins</span>' if on
+              else '<span class="pp-chip pp-off">BTC is below its 100-day average &mdash; the strategies are sitting in cash</span>')
+    cards = []
+    for k, (title, sub) in NAMES.items():
+        p = sm["portfolios"][k]
+        hold = ", ".join("%s %s" % (_html.escape(c), _usd(v)) for c, v in sorted(p["holdings"].items(), key=lambda x: -x[1])) or "all cash"
+        cls = "pp-up" if p["return_pct"] > 0 else ("pp-down" if p["return_pct"] < 0 else "")
+        cards.append(
+            '<div class="pp-card"><div class="pp-name"><i style="background:%s"></i>%s</div><div class="pp-sub">%s</div>'
+            '<div class="pp-val">%s</div><div class="pp-ret %s">%s since start</div>'
+            '<div class="pp-row"><span>Worst drop so far</span><b>%s</b></div><div class="pp-row"><span>Holding</span><b>%s</b></div></div>'
+            % (COLORS[k], _html.escape(title), _html.escape(sub), _usd(p["value"]), cls, _pct(p["return_pct"]),
+               "{:.1f}%".format(p["max_drawdown_pct"]), hold))
+    trades = [dict(t, who=k) for k in ("momentum",) for t in state["portfolios"][k]["trades"]][-12:][::-1]
+    rows = "".join("<tr><td>%s</td><td>%s</td><td>%s</td><td class=\"pp-n\">%s</td></tr>"
+                   % (_html.escape(t["day"]), _html.escape(t["side"]), _html.escape(t["coin"]), _usd(t["usd"])) for t in trades)
+    table = ('<table class="pp-table"><thead><tr><th>Day</th><th>Action</th><th>Coin</th><th>Size</th></tr></thead><tbody>%s</tbody></table>' % rows
+             if rows else '<p class="pp-empty">No trades yet. The first rebalance happens on a Monday while BTC is above its 100-day average.</p>')
+    body = (
+        '<div class="panel panel-paper"><div class="pp">'
+        '<p class="pp-note"><b>Practice money only.</b> Nothing here is bought or sold for real. Three simulated portfolios, each starting at %s, '
+        'follow the rules from our backtest so we can see whether the momentum idea works on live prices before anyone risks money. '
+        'Costs of 0.15%% per trade are included. Started %s.</p>%s<div class="pp-cards">%s</div>'
+        '<h3 class="pp-h">Portfolio value</h3>%s<h3 class="pp-h">Latest momentum trades</h3>%s'
+        '<p class="pp-note pp-small">What the backtest said: the momentum idea looked good in its best case but was over-fitted, with drops of 55&ndash;75%%. '
+        'Holding BTC only while it is above its 100-day average did nearly as well on risk-adjusted terms with a smaller drop. '
+        'This tab will show which one actually earns its keep.</p></div></div>'
+        % (_usd(START_CASH), _html.escape(str(sm["started"])), status, "".join(cards), _chart(state), table))
+    return {"title": "🧪 Paper trading", "sort_order": 8, "html": body, "data": sm}
+
+
 # ---------------------------------------------------------------------------------------------------------------- I/O
 def fetch(coin, limit=150):
     url = f"{BASE}?symbol={coin}USDT&interval=1d&limit={limit}"
@@ -193,6 +263,13 @@ def main(now=None):
     step(state, data, opens, last_prices, today, now.weekday() == 0)
     save_state(state)
     s = summary(state, last_prices)
+    try:
+        import filestore
+        backend = filestore.FileBackend.from_env()
+        if backend:
+            backend.publish_portions({"paper": render_section(state, last_prices)})
+    except Exception as e:  # noqa: BLE001 - the tab is a nicety; the engine state is already saved
+        print("momentum_paper: could not publish the tab (%s: %s)" % (type(e).__name__, e))
     print("momentum_paper:", json.dumps({k: (v["value"], v["return_pct"]) for k, v in s["portfolios"].items()}), "regime_on=%s" % s["regime_on"])
     return 0
 

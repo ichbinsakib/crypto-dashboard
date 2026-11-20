@@ -2243,6 +2243,7 @@ def render(coins_data, fng_value, fng_classification, generated_at, any_stale,
   #tab-performance:checked ~ .tabbar label[for=tab-performance],
   #tab-events:checked ~ .tabbar label[for=tab-events],
   #tab-scalping:checked ~ .tabbar label[for=tab-scalping],
+  #tab-paper:checked ~ .tabbar label[for=tab-paper],
   #bc-btc:checked ~ .tabbar label[for=bc-btc],
   #bc-watch:checked ~ .tabbar label[for=bc-watch],
   #bc-eth:checked ~ .tabbar label[for=bc-eth] {{ background: var(--accent); color:var(--on-accent); border-color:var(--accent); }}
@@ -2253,6 +2254,7 @@ def render(coins_data, fng_value, fng_classification, generated_at, any_stale,
   #tab-performance:checked ~ .panel-performance {{ display:block; }}
   #tab-events:checked ~ .panel-events {{ display:block; }}
   #tab-scalping:checked ~ .panel-scalping {{ display:block; }}
+  #tab-paper:checked ~ .panel-paper {{ display:block; }}
   .bigcoin-panel {{ display:none; }}
   #bc-btc:checked ~ .bigcoin-panel-btc {{ display:block; }}
   #bc-eth:checked ~ .bigcoin-panel-eth {{ display:block; }}

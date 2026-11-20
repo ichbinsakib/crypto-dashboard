@@ -304,7 +304,8 @@
       screener: 'Coins our rules have flagged. Each row shows the entry price, where to cut a loss (the stop) and how to exit. Tap Details for the reasoning.',
       bigcoins: 'Bitcoin, Ethereum and your watchlist: current price, trend and charts.',
       mypicks: 'Signals you chose to follow. They stay here until you remove them.',
-      scalping: 'Fast, short-term setups on a minutes chart. Higher risk and a quicker pace than the other tabs.'
+      scalping: 'Fast, short-term setups on a minutes chart. Higher risk and a quicker pace than the other tabs.',
+      paper: 'A practice run of the momentum strategy with pretend money, so we can test it on live prices first.'
     };
     Object.keys(LEDE).forEach(function (k) {
       var p = root.querySelector('.panel-' + k);

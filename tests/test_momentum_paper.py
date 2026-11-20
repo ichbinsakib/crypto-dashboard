@@ -119,3 +119,34 @@ class Step(unittest.TestCase):
 
 if __name__ == "__main__":
     unittest.main()
+
+
+class Section(unittest.TestCase):
+    def state(self, points=3):
+        s = {"version": 1, "started": "2026-01-05", "regime_on": True, "last_rebalance": "2026-01-05",
+             "portfolios": {n: M.new_portfolio() for n in ("momentum", "btc_regime", "btc_hold")}}
+        for p in s["portfolios"].values():
+            p["equity"] = [["2026-01-%02d" % (5 + i), 10000.0 + 100 * i] for i in range(points)]
+        s["portfolios"]["momentum"]["trades"] = [{"day": "2026-01-05", "coin": "A<B>", "side": "BUY", "price": 1.0, "usd": 2000.0}]
+        s["portfolios"]["momentum"]["units"] = {"AAA": 10.0}
+        return s
+
+    def test_section_shape_and_escaping(self):
+        sec = M.render_section(self.state(), {"AAA": 100.0})
+        self.assertEqual(sec["sort_order"], 8)
+        self.assertIn("panel panel-paper", sec["html"])
+        self.assertIn("Practice money only", sec["html"])
+        self.assertNotIn("A<B>", sec["html"])           # coin names are escaped
+        self.assertIn("A&lt;B&gt;", sec["html"])
+        self.assertIn("<svg", sec["html"])
+
+    def test_single_day_has_no_chart_and_empty_trades_message(self):
+        s = self.state(points=1)
+        s["portfolios"]["momentum"]["trades"] = []
+        html = M.render_section(s, {})["html"]
+        self.assertNotIn("<svg", html)
+        self.assertIn("No trades yet", html)
+
+    def test_regime_off_message(self):
+        s = self.state(); s["regime_on"] = False
+        self.assertIn("sitting in cash", M.render_section(s, {})["html"])
