@@ -109,9 +109,12 @@ jobs:
         env:
           CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
           CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+          SITE_PASSWORD: ${{ secrets.SITE_PASSWORD }}
         run: |
+          [ -n "$SITE_PASSWORD" ] || { echo "SITE_PASSWORD secret is missing - refusing to publish an unlocked site"; exit 1; }
           proj="${{ vars.CF_PAGES_PROJECT || 'kairo-dashboard' }}"
           npx --yes wrangler@3 pages project create "$proj" --production-branch=main >/dev/null 2>&1 || true   # first run only; harmless if it exists
+          printf %s "$SITE_PASSWORD" | npx --yes wrangler@3 pages secret put SITE_PASSWORD --project-name="$proj" >/dev/null
           npx --yes wrangler@3 pages deploy site --project-name="$proj" --branch=main --commit-dirty=true
 
   # GitHub's `schedule` trigger is best-effort and routinely skips or delays runs by an hour or more, which left the
