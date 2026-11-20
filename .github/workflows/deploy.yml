@@ -131,14 +131,20 @@ jobs:
           def call(url, method="GET"):
               with urllib.request.urlopen(urllib.request.Request(url, method=method, headers=hdr), timeout=30) as r:
                   return json.load(r)
-          items = call(base + "?per_page=100")["result"]          # newest first
+          items, page = [], 1                                      # newest first; the API pages in small chunks
+          while page <= 10:
+              chunk = call(f"{base}?page={page}&per_page=25")["result"]
+              items += chunk
+              if len(chunk) < 25:
+                  break
+              page += 1
           old = items[5:]                                          # keep the 5 newest (all carry the password gate)
           done = 0
           for d in old:
               try:
                   call(f"{base}/{d['id']}?force=true", "DELETE"); done += 1
               except Exception as e:
-                  print("skip", d["id"][:8], getattr(e, "code", e))
+                  print("skip", d["id"][:8], getattr(e, "code", e), (e.read()[:200] if hasattr(e, "read") else ""))
           print(f"deleted {done} of {len(old)} old deployments")
           PY
 
