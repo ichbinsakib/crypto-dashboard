@@ -28,13 +28,13 @@ import java.util.TimeZone;
 
 /**
  * Runs periodically in the background (scheduled by WorkManager, see MainActivity), even when the
- * app isn't open. Reads the site's public notifications.json and notifies about events newer than the last one this
+ * app isn't open. Reads the site's notifications.json (sent with the WebView's sign-in cookie) and notifies about events newer than the last one this
  * device saw (no account or token: the database is gone). WorkManager's minimum periodic interval is 15 minutes -- a platform floor.
  */
 public class NotificationWorker extends Worker {
 
     private static final String CHANNEL_ID = "kairo_signals";
-    private static final String FEED_URL = "https://ichbinsakib.github.io/crypto-dashboard/notifications.json";
+    private static final String FEED_URL = "https://kairo-dashboard-2c6.pages.dev/notifications.json";
 
     public NotificationWorker(@NonNull Context context, @NonNull WorkerParameters params) {
         super(context, params);
@@ -54,7 +54,7 @@ public class NotificationWorker extends Worker {
                 return Result.success();
             }
 
-            // The feed is a public static file (newest first); notify about everything newer than the last one seen, oldest first.
+            // The feed is a static file behind the site's password gate (newest first); notify about everything newer than the last one seen, oldest first.
             JSONArray feed = new JSONArray(fetchFeed());
             String newest = lastSeen;
             for (int i = feed.length() - 1; i >= 0; i--) {
@@ -79,6 +79,9 @@ public class NotificationWorker extends Worker {
         HttpURLConnection conn = (HttpURLConnection) url.openConnection();
         conn.setConnectTimeout(10000);
         conn.setReadTimeout(10000);
+        // The site is behind a password gate: reuse the sign-in cookie the in-app WebView already holds.
+        String cookie = android.webkit.CookieManager.getInstance().getCookie(FEED_URL);
+        if (cookie != null && !cookie.isEmpty()) conn.setRequestProperty("Cookie", cookie);
         if (conn.getResponseCode() != 200) throw new Exception("HTTP " + conn.getResponseCode());
         StringBuilder sb = new StringBuilder();
         try (BufferedReader reader = new BufferedReader(new InputStreamReader(conn.getInputStream(), StandardCharsets.UTF_8))) {

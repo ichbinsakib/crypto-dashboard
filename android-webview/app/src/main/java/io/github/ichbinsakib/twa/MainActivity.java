@@ -25,7 +25,7 @@ import java.util.concurrent.TimeUnit;
 
 public class MainActivity extends Activity {
 
-    private static final String HOST = "ichbinsakib.github.io";
+    private static final String HOST = "kairo-dashboard-2c6.pages.dev";
     /** Set by NotificationWorker on the Intent it opens when a notification is tapped -- the same
      * portion_key the dashboard already stamps on every notification event server-side. */
     public static final String EXTRA_GOTO_PORTION = "goto_portion";
