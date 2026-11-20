@@ -119,9 +119,8 @@ jobs:
           git commit -qm "Kairo data $(date -u +%Y-%m-%dT%H:%MZ)"
           git push -q --force origin data-new:data
 
-      # The site goes to Cloudflare Pages, which sits behind Cloudflare Access (only your email can open it).
+      # The site goes to Cloudflare Pages, where a Pages Function (functions/_middleware.js) asks for the SITE_PASSWORD before serving anything.
       # It is deployed from this same job on purpose: a workflow artifact on a public repo can be downloaded by others.
-      # Prints only whether the Cloudflare credentials are accepted -- never the values.
       - name: Publish site (private)
         env:
           CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
