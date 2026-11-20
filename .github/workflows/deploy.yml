@@ -117,6 +117,31 @@ jobs:
           printf %s "$SITE_PASSWORD" | npx --yes wrangler@3 pages secret put SITE_PASSWORD --project-name="$proj" >/dev/null
           npx --yes wrangler@3 pages deploy site --project-name="$proj" --branch=main --commit-dirty=true
 
+      - name: Prune old site deployments
+        continue-on-error: true
+        env:
+          CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+        run: |
+          python3 - <<'PY'
+          import json, os, urllib.request
+          proj = "${{ vars.CF_PAGES_PROJECT || 'kairo-dashboard' }}"
+          base = f"https://api.cloudflare.com/client/v4/accounts/{os.environ['CLOUDFLARE_ACCOUNT_ID']}/pages/projects/{proj}/deployments"
+          hdr = {"Authorization": "Bearer " + os.environ["CLOUDFLARE_API_TOKEN"]}
+          def call(url, method="GET"):
+              with urllib.request.urlopen(urllib.request.Request(url, method=method, headers=hdr), timeout=30) as r:
+                  return json.load(r)
+          items = call(base + "?per_page=100")["result"]          # newest first
+          old = items[5:]                                          # keep the 5 newest (all carry the password gate)
+          done = 0
+          for d in old:
+              try:
+                  call(f"{base}/{d['id']}?force=true", "DELETE"); done += 1
+              except Exception as e:
+                  print("skip", d["id"][:8], getattr(e, "code", e))
+          print(f"deleted {done} of {len(old)} old deployments")
+          PY
+
   # GitHub's `schedule` trigger is best-effort and routinely skips or delays runs by an hour or more, which left the
   # dashboard stale and paused the scalping engine. A workflow_dispatch fired with the workflow's own GITHUB_TOKEN IS
   # allowed to start a new run (unlike push/schedule events), so each run queues its successor a few minutes after it
