@@ -39,6 +39,37 @@ jobs:
 
       # All state lives in plain files on the `data` branch (a single commit, force-pushed each run so history never grows).
       # There is no database: nothing to pause, expire or close. Settings you edit by hand are config/*.json on main.
+      - name: Prune old site deployments
+        continue-on-error: true
+        env:
+          CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+        run: |
+          python3 - <<'PY'
+          import json, os, urllib.request
+          proj = "${{ vars.CF_PAGES_PROJECT || 'kairo-dashboard' }}"
+          base = f"https://api.cloudflare.com/client/v4/accounts/{os.environ['CLOUDFLARE_ACCOUNT_ID']}/pages/projects/{proj}/deployments"
+          hdr = {"Authorization": "Bearer " + os.environ["CLOUDFLARE_API_TOKEN"]}
+          def call(url, method="GET"):
+              with urllib.request.urlopen(urllib.request.Request(url, method=method, headers=hdr), timeout=30) as r:
+                  return json.load(r)
+          items, page = [], 1                                      # newest first; the API pages in small chunks
+          while page <= 10:
+              chunk = call(f"{base}?page={page}&per_page=25")["result"]
+              items += chunk
+              if len(chunk) < 25:
+                  break
+              page += 1
+          old = items[5:]                                          # keep the 5 newest (all carry the password gate)
+          done = 0
+          for d in old:
+              try:
+                  call(f"{base}/{d['id']}?force=true", "DELETE"); done += 1
+              except Exception as e:
+                  print("skip", d["id"][:8], getattr(e, "code", e), (e.read()[:200] if hasattr(e, "read") else ""))
+          print(f"deleted {done} of {len(old)} old deployments")
+          PY
+
       - name: Restore data
         env:
           STORE_KEY: ${{ secrets.STORE_KEY }}
@@ -116,37 +147,6 @@ jobs:
           npx --yes wrangler@3 pages project create "$proj" --production-branch=main >/dev/null 2>&1 || true   # first run only; harmless if it exists
           printf %s "$SITE_PASSWORD" | npx --yes wrangler@3 pages secret put SITE_PASSWORD --project-name="$proj" >/dev/null
           npx --yes wrangler@3 pages deploy site --project-name="$proj" --branch=main --commit-dirty=true
-
-      - name: Prune old site deployments
-        continue-on-error: true
-        env:
-          CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
-          CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
-        run: |
-          python3 - <<'PY'
-          import json, os, urllib.request
-          proj = "${{ vars.CF_PAGES_PROJECT || 'kairo-dashboard' }}"
-          base = f"https://api.cloudflare.com/client/v4/accounts/{os.environ['CLOUDFLARE_ACCOUNT_ID']}/pages/projects/{proj}/deployments"
-          hdr = {"Authorization": "Bearer " + os.environ["CLOUDFLARE_API_TOKEN"]}
-          def call(url, method="GET"):
-              with urllib.request.urlopen(urllib.request.Request(url, method=method, headers=hdr), timeout=30) as r:
-                  return json.load(r)
-          items, page = [], 1                                      # newest first; the API pages in small chunks
-          while page <= 10:
-              chunk = call(f"{base}?page={page}&per_page=25")["result"]
-              items += chunk
-              if len(chunk) < 25:
-                  break
-              page += 1
-          old = items[5:]                                          # keep the 5 newest (all carry the password gate)
-          done = 0
-          for d in old:
-              try:
-                  call(f"{base}/{d['id']}?force=true", "DELETE"); done += 1
-              except Exception as e:
-                  print("skip", d["id"][:8], getattr(e, "code", e), (e.read()[:200] if hasattr(e, "read") else ""))
-          print(f"deleted {done} of {len(old)} old deployments")
-          PY
 
   # GitHub's `schedule` trigger is best-effort and routinely skips or delays runs by an hour or more, which left the
   # dashboard stale and paused the scalping engine. A workflow_dispatch fired with the workflow's own GITHUB_TOKEN IS
