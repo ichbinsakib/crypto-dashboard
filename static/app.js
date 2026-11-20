@@ -299,6 +299,22 @@
     secs.forEach(function (r) { html += r.html + '\n'; });
     root.innerHTML = html;
 
+    // Plain-language "what is this tab" line at the top of each section (display only, no data involved).
+    var LEDE = {
+      screener: 'Coins our rules have flagged. Each row shows the entry price, where to cut a loss (the stop) and how to exit. Tap Details for the reasoning.',
+      bigcoins: 'Bitcoin, Ethereum and your watchlist: current price, trend and charts.',
+      mypicks: 'Signals you chose to follow. They stay here until you remove them.',
+      scalping: 'Fast, short-term setups on a minutes chart. Higher risk and a quicker pace than the other tabs.'
+    };
+    Object.keys(LEDE).forEach(function (k) {
+      var p = root.querySelector('.panel-' + k);
+      if (!p || p.querySelector('.tab-lede')) return;
+      var d = document.createElement('p'); d.className = 'tab-lede'; d.textContent = LEDE[k];
+      p.insertBefore(d, p.firstChild);
+    });
+    var tb = root.querySelector(':scope > .tabbar');
+    if (tb) { tb.setAttribute('role', 'navigation'); tb.setAttribute('aria-label', 'Sections'); }
+
     Object.keys(checked).forEach(function (id) {
       var el = document.getElementById(id);
       if (el && el.type === 'radio') el.checked = true;

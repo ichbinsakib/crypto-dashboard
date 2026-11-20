@@ -2166,7 +2166,7 @@ def render(coins_data, fng_value, fng_classification, generated_at, any_stale,
 <link rel="manifest" href="manifest.webmanifest">
 <link rel="icon" href="favicon-32.png" sizes="32x32" type="image/png">
 <link rel="apple-touch-icon" href="apple-touch-icon.png">
-<meta name="theme-color" content="#eef3fb">
+<meta name="theme-color" content="#f3f5f9">
 <script>(function(){{try{{var t=localStorage.getItem("kairo_theme")||"light";document.documentElement.setAttribute("data-theme",t);}}catch(e){{document.documentElement.setAttribute("data-theme","light");}}}})();</script>
 <meta name="mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-capable" content="yes">
@@ -2175,9 +2175,9 @@ def render(coins_data, fng_value, fng_classification, generated_at, any_stale,
 <style>
   :root {{
     color-scheme: light;
-    --bg: #eef3fb; --panel: rgba(255,255,255,0.86); --border: #d5dfee; --text: #0f172a; --muted: #56617a;
-    --green: #059669; --red: #dc2626; --yellow: #b45309; --gray: #64748b; --accent: #0284c7; --on-accent: #ffffff;
-    --inset: #f1f5fb; --chip: #e3eaf6; --tip: #1e293b; --tip-text: #f8fafc; --shadow: 0 2px 10px rgba(30,64,120,0.08);
+    --bg: #f3f5f9; --panel: #ffffff; --border: #e2e7ef; --text: #0f172a; --muted: #566277;
+    --green: #047857; --red: #c62828; --yellow: #92400e; --gray: #64748b; --accent: #0b63c4; --on-accent: #ffffff;
+    --inset: #f3f6fa; --chip: #e6ecf5; --tip: #1e293b; --tip-text: #f8fafc; --shadow: 0 1px 2px rgba(15,23,42,0.05), 0 2px 8px rgba(15,23,42,0.04);
     --shadow-hover: 0 8px 22px rgba(30,64,120,0.16); --overlay: rgba(15,23,42,0.45);
     --bull-bg: #d9f5e8; --bear-bg: #fde0e0; --neu-bg: #fdf0cc; --locked-bg: #e6ebf3; --armed-bg: #dbeefb;
     --bull-bd: #6cc9a2; --bear-bd: #ee9a9a; --neu-bd: #e3c165; --lvl-bd: #8bbbd6; --inset-accent: #e2f3fc;
@@ -2186,9 +2186,9 @@ def render(coins_data, fng_value, fng_classification, generated_at, any_stale,
   }}
   :root[data-theme="dark"] {{
     color-scheme: dark;
-    --bg: #0a0e14; --panel: #10151f; --border: #1f2937; --text: #e5e7eb; --muted: #9ca3af;
-    --green: #34d399; --red: #f87171; --yellow: #fbbf24; --gray: #6b7280; --accent: #38bdf8; --on-accent: #04121c;
-    --inset: #0d1320; --chip: #2a3550; --tip: #1c2230; --tip-text: #e5e7eb; --shadow: none; --shadow-hover: 0 6px 18px rgba(0,0,0,0.45);
+    --bg: #0b0f17; --panel: #121826; --border: #222c3d; --text: #e8ecf3; --muted: #a0abbd;
+    --green: #34d399; --red: #f87171; --yellow: #fbbf24; --gray: #6b7280; --accent: #60b0f8; --on-accent: #04121c;
+    --inset: #0e1522; --chip: #2a3550; --tip: #1c2230; --tip-text: #e5e7eb; --shadow: none; --shadow-hover: 0 6px 18px rgba(0,0,0,0.45);
     --overlay: rgba(4,8,14,0.8);
     --bull-bg: #0f2e20; --bear-bg: #3a1414; --neu-bg: #332b0d; --locked-bg: #1c2230; --armed-bg: #182233;
     --bull-bd: #1f6a4a; --bear-bd: #7a2e2e; --neu-bd: #5a4d18; --lvl-bd: #2a4a5a; --inset-accent: #0d1c26;
@@ -2198,9 +2198,9 @@ def render(coins_data, fng_value, fng_classification, generated_at, any_stale,
   @media (prefers-color-scheme: dark) {{
     :root[data-theme="auto"] {{
       color-scheme: dark;
-      --bg: #0a0e14; --panel: #10151f; --border: #1f2937; --text: #e5e7eb; --muted: #9ca3af;
-      --green: #34d399; --red: #f87171; --yellow: #fbbf24; --gray: #6b7280; --accent: #38bdf8; --on-accent: #04121c;
-      --inset: #0d1320; --chip: #2a3550; --tip: #1c2230; --tip-text: #e5e7eb; --shadow: none; --shadow-hover: 0 6px 18px rgba(0,0,0,0.45);
+      --bg: #0b0f17; --panel: #121826; --border: #222c3d; --text: #e8ecf3; --muted: #a0abbd;
+      --green: #34d399; --red: #f87171; --yellow: #fbbf24; --gray: #6b7280; --accent: #60b0f8; --on-accent: #04121c;
+      --inset: #0e1522; --chip: #2a3550; --tip: #1c2230; --tip-text: #e5e7eb; --shadow: none; --shadow-hover: 0 6px 18px rgba(0,0,0,0.45);
       --overlay: rgba(4,8,14,0.8);
       --bull-bg: #0f2e20; --bear-bg: #3a1414; --neu-bg: #332b0d; --locked-bg: #1c2230; --armed-bg: #182233;
       --bull-bd: #1f6a4a; --bear-bd: #7a2e2e; --neu-bd: #5a4d18; --lvl-bd: #2a4a5a; --inset-accent: #0d1c26;
@@ -2210,7 +2210,7 @@ def render(coins_data, fng_value, fng_classification, generated_at, any_stale,
   }}
   * {{ box-sizing: border-box; }}
   html, body {{ max-width:100%; overflow-x:hidden; }}
-  body {{ margin:0; background: var(--bg); color: var(--text); font-family: 'Segoe UI', Arial, sans-serif; position:relative; }}
+  body {{ margin:0; background: var(--bg); color: var(--text); font-family: Inter, 'Segoe UI Variable Text', 'Segoe UI', system-ui, -apple-system, Roboto, Arial, sans-serif; position:relative; }}
   body::before {{
     content:''; position:fixed; inset:0; z-index:-1; pointer-events:none;
     background: var(--bg);
@@ -2382,8 +2382,9 @@ def render(coins_data, fng_value, fng_classification, generated_at, any_stale,
   </div>
 </div>
 <div id="app" hidden>
+<a class="skip-link" href="#tabs-root">Skip to content</a>
 <header>
-  <h1>&#9889; KAIRO</h1>
+  <div class="brand"><span class="brand-mark" aria-hidden="true">&#9889;</span><div class="brand-txt"><h1>KAIRO</h1><span class="brand-sub">Live crypto signals</span></div></div>
   <div class="meta" id="meta-line"></div>
   <div class="header-actions">
     <button type="button" id="btn-theme" class="hdr-btn" title="Switch theme">&#9728; Light</button>
@@ -2395,7 +2396,7 @@ def render(coins_data, fng_value, fng_classification, generated_at, any_stale,
   </div>
 </header>
 <div id="banner"></div>
-<div id="tabs-root"></div>
+<main id="tabs-root"></main>
 <footer>
   Education only, not financial advice. You trade at your own risk.
   <span class="info-tip" tabindex="0" data-tip="Data sources: CoinGecko (price/market), Binance Futures public API (funding rate, open interest, mark/index premium), Alternative.me (Fear &amp; Greed Index). No paid subscriptions used. Rows marked Unavailable (MVRV Z-Score, NUPL, exchange flows, ETF flows) require a paid on-chain data provider not connected here. Cycle Map, Heat Score, and Liquidation Risk are Kairo's own heuristic models, not a third-party analytics service.">&#9432;</span>

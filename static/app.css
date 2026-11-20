@@ -865,3 +865,113 @@ a.ov-chip { cursor: pointer; } a.ov-chip:hover, a.ov-chip:focus-visible { border
 .refresh-btn { margin-left: 8px; padding: 2px 10px; font: inherit; font-size: 12px; font-weight: 700; color: var(--text); background: var(--inset); border: 1px solid var(--border); border-radius: 14px; cursor: pointer; }
 .refresh-btn:hover:not(:disabled) { border-color: var(--accent); }
 .refresh-btn:disabled { opacity: .7; cursor: default; }
+
+/* ==========================================================================================================
+   DESIGN LAYER v2 (professional redesign). Only visual rules live here: tokens, header, navigation, cards,
+   tables, buttons. Behaviour and data hooks (ids, data-* attributes, class names) are unchanged.
+   ========================================================================================================== */
+:root { --r-lg: 14px; --r-md: 10px; --hdrh: 60px; --focus: 0 0 0 3px rgba(11, 99, 196, 0.28); }
+:root[data-theme="dark"] { --focus: 0 0 0 3px rgba(96, 176, 248, 0.35); }
+html, body { overflow-x: clip; }                       /* clip (not hidden) so the sticky header and tabs keep working */
+body { font-size: 15px; line-height: 1.5; -webkit-font-smoothing: antialiased; font-variant-numeric: tabular-nums; }
+h1, h2, h3 { letter-spacing: -0.01em; }
+:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; border-radius: 6px; }
+button { font-family: inherit; }
+.skip-link { position: absolute; left: 12px; top: -48px; z-index: 100; background: var(--accent); color: var(--on-accent); padding: 10px 14px; border-radius: 10px; font-weight: 700; text-decoration: none; }
+.skip-link:focus { top: 8px; }
+
+/* ---------- header ---------- */
+header { position: sticky; top: 0; z-index: 30; min-height: var(--hdrh); display: flex; align-items: center; flex-wrap: nowrap; gap: 6px 18px;
+  background: var(--panel); border-bottom: 1px solid var(--border); animation: none; }
+.brand { display: flex; align-items: center; gap: 10px; flex: 0 0 auto; }
+.brand-mark { display: inline-flex; align-items: center; justify-content: center; width: 34px; height: 34px; border-radius: 10px; font-size: 18px;
+  background: linear-gradient(135deg, #0b63c4, #14a3c7); color: #fff; box-shadow: 0 2px 6px rgba(11, 99, 196, 0.3); }
+.brand-txt { display: flex; flex-direction: column; line-height: 1.1; }
+header h1 { font-size: 17px; font-weight: 800; letter-spacing: 0.08em; margin: 0; }
+.brand-sub { font-size: 11px; color: var(--muted); font-weight: 600; letter-spacing: 0.02em; }
+header .meta { display: flex; align-items: center; flex-wrap: wrap; gap: 4px 8px; font-size: 12.5px; color: var(--muted); }
+.header-actions { margin-left: auto; align-items: center; }
+.hdr-btn { border-radius: var(--r-md); padding: 0 13px; min-height: 36px; font-size: 13px; font-weight: 600; background: transparent; color: var(--text); border: 1px solid var(--border); }
+.hdr-btn:hover { background: var(--inset); color: var(--accent); border-color: var(--accent); }
+.refresh-btn { margin-left: 4px; min-height: 32px; padding: 0 13px; font-size: 12.5px; font-weight: 700; color: var(--accent); background: var(--inset-accent); border: 1px solid var(--lvl-bd); border-radius: 999px; }
+.refresh-btn:hover:not(:disabled) { background: var(--accent); color: var(--on-accent); border-color: var(--accent); }
+
+/* ---------- top-level navigation ---------- */
+input[type=radio] { display: block; position: absolute; width: 1px; height: 1px; margin: 0; opacity: 0; pointer-events: none; }
+#tabs-root { display: block; }
+#tabs-root > .tabbar { gap: 2px; }
+.tabbar label { cursor: pointer; user-select: none; }
+.tab-lede { margin: 2px 0 14px; max-width: 78ch; color: var(--muted); font-size: 14px; line-height: 1.55; }
+@media (min-width: 721px) {
+  #tabs-root > .tabbar { position: sticky; top: var(--hdrh); z-index: 20; padding: 0 16px; gap: 4px; background: var(--panel); border-bottom: 1px solid var(--border); margin-bottom: 4px; }
+  #tabs-root > .tabbar label { display: inline-flex; align-items: center; gap: 2px; padding: 14px 16px 12px; border: 0; border-bottom: 3px solid transparent; border-radius: 0;
+    font-size: 14.5px; font-weight: 700; color: var(--muted); white-space: nowrap; background: transparent; transform: none; }
+  #tabs-root > .tabbar label:hover { color: var(--text); background: var(--inset); transform: none; }
+  #tab-screener:checked ~ .tabbar label[for=tab-screener], #tab-bigcoins:checked ~ .tabbar label[for=tab-bigcoins],
+  #tab-mypicks:checked ~ .tabbar label[for=tab-mypicks], #tab-performance:checked ~ .tabbar label[for=tab-performance],
+  #tab-events:checked ~ .tabbar label[for=tab-events], #tab-scalping:checked ~ .tabbar label[for=tab-scalping] {
+    background: transparent; color: var(--accent); border-color: transparent; border-bottom-color: var(--accent); }
+  .panel { padding: 14px 20px 28px; max-width: 1760px; margin: 0 auto; }
+}
+/* keyboard focus on the hidden radios lights up the matching tab */
+#tab-screener:focus-visible ~ .tabbar label[for=tab-screener], #tab-bigcoins:focus-visible ~ .tabbar label[for=tab-bigcoins],
+#tab-mypicks:focus-visible ~ .tabbar label[for=tab-mypicks], #tab-performance:focus-visible ~ .tabbar label[for=tab-performance],
+#tab-events:focus-visible ~ .tabbar label[for=tab-events], #tab-scalping:focus-visible ~ .tabbar label[for=tab-scalping] { box-shadow: var(--focus); }
+.tab-ico { margin-right: 7px; }
+/* second-level tabs (timeframes, Bitcoin/Ethereum): compact pill selector */
+.panel .tabbar { padding: 4px 0 10px; gap: 6px; }
+.panel .tabbar label { border-radius: 999px; padding: 7px 15px; background: var(--panel); border: 1px solid var(--border); font-size: 13.5px; }
+.panel .tabbar label:hover { transform: none; border-color: var(--accent); }
+
+/* ---------- surfaces ---------- */
+.card, .screener-card, .cycle-map, .ev-card, .sc2-card, .evd-p, .evd-top, .wl-pane, .overlay-card, .auth-card { border-radius: var(--r-lg); }
+.card, table.signal-table { backdrop-filter: none; -webkit-backdrop-filter: none; box-shadow: var(--shadow); }
+.card:hover { transform: none; box-shadow: var(--shadow); }
+.card { padding: 14px 16px; }
+.card-title, .sc2-sec, .watch-title { font-size: 11.5px; letter-spacing: 0.08em; text-transform: uppercase; }
+.big-price { font-size: 32px; letter-spacing: -0.02em; }
+.panel { animation: none; }
+.screener-card { border-width: 1px; border-left-width: 4px; box-shadow: var(--shadow); }
+.stale-note, .sig-notice { border-radius: var(--r-md); }
+
+/* ---------- overview band (market status / alerts / watch) ---------- */
+.ov-band { margin: 12px 20px 4px; border-radius: var(--r-lg); box-shadow: var(--shadow); padding: 4px 14px; }
+.ov-label { font-size: 10.5px; letter-spacing: 0.1em; }
+.ov-chip { border-radius: 10px; background: var(--inset); }
+.ov-alert { border-radius: 10px; }
+
+/* ---------- tables ---------- */
+table.signal-table { border-radius: var(--r-lg); margin-bottom: 18px; }
+table.signal-table th { background: var(--inset); font-size: 11px; font-weight: 700; letter-spacing: 0.07em; text-transform: uppercase; padding: 10px 12px; }
+table.signal-table td { padding: 12px; vertical-align: middle; }
+table.signal-table tbody tr:hover { background: var(--inset); }
+.dip-table th, .dip-table td { padding: 11px 12px; }
+.badge { padding: 4px 11px; border-radius: 999px; font-size: 12px; font-weight: 700; }
+.follow-btn, .sig-detail-btn { min-height: 34px; border-radius: 999px; font-weight: 700; }
+.sig-detail-btn { background: var(--inset-accent); border-color: var(--lvl-bd); }
+.follow-btn:hover, .sig-detail-btn:hover { border-color: var(--accent); background: var(--inset-accent); color: var(--accent); }
+.follow-btn.following { background: var(--accent); color: var(--on-accent); }
+
+/* ---------- footer ---------- */
+footer { max-width: 1100px; margin: 24px auto 0; padding: 18px 20px calc(28px + var(--sab)); text-align: center; border-top: 0; font-size: 12px; }
+
+/* ---------- phones ---------- */
+@media (max-width: 720px) {
+  :root { --hdrh: 58px; }
+  header { position: static; display: grid; grid-template-columns: 1fr auto; gap: 2px 10px; }
+  header .meta .info-tip { display: none; }
+  .brand { grid-column: 1; grid-row: 1; }
+  .brand-mark { width: 30px; height: 30px; font-size: 16px; }
+  .brand-sub { display: none; }
+  header .meta { grid-column: 1; grid-row: 2; font-size: 12px; }
+  .refresh-btn { min-height: 36px; }
+  .ov-band { margin: 10px 12px 2px; }
+  .panel { padding: 10px 12px 22px; }
+  .tab-lede { font-size: 13.5px; margin-bottom: 12px; }
+  #tabs-root > .tabbar { background: var(--panel); box-shadow: 0 -4px 16px rgba(15, 23, 42, 0.08); }
+  #tabs-root > .tabbar label { border-radius: 12px; font-weight: 700; }
+  #tab-screener:checked ~ .tabbar label[for=tab-screener], #tab-bigcoins:checked ~ .tabbar label[for=tab-bigcoins],
+  #tab-mypicks:checked ~ .tabbar label[for=tab-mypicks], #tab-performance:checked ~ .tabbar label[for=tab-performance],
+  #tab-events:checked ~ .tabbar label[for=tab-events], #tab-scalping:checked ~ .tabbar label[for=tab-scalping] { background: var(--inset-accent); color: var(--accent); border: 0; }
+  footer { padding-bottom: calc(var(--navh) + var(--sab) + 24px); }
+}
