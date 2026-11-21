@@ -268,7 +268,7 @@
 
   function render(rows) {
     var meta = rows.filter(function (r) { return r.key === '_meta'; })[0];
-    var secs = rows.filter(function (r) { return r.key !== '_meta'; })
+    var secs = rows.filter(function (r) { return r.key !== '_meta' && r.key !== 'paper'; })  // paper trading tab removed
       .sort(function (a, b) { return (a.sort_order || 0) - (b.sort_order || 0); });
     var root = $('tabs-root');
 
@@ -376,7 +376,7 @@
     try {
       var rows = await fetchRows();
       S.rows = rows;
-      var secs = rows.filter(function (r) { return r.key !== '_meta'; });
+      var secs = rows.filter(function (r) { return r.key !== '_meta' && r.key !== 'paper'; });
       if (!secs.length) { showNoAccess(); return; }
       if (initial) showOnly('app');
       render(rows);

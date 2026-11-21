@@ -97,12 +97,6 @@ jobs:
         timeout-minutes: 4
         run: python scalping_job.py
 
-      # Paper-trading only (no real orders, ever): weekly momentum rotation vs two BTC benchmarks. State lives in store/state/momentum_paper.json.
-      - name: Momentum paper engine
-        continue-on-error: true
-        timeout-minutes: 3
-        run: python momentum_paper.py
-
       - name: Generate dashboard
         env:
           DISCORD_WEBHOOK_URL: ${{ secrets.DISCORD_WEBHOOK_URL }}
