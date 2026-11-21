@@ -313,6 +313,21 @@
       var d = document.createElement('p'); d.className = 'tab-lede'; d.textContent = LEDE[k];
       p.insertBefore(d, p.firstChild);
     });
+    // On a big screen the coin detail panel is always shown beside the chart, so open it.
+    if (window.matchMedia && window.matchMedia('(min-width: 1000px) and (min-height: 600px)').matches) {
+      root.querySelectorAll('details.coin-details').forEach(function (d) { d.open = true; });
+    }
+    // Watchlist card: group "list + chart" and "macro backdrop" into two modules so a wide screen can show them side by side.
+    root.querySelectorAll('.wl-card').forEach(function (card) {
+      if (card.querySelector(':scope > .wl-main')) return;
+      var kids = Array.prototype.slice.call(card.children);
+      var at = kids.findIndex(function (k) { return k.classList.contains('wl-split'); });
+      if (at < 0) return;
+      var main = document.createElement('div'); main.className = 'wl-main';
+      var macro = document.createElement('div'); macro.className = 'wl-macro';
+      kids.forEach(function (k, i) { (i <= at ? main : macro).appendChild(k); });
+      card.appendChild(main); card.appendChild(macro);
+    });
     var tb = root.querySelector(':scope > .tabbar');
     if (tb) { tb.setAttribute('role', 'navigation'); tb.setAttribute('aria-label', 'Sections'); }
 

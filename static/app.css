@@ -1046,6 +1046,25 @@ footer { max-width: 1100px; margin: 24px auto 0; padding: 18px 20px calc(28px + 
   .panel-events #events-root { flex: 1 1 auto; min-height: 0; display: flex; flex-direction: column; }
   .panel-events .evd-grid { flex: 1 1 auto; min-height: 0; }
 }
+@media (min-width: 1000px) and (min-height: 600px) {
+  /* Market: coin summary + chart on the left, the full detail panel always open on the right */
+  #tab-bigcoins:checked ~ .panel-bigcoins { display: flex; flex-direction: column; overflow: hidden; }
+  .panel-bigcoins > .tabbar { flex: 0 0 auto; padding-bottom: 8px; }
+  #bc-btc:checked ~ .bigcoin-panel-btc, #bc-eth:checked ~ .bigcoin-panel-eth {
+    display: grid; flex: 1 1 auto; min-height: 0; grid-template-columns: minmax(300px, 1fr) minmax(0, 2.2fr); grid-template-rows: auto minmax(0, 1fr); gap: 0 14px; }
+  .bigcoin-panel-btc > .coin-simple, .bigcoin-panel-eth > .coin-simple { grid-column: 1; grid-row: 1; margin: 0 0 12px; }
+  .bigcoin-panel-btc > .coin-chart, .bigcoin-panel-eth > .coin-chart { grid-column: 1; grid-row: 2; margin: 0; min-height: 0; overflow: auto; }
+  .bigcoin-panel-btc > .coin-details, .bigcoin-panel-eth > .coin-details { grid-column: 2; grid-row: 1 / span 2; margin: 0; min-height: 0; overflow: auto; }
+  .coin-details > summary { display: none; }
+  /* Market > Other markets: watchlist + chart on the left, macro backdrop on the right */
+  #bc-watch:checked ~ .bigcoin-panel-watch { display: flex; flex: 1 1 auto; min-height: 0; }
+  .bigcoin-panel-watch > .wl-card { flex: 1 1 auto; min-height: 0; margin: 0; display: grid; grid-template-columns: minmax(0, 1.9fr) minmax(300px, 1fr); gap: 0 18px; overflow: hidden; }
+  .bigcoin-panel-watch .wl-main, .bigcoin-panel-watch .wl-macro { min-height: 0; overflow: auto; }
+  /* Paper trading: two columns of modules */
+  .panel-paper .pp { max-width: none !important; width: 100%; columns: 2 420px; column-gap: 24px; }
+  .panel-paper .pp > * { break-inside: avoid; }
+  .panel-paper .pp .pp-h { break-after: avoid; }
+}
 @media (min-width: 1000px) and (min-height: 600px) and (max-width: 1399px) {
   #tab-screener:checked ~ .panel-screener { grid-template-columns: minmax(0, 2fr) minmax(300px, 1fr); }
 }
