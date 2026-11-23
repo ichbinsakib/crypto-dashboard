@@ -1107,3 +1107,29 @@ footer { max-width: 1100px; margin: 24px auto 0; padding: 18px 20px calc(28px + 
   #tabs-root[data-nav="collapsed"] > .tabbar { padding: 12px 6px; }
   #tabs-root[data-nav="collapsed"] > .tabbar label, #tabs-root[data-nav="collapsed"] .nav-toggle { justify-content: center; padding-left: 6px; padding-right: 6px; }
 }
+
+/* ---- Wide desktop: logo, status line, market strip and buttons share ONE row (saves a whole row of height) ---- */
+@media (min-width: 1400px) and (min-height: 600px) {
+  #app { display: grid; grid-template-columns: auto auto minmax(0, 1fr) auto; grid-template-rows: auto minmax(0, 1fr) auto; column-gap: 14px; align-items: center; padding: 0 16px; }
+  #app > header { display: contents; }
+  #app > header .brand { grid-column: 1; grid-row: 1; }
+  #app > header .meta { grid-column: 2; grid-row: 1; flex-wrap: nowrap; white-space: nowrap; }
+  #app > #banner { grid-column: 3; grid-row: 1; min-width: 0; }
+  #app > header .header-actions { grid-column: 4; grid-row: 1; margin: 0; }
+  #app > #tabs-root { grid-column: 1 / -1; grid-row: 2; align-self: stretch; min-height: 0; }
+  #app > footer { grid-column: 1 / -1; grid-row: 3; margin: 0 -16px; }
+  #app > header .brand-sub { display: none; }
+  #app > #banner .ov-band { margin: 6px 0; }
+  #app > #banner .market-status { margin: 6px 0; }
+}
+
+/* ---- Scalping desktop: compact coin cards (small chart only; drawing tools & EMA buttons live in the Full screen view) ---- */
+@media (min-width: 1000px) and (min-height: 600px) {
+  .panel-scalping .sc2-coin .kc-emas, .panel-scalping .sc2-coin .kc-ranges, .panel-scalping .sc2-coin .kc-tools,
+  .panel-scalping .sc2-coin .kc-ohlc, .panel-scalping .sc2-coin .kc-note, .panel-scalping .sc2-coin .sc2-chartfacts { display: none !important; }
+  .panel-scalping .sc2-coin .kc-head { margin: 0; padding: 2px 0; }
+  .panel-scalping .sc2-coin .kc-body { display: block; }
+  .panel-scalping .sc2-coin .kc-plot { height: 130px; min-height: 0; }
+  .panel-scalping .sc2-coin { padding: 10px 12px; gap: 6px; }
+  .panel-scalping .sc2-main .sc2-grid { grid-template-columns: repeat(auto-fit, minmax(230px, 1fr)); gap: 10px; }
+}
