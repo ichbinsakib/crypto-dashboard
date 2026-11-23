@@ -1133,3 +1133,8 @@ footer { max-width: 1100px; margin: 24px auto 0; padding: 18px 20px calc(28px + 
   .panel-scalping .sc2-coin { padding: 10px 12px; gap: 6px; }
   .panel-scalping .sc2-main .sc2-grid { grid-template-columns: repeat(auto-fit, minmax(230px, 1fr)); gap: 10px; }
 }
+
+/* wide header: show the whole market strip (status, alerts, watch) - wrap onto a second line instead of hiding the end */
+@media (min-width: 1400px) and (min-height: 600px) {
+  #app > #banner .ov-band { flex-wrap: wrap; overflow: visible; row-gap: 4px; padding: 4px 12px; }
+}
