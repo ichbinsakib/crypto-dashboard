@@ -116,7 +116,33 @@ MAX_ATTEMPTS = 40
 RETENTION_DAYS = 120   # same reach as the dip tracker so Performance can show both over the same windows
 
 
-def scan(pool, tf_key, fetch_ohlc, skip_symbols=(), max_new=MAX_OPEN_PER_TF, attempts=MAX_ATTEMPTS, sleep=0.15, pinned=(), allow_short=False, allow_long=True):
+NEAR_MAX_GAP_PCT = 4.0   # display only: a coin this close under its breakout level is listed as "close to a signal"
+
+
+def near_miss(sig, symbol, name):
+    """Display-only: describe a LONG coin that did NOT qualify but is close. Never creates a signal.
+    Close = above its 200-candle average and either within NEAR_MAX_GAP_PCT under the breakout level,
+    or already broke out earlier (too late to enter under the 'fresh' rule)."""
+    if not sig or sig.get("status") == "momentum" or not sig.get("checks"):
+        return None
+    ch, price, level = sig["checks"], sig["price"], sig.get("breakout_level")
+    if not ch.get("above_ema200") or not level or price <= 0:
+        return None
+    if not ch.get("breakout"):
+        gap = (level - price) / price * 100
+        if gap > NEAR_MAX_GAP_PCT:
+            return None
+        need = f"Needs a 4-hour close above {price_text(level)} ({max(gap, 0):.1f}% above the price now)"
+    elif not ch.get("fresh"):
+        gap = 0.0
+        need = "Already broke out earlier, too late to enter (a signal needs the breakout to be under 1 hour old)"
+    else:
+        return None                       # only the stop-width check failed: not a near miss worth showing
+    return {"symbol": symbol, "name": name, "price": price, "level": level, "gap_pct": round(gap, 2), "need": need,
+            "passed": sum(1 for k in ("breakout", "above_ema200") if ch.get(k))}
+
+
+def scan(pool, tf_key, fetch_ohlc, skip_symbols=(), max_new=MAX_OPEN_PER_TF, attempts=MAX_ATTEMPTS, sleep=0.15, pinned=(), allow_short=False, allow_long=True, watch=None):
     """Look through the coin pool and return coins that currently qualify. `pinned` symbols are
     always checked first, outside the random draw and its `attempts` budget -- and regardless of
     whether they're even in `pool` this run -- so a coin an admin cares about can't be missed just
@@ -141,6 +167,14 @@ def scan(pool, tf_key, fetch_ohlc, skip_symbols=(), max_new=MAX_OPEN_PER_TF, att
             return None
         finally:
             time.sleep(sleep)
+        if watch is not None:                                # display only; never affects which signals are found
+            watch["checked"] = watch.get("checked", 0) + 1
+            try:
+                nm = near_miss(compute_trend_signal(klines, cfg["lookback"], cfg["window_label"], direction="LONG"), sym, name)
+                if nm:
+                    watch.setdefault("near", []).append(nm)
+            except Exception:                                # noqa: BLE001
+                pass
         for direction in (("LONG",) if allow_long else ()) + (("SHORT",) if allow_short else ()):
             sig = compute_trend_signal(klines, cfg["lookback"], cfg["window_label"], direction=direction)
             if sig and sig["status"] == "momentum":

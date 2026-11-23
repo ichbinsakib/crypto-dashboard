@@ -1920,7 +1920,25 @@ def render(coins_data, fng_value, fng_classification, generated_at, any_stale,
         if rows:
             body = f'<div class="wl-scroll"><table class="signal-table dip-table{"" if has_fixed else " trend-only"}"><thead>{head}</thead><tbody>' + "".join(x[3] for x in rows) + "</tbody></table></div>"
         else:
-            body = ('<div class="empty-note">No signals right now.<span> That is normal: a Trend breakout is a rare event, and KAIRO shows nothing weaker.</span></div>')
+            tw = near_misses.get("_trend") or {}
+            bits = []
+            if tw.get("checked"):
+                bits.append(f"Checked {tw['checked']} coins" + (f" at {tw['checked_at']} UTC" if tw.get("checked_at") else "") + " (a rotating sample each run; new coins are checked every ~10 minutes).")
+            if tw.get("btc_up") is False:
+                bits.append("<b>Why quiet:</b> Bitcoin is below its 4-hour 200-candle average, so buy signals are paused. Back-tests showed buying breakouts in that condition lost money.")
+            elif tw.get("btc_up") is True:
+                bits.append("Bitcoin is above its 4-hour 200-candle average, so buy signals are allowed.")
+            body = ('<div class="empty-note">No signals right now.<span> That is normal: a Trend breakout is a rare event, and KAIRO shows nothing weaker.'
+                    + (" " + " ".join(bits) if bits else "") + '</span></div>')
+        tw_near = sorted((near_misses.get("_trend") or {}).get("near") or [], key=lambda x: (x["gap_pct"], -x["passed"]))[:8]
+        trend_close = ""
+        if tw_near:
+            trs = "".join(f'<tr><td>{_esc(str(m["name"]))} <span class="watch">({_esc(m["symbol"])})</span></td><td>{fmt_usd_adaptive(m["price"])}</td>'
+                          f'<td><b>{m["passed"]}/2</b> main checks</td><td class="watch">{_esc(m["need"])}</td></tr>' for m in tw_near)
+            trend_close = ('<div class="card-title" style="margin-top:14px;">CLOSE TO A SIGNAL <span class="watch">&mdash; not signals, nothing to buy yet</span></div>'
+                           '<div class="sub" style="margin-bottom:6px;">Coins above their long-term trend that are near a breakout. Nothing is tracked here and there is no entry or stop. It is only a list to watch.</div>'
+                           '<div class="wl-scroll"><table class="signal-table" style="margin:0;"><thead><tr><th>Coin</th><th>Price now</th><th>Passed</th><th>What is still needed</th></tr></thead>'
+                           f'<tbody>{trs}</tbody></table></div>')
         miss_rows = []
         for tf in TF_ORDER:
             if intraday_results.get(tf):
@@ -1966,6 +1984,7 @@ def render(coins_data, fng_value, fng_classification, generated_at, any_stale,
   {body}
   {('<div class="sub" style="margin-top:8px;">' + str(hidden_old) + ' earlier call' + ('s' if hidden_old != 1 else '') + ' opened before the ' + f'{MIN_NET_PROFIT_PCT:g}' + '% minimum-profit rule ' + ('are' if hidden_old != 1 else 'is') + ' hidden here and still tracked in Performance.</div>') if hidden_old else ''}
   <div class="sub" style="margin-top:8px;">{_esc(mrec)} Full records: see Performance below.</div>
+  {trend_close}
   {misses}
 </div>
 """
@@ -3029,6 +3048,7 @@ def main():
     # SHORT signal is labelled as such in the UI rather than presented with the same confidence.
     prev_momentum = state.get("_momentum_tracker", {})
     new_momentum, momentum_opened, momentum_resolved = prev_momentum, [], []
+    trend_watch = {"checked": 0, "near": [], "btc_up": None, "checked_at": None}   # display-only info for the Signals tab
     try:
         pool_for_momentum = screener_pool or screener_markets
         held = {f"{p['tf']}:{p['coin']}" for p in prev_momentum.get("open", {}).values()}
@@ -3038,6 +3058,8 @@ def main():
         btc_cfg = momentum_mod.MOMENTUM_TIMEFRAMES["4h"]
         btc_up = momentum_mod.market_regime_up(safe_fetch("BTC 4h regime", lambda: fetch_binance_ohlc("BTC", "4h", btc_cfg["limit"]))[0])
         allow_long_trend = btc_up is not False
+        trend_watch["btc_up"] = btc_up                       # shown on the Signals tab (why there may be none); display only
+        trend_watch["checked_at"] = datetime.datetime.utcnow().strftime("%H:%M")
         log(f"Trend regime: BTC {'above' if btc_up else 'below' if btc_up is False else 'unknown vs'} its 4h EMA200 -> LONG entries {'on' if allow_long_trend else 'paused'}")
         for mtf in momentum_mod.MOMENTUM_TIMEFRAMES:
             open_here = sum(1 for k in held if k.startswith(mtf + ":"))
@@ -3045,7 +3067,7 @@ def main():
                 skip = {k.split(":", 1)[1] for k in (held | cooling_now) if k.startswith(mtf + ":")}
                 signals += momentum_mod.scan(pool_for_momentum, mtf, fetch_binance_ohlc, skip_symbols=skip,
                                              max_new=momentum_mod.MAX_OPEN_PER_TF - open_here, pinned=pinned_coins,
-                                             allow_short=allow_short_trend, allow_long=allow_long_trend)
+                                             allow_short=allow_short_trend, allow_long=allow_long_trend, watch=trend_watch)
         new_momentum, momentum_opened, momentum_resolved = momentum_mod.update_tracker(prev_momentum, signals, fetch_binance_ohlc)
         log(f"Momentum: {len(new_momentum['open'])} open, {len(momentum_opened)} new, {len(momentum_resolved)} resolved this run")
     except Exception as e:  # noqa: BLE001 - an experimental tier must never break the main job
@@ -3123,6 +3145,7 @@ def main():
     except Exception as e:  # noqa: BLE001 - the readout is extra; the scanner must publish regardless
         log(f"Signal readouts skipped: {type(e).__name__}: {str(e)[:100]}")
 
+    near_misses["_trend"] = trend_watch          # display-only extras for the Signals tab; the dip lists only read their own timeframe keys
     html, portions, spot_signals_by_coin = render(coins_data, fng_value, fng_classification, generated_at, any_stale,
                                          alerts_results, screener_results, intraday_results,
                                          pnl_stats, new_pnl_state, near_misses, macro_snapshot, wyckoff_by_coin, new_momentum, btc_extra, signal_metrics, market_status_data)
