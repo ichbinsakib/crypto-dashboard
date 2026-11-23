@@ -394,7 +394,7 @@
   function drawBase() {
     var el = root(); if (!el || !ST.data) return;
     // Two groups so a wide screen can show them side by side (live signals left, record and settings right).
-    el.innerHTML = '<div class="sc2-main lp"><button type="button" class="lp-toggle" aria-expanded="' + (el.closest('.panel') && el.closest('.panel').getAttribute('data-lp') === 'collapsed' ? 'false' : 'true') + '" title="Hide or show this panel"><span class="lp-t-label">Scalping</span><span class="lp-t-ico" aria-hidden="true">&#9664;</span></button>' + header() + answer() + ivBar() + activeBlock() + coinCards() + '</div>' +
+    el.innerHTML = '<div class="sc2-main">' + header() + answer() + ivBar() + activeBlock() + coinCards() + '</div>' +
       '<div class="sc2-side">' + perfBlock() + recentBlock() + settingsBlock() + howBlock() +
       (ST.msg ? '<div class="sc2-msg">' + esc(ST.msg) + '</div>' : '') + '<div class="sub sc2-foot">Analysis, not advice. Long-only unless shorts are switched on in Settings. Prices refresh every 5 seconds; signals update about every 5 minutes.</div></div>';
   }
