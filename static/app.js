@@ -328,6 +328,13 @@
       kids.forEach(function (k, i) { (i <= at ? main : macro).appendChild(k); });
       card.appendChild(main); card.appendChild(macro);
     });
+    // Collapsible left panel (desktop only; hidden by CSS on phones): the Signals list gets a hide/show button.
+    var scCard = root.querySelector('.panel-screener > .card.wl-card');
+    if (scCard && !scCard.classList.contains('lp')) {
+      scCard.classList.add('lp');
+      scCard.insertAdjacentHTML('afterbegin', '<button type="button" class="lp-toggle" aria-expanded="true" title="Hide or show this panel"><span class="lp-t-label">Signals</span><span class="lp-t-ico" aria-hidden="true">&#9664;</span></button>');
+    }
+    if (window.kairoLpRestore) window.kairoLpRestore();
     var tb = root.querySelector(':scope > .tabbar');
     if (tb) { tb.setAttribute('role', 'navigation'); tb.setAttribute('aria-label', 'Sections'); }
 
@@ -368,6 +375,24 @@
     setTimeout(function () { var b = $('refresh-btn'); if (b) { b.disabled = false; b.innerHTML = '&#8635; Refresh'; } }, 2500);
   }
   document.addEventListener('click', function (e) { if (e.target.closest && e.target.closest('#refresh-btn')) manualRefresh(); });
+  // Collapsible left panel: remember hidden/shown per tab (a convenience only; works without storage).
+  function lpKey(panel) { return 'kairo_lp_' + (panel.className.match(/panel-(\w+)/) || [0, 'x'])[1]; }
+  function lpRestore() {
+    document.querySelectorAll('#tabs-root > .panel').forEach(function (p) {
+      var v = null; try { v = localStorage.getItem(lpKey(p)); } catch (x) {}
+      if (v === 'collapsed') p.setAttribute('data-lp', 'collapsed');
+      p.querySelectorAll('.lp-toggle').forEach(function (b) { b.setAttribute('aria-expanded', v === 'collapsed' ? 'false' : 'true'); });
+    });
+  }
+  window.kairoLpRestore = lpRestore;
+  document.addEventListener('click', function (e) {
+    var b = e.target.closest && e.target.closest('.lp-toggle'); if (!b) return;
+    var p = b.closest('.panel'); if (!p) return;
+    var collapsed = p.getAttribute('data-lp') === 'collapsed';
+    if (collapsed) p.removeAttribute('data-lp'); else p.setAttribute('data-lp', 'collapsed');
+    p.querySelectorAll('.lp-toggle').forEach(function (x) { x.setAttribute('aria-expanded', collapsed ? 'true' : 'false'); });
+    try { localStorage.setItem(lpKey(p), collapsed ? 'open' : 'collapsed'); } catch (x) {}
+  });
 
   async function refresh(initial) {
     if (S.loading) return;
